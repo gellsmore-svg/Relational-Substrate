@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMS Topology Sandbox</title>
+  </head>
+  <body>
+    <main id="app">
+      <section class="workspace">
+        <div class="viewport-wrap">
+          <canvas id="scene"></canvas>
+          <div class="readout" aria-live="polite">
+            <div>
+              <span class="label">Outcome</span>
+              <strong id="outcome-name">Admitted</strong>
+            </div>
+            <div>
+              <span class="label">Identity</span>
+              <strong id="identity-state">Preserved</strong>
+            </div>
+            <div>
+              <span class="label">Closure Stress</span>
+              <strong id="stress-state">Low</strong>
+            </div>
+          </div>
+        </div>
+
+        <aside class="controls" aria-label="AMS topology sandbox controls">
+          <header>
+            <p class="eyebrow">AMS Topology Sandbox v0.1</p>
+            <h1>Open Order Meets Closed Order</h1>
+            <p class="summary">Light-like propagation is modelled as an open transient. A vorton candidate is modelled as closed stable order. The sliders change admissibility, not substrate ontology.</p>
+          </header>
+
+          <div class="control-group">
+            <label for="closed-form">Closed form</label>
+            <select id="closed-form">
+              <option value="circle">Circle</option>
+              <option value="trefoil" selected>Trefoil-like</option>
+              <option value="double">Double loop</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="transient-form">Transient</label>
+            <select id="transient-form">
+              <option value="straight" selected>Straight pulse</option>
+              <option value="sine">Sinusoidal pulse</option>
+              <option value="ribbon">Ribbon pulse</option>
+            </select>
+          </div>
+
+          <div class="scenario-row" role="group" aria-label="Scenario presets">
+            <button class="scenario active" data-scenario="admit" type="button">A Admit</button>
+            <button class="scenario" data-scenario="return" type="button">B Return</button>
+            <button class="scenario" data-scenario="store" type="button">C Store</button>
+          </div>
+
+          <div class="sliders">
+            <label>
+              <span>Boundary compatibility <output id="boundary-value">0.82</output></span>
+              <input id="boundary" type="range" min="0" max="1" value="0.82" step="0.01" />
+            </label>
+            <label>
+              <span>Route continuity <output id="route-value">0.78</output></span>
+              <input id="route" type="range" min="0" max="1" value="0.78" step="0.01" />
+            </label>
+            <label>
+              <span>Storage capacity <output id="storage-value">0.18</output></span>
+              <input id="storage" type="range" min="0" max="1" value="0.18" step="0.01" />
+            </label>
+            <label>
+              <span>Scattering tendency <output id="scatter-value">0.12</output></span>
+              <input id="scatter" type="range" min="0" max="1" value="0.12" step="0.01" />
+            </label>
+            <label>
+              <span>Reseating tolerance <output id="reseat-value">0.70</output></span>
+              <input id="reseat" type="range" min="0" max="1" value="0.70" step="0.01" />
+            </label>
+          </div>
+
+          <div class="meters" aria-label="Outcome fractions">
+            <div class="meter"><span>Admitted</span><div><i id="admitted-bar"></i></div><output id="admitted-value">0%</output></div>
+            <div class="meter"><span>Returned</span><div><i id="returned-bar"></i></div><output id="returned-value">0%</output></div>
+            <div class="meter"><span>Stored</span><div><i id="stored-bar"></i></div><output id="stored-value">0%</output></div>
+            <div class="meter"><span>Scattered</span><div><i id="scattered-bar"></i></div><output id="scattered-value">0%</output></div>
+          </div>
+
+          <section class="metric-panel" aria-label="Closure and identity metrics">
+            <h2>Closure Gate</h2>
+            <div class="metric-grid">
+              <div><span>Closure</span><output id="metric-closure">0.00</output></div>
+              <div><span>Return</span><output id="metric-return">0.00</output></div>
+              <div><span>Bounded</span><output id="metric-bounded">0.00</output></div>
+              <div><span>Coherence</span><output id="metric-coherence">0.00</output></div>
+              <div><span>Reseating</span><output id="metric-reseat">0.00</output></div>
+              <div><span>Leakage</span><output id="metric-leakage">0.00</output></div>
+            </div>
+            <div class="identity-score">
+              <span>Identity score</span>
+              <strong id="identity-score">0.00</strong>
+            </div>
+          </section>
+
+          <section class="notes">
+            <h2>Current Reading</h2>
+            <p id="reading">The transient is admitted with coherent delay. The closed form flexes within tolerance and returns.</p>
+          </section>
+
+          <section class="notes">
+            <h2>Visual Key</h2>
+            <ul class="key-list">
+              <li><b class="swatch closed"></b> closed stable order</li>
+              <li><b class="swatch transient"></b> open transient order</li>
+              <li><b class="swatch returned"></b> returned route</li>
+              <li><b class="swatch stored"></b> stored stress</li>
+              <li><b class="swatch scatter"></b> scattered route</li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
