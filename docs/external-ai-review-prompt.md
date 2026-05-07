@@ -24,13 +24,13 @@ Local source path:
 
 ## Current Reported Status
 
-- Sandbox completion: 99.5%
-- Benchmarks: 14/14 passing
-- Checks: 59/59 passing
+- Sandbox completion: 99.6%
+- Benchmarks: 14/15 passing
+- Checks: 62/64 passing
 - Core independent evidence lines: 6
 - Orientation-only evidence lines: 1
-- Grammar internal coherence: 7.5/10
-- Inferential convergence confidence: 6.3/10
+- Grammar internal coherence: 7.3/10
+- Inferential convergence confidence: 6.1/10
 - Cross-domain equivalence demonstrated: 5.6/10
 - Unification thesis support: 5.2/10
 
@@ -45,11 +45,11 @@ Produce a structured review with these sections:
 3. Equivalence standard audit: assess whether the document correctly uses equivalence-with-unification rather than proof or displacement framing.
 4. Evidence audit: identify the strongest benchmark, weakest benchmark, and any hidden tuning or permissive tolerance risk.
 5. Benchmark breadth audit: assess whether 6 core independent evidence lines plus 1 orientation-only boundary check is a fair breadth count.
-6. H2O2 compression audit: evaluate whether the quantified compression is adequately bounded as a limitation.
+6. H2O2 compression and absolute-transfer audit: evaluate whether the mixed trans/cis barrier result is adequately bounded as a limitation and whether the confidence reduction is sufficient.
 7. Boundary benchmark audit: evaluate whether the documented-but-not-timestamped status is stated honestly enough.
 8. Unification map audit: assess whether the benchmarks actually support the stated cross-domain unification thesis.
 9. Confidence calibration: give your own scores for grammar internal coherence, cross-domain equivalence, evidence independence, unification thesis support, and inferential convergence.
-10. Next validation target: choose exactly one next target, preferably outside molecular/material chemistry and requiring no rescaling or endpoint anchoring.
+10. Next validation target: choose exactly one next target, prioritizing calibrated prediction or a held-out conventional comparator over more shallow fixture depth.
 
 Apply a skeptical but constructive standard. Penalize overclaims, proof-framing, weak comparators, qualitative wins presented as strong validation, and confidence increases without calibrated prediction. Credit clear non-claims, explicit ontology boundaries, source anchoring, held-out checks, quantified limitations, and honest downgrade language.
 

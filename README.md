@@ -257,6 +257,14 @@ npm run benchmark:h2o2-quant
 
 This checks the H2O2 equilibrium torsion angle as a non-scaled numeric target and reports cis/trans barrier-ratio compression as a quantitative caveat.
 
+Run the external H2O2 absolute barrier transfer benchmark with:
+
+```bash
+npm run benchmark:h2o2-absolute
+```
+
+This applies the ethane quantitative energy scale to H2O2 trans/cis barriers without fitting either H2O2 endpoint. It is a falsification pressure test for the known barrier-ratio compression, not a new calibration pass.
+
 Run the external ethane benchmark with:
 
 ```bash

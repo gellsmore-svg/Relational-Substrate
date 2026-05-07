@@ -75,11 +75,11 @@ These are the project's current self-reported metrics. Do not assume they are co
 | Core independent evidence lines | 6 |
 | Orientation-only evidence lines | 1 |
 | Grammar internal coherence | 7.5/10 |
-| Inferential convergence confidence | 5.5/10 |
-| Cross-domain equivalence demonstrated | 5.0/10 |
-| Unification thesis support | 4.5/10 |
+| Inferential convergence confidence | 6.1/10 |
+| Cross-domain equivalence demonstrated | 5.6/10 |
+| Unification thesis support | 5.2/10 |
 
-The current milestone summary deliberately keeps inferential convergence below 6/10 despite the recent EM passes, and has been recalibrated down to 5.5/10 after external review feedback. EM checks are still finite static vector comparators and do not yet include continuous field-line topology, equipotential geometry, calibrated magnitudes, or Maxwell-equation dynamics.
+The current milestone summary keeps inferential convergence near 6/10 after EM-05 because the EM domain now includes continuous field-line topology, but the H2O2 absolute barrier transfer is mixed. EM checks still do not include equipotential geometry, calibrated magnitudes, propagation, or Maxwell-equation dynamics.
 
 ## Benchmark Inventory
 
@@ -87,6 +87,7 @@ The current milestone summary deliberately keeps inferential convergence below 6
 |---|---|---|---|---:|---|
 | H2O2 torsion profile | H2O2 molecular torsion | molecular conformational ordering | qualitative pass | 3/3 | cis/trans barrier ratio directionally right but compressed |
 | H2O2 quantitative torsion angle | H2O2 molecular torsion | molecular conformational ordering | quantitative angle pass | 3/3 | angle passes; barrier contrast still compressed |
+| H2O2 absolute barrier transfer | H2O2 molecular torsion | molecular conformational energy scale | absolute barrier mixed diagnostic | 3/5 | ethane-derived scale matches cis but overpredicts trans |
 | Ethane torsion profile | ethane molecular torsion | molecular conformational ordering | qualitative pass | 4/4 | normalized score is not an energy model |
 | Ethane quantitative torsion tolerance | ethane molecular torsion | molecular conformational ordering | quantitative tolerance pass | 3/3 | endpoint is scale-anchored and intermediate points are high |
 | Ionic lattice order | ionic lattice ordering | ionic solid structure | qualitative pass | 3/3 | not full 6:6 coordination or lattice energy |
@@ -95,13 +96,14 @@ The current milestone summary deliberately keeps inferential convergence below 6
 | EM-02 Coulomb comparator | electromagnetic field ordering | static-charge equation comparator | equation-level Coulomb ordering pass | 5/5 | relative comparator only; no absolute force model |
 | EM-03 superposition comparator | electromagnetic field ordering | static two-source field geometry | held-out superposition comparator pass | 5/5 | finite two-source vector comparator |
 | EM-04 three-source comparator | electromagnetic field ordering | asymmetric static field geometry | non-symmetric three-source comparator pass | 6/6 | finite asymmetric vector fixture; not field-line/potential/Maxwell |
+| EM-05 field-line topology comparator | electromagnetic field ordering | continuous EM field-line topology | continuous field-line topology pass | 7/7 | qualitative topology only; not calibrated field/Maxwell |
 | Silicate held-out network order | silicate network topology | network solid/material structure | held-out qualitative pass | 5/5 | graph-level order, not glass-property prediction |
 | Roughness held-out interface order | optical/interface boundary ordering | rough optical/material interface behavior | held-out interface pass | 5/5 | qualitative roughness ordering, not scatter calibration |
 | Material NBO/T quantitative accounting | aluminosilicate NBO/T accounting | glass composition accounting | quantitative material pass | 3/3 | composition accounting, not measured property prediction |
 
 Important breadth caveat:
 
-The project has 13 benchmark entries, but only 6 core independent evidence lines plus 1 orientation-only boundary check. EM-02/03/04 collapse into one static electromagnetic field-geometry line, silicate network and NBO/T accounting collapse into one broader material-structure line, and the boundary phase check is orientation evidence only.
+The project has 15 benchmark entries, but only 6 core independent evidence lines plus 1 orientation-only boundary check. EM-02 through EM-05 collapse into one electromagnetic field-geometry/topology line, silicate network and NBO/T accounting collapse into one broader material-structure line, and the boundary phase check is orientation evidence only.
 
 ## Known Weaknesses and Drift Risks
 
@@ -118,7 +120,7 @@ The H2O2 cis/trans barrier-ratio discrepancy is quantified:
 | Compression factor | 1.9899 |
 | Ratio shortfall | 49.75% |
 
-This is the strongest known grammar limitation and the strongest current candidate for falsification. The roughly 2x compression factor means the current grammar underweights the cost of high-strain closure configurations relative to the experimental cis/trans barrier ratio. It is not resolved. It should remain one of the strongest reasons not to overstate confidence.
+The absolute barrier transfer sharpens the issue: applying the ethane-derived energy scale to H2O2 predicts the cis barrier almost exactly, but overpredicts the trans barrier by 99.04%. This is the strongest known grammar limitation and the strongest current candidate for falsification. The roughly 2x compression factor means the current grammar does not recover the experimental separation between the shallow trans barrier and the high cis barrier. It is not resolved. It should remain one of the strongest reasons not to overstate confidence.
 
 Review question:
 
@@ -140,22 +142,23 @@ The EM sequence now includes:
 - EM-02: pairwise Coulomb direction and inverse-square/product ratios.
 - EM-03: symmetric two-source electric-field superposition geometry.
 - EM-04: non-symmetric three-source electric-field vector fixture.
+- EM-05: continuous electric/magnetic field-line topology.
 
-This is meaningful domain broadening, but EM-03 and EM-04 are still finite static vector comparators built from the same superposition law. They improve depth within EM, but they may not add a fully independent evidence line.
+This is meaningful domain broadening, but EM-02 through EM-05 still collapse into one electromagnetic evidence line. EM-05 adds topology beyond finite vector arithmetic, but it remains qualitative and uncalibrated.
 
 Review questions:
 
-- Are EM-03 and EM-04 real progress or mostly implementation of standard vector arithmetic?
-- Is it honest to hold inferential convergence at 5.5 despite the EM-03/EM-04 passes?
-- Should inferential convergence remain below 6/10 until continuous field-line topology, equipotential geometry, calibrated magnitude, or time-dependent propagation is tested?
+- Does EM-05 add enough topology depth to justify crossing 6/10, or should the mixed H2O2 absolute-transfer result hold confidence lower?
+- Is it honest to count EM-02 through EM-05 as one evidence line despite several implementation checks?
+- Should the next EM step require equipotential geometry, calibrated magnitude, or time-dependent propagation?
 
 ### 4. Confidence Ceiling
 
-Current confidence is intentionally capped below 6/10:
+Current confidence is intentionally held near 6/10 rather than raised further:
 
 - Many checks are qualitative.
 - Several quantitative checks are narrow.
-- EM checks are static finite fixtures.
+- EM checks now include topology, but not calibrated fields or Maxwell dynamics.
 - H2O2 absolute barrier scale is not solved.
 - Material checks do not predict measured viscosity, durability, conductivity, or density.
 - Interface checks do not predict calibrated scatter curves.

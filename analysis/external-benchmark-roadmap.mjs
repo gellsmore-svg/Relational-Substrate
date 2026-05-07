@@ -127,6 +127,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.5 if passed, -0.8 if failed',
     priority: 10,
   },
+  {
+    area: 'H2O2 absolute torsional barrier transfer',
+    currentFrontier: 'post-EM-05 falsification pressure test',
+    externalAnchor:
+      'Apply an energy scale derived from ethane to H2O2 trans and cis torsional barriers without fitting either H2O2 endpoint.',
+    passSignal:
+      'Both transferred H2O2 barriers and the cis/trans ratio land within predeclared tolerance under the same scale.',
+    failSignal:
+      'One barrier or the cis/trans ratio fails materially, showing that the peroxide limitation is not only a unit-conversion issue.',
+    confidenceImpact: '+0.3 if passed, -0.2 if mixed, -0.6 if failed',
+    priority: 11,
+  },
 ];
 
 const confidenceGates = [
