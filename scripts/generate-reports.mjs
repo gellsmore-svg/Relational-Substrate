@@ -34,6 +34,7 @@ const reportSteps = [
   'benchmark:em-superposition',
   'benchmark:em-three-source',
   'benchmark:em-field-lines',
+  'benchmark:em-equipotential',
   'benchmark:silicate-heldout',
   'benchmark:roughness-heldout',
   'benchmark:material-nbo',

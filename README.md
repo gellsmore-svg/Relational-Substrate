@@ -345,6 +345,14 @@ npm run benchmark:em-field-lines
 
 This compares qualitative continuous field-line topology: electric source-line divergence versus magnetic closed-loop continuity under one line-integration grammar. It is a topology comparator, not a Maxwell-equation solver, calibrated field model, or derivation of light speed.
 
+Run the external EM-06 equipotential geometry comparator with:
+
+```bash
+npm run benchmark:em-equipotential
+```
+
+This compares scalar potential superposition, dipole zero-potential symmetry, field/equipotential perpendicularity, and the field-as-negative-gradient relation. It is an electrostatic geometry comparator, not a conductor, propagation, calibrated SI, or Maxwell-equation solver.
+
 Run the external silicate held-out benchmark with:
 
 ```bash
