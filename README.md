@@ -321,6 +321,14 @@ npm run benchmark:em-three-source
 
 This compares non-symmetric three-charge field geometry against predeclared electric-field vector targets: net components, magnitude, angle, third-source contribution, and charge-scale linearity. It is still a finite static-field comparator, not a continuous field-line or Maxwell-equation solver.
 
+Run the external EM-05 field-line topology comparator with:
+
+```bash
+npm run benchmark:em-field-lines
+```
+
+This compares qualitative continuous field-line topology: electric source-line divergence versus magnetic closed-loop continuity under one line-integration grammar. It is a topology comparator, not a Maxwell-equation solver, calibrated field model, or derivation of light speed.
+
 Run the external silicate held-out benchmark with:
 
 ```bash

@@ -29,6 +29,7 @@ const benchmarkFiles = [
   'external-em-coulomb-comparator.json',
   'external-em-superposition-comparator.json',
   'external-em-three-source-comparator.json',
+  'external-em-field-line-topology-comparator.json',
   'external-silicate-heldout-benchmark.json',
   'external-roughness-heldout-benchmark.json',
   'external-material-nbo-quantitative-benchmark.json',
@@ -123,7 +124,7 @@ const unificationMap = [
     conventionalDomain: 'charge, magnetic-field, and EM-wave behavior',
     grammarVariables: 'charge, phase, closure, continuity, route',
     currentReading:
-      'Opens the EM domain with one static electromagnetic evidence line containing Coulomb direction/ratio, two-source superposition geometry, and asymmetric three-source field implementation checks. This is not yet continuous field topology, calibrated magnitude, propagation, or a full electromagnetic solver.',
+      'Opens the EM domain with one electromagnetic evidence line containing Coulomb direction/ratio, two-source superposition geometry, asymmetric three-source field implementation checks, and continuous field-line topology. This is still not calibrated magnitude, propagation, or a full electromagnetic solver.',
   },
   {
     benchmarkFamily: 'Network/material structure: silicate network and NBO/T accounting',
@@ -151,7 +152,7 @@ const confidence = {
   evidenceIndependenceOutOf10: summary.confidence.evidenceIndependenceOutOf10,
   unificationThesisSupportOutOf10: summary.confidence.unificationThesisSupportOutOf10,
   reading:
-    'Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, benchmark-breadth compression, and finite EM vector-fixture limits remain known issues. Inferential convergence remains moderate because the strongest non-molecular tests are still qualitative, composition-accounting, or static-vector checks, not calibrated physical property prediction.',
+    'Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, benchmark-breadth compression, and qualitative EM topology limits remain known issues. Inferential convergence has crossed 6/10 only because EM now includes continuous field-line topology; it remains moderate because the topology check is not calibrated physical property prediction or Maxwell-equation dynamics.',
 };
 
 const nonClaims = [
@@ -307,7 +308,7 @@ ${unificationRows}
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field-geometry, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
 The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, and composition accounting.
 
@@ -357,16 +358,13 @@ ${reviewPackage.reviewerQuestions.map((question) => `- ${question}`).join('\n')}
 
 ## Recommended Next Stage
 
-Do not extend the sandbox laterally until the review package has been read. The next stage should pick one high-value calibrated target:
+Do not extend the sandbox laterally until the review package has been read. EM-05 has now completed the recommended topology broadening step, so the next stage should pick one high-value calibrated target rather than another shallow EM fixture:
 
 - H2O2 absolute torsional barrier scale, not only ratio shape.
 - A measured material-property correlation downstream of NBO/T, such as viscosity, durability, or conductivity.
 - A calibrated roughness/scatter quantity, not only specular/diffuse ordering.
 - A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
-- A qualitative electromagnetic ordering check outside molecular/material chemistry with no rescaling or endpoint anchoring.
-- A held-out electromagnetic superposition or field-geometry comparator that tests whether EM-02 generalizes beyond simple pair cases.
-- A non-symmetric three-source electromagnetic field-geometry comparator that tests whether EM-03 generalizes beyond two-source symmetry cases.
-- A continuous field-line topology or equipotential-geometry comparator that tests whether EM-04 generalizes beyond finite vector fixtures.
+- A calibrated field-magnitude, equipotential-geometry, or time-dependent propagation comparator that tests whether EM-05 generalizes beyond qualitative topology.
 `;
 
 await writeFile(new URL('milestone-external-review-summary.md', outDir), markdown);
