@@ -122,7 +122,7 @@ The prior H2O2 cis/trans barrier-ratio discrepancy was quantified, then rechecke
 | Current compression factor | 1.0029 |
 | Current ratio shortfall | 0.29% |
 
-The anti-planar release revision resolves the prior H2O2 compression in the current grammar version: applying the ethane-derived energy scale to H2O2 now predicts the trans barrier within 0.32% and the cis barrier within 0.02%. Hydrazine cation then gives a held-out ordering and 0/180 ratio pass, but misses absolute barrier magnitudes by more than 50%. This should be treated as directional generalization, not calibrated torsional-energy validation.
+The anti-planar release revision resolves the prior H2O2 compression in the current grammar version: applying the ethane-derived energy scale to H2O2 now predicts the trans barrier within 0.32% and the cis barrier within 0.02%. Hydrazine cation then gives a held-out ordering and 0/180 ratio pass, but misses absolute barrier magnitudes by more than 50%. A calibration-gap diagnostic now quantifies the miss: 0 degrees requires about a 3.04x scale multiplier, 180 degrees requires about 2.21x, and the best single multiplier would still leave the 180 degree barrier high. This should be treated as directional generalization, not calibrated torsional-energy validation.
 
 Review question:
 

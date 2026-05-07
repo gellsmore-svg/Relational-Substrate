@@ -133,8 +133,11 @@ Hydrazine cation tests anti-planar release on a separate N-N torsion target with
 | Ratio error | -27.28% |
 | Ordering pass | yes |
 | Absolute barrier pass | no |
+| 0 degree required scale multiplier | 3.0413x |
+| 180 degree required scale multiplier | 2.2115x |
+| Best single multiplier | 2.8725x |
 
-The held-out hydrazine cation torsion check supports anti-planar release qualitatively and ratiometrically, but misses absolute barrier magnitudes. This reduces H2O2-overfit concern without establishing a calibrated torsional energy model.
+The held-out hydrazine cation torsion check supports anti-planar release qualitatively and ratiometrically, but misses absolute barrier magnitudes. The calibration-gap diagnostic shows the miss is not solved by a clean global multiplier: the 0 degree barrier needs about 3.04x, the 180 degree barrier needs about 2.21x, and the best single multiplier would still leave a relative-barrier shape error. This reduces H2O2-overfit concern without establishing a calibrated torsional energy model.
 
 ## Boundary Benchmark Verification
 

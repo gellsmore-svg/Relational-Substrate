@@ -276,7 +276,10 @@ const hydrazineRows = hydrazineCation
 | External 0/180 ratio | ${hydrazineCation.metrics.externalBarrierRatio0To180} |
 | Ratio error | ${hydrazineCation.metrics.ratioErrorPct}% |
 | Ordering pass | ${hydrazineCation.metrics.orderingPass ? 'yes' : 'no'} |
-| Absolute barrier pass | ${hydrazineCation.metrics.absolutePass ? 'yes' : 'no'} |`
+| Absolute barrier pass | ${hydrazineCation.metrics.absolutePass ? 'yes' : 'no'} |
+| 0 degree required scale multiplier | ${hydrazineCation.metrics.calibrationGap?.requiredScaleMultipliers?.find((row) => row.angle === 0)?.multiplier ?? 'n/a'}x |
+| 180 degree required scale multiplier | ${hydrazineCation.metrics.calibrationGap?.requiredScaleMultipliers?.find((row) => row.angle === 180)?.multiplier ?? 'n/a'}x |
+| Best single multiplier | ${hydrazineCation.metrics.calibrationGap?.leastSquaresScaleMultiplier ?? 'n/a'}x |`
   : '| Hydrazine cation transfer data | unavailable |';
 
 const milestoneSummaryPath = new URL('milestone-external-review-summary.md', outDir).pathname;
@@ -390,7 +393,7 @@ ${
   hydrazineTransferPass
     ? 'The held-out hydrazine cation torsion transfer passes ordering, ratio, and absolute magnitude checks under the ethane scale.'
     : hydrazineOrderingPass
-    ? 'The held-out hydrazine cation torsion check supports anti-planar release qualitatively and ratiometrically, but misses absolute barrier magnitudes. This reduces H2O2-overfit concern without establishing a calibrated torsional energy model.'
+    ? 'The held-out hydrazine cation torsion check supports anti-planar release qualitatively and ratiometrically, but misses absolute barrier magnitudes. The calibration-gap diagnostic shows the miss is not solved by a clean global multiplier: the 0 degree barrier needs about 3.04x, the 180 degree barrier needs about 2.21x, and the best single multiplier would still leave a relative-barrier shape error. This reduces H2O2-overfit concern without establishing a calibrated torsional energy model.'
     : hydrazineCation
     ? 'The held-out hydrazine cation torsion check fails to generalize anti-planar release, which should reduce confidence in the H2O2 refinement.'
     : 'No held-out torsion transfer check has been run yet.'

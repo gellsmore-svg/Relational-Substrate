@@ -237,6 +237,25 @@ const ratioErrorPct = ((modelRatio - externalRatio) / externalRatio) * 100;
 const orderingPass = row90.modelPenalty < row180.modelPenalty && row180.modelPenalty < row0.modelPenalty;
 const absolutePass = rows.every((row) => row.pass);
 const ratioPass = Math.abs(ratioErrorPct) <= external.tolerances.ratioErrorPctMax;
+const nonzeroBarrierRows = rows.filter((row) => row.externalCm1 > 0 && row.modelCm1 > 0);
+const leastSquaresScaleMultiplier =
+  nonzeroBarrierRows.reduce((sum, row) => sum + row.modelCm1 * row.externalCm1, 0) /
+  nonzeroBarrierRows.reduce((sum, row) => sum + row.modelCm1 ** 2, 0);
+const calibrationGapRows = nonzeroBarrierRows.map((row) => {
+  const requiredScaleMultiplier = row.externalCm1 / row.modelCm1;
+  const leastSquaresCm1 = row.modelCm1 * leastSquaresScaleMultiplier;
+  const leastSquaresErrorPct = ((leastSquaresCm1 - row.externalCm1) / row.externalCm1) * 100;
+  return {
+    angle: row.angle,
+    externalCm1: row.externalCm1,
+    modelCm1: row.modelCm1,
+    requiredScaleMultiplier: round(requiredScaleMultiplier, 4),
+    leastSquaresCm1: round(leastSquaresCm1, 2),
+    leastSquaresErrorPct: round(leastSquaresErrorPct, 2),
+  };
+});
+const requiredScaleSpread = Math.max(...calibrationGapRows.map((row) => row.requiredScaleMultiplier)) -
+  Math.min(...calibrationGapRows.map((row) => row.requiredScaleMultiplier));
 
 const checks = [
   {
@@ -316,6 +335,17 @@ const json = {
     modelBarrierRatio0To180: round(modelRatio, 4),
     externalBarrierRatio0To180: round(externalRatio, 4),
     ratioErrorPct: round(ratioErrorPct, 2),
+    calibrationGap: {
+      requiredScaleMultipliers: calibrationGapRows.map((row) => ({
+        angle: row.angle,
+        multiplier: row.requiredScaleMultiplier,
+      })),
+      requiredScaleSpread: round(requiredScaleSpread, 4),
+      leastSquaresScaleMultiplier: round(leastSquaresScaleMultiplier, 4),
+      leastSquaresRows: calibrationGapRows,
+      reading:
+        'Hydrazine absolute magnitudes are not solved by the ethane scale. A single post-hoc multiplier would improve absolute scale but would not remove the relative-barrier shape error.',
+    },
   },
   checks,
 };
@@ -358,6 +388,28 @@ ${rows
       `| ${row.angle} | ${row.externalCm1} | ${row.modelPenalty} | ${row.modelCm1} | ${row.errorPct}% | ${row.effectiveTorsionRms} | ${row.stericDeviation} | ${row.cisCrowding} | ${row.antiPlanarRelease} | ${row.pass ? 'yes' : 'no'} |`
   )
   .join('\n')}
+
+## Calibration Gap Diagnostic
+
+This diagnostic does not add a fitted hydrazine correction. It quantifies what correction would be required if one tried to repair the absolute-magnitude miss after the fact.
+
+| Measure | Value |
+|---|---:|
+| 0 degree required multiplier | ${calibrationGapRows.find((row) => row.angle === 0)?.requiredScaleMultiplier}x |
+| 180 degree required multiplier | ${calibrationGapRows.find((row) => row.angle === 180)?.requiredScaleMultiplier}x |
+| Required multiplier spread | ${round(requiredScaleSpread, 4)}x |
+| Best single multiplier | ${round(leastSquaresScaleMultiplier, 4)}x |
+
+| Angle | External cm-1 | Current model cm-1 | Required multiplier | Best-single-multiplier cm-1 | Best-single-multiplier error |
+|---:|---:|---:|---:|---:|---:|
+${calibrationGapRows
+  .map(
+    (row) =>
+      `| ${row.angle} | ${row.externalCm1} | ${row.modelCm1} | ${row.requiredScaleMultiplier}x | ${row.leastSquaresCm1} | ${row.leastSquaresErrorPct}% |`
+  )
+  .join('\n')}
+
+The required multipliers are not equal. A post-hoc single multiplier would bring the 0 degree barrier near tolerance, but would leave the 180 degree barrier high; the 0/180 shape ratio would remain unchanged. This keeps the hydrazine result classified as directional/ratiometric transfer, not calibrated torsional-energy validation.
 
 ## Source
 
