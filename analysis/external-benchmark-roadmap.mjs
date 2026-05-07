@@ -67,6 +67,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.5 if passed, -0.8 if failed',
     priority: 5,
   },
+  {
+    area: 'Electromagnetic ordering',
+    currentFrontier: 'post-closure domain broadening',
+    externalAnchor:
+      'Compare fixed grammar ordering against conventional qualitative facts about charge polarity, magnetic field closure, and free-space EM-wave propagation.',
+    passSignal:
+      'Charge complementarity, closed magnetic continuity, and phase-coupled propagation outrank deliberately wrong decoys without endpoint anchoring.',
+    failSignal:
+      'The grammar cannot distinguish charge polarity, magnetic closure, or phase-coupled propagation from simple decoys.',
+    confidenceImpact: '+0.2 if passed, -0.5 if failed',
+    priority: 6,
+  },
 ];
 
 const confidenceGates = [

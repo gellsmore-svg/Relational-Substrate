@@ -55,6 +55,7 @@
     "benchmark:ethane-quant": "node analysis/external-ethane-quantitative-benchmark.mjs",
     "benchmark:ionic": "node analysis/external-ionic-benchmark.mjs",
     "benchmark:boundary-blind": "node analysis/external-boundary-blind-benchmark.mjs",
+    "benchmark:em-ordering": "node analysis/external-em-ordering-benchmark.mjs",
     "benchmark:silicate-heldout": "node analysis/external-silicate-heldout-benchmark.mjs",
     "benchmark:roughness-heldout": "node analysis/external-roughness-heldout-benchmark.mjs",
     "benchmark:material-nbo": "node analysis/external-material-nbo-quantitative-benchmark.mjs",

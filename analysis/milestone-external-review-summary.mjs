@@ -25,6 +25,7 @@ const benchmarkFiles = [
   'external-ethane-quantitative-benchmark.json',
   'external-ionic-benchmark.json',
   'external-boundary-blind-benchmark.json',
+  'external-em-ordering-benchmark.json',
   'external-silicate-heldout-benchmark.json',
   'external-roughness-heldout-benchmark.json',
   'external-material-nbo-quantitative-benchmark.json',
@@ -113,6 +114,13 @@ const unificationMap = [
     conventionalDomain: 'optical/electromagnetic boundary behavior',
     grammarVariables: 'phase, continuity, route',
     currentReading: 'Begins to connect the grammar to wave-boundary and rough-surface ordering, but remains qualitative.',
+  },
+  {
+    benchmarkFamily: 'Electromagnetic ordering',
+    conventionalDomain: 'charge, magnetic-field, and EM-wave qualitative behavior',
+    grammarVariables: 'charge, phase, closure, continuity, route',
+    currentReading:
+      'Adds the first post-closure non-molecular/material ordering check, but it is not an equation-level electromagnetic solver.',
   },
   {
     benchmarkFamily: 'Silicate network and NBO/T accounting',
@@ -294,7 +302,7 @@ ${unificationRows}
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, ionic ordering, boundary phase, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. It includes held-out material and interface checks and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, ionic ordering, boundary phase, qualitative electromagnetic ordering, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. It includes held-out material and interface checks, a first post-closure EM ordering check, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
 The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, and composition accounting.
 
@@ -351,6 +359,7 @@ Do not extend the sandbox laterally until the review package has been read. The 
 - A calibrated roughness/scatter quantity, not only specular/diffuse ordering.
 - A conventional-comparator review that asks whether AMS adds predictive leverage over standard physical models.
 - A qualitative electromagnetic ordering check outside molecular/material chemistry with no rescaling or endpoint anchoring.
+- An equation-level electromagnetic comparator that tests whether the qualitative EM ordering benchmark survives stricter mathematical pressure.
 `;
 
 await writeFile(new URL('milestone-external-review-summary.md', outDir), markdown);

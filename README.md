@@ -289,6 +289,14 @@ npm run benchmark:boundary-blind
 
 This records a pre-comparison boundary/phase ordering prediction, then compares it against source-backed qualitative optics expectations about boundary continuity and rough-surface scattering. It is not a full historical blind test.
 
+Run the external electromagnetic ordering benchmark with:
+
+```bash
+npm run benchmark:em-ordering
+```
+
+This tests qualitative charge-polarity, magnetic closure, and EM-wave propagation ordering outside the molecular/material benchmarks. It is not a Maxwell solver, Coulomb-force calculation, or derivation of `c`.
+
 Run the external silicate held-out benchmark with:
 
 ```bash

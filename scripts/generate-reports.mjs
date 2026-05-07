@@ -27,6 +27,7 @@ const reportSteps = [
   'benchmark:ethane-quant',
   'benchmark:ionic',
   'benchmark:boundary-blind',
+  'benchmark:em-ordering',
   'benchmark:silicate-heldout',
   'benchmark:roughness-heldout',
   'benchmark:material-nbo',
