@@ -26,6 +26,7 @@ const ethaneQuant = await readOptionalJson('external-ethane-quantitative-benchma
 const ionic = await readOptionalJson('external-ionic-benchmark.json');
 const boundaryBlind = await readOptionalJson('external-boundary-blind-benchmark.json');
 const emOrdering = await readOptionalJson('external-em-ordering-benchmark.json');
+const emCoulomb = await readOptionalJson('external-em-coulomb-comparator.json');
 const silicateHeldout = await readOptionalJson('external-silicate-heldout-benchmark.json');
 const roughnessHeldout = await readOptionalJson('external-roughness-heldout-benchmark.json');
 const materialNbo = await readOptionalJson('external-material-nbo-quantitative-benchmark.json');
@@ -115,6 +116,18 @@ const benchmarks = [
     limitation: 'qualitative EM ordering pass; not a Maxwell solver, Coulomb calculation, or derivation of c',
     confidenceEffect: emOrdering.confidenceEffect,
   },
+  emCoulomb && {
+    label: 'EM-02 Coulomb comparator',
+    evidenceLine: 'electromagnetic field ordering',
+    domain: 'static-charge equation-level comparator',
+    conventionalComparator: 'Coulomb-law direction, charge-product, and inverse-square relative force ordering',
+    status: emCoulomb.status,
+    score: emCoulomb.score,
+    checksPassed: emCoulomb.checks.filter((check) => check.pass).length,
+    checksTotal: emCoulomb.checks.length,
+    limitation: 'equation-level relative comparator; not an absolute force model or Maxwell solver',
+    confidenceEffect: emCoulomb.confidenceEffect,
+  },
   silicateHeldout && {
     label: 'Silicate held-out network order',
     evidenceLine: 'silicate network topology',
@@ -167,22 +180,25 @@ const hasFactorTwoPeroxideRatio = h2o2Quant?.metrics?.barrierRatioCompressionFac
 const hasHeldoutInterfacePass = roughnessHeldout?.status === 'held-out interface pass';
 const hasQuantitativeMaterialPass = materialNbo?.status === 'quantitative material pass';
 const hasEmOrderingPass = emOrdering?.status === 'qualitative EM ordering pass';
+const hasEmCoulombPass = emCoulomb?.status === 'equation-level Coulomb ordering pass';
 
 const confidence = {
   previousSandboxCompletionPct: roadmap.currentStatus.sandboxCompletionPct,
-  updatedSandboxCompletionPct: hasEmOrderingPass ? 98 : hasQuantitativeMaterialPass ? 97 : hasHeldoutInterfacePass ? 96 : hasFactorTwoPeroxideRatio ? 94 : hasHeldoutMaterialPass ? 93 : hasTighterPeroxideRatio ? 91 : hasSecondNumericPass ? 90 : hasQuantitativePass ? 88 : hasBlindStylePass ? 84 : benchmarks.length >= 3 ? 80 : 76,
+  updatedSandboxCompletionPct: hasEmCoulombPass ? 98.5 : hasEmOrderingPass ? 98 : hasQuantitativeMaterialPass ? 97 : hasHeldoutInterfacePass ? 96 : hasFactorTwoPeroxideRatio ? 94 : hasHeldoutMaterialPass ? 93 : hasTighterPeroxideRatio ? 91 : hasSecondNumericPass ? 90 : hasQuantitativePass ? 88 : hasBlindStylePass ? 84 : benchmarks.length >= 3 ? 80 : 76,
   previousInternalCoherenceOutOf10: roadmap.currentStatus.internalCoherenceConfidenceOutOf10,
   updatedInternalCoherenceOutOf10: hasQuantitativeMaterialPass ? 7.5 : hasHeldoutInterfacePass ? 7.4 : hasFactorTwoPeroxideRatio ? 7.3 : hasHeldoutMaterialPass ? 7.2 : hasTighterPeroxideRatio ? 7.1 : hasSecondNumericPass ? 7.0 : hasQuantitativePass ? 6.9 : hasBlindStylePass ? 6.7 : benchmarks.length >= 3 ? 6.5 : 6.3,
   previousSubstrateTruthOutOf10: roadmap.currentStatus.substrateTruthConfidenceOutOf10,
-  deprecatedSubstrateTruthOutOf10: hasEmOrderingPass ? 5.2 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
-  updatedSubstrateTruthOutOf10: hasEmOrderingPass ? 5.2 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
+  deprecatedSubstrateTruthOutOf10: hasEmCoulombPass ? 5.5 : hasEmOrderingPass ? 5.2 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
+  updatedSubstrateTruthOutOf10: hasEmCoulombPass ? 5.5 : hasEmOrderingPass ? 5.2 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
   previousInferentialConvergenceOutOf10: roadmap.currentStatus.substrateTruthConfidenceOutOf10,
-  updatedInferentialConvergenceOutOf10: hasEmOrderingPass ? 5.2 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
-  crossDomainEquivalenceOutOf10: hasEmOrderingPass ? 4.8 : hasQuantitativeMaterialPass ? 4.5 : hasHeldoutInterfacePass ? 4.3 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
+  updatedInferentialConvergenceOutOf10: hasEmCoulombPass ? 5.5 : hasEmOrderingPass ? 5.2 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
+  crossDomainEquivalenceOutOf10: hasEmCoulombPass ? 5.1 : hasEmOrderingPass ? 4.8 : hasQuantitativeMaterialPass ? 4.5 : hasHeldoutInterfacePass ? 4.3 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
   evidenceIndependenceOutOf10: independentEvidenceLines >= 6 ? 4.0 : independentEvidenceLines >= 5 ? 3.8 : 3.2,
-  unificationThesisSupportOutOf10: hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
+  unificationThesisSupportOutOf10: hasEmCoulombPass ? 4.2 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
   rationale:
-    hasEmOrderingPass
+    hasEmCoulombPass
+      ? 'External anchoring now includes an equation-level Coulomb direction and relative-ratio comparator. Inferential convergence rises modestly because a post-closure EM benchmark survived stricter mathematical pressure, but remains moderate because the comparator is static, small, and not a full electromagnetic field model.'
+      : hasEmOrderingPass
       ? 'External anchoring now includes a non-molecular/material electromagnetic ordering check. Inferential convergence rises slightly because the unification map has broader domain coverage, but remains moderate because the new EM benchmark is qualitative and not a Maxwell-equation or speed-of-light derivation.'
       : hasQuantitativeMaterialPass
       ? 'External anchoring now includes exact quantitative NBO/T composition accounting in addition to held-out material/interface checks. Inferential convergence is real but moderate: four torsion sub-checks collapse to two molecule evidence lines, the H2O2 ratio remains compressed, and boundary-phase evidence is documented rather than independently timestamped.'
@@ -210,10 +226,13 @@ const remainingExternalGates = [
   'Move peroxide from ratio-shape checks toward absolute barrier-height calibration.',
   'Move roughness/interface checks beyond qualitative ordering into calibrated scatter quantities.',
   'Move electromagnetic ordering from qualitative checks toward explicit equation-level comparators.',
+  'Move EM-02 from pairwise Coulomb ratios toward held-out superposition or field-geometry checks.',
 ];
 
 const status =
-  hasEmOrderingPass
+  hasEmCoulombPass
+    ? 'external anchoring broadened: Coulomb equation comparator passes'
+    : hasEmOrderingPass
     ? 'external anchoring broadened: qualitative electromagnetic ordering passes'
     : hasQuantitativeMaterialPass
     ? 'external anchoring broadened: quantitative material accounting passes'

@@ -297,6 +297,14 @@ npm run benchmark:em-ordering
 
 This tests qualitative charge-polarity, magnetic closure, and EM-wave propagation ordering outside the molecular/material benchmarks. It is not a Maxwell solver, Coulomb-force calculation, or derivation of `c`.
 
+Run the external EM-02 Coulomb comparator with:
+
+```bash
+npm run benchmark:em-coulomb
+```
+
+This compares charge-sign direction and relative inverse-square/product-of-charge ordering against Coulomb-law expectations. It is an equation-level relative comparator, not an absolute electrostatics solver.
+
 Run the external silicate held-out benchmark with:
 
 ```bash
