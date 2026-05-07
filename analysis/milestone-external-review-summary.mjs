@@ -21,6 +21,7 @@ const frontier = await readJson('model-frontier-report.json');
 const benchmarkFiles = [
   'external-h2o2-benchmark.json',
   'external-h2o2-quantitative-benchmark.json',
+  'external-h2o2-absolute-barrier-benchmark.json',
   'external-ethane-benchmark.json',
   'external-ethane-quantitative-benchmark.json',
   'external-ionic-benchmark.json',
@@ -37,6 +38,7 @@ const benchmarkFiles = [
 
 const benchmarkArtifacts = (await Promise.all(benchmarkFiles.map((file) => readOptionalJson(file)))).filter(Boolean);
 const h2o2Quant = benchmarkArtifacts.find((artifact) => artifact.source === 'external-h2o2-quantitative-benchmark.mjs');
+const h2o2Absolute = benchmarkArtifacts.find((artifact) => artifact.source === 'external-h2o2-absolute-barrier-benchmark.mjs');
 const boundaryBenchmark = benchmarkArtifacts.find((artifact) => artifact.source === 'external-boundary-blind-benchmark.mjs');
 
 const intent = {
@@ -105,7 +107,8 @@ const unificationMap = [
     benchmarkFamily: 'Molecular torsion: H2O2 and ethane',
     conventionalDomain: 'molecular conformational chemistry',
     grammarVariables: 'route, closure, phase',
-    currentReading: 'Shows torsion-order equivalence but remains limited by H2O2 barrier-ratio compression and unitless penalties. H2O2 compression is the strongest current grammar limitation.',
+    currentReading:
+      'Shows torsion-order equivalence but remains limited by H2O2 barrier-ratio compression. The absolute transfer check localizes the issue: cis is near scale, trans is overpredicted, so the relative barrier floor remains the strongest current grammar limitation.',
   },
   {
     benchmarkFamily: 'Ionic lattice order',
@@ -160,7 +163,7 @@ const nonClaims = [
   'This is not a direct simulation or observation of T0 substrate.',
   'This is not a derivation of atoms or molecules from T1 vortons.',
   'This is not a quantum chemistry, molecular dynamics, glass-property, BRDF, Fresnel, or rough-surface scattering solver.',
-  'This does not yet predict absolute H2O2 barrier heights, material viscosity/durability/conductivity/density, or calibrated scatter curves.',
+  'This does not yet solve absolute H2O2 barrier structure, material viscosity/durability/conductivity/density, or calibrated scatter curves.',
   'Passing benchmark order checks does not by itself exclude conventional explanations.',
 ];
 
@@ -175,6 +178,7 @@ const reviewPackage = {
   inferenceStandard: intent.inferenceStandard,
   unificationMap,
   h2o2Compression: h2o2Quant?.metrics ?? null,
+  h2o2AbsoluteTransfer: h2o2Absolute?.metrics ?? null,
   boundaryVerification: boundaryBenchmark?.predictionManifest?.verificationStatus ?? null,
   independentEvidenceLines: summary.independentEvidenceLines,
   orientationEvidenceLines: summary.orientationEvidenceLines,
@@ -241,6 +245,16 @@ const h2o2CompressionRows = h2o2Quant
 | Ratio shortfall | ${h2o2Quant.metrics.barrierRatioShortfallPct}% |`
   : '| H2O2 compression data | unavailable |';
 
+const h2o2AbsoluteRows = h2o2Absolute
+  ? `| Trans model barrier | ${h2o2Absolute.metrics.trans.modelCm1} cm-1 |
+| Trans external barrier | ${h2o2Absolute.metrics.trans.externalCm1} cm-1 |
+| Trans error | ${h2o2Absolute.metrics.trans.errorPct}% |
+| Cis model barrier | ${h2o2Absolute.metrics.cis.modelCm1} cm-1 |
+| Cis external barrier | ${h2o2Absolute.metrics.cis.externalCm1} cm-1 |
+| Cis error | ${h2o2Absolute.metrics.cis.errorPct}% |
+| Transfer-scale status | ${h2o2Absolute.status} |`
+  : '| H2O2 absolute transfer data | unavailable |';
+
 const milestoneSummaryPath = new URL('milestone-external-review-summary.md', outDir).pathname;
 const aiReviewPromptPath = new URL('milestone-external-review-ai-prompt.md', outDir).pathname;
 
@@ -298,7 +312,7 @@ The milestone is complete in the sense that the sandbox has moved from internal-
 |---|---|---|---|---|---:|---:|---|
 ${benchmarkRows}
 
-The benchmark pass count is not the same as independent-domain breadth. The suite has ${completion.totalBenchmarks} benchmark entries and ${completion.checksPassed}/${completion.totalChecks} passing checks, but the core independent evidence-line count is ${summary.independentEvidenceLines}, plus ${summary.orientationEvidenceLines} orientation-only boundary check. EM-02/03/04 collapse into one static electromagnetic evidence line, and silicate network/NBO/T collapse into one broader material-structure group.
+The benchmark pass count is not the same as independent-domain breadth. The suite has ${completion.totalBenchmarks} benchmark entries and ${completion.checksPassed}/${completion.totalChecks} passing checks, but the core independent evidence-line count is ${summary.independentEvidenceLines}, plus ${summary.orientationEvidenceLines} orientation-only boundary check. EM-02 through EM-05 collapse into one electromagnetic evidence line, and silicate network/NBO/T collapse into one broader material-structure group.
 
 ## Unification Map
 
@@ -308,9 +322,9 @@ ${unificationRows}
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, H2O2 absolute barrier transfer, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
-The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, and composition accounting.
+The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, H2O2 barrier transfer, and composition accounting.
 
 ## H2O2 Compression Closure
 
@@ -320,7 +334,15 @@ The H2O2 cis/trans barrier-ratio discrepancy is quantified rather than left as a
 |---|---:|
 ${h2o2CompressionRows}
 
-This is the strongest known grammar limitation and the strongest current candidate for falsification. The roughly 2x compression factor means the current grammar underweights the cost of high-strain closure configurations relative to the experimental cis/trans barrier ratio. It is not resolved as a physical energy calibration, and it remains one of the strongest reasons not to raise inferential convergence above the current moderate level.
+This is the strongest known grammar limitation and the strongest current candidate for falsification. The roughly 2x compression factor means the current grammar does not recover the experimental separation between the shallow trans barrier and the high cis barrier. It is not resolved as a physical energy calibration, and it remains one of the strongest reasons not to raise inferential convergence above the current moderate level.
+
+The absolute transfer check sharpens the diagnosis by applying the ethane-derived energy scale to H2O2 without fitting either H2O2 endpoint:
+
+| Measure | Value |
+|---|---:|
+${h2o2AbsoluteRows}
+
+This is a mixed diagnostic, not a new convergence pass. The cis barrier lands on scale, but the trans barrier is overpredicted by roughly 2x. The next peroxide revision should therefore target the shallow trans barrier floor and relative closure/phase scaling, not broad energy rescaling.
 
 ## Boundary Benchmark Verification
 
@@ -358,9 +380,9 @@ ${reviewPackage.reviewerQuestions.map((question) => `- ${question}`).join('\n')}
 
 ## Recommended Next Stage
 
-Do not extend the sandbox laterally until the review package has been read. EM-05 has now completed the recommended topology broadening step, so the next stage should pick one high-value calibrated target rather than another shallow EM fixture:
+Do not extend the sandbox laterally until the review package has been read. EM-05 has completed the recommended topology broadening step, and the H2O2 absolute barrier transfer has sharpened the strongest falsification candidate. The next stage should pick one high-value calibrated target rather than another shallow fixture:
 
-- H2O2 absolute torsional barrier scale, not only ratio shape.
+- Resolve H2O2 transferred trans-barrier overprediction without fitting H2O2 endpoints or breaking cis-barrier scale.
 - A measured material-property correlation downstream of NBO/T, such as viscosity, durability, or conductivity.
 - A calibrated roughness/scatter quantity, not only specular/diffuse ordering.
 - A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
@@ -416,11 +438,11 @@ Produce a structured review with these sections:
 3. Equivalence standard audit: assess whether the document correctly uses equivalence-with-unification rather than proof or displacement framing.
 4. Evidence audit: identify the strongest benchmark, weakest benchmark, and any hidden tuning or permissive tolerance risk.
 5. Benchmark breadth audit: assess whether ${summary.independentEvidenceLines} core independent evidence lines plus ${summary.orientationEvidenceLines} orientation-only boundary check is a fair breadth count.
-6. H2O2 compression audit: evaluate whether the quantified compression is adequately bounded as a limitation.
+6. H2O2 compression and absolute-transfer audit: evaluate whether the mixed trans/cis barrier result is adequately bounded as a limitation and whether the confidence reduction is sufficient.
 7. Boundary benchmark audit: evaluate whether the documented-but-not-timestamped status is stated honestly enough.
 8. Unification map audit: assess whether the benchmarks actually support the stated cross-domain unification thesis.
 9. Confidence calibration: give your own scores for grammar internal coherence, cross-domain equivalence, evidence independence, unification thesis support, and inferential convergence.
-10. Next validation target: choose exactly one next target, preferably outside molecular/material chemistry and requiring no rescaling or endpoint anchoring.
+10. Next validation target: choose exactly one next target, prioritizing calibrated prediction or a held-out conventional comparator over more shallow fixture depth.
 
 Apply a skeptical but constructive standard. Penalize overclaims, proof-framing, weak comparators, qualitative wins presented as strong validation, and confidence increases without calibrated prediction. Credit clear non-claims, explicit ontology boundaries, source anchoring, held-out checks, quantified limitations, and honest downgrade language.
 

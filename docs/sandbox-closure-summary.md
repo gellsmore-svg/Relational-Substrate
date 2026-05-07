@@ -4,15 +4,15 @@
 
 Milestone status: complete for external review.
 
-Sandbox completion reported by benchmark summary: 99.5%.
+Sandbox completion reported by benchmark summary: 99.6%.
 
-Benchmark passes: 14/14.
+Benchmark passes: 14/15.
 
-Checks passed: 59/59.
+Checks passed: 62/64.
 
-Grammar internal coherence: 7.5/10.
+Grammar internal coherence: 7.3/10.
 
-Inferential convergence confidence: 6.3/10.
+Inferential convergence confidence: 6.1/10.
 
 Core independent evidence lines: 6.
 
@@ -62,6 +62,7 @@ The milestone is complete in the sense that the sandbox has moved from internal-
 | H2O2 quantitative torsion angle | H2O2 molecular torsion | molecular conformational ordering | experimental and quantum-chemistry torsional barrier/profile references | quantitative angle pass | 3/3 | 1 | quantitative angle pass; cis/trans barrier contrast improved but remains compressed |
 | Ethane torsion profile | ethane molecular torsion | molecular conformational ordering | experimental rotational barrier and molecular orbital/hyperconjugation accounts | qualitative pass | 4/4 | 1 | qualitative pass; normalized score is not an energy model |
 | Ethane quantitative torsion tolerance | ethane molecular torsion | molecular conformational ordering | experimental rotational barrier and molecular orbital/hyperconjugation accounts | quantitative tolerance pass | 3/3 | 1 | quantitative tolerance pass; endpoint is scale-anchored and intermediate points are high |
+| H2O2 absolute barrier transfer | H2O2 molecular torsion | molecular conformational energy scale | experimental and quantum-chemistry H2O2 torsional barrier heights | absolute barrier mixed diagnostic | 3/5 | 0.6 | mixed diagnostic; ethane-derived scale matches cis but overpredicts trans, preserving ratio compression |
 | Ionic lattice order | ionic lattice ordering | ionic solid structure | standard crystallographic ionic-lattice coordination models | qualitative pass | 3/3 | 1 | qualitative pass; full 6:6 coordination and lattice energy are not modeled |
 | Boundary phase prediction | orientation-only boundary phase | optical/electromagnetic boundary behaviour | wave boundary continuity and Fresnel-style optics expectations | documented blind-style qualitative pass | 3/3 | 1 | orientation evidence only; documented qualitative pass, not independently timestamped, and not counted as core convergence evidence |
 | Electromagnetic ordering | electromagnetic field ordering | electromagnetic qualitative behavior | standard electric-charge, magnetic-field-line, and plane-EM-wave ordering expectations | qualitative EM ordering pass | 4/4 | 1 | qualitative EM ordering pass; not a Maxwell solver, Coulomb calculation, or derivation of c |
@@ -73,13 +74,13 @@ The milestone is complete in the sense that the sandbox has moved from internal-
 | Roughness held-out interface order | optical/interface boundary ordering | rough optical/material interface behaviour | rough-surface specular/diffuse scattering models | held-out interface pass | 5/5 | 1 | held-out interface pass; qualitative roughness ordering, not scatter calibration |
 | Material NBO/T quantitative accounting | aluminosilicate NBO/T accounting | glass composition accounting | standard NBO/T stoichiometric accounting in aluminosilicate glasses | quantitative material pass | 3/3 | 1 | quantitative material pass; composition accounting, not measured property prediction |
 
-The benchmark pass count is not the same as independent-domain breadth. The suite has 14 benchmark entries and 59/59 passing checks, but the core independent evidence-line count is 6, plus 1 orientation-only boundary check. EM-02/03/04 collapse into one static electromagnetic evidence line, and silicate network/NBO/T collapse into one broader material-structure group.
+The benchmark pass count is not the same as independent-domain breadth. The suite has 15 benchmark entries and 62/64 passing checks, but the core independent evidence-line count is 6, plus 1 orientation-only boundary check. EM-02 through EM-05 collapse into one electromagnetic evidence line, and silicate network/NBO/T collapse into one broader material-structure group.
 
 ## Unification Map
 
 | Benchmark family | Currently separate domain | Grammar variables exercised | Current reading |
 |---|---|---|---|
-| Molecular torsion: H2O2 and ethane | molecular conformational chemistry | route, closure, phase | Shows torsion-order equivalence but remains limited by H2O2 barrier-ratio compression and unitless penalties. H2O2 compression is the strongest current grammar limitation. |
+| Molecular torsion: H2O2 and ethane | molecular conformational chemistry | route, closure, phase | Shows torsion-order equivalence but remains limited by H2O2 barrier-ratio compression. The absolute transfer check localizes the issue: cis is near scale, trans is overpredicted, so the relative barrier floor remains the strongest current grammar limitation. |
 | Ionic lattice order | solid-state ionic structure | charge, closure, continuity | Shows qualitative ordering against standard ionic coordination expectations. |
 | Boundary phase and roughness/interface checks | optical/electromagnetic boundary behavior | phase, continuity, route | Roughness/interface ordering is a qualitative evidence line. The boundary phase prediction is orientation evidence only because it is documented but not independently timestamped. |
 | Electromagnetic ordering | charge, magnetic-field, and EM-wave behavior | charge, phase, closure, continuity, route | Opens the EM domain with one electromagnetic evidence line containing Coulomb direction/ratio, two-source superposition geometry, asymmetric three-source field implementation checks, and continuous field-line topology. This is still not calibrated magnitude, propagation, or a full electromagnetic solver. |
@@ -87,9 +88,9 @@ The benchmark pass count is not the same as independent-domain breadth. The suit
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, H2O2 absolute barrier transfer, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
-The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, and composition accounting.
+The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, H2O2 barrier transfer, and composition accounting.
 
 ## H2O2 Compression Closure
 
@@ -102,7 +103,21 @@ The H2O2 cis/trans barrier-ratio discrepancy is quantified rather than left as a
 | Compression factor | 1.9899 |
 | Ratio shortfall | 49.75% |
 
-This is the strongest known grammar limitation and the strongest current candidate for falsification. The roughly 2x compression factor means the current grammar underweights the cost of high-strain closure configurations relative to the experimental cis/trans barrier ratio. It is not resolved as a physical energy calibration, and it remains one of the strongest reasons not to raise inferential convergence above the current moderate level.
+This is the strongest known grammar limitation and the strongest current candidate for falsification. The roughly 2x compression factor means the current grammar does not recover the experimental separation between the shallow trans barrier and the high cis barrier. It is not resolved as a physical energy calibration, and it remains one of the strongest reasons not to raise inferential convergence above the current moderate level.
+
+The absolute transfer check sharpens the diagnosis by applying the ethane-derived energy scale to H2O2 without fitting either H2O2 endpoint:
+
+| Measure | Value |
+|---|---:|
+| Trans model barrier | 770.42 cm-1 |
+| Trans external barrier | 387.07 cm-1 |
+| Trans error | 99.04% |
+| Cis model barrier | 2563.44 cm-1 |
+| Cis external barrier | 2562.8 cm-1 |
+| Cis error | 0.02% |
+| Transfer-scale status | absolute barrier mixed diagnostic |
+
+This is a mixed diagnostic, not a new convergence pass. The cis barrier lands on scale, but the trans barrier is overpredicted by roughly 2x. The next peroxide revision should therefore target the shallow trans barrier floor and relative closure/phase scaling, not broad energy rescaling.
 
 ## Boundary Benchmark Verification
 
@@ -112,7 +127,7 @@ This benchmark is retained as a documented qualitative pass because it records e
 
 ## Confidence
 
-External anchoring now includes continuous field-line topology: electric source-line divergence and magnetic closed-loop continuity under one integration grammar. Inferential convergence rises above 6/10 because EM evidence moves beyond finite vector fixtures into global topology, but remains cautious because the check is qualitative, not a Maxwell-equation solver or calibrated field model, and H2O2 compression remains unresolved.
+External anchoring now includes an explicit H2O2 absolute barrier transfer from the ethane energy scale. The result is mixed: the cis barrier lands close, but the trans barrier is overpredicted by roughly 2x, preserving the cis/trans compression as a live grammar limitation. Inferential convergence is therefore held near 6/10 rather than increased after EM-05.
 
 Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, benchmark-breadth compression, and qualitative EM topology limits remain known issues. Inferential convergence has crossed 6/10 only because EM now includes continuous field-line topology; it remains moderate because the topology check is not calibrated physical property prediction or Maxwell-equation dynamics.
 
@@ -124,13 +139,13 @@ Confidence should be read as inferential convergence, not proof-of-substrate fra
 - This is not a direct simulation or observation of T0 substrate.
 - This is not a derivation of atoms or molecules from T1 vortons.
 - This is not a quantum chemistry, molecular dynamics, glass-property, BRDF, Fresnel, or rough-surface scattering solver.
-- This does not yet predict absolute H2O2 barrier heights, material viscosity/durability/conductivity/density, or calibrated scatter curves.
+- This does not yet solve absolute H2O2 barrier structure, material viscosity/durability/conductivity/density, or calibrated scatter curves.
 - Passing benchmark order checks does not by itself exclude conventional explanations.
 
 ## Remaining Gates
 
 - Move material checks from composition accounting to measured property calibration.
-- Move peroxide from ratio-shape checks toward absolute barrier-height calibration.
+- Resolve transferred H2O2 trans-barrier overprediction without fitting H2O2 endpoints or breaking cis-barrier scale.
 - Move roughness/interface checks beyond qualitative ordering into calibrated scatter quantities.
 - Move EM-05 from qualitative field-line topology toward equipotential geometry, calibrated field magnitude, or time-dependent propagation.
 
@@ -232,9 +247,9 @@ Confidence should be read as inferential convergence, not proof-of-substrate fra
 
 ## Recommended Next Stage
 
-Do not extend the sandbox laterally until the review package has been read. EM-05 has now completed the recommended topology broadening step, so the next stage should pick one high-value calibrated target rather than another shallow EM fixture:
+Do not extend the sandbox laterally until the review package has been read. EM-05 has completed the recommended topology broadening step, and the H2O2 absolute barrier transfer has sharpened the strongest falsification candidate. The next stage should pick one high-value calibrated target rather than another shallow fixture:
 
-- H2O2 absolute torsional barrier scale, not only ratio shape.
+- Resolve H2O2 transferred trans-barrier overprediction without fitting H2O2 endpoints or breaking cis-barrier scale.
 - A measured material-property correlation downstream of NBO/T, such as viscosity, durability, or conductivity.
 - A calibrated roughness/scatter quantity, not only specular/diffuse ordering.
 - A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
