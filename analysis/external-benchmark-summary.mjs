@@ -22,6 +22,7 @@ const roadmap = await readJson('external-benchmark-roadmap.json');
 const h2o2 = await readOptionalJson('external-h2o2-benchmark.json');
 const h2o2Quant = await readOptionalJson('external-h2o2-quantitative-benchmark.json');
 const h2o2Absolute = await readOptionalJson('external-h2o2-absolute-barrier-benchmark.json');
+const hydrazineCation = await readOptionalJson('external-hydrazine-cation-torsion-benchmark.json');
 const ethane = await readOptionalJson('external-ethane-benchmark.json');
 const ethaneQuant = await readOptionalJson('external-ethane-quantitative-benchmark.json');
 const ionic = await readOptionalJson('external-ionic-benchmark.json');
@@ -34,6 +35,7 @@ const emFieldLines = await readOptionalJson('external-em-field-line-topology-com
 const silicateHeldout = await readOptionalJson('external-silicate-heldout-benchmark.json');
 const roughnessHeldout = await readOptionalJson('external-roughness-heldout-benchmark.json');
 const materialNbo = await readOptionalJson('external-material-nbo-quantitative-benchmark.json');
+const hasH2O2AbsolutePass = h2o2Absolute?.status === 'absolute barrier pass';
 
 const benchmarks = [
   h2o2 && {
@@ -45,7 +47,9 @@ const benchmarks = [
     score: h2o2.score,
     checksPassed: h2o2.checks.filter((check) => check.pass).length,
     checksTotal: h2o2.checks.length,
-    limitation: 'qualitative pass; cis/trans barrier ratio is directionally right but compressed',
+    limitation: hasH2O2AbsolutePass
+      ? 'qualitative ordering pass; prior compression resolved by later anti-planar release revision'
+      : 'qualitative pass; cis/trans barrier ratio is directionally right but compressed',
     confidenceEffect: h2o2.confidenceEffect,
   },
   h2o2Quant && {
@@ -57,7 +61,9 @@ const benchmarks = [
     score: h2o2Quant.score,
     checksPassed: h2o2Quant.checks.filter((check) => check.pass).length,
     checksTotal: h2o2Quant.checks.length,
-    limitation: 'quantitative angle pass; cis/trans barrier contrast improved but remains compressed',
+    limitation: h2o2Quant.metrics?.barrierRatioShortfallPct <= 5
+      ? 'quantitative angle pass; prior cis/trans compression resolved in current grammar version'
+      : 'quantitative angle pass; cis/trans barrier contrast improved but remains compressed',
     confidenceEffect: h2o2Quant.confidenceEffect,
   },
   ethane && {
@@ -98,6 +104,21 @@ const benchmarks = [
         ? 'absolute barrier transfer pass; still not a full torsional energy surface'
         : 'mixed diagnostic; ethane-derived scale matches cis but overpredicts trans, preserving ratio compression',
     confidenceEffect: h2o2Absolute.confidenceEffect,
+  },
+  hydrazineCation && {
+    label: 'Hydrazine cation held-out torsion transfer',
+    evidenceLine: 'held-out heteroatom torsion transfer',
+    domain: 'held-out molecular torsion energy ordering',
+    conventionalComparator: 'NIST CCCBDB experimental internal-rotation barriers for N2H4+',
+    status: hydrazineCation.status,
+    score: hydrazineCation.score,
+    checksPassed: hydrazineCation.checks.filter((check) => check.pass).length,
+    checksTotal: hydrazineCation.checks.length,
+    limitation:
+      hydrazineCation.status === 'held-out torsion transfer pass'
+        ? 'held-out torsion transfer pass; still a proxy geometry, not a molecular solver'
+        : 'qualitative ordering pass but quantitative barrier magnitudes are low under ethane scale',
+    confidenceEffect: hydrazineCation.confidenceEffect,
   },
   ionic && {
     label: 'Ionic lattice order',
@@ -228,6 +249,7 @@ const passedChecks = benchmarks.reduce((sum, benchmark) => sum + benchmark.check
 const coreEvidenceGroups = new Map([
   ['H2O2 molecular torsion', 'H2O2 molecular torsion'],
   ['ethane molecular torsion', 'ethane molecular torsion'],
+  ['held-out heteroatom torsion transfer', 'held-out heteroatom torsion transfer'],
   ['ionic lattice ordering', 'ionic solid ordering'],
   ['electromagnetic field ordering', 'electromagnetic field geometry/topology'],
   ['silicate network topology', 'network/material structure'],
@@ -253,21 +275,26 @@ const hasEmCoulombPass = emCoulomb?.status === 'equation-level Coulomb ordering 
 const hasEmSuperpositionPass = emSuperposition?.status === 'held-out superposition comparator pass';
 const hasEmThreeSourcePass = emThreeSource?.status === 'non-symmetric three-source comparator pass';
 const hasEmFieldLinePass = emFieldLines?.status === 'continuous field-line topology pass';
-const hasH2O2AbsolutePass = h2o2Absolute?.status === 'absolute barrier pass';
 const hasH2O2AbsoluteMixed = h2o2Absolute?.status === 'absolute barrier mixed diagnostic';
+const hasHydrazineHeldoutPass = hydrazineCation?.status === 'held-out torsion transfer pass';
+const hasHydrazineOrderingPass = hydrazineCation?.status === 'held-out torsion ordering pass with quantitative miss';
 
 const confidence = {
   previousSandboxCompletionPct: roadmap.currentStatus.sandboxCompletionPct,
-  updatedSandboxCompletionPct: h2o2Absolute ? 99.6 : hasEmFieldLinePass ? 99.5 : hasEmThreeSourcePass ? 99.2 : hasEmSuperpositionPass ? 99 : hasEmCoulombPass ? 98.5 : hasEmOrderingPass ? 98 : hasQuantitativeMaterialPass ? 97 : hasHeldoutInterfacePass ? 96 : hasFactorTwoPeroxideRatio ? 94 : hasHeldoutMaterialPass ? 93 : hasTighterPeroxideRatio ? 91 : hasSecondNumericPass ? 90 : hasQuantitativePass ? 88 : hasBlindStylePass ? 84 : benchmarks.length >= 3 ? 80 : 76,
+  updatedSandboxCompletionPct: hydrazineCation ? 99.7 : h2o2Absolute ? 99.6 : hasEmFieldLinePass ? 99.5 : hasEmThreeSourcePass ? 99.2 : hasEmSuperpositionPass ? 99 : hasEmCoulombPass ? 98.5 : hasEmOrderingPass ? 98 : hasQuantitativeMaterialPass ? 97 : hasHeldoutInterfacePass ? 96 : hasFactorTwoPeroxideRatio ? 94 : hasHeldoutMaterialPass ? 93 : hasTighterPeroxideRatio ? 91 : hasSecondNumericPass ? 90 : hasQuantitativePass ? 88 : hasBlindStylePass ? 84 : benchmarks.length >= 3 ? 80 : 76,
   previousInternalCoherenceOutOf10: roadmap.currentStatus.internalCoherenceConfidenceOutOf10,
   updatedInternalCoherenceOutOf10: hasH2O2AbsolutePass ? 7.7 : hasH2O2AbsoluteMixed ? 7.3 : hasQuantitativeMaterialPass ? 7.5 : hasHeldoutInterfacePass ? 7.4 : hasFactorTwoPeroxideRatio ? 7.3 : hasHeldoutMaterialPass ? 7.2 : hasTighterPeroxideRatio ? 7.1 : hasSecondNumericPass ? 7.0 : hasQuantitativePass ? 6.9 : hasBlindStylePass ? 6.7 : benchmarks.length >= 3 ? 6.5 : 6.3,
   previousInferentialConvergenceOutOf10: roadmap.currentStatus.inferentialConvergenceConfidenceOutOf10,
-  updatedInferentialConvergenceOutOf10: hasH2O2AbsolutePass ? 6.6 : hasH2O2AbsoluteMixed ? 6.1 : hasEmFieldLinePass ? 6.3 : hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.4 : hasEmCoulombPass ? 5.3 : hasEmOrderingPass ? 5.1 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
+  updatedInferentialConvergenceOutOf10: hasHydrazineHeldoutPass ? 6.9 : hasHydrazineOrderingPass ? 6.6 : hasH2O2AbsolutePass ? 6.6 : hasH2O2AbsoluteMixed ? 6.1 : hasEmFieldLinePass ? 6.3 : hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.4 : hasEmCoulombPass ? 5.3 : hasEmOrderingPass ? 5.1 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
   crossDomainEquivalenceOutOf10: hasEmFieldLinePass ? 5.6 : hasEmThreeSourcePass ? 5.0 : hasEmSuperpositionPass ? 4.9 : hasEmCoulombPass ? 4.8 : hasEmOrderingPass ? 4.7 : hasQuantitativeMaterialPass ? 4.5 : hasHeldoutInterfacePass ? 4.3 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
   evidenceIndependenceOutOf10: independentEvidenceLines >= 6 ? 4.5 : independentEvidenceLines >= 5 ? 4.0 : 3.2,
   unificationThesisSupportOutOf10: hasEmFieldLinePass ? 5.2 : hasEmThreeSourcePass ? 4.5 : hasEmSuperpositionPass ? 4.4 : hasEmCoulombPass ? 4.2 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
   rationale:
-    hasH2O2AbsolutePass
+    hasHydrazineHeldoutPass
+      ? 'External anchoring now includes a held-out hydrazine cation torsion transfer pass. Anti-planar release generalizes beyond H2O2 under the ethane energy scale, supporting a further but still cautious convergence increase.'
+      : hasHydrazineOrderingPass
+      ? 'External anchoring now includes a held-out hydrazine cation torsion check. Anti-planar release transfers qualitatively and the 0/180 barrier ratio stays within tolerance, but absolute barrier magnitudes are low under the ethane scale, so inferential convergence is held at 6.6/10 rather than raised.'
+      : hasH2O2AbsolutePass
       ? 'External anchoring now includes a successful H2O2 absolute barrier transfer from the ethane energy scale. Inferential convergence rises because the strongest prior peroxide limitation would be materially reduced without fitting H2O2 endpoints.'
       : hasH2O2AbsoluteMixed
       ? 'External anchoring now includes an explicit H2O2 absolute barrier transfer from the ethane energy scale. The result is mixed: the cis barrier lands close, but the trans barrier is overpredicted by roughly 2x, preserving the cis/trans compression as a live grammar limitation. Inferential convergence is therefore held near 6/10 rather than increased after EM-05.'
@@ -305,7 +332,9 @@ const confidence = {
 const remainingExternalGates = [
   'Move material checks from composition accounting to measured property calibration.',
   hasH2O2AbsolutePass
-    ? 'Test anti-planar release on a new held-out torsion system without fitting its endpoints.'
+    ? hydrazineCation
+      ? 'Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.'
+      : 'Test anti-planar release on a new held-out torsion system without fitting its endpoints.'
     : h2o2Absolute
     ? 'Resolve transferred H2O2 trans-barrier overprediction without fitting H2O2 endpoints or breaking cis-barrier scale.'
     : 'Move peroxide from ratio-shape checks toward absolute barrier-height calibration.',
@@ -318,7 +347,11 @@ const remainingExternalGates = [
 ];
 
 const status =
-  hasH2O2AbsolutePass
+  hasHydrazineHeldoutPass
+    ? 'held-out torsion transfer confirms anti-planar release'
+    : hasHydrazineOrderingPass
+    ? 'held-out torsion ordering supports anti-planar release with quantitative miss'
+    : hasH2O2AbsolutePass
     ? 'falsification pressure reduced: H2O2 absolute barrier transfer passes'
     : hasH2O2AbsoluteMixed
     ? 'falsification pressure sharpened: H2O2 absolute barrier transfer is mixed'

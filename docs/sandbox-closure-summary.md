@@ -4,17 +4,17 @@
 
 Milestone status: complete for external review.
 
-Sandbox completion reported by benchmark summary: 99.6%.
+Sandbox completion reported by benchmark summary: 99.7%.
 
-Benchmark passes: 15/15.
+Benchmark passes: 16/16.
 
-Checks passed: 64/64.
+Checks passed: 68/69.
 
 Grammar internal coherence: 7.7/10.
 
 Inferential convergence confidence: 6.6/10.
 
-Core independent evidence lines: 6.
+Core independent evidence lines: 7.
 
 Orientation-only evidence lines: 1.
 
@@ -58,11 +58,12 @@ The milestone is complete in the sense that the sandbox has moved from internal-
 
 | Benchmark | Evidence line | Domain | Comparator | Status | Checks | Score | Limitation |
 |---|---|---|---|---|---:|---:|---|
-| H2O2 torsion profile | H2O2 molecular torsion | molecular conformational ordering | experimental and quantum-chemistry torsional barrier/profile references | qualitative pass | 3/3 | 1 | qualitative pass; cis/trans barrier ratio is directionally right but compressed |
-| H2O2 quantitative torsion angle | H2O2 molecular torsion | molecular conformational ordering | experimental and quantum-chemistry torsional barrier/profile references | quantitative angle pass | 3/3 | 1 | quantitative angle pass; cis/trans barrier contrast improved but remains compressed |
+| H2O2 torsion profile | H2O2 molecular torsion | molecular conformational ordering | experimental and quantum-chemistry torsional barrier/profile references | qualitative pass | 3/3 | 1 | qualitative ordering pass; prior compression resolved by later anti-planar release revision |
+| H2O2 quantitative torsion angle | H2O2 molecular torsion | molecular conformational ordering | experimental and quantum-chemistry torsional barrier/profile references | quantitative angle pass | 3/3 | 1 | quantitative angle pass; prior cis/trans compression resolved in current grammar version |
 | Ethane torsion profile | ethane molecular torsion | molecular conformational ordering | experimental rotational barrier and molecular orbital/hyperconjugation accounts | qualitative pass | 4/4 | 1 | qualitative pass; normalized score is not an energy model |
 | Ethane quantitative torsion tolerance | ethane molecular torsion | molecular conformational ordering | experimental rotational barrier and molecular orbital/hyperconjugation accounts | quantitative tolerance pass | 3/3 | 1 | quantitative tolerance pass; endpoint is scale-anchored and intermediate points are high |
 | H2O2 absolute barrier transfer | H2O2 molecular torsion | molecular conformational energy scale | experimental and quantum-chemistry H2O2 torsional barrier heights | absolute barrier pass | 5/5 | 1 | absolute barrier transfer pass; still not a full torsional energy surface |
+| Hydrazine cation held-out torsion transfer | held-out heteroatom torsion transfer | held-out molecular torsion energy ordering | NIST CCCBDB experimental internal-rotation barriers for N2H4+ | held-out torsion ordering pass with quantitative miss | 4/5 | 0.8 | qualitative ordering pass but quantitative barrier magnitudes are low under ethane scale |
 | Ionic lattice order | ionic lattice ordering | ionic solid structure | standard crystallographic ionic-lattice coordination models | qualitative pass | 3/3 | 1 | qualitative pass; full 6:6 coordination and lattice energy are not modeled |
 | Boundary phase prediction | orientation-only boundary phase | optical/electromagnetic boundary behaviour | wave boundary continuity and Fresnel-style optics expectations | documented blind-style qualitative pass | 3/3 | 1 | orientation evidence only; documented qualitative pass, not independently timestamped, and not counted as core convergence evidence |
 | Electromagnetic ordering | electromagnetic field ordering | electromagnetic qualitative behavior | standard electric-charge, magnetic-field-line, and plane-EM-wave ordering expectations | qualitative EM ordering pass | 4/4 | 1 | qualitative EM ordering pass; not a Maxwell solver, Coulomb calculation, or derivation of c |
@@ -74,13 +75,13 @@ The milestone is complete in the sense that the sandbox has moved from internal-
 | Roughness held-out interface order | optical/interface boundary ordering | rough optical/material interface behaviour | rough-surface specular/diffuse scattering models | held-out interface pass | 5/5 | 1 | held-out interface pass; qualitative roughness ordering, not scatter calibration |
 | Material NBO/T quantitative accounting | aluminosilicate NBO/T accounting | glass composition accounting | standard NBO/T stoichiometric accounting in aluminosilicate glasses | quantitative material pass | 3/3 | 1 | quantitative material pass; composition accounting, not measured property prediction |
 
-The benchmark pass count is not the same as independent-domain breadth. The suite has 15 benchmark entries and 64/64 passing checks, but the core independent evidence-line count is 6, plus 1 orientation-only boundary check. EM-02 through EM-05 collapse into one electromagnetic evidence line, and silicate network/NBO/T collapse into one broader material-structure group.
+The benchmark pass count is not the same as independent-domain breadth. The suite has 16 benchmark entries and 68/69 passing checks, but the core independent evidence-line count is 7, plus 1 orientation-only boundary check. EM-02 through EM-05 collapse into one electromagnetic evidence line, and silicate network/NBO/T collapse into one broader material-structure group.
 
 ## Unification Map
 
 | Benchmark family | Currently separate domain | Grammar variables exercised | Current reading |
 |---|---|---|---|
-| Molecular torsion: H2O2 and ethane | molecular conformational chemistry | route, closure, phase | Shows torsion-order and transferred barrier equivalence after anti-planar release. This reduces the prior H2O2 limitation, but the revision needs a fresh held-out torsion check to guard against overfitting. |
+| Molecular torsion: H2O2 and ethane | molecular conformational chemistry | route, closure, phase | Shows torsion-order and H2O2 transferred barrier equivalence after anti-planar release. Hydrazine cation gives a held-out qualitative/ratiometric pass but misses absolute barrier magnitudes, so calibration remains limited. |
 | Ionic lattice order | solid-state ionic structure | charge, closure, continuity | Shows qualitative ordering against standard ionic coordination expectations. |
 | Boundary phase and roughness/interface checks | optical/electromagnetic boundary behavior | phase, continuity, route | Roughness/interface ordering is a qualitative evidence line. The boundary phase prediction is orientation evidence only because it is documented but not independently timestamped. |
 | Electromagnetic ordering | charge, magnetic-field, and EM-wave behavior | charge, phase, closure, continuity, route | Opens the EM domain with one electromagnetic evidence line containing Coulomb direction/ratio, two-source superposition geometry, asymmetric three-source field implementation checks, and continuous field-line topology. This is still not calibrated magnitude, propagation, or a full electromagnetic solver. |
@@ -88,7 +89,7 @@ The benchmark pass count is not the same as independent-domain breadth. The suit
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, H2O2 absolute barrier transfer, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, H2O2 absolute barrier transfer, held-out hydrazine cation torsion ordering, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
 The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, H2O2 barrier transfer, and composition accounting.
 
@@ -117,7 +118,22 @@ The absolute transfer check sharpens the diagnosis by applying the ethane-derive
 | Cis error | 0.02% |
 | Transfer-scale status | absolute barrier pass |
 
-This is now a convergence pass for the H2O2 transfer check: both trans and cis barriers land within tolerance under the ethane-derived scale. The next step is not more H2O2 fitting; it is an independent held-out torsion transfer check that can test whether anti-planar release generalizes.
+This is now a convergence pass for the H2O2 transfer check: both trans and cis barriers land within tolerance under the ethane-derived scale. Hydrazine cation then tests the anti-planar release mechanism without endpoint fitting.
+
+## Held-Out Torsion Transfer
+
+Hydrazine cation tests anti-planar release on a separate N-N torsion target without fitting hydrazine endpoints:
+
+| Measure | Value |
+|---|---:|
+| Status | held-out torsion ordering pass with quantitative miss |
+| Model 0/180 ratio | 1.9785 |
+| External 0/180 ratio | 2.7209 |
+| Ratio error | -27.28% |
+| Ordering pass | yes |
+| Absolute barrier pass | no |
+
+The held-out hydrazine cation torsion check supports anti-planar release qualitatively and ratiometrically, but misses absolute barrier magnitudes. This reduces H2O2-overfit concern without establishing a calibrated torsional energy model.
 
 ## Boundary Benchmark Verification
 
@@ -127,7 +143,7 @@ This benchmark is retained as a documented qualitative pass because it records e
 
 ## Confidence
 
-External anchoring now includes a successful H2O2 absolute barrier transfer from the ethane energy scale. Inferential convergence rises because the strongest prior peroxide limitation would be materially reduced without fitting H2O2 endpoints.
+External anchoring now includes a held-out hydrazine cation torsion check. Anti-planar release transfers qualitatively and the 0/180 barrier ratio stays within tolerance, but absolute barrier magnitudes are low under the ethane scale, so inferential convergence is held at 6.6/10 rather than raised.
 
 Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, and qualitative EM topology is not calibrated Maxwell-equation dynamics.
 
@@ -145,7 +161,7 @@ Confidence should be read as inferential convergence, not proof-of-substrate fra
 ## Remaining Gates
 
 - Move material checks from composition accounting to measured property calibration.
-- Test anti-planar release on a new held-out torsion system without fitting its endpoints.
+- Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
 - Move roughness/interface checks beyond qualitative ordering into calibrated scatter quantities.
 - Move EM-05 from qualitative field-line topology toward equipotential geometry, calibrated field magnitude, or time-dependent propagation.
 
@@ -153,6 +169,7 @@ Confidence should be read as inferential convergence, not proof-of-substrate fra
 
 - Roto-torsional H2O2 study, Spectrochimica Acta A 2000: https://doi.org/10.1016/S1386-1425(99)00267-X. Reports trans-gauche structure at 111.9 +/- 0.4 degrees, trans barrier 387.07 cm-1, cis barrier 2562.8 cm-1.
 - Diffusion quantum Monte Carlo H2O2 torsional barriers, Chemical Physics Letters 2004: https://doi.org/10.1016/j.cplett.2004.06.142. Reports calculated trans and cis barriers in good agreement with experimental values around 385/387 and 2488/2563 cm-1.
+- NIST CCCBDB experimental barriers to internal rotation for N2H4+: https://cccbdb.nist.gov/exprotbar2x.asp?casno=302012&ti=1. Lists torsion angle 0 at 2993 cm-1, 90 at 0 cm-1, and 180 at 1100 cm-1 for hydrazine cation.
 - Rotational barrier in ethane molecular orbital study, Molecules 2012: https://doi.org/10.3390/molecules17044661. Cites the known ethane rotational barrier as 2.875 kcal/mol and describes staggered minimum / eclipsed maximum.
 - Hyperconjugation not steric repulsion leads to the staggered structure of ethane, Nature 2001: https://doi.org/10.1038/35079036. Describes ethane alternating between preferred staggered and unstable eclipsed conformations during rotation.
 - Barrier to internal rotation in ethane, Journal of Chemical Physics 1966: https://doi.org/10.1063/1.1727979. Reports experimental barrier height around 3.03 +/- 0.3 kcal/mol in historical computational comparison.
@@ -247,9 +264,9 @@ Confidence should be read as inferential convergence, not proof-of-substrate fra
 
 ## Recommended Next Stage
 
-Do not extend the sandbox laterally until the review package has been read. EM-05 has completed the recommended topology broadening step, and the H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate. The next stage should pick one high-value held-out or calibrated target rather than another shallow fixture:
+Do not extend the sandbox laterally until the review package has been read. EM-05 has completed the recommended topology broadening step, H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate, and hydrazine cation has tested anti-planar release as a held-out torsion ordering check. The next stage should pick one high-value calibrated target rather than another shallow fixture:
 
-- Test anti-planar release on a new held-out torsion system without fitting its endpoints.
+- Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
 - A measured material-property correlation downstream of NBO/T, such as viscosity, durability, or conductivity.
 - A calibrated roughness/scatter quantity, not only specular/diffuse ordering.
 - A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
