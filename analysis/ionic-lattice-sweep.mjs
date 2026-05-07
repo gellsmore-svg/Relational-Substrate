@@ -225,7 +225,7 @@ const json = {
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('ionic-lattice-sweep.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS Ionic Lattice Sweep
+const markdown = `# Relational Substrate Ionic Lattice Sweep
 
 ## Scope
 

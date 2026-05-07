@@ -230,7 +230,7 @@ const json = {
 
 await writeFile(new URL('external-em-ordering-benchmark.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS External Electromagnetic Ordering Benchmark
+const markdown = `# Relational Substrate External Electromagnetic Ordering Benchmark
 
 ## Scope
 

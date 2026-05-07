@@ -206,7 +206,7 @@ const json = {
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('silicate-network-sweep.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS Silicate Network Sweep
+const markdown = `# Relational Substrate Silicate Network Sweep
 
 ## Scope
 

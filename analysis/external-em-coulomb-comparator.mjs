@@ -181,7 +181,7 @@ const json = {
 
 await writeFile(new URL('external-em-coulomb-comparator.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS External EM-02 Coulomb Comparator
+const markdown = `# Relational Substrate External EM-02 Coulomb Comparator
 
 ## Scope
 

@@ -262,13 +262,13 @@ const json = {
 
 await writeFile(new URL('t1-coupling-patterns.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS T1 Coupling Pattern Descriptors
+const markdown = `# Relational Substrate T1 Coupling Pattern Descriptors
 
 ## Scope
 
 This report adds candidate T1 coupling descriptors beneath the current T2 molecule calibration bench.
 
-It does not prove AMS, does not derive matter from first principles, and does not insert a hidden material layer. The purpose is narrower: define mechanism-facing descriptors that can later be converted into bounded parameters and tested against the existing T2 coordinate results.
+It does not prove the Relational Substrate theory, does not derive matter from first principles, and does not insert a hidden material layer. The purpose is narrower: define mechanism-facing descriptors that can later be converted into bounded parameters and tested against the existing T2 coordinate results.
 
 ## Mechanism Path
 

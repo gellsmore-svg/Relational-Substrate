@@ -110,7 +110,7 @@ const json = {
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('material-nbo-stoichiometry.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS Material NBO/T Stoichiometry
+const markdown = `# Relational Substrate Material NBO/T Stoichiometry
 
 ## Scope
 

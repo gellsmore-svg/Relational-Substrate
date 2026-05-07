@@ -187,10 +187,7 @@ const confidence = {
   updatedSandboxCompletionPct: hasEmCoulombPass ? 98.5 : hasEmOrderingPass ? 98 : hasQuantitativeMaterialPass ? 97 : hasHeldoutInterfacePass ? 96 : hasFactorTwoPeroxideRatio ? 94 : hasHeldoutMaterialPass ? 93 : hasTighterPeroxideRatio ? 91 : hasSecondNumericPass ? 90 : hasQuantitativePass ? 88 : hasBlindStylePass ? 84 : benchmarks.length >= 3 ? 80 : 76,
   previousInternalCoherenceOutOf10: roadmap.currentStatus.internalCoherenceConfidenceOutOf10,
   updatedInternalCoherenceOutOf10: hasQuantitativeMaterialPass ? 7.5 : hasHeldoutInterfacePass ? 7.4 : hasFactorTwoPeroxideRatio ? 7.3 : hasHeldoutMaterialPass ? 7.2 : hasTighterPeroxideRatio ? 7.1 : hasSecondNumericPass ? 7.0 : hasQuantitativePass ? 6.9 : hasBlindStylePass ? 6.7 : benchmarks.length >= 3 ? 6.5 : 6.3,
-  previousSubstrateTruthOutOf10: roadmap.currentStatus.substrateTruthConfidenceOutOf10,
-  deprecatedSubstrateTruthOutOf10: hasEmCoulombPass ? 5.5 : hasEmOrderingPass ? 5.2 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
-  updatedSubstrateTruthOutOf10: hasEmCoulombPass ? 5.5 : hasEmOrderingPass ? 5.2 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
-  previousInferentialConvergenceOutOf10: roadmap.currentStatus.substrateTruthConfidenceOutOf10,
+  previousInferentialConvergenceOutOf10: roadmap.currentStatus.inferentialConvergenceConfidenceOutOf10,
   updatedInferentialConvergenceOutOf10: hasEmCoulombPass ? 5.5 : hasEmOrderingPass ? 5.2 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
   crossDomainEquivalenceOutOf10: hasEmCoulombPass ? 5.1 : hasEmOrderingPass ? 4.8 : hasQuantitativeMaterialPass ? 4.5 : hasHeldoutInterfacePass ? 4.3 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
   evidenceIndependenceOutOf10: independentEvidenceLines >= 6 ? 4.0 : independentEvidenceLines >= 5 ? 3.8 : 3.2,
@@ -225,7 +222,7 @@ const remainingExternalGates = [
   'Move material checks from composition accounting to measured property calibration.',
   'Move peroxide from ratio-shape checks toward absolute barrier-height calibration.',
   'Move roughness/interface checks beyond qualitative ordering into calibrated scatter quantities.',
-  'Move electromagnetic ordering from qualitative checks toward explicit equation-level comparators.',
+  ...(hasEmCoulombPass ? [] : ['Move electromagnetic ordering from qualitative checks toward explicit equation-level comparators.']),
   'Move EM-02 from pairwise Coulomb ratios toward held-out superposition or field-geometry checks.',
 ];
 
@@ -271,7 +268,7 @@ const json = {
 
 await writeFile(new URL('external-benchmark-summary.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS External Benchmark Summary
+const markdown = `# Relational Substrate External Benchmark Summary
 
 ## Status
 

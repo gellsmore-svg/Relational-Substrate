@@ -74,8 +74,8 @@ const score = round(passed / checks.length, 3);
 const status = checks.every((check) => check.pass) ? 'qualitative pass' : 'mixed external benchmark';
 const confidenceEffect =
   status === 'qualitative pass'
-    ? 'supports a small confidence increase in internal-to-external coherence, not in substrate truth by itself'
-    : 'keeps substrate-truth confidence low until quantitative mismatch is resolved';
+    ? 'supports a small confidence increase in internal-to-external coherence, not in theory confidence by itself'
+    : 'keeps inferential-convergence confidence low until quantitative mismatch is resolved';
 
 const json = {
   source: 'external-h2o2-benchmark.mjs',
@@ -89,13 +89,13 @@ const json = {
 
 await writeFile(new URL('external-h2o2-benchmark.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS External H2O2 Benchmark
+const markdown = `# Relational Substrate External H2O2 Benchmark
 
 ## Scope
 
 This report is the first external anchor for the topology sandbox. It compares the peroxide torsion diagnostic against source-backed qualitative facts about hydrogen peroxide internal rotation.
 
-It is not a fitted quantum chemistry model. It checks whether the AMS torsion score has the right qualitative shape before any tuning against external data.
+It is not a fitted quantum chemistry model. It checks whether the Relational Substrate torsion score has the right qualitative shape before any tuning against external data.
 
 ## Result
 

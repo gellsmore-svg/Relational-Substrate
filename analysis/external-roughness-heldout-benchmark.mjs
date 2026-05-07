@@ -126,7 +126,7 @@ const json = {
 
 await writeFile(new URL('external-roughness-heldout-benchmark.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS External Roughness Held-Out Benchmark
+const markdown = `# Relational Substrate External Roughness Held-Out Benchmark
 
 ## Scope
 

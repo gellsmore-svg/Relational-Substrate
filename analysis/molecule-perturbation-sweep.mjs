@@ -333,7 +333,7 @@ const summary = {
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('molecule-perturbation-sweep.json', outDir), JSON.stringify(summary, null, 2));
 
-const markdown = `# AMS Molecule Perturbation Sweep
+const markdown = `# Relational Substrate Molecule Perturbation Sweep
 
 ## Scope
 

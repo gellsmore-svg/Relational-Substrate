@@ -173,7 +173,7 @@ const json = {
 
 await writeFile(new URL('external-boundary-blind-benchmark.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS External Boundary Blind-Style Benchmark
+const markdown = `# Relational Substrate External Boundary Blind-Style Benchmark
 
 ## Scope
 

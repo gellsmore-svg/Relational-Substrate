@@ -108,13 +108,13 @@ const json = {
 
 await writeFile(new URL('external-ionic-benchmark.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS External Ionic Lattice Benchmark
+const markdown = `# Relational Substrate External Ionic Lattice Benchmark
 
 ## Scope
 
 This report compares the ionic-lattice diagnostic against source-backed qualitative facts about rock-salt ionic ordering.
 
-It is not a crystal-physics model. It checks whether the AMS lattice-control score preserves unlike-neighbour order and rejects obvious same-charge or collapsed decoys.
+It is not a crystal-physics model. It checks whether the Relational Substrate lattice-control score preserves unlike-neighbour order and rejects obvious same-charge or collapsed decoys.
 
 ## Result
 

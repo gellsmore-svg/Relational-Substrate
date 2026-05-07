@@ -106,13 +106,13 @@ const json = {
 
 await writeFile(new URL('external-ethane-benchmark.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS External Ethane Benchmark
+const markdown = `# Relational Substrate External Ethane Benchmark
 
 ## Scope
 
 This report compares the ethane torsion diagnostic against source-backed qualitative facts about ethane internal rotation.
 
-It is not a fitted energy model. It checks whether the AMS torsion score has the right ordering and periodic structure before any quantitative calibration.
+It is not a fitted energy model. It checks whether the Relational Substrate torsion score has the right ordering and periodic structure before any quantitative calibration.
 
 ## Result
 

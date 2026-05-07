@@ -190,7 +190,7 @@ const json = {
 
 await writeFile(new URL('model-frontier-report.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS Topology Sandbox Frontier Report
+const markdown = `# Relational Substrate Sandbox Frontier Report
 
 ## Scope
 

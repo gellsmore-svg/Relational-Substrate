@@ -215,7 +215,7 @@ const json = {
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('mixed-modifier-sweep.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS Mixed-Modifier Sweep
+const markdown = `# Relational Substrate Mixed-Modifier Sweep
 
 ## Scope
 

@@ -195,13 +195,13 @@ const json = {
 
 await writeFile(new URL('t1-local-refinement.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS T1 Local Refinement
+const markdown = `# Relational Substrate T1 Local Refinement
 
 ## Scope
 
 This report performs a local refinement sweep around the best T1 candidate for each family from \`t1-coupling-sweep.json\`.
 
-It does not prove AMS and does not add a material layer between \`T0\` substrate and T1 vortons. Its purpose is to distinguish coarse-grid error from weakness in the target formula or guardrails.
+It does not prove the Relational Substrate theory and does not add a material layer between \`T0\` substrate and T1 vortons. Its purpose is to distinguish coarse-grid error from weakness in the target formula or guardrails.
 
 Offsets tested around each best candidate: ${offsets.join(', ')}
 
