@@ -40,6 +40,7 @@ const benchmarkArtifacts = (await Promise.all(benchmarkFiles.map((file) => readO
 const h2o2Quant = benchmarkArtifacts.find((artifact) => artifact.source === 'external-h2o2-quantitative-benchmark.mjs');
 const h2o2Absolute = benchmarkArtifacts.find((artifact) => artifact.source === 'external-h2o2-absolute-barrier-benchmark.mjs');
 const boundaryBenchmark = benchmarkArtifacts.find((artifact) => artifact.source === 'external-boundary-blind-benchmark.mjs');
+const h2o2AbsolutePass = h2o2Absolute?.status === 'absolute barrier pass';
 
 const intent = {
   primary:
@@ -108,7 +109,9 @@ const unificationMap = [
     conventionalDomain: 'molecular conformational chemistry',
     grammarVariables: 'route, closure, phase',
     currentReading:
-      'Shows torsion-order equivalence but remains limited by H2O2 barrier-ratio compression. The absolute transfer check localizes the issue: cis is near scale, trans is overpredicted, so the relative barrier floor remains the strongest current grammar limitation.',
+      h2o2AbsolutePass
+        ? 'Shows torsion-order and transferred barrier equivalence after anti-planar release. This reduces the prior H2O2 limitation, but the revision needs a fresh held-out torsion check to guard against overfitting.'
+        : 'Shows torsion-order equivalence but remains limited by H2O2 barrier-ratio compression. The absolute transfer check localizes the issue: cis is near scale, trans is overpredicted, so the relative barrier floor remains the strongest current grammar limitation.',
   },
   {
     benchmarkFamily: 'Ionic lattice order',
@@ -155,7 +158,9 @@ const confidence = {
   evidenceIndependenceOutOf10: summary.confidence.evidenceIndependenceOutOf10,
   unificationThesisSupportOutOf10: summary.confidence.unificationThesisSupportOutOf10,
   reading:
-    'Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, benchmark-breadth compression, and qualitative EM topology limits remain known issues. Inferential convergence has crossed 6/10 only because EM now includes continuous field-line topology; it remains moderate because the topology check is not calibrated physical property prediction or Maxwell-equation dynamics.',
+    h2o2AbsolutePass
+      ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, and qualitative EM topology is not calibrated Maxwell-equation dynamics.'
+      : 'Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, benchmark-breadth compression, and qualitative EM topology limits remain known issues. Inferential convergence has crossed 6/10 only because EM now includes continuous field-line topology; it remains moderate because the topology check is not calibrated physical property prediction or Maxwell-equation dynamics.',
 };
 
 const nonClaims = [
@@ -334,7 +339,11 @@ The H2O2 cis/trans barrier-ratio discrepancy is quantified rather than left as a
 |---|---:|
 ${h2o2CompressionRows}
 
-This is the strongest known grammar limitation and the strongest current candidate for falsification. The roughly 2x compression factor means the current grammar does not recover the experimental separation between the shallow trans barrier and the high cis barrier. It is not resolved as a physical energy calibration, and it remains one of the strongest reasons not to raise inferential convergence above the current moderate level.
+${
+  h2o2AbsolutePass
+    ? 'The prior roughly 2x compression is resolved in the current grammar version. This reduces the strongest previous falsification pressure, but it should not be treated as final validation because the anti-planar release was introduced after the failure was observed.'
+    : 'This is the strongest known grammar limitation and the strongest current candidate for falsification. The roughly 2x compression factor means the current grammar does not recover the experimental separation between the shallow trans barrier and the high cis barrier. It is not resolved as a physical energy calibration, and it remains one of the strongest reasons not to raise inferential convergence above the current moderate level.'
+}
 
 The absolute transfer check sharpens the diagnosis by applying the ethane-derived energy scale to H2O2 without fitting either H2O2 endpoint:
 
@@ -342,7 +351,11 @@ The absolute transfer check sharpens the diagnosis by applying the ethane-derive
 |---|---:|
 ${h2o2AbsoluteRows}
 
-This is a mixed diagnostic, not a new convergence pass. The cis barrier lands on scale, but the trans barrier is overpredicted by roughly 2x. The next peroxide revision should therefore target the shallow trans barrier floor and relative closure/phase scaling, not broad energy rescaling.
+${
+  h2o2AbsolutePass
+    ? 'This is now a convergence pass for the H2O2 transfer check: both trans and cis barriers land within tolerance under the ethane-derived scale. The next step is not more H2O2 fitting; it is an independent held-out torsion transfer check that can test whether anti-planar release generalizes.'
+    : 'This is a mixed diagnostic, not a new convergence pass. The cis barrier lands on scale, but the trans barrier is overpredicted by roughly 2x. The next peroxide revision should therefore target the shallow trans barrier floor and relative closure/phase scaling, not broad energy rescaling.'
+}
 
 ## Boundary Benchmark Verification
 
@@ -380,9 +393,9 @@ ${reviewPackage.reviewerQuestions.map((question) => `- ${question}`).join('\n')}
 
 ## Recommended Next Stage
 
-Do not extend the sandbox laterally until the review package has been read. EM-05 has completed the recommended topology broadening step, and the H2O2 absolute barrier transfer has sharpened the strongest falsification candidate. The next stage should pick one high-value calibrated target rather than another shallow fixture:
+Do not extend the sandbox laterally until the review package has been read. EM-05 has completed the recommended topology broadening step, and the H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate. The next stage should pick one high-value held-out or calibrated target rather than another shallow fixture:
 
-- Resolve H2O2 transferred trans-barrier overprediction without fitting H2O2 endpoints or breaking cis-barrier scale.
+- Test anti-planar release on a new held-out torsion system without fitting its endpoints.
 - A measured material-property correlation downstream of NBO/T, such as viscosity, durability, or conductivity.
 - A calibrated roughness/scatter quantity, not only specular/diffuse ordering.
 - A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
@@ -438,7 +451,7 @@ Produce a structured review with these sections:
 3. Equivalence standard audit: assess whether the document correctly uses equivalence-with-unification rather than proof or displacement framing.
 4. Evidence audit: identify the strongest benchmark, weakest benchmark, and any hidden tuning or permissive tolerance risk.
 5. Benchmark breadth audit: assess whether ${summary.independentEvidenceLines} core independent evidence lines plus ${summary.orientationEvidenceLines} orientation-only boundary check is a fair breadth count.
-6. H2O2 compression and absolute-transfer audit: evaluate whether the mixed trans/cis barrier result is adequately bounded as a limitation and whether the confidence reduction is sufficient.
+6. H2O2 compression and absolute-transfer audit: evaluate whether the post-refinement barrier pass is credible, whether the confidence increase is calibrated, and whether a new held-out torsion check is required.
 7. Boundary benchmark audit: evaluate whether the documented-but-not-timestamped status is stated honestly enough.
 8. Unification map audit: assess whether the benchmarks actually support the stated cross-domain unification thesis.
 9. Confidence calibration: give your own scores for grammar internal coherence, cross-domain equivalence, evidence independence, unification thesis support, and inferential convergence.

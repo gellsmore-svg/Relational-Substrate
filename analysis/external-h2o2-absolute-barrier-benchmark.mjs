@@ -57,6 +57,8 @@ const cis = barrierRow('cis barrier', h2o2.metrics.cisPenalty, external.cisBarri
 const modelRatio = trans.modelCm1 > 0 ? cis.modelCm1 / trans.modelCm1 : 0;
 const externalRatio = external.cisBarrierCm1 / external.transBarrierCm1;
 const ratioErrorPct = pctError(modelRatio, externalRatio);
+const ratioPass = Math.abs(ratioErrorPct) <= external.ratioTolerancePct;
+const absoluteTargetsPass = trans.pass && cis.pass && ratioPass;
 
 const checks = [
   {
@@ -72,7 +74,9 @@ const checks = [
     modelValue: `${trans.modelCm1} cm-1; error ${trans.errorPct}%`,
     pass: trans.pass,
     reading:
-      'The transferred scale overpredicts the low trans barrier, so the current grammar does not recover the shallow peroxide barrier floor.',
+      trans.pass
+        ? 'The transferred scale now recovers the shallow peroxide trans barrier within tolerance.'
+        : 'The transferred scale overpredicts the low trans barrier, so the current grammar does not recover the shallow peroxide barrier floor.',
   },
   {
     check: 'Transferred cis barrier',
@@ -86,17 +90,21 @@ const checks = [
     check: 'Transferred cis/trans ratio',
     expectation: `${round(externalRatio, 3)} +/- ${external.ratioTolerancePct}%`,
     modelValue: `${round(modelRatio, 3)}; error ${round(ratioErrorPct, 2)}%`,
-    pass: Math.abs(ratioErrorPct) <= external.ratioTolerancePct,
+    pass: ratioPass,
     reading:
-      'The ratio remains compressed because the trans barrier is too high relative to cis under a scale not fitted to peroxide.',
+      ratioPass
+        ? 'The transferred scale preserves the experimental cis/trans separation without using either H2O2 endpoint as the scale anchor.'
+        : 'The ratio remains compressed because the trans barrier is too high relative to cis under a scale not fitted to peroxide.',
   },
   {
-    check: 'Limitation promoted',
-    expectation: 'a mixed result should reduce confidence or hold it flat rather than be counted as a new convergence pass',
-    modelValue: 'status is absolute barrier mixed diagnostic',
+    check: 'Post-refinement guardrail',
+    expectation: 'a pass should be treated as a grammar-revision success that still needs a new held-out torsion transfer check',
+    modelValue: absoluteTargetsPass ? 'absolute transfer targets pass' : 'absolute transfer targets remain mixed',
     pass: true,
     reading:
-      'This benchmark converts the H2O2 caveat into an explicit falsification pressure point for the next grammar revision.',
+      absoluteTargetsPass
+        ? 'This benchmark reduces the prior H2O2 falsification pressure, but the anti-planar release revision now needs an independent torsion-system check.'
+        : 'This benchmark converts the H2O2 caveat into an explicit falsification pressure point for the next grammar revision.',
   },
 ];
 
@@ -105,7 +113,7 @@ const score = round(passed / checks.length, 3);
 const status = checks.every((check) => check.pass) ? 'absolute barrier pass' : 'absolute barrier mixed diagnostic';
 const confidenceEffect =
   status === 'absolute barrier pass'
-    ? 'would support a material confidence increase because an ethane-derived energy scale transfers to both H2O2 barriers'
+    ? 'supports a material confidence increase because an ethane-derived energy scale transfers to both H2O2 barriers after the anti-planar release revision'
     : 'limits confidence because the ethane-derived scale overpredicts the H2O2 trans barrier while matching the cis barrier, preserving the ratio-compression limitation';
 
 const json = {
@@ -176,7 +184,11 @@ ${external.sources.map((source) => `- ${source.label}: ${source.url}. ${source.n
 
 ## Reading
 
-This is not a new pass. The transferred ethane scale predicts the H2O2 cis barrier closely but overpredicts the trans barrier by ${trans.errorPct}%. That preserves the known cis/trans compression and makes it more specific: the current grammar produces a high-strain cis closure cost on roughly the right absolute scale, but it does not recover the shallow trans barrier floor. The next peroxide revision should therefore target relative closure/phase scaling near planar trans, not broad energy rescaling.
+${
+  status === 'absolute barrier pass'
+    ? `The transferred ethane scale predicts both H2O2 barriers within the predeclared tolerance: trans error ${trans.errorPct}% and cis error ${cis.errorPct}%. This resolves the prior H2O2 compression in the current grammar version, but should be read as a post-failure grammar-revision success rather than a final energy-surface validation. The anti-planar release mechanism now needs a fresh held-out torsion transfer check.`
+    : `This is not a new pass. The transferred ethane scale predicts the H2O2 cis barrier closely but overpredicts the trans barrier by ${trans.errorPct}%. That preserves the known cis/trans compression and makes it more specific: the current grammar produces a high-strain cis closure cost on roughly the right absolute scale, but it does not recover the shallow trans barrier floor. The next peroxide revision should therefore target relative closure/phase scaling near planar trans, not broad energy rescaling.`
+}
 `;
 
 await writeFile(new URL('external-h2o2-absolute-barrier-benchmark.md', outDir), markdown);
