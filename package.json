@@ -1,8 +1,26 @@
 {
   "name": "relational-substrate",
   "version": "0.1.0",
+  "description": "Research sandbox for testing whether route, closure, phase, charge, and continuity form a unified topology grammar across molecular, material, optical, and interface orderings.",
   "private": true,
   "type": "module",
+  "keywords": [
+    "relational-substrate",
+    "topology",
+    "substrate-theory",
+    "computational-modeling",
+    "research",
+    "threejs",
+    "vite"
+  ],
+  "homepage": "https://github.com/gellsmore-svg/Relational-Substrate#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gellsmore-svg/Relational-Substrate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gellsmore-svg/Relational-Substrate/issues"
+  },
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
