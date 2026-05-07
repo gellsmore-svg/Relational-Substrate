@@ -28,6 +28,7 @@ const reportSteps = [
   'benchmark:ionic',
   'benchmark:boundary-blind',
   'benchmark:em-ordering',
+  'benchmark:em-coulomb',
   'benchmark:silicate-heldout',
   'benchmark:roughness-heldout',
   'benchmark:material-nbo',

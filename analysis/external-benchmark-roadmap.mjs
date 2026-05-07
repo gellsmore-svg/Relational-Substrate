@@ -79,6 +79,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.2 if passed, -0.5 if failed',
     priority: 6,
   },
+  {
+    area: 'Electromagnetic equation comparator',
+    currentFrontier: 'post-closure EM-02 pressure test',
+    externalAnchor:
+      'Compare grammar direction and relative magnitude ordering against Coulomb-law sign, product-of-charge, and inverse-square distance expectations.',
+    passSignal:
+      'Direction, inverse-square distance ratio, charge-product ratio, and equal-magnitude/opposite-direction symmetry pass without fitting a force constant.',
+    failSignal:
+      'The grammar cannot reproduce charge-sign direction or simple Coulomb relative scaling.',
+    confidenceImpact: '+0.3 if passed, -0.7 if failed',
+    priority: 7,
+  },
 ];
 
 const confidenceGates = [
