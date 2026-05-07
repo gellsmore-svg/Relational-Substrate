@@ -101,10 +101,10 @@ const glossary = [
 
 const unificationMap = [
   {
-    benchmarkFamily: 'H2O2 and ethane torsion',
+    benchmarkFamily: 'Molecular torsion: H2O2 and ethane',
     conventionalDomain: 'molecular conformational chemistry',
     grammarVariables: 'route, closure, phase',
-    currentReading: 'Shows torsion-order equivalence but remains limited by H2O2 barrier-ratio compression and unitless penalties.',
+    currentReading: 'Shows torsion-order equivalence but remains limited by H2O2 barrier-ratio compression and unitless penalties. H2O2 compression is the strongest current grammar limitation.',
   },
   {
     benchmarkFamily: 'Ionic lattice order',
@@ -116,17 +116,17 @@ const unificationMap = [
     benchmarkFamily: 'Boundary phase and roughness/interface checks',
     conventionalDomain: 'optical/electromagnetic boundary behavior',
     grammarVariables: 'phase, continuity, route',
-    currentReading: 'Begins to connect the grammar to wave-boundary and rough-surface ordering, but remains qualitative.',
+    currentReading: 'Roughness/interface ordering is a qualitative evidence line. The boundary phase prediction is orientation evidence only because it is documented but not independently timestamped.',
   },
   {
     benchmarkFamily: 'Electromagnetic ordering',
     conventionalDomain: 'charge, magnetic-field, and EM-wave behavior',
     grammarVariables: 'charge, phase, closure, continuity, route',
     currentReading:
-      'Adds post-closure non-molecular/material checks, including equation-level Coulomb direction/ratio, two-source superposition geometry, and asymmetric three-source field comparators, but not a full electromagnetic solver.',
+      'Opens the EM domain with one static electromagnetic evidence line containing Coulomb direction/ratio, two-source superposition geometry, and asymmetric three-source field implementation checks. This is not yet continuous field topology, calibrated magnitude, propagation, or a full electromagnetic solver.',
   },
   {
-    benchmarkFamily: 'Silicate network and NBO/T accounting',
+    benchmarkFamily: 'Network/material structure: silicate network and NBO/T accounting',
     conventionalDomain: 'network solids and glass chemistry',
     grammarVariables: 'closure, charge, continuity',
     currentReading: 'Shows held-out material ordering and exact composition accounting, but not measured property prediction.',
@@ -151,7 +151,7 @@ const confidence = {
   evidenceIndependenceOutOf10: summary.confidence.evidenceIndependenceOutOf10,
   unificationThesisSupportOutOf10: summary.confidence.unificationThesisSupportOutOf10,
   reading:
-    'Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, and benchmark-breadth compression remain known issues. Inferential convergence remains moderate because the strongest non-molecular tests are still qualitative or composition-accounting checks, not calibrated physical property prediction.',
+    'Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, benchmark-breadth compression, and finite EM vector-fixture limits remain known issues. Inferential convergence remains moderate because the strongest non-molecular tests are still qualitative, composition-accounting, or static-vector checks, not calibrated physical property prediction.',
 };
 
 const nonClaims = [
@@ -176,6 +176,7 @@ const reviewPackage = {
   h2o2Compression: h2o2Quant?.metrics ?? null,
   boundaryVerification: boundaryBenchmark?.predictionManifest?.verificationStatus ?? null,
   independentEvidenceLines: summary.independentEvidenceLines,
+  orientationEvidenceLines: summary.orientationEvidenceLines,
   externalStatus: {
     status: summary.status,
     externalCompletionPct: summary.externalCompletionPct,
@@ -258,7 +259,9 @@ Grammar internal coherence: ${confidence.internalCoherenceOutOf10}/10.
 
 Inferential convergence confidence: ${confidence.inferentialConvergenceOutOf10}/10.
 
-Independent evidence lines: ${summary.independentEvidenceLines}.
+Core independent evidence lines: ${summary.independentEvidenceLines}.
+
+Orientation-only evidence lines: ${summary.orientationEvidenceLines}.
 
 Cross-domain equivalence demonstrated: ${confidence.crossDomainEquivalenceOutOf10}/10.
 
@@ -294,7 +297,7 @@ The milestone is complete in the sense that the sandbox has moved from internal-
 |---|---|---|---|---|---:|---:|---|
 ${benchmarkRows}
 
-The benchmark pass count is not the same as independent-domain breadth. The suite has ${completion.totalBenchmarks} benchmark entries and ${completion.checksPassed}/${completion.totalChecks} passing checks, but the independent evidence-line count is ${summary.independentEvidenceLines} because the H2O2 and ethane qualitative/quantitative entries are sub-checks on the same two molecule families.
+The benchmark pass count is not the same as independent-domain breadth. The suite has ${completion.totalBenchmarks} benchmark entries and ${completion.checksPassed}/${completion.totalChecks} passing checks, but the core independent evidence-line count is ${summary.independentEvidenceLines}, plus ${summary.orientationEvidenceLines} orientation-only boundary check. EM-02/03/04 collapse into one static electromagnetic evidence line, and silicate network/NBO/T collapse into one broader material-structure group.
 
 ## Unification Map
 
@@ -304,7 +307,7 @@ ${unificationRows}
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, ionic ordering, boundary phase, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, and asymmetric three-source field-geometry comparators, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. It includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field-geometry, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
 The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, and composition accounting.
 
@@ -316,13 +319,13 @@ The H2O2 cis/trans barrier-ratio discrepancy is quantified rather than left as a
 |---|---:|
 ${h2o2CompressionRows}
 
-This is accepted as a bounded limitation of the current grammar version at sandbox closure. It is not resolved as a physical energy calibration, and it remains one of the strongest reasons not to raise inferential convergence above the current moderate level.
+This is the strongest known grammar limitation and the strongest current candidate for falsification. The roughly 2x compression factor means the current grammar underweights the cost of high-strain closure configurations relative to the experimental cis/trans barrier ratio. It is not resolved as a physical energy calibration, and it remains one of the strongest reasons not to raise inferential convergence above the current moderate level.
 
 ## Boundary Benchmark Verification
 
 Boundary benchmark verification status: ${boundaryBenchmark?.predictionManifest?.verificationStatus ?? 'unavailable'}.
 
-This benchmark is retained as a documented qualitative pass because it records explicit prediction criteria and named external references. It is not treated as a fully independent historical blind prediction. Its inferential weight is therefore lower than a timestamped held-out benchmark.
+This benchmark is retained as a documented qualitative pass because it records explicit prediction criteria and named external references. It is not treated as a fully independent historical blind prediction and is classified as orientation evidence only, not core convergence evidence. Its inferential weight is therefore lower than a timestamped held-out benchmark.
 
 ## Confidence
 
@@ -397,7 +400,8 @@ Local source path:
 - Sandbox completion: ${completion.sandboxCompletionPct}%
 - Benchmarks: ${completion.benchmarkPasses}/${completion.totalBenchmarks} passing
 - Checks: ${completion.checksPassed}/${completion.totalChecks} passing
-- Independent evidence lines: ${summary.independentEvidenceLines}
+- Core independent evidence lines: ${summary.independentEvidenceLines}
+- Orientation-only evidence lines: ${summary.orientationEvidenceLines}
 - Grammar internal coherence: ${confidence.internalCoherenceOutOf10}/10
 - Inferential convergence confidence: ${confidence.inferentialConvergenceOutOf10}/10
 - Cross-domain equivalence demonstrated: ${confidence.crossDomainEquivalenceOutOf10}/10
@@ -413,7 +417,7 @@ Produce a structured review with these sections:
 2. Intent and ontology boundary audit: check whether T0/T1/T2 separation is clear and whether analogy is being confused with mechanism.
 3. Equivalence standard audit: assess whether the document correctly uses equivalence-with-unification rather than proof or displacement framing.
 4. Evidence audit: identify the strongest benchmark, weakest benchmark, and any hidden tuning or permissive tolerance risk.
-5. Benchmark breadth audit: assess whether ${summary.independentEvidenceLines} independent evidence lines is a fair breadth count.
+5. Benchmark breadth audit: assess whether ${summary.independentEvidenceLines} core independent evidence lines plus ${summary.orientationEvidenceLines} orientation-only boundary check is a fair breadth count.
 6. H2O2 compression audit: evaluate whether the quantified compression is adequately bounded as a limitation.
 7. Boundary benchmark audit: evaluate whether the documented-but-not-timestamped status is stated honestly enough.
 8. Unification map audit: assess whether the benchmarks actually support the stated cross-domain unification thesis.
