@@ -12,13 +12,15 @@ Checks passed: 52/52.
 
 Grammar internal coherence: 7.5/10.
 
-Inferential convergence confidence: 5.9/10.
+Inferential convergence confidence: 5.5/10.
 
-Independent evidence lines: 7.
+Core independent evidence lines: 6.
 
-Cross-domain equivalence demonstrated: 5.5/10.
+Orientation-only evidence lines: 1.
 
-Unification thesis support: 4.7/10.
+Cross-domain equivalence demonstrated: 5/10.
+
+Unification thesis support: 4.5/10.
 
 Next frontier: watch and refine peroxide torsion: nonlocal torsion challenger.
 
@@ -61,7 +63,7 @@ The milestone is complete in the sense that the sandbox has moved from internal-
 | Ethane torsion profile | ethane molecular torsion | molecular conformational ordering | experimental rotational barrier and molecular orbital/hyperconjugation accounts | qualitative pass | 4/4 | 1 | qualitative pass; normalized score is not an energy model |
 | Ethane quantitative torsion tolerance | ethane molecular torsion | molecular conformational ordering | experimental rotational barrier and molecular orbital/hyperconjugation accounts | quantitative tolerance pass | 3/3 | 1 | quantitative tolerance pass; endpoint is scale-anchored and intermediate points are high |
 | Ionic lattice order | ionic lattice ordering | ionic solid structure | standard crystallographic ionic-lattice coordination models | qualitative pass | 3/3 | 1 | qualitative pass; full 6:6 coordination and lattice energy are not modeled |
-| Boundary phase prediction | optical/interface boundary ordering | optical/electromagnetic boundary behaviour | wave boundary continuity and Fresnel-style optics expectations | documented blind-style qualitative pass | 3/3 | 1 | documented qualitative pass; not independently timestamped and not an optics simulator |
+| Boundary phase prediction | orientation-only boundary phase | optical/electromagnetic boundary behaviour | wave boundary continuity and Fresnel-style optics expectations | documented blind-style qualitative pass | 3/3 | 1 | orientation evidence only; documented qualitative pass, not independently timestamped, and not counted as core convergence evidence |
 | Electromagnetic ordering | electromagnetic field ordering | electromagnetic qualitative behavior | standard electric-charge, magnetic-field-line, and plane-EM-wave ordering expectations | qualitative EM ordering pass | 4/4 | 1 | qualitative EM ordering pass; not a Maxwell solver, Coulomb calculation, or derivation of c |
 | EM-02 Coulomb comparator | electromagnetic field ordering | static-charge equation-level comparator | Coulomb-law direction, charge-product, and inverse-square relative force ordering | equation-level Coulomb ordering pass | 5/5 | 1 | equation-level relative comparator; not an absolute force model or Maxwell solver |
 | EM-03 superposition comparator | electromagnetic field ordering | static electric-field superposition geometry | electric-field superposition, symmetry cancellation, and dipole field direction expectations | held-out superposition comparator pass | 5/5 | 1 | finite two-source vector comparator; not a continuous field-line or Maxwell solver |
@@ -70,21 +72,21 @@ The milestone is complete in the sense that the sandbox has moved from internal-
 | Roughness held-out interface order | optical/interface boundary ordering | rough optical/material interface behaviour | rough-surface specular/diffuse scattering models | held-out interface pass | 5/5 | 1 | held-out interface pass; qualitative roughness ordering, not scatter calibration |
 | Material NBO/T quantitative accounting | aluminosilicate NBO/T accounting | glass composition accounting | standard NBO/T stoichiometric accounting in aluminosilicate glasses | quantitative material pass | 3/3 | 1 | quantitative material pass; composition accounting, not measured property prediction |
 
-The benchmark pass count is not the same as independent-domain breadth. The suite has 13 benchmark entries and 52/52 passing checks, but the independent evidence-line count is 7 because the H2O2 and ethane qualitative/quantitative entries are sub-checks on the same two molecule families.
+The benchmark pass count is not the same as independent-domain breadth. The suite has 13 benchmark entries and 52/52 passing checks, but the core independent evidence-line count is 6, plus 1 orientation-only boundary check. EM-02/03/04 collapse into one static electromagnetic evidence line, and silicate network/NBO/T collapse into one broader material-structure group.
 
 ## Unification Map
 
 | Benchmark family | Currently separate domain | Grammar variables exercised | Current reading |
 |---|---|---|---|
-| H2O2 and ethane torsion | molecular conformational chemistry | route, closure, phase | Shows torsion-order equivalence but remains limited by H2O2 barrier-ratio compression and unitless penalties. |
+| Molecular torsion: H2O2 and ethane | molecular conformational chemistry | route, closure, phase | Shows torsion-order equivalence but remains limited by H2O2 barrier-ratio compression and unitless penalties. H2O2 compression is the strongest current grammar limitation. |
 | Ionic lattice order | solid-state ionic structure | charge, closure, continuity | Shows qualitative ordering against standard ionic coordination expectations. |
-| Boundary phase and roughness/interface checks | optical/electromagnetic boundary behavior | phase, continuity, route | Begins to connect the grammar to wave-boundary and rough-surface ordering, but remains qualitative. |
-| Electromagnetic ordering | charge, magnetic-field, and EM-wave behavior | charge, phase, closure, continuity, route | Adds post-closure non-molecular/material checks, including equation-level Coulomb direction/ratio, two-source superposition geometry, and asymmetric three-source field comparators, but not a full electromagnetic solver. |
-| Silicate network and NBO/T accounting | network solids and glass chemistry | closure, charge, continuity | Shows held-out material ordering and exact composition accounting, but not measured property prediction. |
+| Boundary phase and roughness/interface checks | optical/electromagnetic boundary behavior | phase, continuity, route | Roughness/interface ordering is a qualitative evidence line. The boundary phase prediction is orientation evidence only because it is documented but not independently timestamped. |
+| Electromagnetic ordering | charge, magnetic-field, and EM-wave behavior | charge, phase, closure, continuity, route | Opens the EM domain with one static electromagnetic evidence line containing Coulomb direction/ratio, two-source superposition geometry, and asymmetric three-source field implementation checks. This is not yet continuous field topology, calibrated magnitude, propagation, or a full electromagnetic solver. |
+| Network/material structure: silicate network and NBO/T accounting | network solids and glass chemistry | closure, charge, continuity | Shows held-out material ordering and exact composition accounting, but not measured property prediction. |
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, ionic ordering, boundary phase, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, and asymmetric three-source field-geometry comparators, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. It includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field-geometry, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
 The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, and composition accounting.
 
@@ -99,19 +101,19 @@ The H2O2 cis/trans barrier-ratio discrepancy is quantified rather than left as a
 | Compression factor | 1.9899 |
 | Ratio shortfall | 49.75% |
 
-This is accepted as a bounded limitation of the current grammar version at sandbox closure. It is not resolved as a physical energy calibration, and it remains one of the strongest reasons not to raise inferential convergence above the current moderate level.
+This is the strongest known grammar limitation and the strongest current candidate for falsification. The roughly 2x compression factor means the current grammar underweights the cost of high-strain closure configurations relative to the experimental cis/trans barrier ratio. It is not resolved as a physical energy calibration, and it remains one of the strongest reasons not to raise inferential convergence above the current moderate level.
 
 ## Boundary Benchmark Verification
 
 Boundary benchmark verification status: documented in-script and reproducible, but not independently timestamped before the diagnostic cases existed.
 
-This benchmark is retained as a documented qualitative pass because it records explicit prediction criteria and named external references. It is not treated as a fully independent historical blind prediction. Its inferential weight is therefore lower than a timestamped held-out benchmark.
+This benchmark is retained as a documented qualitative pass because it records explicit prediction criteria and named external references. It is not treated as a fully independent historical blind prediction and is classified as orientation evidence only, not core convergence evidence. Its inferential weight is therefore lower than a timestamped held-out benchmark.
 
 ## Confidence
 
-External anchoring now includes a non-symmetric three-source electric-field geometry comparator. Inferential convergence approaches but does not cross 6/10 because EM evidence now survives pairwise ratios, symmetric superposition, and asymmetric multi-source vector targets, while still lacking continuous field-line topology, calibrated magnitudes, or Maxwell-equation dynamics.
+External anchoring now includes a non-symmetric three-source electric-field geometry comparator. Inferential convergence remains at 5.5/10 after review recalibration: EM evidence now survives pairwise ratios, symmetric superposition, and asymmetric multi-source vector targets, but these are still finite static vector checks within one evidence line; H2O2 compression remains the strongest grammar limitation; and the boundary-phase benchmark is orientation evidence only.
 
-Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, and benchmark-breadth compression remain known issues. Inferential convergence remains moderate because the strongest non-molecular tests are still qualitative or composition-accounting checks, not calibrated physical property prediction.
+Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, benchmark-breadth compression, and finite EM vector-fixture limits remain known issues. Inferential convergence remains moderate because the strongest non-molecular tests are still qualitative, composition-accounting, or static-vector checks, not calibrated physical property prediction.
 
 Confidence should be read as inferential convergence, not proof-of-substrate framing. It asks how much independent, non-circular evidence has converged on the grammar as a coherent explanatory framework relative to conventional domain models. The right next confidence increase requires calibrated physical-property prediction, a stricter held-out benchmark against a conventional comparator, or a new non-molecular domain check with no rescaling or endpoint anchoring.
 

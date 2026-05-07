@@ -96,15 +96,16 @@ const benchmarks = [
   },
   boundaryBlind && {
     label: 'Boundary phase prediction',
-    evidenceLine: 'optical/interface boundary ordering',
+    evidenceLine: 'orientation-only boundary phase',
     domain: 'optical/electromagnetic boundary behaviour',
     conventionalComparator: 'wave boundary continuity and Fresnel-style optics expectations',
     status: boundaryBlind.status,
     score: boundaryBlind.score,
     checksPassed: boundaryBlind.checks.filter((check) => check.pass).length,
     checksTotal: boundaryBlind.checks.length,
-    limitation: 'documented qualitative pass; not independently timestamped and not an optics simulator',
+    limitation: 'orientation evidence only; documented qualitative pass, not independently timestamped, and not counted as core convergence evidence',
     confidenceEffect: boundaryBlind.confidenceEffect,
+    orientationOnly: true,
   },
   emOrdering && {
     label: 'Electromagnetic ordering',
@@ -195,7 +196,20 @@ const benchmarks = [
 const benchmarkPasses = benchmarks.filter((benchmark) => benchmark.status.includes('pass')).length;
 const totalChecks = benchmarks.reduce((sum, benchmark) => sum + benchmark.checksTotal, 0);
 const passedChecks = benchmarks.reduce((sum, benchmark) => sum + benchmark.checksPassed, 0);
-const independentEvidenceLines = new Set(benchmarks.map((benchmark) => benchmark.evidenceLine)).size;
+const coreEvidenceGroups = new Map([
+  ['H2O2 molecular torsion', 'H2O2 molecular torsion'],
+  ['ethane molecular torsion', 'ethane molecular torsion'],
+  ['ionic lattice ordering', 'ionic solid ordering'],
+  ['electromagnetic field ordering', 'static electromagnetic field geometry'],
+  ['silicate network topology', 'network/material structure'],
+  ['aluminosilicate NBO/T accounting', 'network/material structure'],
+  ['optical/interface boundary ordering', 'rough optical/interface ordering'],
+]);
+const coreBenchmarks = benchmarks.filter((benchmark) => !benchmark.orientationOnly);
+const independentEvidenceLines = new Set(
+  coreBenchmarks.map((benchmark) => coreEvidenceGroups.get(benchmark.evidenceLine) ?? benchmark.evidenceLine)
+).size;
+const orientationEvidenceLines = benchmarks.filter((benchmark) => benchmark.orientationOnly).length;
 const externalCompletionPct = round(Math.min(benchmarks.length / roadmap.benchmarkTargets.length, 1) * 100);
 const hasBlindStylePass = boundaryBlind?.status?.includes('qualitative pass');
 const hasQuantitativePass = ethaneQuant?.status === 'quantitative tolerance pass';
@@ -216,13 +230,13 @@ const confidence = {
   previousInternalCoherenceOutOf10: roadmap.currentStatus.internalCoherenceConfidenceOutOf10,
   updatedInternalCoherenceOutOf10: hasQuantitativeMaterialPass ? 7.5 : hasHeldoutInterfacePass ? 7.4 : hasFactorTwoPeroxideRatio ? 7.3 : hasHeldoutMaterialPass ? 7.2 : hasTighterPeroxideRatio ? 7.1 : hasSecondNumericPass ? 7.0 : hasQuantitativePass ? 6.9 : hasBlindStylePass ? 6.7 : benchmarks.length >= 3 ? 6.5 : 6.3,
   previousInferentialConvergenceOutOf10: roadmap.currentStatus.inferentialConvergenceConfidenceOutOf10,
-  updatedInferentialConvergenceOutOf10: hasEmThreeSourcePass ? 5.9 : hasEmSuperpositionPass ? 5.7 : hasEmCoulombPass ? 5.5 : hasEmOrderingPass ? 5.2 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
-  crossDomainEquivalenceOutOf10: hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.3 : hasEmCoulombPass ? 5.1 : hasEmOrderingPass ? 4.8 : hasQuantitativeMaterialPass ? 4.5 : hasHeldoutInterfacePass ? 4.3 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
-  evidenceIndependenceOutOf10: independentEvidenceLines >= 6 ? 4.0 : independentEvidenceLines >= 5 ? 3.8 : 3.2,
-  unificationThesisSupportOutOf10: hasEmThreeSourcePass ? 4.7 : hasEmSuperpositionPass ? 4.5 : hasEmCoulombPass ? 4.2 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
+  updatedInferentialConvergenceOutOf10: hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.4 : hasEmCoulombPass ? 5.3 : hasEmOrderingPass ? 5.1 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
+  crossDomainEquivalenceOutOf10: hasEmThreeSourcePass ? 5.0 : hasEmSuperpositionPass ? 4.9 : hasEmCoulombPass ? 4.8 : hasEmOrderingPass ? 4.7 : hasQuantitativeMaterialPass ? 4.5 : hasHeldoutInterfacePass ? 4.3 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
+  evidenceIndependenceOutOf10: independentEvidenceLines >= 6 ? 4.5 : independentEvidenceLines >= 5 ? 4.0 : 3.2,
+  unificationThesisSupportOutOf10: hasEmThreeSourcePass ? 4.5 : hasEmSuperpositionPass ? 4.4 : hasEmCoulombPass ? 4.2 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
   rationale:
     hasEmThreeSourcePass
-      ? 'External anchoring now includes a non-symmetric three-source electric-field geometry comparator. Inferential convergence approaches but does not cross 6/10 because EM evidence now survives pairwise ratios, symmetric superposition, and asymmetric multi-source vector targets, while still lacking continuous field-line topology, calibrated magnitudes, or Maxwell-equation dynamics.'
+      ? 'External anchoring now includes a non-symmetric three-source electric-field geometry comparator. Inferential convergence remains at 5.5/10 after review recalibration: EM evidence now survives pairwise ratios, symmetric superposition, and asymmetric multi-source vector targets, but these are still finite static vector checks within one evidence line; H2O2 compression remains the strongest grammar limitation; and the boundary-phase benchmark is orientation evidence only.'
       : hasEmSuperpositionPass
       ? 'External anchoring now includes a held-out electric-field superposition geometry comparator. Inferential convergence rises modestly because EM evidence generalizes from pairwise Coulomb direction/ratio checks to multi-source vector cancellation and dipole reversal, but remains below 6/10 because the comparator is still static, symmetric, and not a calibrated field or Maxwell solver.'
       : hasEmCoulombPass
@@ -230,7 +244,7 @@ const confidence = {
       : hasEmOrderingPass
       ? 'External anchoring now includes a non-molecular/material electromagnetic ordering check. Inferential convergence rises slightly because the unification map has broader domain coverage, but remains moderate because the new EM benchmark is qualitative and not a Maxwell-equation or speed-of-light derivation.'
       : hasQuantitativeMaterialPass
-      ? 'External anchoring now includes exact quantitative NBO/T composition accounting in addition to held-out material/interface checks. Inferential convergence is real but moderate: four torsion sub-checks collapse to two molecule evidence lines, the H2O2 ratio remains compressed, and boundary-phase evidence is documented rather than independently timestamped.'
+      ? 'External anchoring now includes exact quantitative NBO/T composition accounting in addition to held-out material/interface checks. Inferential convergence is real but moderate: molecule torsion sub-checks collapse to one broader chemistry evidence group, the H2O2 ratio remains compressed, and boundary-phase evidence is orientation-only rather than independently timestamped.'
       : hasHeldoutInterfacePass
       ? 'External anchoring now includes held-out material and interface checks, plus peroxide factor-2 ratio compression. Confidence crosses 5/10, but remains moderate because the interface/material checks are qualitative and the project still lacks absolute physical calibration.'
       : hasFactorTwoPeroxideRatio
@@ -299,6 +313,7 @@ const json = {
   passedChecks,
   totalChecks,
   independentEvidenceLines,
+  orientationEvidenceLines,
   confidence,
   benchmarks,
   remainingExternalGates,
@@ -315,7 +330,8 @@ ${status}.
 | Measure | Value |
 |---|---:|
 | External benchmark targets covered | ${benchmarks.length}/${roadmap.benchmarkTargets.length} |
-| Independent evidence lines | ${independentEvidenceLines} |
+| Core independent evidence lines | ${independentEvidenceLines} |
+| Orientation-only evidence lines | ${orientationEvidenceLines} |
 | External benchmark completion | ${externalCompletionPct}% |
 | Benchmark passes | ${benchmarkPasses}/${benchmarks.length} |
 | Checks passed | ${passedChecks}/${totalChecks} |
@@ -350,7 +366,7 @@ ${remainingExternalGates.map((gate) => `- ${gate}`).join('\n')}
 
 ## Reading
 
-The external anchors improve confidence that the current grammar can line up with known conformational, ionic-ordering, boundary-phase, silicate-network, roughness-scatter, and NBO/T composition facts. The breadth count should be read as ${independentEvidenceLines} independent evidence lines, not ${benchmarks.length} fully independent domains, because the H2O2 and ethane entries each include qualitative and quantitative sub-checks. The result supports moderate inferential convergence under an equivalence-with-unification standard, not proof of substrate existence or displacement of conventional domain models.
+The external anchors improve confidence that the current grammar can line up with known H2O2 torsion, ethane torsion, ionic-ordering, static electromagnetic, roughness-scatter, and silicate/material-structure facts. The breadth count should be read as ${independentEvidenceLines} core independent evidence lines, plus ${orientationEvidenceLines} orientation-only boundary check, not ${benchmarks.length} fully independent domains. Silicate network and NBO/T collapse into one broader material-structure group, and EM-02/03/04 are depth checks inside one static electromagnetic evidence line. The result supports moderate inferential convergence under an equivalence-with-unification standard, not proof of substrate existence or displacement of conventional domain models.
 `;
 
 await writeFile(new URL('external-benchmark-summary.md', outDir), markdown);

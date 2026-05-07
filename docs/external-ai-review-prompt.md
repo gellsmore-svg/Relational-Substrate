@@ -27,11 +27,12 @@ Local source path:
 - Sandbox completion: 99.2%
 - Benchmarks: 13/13 passing
 - Checks: 52/52 passing
-- Independent evidence lines: 7
+- Core independent evidence lines: 6
+- Orientation-only evidence lines: 1
 - Grammar internal coherence: 7.5/10
-- Inferential convergence confidence: 5.9/10
-- Cross-domain equivalence demonstrated: 5.5/10
-- Unification thesis support: 4.7/10
+- Inferential convergence confidence: 5.5/10
+- Cross-domain equivalence demonstrated: 5/10
+- Unification thesis support: 4.5/10
 
 Do not assume these scores are correct. Audit whether the evidence described in the summary supports them.
 
@@ -43,7 +44,7 @@ Produce a structured review with these sections:
 2. Intent and ontology boundary audit: check whether T0/T1/T2 separation is clear and whether analogy is being confused with mechanism.
 3. Equivalence standard audit: assess whether the document correctly uses equivalence-with-unification rather than proof or displacement framing.
 4. Evidence audit: identify the strongest benchmark, weakest benchmark, and any hidden tuning or permissive tolerance risk.
-5. Benchmark breadth audit: assess whether 7 independent evidence lines is a fair breadth count.
+5. Benchmark breadth audit: assess whether 6 core independent evidence lines plus 1 orientation-only boundary check is a fair breadth count.
 6. H2O2 compression audit: evaluate whether the quantified compression is adequately bounded as a limitation.
 7. Boundary benchmark audit: evaluate whether the documented-but-not-timestamped status is stated honestly enough.
 8. Unification map audit: assess whether the benchmarks actually support the stated cross-domain unification thesis.

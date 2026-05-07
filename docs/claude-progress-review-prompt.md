@@ -72,13 +72,14 @@ These are the project's current self-reported metrics. Do not assume they are co
 | Sandbox completion | 99.2% |
 | Benchmark entries | 13/13 passing |
 | Checks | 52/52 passing |
-| Independent evidence lines | 7 |
+| Core independent evidence lines | 6 |
+| Orientation-only evidence lines | 1 |
 | Grammar internal coherence | 7.5/10 |
-| Inferential convergence confidence | 5.9/10 |
-| Cross-domain equivalence demonstrated | 5.5/10 |
-| Unification thesis support | 4.7/10 |
+| Inferential convergence confidence | 5.5/10 |
+| Cross-domain equivalence demonstrated | 5.0/10 |
+| Unification thesis support | 4.5/10 |
 
-The current milestone summary deliberately keeps inferential convergence below 6/10 despite the recent EM passes, because the EM checks are still finite static vector comparators and do not yet include continuous field-line topology, equipotential geometry, calibrated magnitudes, or Maxwell-equation dynamics.
+The current milestone summary deliberately keeps inferential convergence below 6/10 despite the recent EM passes, and has been recalibrated down to 5.5/10 after external review feedback. EM checks are still finite static vector comparators and do not yet include continuous field-line topology, equipotential geometry, calibrated magnitudes, or Maxwell-equation dynamics.
 
 ## Benchmark Inventory
 
@@ -89,7 +90,7 @@ The current milestone summary deliberately keeps inferential convergence below 6
 | Ethane torsion profile | ethane molecular torsion | molecular conformational ordering | qualitative pass | 4/4 | normalized score is not an energy model |
 | Ethane quantitative torsion tolerance | ethane molecular torsion | molecular conformational ordering | quantitative tolerance pass | 3/3 | endpoint is scale-anchored and intermediate points are high |
 | Ionic lattice order | ionic lattice ordering | ionic solid structure | qualitative pass | 3/3 | not full 6:6 coordination or lattice energy |
-| Boundary phase prediction | optical/interface boundary ordering | optical/electromagnetic boundary behavior | documented blind-style qualitative pass | 3/3 | not independently timestamped; not an optics simulator |
+| Boundary phase prediction | orientation-only boundary phase | optical/electromagnetic boundary behavior | documented blind-style qualitative pass | 3/3 | orientation evidence only; not counted as core convergence evidence |
 | Electromagnetic ordering | electromagnetic field ordering | qualitative EM behavior | qualitative EM ordering pass | 4/4 | not Maxwell, Coulomb calculation, or derivation of c |
 | EM-02 Coulomb comparator | electromagnetic field ordering | static-charge equation comparator | equation-level Coulomb ordering pass | 5/5 | relative comparator only; no absolute force model |
 | EM-03 superposition comparator | electromagnetic field ordering | static two-source field geometry | held-out superposition comparator pass | 5/5 | finite two-source vector comparator |
@@ -100,7 +101,7 @@ The current milestone summary deliberately keeps inferential convergence below 6
 
 Important breadth caveat:
 
-The project has 13 benchmark entries, but only about 7 independent evidence lines. H2O2 and ethane each have qualitative and quantitative sub-checks; they should not be counted as separate domains.
+The project has 13 benchmark entries, but only 6 core independent evidence lines plus 1 orientation-only boundary check. EM-02/03/04 collapse into one static electromagnetic field-geometry line, silicate network and NBO/T accounting collapse into one broader material-structure line, and the boundary phase check is orientation evidence only.
 
 ## Known Weaknesses and Drift Risks
 
@@ -117,19 +118,19 @@ The H2O2 cis/trans barrier-ratio discrepancy is quantified:
 | Compression factor | 1.9899 |
 | Ratio shortfall | 49.75% |
 
-This is currently accepted as a bounded limitation. It is not resolved. It should remain one of the strongest reasons not to overstate confidence.
+This is the strongest known grammar limitation and the strongest current candidate for falsification. The roughly 2x compression factor means the current grammar underweights the cost of high-strain closure configurations relative to the experimental cis/trans barrier ratio. It is not resolved. It should remain one of the strongest reasons not to overstate confidence.
 
 Review question:
 
-Is this limitation stated strongly enough, or does the current document make the H2O2 result sound cleaner than it is?
+Is the revised limitation language now strong enough, or should the H2O2 compression be promoted even more prominently in the executive status?
 
 ### 2. Boundary Benchmark Status
 
-The boundary benchmark is documented in-script and reproducible, but it was not independently timestamped before the diagnostic cases existed.
+The boundary benchmark is documented in-script and reproducible, but it was not independently timestamped before the diagnostic cases existed. It is now explicitly labelled as orientation evidence only and is not counted as core convergence evidence.
 
 Review question:
 
-Is it fair to retain it as a documented qualitative pass with reduced inferential weight, or should it be downgraded further?
+Is it fair to retain it as orientation evidence, or should it be removed from the benchmark inventory entirely until made verifiable?
 
 ### 3. EM Benchmark Proliferation
 
@@ -145,7 +146,7 @@ This is meaningful domain broadening, but EM-03 and EM-04 are still finite stati
 Review questions:
 
 - Are EM-03 and EM-04 real progress or mostly implementation of standard vector arithmetic?
-- Is it honest to raise inferential convergence from 5.5 to 5.9 on this basis?
+- Is it honest to hold inferential convergence at 5.5 despite the EM-03/EM-04 passes?
 - Should inferential convergence remain below 6/10 until continuous field-line topology, equipotential geometry, calibrated magnitude, or time-dependent propagation is tested?
 
 ### 4. Confidence Ceiling
@@ -161,7 +162,7 @@ Current confidence is intentionally capped below 6/10:
 
 Review question:
 
-Is 5.9/10 too high, too low, or appropriate under an inferential-convergence framing?
+Is 5.5/10 too high, too low, or appropriate under an inferential-convergence framing?
 
 ### 5. Equivalence vs Displacement
 
@@ -229,7 +230,7 @@ Give your own scores:
 | Unification thesis support | ?/10 |
 | Inferential convergence overall | ?/10 |
 
-Briefly justify each score. If you think 5.9/10 is wrong, say what number should replace it and why.
+Briefly justify each score. If you think 5.5/10 is wrong, say what number should replace it and why.
 
 ### 5. EM Sequence Audit
 
