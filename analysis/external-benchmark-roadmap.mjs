@@ -91,6 +91,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.3 if passed, -0.7 if failed',
     priority: 7,
   },
+  {
+    area: 'Electromagnetic superposition geometry',
+    currentFrontier: 'post-closure EM-03 pressure test',
+    externalAnchor:
+      'Compare grammar vector addition and symmetry cancellation against electric-field superposition expectations for fixed two-charge layouts.',
+    passSignal:
+      'Like-charge midline components cancel/add correctly, dipole components reverse with charge order, and the check remains bounded to static field geometry.',
+    failSignal:
+      'The grammar cannot reproduce simple multi-source vector cancellation or dipole direction reversal.',
+    confidenceImpact: '+0.2 if passed, -0.6 if failed',
+    priority: 8,
+  },
 ];
 
 const confidenceGates = [

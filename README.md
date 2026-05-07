@@ -305,6 +305,14 @@ npm run benchmark:em-coulomb
 
 This compares charge-sign direction and relative inverse-square/product-of-charge ordering against Coulomb-law expectations. It is an equation-level relative comparator, not an absolute electrostatics solver.
 
+Run the external EM-03 superposition comparator with:
+
+```bash
+npm run benchmark:em-superposition
+```
+
+This compares fixed two-charge field geometry against electric-field superposition expectations: symmetry cancellation, vector addition, and dipole direction reversal. It is a finite static-field comparator, not a continuous field-line or Maxwell-equation solver.
+
 Run the external silicate held-out benchmark with:
 
 ```bash

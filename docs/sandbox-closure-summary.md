@@ -4,21 +4,21 @@
 
 Milestone status: complete for external review.
 
-Sandbox completion reported by benchmark summary: 98.5%.
+Sandbox completion reported by benchmark summary: 99%.
 
-Benchmark passes: 11/11.
+Benchmark passes: 12/12.
 
-Checks passed: 41/41.
+Checks passed: 46/46.
 
 Grammar internal coherence: 7.5/10.
 
-Inferential convergence confidence: 5.5/10.
+Inferential convergence confidence: 5.7/10.
 
 Independent evidence lines: 7.
 
-Cross-domain equivalence demonstrated: 5.1/10.
+Cross-domain equivalence demonstrated: 5.3/10.
 
-Unification thesis support: 4.2/10.
+Unification thesis support: 4.5/10.
 
 Next frontier: watch and refine peroxide torsion: nonlocal torsion challenger.
 
@@ -64,11 +64,12 @@ The milestone is complete in the sense that the sandbox has moved from internal-
 | Boundary phase prediction | optical/interface boundary ordering | optical/electromagnetic boundary behaviour | wave boundary continuity and Fresnel-style optics expectations | documented blind-style qualitative pass | 3/3 | 1 | documented qualitative pass; not independently timestamped and not an optics simulator |
 | Electromagnetic ordering | electromagnetic field ordering | electromagnetic qualitative behavior | standard electric-charge, magnetic-field-line, and plane-EM-wave ordering expectations | qualitative EM ordering pass | 4/4 | 1 | qualitative EM ordering pass; not a Maxwell solver, Coulomb calculation, or derivation of c |
 | EM-02 Coulomb comparator | electromagnetic field ordering | static-charge equation-level comparator | Coulomb-law direction, charge-product, and inverse-square relative force ordering | equation-level Coulomb ordering pass | 5/5 | 1 | equation-level relative comparator; not an absolute force model or Maxwell solver |
+| EM-03 superposition comparator | electromagnetic field ordering | static electric-field superposition geometry | electric-field superposition, symmetry cancellation, and dipole field direction expectations | held-out superposition comparator pass | 5/5 | 1 | finite two-source vector comparator; not a continuous field-line or Maxwell solver |
 | Silicate held-out network order | silicate network topology | network solid/material structure | standard silicate tetrahedral network and modifier/NBO descriptions | held-out qualitative pass | 5/5 | 1 | held-out qualitative pass; graph-level material order, not glass-property prediction |
 | Roughness held-out interface order | optical/interface boundary ordering | rough optical/material interface behaviour | rough-surface specular/diffuse scattering models | held-out interface pass | 5/5 | 1 | held-out interface pass; qualitative roughness ordering, not scatter calibration |
 | Material NBO/T quantitative accounting | aluminosilicate NBO/T accounting | glass composition accounting | standard NBO/T stoichiometric accounting in aluminosilicate glasses | quantitative material pass | 3/3 | 1 | quantitative material pass; composition accounting, not measured property prediction |
 
-The benchmark pass count is not the same as independent-domain breadth. The suite has 11 benchmark entries and 41/41 passing checks, but the independent evidence-line count is 7 because the H2O2 and ethane qualitative/quantitative entries are sub-checks on the same two molecule families.
+The benchmark pass count is not the same as independent-domain breadth. The suite has 12 benchmark entries and 46/46 passing checks, but the independent evidence-line count is 7 because the H2O2 and ethane qualitative/quantitative entries are sub-checks on the same two molecule families.
 
 ## Unification Map
 
@@ -77,12 +78,12 @@ The benchmark pass count is not the same as independent-domain breadth. The suit
 | H2O2 and ethane torsion | molecular conformational chemistry | route, closure, phase | Shows torsion-order equivalence but remains limited by H2O2 barrier-ratio compression and unitless penalties. |
 | Ionic lattice order | solid-state ionic structure | charge, closure, continuity | Shows qualitative ordering against standard ionic coordination expectations. |
 | Boundary phase and roughness/interface checks | optical/electromagnetic boundary behavior | phase, continuity, route | Begins to connect the grammar to wave-boundary and rough-surface ordering, but remains qualitative. |
-| Electromagnetic ordering | charge, magnetic-field, and EM-wave behavior | charge, phase, closure, continuity, route | Adds post-closure non-molecular/material checks, including a first equation-level Coulomb direction and ratio comparator, but not a full electromagnetic solver. |
+| Electromagnetic ordering | charge, magnetic-field, and EM-wave behavior | charge, phase, closure, continuity, route | Adds post-closure non-molecular/material checks, including equation-level Coulomb direction/ratio and two-source superposition geometry comparators, but not a full electromagnetic solver. |
 | Silicate network and NBO/T accounting | network solids and glass chemistry | closure, charge, continuity | Shows held-out material ordering and exact composition accounting, but not measured property prediction. |
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, ionic ordering, boundary phase, qualitative electromagnetic ordering, a Coulomb direction/ratio comparator, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. It includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, ionic ordering, boundary phase, qualitative electromagnetic ordering, Coulomb direction/ratio and electric-field superposition comparators, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. It includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
 The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, and composition accounting.
 
@@ -107,7 +108,7 @@ This benchmark is retained as a documented qualitative pass because it records e
 
 ## Confidence
 
-External anchoring now includes an equation-level Coulomb direction and relative-ratio comparator. Inferential convergence rises modestly because a post-closure EM benchmark survived stricter mathematical pressure, but remains moderate because the comparator is static, small, and not a full electromagnetic field model.
+External anchoring now includes a held-out electric-field superposition geometry comparator. Inferential convergence rises modestly because EM evidence generalizes from pairwise Coulomb direction/ratio checks to multi-source vector cancellation and dipole reversal, but remains below 6/10 because the comparator is still static, symmetric, and not a calibrated field or Maxwell solver.
 
 Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, and benchmark-breadth compression remain known issues. Inferential convergence remains moderate because the strongest non-molecular tests are still qualitative or composition-accounting checks, not calibrated physical property prediction.
 
@@ -127,7 +128,7 @@ Confidence should be read as inferential convergence, not proof-of-substrate fra
 - Move material checks from composition accounting to measured property calibration.
 - Move peroxide from ratio-shape checks toward absolute barrier-height calibration.
 - Move roughness/interface checks beyond qualitative ordering into calibrated scatter quantities.
-- Move EM-02 from pairwise Coulomb ratios toward held-out superposition or field-geometry checks.
+- Move EM-03 from symmetric two-source layouts toward non-symmetric three-source field geometry or calibrated field magnitude comparisons.
 
 ## Source Anchors
 
@@ -146,6 +147,8 @@ Confidence should be read as inferential convergence, not proof-of-substrate fra
 - OpenStax University Physics Volume 2, Plane Electromagnetic Waves: https://openstax.org/books/university-physics-volume-2/pages/16-2-plane-electromagnetic-waves. Describes plane electromagnetic waves as coupled electric and magnetic fields propagating through space at the speed of light in free space.
 - OpenStax University Physics Volume 2, Coulomb's Law: https://openstax.org/books/university-physics-volume-2/pages/5-3-coulombs-law. States that force magnitude is proportional to the charge product and inversely proportional to distance squared; force direction follows charge signs.
 - OpenStax University Physics Volume 2, Chapter 5 Summary: https://openstax.org/books/university-physics-volume-2/pages/5-summary. Summarizes like-charge repulsion, unlike-charge attraction, and square-distance weakening.
+- OpenStax University Physics Volume 2, Electric Field: https://openstax.org/books/university-physics-volume-2/pages/5-4-electric-field. States that the net electric field obeys superposition and is the vector sum of fields from source charges.
+- OpenStax University Physics Volume 2, Electric Field Lines: https://openstax.org/books/university-physics-volume-2/pages/5-6-electric-field-lines. Gives standard field-line rules: positive charges source outward lines, negative charges terminate lines, density indicates magnitude, and field lines do not cross.
 - Stebbins and Xu, Nature 1997: https://www.nature.com/articles/36312. Describes bridging and non-bridging oxygen sites, modifier cations, and the property relevance of NBO abundance in aluminosilicate glasses.
 - Chemistry LibreTexts, The Structure of Silicate Anions: https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_%28LibreTexts%29/08%3A_Solids_and_Solid-State_Materials/8.22%3A_Silicate_Minerals. Describes silicate tetrahedra and network-forming oxygen sharing in silicate structures.
 - van Ginneken et al., Applied Optics 1998: https://doi.org/10.1364/AO.37.000130. Treats diffuse and specular reflectance from rough surfaces.
@@ -233,3 +236,4 @@ Do not extend the sandbox laterally until the review package has been read. The 
 - A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
 - A qualitative electromagnetic ordering check outside molecular/material chemistry with no rescaling or endpoint anchoring.
 - A held-out electromagnetic superposition or field-geometry comparator that tests whether EM-02 generalizes beyond simple pair cases.
+- A non-symmetric three-source electromagnetic field-geometry comparator that tests whether EM-03 generalizes beyond two-source symmetry cases.
