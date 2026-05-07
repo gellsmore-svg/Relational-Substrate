@@ -30,6 +30,7 @@ const reportSteps = [
   'benchmark:em-ordering',
   'benchmark:em-coulomb',
   'benchmark:em-superposition',
+  'benchmark:em-three-source',
   'benchmark:silicate-heldout',
   'benchmark:roughness-heldout',
   'benchmark:material-nbo',
