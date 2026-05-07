@@ -139,6 +139,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.3 if passed, -0.2 if mixed, -0.6 if failed',
     priority: 11,
   },
+  {
+    area: 'Electromagnetic equipotential geometry',
+    currentFrontier: 'post-hydrazine EM-06 electrostatic pressure test',
+    externalAnchor:
+      'Compare scalar potential superposition, dipole zero-potential symmetry, equipotential perpendicularity, and field-as-negative-gradient behavior against conventional electrostatics.',
+    passSignal:
+      'The same charge/route/closure/phase/continuity grammar links scalar potential, vector field, and equipotential geometry without a new scale parameter.',
+    failSignal:
+      'The grammar can trace field lines or vector fixtures but cannot reproduce scalar potential/equipotential geometry from the same charge layout.',
+    confidenceImpact: '+0.1 if passed, -0.5 if failed',
+    priority: 12,
+  },
 ];
 
 const confidenceGates = [
