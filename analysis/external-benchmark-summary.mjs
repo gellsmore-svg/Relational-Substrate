@@ -29,6 +29,7 @@ const emOrdering = await readOptionalJson('external-em-ordering-benchmark.json')
 const emCoulomb = await readOptionalJson('external-em-coulomb-comparator.json');
 const emSuperposition = await readOptionalJson('external-em-superposition-comparator.json');
 const emThreeSource = await readOptionalJson('external-em-three-source-comparator.json');
+const emFieldLines = await readOptionalJson('external-em-field-line-topology-comparator.json');
 const silicateHeldout = await readOptionalJson('external-silicate-heldout-benchmark.json');
 const roughnessHeldout = await readOptionalJson('external-roughness-heldout-benchmark.json');
 const materialNbo = await readOptionalJson('external-material-nbo-quantitative-benchmark.json');
@@ -155,6 +156,18 @@ const benchmarks = [
     limitation: 'finite asymmetric vector comparator; not a continuous field-line, potential, or Maxwell solver',
     confidenceEffect: emThreeSource.confidenceEffect,
   },
+  emFieldLines && {
+    label: 'EM-05 field-line topology comparator',
+    evidenceLine: 'electromagnetic field ordering',
+    domain: 'continuous electromagnetic field-line topology',
+    conventionalComparator: 'electric field-line source divergence and magnetic field-line closed-loop topology',
+    status: emFieldLines.status,
+    score: emFieldLines.score,
+    checksPassed: emFieldLines.checks.filter((check) => check.pass).length,
+    checksTotal: emFieldLines.checks.length,
+    limitation: 'qualitative topology comparator; not a Maxwell solver, calibrated field model, or derivation of light speed',
+    confidenceEffect: emFieldLines.confidenceEffect,
+  },
   silicateHeldout && {
     label: 'Silicate held-out network order',
     evidenceLine: 'silicate network topology',
@@ -223,19 +236,22 @@ const hasEmOrderingPass = emOrdering?.status === 'qualitative EM ordering pass';
 const hasEmCoulombPass = emCoulomb?.status === 'equation-level Coulomb ordering pass';
 const hasEmSuperpositionPass = emSuperposition?.status === 'held-out superposition comparator pass';
 const hasEmThreeSourcePass = emThreeSource?.status === 'non-symmetric three-source comparator pass';
+const hasEmFieldLinePass = emFieldLines?.status === 'continuous field-line topology pass';
 
 const confidence = {
   previousSandboxCompletionPct: roadmap.currentStatus.sandboxCompletionPct,
-  updatedSandboxCompletionPct: hasEmThreeSourcePass ? 99.2 : hasEmSuperpositionPass ? 99 : hasEmCoulombPass ? 98.5 : hasEmOrderingPass ? 98 : hasQuantitativeMaterialPass ? 97 : hasHeldoutInterfacePass ? 96 : hasFactorTwoPeroxideRatio ? 94 : hasHeldoutMaterialPass ? 93 : hasTighterPeroxideRatio ? 91 : hasSecondNumericPass ? 90 : hasQuantitativePass ? 88 : hasBlindStylePass ? 84 : benchmarks.length >= 3 ? 80 : 76,
+  updatedSandboxCompletionPct: hasEmFieldLinePass ? 99.5 : hasEmThreeSourcePass ? 99.2 : hasEmSuperpositionPass ? 99 : hasEmCoulombPass ? 98.5 : hasEmOrderingPass ? 98 : hasQuantitativeMaterialPass ? 97 : hasHeldoutInterfacePass ? 96 : hasFactorTwoPeroxideRatio ? 94 : hasHeldoutMaterialPass ? 93 : hasTighterPeroxideRatio ? 91 : hasSecondNumericPass ? 90 : hasQuantitativePass ? 88 : hasBlindStylePass ? 84 : benchmarks.length >= 3 ? 80 : 76,
   previousInternalCoherenceOutOf10: roadmap.currentStatus.internalCoherenceConfidenceOutOf10,
   updatedInternalCoherenceOutOf10: hasQuantitativeMaterialPass ? 7.5 : hasHeldoutInterfacePass ? 7.4 : hasFactorTwoPeroxideRatio ? 7.3 : hasHeldoutMaterialPass ? 7.2 : hasTighterPeroxideRatio ? 7.1 : hasSecondNumericPass ? 7.0 : hasQuantitativePass ? 6.9 : hasBlindStylePass ? 6.7 : benchmarks.length >= 3 ? 6.5 : 6.3,
   previousInferentialConvergenceOutOf10: roadmap.currentStatus.inferentialConvergenceConfidenceOutOf10,
-  updatedInferentialConvergenceOutOf10: hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.4 : hasEmCoulombPass ? 5.3 : hasEmOrderingPass ? 5.1 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
-  crossDomainEquivalenceOutOf10: hasEmThreeSourcePass ? 5.0 : hasEmSuperpositionPass ? 4.9 : hasEmCoulombPass ? 4.8 : hasEmOrderingPass ? 4.7 : hasQuantitativeMaterialPass ? 4.5 : hasHeldoutInterfacePass ? 4.3 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
+  updatedInferentialConvergenceOutOf10: hasEmFieldLinePass ? 6.3 : hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.4 : hasEmCoulombPass ? 5.3 : hasEmOrderingPass ? 5.1 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
+  crossDomainEquivalenceOutOf10: hasEmFieldLinePass ? 5.6 : hasEmThreeSourcePass ? 5.0 : hasEmSuperpositionPass ? 4.9 : hasEmCoulombPass ? 4.8 : hasEmOrderingPass ? 4.7 : hasQuantitativeMaterialPass ? 4.5 : hasHeldoutInterfacePass ? 4.3 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
   evidenceIndependenceOutOf10: independentEvidenceLines >= 6 ? 4.5 : independentEvidenceLines >= 5 ? 4.0 : 3.2,
-  unificationThesisSupportOutOf10: hasEmThreeSourcePass ? 4.5 : hasEmSuperpositionPass ? 4.4 : hasEmCoulombPass ? 4.2 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
+  unificationThesisSupportOutOf10: hasEmFieldLinePass ? 5.2 : hasEmThreeSourcePass ? 4.5 : hasEmSuperpositionPass ? 4.4 : hasEmCoulombPass ? 4.2 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
   rationale:
-    hasEmThreeSourcePass
+    hasEmFieldLinePass
+      ? 'External anchoring now includes continuous field-line topology: electric source-line divergence and magnetic closed-loop continuity under one integration grammar. Inferential convergence rises above 6/10 because EM evidence moves beyond finite vector fixtures into global topology, but remains cautious because the check is qualitative, not a Maxwell-equation solver or calibrated field model, and H2O2 compression remains unresolved.'
+      : hasEmThreeSourcePass
       ? 'External anchoring now includes a non-symmetric three-source electric-field geometry comparator. Inferential convergence remains at 5.5/10 after review recalibration: EM evidence now survives pairwise ratios, symmetric superposition, and asymmetric multi-source vector targets, but these are still finite static vector checks within one evidence line; H2O2 compression remains the strongest grammar limitation; and the boundary-phase benchmark is orientation evidence only.'
       : hasEmSuperpositionPass
       ? 'External anchoring now includes a held-out electric-field superposition geometry comparator. Inferential convergence rises modestly because EM evidence generalizes from pairwise Coulomb direction/ratio checks to multi-source vector cancellation and dipole reversal, but remains below 6/10 because the comparator is still static, symmetric, and not a calibrated field or Maxwell solver.'
@@ -271,11 +287,14 @@ const remainingExternalGates = [
   ...(hasEmCoulombPass ? [] : ['Move electromagnetic ordering from qualitative checks toward explicit equation-level comparators.']),
   ...(hasEmSuperpositionPass ? [] : ['Move EM-02 from pairwise Coulomb ratios toward held-out superposition or field-geometry checks.']),
   ...(hasEmThreeSourcePass ? [] : ['Move EM-03 from symmetric two-source layouts toward non-symmetric three-source field geometry or calibrated field magnitude comparisons.']),
-  'Move EM-04 from finite vector fixtures toward continuous field-line topology, equipotential geometry, or calibrated field magnitude comparisons.',
+  ...(hasEmFieldLinePass ? [] : ['Move EM-04 from finite vector fixtures toward continuous field-line topology, equipotential geometry, or calibrated field magnitude comparisons.']),
+  'Move EM-05 from qualitative field-line topology toward equipotential geometry, calibrated field magnitude, or time-dependent propagation.',
 ];
 
 const status =
-  hasEmThreeSourcePass
+  hasEmFieldLinePass
+    ? 'external anchoring broadened: continuous field-line topology comparator passes'
+    : hasEmThreeSourcePass
     ? 'external anchoring broadened: asymmetric three-source field comparator passes'
     : hasEmSuperpositionPass
     ? 'external anchoring broadened: electric-field superposition comparator passes'

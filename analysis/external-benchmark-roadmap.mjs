@@ -115,6 +115,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.2 if passed, -0.6 if failed',
     priority: 9,
   },
+  {
+    area: 'Electromagnetic continuous field-line topology',
+    currentFrontier: 'post-closure EM-05 topology pressure test',
+    externalAnchor:
+      'Compare one grammar integration rule against electric source-line divergence and magnetic closed-loop field-line topology.',
+    passSignal:
+      'Electric field-line routes diverge and remain open, magnetic routes close into loops, and both use the same route/phase/continuity integrator without domain-specific tuning.',
+    failSignal:
+      'Electric routes close like magnetic loops, magnetic routes fail to close, or the two cases require separate integration grammars.',
+    confidenceImpact: '+0.5 if passed, -0.8 if failed',
+    priority: 10,
+  },
 ];
 
 const confidenceGates = [
