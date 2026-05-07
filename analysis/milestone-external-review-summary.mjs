@@ -22,6 +22,7 @@ const benchmarkFiles = [
   'external-h2o2-benchmark.json',
   'external-h2o2-quantitative-benchmark.json',
   'external-h2o2-absolute-barrier-benchmark.json',
+  'external-hydrazine-cation-torsion-benchmark.json',
   'external-ethane-benchmark.json',
   'external-ethane-quantitative-benchmark.json',
   'external-ionic-benchmark.json',
@@ -39,8 +40,11 @@ const benchmarkFiles = [
 const benchmarkArtifacts = (await Promise.all(benchmarkFiles.map((file) => readOptionalJson(file)))).filter(Boolean);
 const h2o2Quant = benchmarkArtifacts.find((artifact) => artifact.source === 'external-h2o2-quantitative-benchmark.mjs');
 const h2o2Absolute = benchmarkArtifacts.find((artifact) => artifact.source === 'external-h2o2-absolute-barrier-benchmark.mjs');
+const hydrazineCation = benchmarkArtifacts.find((artifact) => artifact.source === 'external-hydrazine-cation-torsion-benchmark.mjs');
 const boundaryBenchmark = benchmarkArtifacts.find((artifact) => artifact.source === 'external-boundary-blind-benchmark.mjs');
 const h2o2AbsolutePass = h2o2Absolute?.status === 'absolute barrier pass';
+const hydrazineOrderingPass = hydrazineCation?.status === 'held-out torsion ordering pass with quantitative miss';
+const hydrazineTransferPass = hydrazineCation?.status === 'held-out torsion transfer pass';
 
 const intent = {
   primary:
@@ -109,7 +113,11 @@ const unificationMap = [
     conventionalDomain: 'molecular conformational chemistry',
     grammarVariables: 'route, closure, phase',
     currentReading:
-      h2o2AbsolutePass
+      hydrazineTransferPass
+        ? 'Shows torsion-order and transferred barrier equivalence after anti-planar release, with a held-out hydrazine cation transfer pass.'
+        : hydrazineOrderingPass
+        ? 'Shows torsion-order and H2O2 transferred barrier equivalence after anti-planar release. Hydrazine cation gives a held-out qualitative/ratiometric pass but misses absolute barrier magnitudes, so calibration remains limited.'
+        : h2o2AbsolutePass
         ? 'Shows torsion-order and transferred barrier equivalence after anti-planar release. This reduces the prior H2O2 limitation, but the revision needs a fresh held-out torsion check to guard against overfitting.'
         : 'Shows torsion-order equivalence but remains limited by H2O2 barrier-ratio compression. The absolute transfer check localizes the issue: cis is near scale, trans is overpredicted, so the relative barrier floor remains the strongest current grammar limitation.',
   },
@@ -184,6 +192,7 @@ const reviewPackage = {
   unificationMap,
   h2o2Compression: h2o2Quant?.metrics ?? null,
   h2o2AbsoluteTransfer: h2o2Absolute?.metrics ?? null,
+  hydrazineCationTransfer: hydrazineCation?.metrics ?? null,
   boundaryVerification: boundaryBenchmark?.predictionManifest?.verificationStatus ?? null,
   independentEvidenceLines: summary.independentEvidenceLines,
   orientationEvidenceLines: summary.orientationEvidenceLines,
@@ -214,7 +223,7 @@ const benchmarkRows = summary.benchmarks
   .join('\n');
 
 const uniqueSources = benchmarkArtifacts
-  .flatMap((artifact) => artifact.external?.sources ?? [])
+  .flatMap((artifact) => [...(artifact.external?.sources ?? []), ...(artifact.external?.source ? [artifact.external.source] : [])])
   .reduce((sources, source) => {
     const key = source.url ?? source.label;
     if (!sources.has(key)) sources.set(key, source);
@@ -259,6 +268,15 @@ const h2o2AbsoluteRows = h2o2Absolute
 | Cis error | ${h2o2Absolute.metrics.cis.errorPct}% |
 | Transfer-scale status | ${h2o2Absolute.status} |`
   : '| H2O2 absolute transfer data | unavailable |';
+
+const hydrazineRows = hydrazineCation
+  ? `| Status | ${hydrazineCation.status} |
+| Model 0/180 ratio | ${hydrazineCation.metrics.modelBarrierRatio0To180} |
+| External 0/180 ratio | ${hydrazineCation.metrics.externalBarrierRatio0To180} |
+| Ratio error | ${hydrazineCation.metrics.ratioErrorPct}% |
+| Ordering pass | ${hydrazineCation.metrics.orderingPass ? 'yes' : 'no'} |
+| Absolute barrier pass | ${hydrazineCation.metrics.absolutePass ? 'yes' : 'no'} |`
+  : '| Hydrazine cation transfer data | unavailable |';
 
 const milestoneSummaryPath = new URL('milestone-external-review-summary.md', outDir).pathname;
 const aiReviewPromptPath = new URL('milestone-external-review-ai-prompt.md', outDir).pathname;
@@ -327,7 +345,7 @@ ${unificationRows}
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, H2O2 absolute barrier transfer, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, H2O2 absolute barrier transfer, held-out hydrazine cation torsion ordering, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
 The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, H2O2 barrier transfer, and composition accounting.
 
@@ -353,8 +371,28 @@ ${h2o2AbsoluteRows}
 
 ${
   h2o2AbsolutePass
-    ? 'This is now a convergence pass for the H2O2 transfer check: both trans and cis barriers land within tolerance under the ethane-derived scale. The next step is not more H2O2 fitting; it is an independent held-out torsion transfer check that can test whether anti-planar release generalizes.'
+    ? hydrazineCation
+      ? 'This is now a convergence pass for the H2O2 transfer check: both trans and cis barriers land within tolerance under the ethane-derived scale. Hydrazine cation then tests the anti-planar release mechanism without endpoint fitting.'
+      : 'This is now a convergence pass for the H2O2 transfer check: both trans and cis barriers land within tolerance under the ethane-derived scale. The next step is not more H2O2 fitting; it is an independent held-out torsion transfer check that can test whether anti-planar release generalizes.'
     : 'This is a mixed diagnostic, not a new convergence pass. The cis barrier lands on scale, but the trans barrier is overpredicted by roughly 2x. The next peroxide revision should therefore target the shallow trans barrier floor and relative closure/phase scaling, not broad energy rescaling.'
+}
+
+## Held-Out Torsion Transfer
+
+Hydrazine cation tests anti-planar release on a separate N-N torsion target without fitting hydrazine endpoints:
+
+| Measure | Value |
+|---|---:|
+${hydrazineRows}
+
+${
+  hydrazineTransferPass
+    ? 'The held-out hydrazine cation torsion transfer passes ordering, ratio, and absolute magnitude checks under the ethane scale.'
+    : hydrazineOrderingPass
+    ? 'The held-out hydrazine cation torsion check supports anti-planar release qualitatively and ratiometrically, but misses absolute barrier magnitudes. This reduces H2O2-overfit concern without establishing a calibrated torsional energy model.'
+    : hydrazineCation
+    ? 'The held-out hydrazine cation torsion check fails to generalize anti-planar release, which should reduce confidence in the H2O2 refinement.'
+    : 'No held-out torsion transfer check has been run yet.'
 }
 
 ## Boundary Benchmark Verification
@@ -393,9 +431,9 @@ ${reviewPackage.reviewerQuestions.map((question) => `- ${question}`).join('\n')}
 
 ## Recommended Next Stage
 
-Do not extend the sandbox laterally until the review package has been read. EM-05 has completed the recommended topology broadening step, and the H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate. The next stage should pick one high-value held-out or calibrated target rather than another shallow fixture:
+Do not extend the sandbox laterally until the review package has been read. EM-05 has completed the recommended topology broadening step, H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate, and hydrazine cation has tested anti-planar release as a held-out torsion ordering check. The next stage should pick one high-value calibrated target rather than another shallow fixture:
 
-- Test anti-planar release on a new held-out torsion system without fitting its endpoints.
+- Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
 - A measured material-property correlation downstream of NBO/T, such as viscosity, durability, or conductivity.
 - A calibrated roughness/scatter quantity, not only specular/diffuse ordering.
 - A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
@@ -451,7 +489,7 @@ Produce a structured review with these sections:
 3. Equivalence standard audit: assess whether the document correctly uses equivalence-with-unification rather than proof or displacement framing.
 4. Evidence audit: identify the strongest benchmark, weakest benchmark, and any hidden tuning or permissive tolerance risk.
 5. Benchmark breadth audit: assess whether ${summary.independentEvidenceLines} core independent evidence lines plus ${summary.orientationEvidenceLines} orientation-only boundary check is a fair breadth count.
-6. H2O2 compression and absolute-transfer audit: evaluate whether the post-refinement barrier pass is credible, whether the confidence increase is calibrated, and whether a new held-out torsion check is required.
+6. Torsion audit: evaluate whether the H2O2 post-refinement pass plus hydrazine cation held-out ordering pass credibly reduce overfit concern, and whether the hydrazine absolute-magnitude miss is weighted honestly.
 7. Boundary benchmark audit: evaluate whether the documented-but-not-timestamped status is stated honestly enough.
 8. Unification map audit: assess whether the benchmarks actually support the stated cross-domain unification thesis.
 9. Confidence calibration: give your own scores for grammar internal coherence, cross-domain equivalence, evidence independence, unification thesis support, and inferential convergence.

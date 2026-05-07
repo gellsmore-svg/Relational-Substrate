@@ -24,10 +24,10 @@ Local source path:
 
 ## Current Reported Status
 
-- Sandbox completion: 99.6%
-- Benchmarks: 15/15 passing
-- Checks: 64/64 passing
-- Core independent evidence lines: 6
+- Sandbox completion: 99.7%
+- Benchmarks: 16/16 passing
+- Checks: 68/69 passing
+- Core independent evidence lines: 7
 - Orientation-only evidence lines: 1
 - Grammar internal coherence: 7.7/10
 - Inferential convergence confidence: 6.6/10
@@ -44,8 +44,8 @@ Produce a structured review with these sections:
 2. Intent and ontology boundary audit: check whether T0/T1/T2 separation is clear and whether analogy is being confused with mechanism.
 3. Equivalence standard audit: assess whether the document correctly uses equivalence-with-unification rather than proof or displacement framing.
 4. Evidence audit: identify the strongest benchmark, weakest benchmark, and any hidden tuning or permissive tolerance risk.
-5. Benchmark breadth audit: assess whether 6 core independent evidence lines plus 1 orientation-only boundary check is a fair breadth count.
-6. H2O2 compression and absolute-transfer audit: evaluate whether the post-refinement barrier pass is credible, whether the confidence increase is calibrated, and whether a new held-out torsion check is required.
+5. Benchmark breadth audit: assess whether 7 core independent evidence lines plus 1 orientation-only boundary check is a fair breadth count.
+6. Torsion audit: evaluate whether the H2O2 post-refinement pass plus hydrazine cation held-out ordering pass credibly reduce overfit concern, and whether the hydrazine absolute-magnitude miss is weighted honestly.
 7. Boundary benchmark audit: evaluate whether the documented-but-not-timestamped status is stated honestly enough.
 8. Unification map audit: assess whether the benchmarks actually support the stated cross-domain unification thesis.
 9. Confidence calibration: give your own scores for grammar internal coherence, cross-domain equivalence, evidence independence, unification thesis support, and inferential convergence.

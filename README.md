@@ -263,7 +263,15 @@ Run the external H2O2 absolute barrier transfer benchmark with:
 npm run benchmark:h2o2-absolute
 ```
 
-This applies the ethane quantitative energy scale to H2O2 trans/cis barriers without fitting either H2O2 endpoint. It is a falsification pressure test for the prior barrier-ratio compression; after anti-planar release, it should be followed by a fresh held-out torsion transfer check.
+This applies the ethane quantitative energy scale to H2O2 trans/cis barriers without fitting either H2O2 endpoint. It is a falsification pressure test for the prior barrier-ratio compression; hydrazine cation is the follow-up held-out anti-planar transfer check.
+
+Run the held-out hydrazine cation torsion benchmark with:
+
+```bash
+npm run benchmark:hydrazine-cation
+```
+
+This applies the same ethane scale and anti-planar release grammar to NIST hydrazine cation internal-rotation barriers without fitting hydrazine endpoints. It tests held-out torsion ordering and ratio transfer, not a calibrated hydrazine quantum-chemistry surface.
 
 Run the external ethane benchmark with:
 

@@ -26,6 +26,7 @@ const reportSteps = [
   'benchmark:ethane',
   'benchmark:ethane-quant',
   'benchmark:h2o2-absolute',
+  'benchmark:hydrazine-cation',
   'benchmark:ionic',
   'benchmark:boundary-blind',
   'benchmark:em-ordering',

@@ -79,15 +79,16 @@ These are the project's current self-reported metrics. Do not assume they are co
 | Cross-domain equivalence demonstrated | 5.6/10 |
 | Unification thesis support | 5.2/10 |
 
-The current milestone summary raises inferential convergence to 6.6/10 after EM-05 and after the anti-planar release revision resolves the H2O2 absolute transfer check. EM checks still do not include equipotential geometry, calibrated magnitudes, propagation, or Maxwell-equation dynamics, and the H2O2 revision now needs a fresh held-out torsion check.
+The current milestone summary holds inferential convergence at 6.6/10 after EM-05, after H2O2 absolute transfer passes, and after hydrazine cation gives a held-out qualitative/ratiometric torsion pass with an absolute-magnitude miss. EM checks still do not include equipotential geometry, calibrated magnitudes, propagation, or Maxwell-equation dynamics.
 
 ## Benchmark Inventory
 
 | Benchmark | Evidence line | Domain | Status | Checks | Limitation |
 |---|---|---|---|---:|---|
-| H2O2 torsion profile | H2O2 molecular torsion | molecular conformational ordering | qualitative pass | 3/3 | cis/trans barrier ratio directionally right but compressed |
-| H2O2 quantitative torsion angle | H2O2 molecular torsion | molecular conformational ordering | quantitative angle pass | 3/3 | angle passes; barrier contrast still compressed |
+| H2O2 torsion profile | H2O2 molecular torsion | molecular conformational ordering | qualitative pass | 3/3 | ordering pass; prior compression resolved by later anti-planar release revision |
+| H2O2 quantitative torsion angle | H2O2 molecular torsion | molecular conformational ordering | quantitative angle pass | 3/3 | angle passes; current ratio compression is 0.29% |
 | H2O2 absolute barrier transfer | H2O2 molecular torsion | molecular conformational energy scale | absolute barrier pass | 5/5 | post-refinement pass; needs held-out torsion transfer check |
+| Hydrazine cation held-out torsion transfer | held-out heteroatom torsion transfer | held-out torsion energy ordering | held-out torsion ordering pass with quantitative miss | 4/5 | ordering and ratio pass; absolute magnitudes low |
 | Ethane torsion profile | ethane molecular torsion | molecular conformational ordering | qualitative pass | 4/4 | normalized score is not an energy model |
 | Ethane quantitative torsion tolerance | ethane molecular torsion | molecular conformational ordering | quantitative tolerance pass | 3/3 | endpoint is scale-anchored and intermediate points are high |
 | Ionic lattice order | ionic lattice ordering | ionic solid structure | qualitative pass | 3/3 | not full 6:6 coordination or lattice energy |
@@ -103,7 +104,7 @@ The current milestone summary raises inferential convergence to 6.6/10 after EM-
 
 Important breadth caveat:
 
-The project has 15 benchmark entries, but only 6 core independent evidence lines plus 1 orientation-only boundary check. EM-02 through EM-05 collapse into one electromagnetic field-geometry/topology line, silicate network and NBO/T accounting collapse into one broader material-structure line, and the boundary phase check is orientation evidence only.
+The project has 16 benchmark entries, but only 7 core independent evidence lines plus 1 orientation-only boundary check. EM-02 through EM-05 collapse into one electromagnetic field-geometry/topology line, silicate network and NBO/T accounting collapse into one broader material-structure line, and the boundary phase check is orientation evidence only.
 
 ## Known Weaknesses and Drift Risks
 
@@ -111,20 +112,20 @@ Audit these carefully.
 
 ### 1. H2O2 Compression
 
-The H2O2 cis/trans barrier-ratio discrepancy is quantified:
+The prior H2O2 cis/trans barrier-ratio discrepancy was quantified, then rechecked after anti-planar release:
 
 | Measure | Value |
 |---|---:|
-| Model cis/trans ratio | 3.3273 |
+| Current model cis/trans ratio | 6.6016 |
 | External cis/trans ratio | 6.621 |
-| Compression factor | 1.9899 |
-| Ratio shortfall | 49.75% |
+| Current compression factor | 1.0029 |
+| Current ratio shortfall | 0.29% |
 
-The anti-planar release revision resolves the prior H2O2 compression in the current grammar version: applying the ethane-derived energy scale to H2O2 now predicts the trans barrier within 0.32% and the cis barrier within 0.02%. This should be treated as a post-failure grammar-revision success, not final validation. The next falsification pressure point is whether anti-planar release generalizes to a fresh held-out torsion system without endpoint fitting.
+The anti-planar release revision resolves the prior H2O2 compression in the current grammar version: applying the ethane-derived energy scale to H2O2 now predicts the trans barrier within 0.32% and the cis barrier within 0.02%. Hydrazine cation then gives a held-out ordering and 0/180 ratio pass, but misses absolute barrier magnitudes by more than 50%. This should be treated as directional generalization, not calibrated torsional-energy validation.
 
 Review question:
 
-Is the revised success language cautious enough, and does it clearly require a new held-out torsion transfer check?
+Is the revised success language cautious enough, and does it weight the hydrazine absolute-magnitude miss strongly enough?
 
 ### 2. Boundary Benchmark Status
 
@@ -148,7 +149,7 @@ This is meaningful domain broadening, but EM-02 through EM-05 still collapse int
 
 Review questions:
 
-- Does EM-05 plus the H2O2 post-refinement pass justify 6.6/10, or should confidence stay lower until anti-planar release passes a held-out torsion system?
+- Does EM-05 plus the H2O2 post-refinement pass plus hydrazine ordering/ratio transfer justify 6.6/10, or should confidence stay lower because hydrazine absolute magnitudes miss?
 - Is it honest to count EM-02 through EM-05 as one evidence line despite several implementation checks?
 - Should the next EM step require equipotential geometry, calibrated magnitude, or time-dependent propagation?
 
@@ -159,7 +160,7 @@ Current confidence is intentionally held near 6/10 rather than raised further:
 - Many checks are qualitative.
 - Several quantitative checks are narrow.
 - EM checks now include topology, but not calibrated fields or Maxwell dynamics.
-- H2O2 absolute barrier scale is not solved.
+- Held-out hydrazine torsion absolute magnitudes are not solved.
 - Material checks do not predict measured viscosity, durability, conductivity, or density.
 - Interface checks do not predict calibrated scatter curves.
 

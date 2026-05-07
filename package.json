@@ -52,6 +52,7 @@
     "benchmark:h2o2": "node analysis/external-h2o2-benchmark.mjs",
     "benchmark:h2o2-quant": "node analysis/external-h2o2-quantitative-benchmark.mjs",
     "benchmark:h2o2-absolute": "node analysis/external-h2o2-absolute-barrier-benchmark.mjs",
+    "benchmark:hydrazine-cation": "node analysis/external-hydrazine-cation-torsion-benchmark.mjs",
     "benchmark:ethane": "node analysis/external-ethane-benchmark.mjs",
     "benchmark:ethane-quant": "node analysis/external-ethane-quantitative-benchmark.mjs",
     "benchmark:ionic": "node analysis/external-ionic-benchmark.mjs",
