@@ -4,23 +4,23 @@
 
 Milestone status: complete for external review.
 
-Sandbox completion reported by benchmark summary: 99.8%.
+Sandbox completion reported by benchmark summary: 99.9%.
 
-Benchmark passes: 17/17.
+Benchmark passes: 18/18.
 
-Checks passed: 76/77.
+Checks passed: 84/85.
 
-Grammar internal coherence: 7.8/10.
+Grammar internal coherence: 7.9/10.
 
-Inferential convergence confidence: 6.7/10.
+Inferential convergence confidence: 6.8/10.
 
 Core independent evidence lines: 7.
 
 Orientation-only evidence lines: 1.
 
-Cross-domain equivalence demonstrated: 5.8/10.
+Cross-domain equivalence demonstrated: 5.9/10.
 
-Unification thesis support: 5.4/10.
+Unification thesis support: 5.5/10.
 
 Next frontier: tighten peroxide torsion: nonlocal torsion challenger.
 
@@ -72,11 +72,12 @@ The milestone is complete in the sense that the sandbox has moved from internal-
 | EM-04 three-source comparator | electromagnetic field ordering | asymmetric static electric-field geometry | electric-field vector superposition for non-symmetric three-source layouts | non-symmetric three-source comparator pass | 6/6 | 1 | finite asymmetric vector comparator; not a continuous field-line, potential, or Maxwell solver |
 | EM-05 field-line topology comparator | electromagnetic field ordering | continuous electromagnetic field-line topology | electric field-line source divergence and magnetic field-line closed-loop topology | continuous field-line topology pass | 7/7 | 1 | qualitative topology comparator; not a Maxwell solver, calibrated field model, or derivation of light speed |
 | EM-06 equipotential geometry comparator | electromagnetic field ordering | static electric potential/equipotential geometry | point-charge scalar-potential superposition and field-as-negative-gradient relation | equipotential geometry comparator pass | 8/8 | 8/8 | electrostatic scalar-potential geometry comparator; not calibrated magnitude, conductors, propagation, or Maxwell dynamics |
+| EM-07 field magnitude comparator | electromagnetic field ordering | calibrated static electric-field magnitude | point-charge electric-field magnitude and vector components using E = kq/r^2 | calibrated field magnitude comparator pass | 8/8 | 8/8 | calibrated point-charge field comparator; imports Coulomb constant and does not model conductors, media, propagation, or Maxwell dynamics |
 | Silicate held-out network order | silicate network topology | network solid/material structure | standard silicate tetrahedral network and modifier/NBO descriptions | held-out qualitative pass | 5/5 | 1 | held-out qualitative pass; graph-level material order, not glass-property prediction |
 | Roughness held-out interface order | optical/interface boundary ordering | rough optical/material interface behaviour | rough-surface specular/diffuse scattering models | held-out interface pass | 5/5 | 1 | held-out interface pass; qualitative roughness ordering, not scatter calibration |
 | Material NBO/T quantitative accounting | aluminosilicate NBO/T accounting | glass composition accounting | standard NBO/T stoichiometric accounting in aluminosilicate glasses | quantitative material pass | 3/3 | 1 | quantitative material pass; composition accounting, not measured property prediction |
 
-The benchmark pass count is not the same as independent-domain breadth. The suite has 17 benchmark entries and 76/77 passing checks, but the core independent evidence-line count is 7, plus 1 orientation-only boundary check. EM-02 through EM-06 collapse into one electromagnetic evidence line, and silicate network/NBO/T collapse into one broader material-structure group.
+The benchmark pass count is not the same as independent-domain breadth. The suite has 18 benchmark entries and 84/85 passing checks, but the core independent evidence-line count is 7, plus 1 orientation-only boundary check. EM-02 through EM-07 collapse into one electromagnetic evidence line, and silicate network/NBO/T collapse into one broader material-structure group.
 
 ## Unification Map
 
@@ -85,12 +86,12 @@ The benchmark pass count is not the same as independent-domain breadth. The suit
 | Molecular torsion: H2O2 and ethane | molecular conformational chemistry | route, closure, phase | Shows torsion-order and H2O2 transferred barrier equivalence after anti-planar release. Hydrazine cation gives a held-out qualitative/ratiometric pass but misses absolute barrier magnitudes, so calibration remains limited. |
 | Ionic lattice order | solid-state ionic structure | charge, closure, continuity | Shows qualitative ordering against standard ionic coordination expectations. |
 | Boundary phase and roughness/interface checks | optical/electromagnetic boundary behavior | phase, continuity, route | Roughness/interface ordering is a qualitative evidence line. The boundary phase prediction is orientation evidence only because it is documented but not independently timestamped. |
-| Electromagnetic ordering | charge, magnetic-field, and EM-wave behavior | charge, phase, closure, continuity, route | Opens the EM domain with one electromagnetic evidence line containing Coulomb direction/ratio, two-source superposition geometry, asymmetric three-source field implementation checks, continuous field-line topology, and scalar equipotential geometry. This is still not calibrated magnitude, conductors/material media, propagation, or a full electromagnetic solver. |
+| Electromagnetic ordering | charge, magnetic-field, and EM-wave behavior | charge, phase, closure, continuity, route | Opens the EM domain with one electromagnetic evidence line containing Coulomb direction/ratio, two-source superposition geometry, asymmetric three-source field implementation checks, continuous field-line topology, scalar equipotential geometry, and calibrated point-charge field magnitude. This still imports the conventional Coulomb constant and is not a conductor/material-media, propagation, or full electromagnetic solver. |
 | Network/material structure: silicate network and NBO/T accounting | network solids and glass chemistry | closure, charge, continuity | Shows held-out material ordering and exact composition accounting, but not measured property prediction. |
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, H2O2 absolute barrier transfer, held-out hydrazine cation torsion ordering, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, electrostatic equipotential geometry, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, H2O2 absolute barrier transfer, held-out hydrazine cation torsion ordering, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, electrostatic equipotential geometry, calibrated point-charge field magnitude, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
 The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, H2O2 barrier transfer, and composition accounting.
 
@@ -147,9 +148,9 @@ This benchmark is retained as a documented qualitative pass because it records e
 
 ## Confidence
 
-External anchoring now includes electrostatic equipotential geometry: scalar potential superposition, dipole zero-potential symmetry, field/equipotential perpendicularity, and the field-as-negative-gradient relation. Inferential convergence rises only slightly because EM-06 is still uncalibrated electrostatic geometry inside the same electromagnetic evidence line, not a new independent domain or Maxwell-equation validation.
+External anchoring now includes calibrated point-charge electric-field magnitude: a published worked example, absolute microcoulomb field magnitude, inverse-square distance scaling, charge linearity, and vector components. Inferential convergence rises only slightly because EM-07 imports the conventional Coulomb constant and remains inside one electromagnetic evidence line rather than deriving electrodynamics or opening a new domain.
 
-Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, and qualitative EM topology is not calibrated Maxwell-equation dynamics.
+Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, and calibrated EM point-charge magnitude still imports the conventional Coulomb constant rather than deriving electrodynamics.
 
 Confidence should be read as inferential convergence, not proof-of-substrate framing. It asks how much independent, non-circular evidence has converged on the grammar as a coherent explanatory framework relative to conventional domain models. The right next confidence increase requires calibrated physical-property prediction, a stricter held-out benchmark against a conventional comparator, or a new non-molecular domain check with no rescaling or endpoint anchoring.
 
@@ -158,7 +159,7 @@ Confidence should be read as inferential convergence, not proof-of-substrate fra
 - This is not proof of the Relational Substrate theory.
 - This is not a direct simulation or observation of T0 substrate.
 - This is not a derivation of atoms or molecules from T1 vortons.
-- This is not a quantum chemistry, molecular dynamics, glass-property, BRDF, Fresnel, rough-surface scattering, conductor, capacitance, or Maxwell-equation solver.
+- This is not a quantum chemistry, molecular dynamics, glass-property, BRDF, Fresnel, rough-surface scattering, conductor, capacitance, Coulomb-constant derivation, or Maxwell-equation solver.
 - This does not yet solve absolute H2O2 barrier structure, material viscosity/durability/conductivity/density, or calibrated scatter curves.
 - Passing benchmark order checks does not by itself exclude conventional explanations.
 
@@ -167,7 +168,7 @@ Confidence should be read as inferential convergence, not proof-of-substrate fra
 - Move material checks from composition accounting to measured property calibration.
 - Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
 - Move roughness/interface checks beyond qualitative ordering into calibrated scatter quantities.
-- Move EM-06 from electrostatic potential geometry toward calibrated field magnitude, conductors/material media, or time-dependent propagation.
+- Move EM-07 from calibrated point-charge fields toward conductors/material media or time-dependent propagation.
 
 ## Source Anchors
 
@@ -192,6 +193,7 @@ Confidence should be read as inferential convergence, not proof-of-substrate fra
 - OpenStax University Physics Volume 2, Calculations of Electric Potential: https://openstax.org/books/university-physics-volume-2/pages/7-3-calculations-of-electric-potential. Gives point-charge potential V = kq/r and scalar superposition for systems of point charges.
 - OpenStax University Physics Volume 2, Determining Field from Potential: https://openstax.org/books/university-physics-volume-2/pages/7-4-determining-field-from-potential. States that electric field points in the direction of decreasing potential and is the negative gradient of potential.
 - OpenStax University Physics Volume 2, Equipotential Surfaces and Conductors: https://openstax.org/books/university-physics-volume-2/pages/7-5-equipotential-surfaces-and-conductors. States that equipotential lines are perpendicular to electric field lines.
+- OpenStax University Physics Volume 2, Chapter 5 Key Equations: https://openstax.org/books/university-physics-volume-2/pages/5-key-equations. Lists the electric field at a point as the sum of point-charge source terms with the 1/(4 pi epsilon_0) constant.
 - Stebbins and Xu, Nature 1997: https://www.nature.com/articles/36312. Describes bridging and non-bridging oxygen sites, modifier cations, and the property relevance of NBO abundance in aluminosilicate glasses.
 - Chemistry LibreTexts, The Structure of Silicate Anions: https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_%28LibreTexts%29/08%3A_Solids_and_Solid-State_Materials/8.22%3A_Silicate_Minerals. Describes silicate tetrahedra and network-forming oxygen sharing in silicate structures.
 - van Ginneken et al., Applied Optics 1998: https://doi.org/10.1364/AO.37.000130. Treats diffuse and specular reflectance from rough surfaces.
@@ -271,10 +273,10 @@ Confidence should be read as inferential convergence, not proof-of-substrate fra
 
 ## Recommended Next Stage
 
-Do not extend the sandbox laterally until the review package has been read. EM-05 completed the recommended topology broadening step, EM-06 links scalar potential geometry to the vector-field checks, H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate, and hydrazine cation has tested anti-planar release as a held-out torsion ordering check. The next stage should pick one high-value calibrated target rather than another shallow fixture:
+Do not extend the sandbox laterally until the review package has been read. EM-05 completed the recommended topology broadening step, EM-06 links scalar potential geometry to the vector-field checks, EM-07 adds calibrated point-charge field magnitude, H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate, and hydrazine cation has tested anti-planar release as a held-out torsion ordering check. The next stage should pick one high-value calibrated target rather than another shallow fixture:
 
 - Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
 - A measured material-property correlation downstream of NBO/T, such as viscosity, durability, or conductivity.
 - A calibrated roughness/scatter quantity, not only specular/diffuse ordering.
 - A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
-- A calibrated field-magnitude, conductor/material-media, or time-dependent propagation comparator that tests whether EM-06 generalizes beyond electrostatic geometry.
+- A conductor/material-media or time-dependent propagation comparator that tests whether EM-07 generalizes beyond point-charge electrostatics.
