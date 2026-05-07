@@ -229,6 +229,9 @@ const h2o2CompressionRows = h2o2Quant
 | Ratio shortfall | ${h2o2Quant.metrics.barrierRatioShortfallPct}% |`
   : '| H2O2 compression data | unavailable |';
 
+const milestoneSummaryPath = new URL('milestone-external-review-summary.md', outDir).pathname;
+const aiReviewPromptPath = new URL('milestone-external-review-ai-prompt.md', outDir).pathname;
+
 const markdown = `# AMS Topology Sandbox Milestone Summary for External Review
 
 ## Executive Status
@@ -374,7 +377,7 @@ Review the attached or pasted file:
 
 Local source path:
 
-\`/home/cello/domains/AMS/research/topology-sandbox/analysis/out/milestone-external-review-summary.md\`
+\`${milestoneSummaryPath}\`
 
 ## Current Reported Status
 
@@ -417,5 +420,5 @@ await writeFile(new URL('milestone-external-review-ai-prompt.md', outDir), aiRev
 
 console.log('Milestone status: complete for external review');
 console.log(`Inferential convergence confidence: ${confidence.inferentialConvergenceOutOf10}/10`);
-console.log(`Wrote ${new URL('milestone-external-review-summary.md', outDir).pathname}`);
-console.log(`Wrote ${new URL('milestone-external-review-ai-prompt.md', outDir).pathname}`);
+console.log(`Wrote ${milestoneSummaryPath}`);
+console.log(`Wrote ${aiReviewPromptPath}`);
