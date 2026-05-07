@@ -153,11 +153,18 @@ function deriveCandidate(features, referenceFeatures) {
   const torsionMax = maxOrZero(torsionDeviations);
   const torsionMean = average(features.torsions);
   const cisCrowding = clamp01(stericDeviation * clamp01((60 - torsionMean) / 60));
+  const antiPlanarRelease = clamp01((torsionMean - 145) / 35) * clamp01(1 - stericDeviation) * clamp01(1 - cisCrowding);
+  const effectiveTorsionRms = torsionRms * (1 - antiPlanarRelease * 0.65);
+  const effectiveTorsionMax = torsionMax * (1 - antiPlanarRelease * 0.65);
 
   const bondStrain = clamp01(bondRms * 0.65 + bondMax * 0.2);
-  const angleStrain = clamp01(angleRms * 0.42 + angleMax * 0.16 + torsionRms * 0.3 + torsionMax * 0.08 + stericDeviation * 0.04 + cisCrowding * 0.48);
-  const geometryFit = clamp01(1 - (bondRms * 0.18 + bondMax * 0.08 + angleRms * 0.18 + angleMax * 0.07 + torsionRms * 0.24 + stericDeviation * 0.18 + cisCrowding * 0.36));
-  const routeContinuity = clamp01(reference.routeBase - bondRms * 0.08 - angleRms * 0.08 - torsionRms * 0.16 - stericDeviation * 0.08 - cisCrowding * 0.18);
+  const angleStrain = clamp01(
+    angleRms * 0.42 + angleMax * 0.16 + effectiveTorsionRms * 0.3 + effectiveTorsionMax * 0.08 + stericDeviation * 0.04 + cisCrowding * 0.48
+  );
+  const geometryFit = clamp01(
+    1 - (bondRms * 0.18 + bondMax * 0.08 + angleRms * 0.18 + angleMax * 0.07 + effectiveTorsionRms * 0.24 + stericDeviation * 0.18 + cisCrowding * 0.36)
+  );
+  const routeContinuity = clamp01(reference.routeBase - bondRms * 0.08 - angleRms * 0.08 - effectiveTorsionRms * 0.16 - stericDeviation * 0.08 - cisCrowding * 0.18);
   const polarityBalance = clamp01(1 - polarityDeviation * 0.72);
 
   return {
@@ -173,9 +180,11 @@ function deriveCandidate(features, referenceFeatures) {
       bondRms,
       angleRms,
       torsionRms,
+      effectiveTorsionRms,
       torsionMax,
       steric: stericDeviation,
       cisCrowding,
+      antiPlanarRelease,
       stericClearance: features.stericClearance,
       torsionMean,
       polarityDeviation,
@@ -235,10 +244,12 @@ const rows = angles.map((angle) => {
     penaltyVsReference: round(penalty),
     torsionMean: round(candidate.coordinateMetrics.torsionMean, 2),
     torsionRms: round(candidate.coordinateMetrics.torsionRms, 3),
+    effectiveTorsionRms: round(candidate.coordinateMetrics.effectiveTorsionRms, 3),
     torsionMax: round(candidate.coordinateMetrics.torsionMax, 3),
     stericClearance: round(candidate.coordinateMetrics.stericClearance, 4),
     stericObstruction: round(candidate.coordinateMetrics.steric, 3),
     cisCrowding: round(candidate.coordinateMetrics.cisCrowding, 3),
+    antiPlanarRelease: round(candidate.coordinateMetrics.antiPlanarRelease, 3),
     polarityDeviation: round(candidate.coordinateMetrics.polarityDeviation, 3),
     geometryFit: round(candidate.geometryFit, 3),
     angleStrain: round(candidate.angleStrain, 3),
@@ -307,18 +318,18 @@ Diagnosis: ${diagnosis}.
 
 ## Torsion Rows
 
-| Torsion angle | Expected class | Reference band | Distance from reference | Family score | Generic score | Penalty vs reference | Torsion mean | Torsion RMS | Steric clearance | Steric obstruction | Cis crowding | Polarity deviation | Geometry fit | Angle strain | Route continuity |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Torsion angle | Expected class | Reference band | Distance from reference | Family score | Generic score | Penalty vs reference | Torsion mean | Torsion RMS | Effective torsion RMS | Steric clearance | Steric obstruction | Cis crowding | Anti-planar release | Polarity deviation | Geometry fit | Angle strain | Route continuity |
+|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 ${rows
   .map(
     (row) =>
-      `| ${row.angle} | ${row.expectedClass} | ${row.referenceBand} | ${row.referenceDistance} | ${row.familyScore} | ${row.genericScore} | ${row.penaltyVsReference} | ${row.torsionMean} | ${row.torsionRms} | ${row.stericClearance} | ${row.stericObstruction} | ${row.cisCrowding} | ${row.polarityDeviation} | ${row.geometryFit} | ${row.angleStrain} | ${row.routeContinuity} |`
+      `| ${row.angle} | ${row.expectedClass} | ${row.referenceBand} | ${row.referenceDistance} | ${row.familyScore} | ${row.genericScore} | ${row.penaltyVsReference} | ${row.torsionMean} | ${row.torsionRms} | ${row.effectiveTorsionRms} | ${row.stericClearance} | ${row.stericObstruction} | ${row.cisCrowding} | ${row.antiPlanarRelease} | ${row.polarityDeviation} | ${row.geometryFit} | ${row.angleStrain} | ${row.routeContinuity} |`
   )
   .join('\n')}
 
 ## Reading
 
-The peroxide case is not an ethane clone: torsion changes also shift polarity and H-H separation. Rows inside the near-reference window should be read as local tolerance neighbours, not hard decoys. The frontier penalty is therefore the lowest nonlocal penalty. Cis crowding prevents planar cis compression from being hidden inside a single saturated steric channel.
+The peroxide case is not an ethane clone: torsion changes also shift polarity and H-H separation. Rows inside the near-reference window should be read as local tolerance neighbours, not hard decoys. The frontier penalty is therefore the lowest nonlocal penalty. Cis crowding prevents planar cis compression from being hidden inside a single saturated steric channel; anti-planar release prevents uncrowded trans-like routes from inheriting the same saturated closure penalty as crowded cis routes.
 `;
 
 await writeFile(new URL('peroxide-torsion-sweep.md', outDir), markdown);

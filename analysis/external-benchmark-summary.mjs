@@ -304,7 +304,9 @@ const confidence = {
 
 const remainingExternalGates = [
   'Move material checks from composition accounting to measured property calibration.',
-  h2o2Absolute
+  hasH2O2AbsolutePass
+    ? 'Test anti-planar release on a new held-out torsion system without fitting its endpoints.'
+    : h2o2Absolute
     ? 'Resolve transferred H2O2 trans-barrier overprediction without fitting H2O2 endpoints or breaking cis-barrier scale.'
     : 'Move peroxide from ratio-shape checks toward absolute barrier-height calibration.',
   'Move roughness/interface checks beyond qualitative ordering into calibrated scatter quantities.',

@@ -263,7 +263,7 @@ Run the external H2O2 absolute barrier transfer benchmark with:
 npm run benchmark:h2o2-absolute
 ```
 
-This applies the ethane quantitative energy scale to H2O2 trans/cis barriers without fitting either H2O2 endpoint. It is a falsification pressure test for the known barrier-ratio compression, not a new calibration pass.
+This applies the ethane quantitative energy scale to H2O2 trans/cis barriers without fitting either H2O2 endpoint. It is a falsification pressure test for the prior barrier-ratio compression; after anti-planar release, it should be followed by a fresh held-out torsion transfer check.
 
 Run the external ethane benchmark with:
 

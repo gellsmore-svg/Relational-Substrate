@@ -75,11 +75,11 @@ These are the project's current self-reported metrics. Do not assume they are co
 | Core independent evidence lines | 6 |
 | Orientation-only evidence lines | 1 |
 | Grammar internal coherence | 7.5/10 |
-| Inferential convergence confidence | 6.1/10 |
+| Inferential convergence confidence | 6.6/10 |
 | Cross-domain equivalence demonstrated | 5.6/10 |
 | Unification thesis support | 5.2/10 |
 
-The current milestone summary keeps inferential convergence near 6/10 after EM-05 because the EM domain now includes continuous field-line topology, but the H2O2 absolute barrier transfer is mixed. EM checks still do not include equipotential geometry, calibrated magnitudes, propagation, or Maxwell-equation dynamics.
+The current milestone summary raises inferential convergence to 6.6/10 after EM-05 and after the anti-planar release revision resolves the H2O2 absolute transfer check. EM checks still do not include equipotential geometry, calibrated magnitudes, propagation, or Maxwell-equation dynamics, and the H2O2 revision now needs a fresh held-out torsion check.
 
 ## Benchmark Inventory
 
@@ -87,7 +87,7 @@ The current milestone summary keeps inferential convergence near 6/10 after EM-0
 |---|---|---|---|---:|---|
 | H2O2 torsion profile | H2O2 molecular torsion | molecular conformational ordering | qualitative pass | 3/3 | cis/trans barrier ratio directionally right but compressed |
 | H2O2 quantitative torsion angle | H2O2 molecular torsion | molecular conformational ordering | quantitative angle pass | 3/3 | angle passes; barrier contrast still compressed |
-| H2O2 absolute barrier transfer | H2O2 molecular torsion | molecular conformational energy scale | absolute barrier mixed diagnostic | 3/5 | ethane-derived scale matches cis but overpredicts trans |
+| H2O2 absolute barrier transfer | H2O2 molecular torsion | molecular conformational energy scale | absolute barrier pass | 5/5 | post-refinement pass; needs held-out torsion transfer check |
 | Ethane torsion profile | ethane molecular torsion | molecular conformational ordering | qualitative pass | 4/4 | normalized score is not an energy model |
 | Ethane quantitative torsion tolerance | ethane molecular torsion | molecular conformational ordering | quantitative tolerance pass | 3/3 | endpoint is scale-anchored and intermediate points are high |
 | Ionic lattice order | ionic lattice ordering | ionic solid structure | qualitative pass | 3/3 | not full 6:6 coordination or lattice energy |
@@ -120,11 +120,11 @@ The H2O2 cis/trans barrier-ratio discrepancy is quantified:
 | Compression factor | 1.9899 |
 | Ratio shortfall | 49.75% |
 
-The absolute barrier transfer sharpens the issue: applying the ethane-derived energy scale to H2O2 predicts the cis barrier almost exactly, but overpredicts the trans barrier by 99.04%. This is the strongest known grammar limitation and the strongest current candidate for falsification. The roughly 2x compression factor means the current grammar does not recover the experimental separation between the shallow trans barrier and the high cis barrier. It is not resolved. It should remain one of the strongest reasons not to overstate confidence.
+The anti-planar release revision resolves the prior H2O2 compression in the current grammar version: applying the ethane-derived energy scale to H2O2 now predicts the trans barrier within 0.32% and the cis barrier within 0.02%. This should be treated as a post-failure grammar-revision success, not final validation. The next falsification pressure point is whether anti-planar release generalizes to a fresh held-out torsion system without endpoint fitting.
 
 Review question:
 
-Is the revised limitation language now strong enough, or should the H2O2 compression be promoted even more prominently in the executive status?
+Is the revised success language cautious enough, and does it clearly require a new held-out torsion transfer check?
 
 ### 2. Boundary Benchmark Status
 
@@ -148,7 +148,7 @@ This is meaningful domain broadening, but EM-02 through EM-05 still collapse int
 
 Review questions:
 
-- Does EM-05 add enough topology depth to justify crossing 6/10, or should the mixed H2O2 absolute-transfer result hold confidence lower?
+- Does EM-05 plus the H2O2 post-refinement pass justify 6.6/10, or should confidence stay lower until anti-planar release passes a held-out torsion system?
 - Is it honest to count EM-02 through EM-05 as one evidence line despite several implementation checks?
 - Should the next EM step require equipotential geometry, calibrated magnitude, or time-dependent propagation?
 
@@ -248,12 +248,12 @@ Questions to answer:
 
 ### 6. H2O2 and Chemistry Audit
 
-Evaluate whether the H2O2 compression issue should now become the priority.
+Evaluate whether anti-planar release should now become the priority for held-out validation.
 
 Questions to answer:
 
 - Is H2O2 absolute torsional barrier calibration a better next target than more EM work?
-- Does the current barrier-ratio compression suggest a grammar limitation or just a calibration limitation?
+- Does the resolved barrier-ratio compression look like a genuine grammar improvement or a likely overfit?
 - What would count as a strong pass?
 - What would count as a real failure?
 
