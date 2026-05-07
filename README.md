@@ -353,6 +353,14 @@ npm run benchmark:em-equipotential
 
 This compares scalar potential superposition, dipole zero-potential symmetry, field/equipotential perpendicularity, and the field-as-negative-gradient relation. It is an electrostatic geometry comparator, not a conductor, propagation, calibrated SI, or Maxwell-equation solver.
 
+Run the external EM-07 field magnitude comparator with:
+
+```bash
+npm run benchmark:em-field-magnitude
+```
+
+This compares absolute SI point-charge electric-field magnitudes, inverse-square scaling, charge linearity, and vector components using the published Coulomb constant. It is a calibrated static-field comparator, not a derivation of the Coulomb constant, conductor model, material-media model, propagation model, or Maxwell-equation solver.
+
 Run the external silicate held-out benchmark with:
 
 ```bash

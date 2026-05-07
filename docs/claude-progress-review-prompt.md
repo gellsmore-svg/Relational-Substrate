@@ -69,17 +69,17 @@ These are the project's current self-reported metrics. Do not assume they are co
 
 | Metric | Current value |
 |---|---:|
-| Sandbox completion | 99.8% |
-| Benchmark entries | 17/17 passing |
-| Checks | 76/77 passing |
+| Sandbox completion | 99.9% |
+| Benchmark entries | 18/18 passing |
+| Checks | 84/85 passing |
 | Core independent evidence lines | 7 |
 | Orientation-only evidence lines | 1 |
-| Grammar internal coherence | 7.8/10 |
-| Inferential convergence confidence | 6.7/10 |
-| Cross-domain equivalence demonstrated | 5.8/10 |
-| Unification thesis support | 5.4/10 |
+| Grammar internal coherence | 7.9/10 |
+| Inferential convergence confidence | 6.8/10 |
+| Cross-domain equivalence demonstrated | 5.9/10 |
+| Unification thesis support | 5.5/10 |
 
-The current milestone summary reports inferential convergence at 6.7/10 after EM-06, after H2O2 absolute transfer passes, and after hydrazine cation gives a held-out qualitative/ratiometric torsion pass with an absolute-magnitude miss. EM checks now include scalar equipotential geometry, but still do not include calibrated magnitudes, conductors/material media, propagation, or Maxwell-equation dynamics.
+The current milestone summary reports inferential convergence at 6.8/10 after EM-07, after H2O2 absolute transfer passes, and after hydrazine cation gives a held-out qualitative/ratiometric torsion pass with an absolute-magnitude miss. EM checks now include calibrated point-charge field magnitudes, but still import the conventional Coulomb constant and do not include conductors/material media, propagation, or Maxwell-equation dynamics.
 
 ## Benchmark Inventory
 
@@ -99,13 +99,14 @@ The current milestone summary reports inferential convergence at 6.7/10 after EM
 | EM-04 three-source comparator | electromagnetic field ordering | asymmetric static field geometry | non-symmetric three-source comparator pass | 6/6 | finite asymmetric vector fixture; not field-line/potential/Maxwell |
 | EM-05 field-line topology comparator | electromagnetic field ordering | continuous EM field-line topology | continuous field-line topology pass | 7/7 | qualitative topology only; not calibrated field/Maxwell |
 | EM-06 equipotential geometry comparator | electromagnetic field ordering | static electric potential/equipotential geometry | equipotential geometry comparator pass | 8/8 | electrostatic scalar-potential geometry; not calibrated magnitude, conductors, propagation, or Maxwell |
+| EM-07 field magnitude comparator | electromagnetic field ordering | calibrated static electric-field magnitude | calibrated field magnitude comparator pass | 8/8 | imports Coulomb constant; not conductors, material media, propagation, or Maxwell |
 | Silicate held-out network order | silicate network topology | network solid/material structure | held-out qualitative pass | 5/5 | graph-level order, not glass-property prediction |
 | Roughness held-out interface order | optical/interface boundary ordering | rough optical/material interface behavior | held-out interface pass | 5/5 | qualitative roughness ordering, not scatter calibration |
 | Material NBO/T quantitative accounting | aluminosilicate NBO/T accounting | glass composition accounting | quantitative material pass | 3/3 | composition accounting, not measured property prediction |
 
 Important breadth caveat:
 
-The project has 17 benchmark entries, but only 7 core independent evidence lines plus 1 orientation-only boundary check. EM-02 through EM-06 collapse into one electromagnetic field-geometry/topology/potential line, silicate network and NBO/T accounting collapse into one broader material-structure line, and the boundary phase check is orientation evidence only.
+The project has 18 benchmark entries, but only 7 core independent evidence lines plus 1 orientation-only boundary check. EM-02 through EM-07 collapse into one electromagnetic field-geometry/topology/potential/magnitude line, silicate network and NBO/T accounting collapse into one broader material-structure line, and the boundary phase check is orientation evidence only.
 
 ## Known Weaknesses and Drift Risks
 
@@ -146,14 +147,15 @@ The EM sequence now includes:
 - EM-04: non-symmetric three-source electric-field vector fixture.
 - EM-05: continuous electric/magnetic field-line topology.
 - EM-06: scalar electric-potential/equipotential geometry.
+- EM-07: calibrated point-charge electric-field magnitude.
 
-This is meaningful domain broadening, but EM-02 through EM-06 still collapse into one electromagnetic evidence line. EM-05 adds topology beyond finite vector arithmetic, and EM-06 links scalar potential geometry to vector fields, but both remain uncalibrated electrostatic/electromagnetic comparators.
+This is meaningful domain broadening, but EM-02 through EM-07 still collapse into one electromagnetic evidence line. EM-05 adds topology beyond finite vector arithmetic, EM-06 links scalar potential geometry to vector fields, and EM-07 adds absolute SI magnitudes, but EM-07 imports the conventional Coulomb constant rather than deriving it.
 
 Review questions:
 
-- Does EM-06 plus the H2O2 post-refinement pass plus hydrazine ordering/ratio transfer justify 6.7/10, or should confidence stay lower because hydrazine absolute magnitudes miss?
-- Is it honest to count EM-02 through EM-06 as one evidence line despite several implementation checks?
-- Should the next EM step require calibrated magnitude, conductor/material-media behavior, or time-dependent propagation?
+- Does EM-07 plus the H2O2 post-refinement pass plus hydrazine ordering/ratio transfer justify 6.8/10, or should confidence stay lower because hydrazine absolute magnitudes miss and EM-07 imports the Coulomb constant?
+- Is it honest to count EM-02 through EM-07 as one evidence line despite several implementation checks?
+- Should the next EM step require conductor/material-media behavior or time-dependent propagation?
 
 ### 4. Confidence Ceiling
 
@@ -161,14 +163,14 @@ Current confidence is intentionally held near 6/10 rather than raised further:
 
 - Many checks are qualitative.
 - Several quantitative checks are narrow.
-- EM checks now include topology and scalar equipotential geometry, but not calibrated fields, conductors/material media, or Maxwell dynamics.
+- EM checks now include topology, scalar equipotential geometry, and calibrated point-charge field magnitudes, but not conductors/material media or Maxwell dynamics.
 - Held-out hydrazine torsion absolute magnitudes are not solved.
 - Material checks do not predict measured viscosity, durability, conductivity, or density.
 - Interface checks do not predict calibrated scatter curves.
 
 Review question:
 
-Is 6.7/10 too high, too low, or appropriate under an inferential-convergence framing?
+Is 6.8/10 too high, too low, or appropriate under an inferential-convergence framing?
 
 ### 5. Equivalence vs Displacement
 
@@ -236,18 +238,18 @@ Give your own scores:
 | Unification thesis support | ?/10 |
 | Inferential convergence overall | ?/10 |
 
-Briefly justify each score. If you think 6.7/10 is wrong, say what number should replace it and why.
+Briefly justify each score. If you think 6.8/10 is wrong, say what number should replace it and why.
 
 ### 5. EM Sequence Audit
 
-Evaluate EM-01 through EM-04.
+Evaluate EM-01 through EM-07.
 
 Questions to answer:
 
 - Does EM-04 genuinely improve over EM-03?
 - Does the EM sequence now justify calling electromagnetic behavior a substantiated domain in the unification map?
 - What is the next EM test that would actually add inferential weight?
-- Should the next EM test be calibrated magnitude, conductor/material-media behavior, or time-dependent propagation?
+- Should the next EM test be conductor/material-media behavior or time-dependent propagation?
 
 ### 6. H2O2 and Chemistry Audit
 
@@ -264,10 +266,10 @@ Questions to answer:
 
 Choose exactly one next target:
 
-1. EM-07 calibrated field-magnitude comparator.
-2. EM-07 conductor/material-media comparator.
-3. EM-07 time-dependent propagation comparator.
-4. H2O2 absolute torsional barrier calibration.
+1. EM-08 conductor/material-media comparator.
+2. EM-08 time-dependent propagation comparator.
+3. H2O2 absolute torsional barrier calibration.
+4. Held-out torsion absolute-magnitude repair without hydrazine endpoint fitting.
 5. Material measured-property correlation downstream of NBO/T.
 6. Roughness calibrated scatter quantity.
 7. Something else, but only if you can justify why it better tests the unification thesis.

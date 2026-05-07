@@ -151,6 +151,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.1 if passed, -0.5 if failed',
     priority: 12,
   },
+  {
+    area: 'Electromagnetic calibrated field magnitude',
+    currentFrontier: 'post-EM-06 calibrated electrostatic pressure test',
+    externalAnchor:
+      'Compare absolute SI electric-field magnitudes and vector components against point-charge E = kq/r^2 examples using the published Coulomb constant.',
+    passSignal:
+      'Published worked example, microcoulomb magnitude, inverse-square scaling, charge linearity, and vector components pass without fitting a new field scale.',
+    failSignal:
+      'The grammar survives relative electrostatic geometry but cannot reproduce calibrated point-charge field magnitudes under the same charge/continuity rules.',
+    confidenceImpact: '+0.1 if passed, -0.5 if failed',
+    priority: 13,
+  },
 ];
 
 const confidenceGates = [
