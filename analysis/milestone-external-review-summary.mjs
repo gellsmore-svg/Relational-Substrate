@@ -28,6 +28,7 @@ const benchmarkFiles = [
   'external-em-ordering-benchmark.json',
   'external-em-coulomb-comparator.json',
   'external-em-superposition-comparator.json',
+  'external-em-three-source-comparator.json',
   'external-silicate-heldout-benchmark.json',
   'external-roughness-heldout-benchmark.json',
   'external-material-nbo-quantitative-benchmark.json',
@@ -122,7 +123,7 @@ const unificationMap = [
     conventionalDomain: 'charge, magnetic-field, and EM-wave behavior',
     grammarVariables: 'charge, phase, closure, continuity, route',
     currentReading:
-      'Adds post-closure non-molecular/material checks, including equation-level Coulomb direction/ratio and two-source superposition geometry comparators, but not a full electromagnetic solver.',
+      'Adds post-closure non-molecular/material checks, including equation-level Coulomb direction/ratio, two-source superposition geometry, and asymmetric three-source field comparators, but not a full electromagnetic solver.',
   },
   {
     benchmarkFamily: 'Silicate network and NBO/T accounting',
@@ -303,7 +304,7 @@ ${unificationRows}
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, ionic ordering, boundary phase, qualitative electromagnetic ordering, Coulomb direction/ratio and electric-field superposition comparators, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. It includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, ionic ordering, boundary phase, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, and asymmetric three-source field-geometry comparators, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. It includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
 The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, and composition accounting.
 
@@ -362,6 +363,7 @@ Do not extend the sandbox laterally until the review package has been read. The 
 - A qualitative electromagnetic ordering check outside molecular/material chemistry with no rescaling or endpoint anchoring.
 - A held-out electromagnetic superposition or field-geometry comparator that tests whether EM-02 generalizes beyond simple pair cases.
 - A non-symmetric three-source electromagnetic field-geometry comparator that tests whether EM-03 generalizes beyond two-source symmetry cases.
+- A continuous field-line topology or equipotential-geometry comparator that tests whether EM-04 generalizes beyond finite vector fixtures.
 `;
 
 await writeFile(new URL('milestone-external-review-summary.md', outDir), markdown);

@@ -313,6 +313,14 @@ npm run benchmark:em-superposition
 
 This compares fixed two-charge field geometry against electric-field superposition expectations: symmetry cancellation, vector addition, and dipole direction reversal. It is a finite static-field comparator, not a continuous field-line or Maxwell-equation solver.
 
+Run the external EM-04 three-source comparator with:
+
+```bash
+npm run benchmark:em-three-source
+```
+
+This compares non-symmetric three-charge field geometry against predeclared electric-field vector targets: net components, magnitude, angle, third-source contribution, and charge-scale linearity. It is still a finite static-field comparator, not a continuous field-line or Maxwell-equation solver.
+
 Run the external silicate held-out benchmark with:
 
 ```bash

@@ -103,6 +103,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.2 if passed, -0.6 if failed',
     priority: 8,
   },
+  {
+    area: 'Electromagnetic asymmetric multi-source geometry',
+    currentFrontier: 'post-closure EM-04 pressure test',
+    externalAnchor:
+      'Compare grammar vector addition against predeclared non-symmetric three-source electric-field targets.',
+    passSignal:
+      'Net vector components, magnitude, angle, third-source contribution, and uniform charge-scale linearity pass for asymmetric layouts.',
+    failSignal:
+      'The grammar only survives symmetric two-source cases and fails asymmetric multi-source field geometry.',
+    confidenceImpact: '+0.2 if passed, -0.6 if failed',
+    priority: 9,
+  },
 ];
 
 const confidenceGates = [
