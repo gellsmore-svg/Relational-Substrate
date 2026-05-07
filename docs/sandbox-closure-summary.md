@@ -1,30 +1,30 @@
-# AMS Topology Sandbox Milestone Summary for External Review
+# Relational Substrate Sandbox Milestone Summary for External Review
 
 ## Executive Status
 
 Milestone status: complete for external review.
 
-Sandbox completion reported by benchmark summary: 97%.
+Sandbox completion reported by benchmark summary: 98.5%.
 
-Benchmark passes: 9/9.
+Benchmark passes: 11/11.
 
-Checks passed: 32/32.
+Checks passed: 41/41.
 
 Grammar internal coherence: 7.5/10.
 
-Inferential convergence confidence: 5/10.
+Inferential convergence confidence: 5.5/10.
 
-Independent evidence lines: 6.
+Independent evidence lines: 7.
 
-Cross-domain equivalence demonstrated: 4.5/10.
+Cross-domain equivalence demonstrated: 5.1/10.
 
-Unification thesis support: 3.5/10.
+Unification thesis support: 4.2/10.
 
 Next frontier: watch and refine peroxide torsion: nonlocal torsion challenger.
 
 ## Intent
 
-The AMS topology sandbox is an external-review test bench for a proposed substrate/topology grammar. Its purpose is to test whether a small unified grammar of route, closure, phase, charge, and continuity variables can reproduce, with reasonable equivalence, outputs and orderings that established domain models already produce while providing one ontological framework across phenomena those models usually treat separately.
+The Relational Substrate sandbox is an external-review test bench for a proposed substrate/topology grammar. Its purpose is to test whether a small unified grammar of route, closure, phase, charge, and continuity variables can reproduce, with reasonable equivalence, outputs and orderings that established domain models already produce while providing one ontological framework across phenomena those models usually treat separately.
 
 The sandbox does not simulate T0 directly. It does not treat atoms, molecules, lattices, surfaces, curves, rendered meshes, or graph nodes as substrate objects. Molecules and materials are T2 secondary regimes used as pressure tests for a possible T1 coupling grammar.
 
@@ -32,7 +32,7 @@ The standard is equivalence-with-unification, not displacement. The sandbox does
 
 The inference target is not proof of an invisible substrate. The target is increasing independent, non-circular evidential convergence, analogous in structure to how unobservable theoretical entities gain standing through convergent explanatory and predictive success.
 
-The correct review question is not "has AMS been proven?" The correct question is "does this sandbox now contain enough externally anchored, non-circular checks to justify the next stage of stricter quantitative and held-out validation?"
+The correct review question is not "has the Relational Substrate theory been proven?" The correct question is "does this sandbox now contain enough externally anchored, non-circular checks to justify the next stage of stricter quantitative and held-out validation?"
 
 ## Glossary
 
@@ -62,11 +62,13 @@ The milestone is complete in the sense that the sandbox has moved from internal-
 | Ethane quantitative torsion tolerance | ethane molecular torsion | molecular conformational ordering | experimental rotational barrier and molecular orbital/hyperconjugation accounts | quantitative tolerance pass | 3/3 | 1 | quantitative tolerance pass; endpoint is scale-anchored and intermediate points are high |
 | Ionic lattice order | ionic lattice ordering | ionic solid structure | standard crystallographic ionic-lattice coordination models | qualitative pass | 3/3 | 1 | qualitative pass; full 6:6 coordination and lattice energy are not modeled |
 | Boundary phase prediction | optical/interface boundary ordering | optical/electromagnetic boundary behaviour | wave boundary continuity and Fresnel-style optics expectations | documented blind-style qualitative pass | 3/3 | 1 | documented qualitative pass; not independently timestamped and not an optics simulator |
+| Electromagnetic ordering | electromagnetic field ordering | electromagnetic qualitative behavior | standard electric-charge, magnetic-field-line, and plane-EM-wave ordering expectations | qualitative EM ordering pass | 4/4 | 1 | qualitative EM ordering pass; not a Maxwell solver, Coulomb calculation, or derivation of c |
+| EM-02 Coulomb comparator | electromagnetic field ordering | static-charge equation-level comparator | Coulomb-law direction, charge-product, and inverse-square relative force ordering | equation-level Coulomb ordering pass | 5/5 | 1 | equation-level relative comparator; not an absolute force model or Maxwell solver |
 | Silicate held-out network order | silicate network topology | network solid/material structure | standard silicate tetrahedral network and modifier/NBO descriptions | held-out qualitative pass | 5/5 | 1 | held-out qualitative pass; graph-level material order, not glass-property prediction |
 | Roughness held-out interface order | optical/interface boundary ordering | rough optical/material interface behaviour | rough-surface specular/diffuse scattering models | held-out interface pass | 5/5 | 1 | held-out interface pass; qualitative roughness ordering, not scatter calibration |
 | Material NBO/T quantitative accounting | aluminosilicate NBO/T accounting | glass composition accounting | standard NBO/T stoichiometric accounting in aluminosilicate glasses | quantitative material pass | 3/3 | 1 | quantitative material pass; composition accounting, not measured property prediction |
 
-The benchmark pass count is not the same as independent-domain breadth. The suite has 9 benchmark entries and 32/32 passing checks, but the independent evidence-line count is 6 because the H2O2 and ethane qualitative/quantitative entries are sub-checks on the same two molecule families.
+The benchmark pass count is not the same as independent-domain breadth. The suite has 11 benchmark entries and 41/41 passing checks, but the independent evidence-line count is 7 because the H2O2 and ethane qualitative/quantitative entries are sub-checks on the same two molecule families.
 
 ## Unification Map
 
@@ -75,11 +77,12 @@ The benchmark pass count is not the same as independent-domain breadth. The suit
 | H2O2 and ethane torsion | molecular conformational chemistry | route, closure, phase | Shows torsion-order equivalence but remains limited by H2O2 barrier-ratio compression and unitless penalties. |
 | Ionic lattice order | solid-state ionic structure | charge, closure, continuity | Shows qualitative ordering against standard ionic coordination expectations. |
 | Boundary phase and roughness/interface checks | optical/electromagnetic boundary behavior | phase, continuity, route | Begins to connect the grammar to wave-boundary and rough-surface ordering, but remains qualitative. |
+| Electromagnetic ordering | charge, magnetic-field, and EM-wave behavior | charge, phase, closure, continuity, route | Adds post-closure non-molecular/material checks, including a first equation-level Coulomb direction and ratio comparator, but not a full electromagnetic solver. |
 | Silicate network and NBO/T accounting | network solids and glass chemistry | closure, charge, continuity | Shows held-out material ordering and exact composition accounting, but not measured property prediction. |
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, ionic ordering, boundary phase, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. It includes held-out material and interface checks and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, ionic ordering, boundary phase, qualitative electromagnetic ordering, a Coulomb direction/ratio comparator, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. It includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
 The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, and composition accounting.
 
@@ -104,15 +107,15 @@ This benchmark is retained as a documented qualitative pass because it records e
 
 ## Confidence
 
-External anchoring now includes exact quantitative NBO/T composition accounting in addition to held-out material/interface checks. Inferential convergence is real but moderate: four torsion sub-checks collapse to two molecule evidence lines, the H2O2 ratio remains compressed, and boundary-phase evidence is documented rather than independently timestamped.
+External anchoring now includes an equation-level Coulomb direction and relative-ratio comparator. Inferential convergence rises modestly because a post-closure EM benchmark survived stricter mathematical pressure, but remains moderate because the comparator is static, small, and not a full electromagnetic field model.
 
 Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, and benchmark-breadth compression remain known issues. Inferential convergence remains moderate because the strongest non-molecular tests are still qualitative or composition-accounting checks, not calibrated physical property prediction.
 
-Confidence should be read as inferential convergence, not substrate-truth proof. It asks how much independent, non-circular evidence has converged on the grammar as a coherent explanatory framework relative to conventional domain models. The right next confidence increase requires calibrated physical-property prediction, a stricter held-out benchmark against a conventional comparator, or a new non-molecular domain check with no rescaling or endpoint anchoring.
+Confidence should be read as inferential convergence, not proof-of-substrate framing. It asks how much independent, non-circular evidence has converged on the grammar as a coherent explanatory framework relative to conventional domain models. The right next confidence increase requires calibrated physical-property prediction, a stricter held-out benchmark against a conventional comparator, or a new non-molecular domain check with no rescaling or endpoint anchoring.
 
 ## Explicit Non-Claims
 
-- This is not proof of the AMS substrate theory.
+- This is not proof of the Relational Substrate theory.
 - This is not a direct simulation or observation of T0 substrate.
 - This is not a derivation of atoms or molecules from T1 vortons.
 - This is not a quantum chemistry, molecular dynamics, glass-property, BRDF, Fresnel, or rough-surface scattering solver.
@@ -124,6 +127,7 @@ Confidence should be read as inferential convergence, not substrate-truth proof.
 - Move material checks from composition accounting to measured property calibration.
 - Move peroxide from ratio-shape checks toward absolute barrier-height calibration.
 - Move roughness/interface checks beyond qualitative ordering into calibrated scatter quantities.
+- Move EM-02 from pairwise Coulomb ratios toward held-out superposition or field-geometry checks.
 
 ## Source Anchors
 
@@ -137,6 +141,11 @@ Confidence should be read as inferential convergence, not substrate-truth proof.
 - Physics LibreTexts, Reflection and Transmission at Boundaries and Fresnel Equations: https://phys.libretexts.org/Bookshelves/Optics/Physical_Optics_%28Tatum%29/02%3A_Reflection_and_Transmission_at_Boundaries_and_the_Fresnel_Equations. Frames reflected and transmitted amplitudes as consequences of boundary continuity conditions.
 - Bruce et al., Applied Optics 2021: https://doi.org/10.1364/AO.410003. Studies rough-surface scattering with controlled polarization and coherence of the incident beam.
 - Hyde et al., Optics Express 2013: https://doi.org/10.1364/OE.21.006807. Treats scattering of a partially coherent wave from a statistically rough material surface.
+- OpenStax University Physics Volume 2, Electric Charges and Fields: https://openstax.org/books/university-physics-volume-2/pages/5-1-electric-charge. Frames electric charge as positive/negative and gives the conventional attraction/repulsion ordering for unlike/like charges.
+- OpenStax University Physics Volume 2, Magnetic Fields and Lines: https://openstax.org/books/university-physics-volume-2/pages/11-2-magnetic-fields-and-lines. States that magnetic field lines are continuous and form closed loops without beginning or end.
+- OpenStax University Physics Volume 2, Plane Electromagnetic Waves: https://openstax.org/books/university-physics-volume-2/pages/16-2-plane-electromagnetic-waves. Describes plane electromagnetic waves as coupled electric and magnetic fields propagating through space at the speed of light in free space.
+- OpenStax University Physics Volume 2, Coulomb's Law: https://openstax.org/books/university-physics-volume-2/pages/5-3-coulombs-law. States that force magnitude is proportional to the charge product and inversely proportional to distance squared; force direction follows charge signs.
+- OpenStax University Physics Volume 2, Chapter 5 Summary: https://openstax.org/books/university-physics-volume-2/pages/5-summary. Summarizes like-charge repulsion, unlike-charge attraction, and square-distance weakening.
 - Stebbins and Xu, Nature 1997: https://www.nature.com/articles/36312. Describes bridging and non-bridging oxygen sites, modifier cations, and the property relevance of NBO abundance in aluminosilicate glasses.
 - Chemistry LibreTexts, The Structure of Silicate Anions: https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_%28LibreTexts%29/08%3A_Solids_and_Solid-State_Materials/8.22%3A_Silicate_Minerals. Describes silicate tetrahedra and network-forming oxygen sharing in silicate structures.
 - van Ginneken et al., Applied Optics 1998: https://doi.org/10.1364/AO.37.000130. Treats diffuse and specular reflectance from rough surfaces.
@@ -152,11 +161,11 @@ Confidence should be read as inferential convergence, not substrate-truth proof.
 - No material middle layer is allowed between T0 substrate and T1 vortons. Status: hard guardrail. Risk: Any future model that inserts cells, lattices, particles, or material fillers at this level violates the ontology.
 - Vortons are treated as candidate stable primary topology, not as conventional particles. Status: foundational. Risk: The numeric parameters are descriptors of coupling grammar, not evidence that a specific vorton shape exists.
 - Atoms and molecules are T2 secondary material regimes, not T1 vorton species. Status: hard guardrail. Risk: The molecule bench cannot be used to claim that atoms have been derived from T1; it only constrains possible T1 coupling grammar.
-- Matter is treated as real perceived geometry/grammar arising from stable substrate expression. Status: interpretive. Risk: This is an AMS framing assumption; the software does not prove perception, matter, or ontology.
+- Matter is treated as real perceived geometry/grammar arising from stable substrate expression. Status: interpretive. Risk: This is a Relational Substrate framing assumption; the software does not prove perception, matter, or ontology.
 
 ### Reference Data
 
-- Classical molecular geometries can be used as calibration anchors. Status: working. Risk: The anchors constrain coherence but do not define AMS ontology.
+- Classical molecular geometries can be used as calibration anchors. Status: working. Risk: The anchors constrain coherence but do not define the Relational Substrate ontology.
 - Rounded gas-phase geometry values are adequate for this early-stage test bench. Status: temporary. Risk: Higher-precision and source-specific values may alter family envelopes.
 - The current molecule cases are representative enough to test initial family behaviour. Status: temporary. Risk: The sample is too small for strong claims; more families and more examples per family are needed.
 - NaCl and LiF are only gas-phase ionic pair proxies. Status: explicit limitation with focused diagnostic. Risk: The molecule coordinate bench does not represent ionic crystal lattices or bulk material behaviour; the ionic lattice sweep is a separate topology/control diagnostic.
@@ -190,7 +199,7 @@ Confidence should be read as inferential convergence, not substrate-truth proof.
 - Ten scalar parameters can represent the first-pass T1 coupling envelope. Status: working. Risk: The real coupling grammar may require additional dimensions or non-scalar structure.
 - The current parameters are comparable across families. Status: working. Risk: A value like angularConstraint may not mean exactly the same thing in a ring and a bent polar molecule.
 - T2 metrics can derive T1 target envelopes through one shared formula. Status: current test. Risk: The formula may fail when more molecule families are added.
-- Residuals between T1 candidates and derived targets are meaningful coherence diagnostics. Status: working. Risk: Residuals measure fit to the current formula, not truth of AMS.
+- Residuals between T1 candidates and derived targets are meaningful coherence diagnostics. Status: working. Risk: Residuals measure fit to the current formula, not truth of the Relational Substrate theory.
 - Local refinement around best candidates can distinguish coarse-grid error from formula weakness. Status: validated for current run. Risk: Refinement improves fit but may also make overfitting easier if used without new data.
 
 ### Sweep Mechanics
@@ -221,5 +230,6 @@ Do not extend the sandbox laterally until the review package has been read. The 
 - H2O2 absolute torsional barrier scale, not only ratio shape.
 - A measured material-property correlation downstream of NBO/T, such as viscosity, durability, or conductivity.
 - A calibrated roughness/scatter quantity, not only specular/diffuse ordering.
-- A conventional-comparator review that asks whether AMS adds predictive leverage over standard physical models.
+- A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
 - A qualitative electromagnetic ordering check outside molecular/material chemistry with no rescaling or endpoint anchoring.
+- A held-out electromagnetic superposition or field-geometry comparator that tests whether EM-02 generalizes beyond simple pair cases.

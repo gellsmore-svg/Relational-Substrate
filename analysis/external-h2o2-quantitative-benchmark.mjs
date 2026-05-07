@@ -105,7 +105,7 @@ const json = {
 
 await writeFile(new URL('external-h2o2-quantitative-benchmark.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS External H2O2 Quantitative Benchmark
+const markdown = `# Relational Substrate External H2O2 Quantitative Benchmark
 
 ## Scope
 

@@ -186,7 +186,7 @@ const json = {
 
 await writeFile(new URL('external-silicate-heldout-benchmark.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS External Silicate Held-Out Benchmark
+const markdown = `# Relational Substrate External Silicate Held-Out Benchmark
 
 ## Scope
 

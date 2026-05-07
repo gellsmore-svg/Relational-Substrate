@@ -7,7 +7,7 @@ const defaultReferenceProvenance = {
   sourceName: 'NIST CCCBDB geometry data',
   sourceUrl: 'https://cccbdb.nist.gov/geometriesx.asp',
   status: 'rounded gas-phase geometry anchor',
-  caution: 'Used as a classical calibration anchor only; it does not define AMS ontology.',
+  caution: 'Used as a classical calibration anchor only; it does not define the Relational Substrate ontology.',
 };
 
 const referenceData = {
@@ -1792,11 +1792,11 @@ const summary = {
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('molecule-coordinate-sweep.json', outDir), JSON.stringify(summary, null, 2));
 
-const markdown = `# AMS Molecule Coordinate Sweep
+const markdown = `# Relational Substrate Molecule Coordinate Sweep
 
 ## Scope
 
-This sweep perturbs actual atom coordinate sets, derives coordinate-feature distributions, then derives the AMS coherence variables from those distributions.
+This sweep perturbs actual atom coordinate sets, derives coordinate-feature distributions, then derives the Relational Substrate coherence variables from those distributions.
 
 It is still a secondary-regime coherence bench. It does not treat atoms as vorton species and does not insert material parts between substrate and vorton formation.
 
@@ -1822,7 +1822,7 @@ ${Object.entries(globalPerturbationCounts)
 
 ## Reference Calibration Table
 
-These are approximate classical anchors used to construct the coordinate references. They calibrate the bench; they do not define AMS ontology.
+These are approximate classical anchors used to construct the coordinate references. They calibrate the bench; they do not define the Relational Substrate ontology.
 
 | Case | Family | Bond length | Bond angle | Route base | Polarity proxy | Provenance | Status | Notes |
 |---|---|---:|---:|---:|---:|---|---|---|

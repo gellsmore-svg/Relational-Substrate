@@ -81,7 +81,7 @@ const json = {
 
 await writeFile(new URL('external-material-nbo-quantitative-benchmark.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS External Material NBO/T Quantitative Benchmark
+const markdown = `# Relational Substrate External Material NBO/T Quantitative Benchmark
 
 ## Scope
 

@@ -16,9 +16,9 @@ const frontier = await readJson('model-frontier-report.json');
 const currentStatus = {
   sandboxCompletionPct: 72,
   internalCoherenceConfidenceOutOf10: 7,
-  substrateTruthConfidenceOutOf10: 2.5,
+  inferentialConvergenceConfidenceOutOf10: 2.5,
   reason:
-    'The sandbox now has broad internal coherence checks, but confidence in substrate truth remains low because external prediction and comparison are not yet implemented.',
+    'The sandbox now has broad internal coherence checks, but inferential convergence remains low because external prediction and comparison are not yet implemented.',
 };
 
 const benchmarkTargets = [
@@ -102,13 +102,13 @@ const confidenceGates = [
   },
   {
     gate: 'External anchoring',
-    current: currentStatus.substrateTruthConfidenceOutOf10,
+    current: currentStatus.inferentialConvergenceConfidenceOutOf10,
     nextThreshold: 4,
     requirement: 'At least three independent external comparisons pass without per-case tuning.',
   },
   {
-    gate: 'Substrate-theory claim strength',
-    current: currentStatus.substrateTruthConfidenceOutOf10,
+    gate: 'Relational Substrate theory claim strength',
+    current: currentStatus.inferentialConvergenceConfidenceOutOf10,
     nextThreshold: 6,
     requirement: 'The model makes at least one nontrivial prediction before fitting and survives external comparison.',
   },
@@ -118,12 +118,12 @@ const immediatePlan = [
   'Implement a small external-data ingestion shape for benchmark rows without embedding source-specific assumptions in the scoring code.',
   'Start with peroxide torsion because it is the current weakest true frontier and has a clear external analogue.',
   'Record pass/fail criteria before any score adjustment.',
-  'Only raise substrate-theory confidence after an external comparison passes without special tuning.',
+  'Only raise inferential-convergence confidence after an external comparison passes without special tuning.',
 ];
 
 const json = {
   source: 'external-benchmark-roadmap.mjs',
-  status: 'external anchoring roadmap for AMS topology sandbox',
+  status: 'external anchoring roadmap for Relational Substrate sandbox',
   currentStatus,
   currentFrontier: frontier.nextTarget,
   benchmarkTargets,
@@ -134,7 +134,7 @@ const json = {
 
 await writeFile(new URL('external-benchmark-roadmap.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS External Benchmark Roadmap
+const markdown = `# Relational Substrate External Benchmark Roadmap
 
 ## Current Status
 
@@ -142,7 +142,7 @@ const markdown = `# AMS External Benchmark Roadmap
 |---|---:|
 | Sandbox completion | ${currentStatus.sandboxCompletionPct}% |
 | Internal coherence confidence | ${currentStatus.internalCoherenceConfidenceOutOf10}/10 |
-| Substrate truth confidence | ${currentStatus.substrateTruthConfidenceOutOf10}/10 |
+| Inferential convergence confidence | ${currentStatus.inferentialConvergenceConfidenceOutOf10}/10 |
 
 ${currentStatus.reason}
 
@@ -172,11 +172,11 @@ ${immediatePlan.map((item) => `- ${item}`).join('\n')}
 
 ## Reading
 
-The sandbox has earned confidence as an internal coherence machine. It has not earned strong confidence as a substrate theory. The next confidence gain must come from external comparisons defined before tuning.
+The sandbox has earned confidence as an internal coherence machine. It has not earned strong inferential convergence as a Relational Substrate theory. The next confidence gain must come from external comparisons defined before tuning.
 `;
 
 await writeFile(new URL('external-benchmark-roadmap.md', outDir), markdown);
 
 console.log(`Current frontier: ${frontier.nextTarget}`);
-console.log(`Substrate truth confidence: ${currentStatus.substrateTruthConfidenceOutOf10}/10`);
+console.log(`Inferential convergence confidence: ${currentStatus.inferentialConvergenceConfidenceOutOf10}/10`);
 console.log(`Wrote ${new URL('external-benchmark-roadmap.md', outDir).pathname}`);

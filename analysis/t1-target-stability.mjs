@@ -92,13 +92,13 @@ const json = {
 
 await writeFile(new URL('t1-target-stability.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS T1 Target Stability
+const markdown = `# Relational Substrate T1 Target Stability
 
 ## Scope
 
 This report reads \`t1-coupling-sweep.json\` and checks how closely the best admissible candidate in each family matches the T2-derived target envelope.
 
-It does not prove AMS and does not add any material layer between \`T0\` substrate and T1 vortons. It is a residual report for the current target-derivation formula.
+It does not prove the Relational Substrate theory and does not add any material layer between \`T0\` substrate and T1 vortons. It is a residual report for the current target-derivation formula.
 
 ## Family Residuals
 

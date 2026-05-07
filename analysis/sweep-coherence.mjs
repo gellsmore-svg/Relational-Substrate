@@ -86,7 +86,7 @@ const patternSummary = [...byPattern.values()]
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('coherence-sweep.json', outDir), JSON.stringify({ total: rows.length, preserved: preserved.length, patternSummary, topCoherent, fragile, failure }, null, 2));
 
-const markdown = `# AMS Topology Sandbox Coherence Sweep
+const markdown = `# Relational Substrate Sandbox Coherence Sweep
 
 ## Scope
 

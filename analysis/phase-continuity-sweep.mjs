@@ -218,7 +218,7 @@ const json = {
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('phase-continuity-sweep.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS Phase Continuity Sweep
+const markdown = `# Relational Substrate Phase Continuity Sweep
 
 ## Scope
 

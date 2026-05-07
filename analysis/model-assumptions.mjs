@@ -56,7 +56,7 @@ const assumptions = [
       {
         assumption: 'Matter is treated as real perceived geometry/grammar arising from stable substrate expression.',
         status: 'interpretive',
-        risk: 'This is an AMS framing assumption; the software does not prove perception, matter, or ontology.',
+        risk: 'This is a Relational Substrate framing assumption; the software does not prove perception, matter, or ontology.',
       },
     ],
   },
@@ -66,7 +66,7 @@ const assumptions = [
       {
         assumption: 'Classical molecular geometries can be used as calibration anchors.',
         status: 'working',
-        risk: 'The anchors constrain coherence but do not define AMS ontology.',
+        risk: 'The anchors constrain coherence but do not define the Relational Substrate ontology.',
       },
       {
         assumption: 'Rounded gas-phase geometry values are adequate for this early-stage test bench.',
@@ -206,7 +206,7 @@ const assumptions = [
       {
         assumption: 'Residuals between T1 candidates and derived targets are meaningful coherence diagnostics.',
         status: 'working',
-        risk: 'Residuals measure fit to the current formula, not truth of AMS.',
+        risk: 'Residuals measure fit to the current formula, not truth of the Relational Substrate theory.',
       },
       {
         assumption: 'Local refinement around best candidates can distinguish coarse-grid error from formula weakness.',
@@ -370,7 +370,7 @@ const metrics = {
 };
 
 const json = {
-  status: 'current AMS topology sandbox modelling assumptions',
+  status: 'current Relational Substrate sandbox modelling assumptions',
   generatedFrom: [
     'molecule-coordinate-sweep.json',
     'molecule-calibration-summary.json',
@@ -393,13 +393,13 @@ const json = {
 
 await writeFile(new URL('model-assumptions.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS Topology Sandbox Modelling Assumptions
+const markdown = `# Relational Substrate Sandbox Modelling Assumptions
 
 ## Scope
 
-This report lists the assumptions currently built into the AMS topology and molecule coherence sandbox.
+This report lists the assumptions currently built into the Relational Substrate topology and molecule coherence sandbox.
 
-It does not prove AMS. It makes the modelling commitments explicit so future changes can be judged against them.
+It does not prove the Relational Substrate theory. It makes the modelling commitments explicit so future changes can be judged against them.
 
 ## Current Scale
 

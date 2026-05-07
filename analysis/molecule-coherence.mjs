@@ -21,7 +21,7 @@ const failed = results.length - passed;
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('molecule-coherence.json', outDir), JSON.stringify({ passed, failed, results }, null, 2));
 
-const markdown = `# AMS Molecule Coherence Bench
+const markdown = `# Relational Substrate Molecule Coherence Bench
 
 ## Scope
 
@@ -60,7 +60,7 @@ ${result.ranked
 
 This first bench passes only because the input variables are hand-calibrated from known chemistry. That is acceptable at this stage. The value is that the scoring language is now explicit and executable.
 
-The next hard test is to move from hand-scored candidates to generated perturbations of bond length, angle, polarity balance, ring closure, and route continuity. If generated known-good candidates do not remain near the top, the weights or variables need correction before any stronger AMS claim is made.
+The next hard test is to move from hand-scored candidates to generated perturbations of bond length, angle, polarity balance, ring closure, and route continuity. If generated known-good candidates do not remain near the top, the weights or variables need correction before any stronger Relational Substrate theory claim is made.
 `;
 
 await writeFile(new URL('molecule-coherence-summary.md', outDir), markdown);

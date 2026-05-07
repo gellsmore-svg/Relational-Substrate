@@ -1,6 +1,6 @@
 # Relational Substrate
 
-Relational Substrate is a visual and analytical sandbox for the AMS topology grammar: route, closure, phase, charge, and continuity.
+Relational Substrate is a visual and analytical sandbox for the substrate grammar: route, closure, phase, charge, and continuity.
 
 It does not simulate `T0` directly and does not treat rendered curves, molecules, lattices, materials, or interfaces as substrate objects. It is a browser-based conceptual model for:
 
@@ -93,7 +93,7 @@ This sweep perturbs atom coordinate sets first, derives coordinate-feature distr
 
 Coordinate scoring uses the same coherence variables across all cases, with family-aware weights for diatomic covalent, bent polar, trigonal pyramidal covalent, linear triatomic, linear unsaturated covalent, trigonal planar covalent, asymmetric planar covalent, tetrahedral covalent, rotatable covalent, aromatic ring, and ionic-pair cases.
 
-Coordinate references include provenance metadata for the classical geometry anchors. These anchors calibrate the bench; they are not AMS-derived claims.
+Coordinate references include provenance metadata for the classical geometry anchors. These anchors calibrate the bench; they are not claims derived from the Relational Substrate grammar.
 
 The coordinate sweep also writes decoy-control results for deliberately wrong or strained geometries such as linear water, bent carbon dioxide, planar ammonia, pyramidal boron trifluoride, eclipsed ethane, and warped benzene. These controls are not calibration anchors; they test whether the current score rejects familiar failure modes.
 
@@ -191,7 +191,7 @@ Run the T1 coupling descriptor report with:
 npm run t1:coupling
 ```
 
-This reads the coordinate and calibration outputs, then writes candidate T1 coupling-pattern descriptors for each T2 molecule family. These descriptors are mechanism-facing hypotheses only: they do not prove AMS and do not introduce cells, particles, lattices, or material components between `T0` substrate and T1 vortons.
+This reads the coordinate and calibration outputs, then writes candidate T1 coupling-pattern descriptors for each T2 molecule family. These descriptors are mechanism-facing hypotheses only: they do not prove the Relational Substrate theory and do not introduce cells, particles, lattices, or material components between `T0` substrate and T1 vortons.
 
 Run the T1 coupling parameter sweep with:
 

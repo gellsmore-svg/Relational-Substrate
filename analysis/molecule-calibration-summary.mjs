@@ -164,11 +164,11 @@ const json = {
 
 await writeFile(new URL('molecule-calibration-summary.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS Molecule Calibration Summary
+const markdown = `# Relational Substrate Molecule Calibration Summary
 
 ## Scope
 
-This report interprets the coordinate sweep output. It does not prove AMS. It summarizes whether the current family-aware bench behaves coherently against approximate classical reference geometries.
+This report interprets the coordinate sweep output. It does not prove the Relational Substrate theory. It summarizes whether the current family-aware bench behaves coherently against approximate classical reference geometries.
 
 Source: \`molecule-coordinate-sweep.json\`
 
@@ -224,7 +224,7 @@ ${(summary.controlResults ?? [])
 
 ## Reference Provenance
 
-The coordinate references are rounded classical geometry anchors. They calibrate the test bench; they are not AMS-derived claims.
+The coordinate references are rounded classical geometry anchors. They calibrate the test bench; they are not claims derived from the Relational Substrate grammar.
 
 | Molecule | Family | Source | Status | Caution |
 |---|---|---|---|---|

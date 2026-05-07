@@ -290,13 +290,13 @@ const json = {
 
 await writeFile(new URL('t1-coupling-sweep.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS T1 Coupling Parameter Sweep
+const markdown = `# Relational Substrate T1 Coupling Parameter Sweep
 
 ## Scope
 
 This report turns the qualitative T1 coupling descriptors into bounded numeric parameter candidates.
 
-It does not prove AMS and does not introduce a hidden material layer. The sweep tests whether a candidate coupling grammar can produce the right constraint shape for the already-calibrated T2 molecule families.
+It does not prove the Relational Substrate theory and does not introduce a hidden material layer. The sweep tests whether a candidate coupling grammar can produce the right constraint shape for the already-calibrated T2 molecule families.
 
 The target envelopes in this version are derived from T2 calibration metrics, with descriptor priors used only for broad family features that the T2 metrics do not directly contain, such as route count demand and distribution mode.
 

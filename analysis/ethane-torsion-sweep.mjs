@@ -317,7 +317,7 @@ const json = {
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('ethane-torsion-sweep.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS Ethane Torsion Sweep
+const markdown = `# Relational Substrate Ethane Torsion Sweep
 
 ## Scope
 

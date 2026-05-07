@@ -215,7 +215,7 @@ const summary = {
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('molecule-geometry-sweep.json', outDir), JSON.stringify(summary, null, 2));
 
-const markdown = `# AMS Molecule Geometry Sweep
+const markdown = `# Relational Substrate Molecule Geometry Sweep
 
 ## Scope
 

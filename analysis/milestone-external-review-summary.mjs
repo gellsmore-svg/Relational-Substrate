@@ -38,7 +38,7 @@ const boundaryBenchmark = benchmarkArtifacts.find((artifact) => artifact.source 
 
 const intent = {
   primary:
-    'The AMS topology sandbox is an external-review test bench for a proposed substrate/topology grammar. Its purpose is to test whether a small unified grammar of route, closure, phase, charge, and continuity variables can reproduce, with reasonable equivalence, outputs and orderings that established domain models already produce while providing one ontological framework across phenomena those models usually treat separately.',
+    'The Relational Substrate sandbox is an external-review test bench for a proposed substrate/topology grammar. Its purpose is to test whether a small unified grammar of route, closure, phase, charge, and continuity variables can reproduce, with reasonable equivalence, outputs and orderings that established domain models already produce while providing one ontological framework across phenomena those models usually treat separately.',
   ontologyBoundary:
     'The sandbox does not simulate T0 directly. It does not treat atoms, molecules, lattices, surfaces, curves, rendered meshes, or graph nodes as substrate objects. Molecules and materials are T2 secondary regimes used as pressure tests for a possible T1 coupling grammar.',
   equivalenceStandard:
@@ -46,7 +46,7 @@ const intent = {
   inferenceStandard:
     'The inference target is not proof of an invisible substrate. The target is increasing independent, non-circular evidential convergence, analogous in structure to how unobservable theoretical entities gain standing through convergent explanatory and predictive success.',
   reviewQuestion:
-    'The correct review question is not "has AMS been proven?" The correct question is "does this sandbox now contain enough externally anchored, non-circular checks to justify the next stage of stricter quantitative and held-out validation?"',
+    'The correct review question is not "has the Relational Substrate theory been proven?" The correct question is "does this sandbox now contain enough externally anchored, non-circular checks to justify the next stage of stricter quantitative and held-out validation?"',
 };
 
 const glossary = [
@@ -145,7 +145,6 @@ const completion = {
 const confidence = {
   internalCoherenceOutOf10: summary.confidence.updatedInternalCoherenceOutOf10,
   inferentialConvergenceOutOf10: summary.confidence.updatedInferentialConvergenceOutOf10,
-  deprecatedSubstrateTruthOutOf10: summary.confidence.updatedSubstrateTruthOutOf10,
   crossDomainEquivalenceOutOf10: summary.confidence.crossDomainEquivalenceOutOf10,
   evidenceIndependenceOutOf10: summary.confidence.evidenceIndependenceOutOf10,
   unificationThesisSupportOutOf10: summary.confidence.unificationThesisSupportOutOf10,
@@ -154,7 +153,7 @@ const confidence = {
 };
 
 const nonClaims = [
-  'This is not proof of the AMS substrate theory.',
+  'This is not proof of the Relational Substrate theory.',
   'This is not a direct simulation or observation of T0 substrate.',
   'This is not a derivation of atoms or molecules from T1 vortons.',
   'This is not a quantum chemistry, molecular dynamics, glass-property, BRDF, Fresnel, or rough-surface scattering solver.',
@@ -164,7 +163,7 @@ const nonClaims = [
 
 const reviewPackage = {
   source: 'milestone-external-review-summary.mjs',
-  status: 'AMS topology sandbox milestone summary for external review',
+  status: 'Relational Substrate sandbox milestone summary for external review',
   intent,
   completion,
   confidence,
@@ -241,7 +240,7 @@ const h2o2CompressionRows = h2o2Quant
 const milestoneSummaryPath = new URL('milestone-external-review-summary.md', outDir).pathname;
 const aiReviewPromptPath = new URL('milestone-external-review-ai-prompt.md', outDir).pathname;
 
-const markdown = `# AMS Topology Sandbox Milestone Summary for External Review
+const markdown = `# Relational Substrate Sandbox Milestone Summary for External Review
 
 ## Executive Status
 
@@ -329,7 +328,7 @@ ${summary.confidence.rationale}
 
 ${confidence.reading}
 
-Confidence should be read as inferential convergence, not substrate-truth proof. It asks how much independent, non-circular evidence has converged on the grammar as a coherent explanatory framework relative to conventional domain models. The right next confidence increase requires calibrated physical-property prediction, a stricter held-out benchmark against a conventional comparator, or a new non-molecular domain check with no rescaling or endpoint anchoring.
+Confidence should be read as inferential convergence, not proof-of-substrate framing. It asks how much independent, non-circular evidence has converged on the grammar as a coherent explanatory framework relative to conventional domain models. The right next confidence increase requires calibrated physical-property prediction, a stricter held-out benchmark against a conventional comparator, or a new non-molecular domain check with no rescaling or endpoint anchoring.
 
 ## Explicit Non-Claims
 
@@ -358,22 +357,22 @@ Do not extend the sandbox laterally until the review package has been read. The 
 - H2O2 absolute torsional barrier scale, not only ratio shape.
 - A measured material-property correlation downstream of NBO/T, such as viscosity, durability, or conductivity.
 - A calibrated roughness/scatter quantity, not only specular/diffuse ordering.
-- A conventional-comparator review that asks whether AMS adds predictive leverage over standard physical models.
+- A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
 - A qualitative electromagnetic ordering check outside molecular/material chemistry with no rescaling or endpoint anchoring.
 - A held-out electromagnetic superposition or field-geometry comparator that tests whether EM-02 generalizes beyond simple pair cases.
 `;
 
 await writeFile(new URL('milestone-external-review-summary.md', outDir), markdown);
 
-const aiReviewPrompt = `# AI Review Prompt: AMS Topology Sandbox Closure Milestone
+const aiReviewPrompt = `# AI Review Prompt: Relational Substrate Sandbox Closure Milestone
 
-You are reviewing the AMS topology sandbox closure package.
+You are reviewing the Relational Substrate sandbox closure package.
 
 Your task is not to endorse the theory. Your task is to evaluate whether the sandbox, as described in the attached milestone summary, has corrected closure drift and is ready to proceed from sandbox work into stricter quantitative validation.
 
 ## Primary Intent
 
-The AMS topology sandbox tests whether a small unified grammar of route, closure, phase, charge, and continuity variables can reproduce, with reasonable equivalence, outputs and orderings that established domain models already produce while providing one ontological framework across phenomena those models usually treat separately.
+The Relational Substrate sandbox tests whether a small unified grammar of route, closure, phase, charge, and continuity variables can reproduce, with reasonable equivalence, outputs and orderings that established domain models already produce while providing one ontological framework across phenomena those models usually treat separately.
 
 Do not treat the sandbox as a literal substrate simulation. It does not simulate T0 directly, does not derive atoms or molecules from T1 vortons, and does not replace quantum chemistry, molecular dynamics, optics, glass-property, Fresnel, BRDF, or rough-surface scattering solvers.
 

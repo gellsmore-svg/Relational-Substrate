@@ -222,7 +222,7 @@ const json = {
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('boundary-transition-sweep.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS Boundary Transition Sweep
+const markdown = `# Relational Substrate Boundary Transition Sweep
 
 ## Scope
 

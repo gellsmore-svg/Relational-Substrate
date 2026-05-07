@@ -289,7 +289,7 @@ const json = {
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('peroxide-nonlocal-refinement.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS Peroxide Nonlocal Refinement
+const markdown = `# Relational Substrate Peroxide Nonlocal Refinement
 
 ## Scope
 

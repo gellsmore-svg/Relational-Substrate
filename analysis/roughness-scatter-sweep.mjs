@@ -175,7 +175,7 @@ const json = {
 await mkdir(outDir, { recursive: true });
 await writeFile(new URL('roughness-scatter-sweep.json', outDir), JSON.stringify(json, null, 2));
 
-const markdown = `# AMS Roughness Scatter Sweep
+const markdown = `# Relational Substrate Roughness Scatter Sweep
 
 ## Scope
 
