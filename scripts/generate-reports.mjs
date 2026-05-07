@@ -29,6 +29,7 @@ const reportSteps = [
   'benchmark:boundary-blind',
   'benchmark:em-ordering',
   'benchmark:em-coulomb',
+  'benchmark:em-superposition',
   'benchmark:silicate-heldout',
   'benchmark:roughness-heldout',
   'benchmark:material-nbo',

@@ -24,14 +24,14 @@ Local source path:
 
 ## Current Reported Status
 
-- Sandbox completion: 98.5%
-- Benchmarks: 11/11 passing
-- Checks: 41/41 passing
+- Sandbox completion: 99%
+- Benchmarks: 12/12 passing
+- Checks: 46/46 passing
 - Independent evidence lines: 7
 - Grammar internal coherence: 7.5/10
-- Inferential convergence confidence: 5.5/10
-- Cross-domain equivalence demonstrated: 5.1/10
-- Unification thesis support: 4.2/10
+- Inferential convergence confidence: 5.7/10
+- Cross-domain equivalence demonstrated: 5.3/10
+- Unification thesis support: 4.5/10
 
 Do not assume these scores are correct. Audit whether the evidence described in the summary supports them.
 

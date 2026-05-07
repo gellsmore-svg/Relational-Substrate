@@ -57,6 +57,7 @@
     "benchmark:boundary-blind": "node analysis/external-boundary-blind-benchmark.mjs",
     "benchmark:em-ordering": "node analysis/external-em-ordering-benchmark.mjs",
     "benchmark:em-coulomb": "node analysis/external-em-coulomb-comparator.mjs",
+    "benchmark:em-superposition": "node analysis/external-em-superposition-comparator.mjs",
     "benchmark:silicate-heldout": "node analysis/external-silicate-heldout-benchmark.mjs",
     "benchmark:roughness-heldout": "node analysis/external-roughness-heldout-benchmark.mjs",
     "benchmark:material-nbo": "node analysis/external-material-nbo-quantitative-benchmark.mjs",
