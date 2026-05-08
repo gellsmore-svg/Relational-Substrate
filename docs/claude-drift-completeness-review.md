@@ -15,7 +15,7 @@ Review this as an external critique packet for the Relational Substrate sandbox.
 | Cross-domain equivalence | 5.7/10 |
 | Unification thesis support | 5.2/10 |
 | Benchmark passes | 29/30 |
-| Checks passed | 183/186 |
+| Checks passed | 184/186 |
 | Core independent evidence lines | 7 |
 | Orientation-only evidence lines | 1 |
 
@@ -40,7 +40,7 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 | ionic solid ordering | 1 | 3/3 | charge, closure, continuity | core evidence |
 | orientation-only boundary phase | 1 | 3/3 | route, phase, continuity | orientation-only |
 | electromagnetic field geometry/topology | 17 | 131/131 | route, closure, phase, continuity, charge | core evidence |
-| network/material structure | 3 | 11/13 | charge, closure, continuity | core evidence |
+| network/material structure | 3 | 12/13 | charge, closure, continuity | core evidence |
 | rough optical/interface ordering | 2 | 13/13 | route, phase, continuity, closure | core evidence |
 
 ## EM-17 Checks
@@ -62,7 +62,7 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 
 ## Drift Audit Targets
 
-- Benchmark scope: pass. The aggregate now includes an explicit unresolved material refractive-index challenge. Reviewers should verify that this is treated as a gate, not as a failed-by-design excuse or a hidden pass.
+- Benchmark scope: pass. The aggregate now includes an explicit unresolved material refractive-index challenge with a first-pass topology-only predictor. Reviewers should verify that this is treated as a tolerance miss, not as a hidden material-property pass.
 - EM evidence independence: review. EM-02 through EM-17 are depth checks inside one electromagnetic evidence line, not separate independent domains. They should increase confidence in grammar breadth within EM but should not be counted as independent cross-domain evidence.
 - Double-slit completeness: pass. EM-17 covers scalar bright/dark fringe positions, finite-slit modulation, missing-order suppression, symmetry, scaling, and screen mapping. It deliberately excludes vector diffraction, broadband intensities, resolving power, radiation generation, and Maxwell solving.
 - Confidence drift: pass. The confidence posture remains conservative after adding calibrated roughness scatter and an unresolved material-property challenge: inferential convergence is 6.25/10 and unification support is 5.2/10. This keeps scalar EM depth, imported smooth-surface TIS accounting, and NBO/T composition accounting from being counted as near-decisive evidence.
@@ -79,12 +79,13 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 - Check whether confidence increments after EM-15 through EM-17 are modest enough for scalar analytic optics comparators.
 - Confirm that the recalibrated confidence score stays near 6/10 until a calibrated material-property prediction, measured scatter curve, or held-out absolute torsion transfer passes.
 - Confirm that the material refractive-index row is treated as an unresolved measured-property challenge, not as a benchmark pass.
+- Check whether the topology-only refractive-index proxy is too weak, under-justified, or implicitly tuned despite failing Na2SiO3 tolerance.
 - Identify any missing source citations or comparator assumptions that should be made explicit before external review.
 - Recommend the next falsification-oriented benchmark, prioritizing calibrated quantities or held-out cases over more same-family EM depth checks.
 
 ## Remaining Gates
 
-- Resolve material refractive-index challenge by adding a predeclared optical-property predictor before comparing against measured SiO2/Na2SiO3 targets.
+- Resolve material refractive-index challenge by improving the predeclared topology-only optical-property predictor until it clears measured SiO2/Na2SiO3 tolerance without endpoint fitting.
 - Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
 - Move calibrated roughness/interface checks beyond smooth-surface TIS into BRDF/PSD, measured scatter curves, or broadband surface response.
 - Move EM-17 from scalar double-slit envelope coupling toward resolving power, broadband intensities, vector diffraction, or radiation generation.

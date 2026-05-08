@@ -479,7 +479,7 @@ Run the external material refractive-index challenge with:
 npm run benchmark:material-refractive-index
 ```
 
-This checks source-anchored SiO2 and Na2SiO3 refractive-index targets against current material grammar outputs. It is intentionally unresolved until a predeclared refractive-index predictor exists; it is not a Sellmeier, density, polarizability, dispersion, or ab initio optical-property model.
+This checks source-anchored SiO2 and Na2SiO3 refractive-index targets against a first-pass topology-only refractive-index proxy. It is intentionally unresolved until the predictor clears measured tolerance without endpoint fitting; it is not a Sellmeier, density, polarizability, dispersion, or ab initio optical-property model.
 
 Run the external benchmark summary with:
 
