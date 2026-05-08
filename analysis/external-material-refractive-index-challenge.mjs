@@ -15,7 +15,7 @@ const nbo = await readJson('material-nbo-stoichiometry.json');
 const external = {
   target: 'measured refractive-index material-property challenge',
   modeledSubset:
-    'source-anchored refractive-index targets for SiO2 fused silica and sodium silicate glass, checked against the current material grammar outputs',
+    'source-anchored refractive-index targets for SiO2 fused silica, sodium silicate glass, and held-out albite feldspar, checked against the current material grammar outputs',
   notModeled:
     'Sellmeier coefficient derivation, density prediction, molar refraction, glass relaxation, temperature dependence, wavelength-dependent dispersion beyond cited target values, molecular polarizability, or ab initio optical-property prediction',
   tolerances: {
@@ -85,12 +85,35 @@ const predictor = {
     'does not use density, molar refraction, electronic polarizability, Sellmeier dispersion, glass relaxation, temperature, or wavelength-dependent composition response',
 };
 
+const quarantinedCandidate = {
+  name: 'calibration-debt aluminosilicate framework candidate',
+  equation: 'n = silicaBaseline + candidateNboTSlope * NBO/T + frameworkAlBoost * chargeBalancedAl',
+  silicaBaseline: 1.46,
+  candidateNboTSlope: 0.03,
+  frameworkAlBoost: 0.075,
+  status: 'quarantined calibration candidate; not counted as a benchmark pass',
+  reason:
+    'The NBO/T slope and framework-Al boost are target-implied by the current Na2SiO3 and NaAlSi3O8 rows after the miss was observed.',
+  releaseCondition:
+    'Promote only if the same coefficients clear a new held-out material composition without changing coefficients.',
+};
+
 function predictRefractiveIndex(composition) {
   if (!composition) return null;
   return round(
     predictor.silicaBaseline +
       predictor.nboTModifierSlope * composition.nboT -
       predictor.chargeBalancedAlPenalty * composition.chargeBalancedAl,
+    5
+  );
+}
+
+function predictQuarantinedCandidate(composition) {
+  if (!composition) return null;
+  return round(
+    quarantinedCandidate.silicaBaseline +
+      quarantinedCandidate.candidateNboTSlope * composition.nboT +
+      quarantinedCandidate.frameworkAlBoost * composition.chargeBalancedAl,
     5
   );
 }
@@ -171,6 +194,24 @@ const frameworkPairs = frameworkRows.flatMap((left, leftIndex) =>
   })
 );
 
+const candidateRows = rows.map((row) => {
+  const composition = nbo.rows.find((compositionRow) => compositionRow.formula === row.formula);
+  const candidatePrediction = predictQuarantinedCandidate(composition);
+  const candidateAbsoluteError =
+    typeof candidatePrediction === 'number'
+      ? round(Math.abs(candidatePrediction - row.measuredRefractiveIndex), 5)
+      : null;
+  return {
+    formula: row.formula,
+    measuredRefractiveIndex: row.measuredRefractiveIndex,
+    candidatePrediction,
+    candidateAbsoluteError,
+    wouldPassTolerance:
+      typeof candidateAbsoluteError === 'number' &&
+      candidateAbsoluteError <= external.tolerances.refractiveIndexAbsoluteErrorMax,
+  };
+});
+
 const checks = [
   {
     check: 'Source anchors present',
@@ -245,6 +286,18 @@ const checks = [
     reading:
       'Albite exposes a structural limitation of the topology-only proxy: NBO/T alone cannot distinguish silica from a charge-balanced aluminosilicate framework.',
   },
+  {
+    check: 'Quarantined candidate discipline',
+    expectation: 'target-implied coefficient revisions should be reported as calibration debt, not counted as a current pass',
+    modelValue: `${quarantinedCandidate.name}: ${candidateRows
+      .map((row) => `${row.formula} candidate error ${row.candidateAbsoluteError}`)
+      .join('; ')}`,
+    pass:
+      quarantinedCandidate.status.includes('not counted') &&
+      candidateRows.every((row) => row.wouldPassTolerance),
+    reading:
+      'A revised slope/framework-Al candidate can fit these rows, but because it is target-implied after failure it remains quarantined until a new held-out composition validates it.',
+  },
 ];
 
 const passed = checks.filter((check) => check.pass).length;
@@ -259,8 +312,10 @@ const report = {
   status,
   external,
   predictor,
+  quarantinedCandidate,
   calibrationDiagnostic,
   frameworkPairs,
+  candidateRows,
   grammarVariables,
   rows,
   score,
@@ -268,7 +323,7 @@ const report = {
   confidenceEffect:
     status === 'measured material refractive-index pass'
       ? 'would support a material-property confidence increase because NBO/T accounting transfers to measured refractive index without target fitting'
-      : 'holds confidence flat and preserves the material-property gate because the first-pass topology-only proxy does not yet satisfy measured refractive-index tolerance',
+      : 'holds confidence flat and preserves the material-property gate because the first-pass topology-only proxy does not yet satisfy measured refractive-index tolerance; the target-implied improved candidate is quarantined as calibration debt',
 };
 
 await writeFile(new URL('external-material-refractive-index-challenge.json', outDir), JSON.stringify(report, null, 2));
@@ -323,6 +378,28 @@ ${frameworkPairs
   )
   .join('\n')}
 
+## Quarantined Candidate
+
+This candidate is not counted as the benchmark result. It records the shape of the likely repair, while preserving the requirement for a fresh held-out material target.
+
+| Measure | Value |
+|---|---|
+| Name | ${quarantinedCandidate.name} |
+| Equation | ${quarantinedCandidate.equation} |
+| Coefficients | silicaBaseline ${quarantinedCandidate.silicaBaseline}; candidateNboTSlope ${quarantinedCandidate.candidateNboTSlope}; frameworkAlBoost ${quarantinedCandidate.frameworkAlBoost} |
+| Status | ${quarantinedCandidate.status} |
+| Reason | ${quarantinedCandidate.reason} |
+| Release condition | ${quarantinedCandidate.releaseCondition} |
+
+| Formula | Measured RI | Candidate prediction | Absolute error | Would pass tolerance |
+|---|---:|---:|---:|---|
+${candidateRows
+  .map(
+    (row) =>
+      `| ${row.formula} | ${row.measuredRefractiveIndex} | ${row.candidatePrediction} | ${row.candidateAbsoluteError} | ${row.wouldPassTolerance ? 'yes' : 'no'} |`
+  )
+  .join('\n')}
+
 ## Checks
 
 | Check | Expectation | Model value | Pass | Reading |
@@ -351,7 +428,7 @@ ${external.sources.map((source) => `- ${source.label}: ${source.url}. ${source.n
 
 ## Reading
 
-This is an unresolved calibration challenge, not a failed source check. The material grammar has reached exact composition accounting and now has a first-pass topology-only refractive-index proxy, but the proxy does not yet satisfy measured tolerance across all targets. The held-out albite row shows that NBO/T alone collapses silica and charge-balanced aluminosilicate frameworks that have different measured refractive indices. A future pass requires improving the predeclared optical-property equation or grammar-derived proxy before comparing against measured targets.
+This is an unresolved calibration challenge, not a failed source check. The material grammar has reached exact composition accounting and now has a first-pass topology-only refractive-index proxy, but the proxy does not yet satisfy measured tolerance across all targets. The held-out albite row shows that NBO/T alone collapses silica and charge-balanced aluminosilicate frameworks that have different measured refractive indices. A target-implied candidate with a stronger NBO/T slope and positive framework-Al contribution can fit the current rows, but it is quarantined as calibration debt until a new held-out composition validates the coefficients.
 `;
 
 await writeFile(new URL('external-material-refractive-index-challenge.md', outDir), markdown);
