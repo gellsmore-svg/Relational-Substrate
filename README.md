@@ -417,6 +417,14 @@ npm run benchmark:em-rough-surface-scatter
 
 This compares Bennett-Porteus style total integrated scatter, specular-loss factor, RMS roughness scaling, wavelength scaling, incidence-angle scaling, smooth-limit recovery, small-roughness approximation, and reflected-energy budgeting. It is a smooth-surface analytic roughness comparator, not a BRDF, PSD, deep-roughness, broadband, diffraction, or Maxwell-equation surface-scatter model.
 
+Run the external EM-15 diffraction grating comparator with:
+
+```bash
+npm run benchmark:em-diffraction-grating
+```
+
+This compares the grating equation, first-order red/violet angular dispersion, central-order non-dispersion, positive/negative order symmetry, order cutoff, and screen-position scaling. It is a scalar grating-equation comparator, not a finite-envelope, blaze-efficiency, broadband-intensity, vector-diffraction, radiation-generation, or Maxwell-equation optics model.
+
 Run the external silicate held-out benchmark with:
 
 ```bash

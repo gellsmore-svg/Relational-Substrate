@@ -247,6 +247,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.1 if passed, -0.6 if failed',
     priority: 20,
   },
+  {
+    area: 'Electromagnetic diffraction grating',
+    currentFrontier: 'post-EM-14 periodic-aperture diffraction pressure test',
+    externalAnchor:
+      'Compare normal-incidence grating-equation order angles, spectral angular dispersion, central-order non-dispersion, positive/negative order symmetry, order cutoff, and screen-position scaling against standard diffraction-grating optics.',
+    passSignal:
+      'The same route/closure/phase/charge/continuity grammar handles periodic phase closure and wavelength-dependent diffraction orders without adding a new electromagnetic vocabulary.',
+    failSignal:
+      'The grammar survives rough-surface scatter but cannot reproduce periodic-aperture diffraction constraints.',
+    confidenceImpact: '+0.1 if passed, -0.6 if failed',
+    priority: 21,
+  },
 ];
 
 const confidenceGates = [

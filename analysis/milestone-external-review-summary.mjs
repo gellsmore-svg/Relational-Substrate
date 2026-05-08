@@ -41,6 +41,7 @@ const benchmarkFiles = [
   'external-em-multilayer-interference-comparator.json',
   'external-em-absorbing-media-comparator.json',
   'external-em-rough-surface-scatter-comparator.json',
+  'external-em-diffraction-grating-comparator.json',
   'external-silicate-heldout-benchmark.json',
   'external-roughness-heldout-benchmark.json',
   'external-material-nbo-quantitative-benchmark.json',
@@ -147,7 +148,7 @@ const unificationMap = [
     conventionalDomain: 'charge, magnetic-field, and EM-wave behavior',
     grammarVariables: 'charge, phase, closure, continuity, route',
     currentReading:
-      'Opens the EM domain with one electromagnetic evidence line containing Coulomb direction/ratio, two-source superposition geometry, asymmetric three-source field implementation checks, continuous field-line topology, scalar equipotential geometry, calibrated point-charge field magnitude, ideal conductor/dielectric media behavior, plane-wave propagation relations, normal-incidence boundary propagation, oblique Fresnel behavior, multilayer thin-film interference, absorbing-media attenuation, and calibrated rough-surface scatter. This still imports conventional constants and ideal constraints and is not a material-response derivation, radiation-generation model, or full electromagnetic solver.',
+      'Opens the EM domain with one electromagnetic evidence line containing Coulomb direction/ratio, two-source superposition geometry, asymmetric three-source field implementation checks, continuous field-line topology, scalar equipotential geometry, calibrated point-charge field magnitude, ideal conductor/dielectric media behavior, plane-wave propagation relations, normal-incidence boundary propagation, oblique Fresnel behavior, multilayer thin-film interference, absorbing-media attenuation, calibrated rough-surface scatter, and diffraction-grating dispersion. This still imports conventional constants and ideal constraints and is not a material-response derivation, radiation-generation model, or full electromagnetic solver.',
   },
   {
     benchmarkFamily: 'Network/material structure: silicate network and NBO/T accounting',
@@ -176,7 +177,7 @@ const confidence = {
   unificationThesisSupportOutOf10: summary.confidence.unificationThesisSupportOutOf10,
   reading:
     h2o2AbsolutePass
-      ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, and EM propagation/boundary/Fresnel/multilayer/absorption/roughness/media checks still import conventional constants and ideal constraints rather than deriving electrodynamics.'
+      ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, and EM propagation/boundary/Fresnel/multilayer/absorption/roughness/diffraction/media checks still import conventional constants and ideal constraints rather than deriving electrodynamics.'
       : 'Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, benchmark-breadth compression, and qualitative EM topology limits remain known issues. Inferential convergence has crossed 6/10 only because EM now includes continuous field-line topology; it remains moderate because the topology check is not calibrated physical property prediction or Maxwell-equation dynamics.',
 };
 
@@ -184,7 +185,7 @@ const nonClaims = [
   'This is not proof of the Relational Substrate theory.',
   'This is not a direct simulation or observation of T0 substrate.',
   'This is not a derivation of atoms or molecules from T1 vortons.',
-  'This is not a quantum chemistry, molecular dynamics, glass-property, BRDF, Fresnel, rough-surface scattering, conductor, capacitance, Coulomb-constant derivation, or Maxwell-equation solver.',
+  'This is not a quantum chemistry, molecular dynamics, glass-property, BRDF, Fresnel, diffraction, rough-surface scattering, conductor, capacitance, Coulomb-constant derivation, or Maxwell-equation solver.',
   'This does not yet solve absolute H2O2 barrier structure, material viscosity/durability/conductivity/density, or calibrated scatter curves.',
   'Passing benchmark order checks does not by itself exclude conventional explanations.',
 ];
@@ -464,7 +465,7 @@ Your task is not to endorse the theory. Your task is to evaluate whether the san
 
 The Relational Substrate sandbox tests whether a small unified grammar of route, closure, phase, charge, and continuity variables can reproduce, with reasonable equivalence, outputs and orderings that established domain models already produce while providing one ontological framework across phenomena those models usually treat separately.
 
-Do not treat the sandbox as a literal substrate simulation. It does not simulate T0 directly, does not derive atoms or molecules from T1 vortons, and does not replace quantum chemistry, molecular dynamics, optics, glass-property, Fresnel, BRDF, or rough-surface scattering solvers.
+Do not treat the sandbox as a literal substrate simulation. It does not simulate T0 directly, does not derive atoms or molecules from T1 vortons, and does not replace quantum chemistry, molecular dynamics, optics, glass-property, Fresnel, diffraction, BRDF, or rough-surface scattering solvers.
 
 The standard is equivalence-with-unification, not displacement. A useful review asks whether the grammar has enough independent, non-circular evidential convergence to justify stricter validation.
 
