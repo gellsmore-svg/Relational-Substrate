@@ -430,13 +430,13 @@ const benchmarks = [
     evidenceLine: 'material measured property calibration',
     domain: 'measured silicate optical property',
     conventionalComparator:
-      'source-anchored SiO2, Na2SiO3, and held-out NaAlSi3O8 refractive-index targets checked against current material grammar outputs',
+      'source-anchored SiO2, Na2SiO3, held-out NaAlSi3O8, and fresh-validation CaAl2Si2O8 refractive-index targets checked against current material grammar outputs',
     status: materialRefractiveIndex.status,
     score: materialRefractiveIndex.score,
     checksPassed: materialRefractiveIndex.checks.filter((check) => check.pass).length,
     checksTotal: materialRefractiveIndex.checks.length,
     limitation:
-      'unresolved measured-property challenge; current grammar has a first-pass topology-only refractive-index proxy and a target-implied repair candidate that fails fresh anorthite validation, but no validated tolerance-clearing density, polarizability, Sellmeier, dispersion, or optical-property model',
+      'unresolved measured-property challenge; current grammar has a first-pass topology-only refractive-index proxy, a target-implied repair candidate that fails fresh anorthite validation, and a second-generation modifier-identity candidate that fits current rows but remains target-informed calibration debt',
     confidenceEffect: materialRefractiveIndex.confidenceEffect,
   },
 ].filter(Boolean);
@@ -586,7 +586,7 @@ const confidence = {
   unificationThesisSupportOutOf10: hasRoughnessCalibratedScatterPass ? 5.2 : hasEmDoubleSlitEnvelopePass ? 5.0 : hasEmSingleSlitEnvelopePass ? 4.95 : hasEmDiffractionGratingPass ? 4.9 : hasEmRoughSurfaceScatterPass ? 4.85 : hasEmAbsorbingMediaPass ? 4.8 : hasEmMultilayerInterferencePass ? 4.75 : hasEmObliqueFresnelPass ? 4.7 : hasEmBoundaryPropagationPass ? 4.65 : hasEmWavePropagationPass ? 4.6 : hasEmDielectricMediaPass ? 4.55 : hasEmFieldMagnitudePass ? 4.5 : hasEmEquipotentialPass ? 4.45 : hasEmFieldLinePass ? 4.4 : hasEmThreeSourcePass ? 4.3 : hasEmSuperpositionPass ? 4.2 : hasEmCoulombPass ? 4.1 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
   rationale:
     hasMaterialRefractiveIndexChallenge
-      ? 'External anchoring now includes an explicit measured material-property challenge, and it is unresolved: SiO2, Na2SiO3, held-out NaAlSi3O8, and fresh-validation CaAl2Si2O8 refractive-index targets are source-anchored; the current topology-only refractive-index proxy clears SiO2 but misses the material set, and the target-implied slope/framework-Al candidate fails fresh anorthite validation. Inferential convergence is held near 6/10 because the material-property gate remains open.'
+      ? 'External anchoring now includes an explicit measured material-property challenge, and it is unresolved: SiO2, Na2SiO3, held-out NaAlSi3O8, and fresh-validation CaAl2Si2O8 refractive-index targets are source-anchored; the current topology-only refractive-index proxy clears SiO2 but misses the material set, the target-implied slope/framework-Al candidate fails fresh anorthite validation, and the second-generation modifier-identity candidate remains quarantined until a new held-out target validates it. Inferential convergence is held near 6/10 because the material-property gate remains open.'
       : hasRoughnessCalibratedScatterPass
       ? 'External anchoring now includes a calibrated roughness/interface scatter quantity: Bennett-Porteus total integrated scatter, specular fraction, roughness/wavelength scaling, and reflected-budget closure. Inferential convergence rises only slightly because this imports a conventional smooth-surface approximation and does not yet solve measured material properties, held-out torsion absolute magnitudes, full BRDFs, or Maxwell surface scattering.'
       : hasEmDoubleSlitEnvelopePass
@@ -654,7 +654,7 @@ const confidence = {
 
 const remainingExternalGates = [
   hasMaterialRefractiveIndexChallenge
-    ? 'Replace or revise the failed refractive-index slope/framework-Al candidate, then validate on a new held-out material composition before promotion.'
+    ? 'Validate the second-generation modifier-identity refractive-index candidate on a new held-out material composition before promotion.'
     : 'Move material checks from composition accounting to measured property calibration.',
   hasH2O2AbsolutePass
     ? hydrazineCation
@@ -860,7 +860,7 @@ ${remainingExternalGates.map((gate) => `- ${gate}`).join('\n')}
 
 ## Reading
 
-The external anchors improve confidence that the current grammar can line up with known H2O2 torsion, ethane torsion, ionic-ordering, electromagnetic field-geometry/topology/potential/magnitude/media/propagation/boundary/Fresnel/multilayer/absorption/roughness-scatter/diffraction/interference-envelope checks, calibrated roughness/interface scatter accounting, and silicate/material-structure facts. The new measured material-property row is a deliberately unresolved refractive-index challenge, not a pass. The breadth count should be read as ${independentEvidenceLines} core independent evidence lines, plus ${orientationEvidenceLines} orientation-only boundary check, not ${benchmarks.length} fully independent domains. Silicate network, NBO/T, and the refractive-index challenge collapse into one broader material-structure group, roughness held-out and calibrated scatter remain one rough optical/interface line, and EM-02 through EM-17 are depth checks inside one electromagnetic evidence line. The result supports moderate inferential convergence under an equivalence-with-unification standard, not proof of substrate existence or displacement of conventional domain models.
+The external anchors improve confidence that the current grammar can line up with known H2O2 torsion, ethane torsion, ionic-ordering, electromagnetic field-geometry/topology/potential/magnitude/media/propagation/boundary/Fresnel/multilayer/absorption/roughness-scatter/diffraction/interference-envelope checks, calibrated roughness/interface scatter accounting, and silicate/material-structure facts. The new measured material-property row is a deliberately unresolved refractive-index challenge, not a pass; its second-generation modifier-identity candidate fits current rows but is target-informed and needs a fresh held-out target. The breadth count should be read as ${independentEvidenceLines} core independent evidence lines, plus ${orientationEvidenceLines} orientation-only boundary check, not ${benchmarks.length} fully independent domains. Silicate network, NBO/T, and the refractive-index challenge collapse into one broader material-structure group, roughness held-out and calibrated scatter remain one rough optical/interface line, and EM-02 through EM-17 are depth checks inside one electromagnetic evidence line. The result supports moderate inferential convergence under an equivalence-with-unification standard, not proof of substrate existence or displacement of conventional domain models.
 `;
 
 await writeFile(new URL('external-benchmark-summary.md', outDir), markdown);

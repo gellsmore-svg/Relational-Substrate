@@ -479,7 +479,7 @@ Run the external material refractive-index challenge with:
 npm run benchmark:material-refractive-index
 ```
 
-This checks source-anchored SiO2, Na2SiO3, held-out NaAlSi3O8, and fresh-validation CaAl2Si2O8 refractive-index targets against a first-pass topology-only refractive-index proxy. It also records a target-implied slope/framework-Al repair candidate, but fresh anorthite validation fails; it is not a Sellmeier, density, polarizability, dispersion, or ab initio optical-property model.
+This checks source-anchored SiO2, Na2SiO3, held-out NaAlSi3O8, and fresh-validation CaAl2Si2O8 refractive-index targets against a first-pass topology-only refractive-index proxy. It also records a target-implied slope/framework-Al repair candidate that fails fresh anorthite validation, plus a second-generation modifier-identity candidate that fits current rows but is quarantined until a new held-out material validates it. It is not a Sellmeier, density, polarizability, dispersion, or ab initio optical-property model.
 
 Run the external benchmark summary with:
 

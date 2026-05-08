@@ -112,6 +112,22 @@ const quarantinedCandidate = {
     'Do not promote in this form: CaAl2Si2O8 fresh validation misses tolerance without changing coefficients.',
 };
 
+const secondGenerationCandidate = {
+  name: 'second-generation modifier-identity candidate',
+  equation:
+    'n = silicaBaseline + candidateNboTSlope * NBO/T + frameworkAlBoost * chargeBalancedAl - divalentModifierPenalty * divalentModifierCharge',
+  silicaBaseline: 1.46,
+  candidateNboTSlope: 0.03,
+  frameworkAlBoost: 0.075,
+  divalentModifierPenalty: 0.014,
+  status:
+    'quarantined second-generation candidate; target-informed after anorthite failure; not counted as a benchmark pass',
+  reason:
+    'The divalent modifier term is introduced only after observing that the first repair overpredicts CaAl2Si2O8, so current-row agreement is calibration debt.',
+  releaseCondition:
+    'Promote only if the same coefficients clear a new source-anchored held-out material composition chosen before comparison.',
+};
+
 function predictRefractiveIndex(composition) {
   if (!composition) return null;
   return round(
@@ -128,6 +144,17 @@ function predictQuarantinedCandidate(composition) {
     quarantinedCandidate.silicaBaseline +
       quarantinedCandidate.candidateNboTSlope * composition.nboT +
       quarantinedCandidate.frameworkAlBoost * composition.chargeBalancedAl,
+    5
+  );
+}
+
+function predictSecondGenerationCandidate(composition) {
+  if (!composition) return null;
+  return round(
+    secondGenerationCandidate.silicaBaseline +
+      secondGenerationCandidate.candidateNboTSlope * composition.nboT +
+      secondGenerationCandidate.frameworkAlBoost * composition.chargeBalancedAl -
+      secondGenerationCandidate.divalentModifierPenalty * (composition.divalentModifierCharge ?? 0),
     5
   );
 }
@@ -228,6 +255,28 @@ const candidateRows = rows.map((row) => {
 });
 const calibrationCandidateRows = candidateRows.filter((row) => !row.freshCandidateValidation);
 const freshCandidateValidationRows = candidateRows.filter((row) => row.freshCandidateValidation);
+
+const secondGenerationRows = rows.map((row) => {
+  const composition = nbo.rows.find((compositionRow) => compositionRow.formula === row.formula);
+  const candidatePrediction = predictSecondGenerationCandidate(composition);
+  const candidateAbsoluteError =
+    typeof candidatePrediction === 'number'
+      ? round(Math.abs(candidatePrediction - row.measuredRefractiveIndex), 5)
+      : null;
+  return {
+    formula: row.formula,
+    measuredRefractiveIndex: row.measuredRefractiveIndex,
+    nboT: row.nboT,
+    chargeBalancedAl: row.chargeBalancedAl,
+    divalentModifierCharge: composition?.divalentModifierCharge ?? null,
+    candidatePrediction,
+    candidateAbsoluteError,
+    currentRowsOnly: true,
+    wouldPassTolerance:
+      typeof candidateAbsoluteError === 'number' &&
+      candidateAbsoluteError <= external.tolerances.refractiveIndexAbsoluteErrorMax,
+  };
+});
 
 const checks = [
   {
@@ -330,6 +379,19 @@ const checks = [
     reading:
       'Anorthite is a fresh validation target for the quarantined candidate; failure here keeps the repair candidate from becoming a measured-property pass.',
   },
+  {
+    check: 'Second-generation candidate quarantine',
+    expectation:
+      'a repair introduced after anorthite failure may be reported only as calibration debt until a new held-out material validates it',
+    modelValue: `${secondGenerationCandidate.name}: ${secondGenerationRows
+      .map((row) => `${row.formula} candidate error ${row.candidateAbsoluteError}`)
+      .join('; ')}`,
+    pass:
+      secondGenerationCandidate.status.includes('not counted') &&
+      secondGenerationRows.every((row) => row.wouldPassTolerance),
+    reading:
+      'A modifier-identity term can fit the current rows, but because it was added after seeing anorthite it creates the next validation target rather than resolving the benchmark.',
+  },
 ];
 
 const passed = checks.filter((check) => check.pass).length;
@@ -345,9 +407,11 @@ const report = {
   external,
   predictor,
   quarantinedCandidate,
+  secondGenerationCandidate,
   calibrationDiagnostic,
   frameworkPairs,
   candidateRows,
+  secondGenerationRows,
   grammarVariables,
   rows,
   score,
@@ -355,7 +419,7 @@ const report = {
   confidenceEffect:
     status === 'measured material refractive-index pass'
       ? 'would support a material-property confidence increase because NBO/T accounting transfers to measured refractive index without target fitting'
-      : 'holds confidence flat and preserves the material-property gate because the first-pass topology-only proxy does not yet satisfy measured refractive-index tolerance; the target-implied improved candidate is quarantined as calibration debt',
+      : 'holds confidence flat and preserves the material-property gate because the first-pass topology-only proxy does not yet satisfy measured refractive-index tolerance; the first repair fails fresh anorthite validation; the second-generation modifier-identity candidate fits current rows but remains target-informed calibration debt',
 };
 
 await writeFile(new URL('external-material-refractive-index-challenge.json', outDir), JSON.stringify(report, null, 2));
@@ -366,7 +430,7 @@ const markdown = `# Relational Substrate External Material Refractive-Index Chal
 
 This report turns the material-property gate into an explicit measured refractive-index challenge.
 
-It asks whether the current material grammar can move beyond NBO/T composition accounting and produce a predeclared refractive-index prediction for source-anchored SiO2, Na2SiO3, held-out NaAlSi3O8, and fresh-validation CaAl2Si2O8 targets. The current answer is still no at pass level: a first-pass topology-only proxy exists, but it does not clear the measured tolerance and collapses distinct zero-NBO frameworks. A target-implied repair candidate also fails fresh anorthite validation.
+It asks whether the current material grammar can move beyond NBO/T composition accounting and produce a predeclared refractive-index prediction for source-anchored SiO2, Na2SiO3, held-out NaAlSi3O8, and fresh-validation CaAl2Si2O8 targets. The current answer is still no at pass level: a first-pass topology-only proxy exists, but it does not clear the measured tolerance and collapses distinct zero-NBO frameworks. A target-implied repair candidate also fails fresh anorthite validation. A second-generation modifier-identity candidate fits the current rows, but it was introduced after the anorthite failure and is therefore quarantined pending a new held-out material.
 
 ## Result
 
@@ -432,6 +496,28 @@ ${candidateRows
   )
   .join('\n')}
 
+## Second-Generation Quarantined Candidate
+
+This candidate is also not counted as the benchmark result. It records the next repair hypothesis after the anorthite failure: a divalent-modifier correction distinguishes Na and Ca aluminosilicate frameworks, but current-row agreement is not validation because the term was added after seeing the CaAl2Si2O8 miss.
+
+| Measure | Value |
+|---|---|
+| Name | ${secondGenerationCandidate.name} |
+| Equation | ${secondGenerationCandidate.equation} |
+| Coefficients | silicaBaseline ${secondGenerationCandidate.silicaBaseline}; candidateNboTSlope ${secondGenerationCandidate.candidateNboTSlope}; frameworkAlBoost ${secondGenerationCandidate.frameworkAlBoost}; divalentModifierPenalty ${secondGenerationCandidate.divalentModifierPenalty} |
+| Status | ${secondGenerationCandidate.status} |
+| Reason | ${secondGenerationCandidate.reason} |
+| Release condition | ${secondGenerationCandidate.releaseCondition} |
+
+| Formula | Measured RI | Divalent modifier charge | Candidate prediction | Absolute error | Would pass current-row tolerance |
+|---|---:|---:|---:|---:|---|
+${secondGenerationRows
+  .map(
+    (row) =>
+      `| ${row.formula} | ${row.measuredRefractiveIndex} | ${row.divalentModifierCharge} | ${row.candidatePrediction} | ${row.candidateAbsoluteError} | ${row.wouldPassTolerance ? 'yes' : 'no'} |`
+  )
+  .join('\n')}
+
 ## Checks
 
 | Check | Expectation | Model value | Pass | Reading |
@@ -460,7 +546,7 @@ ${external.sources.map((source) => `- ${source.label}: ${source.url}. ${source.n
 
 ## Reading
 
-This is an unresolved calibration challenge, not a failed source check. The material grammar has reached exact composition accounting and now has a first-pass topology-only refractive-index proxy, but the proxy does not satisfy measured tolerance across all targets. The held-out albite row shows that NBO/T alone collapses silica and charge-balanced aluminosilicate frameworks that have different measured refractive indices. A target-implied candidate with a stronger NBO/T slope and positive framework-Al contribution fits the calibration rows, but fresh anorthite validation misses tolerance, so this repair candidate remains failed calibration debt rather than a promotable material-property model.
+This is an unresolved calibration challenge, not a failed source check. The material grammar has reached exact composition accounting and now has a first-pass topology-only refractive-index proxy, but the proxy does not satisfy measured tolerance across all targets. The held-out albite row shows that NBO/T alone collapses silica and charge-balanced aluminosilicate frameworks that have different measured refractive indices. A target-implied candidate with a stronger NBO/T slope and positive framework-Al contribution fits the calibration rows, but fresh anorthite validation misses tolerance, so this repair candidate remains failed calibration debt rather than a promotable material-property model. A second-generation modifier-identity candidate fits the current rows by adding a divalent-modifier correction, but it is target-informed after the anorthite miss and therefore only defines the next held-out validation task.
 `;
 
 await writeFile(new URL('external-material-refractive-index-challenge.md', outDir), markdown);
