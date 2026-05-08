@@ -65,6 +65,7 @@
     "benchmark:em-equipotential": "node analysis/external-em-equipotential-comparator.mjs",
     "benchmark:em-field-magnitude": "node analysis/external-em-field-magnitude-comparator.mjs",
     "benchmark:em-dielectric-media": "node analysis/external-em-dielectric-media-comparator.mjs",
+    "benchmark:em-wave-propagation": "node analysis/external-em-wave-propagation-comparator.mjs",
     "benchmark:silicate-heldout": "node analysis/external-silicate-heldout-benchmark.mjs",
     "benchmark:roughness-heldout": "node analysis/external-roughness-heldout-benchmark.mjs",
     "benchmark:material-nbo": "node analysis/external-material-nbo-quantitative-benchmark.mjs",
