@@ -235,6 +235,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.1 if passed, -0.6 if failed',
     priority: 19,
   },
+  {
+    area: 'Electromagnetic rough-surface scatter',
+    currentFrontier: 'post-EM-13 calibrated rough-boundary pressure test',
+    externalAnchor:
+      'Compare Bennett-Porteus style total integrated scatter, specular-loss factor, roughness scaling, wavelength scaling, incidence-angle scaling, smooth-limit recovery, and reflected-energy budget against standard optical roughness relations.',
+    passSignal:
+      'The same route/closure/phase/charge/continuity grammar handles RMS roughness as a quantitative phase-disorder loss without adding a new electromagnetic vocabulary.',
+    failSignal:
+      'The grammar survives absorbing-media optics but cannot reproduce calibrated rough-surface specular-loss constraints.',
+    confidenceImpact: '+0.1 if passed, -0.6 if failed',
+    priority: 20,
+  },
 ];
 
 const confidenceGates = [
