@@ -433,6 +433,14 @@ npm run benchmark:em-single-slit-envelope
 
 This compares single-slit minima, the sinc-squared intensity envelope, central maximum, side-lobe relative intensity, wavelength scaling, slit-width scaling, symmetry, and screen-position mapping. It is a scalar Fraunhofer single-slit comparator, not double-slit interference, grating combs, vector diffraction, broadband intensity prediction, radiation generation, or Maxwell-equation optics.
 
+Run the external EM-17 double-slit envelope comparator with:
+
+```bash
+npm run benchmark:em-double-slit-envelope
+```
+
+This compares double-slit fringe spacing, constructive/destructive conditions, finite-slit envelope modulation, missing orders, slit-separation scaling, wavelength scaling, symmetry, and screen-position mapping. It is a scalar Fraunhofer two-aperture comparator, not full vector diffraction, broadband intensity prediction, resolving power, radiation generation, or Maxwell-equation optics.
+
 Run the external silicate held-out benchmark with:
 
 ```bash
@@ -472,6 +480,14 @@ npm run milestone:external-review
 ```
 
 This generates a detailed milestone report for outside review, including the sandbox intent, ontology boundaries, evidence, confidence posture, non-claims, remaining gates, source anchors, and reviewer questions. It should be regenerated before any next-stage modelling work.
+
+Run the Claude drift/completeness review packet with:
+
+```bash
+npm run review:claude-drift-completeness
+```
+
+This generates a focused review brief for checking benchmark drift, scope creep, completeness, evidence independence, non-claim discipline, and remaining validation gaps. It writes the generated artifact to `analysis/out/claude-drift-completeness-review.md` and a tracked review copy to `docs/claude-drift-completeness-review.md`.
 
 For a fresh clone, regenerate the full report chain with:
 

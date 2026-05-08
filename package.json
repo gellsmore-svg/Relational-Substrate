@@ -73,11 +73,13 @@
     "benchmark:em-rough-surface-scatter": "node analysis/external-em-rough-surface-scatter-comparator.mjs",
     "benchmark:em-diffraction-grating": "node analysis/external-em-diffraction-grating-comparator.mjs",
     "benchmark:em-single-slit-envelope": "node analysis/external-em-single-slit-envelope-comparator.mjs",
+    "benchmark:em-double-slit-envelope": "node analysis/external-em-double-slit-envelope-comparator.mjs",
     "benchmark:silicate-heldout": "node analysis/external-silicate-heldout-benchmark.mjs",
     "benchmark:roughness-heldout": "node analysis/external-roughness-heldout-benchmark.mjs",
     "benchmark:material-nbo": "node analysis/external-material-nbo-quantitative-benchmark.mjs",
     "benchmark:summary": "node analysis/external-benchmark-summary.mjs",
     "milestone:external-review": "node analysis/milestone-external-review-summary.mjs",
+    "review:claude-drift-completeness": "node analysis/claude-drift-completeness-review.mjs",
     "reports": "node scripts/generate-reports.mjs"
   },
   "dependencies": {
