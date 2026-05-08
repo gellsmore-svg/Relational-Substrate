@@ -36,6 +36,7 @@ const emEquipotential = await readOptionalJson('external-em-equipotential-compar
 const emFieldMagnitude = await readOptionalJson('external-em-field-magnitude-comparator.json');
 const emDielectricMedia = await readOptionalJson('external-em-dielectric-media-comparator.json');
 const emWavePropagation = await readOptionalJson('external-em-wave-propagation-comparator.json');
+const emBoundaryPropagation = await readOptionalJson('external-em-boundary-propagation-comparator.json');
 const silicateHeldout = await readOptionalJson('external-silicate-heldout-benchmark.json');
 const roughnessHeldout = await readOptionalJson('external-roughness-heldout-benchmark.json');
 const materialNbo = await readOptionalJson('external-material-nbo-quantitative-benchmark.json');
@@ -257,6 +258,18 @@ const benchmarks = [
     limitation: 'calibrated plane-wave relation comparator; imports c, permittivity, and permeability rather than deriving electrodynamics or radiation generation',
     confidenceEffect: emWavePropagation.confidenceEffect,
   },
+  emBoundaryPropagation && {
+    label: 'EM-10 boundary propagation comparator',
+    evidenceLine: 'electromagnetic field ordering',
+    domain: 'normal-incidence electromagnetic boundary propagation',
+    conventionalComparator: 'dielectric-boundary reflection, transmission, phase inversion, speed change, and energy balance',
+    status: emBoundaryPropagation.status,
+    score: emBoundaryPropagation.score,
+    checksPassed: emBoundaryPropagation.checks.filter((check) => check.pass).length,
+    checksTotal: emBoundaryPropagation.checks.length,
+    limitation: 'normal-incidence imported-index boundary comparator; not a full Fresnel, rough-interface, absorption, or Maxwell-equation solver',
+    confidenceEffect: emBoundaryPropagation.confidenceEffect,
+  },
   silicateHeldout && {
     label: 'Silicate held-out network order',
     evidenceLine: 'silicate network topology',
@@ -331,22 +344,25 @@ const hasEmEquipotentialPass = emEquipotential?.status === 'equipotential geomet
 const hasEmFieldMagnitudePass = emFieldMagnitude?.status === 'calibrated field magnitude comparator pass';
 const hasEmDielectricMediaPass = emDielectricMedia?.status === 'dielectric media comparator pass';
 const hasEmWavePropagationPass = emWavePropagation?.status === 'plane-wave propagation comparator pass';
+const hasEmBoundaryPropagationPass = emBoundaryPropagation?.status === 'boundary propagation comparator pass';
 const hasH2O2AbsoluteMixed = h2o2Absolute?.status === 'absolute barrier mixed diagnostic';
 const hasHydrazineHeldoutPass = hydrazineCation?.status === 'held-out torsion transfer pass';
 const hasHydrazineOrderingPass = hydrazineCation?.status === 'held-out torsion ordering pass with quantitative miss';
 
 const confidence = {
   previousSandboxCompletionPct: roadmap.currentStatus.sandboxCompletionPct,
-  updatedSandboxCompletionPct: hasEmWavePropagationPass ? 99.97 : hasEmDielectricMediaPass ? 99.95 : hasEmFieldMagnitudePass ? 99.9 : hasEmEquipotentialPass ? 99.8 : hydrazineCation ? 99.7 : h2o2Absolute ? 99.6 : hasEmFieldLinePass ? 99.5 : hasEmThreeSourcePass ? 99.2 : hasEmSuperpositionPass ? 99 : hasEmCoulombPass ? 98.5 : hasEmOrderingPass ? 98 : hasQuantitativeMaterialPass ? 97 : hasHeldoutInterfacePass ? 96 : hasFactorTwoPeroxideRatio ? 94 : hasHeldoutMaterialPass ? 93 : hasTighterPeroxideRatio ? 91 : hasSecondNumericPass ? 90 : hasQuantitativePass ? 88 : hasBlindStylePass ? 84 : benchmarks.length >= 3 ? 80 : 76,
+  updatedSandboxCompletionPct: hasEmBoundaryPropagationPass ? 99.98 : hasEmWavePropagationPass ? 99.97 : hasEmDielectricMediaPass ? 99.95 : hasEmFieldMagnitudePass ? 99.9 : hasEmEquipotentialPass ? 99.8 : hydrazineCation ? 99.7 : h2o2Absolute ? 99.6 : hasEmFieldLinePass ? 99.5 : hasEmThreeSourcePass ? 99.2 : hasEmSuperpositionPass ? 99 : hasEmCoulombPass ? 98.5 : hasEmOrderingPass ? 98 : hasQuantitativeMaterialPass ? 97 : hasHeldoutInterfacePass ? 96 : hasFactorTwoPeroxideRatio ? 94 : hasHeldoutMaterialPass ? 93 : hasTighterPeroxideRatio ? 91 : hasSecondNumericPass ? 90 : hasQuantitativePass ? 88 : hasBlindStylePass ? 84 : benchmarks.length >= 3 ? 80 : 76,
   previousInternalCoherenceOutOf10: roadmap.currentStatus.internalCoherenceConfidenceOutOf10,
-  updatedInternalCoherenceOutOf10: hasEmWavePropagationPass ? 8.1 : hasEmDielectricMediaPass ? 8.0 : hasEmFieldMagnitudePass ? 7.9 : hasEmEquipotentialPass ? 7.8 : hasH2O2AbsolutePass ? 7.7 : hasH2O2AbsoluteMixed ? 7.3 : hasQuantitativeMaterialPass ? 7.5 : hasHeldoutInterfacePass ? 7.4 : hasFactorTwoPeroxideRatio ? 7.3 : hasHeldoutMaterialPass ? 7.2 : hasTighterPeroxideRatio ? 7.1 : hasSecondNumericPass ? 7.0 : hasQuantitativePass ? 6.9 : hasBlindStylePass ? 6.7 : benchmarks.length >= 3 ? 6.5 : 6.3,
+  updatedInternalCoherenceOutOf10: hasEmBoundaryPropagationPass ? 8.2 : hasEmWavePropagationPass ? 8.1 : hasEmDielectricMediaPass ? 8.0 : hasEmFieldMagnitudePass ? 7.9 : hasEmEquipotentialPass ? 7.8 : hasH2O2AbsolutePass ? 7.7 : hasH2O2AbsoluteMixed ? 7.3 : hasQuantitativeMaterialPass ? 7.5 : hasHeldoutInterfacePass ? 7.4 : hasFactorTwoPeroxideRatio ? 7.3 : hasHeldoutMaterialPass ? 7.2 : hasTighterPeroxideRatio ? 7.1 : hasSecondNumericPass ? 7.0 : hasQuantitativePass ? 6.9 : hasBlindStylePass ? 6.7 : benchmarks.length >= 3 ? 6.5 : 6.3,
   previousInferentialConvergenceOutOf10: roadmap.currentStatus.inferentialConvergenceConfidenceOutOf10,
-  updatedInferentialConvergenceOutOf10: hasEmWavePropagationPass ? 7.0 : hasEmDielectricMediaPass ? 6.9 : hasEmFieldMagnitudePass ? 6.8 : hasEmEquipotentialPass ? 6.7 : hasHydrazineHeldoutPass ? 6.9 : hasHydrazineOrderingPass ? 6.6 : hasH2O2AbsolutePass ? 6.6 : hasH2O2AbsoluteMixed ? 6.1 : hasEmFieldLinePass ? 6.3 : hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.4 : hasEmCoulombPass ? 5.3 : hasEmOrderingPass ? 5.1 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
-  crossDomainEquivalenceOutOf10: hasEmWavePropagationPass ? 6.1 : hasEmDielectricMediaPass ? 6.0 : hasEmFieldMagnitudePass ? 5.9 : hasEmEquipotentialPass ? 5.8 : hasEmFieldLinePass ? 5.6 : hasEmThreeSourcePass ? 5.0 : hasEmSuperpositionPass ? 4.9 : hasEmCoulombPass ? 4.8 : hasEmOrderingPass ? 4.7 : hasQuantitativeMaterialPass ? 4.5 : hasHeldoutInterfacePass ? 4.3 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
+  updatedInferentialConvergenceOutOf10: hasEmBoundaryPropagationPass ? 7.1 : hasEmWavePropagationPass ? 7.0 : hasEmDielectricMediaPass ? 6.9 : hasEmFieldMagnitudePass ? 6.8 : hasEmEquipotentialPass ? 6.7 : hasHydrazineHeldoutPass ? 6.9 : hasHydrazineOrderingPass ? 6.6 : hasH2O2AbsolutePass ? 6.6 : hasH2O2AbsoluteMixed ? 6.1 : hasEmFieldLinePass ? 6.3 : hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.4 : hasEmCoulombPass ? 5.3 : hasEmOrderingPass ? 5.1 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
+  crossDomainEquivalenceOutOf10: hasEmBoundaryPropagationPass ? 6.2 : hasEmWavePropagationPass ? 6.1 : hasEmDielectricMediaPass ? 6.0 : hasEmFieldMagnitudePass ? 5.9 : hasEmEquipotentialPass ? 5.8 : hasEmFieldLinePass ? 5.6 : hasEmThreeSourcePass ? 5.0 : hasEmSuperpositionPass ? 4.9 : hasEmCoulombPass ? 4.8 : hasEmOrderingPass ? 4.7 : hasQuantitativeMaterialPass ? 4.5 : hasHeldoutInterfacePass ? 4.3 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
   evidenceIndependenceOutOf10: independentEvidenceLines >= 6 ? 4.5 : independentEvidenceLines >= 5 ? 4.0 : 3.2,
-  unificationThesisSupportOutOf10: hasEmWavePropagationPass ? 5.7 : hasEmDielectricMediaPass ? 5.6 : hasEmFieldMagnitudePass ? 5.5 : hasEmEquipotentialPass ? 5.4 : hasEmFieldLinePass ? 5.2 : hasEmThreeSourcePass ? 4.5 : hasEmSuperpositionPass ? 4.4 : hasEmCoulombPass ? 4.2 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
+  unificationThesisSupportOutOf10: hasEmBoundaryPropagationPass ? 5.8 : hasEmWavePropagationPass ? 5.7 : hasEmDielectricMediaPass ? 5.6 : hasEmFieldMagnitudePass ? 5.5 : hasEmEquipotentialPass ? 5.4 : hasEmFieldLinePass ? 5.2 : hasEmThreeSourcePass ? 4.5 : hasEmSuperpositionPass ? 4.4 : hasEmCoulombPass ? 4.2 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
   rationale:
-    hasEmWavePropagationPass
+    hasEmBoundaryPropagationPass
+      ? 'External anchoring now includes normal-incidence boundary propagation: impedance/reflection splitting, phase inversion, speed change, and lossless energy balance. Inferential convergence rises only slightly because EM-10 remains an imported-index, normal-incidence boundary check rather than full Fresnel optics, rough media, or Maxwell boundary simulation.'
+      : hasEmWavePropagationPass
       ? 'External anchoring now includes plane-wave propagation behavior: vacuum speed relation, E/B coupling, transverse field geometry, Poynting direction, impedance, and phase translation continuity. Inferential convergence reaches 7/10 only cautiously because EM-09 imports c, permittivity, and permeability rather than deriving electrodynamics or radiation generation.'
       : hasEmDielectricMediaPass
       ? 'External anchoring now includes ideal conductor/dielectric media behavior: parallel-plate capacitance scaling, dielectric field reduction, conductor interior screening, and energy-density consistency. Inferential convergence rises only slightly because EM-08 imports permittivity and ideal conductor constraints rather than deriving material response or solving time-dependent Maxwell dynamics.'
@@ -411,11 +427,14 @@ const remainingExternalGates = [
   ...(hasEmFieldMagnitudePass ? [] : ['Move EM-06 from electrostatic potential geometry toward calibrated field magnitude, conductors/material media, or time-dependent propagation.']),
   ...(hasEmDielectricMediaPass ? [] : ['Move EM-07 from calibrated point-charge fields toward conductors/material media or time-dependent propagation.']),
   ...(hasEmWavePropagationPass ? [] : ['Move EM-08 from ideal conductor/dielectric media toward time-dependent propagation or material-response derivation.']),
-  'Move EM-09 from imported-constant plane-wave relations toward material-response derivation, boundary propagation, or radiation generation.',
+  ...(hasEmBoundaryPropagationPass ? [] : ['Move EM-09 from imported-constant plane-wave relations toward material-response derivation, boundary propagation, or radiation generation.']),
+  'Move EM-10 from normal-incidence imported-index boundaries toward oblique Fresnel behavior, rough/multilayer boundaries, or radiation generation.',
 ];
 
 const status =
-  hasEmWavePropagationPass
+  hasEmBoundaryPropagationPass
+    ? 'external anchoring broadened: boundary propagation comparator passes'
+    : hasEmWavePropagationPass
     ? 'external anchoring broadened: wave propagation comparator passes'
     : hasEmDielectricMediaPass
     ? 'external anchoring broadened: dielectric media comparator passes'
@@ -524,7 +543,7 @@ ${remainingExternalGates.map((gate) => `- ${gate}`).join('\n')}
 
 ## Reading
 
-The external anchors improve confidence that the current grammar can line up with known H2O2 torsion, ethane torsion, ionic-ordering, electromagnetic field-geometry/topology/potential/magnitude/media/propagation checks, roughness-scatter, and silicate/material-structure facts. The breadth count should be read as ${independentEvidenceLines} core independent evidence lines, plus ${orientationEvidenceLines} orientation-only boundary check, not ${benchmarks.length} fully independent domains. Silicate network and NBO/T collapse into one broader material-structure group, and EM-02 through EM-09 are depth checks inside one electromagnetic evidence line. The result supports moderate inferential convergence under an equivalence-with-unification standard, not proof of substrate existence or displacement of conventional domain models.
+The external anchors improve confidence that the current grammar can line up with known H2O2 torsion, ethane torsion, ionic-ordering, electromagnetic field-geometry/topology/potential/magnitude/media/propagation/boundary checks, roughness-scatter, and silicate/material-structure facts. The breadth count should be read as ${independentEvidenceLines} core independent evidence lines, plus ${orientationEvidenceLines} orientation-only boundary check, not ${benchmarks.length} fully independent domains. Silicate network and NBO/T collapse into one broader material-structure group, and EM-02 through EM-10 are depth checks inside one electromagnetic evidence line. The result supports moderate inferential convergence under an equivalence-with-unification standard, not proof of substrate existence or displacement of conventional domain models.
 `;
 
 await writeFile(new URL('external-benchmark-summary.md', outDir), markdown);

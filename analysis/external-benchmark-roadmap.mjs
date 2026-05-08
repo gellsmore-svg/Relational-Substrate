@@ -187,6 +187,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.1 if passed, -0.6 if failed',
     priority: 15,
   },
+  {
+    area: 'Electromagnetic boundary propagation',
+    currentFrontier: 'post-EM-09 normal-incidence boundary pressure test',
+    externalAnchor:
+      'Compare normal-incidence reflection/transmission, impedance contrast, phase inversion, speed change, and lossless energy balance against standard dielectric-boundary optics.',
+    passSignal:
+      'The same route/closure/phase/charge/continuity grammar handles boundary splitting and conditional phase inversion without adding a new electromagnetic vocabulary.',
+    failSignal:
+      'The grammar survives free-space propagation but cannot reproduce basic boundary reflection/transmission constraints.',
+    confidenceImpact: '+0.1 if passed, -0.6 if failed',
+    priority: 16,
+  },
 ];
 
 const confidenceGates = [

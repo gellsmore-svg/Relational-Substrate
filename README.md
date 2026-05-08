@@ -377,6 +377,14 @@ npm run benchmark:em-wave-propagation
 
 This compares vacuum plane-wave speed, E/B coupling, transverse field geometry, Poynting direction, impedance, and phase translation continuity. It is a calibrated propagation-relation comparator, not a derivation of `c`, radiation-generation model, or Maxwell-equation solver.
 
+Run the external EM-10 boundary propagation comparator with:
+
+```bash
+npm run benchmark:em-boundary-propagation
+```
+
+This compares normal-incidence dielectric-boundary reflection, transmission, phase inversion, speed change, and ideal energy balance. It is a narrow imported-index boundary comparator, not a full Fresnel, rough-interface, absorption, or Maxwell-equation solver.
+
 Run the external silicate held-out benchmark with:
 
 ```bash
