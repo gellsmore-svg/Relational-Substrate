@@ -457,6 +457,14 @@ npm run benchmark:roughness-heldout
 
 This evaluates a held-out interface prediction against source-backed qualitative facts about roughness-controlled specular and diffuse scattering. It is an ordering benchmark, not a calibrated scatter model.
 
+Run the external roughness calibrated scatter benchmark with:
+
+```bash
+npm run benchmark:roughness-calibrated-scatter
+```
+
+This compares Bennett-Porteus total integrated scatter, specular fraction, roughness scaling, wavelength scaling, qualitative sweep consistency, and reflected-budget closure. It is a smooth-surface calibrated TIS comparator, not a BRDF, PSD, broadband surface-response, radiation-generation, or Maxwell-equation optics model.
+
 Run the external material NBO/T quantitative benchmark with:
 
 ```bash
