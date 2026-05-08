@@ -61,6 +61,7 @@ const explicitArtifacts = (
     readOptionalJson('external-silicate-heldout-benchmark.json'),
     readOptionalJson('external-roughness-heldout-benchmark.json'),
     readOptionalJson('external-material-nbo-quantitative-benchmark.json'),
+    readOptionalJson('external-roughness-calibrated-scatter-benchmark.json'),
   ])
 ).filter(Boolean);
 
@@ -98,7 +99,7 @@ const driftChecks = [
     area: 'Confidence drift',
     status: 'pass',
     finding:
-      `The confidence posture has been recalibrated after review: inferential convergence is ${summary.confidence.updatedInferentialConvergenceOutOf10}/10 and unification support is ${summary.confidence.unificationThesisSupportOutOf10}/10. This keeps scalar EM depth from being counted as independent-domain breadth.`,
+      `The confidence posture remains conservative after adding calibrated roughness scatter: inferential convergence is ${summary.confidence.updatedInferentialConvergenceOutOf10}/10 and unification support is ${summary.confidence.unificationThesisSupportOutOf10}/10. This keeps scalar EM depth and imported smooth-surface TIS accounting from being counted as near-decisive evidence.`,
   },
   {
     area: 'Non-claim discipline',
@@ -110,18 +111,18 @@ const driftChecks = [
     area: 'Known weak points',
     status: 'review',
     finding:
-      'Remaining gates still include measured material-property calibration, held-out torsion absolute magnitudes, calibrated roughness/interface scatter, and EM movement beyond scalar double-slit envelope coupling. Hydrazine absolute-magnitude miss is the live torsion falsification pressure after the H2O2 pass.',
+      'Remaining gates still include measured material-property calibration, held-out torsion absolute magnitudes, roughness/interface movement beyond smooth-surface TIS, and EM movement beyond scalar double-slit envelope coupling. Hydrazine absolute-magnitude miss is the live torsion falsification pressure after the H2O2 pass.',
   },
 ];
 
 const completenessChecklist = [
   'Verify every benchmark row has an artifact, source anchor, status, score, explicit limitation, and confidence effect.',
   'Check that EM-17 equations match standard scalar Fraunhofer double-slit optics: d sin(theta) = m lambda, d sin(theta) = (m + 1/2) lambda, envelope sinc(beta)^2, and missing orders where an interference maximum coincides with a single-slit minimum.',
-  'Confirm the report keeps breadth and depth separate: 28 benchmarks, 7 core independent evidence lines, and 1 orientation-only evidence line.',
+  `Confirm the report keeps breadth and depth separate: ${summary.benchmarks.length} benchmarks, ${summary.independentEvidenceLines} core independent evidence lines, and ${summary.orientationEvidenceLines} orientation-only evidence line.`,
   'Confirm boundary-phase evidence remains labelled orientation-only and is not inflated into independent proof.',
   'Audit whether any wording implies direct substrate proof, direct T0 simulation, or displacement of conventional models.',
   'Check whether confidence increments after EM-15 through EM-17 are modest enough for scalar analytic optics comparators.',
-  'Confirm that the recalibrated confidence score stays near 6/10 until a calibrated physical-property prediction or held-out absolute torsion transfer passes.',
+  'Confirm that the recalibrated confidence score stays near 6/10 until a calibrated material-property prediction, measured scatter curve, or held-out absolute torsion transfer passes.',
   'Identify any missing source citations or comparator assumptions that should be made explicit before external review.',
   'Recommend the next falsification-oriented benchmark, prioritizing calibrated quantities or held-out cases over more same-family EM depth checks.',
 ];

@@ -47,6 +47,7 @@ const emDoubleSlitEnvelope = await readOptionalJson('external-em-double-slit-env
 const silicateHeldout = await readOptionalJson('external-silicate-heldout-benchmark.json');
 const roughnessHeldout = await readOptionalJson('external-roughness-heldout-benchmark.json');
 const materialNbo = await readOptionalJson('external-material-nbo-quantitative-benchmark.json');
+const roughnessCalibratedScatter = await readOptionalJson('external-roughness-calibrated-scatter-benchmark.json');
 const hasH2O2AbsolutePass = h2o2Absolute?.status === 'absolute barrier pass';
 
 const benchmarks = [
@@ -397,6 +398,20 @@ const benchmarks = [
     limitation: 'held-out interface pass; qualitative roughness ordering, not scatter calibration',
     confidenceEffect: roughnessHeldout.confidenceEffect,
   },
+  roughnessCalibratedScatter && {
+    label: 'Roughness calibrated scatter quantity',
+    evidenceLine: 'optical/interface boundary ordering',
+    domain: 'calibrated rough optical/interface scatter',
+    conventionalComparator:
+      'Bennett-Porteus total integrated scatter, specular fraction, roughness scaling, wavelength scaling, and reflected-budget closure',
+    status: roughnessCalibratedScatter.status,
+    score: roughnessCalibratedScatter.score,
+    checksPassed: roughnessCalibratedScatter.checks.filter((check) => check.pass).length,
+    checksTotal: roughnessCalibratedScatter.checks.length,
+    limitation:
+      'calibrated smooth-surface TIS comparator; imports conventional roughness-scatter relation and does not model BRDFs, PSDs, broadband spectra, deep roughness, or Maxwell-equation surface scattering',
+    confidenceEffect: roughnessCalibratedScatter.confidenceEffect,
+  },
   materialNbo && {
     label: 'Material NBO/T quantitative accounting',
     evidenceLine: 'aluminosilicate NBO/T accounting',
@@ -416,6 +431,9 @@ function grammarVariablesFor(benchmark) {
   if (benchmark.label === 'EM-17 double-slit envelope comparator') {
     return 'route, closure, phase, continuity; charge not exercised non-trivially';
   }
+  if (benchmark.label === 'Roughness calibrated scatter quantity') {
+    return 'route, closure, phase, continuity; charge not exercised non-trivially';
+  }
   if (benchmark.evidenceLine === 'electromagnetic field ordering') {
     if (benchmark.label.includes('Coulomb') || benchmark.label.includes('superposition') || benchmark.label.includes('three-source') || benchmark.label.includes('field-line') || benchmark.label.includes('equipotential') || benchmark.label.includes('field magnitude') || benchmark.label.includes('dielectric')) {
       return 'charge, route, closure, phase, continuity';
@@ -433,7 +451,10 @@ function grammarVariablesFor(benchmark) {
 
 function grammarVariableTokensFor(benchmark) {
   if (benchmark.orientationOnly) return ['route', 'phase', 'continuity'];
-  if (benchmark.label === 'EM-17 double-slit envelope comparator') {
+  if (
+    benchmark.label === 'EM-17 double-slit envelope comparator' ||
+    benchmark.label === 'Roughness calibrated scatter quantity'
+  ) {
     return ['route', 'closure', 'phase', 'continuity'];
   }
   if (benchmark.evidenceLine === 'electromagnetic field ordering') {
@@ -507,6 +528,8 @@ const hasHeldoutMaterialPass = silicateHeldout?.status === 'held-out qualitative
 const hasFactorTwoPeroxideRatio = h2o2Quant?.metrics?.barrierRatioCompressionFactor <= 2;
 const hasHeldoutInterfacePass = roughnessHeldout?.status === 'held-out interface pass';
 const hasQuantitativeMaterialPass = materialNbo?.status === 'quantitative material pass';
+const hasRoughnessCalibratedScatterPass =
+  roughnessCalibratedScatter?.status === 'calibrated roughness scatter pass';
 const hasEmOrderingPass = emOrdering?.status === 'qualitative EM ordering pass';
 const hasEmCoulombPass = emCoulomb?.status === 'equation-level Coulomb ordering pass';
 const hasEmSuperpositionPass = emSuperposition?.status === 'held-out superposition comparator pass';
@@ -534,14 +557,16 @@ const confidence = {
   previousSandboxCompletionPct: roadmap.currentStatus.sandboxCompletionPct,
   updatedSandboxCompletionPct: hasEmDoubleSlitEnvelopePass ? 99.998 : hasEmSingleSlitEnvelopePass ? 99.997 : hasEmDiffractionGratingPass ? 99.996 : hasEmRoughSurfaceScatterPass ? 99.994 : hasEmAbsorbingMediaPass ? 99.992 : hasEmMultilayerInterferencePass ? 99.99 : hasEmObliqueFresnelPass ? 99.985 : hasEmBoundaryPropagationPass ? 99.98 : hasEmWavePropagationPass ? 99.97 : hasEmDielectricMediaPass ? 99.95 : hasEmFieldMagnitudePass ? 99.9 : hasEmEquipotentialPass ? 99.8 : hydrazineCation ? 99.7 : h2o2Absolute ? 99.6 : hasEmFieldLinePass ? 99.5 : hasEmThreeSourcePass ? 99.2 : hasEmSuperpositionPass ? 99 : hasEmCoulombPass ? 98.5 : hasEmOrderingPass ? 98 : hasQuantitativeMaterialPass ? 97 : hasHeldoutInterfacePass ? 96 : hasFactorTwoPeroxideRatio ? 94 : hasHeldoutMaterialPass ? 93 : hasTighterPeroxideRatio ? 91 : hasSecondNumericPass ? 90 : hasQuantitativePass ? 88 : hasBlindStylePass ? 84 : benchmarks.length >= 3 ? 80 : 76,
   previousInternalCoherenceOutOf10: roadmap.currentStatus.internalCoherenceConfidenceOutOf10,
-  updatedInternalCoherenceOutOf10: hasEmDoubleSlitEnvelopePass ? 8.0 : hasEmSingleSlitEnvelopePass ? 7.9 : hasEmDiffractionGratingPass ? 7.8 : hasEmRoughSurfaceScatterPass ? 7.7 : hasEmAbsorbingMediaPass ? 7.6 : hasEmMultilayerInterferencePass ? 7.5 : hasEmObliqueFresnelPass ? 7.4 : hasEmBoundaryPropagationPass ? 7.3 : hasEmWavePropagationPass ? 7.2 : hasEmDielectricMediaPass ? 7.1 : hasEmFieldMagnitudePass ? 7.0 : hasEmEquipotentialPass ? 6.9 : hasH2O2AbsolutePass ? 7.7 : hasH2O2AbsoluteMixed ? 7.3 : hasQuantitativeMaterialPass ? 7.5 : hasHeldoutInterfacePass ? 7.4 : hasFactorTwoPeroxideRatio ? 7.3 : hasHeldoutMaterialPass ? 7.2 : hasTighterPeroxideRatio ? 7.1 : hasSecondNumericPass ? 7.0 : hasQuantitativePass ? 6.9 : hasBlindStylePass ? 6.7 : benchmarks.length >= 3 ? 6.5 : 6.3,
+  updatedInternalCoherenceOutOf10: hasRoughnessCalibratedScatterPass ? 8.1 : hasEmDoubleSlitEnvelopePass ? 8.0 : hasEmSingleSlitEnvelopePass ? 7.9 : hasEmDiffractionGratingPass ? 7.8 : hasEmRoughSurfaceScatterPass ? 7.7 : hasEmAbsorbingMediaPass ? 7.6 : hasEmMultilayerInterferencePass ? 7.5 : hasEmObliqueFresnelPass ? 7.4 : hasEmBoundaryPropagationPass ? 7.3 : hasEmWavePropagationPass ? 7.2 : hasEmDielectricMediaPass ? 7.1 : hasEmFieldMagnitudePass ? 7.0 : hasEmEquipotentialPass ? 6.9 : hasH2O2AbsolutePass ? 7.7 : hasH2O2AbsoluteMixed ? 7.3 : hasQuantitativeMaterialPass ? 7.5 : hasHeldoutInterfacePass ? 7.4 : hasFactorTwoPeroxideRatio ? 7.3 : hasHeldoutMaterialPass ? 7.2 : hasTighterPeroxideRatio ? 7.1 : hasSecondNumericPass ? 7.0 : hasQuantitativePass ? 6.9 : hasBlindStylePass ? 6.7 : benchmarks.length >= 3 ? 6.5 : 6.3,
   previousInferentialConvergenceOutOf10: roadmap.currentStatus.inferentialConvergenceConfidenceOutOf10,
-  updatedInferentialConvergenceOutOf10: hasEmDoubleSlitEnvelopePass ? 6.2 : hasEmSingleSlitEnvelopePass ? 6.15 : hasEmDiffractionGratingPass ? 6.1 : hasEmRoughSurfaceScatterPass ? 6.05 : hasEmAbsorbingMediaPass ? 6.0 : hasEmMultilayerInterferencePass ? 5.95 : hasEmObliqueFresnelPass ? 5.9 : hasEmBoundaryPropagationPass ? 5.85 : hasEmWavePropagationPass ? 5.8 : hasEmDielectricMediaPass ? 5.75 : hasEmFieldMagnitudePass ? 5.7 : hasEmEquipotentialPass ? 5.65 : hasHydrazineHeldoutPass ? 6.0 : hasHydrazineOrderingPass ? 5.9 : hasH2O2AbsolutePass ? 5.8 : hasH2O2AbsoluteMixed ? 5.5 : hasEmFieldLinePass ? 5.6 : hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.4 : hasEmCoulombPass ? 5.3 : hasEmOrderingPass ? 5.1 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
-  crossDomainEquivalenceOutOf10: hasEmDoubleSlitEnvelopePass ? 5.5 : hasEmSingleSlitEnvelopePass ? 5.45 : hasEmDiffractionGratingPass ? 5.4 : hasEmRoughSurfaceScatterPass ? 5.35 : hasEmAbsorbingMediaPass ? 5.3 : hasEmMultilayerInterferencePass ? 5.25 : hasEmObliqueFresnelPass ? 5.2 : hasEmBoundaryPropagationPass ? 5.15 : hasEmWavePropagationPass ? 5.1 : hasEmDielectricMediaPass ? 5.05 : hasEmFieldMagnitudePass ? 5.0 : hasEmEquipotentialPass ? 4.9 : hasEmFieldLinePass ? 4.8 : hasEmThreeSourcePass ? 4.7 : hasEmSuperpositionPass ? 4.6 : hasEmCoulombPass ? 4.5 : hasEmOrderingPass ? 4.4 : hasQuantitativeMaterialPass ? 4.3 : hasHeldoutInterfacePass ? 4.2 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
+  updatedInferentialConvergenceOutOf10: hasRoughnessCalibratedScatterPass ? 6.3 : hasEmDoubleSlitEnvelopePass ? 6.2 : hasEmSingleSlitEnvelopePass ? 6.15 : hasEmDiffractionGratingPass ? 6.1 : hasEmRoughSurfaceScatterPass ? 6.05 : hasEmAbsorbingMediaPass ? 6.0 : hasEmMultilayerInterferencePass ? 5.95 : hasEmObliqueFresnelPass ? 5.9 : hasEmBoundaryPropagationPass ? 5.85 : hasEmWavePropagationPass ? 5.8 : hasEmDielectricMediaPass ? 5.75 : hasEmFieldMagnitudePass ? 5.7 : hasEmEquipotentialPass ? 5.65 : hasHydrazineHeldoutPass ? 6.0 : hasHydrazineOrderingPass ? 5.9 : hasH2O2AbsolutePass ? 5.8 : hasH2O2AbsoluteMixed ? 5.5 : hasEmFieldLinePass ? 5.6 : hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.4 : hasEmCoulombPass ? 5.3 : hasEmOrderingPass ? 5.1 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
+  crossDomainEquivalenceOutOf10: hasRoughnessCalibratedScatterPass ? 5.7 : hasEmDoubleSlitEnvelopePass ? 5.5 : hasEmSingleSlitEnvelopePass ? 5.45 : hasEmDiffractionGratingPass ? 5.4 : hasEmRoughSurfaceScatterPass ? 5.35 : hasEmAbsorbingMediaPass ? 5.3 : hasEmMultilayerInterferencePass ? 5.25 : hasEmObliqueFresnelPass ? 5.2 : hasEmBoundaryPropagationPass ? 5.15 : hasEmWavePropagationPass ? 5.1 : hasEmDielectricMediaPass ? 5.05 : hasEmFieldMagnitudePass ? 5.0 : hasEmEquipotentialPass ? 4.9 : hasEmFieldLinePass ? 4.8 : hasEmThreeSourcePass ? 4.7 : hasEmSuperpositionPass ? 4.6 : hasEmCoulombPass ? 4.5 : hasEmOrderingPass ? 4.4 : hasQuantitativeMaterialPass ? 4.3 : hasHeldoutInterfacePass ? 4.2 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
   evidenceIndependenceOutOf10: independentEvidenceLines >= 6 ? 4.5 : independentEvidenceLines >= 5 ? 4.0 : 3.2,
-  unificationThesisSupportOutOf10: hasEmDoubleSlitEnvelopePass ? 5.0 : hasEmSingleSlitEnvelopePass ? 4.95 : hasEmDiffractionGratingPass ? 4.9 : hasEmRoughSurfaceScatterPass ? 4.85 : hasEmAbsorbingMediaPass ? 4.8 : hasEmMultilayerInterferencePass ? 4.75 : hasEmObliqueFresnelPass ? 4.7 : hasEmBoundaryPropagationPass ? 4.65 : hasEmWavePropagationPass ? 4.6 : hasEmDielectricMediaPass ? 4.55 : hasEmFieldMagnitudePass ? 4.5 : hasEmEquipotentialPass ? 4.45 : hasEmFieldLinePass ? 4.4 : hasEmThreeSourcePass ? 4.3 : hasEmSuperpositionPass ? 4.2 : hasEmCoulombPass ? 4.1 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
+  unificationThesisSupportOutOf10: hasRoughnessCalibratedScatterPass ? 5.2 : hasEmDoubleSlitEnvelopePass ? 5.0 : hasEmSingleSlitEnvelopePass ? 4.95 : hasEmDiffractionGratingPass ? 4.9 : hasEmRoughSurfaceScatterPass ? 4.85 : hasEmAbsorbingMediaPass ? 4.8 : hasEmMultilayerInterferencePass ? 4.75 : hasEmObliqueFresnelPass ? 4.7 : hasEmBoundaryPropagationPass ? 4.65 : hasEmWavePropagationPass ? 4.6 : hasEmDielectricMediaPass ? 4.55 : hasEmFieldMagnitudePass ? 4.5 : hasEmEquipotentialPass ? 4.45 : hasEmFieldLinePass ? 4.4 : hasEmThreeSourcePass ? 4.3 : hasEmSuperpositionPass ? 4.2 : hasEmCoulombPass ? 4.1 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
   rationale:
-    hasEmDoubleSlitEnvelopePass
+    hasRoughnessCalibratedScatterPass
+      ? 'External anchoring now includes a calibrated roughness/interface scatter quantity: Bennett-Porteus total integrated scatter, specular fraction, roughness/wavelength scaling, and reflected-budget closure. Inferential convergence rises only slightly because this imports a conventional smooth-surface approximation and does not yet solve measured material properties, held-out torsion absolute magnitudes, full BRDFs, or Maxwell surface scattering.'
+      : hasEmDoubleSlitEnvelopePass
       ? 'External anchoring now includes double-slit diffraction-envelope behavior, but the confidence scale has been recalibrated downward after review: EM-02 through EM-17 deepen one electromagnetic evidence line rather than opening new independent domains, and the latest additions remain scalar analytic comparators importing conventional equations and constants. The current reading is meaningful sandbox progress, not a near-decisive convergence claim.'
       : hasEmSingleSlitEnvelopePass
       ? 'External anchoring now includes single-slit diffraction-envelope behavior: aperture minima, sinc-squared side-lobe intensity, central maximum recovery, wavelength/slit-width scaling, symmetry, and screen-position mapping. Inferential convergence rises only slightly because EM-16 remains scalar Fraunhofer single-slit optics rather than vector diffraction, broadband intensity prediction, resolving power, radiation generation, or Maxwell optics.'
@@ -613,7 +638,10 @@ const remainingExternalGates = [
     : h2o2Absolute
     ? 'Resolve transferred H2O2 trans-barrier overprediction without fitting H2O2 endpoints or breaking cis-barrier scale.'
     : 'Move peroxide from ratio-shape checks toward absolute barrier-height calibration.',
-  'Move roughness/interface checks beyond qualitative ordering into calibrated scatter quantities.',
+  ...(hasRoughnessCalibratedScatterPass
+    ? []
+    : ['Move roughness/interface checks beyond qualitative ordering into calibrated scatter quantities.']),
+  'Move calibrated roughness/interface checks beyond smooth-surface TIS into BRDF/PSD, measured scatter curves, or broadband surface response.',
   ...(hasEmCoulombPass ? [] : ['Move electromagnetic ordering from qualitative checks toward explicit equation-level comparators.']),
   ...(hasEmSuperpositionPass ? [] : ['Move EM-02 from pairwise Coulomb ratios toward held-out superposition or field-geometry checks.']),
   ...(hasEmThreeSourcePass ? [] : ['Move EM-03 from symmetric two-source layouts toward non-symmetric three-source field geometry or calibrated field magnitude comparisons.']),
@@ -656,7 +684,9 @@ const remainingExternalGates = [
 ];
 
 const status =
-  hasEmDoubleSlitEnvelopePass
+  hasRoughnessCalibratedScatterPass
+    ? 'external anchoring broadened: calibrated roughness scatter benchmark passes'
+    : hasEmDoubleSlitEnvelopePass
     ? 'external anchoring broadened: double-slit envelope comparator passes'
     : hasEmSingleSlitEnvelopePass
     ? 'external anchoring broadened: single-slit envelope comparator passes'
@@ -803,7 +833,7 @@ ${remainingExternalGates.map((gate) => `- ${gate}`).join('\n')}
 
 ## Reading
 
-The external anchors improve confidence that the current grammar can line up with known H2O2 torsion, ethane torsion, ionic-ordering, electromagnetic field-geometry/topology/potential/magnitude/media/propagation/boundary/Fresnel/multilayer/absorption/roughness-scatter/diffraction/interference-envelope checks, and silicate/material-structure facts. The breadth count should be read as ${independentEvidenceLines} core independent evidence lines, plus ${orientationEvidenceLines} orientation-only boundary check, not ${benchmarks.length} fully independent domains. Silicate network and NBO/T collapse into one broader material-structure group, and EM-02 through EM-17 are depth checks inside one electromagnetic evidence line. The result supports moderate inferential convergence under an equivalence-with-unification standard, not proof of substrate existence or displacement of conventional domain models.
+The external anchors improve confidence that the current grammar can line up with known H2O2 torsion, ethane torsion, ionic-ordering, electromagnetic field-geometry/topology/potential/magnitude/media/propagation/boundary/Fresnel/multilayer/absorption/roughness-scatter/diffraction/interference-envelope checks, calibrated roughness/interface scatter accounting, and silicate/material-structure facts. The breadth count should be read as ${independentEvidenceLines} core independent evidence lines, plus ${orientationEvidenceLines} orientation-only boundary check, not ${benchmarks.length} fully independent domains. Silicate network and NBO/T collapse into one broader material-structure group, roughness held-out and calibrated scatter remain one rough optical/interface line, and EM-02 through EM-17 are depth checks inside one electromagnetic evidence line. The result supports moderate inferential convergence under an equivalence-with-unification standard, not proof of substrate existence or displacement of conventional domain models.
 `;
 
 await writeFile(new URL('external-benchmark-summary.md', outDir), markdown);

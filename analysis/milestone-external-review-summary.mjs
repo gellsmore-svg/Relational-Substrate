@@ -47,6 +47,7 @@ const benchmarkFiles = [
   'external-silicate-heldout-benchmark.json',
   'external-roughness-heldout-benchmark.json',
   'external-material-nbo-quantitative-benchmark.json',
+  'external-roughness-calibrated-scatter-benchmark.json',
 ];
 
 const benchmarkArtifacts = (await Promise.all(benchmarkFiles.map((file) => readOptionalJson(file)))).filter(Boolean);
@@ -143,7 +144,8 @@ const unificationMap = [
     benchmarkFamily: 'Boundary phase and roughness/interface checks',
     conventionalDomain: 'optical/electromagnetic boundary behavior',
     grammarVariables: 'phase, continuity, route',
-    currentReading: 'Roughness/interface ordering is a qualitative evidence line. The boundary phase prediction is orientation evidence only because it is documented but not independently timestamped.',
+    currentReading:
+      'Roughness/interface evidence now includes both qualitative specular/diffuse ordering and a calibrated smooth-surface total-integrated-scatter quantity. The boundary phase prediction is orientation evidence only because it is documented but not independently timestamped.',
   },
   {
     benchmarkFamily: 'Electromagnetic ordering',
@@ -179,7 +181,7 @@ const confidence = {
   unificationThesisSupportOutOf10: summary.confidence.unificationThesisSupportOutOf10,
   reading:
     h2o2AbsolutePass
-      ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, and EM propagation/boundary/Fresnel/multilayer/absorption/roughness/diffraction/interference-envelope/media checks still import conventional constants and ideal constraints rather than deriving electrodynamics. The confidence posture is therefore calibrated around 6/10 rather than treated as near-decisive convergence.'
+      ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, calibrated roughness scatter still imports a smooth-surface approximation, and EM propagation/boundary/Fresnel/multilayer/absorption/roughness/diffraction/interference-envelope/media checks still import conventional constants and ideal constraints rather than deriving electrodynamics. The confidence posture is therefore calibrated around 6/10 rather than treated as near-decisive convergence.'
       : 'Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, benchmark-breadth compression, and qualitative EM topology limits remain known issues. Inferential convergence has crossed 6/10 only because EM now includes continuous field-line topology; it remains moderate because the topology check is not calibrated physical property prediction or Maxwell-equation dynamics.',
 };
 
@@ -460,11 +462,11 @@ ${reviewPackage.reviewerQuestions.map((question) => `- ${question}`).join('\n')}
 
 ## Recommended Next Stage
 
-Do not extend the sandbox laterally until the review package has been read. EM-05 completed the recommended topology broadening step, EM-06 links scalar potential geometry to the vector-field checks, EM-07 adds calibrated point-charge field magnitude, and EM-17 completes a scalar double-slit envelope depth check. H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate, but hydrazine cation absolute magnitudes remain a live torsion falsification pressure. The next stage should pick one high-value calibrated target rather than another shallow fixture:
+Do not extend the sandbox laterally until the review package has been read. EM-05 completed the recommended topology broadening step, EM-06 links scalar potential geometry to the vector-field checks, EM-07 adds calibrated point-charge field magnitude, EM-17 completes a scalar double-slit envelope depth check, and the roughness/interface line now includes calibrated smooth-surface TIS accounting. H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate, but hydrazine cation absolute magnitudes remain a live torsion falsification pressure. The next stage should pick one high-value calibrated target rather than another shallow fixture:
 
 - Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
 - A measured material-property correlation downstream of NBO/T, such as viscosity, durability, or conductivity.
-- A calibrated roughness/scatter quantity, not only specular/diffuse ordering.
+- A measured roughness/scatter curve beyond smooth-surface TIS, such as BRDF/PSD or broadband surface response.
 - A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
 - Do not prioritize further scalar EM depth until at least one calibrated material-property or held-out absolute torsion target has been attempted.
 `;
