@@ -86,7 +86,7 @@ const driftChecks = [
     area: 'Benchmark scope',
     status: statusIcon(Boolean(materialRefractiveIndex) && summary.benchmarkPasses < summary.benchmarks.length),
     finding:
-      'The aggregate now includes an explicit unresolved material refractive-index challenge with a first-pass topology-only predictor and a target-implied repair candidate that fails fresh anorthite validation. Reviewers should verify that the failed candidate remains calibration debt, not a hidden material-property pass.',
+      'The aggregate now includes an explicit unresolved material refractive-index challenge with a first-pass topology-only predictor, a target-implied repair candidate that fails fresh anorthite validation, and a second-generation modifier-identity candidate that fits current rows but remains target-informed calibration debt. Reviewers should verify that neither candidate is treated as a hidden material-property pass.',
   },
   {
     area: 'EM evidence independence',
@@ -129,7 +129,7 @@ const completenessChecklist = [
   'Check whether confidence increments after EM-15 through EM-17 are modest enough for scalar analytic optics comparators.',
   'Confirm that the recalibrated confidence score stays near 6/10 until a calibrated material-property prediction, measured scatter curve, or held-out absolute torsion transfer passes.',
   'Confirm that the material refractive-index row is treated as an unresolved measured-property challenge, not as a benchmark pass.',
-  'Check whether the failed slope/framework-Al refractive-index candidate reveals a structural missing variable such as density, cation field strength, molar refraction, or polarizability.',
+  'Check whether the second-generation modifier-identity refractive-index candidate is sufficiently predeclared for the next held-out target, and whether it still omits required variables such as density, cation field strength, molar refraction, or polarizability.',
   'Identify any missing source citations or comparator assumptions that should be made explicit before external review.',
   'Recommend the next falsification-oriented benchmark, prioritizing calibrated quantities or held-out cases over more same-family EM depth checks.',
 ];

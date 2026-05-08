@@ -2,7 +2,7 @@
 
 Last updated: 2026-05-08
 Current branch: `main`
-Latest committed validation state: `a64ba99`
+Latest validation state: see latest commit on `main`; this map reflects the second-generation modifier-identity candidate state.
 
 ## Current Status
 
@@ -12,7 +12,7 @@ Latest committed validation state: `a64ba99`
 | External benchmark completion | 100% |
 | Benchmark target coverage | 30/24 |
 | Benchmark passes | 29/30 (96.7%) |
-| Checks passed | 186/190 (97.9%) |
+| Checks passed | 187/191 (97.9%) |
 | Core independent evidence lines | 7 |
 | Orientation-only evidence lines | 1 |
 | Grammar internal coherence | 8/10 |
@@ -38,19 +38,21 @@ Current status:
 | Item | State |
 |---|---|
 | Benchmark status | measured material refractive-index challenge unresolved |
-| Benchmark score | 6/9 |
+| Benchmark score | 7/10 |
 | Primary proxy | `n = 1.46 + 0.02*NBO/T - 0.004*chargeBalancedAl` |
-| Repair candidate | `n = 1.46 + 0.03*NBO/T + 0.075*chargeBalancedAl` |
-| Repair status | failed fresh anorthite validation; not promotable |
+| First repair candidate | `n = 1.46 + 0.03*NBO/T + 0.075*chargeBalancedAl` |
+| First repair status | failed fresh anorthite validation; not promotable |
+| Second-generation candidate | `n = 1.46 + 0.03*NBO/T + 0.075*chargeBalancedAl - 0.014*divalentModifierCharge` |
+| Second-generation status | fits current rows; target-informed after anorthite; quarantined pending new held-out validation |
 
 Measured targets:
 
-| Formula | Material | Role | Measured RI | Primary prediction | Repair prediction | Reading |
-|---|---|---|---:|---:|---:|---|
-| SiO2 | fused silica | source-anchored baseline | 1.45704 | 1.46 | 1.46 | baseline clears tolerance |
-| Na2SiO3 | sodium silicate glass | modifier/NBO pressure | 1.52 | 1.5 | 1.52 | primary fails; repair fits |
-| NaAlSi3O8 | albite feldspar | held-out framework pressure | 1.53493 | 1.456 | 1.535 | primary collapses framework; repair fits |
-| CaAl2Si2O8 | anorthite feldspar | fresh repair validation | 1.58167 | 1.452 | 1.61 | primary fails; repair also fails |
+| Formula | Material | Role | Measured RI | Primary prediction | First repair | Second-generation candidate | Reading |
+|---|---|---|---:|---:|---:|---:|---|
+| SiO2 | fused silica | source-anchored baseline | 1.45704 | 1.46 | 1.46 | 1.46 | baseline clears tolerance |
+| Na2SiO3 | sodium silicate glass | modifier/NBO pressure | 1.52 | 1.5 | 1.52 | 1.52 | primary fails; candidates fit |
+| NaAlSi3O8 | albite feldspar | held-out framework pressure | 1.53493 | 1.456 | 1.535 | 1.535 | primary collapses framework; candidates fit |
+| CaAl2Si2O8 | anorthite feldspar | fresh first-repair validation | 1.58167 | 1.452 | 1.61 | 1.582 | primary fails; first repair fails; second-generation fits current rows but is not validation |
 
 Source anchors:
 
@@ -67,17 +69,28 @@ The first proxy only uses NBO/T and charge-balanced Al, so it cannot distinguish
 |---|---:|---:|---:|---:|
 | CaAl2Si2O8 | 1.61 | 1.58167 | 0.02833 | 0.01 |
 
-This means a simple linear framework-Al boost is still structurally incomplete. The next model likely needs a variable that distinguishes Na-aluminosilicate and Ca-aluminosilicate frameworks.
+This means a simple linear framework-Al boost is still structurally incomplete. The current second-generation candidate tests one such variable: modifier identity via divalent modifier charge.
+
+## Current Second-Generation Candidate
+
+The current second-generation candidate adds a crude divalent-modifier correction:
+
+```text
+n = 1.46 + 0.03*NBO/T + 0.075*chargeBalancedAl - 0.014*divalentModifierCharge
+```
+
+This fits the current measured rows, including CaAl2Si2O8, but it was introduced after the anorthite failure. It is calibration debt, not a benchmark pass. The candidate must be treated as predeclared only for the next source-anchored held-out material selected after this point.
 
 ## Next Tasks
 
-1. Replace the failed refractive-index repair candidate.
-   - Candidate variables to test: cation field strength, density, molar refraction, cation polarizability, Ca/Na modifier identity, or a normalized framework-charge-density term.
-   - Do not promote a target-fitted equation without a fresh held-out material.
+1. Validate the second-generation refractive-index candidate on a new held-out material.
+   - The candidate variable is now modifier identity through `divalentModifierCharge`.
+   - Do not promote it unless the exact current coefficients clear the new target.
+   - If it fails, update the report as a structural limitation rather than fitting another current-row coefficient.
 
-2. Add one new held-out refractive-index material only after choosing the next predictor form.
+2. Select and add one new held-out refractive-index material for the already chosen predictor form.
    - Recommended class: another feldspar or silicate with simple stoichiometry that the NBO/T model can represent.
-   - Avoid choosing the validation row after inspecting whether the revised equation passes it.
+   - The next row must be selected and source-anchored before checking whether the second-generation equation passes it.
 
 3. Keep current confidence capped.
    - Do not raise inferential convergence above 6.25/10 until a measured material-property prediction passes without endpoint fitting.

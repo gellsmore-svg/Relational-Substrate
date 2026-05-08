@@ -49,6 +49,14 @@ function modifierCharge(modifiers) {
   return modifiers.Na + modifiers.Ca * 2 + modifiers.Mg * 2;
 }
 
+function monovalentModifierCharge(modifiers) {
+  return modifiers.Na;
+}
+
+function divalentModifierCharge(modifiers) {
+  return modifiers.Ca * 2 + modifiers.Mg * 2;
+}
+
 function nboAccounting(testCase) {
   const tetrahedralCations = testCase.networkFormers.Si + testCase.networkFormers.Al;
   const chargeRequiredForAl = testCase.networkFormers.Al;
@@ -60,7 +68,10 @@ function nboAccounting(testCase) {
     formula: testCase.formula,
     materialType: testCase.materialType,
     tetrahedralCations,
+    modifierCounts: testCase.modifiers,
     modifierCharge: modifierCharge(testCase.modifiers),
+    monovalentModifierCharge: monovalentModifierCharge(testCase.modifiers),
+    divalentModifierCharge: divalentModifierCharge(testCase.modifiers),
     chargeRequiredForAl,
     chargeBalancedAl,
     excessModifierCharge,
