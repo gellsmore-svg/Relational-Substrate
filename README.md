@@ -393,6 +393,14 @@ npm run benchmark:em-oblique-fresnel
 
 This compares s/p oblique-incidence reflectance, Brewster-angle cancellation, grazing trend, critical angle, and total internal reflection. It is an ideal lossless Fresnel comparator, not a rough, absorbing, multilayer, diffraction, or Maxwell-equation solver.
 
+Run the external EM-12 multilayer interference comparator with:
+
+```bash
+npm run benchmark:em-multilayer-interference
+```
+
+This compares ideal thin-film phase thickness, quarter-wave anti-reflection cancellation, off-design wavelength degradation, half-wave recurrence, and nonideal coating-index partial improvement. It is a lossless imported-index multilayer comparator, not rough, absorbing, broadband coating, or Maxwell-equation optics.
+
 Run the external silicate held-out benchmark with:
 
 ```bash

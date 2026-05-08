@@ -211,6 +211,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.1 if passed, -0.6 if failed',
     priority: 17,
   },
+  {
+    area: 'Electromagnetic multilayer interference',
+    currentFrontier: 'post-EM-11 thin-film interference pressure test',
+    externalAnchor:
+      'Compare quarter-wave anti-reflection cancellation, off-design wavelength degradation, half-wave recurrence, and nonideal coating-index behavior against standard thin-film optics.',
+    passSignal:
+      'The same route/closure/phase/charge/continuity grammar handles phase-sensitive multilayer interference and amplitude matching without adding a new electromagnetic vocabulary.',
+    failSignal:
+      'The grammar survives single-boundary Fresnel optics but cannot reproduce thin-film interference constraints.',
+    confidenceImpact: '+0.1 if passed, -0.6 if failed',
+    priority: 18,
+  },
 ];
 
 const confidenceGates = [
