@@ -45,11 +45,13 @@ const reportSteps = [
   'benchmark:em-rough-surface-scatter',
   'benchmark:em-diffraction-grating',
   'benchmark:em-single-slit-envelope',
+  'benchmark:em-double-slit-envelope',
   'benchmark:silicate-heldout',
   'benchmark:roughness-heldout',
   'benchmark:material-nbo',
   'benchmark:summary',
   'milestone:external-review',
+  'review:claude-drift-completeness',
 ];
 
 await mkdir(new URL('../analysis/out/', import.meta.url), { recursive: true });

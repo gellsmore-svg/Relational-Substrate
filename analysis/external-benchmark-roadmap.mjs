@@ -271,6 +271,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.1 if passed, -0.6 if failed',
     priority: 22,
   },
+  {
+    area: 'Electromagnetic double-slit envelope coupling',
+    currentFrontier: 'post-EM-16 two-aperture interference-envelope pressure test',
+    externalAnchor:
+      'Compare double-slit fringe spacing, constructive/destructive conditions, single-slit envelope modulation, missing orders, slit-separation scaling, wavelength scaling, symmetry, and screen-position mapping against standard double-slit diffraction optics.',
+    passSignal:
+      'The same route/closure/phase/charge/continuity grammar handles two-aperture interference under a finite-aperture envelope without adding a new electromagnetic vocabulary.',
+    failSignal:
+      'The grammar survives single-slit envelopes but cannot reproduce double-slit interference-envelope coupling.',
+    confidenceImpact: '+0.1 if passed, -0.6 if failed',
+    priority: 23,
+  },
 ];
 
 const confidenceGates = [
