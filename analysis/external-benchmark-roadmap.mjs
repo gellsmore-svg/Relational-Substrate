@@ -175,6 +175,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.1 if passed, -0.5 if failed',
     priority: 14,
   },
+  {
+    area: 'Electromagnetic plane-wave propagation',
+    currentFrontier: 'post-EM-08 time-dependent propagation pressure test',
+    externalAnchor:
+      'Compare vacuum plane-wave speed relation, E/B relation, transverse field geometry, Poynting direction, impedance, and phase propagation against standard electromagnetic-wave relations.',
+    passSignal:
+      'The same route/closure/phase/charge/continuity grammar handles coupled time-dependent propagation without adding a new electromagnetic vocabulary.',
+    failSignal:
+      'The grammar survives static field and ideal media checks but cannot reproduce basic vacuum propagation constraints.',
+    confidenceImpact: '+0.1 if passed, -0.6 if failed',
+    priority: 15,
+  },
 ];
 
 const confidenceGates = [

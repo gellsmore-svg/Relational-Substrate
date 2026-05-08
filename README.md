@@ -369,6 +369,14 @@ npm run benchmark:em-dielectric-media
 
 This compares ideal parallel-plate capacitance scaling, dielectric field reduction, conductor interior screening, and dielectric energy-density consistency. It is an electrostatic media comparator, not a permittivity derivation, molecular polarizability model, propagation model, or Maxwell-equation solver.
 
+Run the external EM-09 wave propagation comparator with:
+
+```bash
+npm run benchmark:em-wave-propagation
+```
+
+This compares vacuum plane-wave speed, E/B coupling, transverse field geometry, Poynting direction, impedance, and phase translation continuity. It is a calibrated propagation-relation comparator, not a derivation of `c`, radiation-generation model, or Maxwell-equation solver.
+
 Run the external silicate held-out benchmark with:
 
 ```bash
