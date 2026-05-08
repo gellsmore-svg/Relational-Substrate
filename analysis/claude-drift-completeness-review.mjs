@@ -129,7 +129,7 @@ const completenessChecklist = [
   'Check whether confidence increments after EM-15 through EM-17 are modest enough for scalar analytic optics comparators.',
   'Confirm that the recalibrated confidence score stays near 6/10 until a calibrated material-property prediction, measured scatter curve, or held-out absolute torsion transfer passes.',
   'Confirm that the material refractive-index row is treated as an unresolved measured-property challenge, not as a benchmark pass.',
-  'Check whether the topology-only refractive-index proxy is too weak, under-justified, or implicitly tuned despite failing Na2SiO3 tolerance.',
+  'Check whether the topology-only refractive-index proxy is too weak, under-justified, or implicitly tuned despite failing Na2SiO3 tolerance and collapsing held-out albite against silica.',
   'Identify any missing source citations or comparator assumptions that should be made explicit before external review.',
   'Recommend the next falsification-oriented benchmark, prioritizing calibrated quantities or held-out cases over more same-family EM depth checks.',
 ];

@@ -430,7 +430,7 @@ const benchmarks = [
     evidenceLine: 'material measured property calibration',
     domain: 'measured silicate optical property',
     conventionalComparator:
-      'source-anchored SiO2 and Na2SiO3 refractive-index targets checked against current material grammar outputs',
+      'source-anchored SiO2, Na2SiO3, and held-out NaAlSi3O8 refractive-index targets checked against current material grammar outputs',
     status: materialRefractiveIndex.status,
     score: materialRefractiveIndex.score,
     checksPassed: materialRefractiveIndex.checks.filter((check) => check.pass).length,
@@ -586,7 +586,7 @@ const confidence = {
   unificationThesisSupportOutOf10: hasRoughnessCalibratedScatterPass ? 5.2 : hasEmDoubleSlitEnvelopePass ? 5.0 : hasEmSingleSlitEnvelopePass ? 4.95 : hasEmDiffractionGratingPass ? 4.9 : hasEmRoughSurfaceScatterPass ? 4.85 : hasEmAbsorbingMediaPass ? 4.8 : hasEmMultilayerInterferencePass ? 4.75 : hasEmObliqueFresnelPass ? 4.7 : hasEmBoundaryPropagationPass ? 4.65 : hasEmWavePropagationPass ? 4.6 : hasEmDielectricMediaPass ? 4.55 : hasEmFieldMagnitudePass ? 4.5 : hasEmEquipotentialPass ? 4.45 : hasEmFieldLinePass ? 4.4 : hasEmThreeSourcePass ? 4.3 : hasEmSuperpositionPass ? 4.2 : hasEmCoulombPass ? 4.1 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
   rationale:
     hasMaterialRefractiveIndexChallenge
-      ? 'External anchoring now includes an explicit measured material-property challenge, and it is unresolved: SiO2 and Na2SiO3 refractive-index targets are source-anchored, and the current topology-only refractive-index proxy clears SiO2 but misses Na2SiO3 tolerance. Inferential convergence is held near 6/10 because the material-property gate remains open.'
+      ? 'External anchoring now includes an explicit measured material-property challenge, and it is unresolved: SiO2, Na2SiO3, and held-out NaAlSi3O8 refractive-index targets are source-anchored; the current topology-only refractive-index proxy clears SiO2 but misses Na2SiO3 tolerance and collapses albite against silica. Inferential convergence is held near 6/10 because the material-property gate remains open.'
       : hasRoughnessCalibratedScatterPass
       ? 'External anchoring now includes a calibrated roughness/interface scatter quantity: Bennett-Porteus total integrated scatter, specular fraction, roughness/wavelength scaling, and reflected-budget closure. Inferential convergence rises only slightly because this imports a conventional smooth-surface approximation and does not yet solve measured material properties, held-out torsion absolute magnitudes, full BRDFs, or Maxwell surface scattering.'
       : hasEmDoubleSlitEnvelopePass
@@ -654,7 +654,7 @@ const confidence = {
 
 const remainingExternalGates = [
   hasMaterialRefractiveIndexChallenge
-    ? 'Resolve material refractive-index challenge by improving the predeclared topology-only optical-property predictor until it clears measured SiO2/Na2SiO3 tolerance without endpoint fitting.'
+    ? 'Resolve material refractive-index challenge by improving the predeclared topology-only optical-property predictor until it clears measured SiO2/Na2SiO3/NaAlSi3O8 tolerance without endpoint fitting.'
     : 'Move material checks from composition accounting to measured property calibration.',
   hasH2O2AbsolutePass
     ? hydrazineCation
