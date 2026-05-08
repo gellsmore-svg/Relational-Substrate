@@ -8,14 +8,14 @@ Review this as an external critique packet for the Relational Substrate sandbox.
 
 | Measure | Value |
 |---|---:|
-| Status | external anchoring broadened: calibrated roughness scatter benchmark passes |
-| Sandbox completion | 99.998% |
-| Internal coherence | 8.1/10 |
-| Inferential convergence | 6.3/10 |
+| Status | external anchoring sharpened: measured material refractive-index challenge unresolved |
+| Sandbox completion | 99.999% |
+| Internal coherence | 8/10 |
+| Inferential convergence | 6.25/10 |
 | Cross-domain equivalence | 5.7/10 |
 | Unification thesis support | 5.2/10 |
-| Benchmark passes | 29/29 |
-| Checks passed | 180/181 |
+| Benchmark passes | 29/30 |
+| Checks passed | 183/186 |
 | Core independent evidence lines | 7 |
 | Orientation-only evidence lines | 1 |
 
@@ -40,7 +40,7 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 | ionic solid ordering | 1 | 3/3 | charge, closure, continuity | core evidence |
 | orientation-only boundary phase | 1 | 3/3 | route, phase, continuity | orientation-only |
 | electromagnetic field geometry/topology | 17 | 131/131 | route, closure, phase, continuity, charge | core evidence |
-| network/material structure | 2 | 8/8 | charge, closure, continuity | core evidence |
+| network/material structure | 3 | 11/13 | charge, closure, continuity | core evidence |
 | rough optical/interface ordering | 2 | 13/13 | route, phase, continuity, closure | core evidence |
 
 ## EM-17 Checks
@@ -62,28 +62,29 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 
 ## Drift Audit Targets
 
-- Benchmark scope: pass. All benchmark rows currently report pass status, but the reviewer should verify that pass conditions remain bounded to each comparator and have not been relaxed to preserve the aggregate.
+- Benchmark scope: pass. The aggregate now includes an explicit unresolved material refractive-index challenge. Reviewers should verify that this is treated as a gate, not as a failed-by-design excuse or a hidden pass.
 - EM evidence independence: review. EM-02 through EM-17 are depth checks inside one electromagnetic evidence line, not separate independent domains. They should increase confidence in grammar breadth within EM but should not be counted as independent cross-domain evidence.
 - Double-slit completeness: pass. EM-17 covers scalar bright/dark fringe positions, finite-slit modulation, missing-order suppression, symmetry, scaling, and screen mapping. It deliberately excludes vector diffraction, broadband intensities, resolving power, radiation generation, and Maxwell solving.
-- Confidence drift: pass. The confidence posture remains conservative after adding calibrated roughness scatter: inferential convergence is 6.3/10 and unification support is 5.2/10. This keeps scalar EM depth and imported smooth-surface TIS accounting from being counted as near-decisive evidence.
+- Confidence drift: pass. The confidence posture remains conservative after adding calibrated roughness scatter and an unresolved material-property challenge: inferential convergence is 6.25/10 and unification support is 5.2/10. This keeps scalar EM depth, imported smooth-surface TIS accounting, and NBO/T composition accounting from being counted as near-decisive evidence.
 - Non-claim discipline: review. The milestone report explicitly says the sandbox is not proof of the theory, not T0 simulation, not vorton-to-atom derivation, and not a quantum chemistry, material property, BRDF, diffraction, roughness, Fresnel, or Maxwell solver.
-- Known weak points: review. Remaining gates still include measured material-property calibration, held-out torsion absolute magnitudes, roughness/interface movement beyond smooth-surface TIS, and EM movement beyond scalar double-slit envelope coupling. Hydrazine absolute-magnitude miss is the live torsion falsification pressure after the H2O2 pass.
+- Known weak points: review. Remaining gates still include the unresolved material refractive-index challenge, held-out torsion absolute magnitudes, roughness/interface movement beyond smooth-surface TIS, and EM movement beyond scalar double-slit envelope coupling. Hydrazine absolute-magnitude miss is the live torsion falsification pressure after the H2O2 pass.
 
 ## Completeness Checklist
 
 - Verify every benchmark row has an artifact, source anchor, status, score, explicit limitation, and confidence effect.
 - Check that EM-17 equations match standard scalar Fraunhofer double-slit optics: d sin(theta) = m lambda, d sin(theta) = (m + 1/2) lambda, envelope sinc(beta)^2, and missing orders where an interference maximum coincides with a single-slit minimum.
-- Confirm the report keeps breadth and depth separate: 29 benchmarks, 7 core independent evidence lines, and 1 orientation-only evidence line.
+- Confirm the report keeps breadth and depth separate: 30 benchmarks, 7 core independent evidence lines, and 1 orientation-only evidence line.
 - Confirm boundary-phase evidence remains labelled orientation-only and is not inflated into independent proof.
 - Audit whether any wording implies direct substrate proof, direct T0 simulation, or displacement of conventional models.
 - Check whether confidence increments after EM-15 through EM-17 are modest enough for scalar analytic optics comparators.
 - Confirm that the recalibrated confidence score stays near 6/10 until a calibrated material-property prediction, measured scatter curve, or held-out absolute torsion transfer passes.
+- Confirm that the material refractive-index row is treated as an unresolved measured-property challenge, not as a benchmark pass.
 - Identify any missing source citations or comparator assumptions that should be made explicit before external review.
 - Recommend the next falsification-oriented benchmark, prioritizing calibrated quantities or held-out cases over more same-family EM depth checks.
 
 ## Remaining Gates
 
-- Move material checks from composition accounting to measured property calibration.
+- Resolve material refractive-index challenge by adding a predeclared optical-property predictor before comparing against measured SiO2/Na2SiO3 targets.
 - Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
 - Move calibrated roughness/interface checks beyond smooth-surface TIS into BRDF/PSD, measured scatter curves, or broadband surface response.
 - Move EM-17 from scalar double-slit envelope coupling toward resolving power, broadband intensities, vector diffraction, or radiation generation.
@@ -93,8 +94,8 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 - This is not proof of the Relational Substrate theory.
 - This is not a direct simulation or observation of T0 substrate.
 - This is not a derivation of atoms or molecules from T1 vortons.
-- This is not a quantum chemistry, molecular dynamics, glass-property, BRDF, Fresnel, diffraction, rough-surface scattering, conductor, capacitance, Coulomb-constant derivation, or Maxwell-equation solver.
-- This does not yet solve absolute H2O2 barrier structure, material viscosity/durability/conductivity/density, or calibrated scatter curves.
+- This is not a quantum chemistry, molecular dynamics, glass-property, refractive-index, density, polarizability, Sellmeier, BRDF, Fresnel, diffraction, rough-surface scattering, conductor, capacitance, Coulomb-constant derivation, or Maxwell-equation solver.
+- This does not yet solve absolute H2O2 barrier structure, material viscosity/durability/conductivity/density/refractive-index prediction, or calibrated scatter curves beyond smooth-surface TIS.
 - Passing benchmark order checks does not by itself exclude conventional explanations.
 
 ## Requested Claude Output
@@ -158,6 +159,8 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 - van Ginneken et al., Applied Optics 1998: https://doi.org/10.1364/AO.37.000130. Treats diffuse and specular reflectance from rough surfaces.
 - Walkley et al., PLOS One 2021: https://doi.org/10.1371/journal.pone.0244621. Uses NBO/T as a composition-derived parameter for aluminosilicate glass reactivity.
 - Mysen and Richet, Nature 1997: https://www.nature.com/articles/36199. Describes charge-balancing cations near aluminium and excess modifier charge forming NBOs that depolymerize the network.
+- KLA/Filmetrics, Refractive Index of SiO2 Fused Silica: https://www.kla.com/products/instruments/refractive-index-database/SiO2/Fused-Silica. Lists n = 1.45704 at 632.8 nm for SiO2 and cites I. H. Malitson, JOSA 1965.
+- PubChem Sodium Silicate, CID 23266: https://pubchem.ncbi.nlm.nih.gov/compound/23266. Lists index of refraction 1.520 for sodium silicate glass from HSDB/Merck Index.
 
 ## File Context
 

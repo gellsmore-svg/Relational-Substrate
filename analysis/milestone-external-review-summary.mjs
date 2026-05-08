@@ -47,6 +47,7 @@ const benchmarkFiles = [
   'external-silicate-heldout-benchmark.json',
   'external-roughness-heldout-benchmark.json',
   'external-material-nbo-quantitative-benchmark.json',
+  'external-material-refractive-index-challenge.json',
   'external-roughness-calibrated-scatter-benchmark.json',
 ];
 
@@ -54,6 +55,9 @@ const benchmarkArtifacts = (await Promise.all(benchmarkFiles.map((file) => readO
 const h2o2Quant = benchmarkArtifacts.find((artifact) => artifact.source === 'external-h2o2-quantitative-benchmark.mjs');
 const h2o2Absolute = benchmarkArtifacts.find((artifact) => artifact.source === 'external-h2o2-absolute-barrier-benchmark.mjs');
 const hydrazineCation = benchmarkArtifacts.find((artifact) => artifact.source === 'external-hydrazine-cation-torsion-benchmark.mjs');
+const materialRefractiveIndex = benchmarkArtifacts.find(
+  (artifact) => artifact.source === 'external-material-refractive-index-challenge.mjs'
+);
 const boundaryBenchmark = benchmarkArtifacts.find((artifact) => artifact.source === 'external-boundary-blind-benchmark.mjs');
 const h2o2AbsolutePass = h2o2Absolute?.status === 'absolute barrier pass';
 const hydrazineOrderingPass = hydrazineCation?.status === 'held-out torsion ordering pass with quantitative miss';
@@ -155,10 +159,11 @@ const unificationMap = [
       'Opens the EM domain with one electromagnetic evidence line containing Coulomb direction/ratio, two-source superposition geometry, asymmetric three-source field implementation checks, continuous field-line topology, scalar equipotential geometry, calibrated point-charge field magnitude, ideal conductor/dielectric media behavior, plane-wave propagation relations, normal-incidence boundary propagation, oblique Fresnel behavior, multilayer thin-film interference, absorbing-media attenuation, calibrated rough-surface scatter, diffraction-grating dispersion, single-slit diffraction envelopes, and double-slit interference-envelope coupling. This still imports conventional constants and ideal constraints and is not a material-response derivation, radiation-generation model, or full electromagnetic solver.',
   },
   {
-    benchmarkFamily: 'Network/material structure: silicate network and NBO/T accounting',
+    benchmarkFamily: 'Network/material structure: silicate network, NBO/T accounting, and refractive-index challenge',
     conventionalDomain: 'network solids and glass chemistry',
     grammarVariables: 'closure, charge, continuity',
-    currentReading: 'Shows held-out material ordering and exact composition accounting, but not measured property prediction.',
+    currentReading:
+      'Shows held-out material ordering and exact composition accounting. The measured refractive-index challenge is now explicit and unresolved because the current grammar has no predeclared optical-property predictor.',
   },
 ];
 
@@ -180,7 +185,9 @@ const confidence = {
   evidenceIndependenceOutOf10: summary.confidence.evidenceIndependenceOutOf10,
   unificationThesisSupportOutOf10: summary.confidence.unificationThesisSupportOutOf10,
   reading:
-    h2o2AbsolutePass
+    materialRefractiveIndex
+      ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, calibrated roughness scatter still imports a smooth-surface approximation, EM checks still import conventional constants and ideal constraints, and the measured material refractive-index challenge is unresolved. The confidence posture is therefore calibrated around 6/10 rather than treated as near-decisive convergence.'
+      : h2o2AbsolutePass
       ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, calibrated roughness scatter still imports a smooth-surface approximation, and EM propagation/boundary/Fresnel/multilayer/absorption/roughness/diffraction/interference-envelope/media checks still import conventional constants and ideal constraints rather than deriving electrodynamics. The confidence posture is therefore calibrated around 6/10 rather than treated as near-decisive convergence.'
       : 'Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, benchmark-breadth compression, and qualitative EM topology limits remain known issues. Inferential convergence has crossed 6/10 only because EM now includes continuous field-line topology; it remains moderate because the topology check is not calibrated physical property prediction or Maxwell-equation dynamics.',
 };
@@ -189,8 +196,8 @@ const nonClaims = [
   'This is not proof of the Relational Substrate theory.',
   'This is not a direct simulation or observation of T0 substrate.',
   'This is not a derivation of atoms or molecules from T1 vortons.',
-  'This is not a quantum chemistry, molecular dynamics, glass-property, BRDF, Fresnel, diffraction, rough-surface scattering, conductor, capacitance, Coulomb-constant derivation, or Maxwell-equation solver.',
-  'This does not yet solve absolute H2O2 barrier structure, material viscosity/durability/conductivity/density, or calibrated scatter curves.',
+  'This is not a quantum chemistry, molecular dynamics, glass-property, refractive-index, density, polarizability, Sellmeier, BRDF, Fresnel, diffraction, rough-surface scattering, conductor, capacitance, Coulomb-constant derivation, or Maxwell-equation solver.',
+  'This does not yet solve absolute H2O2 barrier structure, material viscosity/durability/conductivity/density/refractive-index prediction, or calibrated scatter curves beyond smooth-surface TIS.',
   'Passing benchmark order checks does not by itself exclude conventional explanations.',
 ];
 
@@ -207,6 +214,7 @@ const reviewPackage = {
   h2o2Compression: h2o2Quant?.metrics ?? null,
   h2o2AbsoluteTransfer: h2o2Absolute?.metrics ?? null,
   hydrazineCationTransfer: hydrazineCation?.metrics ?? null,
+  materialRefractiveIndexChallenge: materialRefractiveIndex?.rows ?? null,
   boundaryVerification: boundaryBenchmark?.predictionManifest?.verificationStatus ?? null,
   independentEvidenceLines: summary.independentEvidenceLines,
   orientationEvidenceLines: summary.orientationEvidenceLines,
@@ -376,9 +384,9 @@ ${unificationRows}
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, H2O2 absolute barrier transfer, held-out hydrazine cation torsion ordering, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, electrostatic equipotential geometry, calibrated point-charge field magnitude, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, H2O2 absolute barrier transfer, held-out hydrazine cation torsion ordering, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, electrostatic equipotential geometry, calibrated point-charge field magnitude, roughness-controlled interface scatter, silicate network order, NBO/T material composition accounting, and a source-anchored material refractive-index challenge. The refractive-index challenge is explicit but unresolved because the current material grammar has no measured optical-property predictor. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
-The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, H2O2 barrier transfer, and composition accounting. The EM suite adds useful depth but remains one independent evidence line because EM-02 through EM-17 are same-domain scalar or analytic comparators.
+The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, H2O2 barrier transfer, roughness TIS, and composition accounting. The measured material-property gate has now been attempted as refractive-index anchoring and remains unresolved. The EM suite adds useful depth but remains one independent evidence line because EM-02 through EM-17 are same-domain scalar or analytic comparators.
 
 ## H2O2 Compression Closure
 
@@ -432,6 +440,12 @@ Boundary benchmark verification status: ${boundaryBenchmark?.predictionManifest?
 
 This benchmark is retained as a documented qualitative pass because it records explicit prediction criteria and named external references. It is not treated as a fully independent historical blind prediction and is classified as orientation evidence only, not core convergence evidence. Its inferential weight is therefore lower than a timestamped held-out benchmark.
 
+## Material Refractive-Index Challenge
+
+Current status: ${materialRefractiveIndex?.status ?? 'not run'}.
+
+This challenge anchors measured SiO2 and Na2SiO3 refractive-index targets but intentionally records an unresolved result until the grammar contains a predeclared refractive-index predictor. It prevents NBO/T composition accounting from being mistaken for a measured material-property pass.
+
 ## Confidence
 
 ${summary.confidence.rationale}
@@ -462,10 +476,10 @@ ${reviewPackage.reviewerQuestions.map((question) => `- ${question}`).join('\n')}
 
 ## Recommended Next Stage
 
-Do not extend the sandbox laterally until the review package has been read. EM-05 completed the recommended topology broadening step, EM-06 links scalar potential geometry to the vector-field checks, EM-07 adds calibrated point-charge field magnitude, EM-17 completes a scalar double-slit envelope depth check, and the roughness/interface line now includes calibrated smooth-surface TIS accounting. H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate, but hydrazine cation absolute magnitudes remain a live torsion falsification pressure. The next stage should pick one high-value calibrated target rather than another shallow fixture:
+Do not extend the sandbox laterally until the review package has been read. EM-05 completed the recommended topology broadening step, EM-06 links scalar potential geometry to the vector-field checks, EM-07 adds calibrated point-charge field magnitude, EM-17 completes a scalar double-slit envelope depth check, and the roughness/interface line now includes calibrated smooth-surface TIS accounting. H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate, but hydrazine cation absolute magnitudes and the unresolved material refractive-index challenge remain live falsification pressures. The next stage should pick one high-value calibrated target rather than another shallow fixture:
 
 - Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
-- A measured material-property correlation downstream of NBO/T, such as viscosity, durability, or conductivity.
+- Resolve the material refractive-index challenge with a predeclared optical-property predictor before comparing against measured SiO2/Na2SiO3 targets.
 - A measured roughness/scatter curve beyond smooth-surface TIS, such as BRDF/PSD or broadband surface response.
 - A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
 - Do not prioritize further scalar EM depth until at least one calibrated material-property or held-out absolute torsion target has been attempted.

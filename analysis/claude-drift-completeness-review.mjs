@@ -61,6 +61,7 @@ const explicitArtifacts = (
     readOptionalJson('external-silicate-heldout-benchmark.json'),
     readOptionalJson('external-roughness-heldout-benchmark.json'),
     readOptionalJson('external-material-nbo-quantitative-benchmark.json'),
+    readOptionalJson('external-material-refractive-index-challenge.json'),
     readOptionalJson('external-roughness-calibrated-scatter-benchmark.json'),
   ])
 ).filter(Boolean);
@@ -76,12 +77,16 @@ const sources = uniqueByUrl(
   )
 );
 
+const materialRefractiveIndex = explicitArtifacts.find(
+  (artifact) => artifact.source === 'external-material-refractive-index-challenge.mjs'
+);
+
 const driftChecks = [
   {
     area: 'Benchmark scope',
-    status: statusIcon(summary.benchmarkPasses === summary.benchmarks.length),
+    status: statusIcon(Boolean(materialRefractiveIndex) && summary.benchmarkPasses < summary.benchmarks.length),
     finding:
-      'All benchmark rows currently report pass status, but the reviewer should verify that pass conditions remain bounded to each comparator and have not been relaxed to preserve the aggregate.',
+      'The aggregate now includes an explicit unresolved material refractive-index challenge. Reviewers should verify that this is treated as a gate, not as a failed-by-design excuse or a hidden pass.',
   },
   {
     area: 'EM evidence independence',
@@ -99,7 +104,7 @@ const driftChecks = [
     area: 'Confidence drift',
     status: 'pass',
     finding:
-      `The confidence posture remains conservative after adding calibrated roughness scatter: inferential convergence is ${summary.confidence.updatedInferentialConvergenceOutOf10}/10 and unification support is ${summary.confidence.unificationThesisSupportOutOf10}/10. This keeps scalar EM depth and imported smooth-surface TIS accounting from being counted as near-decisive evidence.`,
+      `The confidence posture remains conservative after adding calibrated roughness scatter and an unresolved material-property challenge: inferential convergence is ${summary.confidence.updatedInferentialConvergenceOutOf10}/10 and unification support is ${summary.confidence.unificationThesisSupportOutOf10}/10. This keeps scalar EM depth, imported smooth-surface TIS accounting, and NBO/T composition accounting from being counted as near-decisive evidence.`,
   },
   {
     area: 'Non-claim discipline',
@@ -111,7 +116,7 @@ const driftChecks = [
     area: 'Known weak points',
     status: 'review',
     finding:
-      'Remaining gates still include measured material-property calibration, held-out torsion absolute magnitudes, roughness/interface movement beyond smooth-surface TIS, and EM movement beyond scalar double-slit envelope coupling. Hydrazine absolute-magnitude miss is the live torsion falsification pressure after the H2O2 pass.',
+      'Remaining gates still include the unresolved material refractive-index challenge, held-out torsion absolute magnitudes, roughness/interface movement beyond smooth-surface TIS, and EM movement beyond scalar double-slit envelope coupling. Hydrazine absolute-magnitude miss is the live torsion falsification pressure after the H2O2 pass.',
   },
 ];
 
@@ -123,6 +128,7 @@ const completenessChecklist = [
   'Audit whether any wording implies direct substrate proof, direct T0 simulation, or displacement of conventional models.',
   'Check whether confidence increments after EM-15 through EM-17 are modest enough for scalar analytic optics comparators.',
   'Confirm that the recalibrated confidence score stays near 6/10 until a calibrated material-property prediction, measured scatter curve, or held-out absolute torsion transfer passes.',
+  'Confirm that the material refractive-index row is treated as an unresolved measured-property challenge, not as a benchmark pass.',
   'Identify any missing source citations or comparator assumptions that should be made explicit before external review.',
   'Recommend the next falsification-oriented benchmark, prioritizing calibrated quantities or held-out cases over more same-family EM depth checks.',
 ];
@@ -170,6 +176,14 @@ const reviewPacket = {
       reading: check.reading,
     })),
   },
+  materialRefractiveIndexChallenge: materialRefractiveIndex
+    ? {
+        status: materialRefractiveIndex.status,
+        score: materialRefractiveIndex.score,
+        rows: materialRefractiveIndex.rows,
+        checks: materialRefractiveIndex.checks,
+      }
+    : null,
   driftChecks,
   completenessChecklist,
   remainingGates: summary.remainingExternalGates,

@@ -49,6 +49,7 @@ const reportSteps = [
   'benchmark:silicate-heldout',
   'benchmark:roughness-heldout',
   'benchmark:material-nbo',
+  'benchmark:material-refractive-index',
   'benchmark:roughness-calibrated-scatter',
   'benchmark:summary',
   'milestone:external-review',
