@@ -43,6 +43,7 @@ const reportSteps = [
   'benchmark:em-multilayer-interference',
   'benchmark:em-absorbing-media',
   'benchmark:em-rough-surface-scatter',
+  'benchmark:em-diffraction-grating',
   'benchmark:silicate-heldout',
   'benchmark:roughness-heldout',
   'benchmark:material-nbo',
