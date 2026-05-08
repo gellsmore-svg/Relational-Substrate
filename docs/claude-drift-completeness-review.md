@@ -15,7 +15,7 @@ Review this as an external critique packet for the Relational Substrate sandbox.
 | Cross-domain equivalence | 5.7/10 |
 | Unification thesis support | 5.2/10 |
 | Benchmark passes | 29/30 |
-| Checks passed | 184/186 |
+| Checks passed | 185/187 |
 | Core independent evidence lines | 7 |
 | Orientation-only evidence lines | 1 |
 
@@ -40,7 +40,7 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 | ionic solid ordering | 1 | 3/3 | charge, closure, continuity | core evidence |
 | orientation-only boundary phase | 1 | 3/3 | route, phase, continuity | orientation-only |
 | electromagnetic field geometry/topology | 17 | 131/131 | route, closure, phase, continuity, charge | core evidence |
-| network/material structure | 3 | 12/13 | charge, closure, continuity | core evidence |
+| network/material structure | 3 | 13/14 | charge, closure, continuity | core evidence |
 | rough optical/interface ordering | 2 | 13/13 | route, phase, continuity, closure | core evidence |
 
 ## EM-17 Checks

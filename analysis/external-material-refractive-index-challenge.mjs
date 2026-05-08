@@ -81,6 +81,11 @@ function predictRefractiveIndex(composition) {
   );
 }
 
+function slopeForTarget(row, baseline = predictor.silicaBaseline) {
+  if (!row || row.nboT === 0) return null;
+  return round((row.measuredRefractiveIndex - baseline + predictor.chargeBalancedAlPenalty * row.chargeBalancedAl) / row.nboT, 5);
+}
+
 const rows = external.measuredRows.map((target) => {
   const composition = nbo.rows.find((row) => row.formula === target.formula);
   const predictedRefractiveIndex = predictRefractiveIndex(composition);
@@ -99,6 +104,44 @@ const rows = external.measuredRows.map((target) => {
       absoluteError <= external.tolerances.refractiveIndexAbsoluteErrorMax,
   };
 });
+
+const modifierRows = rows.filter((row) => row.nboT > 0);
+const tolerance = external.tolerances.refractiveIndexAbsoluteErrorMax;
+const slopeDiagnostics = modifierRows.map((row) => {
+  const lowerSlope = round(
+    (row.measuredRefractiveIndex -
+      tolerance -
+      predictor.silicaBaseline +
+      predictor.chargeBalancedAlPenalty * row.chargeBalancedAl) /
+      row.nboT,
+    5
+  );
+  const upperSlope = round(
+    (row.measuredRefractiveIndex +
+      tolerance -
+      predictor.silicaBaseline +
+      predictor.chargeBalancedAlPenalty * row.chargeBalancedAl) /
+      row.nboT,
+    5
+  );
+  const targetImpliedSlope = slopeForTarget(row);
+  return {
+    formula: row.formula,
+    targetImpliedSlope,
+    toleranceSlopeWindow: [lowerSlope, upperSlope],
+    currentSlope: predictor.nboTModifierSlope,
+    currentSlopeWithinToleranceWindow:
+      predictor.nboTModifierSlope >= lowerSlope && predictor.nboTModifierSlope <= upperSlope,
+  };
+});
+
+const calibrationDiagnostic = {
+  purpose: 'show the modifier slope required by measured targets without converting that target-implied value into a pass',
+  currentSlope: predictor.nboTModifierSlope,
+  slopeDiagnostics,
+  endpointFitPolicy:
+    'A slope changed after seeing these targets is treated as calibration debt unless it is validated on a new held-out composition.',
+};
 
 const checks = [
   {
@@ -148,6 +191,19 @@ const checks = [
       external.notModeled.includes('polarizability'),
     reading: 'The challenge is a deliberately hard gate, not a hidden refractive-index model.',
   },
+  {
+    check: 'Endpoint-fit guard',
+    expectation: 'target-implied slope diagnostics should be reported without converting a two-target fit into an independent pass',
+    modelValue: slopeDiagnostics
+      .map(
+        (row) =>
+          `${row.formula}: implied slope ${row.targetImpliedSlope}; tolerance window ${row.toleranceSlopeWindow.join('..')}; current ${row.currentSlope}`
+      )
+      .join('; '),
+    pass: slopeDiagnostics.every((row) => !row.currentSlopeWithinToleranceWindow),
+    reading:
+      'The diagnostic exposes the slope needed for tolerance while preserving the unresolved status until a new held-out composition validates any revised coefficient.',
+  },
 ];
 
 const passed = checks.filter((check) => check.pass).length;
@@ -162,6 +218,7 @@ const report = {
   status,
   external,
   predictor,
+  calibrationDiagnostic,
   grammarVariables,
   rows,
   score,
@@ -199,6 +256,19 @@ It asks whether the current material grammar can move beyond NBO/T composition a
 | Coefficients | silicaBaseline ${predictor.silicaBaseline}; nboTModifierSlope ${predictor.nboTModifierSlope}; chargeBalancedAlPenalty ${predictor.chargeBalancedAlPenalty} |
 | Calibration discipline | ${predictor.calibrationDiscipline} |
 | Limitations | ${predictor.limitations} |
+
+## Calibration Diagnostic
+
+| Formula | Target-implied modifier slope | Tolerance slope window | Current slope | Current slope in window |
+|---|---:|---:|---:|---|
+${slopeDiagnostics
+  .map(
+    (row) =>
+      `| ${row.formula} | ${row.targetImpliedSlope} | ${row.toleranceSlopeWindow.join(' to ')} | ${row.currentSlope} | ${row.currentSlopeWithinToleranceWindow ? 'yes' : 'no'} |`
+  )
+  .join('\n')}
+
+Endpoint-fit policy: ${calibrationDiagnostic.endpointFitPolicy}
 
 ## Checks
 
