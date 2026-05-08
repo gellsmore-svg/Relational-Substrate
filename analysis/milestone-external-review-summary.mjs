@@ -179,7 +179,7 @@ const confidence = {
   unificationThesisSupportOutOf10: summary.confidence.unificationThesisSupportOutOf10,
   reading:
     h2o2AbsolutePass
-      ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, and EM propagation/boundary/Fresnel/multilayer/absorption/roughness/diffraction/interference-envelope/media checks still import conventional constants and ideal constraints rather than deriving electrodynamics.'
+      ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, and EM propagation/boundary/Fresnel/multilayer/absorption/roughness/diffraction/interference-envelope/media checks still import conventional constants and ideal constraints rather than deriving electrodynamics. The confidence posture is therefore calibrated around 6/10 rather than treated as near-decisive convergence.'
       : 'Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, benchmark-breadth compression, and qualitative EM topology limits remain known issues. Inferential convergence has crossed 6/10 only because EM now includes continuous field-line topology; it remains moderate because the topology check is not calibrated physical property prediction or Maxwell-equation dynamics.',
 };
 
@@ -213,6 +213,7 @@ const reviewPackage = {
     externalCompletionPct: summary.externalCompletionPct,
     remainingGates: summary.remainingExternalGates,
   },
+  evidenceLineSummaries: summary.evidenceLineSummaries,
   benchmarks: summary.benchmarks,
   nextFrontier: frontier.nextTarget,
   nonClaims,
@@ -220,7 +221,7 @@ const reviewPackage = {
     'Are the ontology boundaries clear enough to prevent overclaiming?',
     'Are the external benchmarks independent enough to reduce circularity?',
     'Which benchmark is most vulnerable to hidden tuning or overly permissive tolerances?',
-    'What quantitative target should be required before inferential convergence can responsibly rise above 6/10?',
+    'What quantitative target should be required before inferential convergence can responsibly rise above 6.5/10?',
     'Which conventional model should be used as the strongest comparator in the next validation round?',
   ],
 };
@@ -230,7 +231,14 @@ await writeFile(new URL('milestone-external-review-summary.json', outDir), JSON.
 const benchmarkRows = summary.benchmarks
   .map(
     (benchmark) =>
-      `| ${benchmark.label} | ${benchmark.evidenceLine ?? 'n/a'} | ${benchmark.domain ?? 'n/a'} | ${benchmark.conventionalComparator ?? 'n/a'} | ${benchmark.status} | ${benchmark.checksPassed}/${benchmark.checksTotal} | ${benchmark.score} | ${benchmark.limitation} |`
+      `| ${benchmark.label} | ${benchmark.evidenceLine ?? 'n/a'} | ${benchmark.domain ?? 'n/a'} | ${benchmark.conventionalComparator ?? 'n/a'} | ${benchmark.grammarVariablesExercised ?? 'n/a'} | ${benchmark.status} | ${benchmark.checksPassed}/${benchmark.checksTotal} | ${benchmark.score} | ${benchmark.limitation} |`
+  )
+  .join('\n');
+
+const evidenceLineRows = summary.evidenceLineSummaries
+  .map(
+    (line) =>
+      `| ${line.evidenceLine} | ${line.benchmarkCount} | ${line.checksPassed}/${line.checksTotal} | ${line.variables} | ${line.orientationOnly ? 'orientation-only' : 'core evidence'} |`
   )
   .join('\n');
 
@@ -346,11 +354,17 @@ The milestone is complete in the sense that the sandbox has moved from internal-
 
 ## What Was Tested
 
-| Benchmark | Evidence line | Domain | Comparator | Status | Checks | Score | Limitation |
-|---|---|---|---|---|---:|---:|---|
+| Benchmark | Evidence line | Domain | Comparator | Grammar variables exercised | Status | Checks | Score | Limitation |
+|---|---|---|---|---|---|---:|---:|---|
 ${benchmarkRows}
 
 The benchmark pass count is not the same as independent-domain breadth. The suite has ${completion.totalBenchmarks} benchmark entries and ${completion.checksPassed}/${completion.totalChecks} passing checks, but the core independent evidence-line count is ${summary.independentEvidenceLines}, plus ${summary.orientationEvidenceLines} orientation-only boundary check. EM-02 onward collapse into one electromagnetic evidence line, and silicate network/NBO/T collapse into one broader material-structure group.
+
+## Independent Evidence-Line Summary
+
+| Evidence line | Benchmarks | Checks | Grammar variables exercised | Counting status |
+|---|---:|---:|---|---|
+${evidenceLineRows}
 
 ## Unification Map
 
@@ -362,7 +376,7 @@ ${unificationRows}
 
 The sandbox now has externally anchored checks across molecule torsion, H2O2 absolute barrier transfer, held-out hydrazine cation torsion ordering, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, electrostatic equipotential geometry, calibrated point-charge field magnitude, roughness-controlled interface scatter, silicate network order, and NBO/T material composition accounting. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
-The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, H2O2 barrier transfer, and composition accounting.
+The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, H2O2 barrier transfer, and composition accounting. The EM suite adds useful depth but remains one independent evidence line because EM-02 through EM-17 are same-domain scalar or analytic comparators.
 
 ## H2O2 Compression Closure
 
@@ -374,7 +388,7 @@ ${h2o2CompressionRows}
 
 ${
   h2o2AbsolutePass
-    ? 'The prior roughly 2x compression is resolved in the current grammar version. This reduces the strongest previous falsification pressure, but it should not be treated as final validation because the anti-planar release was introduced after the failure was observed.'
+    ? 'The prior roughly 2x compression is resolved in the current grammar version. This reduces the strongest previous H2O2 falsification pressure, but it should not be treated as final validation because the anti-planar release was introduced after the failure was observed and must remain exposed to held-out torsion transfer tests.'
     : 'This is the strongest known grammar limitation and the strongest current candidate for falsification. The roughly 2x compression factor means the current grammar does not recover the experimental separation between the shallow trans barrier and the high cis barrier. It is not resolved as a physical energy calibration, and it remains one of the strongest reasons not to raise inferential convergence above the current moderate level.'
 }
 
@@ -387,7 +401,7 @@ ${h2o2AbsoluteRows}
 ${
   h2o2AbsolutePass
     ? hydrazineCation
-      ? 'This is now a convergence pass for the H2O2 transfer check: both trans and cis barriers land within tolerance under the ethane-derived scale. Hydrazine cation then tests the anti-planar release mechanism without endpoint fitting.'
+      ? 'This is now a convergence pass for the H2O2 transfer check: both trans and cis barriers land within tolerance under the ethane-derived scale. Hydrazine cation then tests the anti-planar release mechanism without endpoint fitting; its absolute-magnitude miss is the current torsion falsification pressure.'
       : 'This is now a convergence pass for the H2O2 transfer check: both trans and cis barriers land within tolerance under the ethane-derived scale. The next step is not more H2O2 fitting; it is an independent held-out torsion transfer check that can test whether anti-planar release generalizes.'
     : 'This is a mixed diagnostic, not a new convergence pass. The cis barrier lands on scale, but the trans barrier is overpredicted by roughly 2x. The next peroxide revision should therefore target the shallow trans barrier floor and relative closure/phase scaling, not broad energy rescaling.'
 }
@@ -422,7 +436,7 @@ ${summary.confidence.rationale}
 
 ${confidence.reading}
 
-Confidence should be read as inferential convergence, not proof-of-substrate framing. It asks how much independent, non-circular evidence has converged on the grammar as a coherent explanatory framework relative to conventional domain models. The right next confidence increase requires calibrated physical-property prediction, a stricter held-out benchmark against a conventional comparator, or a new non-molecular domain check with no rescaling or endpoint anchoring.
+Confidence should be read as inferential convergence, not proof-of-substrate framing. It asks how much independent, non-circular evidence has converged on the grammar as a coherent explanatory framework relative to conventional domain models. The score is deliberately capped near 6/10 after review because EM depth does not equal independent-domain breadth and because no calibrated material-property prediction has passed without importing the target value. The right next confidence increase requires calibrated physical-property prediction, a stricter held-out benchmark against a conventional comparator, or a new non-molecular domain check with no rescaling or endpoint anchoring.
 
 ## Explicit Non-Claims
 
@@ -446,13 +460,13 @@ ${reviewPackage.reviewerQuestions.map((question) => `- ${question}`).join('\n')}
 
 ## Recommended Next Stage
 
-Do not extend the sandbox laterally until the review package has been read. EM-05 completed the recommended topology broadening step, EM-06 links scalar potential geometry to the vector-field checks, EM-07 adds calibrated point-charge field magnitude, H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate, and hydrazine cation has tested anti-planar release as a held-out torsion ordering check. The next stage should pick one high-value calibrated target rather than another shallow fixture:
+Do not extend the sandbox laterally until the review package has been read. EM-05 completed the recommended topology broadening step, EM-06 links scalar potential geometry to the vector-field checks, EM-07 adds calibrated point-charge field magnitude, and EM-17 completes a scalar double-slit envelope depth check. H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate, but hydrazine cation absolute magnitudes remain a live torsion falsification pressure. The next stage should pick one high-value calibrated target rather than another shallow fixture:
 
 - Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
 - A measured material-property correlation downstream of NBO/T, such as viscosity, durability, or conductivity.
 - A calibrated roughness/scatter quantity, not only specular/diffuse ordering.
 - A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
-- A conductor/material-media or time-dependent propagation comparator that tests whether EM-07 generalizes beyond point-charge electrostatics.
+- Do not prioritize further scalar EM depth until at least one calibrated material-property or held-out absolute torsion target has been attempted.
 `;
 
 await writeFile(new URL('milestone-external-review-summary.md', outDir), markdown);

@@ -370,7 +370,7 @@ const benchmarks = [
     checksPassed: emDoubleSlitEnvelope.checks.filter((check) => check.pass).length,
     checksTotal: emDoubleSlitEnvelope.checks.length,
     limitation:
-      'scalar double-slit Fraunhofer comparator; not full vector diffraction, broadband intensity prediction, resolving power, aperture aberrations, radiation-generation, or Maxwell-equation optics',
+      'scalar double-slit Fraunhofer comparator; exercises route/closure/phase/continuity but does not exercise charge non-trivially; not full vector diffraction, broadband intensity prediction, resolving power, aperture aberrations, radiation-generation, or Maxwell-equation optics',
     confidenceEffect: emDoubleSlitEnvelope.confidenceEffect,
   },
   silicateHeldout && {
@@ -411,6 +411,48 @@ const benchmarks = [
   },
 ].filter(Boolean);
 
+function grammarVariablesFor(benchmark) {
+  if (benchmark.orientationOnly) return 'route, phase, continuity; orientation-only';
+  if (benchmark.label === 'EM-17 double-slit envelope comparator') {
+    return 'route, closure, phase, continuity; charge not exercised non-trivially';
+  }
+  if (benchmark.evidenceLine === 'electromagnetic field ordering') {
+    if (benchmark.label.includes('Coulomb') || benchmark.label.includes('superposition') || benchmark.label.includes('three-source') || benchmark.label.includes('field-line') || benchmark.label.includes('equipotential') || benchmark.label.includes('field magnitude') || benchmark.label.includes('dielectric')) {
+      return 'charge, route, closure, phase, continuity';
+    }
+    return 'route, closure, phase, continuity; charge imported or inactive';
+  }
+  if (benchmark.evidenceLine.includes('torsion')) return 'route, closure, phase';
+  if (benchmark.evidenceLine.includes('ionic')) return 'charge, closure, continuity';
+  if (benchmark.evidenceLine.includes('silicate') || benchmark.evidenceLine.includes('NBO')) {
+    return 'charge, closure, continuity';
+  }
+  if (benchmark.evidenceLine.includes('interface')) return 'route, phase, continuity';
+  return 'route, closure, phase, charge, continuity';
+}
+
+function grammarVariableTokensFor(benchmark) {
+  if (benchmark.orientationOnly) return ['route', 'phase', 'continuity'];
+  if (benchmark.label === 'EM-17 double-slit envelope comparator') {
+    return ['route', 'closure', 'phase', 'continuity'];
+  }
+  if (benchmark.evidenceLine === 'electromagnetic field ordering') {
+    if (benchmark.grammarVariablesExercised?.includes('charge,')) {
+      return ['route', 'closure', 'phase', 'charge', 'continuity'];
+    }
+    return ['route', 'closure', 'phase', 'continuity'];
+  }
+  return benchmark.grammarVariablesExercised
+    .split(';')[0]
+    .split(',')
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+for (const benchmark of benchmarks) {
+  benchmark.grammarVariablesExercised = grammarVariablesFor(benchmark);
+}
+
 const benchmarkPasses = benchmarks.filter((benchmark) => benchmark.status.includes('pass')).length;
 const totalChecks = benchmarks.reduce((sum, benchmark) => sum + benchmark.checksTotal, 0);
 const passedChecks = benchmarks.reduce((sum, benchmark) => sum + benchmark.checksPassed, 0);
@@ -430,6 +472,33 @@ const independentEvidenceLines = new Set(
 ).size;
 const orientationEvidenceLines = benchmarks.filter((benchmark) => benchmark.orientationOnly).length;
 const externalCompletionPct = round(Math.min(benchmarks.length / roadmap.benchmarkTargets.length, 1) * 100);
+const evidenceLineSummaries = Array.from(
+  benchmarks.reduce((groups, benchmark) => {
+    const group = coreEvidenceGroups.get(benchmark.evidenceLine) ?? benchmark.evidenceLine;
+    const current = groups.get(group) ?? {
+      evidenceLine: group,
+      benchmarkCount: 0,
+      checksPassed: 0,
+      checksTotal: 0,
+      variables: new Set(),
+      orientationOnly: Boolean(benchmark.orientationOnly),
+      benchmarks: [],
+    };
+    current.benchmarkCount += 1;
+    current.checksPassed += benchmark.checksPassed;
+    current.checksTotal += benchmark.checksTotal;
+    current.orientationOnly = current.orientationOnly || Boolean(benchmark.orientationOnly);
+    current.benchmarks.push(benchmark.label);
+    for (const variable of grammarVariableTokensFor(benchmark)) {
+      current.variables.add(variable);
+    }
+    groups.set(group, current);
+    return groups;
+  }, new Map()).values()
+).map((group) => ({
+  ...group,
+  variables: Array.from(group.variables).join(', '),
+}));
 const hasBlindStylePass = boundaryBlind?.status?.includes('qualitative pass');
 const hasQuantitativePass = ethaneQuant?.status === 'quantitative tolerance pass';
 const hasSecondNumericPass = h2o2Quant?.status === 'quantitative angle pass';
@@ -465,15 +534,15 @@ const confidence = {
   previousSandboxCompletionPct: roadmap.currentStatus.sandboxCompletionPct,
   updatedSandboxCompletionPct: hasEmDoubleSlitEnvelopePass ? 99.998 : hasEmSingleSlitEnvelopePass ? 99.997 : hasEmDiffractionGratingPass ? 99.996 : hasEmRoughSurfaceScatterPass ? 99.994 : hasEmAbsorbingMediaPass ? 99.992 : hasEmMultilayerInterferencePass ? 99.99 : hasEmObliqueFresnelPass ? 99.985 : hasEmBoundaryPropagationPass ? 99.98 : hasEmWavePropagationPass ? 99.97 : hasEmDielectricMediaPass ? 99.95 : hasEmFieldMagnitudePass ? 99.9 : hasEmEquipotentialPass ? 99.8 : hydrazineCation ? 99.7 : h2o2Absolute ? 99.6 : hasEmFieldLinePass ? 99.5 : hasEmThreeSourcePass ? 99.2 : hasEmSuperpositionPass ? 99 : hasEmCoulombPass ? 98.5 : hasEmOrderingPass ? 98 : hasQuantitativeMaterialPass ? 97 : hasHeldoutInterfacePass ? 96 : hasFactorTwoPeroxideRatio ? 94 : hasHeldoutMaterialPass ? 93 : hasTighterPeroxideRatio ? 91 : hasSecondNumericPass ? 90 : hasQuantitativePass ? 88 : hasBlindStylePass ? 84 : benchmarks.length >= 3 ? 80 : 76,
   previousInternalCoherenceOutOf10: roadmap.currentStatus.internalCoherenceConfidenceOutOf10,
-  updatedInternalCoherenceOutOf10: hasEmDoubleSlitEnvelopePass ? 8.9 : hasEmSingleSlitEnvelopePass ? 8.8 : hasEmDiffractionGratingPass ? 8.7 : hasEmRoughSurfaceScatterPass ? 8.6 : hasEmAbsorbingMediaPass ? 8.5 : hasEmMultilayerInterferencePass ? 8.4 : hasEmObliqueFresnelPass ? 8.3 : hasEmBoundaryPropagationPass ? 8.2 : hasEmWavePropagationPass ? 8.1 : hasEmDielectricMediaPass ? 8.0 : hasEmFieldMagnitudePass ? 7.9 : hasEmEquipotentialPass ? 7.8 : hasH2O2AbsolutePass ? 7.7 : hasH2O2AbsoluteMixed ? 7.3 : hasQuantitativeMaterialPass ? 7.5 : hasHeldoutInterfacePass ? 7.4 : hasFactorTwoPeroxideRatio ? 7.3 : hasHeldoutMaterialPass ? 7.2 : hasTighterPeroxideRatio ? 7.1 : hasSecondNumericPass ? 7.0 : hasQuantitativePass ? 6.9 : hasBlindStylePass ? 6.7 : benchmarks.length >= 3 ? 6.5 : 6.3,
+  updatedInternalCoherenceOutOf10: hasEmDoubleSlitEnvelopePass ? 8.0 : hasEmSingleSlitEnvelopePass ? 7.9 : hasEmDiffractionGratingPass ? 7.8 : hasEmRoughSurfaceScatterPass ? 7.7 : hasEmAbsorbingMediaPass ? 7.6 : hasEmMultilayerInterferencePass ? 7.5 : hasEmObliqueFresnelPass ? 7.4 : hasEmBoundaryPropagationPass ? 7.3 : hasEmWavePropagationPass ? 7.2 : hasEmDielectricMediaPass ? 7.1 : hasEmFieldMagnitudePass ? 7.0 : hasEmEquipotentialPass ? 6.9 : hasH2O2AbsolutePass ? 7.7 : hasH2O2AbsoluteMixed ? 7.3 : hasQuantitativeMaterialPass ? 7.5 : hasHeldoutInterfacePass ? 7.4 : hasFactorTwoPeroxideRatio ? 7.3 : hasHeldoutMaterialPass ? 7.2 : hasTighterPeroxideRatio ? 7.1 : hasSecondNumericPass ? 7.0 : hasQuantitativePass ? 6.9 : hasBlindStylePass ? 6.7 : benchmarks.length >= 3 ? 6.5 : 6.3,
   previousInferentialConvergenceOutOf10: roadmap.currentStatus.inferentialConvergenceConfidenceOutOf10,
-  updatedInferentialConvergenceOutOf10: hasEmDoubleSlitEnvelopePass ? 7.8 : hasEmSingleSlitEnvelopePass ? 7.7 : hasEmDiffractionGratingPass ? 7.6 : hasEmRoughSurfaceScatterPass ? 7.5 : hasEmAbsorbingMediaPass ? 7.4 : hasEmMultilayerInterferencePass ? 7.3 : hasEmObliqueFresnelPass ? 7.2 : hasEmBoundaryPropagationPass ? 7.1 : hasEmWavePropagationPass ? 7.0 : hasEmDielectricMediaPass ? 6.9 : hasEmFieldMagnitudePass ? 6.8 : hasEmEquipotentialPass ? 6.7 : hasHydrazineHeldoutPass ? 6.9 : hasHydrazineOrderingPass ? 6.6 : hasH2O2AbsolutePass ? 6.6 : hasH2O2AbsoluteMixed ? 6.1 : hasEmFieldLinePass ? 6.3 : hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.4 : hasEmCoulombPass ? 5.3 : hasEmOrderingPass ? 5.1 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
-  crossDomainEquivalenceOutOf10: hasEmDoubleSlitEnvelopePass ? 6.9 : hasEmSingleSlitEnvelopePass ? 6.8 : hasEmDiffractionGratingPass ? 6.7 : hasEmRoughSurfaceScatterPass ? 6.6 : hasEmAbsorbingMediaPass ? 6.5 : hasEmMultilayerInterferencePass ? 6.4 : hasEmObliqueFresnelPass ? 6.3 : hasEmBoundaryPropagationPass ? 6.2 : hasEmWavePropagationPass ? 6.1 : hasEmDielectricMediaPass ? 6.0 : hasEmFieldMagnitudePass ? 5.9 : hasEmEquipotentialPass ? 5.8 : hasEmFieldLinePass ? 5.6 : hasEmThreeSourcePass ? 5.0 : hasEmSuperpositionPass ? 4.9 : hasEmCoulombPass ? 4.8 : hasEmOrderingPass ? 4.7 : hasQuantitativeMaterialPass ? 4.5 : hasHeldoutInterfacePass ? 4.3 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
+  updatedInferentialConvergenceOutOf10: hasEmDoubleSlitEnvelopePass ? 6.2 : hasEmSingleSlitEnvelopePass ? 6.15 : hasEmDiffractionGratingPass ? 6.1 : hasEmRoughSurfaceScatterPass ? 6.05 : hasEmAbsorbingMediaPass ? 6.0 : hasEmMultilayerInterferencePass ? 5.95 : hasEmObliqueFresnelPass ? 5.9 : hasEmBoundaryPropagationPass ? 5.85 : hasEmWavePropagationPass ? 5.8 : hasEmDielectricMediaPass ? 5.75 : hasEmFieldMagnitudePass ? 5.7 : hasEmEquipotentialPass ? 5.65 : hasHydrazineHeldoutPass ? 6.0 : hasHydrazineOrderingPass ? 5.9 : hasH2O2AbsolutePass ? 5.8 : hasH2O2AbsoluteMixed ? 5.5 : hasEmFieldLinePass ? 5.6 : hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.4 : hasEmCoulombPass ? 5.3 : hasEmOrderingPass ? 5.1 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
+  crossDomainEquivalenceOutOf10: hasEmDoubleSlitEnvelopePass ? 5.5 : hasEmSingleSlitEnvelopePass ? 5.45 : hasEmDiffractionGratingPass ? 5.4 : hasEmRoughSurfaceScatterPass ? 5.35 : hasEmAbsorbingMediaPass ? 5.3 : hasEmMultilayerInterferencePass ? 5.25 : hasEmObliqueFresnelPass ? 5.2 : hasEmBoundaryPropagationPass ? 5.15 : hasEmWavePropagationPass ? 5.1 : hasEmDielectricMediaPass ? 5.05 : hasEmFieldMagnitudePass ? 5.0 : hasEmEquipotentialPass ? 4.9 : hasEmFieldLinePass ? 4.8 : hasEmThreeSourcePass ? 4.7 : hasEmSuperpositionPass ? 4.6 : hasEmCoulombPass ? 4.5 : hasEmOrderingPass ? 4.4 : hasQuantitativeMaterialPass ? 4.3 : hasHeldoutInterfacePass ? 4.2 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
   evidenceIndependenceOutOf10: independentEvidenceLines >= 6 ? 4.5 : independentEvidenceLines >= 5 ? 4.0 : 3.2,
-  unificationThesisSupportOutOf10: hasEmDoubleSlitEnvelopePass ? 6.5 : hasEmSingleSlitEnvelopePass ? 6.4 : hasEmDiffractionGratingPass ? 6.3 : hasEmRoughSurfaceScatterPass ? 6.2 : hasEmAbsorbingMediaPass ? 6.1 : hasEmMultilayerInterferencePass ? 6.0 : hasEmObliqueFresnelPass ? 5.9 : hasEmBoundaryPropagationPass ? 5.8 : hasEmWavePropagationPass ? 5.7 : hasEmDielectricMediaPass ? 5.6 : hasEmFieldMagnitudePass ? 5.5 : hasEmEquipotentialPass ? 5.4 : hasEmFieldLinePass ? 5.2 : hasEmThreeSourcePass ? 4.5 : hasEmSuperpositionPass ? 4.4 : hasEmCoulombPass ? 4.2 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
+  unificationThesisSupportOutOf10: hasEmDoubleSlitEnvelopePass ? 5.0 : hasEmSingleSlitEnvelopePass ? 4.95 : hasEmDiffractionGratingPass ? 4.9 : hasEmRoughSurfaceScatterPass ? 4.85 : hasEmAbsorbingMediaPass ? 4.8 : hasEmMultilayerInterferencePass ? 4.75 : hasEmObliqueFresnelPass ? 4.7 : hasEmBoundaryPropagationPass ? 4.65 : hasEmWavePropagationPass ? 4.6 : hasEmDielectricMediaPass ? 4.55 : hasEmFieldMagnitudePass ? 4.5 : hasEmEquipotentialPass ? 4.45 : hasEmFieldLinePass ? 4.4 : hasEmThreeSourcePass ? 4.3 : hasEmSuperpositionPass ? 4.2 : hasEmCoulombPass ? 4.1 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
   rationale:
     hasEmDoubleSlitEnvelopePass
-      ? 'External anchoring now includes double-slit diffraction-envelope behavior: fringe spacing, constructive/destructive conditions, finite-slit envelope modulation, missing orders, slit-separation/wavelength scaling, symmetry, and screen-position mapping. Inferential convergence rises only slightly because EM-17 remains scalar Fraunhofer double-slit optics rather than vector diffraction, broadband intensity prediction, resolving power, radiation generation, or Maxwell optics.'
+      ? 'External anchoring now includes double-slit diffraction-envelope behavior, but the confidence scale has been recalibrated downward after review: EM-02 through EM-17 deepen one electromagnetic evidence line rather than opening new independent domains, and the latest additions remain scalar analytic comparators importing conventional equations and constants. The current reading is meaningful sandbox progress, not a near-decisive convergence claim.'
       : hasEmSingleSlitEnvelopePass
       ? 'External anchoring now includes single-slit diffraction-envelope behavior: aperture minima, sinc-squared side-lobe intensity, central maximum recovery, wavelength/slit-width scaling, symmetry, and screen-position mapping. Inferential convergence rises only slightly because EM-16 remains scalar Fraunhofer single-slit optics rather than vector diffraction, broadband intensity prediction, resolving power, radiation generation, or Maxwell optics.'
       : hasEmDiffractionGratingPass
@@ -662,6 +731,7 @@ const json = {
   orientationEvidenceLines,
   confidence,
   benchmarks,
+  evidenceLineSummaries,
   remainingExternalGates,
 };
 
@@ -695,16 +765,37 @@ ${status}.
 
 ${confidence.rationale}
 
-## Benchmarks
+## Independent Evidence Lines
 
-| Benchmark | Evidence line | Domain | Comparator | Status | Checks | Score | Limitation |
-|---|---|---|---|---|---:|---:|---|
-${benchmarks
+| Evidence line | Benchmarks | Checks | Grammar variables exercised | Counting status |
+|---|---:|---:|---|---|
+${evidenceLineSummaries
   .map(
-    (benchmark) =>
-      `| ${benchmark.label} | ${benchmark.evidenceLine} | ${benchmark.domain} | ${benchmark.conventionalComparator} | ${benchmark.status} | ${benchmark.checksPassed}/${benchmark.checksTotal} | ${benchmark.score} | ${benchmark.limitation} |`
+    (line) =>
+      `| ${line.evidenceLine} | ${line.benchmarkCount} | ${line.checksPassed}/${line.checksTotal} | ${line.variables} | ${line.orientationOnly ? 'orientation-only' : 'core evidence'} |`
   )
   .join('\n')}
+
+## Benchmarks by Evidence Line
+
+${evidenceLineSummaries
+  .map((line) => {
+    const rows = benchmarks
+      .filter((benchmark) => (coreEvidenceGroups.get(benchmark.evidenceLine) ?? benchmark.evidenceLine) === line.evidenceLine)
+      .map(
+        (benchmark) =>
+          `| ${benchmark.label} | ${benchmark.domain} | ${benchmark.conventionalComparator} | ${benchmark.grammarVariablesExercised} | ${benchmark.status} | ${benchmark.checksPassed}/${benchmark.checksTotal} | ${benchmark.score} | ${benchmark.limitation} |`
+      )
+      .join('\n');
+    return `### ${line.evidenceLine}
+
+This evidence line contains ${line.benchmarkCount} benchmark${line.benchmarkCount === 1 ? '' : 's'} and ${line.checksPassed}/${line.checksTotal} passing checks. It is counted as ${line.orientationOnly ? 'orientation-only evidence' : 'one core independent evidence line'}, not as ${line.benchmarkCount} independent line${line.benchmarkCount === 1 ? '' : 's'}.
+
+| Benchmark | Domain | Comparator | Grammar variables exercised | Status | Checks | Score | Limitation |
+|---|---|---|---|---|---:|---:|---|
+${rows}`;
+  })
+  .join('\n\n')}
 
 ## Remaining Gates
 
