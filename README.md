@@ -439,7 +439,7 @@ Run the external EM-17 double-slit envelope comparator with:
 npm run benchmark:em-double-slit-envelope
 ```
 
-This compares double-slit fringe spacing, constructive/destructive conditions, finite-slit envelope modulation, missing orders, slit-separation scaling, wavelength scaling, symmetry, and screen-position mapping. It is a scalar Fraunhofer two-aperture comparator, not full vector diffraction, broadband intensity prediction, resolving power, radiation generation, or Maxwell-equation optics.
+This compares double-slit fringe spacing, constructive/destructive conditions, finite-slit envelope modulation, missing orders, slit-separation scaling, wavelength scaling, symmetry, and screen-position mapping. It exercises route, closure, phase, and continuity but does not exercise charge in a non-trivial way. It is a scalar Fraunhofer two-aperture comparator, not full vector diffraction, broadband intensity prediction, resolving power, radiation generation, or Maxwell-equation optics.
 
 Run the external silicate held-out benchmark with:
 

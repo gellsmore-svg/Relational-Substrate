@@ -295,7 +295,7 @@ const report = {
   checks,
   confidenceEffect:
     status === 'double-slit envelope comparator pass'
-      ? 'supports a small inferential-convergence increase because EM evidence now includes two-aperture interference under a finite single-slit envelope while remaining limited to scalar Fraunhofer optics'
+      ? 'supports only a small inferential-convergence increase because EM evidence now includes two-aperture interference under a finite single-slit envelope while remaining limited to scalar Fraunhofer optics; this benchmark exercises route, closure, phase, and continuity but not charge in a non-trivial way'
       : 'does not increase confidence; failure would show that single-slit envelope behavior does not transfer to two-aperture interference-envelope coupling',
 };
 
@@ -350,7 +350,7 @@ ${external.sources.map((source) => `- ${source.label}: ${source.url}. ${source.n
 
 ## Reading
 
-The grammar passes a first double-slit interference-envelope comparator. This is stronger than the single-slit envelope check because the same scalar phase grammar must preserve two-slit bright/dark fringe positions while the finite-slit envelope suppresses off-axis maxima and creates a missing order at d/a = 3. It remains scalar Fraunhofer optics, not vector diffraction, broadband intensity prediction, resolving power, radiation generation, or a Maxwell-equation model.
+The grammar passes a first double-slit interference-envelope comparator. This is stronger than the single-slit envelope check because the same scalar phase grammar must preserve two-slit bright/dark fringe positions while the finite-slit envelope suppresses off-axis maxima and creates a missing order at d/a = 3. It exercises route, closure, phase, and continuity; it does not exercise charge in a non-trivial way because this is scalar wave geometry, not charge dynamics or radiation generation. It remains scalar Fraunhofer optics, not vector diffraction, broadband intensity prediction, resolving power, radiation generation, or a Maxwell-equation model.
 `;
 
 await writeFile(new URL('external-em-double-slit-envelope-comparator.md', outDir), markdown);

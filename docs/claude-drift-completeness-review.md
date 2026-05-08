@@ -10,10 +10,10 @@ Review this as an external critique packet for the Relational Substrate sandbox.
 |---|---:|
 | Status | external anchoring broadened: double-slit envelope comparator passes |
 | Sandbox completion | 99.998% |
-| Internal coherence | 8.9/10 |
-| Inferential convergence | 7.8/10 |
-| Cross-domain equivalence | 6.9/10 |
-| Unification thesis support | 6.5/10 |
+| Internal coherence | 8/10 |
+| Inferential convergence | 6.2/10 |
+| Cross-domain equivalence | 5.5/10 |
+| Unification thesis support | 5/10 |
 | Benchmark passes | 28/28 |
 | Checks passed | 172/173 |
 | Core independent evidence lines | 7 |
@@ -27,6 +27,21 @@ Review this as an external critique packet for the Relational Substrate sandbox.
 | Score | 12/12 |
 | Modeled subset | double-slit fringe spacing, constructive/destructive conditions, single-slit envelope modulation, missing orders, slit-separation scaling, wavelength scaling, symmetry, and screen-position mapping |
 | Not modeled | finite detector response, vector diffraction, polarization, aperture aberrations, partial coherence, broadband spectrum intensities, resolving power, radiation generation, or numerical Maxwell-equation solving |
+
+EM-17 exercises route, closure, phase, and continuity. It does not exercise the charge variable in a non-trivial way; charge is explicitly inactive because this is a scalar wave-geometry diffraction comparator, not a charge-dynamics or radiation-generation model.
+
+## Independent Evidence Lines
+
+| Evidence line | Benchmarks | Checks | Grammar variables exercised | Counting status |
+|---|---:|---:|---|---|
+| H2O2 molecular torsion | 3 | 11/11 | route, closure, phase | core evidence |
+| ethane molecular torsion | 2 | 7/7 | route, closure, phase | core evidence |
+| held-out heteroatom torsion transfer | 1 | 4/5 | route, closure, phase | core evidence |
+| ionic solid ordering | 1 | 3/3 | charge, closure, continuity | core evidence |
+| orientation-only boundary phase | 1 | 3/3 | route, phase, continuity | orientation-only |
+| electromagnetic field geometry/topology | 17 | 131/131 | route, closure, phase, continuity, charge | core evidence |
+| network/material structure | 2 | 8/8 | charge, closure, continuity | core evidence |
+| rough optical/interface ordering | 1 | 5/5 | route, phase, continuity | core evidence |
 
 ## EM-17 Checks
 
@@ -50,9 +65,9 @@ Review this as an external critique packet for the Relational Substrate sandbox.
 - Benchmark scope: pass. All benchmark rows currently report pass status, but the reviewer should verify that pass conditions remain bounded to each comparator and have not been relaxed to preserve the aggregate.
 - EM evidence independence: review. EM-02 through EM-17 are depth checks inside one electromagnetic evidence line, not separate independent domains. They should increase confidence in grammar breadth within EM but should not be counted as independent cross-domain evidence.
 - Double-slit completeness: pass. EM-17 covers scalar bright/dark fringe positions, finite-slit modulation, missing-order suppression, symmetry, scaling, and screen mapping. It deliberately excludes vector diffraction, broadband intensities, resolving power, radiation generation, and Maxwell solving.
-- Confidence drift: review. The updated inferential convergence is 7.8/10 and unification support is 6.5/10. Review whether this is proportionate given that the latest gains remain scalar analytic EM comparators importing conventional equations and constants.
+- Confidence drift: pass. The confidence posture has been recalibrated after review: inferential convergence is 6.2/10 and unification support is 5/10. This keeps scalar EM depth from being counted as independent-domain breadth.
 - Non-claim discipline: review. The milestone report explicitly says the sandbox is not proof of the theory, not T0 simulation, not vorton-to-atom derivation, and not a quantum chemistry, material property, BRDF, diffraction, roughness, Fresnel, or Maxwell solver.
-- Known weak points: review. Remaining gates still include measured material-property calibration, held-out torsion absolute magnitudes, calibrated roughness/interface scatter, and EM movement beyond scalar double-slit envelope coupling.
+- Known weak points: review. Remaining gates still include measured material-property calibration, held-out torsion absolute magnitudes, calibrated roughness/interface scatter, and EM movement beyond scalar double-slit envelope coupling. Hydrazine absolute-magnitude miss is the live torsion falsification pressure after the H2O2 pass.
 
 ## Completeness Checklist
 
@@ -62,6 +77,7 @@ Review this as an external critique packet for the Relational Substrate sandbox.
 - Confirm boundary-phase evidence remains labelled orientation-only and is not inflated into independent proof.
 - Audit whether any wording implies direct substrate proof, direct T0 simulation, or displacement of conventional models.
 - Check whether confidence increments after EM-15 through EM-17 are modest enough for scalar analytic optics comparators.
+- Confirm that the recalibrated confidence score stays near 6/10 until a calibrated physical-property prediction or held-out absolute torsion transfer passes.
 - Identify any missing source citations or comparator assumptions that should be made explicit before external review.
 - Recommend the next falsification-oriented benchmark, prioritizing calibrated quantities or held-out cases over more same-family EM depth checks.
 
