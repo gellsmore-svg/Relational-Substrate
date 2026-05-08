@@ -30,6 +30,15 @@ const cases = [
     expectedNboT: 0,
     expectedChargeBalancedAl: 1,
   },
+  {
+    formula: 'CaAl2Si2O8',
+    materialType: 'charge-balanced calcium aluminosilicate framework',
+    networkFormers: { Si: 2, Al: 2 },
+    modifiers: { Na: 0, Ca: 1, Mg: 0 },
+    oxygen: 8,
+    expectedNboT: 0,
+    expectedChargeBalancedAl: 2,
+  },
 ];
 
 function round(value, places = 4) {
@@ -90,6 +99,17 @@ const checks = [
     pass:
       rows.find((row) => row.formula === 'NaAlSi3O8').nboT === 0 &&
       rows.find((row) => row.formula === 'NaAlSi3O8').chargeBalancedAl === 1,
+  },
+  {
+    check: 'Anorthite-like calcium aluminosilicate charge balances two Al without NBO excess',
+    formula: 'CaAl2Si2O8',
+    expected: 'NBO/T 0 and two charge-balanced Al',
+    modelValue: `NBO/T ${rows.find((row) => row.formula === 'CaAl2Si2O8').nboT}; charge-balanced Al ${
+      rows.find((row) => row.formula === 'CaAl2Si2O8').chargeBalancedAl
+    }`,
+    pass:
+      rows.find((row) => row.formula === 'CaAl2Si2O8').nboT === 0 &&
+      rows.find((row) => row.formula === 'CaAl2Si2O8').chargeBalancedAl === 2,
   },
 ];
 
