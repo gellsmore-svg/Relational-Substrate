@@ -385,6 +385,14 @@ npm run benchmark:em-boundary-propagation
 
 This compares normal-incidence dielectric-boundary reflection, transmission, phase inversion, speed change, and ideal energy balance. It is a narrow imported-index boundary comparator, not a full Fresnel, rough-interface, absorption, or Maxwell-equation solver.
 
+Run the external EM-11 oblique Fresnel comparator with:
+
+```bash
+npm run benchmark:em-oblique-fresnel
+```
+
+This compares s/p oblique-incidence reflectance, Brewster-angle cancellation, grazing trend, critical angle, and total internal reflection. It is an ideal lossless Fresnel comparator, not a rough, absorbing, multilayer, diffraction, or Maxwell-equation solver.
+
 Run the external silicate held-out benchmark with:
 
 ```bash

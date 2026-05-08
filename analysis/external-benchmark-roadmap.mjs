@@ -199,6 +199,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.1 if passed, -0.6 if failed',
     priority: 16,
   },
+  {
+    area: 'Electromagnetic oblique Fresnel behavior',
+    currentFrontier: 'post-EM-10 oblique boundary pressure test',
+    externalAnchor:
+      'Compare s/p reflectance split, Brewster-angle p-reflectance zero, grazing trend, critical angle, and total internal reflection against ideal Fresnel optics.',
+    passSignal:
+      'The same route/closure/phase/charge/continuity grammar handles polarization-sensitive oblique boundary constraints without adding a new electromagnetic vocabulary.',
+    failSignal:
+      'The grammar survives normal incidence but cannot reproduce oblique Fresnel polarization and total-internal-reflection constraints.',
+    confidenceImpact: '+0.1 if passed, -0.6 if failed',
+    priority: 17,
+  },
 ];
 
 const confidenceGates = [
