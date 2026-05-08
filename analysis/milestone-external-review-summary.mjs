@@ -36,6 +36,7 @@ const benchmarkFiles = [
   'external-em-field-magnitude-comparator.json',
   'external-em-dielectric-media-comparator.json',
   'external-em-wave-propagation-comparator.json',
+  'external-em-boundary-propagation-comparator.json',
   'external-silicate-heldout-benchmark.json',
   'external-roughness-heldout-benchmark.json',
   'external-material-nbo-quantitative-benchmark.json',
@@ -142,7 +143,7 @@ const unificationMap = [
     conventionalDomain: 'charge, magnetic-field, and EM-wave behavior',
     grammarVariables: 'charge, phase, closure, continuity, route',
     currentReading:
-      'Opens the EM domain with one electromagnetic evidence line containing Coulomb direction/ratio, two-source superposition geometry, asymmetric three-source field implementation checks, continuous field-line topology, scalar equipotential geometry, calibrated point-charge field magnitude, ideal conductor/dielectric media behavior, and plane-wave propagation relations. This still imports conventional constants and ideal constraints and is not a material-response derivation, radiation-generation model, or full electromagnetic solver.',
+      'Opens the EM domain with one electromagnetic evidence line containing Coulomb direction/ratio, two-source superposition geometry, asymmetric three-source field implementation checks, continuous field-line topology, scalar equipotential geometry, calibrated point-charge field magnitude, ideal conductor/dielectric media behavior, plane-wave propagation relations, and normal-incidence boundary propagation. This still imports conventional constants and ideal constraints and is not a material-response derivation, radiation-generation model, or full electromagnetic solver.',
   },
   {
     benchmarkFamily: 'Network/material structure: silicate network and NBO/T accounting',
@@ -171,7 +172,7 @@ const confidence = {
   unificationThesisSupportOutOf10: summary.confidence.unificationThesisSupportOutOf10,
   reading:
     h2o2AbsolutePass
-      ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, and EM propagation/media checks still import conventional constants and ideal constraints rather than deriving electrodynamics.'
+      ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, and EM propagation/boundary/media checks still import conventional constants and ideal constraints rather than deriving electrodynamics.'
       : 'Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, benchmark-breadth compression, and qualitative EM topology limits remain known issues. Inferential convergence has crossed 6/10 only because EM now includes continuous field-line topology; it remains moderate because the topology check is not calibrated physical property prediction or Maxwell-equation dynamics.',
 };
 
