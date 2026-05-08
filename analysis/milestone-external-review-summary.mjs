@@ -163,7 +163,7 @@ const unificationMap = [
     conventionalDomain: 'network solids and glass chemistry',
     grammarVariables: 'closure, charge, continuity',
     currentReading:
-      'Shows held-out material ordering and exact composition accounting. The measured refractive-index challenge is now explicit and unresolved: a first-pass topology-only optical-property proxy exists but does not clear all measured targets and collapses held-out albite against silica.',
+      'Shows held-out material ordering and exact composition accounting. The measured refractive-index challenge is now explicit and unresolved: a first-pass topology-only proxy fails, and the target-implied slope/framework-Al repair candidate is quarantined until a new held-out composition validates it.',
   },
 ];
 
@@ -384,7 +384,7 @@ ${unificationRows}
 
 ## Current Evidence Reading
 
-The sandbox now has externally anchored checks across molecule torsion, H2O2 absolute barrier transfer, held-out hydrazine cation torsion ordering, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, electrostatic equipotential geometry, calibrated point-charge field magnitude, roughness-controlled interface scatter, silicate network order, NBO/T material composition accounting, and a source-anchored material refractive-index challenge. The refractive-index challenge is explicit but unresolved because the current topology-only material proxy clears SiO2, misses Na2SiO3 tolerance, and collapses held-out albite against silica despite different measured RI. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
+The sandbox now has externally anchored checks across molecule torsion, H2O2 absolute barrier transfer, held-out hydrazine cation torsion ordering, ionic ordering, qualitative electromagnetic ordering, Coulomb direction/ratio, two-source electric-field superposition, asymmetric three-source field geometry, continuous electric/magnetic field-line topology, electrostatic equipotential geometry, calibrated point-charge field magnitude, roughness-controlled interface scatter, silicate network order, NBO/T material composition accounting, and a source-anchored material refractive-index challenge. The refractive-index challenge is explicit but unresolved because the current topology-only material proxy clears SiO2, misses Na2SiO3 tolerance, and collapses held-out albite against silica despite different measured RI. A target-implied slope/framework-Al candidate is documented but quarantined as calibration debt until a new held-out composition validates it. The boundary phase prediction is retained only as orientation evidence. The suite includes held-out material and interface checks, post-closure EM checks, and multiple quantitative checks. Its value proposition is not better mathematics; it is the possibility that one grammar can recover equivalent outputs across domains that are normally handled by separate models.
 
 The positive evidence is that the same broad route/continuity grammar can repeatedly distinguish reference order from deliberately wrong alternatives without changing global ontology boundaries. The main weakness is that many checks are still qualitative ordering tests, and the quantitative checks are narrow: torsion shape/ratio, equilibrium angle, H2O2 barrier transfer, roughness TIS, and composition accounting. The measured material-property gate has now been attempted as refractive-index anchoring and remains unresolved. The EM suite adds useful depth but remains one independent evidence line because EM-02 through EM-17 are same-domain scalar or analytic comparators.
 
@@ -444,7 +444,7 @@ This benchmark is retained as a documented qualitative pass because it records e
 
 Current status: ${materialRefractiveIndex?.status ?? 'not run'}.
 
-This challenge anchors measured SiO2, Na2SiO3, and held-out NaAlSi3O8 refractive-index targets and now includes a first-pass topology-only refractive-index proxy. It intentionally remains unresolved until that predictor clears all measured targets without endpoint fitting. It prevents NBO/T composition accounting, or a weak proxy, from being mistaken for a measured material-property pass.
+This challenge anchors measured SiO2, Na2SiO3, and held-out NaAlSi3O8 refractive-index targets and now includes a first-pass topology-only refractive-index proxy. It also records a target-implied slope/framework-Al repair candidate, but keeps that candidate quarantined until a fresh held-out material validates it. This prevents NBO/T composition accounting, or a target-fitted proxy, from being mistaken for a measured material-property pass.
 
 ## Confidence
 
@@ -479,7 +479,7 @@ ${reviewPackage.reviewerQuestions.map((question) => `- ${question}`).join('\n')}
 Do not extend the sandbox laterally until the review package has been read. EM-05 completed the recommended topology broadening step, EM-06 links scalar potential geometry to the vector-field checks, EM-07 adds calibrated point-charge field magnitude, EM-17 completes a scalar double-slit envelope depth check, and the roughness/interface line now includes calibrated smooth-surface TIS accounting. H2O2 absolute barrier transfer has reduced the strongest prior falsification candidate, but hydrazine cation absolute magnitudes and the unresolved material refractive-index challenge remain live falsification pressures. The next stage should pick one high-value calibrated target rather than another shallow fixture:
 
 - Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
-- Resolve the material refractive-index challenge by improving the predeclared topology-only optical-property predictor until it clears measured SiO2/Na2SiO3/NaAlSi3O8 tolerance without endpoint fitting.
+- Validate the quarantined refractive-index slope/framework-Al candidate on a new held-out material composition before promoting it to the measured-property benchmark.
 - A measured roughness/scatter curve beyond smooth-surface TIS, such as BRDF/PSD or broadband surface response.
 - A conventional-comparator review that asks whether the Relational Substrate grammar adds predictive leverage over standard physical models.
 - Do not prioritize further scalar EM depth until at least one calibrated material-property or held-out absolute torsion target has been attempted.
