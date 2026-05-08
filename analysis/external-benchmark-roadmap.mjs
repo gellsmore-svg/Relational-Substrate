@@ -287,7 +287,7 @@ const benchmarkTargets = [
     area: 'Material refractive-index property calibration',
     currentFrontier: 'post-NBO/T measured-property pressure test',
     externalAnchor:
-      'Compare source-anchored SiO2 and Na2SiO3 refractive-index targets against a predeclared material grammar property predictor.',
+      'Compare source-anchored SiO2, Na2SiO3, and held-out NaAlSi3O8 refractive-index targets against a predeclared material grammar property predictor.',
     passSignal:
       'The material grammar produces refractive-index values within tolerance without using the target values as fitted endpoints.',
     failSignal:

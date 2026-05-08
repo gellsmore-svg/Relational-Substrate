@@ -15,7 +15,7 @@ Review this as an external critique packet for the Relational Substrate sandbox.
 | Cross-domain equivalence | 5.7/10 |
 | Unification thesis support | 5.2/10 |
 | Benchmark passes | 29/30 |
-| Checks passed | 185/187 |
+| Checks passed | 185/188 |
 | Core independent evidence lines | 7 |
 | Orientation-only evidence lines | 1 |
 
@@ -40,7 +40,7 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 | ionic solid ordering | 1 | 3/3 | charge, closure, continuity | core evidence |
 | orientation-only boundary phase | 1 | 3/3 | route, phase, continuity | orientation-only |
 | electromagnetic field geometry/topology | 17 | 131/131 | route, closure, phase, continuity, charge | core evidence |
-| network/material structure | 3 | 13/14 | charge, closure, continuity | core evidence |
+| network/material structure | 3 | 13/15 | charge, closure, continuity | core evidence |
 | rough optical/interface ordering | 2 | 13/13 | route, phase, continuity, closure | core evidence |
 
 ## EM-17 Checks
@@ -79,13 +79,13 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 - Check whether confidence increments after EM-15 through EM-17 are modest enough for scalar analytic optics comparators.
 - Confirm that the recalibrated confidence score stays near 6/10 until a calibrated material-property prediction, measured scatter curve, or held-out absolute torsion transfer passes.
 - Confirm that the material refractive-index row is treated as an unresolved measured-property challenge, not as a benchmark pass.
-- Check whether the topology-only refractive-index proxy is too weak, under-justified, or implicitly tuned despite failing Na2SiO3 tolerance.
+- Check whether the topology-only refractive-index proxy is too weak, under-justified, or implicitly tuned despite failing Na2SiO3 tolerance and collapsing held-out albite against silica.
 - Identify any missing source citations or comparator assumptions that should be made explicit before external review.
 - Recommend the next falsification-oriented benchmark, prioritizing calibrated quantities or held-out cases over more same-family EM depth checks.
 
 ## Remaining Gates
 
-- Resolve material refractive-index challenge by improving the predeclared topology-only optical-property predictor until it clears measured SiO2/Na2SiO3 tolerance without endpoint fitting.
+- Resolve material refractive-index challenge by improving the predeclared topology-only optical-property predictor until it clears measured SiO2/Na2SiO3/NaAlSi3O8 tolerance without endpoint fitting.
 - Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
 - Move calibrated roughness/interface checks beyond smooth-surface TIS into BRDF/PSD, measured scatter curves, or broadband surface response.
 - Move EM-17 from scalar double-slit envelope coupling toward resolving power, broadband intensities, vector diffraction, or radiation generation.
@@ -162,6 +162,7 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 - Mysen and Richet, Nature 1997: https://www.nature.com/articles/36199. Describes charge-balancing cations near aluminium and excess modifier charge forming NBOs that depolymerize the network.
 - KLA/Filmetrics, Refractive Index of SiO2 Fused Silica: https://www.kla.com/products/instruments/refractive-index-database/SiO2/Fused-Silica. Lists n = 1.45704 at 632.8 nm for SiO2 and cites I. H. Malitson, JOSA 1965.
 - PubChem Sodium Silicate, CID 23266: https://pubchem.ncbi.nlm.nih.gov/compound/23266. Lists index of refraction 1.520 for sodium silicate glass from HSDB/Merck Index.
+- Mindat, Albite mineral information: https://www.mindat.org/min-96.html. Lists albite optical RI ranges n-alpha 1.528-1.533, n-beta 1.5317-1.53685, and n-gamma 1.538-1.542; scalar target uses the mean of range midpoints.
 
 ## File Context
 

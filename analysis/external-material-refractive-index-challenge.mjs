@@ -36,6 +36,14 @@ const external = {
       measuredRefractiveIndex: 1.52,
       source: 'PubChem sodium silicate HSDB/Merck Index property record',
     },
+    {
+      formula: 'NaAlSi3O8',
+      material: 'albite feldspar',
+      wavelengthNm: null,
+      measuredRefractiveIndex: 1.53493,
+      source: 'Mindat albite optical data mean of n-alpha/n-beta/n-gamma range midpoints',
+      heldOut: true,
+    },
   ],
   sources: [
     {
@@ -47,6 +55,12 @@ const external = {
       label: 'PubChem Sodium Silicate, CID 23266',
       url: 'https://pubchem.ncbi.nlm.nih.gov/compound/23266',
       note: 'Lists index of refraction 1.520 for sodium silicate glass from HSDB/Merck Index.',
+    },
+    {
+      label: 'Mindat, Albite mineral information',
+      url: 'https://www.mindat.org/min-96.html',
+      note:
+        'Lists albite optical RI ranges n-alpha 1.528-1.533, n-beta 1.5317-1.53685, and n-gamma 1.538-1.542; scalar target uses the mean of range midpoints.',
     },
   ],
 };
@@ -143,12 +157,26 @@ const calibrationDiagnostic = {
     'A slope changed after seeing these targets is treated as calibration debt unless it is validated on a new held-out composition.',
 };
 
+const frameworkRows = rows.filter((row) => row.nboT === 0);
+const frameworkPairs = frameworkRows.flatMap((left, leftIndex) =>
+  frameworkRows.slice(leftIndex + 1).map((right) => {
+    const measuredSeparation = round(Math.abs(left.measuredRefractiveIndex - right.measuredRefractiveIndex), 5);
+    const predictedSeparation = round(Math.abs(left.predictedRefractiveIndex - right.predictedRefractiveIndex), 5);
+    return {
+      formulas: [left.formula, right.formula],
+      measuredSeparation,
+      predictedSeparation,
+      pass: Math.abs(measuredSeparation - predictedSeparation) <= tolerance,
+    };
+  })
+);
+
 const checks = [
   {
     check: 'Source anchors present',
     expectation: 'measured refractive-index targets should have explicit external source anchors',
     modelValue: external.sources.map((source) => source.label).join('; '),
-    pass: external.sources.length === 2,
+    pass: external.sources.length === 3,
     reading: 'The challenge uses concrete measured-property targets rather than qualitative material language.',
   },
   {
@@ -179,7 +207,7 @@ const checks = [
         Math.abs(row.predictedRefractiveIndex - row.measuredRefractiveIndex) <=
           external.tolerances.refractiveIndexAbsoluteErrorMax
     ),
-    reading: 'The current proxy must clear both measured targets before this becomes a calibrated material-property pass.',
+    reading: 'The current proxy must clear all measured targets before this becomes a calibrated material-property pass.',
   },
   {
     check: 'Boundary/non-claim discipline',
@@ -204,6 +232,19 @@ const checks = [
     reading:
       'The diagnostic exposes the slope needed for tolerance while preserving the unresolved status until a new held-out composition validates any revised coefficient.',
   },
+  {
+    check: 'Held-out framework distinction',
+    expectation: 'zero-NBO framework compositions with different measured RI should not collapse to nearly identical predictions',
+    modelValue: frameworkPairs
+      .map(
+        (pair) =>
+          `${pair.formulas.join(' vs ')}: measured separation ${pair.measuredSeparation}; predicted separation ${pair.predictedSeparation}`
+      )
+      .join('; '),
+    pass: frameworkPairs.every((pair) => pair.pass),
+    reading:
+      'Albite exposes a structural limitation of the topology-only proxy: NBO/T alone cannot distinguish silica from a charge-balanced aluminosilicate framework.',
+  },
 ];
 
 const passed = checks.filter((check) => check.pass).length;
@@ -219,6 +260,7 @@ const report = {
   external,
   predictor,
   calibrationDiagnostic,
+  frameworkPairs,
   grammarVariables,
   rows,
   score,
@@ -237,7 +279,7 @@ const markdown = `# Relational Substrate External Material Refractive-Index Chal
 
 This report turns the material-property gate into an explicit measured refractive-index challenge.
 
-It asks whether the current material grammar can move beyond NBO/T composition accounting and produce a predeclared refractive-index prediction for source-anchored SiO2 and Na2SiO3 targets. The current answer is still no at pass level: a first-pass topology-only proxy exists, but it does not clear the measured tolerance for both targets.
+It asks whether the current material grammar can move beyond NBO/T composition accounting and produce a predeclared refractive-index prediction for source-anchored SiO2, Na2SiO3, and held-out NaAlSi3O8 targets. The current answer is still no at pass level: a first-pass topology-only proxy exists, but it does not clear the measured tolerance and collapses distinct zero-NBO frameworks.
 
 ## Result
 
@@ -270,6 +312,17 @@ ${slopeDiagnostics
 
 Endpoint-fit policy: ${calibrationDiagnostic.endpointFitPolicy}
 
+## Held-Out Framework Diagnostic
+
+| Pair | Measured RI separation | Predicted RI separation | Pass |
+|---|---:|---:|---|
+${frameworkPairs
+  .map(
+    (pair) =>
+      `| ${pair.formulas.join(' vs ')} | ${pair.measuredSeparation} | ${pair.predictedSeparation} | ${pair.pass ? 'yes' : 'no'} |`
+  )
+  .join('\n')}
+
 ## Checks
 
 | Check | Expectation | Model value | Pass | Reading |
@@ -298,7 +351,7 @@ ${external.sources.map((source) => `- ${source.label}: ${source.url}. ${source.n
 
 ## Reading
 
-This is an unresolved calibration challenge, not a failed source check. The material grammar has reached exact composition accounting and now has a first-pass topology-only refractive-index proxy, but the proxy does not yet satisfy measured tolerance across both targets. A future pass requires improving the predeclared optical-property equation or grammar-derived proxy before comparing against measured targets.
+This is an unresolved calibration challenge, not a failed source check. The material grammar has reached exact composition accounting and now has a first-pass topology-only refractive-index proxy, but the proxy does not yet satisfy measured tolerance across all targets. The held-out albite row shows that NBO/T alone collapses silica and charge-balanced aluminosilicate frameworks that have different measured refractive indices. A future pass requires improving the predeclared optical-property equation or grammar-derived proxy before comparing against measured targets.
 `;
 
 await writeFile(new URL('external-material-refractive-index-challenge.md', outDir), markdown);
