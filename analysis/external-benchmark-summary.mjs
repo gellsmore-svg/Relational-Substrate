@@ -436,7 +436,7 @@ const benchmarks = [
     checksPassed: materialRefractiveIndex.checks.filter((check) => check.pass).length,
     checksTotal: materialRefractiveIndex.checks.length,
     limitation:
-      'unresolved measured-property challenge; current grammar has a first-pass topology-only refractive-index proxy and a quarantined target-implied repair candidate, but no validated tolerance-clearing density, polarizability, Sellmeier, dispersion, or optical-property model',
+      'unresolved measured-property challenge; current grammar has a first-pass topology-only refractive-index proxy and a target-implied repair candidate that fails fresh anorthite validation, but no validated tolerance-clearing density, polarizability, Sellmeier, dispersion, or optical-property model',
     confidenceEffect: materialRefractiveIndex.confidenceEffect,
   },
 ].filter(Boolean);
@@ -586,7 +586,7 @@ const confidence = {
   unificationThesisSupportOutOf10: hasRoughnessCalibratedScatterPass ? 5.2 : hasEmDoubleSlitEnvelopePass ? 5.0 : hasEmSingleSlitEnvelopePass ? 4.95 : hasEmDiffractionGratingPass ? 4.9 : hasEmRoughSurfaceScatterPass ? 4.85 : hasEmAbsorbingMediaPass ? 4.8 : hasEmMultilayerInterferencePass ? 4.75 : hasEmObliqueFresnelPass ? 4.7 : hasEmBoundaryPropagationPass ? 4.65 : hasEmWavePropagationPass ? 4.6 : hasEmDielectricMediaPass ? 4.55 : hasEmFieldMagnitudePass ? 4.5 : hasEmEquipotentialPass ? 4.45 : hasEmFieldLinePass ? 4.4 : hasEmThreeSourcePass ? 4.3 : hasEmSuperpositionPass ? 4.2 : hasEmCoulombPass ? 4.1 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
   rationale:
     hasMaterialRefractiveIndexChallenge
-      ? 'External anchoring now includes an explicit measured material-property challenge, and it is unresolved: SiO2, Na2SiO3, and held-out NaAlSi3O8 refractive-index targets are source-anchored; the current topology-only refractive-index proxy clears SiO2 but misses Na2SiO3 tolerance and collapses albite against silica. A target-implied slope/framework-Al candidate is quarantined as calibration debt, so inferential convergence is held near 6/10 because the material-property gate remains open.'
+      ? 'External anchoring now includes an explicit measured material-property challenge, and it is unresolved: SiO2, Na2SiO3, held-out NaAlSi3O8, and fresh-validation CaAl2Si2O8 refractive-index targets are source-anchored; the current topology-only refractive-index proxy clears SiO2 but misses the material set, and the target-implied slope/framework-Al candidate fails fresh anorthite validation. Inferential convergence is held near 6/10 because the material-property gate remains open.'
       : hasRoughnessCalibratedScatterPass
       ? 'External anchoring now includes a calibrated roughness/interface scatter quantity: Bennett-Porteus total integrated scatter, specular fraction, roughness/wavelength scaling, and reflected-budget closure. Inferential convergence rises only slightly because this imports a conventional smooth-surface approximation and does not yet solve measured material properties, held-out torsion absolute magnitudes, full BRDFs, or Maxwell surface scattering.'
       : hasEmDoubleSlitEnvelopePass
@@ -654,7 +654,7 @@ const confidence = {
 
 const remainingExternalGates = [
   hasMaterialRefractiveIndexChallenge
-    ? 'Validate the quarantined refractive-index slope/framework-Al candidate on a new held-out material composition before promoting it to the measured-property benchmark.'
+    ? 'Replace or revise the failed refractive-index slope/framework-Al candidate, then validate on a new held-out material composition before promotion.'
     : 'Move material checks from composition accounting to measured property calibration.',
   hasH2O2AbsolutePass
     ? hydrazineCation

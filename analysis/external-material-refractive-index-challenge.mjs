@@ -15,7 +15,7 @@ const nbo = await readJson('material-nbo-stoichiometry.json');
 const external = {
   target: 'measured refractive-index material-property challenge',
   modeledSubset:
-    'source-anchored refractive-index targets for SiO2 fused silica, sodium silicate glass, and held-out albite feldspar, checked against the current material grammar outputs',
+    'source-anchored refractive-index targets for SiO2 fused silica, sodium silicate glass, held-out albite feldspar, and fresh-validation anorthite feldspar, checked against the current material grammar outputs',
   notModeled:
     'Sellmeier coefficient derivation, density prediction, molar refraction, glass relaxation, temperature dependence, wavelength-dependent dispersion beyond cited target values, molecular polarizability, or ab initio optical-property prediction',
   tolerances: {
@@ -44,6 +44,14 @@ const external = {
       source: 'Mindat albite optical data mean of n-alpha/n-beta/n-gamma range midpoints',
       heldOut: true,
     },
+    {
+      formula: 'CaAl2Si2O8',
+      material: 'anorthite feldspar',
+      wavelengthNm: null,
+      measuredRefractiveIndex: 1.58167,
+      source: 'Mindat anorthite optical data mean of n-alpha/n-beta/n-gamma range midpoints',
+      freshCandidateValidation: true,
+    },
   ],
   sources: [
     {
@@ -61,6 +69,12 @@ const external = {
       url: 'https://www.mindat.org/min-96.html',
       note:
         'Lists albite optical RI ranges n-alpha 1.528-1.533, n-beta 1.5317-1.53685, and n-gamma 1.538-1.542; scalar target uses the mean of range midpoints.',
+    },
+    {
+      label: 'Mindat, Anorthite mineral information',
+      url: 'https://www.mindat.org/min-246.html',
+      note:
+        'Lists anorthite optical RI ranges n-alpha 1.573-1.577, n-beta 1.58-1.585, and n-gamma 1.585-1.59; scalar target uses the mean of range midpoints.',
     },
   ],
 };
@@ -91,11 +105,11 @@ const quarantinedCandidate = {
   silicaBaseline: 1.46,
   candidateNboTSlope: 0.03,
   frameworkAlBoost: 0.075,
-  status: 'quarantined calibration candidate; not counted as a benchmark pass',
+  status: 'quarantined calibration candidate; fresh validation failed; not counted as a benchmark pass',
   reason:
     'The NBO/T slope and framework-Al boost are target-implied by the current Na2SiO3 and NaAlSi3O8 rows after the miss was observed.',
   releaseCondition:
-    'Promote only if the same coefficients clear a new held-out material composition without changing coefficients.',
+    'Do not promote in this form: CaAl2Si2O8 fresh validation misses tolerance without changing coefficients.',
 };
 
 function predictRefractiveIndex(composition) {
@@ -203,6 +217,7 @@ const candidateRows = rows.map((row) => {
       : null;
   return {
     formula: row.formula,
+    freshCandidateValidation: Boolean(row.freshCandidateValidation),
     measuredRefractiveIndex: row.measuredRefractiveIndex,
     candidatePrediction,
     candidateAbsoluteError,
@@ -211,13 +226,15 @@ const candidateRows = rows.map((row) => {
       candidateAbsoluteError <= external.tolerances.refractiveIndexAbsoluteErrorMax,
   };
 });
+const calibrationCandidateRows = candidateRows.filter((row) => !row.freshCandidateValidation);
+const freshCandidateValidationRows = candidateRows.filter((row) => row.freshCandidateValidation);
 
 const checks = [
   {
     check: 'Source anchors present',
     expectation: 'measured refractive-index targets should have explicit external source anchors',
     modelValue: external.sources.map((source) => source.label).join('; '),
-    pass: external.sources.length === 3,
+    pass: external.sources.length === external.measuredRows.length,
     reading: 'The challenge uses concrete measured-property targets rather than qualitative material language.',
   },
   {
@@ -294,9 +311,24 @@ const checks = [
       .join('; ')}`,
     pass:
       quarantinedCandidate.status.includes('not counted') &&
-      candidateRows.every((row) => row.wouldPassTolerance),
+      calibrationCandidateRows.every((row) => row.wouldPassTolerance),
     reading:
-      'A revised slope/framework-Al candidate can fit these rows, but because it is target-implied after failure it remains quarantined until a new held-out composition validates it.',
+      'A revised slope/framework-Al candidate can fit the calibration rows, but because it is target-implied after failure it remains quarantined and must survive fresh validation before promotion.',
+  },
+  {
+    check: 'Fresh held-out candidate validation',
+    expectation: 'the quarantined candidate should clear a new material composition without changing coefficients before promotion',
+    modelValue: freshCandidateValidationRows
+      .map(
+        (row) =>
+          `${row.formula}: measured ${row.measuredRefractiveIndex}, candidate ${row.candidatePrediction}, error ${row.candidateAbsoluteError}`
+      )
+      .join('; '),
+    pass:
+      freshCandidateValidationRows.length > 0 &&
+      freshCandidateValidationRows.every((row) => row.wouldPassTolerance),
+    reading:
+      'Anorthite is a fresh validation target for the quarantined candidate; failure here keeps the repair candidate from becoming a measured-property pass.',
   },
 ];
 
@@ -334,7 +366,7 @@ const markdown = `# Relational Substrate External Material Refractive-Index Chal
 
 This report turns the material-property gate into an explicit measured refractive-index challenge.
 
-It asks whether the current material grammar can move beyond NBO/T composition accounting and produce a predeclared refractive-index prediction for source-anchored SiO2, Na2SiO3, and held-out NaAlSi3O8 targets. The current answer is still no at pass level: a first-pass topology-only proxy exists, but it does not clear the measured tolerance and collapses distinct zero-NBO frameworks.
+It asks whether the current material grammar can move beyond NBO/T composition accounting and produce a predeclared refractive-index prediction for source-anchored SiO2, Na2SiO3, held-out NaAlSi3O8, and fresh-validation CaAl2Si2O8 targets. The current answer is still no at pass level: a first-pass topology-only proxy exists, but it does not clear the measured tolerance and collapses distinct zero-NBO frameworks. A target-implied repair candidate also fails fresh anorthite validation.
 
 ## Result
 
@@ -380,7 +412,7 @@ ${frameworkPairs
 
 ## Quarantined Candidate
 
-This candidate is not counted as the benchmark result. It records the shape of the likely repair, while preserving the requirement for a fresh held-out material target.
+This candidate is not counted as the benchmark result. It records the shape of the likely repair and the fresh held-out validation failure.
 
 | Measure | Value |
 |---|---|
@@ -396,7 +428,7 @@ This candidate is not counted as the benchmark result. It records the shape of t
 ${candidateRows
   .map(
     (row) =>
-      `| ${row.formula} | ${row.measuredRefractiveIndex} | ${row.candidatePrediction} | ${row.candidateAbsoluteError} | ${row.wouldPassTolerance ? 'yes' : 'no'} |`
+      `| ${row.formula}${row.freshCandidateValidation ? ' (fresh validation)' : ''} | ${row.measuredRefractiveIndex} | ${row.candidatePrediction} | ${row.candidateAbsoluteError} | ${row.wouldPassTolerance ? 'yes' : 'no'} |`
   )
   .join('\n')}
 
@@ -428,7 +460,7 @@ ${external.sources.map((source) => `- ${source.label}: ${source.url}. ${source.n
 
 ## Reading
 
-This is an unresolved calibration challenge, not a failed source check. The material grammar has reached exact composition accounting and now has a first-pass topology-only refractive-index proxy, but the proxy does not yet satisfy measured tolerance across all targets. The held-out albite row shows that NBO/T alone collapses silica and charge-balanced aluminosilicate frameworks that have different measured refractive indices. A target-implied candidate with a stronger NBO/T slope and positive framework-Al contribution can fit the current rows, but it is quarantined as calibration debt until a new held-out composition validates the coefficients.
+This is an unresolved calibration challenge, not a failed source check. The material grammar has reached exact composition accounting and now has a first-pass topology-only refractive-index proxy, but the proxy does not satisfy measured tolerance across all targets. The held-out albite row shows that NBO/T alone collapses silica and charge-balanced aluminosilicate frameworks that have different measured refractive indices. A target-implied candidate with a stronger NBO/T slope and positive framework-Al contribution fits the calibration rows, but fresh anorthite validation misses tolerance, so this repair candidate remains failed calibration debt rather than a promotable material-property model.
 `;
 
 await writeFile(new URL('external-material-refractive-index-challenge.md', outDir), markdown);
