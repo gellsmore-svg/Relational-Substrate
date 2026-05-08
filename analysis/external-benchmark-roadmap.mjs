@@ -223,6 +223,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.1 if passed, -0.6 if failed',
     priority: 18,
   },
+  {
+    area: 'Electromagnetic absorbing media',
+    currentFrontier: 'post-EM-12 lossy optical-media pressure test',
+    externalAnchor:
+      'Compare complex-index reflectance, extinction-coefficient absorption, Beer-Lambert attenuation, thickness scaling, transparent-limit recovery, and single-entry energy accounting against standard absorbing-media optics.',
+    passSignal:
+      'The same route/closure/phase/charge/continuity grammar handles path-length absorption and complex-index boundary response without adding a new electromagnetic vocabulary.',
+    failSignal:
+      'The grammar survives lossless boundary and thin-film optics but cannot reproduce absorbing-media attenuation constraints.',
+    confidenceImpact: '+0.1 if passed, -0.6 if failed',
+    priority: 19,
+  },
 ];
 
 const confidenceGates = [

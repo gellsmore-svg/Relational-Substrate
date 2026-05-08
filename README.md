@@ -401,6 +401,14 @@ npm run benchmark:em-multilayer-interference
 
 This compares ideal thin-film phase thickness, quarter-wave anti-reflection cancellation, off-design wavelength degradation, half-wave recurrence, and nonideal coating-index partial improvement. It is a lossless imported-index multilayer comparator, not rough, absorbing, broadband coating, or Maxwell-equation optics.
 
+Run the external EM-13 absorbing media comparator with:
+
+```bash
+npm run benchmark:em-absorbing-media
+```
+
+This compares complex-index reflectance, extinction-coefficient absorption, Beer-Lambert attenuation, thickness scaling, transparent-limit recovery, and single-entry energy accounting. It is a narrow analytic absorbing-media comparator, not roughness scattering, lossy multilayer transfer, broadband material spectra, nonlinear response, or Maxwell-equation optics.
+
 Run the external silicate held-out benchmark with:
 
 ```bash

@@ -41,6 +41,7 @@ const reportSteps = [
   'benchmark:em-boundary-propagation',
   'benchmark:em-oblique-fresnel',
   'benchmark:em-multilayer-interference',
+  'benchmark:em-absorbing-media',
   'benchmark:silicate-heldout',
   'benchmark:roughness-heldout',
   'benchmark:material-nbo',

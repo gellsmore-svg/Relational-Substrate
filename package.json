@@ -69,6 +69,7 @@
     "benchmark:em-boundary-propagation": "node analysis/external-em-boundary-propagation-comparator.mjs",
     "benchmark:em-oblique-fresnel": "node analysis/external-em-oblique-fresnel-comparator.mjs",
     "benchmark:em-multilayer-interference": "node analysis/external-em-multilayer-interference-comparator.mjs",
+    "benchmark:em-absorbing-media": "node analysis/external-em-absorbing-media-comparator.mjs",
     "benchmark:silicate-heldout": "node analysis/external-silicate-heldout-benchmark.mjs",
     "benchmark:roughness-heldout": "node analysis/external-roughness-heldout-benchmark.mjs",
     "benchmark:material-nbo": "node analysis/external-material-nbo-quantitative-benchmark.mjs",
