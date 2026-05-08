@@ -36,6 +36,7 @@ const reportSteps = [
   'benchmark:em-field-lines',
   'benchmark:em-equipotential',
   'benchmark:em-field-magnitude',
+  'benchmark:em-dielectric-media',
   'benchmark:silicate-heldout',
   'benchmark:roughness-heldout',
   'benchmark:material-nbo',

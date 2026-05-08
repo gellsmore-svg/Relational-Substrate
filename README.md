@@ -361,6 +361,14 @@ npm run benchmark:em-field-magnitude
 
 This compares absolute SI point-charge electric-field magnitudes, inverse-square scaling, charge linearity, and vector components using the published Coulomb constant. It is a calibrated static-field comparator, not a derivation of the Coulomb constant, conductor model, material-media model, propagation model, or Maxwell-equation solver.
 
+Run the external EM-08 dielectric media comparator with:
+
+```bash
+npm run benchmark:em-dielectric-media
+```
+
+This compares ideal parallel-plate capacitance scaling, dielectric field reduction, conductor interior screening, and dielectric energy-density consistency. It is an electrostatic media comparator, not a permittivity derivation, molecular polarizability model, propagation model, or Maxwell-equation solver.
+
 Run the external silicate held-out benchmark with:
 
 ```bash
