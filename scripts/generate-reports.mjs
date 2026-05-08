@@ -42,6 +42,7 @@ const reportSteps = [
   'benchmark:em-oblique-fresnel',
   'benchmark:em-multilayer-interference',
   'benchmark:em-absorbing-media',
+  'benchmark:em-rough-surface-scatter',
   'benchmark:silicate-heldout',
   'benchmark:roughness-heldout',
   'benchmark:material-nbo',

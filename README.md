@@ -409,6 +409,14 @@ npm run benchmark:em-absorbing-media
 
 This compares complex-index reflectance, extinction-coefficient absorption, Beer-Lambert attenuation, thickness scaling, transparent-limit recovery, and single-entry energy accounting. It is a narrow analytic absorbing-media comparator, not roughness scattering, lossy multilayer transfer, broadband material spectra, nonlinear response, or Maxwell-equation optics.
 
+Run the external EM-14 rough-surface scatter comparator with:
+
+```bash
+npm run benchmark:em-rough-surface-scatter
+```
+
+This compares Bennett-Porteus style total integrated scatter, specular-loss factor, RMS roughness scaling, wavelength scaling, incidence-angle scaling, smooth-limit recovery, small-roughness approximation, and reflected-energy budgeting. It is a smooth-surface analytic roughness comparator, not a BRDF, PSD, deep-roughness, broadband, diffraction, or Maxwell-equation surface-scatter model.
+
 Run the external silicate held-out benchmark with:
 
 ```bash
