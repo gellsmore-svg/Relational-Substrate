@@ -473,6 +473,14 @@ npm run benchmark:material-nbo
 
 This compares exact NBO/T charge-balance accounting against source-backed material-structure expectations for simple silicate and aluminosilicate compositions. It is quantitative composition accounting, not measured property prediction.
 
+Run the external material refractive-index challenge with:
+
+```bash
+npm run benchmark:material-refractive-index
+```
+
+This checks source-anchored SiO2 and Na2SiO3 refractive-index targets against current material grammar outputs. It is intentionally unresolved until a predeclared refractive-index predictor exists; it is not a Sellmeier, density, polarizability, dispersion, or ab initio optical-property model.
+
 Run the external benchmark summary with:
 
 ```bash

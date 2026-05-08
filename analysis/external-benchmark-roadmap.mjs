@@ -283,6 +283,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.1 if passed, -0.6 if failed',
     priority: 23,
   },
+  {
+    area: 'Material refractive-index property calibration',
+    currentFrontier: 'post-NBO/T measured-property pressure test',
+    externalAnchor:
+      'Compare source-anchored SiO2 and Na2SiO3 refractive-index targets against a predeclared material grammar property predictor.',
+    passSignal:
+      'The material grammar produces refractive-index values within tolerance without using the target values as fitted endpoints.',
+    failSignal:
+      'The grammar remains composition accounting only and cannot predict measured material optical properties.',
+    confidenceImpact: '+0.3 if passed, -0.2 if unresolved or failed',
+    priority: 24,
+  },
 ];
 
 const confidenceGates = [
