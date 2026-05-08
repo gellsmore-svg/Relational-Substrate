@@ -163,6 +163,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.1 if passed, -0.5 if failed',
     priority: 13,
   },
+  {
+    area: 'Electromagnetic conductor/dielectric media',
+    currentFrontier: 'post-EM-07 material-media electrostatic pressure test',
+    externalAnchor:
+      'Compare ideal parallel-plate capacitance, dielectric field reduction, conductor interior screening, and dielectric energy-density consistency against standard electrostatics.',
+    passSignal:
+      'The same route/closure/phase/charge/continuity grammar handles dielectric dilution and conductor screening without adding a new electromagnetic vocabulary.',
+    failSignal:
+      'The grammar survives point-charge electrostatics but cannot reproduce simple conductor or dielectric media constraints.',
+    confidenceImpact: '+0.1 if passed, -0.5 if failed',
+    priority: 14,
+  },
 ];
 
 const confidenceGates = [
