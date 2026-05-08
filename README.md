@@ -425,6 +425,14 @@ npm run benchmark:em-diffraction-grating
 
 This compares the grating equation, first-order red/violet angular dispersion, central-order non-dispersion, positive/negative order symmetry, order cutoff, and screen-position scaling. It is a scalar grating-equation comparator, not a finite-envelope, blaze-efficiency, broadband-intensity, vector-diffraction, radiation-generation, or Maxwell-equation optics model.
 
+Run the external EM-16 single-slit envelope comparator with:
+
+```bash
+npm run benchmark:em-single-slit-envelope
+```
+
+This compares single-slit minima, the sinc-squared intensity envelope, central maximum, side-lobe relative intensity, wavelength scaling, slit-width scaling, symmetry, and screen-position mapping. It is a scalar Fraunhofer single-slit comparator, not double-slit interference, grating combs, vector diffraction, broadband intensity prediction, radiation generation, or Maxwell-equation optics.
+
 Run the external silicate held-out benchmark with:
 
 ```bash

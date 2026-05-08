@@ -72,6 +72,7 @@
     "benchmark:em-absorbing-media": "node analysis/external-em-absorbing-media-comparator.mjs",
     "benchmark:em-rough-surface-scatter": "node analysis/external-em-rough-surface-scatter-comparator.mjs",
     "benchmark:em-diffraction-grating": "node analysis/external-em-diffraction-grating-comparator.mjs",
+    "benchmark:em-single-slit-envelope": "node analysis/external-em-single-slit-envelope-comparator.mjs",
     "benchmark:silicate-heldout": "node analysis/external-silicate-heldout-benchmark.mjs",
     "benchmark:roughness-heldout": "node analysis/external-roughness-heldout-benchmark.mjs",
     "benchmark:material-nbo": "node analysis/external-material-nbo-quantitative-benchmark.mjs",

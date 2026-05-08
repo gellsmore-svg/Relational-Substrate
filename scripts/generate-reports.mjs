@@ -44,6 +44,7 @@ const reportSteps = [
   'benchmark:em-absorbing-media',
   'benchmark:em-rough-surface-scatter',
   'benchmark:em-diffraction-grating',
+  'benchmark:em-single-slit-envelope',
   'benchmark:silicate-heldout',
   'benchmark:roughness-heldout',
   'benchmark:material-nbo',

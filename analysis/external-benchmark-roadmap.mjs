@@ -259,6 +259,18 @@ const benchmarkTargets = [
     confidenceImpact: '+0.1 if passed, -0.6 if failed',
     priority: 21,
   },
+  {
+    area: 'Electromagnetic single-slit envelope',
+    currentFrontier: 'post-EM-15 finite-aperture diffraction-envelope pressure test',
+    externalAnchor:
+      'Compare single-slit minima, sinc-squared intensity envelope, central maximum, side-lobe relative intensity, wavelength scaling, slit-width scaling, symmetry, and screen-position mapping against standard single-slit Fraunhofer optics.',
+    passSignal:
+      'The same route/closure/phase/charge/continuity grammar handles finite-aperture envelope intensity without adding a new electromagnetic vocabulary.',
+    failSignal:
+      'The grammar survives grating order positions but cannot reproduce finite-aperture diffraction-envelope constraints.',
+    confidenceImpact: '+0.1 if passed, -0.6 if failed',
+    priority: 22,
+  },
 ];
 
 const confidenceGates = [
