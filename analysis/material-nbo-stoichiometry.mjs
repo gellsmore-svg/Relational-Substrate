@@ -7,7 +7,7 @@ const cases = [
     formula: 'SiO2',
     materialType: 'fully polymerized silica network',
     networkFormers: { Si: 1, Al: 0 },
-    modifiers: { Na: 0, Ca: 0, Mg: 0 },
+    modifiers: { Na: 0, K: 0, Ca: 0, Mg: 0 },
     oxygen: 2,
     expectedNboT: 0,
     expectedChargeBalancedAl: 0,
@@ -16,7 +16,7 @@ const cases = [
     formula: 'Na2SiO3',
     materialType: 'sodium metasilicate network',
     networkFormers: { Si: 1, Al: 0 },
-    modifiers: { Na: 2, Ca: 0, Mg: 0 },
+    modifiers: { Na: 2, K: 0, Ca: 0, Mg: 0 },
     oxygen: 3,
     expectedNboT: 2,
     expectedChargeBalancedAl: 0,
@@ -25,7 +25,7 @@ const cases = [
     formula: 'NaAlSi3O8',
     materialType: 'charge-balanced aluminosilicate network',
     networkFormers: { Si: 3, Al: 1 },
-    modifiers: { Na: 1, Ca: 0, Mg: 0 },
+    modifiers: { Na: 1, K: 0, Ca: 0, Mg: 0 },
     oxygen: 8,
     expectedNboT: 0,
     expectedChargeBalancedAl: 1,
@@ -34,10 +34,19 @@ const cases = [
     formula: 'CaAl2Si2O8',
     materialType: 'charge-balanced calcium aluminosilicate framework',
     networkFormers: { Si: 2, Al: 2 },
-    modifiers: { Na: 0, Ca: 1, Mg: 0 },
+    modifiers: { Na: 0, K: 0, Ca: 1, Mg: 0 },
     oxygen: 8,
     expectedNboT: 0,
     expectedChargeBalancedAl: 2,
+  },
+  {
+    formula: 'KAlSi3O8',
+    materialType: 'charge-balanced potassium aluminosilicate framework',
+    networkFormers: { Si: 3, Al: 1 },
+    modifiers: { Na: 0, K: 1, Ca: 0, Mg: 0 },
+    oxygen: 8,
+    expectedNboT: 0,
+    expectedChargeBalancedAl: 1,
   },
 ];
 
@@ -46,11 +55,11 @@ function round(value, places = 4) {
 }
 
 function modifierCharge(modifiers) {
-  return modifiers.Na + modifiers.Ca * 2 + modifiers.Mg * 2;
+  return modifiers.Na + modifiers.K + modifiers.Ca * 2 + modifiers.Mg * 2;
 }
 
 function monovalentModifierCharge(modifiers) {
-  return modifiers.Na;
+  return modifiers.Na + modifiers.K;
 }
 
 function divalentModifierCharge(modifiers) {
@@ -121,6 +130,17 @@ const checks = [
     pass:
       rows.find((row) => row.formula === 'CaAl2Si2O8').nboT === 0 &&
       rows.find((row) => row.formula === 'CaAl2Si2O8').chargeBalancedAl === 2,
+  },
+  {
+    check: 'Orthoclase-like potassium aluminosilicate charge balances Al without NBO excess',
+    formula: 'KAlSi3O8',
+    expected: 'NBO/T 0 and one charge-balanced Al',
+    modelValue: `NBO/T ${rows.find((row) => row.formula === 'KAlSi3O8').nboT}; charge-balanced Al ${
+      rows.find((row) => row.formula === 'KAlSi3O8').chargeBalancedAl
+    }`,
+    pass:
+      rows.find((row) => row.formula === 'KAlSi3O8').nboT === 0 &&
+      rows.find((row) => row.formula === 'KAlSi3O8').chargeBalancedAl === 1,
   },
 ];
 
