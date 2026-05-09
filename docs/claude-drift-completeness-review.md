@@ -15,7 +15,7 @@ Review this as an external critique packet for the Relational Substrate sandbox.
 | Cross-domain equivalence | 5.7/10 |
 | Unification thesis support | 5.2/10 |
 | Benchmark passes | 29/30 |
-| Checks passed | 187/191 |
+| Checks passed | 187/192 |
 | Core independent evidence lines | 7 |
 | Orientation-only evidence lines | 1 |
 
@@ -40,7 +40,7 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 | ionic solid ordering | 1 | 3/3 | charge, closure, continuity | core evidence |
 | orientation-only boundary phase | 1 | 3/3 | route, phase, continuity | orientation-only |
 | electromagnetic field geometry/topology | 17 | 131/131 | route, closure, phase, continuity, charge | core evidence |
-| network/material structure | 3 | 15/18 | charge, closure, continuity | core evidence |
+| network/material structure | 3 | 15/19 | charge, closure, continuity | core evidence |
 | rough optical/interface ordering | 2 | 13/13 | route, phase, continuity, closure | core evidence |
 
 ## EM-17 Checks
@@ -62,7 +62,7 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 
 ## Drift Audit Targets
 
-- Benchmark scope: pass. The aggregate now includes an explicit unresolved material refractive-index challenge with a first-pass topology-only predictor, a target-implied repair candidate that fails fresh anorthite validation, and a second-generation modifier-identity candidate that fits current rows but remains target-informed calibration debt. Reviewers should verify that neither candidate is treated as a hidden material-property pass.
+- Benchmark scope: pass. The aggregate now includes an explicit unresolved material refractive-index challenge with a first-pass topology-only predictor, a target-implied repair candidate that fails fresh anorthite validation, and a second-generation modifier-identity candidate that fails fresh orthoclase validation. Reviewers should verify that neither candidate is treated as a hidden material-property pass.
 - EM evidence independence: review. EM-02 through EM-17 are depth checks inside one electromagnetic evidence line, not separate independent domains. They should increase confidence in grammar breadth within EM but should not be counted as independent cross-domain evidence.
 - Double-slit completeness: pass. EM-17 covers scalar bright/dark fringe positions, finite-slit modulation, missing-order suppression, symmetry, scaling, and screen mapping. It deliberately excludes vector diffraction, broadband intensities, resolving power, radiation generation, and Maxwell solving.
 - Confidence drift: pass. The confidence posture remains conservative after adding calibrated roughness scatter and an unresolved material-property challenge: inferential convergence is 6.25/10 and unification support is 5.2/10. This keeps scalar EM depth, imported smooth-surface TIS accounting, and NBO/T composition accounting from being counted as near-decisive evidence.
@@ -79,13 +79,13 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 - Check whether confidence increments after EM-15 through EM-17 are modest enough for scalar analytic optics comparators.
 - Confirm that the recalibrated confidence score stays near 6/10 until a calibrated material-property prediction, measured scatter curve, or held-out absolute torsion transfer passes.
 - Confirm that the material refractive-index row is treated as an unresolved measured-property challenge, not as a benchmark pass.
-- Check whether the second-generation modifier-identity refractive-index candidate is sufficiently predeclared for the next held-out target, and whether it still omits required variables such as density, cation field strength, molar refraction, or polarizability.
+- Check whether the failed orthoclase validation is treated as a structural K/Na framework-response miss, and whether the next refractive-index revision needs density, cation field strength, molar refraction, or polarizability rather than another target-fitted coefficient.
 - Identify any missing source citations or comparator assumptions that should be made explicit before external review.
 - Recommend the next falsification-oriented benchmark, prioritizing calibrated quantities or held-out cases over more same-family EM depth checks.
 
 ## Remaining Gates
 
-- Validate the second-generation modifier-identity refractive-index candidate on a new held-out material composition before promotion.
+- Replace or revise the failed modifier-identity refractive-index candidate only after documenting orthoclase as a structural K/Na framework-response miss; validate any revision on a new held-out material before promotion.
 - Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
 - Move calibrated roughness/interface checks beyond smooth-surface TIS into BRDF/PSD, measured scatter curves, or broadband surface response.
 - Move EM-17 from scalar double-slit envelope coupling toward resolving power, broadband intensities, vector diffraction, or radiation generation.
@@ -164,6 +164,7 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 - PubChem Sodium Silicate, CID 23266: https://pubchem.ncbi.nlm.nih.gov/compound/23266. Lists index of refraction 1.520 for sodium silicate glass from HSDB/Merck Index.
 - Mindat, Albite mineral information: https://www.mindat.org/min-96.html. Lists albite optical RI ranges n-alpha 1.528-1.533, n-beta 1.5317-1.53685, and n-gamma 1.538-1.542; scalar target uses the mean of range midpoints.
 - Mindat, Anorthite mineral information: https://www.mindat.org/min-246.html. Lists anorthite optical RI ranges n-alpha 1.573-1.577, n-beta 1.58-1.585, and n-gamma 1.585-1.59; scalar target uses the mean of range midpoints.
+- Mindat, Orthoclase mineral information: https://www.mindat.org/min-3026.html. Lists orthoclase optical RI ranges n-alpha 1.518-1.520, n-beta 1.522-1.524, and n-gamma 1.522-1.525; scalar target uses the mean of range midpoints.
 
 ## File Context
 

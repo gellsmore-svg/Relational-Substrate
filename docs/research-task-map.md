@@ -1,8 +1,8 @@
 # Relational Substrate Research Task Map
 
-Last updated: 2026-05-08
+Last updated: 2026-05-09
 Current branch: `main`
-Latest validation state: see latest commit on `main`; this map reflects the second-generation modifier-identity candidate state.
+Latest validation state: see latest commit on `main`; this map reflects the orthoclase held-out failure of the second-generation modifier-identity candidate.
 
 ## Current Status
 
@@ -12,7 +12,7 @@ Latest validation state: see latest commit on `main`; this map reflects the seco
 | External benchmark completion | 100% |
 | Benchmark target coverage | 30/24 |
 | Benchmark passes | 29/30 (96.7%) |
-| Checks passed | 187/191 (97.9%) |
+| Checks passed | 187/192 (97.4%) |
 | Core independent evidence lines | 7 |
 | Orientation-only evidence lines | 1 |
 | Grammar internal coherence | 8/10 |
@@ -38,12 +38,12 @@ Current status:
 | Item | State |
 |---|---|
 | Benchmark status | measured material refractive-index challenge unresolved |
-| Benchmark score | 7/10 |
+| Benchmark score | 7/11 |
 | Primary proxy | `n = 1.46 + 0.02*NBO/T - 0.004*chargeBalancedAl` |
 | First repair candidate | `n = 1.46 + 0.03*NBO/T + 0.075*chargeBalancedAl` |
 | First repair status | failed fresh anorthite validation; not promotable |
 | Second-generation candidate | `n = 1.46 + 0.03*NBO/T + 0.075*chargeBalancedAl - 0.014*divalentModifierCharge` |
-| Second-generation status | fits current rows; target-informed after anorthite; quarantined pending new held-out validation |
+| Second-generation status | failed fresh orthoclase validation; not promotable |
 
 Measured targets:
 
@@ -53,6 +53,7 @@ Measured targets:
 | Na2SiO3 | sodium silicate glass | modifier/NBO pressure | 1.52 | 1.5 | 1.52 | 1.52 | primary fails; candidates fit |
 | NaAlSi3O8 | albite feldspar | held-out framework pressure | 1.53493 | 1.456 | 1.535 | 1.535 | primary collapses framework; candidates fit |
 | CaAl2Si2O8 | anorthite feldspar | fresh first-repair validation | 1.58167 | 1.452 | 1.61 | 1.582 | primary fails; first repair fails; second-generation fits current rows but is not validation |
+| KAlSi3O8 | orthoclase feldspar | fresh second-generation validation | 1.52183 | 1.456 | 1.535 | 1.535 | second-generation overpredicts by 0.01317; fails 0.01 tolerance |
 
 Source anchors:
 
@@ -60,6 +61,7 @@ Source anchors:
 - Na2SiO3: PubChem sodium silicate HSDB/Merck Index property record.
 - NaAlSi3O8: Mindat albite optical RI ranges.
 - CaAl2Si2O8: Mindat anorthite optical RI ranges.
+- KAlSi3O8: Mindat orthoclase optical RI ranges.
 
 ## Why The Current Repair Failed
 
@@ -79,18 +81,24 @@ The current second-generation candidate adds a crude divalent-modifier correctio
 n = 1.46 + 0.03*NBO/T + 0.075*chargeBalancedAl - 0.014*divalentModifierCharge
 ```
 
-This fits the current measured rows, including CaAl2Si2O8, but it was introduced after the anorthite failure. It is calibration debt, not a benchmark pass. The candidate must be treated as predeclared only for the next source-anchored held-out material selected after this point.
+This fit the measured rows available when it was introduced, including CaAl2Si2O8, but it failed the fresh orthoclase held-out row:
+
+| Formula | Candidate prediction | Measured RI | Error | Tolerance |
+|---|---:|---:|---:|---:|
+| KAlSi3O8 | 1.535 | 1.52183 | 0.01317 | 0.01 |
+
+The failure is narrow but real under the predeclared tolerance. Treat it as a structural K/Na framework-response miss, not as a source problem.
 
 ## Next Tasks
 
-1. Validate the second-generation refractive-index candidate on a new held-out material.
-   - The candidate variable is now modifier identity through `divalentModifierCharge`.
-   - Do not promote it unless the exact current coefficients clear the new target.
-   - If it fails, update the report as a structural limitation rather than fitting another current-row coefficient.
+1. Diagnose the orthoclase miss without refitting immediately.
+   - Candidate missing variables: K/Na cation field strength, molar refraction, density, cation polarizability, or feldspar framework packing.
+   - Do not add a new coefficient unless the next revision is declared before a new held-out target.
+   - Keep the second-generation modifier-identity candidate failed and quarantined.
 
-2. Select and add one new held-out refractive-index material for the already chosen predictor form.
+2. If revising the refractive-index model, predeclare the revised equation and then add a new held-out material.
    - Recommended class: another feldspar or silicate with simple stoichiometry that the NBO/T model can represent.
-   - The next row must be selected and source-anchored before checking whether the second-generation equation passes it.
+   - The next row must be selected and source-anchored before checking whether the revised equation passes it.
 
 3. Keep current confidence capped.
    - Do not raise inferential convergence above 6.25/10 until a measured material-property prediction passes without endpoint fitting.
