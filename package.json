@@ -51,6 +51,7 @@
     "model:assumptions": "node analysis/model-assumptions.mjs",
     "model:frontier": "node analysis/model-frontier-report.mjs",
     "model:external-roadmap": "node analysis/external-benchmark-roadmap.mjs",
+    "model:sensitivity": "node analysis/model-sensitivity-analysis.mjs",
     "benchmark:h2o2": "node analysis/external-h2o2-benchmark.mjs",
     "benchmark:h2o2-quant": "node analysis/external-h2o2-quantitative-benchmark.mjs",
     "benchmark:h2o2-absolute": "node analysis/external-h2o2-absolute-barrier-benchmark.mjs",

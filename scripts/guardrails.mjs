@@ -26,6 +26,7 @@ const checks = [
   'analysis/ri-pure-ca-si-o-source-exhaustion-screen.mjs',
   'analysis/external-material-refractive-index-challenge.mjs',
   'analysis/material-nbo-stoichiometry.mjs',
+  'analysis/model-sensitivity-analysis.mjs',
   'scripts/generate-reports.mjs',
 ];
 
