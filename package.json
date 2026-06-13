@@ -92,6 +92,7 @@
     "review:claude-drift-completeness": "node analysis/claude-drift-completeness-review.mjs",
     "reports": "node scripts/generate-reports.mjs",
     "evidence:ledger": "node analysis/evidence-ledger.mjs",
+    "gate:check": "node analysis/predeclaration-gate.mjs",
     "guardrails": "node scripts/guardrails.mjs"
   },
   "dependencies": {

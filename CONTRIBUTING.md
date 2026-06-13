@@ -30,7 +30,9 @@ The following practices are now encouraged for all new model-form or descriptor 
 
 - **Predeclaration**: Any new predictor or model form must explicitly declare the allowed descriptors (ideally from analysis/descriptor-registry.json or an extension) *before* any target is scored.
 - **Conventional baselines**: Every material-property or optical report must include a clean, non-endpoint-fitted conventional comparator (e.g. density + Lorentz-Lorenz) reported side-by-side. Conventional terms must be labelled as such and never counted as substrate evidence.
+- **Predeclaration gate (enforced)**: New scoring work must go through the hard gate in `analysis/predeclaration-gate.mjs` — call `predeclare({ target, modelForm, descriptors, heldOut })` then `requireScoringGate(...)` *before* scoring, and emit `formatPredeclaration(record)` into the report. The gate throws on unregistered descriptors (#1) or a missing conventional comparator (#2). Verify it with `npm run gate:check`; `npm run guardrails` also runs its self-test. (Retrofitting the existing RI chain is a separate change; this is the required path for new work.)
 - **Descriptor registry & provenance**: Prefer descriptors registered with units, extraction rules, and source requirements. Lock primary data rows (CIF + measured n + density) before prediction.
+- **Evidence ledger**: After regenerating reports, run `npm run evidence:ledger` to consolidate the cross-track accounting and flag any drift between declared (task map) and computed (summary) headline numbers.
 - **Guardrails script**: Run `npm run guardrails` (or `node scripts/guardrails.mjs`) as part of pre-PR checks when touching analysis or reports.
 
 These strengthen the existing "predeclare before score" and "held-out + conventional comparator" discipline without relaxing ontology boundaries.

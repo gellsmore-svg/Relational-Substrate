@@ -16,6 +16,7 @@ import { readFile } from 'node:fs/promises';
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
+import { runGateSelfTest } from '../analysis/predeclaration-gate.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -28,6 +29,7 @@ const checks = [
   'analysis/material-nbo-stoichiometry.mjs',
   'analysis/model-sensitivity-analysis.mjs',
   'analysis/evidence-ledger.mjs',
+  'analysis/predeclaration-gate.mjs',
   'scripts/generate-reports.mjs',
 ];
 
@@ -70,6 +72,20 @@ async function main() {
   } catch (e) {
     console.log('  ! No analysis/descriptor-registry.json found or unreadable. Consider creating one for new model forms.');
     // Not fatal — registry is a new recommendation
+  }
+
+  // Predeclaration + conventional-baseline gate self-test (#1/#2): prove the
+  // hard gate still rejects unregistered descriptors and a missing baseline.
+  console.log('\nPredeclaration gate (#1/#2) self-test:');
+  try {
+    const { passed, results } = runGateSelfTest();
+    for (const r of results) {
+      console.log(`  ${r.ok ? '✓' : '✗'} ${r.name}${r.ok ? '' : ` — ${r.detail}`}`);
+    }
+    if (!passed) allGood = false;
+  } catch (e) {
+    console.log(`  ! gate self-test could not run: ${e.message}`);
+    allGood = false;
   }
 
   console.log('\nProcess reminders (from review):');
