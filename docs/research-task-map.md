@@ -1,6 +1,6 @@
 # Relational Substrate Research Task Map
 
-Last updated: 2026-05-17
+Last updated: 2026-06-13
 Current branch: `main`
 Latest validation state: see latest RI chain output; this map now reflects the post-orthoclase Ca-scaffold topology-gate sequence through Ca-scaffold model-form quarantine.
 
@@ -16,12 +16,14 @@ Latest validation state: see latest RI chain output; this map now reflects the p
 | Core independent evidence lines | 7 |
 | Orientation-only evidence lines | 1 |
 | Grammar internal coherence | 8/10 |
-| Cross-domain equivalence | 5.7/10 |
+| Cross-domain equivalence | 5.2/10 |
 | Evidence independence | 4.5/10 |
-| Unification thesis support | 5.2/10 |
-| Inferential convergence | 6.25/10 |
+| Unification thesis support | 4.8/10 |
+| Inferential convergence | 5.6/10 |
 
-Read confidence as inferential convergence, not proof. The current posture is deliberately held near 6/10 because the material-property gate is unresolved and EM depth remains mostly scalar analytic evidence inside one electromagnetic evidence line.
+Read confidence as inferential convergence, not proof. The current posture is deliberately held near 5.6/10 — below the 6.25 cap — because the material-property gate is unresolved, the heteroatom-torsion (disulfane / H-Se-Se-H) trans-side transfer failed under held constants, and EM depth remains mostly scalar analytic evidence inside one electromagnetic evidence line.
+
+> Reconciled 2026-06-13: the /10 confidence metrics above were updated to match the regenerated `analysis/out/external-benchmark-summary.json` (the doc had drifted high — it previously read inferential convergence 6.25, cross-domain 5.7, unification 5.2). 6.25 was the **cap**, not the computed value; the computed inferential convergence stepped down to 5.6 after the heteroatom-torsion trans-side failures. Regenerate with `npm run reports` and audit drift with `npm run evidence:ledger`.
 
 ## Current Blocking Gate
 
