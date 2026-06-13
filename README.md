@@ -518,3 +518,16 @@ This rebuilds the ignored `analysis/out/` artifacts in dependency order, ending 
 The geometry is a visual grammar only.
 
 No mesh, curve, tube, point, or rendered object should be read as a literal substrate cell.
+
+## Books and Core Manuscripts
+
+The primary texts of the framework are maintained in the `books/` directory:
+
+- `books/relational-substrate.md` — Technical ontology volume (*The Relational Substrate*)
+- `books/coherent-biblical-ontology-bachelors.md` — Coherent Biblical Ontology (Bachelor's Edition)
+
+These contain the full current statements of the RS (Relational Substrate) framework, including the rename from the earlier AMS terminology and the explicit transformation tier.
+
+See `books/README.md` for details and reading guidance.
+
+The conceptual work is developed alongside this sandbox implementation. The topology-sandbox (in `src/`) and analysis outputs provide the modelling and validation layer for the ontology described in the books.
