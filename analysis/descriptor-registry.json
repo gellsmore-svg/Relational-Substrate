@@ -1,0 +1,65 @@
+{
+  "version": "0.1.0",
+  "description": "Pre-declared descriptors for model forms. Source-locked only. Used to enforce predeclaration before any target scoring.",
+  "descriptors": [
+    {
+      "id": "ca_coordination",
+      "name": "Mean Ca coordination number",
+      "units": "dimensionless",
+      "extraction": "From CIF: average coordination of Ca sites using standard Voronoi or distance cutoff (document cutoff)",
+      "source_requirement": "Primary CIF from COD or equivalent with structure quality flags",
+      "conventional": false,
+      "notes": "Core structural gate for Ca-bearing silicates. Must be predeclared with exact extraction algorithm before use in any predictor."
+    },
+    {
+      "id": "mean_ca_o_distance",
+      "name": "Mean Ca–O distance",
+      "units": "Å",
+      "extraction": "Average of all Ca–O bond lengths in the coordination polyhedra",
+      "source_requirement": "Same CIF as ca_coordination",
+      "conventional": false,
+      "notes": "Paired with coordination. Thresholds (e.g. ≥2.53 Å) must be justified from source data before model form freeze."
+    },
+    {
+      "id": "t_site_polarizability",
+      "name": "T-site polarizability proxy",
+      "units": "arbitrary (field-strength weighted)",
+      "extraction": "Cation field strength delta × charge balance factor for T-site occupants (Al, Si, etc.)",
+      "source_requirement": "CIF + standard ionic radii table (cite source)",
+      "conventional": false,
+      "notes": "Replaces ad-hoc Al/O terms. Must be versioned with the radii table used."
+    },
+    {
+      "id": "silicate_connectivity",
+      "name": "Silicate unit connectivity class",
+      "units": "categorical (orthosilicate, sorosilicate, etc.)",
+      "extraction": "Topology classification from CIF (Q^n species or ring/chain classification)",
+      "source_requirement": "Full CIF with atom connectivity",
+      "conventional": false,
+      "notes": "Key for distinguishing melilite vs. non-melilite Ca3Si2O7 polymorphs."
+    },
+    {
+      "id": "density",
+      "name": "Measured or calculated density",
+      "units": "g/cm³",
+      "extraction": "Measured value preferred; calculated only when measured unavailable with full provenance",
+      "source_requirement": "Primary literature or database with citation and temperature",
+      "conventional": true,
+      "notes": "Always labelled as conventional control evidence. Never promoted as substrate-specific support."
+    },
+    {
+      "id": "lorentz_lorenz",
+      "name": "Lorentz-Lorenz molar refraction term",
+      "units": "cm³/mol",
+      "extraction": "(n²-1)/(n²+2) × molar volume",
+      "source_requirement": "Paired measured n and density",
+      "conventional": true,
+      "notes": "Primary conventional optical comparator. All substrate-inspired terms must be shown to add value over this baseline on held-out targets."
+    }
+  ],
+  "rules": {
+    "predeclaration": "Any new model form or predictor must declare the exact subset of descriptors from this registry (or an extension PR) before scoring any target.",
+    "conventional_labelling": "All entries with 'conventional': true must be reported as control comparators and never counted toward unification or substrate evidence.",
+    "source_lock": "No descriptor may be used in a scored prediction unless a primary source (CIF + optical + density) for the target has been pre-reserved and classified under these descriptors."
+  }
+}

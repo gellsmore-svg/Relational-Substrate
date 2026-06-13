@@ -24,6 +24,8 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
+    "test": "npm run reports && npm run build",
+    "test:visual": "npm run verify",
     "preview": "vite preview --host 0.0.0.0",
     "verify": "node scripts/verify-canvas.mjs",
     "sweep": "node analysis/sweep-coherence.mjs",
@@ -53,6 +55,10 @@
     "benchmark:h2o2-quant": "node analysis/external-h2o2-quantitative-benchmark.mjs",
     "benchmark:h2o2-absolute": "node analysis/external-h2o2-absolute-barrier-benchmark.mjs",
     "benchmark:hydrazine-cation": "node analysis/external-hydrazine-cation-torsion-benchmark.mjs",
+    "benchmark:disulfane-prelookup": "node analysis/disulfane-heteroatom-rotor-prelookup.mjs",
+    "benchmark:disulfane-comparison": "node analysis/disulfane-heteroatom-rotor-comparison.mjs",
+    "benchmark:selenane-prelookup": "node analysis/selenane-heteroatom-rotor-prelookup.mjs",
+    "benchmark:selenane-comparison": "node analysis/selenane-heteroatom-rotor-comparison.mjs",
     "benchmark:ethane": "node analysis/external-ethane-benchmark.mjs",
     "benchmark:ethane-quant": "node analysis/external-ethane-quantitative-benchmark.mjs",
     "benchmark:ionic": "node analysis/external-ionic-benchmark.mjs",
@@ -78,11 +84,13 @@
     "benchmark:roughness-heldout": "node analysis/external-roughness-heldout-benchmark.mjs",
     "benchmark:material-nbo": "node analysis/external-material-nbo-quantitative-benchmark.mjs",
     "benchmark:material-refractive-index": "node analysis/external-material-refractive-index-challenge.mjs",
+    "benchmark:ri-cation-response": "node analysis/ri-cation-response-validation.mjs",
     "benchmark:roughness-calibrated-scatter": "node analysis/external-roughness-calibrated-scatter-benchmark.mjs",
     "benchmark:summary": "node analysis/external-benchmark-summary.mjs",
     "milestone:external-review": "node analysis/milestone-external-review-summary.mjs",
     "review:claude-drift-completeness": "node analysis/claude-drift-completeness-review.mjs",
-    "reports": "node scripts/generate-reports.mjs"
+    "reports": "node scripts/generate-reports.mjs",
+    "guardrails": "node scripts/guardrails.mjs"
   },
   "dependencies": {
     "three": "^0.165.0",

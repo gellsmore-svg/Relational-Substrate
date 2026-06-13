@@ -22,6 +22,18 @@ Good contributions usually do one of the following:
 - Improve reproducibility of `npm run reports`.
 - Improve review documentation without strengthening claims beyond evidence.
 - Add a non-molecular/material validation target that exercises the unification thesis.
+- Add tooling or process improvements that strengthen predeclaration, provenance, guardrails, or conventional baseline visibility (see recommendations in .restart.md and research-task-map.md).
+
+## Process Improvements (adopted from 2026-06 review)
+
+The following practices are now encouraged for all new model-form or descriptor work:
+
+- **Predeclaration**: Any new predictor or model form must explicitly declare the allowed descriptors (ideally from analysis/descriptor-registry.json or an extension) *before* any target is scored.
+- **Conventional baselines**: Every material-property or optical report must include a clean, non-endpoint-fitted conventional comparator (e.g. density + Lorentz-Lorenz) reported side-by-side. Conventional terms must be labelled as such and never counted as substrate evidence.
+- **Descriptor registry & provenance**: Prefer descriptors registered with units, extraction rules, and source requirements. Lock primary data rows (CIF + measured n + density) before prediction.
+- **Guardrails script**: Run `npm run guardrails` (or `node scripts/guardrails.mjs`) as part of pre-PR checks when touching analysis or reports.
+
+These strengthen the existing "predeclare before score" and "held-out + conventional comparator" discipline without relaxing ontology boundaries.
 
 ## Before Opening a Pull Request
 
