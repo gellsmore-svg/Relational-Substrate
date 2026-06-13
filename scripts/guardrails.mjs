@@ -27,6 +27,7 @@ const checks = [
   'analysis/external-material-refractive-index-challenge.mjs',
   'analysis/material-nbo-stoichiometry.mjs',
   'analysis/model-sensitivity-analysis.mjs',
+  'analysis/evidence-ledger.mjs',
   'scripts/generate-reports.mjs',
 ];
 

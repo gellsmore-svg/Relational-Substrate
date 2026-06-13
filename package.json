@@ -91,6 +91,7 @@
     "milestone:external-review": "node analysis/milestone-external-review-summary.mjs",
     "review:claude-drift-completeness": "node analysis/claude-drift-completeness-review.mjs",
     "reports": "node scripts/generate-reports.mjs",
+    "evidence:ledger": "node analysis/evidence-ledger.mjs",
     "guardrails": "node scripts/guardrails.mjs"
   },
   "dependencies": {
