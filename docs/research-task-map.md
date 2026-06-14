@@ -12,7 +12,7 @@ Latest validation state: see latest RI chain output; this map now reflects the p
 | External benchmark completion | 100% |
 | Benchmark target coverage | 30/24 |
 | Benchmark passes | 29/30 (96.7%) |
-| Checks passed | 187/192 (97.4%) |
+| Checks passed | 190/202 (94.1%) |
 | Core independent evidence lines | 7 |
 | Orientation-only evidence lines | 1 |
 | Grammar internal coherence | 8/10 |
