@@ -91,6 +91,8 @@ const els = {
   storage: document.querySelector('#storage'),
   scatter: document.querySelector('#scatter'),
   reseat: document.querySelector('#reseat'),
+  exportButton: document.querySelector('#export-case'),
+  exportOutput: document.querySelector('#export-output'),
 };
 
 const outputs = {
@@ -329,6 +331,36 @@ document.querySelectorAll('.scenario').forEach((button) => {
 [els.closedForm, els.transientForm, els.boundary, els.route, els.storage, els.scatter, els.reseat].forEach((control) => {
   control.addEventListener('input', updateStateFromControls);
 });
+
+// #8 UI->analysis round-trip: export the exact current case as JSON in the
+// same shape analysis scripts/the chain runner consume (calculateOutcome
+// input). Replay with `npm run case:run -- case.json`.
+function currentCase() {
+  return {
+    schema: 'rs-sandbox-case/v1',
+    scenario: state.scenario,
+    closedForm: state.closedForm,
+    transientForm: state.transientForm,
+    boundary: state.boundary,
+    route: state.route,
+    storage: state.storage,
+    scatter: state.scatter,
+    reseat: state.reseat,
+  };
+}
+
+if (els.exportButton && els.exportOutput) {
+  els.exportButton.addEventListener('click', () => {
+    const json = JSON.stringify(currentCase(), null, 2);
+    els.exportOutput.value = json;
+    els.exportOutput.hidden = false;
+    els.exportOutput.focus();
+    els.exportOutput.select();
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(json).catch(() => {});
+    }
+  });
+}
 
 function resize() {
   const rect = canvas.getBoundingClientRect();

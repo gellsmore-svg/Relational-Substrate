@@ -93,6 +93,7 @@
     "reports": "node scripts/generate-reports.mjs",
     "evidence:ledger": "node analysis/evidence-ledger.mjs",
     "gate:check": "node analysis/predeclaration-gate.mjs",
+    "case:run": "node analysis/run-exported-case.mjs",
     "guardrails": "node scripts/guardrails.mjs"
   },
   "dependencies": {

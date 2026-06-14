@@ -1,0 +1,11 @@
+{
+  "schema": "rs-sandbox-case/v1",
+  "scenario": "admit",
+  "closedForm": "trefoil",
+  "transientForm": "straight",
+  "boundary": 0.82,
+  "route": 0.78,
+  "storage": 0.18,
+  "scatter": 0.12,
+  "reseat": 0.7
+}

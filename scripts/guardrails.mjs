@@ -30,6 +30,7 @@ const checks = [
   'analysis/model-sensitivity-analysis.mjs',
   'analysis/evidence-ledger.mjs',
   'analysis/predeclaration-gate.mjs',
+  'analysis/run-exported-case.mjs',
   'scripts/generate-reports.mjs',
 ];
 

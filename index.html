@@ -109,6 +109,13 @@
           </section>
 
           <section class="notes">
+            <h2>Reproduce This Case</h2>
+            <p>Export the exact form/scenario/slider state as JSON, then replay it in batch: <code>npm run case:run -- case.json</code> (or pipe the JSON to it).</p>
+            <button id="export-case" type="button">Export case (JSON)</button>
+            <textarea id="export-output" rows="11" readonly hidden aria-label="Exported case JSON"></textarea>
+          </section>
+
+          <section class="notes">
             <h2>Visual Key</h2>
             <ul class="key-list">
               <li><b class="swatch closed"></b> closed stable order</li>
