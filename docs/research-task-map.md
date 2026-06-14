@@ -167,6 +167,15 @@ npm run build
 npm run guardrails
 ```
 
+Review tooling added 2026-06 (see `docs/process-recommendations.md`):
+
+```bash
+npm run model:sensitivity            # toy-model threshold/weight/input robustness (#5)
+npm run reports && npm run evidence:ledger   # cross-track ledger + declared-vs-computed drift (#7)
+npm run gate:check                   # predeclaration + conventional-baseline hard gate self-test (#1/#2)
+npm run case:run -- analysis/exported-case.example.json   # replay a sandbox-exported case (#8)
+```
+
 After reports regenerate, inspect:
 
 ```bash
