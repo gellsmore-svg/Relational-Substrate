@@ -685,3 +685,17 @@ Symmetric post-rescue healing for the ending snapshot metrics:
 
 The rescue layer now consistently improves three things on a rescued trace: the binary verdict, the exported ending carry, and the reported final stress/identity numbers.
 
+
+## Continuation (quality rescue heals reported final coherence)
+
+User: "continue"
+
+Symmetric addition to the post-rescue healing of the ending snapshot:
+
+- qualityRescuedFinalCoherence now in the simulate summary (proportional lift using avgPathQ for pathQBoostedPreserved rescue; smaller for memoryCarried).
+- UI trace demo updated to display it when different from the raw final coherence.
+- Sweep stabilitySearch extracts it for the adaptive explorer cases (visible in fresh data).
+- Full verification followed. Docs updated.
+
+The rescue layer now consistently improves the binary, carry, final stress/identity, *and* the final coherence number of a quality-rescued history.
+

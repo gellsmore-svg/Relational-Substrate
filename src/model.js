@@ -568,6 +568,14 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     qualityRescuedFinalIdentity = Number(clamp01(last.identityScore * (1 + 0.03 * avgMem)).toFixed(4));
   }
 
+  // Quality rescue also heals the reported final coherence (pure logic: the ending coherence number itself is gently improved when the history "counted as preserved thanks to quality").
+  let qualityRescuedFinalCoherence = Number(last.coherenceMetric.toFixed(4));
+  if (pathQBoostedPreserved) {
+    qualityRescuedFinalCoherence = Number(clamp01(last.coherenceMetric * (1 + 0.05 * avgPathQ)).toFixed(4));
+  } else if (memoryCarriedPreserved) {
+    qualityRescuedFinalCoherence = Number(clamp01(last.coherenceMetric * (1 + 0.025 * avgMem)).toFixed(4));
+  }
+
   return {
     trace,
     finalPreserved,
@@ -594,6 +602,7 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
       qualityRescuedFinalAccumContinuity,
       qualityRescuedFinalStress,
       qualityRescuedFinalIdentity,
+      qualityRescuedFinalCoherence,
     },
   };
 }

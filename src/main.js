@@ -592,6 +592,7 @@ if (els.runTraceButton && els.traceOutput) {
       (summary.qualityRescuedFinalAccumContinuity && summary.qualityRescuedFinalAccumContinuity !== (summary.finalAccumContinuity||0) ? `  rescuedFinalCarry=${summary.qualityRescuedFinalAccumContinuity}` : '') +
       (summary.qualityRescuedFinalStress && summary.qualityRescuedFinalStress !== summary.finalStress ? `  rescuedFinalStress=${summary.qualityRescuedFinalStress}` : '') +
       (summary.qualityRescuedFinalIdentity && summary.qualityRescuedFinalIdentity !== summary.finalIdentity ? `  rescuedFinalId=${summary.qualityRescuedFinalIdentity}` : '') +
+      (summary.qualityRescuedFinalCoherence && summary.qualityRescuedFinalCoherence !== summary.coherenceMetric ? `  rescuedFinalCoh=${summary.qualityRescuedFinalCoherence}` : '') +
       `\nresilience (8-step, primary=${primaryRegime}): ${regimeLine}` +
       `\nrobustness: ${robust.robustness} (min ${robust.minSurvival}/8, fullRobust=${robust.fullRobust})` +
       `\n${transLine}` +
