@@ -417,7 +417,7 @@ The required multipliers are not equal. A post-hoc single multiplier would bring
 
 ## Reading
 
-The important result is whether anti-planar release transfers without endpoint fitting. A qualitative ordering pass would reduce the overfit concern from H2O2, while a quantitative miss would still warn that the current geometry proxy is not a calibrated torsional energy model.
+The important result is whether anti-planar release transfers without endpoint fitting. A qualitative ordering pass reduces the overfit concern from H2O2, while the absolute-magnitude miss remains an explicit limitation: the current geometry proxy is not a calibrated torsional energy model and should not be counted as held-out absolute barrier validation.
 `;
 
 await writeFile(new URL('external-hydrazine-cation-torsion-benchmark.md', outDir), markdown);

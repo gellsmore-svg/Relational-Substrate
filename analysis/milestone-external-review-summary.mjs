@@ -23,6 +23,8 @@ const benchmarkFiles = [
   'external-h2o2-quantitative-benchmark.json',
   'external-h2o2-absolute-barrier-benchmark.json',
   'external-hydrazine-cation-torsion-benchmark.json',
+  'disulfane-heteroatom-rotor-comparison.json',
+  'selenane-heteroatom-rotor-comparison.json',
   'external-ethane-benchmark.json',
   'external-ethane-quantitative-benchmark.json',
   'external-ionic-benchmark.json',
@@ -55,6 +57,8 @@ const benchmarkArtifacts = (await Promise.all(benchmarkFiles.map((file) => readO
 const h2o2Quant = benchmarkArtifacts.find((artifact) => artifact.source === 'external-h2o2-quantitative-benchmark.mjs');
 const h2o2Absolute = benchmarkArtifacts.find((artifact) => artifact.source === 'external-h2o2-absolute-barrier-benchmark.mjs');
 const hydrazineCation = benchmarkArtifacts.find((artifact) => artifact.source === 'external-hydrazine-cation-torsion-benchmark.mjs');
+const disulfane = benchmarkArtifacts.find((artifact) => artifact.source === 'disulfane-heteroatom-rotor-comparison.mjs');
+const selenane = benchmarkArtifacts.find((artifact) => artifact.source === 'selenane-heteroatom-rotor-comparison.mjs');
 const materialRefractiveIndex = benchmarkArtifacts.find(
   (artifact) => artifact.source === 'external-material-refractive-index-challenge.mjs'
 );
@@ -130,7 +134,11 @@ const unificationMap = [
     conventionalDomain: 'molecular conformational chemistry',
     grammarVariables: 'route, closure, phase',
     currentReading:
-      hydrazineTransferPass
+      selenane?.status === 'fail'
+        ? 'Shows H2O2 transferred barrier equivalence and hydrazine qualitative/ratiometric transfer, but the fully predeclared fresh disulfane and H-Se-Se-H same-topology rows fail trans-side topology and magnitude under held constants. Current torsion status is cis-side magnitude transfer retained, but trans-side transfer for heavier H2X2 chalcogens is capped as not evidence-bearing under current constants.'
+        : disulfane?.status === 'fail'
+        ? 'Shows H2O2 transferred barrier equivalence and hydrazine qualitative/ratiometric transfer, but the fully predeclared fresh disulfane same-topology row fails trans-side topology and magnitude. Current torsion status is fresh validation failure with one diagnostic positive: cis side, same topology, second row.'
+        : hydrazineTransferPass
         ? 'Shows torsion-order and transferred barrier equivalence after anti-planar release, with a held-out hydrazine cation transfer pass.'
         : hydrazineOrderingPass
         ? 'Shows torsion-order and H2O2 transferred barrier equivalence after anti-planar release. Hydrazine cation gives a held-out qualitative/ratiometric pass but misses absolute barrier magnitudes, so calibration remains limited.'
@@ -186,7 +194,11 @@ const confidence = {
   unificationThesisSupportOutOf10: summary.confidence.unificationThesisSupportOutOf10,
   reading:
     materialRefractiveIndex
-      ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, calibrated roughness scatter still imports a smooth-surface approximation, EM checks still import conventional constants and ideal constraints, and the measured material refractive-index challenge is unresolved. The confidence posture is therefore calibrated around 6/10 rather than treated as near-decisive convergence.'
+      ? selenane?.status === 'fail'
+        ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, disulfane and H-Se-Se-H both fail fully predeclared fresh same-topology torsion transfer on trans-side topology and magnitude, calibrated roughness scatter still imports a smooth-surface approximation, EM checks still import conventional constants and ideal constraints, and the measured material refractive-index challenge is unresolved. The confidence posture is therefore recalibrated below 6/10 rather than treated as near-decisive convergence.'
+        : disulfane?.status === 'fail'
+        ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, disulfane fails a fully predeclared fresh same-topology torsion transfer on trans-side topology and magnitude, calibrated roughness scatter still imports a smooth-surface approximation, EM checks still import conventional constants and ideal constraints, and the measured material refractive-index challenge is unresolved. The confidence posture is therefore recalibrated below 6/10 rather than treated as near-decisive convergence.'
+        : 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, calibrated roughness scatter still imports a smooth-surface approximation, EM checks still import conventional constants and ideal constraints, and the measured material refractive-index challenge is unresolved. The confidence posture is therefore calibrated around 6/10 rather than treated as near-decisive convergence.'
       : h2o2AbsolutePass
       ? 'Internal coherence is sufficient for external review but still below final-theory confidence because the H2O2 improvement came from a post-failure grammar refinement, boundary verification remains non-timestamped, benchmark breadth is compressed, hydrazine absolute magnitudes remain low, calibrated roughness scatter still imports a smooth-surface approximation, and EM propagation/boundary/Fresnel/multilayer/absorption/roughness/diffraction/interference-envelope/media checks still import conventional constants and ideal constraints rather than deriving electrodynamics. The confidence posture is therefore calibrated around 6/10 rather than treated as near-decisive convergence.'
       : 'Internal coherence is sufficient for external review but lower than the prior 8.5/10 closure draft because H2O2 compression, boundary-verification limits, benchmark-breadth compression, and qualitative EM topology limits remain known issues. Inferential convergence has crossed 6/10 only because EM now includes continuous field-line topology; it remains moderate because the topology check is not calibrated physical property prediction or Maxwell-equation dynamics.',
@@ -214,6 +226,8 @@ const reviewPackage = {
   h2o2Compression: h2o2Quant?.metrics ?? null,
   h2o2AbsoluteTransfer: h2o2Absolute?.metrics ?? null,
   hydrazineCationTransfer: hydrazineCation?.metrics ?? null,
+  disulfaneTransfer: disulfane ?? null,
+  selenaneTransfer: selenane ?? null,
   materialRefractiveIndexChallenge: materialRefractiveIndex?.rows ?? null,
   boundaryVerification: boundaryBenchmark?.predictionManifest?.verificationStatus ?? null,
   independentEvidenceLines: summary.independentEvidenceLines,

@@ -130,6 +130,8 @@ const completenessChecklist = [
   'Confirm that the recalibrated confidence score stays near 6/10 until a calibrated material-property prediction, measured scatter curve, or held-out absolute torsion transfer passes.',
   'Confirm that the material refractive-index row is treated as an unresolved measured-property challenge, not as a benchmark pass.',
   'Check whether the failed orthoclase validation is treated as a structural K/Na framework-response miss, and whether the next refractive-index revision needs density, cation field strength, molar refraction, or polarizability rather than another target-fitted coefficient.',
+  'Confirm that the hydrazine cation absolute-magnitude miss is visible as a torsion limitation alongside orthoclase, not hidden behind the held-out ordering and ratio transfer.',
+  'Confirm that the EM evidence-line row keeps EM-17 charge non-contribution visible: charge is inactive in the scalar double-slit geometry comparator.',
   'Identify any missing source citations or comparator assumptions that should be made explicit before external review.',
   'Recommend the next falsification-oriented benchmark, prioritizing calibrated quantities or held-out cases over more same-family EM depth checks.',
 ];
@@ -230,14 +232,20 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 
 ## Independent Evidence Lines
 
-| Evidence line | Benchmarks | Checks | Grammar variables exercised | Counting status |
-|---|---:|---:|---|---|
+| Evidence line | Benchmarks | Checks | Grammar variables exercised | Counting status | Line limitation |
+|---|---:|---:|---|---|---|
 ${summary.evidenceLineSummaries
   .map(
     (line) =>
-      `| ${line.evidenceLine} | ${line.benchmarkCount} | ${line.checksPassed}/${line.checksTotal} | ${line.variables} | ${line.orientationOnly ? 'orientation-only' : 'core evidence'} |`
+      `| ${line.evidenceLine} | ${line.benchmarkCount} | ${line.checksPassed}/${line.checksTotal} | ${line.variables} | ${line.orientationOnly ? 'orientation-only' : 'core evidence'} | ${line.limitation} |`
   )
   .join('\n')}
+
+Limitation visibility notes:
+
+- Held-out heteroatom torsion transfer is not a calibrated absolute-energy pass: hydrazine cation preserves qualitative ordering and 0/180 ratio transfer, but misses absolute barrier magnitudes under the transferred ethane scale.
+- The EM evidence line includes EM-17 as scalar wave geometry. EM-17 exercises route, closure, phase, and continuity, but charge is inactive and should not be counted as a charge-dynamics contribution.
+- The material refractive-index repair candidates are calibration iterations, not validation passes. Only a predeclared equation tested on a fresh held-out row should count as material-property validation.
 
 ## EM-17 Checks
 

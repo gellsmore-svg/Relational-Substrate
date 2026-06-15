@@ -11,11 +11,11 @@ Review this as an external critique packet for the Relational Substrate sandbox.
 | Status | external anchoring sharpened: measured material refractive-index challenge unresolved |
 | Sandbox completion | 99.999% |
 | Internal coherence | 8/10 |
-| Inferential convergence | 6.25/10 |
-| Cross-domain equivalence | 5.7/10 |
-| Unification thesis support | 5.2/10 |
-| Benchmark passes | 29/30 |
-| Checks passed | 187/192 |
+| Inferential convergence | 5.6/10 |
+| Cross-domain equivalence | 5.2/10 |
+| Unification thesis support | 4.8/10 |
+| Benchmark passes | 29/33 |
+| Checks passed | 190/202 |
 | Core independent evidence lines | 7 |
 | Orientation-only evidence lines | 1 |
 
@@ -32,16 +32,22 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 
 ## Independent Evidence Lines
 
-| Evidence line | Benchmarks | Checks | Grammar variables exercised | Counting status |
-|---|---:|---:|---|---|
-| H2O2 molecular torsion | 3 | 11/11 | route, closure, phase | core evidence |
-| ethane molecular torsion | 2 | 7/7 | route, closure, phase | core evidence |
-| held-out heteroatom torsion transfer | 1 | 4/5 | route, closure, phase | core evidence |
-| ionic solid ordering | 1 | 3/3 | charge, closure, continuity | core evidence |
-| orientation-only boundary phase | 1 | 3/3 | route, phase, continuity | orientation-only |
-| electromagnetic field geometry/topology | 17 | 131/131 | route, closure, phase, continuity, charge | core evidence |
-| network/material structure | 3 | 15/19 | charge, closure, continuity | core evidence |
-| rough optical/interface ordering | 2 | 13/13 | route, phase, continuity, closure | core evidence |
+| Evidence line | Benchmarks | Checks | Grammar variables exercised | Counting status | Line limitation |
+|---|---:|---:|---|---|---|
+| H2O2 molecular torsion | 3 | 11/11 | route, closure, phase | core evidence | no additional line-level limitation beyond benchmark rows |
+| ethane molecular torsion | 2 | 7/7 | route, closure, phase | core evidence | no additional line-level limitation beyond benchmark rows |
+| held-out heteroatom torsion transfer | 3 | 7/13 | route, closure, phase | core evidence | hydrazine ordering/ratio transfer passes but absolute barrier magnitudes miss; disulfane and H-Se-Se-H fresh same-topology transfers fail trans-side topology and magnitude under held constants |
+| ionic solid ordering | 1 | 3/3 | charge, closure, continuity | core evidence | no additional line-level limitation beyond benchmark rows |
+| orientation-only boundary phase | 1 | 3/3 | route, phase, continuity | orientation-only | orientation-only; excluded from core evidence count |
+| electromagnetic field geometry/topology | 17 | 131/131 | route, closure, phase, continuity, charge | core evidence | EM-17 charge variable inactive; scalar wave-geometry depth, not charge dynamics |
+| network/material structure | 4 | 15/21 | charge, closure, continuity | core evidence | includes unresolved RI gate; repair candidates are calibration debt, not validation |
+| rough optical/interface ordering | 2 | 13/13 | route, phase, continuity, closure | core evidence | no additional line-level limitation beyond benchmark rows |
+
+Limitation visibility notes:
+
+- Held-out heteroatom torsion transfer is not a calibrated absolute-energy pass: hydrazine cation preserves qualitative ordering and 0/180 ratio transfer, but misses absolute barrier magnitudes under the transferred ethane scale.
+- The EM evidence line includes EM-17 as scalar wave geometry. EM-17 exercises route, closure, phase, and continuity, but charge is inactive and should not be counted as a charge-dynamics contribution.
+- The material refractive-index repair candidates are calibration iterations, not validation passes. Only a predeclared equation tested on a fresh held-out row should count as material-property validation.
 
 ## EM-17 Checks
 
@@ -65,7 +71,7 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 - Benchmark scope: pass. The aggregate now includes an explicit unresolved material refractive-index challenge with a first-pass topology-only predictor, a target-implied repair candidate that fails fresh anorthite validation, and a second-generation modifier-identity candidate that fails fresh orthoclase validation. Reviewers should verify that neither candidate is treated as a hidden material-property pass.
 - EM evidence independence: review. EM-02 through EM-17 are depth checks inside one electromagnetic evidence line, not separate independent domains. They should increase confidence in grammar breadth within EM but should not be counted as independent cross-domain evidence.
 - Double-slit completeness: pass. EM-17 covers scalar bright/dark fringe positions, finite-slit modulation, missing-order suppression, symmetry, scaling, and screen mapping. It deliberately excludes vector diffraction, broadband intensities, resolving power, radiation generation, and Maxwell solving.
-- Confidence drift: pass. The confidence posture remains conservative after adding calibrated roughness scatter and an unresolved material-property challenge: inferential convergence is 6.25/10 and unification support is 5.2/10. This keeps scalar EM depth, imported smooth-surface TIS accounting, and NBO/T composition accounting from being counted as near-decisive evidence.
+- Confidence drift: pass. The confidence posture remains conservative after adding calibrated roughness scatter and an unresolved material-property challenge: inferential convergence is 5.6/10 and unification support is 4.8/10. This keeps scalar EM depth, imported smooth-surface TIS accounting, and NBO/T composition accounting from being counted as near-decisive evidence.
 - Non-claim discipline: review. The milestone report explicitly says the sandbox is not proof of the theory, not T0 simulation, not vorton-to-atom derivation, and not a quantum chemistry, material property, BRDF, diffraction, roughness, Fresnel, or Maxwell solver.
 - Known weak points: review. Remaining gates still include the unresolved material refractive-index challenge, held-out torsion absolute magnitudes, roughness/interface movement beyond smooth-surface TIS, and EM movement beyond scalar double-slit envelope coupling. Hydrazine absolute-magnitude miss is the live torsion falsification pressure after the H2O2 pass.
 
@@ -73,20 +79,22 @@ EM-17 exercises route, closure, phase, and continuity. It does not exercise the 
 
 - Verify every benchmark row has an artifact, source anchor, status, score, explicit limitation, and confidence effect.
 - Check that EM-17 equations match standard scalar Fraunhofer double-slit optics: d sin(theta) = m lambda, d sin(theta) = (m + 1/2) lambda, envelope sinc(beta)^2, and missing orders where an interference maximum coincides with a single-slit minimum.
-- Confirm the report keeps breadth and depth separate: 30 benchmarks, 7 core independent evidence lines, and 1 orientation-only evidence line.
+- Confirm the report keeps breadth and depth separate: 33 benchmarks, 7 core independent evidence lines, and 1 orientation-only evidence line.
 - Confirm boundary-phase evidence remains labelled orientation-only and is not inflated into independent proof.
 - Audit whether any wording implies direct substrate proof, direct T0 simulation, or displacement of conventional models.
 - Check whether confidence increments after EM-15 through EM-17 are modest enough for scalar analytic optics comparators.
 - Confirm that the recalibrated confidence score stays near 6/10 until a calibrated material-property prediction, measured scatter curve, or held-out absolute torsion transfer passes.
 - Confirm that the material refractive-index row is treated as an unresolved measured-property challenge, not as a benchmark pass.
 - Check whether the failed orthoclase validation is treated as a structural K/Na framework-response miss, and whether the next refractive-index revision needs density, cation field strength, molar refraction, or polarizability rather than another target-fitted coefficient.
+- Confirm that the hydrazine cation absolute-magnitude miss is visible as a torsion limitation alongside orthoclase, not hidden behind the held-out ordering and ratio transfer.
+- Confirm that the EM evidence-line row keeps EM-17 charge non-contribution visible: charge is inactive in the scalar double-slit geometry comparator.
 - Identify any missing source citations or comparator assumptions that should be made explicit before external review.
 - Recommend the next falsification-oriented benchmark, prioritizing calibrated quantities or held-out cases over more same-family EM depth checks.
 
 ## Remaining Gates
 
-- Replace or revise the failed modifier-identity refractive-index candidate only after documenting orthoclase as a structural K/Na framework-response miss; validate any revision on a new held-out material before promotion.
-- Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.
+- Do not continue RI by scalar coefficient patching. Diagnose why oxygen-normalised framework-Al extrapolates feldspathoid RI too high; any next model needs a predeclared structural descriptor such as topology class, density/molar volume, or Lorentz-Lorenz-compatible molar refraction before fresh validation.
+- Do not tune torsion constants from the disulfane failure. Predeclare whether to test same-topology third-row H-Se-Se-H with constants held, switch to a different topology, or redesign cisCrowding/antiPlanarRelease as exposed calibration with a new fresh target reserved.
 - Move calibrated roughness/interface checks beyond smooth-surface TIS into BRDF/PSD, measured scatter curves, or broadband surface response.
 - Move EM-17 from scalar double-slit envelope coupling toward resolving power, broadband intensities, vector diffraction, or radiation generation.
 

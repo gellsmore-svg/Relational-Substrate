@@ -23,6 +23,8 @@ const h2o2 = await readOptionalJson('external-h2o2-benchmark.json');
 const h2o2Quant = await readOptionalJson('external-h2o2-quantitative-benchmark.json');
 const h2o2Absolute = await readOptionalJson('external-h2o2-absolute-barrier-benchmark.json');
 const hydrazineCation = await readOptionalJson('external-hydrazine-cation-torsion-benchmark.json');
+const disulfane = await readOptionalJson('disulfane-heteroatom-rotor-comparison.json');
+const selenane = await readOptionalJson('selenane-heteroatom-rotor-comparison.json');
 const ethane = await readOptionalJson('external-ethane-benchmark.json');
 const ethaneQuant = await readOptionalJson('external-ethane-quantitative-benchmark.json');
 const ionic = await readOptionalJson('external-ionic-benchmark.json');
@@ -48,6 +50,7 @@ const silicateHeldout = await readOptionalJson('external-silicate-heldout-benchm
 const roughnessHeldout = await readOptionalJson('external-roughness-heldout-benchmark.json');
 const materialNbo = await readOptionalJson('external-material-nbo-quantitative-benchmark.json');
 const materialRefractiveIndex = await readOptionalJson('external-material-refractive-index-challenge.json');
+const riCationResponse = await readOptionalJson('ri-cation-response-validation.json');
 const roughnessCalibratedScatter = await readOptionalJson('external-roughness-calibrated-scatter-benchmark.json');
 const hasH2O2AbsolutePass = h2o2Absolute?.status === 'absolute barrier pass';
 
@@ -133,6 +136,32 @@ const benchmarks = [
         ? 'held-out torsion transfer pass; still a proxy geometry, not a molecular solver'
         : 'qualitative ordering pass but quantitative barrier magnitudes are low under ethane scale',
     confidenceEffect: hydrazineCation.confidenceEffect,
+  },
+  disulfane && {
+    label: 'Disulfane same-topology heteroatom rotor transfer',
+    evidenceLine: 'held-out heteroatom torsion transfer',
+    domain: 'fresh molecular torsion topology and barrier transfer',
+    conventionalComparator: 'Koput 1996 ab initio disulfane torsional potential surface',
+    status: 'fresh validation failure',
+    score: disulfane.score,
+    checksPassed: disulfane.checks.filter((check) => check.pass).length,
+    checksTotal: disulfane.checks.length,
+    limitation:
+      'fresh fully predeclared same-topology transfer failure; minimum location and cis-side barrier pass, but trans side fails topology and magnitude by predicting a spurious shallow minimum at 180 degrees',
+    confidenceEffect: disulfane.confidenceEffect,
+  },
+  selenane && {
+    label: 'H-Se-Se-H same-topology heteroatom rotor transfer',
+    evidenceLine: 'held-out heteroatom torsion transfer',
+    domain: 'fresh molecular torsion topology and barrier transfer',
+    conventionalComparator: 'Sahu, Richardson, and Berger 2021 H2Se2 cis/trans barrier table',
+    status: 'fresh validation failure',
+    score: selenane.score,
+    checksPassed: selenane.checks.filter((check) => check.pass).length,
+    checksTotal: selenane.checks.length,
+    limitation:
+      'fresh fully predeclared same-topology transfer failure across the full bent-angle bracket; cis-side barrier passes, but trans side repeats the disulfane topology and magnitude failure',
+    confidenceEffect: selenane.confidenceEffect,
   },
   ionic && {
     label: 'Ionic lattice order',
@@ -439,6 +468,21 @@ const benchmarks = [
       'unresolved measured-property challenge; current grammar has a first-pass topology-only refractive-index proxy, a target-implied repair candidate that fails fresh anorthite validation, and a second-generation modifier-identity candidate that fails fresh orthoclase validation',
     confidenceEffect: materialRefractiveIndex.confidenceEffect,
   },
+  riCationResponse && {
+    label: 'RI cation-response per-oxygen validation',
+    evidenceLine: 'material measured property calibration',
+    domain: 'measured silicate optical property',
+    conventionalComparator:
+      'source-anchored kalsilite and nepheline refractive-index targets checked after a predeclared per-oxygen cation-response repair',
+    status: riCationResponse.classification,
+    score: 0,
+    checksPassed: riCationResponse.heldOutResults.filter((row) => row.passTolerance).length,
+    checksTotal: riCationResponse.heldOutResults.length,
+    limitation:
+      'failed fresh measured-property validation; K cation-response moves in the expected direction but oxygen-normalised framework-Al extrapolates feldspathoid RI too high, and nepheline is compromised as a pure Na-only target because the source formula is mixed Na/K',
+    confidenceEffect:
+      'adds active falsification pressure to the material-property gate; does not count as an independent evidence-line pass',
+  },
 ].filter(Boolean);
 
 function grammarVariablesFor(benchmark) {
@@ -538,6 +582,16 @@ const evidenceLineSummaries = Array.from(
 ).map((group) => ({
   ...group,
   variables: Array.from(group.variables).join(', '),
+  limitation:
+    group.evidenceLine === 'electromagnetic field geometry/topology'
+      ? 'EM-17 charge variable inactive; scalar wave-geometry depth, not charge dynamics'
+      : group.evidenceLine === 'held-out heteroatom torsion transfer'
+      ? 'hydrazine ordering/ratio transfer passes but absolute barrier magnitudes miss; disulfane and H-Se-Se-H fresh same-topology transfers fail trans-side topology and magnitude under held constants'
+      : group.evidenceLine === 'network/material structure'
+      ? 'includes unresolved RI gate; repair candidates are calibration debt, not validation'
+      : group.orientationOnly
+      ? 'orientation-only; excluded from core evidence count'
+      : 'no additional line-level limitation beyond benchmark rows',
 }));
 const hasBlindStylePass = boundaryBlind?.status?.includes('qualitative pass');
 const hasQuantitativePass = ethaneQuant?.status === 'quantitative tolerance pass';
@@ -549,6 +603,7 @@ const hasHeldoutInterfacePass = roughnessHeldout?.status === 'held-out interface
 const hasQuantitativeMaterialPass = materialNbo?.status === 'quantitative material pass';
 const hasMaterialRefractiveIndexChallenge =
   materialRefractiveIndex?.status === 'measured material refractive-index challenge unresolved';
+const hasRiCationResponseFailure = riCationResponse?.classification === 'framework-Al extrapolation falsified';
 const hasRoughnessCalibratedScatterPass =
   roughnessCalibratedScatter?.status === 'calibrated roughness scatter pass';
 const hasEmOrderingPass = emOrdering?.status === 'qualitative EM ordering pass';
@@ -573,6 +628,8 @@ const hasEmDoubleSlitEnvelopePass = emDoubleSlitEnvelope?.status === 'double-sli
 const hasH2O2AbsoluteMixed = h2o2Absolute?.status === 'absolute barrier mixed diagnostic';
 const hasHydrazineHeldoutPass = hydrazineCation?.status === 'held-out torsion transfer pass';
 const hasHydrazineOrderingPass = hydrazineCation?.status === 'held-out torsion ordering pass with quantitative miss';
+const hasDisulfaneFailure = disulfane?.status === 'fail';
+const hasSelenaneFailure = selenane?.status === 'fail';
 
 const confidence = {
   previousSandboxCompletionPct: roadmap.currentStatus.sandboxCompletionPct,
@@ -580,12 +637,18 @@ const confidence = {
   previousInternalCoherenceOutOf10: roadmap.currentStatus.internalCoherenceConfidenceOutOf10,
   updatedInternalCoherenceOutOf10: hasMaterialRefractiveIndexChallenge ? 8.0 : hasRoughnessCalibratedScatterPass ? 8.1 : hasEmDoubleSlitEnvelopePass ? 8.0 : hasEmSingleSlitEnvelopePass ? 7.9 : hasEmDiffractionGratingPass ? 7.8 : hasEmRoughSurfaceScatterPass ? 7.7 : hasEmAbsorbingMediaPass ? 7.6 : hasEmMultilayerInterferencePass ? 7.5 : hasEmObliqueFresnelPass ? 7.4 : hasEmBoundaryPropagationPass ? 7.3 : hasEmWavePropagationPass ? 7.2 : hasEmDielectricMediaPass ? 7.1 : hasEmFieldMagnitudePass ? 7.0 : hasEmEquipotentialPass ? 6.9 : hasH2O2AbsolutePass ? 7.7 : hasH2O2AbsoluteMixed ? 7.3 : hasQuantitativeMaterialPass ? 7.5 : hasHeldoutInterfacePass ? 7.4 : hasFactorTwoPeroxideRatio ? 7.3 : hasHeldoutMaterialPass ? 7.2 : hasTighterPeroxideRatio ? 7.1 : hasSecondNumericPass ? 7.0 : hasQuantitativePass ? 6.9 : hasBlindStylePass ? 6.7 : benchmarks.length >= 3 ? 6.5 : 6.3,
   previousInferentialConvergenceOutOf10: roadmap.currentStatus.inferentialConvergenceConfidenceOutOf10,
-  updatedInferentialConvergenceOutOf10: hasMaterialRefractiveIndexChallenge ? 6.25 : hasRoughnessCalibratedScatterPass ? 6.3 : hasEmDoubleSlitEnvelopePass ? 6.2 : hasEmSingleSlitEnvelopePass ? 6.15 : hasEmDiffractionGratingPass ? 6.1 : hasEmRoughSurfaceScatterPass ? 6.05 : hasEmAbsorbingMediaPass ? 6.0 : hasEmMultilayerInterferencePass ? 5.95 : hasEmObliqueFresnelPass ? 5.9 : hasEmBoundaryPropagationPass ? 5.85 : hasEmWavePropagationPass ? 5.8 : hasEmDielectricMediaPass ? 5.75 : hasEmFieldMagnitudePass ? 5.7 : hasEmEquipotentialPass ? 5.65 : hasHydrazineHeldoutPass ? 6.0 : hasHydrazineOrderingPass ? 5.9 : hasH2O2AbsolutePass ? 5.8 : hasH2O2AbsoluteMixed ? 5.5 : hasEmFieldLinePass ? 5.6 : hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.4 : hasEmCoulombPass ? 5.3 : hasEmOrderingPass ? 5.1 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
-  crossDomainEquivalenceOutOf10: hasRoughnessCalibratedScatterPass ? 5.7 : hasEmDoubleSlitEnvelopePass ? 5.5 : hasEmSingleSlitEnvelopePass ? 5.45 : hasEmDiffractionGratingPass ? 5.4 : hasEmRoughSurfaceScatterPass ? 5.35 : hasEmAbsorbingMediaPass ? 5.3 : hasEmMultilayerInterferencePass ? 5.25 : hasEmObliqueFresnelPass ? 5.2 : hasEmBoundaryPropagationPass ? 5.15 : hasEmWavePropagationPass ? 5.1 : hasEmDielectricMediaPass ? 5.05 : hasEmFieldMagnitudePass ? 5.0 : hasEmEquipotentialPass ? 4.9 : hasEmFieldLinePass ? 4.8 : hasEmThreeSourcePass ? 4.7 : hasEmSuperpositionPass ? 4.6 : hasEmCoulombPass ? 4.5 : hasEmOrderingPass ? 4.4 : hasQuantitativeMaterialPass ? 4.3 : hasHeldoutInterfacePass ? 4.2 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
+  updatedInferentialConvergenceOutOf10: hasSelenaneFailure ? 5.6 : hasDisulfaneFailure ? 5.8 : hasRiCationResponseFailure ? 6.1 : hasMaterialRefractiveIndexChallenge ? 6.25 : hasRoughnessCalibratedScatterPass ? 6.3 : hasEmDoubleSlitEnvelopePass ? 6.2 : hasEmSingleSlitEnvelopePass ? 6.15 : hasEmDiffractionGratingPass ? 6.1 : hasEmRoughSurfaceScatterPass ? 6.05 : hasEmAbsorbingMediaPass ? 6.0 : hasEmMultilayerInterferencePass ? 5.95 : hasEmObliqueFresnelPass ? 5.9 : hasEmBoundaryPropagationPass ? 5.85 : hasEmWavePropagationPass ? 5.8 : hasEmDielectricMediaPass ? 5.75 : hasEmFieldMagnitudePass ? 5.7 : hasEmEquipotentialPass ? 5.65 : hasHydrazineHeldoutPass ? 6.0 : hasHydrazineOrderingPass ? 5.9 : hasH2O2AbsolutePass ? 5.8 : hasH2O2AbsoluteMixed ? 5.5 : hasEmFieldLinePass ? 5.6 : hasEmThreeSourcePass ? 5.5 : hasEmSuperpositionPass ? 5.4 : hasEmCoulombPass ? 5.3 : hasEmOrderingPass ? 5.1 : hasQuantitativeMaterialPass ? 5.0 : hasHeldoutInterfacePass ? 4.8 : hasFactorTwoPeroxideRatio ? 4.6 : hasHeldoutMaterialPass ? 4.4 : hasTighterPeroxideRatio ? 4.1 : hasSecondNumericPass ? 4.0 : hasQuantitativePass ? 3.8 : hasBlindStylePass ? 3.4 : benchmarks.length >= 3 ? 3.0 : 2.7,
+  crossDomainEquivalenceOutOf10: hasSelenaneFailure ? 5.2 : hasDisulfaneFailure ? 5.4 : hasRiCationResponseFailure ? 5.5 : hasRoughnessCalibratedScatterPass ? 5.7 : hasEmDoubleSlitEnvelopePass ? 5.5 : hasEmSingleSlitEnvelopePass ? 5.45 : hasEmDiffractionGratingPass ? 5.4 : hasEmRoughSurfaceScatterPass ? 5.35 : hasEmAbsorbingMediaPass ? 5.3 : hasEmMultilayerInterferencePass ? 5.25 : hasEmObliqueFresnelPass ? 5.2 : hasEmBoundaryPropagationPass ? 5.15 : hasEmWavePropagationPass ? 5.1 : hasEmDielectricMediaPass ? 5.05 : hasEmFieldMagnitudePass ? 5.0 : hasEmEquipotentialPass ? 4.9 : hasEmFieldLinePass ? 4.8 : hasEmThreeSourcePass ? 4.7 : hasEmSuperpositionPass ? 4.6 : hasEmCoulombPass ? 4.5 : hasEmOrderingPass ? 4.4 : hasQuantitativeMaterialPass ? 4.3 : hasHeldoutInterfacePass ? 4.2 : hasHeldoutMaterialPass ? 4.0 : hasBlindStylePass ? 3.4 : 3.0,
   evidenceIndependenceOutOf10: independentEvidenceLines >= 6 ? 4.5 : independentEvidenceLines >= 5 ? 4.0 : 3.2,
-  unificationThesisSupportOutOf10: hasRoughnessCalibratedScatterPass ? 5.2 : hasEmDoubleSlitEnvelopePass ? 5.0 : hasEmSingleSlitEnvelopePass ? 4.95 : hasEmDiffractionGratingPass ? 4.9 : hasEmRoughSurfaceScatterPass ? 4.85 : hasEmAbsorbingMediaPass ? 4.8 : hasEmMultilayerInterferencePass ? 4.75 : hasEmObliqueFresnelPass ? 4.7 : hasEmBoundaryPropagationPass ? 4.65 : hasEmWavePropagationPass ? 4.6 : hasEmDielectricMediaPass ? 4.55 : hasEmFieldMagnitudePass ? 4.5 : hasEmEquipotentialPass ? 4.45 : hasEmFieldLinePass ? 4.4 : hasEmThreeSourcePass ? 4.3 : hasEmSuperpositionPass ? 4.2 : hasEmCoulombPass ? 4.1 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
+  unificationThesisSupportOutOf10: hasSelenaneFailure ? 4.8 : hasDisulfaneFailure ? 4.9 : hasRiCationResponseFailure ? 5.0 : hasRoughnessCalibratedScatterPass ? 5.2 : hasEmDoubleSlitEnvelopePass ? 5.0 : hasEmSingleSlitEnvelopePass ? 4.95 : hasEmDiffractionGratingPass ? 4.9 : hasEmRoughSurfaceScatterPass ? 4.85 : hasEmAbsorbingMediaPass ? 4.8 : hasEmMultilayerInterferencePass ? 4.75 : hasEmObliqueFresnelPass ? 4.7 : hasEmBoundaryPropagationPass ? 4.65 : hasEmWavePropagationPass ? 4.6 : hasEmDielectricMediaPass ? 4.55 : hasEmFieldMagnitudePass ? 4.5 : hasEmEquipotentialPass ? 4.45 : hasEmFieldLinePass ? 4.4 : hasEmThreeSourcePass ? 4.3 : hasEmSuperpositionPass ? 4.2 : hasEmCoulombPass ? 4.1 : hasEmOrderingPass ? 3.9 : hasQuantitativeMaterialPass ? 3.5 : hasHeldoutInterfacePass ? 3.3 : hasBlindStylePass ? 3.0 : 2.6,
   rationale:
-    hasMaterialRefractiveIndexChallenge
+    hasSelenaneFailure
+      ? 'External anchoring now includes repeated same-mode torsion failure under held constants: disulfane and H-Se-Se-H both transfer cis-side magnitude while failing trans-side topology and magnitude by predicting a spurious local minimum at 180 degrees where external sources report trans barrier pathways. This caps the trans-side transfer claim for heavier H2X2 chalcogens as not evidence-bearing under current constants. Inferential convergence steps down to 5.6; cross-domain equivalence and unification thesis support step down modestly while grammar internal coherence is held because this is a scoped transfer failure, not an internal contradiction. The next torsion step is exposed redesign of cisCrowding/antiPlanarRelease with a fresh post-redesign target reserved, not another fresh same-architecture target.'
+      : hasDisulfaneFailure
+      ? 'External anchoring now includes two independent fresh validation failures after review-cleared predeclaration: the material RI cation-response repair fails kalsilite tolerance, and the disulfane same-topology torsion transfer fails trans-side topology and magnitude. Disulfane retains diagnostic positives for minimum location and cis-side magnitude, but it predicts a spurious shallow trans minimum where the external surface has a large planar trans maximum. Inferential convergence steps down from 6.1 to 5.8; cross-domain equivalence and unification thesis support drop one notch while grammar internal coherence is held because this is a transfer failure, not an internal contradiction.'
+      : hasRiCationResponseFailure
+      ? 'External anchoring now includes a reviewed per-oxygen RI cation-response validation that broke the prior descriptor degeneracy but failed fresh kalsilite tolerance (full error 0.04616 against a 0.01 predeclared threshold; K cation-response moved in the expected direction relative to baseline but framework-Al extrapolated feldspathoid RI too high). Nepheline cannot serve as a clean Na-only transfer target because the Mindat source formula is mixed Na/K. Inferential convergence steps down from 6.25 to 6.1 to register the second documented fresh held-out failure on the material-property gate under a design that had cleared review; the prior 6.25 cap was conditional on a fresh held-out pass, and a tighter-reviewed iteration failing under tightened review is new negative evidence beyond the prior state. The drop is deliberately small: falsification is localized to the scalar framework-Al proxy within one evidence line, and the other six core evidence lines, grammar internal coherence, and the independent-line count are unaffected. Further scalar coefficient patching is excluded by the existing gate; any next material-property model needs a predeclared structural descriptor (topology class, density/molar volume, or Lorentz-Lorenz-compatible molar refraction) before any new fresh validation.'
+      : hasMaterialRefractiveIndexChallenge
       ? 'External anchoring now includes an explicit measured material-property challenge, and it is unresolved: SiO2, Na2SiO3, held-out NaAlSi3O8, fresh-validation CaAl2Si2O8, and second-generation held-out KAlSi3O8 refractive-index targets are source-anchored; the current topology-only refractive-index proxy clears SiO2 but misses the material set, the target-implied slope/framework-Al candidate fails fresh anorthite validation, and the second-generation modifier-identity candidate fails fresh orthoclase validation. Inferential convergence is held near 6/10 because the material-property gate remains open.'
       : hasRoughnessCalibratedScatterPass
       ? 'External anchoring now includes a calibrated roughness/interface scatter quantity: Bennett-Porteus total integrated scatter, specular fraction, roughness/wavelength scaling, and reflected-budget closure. Inferential convergence rises only slightly because this imports a conventional smooth-surface approximation and does not yet solve measured material properties, held-out torsion absolute magnitudes, full BRDFs, or Maxwell surface scattering.'
@@ -653,11 +716,15 @@ const confidence = {
 };
 
 const remainingExternalGates = [
-  hasMaterialRefractiveIndexChallenge
+  hasRiCationResponseFailure
+    ? 'Do not continue RI by scalar coefficient patching. Diagnose why oxygen-normalised framework-Al extrapolates feldspathoid RI too high; any next model needs a predeclared structural descriptor such as topology class, density/molar volume, or Lorentz-Lorenz-compatible molar refraction before fresh validation.'
+    : hasMaterialRefractiveIndexChallenge
     ? 'Replace or revise the failed modifier-identity refractive-index candidate only after documenting orthoclase as a structural K/Na framework-response miss; validate any revision on a new held-out material before promotion.'
     : 'Move material checks from composition accounting to measured property calibration.',
   hasH2O2AbsolutePass
-    ? hydrazineCation
+    ? disulfane
+      ? 'Do not tune torsion constants from the disulfane failure. Predeclare whether to test same-topology third-row H-Se-Se-H with constants held, switch to a different topology, or redesign cisCrowding/antiPlanarRelease as exposed calibration with a new fresh target reserved.'
+      : hydrazineCation
       ? 'Move held-out torsion transfer from qualitative/ratiometric ordering toward calibrated absolute barrier magnitudes.'
       : 'Test anti-planar release on a new held-out torsion system without fitting its endpoints.'
     : h2o2Absolute
@@ -824,12 +891,12 @@ ${confidence.rationale}
 
 ## Independent Evidence Lines
 
-| Evidence line | Benchmarks | Checks | Grammar variables exercised | Counting status |
-|---|---:|---:|---|---|
+| Evidence line | Benchmarks | Checks | Grammar variables exercised | Counting status | Line limitation |
+|---|---:|---:|---|---|---|
 ${evidenceLineSummaries
   .map(
     (line) =>
-      `| ${line.evidenceLine} | ${line.benchmarkCount} | ${line.checksPassed}/${line.checksTotal} | ${line.variables} | ${line.orientationOnly ? 'orientation-only' : 'core evidence'} |`
+      `| ${line.evidenceLine} | ${line.benchmarkCount} | ${line.checksPassed}/${line.checksTotal} | ${line.variables} | ${line.orientationOnly ? 'orientation-only' : 'core evidence'} | ${line.limitation} |`
   )
   .join('\n')}
 

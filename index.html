@@ -28,7 +28,7 @@
 
         <aside class="controls" aria-label="Relational Substrate sandbox controls">
           <header>
-            <p class="eyebrow">Relational Substrate Sandbox v0.1</p>
+            <p class="eyebrow">Relational Substrate Sandbox v0.2 • grammar model advancing (v0.3 logic)</p>
             <h1>Open Order Meets Closed Order</h1>
             <p class="summary">Light-like propagation is modelled as an open transient. A vorton candidate is modelled as closed stable order. The sliders change admissibility, not substrate ontology.</p>
           </header>
@@ -57,6 +57,15 @@
             <button class="scenario" data-scenario="store" type="button">C Store</button>
           </div>
 
+          <div class="control-group" aria-label="Regime / environmental condition for durability">
+            <label for="regime">Regime / Condition</label>
+            <select id="regime">
+              <option value="nominal" selected>Nominal (baseline)</option>
+              <option value="stressed">Stressed (harsher fatigue)</option>
+              <option value="recovering">Recovering (gentler settling)</option>
+            </select>
+          </div>
+
           <div class="sliders">
             <label>
               <span>Boundary compatibility <output id="boundary-value">0.82</output></span>
@@ -77,6 +86,14 @@
             <label>
               <span>Reseating tolerance <output id="reseat-value">0.70</output></span>
               <input id="reseat" type="range" min="0" max="1" value="0.70" step="0.01" />
+            </label>
+            <label>
+              <span>Phase alignment <output id="phase-value">0.50</output></span>
+              <input id="phase" type="range" min="0" max="1" value="0.50" step="0.01" />
+            </label>
+            <label>
+              <span>Charge tension <output id="charge-value">0.00</output></span>
+              <input id="charge" type="range" min="-1" max="1" value="0.00" step="0.01" />
             </label>
           </div>
 
@@ -101,6 +118,40 @@
               <span>Identity score</span>
               <strong id="identity-score">0.00</strong>
             </div>
+
+            <div class="resilience-score" style="margin: 4px 0 8px; font-size:0.92em; border-top:1px solid #d9d4c4; padding-top:4px;">
+              <span>Resilience (8-step horizon)</span>
+              <strong id="resilience-horizon">0/8</strong>
+              <span id="resilience-note" style="font-size:0.8em; margin-left:4px; color:#555;"></span>
+            </div>
+
+            <div class="robustness-score" style="margin: 2px 0 6px; font-size:0.9em;">
+              <span>Cross-regime robustness</span>
+              <strong id="robustness-score">0.00</strong>
+              <span id="robustness-note" style="font-size:0.75em; margin-left:4px; color:#555;"></span>
+            </div>
+
+            <div class="stability-score" style="margin: 2px 0 6px; font-size:0.9em;">
+              <span>Regime Stability (max across profiles)</span>
+              <strong id="stability-score">0.00</strong>
+              <span id="stability-note" style="font-size:0.75em; margin-left:4px; color:#555;"></span>
+            </div>
+
+            <div class="durability-index" style="margin: 2px 0 6px; font-size:0.9em; font-weight:bold;">
+              <span>Durability Index</span>
+              <strong id="durability-index">0.00</strong>
+              <span id="durability-note" style="font-size:0.75em; margin-left:4px; color:#555; font-weight:normal;"></span>
+            </div>
+
+            <section class="grammar-factors" aria-label="Grammar factors (route, closure, phase, charge, continuity)">
+              <h2>Grammar</h2>
+              <div class="grammar-grid">
+                <div><span>Continuity</span><output id="grammar-continuity">0.00</output></div>
+                <div><span>Phase Match</span><output id="grammar-phaseMatch">0.00</output></div>
+                <div><span>Charge Tension</span><output id="grammar-chargeTension">0.00</output></div>
+              </div>
+              <div style="margin-top:6px;font-size:0.85em"><span>Grammar health</span> <output id="grammar-health">0.00</output></div>
+            </section>
           </section>
 
           <section class="notes">
@@ -113,6 +164,14 @@
             <p>Export the exact form/scenario/slider state as JSON, then replay it in batch: <code>npm run case:run -- case.json</code> (or pipe the JSON to it).</p>
             <button id="export-case" type="button">Export case (JSON)</button>
             <textarea id="export-output" rows="11" readonly hidden aria-label="Exported case JSON"></textarea>
+          </section>
+
+          <section class="notes">
+            <h2>Trace demo (v0.3 sequence)</h2>
+            <p>Run a short 3-step memory-carrying trace from the current state using <code>simulateSequence</code>. Shows how identity/coherence can drift across repeated interactions.</p>
+            <button id="run-trace" type="button">Run 3-step trace</button>
+            <button id="suggest-stable" type="button" style="margin-left:8px;">Suggest higher-stability settings</button>
+            <pre id="trace-output" style="font-size:0.78em; background:#f4f3eb; padding:6px; margin-top:6px; white-space:pre-wrap; min-height:2.6em;"></pre>
           </section>
 
           <section class="notes">

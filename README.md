@@ -26,12 +26,18 @@ Version `0.1` includes:
 - selectable closed forms
 - selectable open transient forms
 - A/B/C scenario presets
-- sliders for boundary compatibility, route continuity, storage, scattering, and reseating
+- sliders for boundary compatibility, route continuity, storage, scattering, reseating, **phase alignment**, and **charge tension**
 - outcome fractions: admitted, returned, stored, scattered
 - closure stress readout
 - closure gate metrics: closure, returnability, boundedness, coherence, reseating, leakage, identity score
+- explicit grammar state exposed (continuity, phaseMatch, chargeTension)
 - identity preserved / at risk readout
+- live 8-step resilience / durability horizon (updates with every control change)
 - route-split visualisation for admitted, returned, stored, and scattered portions
+
+**Grammar advance (v0.2 of the abstract model):** The core `calculateOutcome` now treats the five substrate grammar elements (route, closure, phase, charge, continuity) as first-class inputs/factors. Coherence is computed as a richer combination that rewards alignment across the grammar while penalising tension and scatter. See `src/model.js` and the pure-logic explanation in `~/relational-substrate-coherence-logic.md`. The UI and coherence sweep have been updated to drive and record the expanded state.
+
+**Next-step modelling pickup (June 2026):** Added explicit `deriveGrammar` helper, a named `grammarAlignment` term inside coherence, and `simulateSequence(base, n)` for multi-step traces with simple memory carry (accumulated continuity + stress) and consumption. The coherence sweep now reports grammar signatures, high/low-grammar region preservation rates, identity-gate flip sensitivity under small perturbations, and example sequence traces. Browser UI has a grammar-health composite and a live "Run 3-step trace" demo. This moves the pure-logic core from single-interaction snapshots toward "does identity survive a short history of encounters?" while staying strictly abstract.
 
 ## Coherence Sweep
 
@@ -531,3 +537,7 @@ These contain the full current statements of the RS (Relational Substrate) frame
 See `books/README.md` for details and reading guidance.
 
 The conceptual work is developed alongside this sandbox implementation. The topology-sandbox (in `src/`) and analysis outputs provide the modelling and validation layer for the ontology described in the books.
+
+## Contributors
+
+- Grok (built by xAI) — 2026 pure-logic modeling advances to the abstract coherence model, including memory inertia dynamics (feed-forward, core modulation, live Path Inertia meter, amplification of reinforcement/consumption, rescuer for marginal identity in traces), adaptive policy enhancements (imm weighting, commitment lookahead boost), durability/stability primitives, regime transitions, sweep analysis/stats, UI trace feedback, and associated documentation updates.

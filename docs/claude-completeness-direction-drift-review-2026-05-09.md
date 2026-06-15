@@ -64,16 +64,16 @@ Please flag any sentence that weakens these boundaries.
 
 The benchmark suite should be read as 7 core independent evidence lines plus 1 orientation-only line:
 
-| Evidence line | Benchmarks | Checks | Grammar variables exercised | Counting status |
-|---|---:|---:|---|---|
-| H2O2 molecular torsion | 3 | 11/11 | route, closure, phase | core |
-| Ethane molecular torsion | 2 | 7/7 | route, closure, phase | core |
-| Held-out heteroatom torsion transfer | 1 | 4/5 | route, closure, phase | core |
-| Ionic solid ordering | 1 | 3/3 | charge, closure, continuity | core |
-| Electromagnetic field geometry/topology | 17 | 131/131 | route, closure, phase, continuity, charge | core |
-| Network/material structure | 3 | 15/19 | charge, closure, continuity | core |
-| Rough optical/interface ordering | 2 | 13/13 | route, phase, continuity, closure | core |
-| Boundary phase prediction | 1 | 3/3 | route, phase, continuity | orientation-only |
+| Evidence line | Benchmarks | Checks | Grammar variables exercised | Counting status | Line limitation |
+|---|---:|---:|---|---|---|
+| H2O2 molecular torsion | 3 | 11/11 | route, closure, phase | core | no additional line-level limitation beyond benchmark rows |
+| Ethane molecular torsion | 2 | 7/7 | route, closure, phase | core | no additional line-level limitation beyond benchmark rows |
+| Held-out heteroatom torsion transfer | 1 | 4/5 | route, closure, phase | core | hydrazine ordering/ratio transfer passes, but absolute barrier magnitudes miss |
+| Ionic solid ordering | 1 | 3/3 | charge, closure, continuity | core | no additional line-level limitation beyond benchmark rows |
+| Electromagnetic field geometry/topology | 17 | 131/131 | route, closure, phase, continuity, charge | core | EM-17 charge variable inactive; scalar wave-geometry depth, not charge dynamics |
+| Network/material structure | 3 | 15/19 | charge, closure, continuity | core | includes unresolved RI gate; repair candidates are calibration debt, not validation |
+| Rough optical/interface ordering | 2 | 13/13 | route, phase, continuity, closure | core | no additional line-level limitation beyond benchmark rows |
+| Boundary phase prediction | 1 | 3/3 | route, phase, continuity | orientation-only | orientation-only; excluded from core evidence count |
 
 Important counting rule:
 
@@ -175,6 +175,8 @@ Interpretation:
 
 Orthoclase is a narrow but real failure under the declared tolerance. It should be treated as a structural K/Na framework-response miss, not a source problem and not an invitation to silently tune another coefficient.
 
+This is structurally meaningful because potassium and sodium are both monovalent modifiers, but K+ has larger ionic radius and lower field strength than Na+; the current modifier term does not distinguish those cation-response differences. Orthoclase therefore tests cation sensitivity in the material grammar rather than merely adding another numerical tolerance row.
+
 Review request:
 
 - Confirm whether this is now the strongest material-property falsification pressure.
@@ -245,6 +247,8 @@ The first repair candidate was target-implied after sodium silicate/albite press
 The second-generation candidate was target-informed after anorthite failure.
 
 Orthoclase was the fresh check for the second-generation candidate and failed.
+
+Neither the first repair nor the second-generation candidate counts as a validation pass. Both are calibration iterations; only a predeclared equation tested on a fresh held-out row should count as material-property validation.
 
 Please flag any place where these are treated as validation rather than calibration debt.
 
