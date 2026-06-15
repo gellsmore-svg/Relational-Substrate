@@ -605,3 +605,19 @@ This makes the adaptive choice more "quality-seeking" over the narrative horizon
 
 Full scope executed.
 
+
+## Continuation (quality-adjusted resilience horizons)
+
+User: "continue"
+
+Autonomous decision: take the consumption/gate/policy quality effects (and the new pathQBoostedFinalIdentity rescue) and make them visibly change the resilience/survival numbers in both the live sandbox and the batch explorer.
+
+- Added qualityAdjustedSurvived to measureResilience summary (raw survived + lift ~ survived * finalPathQ * 0.12, capped).
+- UI updateResilience now shows the qa number in the horizon text and appends a quality-adj delta to the resilienceNote.
+- Sweep resilienceTop/Fragile and stratified samples now include the qualityAdjustedSurvived; the markdown lists and the "Key observation" paragraph were updated to call out the qa lift.
+- The prior pathQOnAdaptive and stabilitySearch already correlate quality with preserved rates; this adds the direct effect on the horizon count itself.
+
+This completes the arc for the quality layer: the effects that were added to carry, consumption, reinf/debt, core gate, policy horizon, and trace-level rescue now also raise the predicted number of steps the order can survive before identity risk.
+
+Full verification followed (build, guardrails, smokes, sweep bg, verify attempt). All pure abstract.
+

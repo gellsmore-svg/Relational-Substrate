@@ -326,6 +326,7 @@ const resilienceTop = topCoherent.slice(0, 10).map((seed) => {
       finalIdentity: Number(r.summary.finalIdentity.toFixed(3)),
       avgPathQ: r.summary.avgPathQuality || null,
       finalPathQ: r.summary.finalPathQuality || null,
+      qualityAdjustedSurvived: r.summary.qualityAdjustedSurvived || r.survivedSteps,
     }
   };
 });
@@ -340,6 +341,7 @@ const resilienceFragile = fragile.slice(0, 10).map((seed) => {
       finalIdentity: Number(r.summary.finalIdentity.toFixed(3)),
       avgPathQ: r.summary.avgPathQuality || null,
       finalPathQ: r.summary.finalPathQuality || null,
+      qualityAdjustedSurvived: r.summary.qualityAdjustedSurvived || r.survivedSteps,
     }
   };
 });
@@ -347,11 +349,11 @@ const resilienceFragile = fragile.slice(0, 10).map((seed) => {
 // Small stratified sample: 2 from high-grammar preserved, 2 from low-grammar
 const highSample = highGrammar.filter(r => r.identityPreserved).slice(0, 2).map((seed) => {
   const r = measureResilience(seed, { maxSteps: 8 });
-  return { pattern: `${seed.closedForm}/${seed.transientForm}/${seed.scenario}`, survived: r.survivedSteps, finalPres: r.finalPreserved };
+  return { pattern: `${seed.closedForm}/${seed.transientForm}/${seed.scenario}`, survived: r.survivedSteps, finalPres: r.finalPreserved, qualityAdj: r.summary.qualityAdjustedSurvived || r.survivedSteps };
 });
 const lowSample = lowGrammar.slice(0, 2).map((seed) => {
   const r = measureResilience(seed, { maxSteps: 8 });
-  return { pattern: `${seed.closedForm}/${seed.transientForm}/${seed.scenario}`, survived: r.survivedSteps, finalPres: r.finalPreserved };
+  return { pattern: `${seed.closedForm}/${seed.transientForm}/${seed.scenario}`, survived: r.survivedSteps, finalPres: r.finalPreserved, qualityAdj: r.summary.qualityAdjustedSurvived || r.survivedSteps };
 });
 
 await mkdir(outDir, { recursive: true });
@@ -485,16 +487,16 @@ This begins to move the model from single-interaction snapshots toward "does ide
 Resilience measures how many sequential interactions (with memory carry + consumption) a configuration can survive before identity is lost. Computed on the interesting subsets only.
 
 **Top coherent cases (best single-shot) durability:**
-${resilienceTop.slice(0,6).map(r => `- ${r.closedForm}/${r.transientForm}/${r.scenario}: survived ${r.resilience.survived}/8, finalId=${r.resilience.finalIdentity}, fullPres=${r.resilience.finalPreserved}`).join('\n')}
+${resilienceTop.slice(0,6).map(r => `- ${r.closedForm}/${r.transientForm}/${r.scenario}: survived ${r.resilience.survived}/8 (qa ${r.resilience.qualityAdjustedSurvived}), finalId=${r.resilience.finalIdentity}, fullPres=${r.resilience.finalPreserved}`).join('\n')}
 
 **Fragile/borderline cases durability:**
-${resilienceFragile.slice(0,6).map(r => `- ${r.closedForm}/${r.transientForm}/${r.scenario}: survived ${r.resilience.survived}/8, finalId=${r.resilience.finalIdentity}, fullPres=${r.resilience.finalPreserved}`).join('\n')}
+${resilienceFragile.slice(0,6).map(r => `- ${r.closedForm}/${r.transientForm}/${r.scenario}: survived ${r.resilience.survived}/8 (qa ${r.resilience.qualityAdjustedSurvived}), finalId=${r.resilience.finalIdentity}, fullPres=${r.resilience.finalPreserved}`).join('\n')}
 
 **Stratified grammar samples:**
-- High-grammar preserved examples: ${highSample.map(s => `${s.pattern} survived ${s.survived}`).join('; ')}
-- Low-grammar examples: ${lowSample.map(s => `${s.pattern} survived ${s.survived}`).join('; ')}
+- High-grammar preserved examples: ${highSample.map(s => `${s.pattern} survived ${s.survived} (qa ${s.qualityAdj})`).join('; ')}
+- Low-grammar examples: ${lowSample.map(s => `${s.pattern} survived ${s.survived} (qa ${s.qualityAdj})`).join('; ')}
 
-Key observation from this run: strong grammar alignment (high continuity + phase match, low charge tension) not only raises the chance of identityPreserved on a single interaction but also dramatically extends the number of repeated encounters the configuration can withstand before coherence/identity collapses under the model's consumption rules.
+Key observation from this run: strong grammar alignment (high continuity + phase match, low charge tension) not only raises the chance of identityPreserved on a single interaction but also dramatically extends the number of repeated encounters the configuration can withstand before coherence/identity collapses under the model's consumption rules. High ending pathQuality in a resilience run now provides an additional 'quality-adjusted' lift to the effective survival horizon (the consumption, core gate, and policy quality effects make the order predictably last longer under the abstract rules).
 
 ## Resilience by Pattern Family (durability across meeting types)
 

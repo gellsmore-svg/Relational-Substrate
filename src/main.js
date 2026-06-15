@@ -409,6 +409,16 @@ function updateResilience() {
       els.resilienceNote.textContent = currentNote + ` (mem+streakQ boost est. +${boostEst})`;
     }
   }
+
+  // Quality-adjusted survival (new): high ending pathQuality in the resilience run 'lifts' the effective horizon (the consumption and gate effects of quality now visibly extend how long the model predicts the order can survive).
+  const qAdj = res.summary && res.summary.qualityAdjustedSurvived ? res.summary.qualityAdjustedSurvived : res.survivedSteps;
+  if (els.resilienceHorizon && qAdj > res.survivedSteps) {
+    els.resilienceHorizon.textContent = `${res.survivedSteps}/8 (qa ${qAdj})`;
+  }
+  if (els.resilienceNote && qAdj > res.survivedSteps) {
+    const currentNote = els.resilienceNote.textContent || '';
+    els.resilienceNote.textContent = currentNote + ` (quality-adj +${qAdj - res.survivedSteps})`;
+  }
 }
 
 function rebuildScene() {

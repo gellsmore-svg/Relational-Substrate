@@ -679,6 +679,7 @@ export function measureResilience(baseInput = {}, options = {}) {
       regime,
       avgPathQuality: Number((history.reduce((s, h) => s + (h.pathQuality || 0), 0) / Math.max(1, history.length)).toFixed(4)),
       finalPathQuality: Number((last.pathQuality || resPathQuality).toFixed(4)),
+      qualityAdjustedSurvived: Math.min(maxSteps, survived + Math.round(survived * ((last.pathQuality || resPathQuality) * 0.12))),
     },
   };
 }
