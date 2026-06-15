@@ -670,3 +670,18 @@ Small but satisfying closed loop at the very end of a trace:
 
 The quality-rescue mechanism now affects not only the binary "did the history count as preserved?" but also the *ending inertia state* the history leaves behind. Virtuous cycles close one more level.
 
+
+## Continuation (quality rescue heals reported final stress/identity)
+
+User: "continue"
+
+Symmetric post-rescue healing for the ending snapshot metrics:
+
+- Added qualityRescuedFinalStress and qualityRescuedFinalIdentity to the simulate summary (small relaxation/lift using avgPathQ when pathQBoostedPreserved; smaller memory-based version for memoryCarriedPreserved).
+- The raw finalStress/finalIdentity from the literal last step remain.
+- UI trace demo now displays the rescued final stress/id when they apply.
+- Sweep stabilitySearch now pulls them for the adaptive cases (visible in fresh explorer output).
+- Full verification run. Docs updated.
+
+The rescue layer now consistently improves three things on a rescued trace: the binary verdict, the exported ending carry, and the reported final stress/identity numbers.
+

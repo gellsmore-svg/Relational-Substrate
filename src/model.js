@@ -556,6 +556,18 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     );
   }
 
+  // Quality rescue also "heals" the reported final metrics (post-rescue relaxation of ending stress/identity).
+  // Parallel to the carry feedback: the history that counted as preserved thanks to quality reports slightly better ending numbers.
+  let qualityRescuedFinalStress = Number(last.closureStress.toFixed(4));
+  let qualityRescuedFinalIdentity = Number(last.identityScore.toFixed(4));
+  if (pathQBoostedPreserved) {
+    qualityRescuedFinalStress = Number(clamp01(last.closureStress * (1 - 0.08 * avgPathQ)).toFixed(4));
+    qualityRescuedFinalIdentity = Number(clamp01(last.identityScore * (1 + 0.06 * avgPathQ)).toFixed(4));
+  } else if (memoryCarriedPreserved) {
+    qualityRescuedFinalStress = Number(clamp01(last.closureStress * (1 - 0.04 * avgMem)).toFixed(4));
+    qualityRescuedFinalIdentity = Number(clamp01(last.identityScore * (1 + 0.03 * avgMem)).toFixed(4));
+  }
+
   return {
     trace,
     finalPreserved,
@@ -580,6 +592,8 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
       pathQBoostedPreserved,
       finalAccumContinuity,
       qualityRescuedFinalAccumContinuity,
+      qualityRescuedFinalStress,
+      qualityRescuedFinalIdentity,
     },
   };
 }
