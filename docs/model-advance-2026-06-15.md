@@ -639,3 +639,19 @@ This makes "the abstract history had high sustained quality" a directly measurab
 
 Full verification scope followed.
 
+
+## Continuation (pathQBoostedFinalIdentity in policy commitment lookahead)
+
+User: "continue"
+
+Small but meaningful feed of the quality-boosted rescue into the non-myopic policy machinery:
+
+- In the adaptive commitment lookahead (the part that scores "value of sticking with this r for the remaining horizon"), commitPresVal now prefers commitTrans.summary.pathQBoostedFinalIdentity over raw finalIdentity.
+- This makes the blended futValue (and thus the overall v for the regime) reflect the quality-rescue mechanism when projecting long-term commitment.
+- The pathQ horizon term (which already used commitScore) inherits the effect.
+- UI feedback extended.
+- No change to the core rescue logic; this is purely the policy "seeing" the boosted ending when deciding whether to commit to a regime.
+- Full verification (build/guardrails/smokes/sweep bg/verify) run. Docs updated.
+
+The adaptive choice is now quality-rescue-aware in its lookahead, closing another non-myopic loop.
+

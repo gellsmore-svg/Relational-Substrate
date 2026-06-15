@@ -303,7 +303,9 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
           // Lookahead with "commitment": simulate a short horizon *sticking* with this r and blend the outcome (high if preserves well under commitment to r)
           const commitSchedule = Array(remaining).fill(r);
           const commitTrans = testRegimeTransition({ ...current, ...baseInput }, { maxSteps: remaining, regimeSchedule: commitSchedule, regimeMemory });
-          const commitScore = commitTrans.finalPreserved ? 1.0 : (commitTrans.summary.finalIdentity || 0.5);
+          // Use pathQBoostedFinalIdentity preferentially for the preservation value under commitment (non-myopic policy now evaluates "sticking" using the quality-boosted ending identity when available).
+          const commitPresVal = commitTrans.summary.pathQBoostedFinalIdentity || commitTrans.summary.finalIdentity || 0.5;
+          const commitScore = commitTrans.finalPreserved ? 1.0 : commitPresVal;
           // Memory boost to commitment value: high current memory (inertia) makes the projected value of sticking with this regime higher (pure logic: built coherence makes long-term commitment to a good regime more attractive).
           const memBoostedCommit = commitScore * (1 + 0.15 * currentMem);
           futValue = 0.5 * futValue + 0.5 * memBoostedCommit;  // blend general stability with commitment-specific preservation under sticking with r
