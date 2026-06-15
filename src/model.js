@@ -318,6 +318,16 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
         // PathQuality scales the non-myopic components (MC + fut) so that high-quality histories value long-term expectation more (self-reinforcing choice under good running quality).
         const vNonMyopicScale = (0.85 + 0.15 * currentPathQEst);
         let v = imm + 0.45 * futValue * vNonMyopicScale + 0.25 * mcExp * vNonMyopicScale;  // non-myopic + quality-weighted
+
+        // Explicit pathQuality horizon term (new): estimate the pathQuality we would expect at the *end* of the remaining horizon under this regime choice.
+        // Pure logic "choose the condition that not only preserves now but leaves the history in a high-quality state".
+        let projectedPathQ = currentPathQEst;
+        if (remaining > 1) {
+          const commitPQBoost = (commitScore > 0.7 ? 0.12 : 0.04);  // good commitment under r builds more ending quality
+          projectedPathQ = clamp01(currentPathQEst + commitPQBoost + 0.06 * (futValue - 0.5));
+        }
+        v += 0.18 * projectedPathQ;  // quality-at-horizon contributes to the choice value
+
         if (prevRegime && r !== prevRegime) {
           v -= regimeSwitchingCost * 0.3;  // penalize switch (friction/cost of changing conditions)
         }
@@ -517,6 +527,15 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
   // memoryWeightedCoherence: the trace coherence now explicitly includes the memory modulation of grammarAlignment/coherenceMetric from core.
   const memoryWeightedCoherence = trace.reduce((s, t) => s + t.coherenceMetric * (1 + (t.memoryMod || 0) * 0.05), 0) / trace.length;
 
+  // PathQuality-boosted final identity (new pure-logic layer): high average pathQuality across the whole trace gives an additional quality lift to the ending identity.
+  // This lets a strong sustained-quality history "carry" the trace-level preservation even if the literal last snapshot is marginal (complements the memory-carried path).
+  const pathQBoostedFinalIdentity = Number((last.identityScore * (1 + avgPathQ * 0.12)).toFixed(4));
+
+  // Allow high avgPathQ to rescue the overall trace preservation (history quality as a whole makes the ending count as preserved).
+  if (!finalPreserved && pathQBoostedFinalIdentity > 0.62) {
+    finalPreserved = true;
+  }
+
   return {
     trace,
     finalPreserved,
@@ -537,6 +556,7 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
       avgPathQuality: Number(avgPathQ.toFixed(4)),
       finalPathQuality: Number(finalPathQ.toFixed(4)),
       memoryCarriedFinalPresQualityGate: Number(carriedQualityGate.toFixed(4)),
+      pathQBoostedFinalIdentity,
     },
   };
 }

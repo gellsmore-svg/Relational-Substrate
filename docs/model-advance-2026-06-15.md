@@ -588,3 +588,20 @@ UI trace feedback extended to note memory carried final pres with quality.
 Build clean. Guardrails passed. Sweep bg. Light simulate smoke shows the flag.
 
 Pure logic: built memory now carries not only the preservation and its quality but also gates the carried preservation on a quality threshold (high inertia carries a high-quality final state). The model now has memory as a carrier of high-quality preservation across the full history. Cross-scale loop closed on the "quality-gated carried preservation".
+
+## Continuation (pathQuality horizon in policy + quality-boosted trace preservation)
+
+User: "continue"
+
+Autonomous decision: extend the quality-aware non-myopic theme and the "history quality affects the test" theme one step further.
+
+- In the adaptive policy value function, added an explicit "projected pathQuality at end of remaining horizon" estimate (based on current quality + commitment outcome under the candidate regime + future stability signal). This term is added directly to the per-step v. The policy now actively prefers regimes that are expected to leave the history in a *high-quality end state*, not just ones that preserve identity.
+- In simulateSequence final logic, compute `pathQBoostedFinalIdentity = last.identityScore * (1 + avgPathQ * 0.12)`. High avgPathQ across the trace can now rescue overall `finalPreserved` for a marginal last step (quality of the whole story carries the trace-level verdict). Exposed in summary as `pathQBoostedFinalIdentity`.
+- Sweep stabilitySearch now extracts and reports the new boosted id for the adaptive explorer traces.
+- UI trace feedback updated with the horizon term and boosted trace pres.
+- Build/guardrails clean. Smoke exercised. Sweep bg + verify launched.
+
+This makes the adaptive choice more "quality-seeking" over the narrative horizon and lets strong sustained pathQuality act as another rescue mechanism for the overall history's preservation (complementing the memory-carried and core-gate effects).
+
+Full scope executed.
+
