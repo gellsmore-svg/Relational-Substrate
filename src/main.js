@@ -580,7 +580,7 @@ if (els.runTraceButton && els.traceOutput) {
 
     // Adaptive policy (state-aware with commitment lookahead): at each step, choose regime maximizing immediate quality (modulated by current stress) + discounted future (blended cross-stability + simulated preservation under *committing/sticking* with that regime for remaining horizon). Active "choosing + committing to conditions to preserve coherence". After preserved policy steps: small carry reinforcement (self-reinforcing paths); after poor steps: debt (degrading paths under bad choices).
     const adaptive = simulateSequence(input, 8, { adaptivePolicy: true, regimeMemory: 0.5 });
-    const adaptiveLine = `adaptive policy (state-aware commitment lookahead + MC non-myopic + mem 0.5): finalPres=${adaptive.finalPreserved} avgId=${adaptive.summary.finalIdentity} (+ reinf on preserved, debt on poor steps; carry/stress-decay dur-scaled)`;
+    const adaptiveLine = `adaptive policy (state-aware commitment lookahead + MC non-myopic + mem 0.5 + expected rescued ending quality): finalPres=${adaptive.finalPreserved} avgId=${adaptive.summary.finalIdentity} (+ reinf on preserved, debt on poor steps; carry/stress-decay dur-scaled; values healed final carry/memMod/coh/memWeightedCoh under sticking)`;
 
     // With switching cost: penalizes changing regimes mid-history (models friction of shifting conditions; encourages sticking with good regimes)
     const adaptiveWithSwitch = simulateSequence(input, 8, { adaptivePolicy: true, regimeMemory: 0.5, regimeSwitchingCost: 0.2 });

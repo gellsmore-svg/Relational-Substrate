@@ -727,3 +727,19 @@ Symmetric addition to the post-rescue healing of the ending snapshot:
 
 The rescue layer now consistently improves the binary, carry, final stress/id, final coherence, final memoryMod *and* the memoryWeightedCoherence of a quality-rescued history.
 
+
+## Continuation (expected rescued ending quality in policy commitment lookahead)
+
+User: "continue"
+
+Small but meaningful non-myopic extension that makes the full "healed ending snapshot" visible to long-term commitment scoring:
+
+- In the adaptive commitment lookahead (remaining > 1 block), after computing the existing boosted commitPresVal, we now also compute expectedRescuedEndingQuality = average of the rescued final carry, memoryMod, coherence and memWeightedCoherence from the commitmentTrans summary (if that sticking simulation would have triggered a rescue).
+- This term (0.12 weight) is blended into futValue for the regime.
+- Policy now explicitly prefers regimes that, under long-term sticking, are expected to produce not just preservation + pathQ but a strong *post-rescue healed ending state* (high final carry, high final memoryMod/inertia, high final coherence, high memWeightedCoh).
+- UI adaptiveLine description extended.
+- Sweep adaptive explorer data will reflect the updated scoring on the next full run.
+- Full verification (build/guardrails/smokes/sweep bg/verify) run. Docs updated.
+
+The adaptive choice is now non-myopic about the entire healed ending snapshot, not just the binary and the pathQ number.
+

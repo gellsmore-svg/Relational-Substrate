@@ -308,7 +308,18 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
           const commitScore = commitTrans.finalPreserved ? 1.0 : commitPresVal;
           // Memory boost to commitment value: high current memory (inertia) makes the projected value of sticking with this regime higher (pure logic: built coherence makes long-term commitment to a good regime more attractive).
           const memBoostedCommit = commitScore * (1 + 0.15 * currentMem);
-          futValue = 0.5 * futValue + 0.5 * memBoostedCommit;  // blend general stability with commitment-specific preservation under sticking with r
+          // Expected rescued ending quality under commitment (new): if sticking with this r would trigger a quality or memory rescue, also value the *strength of the healed ending state* (rescued final carry, memoryMod, coherence, memWeightedCoherence).
+          // This makes non-myopic policy prefer regimes that, under long-term sticking, are expected to produce not just preservation but a strong post-rescue ending inertia and coherence state.
+          let expectedRescuedEndingQuality = 0;
+          if (commitTrans.summary.pathQBoostedPreserved || commitTrans.summary.memoryCarriedPreserved) {
+            const rc = commitTrans.summary.qualityRescuedFinalAccumContinuity || 0;
+            const rm = commitTrans.summary.qualityRescuedFinalMemoryMod || 0;
+            const rcCoh = commitTrans.summary.qualityRescuedFinalCoherence || 0;
+            const rmw = commitTrans.summary.qualityRescuedMemoryWeightedCoherence || 0;
+            expectedRescuedEndingQuality = (rc + rm + rcCoh + rmw) / 4;  // simple 0-1 average of the key rescued ending metrics
+          }
+          futValue = 0.5 * futValue + 0.5 * memBoostedCommit + 0.12 * expectedRescuedEndingQuality;  // blend the expected healed ending quality into the commitment value
+
         }
         // Non-myopic extension (pure logic): blend explicit Monte-Carlo expected final preservation rate (averaged over many random future condition sequences / profiles)
         // directly into the per-step value. This makes regime choice at each step average over uncertainty in future "stories" rather than relying only on immediate + one commitment path.
