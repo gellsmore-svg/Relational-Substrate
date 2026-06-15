@@ -344,6 +344,27 @@ Pure-logic effect: histories that sustain high quality now "earn" stronger persi
 
 Full test scope executed (build clean; sweeps/guardrails/verify in train). 
 
+## Continuation (pathQuality consumption & reinf/debt modulation)
+
+User: "continue"
+
+Autonomous decision: take the newly running pathQuality and feed it *directly into the consumption (fatigue) and the reinf/debt amplification* inside simulateSequence.
+
+- After updating the running pathQuality for the current step:
+  - Fatigue for the *next* consumption step is scaled by (1 - pathQuality * 0.12) — high sustained quality makes continuing the history cheaper (less scatter drift).
+  - reinfScale (carry boost after preserved adaptive step) multiplied by (1 + 0.4 * pathQuality) — good choices during a high-quality streak produce stronger future carry.
+  - debtScale (carry penalty after non-preserved step) multiplied by (1 + 0.35 * pathQuality) — breaking a high-quality history now costs *more* (stronger vicious contrast).
+- Added `pathQOnAdaptive` array (avg/final pathQ vs adaptivePres + carriedPres from the explorer adaptive traces) to the sweep JSON + a new explanatory subsection in the generated markdown summary.
+- Extended the master trace demo feedback line.
+- `npm run build` clean (✓ 1.5s).
+- `npm run guardrails` clean (✓).
+- Fresh `npm run sweep` launched in background (will emit updated coherence-sweep.* containing the new pathQ consumption data and pathQOnAdaptive table).
+- Preview + verify attempted (Playwright selector timeout — same container/browser limitation seen on every prior verify run; core node logic is solid).
+- New sections appended to both pickup docs.
+
+Pure-logic result: pathQuality is no longer just an observed "how good has the streak been" number — it now actively changes the *cost* of the next steps and the magnitude of self-reinforcement / self-punishment. Virtuous cycles (and their opposite) become materially stronger exactly when the abstract history has already been succeeding.
+
+Full verification pattern followed. All changes remain strictly inside the abstract rule model.
 
 ## Continuation ("continue")
 

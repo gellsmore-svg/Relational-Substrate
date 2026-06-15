@@ -442,6 +442,13 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     const mem = memoryMod;  // post-update for this step
     fatigue *= (1 - mem * 0.15);  // high inertia reduces effective fatigue beyond dur
 
+    // PathQuality amplification of the virtuous cycle (new pure-logic layer on top of dur + mem):
+    // High running pathQuality (sustained history of successful, durable, high-inertia steps) makes coherence maintenance *even cheaper*
+    // (further reduced fatigue drift) and makes reinforcement after preserved policy steps stronger while making debt after poor steps more penalizing.
+    // This creates stronger self-reinforcing (and self-punishing) dynamics exactly when the abstract history has been "high quality".
+    const pq = pathQuality;  // running value after this step's blend (closed feedback)
+    fatigue *= (1 - pq * 0.12);  // high pathQuality reduces effective fatigue for the *next* consumption step
+
     current = {
       ...current,
       storage: clamp01((current.storage ?? 0.4) * (mods.storageDecay + out.reseatMetric * 0.03 + mods.reseatBoost)),
@@ -449,15 +456,16 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     };
 
     // Coherence reinforcement / path dependence (pure logic): after a preserved step under adaptive policy (good choice + commitment), slightly boost future carry / reduce future fatigue (self-reinforcing coherent paths under good condition choices). Scaled by dur for stronger effect in high-dur configs.
-    // Further amplified by memoryMod: high inertia makes the reinforcement from a good preserved step stronger.
+    // Further amplified by memoryMod + now also by pathQuality: high sustained quality makes the reinforcement from a good preserved step *stronger*.
     if (adaptivePolicy && out.identityPreserved) {
-      const reinfScale = 0.03 * durForAccum * (1 + 0.5 * mem);
+      const reinfScale = 0.03 * durForAccum * (1 + 0.5 * mem) * (1 + 0.4 * pq);
       accumContinuity = clamp01(accumContinuity * (1 + reinfScale));
     }
 
     // Coherence debt (symmetric negative feedback): after a non-preserved step under adaptive policy (poor choice or bad outcome), slightly reduce future carry / increase future fatigue impact (degrading paths under poor condition choices; vicious cycle contrast to reinforcement). Scaled by dur.
+    // Amplified by pathQuality: breaking a high-quality history incurs *more* debt (self-punishing for derailing a good streak).
     if (adaptivePolicy && !out.identityPreserved) {
-      const debtScale = 0.03 * durForAccum * (1 + 0.5 * mem);
+      const debtScale = 0.03 * durForAccum * (1 + 0.5 * mem) * (1 + 0.35 * pq);
       accumContinuity = clamp01(accumContinuity * (1 - debtScale));
     }
 
