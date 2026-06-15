@@ -192,6 +192,22 @@ export function calculateOutcome(input, options = {}) {
     identityPreserved = modulatedIdentityScore >= 0.60 && closureStress < 0.60;
   }
 
+  // Integrate running pathQuality (sustained success quality of the history) into the core single-shot view.
+  // High pathQuality from a good streak now directly strengthens the immediate coherence/identity numbers and makes the preservation gate itself more forgiving (history quality momentum affects the very next encounter's test).
+  // This is distinct from (and in addition to) the dur-boost scaling that pathQuality already performs inside the durability block.
+  if (options.pathQuality !== undefined) {
+    const pq = clamp01(options.pathQuality);
+    const pqBoost = 0.06 * pq;
+    coherenceMetric = clamp01(coherenceMetric * (0.97 + 0.03 * pq));
+    modulatedIdentityScore = clamp01((modulatedIdentityScore || identityScore) * (0.96 + pqBoost));
+    // Buckets also shift modestly toward persistence (admitted/stored up, scattered down) when streak quality is high.
+    // (light parallel to the pathMemory bucket modulation)
+    // Note: admitted etc are already normalized earlier; we re-apply a gentle shift here for the quality effect.
+    // To keep it simple and non-destructive we modulate the already-computed identity path primarily.
+    closureStress = clamp01(closureStress * (1 - 0.08 * pq));
+    identityPreserved = modulatedIdentityScore >= 0.60 && closureStress < 0.60;
+  }
+
   return {
     ...input,
     admitted,
@@ -350,7 +366,9 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     // Pass the incoming path memory (from prior accum state) so the core calculateOutcome can apply it
     // (history inertia now modulates coherence/identity/gate in the single-step view, closing the loop like durability).
     const incomingMemory = clamp01(accumContinuity * (1 - accumStress));
-    const out = calculateOutcome(stepInput, { skipDurability: true, pathMemory: incomingMemory });
+    // Also pass the current (incoming) pathQuality so the core now sees the sustained history quality directly:
+    // high streak quality strengthens immediate coherence/identity and relaxes the per-step preservation gate itself.
+    const out = calculateOutcome(stepInput, { skipDurability: true, pathMemory: incomingMemory, pathQuality });
 
     // Compute durability for feedback/accumulator scaling independently (cheap short-horizon stability run).
     // This ensures dur-scaled carry and stress decay are active even though the per-step outcome itself uses skipDurability to avoid recursion.
@@ -576,7 +594,8 @@ export function measureResilience(baseInput = {}, options = {}) {
     if (scatterBias) {
       stepInput.scatter = clamp01((stepInput.scatter ?? 0.3) + scatterBias);
     }
-    const out = calculateOutcome(stepInput, { skipDurability: true });
+    // Pass current (incoming) resPathQuality to core so the single-step metrics/gate benefit from the quality of the resilience history so far.
+    const out = calculateOutcome(stepInput, { skipDurability: true, pathQuality: resPathQuality });
 
     // Compute step memory from current out (grammar + low stress = high inertia)
     const stepMem = out.grammar ? clamp01(out.grammar.continuity * (1 - out.closureStress)) : 0;

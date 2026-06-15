@@ -407,6 +407,29 @@ This closes a dynamic loop in the abstract grammar: active choice creates persis
 
 Added coherence debt (symmetric to reinforcement): carry penalty after poor (non-preserved) steps under adaptive policy (degrading paths under bad choices; vicious cycle contrast to virtuous reinf under good policy).
 
+## Continuation (pathQuality now modulates the core single-step gate)
+
+User: "continue"
+
+The previous increments made pathQuality drive consumption, reinf/debt, rescuer, carried-final gates, and resilience horizons.
+
+This turn closes the loop at the single-interaction level: the running pathQuality is now passed into `calculateOutcome` (both from simulateSequence and from measureResilience), and the pathQuality option handling was extended (beyond the prior dur-boost scaling) to directly:
+
+- Boost coherenceMetric.
+- Raise modulatedIdentityScore.
+- Lower closureStress.
+- Relax the identityPreserved test for that step (high streak quality makes the current encounter easier to "pass" on identity).
+
+Simulate now passes the incoming pathQuality value on every step's core call (alongside pathMemory). MeasureResilience does the same with its resilience-run pathQuality.
+
+Result: a history that has built high pathQuality doesn't only make future steps *cheaper*; it makes the *present* coherence and identity numbers better and the gate itself more lenient because of the accumulated quality momentum.
+
+UI trace feedback updated. Sweep (via its simulate/resilience calls) automatically exercises the new core effect. Build + guardrails clean. Smokes and verification pipeline run.
+
+Pure-logic picture now has pathQuality as a full participant in the immediate gate as well as the dynamic layers.
+
+## Continuation ("continue")
+
 - UI trace and sweep search/report note the balanced effect.
 - Full scope green (build/verify/smoke; sweep background).
 - Good cases: slight avgId lift from reinf (~0.810); debt sharpens the penalty for deviating from stable policy paths.
