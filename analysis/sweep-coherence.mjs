@@ -273,6 +273,7 @@ const stabilitySearch = topCoherent.slice(0, 3).map((seed) => {
   const qualityRescuedFinalId = adaptive.summary.qualityRescuedFinalIdentity || null;
   const qualityRescuedFinalCoherence = adaptive.summary.qualityRescuedFinalCoherence || null;
   const qualityRescuedFinalMemoryMod = adaptive.summary.qualityRescuedFinalMemoryMod || null;
+  const qualityRescuedMemoryWeightedCoherence = adaptive.summary.qualityRescuedMemoryWeightedCoherence || null;
   return {
     pattern: `${seed.closedForm}/${seed.transientForm}/${seed.scenario}`,
     baseStability: baseSt,
@@ -309,6 +310,7 @@ const stabilitySearch = topCoherent.slice(0, 3).map((seed) => {
     qualityRescuedFinalId,
     qualityRescuedFinalCoherence,
     qualityRescuedFinalMemoryMod,
+    qualityRescuedMemoryWeightedCoherence,
   };
 });
 
@@ -557,7 +559,7 @@ ${stabilityFragile.map(s => `- ${s.pattern}: stability=${s.stability} (maxFrag=$
 
 Using findHighStabilitySettings (small random perturbations on grammar factors) on a few top cases to estimate how much local improvement in regime stability is still available. Also shown with moderate regimeMemory (inertia from previous regime). Includes Durability Index (composite robustness * stability * low-fragility). Also shows best regime policy (which fixed regime maximizes the durabilityIndex). Adaptive policy (state-aware lookahead choice per step using the policy function).
 
-${stabilitySearch.map(s => `- ${s.pattern}: base stab=${s.baseStability} durIdx=${s.baseDurabilityIndex} → best stab=${s.bestFound} durIdx=${s.projectedDurabilityIndex} (imp ${s.improvement}, mem ${s.withMemoryImprovement}, bestRegime=${s.bestRegimeForDurability} eff=${s.policyEffectiveDurIdx}, MC presRate=${s.mcExpectedFinalPresRate}, adaptive pres=${s.adaptiveFinalPres} avgId=${s.adaptiveAvgId}, adaptive+switch pres=${s.adaptiveWithSwitchFinalPres} avgId=${s.adaptiveWithSwitchAvgId}, avgPathMem=${s.avgPathMemory}, finalMem=${s.finalPathMemory}, memOnPres=${s.avgMemoryOnPreserved}, memRescues=${s.memoryRescues}, avgAdmitHighMem=${s.avgAdmittedHighMem}, avgCohHighMem=${s.avgCoherenceHighMem}, avgCarryHighMem=${s.avgCarryHighMem}, memAdjFinalId=${s.memoryAdjustedFinalId}, memCarriedPres=${s.memoryCarriedPres}, memCarriedFinalId=${s.memoryCarriedFinalId}, memCarriedFinalPres=${s.memoryCarriedFinalPres}, avgPathQ=${s.avgPathQuality}, finalPathQ=${s.finalPathQuality}, carriedQGate=${s.carriedQualityGate}, pathQBoostedFinalId=${s.pathQBoostedFinalId}, pathQBoostedPres=${s.pathQBoostedPres}, rescuedFinalStress=${s.qualityRescuedFinalStress}, rescuedFinalId=${s.qualityRescuedFinalId}, rescuedFinalCoh=${s.qualityRescuedFinalCoherence}, rescuedFinalMemMod=${s.qualityRescuedFinalMemoryMod})`).join('\n')}
+${stabilitySearch.map(s => `- ${s.pattern}: base stab=${s.baseStability} durIdx=${s.baseDurabilityIndex} → best stab=${s.bestFound} durIdx=${s.projectedDurabilityIndex} (imp ${s.improvement}, mem ${s.withMemoryImprovement}, bestRegime=${s.bestRegimeForDurability} eff=${s.policyEffectiveDurIdx}, MC presRate=${s.mcExpectedFinalPresRate}, adaptive pres=${s.adaptiveFinalPres} avgId=${s.adaptiveAvgId}, adaptive+switch pres=${s.adaptiveWithSwitchFinalPres} avgId=${s.adaptiveWithSwitchAvgId}, avgPathMem=${s.avgPathMemory}, finalMem=${s.finalPathMemory}, memOnPres=${s.avgMemoryOnPreserved}, memRescues=${s.memoryRescues}, avgAdmitHighMem=${s.avgAdmittedHighMem}, avgCohHighMem=${s.avgCoherenceHighMem}, avgCarryHighMem=${s.avgCarryHighMem}, memAdjFinalId=${s.memoryAdjustedFinalId}, memCarriedPres=${s.memoryCarriedPres}, memCarriedFinalId=${s.memoryCarriedFinalId}, memCarriedFinalPres=${s.memoryCarriedFinalPres}, avgPathQ=${s.avgPathQuality}, finalPathQ=${s.finalPathQuality}, carriedQGate=${s.carriedQualityGate}, pathQBoostedFinalId=${s.pathQBoostedFinalId}, pathQBoostedPres=${s.pathQBoostedPres}, rescuedFinalStress=${s.qualityRescuedFinalStress}, rescuedFinalId=${s.qualityRescuedFinalId}, rescuedFinalCoh=${s.qualityRescuedFinalCoherence}, rescuedFinalMemMod=${s.qualityRescuedFinalMemoryMod}, rescuedMemWeightedCoh=${s.qualityRescuedMemoryWeightedCoherence})`).join('\n')}
 
 ## PathQuality consumption & reinforcement modulation (latest advance)
 PathQuality (running) now directly reduces fatigue in the consumption step and multiplies the reinfScale / debtScale (high pathQ makes good preserved adaptive steps boost carry *more* and bad steps hurt carry *more*). This is the explicit "sustained quality makes coherence cheaper and streaks self-reinforcing" layer.

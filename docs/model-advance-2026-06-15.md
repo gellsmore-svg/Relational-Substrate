@@ -713,3 +713,17 @@ Symmetric addition to the post-rescue healing of the ending snapshot:
 
 The rescue layer now consistently improves the binary, carry, final stress/id, final coherence *and* the final memoryMod of a quality-rescued history. The ending "path memory" meter itself benefits from the quality rescue.
 
+
+## Continuation (quality rescue heals memoryWeightedCoherence)
+
+User: "continue"
+
+Symmetric addition to the post-rescue healing of the ending snapshot:
+
+- qualityRescuedMemoryWeightedCoherence now in the simulate summary (proportional lift using avgPathQ for pathQBoostedPreserved rescue; smaller for memoryCarriedPreserved).
+- UI trace demo updated to display it when different from the raw memoryWeightedCoherence.
+- Sweep stabilitySearch extracts it for the adaptive explorer cases (visible in fresh data).
+- Full verification followed. Docs updated.
+
+The rescue layer now consistently improves the binary, carry, final stress/id, final coherence, final memoryMod *and* the memoryWeightedCoherence of a quality-rescued history.
+

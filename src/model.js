@@ -585,6 +585,14 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     qualityRescuedFinalMemoryMod = Number(clamp01(last.memoryMod * (1 + 0.04 * avgMem)).toFixed(4));
   }
 
+  // Quality rescue also heals the memoryWeightedCoherence (pure logic: the memory-weighted coherence average benefits from the strong ending memory/inertia when the history "counted as preserved thanks to quality").
+  let qualityRescuedMemoryWeightedCoherence = memoryWeightedCoherence;
+  if (pathQBoostedPreserved) {
+    qualityRescuedMemoryWeightedCoherence = Number( (memoryWeightedCoherence * (1 + 0.04 * avgPathQ)).toFixed(4) );
+  } else if (memoryCarriedPreserved) {
+    qualityRescuedMemoryWeightedCoherence = Number( (memoryWeightedCoherence * (1 + 0.02 * avgMem)).toFixed(4) );
+  }
+
   return {
     trace,
     finalPreserved,
@@ -613,6 +621,7 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
       qualityRescuedFinalIdentity,
       qualityRescuedFinalCoherence,
       qualityRescuedFinalMemoryMod,
+      qualityRescuedMemoryWeightedCoherence,
     },
   };
 }
