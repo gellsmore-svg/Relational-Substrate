@@ -576,6 +576,15 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     qualityRescuedFinalCoherence = Number(clamp01(last.coherenceMetric * (1 + 0.025 * avgMem)).toFixed(4));
   }
 
+  // Quality rescue also strengthens the reported final memoryMod / path memory (pure logic: the ending inertia meter itself is improved when the history "counted as preserved thanks to quality").
+  // This makes the "path memory" at the close of the story stronger for a quality-rescued trace.
+  let qualityRescuedFinalMemoryMod = Number(last.memoryMod.toFixed(4));
+  if (pathQBoostedPreserved) {
+    qualityRescuedFinalMemoryMod = Number(clamp01(last.memoryMod * (1 + 0.08 * avgPathQ)).toFixed(4));
+  } else if (memoryCarriedPreserved) {
+    qualityRescuedFinalMemoryMod = Number(clamp01(last.memoryMod * (1 + 0.04 * avgMem)).toFixed(4));
+  }
+
   return {
     trace,
     finalPreserved,
@@ -603,6 +612,7 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
       qualityRescuedFinalStress,
       qualityRescuedFinalIdentity,
       qualityRescuedFinalCoherence,
+      qualityRescuedFinalMemoryMod,
     },
   };
 }

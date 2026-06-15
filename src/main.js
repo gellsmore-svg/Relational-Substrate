@@ -593,6 +593,7 @@ if (els.runTraceButton && els.traceOutput) {
       (summary.qualityRescuedFinalStress && summary.qualityRescuedFinalStress !== summary.finalStress ? `  rescuedFinalStress=${summary.qualityRescuedFinalStress}` : '') +
       (summary.qualityRescuedFinalIdentity && summary.qualityRescuedFinalIdentity !== summary.finalIdentity ? `  rescuedFinalId=${summary.qualityRescuedFinalIdentity}` : '') +
       (summary.qualityRescuedFinalCoherence && summary.qualityRescuedFinalCoherence !== summary.coherenceMetric ? `  rescuedFinalCoh=${summary.qualityRescuedFinalCoherence}` : '') +
+      (summary.qualityRescuedFinalMemoryMod && summary.qualityRescuedFinalMemoryMod !== (tr.trace[tr.trace.length-1]||{}).memoryMod ? `  rescuedFinalMemMod=${summary.qualityRescuedFinalMemoryMod}` : '') +
       `\nresilience (8-step, primary=${primaryRegime}): ${regimeLine}` +
       `\nrobustness: ${robust.robustness} (min ${robust.minSurvival}/8, fullRobust=${robust.fullRobust})` +
       `\n${transLine}` +
