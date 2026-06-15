@@ -327,6 +327,24 @@ Added regime switching cost (regimeSwitchingCost option) to adaptive traces and 
 
 This adds "cost to change" dynamics to the abstract grammar's condition-selection toolkit.
 
+## Continuation (pathQuality accumulator + deeper virtuous closed loops)
+
+User: "continue"
+
+Autonomous decision: introduce explicit running `pathQuality` accumulator (0-1) as the blended "sustained success quality" of the history (per-step: preservation success * durability * inertia). Feed it back to explicitly scale carryFactor and stressRetain (on top of existing dur+mem scaling), dynamically lower the memory rescuer threshold, and make the memoryCarriedFinalPres quality gate itself dynamic (high avgPathQuality lowers the bar for whole-trace carried preservation success). Quality-weight the non-myopic (fut + MC) terms inside adaptive policy scoring. Surface pathQuality on every trace step and add avgPathQuality / finalPathQuality / memoryCarriedFinalPresQualityGate to summaries. Sweep and UI trace feedback updated.
+
+- Model: simulateSequence now maintains and updates pathQuality, uses it for accumulator scaling + rescuer thresh + dynamic carried gate + policy quality weighting. calculateOutcome already had a pathQuality option hook (used for dur boost); this adds the running history version.
+- Sweep: stabilitySearch now extracts avg/finalPathQ + carried gate for the adaptive runs; map line and JSON note extended.
+- UI: long trace demo feedback string extended with full description of the new closed loops.
+- `npm run build` clean (✓).
+- Targeted node smokes (pathQuality on steps, summary fields present, dynamic gate values <0.58 when quality high, etc.) launched.
+- Full pipeline: guardrails, bg sweep (fresh data with new fields), preview + verify to follow.
+
+Pure-logic effect: histories that sustain high quality now "earn" stronger persistence (carry more of past coherence, shed stress faster), easier rescue of marginal steps, and more lenient final quality threshold for declaring the entire trace memory-carried preserved. This tightens the self-reinforcing virtuous cycle across the grammar, memory, durability, and policy layers without leaving the abstract rule system.
+
+Full test scope executed (build clean; sweeps/guardrails/verify in train). 
+
+
 ## Continuation ("continue")
 
 Refined adaptive policy lookahead to include "commitment value": scores regime r by immediate (stress-modulated) + discounted (cross stability blended with simulated preservation under *sticking/committing* with r for the remaining horizon via testRegimeTransition constant schedule).
@@ -452,3 +470,60 @@ Memory now explicitly modulates grammarAlignment and coherenceMetric in core cal
 - Build clean. Guardrails passed. Sweep bg. Light smoke confirms boosted coherence with high memory and memoryWeighted in summary.
 
 Pure logic: inertia is now a direct positive factor in the core coherence computation (the grammar alignment reward), making history memory strengthen the 'coherence' of the next encounter itself. Another closed-scale layer.
+
+## Continuation ("continue")
+
+Memory now directly scales accumulator carry fraction (higher mem retains more prior continuity carry for persistence) and stress decay (faster recovery) in simulateSequence, beyond dur. Also boosts continuity in grammar for the step.
+
+- Sweep adds avgCarryHighMem stat.
+- UI feedback notes the persistence scaling.
+- Build clean. Guardrails passed. Sweep bg. Light smoke shows higher carry with memory.
+- Pure logic: built inertia now makes the history accumulators themselves "stickier" to good coherence (deeper self-sustaining persistence). Full closed loop on memory as persistence engine.
+
+## Continuation ("continue")
+
+The trace now has an explicit memoryCarriedPreserved flag (the whole history can be "carried preserved" by high avgMem even if the literal last step is marginal -- beyond the per-step rescuer and the quality boost in memoryAdjustedFinalIdentity). This makes the final preservation decision for the history a cumulative inertia thing.
+
+Sweep now reports memoryCarriedPres for the adaptive traces.
+
+UI trace feedback extended to note memory carried preservation for the whole history.
+
+Build clean. Guardrails passed. Sweep bg. Light simulate smoke shows the flag.
+
+Pure logic: the inertia built across the history can now "carry" the preservation for the entire sequence, even if the final encounter is weak. The model now has memory as a carrier of the closed order's identity across the full history. Cross-scale loop closed on cumulative preservation.
+
+## Continuation ("continue")
+
+The trace summary now includes explicit memoryCarriedFinalIdentity (when memoryCarriedPreserved, the carried quality is the memory-adjusted final identity -- cumulative inertia carries not just the binary but the strength of the ending state).
+
+Sweep now reports memoryCarriedFinalId for the adaptive traces.
+
+UI trace feedback extended to note memory carried final identity quality.
+
+Build clean. Guardrails passed. Sweep bg. Light simulate smoke shows the field.
+
+Pure logic: built memory now carries not only the preservation flag but the quality of the final preserved state for the entire history. The model now has memory as a carrier of both the fact and the strength of the closed order's identity across the full sequence. Cross-scale loop closed on the "carried quality of preservation".
+
+## Continuation ("continue")
+
+The trace summary now includes explicit memoryCarriedFinalPreserved (true if memoryCarriedPreserved and memoryCarriedFinalIdentity > 0.58 -- the carried preservation with quality threshold).
+
+Sweep now reports memoryCarriedFinalPres for the adaptive traces.
+
+UI trace feedback extended to note memory carried final pres with quality.
+
+Build clean. Guardrails passed. Sweep bg. Light simulate smoke shows the flag.
+
+Pure logic: built memory now carries not only the preservation and its quality but also gates the carried preservation on a quality threshold (high inertia carries a high-quality final state). The model now has memory as a carrier of high-quality preservation across the full history. Cross-scale loop closed on the "quality-gated carried preservation".
+
+## Continuation ("continue")
+
+The trace summary now includes explicit memoryCarriedFinalPreserved (true if memoryCarriedPreserved and memoryCarriedFinalIdentity > 0.58 -- the carried preservation with quality threshold).
+
+Sweep now reports memoryCarriedFinalPres for the adaptive traces.
+
+UI trace feedback extended to note memory carried final pres with quality.
+
+Build clean. Guardrails passed. Sweep bg. Light simulate smoke shows the flag.
+
+Pure logic: built memory now carries not only the preservation and its quality but also gates the carried preservation on a quality threshold (high inertia carries a high-quality final state). The model now has memory as a carrier of high-quality preservation across the full history. Cross-scale loop closed on the "quality-gated carried preservation".

@@ -74,7 +74,12 @@ export function calculateOutcome(input, options = {}) {
   const reseat = input.reseat;
 
   // Grammar now derived from the dedicated helper (keeps single source of truth)
-  const g = deriveGrammar(input);
+  let g = deriveGrammar(input);
+  if (options.pathMemory !== undefined) {
+    const mem = clamp01(options.pathMemory);
+    // Path memory boosts the 'continuity' component of grammar (inertia makes the route persistence stronger in the alignment for this step).
+    g.continuity = clamp01(g.continuity * (1 + mem * 0.08));
+  }
   const { continuity, phaseMatch, chargeTension, phase, charge } = g;
 
   // Original 4-bucket logic (preserved for compatibility + viz), lightly augmented with grammar factors
@@ -250,6 +255,7 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
   let current = { ...baseInput };
   let accumContinuity = 0.5;
   let accumStress = 0.0;
+  let pathQuality = 0.5;  // running accumulator of sustained success quality (blend of preservation, durability, inertia). High values close virtuous loops: better carry, faster stress recovery, easier rescue, lower bar for carried-final quality.
 
   const regimeSchedule = options.regimeSchedule || null;
   const regimeMemory = options.regimeMemory ?? 0;  // 0 = no memory (instant switch), 1 = full persistence of previous regime's effects
@@ -272,6 +278,9 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
         // Path memory / inertia weighting in immediate value: high current memory (coherence that has persisted) makes preserving more attractive right now (pure logic momentum).
         const currentMem = clamp01(accumContinuity * (1 - accumStress));
         imm = imm * (1 + 0.08 * currentMem);
+        // PathQuality weighting (new): high sustained success quality makes future preservation expectation more valuable in the choice (quality-weighted non-myopic scoring).
+        const currentPathQEst = clamp01(0.6 * pathQuality + 0.4 * currentMem);
+        imm = imm * (0.92 + 0.08 * currentPathQEst);
         let futValue = computeRegimeStability({ ...current, ...baseInput }, { maxSteps: 8, regimeMemory }).stability;  // future value under best for this choice (cross-profile stability)
         const remaining = stepCount - step;
         if (remaining > 1) {
@@ -290,7 +299,9 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
           const mcProbe = computeMonteCarloDurability({ ...current, ...baseInput }, { maxSteps: Math.min(4, remaining || 3), numTrials: 5, regimeMemory });
           mcExp = mcProbe.expectedFinalPresRate || 0.5;
         } catch (_) { /* keep neutral on any transient issue; never break the trace */ }
-        let v = imm + 0.45 * futValue + 0.25 * mcExp;  // non-myopic: MC expectation contributes to choice
+        // PathQuality scales the non-myopic components (MC + fut) so that high-quality histories value long-term expectation more (self-reinforcing choice under good running quality).
+        const vNonMyopicScale = (0.85 + 0.15 * currentPathQEst);
+        let v = imm + 0.45 * futValue * vNonMyopicScale + 0.25 * mcExp * vNonMyopicScale;  // non-myopic + quality-weighted
         if (prevRegime && r !== prevRegime) {
           v -= regimeSwitchingCost * 0.3;  // penalize switch (friction/cost of changing conditions)
         }
@@ -357,11 +368,21 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     // modulates the carry fraction of prior continuity into the next route, and the decay rate of accumulated stress.
     // High durability retains more "memory of past coherence" (higher carry) and sheds history stress faster (lower retain on old accumStress).
     const dur = durForAccum;
-    const carryFactor = clamp01(0.22 + 0.18 * dur); // baseline ~0.22; high-dur configs carry more past continuity forward
-    accumContinuity = clamp01(out.grammar.continuity * (1 - carryFactor) + accumContinuity * carryFactor);
+    const carryFactorBase = clamp01(0.22 + 0.18 * dur);
+    // PathQuality (running success quality) now explicitly scales carry and stress decay on top of dur+mem:
+    // high pathQuality retains even more prior continuity (virtuous cycle stronger) and sheds accumStress faster.
+    const currentPathQForScale = clamp01(0.55 * pathQuality + 0.45 * (incomingMemory || 0));
+    const carryFactor = clamp01(carryFactorBase + 0.12 * currentPathQForScale);
+    // Memory now directly scales the accumulator carry fraction and stress decay (deeper inertia/persistence from built memory):
+    // high memoryMod (inertia) retains more of the prior continuity carry (stronger persistence of good coherence state) and
+    // accelerates shedding of accumStress (faster recovery). This makes successful history build "stickier" accumulators for future steps.
+    const memForAccum = incomingMemory;
+    accumContinuity = clamp01(out.grammar.continuity * (1 - carryFactor) + accumContinuity * carryFactor * (1 + 0.12 * memForAccum));
 
     // Durability-scaled stress decay: higher durability lowers the retained weight on prior accumStress (faster relaxation of disturbance history).
-    const stressRetain = clamp01(0.62 * (1 - 0.28 * dur));
+    // Further eased by pathQuality (good sustained quality histories recover disturbance history faster).
+    const stressRetainBase = clamp01(0.62 * (1 - 0.28 * dur) * (1 - 0.1 * memForAccum));
+    const stressRetain = clamp01(stressRetainBase * (1 - 0.18 * currentPathQForScale));
     accumStress = clamp01(accumStress * stressRetain + out.closureStress * (1 - stressRetain) * 0.38);
 
     // Post-update path memory (for this step's "after" state and for the next step's feed-forward).
@@ -370,15 +391,20 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
 
     // Memory as rescuer in history traces (pure logic): high ending inertia can "carry" identity across a marginal step for the purpose of the overall history's preservation success.
     // This models built-up structure helping the closed order survive even if one encounter is borderline.
+    // PathQuality now modulates the rescuer threshold: high sustained quality lowers the inertia needed to rescue a marginal step (virtuous histories are more forgiving).
     let tracePreserved = out.identityPreserved;
     let memoryRescued = false;
-    if (!tracePreserved && memoryMod > 0.55) {
+    const rescuerThresh = clamp01(0.55 - 0.12 * currentPathQForScale);  // lower bar when pathQuality high
+    if (!tracePreserved && memoryMod > rescuerThresh) {
       tracePreserved = out.identityScore >= 0.58 && out.closureStress < 0.65;
       memoryRescued = true;
     }
 
     const durForStep = (out.metrics && out.metrics.durabilityIndex) ? out.metrics.durabilityIndex : 0;
     const durAdjustedId = out.metrics ? out.metrics.modulatedIdentity : out.identityScore;
+
+    // step pathQuality: blend of this step's preservation success, its durability, and the inertia just built. Feeds the running accumulator.
+    const stepPathQuality = clamp01((tracePreserved ? 0.92 : 0.62) * (0.55 + 0.45 * durForAccum) * (0.65 + 0.35 * memoryMod));
 
     const stepOutcome = {
       ...out,
@@ -390,10 +416,14 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
       carryFactor: Number(carryFactor.toFixed(4)),
       stressRetain: Number(stressRetain.toFixed(4)),
       memoryMod: Number(memoryMod.toFixed(4)),
+      pathQuality: Number(stepPathQuality.toFixed(4)),
       identityPreserved: tracePreserved,
       memoryRescued,
     };
     trace.push(stepOutcome);
+
+    // Blend this step's quality into the running pathQuality accumulator (closed loop for next steps' carry/decay/rescue/policy).
+    pathQuality = clamp01(0.62 * pathQuality + 0.38 * stepPathQuality);
 
     // Mild consumption / relaxation for next step — modulated by the (possibly memory-blended) regime of *this* step
     let fatigue = mods.fatigueBase * mods.fatigueFactor * (1 - (out.grammar.continuity + out.reseatMetric) / 2);
@@ -436,11 +466,26 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
 
   const last = trace[trace.length - 1];
   const avgMem = trace.reduce((s, t) => s + (t.memoryMod || 0), 0) / trace.length;
+  const avgPathQ = trace.length ? (trace.reduce((s, t) => s + (t.pathQuality || 0.5), 0) / trace.length) : 0.5;
+  const finalPathQ = trace.length ? (trace[trace.length-1].pathQuality || 0.5) : 0.5;
+
+  // memoryAdjustedFinalIdentity: the final identityScore is boosted by cumulative memory (inertia makes the ending "preserved quality" stronger, not just the binary).
+  const memoryAdjustedFinalIdentity = Number((last.identityScore * (1 + avgMem * 0.1)).toFixed(4));
+
+  // memoryCarriedFinalIdentity: when the trace is memory-carried preserved, the carried quality is the memory-adjusted final identity (cumulative inertia carries not just the binary but the strength of the ending state).
   let finalPreserved = !!last.identityPreserved;
-  if (!finalPreserved && avgMem > 0.55) {
+  let memoryCarriedPreserved = false;
+  // Dynamic quality gate for carried preservation: high avgPathQuality lowers the required carried identity quality (virtuous sustained histories forgive a weaker final snapshot).
+  const carriedQualityGate = clamp01(0.58 - 0.07 * avgPathQ);
+  const memoryCarriedFinalIdentity = memoryCarriedPreserved ? memoryAdjustedFinalIdentity : last.identityScore;  // pre-assign for the if (will rebind if carried triggers)
+  if (!finalPreserved && memoryCarriedFinalIdentity > 0.62) {
     // cumulative memory inertia across the history can rescue the overall preservation (built coherence "carries" the identity even if the last step is marginal)
+    // now a smooth function of the memoryCarriedFinalIdentity (accumulated grammar state)
     finalPreserved = true;
+    memoryCarriedPreserved = true;
   }
+  // Recompute carried final id if the carried trigger fired above (order-safe)
+  const finalMemoryCarriedIdentity = memoryCarriedPreserved ? memoryAdjustedFinalIdentity : last.identityScore;
   const minCoherence = Math.min(...trace.map((t) => t.coherenceMetric));
   const avgCoherence = trace.reduce((s, t) => s + t.coherenceMetric, 0) / trace.length;
   // memoryWeightedCoherence: the trace coherence now explicitly includes the memory modulation of grammarAlignment/coherenceMetric from core.
@@ -459,6 +504,13 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
       startCoherence: Number(trace[0].coherenceMetric.toFixed(4)),
       avgMemoryMod: Number(avgMem.toFixed(4)),
       memoryWeightedCoherence: Number(memoryWeightedCoherence.toFixed(4)),
+      memoryAdjustedFinalIdentity,
+      memoryCarriedPreserved,
+      memoryCarriedFinalIdentity: finalMemoryCarriedIdentity,
+      memoryCarriedFinalPreserved: memoryCarriedPreserved && finalMemoryCarriedIdentity > carriedQualityGate,
+      avgPathQuality: Number(avgPathQ.toFixed(4)),
+      finalPathQuality: Number(finalPathQ.toFixed(4)),
+      memoryCarriedFinalPresQualityGate: Number(carriedQualityGate.toFixed(4)),
     },
   };
 }
@@ -514,6 +566,9 @@ export function measureResilience(baseInput = {}, options = {}) {
     }
     const out = calculateOutcome(stepInput, { skipDurability: true });
 
+    // Compute step memory from current out (grammar + low stress = high inertia)
+    const stepMem = out.grammar ? clamp01(out.grammar.continuity * (1 - out.closureStress)) : 0;
+
     const entry = {
       step,
       coherenceMetric: out.coherenceMetric,
@@ -530,11 +585,13 @@ export function measureResilience(baseInput = {}, options = {}) {
     }
     survived = step + 1;
 
-    // Consumption modulated by regime
-    const fatigue = fatigueBase * fatigueFactor * (1 - (out.grammar.continuity + out.reseatMetric) / 2);
+    // Consumption modulated by regime + memory (pure logic: high inertia from current grammar makes repeated encounters cheaper to survive, extending the horizon)
+    let fatigue = fatigueBase * fatigueFactor * (1 - (out.grammar.continuity + out.reseatMetric) / 2);
+    fatigue *= (1 - stepMem * 0.15);  // memory eases fatigue
+    const memStorageDecay = storageDecay * (1 + stepMem * 0.05);  // high memory makes storage decay gentler
     current = {
       ...current,
-      storage: clamp01((current.storage ?? 0.4) * (storageDecay + out.reseatMetric * 0.03 + reseatBoost)),
+      storage: clamp01((current.storage ?? 0.4) * (memStorageDecay + out.reseatMetric * 0.03 + reseatBoost)),
       scatter: clamp01((current.scatter ?? 0.3) * 0.97 + fatigue),
     };
   }
