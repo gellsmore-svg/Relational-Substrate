@@ -27,6 +27,7 @@ const checks = [
   'analysis/ri-pure-ca-si-o-source-exhaustion-screen.mjs',
   'analysis/external-material-refractive-index-challenge.mjs',
   'analysis/material-nbo-stoichiometry.mjs',
+  'analysis/heteroatom-trans-topology-repair-diagnostic.mjs',
   'analysis/model-sensitivity-analysis.mjs',
   'analysis/evidence-ledger.mjs',
   'analysis/predeclaration-gate.mjs',

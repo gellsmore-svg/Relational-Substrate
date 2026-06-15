@@ -1,5 +1,7 @@
 # Claude Review Prompt: Relational Substrate Progress and Drift Audit
 
+> Supersession note (2026-06-15): this is a historical review prompt. Its embedded `6.8/10` confidence context is not current. Current generated inferential convergence is 5.6/10 and remains below the 6.25 cap while material RI is unresolved and heavier H2X2 torsion transfer fails trans-side topology/magnitude.
+
 You are reviewing the current progress of the Relational Substrate research sandbox.
 
 Your task is not to endorse the theory. Your task is to audit whether the work has remained aligned with its stated intent, whether the confidence language is calibrated, whether the evidence is being counted honestly, and what the next validation step should be.

@@ -2,6 +2,8 @@
 
 Date: 2026-05-09
 
+> Supersession note (2026-06-15): this is a historical review packet. Its embedded 6.25/10 confidence context predates later reconciliation. Current generated inferential convergence is 5.6/10 and remains below the 6.25 cap while material RI is unresolved and heavier H2X2 torsion transfer fails trans-side topology/magnitude.
+
 Repository: `Relational-Substrate`
 
 Current commit under review: latest `main` after orthoclase held-out validation.

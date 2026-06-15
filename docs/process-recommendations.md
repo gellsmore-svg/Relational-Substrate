@@ -69,7 +69,7 @@ This provides a better understanding of how "coherent" regions in the sandbox de
 
 **Recommendation**: Improve the auditability of the high-level metrics in `docs/research-task-map.md` (evidence lines, independence, cross-domain equivalence, unification support).
 
-A lightweight, machine-readable or consistently formatted ledger across all tracks (molecule, material, EM, interface, torsion, etc.) would make the confidence numbers (currently ~6.25/10) easier to defend or challenge during reviews.
+A lightweight, machine-readable or consistently formatted ledger across all tracks (molecule, material, EM, interface, torsion, etc.) would make the confidence numbers (currently 5.6/10 inferential convergence, below the 6.25 cap) easier to defend or challenge during reviews.
 
 ## 8. UI ↔ Analysis Round-Tripping
 

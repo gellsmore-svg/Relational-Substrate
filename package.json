@@ -60,6 +60,7 @@
     "benchmark:disulfane-comparison": "node analysis/disulfane-heteroatom-rotor-comparison.mjs",
     "benchmark:selenane-prelookup": "node analysis/selenane-heteroatom-rotor-prelookup.mjs",
     "benchmark:selenane-comparison": "node analysis/selenane-heteroatom-rotor-comparison.mjs",
+    "diagnostic:heteroatom-trans-repair": "node analysis/heteroatom-trans-topology-repair-diagnostic.mjs",
     "benchmark:ethane": "node analysis/external-ethane-benchmark.mjs",
     "benchmark:ethane-quant": "node analysis/external-ethane-quantitative-benchmark.mjs",
     "benchmark:ionic": "node analysis/external-ionic-benchmark.mjs",

@@ -39,6 +39,15 @@
       "notes": "Key for distinguishing melilite vs. non-melilite Ca3Si2O7 polymorphs."
     },
     {
+      "id": "trans_planar_topology_penalty",
+      "name": "Heavy H2X2 trans-planar topology penalty",
+      "units": "cm-1 penalty term",
+      "extraction": "For heavy-atom H2X2 rotors only: coefficient × clamp01((torsionMean - 150) / 30)^2 × antiPlanarRelease × heavyAtomFactor(central element). Allowed central elements and coefficient must be frozen before fresh-target lookup.",
+      "source_requirement": "Geometry and charge rules must be source-locked before lookup; descriptor may be calibrated only on already-exposed failed H-S-S-H / H-Se-Se-H trans-side rows before a fresh target is reserved.",
+      "conventional": false,
+      "notes": "Diagnostic repair candidate for the exposed trans-side topology failure. Does not count as validation until an unchanged post-redesign formula passes a fresh held-out rotor target."
+    },
+    {
       "id": "density",
       "name": "Measured or calculated density",
       "units": "g/cm³",

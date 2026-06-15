@@ -567,7 +567,7 @@ Pure logic: built memory now carries not only the preservation flag but the qual
 
 ## Continuation ("continue")
 
-The trace summary now includes explicit memoryCarriedFinalPreserved (true if memoryCarriedPreserved and memoryCarriedFinalIdentity > 0.58 -- the carried preservation with quality threshold).
+The trace summary now includes explicit memoryCarriedFinalPreserved (true if memoryCarriedPreserved and memoryCarriedFinalIdentity exceeds the dynamic memoryCarriedFinalPresQualityGate).
 
 Sweep now reports memoryCarriedFinalPres for the adaptive traces.
 
@@ -579,7 +579,7 @@ Pure logic: built memory now carries not only the preservation and its quality b
 
 ## Continuation ("continue")
 
-The trace summary now includes explicit memoryCarriedFinalPreserved (true if memoryCarriedPreserved and memoryCarriedFinalIdentity > 0.58 -- the carried preservation with quality threshold).
+The trace summary now includes explicit memoryCarriedFinalPreserved (true if memoryCarriedPreserved and memoryCarriedFinalIdentity exceeds the dynamic memoryCarriedFinalPresQualityGate).
 
 Sweep now reports memoryCarriedFinalPres for the adaptive traces.
 
@@ -596,7 +596,7 @@ User: "continue"
 Autonomous decision: extend the quality-aware non-myopic theme and the "history quality affects the test" theme one step further.
 
 - In the adaptive policy value function, added an explicit "projected pathQuality at end of remaining horizon" estimate (based on current quality + commitment outcome under the candidate regime + future stability signal). This term is added directly to the per-step v. The policy now actively prefers regimes that are expected to leave the history in a *high-quality end state*, not just ones that preserve identity.
-- In simulateSequence final logic, compute `pathQBoostedFinalIdentity = last.identityScore * (1 + avgPathQ * 0.12)`. High avgPathQ across the trace can now rescue overall `finalPreserved` for a marginal last step (quality of the whole story carries the trace-level verdict). Exposed in summary as `pathQBoostedFinalIdentity`.
+- In simulateSequence final logic, compute `pathQBoostedFinalIdentity = effectiveLastIdentity * (1 + avgPathQ * 0.12)`. High avgPathQ across the trace can now rescue overall `finalPreserved` for a marginal last step (quality of the whole story carries the trace-level verdict). Exposed in summary as `pathQBoostedFinalIdentity`.
 - Sweep stabilitySearch now extracts and reports the new boosted id for the adaptive explorer traces.
 - UI trace feedback updated with the horizon term and boosted trace pres.
 - Build/guardrails clean. Smoke exercised. Sweep bg + verify launched.
@@ -678,7 +678,7 @@ User: "continue"
 Symmetric post-rescue healing for the ending snapshot metrics:
 
 - Added qualityRescuedFinalStress and qualityRescuedFinalIdentity to the simulate summary (small relaxation/lift using avgPathQ when pathQBoostedPreserved; smaller memory-based version for memoryCarriedPreserved).
-- The raw finalStress/finalIdentity from the literal last step remain.
+- The raw finalStress and rawFinalIdentity from the literal last step remain, while finalIdentity is now the effective identity used by preservation-facing summaries.
 - UI trace demo now displays the rescued final stress/id when they apply.
 - Sweep stabilitySearch now pulls them for the adaptive cases (visible in fresh explorer output).
 - Full verification run. Docs updated.
@@ -743,3 +743,38 @@ Small but meaningful non-myopic extension that makes the full "healed ending sna
 
 The adaptive choice is now non-myopic about the entire healed ending snapshot, not just the binary and the pathQ number.
 
+
+## Continuation (rescue identity audit and bounded score cleanup)
+
+User: "okay, let's fix that and give a completion report"
+
+Tightened the rescue/reporting semantics after review found the memory-carried trace gate was documented as dynamic but implemented as a stale fixed threshold:
+
+- `calculateOutcome` now exports `effectiveIdentityScore` / `metrics.effectiveIdentity` alongside the raw `identityScore`, so callers can tell which value the preservation-facing gate used.
+- `simulateSequence` now reports both `rawFinalIdentity` and preservation-facing `finalIdentity`.
+- `memoryCarriedPreserved` now tests the memory-adjusted candidate against `memoryCarriedFinalPresQualityGate` instead of an obsolete fixed `0.62` gate.
+- `pathQBoostedFinalIdentity` and `memoryAdjustedFinalIdentity` now use the effective final identity and are clamped to the normal 0-1 score range.
+- `measureResilience` now keeps `rawFinalIdentity` while reporting effective `finalIdentity`, matching its preservation decision.
+- Current-facing confidence docs were reconciled to generated status: inferential convergence remains 5.6/10, below the 6.25 cap, with material RI unresolved and heavier chalcogen trans-side torsion transfer failed under held constants.
+
+This makes the rescue layer finite and auditable: raw score, effective score, dynamic gate, and rescue flags are now separately visible instead of being collapsed into one ambiguous identity number.
+
+
+## Continuation (bounded torsion trans-topology repair diagnostic)
+
+User: "agreed, continue"
+
+Started the finite torsion repair track rather than adding open-ended coherence knobs:
+
+- Added descriptor `trans_planar_topology_penalty` to the registry as diagnostic-only until a fresh target passes.
+- Added `analysis/heteroatom-trans-topology-repair-diagnostic.mjs`.
+- Added `npm run diagnostic:heteroatom-trans-repair` and included it in report generation.
+- The diagnostic leaves the locked disulfane and H-Se-Se-H comparison failures intact.
+- Candidate formula: `additionalCm1 = coefficientCm1 * transWindow(torsionMean)^2 * antiPlanarRelease * heavyAtomFactor(centralElement)`.
+- Frozen diagnostic coefficient: `1450 cm-1`.
+- Allowed inputs: torsionMean, antiPlanarRelease, centralElement.
+- Prohibited inputs: fresh-target external barrier magnitude, post-lookup geometry edits, target-specific coefficients.
+- Exposed-failure result: repairs the disulfane and selenane trans local-minimum pathology on already-exposed rows, including large-barrier magnitude tolerance.
+- Evidence status: none. This is calibration pressure only.
+
+Required next gate: reserve one fresh H2X2-like or adjacent heavy-atom rotor target before lookup. Freeze the exact formula, coefficient, geometry rules, charge rules, grid, and pass/fail criteria before consulting the target. If it fails, record the failure without adding a second repair term.

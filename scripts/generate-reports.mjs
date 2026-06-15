@@ -31,6 +31,7 @@ const reportSteps = [
   'benchmark:disulfane-comparison',
   'benchmark:selenane-prelookup',
   'benchmark:selenane-comparison',
+  'diagnostic:heteroatom-trans-repair',
   'benchmark:ionic',
   'benchmark:boundary-blind',
   'benchmark:em-ordering',

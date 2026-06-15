@@ -24,15 +24,17 @@ Local source path:
 
 ## Current Reported Status
 
-- Sandbox completion: 99.9%
-- Benchmarks: 18/18 passing
-- Checks: 84/85 passing
+- Sandbox completion: external-review milestone complete, but not final validation
+- Benchmarks: current generated benchmark suite passes/fails are mixed by evidence line
+- Checks: current generated reports should be treated as authoritative
 - Core independent evidence lines: 7
 - Orientation-only evidence lines: 1
 - Grammar internal coherence: 7.9/10
-- Inferential convergence confidence: 6.8/10
-- Cross-domain equivalence demonstrated: 5.9/10
-- Unification thesis support: 5.5/10
+- Inferential convergence confidence: 5.6/10
+- Cross-domain equivalence demonstrated: 5.2/10
+- Unification thesis support: 4.8/10
+
+Note: this prompt was reconciled after later benchmark failures and report regeneration. The current confidence posture is below the older 6.8/10 milestone language because measured material refractive index remains unresolved and fully predeclared heavier H2X2 chalcogen torsion transfers fail on trans-side topology/magnitude.
 
 Do not assume these scores are correct. Audit whether the evidence described in the summary supports them.
 

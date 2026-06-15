@@ -236,6 +236,7 @@ export function calculateOutcome(input, options = {}) {
     reseatMetric,
     leakageMetric,
     identityScore,
+    effectiveIdentityScore: modulatedIdentityScore,
     // New explicit grammar state for downstream use (UI, sweeps, books)
     grammar: {
       continuity,
@@ -253,6 +254,7 @@ export function calculateOutcome(input, options = {}) {
       reseat: reseatMetric,
       leakage: leakageMetric,
       identity: identityScore,
+      effectiveIdentity: modulatedIdentityScore,
       continuity,
       phaseMatch,
       chargeTension,
@@ -538,22 +540,24 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
   const finalPathQ = trace.length ? (trace[trace.length-1].pathQuality || 0.5) : 0.5;
 
   // memoryAdjustedFinalIdentity: the final identityScore is boosted by cumulative memory (inertia makes the ending "preserved quality" stronger, not just the binary).
-  const memoryAdjustedFinalIdentity = Number((last.identityScore * (1 + avgMem * 0.1)).toFixed(4));
+  const rawFinalIdentity = last.identityScore;
+  const effectiveLastIdentity = last.effectiveIdentityScore ?? last.metrics?.effectiveIdentity ?? last.metrics?.modulatedIdentity ?? last.identityScore;
+  const memoryAdjustedFinalIdentity = Number(clamp01(effectiveLastIdentity * (1 + avgMem * 0.1)).toFixed(4));
 
   // memoryCarriedFinalIdentity: when the trace is memory-carried preserved, the carried quality is the memory-adjusted final identity (cumulative inertia carries not just the binary but the strength of the ending state).
   let finalPreserved = !!last.identityPreserved;
   let memoryCarriedPreserved = false;
   // Dynamic quality gate for carried preservation: high avgPathQuality lowers the required carried identity quality (virtuous sustained histories forgive a weaker final snapshot).
   const carriedQualityGate = clamp01(0.58 - 0.07 * avgPathQ);
-  const memoryCarriedFinalIdentity = memoryCarriedPreserved ? memoryAdjustedFinalIdentity : last.identityScore;  // pre-assign for the if (will rebind if carried triggers)
-  if (!finalPreserved && memoryCarriedFinalIdentity > 0.62) {
+  const memoryCarriedCandidateIdentity = memoryAdjustedFinalIdentity;
+  if (!finalPreserved && memoryCarriedCandidateIdentity > carriedQualityGate) {
     // cumulative memory inertia across the history can rescue the overall preservation (built coherence "carries" the identity even if the last step is marginal)
     // now a smooth function of the memoryCarriedFinalIdentity (accumulated grammar state)
     finalPreserved = true;
     memoryCarriedPreserved = true;
   }
   // Recompute carried final id if the carried trigger fired above (order-safe)
-  const finalMemoryCarriedIdentity = memoryCarriedPreserved ? memoryAdjustedFinalIdentity : last.identityScore;
+  const finalMemoryCarriedIdentity = memoryCarriedPreserved ? memoryAdjustedFinalIdentity : effectiveLastIdentity;
   const minCoherence = Math.min(...trace.map((t) => t.coherenceMetric));
   const avgCoherence = trace.reduce((s, t) => s + t.coherenceMetric, 0) / trace.length;
   // memoryWeightedCoherence: the trace coherence now explicitly includes the memory modulation of grammarAlignment/coherenceMetric from core.
@@ -561,7 +565,7 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
 
   // PathQuality-boosted final identity (new pure-logic layer): high average pathQuality across the whole trace gives an additional quality lift to the ending identity.
   // This lets a strong sustained-quality history "carry" the trace-level preservation even if the literal last snapshot is marginal (complements the memory-carried path).
-  const pathQBoostedFinalIdentity = Number((last.identityScore * (1 + avgPathQ * 0.12)).toFixed(4));
+  const pathQBoostedFinalIdentity = Number(clamp01(effectiveLastIdentity * (1 + avgPathQ * 0.12)).toFixed(4));
 
   // Allow high avgPathQ to rescue the overall trace preservation (history quality as a whole makes the ending count as preserved).
   let pathQBoostedPreserved = false;
@@ -589,13 +593,13 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
   // Quality rescue also "heals" the reported final metrics (post-rescue relaxation of ending stress/identity).
   // Parallel to the carry feedback: the history that counted as preserved thanks to quality reports slightly better ending numbers.
   let qualityRescuedFinalStress = Number(last.closureStress.toFixed(4));
-  let qualityRescuedFinalIdentity = Number(last.identityScore.toFixed(4));
+  let qualityRescuedFinalIdentity = Number(effectiveLastIdentity.toFixed(4));
   if (pathQBoostedPreserved) {
     qualityRescuedFinalStress = Number(clamp01(last.closureStress * (1 - 0.08 * avgPathQ)).toFixed(4));
-    qualityRescuedFinalIdentity = Number(clamp01(last.identityScore * (1 + 0.06 * avgPathQ)).toFixed(4));
+    qualityRescuedFinalIdentity = Number(clamp01(effectiveLastIdentity * (1 + 0.06 * avgPathQ)).toFixed(4));
   } else if (memoryCarriedPreserved) {
     qualityRescuedFinalStress = Number(clamp01(last.closureStress * (1 - 0.04 * avgMem)).toFixed(4));
-    qualityRescuedFinalIdentity = Number(clamp01(last.identityScore * (1 + 0.03 * avgMem)).toFixed(4));
+    qualityRescuedFinalIdentity = Number(clamp01(effectiveLastIdentity * (1 + 0.03 * avgMem)).toFixed(4));
   }
 
   // Quality rescue also heals the reported final coherence (pure logic: the ending coherence number itself is gently improved when the history "counted as preserved thanks to quality").
@@ -632,7 +636,8 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     finalPreserved,
     summary: {
       steps: trace.length,
-      finalIdentity: Number(last.identityScore.toFixed(4)),
+      rawFinalIdentity: Number(rawFinalIdentity.toFixed(4)),
+      finalIdentity: Number(effectiveLastIdentity.toFixed(4)),
       finalStress: Number(last.closureStress.toFixed(4)),
       finalPreserved,
       minCoherence: Number(minCoherence.toFixed(4)),
@@ -730,7 +735,8 @@ export function measureResilience(baseInput = {}, options = {}) {
     const entry = {
       step,
       coherenceMetric: out.coherenceMetric,
-      identityScore: out.identityScore,
+      rawIdentityScore: out.identityScore,
+      identityScore: out.effectiveIdentityScore ?? out.metrics?.effectiveIdentity ?? out.metrics?.modulatedIdentity ?? out.identityScore,
       closureStress: out.closureStress,
       identityPreserved: out.identityPreserved,
       grammar: out.grammar,
@@ -775,6 +781,7 @@ export function measureResilience(baseInput = {}, options = {}) {
       survived,
       failedAt: last.identityPreserved ? null : last.step,
       finalCoherence: Number(last.coherenceMetric.toFixed(4)),
+      rawFinalIdentity: Number((last.rawIdentityScore ?? last.identityScore).toFixed(4)),
       finalIdentity: Number(last.identityScore.toFixed(4)),
       finalStress: Number(last.closureStress.toFixed(4)),
       regime,

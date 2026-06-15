@@ -4,23 +4,25 @@
 
 Milestone status: complete for external review.
 
-Sandbox completion reported by benchmark summary: 99.9%.
+Sandbox completion reported by current benchmark summary: external-review milestone complete, not final validation.
 
-Benchmark passes: 18/18.
+Benchmark posture: mixed by evidence line; EM/interface depth is strong, while measured material-property and heavier chalcogen torsion transfer remain unresolved/failed.
 
-Checks passed: 84/85.
+Checks passed: see regenerated `analysis/out/milestone-external-review-summary.md` and `analysis/out/external-benchmark-summary.md`.
 
 Grammar internal coherence: 7.9/10.
 
-Inferential convergence confidence: 6.8/10.
+Inferential convergence confidence: 5.6/10.
 
 Core independent evidence lines: 7.
 
 Orientation-only evidence lines: 1.
 
-Cross-domain equivalence demonstrated: 5.9/10.
+Cross-domain equivalence demonstrated: 5.2/10.
 
-Unification thesis support: 5.5/10.
+Unification thesis support: 4.8/10.
+
+Reconciliation note: older closure text overstated the current confidence after later locked failures. The authoritative current posture is the regenerated external benchmark summary: material refractive index remains unresolved, and disulfane plus H-Se-Se-H fail trans-side topology/magnitude transfer under held constants.
 
 Next frontier: tighten peroxide torsion: nonlocal torsion challenger.
 
