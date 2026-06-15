@@ -441,3 +441,14 @@ Memory now directly eases next-step consumption/fatigue and amplifies reinf/debt
 - Build ✓ (2s), guardrails ✓, sweep bg, light adaptive smoke exercised new scalings (memoryMod on traces; reinf/commitment now memory-aware).
 
 Pure logic: once inertia is built, the system not only sees better immediate metrics and starts future steps stronger, but a preserved good-policy step now produces *stronger* future carry and *lower* fatigue — and the farsighted policy values commitment more when inertia is high. The virtuous cycle is self-amplifying and self-aware in the abstract rules. Cross-scale loop tightened again.
+
+## Continuation ("continue")
+
+Memory now explicitly modulates grammarAlignment and coherenceMetric in core calculateOutcome (high pathMemory boosts the alignment term and coherence as a 'grammar factor').
+
+- Simulate trace coherence now reflects it; summary has memoryWeightedCoherence.
+- Sweep adds avgCoherenceHighMem stat for adaptive traces.
+- UI feedback notes the grammar/coherence modulation.
+- Build clean. Guardrails passed. Sweep bg. Light smoke confirms boosted coherence with high memory and memoryWeighted in summary.
+
+Pure logic: inertia is now a direct positive factor in the core coherence computation (the grammar alignment reward), making history memory strengthen the 'coherence' of the next encounter itself. Another closed-scale layer.

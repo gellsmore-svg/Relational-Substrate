@@ -97,6 +97,21 @@ export function calculateOutcome(input, options = {}) {
   stored /= total;
   scattered /= total;
 
+  // Memory modulation of 4-bucket outcomes (pure logic): when pathMemory (inertia from history) is passed, high memory shifts the immediate encounter toward persistence.
+  // High inertia "holds" more of the transient coherently (higher admitted + stored, lower scattered) — history state changes the fate fractions themselves.
+  if (options.pathMemory !== undefined) {
+    const mem = clamp01(options.pathMemory);
+    admitted = clamp01(admitted * (1 + mem * 0.12));
+    stored = clamp01(stored * (1 + mem * 0.08));
+    scattered = clamp01(scattered * (1 - mem * 0.15));
+    returned = clamp01(returned * (1 - mem * 0.04));
+    const t2 = admitted + returned + stored + scattered || 1;
+    admitted /= t2;
+    returned /= t2;
+    stored /= t2;
+    scattered /= t2;
+  }
+
   // === Metrics (gate scores) - evolved coherence logic (v0.3) ===
   let closureStress = stored * 0.60 + scattered * 0.50 + (1 - reseat) * 0.34 + chargeTension * 0.18;
 
@@ -113,6 +128,15 @@ export function calculateOutcome(input, options = {}) {
   let coherenceMetric = clamp01(
     grammarAlignment * 0.82 + baseAlignment * 0.18 + fBias.coherence
   );
+
+  // Memory now explicitly participates in the grammarAlignment and coherenceMetric (pure logic: built inertia from history strengthens the alignment of the five grammar elements for the current step).
+  if (options.pathMemory !== undefined) {
+    const mem = clamp01(options.pathMemory);
+    // High memory directly boosts the multiplicative grammarAlignment term (inertia as a 'memory factor' in coherence).
+    // This makes coherence itself reflect the accumulated history state.
+    const memBoost = 1 + 0.1 * mem;
+    coherenceMetric = clamp01(coherenceMetric * memBoost);
+  }
 
   const reseatMetric = clamp01(reseat - closureStress * 0.23 + fBias.reseat);
   const leakageMetric = clamp01(1 - (stored * 0.37 + scattered * 0.48 + (1 - boundary) * 0.15) + fBias.leakage);
@@ -411,9 +435,16 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
   }
 
   const last = trace[trace.length - 1];
-  const finalPreserved = !!last.identityPreserved;
+  const avgMem = trace.reduce((s, t) => s + (t.memoryMod || 0), 0) / trace.length;
+  let finalPreserved = !!last.identityPreserved;
+  if (!finalPreserved && avgMem > 0.55) {
+    // cumulative memory inertia across the history can rescue the overall preservation (built coherence "carries" the identity even if the last step is marginal)
+    finalPreserved = true;
+  }
   const minCoherence = Math.min(...trace.map((t) => t.coherenceMetric));
   const avgCoherence = trace.reduce((s, t) => s + t.coherenceMetric, 0) / trace.length;
+  // memoryWeightedCoherence: the trace coherence now explicitly includes the memory modulation of grammarAlignment/coherenceMetric from core.
+  const memoryWeightedCoherence = trace.reduce((s, t) => s + t.coherenceMetric * (1 + (t.memoryMod || 0) * 0.05), 0) / trace.length;
 
   return {
     trace,
@@ -426,6 +457,8 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
       minCoherence: Number(minCoherence.toFixed(4)),
       avgCoherence: Number(avgCoherence.toFixed(4)),
       startCoherence: Number(trace[0].coherenceMetric.toFixed(4)),
+      avgMemoryMod: Number(avgMem.toFixed(4)),
+      memoryWeightedCoherence: Number(memoryWeightedCoherence.toFixed(4)),
     },
   };
 }

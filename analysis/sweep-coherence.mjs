@@ -254,6 +254,10 @@ const stabilitySearch = topCoherent.slice(0, 3).map((seed) => {
   const presMems = adaptive.trace.filter(t => t.identityPreserved).map(t => t.memoryMod || 0);
   const avgMemPres = presMems.length ? presMems.reduce((s, v) => s + v, 0) / presMems.length : 0;
   const memRescues = adaptive.trace.filter(t => t.memoryRescued).length;
+  const highMemAdmitted = adaptive.trace.filter(t => (t.memoryMod || 0) > 0.5).map(t => t.admitted || 0);
+  const avgAdmittedHighMem = highMemAdmitted.length ? highMemAdmitted.reduce((s, v) => s + v, 0) / highMemAdmitted.length : 0;
+  const highMemCoh = adaptive.trace.filter(t => (t.memoryMod || 0) > 0.5).map(t => t.coherenceMetric || 0);
+  const avgCoherenceHighMem = highMemCoh.length ? highMemCoh.reduce((s, v) => s + v, 0) / highMemCoh.length : 0;
   return {
     pattern: `${seed.closedForm}/${seed.transientForm}/${seed.scenario}`,
     baseStability: baseSt,
@@ -274,6 +278,8 @@ const stabilitySearch = topCoherent.slice(0, 3).map((seed) => {
     finalPathMemory: finalMem,
     avgMemoryOnPreserved: Number(avgMemPres.toFixed(4)),
     memoryRescues: memRescues,
+    avgAdmittedHighMem: Number(avgAdmittedHighMem.toFixed(4)),
+    avgCoherenceHighMem: Number(avgCoherenceHighMem.toFixed(4)),
   };
 });
 
@@ -496,7 +502,7 @@ ${stabilityFragile.map(s => `- ${s.pattern}: stability=${s.stability} (maxFrag=$
 
 Using findHighStabilitySettings (small random perturbations on grammar factors) on a few top cases to estimate how much local improvement in regime stability is still available. Also shown with moderate regimeMemory (inertia from previous regime). Includes Durability Index (composite robustness * stability * low-fragility). Also shows best regime policy (which fixed regime maximizes the durabilityIndex). Adaptive policy (state-aware lookahead choice per step using the policy function).
 
-${stabilitySearch.map(s => `- ${s.pattern}: base stab=${s.baseStability} durIdx=${s.baseDurabilityIndex} → best stab=${s.bestFound} durIdx=${s.projectedDurabilityIndex} (imp ${s.improvement}, mem ${s.withMemoryImprovement}, bestRegime=${s.bestRegimeForDurability} eff=${s.policyEffectiveDurIdx}, MC presRate=${s.mcExpectedFinalPresRate}, adaptive pres=${s.adaptiveFinalPres} avgId=${s.adaptiveAvgId}, adaptive+switch pres=${s.adaptiveWithSwitchFinalPres} avgId=${s.adaptiveWithSwitchAvgId}, avgPathMem=${s.avgPathMemory}, finalMem=${s.finalPathMemory}, memOnPres=${s.avgMemoryOnPreserved}, memRescues=${s.memoryRescues})`).join('\n')}
+${stabilitySearch.map(s => `- ${s.pattern}: base stab=${s.baseStability} durIdx=${s.baseDurabilityIndex} → best stab=${s.bestFound} durIdx=${s.projectedDurabilityIndex} (imp ${s.improvement}, mem ${s.withMemoryImprovement}, bestRegime=${s.bestRegimeForDurability} eff=${s.policyEffectiveDurIdx}, MC presRate=${s.mcExpectedFinalPresRate}, adaptive pres=${s.adaptiveFinalPres} avgId=${s.adaptiveAvgId}, adaptive+switch pres=${s.adaptiveWithSwitchFinalPres} avgId=${s.adaptiveWithSwitchAvgId}, avgPathMem=${s.avgPathMemory}, finalMem=${s.finalPathMemory}, memOnPres=${s.avgMemoryOnPreserved}, memRescues=${s.memoryRescues}, avgAdmitHighMem=${s.avgAdmittedHighMem}, avgCohHighMem=${s.avgCoherenceHighMem})`).join('\n')}
 
 This begins to move the model from measurement of durability to active search for more stable regions in the abstract parameter space. The policy helps "choose the best condition" for the config. MC adds average-case expectation over random sequences. Adaptive adds per-step dynamic choice with commitment lookahead (evaluates value of sticking with the regime for the remaining horizon, blended with cross stability; reacts to current accum stress). Switching cost adds friction to changing regimes mid-history (encourages sticking). Reinforcement (small carry boost after preserved policy steps) creates self-reinforcing coherent paths under good choices; debt (carry penalty after poor steps) creates degrading paths under bad choices (balanced virtuous/vicious cycles). Deeper closed-loop: durability now explicitly scales the carry fraction (how much prior continuity memory is retained into the next route) and the accumStress decay rate (how quickly history disturbance is shed) inside the accumulators themselves; adaptive choice directly blends MC expected preservation (non-myopic averaging over many possible future condition stories) into its per-step value scoring. Path memory (the running accumContinuity * (1 - accumStress) after each step) now feeds forward explicitly: before each calculateOutcome the incoming carry boosts the effective route fed to the 4-bucket/grammar/coherence calc, while incoming accumStress raises scatter (history state changes the actual inputs and therefore the coherence/identity numbers on subsequent encounters). The live sandbox now shows "Path Inertia" (memoryMod after short nominal trace on current sliders) next to durability. Adaptive policy imm value now weights by current memory (high inertia makes immediate preservation more attractive). Consumption and accum updates therefore reflect both immediate dur and the explicit carry/decay modulators; the next step's outcome reflects the memoryMod; memory also modulates core coherence/identity/gate when passed -- full cross-scale path-dependent feedback in the pure abstract grammar. Memory now further amplifies reinf and eases fatigue in simulate (stronger self-reinforcing cycles once inertia builds); adaptive commitment lookahead value is boosted by current memory (high inertia makes "sticking" with a regime more valuable in the farsighted score). Sweep reports avg memory on preserved steps (memOnPres) to quantify the benefit.
 `;
