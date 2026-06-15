@@ -621,3 +621,21 @@ This completes the arc for the quality layer: the effects that were added to car
 
 Full verification followed (build, guardrails, smokes, sweep bg, verify attempt). All pure abstract.
 
+
+## Continuation (pathQBoostedPreserved flag: quality-driven whole-trace preservation rescue)
+
+User: "continue"
+
+Small symmetric addition to the quality-boosted rescue mechanism:
+
+- Introduced `pathQBoostedPreserved` boolean in simulateSequence summary (set when the pathQBoostedFinalIdentity lift was what caused finalPreserved to become true).
+- This provides a clean, inspectable flag parallel to memoryCarriedPreserved / memoryCarriedFinalPreserved.
+- Sweep stabilitySearch now pulls pathQBoostedPres (alongside the existing pathQBoostedFinalId) for the adaptive runs; the long explorer map line includes it.
+- UI trace demo feedback extended with mention of the flag.
+- The memory-carried path (with its avgPathQ-dependent gate) is untouched; the two quality/inertia rescue routes for whole-trace preservation are now both first-class observables.
+- Build/guardrails clean. Smoke, sweep bg, verify per pattern. Docs updated.
+
+This makes "the abstract history had high sustained quality" a directly measurable reason the whole sequence survives, on equal footing with the memory-inertia carry.
+
+Full verification scope followed.
+

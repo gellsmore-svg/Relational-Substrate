@@ -532,8 +532,10 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
   const pathQBoostedFinalIdentity = Number((last.identityScore * (1 + avgPathQ * 0.12)).toFixed(4));
 
   // Allow high avgPathQ to rescue the overall trace preservation (history quality as a whole makes the ending count as preserved).
+  let pathQBoostedPreserved = false;
   if (!finalPreserved && pathQBoostedFinalIdentity > 0.62) {
     finalPreserved = true;
+    pathQBoostedPreserved = true;
   }
 
   return {
@@ -557,6 +559,7 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
       finalPathQuality: Number(finalPathQ.toFixed(4)),
       memoryCarriedFinalPresQualityGate: Number(carriedQualityGate.toFixed(4)),
       pathQBoostedFinalIdentity,
+      pathQBoostedPreserved,
     },
   };
 }
