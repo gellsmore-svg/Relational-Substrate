@@ -360,7 +360,7 @@ function updateResilience() {
   }
 
   // Regime stability (live): composite across all transition profiles using the new primitive.
-  const stab = computeRegimeStability(input, { maxSteps: 8 });
+  const stab = computeRegimeStability(input, { maxSteps: 8, lightweight: true });
   if (els.stabilityScore) {
     els.stabilityScore.textContent = stab.stability.toFixed(2);
   }
@@ -384,7 +384,7 @@ function updateResilience() {
 
   // Path Inertia / Memory (live): short nominal trace on current static state to show what memoryMod (coherence inertia from accum carry * (1-stress)) this grammar would build.
   // High inertia means history has created momentum that feeds forward and now also modulates core coherence/identity in snapshots, and extends resilience horizon (memory eases consumption in repeated encounters).
-  const memTrace = simulateSequence(input, 3);  // default nominal, exercises feed-forward + core memory mod
+  const memTrace = simulateSequence(input, 3, { lightweight: true });  // default nominal, exercises feed-forward + core memory mod
   const pathInertia = memTrace.trace && memTrace.trace.length ? (memTrace.trace[memTrace.trace.length - 1].memoryMod || 0) : 0;
   if (els.durabilityNote) {
     const current = els.durabilityNote.textContent || '';
@@ -393,7 +393,7 @@ function updateResilience() {
 
   // PathQuality / streak quality (live): short trace to surface the running pathQuality (sustained success quality).
   // This now directly eases consumption and amplifies reinf/debt; high values mean the history "earns" cheaper future steps and stronger self-reinforcement.
-  const pqTrace = simulateSequence(input, 4);
+  const pqTrace = simulateSequence(input, 4, { lightweight: true });
   const avgPathQ = pqTrace.summary && pqTrace.summary.avgPathQuality ? pqTrace.summary.avgPathQuality : 0;
   const finalPathQ = pqTrace.summary && pqTrace.summary.finalPathQuality ? pqTrace.summary.finalPathQuality : 0;
   if (els.durabilityNote) {
@@ -531,9 +531,9 @@ if (els.runTraceButton && els.traceOutput) {
     const primaryRegime = state.regime || 'nominal';
 
     // run a short 3-step trace (use 3 so output is compact)
-    const { trace, summary } = simulateSequence(input, 3);
+    const { trace, summary } = simulateSequence(input, 3, { lightweight: true });
     const lines = trace.map((t, i) =>
-      `step${i}: coh=${t.coherenceMetric.toFixed(2)} id=${(t.durabilityAdjustedIdentityScore || t.identityScore).toFixed(2)} stress=${t.closureStress.toFixed(2)} pres=${t.identityPreserved}${t.memoryRescued ? ' (mem-rescued)' : ''} | cont=${t.grammar.continuity.toFixed(2)} pm=${t.grammar.phaseMatch.toFixed(2)} (dur-adj id in trace from feedback)`
+      `step${i}: coh=${t.coherenceMetric.toFixed(2)} id=${(t.durabilityAdjustedIdentityScore || t.identityScore).toFixed(2)} stress=${t.closureStress.toFixed(2)} pres=${t.identityPreserved}${t.memoryRescued ? ' (mem-rescued)' : ''}${t.lengthDebt > 0 ? ' debt='+t.lengthDebt.toFixed(2) : ''} | cont=${t.grammar.continuity.toFixed(2)} pm=${t.grammar.phaseMatch.toFixed(2)} (dur-adj id in trace from feedback)`
     );
 
     // Primary resilience under the UI-selected regime
@@ -551,39 +551,39 @@ if (els.runTraceButton && els.traceOutput) {
     const regimeLine = `${primaryRegime}:${resPrimary.survivedSteps}/8  ${others[0]}:${resOther1.survivedSteps}/8  ${others[1]}:${resOther2.survivedSteps}/8`;
 
     // Regime transition test + standard profiles with fragility (new)
-    const trans = testRegimeTransition(input, { maxSteps: 8 });
+    const trans = testRegimeTransition(input, { maxSteps: 8, lightweight: true });
     const transLine = `transition survival: ${trans.finalPreserved ? 'full' : 'at risk'} (stressed phase: ${trans.transitionSummary.survivedThroughStressed}/${trans.transitionSummary.stressedStepsInSchedule})`;
 
-    const spikeFrag = computeTransitionFragility(input, { maxSteps: 8, profile: 'stress-spike' });
-    const oscFrag = computeTransitionFragility(input, { maxSteps: 8, profile: 'oscillation' });
-    const degFrag = computeTransitionFragility(input, { maxSteps: 8, profile: 'gradual-degradation' });
+    const spikeFrag = computeTransitionFragility(input, { maxSteps: 8, profile: 'stress-spike', lightweight: true });
+    const oscFrag = computeTransitionFragility(input, { maxSteps: 8, profile: 'oscillation', lightweight: true });
+    const degFrag = computeTransitionFragility(input, { maxSteps: 8, profile: 'gradual-degradation', lightweight: true });
     const profileLine = `fragility: spike=${spikeFrag.fragility} osc=${oscFrag.fragility} deg=${degFrag.fragility}`;
 
-    const stability = computeRegimeStability(input, { maxSteps: 8 });
+    const stability = computeRegimeStability(input, { maxSteps: 8, lightweight: true });
     const stabilityLine = `stability: ${stability.stability} (maxFrag=${stability.maxFragility}, fullStable=${stability.fullStable})`;
 
     // Quick regime memory demo (inertia from previous step's regime affects consumption)
-    const withMem = testRegimeTransition(input, { maxSteps: 8, regimeMemory: 0.6 });
+    const withMem = testRegimeTransition(input, { maxSteps: 8, regimeMemory: 0.6, lightweight: true });
     const memLine = `with memory (0.6): finalPres=${withMem.finalPreserved}`;
 
     // Core integration demo: durabilityIndex now in calculateOutcome, with pathQuality scaling the boost (from recent reinf/debt in history)
-    const sampleOutcome = calculateOutcome(input, { pathQuality: 0.8 });  // e.g. recent reinforcement
+    const sampleOutcome = calculateOutcome(input, { pathQuality: 0.8, lightweight: true });  // e.g. recent reinforcement
     const coreModLine = `core: durIdx=${sampleOutcome.metrics.durabilityIndex} modulatedId (pathQ 0.8)=${sampleOutcome.metrics.modulatedIdentity}`;
 
     // Optimal regime policy: which single regime maximizes the durabilityIndex for this config (pure logic "choose the best condition")
-    const policy = findBestRegimeForDurability(input, { maxSteps: 8 });
+    const policy = findBestRegimeForDurability(input, { maxSteps: 8, lightweight: true });
     const policyLine = `best regime for durability: ${policy.bestRegime} (effIdx=${policy.bestEffectiveDurabilityIndex} vs cross=${policy.crossDurabilityIndex})`;
 
     // Monte Carlo expected durability: average over random transition sequences (probabilistic average-case under unpredictable changes)
-    const mc = computeMonteCarloDurability(input, { maxSteps: 8, numTrials: 30 });
+    const mc = computeMonteCarloDurability(input, { maxSteps: 8, numTrials: 30, lightweight: true });
     const mcLine = `MC expected finalPres rate: ${mc.expectedFinalPresRate} (avgId=${mc.avgFinalIdentity} over ${mc.numTrials} trials)`;
 
     // Adaptive policy (state-aware with commitment lookahead): at each step, choose regime maximizing immediate quality (modulated by current stress) + discounted future (blended cross-stability + simulated preservation under *committing/sticking* with that regime for remaining horizon). Active "choosing + committing to conditions to preserve coherence". After preserved policy steps: small carry reinforcement (self-reinforcing paths); after poor steps: debt (degrading paths under bad choices).
-    const adaptive = simulateSequence(input, 8, { adaptivePolicy: true, regimeMemory: 0.5 });
+    const adaptive = simulateSequence(input, 8, { adaptivePolicy: true, regimeMemory: 0.5, lightweight: true });
     const adaptiveLine = `adaptive policy (state-aware commitment lookahead + MC non-myopic + mem 0.5 + expected rescued ending quality): finalPres=${adaptive.finalPreserved} avgId=${adaptive.summary.finalIdentity} (+ reinf on preserved, debt on poor steps; carry/stress-decay dur-scaled; values healed final carry/memMod/coh/memWeightedCoh under sticking)`;
 
     // With switching cost: penalizes changing regimes mid-history (models friction of shifting conditions; encourages sticking with good regimes)
-    const adaptiveWithSwitch = simulateSequence(input, 8, { adaptivePolicy: true, regimeMemory: 0.5, regimeSwitchingCost: 0.2 });
+    const adaptiveWithSwitch = simulateSequence(input, 8, { adaptivePolicy: true, regimeMemory: 0.5, regimeSwitchingCost: 0.2, lightweight: true });
     const switchLine = `adaptive + switching cost 0.2: finalPres=${adaptiveWithSwitch.finalPreserved} avgId=${adaptiveWithSwitch.summary.finalIdentity}`;
 
     els.traceOutput.textContent =
@@ -593,7 +593,7 @@ if (els.runTraceButton && els.traceOutput) {
       (summary.qualityRescuedFinalStress && summary.qualityRescuedFinalStress !== summary.finalStress ? `  rescuedFinalStress=${summary.qualityRescuedFinalStress}` : '') +
       (summary.qualityRescuedFinalIdentity && summary.qualityRescuedFinalIdentity !== summary.finalIdentity ? `  rescuedFinalId=${summary.qualityRescuedFinalIdentity}` : '') +
       (summary.qualityRescuedFinalCoherence && summary.qualityRescuedFinalCoherence !== summary.coherenceMetric ? `  rescuedFinalCoh=${summary.qualityRescuedFinalCoherence}` : '') +
-      (summary.qualityRescuedFinalMemoryMod && summary.qualityRescuedFinalMemoryMod !== (tr.trace[tr.trace.length-1]||{}).memoryMod ? `  rescuedFinalMemMod=${summary.qualityRescuedFinalMemoryMod}` : '') +
+      (summary.qualityRescuedFinalMemoryMod && summary.qualityRescuedFinalMemoryMod !== (trace[trace.length-1]||{}).memoryMod ? `  rescuedFinalMemMod=${summary.qualityRescuedFinalMemoryMod}` : '') +
       (summary.qualityRescuedMemoryWeightedCoherence && summary.qualityRescuedMemoryWeightedCoherence !== summary.memoryWeightedCoherence ? `  rescuedMemWeightedCoh=${summary.qualityRescuedMemoryWeightedCoherence}` : '') +
       `\nresilience (8-step, primary=${primaryRegime}): ${regimeLine}` +
       `\nrobustness: ${robust.robustness} (min ${robust.minSurvival}/8, fullRobust=${robust.fullRobust})` +
@@ -616,7 +616,7 @@ if (els.suggestStableButton && els.traceOutput) {
   els.suggestStableButton.addEventListener('click', () => {
     const input = currentCase();
     const suggestion = findHighStabilitySettings(input, { maxSteps: 8, samples: 30, stepSize: 0.07 });
-    const currentStabObj = computeRegimeStability(input, { maxSteps: 8 });
+    const currentStabObj = computeRegimeStability(input, { maxSteps: 8, lightweight: true });
     const currentDur = currentStabObj.durabilityIndex;
 
     let text = `Current: stability=${currentStabObj.stability} durabilityIndex=${currentDur}\n`;

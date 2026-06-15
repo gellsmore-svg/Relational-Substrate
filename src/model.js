@@ -30,6 +30,19 @@ export function clamp01(value) {
   return Math.max(0, Math.min(1, value));
 }
 
+/** Fast durability estimate for per-step accumulator scaling (avoids nested stability probes inside traces). */
+function estimateDurabilityForAccum(stepInput, incomingMemory = 0.5, pathQuality = 0.5) {
+  const g = deriveGrammar(stepInput);
+  return clamp01(
+    0.2 +
+      0.22 * g.continuity +
+      0.18 * g.phaseMatch +
+      0.12 * (1 - g.chargeTension) +
+      0.14 * incomingMemory +
+      0.14 * pathQuality
+  );
+}
+
 // === Pure grammar derivation (v0.3 advancement) ===
 // The five first-class substrate grammar elements in the abstract model:
 // - route (continuity source from the transient path)
@@ -162,7 +175,7 @@ export function calculateOutcome(input, options = {}) {
   let durabilityIndex = 0;
   let modulatedIdentityScore = identityScore;
   if (!skipDurability) {
-    const durObj = computeRegimeStability(input, { maxSteps: 8 });
+    const durObj = computeRegimeStability(input, { maxSteps: 8, lightweight: options.lightweight });
     durabilityIndex = durObj.durabilityIndex;
     let durabilityBoost = 0.1 * durabilityIndex;
     if (options.pathQuality !== undefined) {
@@ -277,6 +290,7 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
   const regimeMemory = options.regimeMemory ?? 0;  // 0 = no memory (instant switch), 1 = full persistence of previous regime's effects
   const adaptivePolicy = options.adaptivePolicy || false;  // if true, at each step greedily pick the regime that maximizes durabilityIndex for the config (pure logic "choose the condition to best preserve coherence")
   const regimeSwitchingCost = options.regimeSwitchingCost ?? 0;  // 0 = free to switch regimes mid-history; >0 penalizes changes (models friction/cost of shifting conditions, encouraging "sticking" with good regimes)
+  const lightweight = options.lightweight ?? false;  // fast path: heuristic durability + immediate-only adaptive policy (for UI/smokes)
 
   let prevRegime = null;
 
@@ -297,49 +311,44 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
         // PathQuality weighting (new): high sustained success quality makes future preservation expectation more valuable in the choice (quality-weighted non-myopic scoring).
         const currentPathQEst = clamp01(0.6 * pathQuality + 0.4 * currentMem);
         imm = imm * (0.92 + 0.08 * currentPathQEst);
-        let futValue = computeRegimeStability({ ...current, ...baseInput }, { maxSteps: 8, regimeMemory }).stability;  // future value under best for this choice (cross-profile stability)
         const remaining = stepCount - step;
-        if (remaining > 1) {
-          // Lookahead with "commitment": simulate a short horizon *sticking* with this r and blend the outcome (high if preserves well under commitment to r)
-          const commitSchedule = Array(remaining).fill(r);
-          const commitTrans = testRegimeTransition({ ...current, ...baseInput }, { maxSteps: remaining, regimeSchedule: commitSchedule, regimeMemory });
-          // Use pathQBoostedFinalIdentity preferentially for the preservation value under commitment (non-myopic policy now evaluates "sticking" using the quality-boosted ending identity when available).
-          const commitPresVal = commitTrans.summary.pathQBoostedFinalIdentity || commitTrans.summary.finalIdentity || 0.5;
-          const commitScore = commitTrans.finalPreserved ? 1.0 : commitPresVal;
-          // Memory boost to commitment value: high current memory (inertia) makes the projected value of sticking with this regime higher (pure logic: built coherence makes long-term commitment to a good regime more attractive).
-          const memBoostedCommit = commitScore * (1 + 0.15 * currentMem);
-          // Expected rescued ending quality under commitment (new): if sticking with this r would trigger a quality or memory rescue, also value the *strength of the healed ending state* (rescued final carry, memoryMod, coherence, memWeightedCoherence).
-          // This makes non-myopic policy prefer regimes that, under long-term sticking, are expected to produce not just preservation but a strong post-rescue ending inertia and coherence state.
-          let expectedRescuedEndingQuality = 0;
-          if (commitTrans.summary.pathQBoostedPreserved || commitTrans.summary.memoryCarriedPreserved) {
-            const rc = commitTrans.summary.qualityRescuedFinalAccumContinuity || 0;
-            const rm = commitTrans.summary.qualityRescuedFinalMemoryMod || 0;
-            const rcCoh = commitTrans.summary.qualityRescuedFinalCoherence || 0;
-            const rmw = commitTrans.summary.qualityRescuedMemoryWeightedCoherence || 0;
-            expectedRescuedEndingQuality = (rc + rm + rcCoh + rmw) / 4;  // simple 0-1 average of the key rescued ending metrics
+        let v;
+        if (lightweight) {
+          // Immediate + pathQuality only (no nested stability/commitment/MC probes).
+          v = imm + 0.18 * currentPathQEst;
+        } else {
+          let futValue = computeRegimeStability({ ...current, ...baseInput }, { maxSteps: 8, regimeMemory, lightweight: true }).stability;
+          let commitScore = 0.5;
+          if (remaining > 1) {
+            const commitSchedule = Array(remaining).fill(r);
+            const commitTrans = testRegimeTransition({ ...current, ...baseInput }, { maxSteps: remaining, regimeSchedule: commitSchedule, regimeMemory, lightweight: true });
+            const commitPresVal = commitTrans.summary.pathQBoostedFinalIdentity || commitTrans.summary.finalIdentity || 0.5;
+            commitScore = commitTrans.finalPreserved ? 1.0 : commitPresVal;
+            const memBoostedCommit = commitScore * (1 + 0.15 * currentMem);
+            let expectedRescuedEndingQuality = 0;
+            if (commitTrans.summary.pathQBoostedPreserved || commitTrans.summary.memoryCarriedPreserved) {
+              const rc = commitTrans.summary.qualityRescuedFinalAccumContinuity || 0;
+              const rm = commitTrans.summary.qualityRescuedFinalMemoryMod || 0;
+              const rcCoh = commitTrans.summary.qualityRescuedFinalCoherence || 0;
+              const rmw = commitTrans.summary.qualityRescuedMemoryWeightedCoherence || 0;
+              expectedRescuedEndingQuality = (rc + rm + rcCoh + rmw) / 4;
+            }
+            futValue = 0.5 * futValue + 0.5 * memBoostedCommit + 0.12 * expectedRescuedEndingQuality;
           }
-          futValue = 0.5 * futValue + 0.5 * memBoostedCommit + 0.12 * expectedRescuedEndingQuality;  // blend the expected healed ending quality into the commitment value
-
+          let mcExp = 0.5;
+          try {
+            const mcProbe = computeMonteCarloDurability({ ...current, ...baseInput }, { maxSteps: Math.min(4, remaining || 3), numTrials: 5, regimeMemory, lightweight: true });
+            mcExp = mcProbe.expectedFinalPresRate || 0.5;
+          } catch (_) { /* keep neutral on any transient issue; never break the trace */ }
+          const vNonMyopicScale = (0.85 + 0.15 * currentPathQEst);
+          v = imm + 0.45 * futValue * vNonMyopicScale + 0.25 * mcExp * vNonMyopicScale;
+          let projectedPathQ = currentPathQEst;
+          if (remaining > 1) {
+            const commitPQBoost = (commitScore > 0.7 ? 0.12 : 0.04);
+            projectedPathQ = clamp01(currentPathQEst + commitPQBoost + 0.06 * (futValue - 0.5));
+          }
+          v += 0.18 * projectedPathQ;
         }
-        // Non-myopic extension (pure logic): blend explicit Monte-Carlo expected final preservation rate (averaged over many random future condition sequences / profiles)
-        // directly into the per-step value. This makes regime choice at each step average over uncertainty in future "stories" rather than relying only on immediate + one commitment path.
-        let mcExp = 0.5;
-        try {
-          const mcProbe = computeMonteCarloDurability({ ...current, ...baseInput }, { maxSteps: Math.min(4, remaining || 3), numTrials: 5, regimeMemory });
-          mcExp = mcProbe.expectedFinalPresRate || 0.5;
-        } catch (_) { /* keep neutral on any transient issue; never break the trace */ }
-        // PathQuality scales the non-myopic components (MC + fut) so that high-quality histories value long-term expectation more (self-reinforcing choice under good running quality).
-        const vNonMyopicScale = (0.85 + 0.15 * currentPathQEst);
-        let v = imm + 0.45 * futValue * vNonMyopicScale + 0.25 * mcExp * vNonMyopicScale;  // non-myopic + quality-weighted
-
-        // Explicit pathQuality horizon term (new): estimate the pathQuality we would expect at the *end* of the remaining horizon under this regime choice.
-        // Pure logic "choose the condition that not only preserves now but leaves the history in a high-quality state".
-        let projectedPathQ = currentPathQEst;
-        if (remaining > 1) {
-          const commitPQBoost = (commitScore > 0.7 ? 0.12 : 0.04);  // good commitment under r builds more ending quality
-          projectedPathQ = clamp01(currentPathQEst + commitPQBoost + 0.06 * (futValue - 0.5));
-        }
-        v += 0.18 * projectedPathQ;  // quality-at-horizon contributes to the choice value
 
         if (prevRegime && r !== prevRegime) {
           v -= regimeSwitchingCost * 0.3;  // penalize switch (friction/cost of changing conditions)
@@ -393,13 +402,18 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     // high streak quality strengthens immediate coherence/identity and relaxes the per-step preservation gate itself.
     const out = calculateOutcome(stepInput, { skipDurability: true, pathMemory: incomingMemory, pathQuality });
 
-    // Compute durability for feedback/accumulator scaling independently (cheap short-horizon stability run).
-    // This ensures dur-scaled carry and stress decay are active even though the per-step outcome itself uses skipDurability to avoid recursion.
+    // Durability for accumulator scaling: never recurse full stability probes inside every trace step.
     let durForAccum = 0;
-    try {
-      const d = computeRegimeStability({ ...stepInput }, { maxSteps: 2, regimeMemory: (options.regimeMemory ?? 0) });
-      durForAccum = d.durabilityIndex || 0;
-    } catch (_) {}
+    if (lightweight) {
+      durForAccum = estimateDurabilityForAccum(stepInput, incomingMemory, pathQuality);
+    } else {
+      try {
+        const d = computeRegimeStability({ ...stepInput }, { maxSteps: 2, regimeMemory: (options.regimeMemory ?? 0), lightweight: true });
+        durForAccum = d.durabilityIndex || 0;
+      } catch (_) {
+        durForAccum = estimateDurabilityForAccum(stepInput, incomingMemory, pathQuality);
+      }
+    }
     // Also surface it on the step for traces/UI if not already present from a non-skip path.
     if (!out.metrics) out.metrics = {};
     if (!out.metrics.durabilityIndex) out.metrics.durabilityIndex = durForAccum;
@@ -447,6 +461,9 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     // step pathQuality: blend of this step's preservation success, its durability, and the inertia just built. Feeds the running accumulator.
     const stepPathQuality = clamp01((tracePreserved ? 0.92 : 0.62) * (0.55 + 0.45 * durForAccum) * (0.65 + 0.35 * memoryMod));
 
+    // Length-dependent pathQuality debt (pure logic balance for long traces): mild accumulating cost after ~6 steps, mitigated by high pathQuality.
+    const lengthDebt = Math.max(0, (step - 6) * 0.015);
+
     const stepOutcome = {
       ...out,
       step,
@@ -460,6 +477,7 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
       pathQuality: Number(stepPathQuality.toFixed(4)),
       identityPreserved: tracePreserved,
       memoryRescued,
+      lengthDebt: Number(lengthDebt.toFixed(4)),
     };
     trace.push(stepOutcome);
 
@@ -489,6 +507,7 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     // This creates stronger self-reinforcing (and self-punishing) dynamics exactly when the abstract history has been "high quality".
     const pq = pathQuality;  // running value after this step's blend (closed feedback)
     fatigue *= (1 - pq * 0.12);  // high pathQuality reduces effective fatigue for the *next* consumption step
+    fatigue *= (1 + lengthDebt * (1 - pq * 0.6));  // high pathQ reduces the length penalty
 
     current = {
       ...current,
@@ -604,6 +623,10 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     qualityRescuedMemoryWeightedCoherence = Number( (memoryWeightedCoherence * (1 + 0.02 * avgMem)).toFixed(4) );
   }
 
+  // Length debt (pure logic balance): mild accumulating cost for long traces, mitigated by high pathQuality.
+  const finalLengthDebt = trace.length ? (trace[trace.length-1].lengthDebt || 0) : 0;
+  const cumulativeLengthDebt = trace.reduce((s, t) => s + (t.lengthDebt || 0), 0);
+
   return {
     trace,
     finalPreserved,
@@ -633,6 +656,8 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
       qualityRescuedFinalCoherence,
       qualityRescuedFinalMemoryMod,
       qualityRescuedMemoryWeightedCoherence,
+      finalLengthDebt,
+      cumulativeLengthDebt,
     },
   };
 }
@@ -855,7 +880,7 @@ export function testRegimeTransition(baseInput = {}, options = {}) {
   const regimeSwitchingCost = options.regimeSwitchingCost ?? 0;
 
   // Delegate to the now transition-aware simulateSequence
-  const res = simulateSequence(baseInput, maxSteps, { regimeSchedule: schedule, regimeMemory, adaptivePolicy, regimeSwitchingCost });
+  const res = simulateSequence(baseInput, maxSteps, { regimeSchedule: schedule, regimeMemory, adaptivePolicy, regimeSwitchingCost, lightweight: options.lightweight });
 
   // Compute transition-specific summary
   const stressedSteps = schedule.filter(r => r === 'stressed').length;
@@ -900,12 +925,14 @@ export function computeTransitionFragility(baseInput = {}, options = {}) {
   const profileName = options.profile || 'stress-spike';
   const schedule = REGIME_TRANSITION_PROFILES[profileName] || options.regimeSchedule || REGIME_TRANSITION_PROFILES['stress-spike'];
 
+  const lightweight = options.lightweight ?? false;
+
   // Pure nominal run for baseline
-  const nominalRun = simulateSequence(baseInput, maxSteps);
+  const nominalRun = simulateSequence(baseInput, maxSteps, { lightweight });
 
   // Transition run
   const regimeMemory = options.regimeMemory ?? 0;
-  const transRun = simulateSequence(baseInput, maxSteps, { regimeSchedule: schedule, regimeMemory });
+  const transRun = simulateSequence(baseInput, maxSteps, { regimeSchedule: schedule, regimeMemory, lightweight });
 
   // Compute "survival" as steps until first identity failure (consistent with resilience style)
   function countSurvival(trace) {
@@ -942,6 +969,7 @@ export function computeTransitionFragility(baseInput = {}, options = {}) {
 export function computeRegimeStability(baseInput = {}, options = {}) {
   const maxSteps = options.maxSteps ?? 8;
   const regimeMemory = options.regimeMemory ?? 0;
+  const lightweight = options.lightweight ?? false;
   const profiles = Object.keys(REGIME_TRANSITION_PROFILES);
 
   const fragilities = {};
@@ -949,7 +977,7 @@ export function computeRegimeStability(baseInput = {}, options = {}) {
   let sumFrag = 0;
 
   profiles.forEach((p) => {
-    const f = computeTransitionFragility(baseInput, { maxSteps, profile: p, regimeMemory });
+    const f = computeTransitionFragility(baseInput, { maxSteps, profile: p, regimeMemory, lightweight });
     fragilities[p] = f.fragility;
     if (f.fragility > maxFrag) maxFrag = f.fragility;
     sumFrag += f.fragility;
@@ -993,7 +1021,8 @@ export function findHighStabilitySettings(baseInput = {}, options = {}) {
 
   const grammarKeys = ['boundary', 'route', 'reseat', 'phase', 'charge'];
 
-  const baseStability = computeRegimeStability(baseInput, { maxSteps }).stability;
+  const lightweight = options.lightweight ?? false;
+  const baseStability = computeRegimeStability(baseInput, { maxSteps, lightweight }).stability;
 
   let best = {
     input: { ...baseInput },
@@ -1016,7 +1045,7 @@ export function findHighStabilitySettings(baseInput = {}, options = {}) {
       }
     });
 
-    const stab = computeRegimeStability(candidate, { maxSteps, regimeMemory }).stability;
+    const stab = computeRegimeStability(candidate, { maxSteps, regimeMemory, lightweight }).stability;
     if (stab > best.stability) {
       best = {
         input: candidate,
@@ -1027,7 +1056,7 @@ export function findHighStabilitySettings(baseInput = {}, options = {}) {
     }
   }
 
-  const projectedDur = computeRegimeStability(best.input, { maxSteps, regimeMemory }).durabilityIndex;
+  const projectedDur = computeRegimeStability(best.input, { maxSteps, regimeMemory, lightweight }).durabilityIndex;
 
   return {
     baseStability: Number(baseStability.toFixed(4)),
@@ -1053,7 +1082,8 @@ export function findBestRegimeForDurability(baseInput = {}, options = {}) {
   const regimeMemory = options.regimeMemory ?? 0;
   const regimes = ['nominal', 'stressed', 'recovering'];
 
-  const cross = computeRegimeStability(baseInput, { maxSteps, regimeMemory });
+  const lightweight = options.lightweight ?? false;
+  const cross = computeRegimeStability(baseInput, { maxSteps, regimeMemory, lightweight });
   const baseDur = cross.durabilityIndex;
 
   let best = { regime: null, effectiveDurabilityIndex: -1, finalPreserved: false };
@@ -1061,7 +1091,7 @@ export function findBestRegimeForDurability(baseInput = {}, options = {}) {
 
   regimes.forEach(reg => {
     const constSchedule = Array(maxSteps).fill(reg);
-    const trans = testRegimeTransition(baseInput, { maxSteps, regimeSchedule: constSchedule, regimeMemory });
+    const trans = testRegimeTransition(baseInput, { maxSteps, regimeSchedule: constSchedule, regimeMemory, lightweight });
     // Effective = cross dur * (1 if preserves in this fixed regime, else penalty)
     const regimeScore = trans.finalPreserved ? 1.0 : 0.6;
     const effective = Number((baseDur * regimeScore).toFixed(4));
@@ -1116,7 +1146,7 @@ export function computeMonteCarloDurability(baseInput = {}, options = {}) {
       schedule = Array.from({length: maxSteps}, () => regimes[Math.floor(Math.random() * regimes.length)]);
     }
 
-    const trans = testRegimeTransition(baseInput, { maxSteps, regimeSchedule: schedule, regimeMemory });
+    const trans = testRegimeTransition(baseInput, { maxSteps, regimeSchedule: schedule, regimeMemory, lightweight: options.lightweight });
 
     totalFinalPres += trans.finalPreserved ? 1 : 0;
     totalFinalId += trans.summary.finalIdentity || 0;

@@ -2,6 +2,8 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { calculateOutcome, closedForms, transientForms, scenarios, simulateSequence, deriveGrammar, measureResilience, computeCrossRegimeDurability, testRegimeTransition, computeTransitionFragility, computeRegimeStability, findHighStabilitySettings, findBestRegimeForDurability, computeMonteCarloDurability } from '../src/model.js';
 
 const outDir = new URL('./out/', import.meta.url);
+// Fast trace/stability path: avoids nested full-fidelity probes inside simulateSequence steps.
+const LW = { lightweight: true };
 
 const values = [0.15, 0.35, 0.55, 0.75, 0.9];
 const phaseValues = [0.2, 0.5, 0.8];
@@ -185,7 +187,7 @@ const flipRate = flipsTested ? Number((flips / flipsTested).toFixed(4)) : 0;
 // A few representative traces on high-coherence seeds (to exercise the new sequence simulator)
 const topSeeds = topCoherent.slice(0, 3);
 const traceExamples = topSeeds.map((seed) => {
-  const res = simulateSequence(seed, 4);
+  const res = simulateSequence(seed, 4, LW);
   return {
     seed: { closedForm: seed.closedForm, transientForm: seed.transientForm, scenario: seed.scenario },
     summary: res.summary,
@@ -199,7 +201,7 @@ const traceExamples = topSeeds.map((seed) => {
 // Regime transition test on interesting subsets (new: durability under changing conditions)
 const defaultTransition = ['nominal', 'nominal', 'stressed', 'stressed', 'recovering', 'recovering', 'recovering', 'recovering'];
 const transitionTop = topCoherent.slice(0, 6).map((seed) => {
-  const t = testRegimeTransition(seed, { maxSteps: 8, regimeSchedule: defaultTransition });
+  const t = testRegimeTransition(seed, { maxSteps: 8, regimeSchedule: defaultTransition, ...LW });
   return {
     pattern: `${seed.closedForm}/${seed.transientForm}/${seed.scenario}`,
     finalPreserved: t.finalPreserved,
@@ -209,7 +211,7 @@ const transitionTop = topCoherent.slice(0, 6).map((seed) => {
 });
 
 const transitionFragile = fragile.slice(0, 6).map((seed) => {
-  const t = testRegimeTransition(seed, { maxSteps: 8, regimeSchedule: defaultTransition });
+  const t = testRegimeTransition(seed, { maxSteps: 8, regimeSchedule: defaultTransition, ...LW });
   return {
     pattern: `${seed.closedForm}/${seed.transientForm}/${seed.scenario}`,
     finalPreserved: t.finalPreserved,
@@ -221,34 +223,34 @@ const transitionFragile = fragile.slice(0, 6).map((seed) => {
 // Profile fragility (damage caused by specific transition patterns) on interesting subsets
 const profileFragTop = topCoherent.slice(0, 4).map((seed) => ({
   pattern: `${seed.closedForm}/${seed.transientForm}/${seed.scenario}`,
-  spike: computeTransitionFragility(seed, { maxSteps: 8, profile: 'stress-spike' }).fragility,
-  osc: computeTransitionFragility(seed, { maxSteps: 8, profile: 'oscillation' }).fragility,
-  degradation: computeTransitionFragility(seed, { maxSteps: 8, profile: 'gradual-degradation' }).fragility,
+  spike: computeTransitionFragility(seed, { maxSteps: 8, profile: 'stress-spike', ...LW }).fragility,
+  osc: computeTransitionFragility(seed, { maxSteps: 8, profile: 'oscillation', ...LW }).fragility,
+  degradation: computeTransitionFragility(seed, { maxSteps: 8, profile: 'gradual-degradation', ...LW }).fragility,
 }));
 const profileFragFragile = fragile.slice(0, 3).map((seed) => ({
   pattern: `${seed.closedForm}/${seed.transientForm}/${seed.scenario}`,
-  spike: computeTransitionFragility(seed, { maxSteps: 8, profile: 'stress-spike' }).fragility,
+  spike: computeTransitionFragility(seed, { maxSteps: 8, profile: 'stress-spike', ...LW }).fragility,
 }));
 
 // Regime stability (1 - max fragility across profiles) for top/fragile
 const stabilityTop = topCoherent.slice(0, 4).map((seed) => {
-  const s = computeRegimeStability(seed, { maxSteps: 8 });
+  const s = computeRegimeStability(seed, { maxSteps: 8, ...LW });
   return { pattern: `${seed.closedForm}/${seed.transientForm}/${seed.scenario}`, stability: s.stability, maxFrag: s.maxFragility };
 });
 const stabilityFragile = fragile.slice(0, 3).map((seed) => {
-  const s = computeRegimeStability(seed, { maxSteps: 8 });
+  const s = computeRegimeStability(seed, { maxSteps: 8, ...LW });
   return { pattern: `${seed.closedForm}/${seed.transientForm}/${seed.scenario}`, stability: s.stability, maxFrag: s.maxFragility };
 });
 
 // Small "explorer" pass: use findHighStabilitySettings on top cases to show improvement potential
 const stabilitySearch = topCoherent.slice(0, 3).map((seed) => {
-  const baseSt = computeRegimeStability(seed, { maxSteps: 8 }).stability;
-  const search = findHighStabilitySettings(seed, { maxSteps: 8, samples: 15, stepSize: 0.06 });
-  const searchWithMemory = findHighStabilitySettings(seed, { maxSteps: 8, samples: 15, stepSize: 0.06, regimeMemory: 0.5 });
-  const policy = findBestRegimeForDurability(seed, { maxSteps: 8 });
-  const mc = computeMonteCarloDurability(seed, { maxSteps: 8, numTrials: 30 });
-  const adaptive = simulateSequence(seed, 8, { adaptivePolicy: true, regimeMemory: 0.5 });
-  const adaptiveWithSwitch = simulateSequence(seed, 8, { adaptivePolicy: true, regimeMemory: 0.5, regimeSwitchingCost: 0.2 });
+  const baseSt = computeRegimeStability(seed, { maxSteps: 8, ...LW }).stability;
+  const search = findHighStabilitySettings(seed, { maxSteps: 8, samples: 15, stepSize: 0.06, ...LW });
+  const searchWithMemory = findHighStabilitySettings(seed, { maxSteps: 8, samples: 15, stepSize: 0.06, regimeMemory: 0.5, ...LW });
+  const policy = findBestRegimeForDurability(seed, { maxSteps: 8, ...LW });
+  const mc = computeMonteCarloDurability(seed, { maxSteps: 8, numTrials: 30, ...LW });
+  const adaptive = simulateSequence(seed, 8, { adaptivePolicy: true, regimeMemory: 0.5, ...LW });
+  const adaptiveWithSwitch = simulateSequence(seed, 8, { adaptivePolicy: true, regimeMemory: 0.5, regimeSwitchingCost: 0.2, ...LW });
   const avgMem = adaptive.trace && adaptive.trace.length ? (adaptive.trace.reduce((s, t) => s + (t.memoryMod || 0), 0) / adaptive.trace.length) : 0;
   const finalMem = adaptive.trace && adaptive.trace.length ? adaptive.trace[adaptive.trace.length-1].memoryMod : null;
   const presMems = adaptive.trace.filter(t => t.identityPreserved).map(t => t.memoryMod || 0);
