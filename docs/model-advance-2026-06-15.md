@@ -366,6 +366,23 @@ Pure-logic result: pathQuality is no longer just an observed "how good has the s
 
 Full verification pattern followed. All changes remain strictly inside the abstract rule model.
 
+## Continuation (pathQuality reaches resilience & survival horizons)
+
+User: "continue"
+
+Autonomous decision: take the consumption/pathQuality modulation one step further into the "how long can this survive?" question.
+
+- `measureResilience` (the primitive that answers "max steps until identityPreserved flips under controlled load") now runs its own lightweight pathQuality accumulator inside the loop and uses it to scale fatigue and storage decay (same rule as simulateSequence). High pathQuality during the resilience run extends the predicted survival.
+- Resilience return now includes `avgPathQuality` / `finalPathQuality` in summary (and per-entry pathQuality).
+- Live UI (`updateResilience`): the existing short simulate for inertia is joined by capture of avgPathQ/finalPathQ; "streakQ X.XX" is appended to the durability note, and the resilienceNote boost estimate now includes a streakQ component ("mem+streakQ boost est.").
+- Sweep: resilienceTop / resilienceFragile (and byPattern) objects now carry the pathQ values from the measureResilience runs. pathQOnAdaptive (from prior turn) already links quality to preserved rates.
+- `npm run build` clean, guardrails clean, smoke for the new fields, fresh sweep bg, verify attempt (env limit).
+- Docs updated.
+
+The survival horizon is now sensitive to the quality of the history: good streaks don't just look better in traces — they let the closed order *last longer* before the model's consumption rules put identity at risk.
+
+Full scope followed. Pure abstract only.
+
 ## Continuation ("continue")
 
 Refined adaptive policy lookahead to include "commitment value": scores regime r by immediate (stress-modulated) + discounted (cross stability blended with simulated preservation under *sticking/committing* with r for the remaining horizon via testRegimeTransition constant schedule).

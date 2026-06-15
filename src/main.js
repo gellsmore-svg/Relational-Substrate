@@ -391,12 +391,22 @@ function updateResilience() {
     els.durabilityNote.textContent = current + ` | inertia ${pathInertia.toFixed(2)}`;
   }
 
-  // Note memory boost to resilience (high inertia reduces effective consumption, extending survival in measureResilience-style horizons)
+  // PathQuality / streak quality (live): short trace to surface the running pathQuality (sustained success quality).
+  // This now directly eases consumption and amplifies reinf/debt; high values mean the history "earns" cheaper future steps and stronger self-reinforcement.
+  const pqTrace = simulateSequence(input, 4);
+  const avgPathQ = pqTrace.summary && pqTrace.summary.avgPathQuality ? pqTrace.summary.avgPathQuality : 0;
+  const finalPathQ = pqTrace.summary && pqTrace.summary.finalPathQuality ? pqTrace.summary.finalPathQuality : 0;
+  if (els.durabilityNote) {
+    const current = els.durabilityNote.textContent || '';
+    els.durabilityNote.textContent = current + ` | streakQ ${avgPathQ.toFixed(2)}`;
+  }
+
+  // Note memory + pathQuality boost to resilience (high quality/consumption modulation reduces effective consumption, extending survival).
   if (els.resilienceNote) {
-    const boostEst = Math.round(res.survivedSteps * pathInertia * 0.15);
+    const boostEst = Math.round(res.survivedSteps * pathInertia * 0.15 + res.survivedSteps * avgPathQ * 0.12);
     const currentNote = els.resilienceNote.textContent || '';
     if (boostEst > 0) {
-      els.resilienceNote.textContent = currentNote + ` (mem boost est. +${boostEst})`;
+      els.resilienceNote.textContent = currentNote + ` (mem+streakQ boost est. +${boostEst})`;
     }
   }
 }

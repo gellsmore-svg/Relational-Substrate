@@ -318,7 +318,13 @@ const resilienceTop = topCoherent.slice(0, 10).map((seed) => {
   const r = measureResilience(seed, { maxSteps: 8 });
   return {
     ...compact(seed),
-    resilience: { survived: r.survivedSteps, finalPreserved: r.finalPreserved, finalIdentity: Number(r.summary.finalIdentity.toFixed(3)) }
+    resilience: {
+      survived: r.survivedSteps,
+      finalPreserved: r.finalPreserved,
+      finalIdentity: Number(r.summary.finalIdentity.toFixed(3)),
+      avgPathQ: r.summary.avgPathQuality || null,
+      finalPathQ: r.summary.finalPathQuality || null,
+    }
   };
 });
 
@@ -326,7 +332,13 @@ const resilienceFragile = fragile.slice(0, 10).map((seed) => {
   const r = measureResilience(seed, { maxSteps: 8 });
   return {
     ...compact(seed),
-    resilience: { survived: r.survivedSteps, finalPreserved: r.finalPreserved, finalIdentity: Number(r.summary.finalIdentity.toFixed(3)) }
+    resilience: {
+      survived: r.survivedSteps,
+      finalPreserved: r.finalPreserved,
+      finalIdentity: Number(r.summary.finalIdentity.toFixed(3)),
+      avgPathQ: r.summary.avgPathQuality || null,
+      finalPathQ: r.summary.finalPathQuality || null,
+    }
   };
 });
 

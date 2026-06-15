@@ -566,6 +566,10 @@ export function measureResilience(baseInput = {}, options = {}) {
   const history = [];
   let survived = 0;
 
+  // Lightweight pathQuality for this resilience run (pure logic parallel to simulateSequence).
+  // High quality (built from preservation + grammar health + inertia) makes repeated survival cheaper.
+  let resPathQuality = 0.5;
+
   for (let step = 0; step < maxSteps; step += 1) {
     const stepInput = { ...current, ...loadProfile };
     // Apply regime bias to scatter for this step
@@ -577,6 +581,12 @@ export function measureResilience(baseInput = {}, options = {}) {
     // Compute step memory from current out (grammar + low stress = high inertia)
     const stepMem = out.grammar ? clamp01(out.grammar.continuity * (1 - out.closureStress)) : 0;
 
+    // Step pathQuality for resilience horizon (blend of preservation success, grammar health, and inertia).
+    const stepPresQ = out.identityPreserved ? 0.9 : 0.55;
+    const grammarHealth = out.grammar ? (out.grammar.continuity + out.grammar.phaseMatch + (1 - out.grammar.chargeTension)) / 3 : 0.5;
+    const stepResQ = clamp01(stepPresQ * (0.6 + 0.4 * grammarHealth) * (0.7 + 0.3 * stepMem));
+    resPathQuality = clamp01(0.65 * resPathQuality + 0.35 * stepResQ);
+
     const entry = {
       step,
       coherenceMetric: out.coherenceMetric,
@@ -585,6 +595,7 @@ export function measureResilience(baseInput = {}, options = {}) {
       identityPreserved: out.identityPreserved,
       grammar: out.grammar,
       regime,
+      pathQuality: Number(resPathQuality.toFixed(4)),
     };
     history.push(entry);
 
@@ -593,13 +604,15 @@ export function measureResilience(baseInput = {}, options = {}) {
     }
     survived = step + 1;
 
-    // Consumption modulated by regime + memory (pure logic: high inertia from current grammar makes repeated encounters cheaper to survive, extending the horizon)
+    // Consumption modulated by regime + memory + pathQuality (pure logic: high sustained quality from the resilience history itself makes future encounters cheaper, extending the horizon).
     let fatigue = fatigueBase * fatigueFactor * (1 - (out.grammar.continuity + out.reseatMetric) / 2);
     fatigue *= (1 - stepMem * 0.15);  // memory eases fatigue
+    fatigue *= (1 - resPathQuality * 0.12);  // pathQuality (streak quality) further reduces consumption
     const memStorageDecay = storageDecay * (1 + stepMem * 0.05);  // high memory makes storage decay gentler
+    const pqStorageDecay = memStorageDecay * (1 + resPathQuality * 0.06);  // high pathQuality in resilience makes storage even gentler
     current = {
       ...current,
-      storage: clamp01((current.storage ?? 0.4) * (memStorageDecay + out.reseatMetric * 0.03 + reseatBoost)),
+      storage: clamp01((current.storage ?? 0.4) * (pqStorageDecay + out.reseatMetric * 0.03 + reseatBoost)),
       scatter: clamp01((current.scatter ?? 0.3) * 0.97 + fatigue),
     };
   }
@@ -625,6 +638,8 @@ export function measureResilience(baseInput = {}, options = {}) {
       finalIdentity: Number(last.identityScore.toFixed(4)),
       finalStress: Number(last.closureStress.toFixed(4)),
       regime,
+      avgPathQuality: Number((history.reduce((s, h) => s + (h.pathQuality || 0), 0) / Math.max(1, history.length)).toFixed(4)),
+      finalPathQuality: Number((last.pathQuality || resPathQuality).toFixed(4)),
     },
   };
 }
