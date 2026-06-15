@@ -47,7 +47,7 @@ for (const closedForm of closedForms) {
               for (const reseat of values) {
                 for (const phase of phaseValues) {
                   for (const charge of chargeValues) {
-                    rows.push(calculateOutcome({ closedForm, transientForm, scenario, boundary, route, storage, scatter, reseat, phase, charge }));
+                    rows.push(calculateOutcome({ closedForm, transientForm, scenario, boundary, route, storage, scatter, reseat, phase, charge }, { skipDurability: true }));
                   }
                 }
               }
