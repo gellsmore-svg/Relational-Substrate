@@ -655,3 +655,18 @@ Small but meaningful feed of the quality-boosted rescue into the non-myopic poli
 
 The adaptive choice is now quality-rescue-aware in its lookahead, closing another non-myopic loop.
 
+
+## Continuation (quality rescue feeds back to ending accumulator carry state)
+
+User: "continue"
+
+Small but satisfying closed loop at the very end of a trace:
+
+- After setting pathQBoostedPreserved (or memoryCarriedPreserved), the summary now also reports qualityRescuedFinalAccumContinuity — a modestly stronger final accumContinuity (scaled by avgPathQ or avgMem) when the rescue fired.
+- The raw finalAccumContinuity from the last step is also surfaced for completeness.
+- UI trace demo output updated to display the rescued carry when it differs from the raw one.
+- The effect is automatically exercised by any simulateSequence that triggers a quality or memory rescue (including the explorer adaptive runs).
+- Build/guardrails clean. Smoke, fresh sweep bg, verify per pattern. Docs updated.
+
+The quality-rescue mechanism now affects not only the binary "did the history count as preserved?" but also the *ending inertia state* the history leaves behind. Virtuous cycles close one more level.
+

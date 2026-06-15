@@ -540,6 +540,22 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
     pathQBoostedPreserved = true;
   }
 
+  // Quality rescue feeds back to the ending accumulator state (pure logic closed loop):
+  // if the trace was rescued by pathQuality (or memory carry), the history ends in a slightly stronger carry state.
+  // This is the "the story was good enough to count as preserved, so it leaves a better inertia behind".
+  const finalAccumContinuity = Number(last.accumContinuity.toFixed(4));
+  let qualityRescuedFinalAccumContinuity = finalAccumContinuity;
+  if (pathQBoostedPreserved) {
+    qualityRescuedFinalAccumContinuity = Number(
+      clamp01(last.accumContinuity * (1 + 0.1 * avgPathQ)).toFixed(4)
+    );
+  } else if (memoryCarriedPreserved) {
+    // memory carry also leaves a modestly stronger ending carry
+    qualityRescuedFinalAccumContinuity = Number(
+      clamp01(last.accumContinuity * (1 + 0.05 * avgMem)).toFixed(4)
+    );
+  }
+
   return {
     trace,
     finalPreserved,
@@ -562,6 +578,8 @@ export function simulateSequence(baseInput = {}, stepCount = 4, options = {}) {
       memoryCarriedFinalPresQualityGate: Number(carriedQualityGate.toFixed(4)),
       pathQBoostedFinalIdentity,
       pathQBoostedPreserved,
+      finalAccumContinuity,
+      qualityRescuedFinalAccumContinuity,
     },
   };
 }

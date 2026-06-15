@@ -589,6 +589,7 @@ if (els.runTraceButton && els.traceOutput) {
     els.traceOutput.textContent =
       lines.join('\n') +
       `\n\ntrace summary: finalPres=${summary.finalPreserved}  avgCoh=${summary.avgCoherence}  minCoh=${summary.minCoherence}  finalId=${summary.finalIdentity}` +
+      (summary.qualityRescuedFinalAccumContinuity && summary.qualityRescuedFinalAccumContinuity !== (summary.finalAccumContinuity||0) ? `  rescuedFinalCarry=${summary.qualityRescuedFinalAccumContinuity}` : '') +
       `\nresilience (8-step, primary=${primaryRegime}): ${regimeLine}` +
       `\nrobustness: ${robust.robustness} (min ${robust.minSurvival}/8, fullRobust=${robust.fullRobust})` +
       `\n${transLine}` +
