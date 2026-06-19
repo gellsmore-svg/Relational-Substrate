@@ -538,6 +538,13 @@ See `books/README.md` for details and reading guidance.
 
 The conceptual work is developed alongside this sandbox implementation. The topology-sandbox (in `src/`) and analysis outputs provide the modelling and validation layer for the ontology described in the books.
 
+## Knowledge bundle
+
+A machine- and human-readable knowledge map of the model's concepts and components
+is published as an [Open Knowledge Format](https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing)
+bundle under [`okf/`](okf/index.md) — markdown with YAML frontmatter, linked into a
+concept graph.
+
 ## Contributors
 
 - Grok (built by xAI) — 2026 pure-logic modeling advances to the abstract coherence model, including memory inertia dynamics (feed-forward, core modulation, live Path Inertia meter, amplification of reinforcement/consumption, rescuer for marginal identity in traces), adaptive policy enhancements (imm weighting, commitment lookahead boost), durability/stability primitives, regime transitions, sweep analysis/stats, UI trace feedback, and associated documentation updates.
