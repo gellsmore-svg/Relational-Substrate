@@ -65,13 +65,13 @@ const candidates = [
       'S. Schroeder, A. Duparre, L. Coriand, A. Tuennermann, D. H. Penalver, and J. E. Harvey, Modeling of light scattering in different regimes of surface roughness, Optics Express 19, 9820-9835 (2011)',
     doi: '10.1364/OE.19.009820',
     metadataSignals: [
-      'title and abstract emphasize modeling measured scatter across smooth-to-rough regimes from PSD',
-      'unclear from metadata whether an independent topography PSD and a same-state scattering-derived PSD are both reported as comparable curves rather than a measured-versus-modeled scatter comparison',
+      'abstract and PubMed record state the steel-surface PSD is measured by AFM and white-light interferometry and then used to PREDICT scattering via Rayleigh-Rice and Generalized Harvey-Shack theory',
+      'predicted angle-resolved scattering is compared against MEASURED angle-resolved scattering at 325, 532, and 1064 nm; the comparison axis is scattering versus angle, not an independent scatter-derived PSD versus a topography PSD',
     ],
-    availability: 'secondary',
-    decision: 'defer',
+    availability: 'checked-2026-06-24',
+    decision: 'reject-current-gate',
     reason:
-      'A modeled-scatter-versus-measured-scatter emphasis would not supply two independent PSD curves; hold as a fallback only if the primary candidate fails source lock.',
+      'Construct verified at abstract/PubMed level: this is measured-ARS versus modeled-ARS (the topography PSD is the model input), so it does not supply the second, independently scatter-derived PSD curve the comparator needs. It is a candidate for the SEPARATE Form-1 PSD-backed-BRDF model instead, but only on its smooth subset and with metallic-surface optical-constant handling, so it needs its own screen and reservation, not this gate.',
   },
   {
     source:

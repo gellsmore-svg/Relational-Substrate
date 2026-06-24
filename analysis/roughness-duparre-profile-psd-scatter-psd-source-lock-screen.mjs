@@ -82,7 +82,7 @@ const sourceLockDecision = {
   ],
   recovery: [
     'obtain verified full text via institutional Optica access (the Fraunhofer IOF competence page was checked and does not host the PDF; the publica.fraunhofer.de repository may hold an author copy but renders client-side and needs an interactive session to confirm), then confirm the three required facts and source-lock against hash 5305a937566e8b24',
-    'if Duparre 2002 cannot be accessed, fall back to the deferred candidate Schroeder et al., Opt. Express 19, 9820 (2011), re-running the source screen decision first',
+    'do NOT fall back to Schroeder et al., Opt. Express 19, 9820 (2011) for this comparator: checked 2026-06-24, it is measured-ARS versus modeled-ARS (topography PSD is the model input) and supplies no independent scatter-derived PSD curve; it is a Form-1 candidate only. If Duparre 2002 stays inaccessible, run a fresh metadata screen for another same-specimen independent-topography-PSD plus scatter-derived-PSD source',
   ],
 };
 
