@@ -102,6 +102,28 @@ standard order-independent baseline.
    programme should choose deliberately: pursue the order-effect prediction (the only
    route to decisive evidence) or reframe the grammar's contribution as explanatory.
 
+## P1 done (same day): the order effect is real in the model — with a crucial endpoint refinement
+
+`analysis/grammar-order-effect-derivation.mjs` (`npm run grammar:order-effect`) drove
+`simulateSequence` with reversed regime schedules (gentle = recovering, harsh =
+stressed) at matched multisets across 192 configs. Result:
+
+- **Final-state endpoint (residual identity): RECENCY**, not preconditioning. Ending on
+  a gentle encounter wins in 100% of configs (mean delta -0.009). Recency is not a
+  distinctive no-competitor claim.
+- **Whole-history endpoint (minimum identity / did it ever break): PRECONDITIONING
+  holds.** Gentle-first holds a higher minimum in 95.8% of configs, with 11 whole-history
+  survival flips (gentle-first survives the whole run, harsh-first breaks) and **zero in
+  reverse**.
+
+So the grammar's distinctive prediction is real in the model, but **only on a
+whole-history survival endpoint**. This sharpens P2 decisively: a real-world test must
+measure **time/cycles-to-first-failure** under gentle-first vs harsh-first blocks
+(fatigue: cycles-to-first-crack; biology: survival under stress-then-stressor) -- NOT a
+final-state endpoint like residual strength, which the model says is recency-dominated
+and would show the *opposite* sign. (Derived from a toy rule model: this shows the claim
+is internally real and which endpoint reveals it, not that it is physically true.)
+
 ## One-line summary
 
 The grammar's only no-established-competitor prediction is its **directional order
