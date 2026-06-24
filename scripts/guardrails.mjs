@@ -31,6 +31,8 @@ const checks = [
   'analysis/ri-structural-predictor-v1-model.mjs',
   'analysis/ri-structural-predictor-v1-feasibility-diagnostic.mjs',
   'analysis/ri-wollastonite-baita-source-candidate.mjs',
+  'analysis/ri-wollastonite-baita-target-reservation.mjs',
+  'analysis/ri-wollastonite-baita-consistency-score.mjs',
   'analysis/ri-pure-ca-si-o-source-exhaustion-screen.mjs',
   'analysis/external-material-refractive-index-challenge.mjs',
   'analysis/material-nbo-stoichiometry.mjs',
