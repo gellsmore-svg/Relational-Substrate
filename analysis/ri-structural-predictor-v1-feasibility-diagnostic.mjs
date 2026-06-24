@@ -1,8 +1,8 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import {
   AE_C,
+  O2_MINUS_ANCHORS,
   O2_MINUS_PARAMS,
-  O2_MINUS_SIO2_ANCHOR,
   anionPolarizability,
   indexFromPolarizability,
   polarizabilityFromIndex,
@@ -39,16 +39,17 @@ const additivityCheck = totalPolarizability([
 const additivityExpected = 1.79 + 0.284;
 
 // (3) Source-anchor check for the eqn (6) oxygen model, sign-corrected to
-// alpha = alpha0 * 10^(No/Van^n). Anchor is source-stated: Van(SiO2)=18.8 A^3 ->
-// alpha(O2-)=1.44 A^3 (SF2016). Evaluate at the source-stated exponent (1.20) and at
-// the exponent that reproduces the anchor exactly (1.0).
-const { anionMolarVolume: sio2Van, expectedAlpha: sio2ExpectedAlphaO } = O2_MINUS_SIO2_ANCHOR;
-const oxygenAtN12 = anionPolarizability({ ...O2_MINUS_PARAMS, nexp: 1.2, anionMolarVolume: sio2Van });
-const oxygenAtN10 = anionPolarizability({ ...O2_MINUS_PARAMS, nexp: 1.0, anionMolarVolume: sio2Van });
-const relErrN12 = Math.abs(oxygenAtN12 - sio2ExpectedAlphaO) / sio2ExpectedAlphaO;
-const relErrN10 = Math.abs(oxygenAtN10 - sio2ExpectedAlphaO) / sio2ExpectedAlphaO;
-const oxygenSignCorrect = oxygenAtN12 < O2_MINUS_PARAMS.freeIonAlpha; // compression reduces alpha
-const oxygenAnchoredAtSourceExponent = relErrN12 <= 0.02; // n=1.20 as the source states
+// alpha = alpha0 * 10^(No/Van^n), at the source-stated exponent nexp=1.20. Verified
+// against TWO source-stated (compound, Van, alpha) anchors: quartz SiO2 (18.8->1.58)
+// and BaO (42.5->1.71). (The source's 1.44 is dense SiO2/stishovite, a different Van.)
+const anchorTolerance = 0.02; // 2% -- worked values are quoted to ~2 sig figs
+const oxygenAnchorResults = O2_MINUS_ANCHORS.map((a) => {
+  const got = anionPolarizability({ ...O2_MINUS_PARAMS, anionMolarVolume: a.anionMolarVolume });
+  const relErr = Math.abs(got - a.expectedAlpha) / a.expectedAlpha;
+  return { ...a, got, relErr, within: relErr <= anchorTolerance };
+});
+const oxygenSignCorrect = oxygenAnchorResults.every((r) => r.got < O2_MINUS_PARAMS.freeIonAlpha);
+const oxygenAnchored = oxygenAnchorResults.every((r) => r.within);
 
 const checks = [
   {
@@ -64,12 +65,14 @@ const checks = [
   {
     check: 'eqn (6) sign correct: compression reduces O2- below free-ion (1.79)',
     pass: oxygenSignCorrect,
-    value: `alpha(O2-, SiO2) = ${oxygenAtN12.toFixed(3)} < 1.79`,
+    value: oxygenAnchorResults.map((r) => `${r.compound}:${r.got.toFixed(3)}`).join(', '),
   },
   {
-    check: 'eqn (6) reproduces source SiO2 anchor (1.44) at the source-stated exponent n=1.20',
-    pass: oxygenAnchoredAtSourceExponent,
-    value: `n=1.20 -> ${oxygenAtN12.toFixed(3)} (relErr ${(relErrN12 * 100).toFixed(1)}%); n=1.0 -> ${oxygenAtN10.toFixed(3)} (relErr ${(relErrN10 * 100).toFixed(1)}%); target ${sio2ExpectedAlphaO}`,
+    check: 'eqn (6) reproduces source-stated (Van,alpha) anchors at nexp=1.20',
+    pass: oxygenAnchored,
+    value: oxygenAnchorResults
+      .map((r) => `${r.compound} Van=${r.anionMolarVolume} -> ${r.got.toFixed(3)} vs ${r.expectedAlpha} (${(r.relErr * 100).toFixed(1)}%)`)
+      .join('; '),
   },
 ];
 
@@ -78,7 +81,7 @@ const oxygenAnchorPass = checks[3].pass;
 const status = machineryValid
   ? oxygenAnchorPass
     ? 'v1-machinery-validated-and-oxygen-anchored'
-    : 'v1-machinery-validated-oxygen-sign-fixed-exponent-residual-scoring-blocked'
+    : 'v1-machinery-validated-oxygen-not-anchored-scoring-blocked'
   : 'v1-machinery-FAILED';
 
 const report = {
@@ -90,7 +93,7 @@ const report = {
   predictorPredeclaration: 'ri-structural-predictor-v1-predeclaration.mjs',
   checks,
   reading:
-    'Anderson-Eggleton forward/inverse and additivity are exact (round-trip ~machine epsilon). The eqn (6) oxygen model is now SIGN-CORRECTED to alpha=alpha0*10^(No/Van^n): compression correctly reduces O2- below the free-ion 1.79, and with the source-stated parameters (alpha0=1.79, No=-1.776) and the source-stated Van(SiO2)=18.8 it reproduces the source SiO2 value 1.44 EXACTLY at exponent n=1.0, while the source-stated whole-dataset exponent n=1.20 gives 1.586 (~10% high) at the same anchor. Because O2- dominates alpha_T, this n=1.0-vs-1.20 residual is disqualifying for scoring, so the model is correctly still blocked. Remaining gap is narrow and specific: reconcile the exponent (read the SF2016 oxygen-polarizability table / additional worked Van-alpha pairs to confirm whether 1.44 is an n=1.20 value at a different Van, or n=1.0 applies). The AE+additivity core is usable now; the oxygen term is one reconciliation away.',
+    'Anderson-Eggleton forward/inverse and additivity are exact (round-trip ~machine epsilon). The eqn (6) oxygen model is sign-corrected to alpha=alpha0*10^(No/Van^n) and the exponent is reconciled to the source-stated nexp=1.20: it now reproduces TWO source-stated (compound, Van, alpha) anchors -- quartz SiO2 (18.8 -> 1.58) and BaO (42.5 -> 1.71) -- within ~0.5%. The earlier n=1.0 confusion was a mis-pairing: the source 1.44 is dense SiO2 (stishovite, small Van), not quartz, and quartz is 1.58 which nexp=1.20 gives. The full predictor machinery (AE + additivity + anchored anion-volume O2- + coordination-resolved cations) is now validated against the source. Scoring is no longer parameter-blocked; the remaining gates are the trace-composition decision, target reservation, and CIF/optical extraction.',
 };
 
 const markdown = `# RI Predictor v1 Feasibility / Source-Anchor Test

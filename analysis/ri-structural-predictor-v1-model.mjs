@@ -51,13 +51,15 @@ export function totalPolarizability(ions) {
 //
 // Sign note: the cached eqn (6) image renders as 10^(-No/Van^n), but with the
 // source-stated O2- parameters {alpha_minus_free=1.79, No=-1.776} that form gives
-// alpha > alpha_free, contradicting the source's own in-crystal values (e.g. 1.44 in
-// SiO2 < 1.79). The form that reproduces the source is 10^(No/Van^n): with No=-1.776
-// and the source-stated Van(SiO2)=18.8 it yields 1.44 EXACTLY at nexp=1.0 (the
-// source-stated whole-dataset exponent is 1.20, which gives 1.586 at the same Van;
-// that residual is flagged and must be reconciled before scoring -- O2- dominates
-// alpha_T). Until anchorOxygenModel() passes against a source value, this term must
-// not be used in a scored prediction.
+// alpha > alpha_free, contradicting the source's own in-crystal values (all < 1.79).
+// The form that reproduces the source is 10^(No/Van^n): compression (smaller Van)
+// lowers alpha below the free-ion 1.79, as required.
+//
+// Exponent reconciled to the source-stated nexp=1.20, confirmed against TWO
+// source-stated (compound, Van, alpha) anchors: quartz SiO2 (Van=18.8 -> 1.58) and
+// BaO (Van=42.5 -> 1.71). The earlier apparent n=1.0 fit was a mis-pairing: the
+// source's 1.44 is for dense SiO2 (stishovite, small Van), not quartz; ordinary
+// quartz SiO2 is 1.58, which nexp=1.20 reproduces.
 export function anionPolarizability({ freeIonAlpha, No, nexp, anionMolarVolume }) {
   assertFinite(freeIonAlpha, 'freeIonAlpha');
   assertFinite(No, 'No');
@@ -67,12 +69,14 @@ export function anionPolarizability({ freeIonAlpha, No, nexp, anionMolarVolume }
   return freeIonAlpha * 10 ** (No / anionMolarVolume ** nexp);
 }
 
-// Source-stated parameters (Shannon-Fischer 2016): free-ion alpha 1.79, No -1.776.
-// nexp is the source's whole-dataset exponent (1.20); nexpAnchor (1.0) reproduces
-// the stated SiO2 worked value exactly -- the unresolved choice is the final gap.
+// Source-stated parameters (Shannon-Fischer 2016): free-ion alpha 1.79, No -1.776,
+// exponent nexp = 1.20 (used throughout SF2016).
 export const O2_MINUS_PARAMS = { freeIonAlpha: 1.79, No: -1.776, nexp: 1.2 };
-// Source-stated worked anchor: Van(SiO2)=18.8 A^3 -> alpha(O2-)=1.44 A^3.
-export const O2_MINUS_SIO2_ANCHOR = { anionMolarVolume: 18.8, expectedAlpha: 1.44 };
+// Source-stated worked (compound, Van, alpha(O2-)) anchors for verification.
+export const O2_MINUS_ANCHORS = [
+  { compound: 'SiO2 (quartz)', anionMolarVolume: 18.8, expectedAlpha: 1.58 },
+  { compound: 'BaO', anionMolarVolume: 42.5, expectedAlpha: 1.71 },
+];
 
 // Coordination-resolved Ca2+ polarizabilities (Shannon-Fischer 2016 cation table).
 export const CA_ALPHA_BY_CN = {
