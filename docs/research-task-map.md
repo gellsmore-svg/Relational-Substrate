@@ -47,7 +47,7 @@ Current status:
 |---|---|
 | Benchmark status | measured material refractive-index challenge unresolved |
 | Benchmark score | 7/11 for the original material-RI challenge |
-| RI chain status | 33-step RI diagnostic chain completes |
+| RI chain status | 34-step RI diagnostic chain completes |
 | Primary proxy | `n = 1.46 + 0.02*NBO/T - 0.004*chargeBalancedAl` |
 | First repair candidate | `n = 1.46 + 0.03*NBO/T + 0.075*chargeBalancedAl` |
 | First repair status | failed fresh anorthite validation; not promotable |
@@ -55,6 +55,7 @@ Current status:
 | Second-generation status | failed fresh orthoclase validation; not promotable |
 | Later Ca-scaffold status | melilite-local Ca scaffold repair failed transfer to hardystonite, rankinite, kilchoanite, and larnite; topology gate required |
 | Current held-out state | larnite classified before scoring and then scored under frozen gates |
+| Structural predeclaration | source-locked structural RI model form v0 predeclared with Ca coordination, mean Ca-O, T-site polarizability, silicate connectivity, density, and Lorentz-Lorenz; target-specific scoring remains blocked |
 
 Measured targets:
 

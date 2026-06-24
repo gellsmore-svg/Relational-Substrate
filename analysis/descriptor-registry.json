@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.4.0",
   "description": "Pre-declared descriptors for model forms. Source-locked only. Used to enforce predeclaration before any target scoring.",
   "descriptors": [
     {
@@ -46,6 +46,87 @@
       "source_requirement": "Geometry and charge rules must be source-locked before lookup; descriptor may be calibrated only on already-exposed failed H-S-S-H / H-Se-Se-H trans-side rows before a fresh target is reserved.",
       "conventional": false,
       "notes": "Diagnostic repair candidate for the exposed trans-side topology failure. Does not count as validation until an unchanged post-redesign formula passes a fresh held-out rotor target."
+    },
+    {
+      "id": "peroxide_anti_planar_release",
+      "name": "Peroxide anti-planar release term",
+      "units": "dimensionless release factor",
+      "extraction": "For H2O2-like rotors: clamp01((torsionMean - onset) / span) × clamp01(1 - stericDeviation) × clamp01(1 - cisCrowding), with release strength, onset, span, and torsion grid frozen before held-out target lookup.",
+      "source_requirement": "Geometry, charge rules, torsion grid, and pass/fail criteria must be source-locked before lookup; current H2O2 rows are already exposed diagnostic pressure and cannot count as fresh validation.",
+      "conventional": false,
+      "notes": "Diagnostic candidate for the weak peroxide nonlocal frontier. Any repair must be predeclared against a fresh held-out rotor target before it can count as evidence."
+    },
+    {
+      "id": "peroxide_unreleased_route_mismatch",
+      "name": "Peroxide unreleased route mismatch",
+      "units": "dimensionless selection score",
+      "extraction": "For peroxide-like rotors: evaluate the existing family score with the torsion deviation left unreleased (effectiveTorsionRms = torsionRms and effectiveTorsionMax = torsionMax). Use the resulting penalty versus the reference only for conformer admissibility or route selection; never convert it to cm-1 or add it to an energy barrier.",
+      "source_requirement": "Reference geometry, torsion tolerance, family weights, geometry rules, and candidate grid must be frozen before fresh-target lookup. Existing H2O2 rows are exposed model-form pressure and can establish feasibility only.",
+      "conventional": false,
+      "notes": "Separates structural route discrimination from the anti-planar energy release channel. It introduces no coefficient: all weights and tolerances are inherited unchanged from the registered molecule model."
+    },
+    {
+      "id": "peroxide_torsion_route_distance",
+      "name": "Peroxide torsion route distance",
+      "units": "dimensionless selection distance",
+      "extraction": "cyclicDifference(candidateTorsion, sourceDefinedReferenceTorsion, 360) / 45 degrees, clamped to [0,1]. The 45-degree denominator is the existing frozen peroxide torsion tolerance. The reference must be explicitly classified as a potential-energy equilibrium coordinate or a dynamical/vibrationally averaged coordinate.",
+      "source_requirement": "A source-defined torsion convention and construct classification must be locked before scoring. Candidate torsions must use the same atom order and angular convention.",
+      "conventional": false,
+      "notes": "Selection-only descriptor introduced after the dimethyl-peroxide mapping failure. It uses no charges, steric pseudo-atoms, family weights, fitted coefficients, or energy conversion."
+    },
+    {
+      "id": "peroxide_equilibrium_relative_crowding",
+      "name": "Peroxide equilibrium-relative crowding",
+      "units": "dimensionless directional crowding factor",
+      "extraction": "Let delta be the signed shortest angular displacement candidateTorsion - sourceDefinedReferenceTorsion in [-180,180). Compute clamp01(-delta / 60 degrees). Positive displacement is the release/non-crowding direction; negative displacement toward the compressed/cis side accumulates crowding over the existing 60-degree crowding span.",
+      "source_requirement": "A source-defined potential-energy equilibrium torsion and atom-order convention must be locked before evaluation. Direction must not be flipped after inspecting target energies.",
+      "conventional": false,
+      "notes": "Post-peroxyformic redesign candidate. It replaces absolute-angle cis crowding so an equilibrium near 0 degrees is not penalized by coordinate origin alone. H2O2, TBHP, and peroxyformic acid are exposed pressure cases only."
+    },
+    {
+      "id": "hydrazine_family_torsion_penalty",
+      "name": "Hydrazine-family N-N torsion penalty",
+      "units": "dimensionless penalty with inherited cm-1 scale comparator",
+      "extraction": "Use the existing hydrazine-cation two-ended N-N geometry builder, source-defined equilibrium torsion as reference, torsion tolerance 55 degrees, steric-clearance span 0.55 Å, cis crowding clamp01(stericDeviation × clamp01((55 - torsion)/55)), anti-planar release clamp01((torsion - 145)/35) × (1-stericDeviation) × (1-cisCrowding), and the frozen molecule-family weights from external-hydrazine-cation-torsion-benchmark.mjs.",
+      "source_requirement": "A source-defined neutral hydrazine equilibrium torsion and at least two same-construct internal-rotation barrier rows must be reserved and locked before scoring. The ethane-derived cm-1-per-penalty scale and all geometry constants remain unchanged.",
+      "conventional": false,
+      "notes": "Exact-topology transfer descriptor. Hydrazine cation is exposed calibration pressure; neutral hydrazine is eligible only if reserved before numerical barrier lookup. Do not apply unchanged to hydroxylamine or other N-O rotors."
+    },
+    {
+      "id": "surface_height_psd_1d",
+      "name": "One-dimensional surface-height power spectral density",
+      "units": "length cubed",
+      "extraction": "Use a source-reported one-dimensional surface-height PSD under a declared scan direction, detrending/windowing convention, and spatial-frequency unit. Interpolate only within the measured frequency support; do not extrapolate.",
+      "source_requirement": "Primary measured profilometry or AFM PSD paired to the same surface and state as the BRDF measurement.",
+      "conventional": true,
+      "notes": "Conventional rough-surface descriptor. It characterizes spatial-frequency content beyond RMS roughness and must never be counted as substrate-specific support."
+    },
+    {
+      "id": "rayleigh_rice_spatial_frequency",
+      "name": "Rayleigh-Rice angle-to-spatial-frequency mapping",
+      "units": "inverse length",
+      "extraction": "For in-plane reflection, f = abs(sin(theta_s) - sin(theta_i)) / wavelength, with all angles measured from the surface normal and the sign convention locked before scoring.",
+      "source_requirement": "Source-locked wavelength, incidence angle, scatter angles, and in-plane geometry for the measured BRDF.",
+      "conventional": true,
+      "notes": "Conventional first-order perturbation mapping. Valid only in the smooth-surface regime declared by the source/model contract."
+    },
+    {
+      "id": "rayleigh_rice_brdf_shape",
+      "name": "Rayleigh-Rice PSD-backed BRDF shape",
+      "units": "normalized dimensionless angular shape",
+      "extraction": "Evaluate PSD at the Rayleigh-Rice spatial frequency for each measured scatter angle and normalize both predicted PSD-backed values and measured BRDF values by their maxima over the frozen non-specular angular rows. Fresnel/polarization prefactors are omitted only for shape-only scoring at one wavelength, incidence, polarization, and material state.",
+      "source_requirement": "Paired measured PSD and BRDF rows for one surface with fixed wavelength, incidence, polarization, and material state; specular-core rows must be excluded by a predeclared angular mask.",
+      "conventional": true,
+      "notes": "Shape-only conventional comparator. It does not claim absolute BRDF magnitude, polarization transfer, multiple scattering, or deep-roughness validity."
+    },
+    {
+      "id": "brdf_derived_surface_psd_1d",
+      "name": "BRDF-derived one-dimensional surface PSD",
+      "units": "length cubed",
+      "extraction": "Use a source-reported PSDscatter curve converted from measured in-plane BRDF with the source-declared Rayleigh-Rice or Golden Rule factors, wavelength, incidence, polarization, refractive-index treatment, and angle-to-frequency convention. Preserve the reported spatial-frequency rows and exclude the source-defined instrument-signature region.",
+      "source_requirement": "Primary measured BRDF from the same surface and state as an independently measured profilometry, AFM, or interferometric PSD. The BRDF-to-PSD conversion must be explicit and must not use the independent topography PSD as a fitted input.",
+      "conventional": true,
+      "notes": "Frequency-domain conventional cross-measurement comparator. It may test whether independent topography and optical scatter encode the same surface-frequency shape, but it is not a raw-BRDF prediction and cannot count as substrate-specific support."
     },
     {
       "id": "density",

@@ -231,6 +231,23 @@ npm run model:assumptions
 
 This writes the current modelling assumptions, risks, and limitations across ontology boundaries, reference data, T2 scoring, T1 descriptors, numeric parameters, and sweep mechanics.
 
+Run one-at-a-time parameter experiments around the current scenario presets with:
+
+```bash
+npm run model:parameter-experiments
+```
+
+This writes a practical sandbox report showing how `boundary`, `route`, `storage`, `scatter`, `reseat`, `phase`, and `charge` alter identity, stress, coherence, and preservation near the current presets. It is exploratory only and must not be used as target-after-the-fact validation tuning.
+
+Run a configurable parameter recipe file with:
+
+```bash
+npm run model:recipe -- analysis/parameter-recipe.example.json
+```
+
+This applies custom parameter moves to selected seeds and writes a named report under `analysis/out/`. Use it for exploration; freeze recipes before target lookup if a future workflow is meant to be evidence-bearing.
+The runner also emits a deterministic recipe hash and a normalized `.lock.json` copy of the exact seeds and moves used.
+
 Run the frontier report with:
 
 ```bash

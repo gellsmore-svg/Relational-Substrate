@@ -2,3 +2,4 @@ node_modules/
 dist/
 verification/
 analysis/out/
+analysis/source-cache/

@@ -1,0 +1,60 @@
+{
+  "name": "example-parameter-recipes",
+  "description": "Exploratory sandbox recipes only. Do not use after-the-fact target tuning as validation evidence.",
+  "seeds": [
+    {
+      "label": "return preset / trefoil+sine",
+      "closedForm": "trefoil",
+      "transientForm": "sine",
+      "scenario": "return",
+      "preset": "return"
+    },
+    {
+      "label": "return preset / circle+straight",
+      "closedForm": "circle",
+      "transientForm": "straight",
+      "scenario": "return",
+      "preset": "return"
+    },
+    {
+      "label": "store preset / trefoil+sine",
+      "closedForm": "trefoil",
+      "transientForm": "sine",
+      "scenario": "store",
+      "preset": "store"
+    }
+  ],
+  "recipes": [
+    {
+      "name": "preservation lift",
+      "description": "Raise reseating and route continuity while reducing scatter and tension.",
+      "moves": [
+        { "knob": "reseat", "delta": 0.1 },
+        { "knob": "route", "delta": 0.1 },
+        { "knob": "scatter", "delta": -0.1 },
+        { "knob": "phase", "toward": 0.5, "amount": 0.1 },
+        { "knob": "charge", "magnitudeDelta": -0.1 }
+      ]
+    },
+    {
+      "name": "stress probe",
+      "description": "Push a marginal case toward failure.",
+      "moves": [
+        { "knob": "reseat", "delta": -0.1 },
+        { "knob": "route", "delta": -0.1 },
+        { "knob": "scatter", "delta": 0.1 },
+        { "knob": "phase", "awayFrom": 0.5, "amount": 0.1 },
+        { "knob": "charge", "magnitudeDelta": 0.1 }
+      ]
+    },
+    {
+      "name": "storage lock-up probe",
+      "description": "Test whether apparent retention becomes stress accumulation.",
+      "moves": [
+        { "knob": "storage", "delta": 0.1 },
+        { "knob": "scatter", "delta": 0.1 },
+        { "knob": "reseat", "delta": -0.1 }
+      ]
+    }
+  ]
+}

@@ -169,6 +169,11 @@ const steps = [
     stage: 'Ca-scaffold model-form quarantine',
     role: 'quarantines baseline, split-Ca, and split-Ca/Mg families as reference diagnostics only',
   },
+  {
+    script: 'ri-structural-model-form-predeclaration.mjs',
+    stage: 'structural RI model-form predeclaration',
+    role: 'freezes the next allowed structural descriptor set before any new target scoring',
+  },
 ];
 
 await mkdir(outDir, { recursive: true });

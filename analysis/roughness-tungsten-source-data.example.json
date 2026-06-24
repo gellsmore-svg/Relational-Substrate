@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "0.1.0",
+  "predeclarationHash": "585a3f59d1b60487",
+  "source": {
+    "citation": "SYNTHETIC EXECUTABLE TEMPLATE — replace with source-locked data",
+    "doi": null,
+    "specimen": "SYNTHETIC_TEMPLATE",
+    "condition": "632.8 nm, 3 degree incidence synthetic fixture"
+  },
+  "geometry": {
+    "wavelengthMeters": 6.328e-7,
+    "incidenceAngleDegrees": 3,
+    "specularAngleDegrees": 3,
+    "specularMaskDegrees": 0.1,
+    "scanPlane": "in-plane"
+  },
+  "psd": {
+    "direction": "synthetic in-plane fixture",
+    "units": {
+      "spatialFrequency": "m^-1",
+      "psd": "m^3"
+    },
+    "rows": [
+      {
+        "spatialFrequencyPerMeter": 100000,
+        "psd": 1e-22
+      },
+      {
+        "spatialFrequencyPerMeter": 200000,
+        "psd": 3e-23
+      },
+      {
+        "spatialFrequencyPerMeter": 300000,
+        "psd": 1.5e-23
+      },
+      {
+        "spatialFrequencyPerMeter": 400000,
+        "psd": 9e-24
+      },
+      {
+        "spatialFrequencyPerMeter": 500000,
+        "psd": 6e-24
+      }
+    ]
+  },
+  "brdf": {
+    "units": "sr^-1",
+    "rows": [
+      {
+        "scatterAngleDegrees": -12,
+        "brdf": 8e-24
+      },
+      {
+        "scatterAngleDegrees": -8,
+        "brdf": 1.5e-23
+      },
+      {
+        "scatterAngleDegrees": -4,
+        "brdf": 3.2e-23
+      },
+      {
+        "scatterAngleDegrees": 8,
+        "brdf": 5e-23
+      },
+      {
+        "scatterAngleDegrees": 12,
+        "brdf": 2e-23
+      },
+      {
+        "scatterAngleDegrees": 16,
+        "brdf": 1.2e-23
+      }
+    ]
+  },
+  "provenance": {
+    "syntheticTemplate": true,
+    "psdLocation": "synthetic executable fixture",
+    "brdfLocation": "synthetic executable fixture",
+    "digitizationMethod": "none",
+    "notes": "This file proves schema and runner execution only. Replace every synthetic field with one source-locked specimen and condition before any evidence-bearing run."
+  }
+}
