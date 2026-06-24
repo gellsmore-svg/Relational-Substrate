@@ -138,6 +138,7 @@
     "benchmark:ri-wollastonite-baita-score": "node analysis/ri-wollastonite-baita-consistency-score.mjs",
     "benchmark:ri-anisotropy-test-design": "node analysis/ri-anisotropy-topology-test-design.mjs",
     "grammar:order-effect": "node analysis/grammar-order-effect-derivation.mjs",
+    "grammar:order-effect-p2-scoping": "node analysis/grammar-order-effect-p2-data-scoping.mjs",
     "benchmark:roughness-calibrated-scatter": "node analysis/external-roughness-calibrated-scatter-benchmark.mjs",
     "benchmark:roughness-psd-brdf-predeclare": "node analysis/roughness-psd-brdf-model-form-predeclaration.mjs",
     "benchmark:roughness-tungsten-reserve": "node analysis/roughness-tungsten-brdf-target-reservation.mjs",

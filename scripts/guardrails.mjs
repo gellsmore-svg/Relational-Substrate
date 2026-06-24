@@ -35,6 +35,7 @@ const checks = [
   'analysis/ri-wollastonite-baita-consistency-score.mjs',
   'analysis/ri-anisotropy-topology-test-design.mjs',
   'analysis/grammar-order-effect-derivation.mjs',
+  'analysis/grammar-order-effect-p2-data-scoping.mjs',
   'analysis/ri-pure-ca-si-o-source-exhaustion-screen.mjs',
   'analysis/external-material-refractive-index-challenge.mjs',
   'analysis/material-nbo-stoichiometry.mjs',
