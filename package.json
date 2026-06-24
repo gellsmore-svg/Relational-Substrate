@@ -141,6 +141,7 @@
     "benchmark:roughness-psd-cross-source-screen": "node analysis/roughness-profile-psd-scatter-psd-source-screen.mjs",
     "benchmark:roughness-psd-cross-reserve": "node analysis/roughness-duparre-profile-psd-scatter-psd-target-reservation.mjs",
     "benchmark:roughness-psd-cross-source-lock": "node analysis/roughness-duparre-profile-psd-scatter-psd-source-lock-screen.mjs",
+    "benchmark:roughness-psd-cross-sulc-record": "node analysis/roughness-sulc-open-access-feasibility-record.mjs",
     "benchmark:roughness-psd-brdf-feasibility": "node analysis/roughness-psd-brdf-feasibility-diagnostic.mjs",
     "benchmark:roughness-psd-brdf-run": "node analysis/run-roughness-psd-brdf-case.mjs",
     "benchmark:summary": "node analysis/external-benchmark-summary.mjs",

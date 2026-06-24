@@ -83,6 +83,7 @@ const checks = [
   'analysis/roughness-profile-psd-scatter-psd-source-screen.mjs',
   'analysis/roughness-duparre-profile-psd-scatter-psd-target-reservation.mjs',
   'analysis/roughness-duparre-profile-psd-scatter-psd-source-lock-screen.mjs',
+  'analysis/roughness-sulc-open-access-feasibility-record.mjs',
   'analysis/model-sensitivity-analysis.mjs',
   'analysis/model-parameter-experiments.mjs',
   'analysis/run-parameter-recipe.mjs',
