@@ -1,0 +1,20 @@
+* AMS HF AC 04 - Concentrated interface lock-up
+* Same total R/C scale as distributed ladder, but C concentrated at one interface.
+
+.param RLEFT=500
+.param RRIGHT=500
+.param CINT=100p
+Vin in 0 AC 1
+Rleft in iface {RLEFT}
+Cinterface iface 0 {CINT}
+Rright iface out {RRIGHT}
+
+.control
+set filetype=ascii
+ac dec 40 10 100Meg
+wrdata 04_concentrated_interface_lockup.csv frequency v(out) i(Vin) v(iface)
+quit
+.endc
+
+.end
+

@@ -1,0 +1,21 @@
+* AMS HF AC 07 - Nonlinear dielectric proxy
+* Transient amplitude sweep proxy using storage plus voltage-dependent leakage.
+
+.param RVAL=1k
+.param C0=100p
+.param G0=1u
+.param BETA=0.05
+.param AMP=1
+Vin in 0 SIN(0 {AMP} 1Meg)
+R1 in out {RVAL}
+Cstore out 0 {C0}
+Gleak out 0 value = {G0*(1 + BETA*V(out)*V(out))*V(out)}
+
+.control
+set filetype=ascii
+tran 10n 20u
+wrdata 07_nonlinear_dielectric_proxy.csv time v(in) v(out) i(Vin)
+quit
+.endc
+
+.end

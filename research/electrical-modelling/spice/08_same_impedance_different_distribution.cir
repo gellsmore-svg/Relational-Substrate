@@ -1,0 +1,47 @@
+* AMS HF AC 08 - Same nominal impedance, different distribution
+* Compares distributed vs concentrated storage in one file.
+
+.param RSEG=100
+.param CSEG=10p
+.param RLEFT=500
+.param RRIGHT=500
+.param CINT=100p
+VinA ina 0 AC 1
+VinB inb 0 AC 1
+
+* Route A: distributed ladder
+RA1 ina a1 {RSEG}
+CA1 a1 0 {CSEG}
+RA2 a1 a2 {RSEG}
+CA2 a2 0 {CSEG}
+RA3 a2 a3 {RSEG}
+CA3 a3 0 {CSEG}
+RA4 a3 a4 {RSEG}
+CA4 a4 0 {CSEG}
+RA5 a4 a5 {RSEG}
+CA5 a5 0 {CSEG}
+RA6 a5 a6 {RSEG}
+CA6 a6 0 {CSEG}
+RA7 a6 a7 {RSEG}
+CA7 a7 0 {CSEG}
+RA8 a7 a8 {RSEG}
+CA8 a8 0 {CSEG}
+RA9 a8 a9 {RSEG}
+CA9 a9 0 {CSEG}
+RA10 a9 outa {RSEG}
+CA10 outa 0 {CSEG}
+
+* Route B: concentrated interface
+RBleft inb biface {RLEFT}
+CBinterface biface 0 {CINT}
+RBright biface outb {RRIGHT}
+
+.control
+set filetype=ascii
+ac dec 40 10 100Meg
+wrdata 08_same_impedance_different_distribution.csv frequency v(outa) v(outb) i(VinA) i(VinB) v(a5) v(biface)
+quit
+.endc
+
+.end
+
