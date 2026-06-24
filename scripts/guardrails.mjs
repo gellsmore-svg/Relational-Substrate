@@ -25,6 +25,8 @@ const checks = [
   'analysis/ri-refractive-index-chain-runner.mjs',
   'analysis/ri-ca-scaffold-model-form-quarantine-diagnostic.mjs',
   'analysis/ri-structural-model-form-predeclaration.mjs',
+  'analysis/ri-structural-predictor-form-predeclaration.mjs',
+  'analysis/ri-wollastonite-baita-source-candidate.mjs',
   'analysis/ri-pure-ca-si-o-source-exhaustion-screen.mjs',
   'analysis/external-material-refractive-index-challenge.mjs',
   'analysis/material-nbo-stoichiometry.mjs',

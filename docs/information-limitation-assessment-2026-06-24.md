@@ -98,3 +98,21 @@ The programme is not modelling-limited or effort-limited; it is **held-out-data-
 because that limit recurs identically across domains, the unification thesis should be reported
 as coherent-but-unvalidated, with the confidence cap treated as structural until an
 identity-locked held-out dataset is acquired in at least one domain.
+
+## Addendum (same day): a concrete counter-example that confirms the thesis
+
+After writing the above, a focused data-availability reconnaissance on the RI track found a
+recent (2026) gold-open-access source — Marincea, Hatert et al., *Crystals* 16(4), 247 — that
+reports, for **one** explicitly named pure-ish polytype (wollastonite-1A), the measured
+refractive indices, the measured density, **and** the crystal structure on the **same sample**.
+That is precisely the identity-locked held-out pairing every track has been missing, and it is
+openly accessible (cached via the Liège ORBI repository).
+
+This does not weaken the thesis; it sharpens it. The bottleneck was never that such data is
+impossible — it is that it is **rare, recent, and unevenly published**, so it must be actively
+hunted rather than assumed. The lesson stands: treat data acquisition as first-class work
+(this find took targeted repository/API access, not a model change), and judge each track by
+whether such a same-sample, identity-locked source can be secured. RI now has a credible path
+to a genuine held-out score, gated only on a trace-composition decision and locking the
+predictor's published parameter tables — **not** on modelling. The confidence cap should still
+hold until that score is actually run and passes without endpoint fitting.

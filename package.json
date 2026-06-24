@@ -129,6 +129,8 @@
     "benchmark:material-nbo": "node analysis/external-material-nbo-quantitative-benchmark.mjs",
     "benchmark:material-refractive-index": "node analysis/external-material-refractive-index-challenge.mjs",
     "benchmark:ri-cation-response": "node analysis/ri-cation-response-validation.mjs",
+    "benchmark:ri-predictor-predeclare": "node analysis/ri-structural-predictor-form-predeclaration.mjs",
+    "benchmark:ri-wollastonite-baita-candidate": "node analysis/ri-wollastonite-baita-source-candidate.mjs",
     "benchmark:roughness-calibrated-scatter": "node analysis/external-roughness-calibrated-scatter-benchmark.mjs",
     "benchmark:roughness-psd-brdf-predeclare": "node analysis/roughness-psd-brdf-model-form-predeclaration.mjs",
     "benchmark:roughness-tungsten-reserve": "node analysis/roughness-tungsten-brdf-target-reservation.mjs",
