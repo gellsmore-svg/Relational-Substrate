@@ -1760,6 +1760,14 @@ for (const definition of coordinateMolecules) {
     aboveReference: ranked.filter((row) => row.score > referenceScore).length,
     withinFivePercent: ranked.filter((row) => row.score >= referenceScore * 0.95).length,
     strongFailures: ranked.filter((row) => row.score < 0.55).length,
+    // Shared-weights (single generic vector, no per-family tuning) ranking aggregates,
+    // for the degradation test. genericScore already exists on every row; this just
+    // ranks the reference under it so we can measure how load-bearing the family
+    // weights are. Purely additive — family-weighted fields above are untouched.
+    referenceGenericRank: ranked.filter((row) => row.genericScore > referenceGenericScore).length + 1,
+    genericAboveReference: ranked.filter((row) => row.genericScore > referenceGenericScore).length,
+    genericWithinFivePercent: ranked.filter((row) => row.genericScore >= referenceGenericScore * 0.95).length,
+    genericStrongFailures: ranked.filter((row) => row.genericScore < 0.55).length,
     zeroEffectIterations: moleculeZeroEffectIterations,
     perturbationCounts,
     controls,

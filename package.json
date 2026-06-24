@@ -86,6 +86,7 @@
     "t1:stability": "node analysis/t1-target-stability.mjs",
     "t1:refine": "node analysis/t1-local-refinement.mjs",
     "model:assumptions": "node analysis/model-assumptions.mjs",
+    "model:shared-degradation": "node analysis/shared-weights-degradation.mjs",
     "model:frontier": "node analysis/model-frontier-report.mjs",
     "model:external-roadmap": "node analysis/external-benchmark-roadmap.mjs",
     "model:sensitivity": "node analysis/model-sensitivity-analysis.mjs",
