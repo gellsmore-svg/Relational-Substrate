@@ -137,6 +137,7 @@
     "benchmark:roughness-tayabaly-reserve": "node analysis/roughness-tayabaly-brdf-target-reservation.mjs",
     "benchmark:roughness-tayabaly-source-lock": "node analysis/roughness-tayabaly-brdf-source-lock-screen.mjs",
     "benchmark:roughness-psd-cross-predeclare": "node analysis/roughness-profile-psd-scatter-psd-predeclaration.mjs",
+    "benchmark:roughness-psd-cross-feasibility": "node analysis/roughness-profile-psd-scatter-psd-feasibility-diagnostic.mjs",
     "benchmark:roughness-psd-brdf-feasibility": "node analysis/roughness-psd-brdf-feasibility-diagnostic.mjs",
     "benchmark:roughness-psd-brdf-run": "node analysis/run-roughness-psd-brdf-case.mjs",
     "benchmark:summary": "node analysis/external-benchmark-summary.mjs",

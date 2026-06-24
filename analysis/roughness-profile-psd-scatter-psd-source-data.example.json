@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "0.1.0",
+  "modelFormPredeclarationHash": "ad3892b700d0b82f",
+  "targetReservationHash": null,
+  "source": {
+    "citation": "SYNTHETIC EXECUTABLE TEMPLATE — replace with source-locked data",
+    "doi": null,
+    "specimen": "SYNTHETIC_TEMPLATE",
+    "condition": "wavelength, incidence, polarization treatment, and scan convention go here once a surface is locked"
+  },
+  "geometry": {
+    "wavelengthMeters": null,
+    "incidenceAngleDegrees": null,
+    "scanConvention": "in-plane",
+    "brdfToPsdConversion": "source-defined Golden Rule / Rayleigh-Rice conversion description goes here"
+  },
+  "profilePsd": {
+    "modality": "independent topography (profilometry, AFM, interferometry, or equivalent surface map)",
+    "units": {
+      "spatialFrequency": "m^-1",
+      "psd": "m^3 (1D) or m^4 (2D azimuthal average) — state which",
+    "_comment": "rows are the INDEPENDENTLY measured surface-height profile PSD; never a PSD inferred from the target BRDF"
+    },
+    "rows": [
+      { "spatialFrequencyPerMeter": 6000, "psd": 2.0e-18 },
+      { "spatialFrequencyPerMeter": 60000, "psd": 4.2e-21 }
+    ]
+  },
+  "scatterPsd": {
+    "modality": "source-reported BRDF-derived PSDscatter curve for the SAME specimen state",
+    "units": {
+      "spatialFrequency": "m^-1",
+      "psd": "m^3 or m^4 — match the profile PSD convention"
+    },
+    "rows": [
+      { "spatialFrequencyPerMeter": 6300, "psd": 9.0e-17 },
+      { "spatialFrequencyPerMeter": 48884, "psd": 2.0e-19 }
+    ]
+  },
+  "exclusions": [
+    {
+      "minPerMeter": null,
+      "maxPerMeter": null,
+      "reason": "every source-defined instrument-signature, specular-core, or validity-region exclusion goes here (e.g. f < 6 cycles/mm); surviving rows must lie OUTSIDE all ranges"
+    }
+  ],
+  "provenance": {
+    "syntheticTemplate": true,
+    "profilePsdLocation": "synthetic executable fixture",
+    "scatterPsdLocation": "synthetic executable fixture",
+    "digitizationMethod": "none",
+    "notes": "Schema template only. The two PSD curves MUST come from independent modalities (measured topography vs BRDF-derived) for the same specimen state. Replace every synthetic field and set syntheticTemplate=false only after a fresh paired surface is reserved and source-locked. This comparator is shape-only and carries no substrate-specific evidence."
+  }
+}
