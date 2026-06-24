@@ -81,6 +81,7 @@ const checks = [
   'analysis/roughness-profile-psd-scatter-psd-model.mjs',
   'analysis/roughness-profile-psd-scatter-psd-feasibility-diagnostic.mjs',
   'analysis/roughness-profile-psd-scatter-psd-source-screen.mjs',
+  'analysis/roughness-duparre-profile-psd-scatter-psd-target-reservation.mjs',
   'analysis/model-sensitivity-analysis.mjs',
   'analysis/model-parameter-experiments.mjs',
   'analysis/run-parameter-recipe.mjs',
