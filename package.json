@@ -131,6 +131,8 @@
     "benchmark:ri-cation-response": "node analysis/ri-cation-response-validation.mjs",
     "benchmark:ri-predictor-predeclare": "node analysis/ri-structural-predictor-form-predeclaration.mjs",
     "benchmark:ri-predictor-parameter-lock": "node analysis/ri-predictor-parameter-source-lock.mjs",
+    "benchmark:ri-predictor-v1-predeclare": "node analysis/ri-structural-predictor-v1-predeclaration.mjs",
+    "benchmark:ri-predictor-v1-feasibility": "node analysis/ri-structural-predictor-v1-feasibility-diagnostic.mjs",
     "benchmark:ri-wollastonite-baita-candidate": "node analysis/ri-wollastonite-baita-source-candidate.mjs",
     "benchmark:roughness-calibrated-scatter": "node analysis/external-roughness-calibrated-scatter-benchmark.mjs",
     "benchmark:roughness-psd-brdf-predeclare": "node analysis/roughness-psd-brdf-model-form-predeclaration.mjs",
