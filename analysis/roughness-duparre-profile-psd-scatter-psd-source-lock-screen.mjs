@@ -34,6 +34,17 @@ const accessAttempts = [
       'ResearchGate full-text page (publication 11464315)',
     result: 'HTTP 403 Forbidden; full text not retrievable without authentication',
   },
+  {
+    location:
+      'Fraunhofer IOF PSD-analysis competence page (claimed by a search summary to host the PDF)',
+    result:
+      'checked: the page hosts only annual-report PDFs and a publica.fraunhofer.de search link; it does NOT host this paper. The search-summary PDF claim was false.',
+  },
+  {
+    location: 'publica.fraunhofer.de repository search',
+    result:
+      'results are rendered client-side (JavaScript); record/full-text availability could not be read by static fetch',
+  },
 ];
 
 const requiredFacts = [
@@ -70,7 +81,7 @@ const sourceLockDecision = {
     'do not extract or estimate any numerical PSD rows',
   ],
   recovery: [
-    'obtain verified full text via institutional Optica access or the Fraunhofer IOF PDF, then confirm the three required facts and source-lock against hash 5305a937566e8b24',
+    'obtain verified full text via institutional Optica access (the Fraunhofer IOF competence page was checked and does not host the PDF; the publica.fraunhofer.de repository may hold an author copy but renders client-side and needs an interactive session to confirm), then confirm the three required facts and source-lock against hash 5305a937566e8b24',
     'if Duparre 2002 cannot be accessed, fall back to the deferred candidate Schroeder et al., Opt. Express 19, 9820 (2011), re-running the source screen decision first',
   ],
 };
