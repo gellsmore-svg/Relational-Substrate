@@ -62,7 +62,8 @@ const siblingsAndLeads = [
     doi: '10.1088/2040-8986/ac1f35',
     relation: 'same group, same AFM + ARS construct, single wavelength (reference [5] of Sulc 2023)',
     inspected: false,
-    access: 'closed (Unpaywall: no open-access copy found)',
+    access:
+      'closed; no open copy via Unpaywall, OpenAlex, or the authors own Brno VUT DSpace (the same repository that holds the Sulc 2023 PDF). Needs institutional/IOP access',
     status:
       'clean un-inspected potential fresh held-out target, but access-gated; metadata-only screening preserved its held-out status (full text not read)',
   },
