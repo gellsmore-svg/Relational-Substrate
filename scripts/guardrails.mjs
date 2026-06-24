@@ -80,6 +80,7 @@ const checks = [
   'analysis/run-roughness-psd-brdf-case.mjs',
   'analysis/roughness-profile-psd-scatter-psd-model.mjs',
   'analysis/roughness-profile-psd-scatter-psd-feasibility-diagnostic.mjs',
+  'analysis/roughness-profile-psd-scatter-psd-source-screen.mjs',
   'analysis/model-sensitivity-analysis.mjs',
   'analysis/model-parameter-experiments.mjs',
   'analysis/run-parameter-recipe.mjs',
