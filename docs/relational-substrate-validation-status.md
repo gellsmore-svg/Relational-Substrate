@@ -67,7 +67,9 @@ directionally corroborated, not quantitatively validated.**
      the strongest honest support the unification-as-lens framing can have, and it does
      not change the magnitude verdict or raise confidence. The domains are recorded side
      by side in a single auditable cross-domain directional ledger
-     (`grammar-two-domain-directional-ledger.mjs`): one pre-registered law, confirmed in
+     (generator `grammar-two-domain-directional-ledger.mjs`; rendered table:
+     [`docs/cross-domain-directional-ledger.md`](cross-domain-directional-ledger.md)):
+     one pre-registered law, confirmed in
      **9/9 entries across three domains** with no connecting established theory and
      different underlying mechanisms — materials fatigue (4/4; microstructural), cardiac
      ischemia (3/3; cellular signalling), and wildfire ecology (2/2; landscape fuel
