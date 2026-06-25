@@ -124,6 +124,29 @@ final-state endpoint like residual strength, which the model says is recency-dom
 and would show the *opposite* sign. (Derived from a toy rule model: this shows the claim
 is internally real and which endpoint reveals it, not that it is physically true.)
 
+## Resolution (2026-06-25): the lens-vs-predictor question is answered — LENS (for magnitude)
+
+The full P2 test ran and the magnitude test settled it (`npm run grammar:order-effect-magnitude`):
+
+- **Direction: corroborated on real data, both sides.** On the Ti-6Al-4V ELI fatigue
+  data (validated S-N), gentle-first gives Miner sum D>1 (3/3) and harsh-first D<1
+  (3/4); matched pair D(L-H)=1.72 > 1 > D(H-L)=0.82. The grammar beats the
+  order-independent Miner null in its pre-registered direction. This is the first
+  real-data corroboration of a distinctive RS-grammar prediction.
+- **Magnitude: NOT predicted parameter-free.** Survival under repeated load in the
+  model is BINARY (lives 0 or the full horizon; no intermediate), so the grammar has
+  no intrinsic cycles-to-failure magnitude. Its order effect is a near-threshold sign
+  flip (~6% of marginal configs; ~0.007 min-identity shift). The fatigue magnitude
+  (D-ratio ~2.1, coaxing up to ~2.5x life) would be supplied entirely by the free
+  amplitude->regime / block->steps mapping. With a calibration that supplies the whole
+  effect size, the grammar is indistinguishable from a fitted nonlinear-damage model.
+
+So the grammar is a **directional / conceptual lens** for the order effect, not a
+quantitative predictor: it earns genuine directional corroboration but does not beat
+established nonlinear cumulative-damage models on magnitude. The unification thesis
+stands as coherent and directionally suggestive; confidence stays capped. This is the
+honest ceiling of the order-effect arc.
+
 ## One-line summary
 
 The grammar's only no-established-competitor prediction is its **directional order

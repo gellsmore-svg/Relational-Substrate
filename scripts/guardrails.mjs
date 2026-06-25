@@ -38,6 +38,7 @@ const checks = [
   'analysis/grammar-order-effect-p2-data-scoping.mjs',
   'analysis/grammar-order-effect-fatigue-test.mjs',
   'analysis/grammar-order-effect-fatigue-miner-test.mjs',
+  'analysis/grammar-order-effect-magnitude-test.mjs',
   'analysis/ri-pure-ca-si-o-source-exhaustion-screen.mjs',
   'analysis/external-material-refractive-index-challenge.mjs',
   'analysis/material-nbo-stoichiometry.mjs',
