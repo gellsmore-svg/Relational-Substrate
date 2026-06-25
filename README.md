@@ -4,6 +4,8 @@ Relational Substrate is a browser-based sandbox and analysis bench for a substra
 
 Its current, evidence-backed standing is a **directional / conceptual lens**: it predicts the *direction* of coherence effects across molecular, material, optical, and interface orderings — and one distinctive prediction has now been corroborated on real-world data — but it is **not** a quantitative predictor (see [Validation status](#validation-status-what-this-has-and-hasnt-established) below).
 
+> **New here, or non-technical?** Start with the [**plain-language explainer**](docs/plain-language-explainer.md) — what we tried, how we tested it honestly, and what it does and doesn't mean.
+
 It does not simulate `T0` directly and does not treat rendered curves, molecules, lattices, materials, or interfaces as substrate objects. It is a browser-based conceptual model for:
 
 ```text
