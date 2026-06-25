@@ -9,7 +9,7 @@ Companion volumes:
 - General: *A Coherent World*
 - Devotional: *How to Hug the Right Tree*
 - Scriptural framing: *Coherent Biblical Ontology*
-- Companion code: `/home/cello/domains/AMS/research/topology-sandbox/`
+- Companion code: `~/domains/Relational-Substrate` (public repository; the topology-sandbox `src/` + `analysis/` modelling layer)
 
 A free electronic edition of this book is available online. It is offered as an open intellectual contribution rather than a closed commercial product, intended to encourage broad readership and discussion; updated versions and related materials can be found through the project website at <https://relational-substrate.blogspot.com/>.
 
@@ -999,9 +999,9 @@ These boundaries are not merely defensive. They are constructive. They prevent t
 
 ## Chapter 43 — The Topology-Sandbox Project: Scope and Method
 
-The RS framework has a computational counterpart. The **topology-sandbox** project, located at `/home/cello/domains/AMS/research/topology-sandbox/`, is the active modelling programme for the framework. This chapter introduces its scope, its method, and the disciplines it observes.
+The RS framework has a computational counterpart. The **topology-sandbox** project, located in the public `~/domains/Relational-Substrate` repository (consolidated there in 2026-06 from the earlier `AMS/research/topology-sandbox` working copy), is the active modelling programme for the framework. This chapter introduces its scope, its method, and the disciplines it observes.
 
-**What the sandbox is.** A browser-based JavaScript/Node.js project that implements a visual rule-grammar for the RS vorton/admissibility model. It includes a small interactive UI for exploring how candidate closed and transient forms interact under varying admissibility conditions, plus a batch analysis infrastructure (currently 38 analysis scripts) that runs sweeps, calibrations, and benchmarks against reference data.
+**What the sandbox is.** A browser-based JavaScript/Node.js project that implements a visual rule-grammar for the RS vorton/admissibility model. It includes a small interactive UI for exploring how candidate closed and transient forms interact under varying admissibility conditions, plus a batch analysis infrastructure (now over 170 analysis scripts) that runs sweeps, calibrations, and benchmarks against reference data.
 
 **What the sandbox is not.** A direct simulation of T0 (the deepest substrate). A particle simulator. A chemistry, physics, or material simulator at the conventional sense. A proof of RS. Each of these non-claims is enforced by an explicit guardrail in the project's modelling-assumptions report; the sandbox is built to stay on the right side of the ontology boundary.
 
@@ -1111,6 +1111,14 @@ This chapter records the state of the modelling programme at the time of writing
 
 **What this does for the book.** The technical book can refer to the modelling programme as a working laboratory, not as a finished mathematical apparatus. The framework's claims are not awaiting validation; they are also not claiming validation. The modelling programme is an active partner whose state will move and whose state matters for what the book can responsibly say.
 
+**Update (2026-06): a held-out material property, the grammar's own order effect, and the lens standing.** Three developments since the snapshot above sharpen — rather than overturn — the status recorded here. The canonical statement is `docs/relational-substrate-validation-status.md`.
+
+- *Held-out refractive index, completed and honestly bounded.* A source-locked structural refractive-index predictor was built and run on a fresh held-out mineral (wollastonite-1A, a 2026 open-access source). It predicted the measured mean index to within ~0.003, beating a structure-blind control. But the predictor reduces to the established Shannon–Fischer (2016) electronic-polarizability method, so the pass is **consistency with established crystal chemistry, not independent evidence** for the topology grammar. By the Appendix D vocabulary it is an *external benchmark* that passed as a *consistency check*; it does not raise the framework's confidence. Mineral refractive index is, on this evidence, effectively closed for *novel* grammar evidence.
+
+- *The grammar's own distinctive prediction, corroborated on real data.* The one observable the grammar predicts that mature reductionist theories do not is **path-dependent identity persistence**: a directional *order effect* in which a gentle-then-harsh history preserves identity better than harsh-then-gentle ("coaxing"). This was derived from `simulateSequence` and then tested, pre-registered, against open fatigue data (Ti-6Al-4V ELI, CC0). The grammar's predicted direction holds **both-sided** — gentle-first orderings sustain more cumulative damage (Miner sum > 1), harsh-first less (< 1) — beating the order-*independent* linear-damage (Miner) baseline, which predicts no order effect. This is the framework's **first cross-domain, pre-registered, real-data corroboration of a grammar-native prediction**, and it directionally corroborates the alignment-dynamics edges of Appendix E (`Misalignment + Persistence → Degradation`; `Misalignment + Restoration → HigherAlignment`).
+
+- *Magnitude is the ceiling: the grammar is a lens, not a quantitative predictor.* A magnitude test — including a graded-survival variant added precisely to rule out a binary-survival artifact — showed the grammar reproduces the *direction* of the order effect parameter-free but its *size* is ~30–50× too small; matching the magnitude requires amplifying the model's memory coefficients, i.e. a calibration, not a derivation. Established nonlinear cumulative-damage models still win on magnitude. The honest standing is therefore: **the RS grammar is a coherent, directional / conceptual lens — it predicts the direction of coherence effects across domains, with one such prediction now corroborated on real data, but it is not (yet) a quantitative predictor.** In Appendix D terms: "the grammar predicts the *direction* of identity-persistence effects" is *working / externally-corroborated*; "the grammar is a *quantitative* predictor" remains *frontier / open*. The confidence posture stays capped, and the conceptual ontology of Parts I–XII is unaffected by this — it concerns the modelling/validation layer only.
+
 ## Chapter 46 — Frontier: From Qualitative Ordering to Equation Equivalence
 
 This chapter records the frontier work — what would have to happen for the modelling programme to move from its current qualitative-ordering stage to genuine equation equivalence with classical and modern physics. It also records the work the framework needs in order to mature beyond its current draft state.
@@ -1133,6 +1141,8 @@ The frontier is organised by ambition level, from nearest-term to most distant.
     Each step preserves the existing discipline rules (no T0 simulation, no material middle layer, no claim of physical derivation) and produces explicit assumption documentation and frontier reports following the model the sandbox already uses. The work is now scoped and specified; implementation can begin.
 
 2. **Time as a first-class variable.** The current sandbox is largely static: it computes outcomes for given configurations rather than tracking how outcomes evolve under repeated operation. To assess restoration vs persistence trajectories quantitatively, the model needs to support dynamic runs in which closure stress accumulates or relaxes over discrete time steps. This is technically straightforward but introduces calibration questions about timescales and integration step size.
+
+    *Status (2026-06): partially moved to working.* `simulateSequence` now runs multi-step histories with memory carry, and the path-dependent **order effect** it produces was derived and then corroborated on real fatigue data (see Chapter 45 update). This makes the framework's restoration-vs-persistence claim *directionally* testable and tested. The calibration questions flagged here are now the binding ones: the magnitude test shows that turning this dynamic from a *directional* into a *quantitative* trajectory model still requires a timescale/effect-size calibration the framework does not yet derive.
 
 3. **Mathematical form of strain.** The current model treats closure stress as a single scalar. The framework's alignment tier suggests that strain may be tensor-like — different strain dimensions corresponding to different operation kinds. Formal work to test whether a scalar strain measure is sufficient or whether a tensor structure is needed would clarify what kind of alignment mathematics RS is actually committed to.
 
@@ -1423,7 +1433,7 @@ Introduced by `benchmark-suite-design-2026-05-25.md`.
 
 # Appendix C — Modelling Programme — Run Catalogue and Output Locations
 
-The topology-sandbox project supports the runs listed below. Each is invoked from `/home/cello/domains/AMS/research/topology-sandbox/`. Output files (markdown and JSON) appear in `analysis/out/`. The README at the project root remains the authoritative source.
+The topology-sandbox project supports the runs listed below. Each is invoked from the project root (`~/domains/Relational-Substrate`). Output files (markdown and JSON) appear in `analysis/out/`. The README at the project root remains the authoritative source. The catalogue below is representative, not exhaustive — the programme now has over 170 analysis scripts; the validation tracks added since the original catalogue are summarised under *Held-out validation tracks* below.
 
 Runs are organised in two sections: **Current** (implemented at time of writing) and **Planned** (specified in companion documents but not yet built). The Planned section grows shorter as runs move into Current.
 
@@ -1481,6 +1491,12 @@ Runs are organised in two sections: **Current** (implemented at time of writing)
 - `npm run benchmark:roughness-heldout` — held-out interface roughness prediction.
 - `npm run benchmark:material-nbo` — quantitative NBO/T accounting.
 - `npm run benchmark:summary` — external benchmark coverage and confidence posture rollup.
+
+**Held-out validation tracks (added since the original catalogue):** source-locked, pre-registered held-out work, each run under the predeclaration gate (`npm run guardrails`, `npm run evidence:ledger`). Representative entry points:
+- *Refractive index* — predictor predeclaration, parameter source-lock (Shannon–Fischer 2016), and a held-out consistency score: `npm run benchmark:ri-predictor-v1-predeclare`, `npm run benchmark:ri-predictor-parameter-lock`, `npm run benchmark:ri-wollastonite-baita-score`.
+- *Surface roughness* (PSD/BRDF) — two comparator forms, source screens, and a consolidated chain runner: `npm run benchmark:roughness-psd-scatter-chain`.
+- *Peroxide torsion* — the predeclare → reserve → source-lock → score chain (largely source-blocked; see the `peroxide-*` scripts).
+- *Grammar order effect* — the framework's own path-dependent prediction, derived and tested on real fatigue data: `npm run grammar:order-effect`, `npm run grammar:order-effect-fatigue-miner`, `npm run grammar:order-effect-magnitude`, `npm run grammar:graded-survival-magnitude`.
 
 **External review:**
 - `npm run milestone:external-review` — detailed milestone report for outside review: intent, ontology boundaries, evidence, confidence posture, non-claims, remaining gates, source anchors, reviewer questions.
