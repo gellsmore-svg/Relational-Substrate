@@ -110,6 +110,16 @@ const ledger = [
     confirms: true,
     source: 'Prichard et al. 2024 (Tamm review)',
   },
+  // ---- Domain 4: psychology / behavioral (a different KIND of system; function endpoint) ----
+  {
+    domain: 'psychology (behavioral resilience)',
+    system: 'humans, stress inoculation training (meta-analysis)',
+    order: 'managed mild-stress exposure + coping skills BEFORE a severe stressor vs no training',
+    quantity: 'anxiety and performance under the subsequent stressor (function/resilience, not survival)',
+    value: 'significant reduction in state/performance anxiety AND enhanced performance under stress (37 studies, 70 tests, 1837 participants; protective direction; training must precede the stressor = inherently order-dependent)',
+    confirms: true,
+    source: 'Saunders, Driskell, Johnston & Salas, J. Occup. Health Psychol. 1(2):170-186 (1996); meta-analysis (open via DTIC ADA309082)',
+  },
 ];
 
 const total = ledger.length;
@@ -137,9 +147,9 @@ const report = {
     orderIndependentNullRejectedIn: domains, // the null predicts no order effect; rejected in both
   },
   reading: [
-    `One pre-registered directional law is corroborated in ${confirmed}/${total} entries spanning ${domains.length} domains -- metal fatigue, cardiac ischemia, and wildfire ecology -- that share no connecting established theory AND have different underlying mechanisms (microstructural fatigue; cellular signalling/chaperones; landscape fuel depletion). The order-INDEPENDENT null (no order effect) is rejected in all ${domains.length}.`,
-    'This is the unification thesis\'s one no-established-competitor space: no domain-specific theory predicts that fatigue coaxing, ischemic preconditioning, and prescribed-fire severity reduction obey the same directional order law, yet the grammar does, and the data agree -- including a recurring timing/recency specificity (proximate gentle-first protects more) in all three.',
-    'HONEST LIMITS: directional cross-domain REACH for the lens standing, NOT decisive. (1) "Mild-first protects" is a very general directional pattern; a skeptic can say any system with memory, adaptation, or resource depletion shows it -- and the three domains here have DIFFERENT mechanisms, so this is explicitly a claim about one shared DIRECTION, not one shared mechanism or substrate. (2) Magnitude is a lens, not a quantitative prediction (established per-domain models win there). (3) The mechanistic disanalogy (esp. fire = fuel depletion, not memory-building) is the point, not a flaw: the grammar is a directional organiser across unrelated mechanisms.',
+    `One pre-registered directional law is corroborated in ${confirmed}/${total} entries spanning ${domains.length} domains -- metal fatigue, cardiac ischemia, wildfire ecology, and behavioral resilience -- that share no connecting established theory, have different underlying mechanisms (microstructural fatigue; cellular signalling/chaperones; landscape fuel depletion; psychological coping-skill acquisition), and even different endpoint TYPES (cycles-to-failure; tissue infarct; burn severity; anxiety/performance). The order-INDEPENDENT null (no order effect) is rejected in all ${domains.length}.`,
+    'This is the unification thesis\'s one no-established-competitor space: no domain-specific theory predicts that fatigue coaxing, ischemic preconditioning, prescribed-fire severity reduction, and stress inoculation obey the same directional order law, yet the grammar does, and the data agree -- including a recurring requirement that the gentle/mild step come FIRST (and proximately).',
+    'HONEST LIMITS: directional cross-domain REACH for the lens standing, NOT decisive. (1) "Mild-first protects" is a very general directional pattern; a skeptic can say any system with memory, adaptation, or resource depletion shows it -- and the four domains here have DIFFERENT mechanisms and even different endpoint types, so this is explicitly a claim about one shared DIRECTION, not one shared mechanism or substrate. (2) Magnitude is a lens, not a quantitative prediction (established per-domain models win there). (3) The mechanistic and endpoint disanalogies (esp. fire = fuel depletion not memory; psychology = function not survival) are the point, not a flaw: the grammar is a directional organiser across unrelated systems.',
     'CONFIDENCE: unchanged (5.6 / 5.2 / 4.8; cap 6.25). The ledger strengthens the "organises and directionally predicts across domains" claim of the lens framing; it does not raise the metrics.',
   ],
 };

@@ -70,13 +70,16 @@ directionally corroborated, not quantitatively validated.**
      (generator `grammar-two-domain-directional-ledger.mjs`; rendered table:
      [`docs/cross-domain-directional-ledger.md`](cross-domain-directional-ledger.md)):
      one pre-registered law, confirmed in
-     **9/9 entries across three domains** with no connecting established theory and
-     different underlying mechanisms — materials fatigue (4/4; microstructural), cardiac
-     ischemia (3/3; cellular signalling), and wildfire ecology (2/2; landscape fuel
-     depletion — prescribed fire reduces subsequent severity 62–72%) — the
-     order-independent null rejected in all three, with a recurring timing/recency
-     specificity. The mechanistic disanalogy is the point: one shared *direction*, not one
-     shared mechanism.
+     **10/10 entries across four domains** with no connecting established theory,
+     different underlying mechanisms, and even different endpoint *types* — materials
+     fatigue (4/4; microstructural; cycles-to-failure), cardiac ischemia (3/3; cellular
+     signalling; infarct size, −24.6%), wildfire ecology (2/2; landscape fuel depletion;
+     prescribed fire reduces subsequent severity 62–72%), and behavioral resilience (1/1;
+     psychological coping; stress-inoculation reduces anxiety / enhances performance under
+     a later stressor across 37 studies, 1837 participants) — the order-independent null
+     rejected in all four, with a recurring requirement that the gentle/mild step come
+     first. The mechanistic/endpoint disanalogy is the point: one shared *direction*, not
+     one shared mechanism.
 
 ## What "lens" means as the success criterion
 
