@@ -23,6 +23,8 @@ Latest validation state: see latest RI chain output; this map now reflects the p
 
 Read confidence as inferential convergence, not proof. The current posture is deliberately held near 5.6/10 — below the 6.25 cap — because the material-property gate is unresolved, the heteroatom-torsion (disulfane / H-Se-Se-H) trans-side transfer failed under held constants, and EM depth remains mostly scalar analytic evidence inside one electromagnetic evidence line.
 
+**Validation framing (adopted 2026-06-25): the RS grammar is a directional / conceptual LENS, not a quantitative predictor.** It predicts the *direction* of effects across domains but does not beat established domain theories on *magnitude*. One distinctive, pre-registered RS prediction (a path-dependent order/"coaxing" effect) has been corroborated on real fatigue data, both-sided, vs the order-independent linear-damage null — the first real-data corroboration of a distinctive RS prediction — but the magnitude test (incl. a graded-survival variant) shows it predicts direction only. The confidence numbers above stay capped; the unification thesis is coherent and directionally corroborated, not quantitatively validated. Canonical statement: `docs/relational-substrate-validation-status.md`.
+
 > Reconciled 2026-06-13: the /10 confidence metrics above were updated to match the regenerated `analysis/out/external-benchmark-summary.json` (the doc had drifted high — it previously read inferential convergence 6.25, cross-domain 5.7, unification 5.2). 6.25 was the **cap**, not the computed value; the computed inferential convergence stepped down to 5.6 after the heteroatom-torsion trans-side failures. Regenerate with `npm run reports` and audit drift with `npm run evidence:ledger`.
 
 ## Current Blocking Gate

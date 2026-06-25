@@ -11,6 +11,26 @@ closed stable order
 under admissibility conditions
 ```
 
+## Validation status (what this has and hasn't established)
+
+The RS grammar is best understood as a **coherent, directional / conceptual lens — not a
+quantitative predictor.** It organises coherence phenomena and predicts the *direction*
+of effects across molecular, material, optical, and interface orderings; on current
+evidence it does not beat established domain theories on *magnitude*.
+
+One distinctive, pre-registered RS prediction — a path-dependent **order effect**
+(gentle-first "coaxing" protects survival) — has been corroborated on real data (open
+fatigue data), in both directions, against the order-independent linear-damage baseline.
+That is the first real-data corroboration of a distinctive RS prediction. A magnitude
+test (including a graded-survival variant) shows the grammar predicts the *direction*
+but not the *size* of the effect, so it does not displace established quantitative
+models. Confidence stays capped; the unification thesis is **coherent and directionally
+corroborated, not quantitatively validated.**
+
+Full reasoning and evidence: [`docs/relational-substrate-validation-status.md`](docs/relational-substrate-validation-status.md).
+This concerns the modelling/validation layer only; the conceptual framework in `books/`
+is unaffected.
+
 ## Run
 
 ```bash
