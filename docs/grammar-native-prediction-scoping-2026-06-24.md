@@ -147,6 +147,20 @@ established nonlinear cumulative-damage models on magnitude. The unification the
 stands as coherent and directionally suggestive; confidence stays capped. This is the
 honest ceiling of the order-effect arc.
 
+**Graded-survival re-test (2026-06-25), the fair check.** To rule out that the lens
+verdict was merely an artifact of the model's BINARY survival, a graded survival
+dynamic was added as a readout (per-step damage = 1 - coherenceMetric, capacity-
+normalized; `src/model.js` unchanged; no tunable fit parameters) and the magnitude test
+re-run (`npm run grammar:graded-survival-magnitude`). Result: with the graded dynamic
+the grammar DOES produce a coaxing magnitude in the right direction (coaxing-vs-linear
+~1.02-1.07, robust across the capacity normalization), but it is ~30-50x too small
+versus the fatigue effect (real coaxing ~100-200% above linear; grammar ~2-7%). The
+shortfall is fundamental: the model's memory coefficients (~10%) are far weaker than a
+fatigue-scale effect, and closing the gap requires amplifying them (a calibration, not
+a derivation). So the lens verdict is NOT a binary-survival artifact; it holds with a
+graded dynamic. The grammar is a directional/conceptual lens for this effect, full
+stop.
+
 ## One-line summary
 
 The grammar's only no-established-competitor prediction is its **directional order
