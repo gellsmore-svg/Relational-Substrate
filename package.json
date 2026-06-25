@@ -140,6 +140,7 @@
     "grammar:order-effect": "node analysis/grammar-order-effect-derivation.mjs",
     "grammar:order-effect-p2-scoping": "node analysis/grammar-order-effect-p2-data-scoping.mjs",
     "grammar:order-effect-fatigue-test": "node analysis/grammar-order-effect-fatigue-test.mjs",
+    "grammar:order-effect-fatigue-miner": "node analysis/grammar-order-effect-fatigue-miner-test.mjs",
     "benchmark:roughness-calibrated-scatter": "node analysis/external-roughness-calibrated-scatter-benchmark.mjs",
     "benchmark:roughness-psd-brdf-predeclare": "node analysis/roughness-psd-brdf-model-form-predeclaration.mjs",
     "benchmark:roughness-tungsten-reserve": "node analysis/roughness-tungsten-brdf-target-reservation.mjs",
