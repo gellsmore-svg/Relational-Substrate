@@ -1,6 +1,8 @@
 # Relational Substrate
 
-Relational Substrate is a visual and analytical sandbox for the substrate grammar: route, closure, phase, charge, and continuity.
+Relational Substrate is a browser-based sandbox and analysis bench for a substrate grammar — route, closure, phase, charge, and continuity.
+
+Its current, evidence-backed standing is a **directional / conceptual lens**: it predicts the *direction* of coherence effects across molecular, material, optical, and interface orderings — and one distinctive prediction has now been corroborated on real-world data — but it is **not** a quantitative predictor (see [Validation status](#validation-status-what-this-has-and-hasnt-established) below).
 
 It does not simulate `T0` directly and does not treat rendered curves, molecules, lattices, materials, or interfaces as substrate objects. It is a browser-based conceptual model for:
 
@@ -39,6 +41,8 @@ npm run dev
 ```
 
 ## Current Scope
+
+**Where the project is now (2026-06).** Beyond the browser UI below, the repository has grown a substantial modelling/validation layer under `analysis/` and `docs/`: source-locked, pre-registered held-out tests across refractive index, surface roughness, peroxide torsion, and the grammar's own path-dependent order effect — the last corroborated on real fatigue data. The honest result of that work is the **lens** standing described under [Validation status](#validation-status-what-this-has-and-hasnt-established); confidence is deliberately held and capped. The canonical statement is [`docs/relational-substrate-validation-status.md`](docs/relational-substrate-validation-status.md), and the full chronological state lives in `.restart.md`. The browser sandbox itself remains at:
 
 Version `0.1` includes:
 
