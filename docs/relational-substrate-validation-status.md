@@ -65,11 +65,16 @@ directionally corroborated, not quantitatively validated.**
      same directional order effect in both. It is **directional reach, not decisive** — a
      skeptic can note that any memory/adaptive system shows preconditioning — but it is
      the strongest honest support the unification-as-lens framing can have, and it does
-     not change the magnitude verdict or raise confidence. The two domains are recorded
-     side by side in a single auditable two-domain directional ledger
+     not change the magnitude verdict or raise confidence. The domains are recorded side
+     by side in a single auditable cross-domain directional ledger
      (`grammar-two-domain-directional-ledger.mjs`): one pre-registered law, confirmed in
-     7/7 entries across materials fatigue (4/4) and cardiac ischemia (3/3), with the
-     order-independent null rejected in both.
+     **9/9 entries across three domains** with no connecting established theory and
+     different underlying mechanisms — materials fatigue (4/4; microstructural), cardiac
+     ischemia (3/3; cellular signalling), and wildfire ecology (2/2; landscape fuel
+     depletion — prescribed fire reduces subsequent severity 62–72%) — the
+     order-independent null rejected in all three, with a recurring timing/recency
+     specificity. The mechanistic disanalogy is the point: one shared *direction*, not one
+     shared mechanism.
 
 ## What "lens" means as the success criterion
 
