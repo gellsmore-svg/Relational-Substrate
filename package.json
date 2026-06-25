@@ -143,6 +143,7 @@
     "grammar:order-effect-fatigue-miner": "node analysis/grammar-order-effect-fatigue-miner-test.mjs",
     "grammar:order-effect-magnitude": "node analysis/grammar-order-effect-magnitude-test.mjs",
     "grammar:graded-survival-magnitude": "node analysis/grammar-graded-survival-magnitude-test.mjs",
+    "grammar:crossdomain-scoping": "node analysis/grammar-order-effect-crossdomain-scoping.mjs",
     "benchmark:roughness-calibrated-scatter": "node analysis/external-roughness-calibrated-scatter-benchmark.mjs",
     "benchmark:roughness-psd-brdf-predeclare": "node analysis/roughness-psd-brdf-model-form-predeclaration.mjs",
     "benchmark:roughness-tungsten-reserve": "node analysis/roughness-tungsten-brdf-target-reservation.mjs",

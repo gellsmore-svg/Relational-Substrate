@@ -55,6 +55,17 @@ directionally corroborated, not quantitatively validated.**
      ~30–50× too small versus the real effect. Matching the magnitude needs amplifying
      the model's memory coefficients — a calibration, not a derivation. So established
      nonlinear cumulative-damage models still win on magnitude.
+   - Cross-domain reach (`grammar-order-effect-crossdomain-scoping.mjs`): the *same*
+     pre-registered directional law is corroborated in a **second, unconnected domain** —
+     cardiac ischemic preconditioning, where open-access meta-analytic data (785
+     comparisons) shows mild-first preconditioning reduces infarct size by ~24.6%, with
+     the order-specificity (preconditioning > postconditioning) matching too. Materials
+     fatigue and cardiac ischemia have no connecting established theory, so this is the
+     unification thesis's one no-established-competitor space: the grammar predicts the
+     same directional order effect in both. It is **directional reach, not decisive** — a
+     skeptic can note that any memory/adaptive system shows preconditioning — but it is
+     the strongest honest support the unification-as-lens framing can have, and it does
+     not change the magnitude verdict or raise confidence.
 
 ## What "lens" means as the success criterion
 
