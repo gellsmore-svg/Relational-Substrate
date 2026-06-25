@@ -65,7 +65,11 @@ directionally corroborated, not quantitatively validated.**
      same directional order effect in both. It is **directional reach, not decisive** — a
      skeptic can note that any memory/adaptive system shows preconditioning — but it is
      the strongest honest support the unification-as-lens framing can have, and it does
-     not change the magnitude verdict or raise confidence.
+     not change the magnitude verdict or raise confidence. The two domains are recorded
+     side by side in a single auditable two-domain directional ledger
+     (`grammar-two-domain-directional-ledger.mjs`): one pre-registered law, confirmed in
+     7/7 entries across materials fatigue (4/4) and cardiac ischemia (3/3), with the
+     order-independent null rejected in both.
 
 ## What "lens" means as the success criterion
 
