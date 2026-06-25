@@ -23,11 +23,16 @@ evidence it does not beat established domain theories on *magnitude*.
 One distinctive, pre-registered RS prediction — a path-dependent **order effect**
 (gentle-first "coaxing" protects survival) — has been corroborated on real data (open
 fatigue data), in both directions, against the order-independent linear-damage baseline.
-That is the first real-data corroboration of a distinctive RS prediction. A magnitude
-test (including a graded-survival variant) shows the grammar predicts the *direction*
-but not the *size* of the effect, so it does not displace established quantitative
-models. Confidence stays capped; the unification thesis is **coherent and directionally
-corroborated, not quantitatively validated.**
+That is the first real-data corroboration of a distinctive RS prediction. The same
+directional law has since been recorded across **three unconnected domains with
+different underlying mechanisms** — metal fatigue, cardiac ischemic preconditioning, and
+wildfire ecology — in a [cross-domain directional ledger](docs/cross-domain-directional-ledger.md)
+(9/9 entries, order-independent null rejected in all three). That is the strongest honest
+support for the lens's cross-domain *reach* — but it is directional, **not decisive**: a
+magnitude test (including a graded-survival variant) shows the grammar predicts the
+*direction* but not the *size* of the effect, so it does not displace established
+quantitative models. Confidence stays capped; the unification thesis is **coherent and
+directionally corroborated, not quantitatively validated.**
 
 Full reasoning and evidence: [`docs/relational-substrate-validation-status.md`](docs/relational-substrate-validation-status.md).
 This concerns the modelling/validation layer only; the conceptual framework in `books/`
