@@ -26,18 +26,30 @@ Two consequences fix the whole method:
   admissible patterns has been contained by robust, assumption-stripped
   constraints* — not a quantitative match (that comes far later, and only
   parameter-free).
-- **The default topological state of the substrate is darkness — unrevealed.**
-  The ground state is not empty space with fields at zero. It is undifferentiated
-  potential with **zero revealed coherence** (zero self-linkage). Structure is
-  *revealing*: coherence rising against darkness. (This is the ontological
-  ground-state; the CBO ground-state framing sits behind it. Kept bounded here.)
+- **The default topological state of the substrate is darkness — a rest
+  configuration, not an absence.** The ground state is not empty space, nor vague
+  potential: it is the substrate *at rest* — a definite, fully-present,
+  unperturbed configuration (bounded metaphor: a taut, unperturbed trampoline
+  skin — a real tensioned medium, simply not yet displaced). It is a **thing**,
+  and it is precisely what *enables* light — and potentially E&M — to form
+  topologically upon it. It is *unrevealed* only in that it carries no closed
+  structure yet, so no identity invariant is instantiated — **not** in the sense
+  of being empty. Structure is *revealing*: coherence rising, first as
+  displacement and then as closure, against the rest state. (The CBO ground-state
+  framing sits behind this; kept bounded here.)
 
 ## 1. Seven working principles (the lens at every stage)
 
 1. **Coherence-only description.** No substance, no mechanism, no contact-force
    language. Only coherence and its topology.
-2. **Darkness is the default.** Zero revealed coherence ≠ empty space. Every
-   construction starts from the unrevealed and asks what *reveals* it.
+2. **Darkness is the default — a substrate at rest, not an absence.** The ground
+   state is a *thing*: the substrate in its definite, unperturbed rest
+   configuration (bounded metaphor: a taut, unperturbed trampoline skin). It is
+   *unrevealed* only in that it holds no closed structure yet, so no identity
+   invariant is instantiated — not in the sense of being empty or vague. The rest
+   state is what *enables* revealing: light forms as a perturbation of it, and
+   (open) E&M may form topologically upon it too. Every construction starts here
+   and asks what minimal information *reveals* the next structure.
 3. **Information → coherence → containment → success.** Each step must either
    *contain* (rule a pattern out) or *correlate* (link two patterns). Nothing is
    added that does neither.
@@ -136,13 +148,20 @@ the scaffold everything below hangs on.
 
 A graded, conceptual ladder — each adds containment, none is numeric yet.
 
-- **T0 — Darkness (the unrevealed default).** Fix the ground state: zero revealed
-  coherence, zero self-linkage — *not* empty space but undifferentiated potential.
-  *Contains:* the ground state (coherence 0, potential ≠ 0). *Falsifier:* if a
-  coherent invariant can exist with nothing revealed, the darkness axiom breaks.
+- **T0 — Darkness (the substrate at rest).** Fix the ground state as the
+  substrate's definite unperturbed rest configuration — a *thing*, fully present
+  (bounded metaphor: a taut, unperturbed trampoline skin), carrying no closed
+  structure so no identity invariant is instantiated. It is what *enables* the
+  later revealings. *Contains:* the ground state (a real rest medium; identity
+  register empty; not empty space). *Falsifier:* if a stable identity invariant
+  could exist without any departure from rest, the rest-default is wrong.
 - **T1 — First revealing (light / propagation, Op A).** The minimal coherent
-  disturbance that is route-bearing but *unclosed* (zero linking). Establishes
-  that *revealing precedes identity*. *Correlates:* darkness→light with Operation A.
+  *displacement* of the rest state — a perturbation that propagates, route-bearing
+  but *unclosed* (no closure, so no identity invariant). Establishes that
+  *revealing precedes identity*, and that the rest skin's perturbability is what
+  carries light — its oscillation is where E&M first appear, in *transient* form.
+  *Correlates:* darkness→light with Operation A; rest-state perturbability with the
+  transient (open) category.
 - **T2 — First closure (the vorton, Op D).** A route that returns and **self-links**:
   the minimal nonzero linking integer. Identity is born. *Falsifier / test:* does
   discreteness (integer linking) fall out **without a tuned threshold**? *(This is
@@ -170,14 +189,63 @@ A graded, conceptual ladder — each adds containment, none is numeric yet.
 
 ## 6. Containment ledger (living)
 
-To be filled as each T-experiment is worked. Two columns only: **Contained**
-(patterns ruled out / fixed) and **Correlated** (patterns linked). The tightness
-of this ledger — not any number — is how this phase reports progress.
+Filled as each T-experiment is worked. **Contained** = patterns ruled out / fixed;
+**Correlated** = patterns linked. The tightness of this ledger — not any number —
+is how this phase reports progress.
 
 | T | Contained | Correlated |
 |---|---|---|
-| T0 | ground state = zero coherence, non-empty | — |
-| … | *(to be worked)* | |
+| **T0** | ground state = the substrate *at rest* (a real tensioned medium), identity register empty, ≠ empty space | rest-state ↔ the ontology's continuous substrate; the enabling role ↔ why Ops A/D can occur at all |
+| T1 | *(bridge)* first displacement = light; carries E&M in transient form; no closure | darkness→light ↔ Op A; perturbability ↔ transient/open category |
+| **T2** | identity appears **only** with closure; identity = an **integer** topological invariant; discreteness forced by topology, not a tuned threshold | closure ↔ birth of identity ↔ first nonzero invariant; vorton ↔ "primary topology" (Ch. 17) |
+
+### Worked entry — T0 (the substrate at rest)
+
+- **Contained.** The ground state is the substrate *at rest*: a real, tensioned,
+  fully-present configuration (trampoline-skin-at-rest), **not** empty space and
+  **not** vague potential. The **identity register is empty** — no closed
+  structure has formed, so no winding/linking invariant is instantiated. This
+  fixes the precise meaning of "unrevealed" = *at rest / no closure*, retiring the
+  misleading "zero linking." The rest state is **causally prior and enabling**: it
+  is the condition of possibility for both propagation (light) and closure
+  (vorton).
+- **Correlated.** Rest-state ↔ the RS "continuous substrate" beneath primary
+  topology; the *enabling* role ↔ why Operations A (propagation) and D (closure)
+  are possible at all; "darkness" ↔ the CBO ground-state (bounded).
+- **Open (flagged, deferred).** What are the rest state's *intrinsic* properties —
+  a tension/stiffness analog? Is it uniform (maximally symmetric) or already
+  textured — does it carry a rest orientation/director field? This is not idle:
+  **the rest structure decides which invariant becomes available at T2** (a 2D
+  winding vs a 3D Hopf/linking), and therefore whether the Lk = Tw + Wr split is
+  usable at T3. *Bounded-metaphor note:* the trampoline image is good for
+  *tension, rest, and perturbability*; it must be stripped of its embedding in a
+  pre-given 3D room (principle 6, background-independence).
+- **Falsifier.** A stable identity invariant existing with no departure from rest.
+
+### Worked entry — T2 (first closure = the vorton)
+
+- **Setup.** A displacement of the rest state that **returns and closes on
+  itself**, and holds — the minimal vorton (Operation D). Enabled by T0's rest
+  medium; revealed only after T1's capacity for displacement exists.
+- **Contained.** Identity appears **only** with closure — never in the rest state,
+  never in open propagation. The identity is a **topological invariant**
+  (winding/linking; the specific one set by T0's rest structure), and it is an
+  **integer**: discreteness is *forced by topology*, not installed by a tuned
+  threshold. This meets the proposal's first could-fail test **conceptually**: if
+  discreteness turns out to require a fitted threshold, the mapping fails here and
+  we say so.
+- **Correlated.** Closure (Op D) ↔ birth of identity ↔ the first nonzero integer
+  invariant ↔ "primary topology / vorton" (Ch. 17); T0's enabling rest-state ↔
+  the skin holding a self-locked, returned pucker. The invariant that appears is
+  the seed of everything downstream (its twist part → magnetism, its writhe/route
+  part → electricity, at T3).
+- **Open.** *Which* invariant (2D winding vs 3D linking) — inherited directly from
+  T0's open question. Containment observation: **the choice made at T0 constrains
+  T2**, which constrains whether Lk = Tw + Wr (needs a ribbon/3D structure) is
+  available downstream. This is the information → containment engine visibly at
+  work: fixing the rest state tightens everything after it.
+- **Falsifier.** Discreteness requires calibration; or a closed structure carries
+  no conserved invariant at all.
 
 ---
 
