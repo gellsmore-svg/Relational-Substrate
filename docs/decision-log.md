@@ -89,8 +89,10 @@ is the single source of truth for *what has been contained/correlated*.
   (Hopf knot)**. Spin-½ arises *structurally*; an axis is gentler on
   background-independence; the stack aims at atoms. 3D is required for the full π₃
   Hopf identity.
-- **Consequence / open debt.** Charge (π₂) is defined only **mod 2** beside a spin
-  disclination (π₁): spin and charge share one topological budget — worked at T3.
+- **Consequence / open debt.** The **sign** of charge (π₂) is gauged by the spin
+  disclination (π₁): only **|N|** is invariant (Volovik–Mineev) — spin and
+  charge-sign are locked. *(Corrects an earlier loose "mod 2" wording; resolved in
+  the shared-budget entry.)*
 - **Status.** Accepted. Scaffold T0/T2 entries.
 
 ---
@@ -104,6 +106,13 @@ is the single source of truth for *what has been contained/correlated*.
 - **First pre-registered could-fail test:** charge quantisation as an integer
   Hopf/linking invariant of the vorton; magnetic polarity = sign of the twist.
   Precedent: Skyrme model gives integer baryon number.
+- **Shared spin/charge budget — resolved (2026-07-12).** Spin (π₁) **gauges charge
+  sign** (only |N| invariant — Volovik–Mineev); the disclination, the vorton's
+  framing/twist parity, and the 2π→4π director rotation are **one Z₂**; and by
+  **Finkelstein–Rubinstein** (2π rotation = exchange = that Z₂) the vorton is a
+  **spin-½ fermion** — so fermionic matter is structurally available, not inserted.
+  Corrects D8's "mod 2." **Next thread:** π₂–π₃ selection rule (Hopf number ↔
+  spin-parity, |charge|) → a *spectrum of vorton species* (particle inventory).
 
 ## Open decisions (not yet taken)
 

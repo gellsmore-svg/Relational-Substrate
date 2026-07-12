@@ -115,7 +115,8 @@ convergence is the phase's first real containment:
 - **Identity is layered** (nematic branch, fixed at T0). One grain (director →
   RP²) yields three stacked topological registers: **spin** (π₁ = Z₂, two-valued),
   **charge** (π₂ = Z, integer), and the **vorton knot** (π₃ = Z, Hopf linking).
-  Spin and charge share one budget (π₂ graded mod 2 by π₁). This is the structural
+  Spin **gauges charge sign** (only |N| invariant — Volovik–Mineev), and by
+  Finkelstein–Rubinstein the vorton is a **spin-½ fermion**. This is the structural
   ladder toward a spin-½, charged, knotted electron-like vorton.
 - **Lk = Tw + Wr — the master decomposition.** One conserved linking integer
   splits, background-free, into:
@@ -215,6 +216,7 @@ is how this phase reports progress.
 | T1 | *(bridge)* first displacement = light; carries E&M in transient form; no closure | darkness→light ↔ Op A; perturbability ↔ transient/open category |
 | **T2** | closure ⇒ **layered** identity: π₁=Z₂ **spin**, π₂=Z **charge**, π₃=Z **Hopf knot** (the vorton); all integer, discreteness forced by topology | closure ↔ birth of identity ↔ primary topology/vorton (Ch. 17) |
 | **T3** | `Lk = Tw + Wr` splits identity: **twist→magnetism** (held, dissipationless, polarity=sign Tw, Op C), **writhe→electricity/reconfiguration** (Op B); E&M = two parts of one conserved `Lk`; `Tw⇄Wr` = **induction** | Lk=Tw+Wr ↔ Ops C+B; Tw⇄Wr ↔ Faraday/Ampère; integer charge vs continuous twist ↔ *no magnetic monopole* (suggestive) |
+| **T2×T3** | spin (π₁) **gauges charge sign** (only \|N\| invariant, Volovik–Mineev); one Z₂ = spin = framing parity; by **Finkelstein–Rubinstein** the vorton is a **spin-½ fermion** | 2π-rotation = exchange ↔ spin–statistics; charge-sign↔spin ↔ (suggestive) charge conjugation; **fermions structurally available → atoms** |
 
 ### Worked entry — T0 (the substrate at rest)
 
@@ -258,10 +260,10 @@ is how this phase reports progress.
     - **π₂(RP²) = Z → charge** (integer skyrmion/texture number);
     - **π₃(RP²) = Z → the vorton proper** (integer Hopf-linked knot).
   3D bulk is required so the full π₃ Hopf identity (and thus `Lk = Tw + Wr`) is
-  available. **Residual containment task (the branch's cost):** the integer charge
-  (π₂) is defined only *mod 2* beside a π₁ disclination — spin and charge share one
-  topological budget; this interaction is worked at T2/T3 and may itself be
-  informative, not mere bookkeeping.
+  available. **Residual containment task (the branch's cost):** the *sign* of the
+  charge (π₂) is gauged by the π₁ disclination — only |N| is invariant
+  (Volovik–Mineev), so spin and charge-sign are locked; this interaction is worked
+  below (shared spin/charge budget) and proves informative, not mere bookkeeping.
 - **Open (smaller).** Whether the *absolute* rest axis is unobservable so that only
   textures/gradients are revealed (restoring effective isotropy, protecting
   background-independence, principle 6). *Bounded-metaphor note:* the trampoline
@@ -290,7 +292,8 @@ is how this phase reports progress.
 - **Contained (T0 now fully fixes the invariant structure).** The residual fork is
   closed: nematic (RP²) / 3D bulk gives the full layered stack (π₁ spin, π₂ charge,
   π₃ Hopf knot) with `Lk = Tw + Wr` available. The **one** remaining task is the
-  shared spin/charge budget (π₂ mod 2 beside a π₁ disclination), worked at T3. This
+  shared spin/charge budget (spin gauges charge *sign*; only |N| invariant), worked
+  in its own entry below. This
   is the information → containment engine visibly at work: T0's single choice
   forced the entire invariant structure here.
 - **Falsifier.** Discreteness requires calibration; or a closed structure carries
@@ -336,13 +339,58 @@ is how this phase reports progress.
   defines `Tw` is the *same* director-rotation whose Z₂ double cover gave spin
   (π₁). Emerging resolution: **spin = the mod-2 framing parity of the twist**, and
   charge (π₂) shares the budget because both are read from the one director
-  rotation. Direction to work; not yet closed.
+  rotation. **Now worked in its own entry below.**
 - **Open.** The quantitative map (Tw, Wr, Lk, framing-parity) → measured |E|, |B|
   (deferred — magnitudes out of scope this phase); whether `Wr`↔Op-B current and
   π₂↔charge fully separate or are linked by a continuity relation.
 - **Falsifier.** If a held twist must radiate (not dissipationless); or `Tw` and
   `Wr` cannot trade at fixed `Lk` (identity not conserved under exchange); or
   polarity is not sign(Tw) — any one falsifies the magnetism/electricity split.
+
+### Worked entry — the shared spin/charge budget (T2×T3 registers)
+
+- **Question.** In the nematic (RP²) substrate the vorton carries three registers —
+  spin (π₁), charge (π₂), knot (π₃). How do spin and charge interact? (Flagged
+  earlier, loosely, as "charge mod 2.")
+- **Contained — correction first (honest).** The interaction is **not** "charge mod
+  2." Because the substrate is parity-invariant (n ≡ −n), the **sign** of the
+  charge (the π₂ hedgehog number) is not a physical invariant — **only |N| is**
+  (Volovik–Mineev): a charge transported around a spin disclination returns with
+  reversed sign. So *charge magnitude is topological; charge sign is defined only
+  relative to the spin frame.* (This corrects D8 and the earlier "mod 2" wording.)
+- **Contained — one Z₂, three faces.** The disclination (π₁), the framing/twist
+  parity of the vorton core (n ≡ −n makes the frame double-valued, so `Tw` carries
+  a Z₂), and the 2π-vs-4π director rotation are the **same Z₂**. "Spin = the
+  framing parity of the vorton" is confirmed: spin is one global Z₂ attribute, not
+  an add-on.
+- **Contained — the vorton is a spin-½ *fermion* (Finkelstein–Rubinstein).** FR: in
+  the configuration space Q, a **2π rotation of a soliton = the exchange of two
+  identical solitons = the same element of π₁(Q)**; when that element is the Z₂
+  generator, the soliton is consistently quantised as a **spin-½ fermion**. The
+  nematic RP² grain supplies exactly that Z₂. So **fermionic, spin-½ matter is
+  structurally available from the substrate** — the electron-like vorton is a
+  fermion *for the same topological reason it has spin*. Payoff for the north star:
+  atoms are built of fermions, and fermions are now *derivable, not inserted*.
+- **Contained — the budget is a *lock*, not a pool.** The "shared budget" is
+  precise: spin and charge do not draw down a common magnitude; the single Z₂
+  (spin) **gauges the sign of charge**. You cannot fix charge sign without fixing
+  the spin frame, and the operation that rotates/exchanges the vorton (spin) is the
+  operation that flips charge sign.
+- **Correlated.** 2π-rotation = exchange (FR) ↔ the **spin–statistics** connection,
+  emerging structurally rather than postulated; charge-sign gauged by spin ↔
+  (suggestive) charge conjugation tied to the spin Z₂ — flag, not asserted;
+  |N|-invariant / sign-relative ↔ the book's charge as "derivative, not a
+  substance."
+- **Open — the next containment.** π₂ and π₃ are **not independent**: the Hopf
+  number (π₃) is built from the linking of the π₂ preimages, so knot, charge and
+  spin are interrelated. The next thread is the **selection rule** linking Hopf
+  number ↔ (spin-parity, |charge|) — the road to a *spectrum* of vorton species (a
+  particle inventory). Also: that 2π is exactly the nontrivial element (spin
+  *exactly* ½) needs the explicit configuration (instantiation-level).
+- **Falsifier.** If the 2π rotation of the vorton is the *trivial* element of π₁(Q)
+  (then it is a boson — no fermions, north star blocked); or if charge sign is a
+  genuine invariant here (then spin and charge are independent, and the FR /
+  Volovik–Mineev linkage is wrong for this substrate).
 
 ---
 
