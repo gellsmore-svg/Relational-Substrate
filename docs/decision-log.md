@@ -95,6 +95,18 @@ is the single source of truth for *what has been contained/correlated*.
   the shared-budget entry.)*
 - **Status.** Accepted. Scaffold T0/T2 entries.
 
+### D9 — Electromagnetism is emergent (B1), not an external field · 2026-07-12
+- **Context.** How does the vorton's structure become EM (Maxwell + electric
+  charge)? Branches: B1 emergent U(1); B2 external gauged U(1); B3 Hopf/θ term.
+- **Decision.** **B1** — EM is the emergent expression of the substrate: the
+  director's winding bivector `F = n·(dn∧dn)` = `E + I·B` (GA). **B2 rejected**
+  (a second fundamental field violates the one-substrate north star, D2). **B3**
+  (the θ/Hopf–Wess–Zumino term) **folds into B1** as part of its effective action.
+- **Rationale.** One-substrate forbids external gauging; CP¹ / Mermin–Ho give an
+  emergent U(1) with the skyrmion density as flux and spin-½ spinons (matching our
+  vorton).
+- **Status.** Accepted; crux worked (below).
+
 ---
 
 ## Standing results (not decisions, but fixed by the above)
@@ -121,13 +133,23 @@ is the single source of truth for *what has been contained/correlated*.
   charge assignment needs a **U(1) coupling / Hopf–Wess–Zumino term whose
   coefficient topology does not fix** — the next decision, which re-engages the
   downstream (GA / U(1)_EM) tier of D3.
+- **Emergent-EM crux — worked (2026-07-12, D9).** The director gives one emergent
+  bivector `F = n·(dn∧dn) = E + I·B` (GA): **B = held twist = skyrmion density**
+  (Op C, dissipationless); **E = moving writhe = skyrmion current** (Op B). So
+  **T3 and Mermin–Ho are the static/dynamic projections of one `F`** — reconciled.
+  **Correction:** π₂ is the emergent **magnetic** flux, *not* electric charge.
+  **Upgrade:** `dF=0` (a pullback) gives the homogeneous Maxwell equations for
+  free, so **no magnetic monopole and induction (Faraday) are now derived**, not
+  suggestive. **Next could-fail test:** the *sourced* equations (Gauss/Ampère) and
+  **electric-charge quantisation** come from the θ/Hopf–WZ term and must fall out
+  **without calibrating** stiffnesses.
 
 ## Open decisions (not yet taken)
 
-- **EM coupling (next up).** How the charge flux couples to a U(1) (gauging) and
-  the coefficient of the Hopf/Wess–Zumino term — *not* fixed by topology; sets net
-  electric charge and pins spin/statistics (`θ=π`). Re-engages the downstream
-  GA / U(1)_EM tier (D3).
+- **Electric-charge quantisation (next test).** With EM emergent (D9), the
+  *homogeneous* Maxwell equations are derived (Bianchi `dF=0`); the *sourced* ones
+  and **electric charge** come from the θ/Hopf–Wess–Zumino term. Could-fail test:
+  does quantised electric charge fall out **without calibrating** stiffnesses?
 - Whether the *absolute* rest axis is unobservable (only textures revealed →
   effective isotropy; protects background-independence).
 - The quantitative (magnitude) map — deliberately deferred; out of scope this phase.

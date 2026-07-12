@@ -114,9 +114,10 @@ convergence is the phase's first real containment:
   linking revealed against it.
 - **Identity is layered** (nematic branch, fixed at T0). One grain (director →
   RP²) yields three stacked topological registers: **spin** (π₁ = Z₂, two-valued),
-  **charge** (π₂ = Z, integer), and the **vorton knot** (π₃ = Z, Hopf linking).
-  Spin **gauges charge sign** (only |N| invariant — Volovik–Mineev), and by
-  Finkelstein–Rubinstein the vorton is a **spin-½ fermion**. This is the structural
+  **magnetic charge** (π₂ = Z, the emergent flux — electric charge is separate, see
+  Crux), and the **vorton knot** (π₃ = Z, Hopf linking). Spin **gauges its sign**
+  (only |N| invariant — Volovik–Mineev), and by Finkelstein–Rubinstein the vorton
+  is a **spin-½ fermion**. This is the structural
   ladder toward a spin-½, charged, knotted electron-like vorton.
 - **Lk = Tw + Wr — the master decomposition.** One conserved linking integer
   splits, background-free, into:
@@ -215,9 +216,10 @@ is how this phase reports progress.
 | **T0** | ground state = substrate *at rest* carrying a uniform **nematic axis** (→RP², 3D bulk) ⇒ field type = Hopfion (derived); **layered identity** π₁=Z₂ spin / π₂=Z charge / π₃=Z Hopf vorton; **Lk = Tw + Wr unlocked** | rest orientation ↔ AMS **magnetic constraint geometry** at rest (Axiom M1); half-integer disclination ↔ **spin-½** |
 | T1 | *(bridge)* first displacement = light; carries E&M in transient form; no closure | darkness→light ↔ Op A; perturbability ↔ transient/open category |
 | **T2** | closure ⇒ **layered** identity: π₁=Z₂ **spin**, π₂=Z **charge**, π₃=Z **Hopf knot** (the vorton); all integer, discreteness forced by topology | closure ↔ birth of identity ↔ primary topology/vorton (Ch. 17) |
-| **T3** | `Lk = Tw + Wr` splits identity: **twist→magnetism** (held, dissipationless, polarity=sign Tw, Op C), **writhe→electricity/reconfiguration** (Op B); E&M = two parts of one conserved `Lk`; `Tw⇄Wr` = **induction** | Lk=Tw+Wr ↔ Ops C+B; Tw⇄Wr ↔ Faraday/Ampère; integer charge vs continuous twist ↔ *no magnetic monopole* (suggestive) |
+| **T3** | `Lk = Tw + Wr` splits identity: **twist→magnetism** (held, dissipationless, polarity=sign Tw, Op C), **writhe→electricity/reconfiguration** (Op B); E&M = two parts of one conserved `Lk`; `Tw⇄Wr` = **induction** | Lk=Tw+Wr ↔ Ops C+B; Tw⇄Wr ↔ Faraday/Ampère; integer charge vs continuous twist ↔ *no magnetic monopole* (**→ derived at Crux**) |
 | **T2×T3** | spin (π₁) **gauges charge sign** (only \|N\| invariant, Volovik–Mineev); one Z₂ = spin = framing parity; by **Finkelstein–Rubinstein** the vorton is a **spin-½ fermion** | 2π-rotation = exchange ↔ spin–statistics; charge-sign↔spin ↔ (suggestive) charge conjugation; **fermions structurally available → atoms** |
 | **π₂–π₃** | Hopf `H` = **helicity/self-linking of the charge flux** (`H=∫A∧F`); selection rule `H = Σ nᵢmᵢ + Σ 2nᵢnⱼℓᵢⱼ`; species live on a lattice indexed by (charges, linking); spin = framing parity | H ↔ linking of π₂ preimages; θ=π Hopf term ↔ FR fermion (two routes agree); merons ↔ (suggestive) constituent structure; **frontier: EM coupling not fixed by topology** |
+| **Crux (B1)** | emergent EM = one bivector `F = n·(dn∧dn)` = `E+I·B` (GA): **B = held twist = skyrmion density**, **E = moving writhe = skyrmion current**; **homogeneous Maxwell (no-monopole + induction) DERIVED** via `dF=0` | T3 ⟺ Mermin–Ho (static/dynamic projections of one `F`); π₂ = **magnetic** flux (corrected); electric charge + sourced Maxwell pending the θ-coupling (next test) |
 
 ### Worked entry — T0 (the substrate at rest)
 
@@ -444,6 +446,55 @@ is how this phase reports progress.
   independent invariant), the "vorton = knotted charge flux" picture fails; if the
   self+mutual helicity decomposition did not hold, there is no selection rule and
   species are unconstrained.
+
+### Worked entry — the crux: emergent EM reconciles T3 and Mermin–Ho (B1)
+
+- **The apparent conflict.** T3: twist → magnetism, writhe → electricity.
+  Mermin–Ho: the skyrmion (π₂) density → emergent *magnetic* flux. So is π₂
+  electric (as loosely said at T2) or magnetic? Are twist and skyrmion-density the
+  same thing?
+- **Resolution — one emergent bivector.** The director defines a single emergent
+  field-strength 2-form, the pullback of the S² area form, **`F = n·(dn ∧ dn)`**.
+  In geometric-algebra terms `F` is a **bivector**, and a time-split gives
+  **`F = E + I·B`** (D3's GA, now doing real work):
+    - **`B` (space–space, *held*) = the static director winding = the skyrmion
+      density = the TWIST.** So "twist → magnetism" (T3) and "skyrmion density →
+      magnetic flux" (Mermin–Ho) are the **same statement**. Held, dissipationless.
+    - **`E` (time–space, *dynamic*) = the changing winding = the skyrmion current =
+      the WRITHE / reconfiguration.** So "writhe → electricity" (T3) and "emergent
+      E = skyrmion motion" (Mermin–Ho) are the same statement.
+  The two pictures are the **static and dynamic projections of one emergent `F`** —
+  no contradiction. GA is exactly the algebra in which `F` shows as complementary
+  `E`/`B` and a boost rotates one into the other (= E&M complementarity; induction
+  as time-evolution).
+- **Contained — terminology correction (honest).** The π₂ integer previously called
+  "charge" is the emergent **magnetic** charge/flux (the held winding), **not**
+  electric charge. (Volovik–Mineev's "charge" is the hedgehog = an emergent
+  *magnetic monopole*; its sign is gauged by spin — unchanged, just correctly
+  labelled magnetic.) **Electric** charge is a *distinct* quantity, still pending.
+- **Contained — the source-free Maxwell equations are now DERIVED (upgrade).**
+  Because `F` is the pullback of a closed form, **`dF = 0` identically** (Bianchi).
+  In 3+1D `dF = 0` is exactly the two homogeneous Maxwell equations:
+    - **∇·B = 0 → no magnetic monopole** for any *smooth* vorton (a monopole needs
+      a *singular* hedgehog). This **upgrades T3's "no-monopole" from suggestive to
+      derived.**
+    - **∇×E + ∂ₜB = 0 → Faraday's law = induction.** This makes T3's "induction =
+      Tw ⇄ Wr" precise: **induction is the Bianchi identity of the emergent `F`.**
+- **Open — the sourced equations need the coupling (next test).** The inhomogeneous
+  Maxwell equations (`d⋆F = J`: Gauss, Ampère) are **not** automatic — they are the
+  equation of motion from the effective action, and **electric charge (and its
+  quantisation)** live here, via the Hopf/Wess–Zumino (θ) term (θ=π ↔ our fermion).
+  This is the **anti-drift crux**: electric-charge quantisation must fall out of the
+  θ-term *structurally*, **not** by calibrating stiffnesses. The next pre-registered
+  could-fail test.
+- **Correlated.** `F = n·(dn∧dn)` ↔ GA `F = E+I·B` (D3 realised); homogeneous
+  Maxwell ↔ Bianchi/topology (automatic); inhomogeneous Maxwell ↔ dynamics (the
+  coupling); held twist = B / moving writhe = E ↔ the book's Op C (alignment) / Op
+  B (reconfiguration).
+- **Falsifier.** `dF=0` is guaranteed (a pullback), so the *real* falsifier is at
+  the next step: if no choice of the θ/coupling yields quantised electric charge
+  **without calibration**, B1 fails and external gauging (B2) or a different
+  substrate is forced.
 
 ---
 
