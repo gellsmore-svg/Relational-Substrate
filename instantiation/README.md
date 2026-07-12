@@ -64,6 +64,28 @@ rounding to 6. This confirms the **species-lattice arithmetic** — the quadrati
 combination rule underpinning the particle inventory — is real and computable, not
 merely asserted.
 
+## Test 3 — the emergent magnetic sector · **PASSED**
+
+`emergent_magnetic.py` tests the Mermin–Ho identification the whole EM tier rests
+on — `b_i = (1/8π) ε_ijk n·(∂_j n × ∂_k n)` is the emergent magnetic field, whose
+flux equals the enclosed topological charge — in two halves:
+
+**(a) a hedgehog (singular, degree q) is an emergent monopole** — box flux `∮b·dS`:
+
+```
+q=1 → 1.017    q=2 → 2.033    q=3 → 3.047   (expect q)
+```
+
+**(b) a smooth Hopfion carries no net monopole** — flux `= -0.00000` (expect 0).
+
+**PASS.** So `π₂ density = emergent magnetic flux` (a hedgehog carries flux equal
+to its charge = an emergent monopole), while a *smooth* texture carries none —
+computationally confirming the crux's **"no magnetic monopole for smooth vortons;
+a monopole requires a singular hedgehog"** (and hence the premise of the Dirac
+charge-quantisation argument). The ~2–5% excess in (a) is finite-difference
+discretisation at the box faces (rounds to the integer); (b) is exact to five
+decimals.
+
 ## Run
 
 ```bash
@@ -73,7 +95,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 ## Next instantiation tests
 
-1. **The emergent magnetic sector** — confirm a hedgehog carries emergent flux
-   (the skyrmion density integrates to its charge).
-2. *(Hardest, instantiation-level conditional)* whether **θ=π is generated**, not
+1. *(Hardest, instantiation-level conditional)* whether **θ=π is generated**, not
    inserted — the assumption behind the charge-quantisation and fermion results.
+   This one needs a microscopic action (integrating out the fermionic sector), not
+   just a field configuration — a materially bigger step than tests 1–3.

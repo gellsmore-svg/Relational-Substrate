@@ -206,5 +206,14 @@ per-case calibration. Code + results in [`../instantiation/`](../instantiation/)
   **`H = p·q` holds parameter-free**, confirming the species-lattice arithmetic (the
   combination rule behind the particle inventory). Higher charge shows the expected
   mild discretisation error (5.99 for 6), still rounding correctly.
-- **Next:** the emergent magnetic sector (hedgehog flux integrates to its charge);
-  and the θ=π generation conditional.
+- **Test 3 — the emergent magnetic sector · PASSED (2026-07-12).** Testing the
+  Mermin–Ho identification the EM tier rests on (`b = (1/8π)ε n·(∂n×∂n)`, flux =
+  enclosed charge): a **hedgehog** of degree q gives box flux `∮b·dS = {1.02, 2.03,
+  3.05}` for q=1,2,3 (**emergent monopole = topological charge**), while a **smooth
+  Hopfion** gives flux `= −0.00000` (**no net monopole**). So `π₂ density = emergent
+  magnetic flux`, and the crux's "no monopole for smooth vortons; monopole ⇔
+  singular hedgehog" is confirmed — which is also the *premise* of the Dirac
+  charge-quantisation argument. (~2–5% excess in the hedgehog case is
+  finite-difference discretisation, rounding to the integer.)
+- **Next:** the θ=π generation conditional — needs a microscopic action (integrating
+  out the fermionic sector), a materially bigger step than tests 1–3.
