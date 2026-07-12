@@ -221,6 +221,7 @@ is how this phase reports progress.
 | **π₂–π₃** | Hopf `H` = **helicity/self-linking of the charge flux** (`H=∫A∧F`); selection rule `H = Σ nᵢmᵢ + Σ 2nᵢnⱼℓᵢⱼ`; species live on a lattice indexed by (charges, linking); spin = framing parity | H ↔ linking of π₂ preimages; θ=π Hopf term ↔ FR fermion (two routes agree); merons ↔ (suggestive) constituent structure; **frontier: EM coupling not fixed by topology** |
 | **Crux (B1)** | emergent EM = one bivector `F = n·(dn∧dn)` = `E+I·B` (GA): **B = held twist = skyrmion density**, **E = moving writhe = skyrmion current**; **homogeneous Maxwell (no-monopole + induction) DERIVED** via `dF=0` | T3 ⟺ Mermin–Ho (static/dynamic projections of one `F`); π₂ = **magnetic** flux (corrected); electric charge + sourced Maxwell pending the θ-coupling (next test) |
 | **Q-test** | **electric charge quantisation DERIVED** (no calibration): **Dirac** (`e·g=2πn`, forced by the π₂ magnetic sector) + **Witten** (`Q=e(n+θm/2π)`, θ=π fermion point → dyons `e(n+m/2)`). **PASS** | one θ=π ⇒ spin-½ + statistics + charge shift; **honest limit:** the unit `e` (α) is a coupling, *not* topological — magnitude not derived |
+| **T6** | binding: charges **add & stay quantised** (neutral atom = ΣQ=0); composite identity `H=ΣHᵢ+2ΣQᵢQⱼℓᵢⱼ` (linking-bond); **Fermi statistics → Pauli → shells → periodic structure** (derived); binding channel exists (elastic + emergent EM) | fermion→exclusion→chemistry (**strong**); shared/linked vorton ↔ covalent bond (suggestive); **open: binding sign/strength, mass hierarchy, energetic stability = magnitudes, parked** |
 
 ### Worked entry — T0 (the substrate at rest)
 
@@ -540,6 +541,52 @@ is how this phase reports progress.
   falsifier ("quantisation needs a tuned coefficient") is **not triggered** —
   quantisation follows from the *existence* of magnetic charge, independent of the
   coupling value. The honest ceiling (α not derivable) is *sharpened*, not hidden.
+
+### Worked entry — T6 (binding vortons → atoms/molecules)
+
+- **Setup.** Two or more vortons (each: magnetic charge `m`, quantised electric
+  charge `Q`, spin-½, Hopf `H`) coexist. What does topology *fix* about their bound
+  composites — and where must dynamics take over? (This is exactly where the prior
+  cycle calibrated; the discipline is to derive *structure* and park *magnitudes*.)
+- **Contained — composite charges add and stay quantised.** Magnetic (`m`) and
+  electric (`Q`) charges are additive and conserved; `Q` stays quantised (Q-test).
+  So a **charge-balanced cluster (Σ Q = 0) is a neutral-atom candidate**, and
+  magnetic neutrality (Σ m = 0) likewise.
+- **Contained — composite identity carries mutual linking.** By the π₂–π₃ rule,
+  `H_total = Σ H_i + Σ_{i<j} 2 Q_i Q_j ℓ_ij`: **bound vortons that link form a
+  composite with a new, well-defined Hopf identity** including the cross-linking.
+  Binding *is* (partly) linking — a topological bond.
+- **Contained — the big one: Fermi statistics → Pauli → shells → chemistry.** The
+  vorton is a spin-½ **fermion** (derived, FR). Identical fermions cannot share a
+  state ⇒ **Pauli exclusion**, which forces bound vortons into **distinct states =
+  shell structure**. So **the periodic organisation of matter is a *derived
+  structural* consequence of the spin-½ we already have** — bound clusters are
+  *structured* (shells), not collapsed; two fermions bind into an integer-spin
+  (boson-like) composite; exclusion governs identical constituents. *This is the
+  structural seed of chemistry — derived, not fitted.*
+- **Contained — a binding channel exists structurally.** Vorton textures interact
+  through their director elastic distortions **and** the emergent EM — so binding
+  needs **no new field**; the substrate already supplies the interaction channel.
+- **Open — the honest boundary (exactly where the prior cycle calibrated).**
+  Topology gives the *combinatorics and selection rules* of atoms; it does **not**
+  give: the **sign/strength of binding** (attraction/repulsion, binding energies,
+  spectra) — configuration- and coupling-dependent; the **mass hierarchy** deciding
+  which species are heavy cores vs light shell vortons; or **energetic stability**
+  — topology *permits* charge-balanced, exclusion-structured clusters but does not
+  *guarantee* they are energetically bound. **These are magnitudes/dynamics —
+  parked, and must not be fitted** (the D1/D4 failure mode).
+- **Correlated.** Fermion → exclusion → shells → periodic table (**strong**);
+  quantised additive charge → neutral atoms; mutual-linking term ↔ bond order, and
+  a shared/linked vorton between two cores ↔ a covalent bond (both **suggestive**).
+- **Falsifier.** If bound vortons were bosonic (no exclusion → no shells → no
+  chemistry) — but fermions are derived, so consistent; if composite charge were
+  not additive/conserved (it is). The residual "do stable neutral atoms *actually*
+  exist?" is an **energetic** question topology cannot settle alone — flagged, not
+  claimed.
+- **North-star status.** Atoms are now reached at the **structural / combinatorial**
+  level: a species inventory (π₂–π₃), additive quantised charges (neutral atoms),
+  Fermi-exclusion shell structure, and linking-bonds — with energetics/magnitudes
+  uniformly parked.
 
 ---
 

@@ -26,7 +26,8 @@ and [decision log](decision-log.md).
 | Species = discrete lattice (π₂–π₃ selection rule) | **derived** (`H` = helicity of charge flux) |
 | Emergent EM (`F=E+I·B`); homogeneous Maxwell (no-monopole, induction) | **derived** (D9 + Crux; `dF=0` Bianchi) |
 | Electric-charge **quantisation** (Dirac + Witten, θ=π) | **derived**, no calibration; magnitude α = a coupling, not derived |
-| Assembly into atoms/molecules | **open** — the next frontier (T6/T7) |
+| Assembly into atoms (T6) | **structural level reached**: additive quantised charge (neutral atoms) + Fermi exclusion → shells + linking-bonds; **energetics/magnitudes parked** |
+| Light–vorton admissibility (T7) | **open** — remaining ladder item |
 
 ## 2. Structurally derived (not inserted) — the wins
 

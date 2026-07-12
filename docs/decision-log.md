@@ -152,6 +152,17 @@ is the single source of truth for *what has been contained/correlated*.
   topological; fitting it is forbidden. Conditional (instantiation-level): the
   microscopic generation of θ=π must still be shown. This effectively **closes the
   EM tier** at the structural level.
+- **T6 binding — worked (2026-07-12).** Structural reach to atoms: composite
+  magnetic & electric charges add and stay quantised (neutral atom = ΣQ=0);
+  composite identity carries mutual linking (`H = ΣHᵢ + 2ΣQᵢQⱼℓᵢⱼ` — a topological
+  bond); and the derived Fermi statistics force **Pauli exclusion → shell structure
+  → the periodic organisation of matter** (chemistry's structure derived, not
+  fitted). A binding channel exists structurally (director elasticity + emergent
+  EM). **Honest boundary (the old-cycle trap):** binding sign/strength, the mass
+  hierarchy (cores vs shells), and energetic stability are magnitudes/dynamics —
+  **parked, not fitted.** The **north star is now reached at the structural /
+  combinatorial level** across light, E&M, constituents, and atoms; magnitudes
+  uniformly out of scope.
 
 ## Open decisions (not yet taken)
 
