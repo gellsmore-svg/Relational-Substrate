@@ -35,8 +35,10 @@ Two consequences fix the whole method:
   topologically upon it. It is *unrevealed* only in that it carries no closed
   structure yet, so no identity invariant is instantiated — **not** in the sense
   of being empty. **The rest state carries a rest orientation** — a uniform
-  director/grain at every locale, all aligned (bounded image: a trampoline skin
-  with a brushed grain). Darkness is therefore *perfect uniform alignment*: maximal
+  **nematic axis** (an *unoriented* director, target RP², in a 3D bulk) at every
+  locale, all aligned but with *no preferred head* (bounded image: a trampoline
+  skin with a brushed grain whose fibres have no arrow). Darkness is therefore
+  *perfect uniform alignment*: maximal
   orientational order, zero topological charge; undifferentiated only in that it
   holds no texture or knot. This rest orientation is the substrate's **magnetic
   constraint geometry in its ground state** (the *M* of the old AMS name; Axiom
@@ -53,9 +55,9 @@ Two consequences fix the whole method:
    configuration (bounded metaphor: a taut, unperturbed trampoline skin). It is
    *unrevealed* only in that it holds no closed structure yet, so no identity
    invariant is instantiated — not in the sense of being empty or vague. It
-   **carries a rest orientation** (a uniform director/grain — the substrate's
-   ground magnetic geometry); revealing is any texture that *departs from uniform
-   alignment*. The rest state is what *enables* revealing: light forms as a
+   **carries a rest orientation** (a uniform **nematic axis** — unoriented
+   director, target RP², 3D bulk — the substrate's ground magnetic geometry);
+   revealing is any texture that *departs from uniform alignment*. The rest state is what *enables* revealing: light forms as a
    perturbation of it, and (open) E&M may form topologically upon it too. Every
    construction starts here and asks what minimal information *reveals* the next
    structure.
@@ -110,6 +112,11 @@ convergence is the phase's first real containment:
   number, vorton kind) is an *integer linking/winding invariant*, not a substance
   and not a tuned threshold. Darkness = zero linking; a vorton = the first nonzero
   linking revealed against it.
+- **Identity is layered** (nematic branch, fixed at T0). One grain (director →
+  RP²) yields three stacked topological registers: **spin** (π₁ = Z₂, two-valued),
+  **charge** (π₂ = Z, integer), and the **vorton knot** (π₃ = Z, Hopf linking).
+  Spin and charge share one budget (π₂ graded mod 2 by π₁). This is the structural
+  ladder toward a spin-½, charged, knotted electron-like vorton.
 - **Lk = Tw + Wr — the master decomposition.** One conserved linking integer
   splits, background-free, into:
   - **Twist** (held, static rotation) → **magnetism** (Operation C): a *held
@@ -204,7 +211,7 @@ is how this phase reports progress.
 
 | T | Contained | Correlated |
 |---|---|---|
-| **T0** | ground state = substrate *at rest* **carrying a uniform rest orientation** (director→S²) ⇒ field type = Hopfion (derived, not imported); invariants fixed (winding/Hopf); **Lk = Tw + Wr unlocked** | rest orientation ↔ AMS **magnetic constraint geometry** at rest (Axiom M1); rest-state ↔ continuous substrate |
+| **T0** | ground state = substrate *at rest* carrying a uniform **nematic axis** (→RP², 3D bulk) ⇒ field type = Hopfion (derived); **layered identity** π₁=Z₂ spin / π₂=Z charge / π₃=Z Hopf vorton; **Lk = Tw + Wr unlocked** | rest orientation ↔ AMS **magnetic constraint geometry** at rest (Axiom M1); half-integer disclination ↔ **spin-½** |
 | T1 | *(bridge)* first displacement = light; carries E&M in transient form; no closure | darkness→light ↔ Op A; perturbability ↔ transient/open category |
 | **T2** | identity appears **only** with closure; identity = an **integer** topological invariant; discreteness forced by topology, not a tuned threshold | closure ↔ birth of identity ↔ first nonzero invariant; vorton ↔ "primary topology" (Ch. 17) |
 
@@ -238,14 +245,27 @@ is how this phase reports progress.
   ontologically motivated, not ad hoc: the substrate's magnetism *is* its
   orientation geometry, and darkness is that geometry at rest. Rest-state ↔ the RS
   "continuous substrate"; enabling role ↔ why Operations A and D are possible.
-- **New open question (sharper).** Is the director a **full vector** (S², head ≠
-  tail) or a **true nematic** (RP², head ≡ tail)? A nematic admits **half-integer**
-  defects — a candidate structural origin of two-valuedness / **spin-½**. Also
-  open: the substrate's dimension (2D skin vs 3D bulk), and whether the *absolute*
-  rest direction is unobservable so that only textures/gradients are revealed
-  (restoring effective isotropy and protecting background-independence, principle
-  6). *Bounded-metaphor note:* the trampoline image is good for *tension, rest,
-  grain, and perturbability*; strip its embedding in a pre-given 3D room.
+- **Decided — nematic director (RP²), 3D bulk.** The rest orientation is an
+  *unoriented axis* (head ≡ tail), not an arrow — chosen because it (a) yields
+  spin-½ **natively** rather than by insertion, (b) is more symmetric (an axis has
+  no absolute head) and so gentler on background-independence, and (c) hands us a
+  **layered identity** aimed straight at atoms. By the standard homotopy
+  classification of ordered-media defects (Mermin, *Rev. Mod. Phys.* **51** (1979)
+  591), RP² gives three stacked registers from one grain:
+    - **π₁(RP²) = Z₂ → spin / two-valuedness** (a half-integer disclination; the
+      2π→4π double cover, SU(2));
+    - **π₂(RP²) = Z → charge** (integer skyrmion/texture number);
+    - **π₃(RP²) = Z → the vorton proper** (integer Hopf-linked knot).
+  3D bulk is required so the full π₃ Hopf identity (and thus `Lk = Tw + Wr`) is
+  available. **Residual containment task (the branch's cost):** the integer charge
+  (π₂) is defined only *mod 2* beside a π₁ disclination — spin and charge share one
+  topological budget; this interaction is worked at T2/T3 and may itself be
+  informative, not mere bookkeeping.
+- **Open (smaller).** Whether the *absolute* rest axis is unobservable so that only
+  textures/gradients are revealed (restoring effective isotropy, protecting
+  background-independence, principle 6). *Bounded-metaphor note:* the trampoline
+  image is good for *tension, rest, grain (no arrow), and perturbability*; strip
+  its embedding in a pre-given 3D room.
 - **Falsifier.** A stable identity invariant existing with no departure from rest.
 
 ### Worked entry — T2 (first closure = the vorton)
@@ -254,9 +274,10 @@ is how this phase reports progress.
   itself**, and holds — the minimal vorton (Operation D). Enabled by T0's rest
   medium; revealed only after T1's capacity for displacement exists.
 - **Contained.** Identity appears **only** with closure — never in the rest state,
-  never in open propagation. With T0's director→S² fixed, the identity is now
-  specifically a **Hopf linking number** (3D) or **winding number** (2D texture) —
-  an **integer**: discreteness is *forced by topology*, not installed by a tuned
+  never in open propagation. With T0 fixed to nematic (RP²) / 3D, a closure carries
+  a **layered** identity: a Z₂ **spin** register (π₁), an integer **charge** (π₂),
+  and an integer **Hopf knot** number (π₃) — the vorton proper is the π₃ knot. Each
+  is an **integer**: discreteness is *forced by topology*, not installed by a tuned
   threshold. This meets the proposal's first could-fail test **conceptually**: if
   discreteness turns out to require a fitted threshold, the mapping fails here and
   we say so.
@@ -265,14 +286,12 @@ is how this phase reports progress.
   the skin holding a self-locked, returned pucker. The invariant that appears is
   the seed of everything downstream (its twist part → magnetism, its writhe/route
   part → electricity, at T3).
-- **Open (narrowed by T0).** The *class* of invariant is now fixed (Hopf/winding
-  on S²); what remains open is inherited straight from T0: **vector (S²) vs nematic
-  (RP²)** — which decides whether *half-integer* closures exist (spin-½), and the
-  substrate dimension, which decides whether the full 3D Hopf linking (and hence
-  `Lk = Tw + Wr`) applies or only 2D winding. Containment observation: **T0's
-  single choice already forced the invariant class here** — the information →
-  containment engine visibly at work; one residual fork (vector vs nematic) now
-  contains T2's remaining freedom.
+- **Contained (T0 now fully fixes the invariant structure).** The residual fork is
+  closed: nematic (RP²) / 3D bulk gives the full layered stack (π₁ spin, π₂ charge,
+  π₃ Hopf knot) with `Lk = Tw + Wr` available. The **one** remaining task is the
+  shared spin/charge budget (π₂ mod 2 beside a π₁ disclination), worked at T3. This
+  is the information → containment engine visibly at work: T0's single choice
+  forced the entire invariant structure here.
 - **Falsifier.** Discreteness requires calibration; or a closed structure carries
   no conserved invariant at all.
 
