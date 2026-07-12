@@ -143,13 +143,24 @@ is the single source of truth for *what has been contained/correlated*.
   suggestive. **Next could-fail test:** the *sourced* equations (Gauss/Ampère) and
   **electric-charge quantisation** come from the θ/Hopf–WZ term and must fall out
   **without calibrating** stiffnesses.
+- **Electric-charge test — PASSED (2026-07-12).** Quantisation is derived by two
+  coupling-independent routes: **Dirac** (`e·g = 2πn`, forced by the *existence* of
+  the emergent π₂ magnetic sector) and **Witten** (`Q = e(n + θm/2π)`, θ fixed to
+  the fermion point θ=π → dyon spectrum `Q = e(n + m/2)`). **No stiffness
+  calibration.** One θ=π yields spin-½, statistics, *and* the charge shift together.
+  **Honest limit:** the absolute unit `e` (α) is the emergent coupling — *not*
+  topological; fitting it is forbidden. Conditional (instantiation-level): the
+  microscopic generation of θ=π must still be shown. This effectively **closes the
+  EM tier** at the structural level.
 
 ## Open decisions (not yet taken)
 
-- **Electric-charge quantisation (next test).** With EM emergent (D9), the
-  *homogeneous* Maxwell equations are derived (Bianchi `dF=0`); the *sourced* ones
-  and **electric charge** come from the θ/Hopf–Wess–Zumino term. Could-fail test:
-  does quantised electric charge fall out **without calibrating** stiffnesses?
+- **Assembly layer (next frontier).** With the EM tier closed at the structural
+  level, the far half of the north star: **binding vortons → atoms/molecules**
+  (scaffold T6, secondary topology) and **light–vorton admissibility** (T7).
+- **Magnitudes / α (parked).** The absolute couplings (e/α, and any mass ratios)
+  are out of scope this phase and not derivable from topology alone; revisit only
+  with a rule that forbids per-case calibration.
 - Whether the *absolute* rest axis is unobservable (only textures revealed →
   effective isotropy; protects background-independence).
 - The quantitative (magnitude) map — deliberately deferred; out of scope this phase.

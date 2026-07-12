@@ -24,7 +24,9 @@ and [decision log](decision-log.md).
 | Induction = `Tw ⇄ Wr` at fixed identity | **derived**, structural |
 | E&M complementary (two parts of one conserved `Lk`) | **derived** |
 | Species = discrete lattice (π₂–π₃ selection rule) | **derived** (`H` = helicity of charge flux) |
-| Net electric charge / EM coupling | **open** — the next decision |
+| Emergent EM (`F=E+I·B`); homogeneous Maxwell (no-monopole, induction) | **derived** (D9 + Crux; `dF=0` Bianchi) |
+| Electric-charge **quantisation** (Dirac + Witten, θ=π) | **derived**, no calibration; magnitude α = a coupling, not derived |
+| Assembly into atoms/molecules | **open** — the next frontier (T6/T7) |
 
 ## 2. Structurally derived (not inserted) — the wins
 

@@ -220,6 +220,7 @@ is how this phase reports progress.
 | **T2×T3** | spin (π₁) **gauges charge sign** (only \|N\| invariant, Volovik–Mineev); one Z₂ = spin = framing parity; by **Finkelstein–Rubinstein** the vorton is a **spin-½ fermion** | 2π-rotation = exchange ↔ spin–statistics; charge-sign↔spin ↔ (suggestive) charge conjugation; **fermions structurally available → atoms** |
 | **π₂–π₃** | Hopf `H` = **helicity/self-linking of the charge flux** (`H=∫A∧F`); selection rule `H = Σ nᵢmᵢ + Σ 2nᵢnⱼℓᵢⱼ`; species live on a lattice indexed by (charges, linking); spin = framing parity | H ↔ linking of π₂ preimages; θ=π Hopf term ↔ FR fermion (two routes agree); merons ↔ (suggestive) constituent structure; **frontier: EM coupling not fixed by topology** |
 | **Crux (B1)** | emergent EM = one bivector `F = n·(dn∧dn)` = `E+I·B` (GA): **B = held twist = skyrmion density**, **E = moving writhe = skyrmion current**; **homogeneous Maxwell (no-monopole + induction) DERIVED** via `dF=0` | T3 ⟺ Mermin–Ho (static/dynamic projections of one `F`); π₂ = **magnetic** flux (corrected); electric charge + sourced Maxwell pending the θ-coupling (next test) |
+| **Q-test** | **electric charge quantisation DERIVED** (no calibration): **Dirac** (`e·g=2πn`, forced by the π₂ magnetic sector) + **Witten** (`Q=e(n+θm/2π)`, θ=π fermion point → dyons `e(n+m/2)`). **PASS** | one θ=π ⇒ spin-½ + statistics + charge shift; **honest limit:** the unit `e` (α) is a coupling, *not* topological — magnitude not derived |
 
 ### Worked entry — T0 (the substrate at rest)
 
@@ -495,6 +496,50 @@ is how this phase reports progress.
   the next step: if no choice of the θ/coupling yields quantised electric charge
   **without calibration**, B1 fails and external gauging (B2) or a different
   substrate is forced.
+
+### Worked entry — the electric-charge test (the anti-drift crux)
+
+- **Question (pre-registered).** Does *quantised* electric charge fall out of the
+  θ/Hopf–Wess–Zumino coupling **structurally, without calibrating stiffnesses**?
+  (Fail if it needs a tuned coefficient.)
+- **Contained — PASS: quantisation is derived, two coupling-independent routes.**
+  1. **Dirac quantisation.** The substrate *already* contains emergent **magnetic**
+     charge (π₂ hedgehogs, from the Crux). Dirac's condition **`e·g = 2π n`** then
+     **forces electric charge to be quantised** in integer units — the mere
+     *existence* of the magnetic sector quantises electric charge, *independent of
+     any coupling value* (DSZ: `e₁g₂ − g₁e₂ = 2πℤ`).
+  2. **Witten effect.** With the emergent θ-term, a magnetic vorton (magnetic
+     charge `m`) carries electric charge **`Q = e(n + θm/2π)`**, `n∈Z`. The integer
+     part is topological; the θ-shift is fixed because **θ sits at the fermion
+     point (θ=π ↔ the FR / Wilczek–Zee fermion)**, not tuned → dyon spectrum
+     `Q = e(n + m/2)` (neutral vortons carry integer `ne`; magnetic ones are
+     half-integer-shifted dyons).
+  Neither route calibrates a stiffness. **Test passed** on the structural claim.
+- **Contained — the honest boundary (what is NOT derived).** Topology fixes the
+  **quantisation and the dyon spectrum (integer structure, ratios)**; it does
+  **not** fix the **absolute unit `e`** (equivalently α = e²/4π), which is the
+  *emergent gauge coupling* = a substrate stiffness. Deriving α from topology is
+  not possible; *fitting* it would be calibration → forbidden → out of scope
+  (magnitudes were never in scope this phase). **Quantisation derived; magnitude
+  declared a coupling, not a fit.**
+- **Contained — the electron, assembled.** The electron is now a definite point on
+  the species lattice: a vorton with **magnetic charge, Dirac/Witten-quantised
+  electric charge, and spin-½ (fermion)** — charge *quantised* structurally, charge
+  *magnitude* a coupling.
+- **Correlated — one θ, three results.** The θ=π that fixes the dyon charge shift is
+  the *same* θ=π that made the vorton a spin-½ fermion (FR / Wilczek–Zee). One
+  parameter yields **spin-½, Fermi statistics, and the charge quantisation shift**
+  together — a striking economy.
+- **Honest conditionals (instantiation-level).** This is a PASS at the *emergent
+  effective* level, conditional on (i) the emergent magnetic (π₂) sector existing —
+  argued structurally — and (ii) θ=π actually being *generated* by the substrate's
+  fermion content (the induced-θ / anomaly step), which an explicit microscopic
+  construction must still show. Those are for the instantiation phase, not fits.
+- **Result vs the pre-registered test. PASS.** Electric charge is quantised, derived
+  from the magnetic sector + fermion-fixed θ, with **no stiffness calibration**. The
+  falsifier ("quantisation needs a tuned coefficient") is **not triggered** —
+  quantisation follows from the *existence* of magnetic charge, independent of the
+  coupling value. The honest ceiling (α not derivable) is *sharpened*, not hidden.
 
 ---
 
