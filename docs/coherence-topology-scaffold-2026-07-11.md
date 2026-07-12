@@ -213,7 +213,8 @@ is how this phase reports progress.
 |---|---|---|
 | **T0** | ground state = substrate *at rest* carrying a uniform **nematic axis** (→RP², 3D bulk) ⇒ field type = Hopfion (derived); **layered identity** π₁=Z₂ spin / π₂=Z charge / π₃=Z Hopf vorton; **Lk = Tw + Wr unlocked** | rest orientation ↔ AMS **magnetic constraint geometry** at rest (Axiom M1); half-integer disclination ↔ **spin-½** |
 | T1 | *(bridge)* first displacement = light; carries E&M in transient form; no closure | darkness→light ↔ Op A; perturbability ↔ transient/open category |
-| **T2** | identity appears **only** with closure; identity = an **integer** topological invariant; discreteness forced by topology, not a tuned threshold | closure ↔ birth of identity ↔ first nonzero invariant; vorton ↔ "primary topology" (Ch. 17) |
+| **T2** | closure ⇒ **layered** identity: π₁=Z₂ **spin**, π₂=Z **charge**, π₃=Z **Hopf knot** (the vorton); all integer, discreteness forced by topology | closure ↔ birth of identity ↔ primary topology/vorton (Ch. 17) |
+| **T3** | `Lk = Tw + Wr` splits identity: **twist→magnetism** (held, dissipationless, polarity=sign Tw, Op C), **writhe→electricity/reconfiguration** (Op B); E&M = two parts of one conserved `Lk`; `Tw⇄Wr` = **induction** | Lk=Tw+Wr ↔ Ops C+B; Tw⇄Wr ↔ Faraday/Ampère; integer charge vs continuous twist ↔ *no magnetic monopole* (suggestive) |
 
 ### Worked entry — T0 (the substrate at rest)
 
@@ -294,6 +295,54 @@ is how this phase reports progress.
   forced the entire invariant structure here.
 - **Falsifier.** Discreteness requires calibration; or a closed structure carries
   no conserved invariant at all.
+
+### Worked entry — T3 (twist vs. writhe = magnetism vs. electricity)
+
+- **Setup.** Take a vorton of fixed identity (Hopf number `Lk`, from π₃) and apply
+  the Călugăreanu–White–Fuller decomposition of a framed closed curve,
+  **`Lk = Tw + Wr`** (standard in DNA topology and magnetic-helicity theory,
+  Moffatt 1969): `Tw` = total *twist* (held local rotation of the director frame
+  about the core), `Wr` = *writhe* (nonlocal coiling of the core's route). `Lk` is
+  integer and conserved; `Tw` and `Wr` are real and trade continuously.
+- **Contained.**
+  1. **Magnetism = twist (Op C).** `Tw` is a *held* local rotation of the grain — a
+     static torsional geometry, **dissipationless** (geometry, not activity), with
+     **polarity = sign(Tw)**. Matches the book verbatim: "static torsional
+     equilibrium… north/south = opposite chirality; a permanent magnet dissipates
+     no energy."
+  2. **Electricity = writhe/route (Op B).** `Wr` is the *re-routable* coiling of the
+     path — the dynamic reconfiguration (current-like) component. *(Precision: the
+     integer electric **charge** is the π₂ number of T2; `Wr` carries the
+     **reconfiguration/current** aspect — charge and current are related but
+     distinct, refining the earlier loose "charge = asymmetry of coiling.")*
+  3. **E and M are one conserved identity, split.** With `Lk` fixed, magnetism and
+     electricity are **not two forces** but the two additive components of one
+     conserved self-linking — the exact structural form of "E&M complementary and
+     dependent": raise one at fixed `Lk` and the other falls.
+  4. **Induction falls out.** Because `Tw` and `Wr` trade at fixed `Lk`, a change in
+     one *is* a change in the other — **electromagnetic induction (Faraday/Ampère)
+     = the geometric conversion `Tw ⇄ Wr` at fixed identity** (the T5 resonance
+     channel, already visible here).
+  5. **The E–M asymmetry (suggestive).** Electric charge is an **integer** (π₂,
+     countable → monopole-like, quantised); magnetism is a **continuous handed
+     twist** with no integer count → **dipolar, no monopole**. So "no magnetic
+     monopole but quantised electric charge" is a candidate *structural*
+     consequence, not an added rule. *(Flagged suggestive — to be pressured, not
+     asserted.)*
+- **Correlated.** `Lk = Tw + Wr` ↔ Ops C + B; `Tw ⇄ Wr` ↔ induction; sign(Tw) ↔
+  polarity/chirality; dissipationless twist ↔ permanent magnet; helicity
+  conservation (Moffatt) ↔ "held geometry dissipates nothing."
+- **Shared-budget task confronted (the T0/D8 debt).** The frame whose rotation
+  defines `Tw` is the *same* director-rotation whose Z₂ double cover gave spin
+  (π₁). Emerging resolution: **spin = the mod-2 framing parity of the twist**, and
+  charge (π₂) shares the budget because both are read from the one director
+  rotation. Direction to work; not yet closed.
+- **Open.** The quantitative map (Tw, Wr, Lk, framing-parity) → measured |E|, |B|
+  (deferred — magnitudes out of scope this phase); whether `Wr`↔Op-B current and
+  π₂↔charge fully separate or are linked by a continuity relation.
+- **Falsifier.** If a held twist must radiate (not dissipationless); or `Tw` and
+  `Wr` cannot trade at fixed `Lk` (identity not conserved under exchange); or
+  polarity is not sign(Tw) — any one falsifies the magnetism/electricity split.
 
 ---
 
