@@ -163,6 +163,13 @@ is the single source of truth for *what has been contained/correlated*.
   **parked, not fitted.** The **north star is now reached at the structural /
   combinatorial level** across light, E&M, constituents, and atoms; magnitudes
   uniformly out of scope.
+- **T7 light–vorton admissibility — worked (2026-07-12).** The original
+  admissibility outcomes (admitted/returned/stored/scattered) are grounded as
+  coherence-matching channels **gated by invariant conservation**: light (transient,
+  `H=0`) cannot change the vorton's Hopf/charge/spin. A bound vorton has **discrete
+  internal modes → discrete spectra** (structural; line positions are magnitudes,
+  parked). This salvages/grounds the original light–vorton walkthroughs and
+  **completes the conceptual ladder T0–T7** (see the completion summary).
 
 ## Open decisions (not yet taken)
 

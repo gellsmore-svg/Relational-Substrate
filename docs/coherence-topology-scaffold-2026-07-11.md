@@ -222,6 +222,7 @@ is how this phase reports progress.
 | **Crux (B1)** | emergent EM = one bivector `F = n·(dn∧dn)` = `E+I·B` (GA): **B = held twist = skyrmion density**, **E = moving writhe = skyrmion current**; **homogeneous Maxwell (no-monopole + induction) DERIVED** via `dF=0` | T3 ⟺ Mermin–Ho (static/dynamic projections of one `F`); π₂ = **magnetic** flux (corrected); electric charge + sourced Maxwell pending the θ-coupling (next test) |
 | **Q-test** | **electric charge quantisation DERIVED** (no calibration): **Dirac** (`e·g=2πn`, forced by the π₂ magnetic sector) + **Witten** (`Q=e(n+θm/2π)`, θ=π fermion point → dyons `e(n+m/2)`). **PASS** | one θ=π ⇒ spin-½ + statistics + charge shift; **honest limit:** the unit `e` (α) is a coupling, *not* topological — magnitude not derived |
 | **T6** | binding: charges **add & stay quantised** (neutral atom = ΣQ=0); composite identity `H=ΣHᵢ+2ΣQᵢQⱼℓᵢⱼ` (linking-bond); **Fermi statistics → Pauli → shells → periodic structure** (derived); binding channel exists (elastic + emergent EM) | fermion→exclusion→chemistry (**strong**); shared/linked vorton ↔ covalent bond (suggestive); **open: binding sign/strength, mass hierarchy, energetic stability = magnitudes, parked** |
+| **T7** | light–vorton admissibility: outcomes (admitted/returned/stored/scattered) = coherence-matching **gated by invariant conservation** (light `H=0` can't change vorton identity); bound texture has **discrete modes → discrete spectra** (structural) | four outcomes ground the original walkthroughs; discrete modes ↔ spectral lines; *store* ↔ absorb/re-emit; **open: line positions = magnitudes, parked** |
 
 ### Worked entry — T0 (the substrate at rest)
 
@@ -587,6 +588,44 @@ is how this phase reports progress.
   level: a species inventory (π₂–π₃), additive quantised charges (neutral atoms),
   Fermi-exclusion shell structure, and linking-bonds — with energetics/magnitudes
   uniformly parked.
+
+### Worked entry — T7 (light meets vorton = admissibility)
+
+- **Setup.** An open transient — **light**: a propagating director perturbation
+  (Op A, unlinked, `H=0`) — meets a **closed vorton** (Op D, `H≠0`). This re-casts
+  the original admissibility walkthroughs (`research/ams-light-vorton-interaction-*`).
+- **Contained — admissibility is gated by invariant conservation.** Light (`H=0`,
+  transient) **cannot by itself change the vorton's topological identity** — its
+  Hopf number, magnetic/electric charge, and spin are conserved. So the four
+  outcomes (admitted / returned / stored / scattered) are **coherence-compatibility
+  channels that leave the invariants intact**; only a transient carrying the
+  requisite topological content could alter them. The original four-outcome model
+  is thereby *grounded* as **conservation-gated coherence matching**, not a
+  free-standing rule.
+- **Contained — discrete spectra are structural.** A **bound vorton texture has
+  discrete internal modes** (normal modes of the knot at fixed topology). Light is
+  admitted (absorbed) **resonantly at discrete couplings**, exciting a mode, later
+  re-emitted (the *store* channel). So the **discreteness** of atomic spectra is a
+  structural consequence (discrete modes of a bound texture); the **line positions
+  are magnitudes — parked.**
+- **Contained — the four outcomes grounded.** *admitted* = resonant / phase-matched
+  coupling; *returned* = boundary-incompatible reflection; *stored* = absorbed into
+  an internal mode, later re-emitted; *scattered* = partial / decohered. All via the
+  emergent-`F` coupling of the transient to the vorton — salvaging the walkthroughs.
+- **Correlated.** Discrete internal modes ↔ spectral lines (discreteness
+  structural); absorb-then-re-emit ↔ the *store* channel ↔ emission/absorption
+  spectroscopy; the invariant-conservation gate ↔ selection-rule structure
+  (suggestive).
+- **Open (parked).** Mode frequencies / line positions = magnitudes (couplings);
+  whether specific selection rules match real spectroscopy needs the explicit mode
+  structure (instantiation-level).
+- **Falsifier.** If light could change the vorton's Hopf/charge/spin **without**
+  carrying topological content (invariant non-conservation), the
+  admissibility-by-conservation picture fails; if a *bound* texture had continuous
+  rather than discrete modes, spectral discreteness fails — but bound ⇒ discrete, so
+  consistent.
+- **Ladder complete.** T0–T7 are worked; the conceptual phase is closed (see the
+  [completion summary](conceptual-phase-completion-2026-07-12.md)).
 
 ---
 

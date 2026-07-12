@@ -27,7 +27,7 @@ and [decision log](decision-log.md).
 | Emergent EM (`F=E+I·B`); homogeneous Maxwell (no-monopole, induction) | **derived** (D9 + Crux; `dF=0` Bianchi) |
 | Electric-charge **quantisation** (Dirac + Witten, θ=π) | **derived**, no calibration; magnitude α = a coupling, not derived |
 | Assembly into atoms (T6) | **structural level reached**: additive quantised charge (neutral atoms) + Fermi exclusion → shells + linking-bonds; **energetics/magnitudes parked** |
-| Light–vorton admissibility (T7) | **open** — remaining ladder item |
+| Light–vorton admissibility (T7) | **done**: outcomes = coherence-matching gated by invariant conservation; discrete spectra structural; positions parked |
 
 ## 2. Structurally derived (not inserted) — the wins
 
