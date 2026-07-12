@@ -39,6 +39,31 @@ a real dependence).
   confidence stays capped (see
   [`../docs/conceptual-phase-completion-2026-07-12.md`](../docs/conceptual-phase-completion-2026-07-12.md) §4).
 
+## Test 2 — the π₂–π₃ selection rule `H = p·q` · **PASSED**
+
+`selection_rule.py` builds the **type-(p,q) Hopfion** (`w = Z₁ᵖ / Z₂q`, director by
+inverse stereographic projection) — two winding numbers playing the roles of
+skyrmion charge and internal twist — and computes its Hopf number with the same
+verified routine. Claim: `H = p·q`.
+
+**Result** (grid 128³, box L=16):
+
+```
+(p,q)   p·q   H
+(1,1)    1    0.9998
+(2,1)    2    2.0000
+(1,2)    2    1.9995
+(2,2)    4    3.9995
+(3,1)    3    3.0000
+(2,3)    6    5.9906
+```
+
+**PASS** — `H = p·q` holds parameter-free across the family. The `(2,3)` case
+(5.99) shows the expected mild discretisation error at higher charge, still
+rounding to 6. This confirms the **species-lattice arithmetic** — the quadratic
+combination rule underpinning the particle inventory — is real and computable, not
+merely asserted.
+
 ## Run
 
 ```bash
@@ -48,9 +73,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 ## Next instantiation tests
 
-1. **The π₂–π₃ selection rule numerically** — build a twisted skyrmion tube and
-   check `H = n·m` (self-linking), verifying the species-lattice arithmetic.
-2. **The emergent magnetic sector** — confirm a hedgehog carries emergent flux
+1. **The emergent magnetic sector** — confirm a hedgehog carries emergent flux
    (the skyrmion density integrates to its charge).
-3. *(Hardest, instantiation-level conditional)* whether **θ=π is generated**, not
+2. *(Hardest, instantiation-level conditional)* whether **θ=π is generated**, not
    inserted — the assumption behind the charge-quantisation and fermion results.

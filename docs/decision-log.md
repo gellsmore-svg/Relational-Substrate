@@ -200,6 +200,11 @@ per-case calibration. Code + results in [`../instantiation/`](../instantiation/)
   (no calibration). The small-box artifact (~0.987 falling with size) behaved like
   a boundary error, not a topological dependence — itself a confirmation. This is
   one narrow anchor; it does **not** lift the empirical-correctness cap.
-- **Next:** the π₂–π₃ selection rule numerically (`H = n·m` for a twisted skyrmion
-  tube); the emergent magnetic sector (hedgehog flux); and the θ=π generation
-  conditional.
+- **Test 2 — the π₂–π₃ selection rule `H = p·q` · PASSED (2026-07-12).** Type-(p,q)
+  Hopfions (`w = Z₁ᵖ/Z₂q`) computed with the verified routine give
+  `H = {(1,1):1.00, (2,1):2.00, (1,2):2.00, (2,2):4.00, (3,1):3.00, (2,3):5.99}` —
+  **`H = p·q` holds parameter-free**, confirming the species-lattice arithmetic (the
+  combination rule behind the particle inventory). Higher charge shows the expected
+  mild discretisation error (5.99 for 6), still rounding correctly.
+- **Next:** the emergent magnetic sector (hedgehog flux integrates to its charge);
+  and the θ=π generation conditional.
