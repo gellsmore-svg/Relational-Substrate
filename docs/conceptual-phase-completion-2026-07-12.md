@@ -103,6 +103,8 @@ under a rule that still forbids per-case calibration:
 
 1. A single explicit Hopfion configuration computing its invariant
    (Hopf/linking) **parameter-free** — the first touch of computation.
+   **→ DONE, PASSED (2026-07-12):** `H = 0.9998 → 1`, scale-independent to < 0.001
+   (`../instantiation/`). One narrow anchor; the empirical-correctness cap stands.
 2. Confirm the instantiation-level conditionals (emergent magnetic sector; θ=π
    generation).
 3. **Magnitudes remain out of scope** until there is a domain where a magnitude

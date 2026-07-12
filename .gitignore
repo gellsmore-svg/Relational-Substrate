@@ -3,3 +3,8 @@ dist/
 verification/
 analysis/out/
 analysis/source-cache/
+
+# Python (instantiation)
+.venv/
+__pycache__/
+*.pyc

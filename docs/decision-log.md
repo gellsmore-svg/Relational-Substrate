@@ -184,3 +184,22 @@ is the single source of truth for *what has been contained/correlated*.
 - The quantitative (magnitude) map — deliberately deferred; out of scope this phase.
 - When to instantiate numerically (a Hopfion computing the T2 linking invariant
   parameter-free) — only after the ledger is tight enough.
+
+---
+
+## Instantiation phase (started 2026-07-12)
+
+The conceptual ladder being complete, computation begins — still forbidding
+per-case calibration. Code + results in [`../instantiation/`](../instantiation/).
+
+- **Test 1 — vorton identity = integer Hopf number · PASSED (2026-07-12).** An
+  *explicit* elementary Hopfion director field (inverse-stereographic ∘ Hopf map)
+  computed by the Whitehead integral (`∇×A=F` solved spectrally) gives
+  **`H = 0.9998 → 1`**, **scale-independent to < 0.001** across sizes 0.8–1.25 — so
+  the vorton's claimed topological identity is real, integer, and **parameter-free**
+  (no calibration). The small-box artifact (~0.987 falling with size) behaved like
+  a boundary error, not a topological dependence — itself a confirmation. This is
+  one narrow anchor; it does **not** lift the empirical-correctness cap.
+- **Next:** the π₂–π₃ selection rule numerically (`H = n·m` for a twisted skyrmion
+  tube); the emergent magnetic sector (hedgehog flux); and the θ=π generation
+  conditional.
