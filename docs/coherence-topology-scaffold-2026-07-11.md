@@ -34,9 +34,15 @@ Two consequences fix the whole method:
   and it is precisely what *enables* light — and potentially E&M — to form
   topologically upon it. It is *unrevealed* only in that it carries no closed
   structure yet, so no identity invariant is instantiated — **not** in the sense
-  of being empty. Structure is *revealing*: coherence rising, first as
-  displacement and then as closure, against the rest state. (The CBO ground-state
-  framing sits behind this; kept bounded here.)
+  of being empty. **The rest state carries a rest orientation** — a uniform
+  director/grain at every locale, all aligned (bounded image: a trampoline skin
+  with a brushed grain). Darkness is therefore *perfect uniform alignment*: maximal
+  orientational order, zero topological charge; undifferentiated only in that it
+  holds no texture or knot. This rest orientation is the substrate's **magnetic
+  constraint geometry in its ground state** (the *M* of the old AMS name; Axiom
+  M1). Structure is *revealing*: coherence rising, first as displacement and then
+  as closure, against the rest state. (The CBO ground-state framing sits behind
+  this; kept bounded here.)
 
 ## 1. Seven working principles (the lens at every stage)
 
@@ -46,10 +52,13 @@ Two consequences fix the whole method:
    state is a *thing*: the substrate in its definite, unperturbed rest
    configuration (bounded metaphor: a taut, unperturbed trampoline skin). It is
    *unrevealed* only in that it holds no closed structure yet, so no identity
-   invariant is instantiated — not in the sense of being empty or vague. The rest
-   state is what *enables* revealing: light forms as a perturbation of it, and
-   (open) E&M may form topologically upon it too. Every construction starts here
-   and asks what minimal information *reveals* the next structure.
+   invariant is instantiated — not in the sense of being empty or vague. It
+   **carries a rest orientation** (a uniform director/grain — the substrate's
+   ground magnetic geometry); revealing is any texture that *departs from uniform
+   alignment*. The rest state is what *enables* revealing: light forms as a
+   perturbation of it, and (open) E&M may form topologically upon it too. Every
+   construction starts here and asks what minimal information *reveals* the next
+   structure.
 3. **Information → coherence → containment → success.** Each step must either
    *contain* (rule a pattern out) or *correlate* (link two patterns). Nothing is
    added that does neither.
@@ -195,7 +204,7 @@ is how this phase reports progress.
 
 | T | Contained | Correlated |
 |---|---|---|
-| **T0** | ground state = the substrate *at rest* (a real tensioned medium), identity register empty, ≠ empty space | rest-state ↔ the ontology's continuous substrate; the enabling role ↔ why Ops A/D can occur at all |
+| **T0** | ground state = substrate *at rest* **carrying a uniform rest orientation** (director→S²) ⇒ field type = Hopfion (derived, not imported); invariants fixed (winding/Hopf); **Lk = Tw + Wr unlocked** | rest orientation ↔ AMS **magnetic constraint geometry** at rest (Axiom M1); rest-state ↔ continuous substrate |
 | T1 | *(bridge)* first displacement = light; carries E&M in transient form; no closure | darkness→light ↔ Op A; perturbability ↔ transient/open category |
 | **T2** | identity appears **only** with closure; identity = an **integer** topological invariant; discreteness forced by topology, not a tuned threshold | closure ↔ birth of identity ↔ first nonzero invariant; vorton ↔ "primary topology" (Ch. 17) |
 
@@ -209,17 +218,34 @@ is how this phase reports progress.
   misleading "zero linking." The rest state is **causally prior and enabling**: it
   is the condition of possibility for both propagation (light) and closure
   (vorton).
-- **Correlated.** Rest-state ↔ the RS "continuous substrate" beneath primary
-  topology; the *enabling* role ↔ why Operations A (propagation) and D (closure)
-  are possible at all; "darkness" ↔ the CBO ground-state (bounded).
-- **Open (flagged, deferred).** What are the rest state's *intrinsic* properties —
-  a tension/stiffness analog? Is it uniform (maximally symmetric) or already
-  textured — does it carry a rest orientation/director field? This is not idle:
-  **the rest structure decides which invariant becomes available at T2** (a 2D
-  winding vs a 3D Hopf/linking), and therefore whether the Lk = Tw + Wr split is
-  usable at T3. *Bounded-metaphor note:* the trampoline image is good for
-  *tension, rest, and perturbability*; it must be stripped of its embedding in a
-  pre-given 3D room (principle 6, background-independence).
+- **Decided — T0 carries a rest orientation (this contains the whole ladder).**
+  The rest state is *not* featureless: it is a **uniform director/grain** — every
+  locale has an orientation, all aligned in the ground state. Darkness = *perfect
+  uniform alignment* (maximal orientational order, zero topological charge). Three
+  consequences, each a containment:
+    1. **The field type is now derived, not imported.** An orientation field is a
+       map into the sphere of directions **S²** — which is *exactly* the
+       Faddeev–Niemi / Hopfion field. The Hopfion stops being a borrowed model and
+       becomes the **forced** instantiation of the rest-orientation choice.
+    2. **The identity invariants are fixed:** a 2D **winding number** (texture/
+       defect) and the 3D **Hopf linking number** (knot) — the integers of T2.
+    3. **Lk = Tw + Wr is unlocked.** A director can be *twisted* (local rotation
+       along a path) and *coiled* (writhe), so the master decomposition — and hence
+       the **magnetism(twist) / electricity(writhe) split of T3** — is now
+       available. This was the purpose of fixing T0.
+- **Correlated.** The rest orientation ↔ the AMS **"magnetic constraint geometry"**
+  in its ground state (the *M* of the old name; Axiom M1) — so the choice is
+  ontologically motivated, not ad hoc: the substrate's magnetism *is* its
+  orientation geometry, and darkness is that geometry at rest. Rest-state ↔ the RS
+  "continuous substrate"; enabling role ↔ why Operations A and D are possible.
+- **New open question (sharper).** Is the director a **full vector** (S², head ≠
+  tail) or a **true nematic** (RP², head ≡ tail)? A nematic admits **half-integer**
+  defects — a candidate structural origin of two-valuedness / **spin-½**. Also
+  open: the substrate's dimension (2D skin vs 3D bulk), and whether the *absolute*
+  rest direction is unobservable so that only textures/gradients are revealed
+  (restoring effective isotropy and protecting background-independence, principle
+  6). *Bounded-metaphor note:* the trampoline image is good for *tension, rest,
+  grain, and perturbability*; strip its embedding in a pre-given 3D room.
 - **Falsifier.** A stable identity invariant existing with no departure from rest.
 
 ### Worked entry — T2 (first closure = the vorton)
@@ -228,9 +254,9 @@ is how this phase reports progress.
   itself**, and holds — the minimal vorton (Operation D). Enabled by T0's rest
   medium; revealed only after T1's capacity for displacement exists.
 - **Contained.** Identity appears **only** with closure — never in the rest state,
-  never in open propagation. The identity is a **topological invariant**
-  (winding/linking; the specific one set by T0's rest structure), and it is an
-  **integer**: discreteness is *forced by topology*, not installed by a tuned
+  never in open propagation. With T0's director→S² fixed, the identity is now
+  specifically a **Hopf linking number** (3D) or **winding number** (2D texture) —
+  an **integer**: discreteness is *forced by topology*, not installed by a tuned
   threshold. This meets the proposal's first could-fail test **conceptually**: if
   discreteness turns out to require a fitted threshold, the mapping fails here and
   we say so.
@@ -239,11 +265,14 @@ is how this phase reports progress.
   the skin holding a self-locked, returned pucker. The invariant that appears is
   the seed of everything downstream (its twist part → magnetism, its writhe/route
   part → electricity, at T3).
-- **Open.** *Which* invariant (2D winding vs 3D linking) — inherited directly from
-  T0's open question. Containment observation: **the choice made at T0 constrains
-  T2**, which constrains whether Lk = Tw + Wr (needs a ribbon/3D structure) is
-  available downstream. This is the information → containment engine visibly at
-  work: fixing the rest state tightens everything after it.
+- **Open (narrowed by T0).** The *class* of invariant is now fixed (Hopf/winding
+  on S²); what remains open is inherited straight from T0: **vector (S²) vs nematic
+  (RP²)** — which decides whether *half-integer* closures exist (spin-½), and the
+  substrate dimension, which decides whether the full 3D Hopf linking (and hence
+  `Lk = Tw + Wr`) applies or only 2D winding. Containment observation: **T0's
+  single choice already forced the invariant class here** — the information →
+  containment engine visibly at work; one residual fork (vector vs nematic) now
+  contains T2's remaining freedom.
 - **Falsifier.** Discreteness requires calibration; or a closed structure carries
   no conserved invariant at all.
 
