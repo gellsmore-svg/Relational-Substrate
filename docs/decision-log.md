@@ -111,11 +111,23 @@ is the single source of truth for *what has been contained/correlated*.
   framing/twist parity, and the 2π→4π director rotation are **one Z₂**; and by
   **Finkelstein–Rubinstein** (2π rotation = exchange = that Z₂) the vorton is a
   **spin-½ fermion** — so fermionic matter is structurally available, not inserted.
-  Corrects D8's "mod 2." **Next thread:** π₂–π₃ selection rule (Hopf number ↔
-  spin-parity, |charge|) → a *spectrum of vorton species* (particle inventory).
+  Corrects D8's "mod 2."
+- **π₂–π₃ selection rule — worked (2026-07-12).** The Hopf number is the
+  **helicity/self-linking of the charge flux** (`H = ∫A∧F`), so π₃ is a quadratic
+  functional of π₂: `H = Σ nᵢmᵢ + Σ 2nᵢnⱼℓᵢⱼ` (self + mutual linking; `H=nm` for
+  one tube). Vorton **species live on a discrete lattice** indexed by (charge
+  content, linking); spin = framing parity (cross-checked by Wilczek–Zee `θ=π →
+  fermion`). **Frontier reached:** net electric charge vs Hopf number are distinct;
+  charge assignment needs a **U(1) coupling / Hopf–Wess–Zumino term whose
+  coefficient topology does not fix** — the next decision, which re-engages the
+  downstream (GA / U(1)_EM) tier of D3.
 
 ## Open decisions (not yet taken)
 
+- **EM coupling (next up).** How the charge flux couples to a U(1) (gauging) and
+  the coefficient of the Hopf/Wess–Zumino term — *not* fixed by topology; sets net
+  electric charge and pins spin/statistics (`θ=π`). Re-engages the downstream
+  GA / U(1)_EM tier (D3).
 - Whether the *absolute* rest axis is unobservable (only textures revealed →
   effective isotropy; protects background-independence).
 - The quantitative (magnitude) map — deliberately deferred; out of scope this phase.

@@ -217,6 +217,7 @@ is how this phase reports progress.
 | **T2** | closure ⇒ **layered** identity: π₁=Z₂ **spin**, π₂=Z **charge**, π₃=Z **Hopf knot** (the vorton); all integer, discreteness forced by topology | closure ↔ birth of identity ↔ primary topology/vorton (Ch. 17) |
 | **T3** | `Lk = Tw + Wr` splits identity: **twist→magnetism** (held, dissipationless, polarity=sign Tw, Op C), **writhe→electricity/reconfiguration** (Op B); E&M = two parts of one conserved `Lk`; `Tw⇄Wr` = **induction** | Lk=Tw+Wr ↔ Ops C+B; Tw⇄Wr ↔ Faraday/Ampère; integer charge vs continuous twist ↔ *no magnetic monopole* (suggestive) |
 | **T2×T3** | spin (π₁) **gauges charge sign** (only \|N\| invariant, Volovik–Mineev); one Z₂ = spin = framing parity; by **Finkelstein–Rubinstein** the vorton is a **spin-½ fermion** | 2π-rotation = exchange ↔ spin–statistics; charge-sign↔spin ↔ (suggestive) charge conjugation; **fermions structurally available → atoms** |
+| **π₂–π₃** | Hopf `H` = **helicity/self-linking of the charge flux** (`H=∫A∧F`); selection rule `H = Σ nᵢmᵢ + Σ 2nᵢnⱼℓᵢⱼ`; species live on a lattice indexed by (charges, linking); spin = framing parity | H ↔ linking of π₂ preimages; θ=π Hopf term ↔ FR fermion (two routes agree); merons ↔ (suggestive) constituent structure; **frontier: EM coupling not fixed by topology** |
 
 ### Worked entry — T0 (the substrate at rest)
 
@@ -391,6 +392,58 @@ is how this phase reports progress.
   (then it is a boson — no fermions, north star blocked); or if charge sign is a
   genuine invariant here (then spin and charge are independent, and the FR /
   Volovik–Mineev linkage is wrong for this substrate).
+
+### Worked entry — the π₂–π₃ selection rule (toward a species spectrum)
+
+- **Question.** Is the knot identity (Hopf, π₃) free, or selected by the charge
+  content (degree, π₂)? If selected, vorton species live on a discrete lattice — a
+  candidate *particle inventory*.
+- **Contained — π₃ is the self-linking (helicity) of the π₂ charge flux.** Let the
+  charge 2-form `F` be the pullback of the S² area form (its flux through a surface
+  = the local π₂ / skyrmion degree). Then the Hopf number is Whitehead's integral
+  **`H = (1/16π²) ∫ A ∧ F`, `dA = F`** — i.e. **`H` = the *helicity* of the charge
+  flux** (the `∫A·B` self-linkage of T3, at the charge-flux level). So π₃ is
+  **built from** π₂: the vorton's knot is the self-linkage of its own charge
+  structure. The two are **not independent**; π₃ is a quadratic functional of π₂.
+- **Contained — the selection rule (helicity = self + mutual linking).** For
+  charge-flux tubes of windings `{nᵢ}`:
+  **`H = Σᵢ nᵢ mᵢ  +  Σ_{i<j} 2 nᵢ nⱼ ℓᵢⱼ`** — self-twist (`mᵢ` = out-of-plane
+  twists of tube *i*) plus mutual linking (`ℓᵢⱼ`); for one tube, **`H = n·m`**
+  (Whitehead). *(This corrects my earlier guess "H = tQ²"; the verified form is
+  `nm` + mutual linking. Exact coefficients are convention-dependent; the
+  structure — `H` quadratic in the charge windings with integer linking
+  coefficients — is not.)* **Consequence:** given the charge content and its
+  linking, `H` is fixed; conversely a target `H` constrains the admissible
+  `(charges, linking)`. Vorton species therefore live on a **discrete lattice**
+  indexed by `(charge multiset {nᵢ}, self-twists {mᵢ}, mutual linkings {ℓᵢⱼ})`,
+  with `H` the quadratic form on it. This is T3's `Lk = Tw + Wr` promoted to the
+  charge-flux level.
+- **Contained — spin rides the framing parity.** The self-twist parity
+  (`Σ mᵢ mod 2`) feeds the Z₂ spin (shared-budget result): even/odd framing ↔
+  boson/fermion. **Cross-check:** the Wilczek–Zee mechanism gives soliton spin
+  `J = θ/2π` from a Hopf/θ term, with `θ=π → fermion` — the *same* spin-½ fermion
+  the Finkelstein–Rubinstein argument gave. Two independent routes agree.
+- **Correlated (suggestive, flagged).** A combinatorial inventory indexed by
+  `(charge content, linking pattern)` ↔ a *particle-inventory* flavour; the
+  quadratic form `H(charges)` ↔ how composite quantum numbers build; **merons**
+  (half-skyrmions bound to disclinations) ↔ fractional / constituent (quark-like)
+  sub-structure — flag, not asserted.
+- **Open — the frontier where topology stops (honest).** Two integers must not be
+  conflated: **net monopole charge `N`** (π₂ on the sphere at infinity — a
+  *singular* hedgehog count) vs the **Hopf number `H`** (π₃ of a *smooth* localized
+  texture, which has `N=0` at infinity). A single smooth vorton is a texture
+  (`H≠0, N=0`); giving it net **electric** charge requires either a singular
+  hedgehog or **coupling the charge flux to a U(1) (gauging) with a Hopf/
+  Wess–Zumino term** (Wilczek–Zee) — whose **coefficient is a physical input, not
+  fixed by topology.** So the pure-topology phase hands us the *species lattice and
+  its linking arithmetic*; it does **not** by itself fix electric-charge assignment
+  or its coupling. **That coupling is the next decision**, and it is exactly where
+  the downstream tier (how U(1)_EM / GA enters — D3) re-engages. This is the clean
+  boundary of what this phase can contain.
+- **Falsifier.** If `H` were *not* a functional of the π₂ charge flux (an
+  independent invariant), the "vorton = knotted charge flux" picture fails; if the
+  self+mutual helicity decomposition did not hold, there is no selection rule and
+  species are unconstrained.
 
 ---
 
