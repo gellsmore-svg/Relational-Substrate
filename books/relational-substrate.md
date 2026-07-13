@@ -2,14 +2,14 @@
 
 ## A Hierarchical Ontology of Runtime Physical Reality
 
-A technical-volume rewrite of *Aetheric Magnetic Substrate*, incorporating the rename to RS and the transformation tier, and joined to the ongoing topology-sandbox modelling programme.
+A technical-volume rewrite of *Aetheric Magnetic Substrate*, incorporating the rename to RS and the transformation tier, and joined to its topological-substrate modelling programme (Part XIII).
 
 Status: master draft v1 (2026-05-25)
 Companion volumes:
 - General: *A Coherent World*
 - Devotional: *How to Hug the Right Tree*
 - Scriptural framing: *Coherent Biblical Ontology*
-- Companion code: `~/domains/Relational-Substrate` (public repository; the topology-sandbox `src/` + `analysis/` modelling layer)
+- Companion code: `~/domains/Relational-Substrate` (public repository; the modelling programme's `docs/` scaffold and `instantiation/` computations — see Part XIII)
 
 A free electronic edition of this book is available online. It is offered as an open intellectual contribution rather than a closed commercial product, intended to encourage broad readership and discussion; updated versions and related materials can be found through the project website at <https://relational-substrate.blogspot.com/>.
 
@@ -19,7 +19,7 @@ A free electronic edition of this book is available online. It is offered as an 
 
 This is the technical volume of the RS framework. It is the book a reader should reach for when the question is precise: what does the ontology actually claim, what are its primitives, what are its axioms, what is closed and what is open, and what is being done about the open parts.
 
-It is intended as a **living book**, not a frozen reference. That phrase matters. A traditional technical reference is published, indexed, and frozen until the next edition. The RS framework is not in that state and may never be in that state on its own. It has a computational counterpart — the topology-sandbox project — that is itself evolving. Modern AI-assisted authorship makes it possible to keep the book and the modelling work coherent through ongoing curation rather than through periodic re-publication. This volume is therefore versioned, marked with claim-status discipline, and explicit about what is settled, what is active, and what is frontier work.
+It is intended as a **living book**, not a frozen reference. That phrase matters. A traditional technical reference is published, indexed, and frozen until the next edition. The RS framework is not in that state and may never be in that state on its own. It has a computational counterpart — the topological-substrate modelling programme of Part XIII — that is itself evolving. Modern AI-assisted authorship makes it possible to keep the book and the modelling work coherent through ongoing curation rather than through periodic re-publication. This volume is therefore versioned, marked with claim-status discipline, and explicit about what is settled, what is active, and what is frontier work.
 
 Three discipline rules govern the whole book.
 
@@ -100,10 +100,10 @@ This volume is the successor to *Aetheric Magnetic Substrate*. The rename to RS 
 - Chapter 42 — Non-Agency and Non-Identity Boundaries
 
 ### Part XIII — The Mathematical Modelling Programme *(new)*
-- Chapter 43 — The Topology-Sandbox Project: Scope and Method
-- Chapter 44 — Closure-Gate Metrics and the Alignment Tier
-- Chapter 45 — Current Status: Calibration, Decoy Controls, External Benchmarks
-- Chapter 46 — Frontier: From Qualitative Ordering to Equation Equivalence
+- Chapter 43 — Re-anchoring: From Rule-Grammar Sandbox to Topological Substrate
+- Chapter 44 — The Coherence-Topology Scaffold: Structural Results
+- Chapter 45 — Instantiation: Explicit Parameter-Free Computations
+- Chapter 46 — Honest Standing and the Frontier
 
 ### Part XIV — Closing Integration
 - Chapter 47 — What RS Explains
@@ -429,7 +429,7 @@ The mechanism, stated as cleanly as we can without overclaiming: the substrate i
 
 This is also the point at which RS must distinguish the vorton from neighbouring concepts such as solitons, topological defects, or other stable structures in ordered media. Those categories are not irrelevant; they show that contemporary physics already has partial language for stability in continuity. But a vorton is not merely any persistent pattern, nor merely any defect relative to a background order. In RS it names a *primary identity-bearing torsional knot-state* that belongs to the first ontological level of stable runtime differentiation. A soliton may describe a self-preserving propagative form. A defect may describe a discontinuity or organised irregularity within an ordered medium. A vorton, by contrast, is posited as a stable primary topological entity from which matter itself is fundamentally constituted. The distinction is therefore not one of decorative vocabulary but of ontological rank.
 
-That difference also sharpens the question of species. RS does not need to pretend that every vorton class has already been mathematically catalogued, but it does require that vorton kinds be discriminable in principle by invariant topology, stability envelope, coupling behaviour, and permitted modes of reconfiguration. In other words, a vorton species is not merely "another persistent shape." It is a distinct class of primary knot-state with a different invariant profile and therefore a different role in the constitution of matter. The ongoing topology-sandbox programme (Part XIII) is one of the active threads attempting to put empirical pressure on this requirement; current work is at the closure-gate level rather than at the full species mathematics.
+That difference also sharpens the question of species. RS does not need to pretend that every vorton class has already been mathematically catalogued, but it does require that vorton kinds be discriminable in principle by invariant topology, stability envelope, coupling behaviour, and permitted modes of reconfiguration. In other words, a vorton species is not merely "another persistent shape." It is a distinct class of primary knot-state with a different invariant profile and therefore a different role in the constitution of matter. The re-anchored modelling programme (Part XIII) puts empirical pressure on this requirement: a vorton's identity is now modelled as an integer linking (Hopf) invariant, and the species arithmetic — the self-linking of the charge flux — has been computed explicitly. This is a first structural instalment of the species mathematics, not yet the full catalogue.
 
 This also explains why the vorton belongs under primary topology rather than transient structures. A transient aether structure may be coherent and real without persisting as an independent identity. A vorton, by contrast, is stable enough to count as a continuing ontological unit within runtime reality. It can move, couple, and participate in larger structures without surrendering its identity, because that identity is carried topologically rather than materially.
 
@@ -451,7 +451,7 @@ That same point sharpens the distinction from generic topological defect languag
 
 This is also why the vorton chapters must be read as ontologically stronger than a loose appeal to contemporary analogies. The book is not claiming only that continuity can support stable patterns. It is claiming that runtime matter requires a specific class of stable primary torsional knot-state capable of bearing identity through change, coupling into higher regimes, and remaining distinct from both transient propagations and merely background-relative defects.
 
-The topology-sandbox programme treats vorton identity not as a binary property but as a continuous **identity-score** composed from six metrics: closure, return, boundedness, coherence, reseating, leakage. Identity is preserved when the score exceeds a threshold and closure stress remains below a separate threshold. These are not yet formal invariants in the strict topological sense; they are *practical* invariants that allow the model to detect when a candidate configuration is stable enough to count as identity-bearing within the rule grammar. Chapter 44 returns to this in detail.
+The framework's earlier (now retired) sandbox treated vorton identity as a continuous **identity-score** composed from six heuristic metrics (closure, return, boundedness, coherence, reseating, leakage) above a threshold. Those were *practical* proxies, not formal invariants. The re-anchored modelling programme replaces them with the genuine topological invariant the ontology's "knot-state" language always implied: an **integer linking (Hopf) invariant**, which has been computed explicitly for candidate vortons. Chapter 44 develops this.
 
 ## Chapter 19 — Vorton Degrees of Freedom and Coupling
 
@@ -469,7 +469,7 @@ A vorton also has an interaction boundary. This does not mean a hard shell. It m
 
 Taken together, these degrees of freedom allow vortons to be neither static abstractions nor disguised particles. They are stable primary topologies capable of relation, orientation, persistence, and participation in larger structures.
 
-The current sandbox T1-coupling programme (Chapter 45) attempts to expose this layer by representing T1-to-T2 coupling through a small set of descriptors: route count, closure topology, polarity mode, angular constraint, torsion mode, and distribution mode. These are *candidate* descriptors, not demonstrated physical primitives. They are the most plausible grammar categories the sandbox has been able to formulate so far.
+The re-anchored programme (Chapters 44–45) exposes this coupling layer topologically: bound vortons combine by additive quantised charge and by the *linking* of their knots, and their derived Fermi statistics force the shell structure of the resulting composites. This replaces the earlier sandbox's heuristic coupling descriptors (route count, closure topology, polarity mode, and the like), which were candidate grammar categories rather than demonstrated primitives.
 
 ## Chapter 20 — Vorton Slip and Reconfiguration
 
@@ -997,11 +997,24 @@ These boundaries are not merely defensive. They are constructive. They prevent t
 
 # Part XIII — The Mathematical Modelling Programme
 
-## Chapter 43 — The Topology-Sandbox Project: Scope and Method
+## Chapter 43 — Re-anchoring: From Rule-Grammar Sandbox to Topological Substrate
 
-The RS framework has a computational counterpart. The **topology-sandbox** project, located in the public `~/domains/Relational-Substrate` repository (consolidated there in 2026-06 from the earlier `AMS/research/topology-sandbox` working copy), is the active modelling programme for the framework. This chapter introduces its scope, its method, and the disciplines it observes.
+The RS framework has a computational counterpart, and in 2026-07 that counterpart was **re-anchored**. This chapter records what the earlier modelling programme was, why it was retired as the framework's working spine, and what replaced it. The re-anchoring changed the *model*, not the *ontology*: the ontology of Part VI (the vorton as a *stable torsional knot-state*, Chapters 17–19) is unchanged and, if anything, vindicated — the new programme models it with the mathematics that "knot-state" language always pointed to.
 
-**What the sandbox is.** A browser-based JavaScript/Node.js project that implements a visual rule-grammar for the RS vorton/admissibility model. It includes a small interactive UI for exploring how candidate closed and transient forms interact under varying admissibility conditions, plus a batch analysis infrastructure (now over 170 analysis scripts) that runs sweeps, calibrations, and benchmarks against reference data.
+**What the earlier programme was.** The **topology-sandbox**: a browser-based JavaScript/Node.js project implementing a heuristic closure-gate rule grammar for the vorton/admissibility model. It scored configurations with six hand-weighted metrics (closure, return, bounded, coherence, reseat, leakage) combined into an identity score, calibrated those weights so that reference molecular geometries out-ranked generated perturbations and decoy controls, and ran source-anchored *ordering* benchmarks (H₂O₂ and ethane torsion, ionic lattices, silicate networks, surface scattering). It was an inspectable rule grammar, not a learned model, and it stayed carefully on the right side of the ontology boundary.
+
+**Why it was retired as the spine.** Honestly, two reasons, both recorded in the programme's own validation status.
+
+1. *It could calibrate, but not derive.* Against static physical observables the grammar was *fitted*, not used to predict; its one clean external pass (a held-out refractive index) reduced to an established chemistry method. The result was consistency at best, never independent evidence — a first-order, near-linear scoring apparatus incapable of magnitude or structure.
+2. *It drifted from the stated objective.* Seeking a distinctive, non-borrowed prediction, the programme settled on a **path-dependent order effect** — a "gentle-then-harsh preserves identity better" lens — and pursued it across metal fatigue, cardiac preconditioning, wildfire, and stress-resilience. That work was real and pre-registered, but it is a *directional lens over resilience phenomena*, and it was a drift away from the framework's actual objective: a substrate account of **atoms, light, electricity, and magnetism**. It is archived, not deleted, and is no longer the spine.
+
+**The correction.** Chapters 17–19 define the vorton as a stable torsional knot-state whose identity is carried by *winding and linking* — a topological object. The re-anchored programme takes that literally and models the vorton with the mathematics of **topological solitons**: the lineage from Kelvin's vortex atom through the Skyrme model to **Hopfions** (closed, twisted, toroidal field-solitons whose identity is an integer linking invariant), with **geometric algebra** as the downstream language for the field-level expressions. The ontology already committed to a knot-state that is "not merely a soliton" but ontologically primary (Chapter 17); topological-soliton theory supplies its *equations and invariants* without demoting that ontological rank. This is *ontology before model*: the model was brought into alignment with the ontology, not the reverse.
+
+**Method.** The re-anchored programme is *conceptual and coherence-based before it is numerical*. Because the substrate is non-material — not accessible to the send/transmit/receive of ordinary perception — it can only be described through *coherence*. The method therefore strips the buried assumptions (material, metric, background-space) out of borrowed mathematics, keeps only the background-free patterns, correlates patterns across independent models, and measures progress as **containment** of the admissible pattern-space rather than as fit. Invariants come before magnitudes; **no parameter is fitted**; every step carries a pre-registered falsifier. Only once the conceptual scaffold was tight did the programme touch computation.
+
+**Guardrails, unchanged.** T0 is not simulated. No material middle layer is inserted between T0 and T1 vortons. Model outputs are never treated as proof of RS.
+
+**Where the work lives.** The re-anchored programme is documented in the repository's `docs/` (the coherence-topology scaffold and its containment ledger; a decision log recording each choice with rationale; a completion summary) and exercised in `instantiation/` (explicit parameter-free computations). Appendix C's run catalogue documents the retired sandbox and is now **historical**.
 
 **What the sandbox is not.** A direct simulation of T0 (the deepest substrate). A particle simulator. A chemistry, physics, or material simulator at the conventional sense. A proof of RS. Each of these non-claims is enforced by an explicit guardrail in the project's modelling-assumptions report; the sandbox is built to stay on the right side of the ontology boundary.
 
@@ -1023,156 +1036,58 @@ The RS framework has a computational counterpart. The **topology-sandbox** proje
 
 **Public status.** The project is currently a research workbench, not a published library. It is versioned, it has an explicit assumptions report, and it generates milestone reports designed for external review. The current external-review milestone explicitly requests adversarial scrutiny and lists open questions.
 
-## Chapter 44 — Closure-Gate Metrics and the Alignment Tier
+## Chapter 44 — The Coherence-Topology Scaffold: Structural Results
 
-The sandbox's core computation produces seven scalar metrics for any given configuration: **closure**, **return**, **bounded**, **coherence**, **reseat**, **leakage**, and **identity score**. This chapter shows how those metrics correspond to the alignment tier introduced in Part X.
+The re-anchored programme was built, first, as a *conceptual scaffold* — a graded sequence of topological thought experiments, each adding containment, none yet numerical. This chapter records what that scaffold derived. The striking feature is that a single ontological choice about the ground state forces a long chain of *structural* results — signs, discreteness, quantisation, complementarity — with no fitted parameter anywhere.
 
-**The metrics, with their RS interpretation:**
+**The ground state.** The scaffold begins in darkness: not emptiness, but the substrate *at rest*. That rest state is a definite thing — a continuous medium carrying a uniform **rest orientation**, an unoriented director (an axis with no preferred head, values in the projective plane RP²) filling a three-dimensional bulk. This rest orientation is precisely the **magnetic constraint geometry of Axiom M1 in its ground state**. Light (Operation A) is a propagating perturbation of this grain; a vorton (Operation D) is a place where the grain folds, returns, and *self-links* into a closed knot.
 
-- **Closure** — the degree to which the configuration's loop is self-completing. Operationally, this measures how well operation D (closure formation) succeeds for this configuration under the given conditions.
-- **Return** — the degree to which propagation through the configuration returns coherently along the closure path. Operationally, this measures the route's capacity to support operation A (propagation) without breakdown.
-- **Bounded** — the degree to which the configuration remains locally contained rather than diffusing. Operationally, this captures the first closure condition stated in Chapter 17 (local boundedness).
-- **Coherence** — the degree to which propagated patterns retain their identity across the configuration. Operationally, this captures the substrate's capacity to support operation A through a region without scattering or storage loss.
-- **Reseat** — the degree to which the configuration can accommodate operation B (reconfiguration) without losing identity. Operationally, this is the dynamic stability envelope.
-- **Leakage** — the degree to which the configuration loses coherence to its environment. Operationally, this is an inverse measure of identity persistence and an early proxy for operation E (dissolution) dynamics.
-- **Identity score** — a weighted combination of all six, returning a scalar between 0 and 1. Operationally, this is a practical alignment measure.
+**The choice is the corner-stone, because it selects the mathematics.** An orientation field is a map into a sphere of directions, which is exactly the field of the **Hopfion** — so the topological-soliton description is *derived* from the ontology, not imported. From this one choice the following results follow in order, each could-fail and none calibrated:
 
-The **identity-preservation threshold** in the sandbox is `identity_score ≥ 0.62 AND closure_stress < 0.62`. This is the model's operational answer to "does this configuration remain itself under these conditions?" It is the most direct quantitative analogue, to date, of the framework's alignment-vs-strain dynamics.
+- **Layered identity.** A vorton carries three stacked topological invariants: a two-valued **spin** (the fundamental group of RP² is ℤ₂), an integer **charge** (the second homotopy group is ℤ), and the **knot** itself (the third homotopy group is ℤ — the Hopf number).
+- **The vorton is a spin-½ fermion.** By the Finkelstein–Rubinstein construction, a 2π rotation of the vorton equals the exchange of two vortons equals the same ℤ₂ element — so it quantises as a spin-½ fermion. The same ℤ₂ gauges the *sign* of its charge (Volovik–Mineev). Fermionic matter is thus available *from the grain*, not inserted.
+- **Electricity and magnetism are one object, split.** The director defines a single emergent field 2-form, the bivector `F = n·(dn ∧ dn) = E + I·B` (this is where geometric algebra earns its place). Its *held* part is **magnetism** (Operation C: a static twist whose handedness is polarity — hence dissipationless, "north and south the opposite chirality of one held configuration"); its *dynamic* part is **electricity** (Operation B: the moving, re-routable reconfiguration). Because `F` is a pullback, `dF = 0` *identically* — and in four dimensions that is exactly the homogeneous half of Maxwell's equations: **no magnetic monopole, and Faraday's law (electromagnetic induction), are derived rather than assumed.** This is the first genuine instalment of the Maxwell equation-equivalence that earlier framings named only as a distant goal.
+- **Electric charge is quantised.** The mere existence of the emergent magnetic sector forces Dirac's quantisation condition on electric charge, and the Witten effect fixes the resulting dyon spectrum — both parameter-free.
+- **A species lattice.** The Hopf number is the self-linking (helicity) of the charge flux, a quadratic form on the constituent windings. Vorton kinds therefore live on a discrete lattice — the **vorton species mathematics** the framework has always required.
+- **Atoms, structurally.** Bound vortons carry additive quantised charge (a neutral atom is a charge-balanced cluster), and the *derived* Fermi statistics force Pauli exclusion, hence shell structure — the periodic organisation of matter as a structural consequence of the substrate's grain.
 
-**Closure stress** is the sandbox's strain measure. It is computed as a weighted combination of stored strain, scattered strain, and (1 − reseat) — i.e., the strain the configuration is holding that has not been released through clean propagation or reseating. When closure stress exceeds 0.62, the model treats the configuration as at risk of identity loss even if the identity score is otherwise acceptable.
+Every one of these is *structural*: a sign, a discreteness, a conserved integer, a complementarity — never a magnitude. That restriction is deliberate (invariants before magnitudes), and it is what lets the whole chain proceed without a single calibration. The full scaffold, with its containment ledger and pre-registered falsifiers, is recorded in `docs/`.
 
-**The outcome partition** (admitted, returned, stored, scattered) is the sandbox's way of decomposing what happens when an open transient meets a closed form under given conditions. *Admitted* corresponds to clean admission into closure (operation D succeeds). *Returned* corresponds to clean reflection or return (operation A with boundary mismatch redirects rather than admits). *Stored* corresponds to strain that the configuration holds without resolving (the system has not yet decided whether the encounter will close, dissipate, or scatter; this is the regime where the framework's alignment dynamics are most visible). *Scattered* corresponds to fragmentation — the encounter produces incoherent dispersion (a primitive form of operation E at the boundary).
+## Chapter 45 — Instantiation: Explicit Parameter-Free Computations
 
-**Where the closure-gate metrics map to the operations typology:**
+Only once the conceptual scaffold was tight — the containment ledger closed as far as topology honestly allows — did the programme touch computation. This chapter records that instantiation. The governing rule was unchanged from the scaffold: **no fitted parameter, ever.** Each check is a construction whose outcome is forced by topology, so it can only pass or fail; it cannot be tuned.
 
-| Sandbox metric | RS operation |
-|---|---|
-| closure | D (closure formation) |
-| return + coherence | A (propagation) |
-| reseat | B (reconfiguration, within stability) |
-| bounded + (1 − scattered) | C (alignment adjustment / boundary management) |
-| leakage + stored-strain dynamics | E (dissolution, partial) |
+Five checks have been run, each parameter-free and each capable of failing:
 
-The mapping is partial because the sandbox is at the closure-gate level, not at the full operations level. But the alignment of metrics to operations is direct enough that the sandbox can be read as a first-generation operationalisation of the alignment tier — even though it was developed before the alignment tier was formally articulated.
+1. **The vorton's identity is an integer.** An *explicit* elementary Hopfion director field, built by composing the standard maps from three-dimensional space onto the two-sphere of directions, computes its Hopf number to `0.9998` — the integer 1 — and does so *independently of the configuration's physical size*, exactly as a topological invariant must. The identity the ontology asserts is therefore real and computable, not merely posited.
 
-**Why this matters.** The framework's transformation tier (Parts VIII–X) was developed partly in response to the question: *what would the sandbox be computing, if it had a clearer ontology behind it?* The closure-gate metrics existed first; the operations typology and alignment tier articulate the ontology those metrics presuppose. The sandbox is therefore not an after-the-fact toy validation of the book; it is an active partner in the framework's development, and the two are co-iterating.
+2. **The species arithmetic holds.** The type-(p,q) construction computes Hopf number equal to the product `p·q` across a family of cases — confirming the quadratic combination rule that gives the vorton species their discrete lattice.
 
-## Chapter 45 — Current Status: Calibration, Decoy Controls, External Benchmarks
+3. **The emergent magnetic sector is real.** A hedgehog configuration carries emergent flux exactly equal to its topological charge (an emergent magnetic monopole), while a *smooth* Hopfion carries none. This confirms both halves of the emergent-electromagnetism claim: the charge density *is* the emergent magnetic flux, and there is no magnetic monopole except at a singular hedgehog — the derived "no monopole" of Chapter 44 made concrete.
 
-This chapter records the state of the modelling programme at the time of writing (RS v2, master draft v1). It is intentionally precise about what has been achieved, what is in progress, and where the genuine uncertainties lie. The status will move; the discipline of recording status precisely should not.
+4. **The half-charge mechanism works.** A single fermionic mode in the hedgehog background binds exactly one topologically protected zero mode, giving the induced half-charge that underlies the vorton's fermionic statistics and its charge quantisation. In the trivial regime it binds none — a correct control.
 
-**Scale of the programme as of the most recent run:**
+5. **Statistics follow parity.** With `N` such modes the bound-state count is `N`, so the induced charge is `N/2` and the statistics is fixed by whether `N` is odd (fermion) or even (boson).
 
-| Area | Metric | Value |
-|---|---|---|
-| T2 coordinate bench | molecules | 30 |
-| T2 coordinate bench | coordinate iterations | 1,406,250 |
-| T2 calibration | families | 11 |
-| T2 calibration | all families pass current sanity check | yes |
-| T2 decoy controls | controls | 7 |
-| T2 decoy controls | all references beat decoys | yes |
-| T1 sweep | candidates tried | 14,417,920 |
-| T1 sweep | accepted | 6,348,375 |
-| T1 sweep | rejected | 8,069,545 |
-| T1 local refinement | candidates tried | 33,125 |
+**What these establish, and what they do not.** They establish that the *mathematics and the mechanisms* of the framework's modelling account are real and computable — the identity, its arithmetic, the emergent magnetic sector, the half-charge, the parity of statistics — by explicit construction rather than by assertion or by fitting. They do **not** establish the physics of our world: no measured quantity of nature (no coupling strength, no mass, no spectral value) has been reproduced, and none was attempted. These are checks on the framework's internal mathematics, not on its correspondence to measured reality. The computations, with their code and honest caveats, live in the repository's `instantiation/` directory.
 
-**What this means in plain language.** The model can take 30 reference molecules (covering 11 structural families — diatomic covalent, bent polar, trigonal pyramidal, linear triatomic, etc.), score their classical geometries against generated perturbations and explicit decoy controls, and rank them correctly. All families pass; no decoy beats a reference; weak controls are not present. The T1 coupling sweep has attempted over 14 million candidate parameter combinations and admitted roughly 6 million through the guardrails. The local refinement sweep is a smaller, denser pass around the best candidates.
+## Chapter 46 — Honest Standing and the Frontier
 
-**What is calibrated.** T2-level family weights, geometry-based scoring grammar, coordinate-feature distributions. Calibrated means: family-specific weights are tuned so the score grammar correctly ranks reference cases above all sampled perturbations and decoys without per-molecule tuning.
+This chapter records, precisely, what the re-anchored programme has and has not established, and where the genuine risk lies. Two kinds of confidence must be kept strictly apart, and conflating them is exactly the error the re-anchoring exists to avoid.
 
-**What is not calibrated.** T1 coupling parameters are explored, not calibrated. The current T1 work tests whether candidate descriptor sets can predict T2 family targets within bounded residuals; residuals are reported, not minimised. There is no claim that the current T1 parameters are correct; the claim is that the parameter space is bounded enough to be searched.
+**Internal coherence — high, and earned.** From one ontological choice about the ground state, a long, self-consistent chain follows: fermionic matter, quantised charge, the electromagnetic field as one split object with half of Maxwell derived, a species lattice, and the shell structure of atoms — several of these *derived without any calibration*, and five of the underlying mathematical facts confirmed by explicit parameter-free computation. This is a real and substantial tightening of the framework's internal structure, well beyond the qualitative ordering the earlier programme could reach.
 
-**Focused diagnostics** are the most pressure-bearing parts of the current work. Each is a targeted test that the model can be wrong about, and the model's behaviour is recorded honestly:
+**Empirical correctness — low, and capped.** No measured quantity of our world has been reproduced. Every magnitude — the strengths of the couplings, particle masses, binding energies, spectral values — is a dynamical input that the topology does not fix, and all are deliberately out of scope. The substrate itself, though motivated (it yields spin, gives magnetism its ground-state geometry, and respects background-independence), remains **chosen, not proven**. Tightening internal coherence is not the same as confirming physics, and the framework does not claim otherwise.
 
-- *Ethane torsion:* weakest eclipsed-decoy penalty 0.195. The model distinguishes staggered from eclipsed but the steric crowding feature is currently too flat for full rotatable-conformer work.
-- *Peroxide torsion:* lowest near-reference penalty 0.0255; lowest nonlocal penalty 0.1166. The refined nonlocal frontier remains at 0.1166. Peroxide mixes torsion, polarity, and H-H separation; the score grammar handles this reasonably but not strongly.
-- *Ionic lattice (NaCl, LiF):* alternating-charge lattice grammar separates ordered lattice from same-charge or collapsed decoys. Diagnostic; not a crystal-physics model.
-- *Silicate network:* graph-level tetrahedral network grammar separates fused-silica, sodium-silicate, and aluminosilicate reference from fragmented, modifier-clustered, or charge-uncompensated decoys. Diagnostic; not a glass simulator.
-- *Mixed modifier:* route-level mixed-modifier order separates distributed compensated transport from single-modifier dominance, clustered modifier islands, depleted corridors, and overcompensated field traps. Diagnostic; not a diffusion model.
-- *Boundary transition:* route-level boundary order separates ordered entry/release from diffuse scatter, trapped loops, wrong-way return, and phase-broken transmission. Diagnostic; not an optics model.
-- *Phase continuity:* route continuity carries phase memory, not merely apparent transmission. Diagnostic; not wave-optics.
-- *Roughness scatter:* roughness-controlled specular/diffuse transition is correctly identified across smooth/intermediate/high-roughness regimes. Held-out diagnostic.
+**What re-anchoring achieved against the earlier frontier.** Earlier statements of this chapter named equation-equivalence to Maxwell, a vorton-species mathematics, and a commitment on substrate dimensionality as distant goals. Each has now been *engaged at the structural level*: the homogeneous half of Maxwell's equations (no magnetic monopole, and Faraday's law) is derived from the emergent field bivector; the species lattice is the self-linking arithmetic of the charge flux; and the substrate is now committed to a definite form — a nematic director field, valued in the projective plane, in three dimensions. These are structural achievements, not quantitative ones, but they are the *right* frontier, now genuinely joined.
 
-**External benchmarks** are the part of the programme intended to expose the model to external scrutiny without circular calibration. Each benchmark has predeclared pass/fail criteria and an explicit source anchor:
+**The deepest open question, and its honest risk.** The fermion result and the charge quantisation that depends on it rest on the substrate occupying a particular class — technically, an *odd* fermionic sector (the value θ=π). That value is **not a free knob**: it is the same topological invariant as the vorton's derived fermionic statistics, and nothing was tuned to obtain it. But it is also **not forced**: the generic way a three-component order parameter fractionalises yields the *opposite* class (an even sector, giving a *bosonic* vorton), which would collapse the fermion-and-charge chain. This is a genuine vulnerability, recorded rather than concealed. It means the fermion and charge-quantisation results hold *only under an assumed, non-generic, could-fail condition* — and it lowers, honestly, the confidence those two results may carry. Settling it requires a concrete microscopic model of this substrate, and that inquiry could come out negative.
 
-- *H2O2 torsion (qualitative):* tested against published H2O2 equilibrium angle and cis/trans torsional barrier ordering. The diagnostic correctly orders the qualitative facts.
-- *H2O2 torsion (quantitative):* tests the H2O2 equilibrium torsion angle as a non-scaled numeric target. Reports compression of the cis/trans barrier ratio as a quantitative caveat.
-- *Ethane torsion (qualitative):* tested against published staggered/eclipsed ordering and threefold periodicity. Correctly ordered; rough 2.9 kcal/mol barrier reported as ordering benchmark, not energy fit.
-- *Ethane torsion (quantitative tolerance):* tests the normalized torsion shape against a predeclared broad tolerance around a simple threefold reference. Quantitative tolerance check, not fitted energy model.
-- *Ionic lattice:* tested against published rock-salt unlike-neighbour ordering for NaCl and LiF. Ordering benchmark, not lattice-energy.
-- *Boundary blind:* predeclared boundary/phase ordering prediction compared against published optics expectations. Records boundary continuity and rough-surface scattering ordering.
-- *Silicate held-out:* held-out material-family prediction evaluated against published silicate network continuity, non-bridging oxygen / modifier structure, and aluminium charge compensation facts. Graph-level ordering benchmark.
-- *Roughness held-out:* held-out interface prediction evaluated against published roughness-controlled specular and diffuse scattering facts.
-- *Material NBO/T quantitative:* exact non-bridging-oxygen-per-tetrahedron charge-balance accounting for simple silicate and aluminosilicate compositions. Quantitative composition accounting, not measured property prediction.
+**Discipline preserved.** The guardrails stand: T0 is not simulated; no material middle layer is inserted between T0 and T1 vortons; model outputs are never proof of RS. The claim-status discipline stands: each result is marked derived, mechanism-verified, structural, or open, and new claims are recorded in the modelling docs rather than smuggled into the ontology chapters. And the ontology-first method stands: a modelling success that contradicted the ontology would pressure the ontology to clarify, never be accommodated by silent drift.
 
-**What this collectively warrants.** Internal model coherence at the level of qualitative ordering across the cases sampled. Some quantitative composition accounting (NBO/T) and some predeclared quantitative tolerance benchmarks (ethane normalized torsion shape, H2O2 equilibrium torsion angle). It does *not* warrant the framework as physically derived; that is a different and much higher bar.
+**What structural equation-equivalence would and would not prove.** That RS can derive the homogeneous Maxwell equations from its emergent field is evidence that the framework is *consistent with* classical electromagnetism at the level of effective description. It is *not* proof that RS is the correct underlying ontology — multiple ontologies can underwrite the same effective equations. Structural equation-equivalence is a necessary test, never a sufficient one; ontological clarity (Chapter 49) is a different test, and one no derived equation set can settle.
 
-**Honest weaknesses to date.** The frontier report flags the weakest current diagnostics (eclipsed-ethane penalty, peroxide nonlocal frontier) and lowest-confidence T1 residuals. These are not hidden. The frontier exists as a tool for choosing the next modelling target without tuning blindly. The external-review milestone summary records the open questions explicitly.
-
-**What this does for the book.** The technical book can refer to the modelling programme as a working laboratory, not as a finished mathematical apparatus. The framework's claims are not awaiting validation; they are also not claiming validation. The modelling programme is an active partner whose state will move and whose state matters for what the book can responsibly say.
-
-**Update (2026-06): a held-out material property, the grammar's own order effect, and the lens standing.** Three developments since the snapshot above sharpen — rather than overturn — the status recorded here. The canonical statement is `docs/relational-substrate-validation-status.md`.
-
-- *Held-out refractive index, completed and honestly bounded.* A source-locked structural refractive-index predictor was built and run on a fresh held-out mineral (wollastonite-1A, a 2026 open-access source). It predicted the measured mean index to within ~0.003, beating a structure-blind control. But the predictor reduces to the established Shannon–Fischer (2016) electronic-polarizability method, so the pass is **consistency with established crystal chemistry, not independent evidence** for the topology grammar. By the Appendix D vocabulary it is an *external benchmark* that passed as a *consistency check*; it does not raise the framework's confidence. Mineral refractive index is, on this evidence, effectively closed for *novel* grammar evidence.
-
-- *The grammar's own distinctive prediction, corroborated on real data.* The one observable the grammar predicts that mature reductionist theories do not is **path-dependent identity persistence**: a directional *order effect* in which a gentle-then-harsh history preserves identity better than harsh-then-gentle ("coaxing"). This was derived from `simulateSequence` and then tested, pre-registered, against open fatigue data (Ti-6Al-4V ELI, CC0). The grammar's predicted direction holds **both-sided** — gentle-first orderings sustain more cumulative damage (Miner sum > 1), harsh-first less (< 1) — beating the order-*independent* linear-damage (Miner) baseline, which predicts no order effect. This is the framework's **first cross-domain, pre-registered, real-data corroboration of a grammar-native prediction**, and it directionally corroborates the alignment-dynamics edges of Appendix E (`Misalignment + Persistence → Degradation`; `Misalignment + Restoration → HigherAlignment`).
-
-- *Magnitude is the ceiling: the grammar is a lens, not a quantitative predictor.* A magnitude test — including a graded-survival variant added precisely to rule out a binary-survival artifact — showed the grammar reproduces the *direction* of the order effect parameter-free but its *size* is ~30–50× too small; matching the magnitude requires amplifying the model's memory coefficients, i.e. a calibration, not a derivation. Established nonlinear cumulative-damage models still win on magnitude. The honest standing is therefore: **the RS grammar is a coherent, directional / conceptual lens — it predicts the direction of coherence effects across domains, with one such prediction now corroborated on real data, but it is not (yet) a quantitative predictor.** In Appendix D terms: "the grammar predicts the *direction* of identity-persistence effects" is *working / externally-corroborated*; "the grammar is a *quantitative* predictor" remains *frontier / open*. The confidence posture stays capped, and the conceptual ontology of Parts I–XII is unaffected by this — it concerns the modelling/validation layer only.
-
-## Chapter 46 — Frontier: From Qualitative Ordering to Equation Equivalence
-
-This chapter records the frontier work — what would have to happen for the modelling programme to move from its current qualitative-ordering stage to genuine equation equivalence with classical and modern physics. It also records the work the framework needs in order to mature beyond its current draft state.
-
-The frontier is organised by ambition level, from nearest-term to most distant.
-
-**Near-term (active items):**
-
-1. **Operation E dynamics.** The current sandbox treats dissolution mostly indirectly, through leakage and closure-stress. A direct operation-E module would model strain release dynamics, cascade propagation through coupled systems, and the distinction between bounded dissolution (which can be followed by restoration) and runaway dissolution (which produces degradation). This is the single biggest gap in the operations typology and the most direct way to put quantitative pressure on the alignment-dynamics axiom T4.
-
-    *Status.* The scoping document `operation-e-dissolution-scoping-2026-05-25.md` audits what the corpus says about dissolution, sharpens the working definition to four jointly necessary features, distinguishes three regimes (clean / partial / pathological), and identifies the five dynamic quantities that an implementation must compute (dissolution rate, release pathway, cascade threshold, restoration window, restoration trigger). The implementation specification `operation-e-specification-2026-05-25.md` then types the configuration state, the dynamics function signatures, the four conservation laws, and the algorithmic outline for the single-region case; it provides three worked examples (clean dissolution; partial dissolution with successful restoration; failed restoration after window expiry) that constitute the test bar for a correct single-region build.
-
-    *Recommended development sequence, in order:*
-    1. **Single-region dissolution module** (`src/dissolution.js` and `analysis/dissolution-single-region.mjs`) implementing the specification's typed state, the five dynamics functions, the phase machine with permitted transitions, and the three worked examples as integration tests. Conservation-law assertions and pathway-distribution tests run automatically.
-    2. **Two-region coupled dissolution.** Add the neighbour relation and coupling strength; activate the cascade-threshold function that the single-region case left as a stub. Test cascade-vs-containment prediction across a parameter sweep.
-    3. **N-region cascade dynamics.** Generalise to coupled networks. Benchmark against known cascade phenomena (percolation, network failure cascades, simple epidemic-style propagation).
-    4. **External benchmark suite for operation E.** Qualitative ordering benchmarks first (apoptosis vs necrosis, crack propagation regime, forest fire dynamics, trust collapse in institutions); quantitative tolerance benchmarks next (radioactive half-life ordering, crack velocity scaling, wound recovery time scaling); quantitative equation benchmarks as long-term goals (derivation of the second law of thermodynamics as an aggregate consequence; derivation of first-order decay law as a limiting case; correspondence to mature cascade mathematics).
-    5. **Integration with existing closure-gate metrics.** Configurations whose identity score is high but whose release pathway is cascading should be flagged differently from those whose identity score is high and whose pathway is clean. This requires the existing `model.js` to receive a small additive feedback from `dissolution.js` once the dynamics are reliable.
-
-    Each step preserves the existing discipline rules (no T0 simulation, no material middle layer, no claim of physical derivation) and produces explicit assumption documentation and frontier reports following the model the sandbox already uses. The work is now scoped and specified; implementation can begin.
-
-2. **Time as a first-class variable.** The current sandbox is largely static: it computes outcomes for given configurations rather than tracking how outcomes evolve under repeated operation. To assess restoration vs persistence trajectories quantitatively, the model needs to support dynamic runs in which closure stress accumulates or relaxes over discrete time steps. This is technically straightforward but introduces calibration questions about timescales and integration step size.
-
-    *Status (2026-06): partially moved to working.* `simulateSequence` now runs multi-step histories with memory carry, and the path-dependent **order effect** it produces was derived and then corroborated on real fatigue data (see Chapter 45 update). This makes the framework's restoration-vs-persistence claim *directionally* testable and tested. The calibration questions flagged here are now the binding ones: the magnitude test shows that turning this dynamic from a *directional* into a *quantitative* trajectory model still requires a timescale/effect-size calibration the framework does not yet derive.
-
-3. **Mathematical form of strain.** The current model treats closure stress as a single scalar. The framework's alignment tier suggests that strain may be tensor-like — different strain dimensions corresponding to different operation kinds. Formal work to test whether a scalar strain measure is sufficient or whether a tensor structure is needed would clarify what kind of alignment mathematics RS is actually committed to.
-
-4. **T1 coupling parameter convergence.** The T1 sweep has admitted 6.3 million candidates within guardrails. Refining toward a stable parameter regime that fits the T2 targets across all 11 families simultaneously — without per-family tuning — would substantially strengthen the T1 layer. The current local refinement work is the first step in this direction.
-
-**Medium-term (named but not yet started):**
-
-5. **Equation equivalence to Maxwell.** The framework's account of operations A (light, propagation) and C (magnetism, alignment adjustment) needs to be shown equivalent in the appropriate limit to Maxwell's equations. This means: starting from the operations grammar and the substrate's torsion/alignment/closure capabilities, derive (or rigorously approximate) the wave equation, Gauss's laws, and Faraday's and Ampere's laws as effective descriptions of substrate behaviour in the field-level regime (Chapter 7's level 7 in the hierarchy). This is a substantial mathematical undertaking. It is the most direct way to test whether the operations typology is genuinely closed at the level of classical electromagnetism.
-
-6. **Equation equivalence to classical mechanics.** The framework's account of operation B (reconfiguration) and operation D (closure formation, identity persistence) needs to be shown to produce — in the appropriate limit — the conservation laws, equations of motion, and constitutive relations of classical mechanics. The vorton stability envelope and the alignment-strain dynamics should reduce to the macroscopic conservation of mass-energy and momentum.
-
-7. **Equation equivalence in the quantum regime.** Substantially harder. The framework's account of identity-as-invariant-organisation, of stability-envelope dynamics, and of the closure-gate threshold non-linearity may eventually be shown to correspond — in the appropriate regime — to features of quantum mechanics (discrete energy levels as closure-gate solutions; superposition as transient aether structure; measurement as forced operation B or D). This is currently speculation rather than work in progress; no formal mapping exists. It is named here because the framework is explicit that classical equation equivalence is necessary but not sufficient.
-
-**Long-term (frontier of the frontier):**
-
-8. **Vorton species mathematics.** The framework's commitment to vorton species (Chapter 17) requires that vorton kinds be discriminable in principle by invariant topology, stability envelope, coupling behaviour, and permitted reconfiguration modes. The full mathematical catalogue of admissible vorton classes — analogous to a periodic table but at the primary topological level — would be a major derived result. Current T1 work touches this but is many steps short of it.
-
-9. **Substrate dimensionality and topology.** The framework treats the substrate as continuous and relational but does not commit to a specific dimensionality or global topology. Whether the substrate is best modelled as a continuum with specific local structure, as a graph with very high connectivity, as a manifold with non-trivial global topology, or as something else, is open. Different choices have different downstream consequences for what mathematics applies.
-
-10. **The four closure conditions in formal terms.** Chapter 17 stated four conditions for vorton closure: local boundedness, distributed coherence, closed return-path, admissible neighbourhood. These are currently stated in ontological language. Translating them into mathematical conditions (probably in terms of local energy/strain balance, return-path topology constraints, and admissibility-region characterisation) is one of the necessary steps for deriving classical equation equivalence.
-
-**Discipline notes for the frontier.**
-
-- The frontier work should preserve the existing guardrails. No work that requires inserting a material middle layer between T0 substrate and T1 vortons. No work that treats T0 as directly simulated. No work that treats sandbox outputs as proof of RS.
-- The frontier work should preserve the claim-status discipline. Each new piece of work should be classified as *foundational*, *working*, *interpretive*, *sanity check*, *focused diagnostic*, or *external benchmark*; new claims should be added to Appendix D rather than smuggled into existing chapters.
-- The frontier work should preserve the ontology-first method. A modelling success that contradicts the ontology should pressure the ontology to clarify, not be accommodated by silent ontological drift.
-
-**A note on what equation equivalence would and would not prove.** If RS, starting from its operations typology and alignment dynamics, can be shown to derive Maxwell's equations in the appropriate limit, that is evidence that RS is *consistent with* classical electromagnetism at the level of effective description. It is *not* proof that RS is the correct underlying ontology. Multiple ontologies can underwrite the same effective equations. Equation equivalence is a necessary test for the framework, not a sufficient one. The framework is also committed to ontological clarity (Chapter 49), which is a different kind of test, and one that no derived equation set can settle.
-
-**The book and the code, going forward.** This volume should be read as the framework's current snapshot. The sandbox is the framework's current laboratory. Both will move. The discipline of the modelling programme is that progress in either should be recorded honestly in both, so that the framework as a whole maintains the kind of claim-status integrity that an open-ended research programme requires. The AI-assisted authorship style that makes this volume living also makes that integrity practical to maintain. The next version of this book will record what has moved.
+**The book and the code, going forward.** This volume is the framework's current snapshot; the modelling programme is its laboratory. Both will move, and progress in either should be recorded honestly in both — including, as here, when deeper analysis *lowers* a confidence rather than raising it. That integrity, not the accumulation of successes, is what an open-ended research programme owes its readers. The next version of this book will record what has moved.
 
 ---
 
@@ -1270,7 +1185,7 @@ Any proposed vorton species should in principle be discriminable by:
 - permitted reconfiguration modes
 - relation to secondary material regimes
 
-This book does not claim to have completed the mathematical catalogue of vorton species. It states the ontological requirement that such discrimination must be possible if vortons are to do the explanatory work assigned to them. The topology-sandbox programme has begun work on this requirement at the T1-coupling level; see Chapter 45.
+This book does not claim to have completed the mathematical catalogue of vorton species. It states the ontological requirement that such discrimination must be possible if vortons are to do the explanatory work assigned to them. The re-anchored modelling programme has begun this at the level of the species-lattice arithmetic — the self-linking of the charge flux — and confirmed it computationally; see Chapters 44–45.
 
 ## A.4 Core Axioms (RS v2)
 
@@ -1432,6 +1347,8 @@ Introduced by `benchmark-suite-design-2026-05-25.md`.
 ---
 
 # Appendix C — Modelling Programme — Run Catalogue and Output Locations
+
+> **Historical (pre-2026-07).** This appendix catalogues the retired JavaScript **topology-sandbox** — the heuristic closure-gate/calibration programme that was superseded when the modelling work was re-anchored on topological-soliton mathematics (Chapter 43). It is preserved for provenance. The current programme's artifacts are the coherence-topology scaffold and decision log in `docs/`, and the parameter-free computations in `instantiation/` (Chapters 44–46).
 
 The topology-sandbox project supports the runs listed below. Each is invoked from the project root (`~/domains/Relational-Substrate`). Output files (markdown and JSON) appear in `analysis/out/`. The README at the project root remains the authoritative source. The catalogue below is representative, not exhaustive — the programme now has over 170 analysis scripts; the validation tracks added since the original catalogue are summarised under *Held-out validation tracks* below.
 
