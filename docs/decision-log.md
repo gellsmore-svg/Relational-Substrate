@@ -216,4 +216,10 @@ per-case calibration. Code + results in [`../instantiation/`](../instantiation/)
   charge-quantisation argument. (~2–5% excess in the hedgehog case is
   finite-difference discretisation, rounding to the integer.)
 - **Next:** the θ=π generation conditional — needs a microscopic action (integrating
-  out the fermionic sector), a materially bigger step than tests 1–3.
+  out the fermionic sector), a materially bigger step than tests 1–3. **Scoped** in
+  [`theta-generation-scope-2026-07-13.md`](theta-generation-scope-2026-07-13.md):
+  mechanism = Abanov–Wiegmann (θ=Nπ ⇒ θ=π needs an *odd* Dirac sector); pivotal fork
+  = is that sector *intrinsic* (CP¹ spinon, one-substrate) or *added* (ontology
+  cost); concrete could-fail check (WP-B) = a Dirac operator in the test-3 hedgehog
+  → Jackiw–Rebbi zero mode / induced charge ½. Unlike tests 1–3 this can genuinely
+  fail/stall; N must be *forced*, never tuned to π.
