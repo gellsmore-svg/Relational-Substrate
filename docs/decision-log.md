@@ -215,11 +215,21 @@ per-case calibration. Code + results in [`../instantiation/`](../instantiation/)
   singular hedgehog" is confirmed — which is also the *premise* of the Dirac
   charge-quantisation argument. (~2–5% excess in the hedgehog case is
   finite-difference discretisation, rounding to the integer.)
-- **Next:** the θ=π generation conditional — needs a microscopic action (integrating
-  out the fermionic sector), a materially bigger step than tests 1–3. **Scoped** in
-  [`theta-generation-scope-2026-07-13.md`](theta-generation-scope-2026-07-13.md):
+- **θ=π scoped** in [`theta-generation-scope-2026-07-13.md`](theta-generation-scope-2026-07-13.md):
   mechanism = Abanov–Wiegmann (θ=Nπ ⇒ θ=π needs an *odd* Dirac sector); pivotal fork
   = is that sector *intrinsic* (CP¹ spinon, one-substrate) or *added* (ontology
-  cost); concrete could-fail check (WP-B) = a Dirac operator in the test-3 hedgehog
-  → Jackiw–Rebbi zero mode / induced charge ½. Unlike tests 1–3 this can genuinely
-  fail/stall; N must be *forced*, never tuned to π.
+  cost). Two work packages: WP-B (numeric, buildable) and WP-A (analytic origin).
+- **Test 4 (WP-B) — Dirac fermion in the hedgehog · PASSED, mechanism (2026-07-13).**
+  An 8-band Wilson–Dirac fermion with a degree-1 hedgehog mass (the test-3 `r̂`),
+  scanning the Wilson `M`: in the **topological windows** (M≈1.0, 2.5) the hedgehog
+  binds **exactly one** core-localised zero mode (`|E|≈0.02–0.03`, gap up to 0.80,
+  ≈79% core), and in the **trivial windows** (M=1.5, 2.0) **none** — the correct
+  control. So a single Dirac cone in the emergent-monopole background realises the
+  **Jackiw–Rebbi ½ = the θ=π Witten half-charge**, computed and could-fail. **But
+  this verifies the *mechanism*, not the *origin*:** the single fermion was inserted
+  by hand; whether the substrate *forces* an odd intrinsic Dirac sector (WP-A) is
+  still open. **Net: θ=π is now mechanism-verified, origin-open** — a *partial*
+  advance (scope §5), not full closure. (N=8 finite-size shifts the windows; modes
+  are near-zero not exactly zero.)
+- **Next:** WP-A — the *origin* question (does the CP¹ spinon supply exactly one
+  Dirac fermion?), research-scale, wider uncertainty.

@@ -86,6 +86,44 @@ charge-quantisation argument). The ~2–5% excess in (a) is finite-difference
 discretisation at the box faces (rounds to the integer); (b) is exact to five
 decimals.
 
+## Test 4 — WP-B: a Dirac fermion in the hedgehog → Jackiw–Rebbi zero mode · **PASSED (mechanism)**
+
+`hedgehog_dirac.py` builds an 8-band Wilson–Dirac fermion with a genuine degree-1
+**hedgehog mass** (the same `r̂` field as test 3) and diagonalises it (dense, N=8),
+scanning the Wilson parameter `M`. Jackiw–Rebbi: a *single* Dirac cone in a
+degree-1 hedgehog binds **exactly one zero mode** → induced charge ½ = the θ=π
+Witten half-charge (see [`../docs/theta-generation-scope-2026-07-13.md`](../docs/theta-generation-scope-2026-07-13.md)).
+
+**Result** (grid 8³):
+
+```
+M=1.0  → 1 core zero mode, |E|=0.023, gap 0.215   (topological)
+M=1.5  → 0 zero modes                             (trivial)
+M=2.0  → 0 zero modes                             (trivial)
+M=2.5  → 1 core zero mode, |E|=0.027, gap 0.798   (topological, cleanest)
+M=3.0  → none clean
+```
+
+In the **topological windows** the hedgehog binds **one** mid-gap mode, localized
+at the core (≈79% within R/4, peak at the centre); in the trivial windows it binds
+none. **PASS** — a single Dirac cone in the hedgehog (emergent-monopole) background
+realises the Jackiw–Rebbi ½, i.e. the θ=π mechanism, computed and could-fail.
+
+### What this does and does not establish (honest)
+
+- **Does:** the *mechanism* is real and computable — an odd (single) Dirac cone in
+  the hedgehog gives induced charge ½ = θ=π (Abanov–Wiegmann N=1). Trivial regimes
+  binding no mode is a correct control.
+- **Does not:** settle **WP-A** — whether the *substrate itself* provides exactly
+  one such Dirac fermion (the CP¹-spinon parity). Here the single fermion was put
+  in **by hand**; θ=π is shown to *follow from* an odd Dirac sector, not yet shown
+  to be *forced/intrinsic*. So the θ=π conditional is now **mechanism-verified,
+  origin-open** — a partial advance, not full closure (scope §5, "PARTIAL").
+- **Finite size:** N=8 shifts the topological windows and leaves the modes
+  near-zero (0.02–0.03) rather than exactly zero; larger N would sharpen. The
+  qualitative JR signature (one core mode in topological windows, none in trivial)
+  is robust.
+
 ## Run
 
 ```bash
@@ -95,7 +133,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 ## Next instantiation tests
 
-1. *(Hardest, instantiation-level conditional)* whether **θ=π is generated**, not
-   inserted — the assumption behind the charge-quantisation and fermion results.
-   This one needs a microscopic action (integrating out the fermionic sector), not
-   just a field configuration — a materially bigger step than tests 1–3.
+1. **WP-A** — whether θ=π is *forced/intrinsic* (does the substrate's own CP¹ spinon
+   supply exactly one Dirac fermion?). WP-B verified the *mechanism*; WP-A is the
+   *origin*, and is research-scale (an induced-term / spectral-asymmetry derivation),
+   with genuinely wider uncertainty. See the θ-generation scope.
