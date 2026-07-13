@@ -41,6 +41,11 @@ sharp point — the *standard* fractionalisation does **not** give it:
 So a *natural* microscopic completion of a 3-vector order parameter tends to land in
 the **even / θ=0 / bosonic** class — the **opposite** of what the program needs.
 
+*Numerically confirmed* (`instantiation/theta_parity.py`, extending WP-B): N_f
+decoupled cones in the hedgehog bind N_f zero modes → induced charge N_f/2, so
+N_f=1 → ½ (fermion, θ=π), **N_f=2 → 1 (boson, θ=0)**, N_f=3 → 3/2 (fermion). Parity
+is what matters, and the standard N_f=2 dual is a boson.
+
 ## The deep finding — a consistency requirement with a real risk of tension
 
 Putting A and B together, honestly:

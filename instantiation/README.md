@@ -124,6 +124,20 @@ realises the Jackiw–Rebbi ½, i.e. the θ=π mechanism, computed and could-fai
   qualitative JR signature (one core mode in topological windows, none in trivial)
   is robust.
 
+### Parity check — `θ = N_f·π`, so even ⇒ boson (`theta_parity.py`)
+
+Supporting WP-A's Result B: `N_f` decoupled cones in the hedgehog bind `N_f` zero
+modes → induced charge `N_f/2`, so statistics is fixed by `N_f mod 2`:
+
+```
+N_f=1 → charge ½ → θ=π → fermion
+N_f=2 → charge 1 → θ=0 → boson
+N_f=3 → charge 3/2 → θ=π → fermion
+```
+
+**The standard N_f=2 fractionalisation is a *boson*** — confirming that the odd/θ=π
+class the program needs is non-generic.
+
 ## Run
 
 ```bash
