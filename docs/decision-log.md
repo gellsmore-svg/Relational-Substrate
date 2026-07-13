@@ -231,5 +231,19 @@ per-case calibration. Code + results in [`../instantiation/`](../instantiation/)
   still open. **Net: θ=π is now mechanism-verified, origin-open** — a *partial*
   advance (scope §5), not full closure. (N=8 finite-size shifts the windows; modes
   are near-zero not exactly zero.)
-- **Next:** WP-A — the *origin* question (does the CP¹ spinon supply exactly one
-  Dirac fermion?), research-scale, wider uncertainty.
+- **WP-A (the origin) — PARTIAL, with a flagged vulnerability (2026-07-13).**
+  Analysis in [`theta-origin-wpa-2026-07-13.md`](theta-origin-wpa-2026-07-13.md).
+  **Result A (positive):** θ=π ≡ the FR-fermion Z₂ (Wilczek–Zee `J=θ/2π`), so θ=π is
+  *locked to the derived statistics — not a free knob, never tuned.* **Result B
+  (honest limit):** *generating* θ needs an **odd** Dirac sector (Abanov–Wiegmann
+  Θ=Nπ), and this is **non-generic** — the standard order-parameter fractionalisation
+  (Néel–VBS fermionic dual, N_f=2, or bosonic NCCP¹) gives **even/θ=0 → a *bosonic*
+  soliton**, the opposite of what the program needs. **Net:** θ=π is *not an
+  independent input* but is **not forced by the substrate** either; a natural
+  completion could give the bosonic alternative and **collapse the fermion +
+  charge-quantisation chain.** **This qualifies (lowers confidence in) the
+  conceptual-phase fermion result:** FR shows fermionic quantisation is *allowed*;
+  θ=π *selects* it; the odd/θ=π class is an **assumed, non-generic, could-fail
+  condition** that must be carried explicitly wherever the fermion/charge results
+  are used. Settling it needs a concrete microscopic model of *this* substrate and
+  **could come out negative.**

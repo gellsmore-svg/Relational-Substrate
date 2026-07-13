@@ -35,11 +35,19 @@ chain ran, each rung could-fail-tested, none falsified, none calibrated:
 | T0 | darkness = substrate at rest, carrying a nematic axis (RP², 3D) | chosen (motivated) |
 | T1 | light = perturbation of the rest grain (Op A) | framed |
 | T2 | closure = vorton; layered identity π₁ spin / π₂ charge / π₃ Hopf | derived |
-| T2×T3 | vorton is a **spin-½ fermion** (Finkelstein–Rubinstein); spin gauges charge sign (Volovik–Mineev) | derived |
+| T2×T3 | vorton is a **spin-½ fermion** (Finkelstein–Rubinstein); spin gauges charge sign (Volovik–Mineev) | derived* |
 | T3 | magnetism = twist, electricity = writhe of one conserved `Lk`; induction = `Tw⇄Wr` | derived |
 | π₂–π₃ | species lattice; Hopf = helicity of the charge flux (`H = Σnᵢmᵢ + Σ2nᵢnⱼℓᵢⱼ`) | derived |
 | Crux (D9) | emergent EM: one bivector `F = n·(dn∧dn) = E+I·B`; **homogeneous Maxwell** (no-monopole, induction) from `dF=0` | derived |
-| Q-test | **electric-charge quantisation** (Dirac + Witten, θ=π) | derived, no calibration |
+| Q-test | **electric-charge quantisation** (Dirac + Witten, θ=π) | derived*, no calibration |
+
+> **\* Qualified by WP-A (2026-07-13, `theta-origin-wpa-…`).** The fermion result
+> (and the charge quantisation that uses θ=π) hold **only if the substrate sits in
+> the odd-Dirac / θ=π class.** FR shows fermionic quantisation is *allowed*; θ=π
+> *selects* it — and that class is **non-generic** (a natural fractionalisation
+> gives even/θ=0 → a *bosonic* soliton). θ=π is *not a free knob* (it equals the FR
+> Z₂) but is **not forced** by the substrate either; this is an assumed, could-fail
+> condition, and it **lowers** confidence in these two rungs.
 | T6 | binding → atoms: additive quantised charge + **Fermi exclusion → shells** + linking-bonds | derived (structure) |
 | T7 | light–vorton admissibility: gated by invariant conservation; discrete spectra structural | derived (structure) |
 
