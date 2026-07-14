@@ -114,7 +114,7 @@ This volume is the successor to *Aetheric Magnetic Substrate*. The rename to RS 
 
 ### Appendix A — Reference Summary of the RS Runtime Ontology
 ### Appendix B — Operation, Permission, Admissibility, Alignment Glossary
-### Appendix C — Modelling Programme — Run Catalogue and Output Locations
+### Appendix C — Modelling Programme Artifacts
 ### Appendix D — Claim-Status Map
 
 ---
