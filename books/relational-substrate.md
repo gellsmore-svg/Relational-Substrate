@@ -622,7 +622,7 @@ The key technical features:
 
 **The speed of light** is bounded by the substrate's transmissive constraints, but the framing can be sharpened. *c* is not a property of the propagating pattern; it is a property of the substrate itself — the maximum rate at which the substrate can propagate a coherent torsional disturbance, its own *relaxation speed limit* under runtime conditions. A signal at *c* is travelling at the upper bound of admissible substrate reseating for an operation-A propagation, not at the inherent velocity of a self-existing object. The frequency-independent character of *c* in vacuum, the universality of the bound across reference frames, and the impossibility of accelerating a closure (Part VI) past *c* without dissolution all follow from this single substrate-property reading rather than from special properties of photons. Light is therefore both more real and less object-like than classical intuitions often allow.
 
-**The sandbox treatment.** The topology-sandbox model handles propagation primarily through the *coherence* and *route* metrics. A pattern with high coherence in a region of high route continuity is being supported in propagation; a region of low coherence or low route is where propagation breaks down into scattering, return, or storage. The boundary-transition sweep and the phase-continuity sweep are the most developed treatments of operation A in the model; the roughness-scatter held-out benchmark tests whether the model correctly predicts the regime in which coherent specular transmission gives way to diffuse scatter as roughness increases.
+**In the topological model.** Propagation is a perturbation of the director grain that travels as an *unclosed, route-bearing* form — coherence carried along a route without self-linking. Light is its paradigm case: an open transient meeting closed vortons, whose outcomes (transmission, return, storage, scatter) are governed by coherence-compatibility and the conservation of the vortons' topological invariants rather than by energy alone (Part XIII).
 
 ## Chapter 27 — Operation B — Reconfiguration (Electricity)
 
@@ -640,7 +640,7 @@ The key technical features:
 
 **Charge-language remains useful but secondary.** The book's earlier statement of A7 ("electricity as reconfiguration, often mediated by vorton slip and constrained pathways") remains technically central. What is new in the operations layer is that electricity is now identified as the paradigm of a *type* of substrate change, alongside other instances of the same type (chemical state change, biological signalling, controlled material reshaping).
 
-**The sandbox treatment.** Reconfiguration in the sandbox is handled by the *reseating* metric and by the route/storage/scatter outcome partition. A high-reseat configuration is one in which the substrate can accommodate reconfiguration along the available routes without forcing dissolution; low reseat indicates that further reconfiguration will trigger fragmentation. The mixed-modifier sweep tests whether the model correctly distinguishes distributed compensated transport from clustered or depleted modifier regimes — a direct stress-test of route-level reconfiguration.
+**In the topological model.** Reconfiguration is the *writhe* of the emergent field — the re-routable, dynamic component of a vorton's electromagnetic bivector, the coiling of its route that can change while its identity (the conserved linking) does not. Electricity is its paradigm case, and the moving writhe is what the model identifies as the emergent electric field (Part XIII).
 
 ## Chapter 28 — Operation C — Alignment Adjustment (Magnetism)
 
@@ -660,7 +660,7 @@ What the operations layer adds is the recognition that magnetism is the paradigm
 
 **Inductance** is the macroscopic signature of held alignment. An inductor concentrates a region of substrate that can hold orientation when energy is supplied and release it as that orientation is allowed to dissipate. The energy is not stored in a literal container; it is held in the alignment state itself.
 
-**The sandbox treatment.** The sandbox handles alignment adjustment through the *boundary* and *coherence* metrics interacting with closure topology. The boundary-transition sweep tests whether the model correctly distinguishes ordered route splitting (well-managed alignment at an interface) from diffuse scatter (failed alignment), trapped release loops (alignment that won't dissipate), and phase-broken transmission (alignment that loses coherence across the boundary). These are early but explicit treatments of operation C dynamics.
+**In the topological model.** Alignment appears as the *held twist* of the emergent field — a static torsional geometry whose handedness is magnetic polarity. Because it is held geometry rather than active flow, it dissipates no energy; magnetism is its paradigm case, and "north and south the opposite chirality of one held configuration" is the model's reading of magnetic polarity (Part XIII).
 
 ## Chapter 29 — Operation D — Closure Formation (Vortons, Identity)
 
@@ -678,7 +678,7 @@ The key technical features:
 
 **The reverse of closure** is dissolution (operation E). The two operations together constitute the threshold dynamics by which identity comes into being and ceases to be. Closure formation is the upward transition; dissolution is the downward one. Most of the rest of substrate change — propagation, reconfiguration, alignment adjustment — happens *within* established closures.
 
-**The sandbox treatment.** Closure formation is the central focus of the sandbox model. The *closed forms* (circle, trefoil, double) represent candidate closure topologies; the *transient forms* (straight, sine, ribbon) represent open configurations; the model computes whether a meeting of open and closed under given conditions yields admittance into a stable closure, return without closure, storage of strain without closure, or scattering. The identity-score (combining closure, return, boundedness, coherence, reseating, leakage) is a quantitative proxy for "did operation D succeed under these conditions?" This is the most heavily instrumented operation in the sandbox.
+**In the topological model.** Closure formation is the birth of a vorton: a route of the director grain that returns and *self-links* into a stable knot. Its identity is not a scored proxy but a genuine topological invariant — an integer linking (Hopf) number — and this is the operation the model treats most fully, deriving from it the vorton's spin, charge, and species (Part XIII).
 
 ## Chapter 30 — Operation E — Dissolution / Unwinding
 
@@ -713,7 +713,7 @@ The three regimes are not visible in any single instant. A clean and a cascading
 
 **Theological note.** When the general volume treats corruption as the persistence of misalignment without restoration (general volume Chapter 26), it is using operation E in the pathological regime: dissolution that propagates rather than disperses, that the substrate's normal restoration dynamics fail to recover from. Corruption is not a separate operation; it is operation E in cascade mode. The five modes named in CBO Ch. 13 — degradation, fragmentation, inversion, counterfeit, parasitism — are five recurring patterns by which pathological dissolution unfolds, distinguished by what restoration would have to look like in each case and how the failure of restoration manifests. The structural account of evil therefore depends on, and now has, a developing account of operation E.
 
-**The sandbox treatment.** Dissolution is partially visible in the sandbox through the *leakage* metric and the closure-stress readout: a high-leakage, high-closure-stress regime is one in which identity is at risk of dissolution. But the sandbox has no time-evolution capability, and therefore no explicit dissolution-dynamics model: the focus to date has been on static outcomes for closure formation and admission. The single-region specification adds time-stepping, strain accounting, release-pathway distribution across operations A/B/C/D/E, and an explicit restoration-window mechanism. It is the first concrete bridge between the framework's alignment-dynamics axiom (T4) and a runnable model.
+**In the topological model.** Dissolution is the loss of a vorton's closure — the *unwinding* of its linking, so that its topological identity ceases to be defined. Because the model's identity is an integer invariant, dissolution is sharp: a structure either retains its linking or does not. This operation remains the least developed in the topological treatment and is named explicitly as open work (Part XIII).
 
 ## Chapter 31 — Resonance, Circuits, and Engineered Systems as Operation Compositions
 
@@ -1015,26 +1015,6 @@ The RS framework has a computational counterpart, and in 2026-07 that counterpar
 **Guardrails, unchanged.** T0 is not simulated. No material middle layer is inserted between T0 and T1 vortons. Model outputs are never treated as proof of RS.
 
 **Where the work lives.** The re-anchored programme is documented in the repository's `docs/` (the coherence-topology scaffold and its containment ledger; a decision log recording each choice with rationale; a completion summary) and exercised in `instantiation/` (explicit parameter-free computations). Appendix C's run catalogue documents the retired sandbox and is now **historical**.
-
-**What the sandbox is not.** A direct simulation of T0 (the deepest substrate). A particle simulator. A chemistry, physics, or material simulator at the conventional sense. A proof of RS. Each of these non-claims is enforced by an explicit guardrail in the project's modelling-assumptions report; the sandbox is built to stay on the right side of the ontology boundary.
-
-**Method.** The sandbox does three kinds of work:
-
-1. **Rule-grammar exploration.** The model implements a closure-gate rule system that takes inputs (closed form selection, transient form selection, scenario presets, slider settings for boundary compatibility, route continuity, storage, scattering, reseating) and produces outputs (outcome fractions: admitted, returned, stored, scattered; closure-gate metrics: closure, return, bounded, coherence, reseat, leakage, identity score; closure stress readout; identity-preserved verdict). The rules are explicit and inspectable; they are not learned parameters.
-
-2. **Calibration against reference geometries.** The sandbox uses known molecular geometries (currently 30 molecules across 11 families) as calibration anchors. It checks whether the closure-gate scoring ranks reference geometries above generated perturbations and against explicit decoy controls. Passing this check is *sanity*, not *physical derivation*: it shows that the rule grammar's internal logic does not contradict known geometry.
-
-3. **External benchmarks.** The sandbox runs source-anchored benchmarks against published facts about specific systems: H2O2 torsion angle, ethane torsional barrier, ionic lattice ordering for NaCl/LiF, silicate network structure, rough-surface scattering regime transitions, aluminosilicate composition accounting. These are *ordering* benchmarks (does the model rank cases correctly?), not yet *quantitative equation* benchmarks (does the model reproduce specific values?).
-
-**Discipline rules.** The sandbox is governed by three explicit disciplines that mirror the book's overall posture:
-
-- The model can only test coherence of *inferred behaviour*, not visibility or proof of substrate. T0 is not simulated.
-- No material middle layer is allowed between T0 substrate and T1 vortons. The model does not insert cells, lattices, particles, or material fillers at this level.
-- Atoms and molecules are treated as T2 secondary material regimes, not T1 vorton species. The molecule bench cannot be used to claim atoms have been derived from T1; it only constrains possible T1 coupling grammar.
-
-**Why a JavaScript browser project?** The choice was practical, not principled. A small visual sandbox with a web UI lowers the friction of exploration; batch sweeps in Node.js allow rule-grammar experimentation at scale (the current T1 sweep has tried over 14 million candidate configurations). Future work may move components to higher-performance languages once the rule grammar is more settled. The current language choice is not a commitment.
-
-**Public status.** The project is currently a research workbench, not a published library. It is versioned, it has an explicit assumptions report, and it generates milestone reports designed for external review. The current external-review milestone explicitly requests adversarial scrutiny and lists open questions.
 
 ## Chapter 44 — The Coherence-Topology Scaffold: Structural Results
 
