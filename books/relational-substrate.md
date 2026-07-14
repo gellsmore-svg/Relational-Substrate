@@ -19,6 +19,8 @@ A free electronic edition of this book is available online. It is offered as an 
 
 This is the technical volume of the RS framework. It is the book a reader should reach for when the question is precise: what does the ontology actually claim, what are its primitives, what are its axioms, what is closed and what is open, and what is being done about the open parts.
 
+**This book is offered as a thought model — to be considered and followed up, not simply accepted.** Its aim is not to announce a validated physics but to develop a single ontology far enough that it makes *concrete, structural, could-fail* claims about matter — and then to say precisely where those claims are strong, where they are merely internal, and where they might break. It is written so that a reader who finds it worth taking seriously has somewhere definite to push: a derivation to check, a computation to rerun, a stated vulnerability to resolve or exploit. Its measure of success is not assent but useful follow-up.
+
 It is intended as a **living book**, not a frozen reference. That phrase matters. A traditional technical reference is published, indexed, and frozen until the next edition. The RS framework is not in that state and may never be in that state on its own. It has a computational counterpart — the topological-substrate modelling programme of Part XIII — that is itself evolving. Modern AI-assisted authorship makes it possible to keep the book and the modelling work coherent through ongoing curation rather than through periodic re-publication. This volume is therefore versioned, marked with claim-status discipline, and explicit about what is settled, what is active, and what is frontier work.
 
 Three discipline rules govern the whole book.
@@ -1083,6 +1085,8 @@ It now also explains, with the operations layer, how the substrate's change is *
 
 It also explains why hierarchy matters. Field measurements, material structures, and technological systems are all preserved as real, but they are no longer forced to carry explanatory weight they were never suited to bear. The framework thereby restores a distinction between what is foundational and what is descriptive, between what exists first and what becomes intelligible later.
 
+And it now begins to explain these things *concretely*. Where the claim that electricity, magnetism, light, and matter are expressions of one substrate was, in earlier statements, an ontological assertion, the topological model (Part XIII) turns several parts of it into structural, checkable results: the electromagnetic field as one object whose held and moving aspects are magnetism and electricity; matter as fermionic, charged, knotted vortons; the shell structure of atoms as a consequence of that fermionic character. These are offered not as proof but as the framework's first concrete, could-fail contributions — the places where an interested reader can most directly test it, and where it is most honestly at risk.
+
 In this sense, RS explains not everything, but the order in which many things become intelligible.
 
 ## Chapter 48 — What RS Does Not Claim
@@ -1101,7 +1105,7 @@ It does not claim that every current mathematical formalism must immediately be 
 
 It does not claim that the five-operation typology has been exhaustively stress-tested. It claims that no phenomenon to date has required a sixth operation; future analysis may pressure this claim.
 
-It does not claim that the modelling programme has validated the framework. The modelling programme has produced internal coherence and qualitative ordering against external benchmarks at the cases sampled; that is not yet equation equivalence, and equation equivalence is not yet ontological proof.
+It does not claim that the modelling programme has validated the framework. The re-anchored programme has derived a chain of *structural* features of matter — fermionic statistics, quantised charge, the electromagnetic field as one split object carrying half of Maxwell's equations, and atomic shell structure — from a single ontological choice, without calibration, and has confirmed the underlying mathematics by explicit parameter-free computation. That is a real and substantial internal coherence. But it has reproduced no measured magnitude of our world, and one of its load-bearing results (the vorton's fermionic class) rests on a condition that is non-generic and could fail (Chapter 46). Internal structural coherence is not empirical validation, and the framework does not pretend otherwise.
 
 It does not claim finality. The ontology may still require sharpening, formalisation, and correction. But those revisions must occur within a clarified commitment to ontological discipline rather than by relaxing back into vagueness.
 
@@ -1118,6 +1122,8 @@ Whether the ontology is finally accepted is a further matter. But the need for s
 That is why this book begins with ontology and returns to it here at the end. The issue was never whether physics can calculate. It was whether reality can be described without first deciding, as clearly as possible, what kind of thing reality is.
 
 The framework is now in a state where the book and the code can move together. The book records what RS commits to; the code tests how those commitments behave under the conditions the framework cares about. Future versions of both will record what has moved. The framework's strength, going forward, is not that it is complete but that it is honest about what is settled, what is active, and what is frontier — and disciplined enough to keep those distinctions clear as both book and code mature.
+
+It is offered, finally, as a thought model: a way of seeing runtime reality, developed until it makes concrete claims and names its own weakest joint. It asks not to be believed but to be taken up — checked, pressed, extended, or broken. If it is wrong, it has tried to be wrong in ways that can be found out. That, and not the appearance of completeness, is what it hopes to contribute.
 
 ---
 
