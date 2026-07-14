@@ -229,7 +229,7 @@ Several technical consequences follow immediately.
 
 **Spatiality is downstream.** Older substrate theories tended to imagine the substrate as something sitting *in* a pre-existing space. RS does not. Space is the consequence of an ordered relational base, not the container into which it is placed. This removes one of the deepest ambiguities that weakened earlier ether proposals.
 
-**Temporality is downstream as well.** Time, in RS, is *runtime ordering*: the ordered sequencing of configurational change, not a corridor through which the substrate travels. Before-and-after relations are real because ordered transitions really occur, but there is no separate temporal container that would still be elapsing if no configurational change took place. This reframes phenomena ordinarily described as time *dilation*. A clock is a physical process — a coordinated run of substrate reconfiguration — and the local *tension* within the substrate governs the rate at which that process can reseat and advance. Where local tension is higher (in the neighbourhood of large mass-energy configurations, or for a region traversed at high relative velocity), the substrate reseats more slowly, and a clock running on it must tick more slowly because its own configurational steps depend on the same reseating. Schematically, *Δt_local ∝ 1 / τ(x)*, where *τ(x)* is the local rate of admissible substrate reconfiguration; the mathematical form of *τ* is open formal work (cf. Appendix A.6) and a natural target of the topology-sandbox programme. The clock is not wading through a thicker stretch of time; its surrounding runtime conditions are harder to reconfigure, and its process inherits that resistance. Conversely, an atomic clock raised to high altitude — where local tension is lower — ticks measurably *faster*, as evidenced both by aircraft-carried atomic clock experiments and by the general-relativistic corrections routinely applied to satellite-borne timing systems. Free fall, on this reading, is motion along a substrate tension gradient — not the discovery of an exotic temporal phenomenon but the regime-dependence of runtime ordering disclosing itself through a physical process whose rate the substrate locally sets. What varying clocks disclose is therefore not the flow-rate of a dimensional corridor but the regime-dependence of runtime ordering itself — the same regularities relativity measures, here given an ontological rather than a purely formal reading. As with space, this does not deny the technical accuracy of the relativistic formalism; it specifies what that formalism is tracking.
+**Temporality is downstream as well.** Time, in RS, is *runtime ordering*: the ordered sequencing of configurational change, not a corridor through which the substrate travels. Before-and-after relations are real because ordered transitions really occur, but there is no separate temporal container that would still be elapsing if no configurational change took place. This reframes phenomena ordinarily described as time *dilation*. A clock is a physical process — a coordinated run of substrate reconfiguration — and the local *tension* within the substrate governs the rate at which that process can reseat and advance. Where local tension is higher (in the neighbourhood of large mass-energy configurations, or for a region traversed at high relative velocity), the substrate reseats more slowly, and a clock running on it must tick more slowly because its own configurational steps depend on the same reseating. Schematically, *Δt_local ∝ 1 / τ(x)*, where *τ(x)* is the local rate of admissible substrate reconfiguration; the mathematical form of *τ* is open formal work (cf. Appendix A.6) and a natural target for the modelling programme. The clock is not wading through a thicker stretch of time; its surrounding runtime conditions are harder to reconfigure, and its process inherits that resistance. Conversely, an atomic clock raised to high altitude — where local tension is lower — ticks measurably *faster*, as evidenced both by aircraft-carried atomic clock experiments and by the general-relativistic corrections routinely applied to satellite-borne timing systems. Free fall, on this reading, is motion along a substrate tension gradient — not the discovery of an exotic temporal phenomenon but the regime-dependence of runtime ordering disclosing itself through a physical process whose rate the substrate locally sets. What varying clocks disclose is therefore not the flow-rate of a dimensional corridor but the regime-dependence of runtime ordering itself — the same regularities relativity measures, here given an ontological rather than a purely formal reading. As with space, this does not deny the technical accuracy of the relativistic formalism; it specifies what that formalism is tracking.
 
 **Relational primacy does not entail idealism.** The relational base is *given*, not constructed by being interpreted. To say that reality is structured in a way that is already meaning-bearing (a claim developed in the general volume) does not say that reality is brought into being by being read. The world is *interpretable* because it is first made real, ordered, and intelligible. Ontological language comes first; verbal language follows.
 
@@ -554,7 +554,7 @@ If critical opalescence is retained, it should be described as the visible conse
 
 Taken together, these ideas allow phase behaviour to be treated as a lawful expression of substrate-based material organisation rather than as a set of brute empirical categories inherited without ontological grounding.
 
-In operations terms, a phase transition is typically a coordinated sequence of C (alignment adjustment), B (reconfiguration), occasional localised E (dissolution of old coupling), and occasional D (closure into a new stable coupling regime). This sequencing is what the sandbox's mixed-modifier and silicate-network sweeps are beginning to test — see Chapter 45.
+In operations terms, a phase transition is typically a coordinated sequence of C (alignment adjustment), B (reconfiguration), occasional localised E (dissolution of old coupling), and occasional D (closure into a new stable coupling regime).
 
 ---
 
@@ -827,7 +827,7 @@ This is a *structural* property, not a moral feeling. Beauty, order, truth, and 
 
 **Alignment is not equilibrium.** A configuration can be in equilibrium without being aligned (a stable balance of opposing strains). A configuration can be aligned without being in equilibrium (an active, growing, dynamically maintained coherence). Equilibrium is a state; alignment is a quality of how well the state coheres.
 
-**Alignment is observable through identity persistence.** This is what the sandbox closure-gate metrics are tracking. A configuration with high alignment will register a high identity score across the closure, return, bounded, coherence, reseat, and leakage metrics simultaneously. A configuration with low alignment may have a high score on some metrics while others compensate — and the compensation is the structural signature of strain. The sandbox identity-preservation threshold (identity score ≥ 0.62 AND closure stress < 0.62) is one practical operationalisation of "is this configuration aligned enough to remain itself?"
+**Alignment is observable through identity persistence.** A configuration is well-aligned when the substrate's grammar elements — route, closure, phase, charge, continuity — hold together coherently, so that its identity survives the encounters it undergoes. Where alignment is low, some aspects hold while others compensate, and that compensation is the structural signature of strain. The topological model sharpens "does this configuration remain itself?" into a definite question: does the structure retain its conserved linking invariant, or not?
 
 ## Chapter 35 — Strain, Threshold, and Cascade
 
@@ -835,7 +835,7 @@ This is a *structural* property, not a moral feeling. Beauty, order, truth, and 
 
 The relation between alignment and strain is conceptually precise: alignment ∝ inverse(strain). The mathematical form of this relationship is not yet fixed; it is one of the open items in the modelling programme (Chapter 46). What is firm is the structural shape of the relationship.
 
-**Some strain is normal.** Nothing in a dynamic world is strain-free. Strain accumulates and is released as part of how the substrate carries change. The sandbox closure-stress metric is one operationalisation: it captures the strain that a configuration is holding to remain identity-bearing under given conditions.
+**Some strain is normal.** Nothing in a dynamic world is strain-free. Strain accumulates and is released as part of how the substrate carries change; a configuration holds strain in order to remain identity-bearing under conditions that would otherwise deform it.
 
 **Threshold.** Strain accumulates until it reaches a threshold beyond which the configuration can no longer hold. Past that threshold the configuration either dissolves (operation E) or undergoes forced reconfiguration (operation B) at the price of identity loss or substantial restructuring. The location of the threshold depends on the configuration's stability envelope (Chapter 18).
 
@@ -843,7 +843,7 @@ The relation between alignment and strain is conceptually precise: alignment ∝
 
 **Compensation.** A configuration under strain can sometimes be held by external compensation — sustained input that absorbs the strain that the configuration cannot itself dissipate. Compensation is a real mechanism, but it is not a substitute for alignment. A compensated configuration is one that requires continuous input to remain itself; a truly aligned configuration is one that holds without such input.
 
-**The sandbox closure-stress score** is the most developed strain measure in the modelling programme. It is a weighted combination of stored, scattered, and (1 − reseat) — i.e. the strain a configuration is carrying that has not been released through clean propagation or accommodation. When this score crosses 0.62, the sandbox treats the configuration as at risk of identity loss.
+**Strain has structure.** Strain is the tension a configuration carries that has not been released through clean propagation or accommodation. When it exceeds what the configuration's closure can hold, identity is at risk. Giving this a precise, possibly tensor-valued, measure is named as open work: the topological model to date treats identity as an invariant that is either retained or lost, not yet as a graded strain field.
 
 ## Chapter 36 — Alignment Dynamics — Restoration and Persistence
 
@@ -863,7 +863,7 @@ Strain that is not paid for accumulates. A wound that does not heal becomes infe
 
 **Evil, structurally.** In this framework, evil is not a rival ontology, not a separate operation, not a parallel grammar. It is the persistence of misalignment without restoration. The five modes of parasitic corruption recognised in the broader corpus — degradation, fragmentation, inversion, counterfeit, parasitism — are five ways misalignment can fail to restore.
 
-**Implication for modelling.** The sandbox can detect misalignment (via the strain and stress metrics) at a moment in time. To assess whether a misalignment is on the restoration trajectory or the persistence trajectory, the model needs to track dynamics across time. This is a significant frontier item: the current sandbox is largely static (computes outcomes for given configurations) rather than dynamic (tracks how outcomes evolve when configurations change under repeated operation). Chapter 46 names this as one of the priority frontier areas.
+**Implication for modelling.** Distinguishing a misalignment on the *restoration* trajectory from one on the *persistence* (degradation) trajectory requires tracking dynamics across time — how a configuration's alignment evolves under repeated operation. This remains open work: the topological model's results to date are structural (invariants, signs, quantisation) rather than dynamical (Part XIII).
 
 ---
 
@@ -1014,7 +1014,7 @@ The RS framework has a computational counterpart, and in 2026-07 that counterpar
 
 **Guardrails, unchanged.** T0 is not simulated. No material middle layer is inserted between T0 and T1 vortons. Model outputs are never treated as proof of RS.
 
-**Where the work lives.** The re-anchored programme is documented in the repository's `docs/` (the coherence-topology scaffold and its containment ledger; a decision log recording each choice with rationale; a completion summary) and exercised in `instantiation/` (explicit parameter-free computations). Appendix C's run catalogue documents the retired sandbox and is now **historical**.
+**Where the work lives.** The re-anchored programme is documented in the repository's `docs/` (the coherence-topology scaffold and its containment ledger; a decision log recording each choice with rationale; a completion summary) and exercised in `instantiation/` (explicit parameter-free computations). The retired sandbox itself survives only in the repository's version history (see Appendix C).
 
 ## Chapter 44 — The Coherence-Topology Scaffold: Structural Results
 
@@ -1249,9 +1249,7 @@ Compact definitions of the transformation-tier vocabulary used throughout the te
 
 **Closure conditions** (Ch. 17). Four simultaneous conditions for operation D success: local boundedness, distributed coherence, closed return-path, admissible neighbourhood.
 
-**Closure-gate metrics** (Ch. 44). The sandbox's operational measurement of alignment: closure, return, bounded, coherence, reseat, leakage, identity score.
-
-**Closure stress** (Ch. 44). The sandbox's operational measurement of strain: weighted combination of stored, scattered, and (1 − reseat).
+**Linking (Hopf) invariant** (Ch. 44). The integer topological invariant that, in the re-anchored model, carries a vorton's identity — the self-linking of the director grain, replacing the earlier heuristic identity-score.
 
 ## Dissolution dynamics (operation-E specification)
 
@@ -1316,7 +1314,7 @@ Introduced by `benchmark-suite-design-2026-05-25.md`.
 
 **Three benchmark tiers**:
 
-- **Tier 1 — Qualitative ordering** — The model ranks reference cases above decoy cases. Passing raises confidence in internal coherence.
+- **Tier 1 — Structural derivation** — The model derives a qualitative structural feature (a sign, a discreteness, a conserved integer) without calibration. Passing raises confidence in internal coherence.
 - **Tier 2 — Quantitative tolerance** — The model's output value falls within a predeclared tolerance around the published target. Passing raises confidence that the model's structural commitments produce quantitatively plausible values.
 - **Tier 3 — Quantitative equation** — Using a predeclared projection, projected values satisfy the target equation across all admissible cases within the projection's domain. Passing warrants consistency with the target equation; does not prove the underlying ontology.
 
@@ -1326,123 +1324,9 @@ Introduced by `benchmark-suite-design-2026-05-25.md`.
 
 ---
 
-# Appendix C — Modelling Programme — Run Catalogue and Output Locations
+# Appendix C — Modelling Programme Artifacts
 
-> **Historical (pre-2026-07).** This appendix catalogues the retired JavaScript **topology-sandbox** — the heuristic closure-gate/calibration programme that was superseded when the modelling work was re-anchored on topological-soliton mathematics (Chapter 43). It is preserved for provenance. The current programme's artifacts are the coherence-topology scaffold and decision log in `docs/`, and the parameter-free computations in `instantiation/` (Chapters 44–46).
-
-The topology-sandbox project supports the runs listed below. Each is invoked from the project root (`~/domains/Relational-Substrate`). Output files (markdown and JSON) appear in `analysis/out/`. The README at the project root remains the authoritative source. The catalogue below is representative, not exhaustive — the programme now has over 170 analysis scripts; the validation tracks added since the original catalogue are summarised under *Held-out validation tracks* below.
-
-Runs are organised in two sections: **Current** (implemented at time of writing) and **Planned** (specified in companion documents but not yet built). The Planned section grows shorter as runs move into Current.
-
-## Current — Implemented Runs
-
-**Interactive UI:**
-- `npm install`
-- `npm run dev` — launches the visual sandbox in a browser.
-
-**Rule-grammar coherence sweep:**
-- `npm run sweep` — iterates closed forms, transient forms, A/B/C scenarios, and sampled slider settings to find coherent, fragile, and high-stress pattern regions.
-
-**T2 molecule and material calibration:**
-- `npm run molecules` — first molecule bench, classical geometry calibration.
-- `npm run molecule:sweep` — perturbation sweep with change counts by category and severity.
-- `npm run molecule:geometry` — perturbs explicit geometry fields (bond length, angle, torsion, ring closure, polarity, steric, valence).
-- `npm run molecule:coordinates` — perturbs coordinate sets first, derives coordinate features, then derives coherence variables.
-- `npm run molecule:calibration` — classifies envelope width, failure rate, and dominant constraint character; per-family validation rollup.
-
-**Focused molecular diagnostics:**
-- `npm run molecule:ethane-torsion` — isolates eclipsed C2H6 decoy without changing family weights.
-- `npm run molecule:peroxide-torsion` — peroxide rotatable-group steric/polarity/H-H behaviour.
-- `npm run molecule:peroxide-refine` — denser torsion grid for nonlocal peroxide separation.
-- `npm run molecule:ionic-lattice` — alternating-charge lattice separation for NaCl/LiF.
-
-**Material network diagnostics:**
-- `npm run material:silicate-network` — graph-level tetrahedral network grammar.
-- `npm run material:mixed-modifier` — route-level mixed modifier transport ordering.
-- `npm run material:nbo-stoichiometry` — exact NBO/T accounting.
-
-**Interface diagnostics:**
-- `npm run interface:boundary-transition` — route-level boundary ordering.
-- `npm run interface:phase-continuity` — phase memory across boundaries.
-- `npm run interface:roughness-scatter` — roughness-controlled specular/diffuse transition.
-
-**T1 coupling work:**
-- `npm run t1:coupling` — qualitative T1 coupling-pattern descriptors per T2 family.
-- `npm run t1:sweep` — bounded numeric T1 parameter sweep with guardrails.
-- `npm run t1:stability` — residuals between T2 target envelopes and best T1 candidates.
-- `npm run t1:refine` — local refinement around best T1 candidates.
-
-**Model meta-reports:**
-- `npm run model:assumptions` — current modelling assumptions, risks, limitations.
-- `npm run model:frontier` — weakest current diagnostics and T1 residuals.
-- `npm run model:external-roadmap` — completion/confidence status and external benchmark roadmap.
-
-**External benchmarks:**
-- `npm run benchmark:h2o2` — qualitative H2O2 torsion ordering.
-- `npm run benchmark:h2o2-quant` — H2O2 equilibrium angle as numeric target.
-- `npm run benchmark:ethane` — qualitative staggered/eclipsed ordering, threefold periodicity.
-- `npm run benchmark:ethane-quant` — normalized torsion shape against threefold reference.
-- `npm run benchmark:ionic` — qualitative rock-salt unlike-neighbour ordering.
-- `npm run benchmark:boundary-blind` — predeclared boundary/phase ordering vs published optics.
-- `npm run benchmark:silicate-heldout` — held-out silicate family prediction.
-- `npm run benchmark:roughness-heldout` — held-out interface roughness prediction.
-- `npm run benchmark:material-nbo` — quantitative NBO/T accounting.
-- `npm run benchmark:summary` — external benchmark coverage and confidence posture rollup.
-
-**Held-out validation tracks (added since the original catalogue):** source-locked, pre-registered held-out work, each run under the predeclaration gate (`npm run guardrails`, `npm run evidence:ledger`). Representative entry points:
-- *Refractive index* — predictor predeclaration, parameter source-lock (Shannon–Fischer 2016), and a held-out consistency score: `npm run benchmark:ri-predictor-v1-predeclare`, `npm run benchmark:ri-predictor-parameter-lock`, `npm run benchmark:ri-wollastonite-baita-score`.
-- *Surface roughness* (PSD/BRDF) — two comparator forms, source screens, and a consolidated chain runner: `npm run benchmark:roughness-psd-scatter-chain`.
-- *Peroxide torsion* — the predeclare → reserve → source-lock → score chain (largely source-blocked; see the `peroxide-*` scripts).
-- *Grammar order effect* — the framework's own path-dependent prediction, derived and tested on real fatigue data: `npm run grammar:order-effect`, `npm run grammar:order-effect-fatigue-miner`, `npm run grammar:order-effect-magnitude`, `npm run grammar:graded-survival-magnitude`.
-
-**External review:**
-- `npm run milestone:external-review` — detailed milestone report for outside review: intent, ontology boundaries, evidence, confidence posture, non-claims, remaining gates, source anchors, reviewer questions.
-
-## Planned — Specified But Not Yet Built
-
-The runs listed below are specified in companion documents but have not yet been implemented in the sandbox. Each is tied to a specification document that defines what the run does, how its outputs should look, and what tests it must pass. Implementations should follow the existing output convention (markdown + JSON in `analysis/out/`, version-controlled scripts in `analysis/`, `npm run` entries in `package.json`).
-
-**Operation-E single-region dissolution dynamics** (`operation-e-specification-2026-05-25.md`):
-
-- `dissolution:single-region` — runs the three worked examples from the step-1 specification (clean dissolution, partial dissolution with successful restoration, failed restoration after window expiry); verifies all four conservation laws; verifies all phase machine transitions; reports release pathway distributions.
-
-**Operation-E two-region coupled dissolution** (`operation-e-step2-specification-2026-05-25.md`):
-
-- `dissolution:two-region` — runs the three worked examples from the step-2 specification (bounded cascade containment, triggered cascade, chained cascade with partial restoration); verifies cross-region conservation laws; verifies cascade event logging; reports cascade-triggered vs cascade-contained outcomes.
-
-**Operation-E benchmark suite** (`benchmark-suite-design-2026-05-25.md`):
-
-Tier 1 (qualitative ordering):
-- `benchmark:dissolution-apoptosis` — bounded programmed dissolution vs cascading unprogrammed dissolution
-- `benchmark:dissolution-crack-propagation` — brittle (cascade) vs ductile (containment) regime distinction
-- `benchmark:dissolution-forest-fire` — wet/sparse (containment) vs dry/dense (cascade) regime distinction
-- `benchmark:dissolution-institutional` — high-trust (contained) vs low-trust (cascading) institutional perturbation
-
-Tier 2 (quantitative tolerance):
-- `benchmark:dissolution-half-life` — correct ordering of half-lives across a series of configurations differing in stability envelope; ratios within predeclared tolerance
-- `benchmark:dissolution-crack-velocity` — scaling form matches classical fracture mechanics within predeclared tolerance
-- `benchmark:dissolution-wound-recovery` — restoration time scales with wound severity in the manner predicted by biological healing models
-
-Tier 3 (quantitative equation):
-- `benchmark:dissolution-first-order-decay` — first projection-invariance benchmark; population trajectory satisfies `dN/dt = -λN` with derivable `λ`
-- `benchmark:dissolution-entropy` — aggregate trajectory of large clean-dissolution-dominated ensemble satisfies second-law tendency
-
-**Projection invariance benchmarks** (`projection-discipline-2026-05-25.md`, `benchmark-suite-design-2026-05-25.md`):
-
-- `benchmark:projection-decay` — `P_FirstOrderDecay` invariance across multiple population scenarios within domain
-- `benchmark:projection-maxwell-static` — `P_Maxwell` invariance across multiple electrostatic and magnetostatic scenarios within domain (static cases first)
-- `benchmark:projection-mechanics` — `P_NewtonianMechanics` invariance across a small set of macroscopic-scale scenarios
-
-**Extended roll-up and milestone summaries:**
-
-- `benchmark:summary-extended` — supersedes `benchmark:summary` once the new categories are populated; rolls up all benchmark tiers across all categories (molecule, material, interface, dissolution, projection invariance)
-- `milestone:external-review-extended` — supersedes `milestone:external-review` once the new categories are populated; adds reviewer questions specific to dissolution dynamics, projection discipline, and tier confusion
-
-## Notes on the Planned section
-
-The presence of a run in the Current section means the run produces a current, machine-generated output and is ready to be executed against the sandbox as it stands. The presence of a run in the Planned section means the work has been specified in detail (with type signatures, conservation laws, worked examples, and integration notes), and is ready to be built. The Planned section is the active forward-work plan for the sandbox.
-
-The historical "no run yet for operation-E dynamics, no run yet for Maxwell-equivalence derivation, no run yet for time-evolution alignment dynamics" gap (which the v1 of this technical book noted) is now scoped, specified, and discipline-bound. The work is on the table; what remains is implementation.
+The modelling programme's working artifacts are not reproduced in the book; they live in the companion repository and evolve faster than a printed catalogue could track. The re-anchored programme is recorded there as: the **coherence-topology scaffold** and its containment ledger, the **decision log** (each modelling choice with its rationale), and a **completion summary**, all under `docs/`; and the explicit **parameter-free computations** under `instantiation/`. The earlier JavaScript topology-sandbox — the retired heuristic programme described historically in Chapter 43 — remains in the repository's version history for provenance, but is no longer part of the framework's live modelling layer.
 
 ---
 
@@ -1454,7 +1338,7 @@ Every claim in this book is labelled by status. The labels are taken from the mo
 - **Hard guardrail** — A discipline rule that protects ontology boundaries. Violating it commits a category error. The boundaries in Chapter 42 are hard guardrails.
 - **Working** — Currently in use, with some validation, but not yet stress-tested at high confidence. Most of the operations-layer mappings to physical lanes (Part VIII Chapters 26–30) are working.
 - **Interpretive** — A framing assumption that is theologically or philosophically load-bearing but not directly testable against the modelling programme. Relational primacy as interpreted in Chapter 6 includes interpretive content.
-- **Sanity check** — A test that, if it fails, indicates internal incoherence (not external falsification). Reference geometries ranking above generated perturbations in the sandbox is a sanity check.
+- **Sanity check** — A test that, if it fails, indicates internal incoherence (not external falsification). An explicit computation confirming a claimed invariant — for example, that a constructed vorton's linking number is the expected integer — is a sanity check.
 - **Focused diagnostic** — A targeted test that the framework can be wrong about. Most of the molecular and material diagnostics in Chapter 45 are focused diagnostics.
 - **External benchmark** — A test against published, source-anchored facts whose verdict is not under the framework's control. The external benchmarks in Chapter 45 are external benchmarks.
 - **Frontier** — Work named as necessary but not yet undertaken or substantially incomplete. Equation equivalence to Maxwell, the explicit operation-E module, vorton species mathematics, and time-evolution alignment dynamics are frontier.
@@ -1468,7 +1352,7 @@ This is part of what makes the book *living*. Future versions will move some fro
 
 # Appendix E — The Ontology as a Relationship Graph
 
-Appendix A gives the runtime hierarchy and core axioms. Appendix B defines the transformation-tier vocabulary. This appendix adds a complementary view: the ontology stated as a directed graph of typed relations between its entities. The point is to make the structure inspectable and machine-readable — to render in one consistent relational vocabulary what the chapters carry as argument, and to leave the framework in a form that can be ingested by knowledge-graph tooling, formal-ontology analysers, or the topology-sandbox programme (Part XIII).
+Appendix A gives the runtime hierarchy and core axioms. Appendix B defines the transformation-tier vocabulary. This appendix adds a complementary view: the ontology stated as a directed graph of typed relations between its entities. The point is to make the structure inspectable and machine-readable — to render in one consistent relational vocabulary what the chapters carry as argument, and to leave the framework in a form that can be ingested by knowledge-graph tooling, formal-ontology analysers, or the modelling programme (Part XIII).
 
 ## E.1 Relationship Types
 
@@ -1576,7 +1460,7 @@ Second, the graph mirrors the prose; the prose remains primary. Where a relation
 
 Third, the graph has a single root. Everything in it, the substrate included, *depends-on* creation-level constraint. The framework is an account of created runtime physical reality; nothing in the graph is self-existent except that root.
 
-A machine-readable export of this graph (RDF-like triples) is a natural target for the topology-sandbox programme — it would allow the framework's typed-edge claims to be cross-checked against the run catalogue (Appendix C) and the claim-status map (Appendix D) under automated tooling.
+A machine-readable export of this graph (RDF-like triples) is a natural target for the modelling programme — it would allow the framework's typed-edge claims to be cross-checked against the claim-status map (Appendix D) under automated tooling.
 
 ---
 
@@ -1632,16 +1516,16 @@ The framework's stance on description vs ontology and on the recovery of ontolog
 - **Bas van Fraassen** on constructive empiricism — the framework lands in the opposite position but engages the same questions.
 - **Tim Maudlin** (*The Metaphysics Within Physics*, *Philosophy of Physics: Space and Time*) on the legitimacy and necessity of metaphysical inquiry into the world physics describes.
 - **James Ladyman** and **Don Ross** (*Every Thing Must Go*) on ontic structural realism — the framework's relational primacy claim resonates here, while the framework's created-relational reading differs from their naturalised metaphysics.
-- **Mauricio Suárez** on models and modelling in physics — relevant to the framework's treatment of the topology-sandbox as a model that informs ontology without being mistaken for it.
+- **Mauricio Suárez** on models and modelling in physics — relevant to the framework's treatment of its modelling programme as a model that informs ontology without being mistaken for it.
 
 ## Mathematics And Modelling Programme Sources
 
-The topology-sandbox project (Chapters 43–46) draws on several methodological traditions:
+The modelling programme (Chapters 43–46) draws on several methodological traditions:
 
 - Computational modelling philosophy from **Margaret Morrison** (*Reconstructing Reality*) and the broader literature on models as mediators.
 - The **falsification** discipline associated with **Karl Popper**, applied through the predeclaration requirements in the benchmark suite.
 - The **structural realism** tradition for the framing of projections from substrate state to classical equation variables.
-- Specific reference data sources (gas-phase geometries, torsional barriers, lattice ordering facts) drawn from published chemistry and physics literature, individually cited in the sandbox's external-benchmark scripts.
+- The **topological-soliton** literature the re-anchored programme builds on: the Hopf invariant and Hopfions, the Skyrme model, and the Kelvin vortex-atom lineage, together with the results on soliton spin and statistics (Finkelstein–Rubinstein), induced topological terms (Abanov–Wiegmann), and the Witten effect — individually cited in the modelling `docs/`.
 
 The projection-discipline document explicitly engages with the historical difficulty of equation-equivalence in alternative-physics frameworks, with **loop quantum gravity**'s difficulties recovering general relativity as a salient cautionary example.
 
@@ -1677,7 +1561,7 @@ These contributions sit within and depend upon the broader traditions acknowledg
 
 ## A Note On Method And AI-Assisted Research
 
-Honesty about sources requires honesty about method. This volume was developed with substantial help from AI systems — principally ChatGPT (OpenAI) and Claude (Anthropic). The framework spans more disciplines than any one person can traverse unaided, and these systems were used for exploratory work and synthesis: summarising and correlating material across physics, mathematics, philosophy of science, and adjacent fields; navigating far more literature than could be read in full; surfacing relevant historical and contemporary antecedents; refining terminology; and testing the framework for internal coherence and consistency with the topology-sandbox programme. The author has not personally read every source in the broader research ecosystem the volume draws on, and it would be misleading to imply otherwise.
+Honesty about sources requires honesty about method. This volume was developed with substantial help from AI systems — principally ChatGPT (OpenAI) and Claude (Anthropic). The framework spans more disciplines than any one person can traverse unaided, and these systems were used for exploratory work and synthesis: summarising and correlating material across physics, mathematics, philosophy of science, and adjacent fields; navigating far more literature than could be read in full; surfacing relevant historical and contemporary antecedents; refining terminology; and testing the framework for internal coherence and consistency with the modelling programme. The author has not personally read every source in the broader research ecosystem the volume draws on, and it would be misleading to imply otherwise.
 
 What was not delegated is the judgement. The positions retained here were evaluated, corroborated, challenged, refined, and selected by the author; AI assistance accelerated exploration without conferring authority. Proposed connections were checked rather than accepted on trust, weak lines were discarded, and what survived did so because it was judged coherent, defensible under the guardrails this appendix specifies, and consistent with the discipline of Appendix D's claim-status map. The honest description of the process is a hybrid of human reasoning and AI-assisted synthesis, with final ontological and methodological judgement kept in human hands — an increasingly ordinary situation for interdisciplinary technical work at this scale, and one better stated openly than left implicit.
 
