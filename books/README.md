@@ -12,6 +12,14 @@ This directory contains the core book-length manuscripts of the Relational Subst
 
 These are the current master drafts incorporating the rename from AMS to RS, the integration of the transformation tier, and the closure-knot terminology.
 
+## EPUB Editions
+
+Validated EPUB 2 editions are published in [`epub/`](epub/). Rebuild and validate both files with:
+
+```bash
+npm run books:epub
+```
+
 Companion volumes exist in draft form elsewhere in the workspace (general volume *A Coherent World*, devotional *How to Hug the Right Tree*) and may be added here in the future.
 
 For the full cross-book reasoning structure and integration notes, see the artifacts in the RS-claude workspace and the canonical sources under the broader AMS project structure.
