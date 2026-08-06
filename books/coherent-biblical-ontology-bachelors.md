@@ -1,17 +1,19 @@
-# Coherent Biblical Ontology — Bachelor's Edition
+# Coherent Biblical Ontology
 
 Status: master draft v2 (2026-05-27)
 Companion to: *A Coherent World* (general volume), *The Relational Substrate* (technical volume), *How to Hug the Right Tree* (devotional volume)
 
-This edition restates the framework at bachelor's-level density, with the rename from AMS to RS (Relational Substrate) and the integrations developed in the wider corpus during 2026: Model B for the language-of-creation claim, personhood as the deeper category over embodiment, corruption as persistent misalignment without restoration, and the transformation tier (operations, permissions, admissibility, alignment) as a layer that crosses the ontological stack.
-
-The bachelor's-level style retains sustained theological argument, the full technical vocabulary, and biblical engagement at depth. It does not avoid hard concepts; it explains them and shows their scriptural anchoring.
+This book presents the scriptural expression of the Relational Substrate framework. It begins from the authority of Scripture, receives creation as real and ordered, and asks how physical order, life, personhood, corruption, redemption, and restoration may be placed within one coherent Christian ontology.
 
 ---
 
 ## Preface — What This Book Is For
 
-This book is the scripture-first companion to *A Coherent World*. The two are not versions of each other. They are companion volumes traversing the same territory from opposite directions.
+This book exists to restore biblical ontology to Christian thought.
+
+That phrase names the governing purpose. The book is not trying to decorate a technical ontology with biblical language after the fact, nor to force Scripture into the shape of modern scientific description. It asks what happens when Scripture is allowed to speak first about reality, and when physical, biological, personal, moral, and redemptive questions are then reasoned within that revealed frame.
+
+It is the scripture-first companion to *A Coherent World*. The two books are not versions of each other. They traverse the same territory from opposite directions.
 
 The master volume begins with the hunger for a coherent picture of reality and reasons toward a Creator through the language of creation itself. This book begins where the Bible begins — with God speaking, with creation made, with a world that is *there* — and works the other way. It uses the framework to articulate what that scriptural beginning permits and forbids us to say about reality.
 
@@ -23,9 +25,9 @@ The CBO does three connected things that the master volume does not.
 
 The point bears extending. When every possible origin of the cosmos is treated as equally plausible, research avenues explode uncontrollably. Money, time, and human lives are consumed in speculative pursuits that produce neither stable knowledge nor wisdom for living. The intelligent-design commitment that scripture binds the framework to is therefore not a faith-based imposition on otherwise free inquiry. It is a massive focusing containment that makes inquiry itself possible at scale. A field of inquiry without containment is not free; it is dissipated. A field with the right containment is not constrained; it is enabled.
 
-**Third, this book is for Christian readers.** It does not need to argue from outside scripture's authority toward an acceptance of it. The reader is presupposed to accept that scripture speaks. What the book does is show how seriously the framework has been disciplined under that authority — so a Christian reader can engage with the framework as Christian work, not as borrowed metaphysics with biblical pictures added.
+**Third, it restores intellectual freedom for Christian reasoning.** A Christian reader should not have to treat locally successful descriptive science as the sovereign judge of what Scripture may mean. Nor should that reader reject observation, experiment, mathematics, or careful technical work. The book's purpose is to clear that false opposition. It distinguishes description from ontology, preserves the legitimate authority of observation, and then places all created knowledge beneath the truthfulness of God.
 
-The structure follows the same 15-chapter arc as the A-level and GCSE editions, but at bachelor's-level density. The early chapters establish the scriptural frame and the substrate ontology. The middle chapters work through the grammar of created order, physical phenomena, and life. The later chapters address personhood, corruption, redemption, and synthesis. The appendices list the axiom reduction explicitly — what the framework would have to commit to without scripture, and what remains with it — note the sources and methods behind the work, and set out the framework's ontology in formal reference form.
+The early chapters establish the scriptural frame and the substrate ontology. The middle chapters work through the grammar of created order, physical phenomena, and life. The later chapters address personhood, corruption, redemption, and synthesis. The appendices list the axiom reduction explicitly, note the sources and methods behind the work, set out the framework's ontology in formal reference form, and provide a thought-work architecture for developing the book's models, outcomes, audiences, metaphors, and future expressions.
 
 A free electronic edition of this book is available online. The project is offered as an open intellectual contribution rather than a closed commercial product: the electronic edition is intended to encourage broad readership, academic sharing, and honest discussion, and updated versions and related materials may also be found through the project website at <https://relational-substrate.blogspot.com/>.
 
@@ -528,7 +530,7 @@ A configuration in the substrate can change in exactly five ways. The set is clo
 - **propagation** — a pattern moves through compatible topology without restructuring it (paradigm: light)
 - **reconfiguration** — structure reshapes through available pathways (paradigm: electricity)
 - **alignment adjustment** — neighbouring regions adjust orientations to reduce mismatch (paradigm: magnetism)
-- **closure formation** — topology folds into a stable identity-bearing loop (paradigm: vorton formation; identity-emergence in general — vortons are introduced formally in Chapter 5)
+- **closure formation** — topology folds into a stable identity-bearing loop (paradigm: closure knot formation; identity-emergence in general — closure knots are introduced formally in Chapter 5)
 - **dissolution** — structure loses coherence and collapses (paradigm: decay, death)
 
 Every substrate change is one of these five or a coordinated sequence of them. The claim that the set is closed is a strong claim and a stress-test for the framework, but it has the right shape because identity can only be moved, locally reshaped, externally re-related, newly generated, or ended.
@@ -766,7 +768,7 @@ That leaves the next question. If this is the grammar, how do matter, form, boun
 
 ---
 
-# Chapter 5: Constraint, Matter, Topology, Vortons, Persistence, and Time
+# Chapter 5: Constraint, Matter, Topology, Closure Knots, Persistence, and Time
 
 Chapter 4 gave the grammar. This chapter applies it to material reality.
 
@@ -818,11 +820,15 @@ Topology is not decorative mathematics hanging over physical reality. In this fr
 
 What persists is not merely a quantity of substance. What persists is a stable pattern of ordered form.
 
-RS uses the term `vorton` for a candidate stable topological identity carrier within the ontology. A vorton is not a little billiard-ball particle hiding behind measurement. It is a stable knot-like configuration whose identity belongs to ordered structure rather than to an isolated nugget of self-explanatory substance.
+RS uses the term `closure knot` for a candidate stable topological identity carrier within the ontology. It acknowledges quantum-field-theoretic and cosmological research on stable current-carrying cosmic-string loops as a distant conceptual predecessor. In those theories, charge, current, and angular momentum can stabilise an extended configuration. The limited point of contact is that stable identity may be carried by enduring relational structure rather than by a miniature hard particle.
 
-The mechanism, stated cleanly: the substrate is capable of torsion, curvature, adjacency, and closure. When a local regime of twist and return folds back on itself in a way that balances outward release against inward retention, a persistent closure can form. If local strain simply radiates away, no identity results. If strain collapses inward without viable return-path, no identity results. A vorton persists only where circulation, containment, and distributed tension fall into a regime that can reseat itself faster than it dissolves.
+The reframing is deliberately narrow. RS does not adopt the equations, spacetime setting, objects, or physical identification of that research. It proposes a closure knot in a different ontological role: a candidate primary identity-bearing closure within created runtime substrate order. The debt is methodological rather than technical: topological stability is a serious explanatory possibility, but the RS claim concerns ontological rank, scriptural containment, and the constitution of matter within a relational substrate.
 
-In the transformation-tier language from Chapter 4, vorton formation is the paradigm of *operation D* (closure formation).
+A closure knot is not a little billiard-ball particle hiding behind measurement. It is a stable knot-like configuration whose identity belongs to ordered structure rather than to an isolated nugget of self-explanatory substance.
+
+The mechanism, stated cleanly: the substrate is capable of torsion, curvature, adjacency, and closure. When a local regime of twist and return folds back on itself in a way that balances outward release against inward retention, a persistent closure can form. If local strain simply radiates away, no identity results. If strain collapses inward without viable return-path, no identity results. A closure knot persists only where circulation, containment, and distributed tension fall into a regime that can reseat itself faster than it dissolves.
+
+In the transformation-tier language from Chapter 4, closure knot formation is the paradigm of *operation D* (closure formation).
 
 The persistence is therefore formal and dynamical at once. *Formal*, because the closure-pattern is what the thing is. *Dynamical*, because the pattern only remains itself by continuously sustaining its own admissible circulation.
 
@@ -852,7 +858,7 @@ This is genuinely hard to picture, because human intuition has been trained for 
 
 The metaphor breaks down just as quickly, and it should be dropped before it misleads: the substrate is not a one-dimensional cord, there are no literal wheels or anchor points, and nothing rides *on* the substrate the way a pulley rides on a rope. The rope is scaffolding for the intuition, not a picture of the substrate. With that caution kept firmly in view, the formal account stands on its own: motion is the sequential re-instantiation of a closure-pattern through neighbouring substrate relations, and the "resistance" felt in moving anything is the substrate's characteristic reluctance to reseat a stable configuration into a new pattern of relation.
 
-The same mechanism also explains why vortons can interact without ceasing to be what they are. Each vorton is a bounded circulation of constraint, but no bounded circulation exists in perfect isolation. Its retained strain modifies the admissible neighbourhood around it. Nearby closure-regimes therefore encounter one another not as hard marbles but as locally structured neighbourhoods of compatibility and incompatibility.
+The same mechanism also explains why closure knots can interact without ceasing to be what they are. Each closure knot is a bounded circulation of constraint, but no bounded circulation exists in perfect isolation. Its retained strain modifies the admissible neighbourhood around it. Nearby closure-regimes therefore encounter one another not as hard marbles but as locally structured neighbourhoods of compatibility and incompatibility.
 
 If stable local closure is possible, then stable grouped closure may also be possible. A higher-order whole becomes real when three conditions converge:
 
@@ -866,7 +872,7 @@ At that point the whole has crossed from aggregate to body.
 
 Slip is permitted relational reseating within continuity. If two stable configurations can partially reseat relative to one another without complete destruction of identity, then motion, deformation, elasticity, plasticity, and conductivity all become thinkable within one framework.
 
-These terms repay being made mechanically concrete, because *slip*, *phase*, and *coupling* are not used loosely here. They carry the rotational and torsional sense the vorton account has already committed to. A vorton persists through a regime of twist, circulation, and return — the substrate's capacity for torsion and closure described earlier — so the relations between vortons are relations between sustained rotational configurations, and that is what fixes what each term refers to:
+These terms repay being made mechanically concrete, because *slip*, *phase*, and *coupling* are not used loosely here. They carry the rotational and torsional sense the closure knot account has already committed to. A closure knot persists through a regime of twist, circulation, and return — the substrate's capacity for torsion and closure described earlier — so the relations between closure knots are relations between sustained rotational configurations, and that is what fixes what each term refers to:
 
 - *coupling* is the degree to which two such configurations constrain one another's circulation — how strongly the twist of one is bound to the twist of its neighbours;
 - *phase* names where a configuration sits in its own cycle of circulation relative to those it is coupled with — the alignment or misalignment of their ongoing reconfiguration;
@@ -895,7 +901,7 @@ The distinction is important and easily lost. It is not that some metaphysical e
 
 ## Scriptural Guardrails
 
-Scripture does not use the terms `topology`, `vorton`, or the RS stack labels. Scripture does support several deeper commitments being drawn on here.
+Scripture does not use the terms `topology`, `closure knot`, or the RS stack labels. Scripture does support several deeper commitments being drawn on here.
 
 > `And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.`
 > *Genesis 2:7*
@@ -942,7 +948,7 @@ The matter-as-stable-form treatment forecloses several historical positions.
 
 It forecloses *materialism in the strong sense* — the view that matter is the deepest reality and that all else reduces to it. Matter in RS is real but derivative; the substrate is more fundamental than matter, and the substrate is created.
 
-It forecloses *atomism in its hard-substance form* — the view that the world is made of indivisible particles that have always existed in essentially their current form. The vorton account treats stable identity as dynamically sustained closure within a continuous relational substrate, not as fundamental particulate units.
+It forecloses *atomism in its hard-substance form* — the view that the world is made of indivisible particles that have always existed in essentially their current form. The closure knot account treats stable identity as dynamically sustained closure within a continuous relational substrate, not as fundamental particulate units.
 
 It forecloses *idealism about matter* — the view that matter is merely appearance or projection. Matter is genuinely real; the substrate is genuinely there; the visible world has real configurational depth.
 
@@ -953,7 +959,7 @@ It forecloses *idealism about matter* — the view that matter is merely appeara
 - mass, inertia, and resistance are emergent properties of substrate-topological interaction, not independent primitives
 - atoms, molecules, and everyday objects are stable substrate configurations, and perception of them is itself a substrate-mediated process
 - identity is borne topologically by sustained closure
-- vortons are the candidate primary identity-carriers (operation D in the transformation tier)
+- closure knots are the candidate primary identity-carriers (operation D in the transformation tier)
 - higher-order wholes are real once coupling crosses the aggregate-to-body threshold
 - slip enables material regimes (solid, liquid, gas) within continuity
 - time is runtime ordering
@@ -1049,7 +1055,7 @@ Once that distinction is restored, several categories have to be recovered — n
 
 **Causation.** Modern explanation tends to collapse all causation into a single narrow kind — efficient cause, the mechanical push of one thing on the next — and to treat that as the whole story. The losses are specific. Formal cause is dropped, so the *organisation* that makes a thing the kind of thing it is no longer counts as explanatory. Final cause is dropped, so function, development, and purpose are treated as illusions to be explained away rather than realities to be explained. And moral responsibility is quietly reduced to biochemical and environmental inputs, as though an account of the antecedents of an act were an account of the act. A world with only one kind of cause is not clearer; it is less comprehensible, because most of what we actually need to explain has gone missing. RS restores the fuller account by giving causation somewhere to live: causation here includes substrate interaction, topological configuration, continuity across change, constraint, ordered development, and direction toward an end — not merely the collision of adjacent parts.
 
-**Form.** Form is the intelligible organisation by which a thing becomes the kind of thing it is, and it is what allows identity to endure through change. In RS this is not an abstract classification imposed by the mind on otherwise formless stuff. Form is *instantiated* — it is carried by stable topological organisation within the substrate. The form of a thing is the configuration that makes it that thing and holds it recognisable, which is why form, the stability of matter, vorton structure, continuity, and the ordinary recognisability of objects are all the same theme seen from different sides.
+**Form.** Form is the intelligible organisation by which a thing becomes the kind of thing it is, and it is what allows identity to endure through change. In RS this is not an abstract classification imposed by the mind on otherwise formless stuff. Form is *instantiated* — it is carried by stable topological organisation within the substrate. The form of a thing is the configuration that makes it that thing and holds it recognisable, which is why form, the stability of matter, closure knot structure, continuity, and the ordinary recognisability of objects are all the same theme seen from different sides.
 
 **Continuity.** Two pictures of the world compete here. On the first, reality is a scatter of isolated instants, events, or objects, and any relation between them must be imposed from outside. On the second — the one this framework takes — relation, persistence, transformation, and causation are possible at all because reality shares a continuous substrate basis. Continuity is therefore not the bland observation that "things keep going." It is the condition that makes causal inheritance, stable identity, coherent transformation, lawfulness, ordered development, moral responsibility, and revelation possible in the first place. (Chapter 4 traced this through physics, morality, and theology; here it takes its place as a standing explanatory category.)
 
@@ -1108,7 +1114,7 @@ One note on method before the lanes themselves. These phenomena — electrical, 
 
 Motion in RS is not the displacement of self-contained pellets through emptiness. It is continuity-preserving transfer of a stable closure-regime through neighbouring substrate relations while preserving its organising form.
 
-The vorton from Chapter 5 moves not by carrying itself bodily across distance but by being re-instantiated sequentially through compatible substrate while maintaining its closure pattern.
+The closure knot from Chapter 5 moves not by carrying itself bodily across distance but by being re-instantiated sequentially through compatible substrate while maintaining its closure pattern.
 
 This explains why mass, inertia, and momentum are real without being primitive. They are the descriptive measures of continuity-preserved transfer at scale.
 
@@ -1332,7 +1338,7 @@ The pattern is unambiguous. Life is not what living configurations possess on th
 
 In the transformation tier from Chapter 4, life is the place where operation D (closure formation) is *sustained continuously* rather than happening as a one-time event.
 
-A vorton is a closure that holds. A living organism is a hierarchically constrained set of closures that hold *and* renew themselves *and* repair themselves *and* reproduce themselves. Life is closure on closure on closure, all maintained simultaneously under coupled constraints (operation C, alignment adjustment) with continuous reconfiguration (operation B) as the environment demands.
+A closure knot is a closure that holds. A living organism is a hierarchically constrained set of closures that hold *and* renew themselves *and* repair themselves *and* reproduce themselves. Life is closure on closure on closure, all maintained simultaneously under coupled constraints (operation C, alignment adjustment) with continuous reconfiguration (operation B) as the environment demands.
 
 Life is not a separate operation type. It is the most demanding sustained coordination of the operations the grammar permits.
 
@@ -1604,7 +1610,7 @@ This is why Christianity does not terminate in disembodied escape but in bodily 
 
 However, continuity is not based on static material persistence. Biological matter changes continuously even during earthly life. Instead, continuity is *relational and configurational*. Identity persists through ordered relational continuity despite changing substrate material.
 
-This insight matters significantly for the framework. It is the same logic that operates at the level of vortons: identity is borne by sustained closure of relation, not by parcel of material. Human personal identity operates at a much higher level of organisation, but the same structural principle holds. Identity is *what is sustained relationally*, not *what is materially preserved*.
+This insight matters significantly for the framework. It is the same logic that operates at the level of closure knots: identity is borne by sustained closure of relation, not by parcel of material. Human personal identity operates at a much higher level of organisation, but the same structural principle holds. Identity is *what is sustained relationally*, not *what is materially preserved*.
 
 ## Personhood Is The Deeper Category
 
@@ -2405,7 +2411,7 @@ Science is powerful because runtime order is real. It can discover repeatability
 
 Philosophy matters because thought must be disciplined to reality, but it is not self-grounding. Theology matters because human beings must think under revelation, but theology too remains answerable to Scripture rather than sovereign over it.
 
-The Relational Substrate, `T0`, `T1A` through `T1D2`, `T2`, topology, vortons, primitive relational modes — these are ontological proposals. They are not revealed dogma. They are not arbitrary either. They are attempts to describe how created runtime order may actually hang together more coherently than atomistic fragmentation or purely formal mathematics detached from being.
+The Relational Substrate, `T0`, `T1A` through `T1D2`, `T2`, topology, closure knots, primitive relational modes — these are ontological proposals. They are not revealed dogma. They are not arbitrary either. They are attempts to describe how created runtime order may actually hang together more coherently than atomistic fragmentation or purely formal mathematics detached from being.
 
 The right stance is *disciplined confidence with appropriate modesty*.
 
@@ -2483,7 +2489,7 @@ The point is not to argue against the foreclosed positions individually. They ar
 
 **Foreclosed**: strong materialism; hard-substance atomism; idealism about matter.
 
-**Retained**: matter as stable configurational form within deeper substrate; identity borne topologically by sustained closure; vortons as candidate primary identity-carriers.
+**Retained**: matter as stable configurational form within deeper substrate; identity borne topologically by sustained closure; closure knots as candidate primary identity-carriers.
 
 ## Chapter 6 (Physics History)
 
@@ -2645,7 +2651,7 @@ Several positions in the framework have less obvious or no clear antecedent in p
 - The **three-layer admissibility distinction** (ontological, operational, moral) as a methodological discipline preventing category errors.
 - The **dialect-permissions account of exceptional events** in scripture — reading miracles as exceptional permissions within the same grammar rather than as ontological exceptions or naturalistic reinterpretations.
 - The structural account of **alignment as coherence-under-constraint with strain as its inverse**, and the unification of beauty / order / truth / good as alignment variants.
-- The **vorton hypothesis** as a candidate primary topological identity within the relational substrate — though this draws on the deep history of vortex and soliton thinking in physics (acknowledged in the technical companion volume).
+- The **closure knot hypothesis** as a candidate primary topological identity within the relational substrate. It acknowledges a limited conceptual debt to QFT and cosmology research by Richard L. Davis, E. Paul S. Shellard, and later contributors on stable current-carrying cosmic-string loops. RS borrows no equation, physical object, or direct correspondence from that work; it reframes only the thought that stable identity can be carried by organised closure.
 - The **exponential reduction** framing of scriptural containment as a focusing discipline that makes large-scale inquiry tractable rather than an arbitrary constraint on free thought.
 
 These are framework-specific contributions, but they sit within and depend upon the broader Christian intellectual tradition acknowledged above. They are not novel ontology built from scratch. They are attempts to articulate, with one particular shape, what Christian ontology can look like when developed under sustained scriptural discipline at the present moment in intellectual history.
@@ -2716,9 +2722,9 @@ The stack runs from substrate capability to manifest lived reality. Each layer *
 
 ## Identity-Bearing Configurations
 
-**Vorton.** A stable, knot-like topological closure within the substrate; the candidate primary identity-carrier. *instantiates* stable Form. *emerges-from* T0 via *operation D* (closure formation). *maintains* its own identity by continuously sustaining admissible circulation. *depends-on* Constraint and Continuity.
+**Closure Knot.** A stable, knot-like topological closure within the substrate; the candidate primary identity-carrier. *instantiates* stable Form. *emerges-from* T0 via *operation D* (closure formation). *maintains* its own identity by continuously sustaining admissible circulation. *depends-on* Constraint and Continuity.
 
-**Matter.** Stable configurational form. *emerges-from* coupled vorton-scale closures. Located across T1A–T1C3 rather than at T0. A downstream stable configuration, not a primitive substance.
+**Matter.** Stable configurational form. *emerges-from* coupled closure knot-scale closures. Located across T1A–T1C3 rather than at T0. A downstream stable configuration, not a primitive substance.
 
 **Atom / Molecule / Object.** Successively larger stable configurations: atoms *part-of* molecules *part-of* objects, each *instantiates* stable Form. This is what perception recognises as material reality.
 
@@ -2734,7 +2740,7 @@ The stack runs from substrate capability to manifest lived reality. Each layer *
 
 **Motion.** Continuity-preserving transfer of a closure-pattern through neighbouring substrate relations. *depends-on* Continuity; not a pellet traversing void.
 
-**Slip / Phase / Coupling.** Relations between rotational closures. *Coupling* *constrains* mutual circulation; *Phase* describes relative position in circulation; *Slip* is partial reseating that preserves identity. All *depend-on* the torsional character of vortons.
+**Slip / Phase / Coupling.** Relations between rotational closures. *Coupling* *constrains* mutual circulation; *Phase* describes relative position in circulation; *Slip* is partial reseating that preserves identity. All *depend-on* the torsional character of closure knots.
 
 **Light.** A coherent transient torsional disturbance that *transmits* perturbation across the substrate (*operation A*). *depends-on* the substrate; not self-existing in empty space.
 
@@ -2782,7 +2788,7 @@ Creator (God)
      │                             ├─> T1D1 / T1D2 Relational & Symbolic Orders
      │                             └─> T2 Manifest Lived Embodiment
      │
-     ├─ instantiated-by ─> Vorton (operation D) ─> Matter ─> Atom ─> Molecule ─> Object
+     ├─ instantiated-by ─> Closure Knot (operation D) ─> Matter ─> Atom ─> Molecule ─> Object
      │        (Mass / Inertia / Resistance emerge-from these interactions)
      │
      ├─ mediates ─> Motion · Light (A) · Electricity (B) · Magnetism (C) · Resonance
@@ -2807,8 +2813,8 @@ For a graph rendering, the load-bearing edges are:
 - `Substrate(T0) depends-on Creator`
 - `Continuity part-of Substrate`; `Constraint constrains Substrate`
 - `T1A emerges-from T0`; `T1B emerges-from T1A`; `T1C1 emerges-from T1B`; `T1C2 depends-on T1C1`; `T1C3 depends-on T1C2`; `T1C3 depends-on Continuity`; `T1D* emerges-from T1C3`; `T2 emerges-from T1`
-- `Vorton instantiates Form`; `Vorton emerges-from T0`; `Vorton maintains Identity`; `Vorton depends-on Constraint`
-- `Matter emerges-from Vorton`; `Atom part-of Molecule`; `Molecule part-of Object`
+- `Closure Knot instantiates Form`; `Closure Knot emerges-from T0`; `Closure Knot maintains Identity`; `Closure Knot depends-on Constraint`
+- `Matter emerges-from Closure Knot`; `Atom part-of Molecule`; `Molecule part-of Object`
 - `Mass emerges-from substrate-topological-interaction`
 - `Identity depends-on Continuity`; `Identity depends-on Form`
 - `Time is-a RuntimeOrdering`; `RuntimeOrdering depends-on SubstrateConditions`
@@ -2823,3 +2829,202 @@ For a graph rendering, the load-bearing edges are:
 ## Notes
 
 This reference is deliberately schematic, and three cautions apply. First, the relationship vocabulary is a tool for inspection, not a claim that reality is a database; the prose chapters remain the primary statement. Second, *emerges-from* and *depends-on* are ontological rather than merely temporal — a higher layer depends on the lower layers at every moment, not only at a first moment. Third, the entire structure, substrate included, *depends-on* the Creator: the ontology is an account of created order, and nothing in it is self-existent except God.
+
+---
+
+# Appendix D: Thought-Work Architecture — Intent, Outcomes, Models, and Expressions
+
+This appendix describes the book as structured thought-work. The book is not merely a sequence of chapters. It is an attempt to produce a deliberate change in understanding: restoring biblical ontology to Christian thought.
+
+That purpose requires more than fluent prose. It requires a traceable relation between intent, audience, outcome, model, concept, claim, argument, metaphor, expression, and assessment. Without that relation, future development can easily expand the book's language while weakening its coherence.
+
+The governing rule is:
+
+> No expression without an audience; no substantive outcome without a supporting model; no metaphor without an explicit target and boundary; no model without concepts, claims, relationships, and unresolved states.
+
+## Core Object Set
+
+**Intent.** The change the work exists to bring about. The governing intent of this book is to restore Christian freedom and capability to reason from revealed ontology.
+
+**Outcome.** A condition intended to become true in the reader's understanding, reasoning, orientation, confidence, or capability.
+
+**Audience.** The person, role, community, or system for whom an intent and outcome are relevant. Audience is not merely delivery metadata. It affects which outcomes matter, which concepts require definition, which objections must be answered, and which expressions are appropriate.
+
+**Concept.** A distinguishable semantic unit, such as creation, substrate, relation, description, ontology, darkness, light, closure knot, personhood, corruption, redemption, or restoration.
+
+**Relationship.** A typed connection between concepts: depends on, emerges from, constrains, reveals, supports, mediates, forecloses, aligns with, or transforms into.
+
+**Claim.** An assertion that a state or relationship is true. For example: description is downstream of coherent reality; Scripture functions as ontological revelation; corruption is persistent misalignment without restoration.
+
+**Principle.** A claim that governs reasoning across several models, such as Scripture speaks first, reality precedes description, relation is ontologically primary, and unresolved states must not be collapsed into forced certainty.
+
+**Thought model.** A bounded, relationally organised structure of concepts and claims constructed to explain, test, or navigate a region of reality or reasoning.
+
+**Argument.** A reasoned path from premises to conclusion that supports, tests, or refines a claim or model.
+
+**Anchor.** A source or constraint that grounds the argument: Scripture, logic, observation, historical evidence, modelling results, or embodied experience.
+
+**Metaphor or analogy.** A bridge from familiar structure to less familiar structure. Every metaphor should state its source, target, mapped relationship, intended audience, intended outcome, and limitation.
+
+**Boundary.** A declared limit that prevents category error. For this book, examples include: the substrate is not God, closure knots are not persons, ontological admissibility is not moral permission, and a successful model is not proof of the ontology.
+
+**Resolution state.** The current epistemic status of a claim, model, objection, or frontier: foundational, settled within framework, working, interpretive, partially resolved, frontier, open, or intentionally bounded.
+
+**Expression.** The reader-facing or machine-facing embodiment of a model: chapter, appendix, diagram, glossary, sermon, lecture, paper, formal graph, or machine-readable model.
+
+**Assessment criterion.** Evidence that an intended outcome has been served.
+
+## Stable Intent, Plural Audiences
+
+The book's governing intent is stable, but its audience graph is plural.
+
+General Christian readers need scriptural clarity, pastoral release, and freedom from false intellectual subordination.
+
+Christian scientists and physicists need disciplined distinction between observation, mathematical formalism, and ontology, together with honest claim-status boundaries.
+
+Theologians need scriptural containment, Creator-creature distinction, and careful handling of personhood, incarnation, resurrection, corruption, and redemption.
+
+Pastors need ways to name intellectual captivity, false opposition, suffering, embodiment, and hope for people under their care.
+
+Philosophers of science need a clear account of description, ontology, model, reification, underdetermination, and metaphysical overreach.
+
+Technically educated sceptics need explicit premises, honest boundaries, and no pretence that the Christian starting point is metaphysically neutral.
+
+AI reasoning systems need stable object IDs, typed relationships, claim status, audience mappings, and contradiction tracking.
+
+The same intent may therefore branch into different outcomes and expressions:
+
+```
+Governing intent
+├─ audience: general Christian reader
+│  └─ outcome: feels free to receive Scripture as truth about reality
+├─ audience: Christian physicist
+│  └─ outcome: distinguishes formal success from ontological closure
+├─ audience: pastor
+│  └─ outcome: can address hidden intellectual captivity pastorally
+└─ audience: AI system
+   └─ outcome: can preserve the model graph without flattening it into prose
+```
+
+The compact formulation is:
+
+> Stable intent, plural audiences, differentiated outcomes, adaptive expressions.
+
+## Outcome Families
+
+The book's outcomes are not all the same kind.
+
+**Epistemic outcomes** concern what the reader understands: creation is real, description is not ontology, relation is primary within runtime order, and Scripture functions as governing containment.
+
+**Discriminatory outcomes** concern distinctions the reader can make: Creator from creation, substrate from God, operation from agency, possibility from permission, personhood from embodiment, corruption from limitation, model from ontology, and metaphor from reality.
+
+**Reasoning outcomes** concern errors the reader can detect: reified mathematics, hidden primitives, descriptive sovereignty, transferred explanatory debt, false opposition, and collapsed unresolved states.
+
+**Orientational outcomes** concern authority and dependence: God reveals, Scripture governs, observation constrains without ruling sovereignly, and human interpretation remains corrigible.
+
+**Pastoral outcomes** concern freedom and courage: the reader is released from the fear that biblical ontology must retreat whenever a local descriptive framework claims authority.
+
+**Generative outcomes** concern future work: the reader can construct new expressions, models, diagrams, lectures, research prompts, or formal graph entries without losing the book's governing structure.
+
+## Major Models In This Book
+
+The book contains several principal thought models.
+
+**Scripture-containment model.** God reveals; Scripture speaks; permissible ontological space is bounded; speculative branches are foreclosed; inquiry gains focus.
+
+**Creation-runtime model.** The creation-level act instantiates created runtime order; runtime order operates through the relational substrate; the substrate is created, dependent, and not divine.
+
+**Relational-primacy model.** Relation entails continuity; continuity permits mediated influence; mediated influence supports stable configurations; stable configurations yield derivative discreteness.
+
+**Ontology-stack model.** Created order is placed from substrate capability through primitive geometry, grouped organisation, objecthood, kind, persistence, higher relational orders, and lived embodiment.
+
+**Transformation-tier model.** Operations, permissions, admissibility, and alignment cross the stack rather than forming one isolated layer.
+
+**Closure-knot identity model.** Stable identity in continuity is carried by sustained topological closure and invariant organisation, not by miniature hard substance.
+
+**Description-ontology model.** Description tracks regularities; ontology asks what must exist for the regularities to be intelligible; metaphysics asks the widest questions of being, dependence, and ground.
+
+**Physics-drift model.** Successful mathematical description can outpace ontology, reify formal objects, and thin cause, form, identity, telos, and continuity.
+
+**Life-as-sustained-closure model.** Life is not an unexplained vital substance and not merely a heap of mechanisms; it is sustained, hierarchically constrained closure with repair, renewal, and bounded generativity.
+
+**Personhood-embodiment model.** Personhood is the deeper category; embodiment is a creaturely mode of expression; resurrection vindicates embodiment without reducing the person to current material arrangement.
+
+**Corruption-as-misalignment model.** Corruption is real but parasitic: persistent misalignment without restoration, expressed as degradation, fragmentation, inversion, counterfeit, and parasitism.
+
+**Redemption-as-restoration model.** Redemption restores created order rather than escaping it; resurrection, judgment, and new creation are ontological fulfilment, not sentimental consolation.
+
+## Coherence Levels
+
+The book's models should be assessed by a spectrum of coherence.
+
+Atomic coherence means one claim is internally well formed.
+
+Local coherence means a small cluster of claims fits together.
+
+Regional coherence means a thought model successfully organises a bounded domain.
+
+Cross-regional coherence means several models connect without contradiction.
+
+Framework coherence means the principal models of the book form an ordered whole.
+
+Humanly accessible global coherence means everything available through revelation, human perception, reasoning, observation, and responsible inference is placed into the most coherent structure presently achievable by finite human beings.
+
+Perfect global coherence means every real entity, relation, distinction, implication, level, and boundary is perfectly placed without contradiction, omission, distortion, or unresolved remainder. Perfect global coherence is identical with perfect truth and belongs fully to God.
+
+## Metaphor Discipline
+
+Metaphors help readers grasp difficult models, but they must not quietly become ontology.
+
+For example, `substrate` helps name an underlying created capacity, but it must not be imagined as a material floor or hidden second world.
+
+`Runtime` helps distinguish creation-level authorship from ongoing created operation, but creation is not software and God is not merely a programmer.
+
+`Constraint map` helps explain DNA as a bounded generative participation in living order, but DNA is not a detached self-executing computer program.
+
+`Closure knot` helps make stable identity in continuity graspable, but the target claim is not that reality is made of literal ropes. The target is invariant topological closure within relational substrate order.
+
+Every future metaphor should carry a boundary statement. The point at which the comparison stops is part of the metaphor's truthfulness.
+
+## Expression Architecture
+
+A chapter is not the model itself. A chapter is an expression designed to make one or more models available to a particular audience in order to produce defined outcomes.
+
+The same model may require several expressions:
+
+- a technical chapter for physicists and modellers;
+- a scriptural chapter for Christian readers;
+- a pastoral explanation for churches;
+- a formal graph for machine reasoning;
+- a diagram for visual inspection;
+- an objection-and-response paper for sceptical readers.
+
+The prose is therefore downstream of the model graph. Future writing should begin by asking:
+
+- What intent does this expression serve?
+- Which audience is being addressed?
+- What outcomes should become true?
+- Which models support those outcomes?
+- Which concepts and claims constitute those models?
+- Which arguments, anchors, metaphors, and objections are required?
+- Which boundaries and unresolved states must be preserved?
+
+## Assessment Criteria
+
+The book is serving its governing intent when a reader can:
+
+- explain why Scripture is treated as ontological revelation within Christian faith;
+- distinguish description, ontology, and metaphysics;
+- explain why local descriptive success does not confer sovereign ontological authority;
+- state the Creator-creature boundary and apply it to the substrate;
+- explain relational primacy, continuity, and derivative discreteness;
+- describe closure knots without treating them as particles or persons;
+- distinguish operation, permission, and admissibility;
+- explain life as sustained closure and DNA as a constraint map;
+- distinguish personhood from embodiment while preserving the goodness of embodiment;
+- explain corruption as persistent misalignment without making evil ultimate;
+- explain redemption as restoration of created order;
+- preserve unresolved questions without forced certainty;
+- generate a new audience-specific expression without altering the underlying model.
+
+This appendix should therefore be treated as a development tool for the book. It is not a replacement for the chapters. It is a way to keep future chapters, diagrams, papers, lectures, and machine-readable representations faithful to the book's governing purpose.

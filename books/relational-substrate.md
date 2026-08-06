@@ -2,14 +2,14 @@
 
 ## A Hierarchical Ontology of Runtime Physical Reality
 
-A technical-volume rewrite of *Aetheric Magnetic Substrate*, incorporating the rename to RS and the transformation tier, and joined to its topological-substrate modelling programme (Part XIII).
+A technical-volume rewrite of *Aetheric Magnetic Substrate*, incorporating the rename to RS and the transformation tier, and accompanied by a bounded numerical research record (Part XIII).
 
 Status: master draft v1 (2026-05-25)
 Companion volumes:
 - General: *A Coherent World*
 - Devotional: *How to Hug the Right Tree*
 - Scriptural framing: *Coherent Biblical Ontology*
-- Companion code: `~/domains/Relational-Substrate` (public repository; the modelling programme's `docs/` scaffold and `instantiation/` computations — see Part XIII)
+- Companion code: `~/domains/Relational-Substrate` (public repository; see Part XIII for the current numerical research status)
 
 A free electronic edition of this book is available online. It is offered as an open intellectual contribution rather than a closed commercial product, intended to encourage broad readership and discussion; updated versions and related materials can be found through the project website at <https://relational-substrate.blogspot.com/>.
 
@@ -19,9 +19,9 @@ A free electronic edition of this book is available online. It is offered as an 
 
 This is the technical volume of the RS framework. It is the book a reader should reach for when the question is precise: what does the ontology actually claim, what are its primitives, what are its axioms, what is closed and what is open, and what is being done about the open parts.
 
-**This book is offered as a thought model — to be considered and followed up, not simply accepted.** Its aim is not to announce a validated physics but to develop a single ontology far enough that it makes *concrete, structural, could-fail* claims about matter — and then to say precisely where those claims are strong, where they are merely internal, and where they might break. It is written so that a reader who finds it worth taking seriously has somewhere definite to push: a derivation to check, a computation to rerun, a stated vulnerability to resolve or exploit. Its measure of success is not assent but useful follow-up.
+**This book is offered as a thought model — to be considered and followed up, not simply accepted.** Its aim is not to announce a validated physics but to develop a single ontology far enough that it makes *concrete, structural, could-fail* claims about matter — and then to say precisely where those claims are strong, where they are merely internal, and where they might break. It is written so that a reader who finds it worth taking seriously has somewhere definite to push: a stated protocol to inspect, a result to reproduce, a vulnerability to resolve or exploit. Its measure of success is not assent but useful follow-up.
 
-It is intended as a **living book**, not a frozen reference. That phrase matters. A traditional technical reference is published, indexed, and frozen until the next edition. The RS framework is not in that state and may never be in that state on its own. It has a computational counterpart — the topological-substrate modelling programme of Part XIII — that is itself evolving. Modern AI-assisted authorship makes it possible to keep the book and the modelling work coherent through ongoing curation rather than through periodic re-publication. This volume is therefore versioned, marked with claim-status discipline, and explicit about what is settled, what is active, and what is frontier work.
+It is intended as a **living book**, not a frozen reference. That phrase matters. A traditional technical reference is published, indexed, and frozen until the next edition. The RS framework is not in that state and may never be in that state on its own. It has a bounded numerical research counterpart in Part XIII that is itself evolving. Modern AI-assisted authorship makes it possible to keep the book and the research record coherent through ongoing curation rather than through periodic re-publication. This volume is therefore versioned, marked with claim-status discipline, and explicit about what is settled, what is active, and what is frontier work.
 
 Three discipline rules govern the whole book.
 
@@ -61,11 +61,11 @@ This volume is the successor to *Aetheric Magnetic Substrate*. The rename to RS 
 - Chapter 15 — Secondary Topology
 - Chapter 16 — Why the Primary / Transient / Secondary Distinction Matters
 
-### Part VI — Vortons
-- Chapter 17 — What a Vorton Is
-- Chapter 18 — Vorton Identity and Invariants
-- Chapter 19 — Vorton Degrees of Freedom and Coupling
-- Chapter 20 — Vorton Slip and Reconfiguration
+### Part VI — Closure Knots
+- Chapter 17 — What a Closure Knot Is
+- Chapter 18 — Closure Knot Identity and Invariants
+- Chapter 19 — Closure Knot Degrees of Freedom and Coupling
+- Chapter 20 — Closure Knot Slip and Reconfiguration
 
 ### Part VII — Matter, Phase, and Material Regimes
 - Chapter 21 — Matter as Stable Configuration
@@ -78,7 +78,7 @@ This volume is the successor to *Aetheric Magnetic Substrate*. The rename to RS 
 - Chapter 26 — Operation A — Propagation (Light)
 - Chapter 27 — Operation B — Reconfiguration (Electricity)
 - Chapter 28 — Operation C — Alignment Adjustment (Magnetism)
-- Chapter 29 — Operation D — Closure Formation (Vortons, Identity)
+- Chapter 29 — Operation D — Closure Formation (Closure Knots, Identity)
 - Chapter 30 — Operation E — Dissolution / Unwinding
 - Chapter 31 — Resonance, Circuits, and Engineered Systems as Operation Compositions
 
@@ -101,11 +101,11 @@ This volume is the successor to *Aetheric Magnetic Substrate*. The rename to RS 
 - Chapter 41 — Core Axioms (RS v2)
 - Chapter 42 — Non-Agency and Non-Identity Boundaries
 
-### Part XIII — The Mathematical Modelling Programme *(new)*
-- Chapter 43 — Re-anchoring: From Rule-Grammar Sandbox to Topological Substrate
-- Chapter 44 — The Coherence-Topology Scaffold: Structural Results
-- Chapter 45 — Instantiation: Explicit Parameter-Free Computations
-- Chapter 46 — Honest Standing and the Frontier
+### Part XIII — Numerical Research Discipline and Current Status
+- Chapter 43 — Scope, Evidence, and Guardrails
+- Chapter 44 — H3S Local Transfer Results
+- Chapter 45 — Temporal Boundary and Cadence-Law Failure
+- Chapter 46 — Standing, Limits, and the Next Question
 
 ### Part XIV — Closing Integration
 - Chapter 47 — What RS Explains
@@ -114,8 +114,10 @@ This volume is the successor to *Aetheric Magnetic Substrate*. The rename to RS 
 
 ### Appendix A — Reference Summary of the RS Runtime Ontology
 ### Appendix B — Operation, Permission, Admissibility, Alignment Glossary
-### Appendix C — Modelling Programme Artifacts
+### Appendix C — Current Numerical Research Record
 ### Appendix D — Claim-Status Map
+### Appendix E — The Ontology as a Relationship Graph
+### Appendix F — Notes on Sources and Intellectual Debts
 
 ---
 
@@ -231,11 +233,11 @@ Several technical consequences follow immediately.
 
 **Spatiality is downstream.** Older substrate theories tended to imagine the substrate as something sitting *in* a pre-existing space. RS does not. Space is the consequence of an ordered relational base, not the container into which it is placed. This removes one of the deepest ambiguities that weakened earlier ether proposals.
 
-**Temporality is downstream as well.** Time, in RS, is *runtime ordering*: the ordered sequencing of configurational change, not a corridor through which the substrate travels. Before-and-after relations are real because ordered transitions really occur, but there is no separate temporal container that would still be elapsing if no configurational change took place. This reframes phenomena ordinarily described as time *dilation*. A clock is a physical process — a coordinated run of substrate reconfiguration — and the local *tension* within the substrate governs the rate at which that process can reseat and advance. Where local tension is higher (in the neighbourhood of large mass-energy configurations, or for a region traversed at high relative velocity), the substrate reseats more slowly, and a clock running on it must tick more slowly because its own configurational steps depend on the same reseating. Schematically, *Δt_local ∝ 1 / τ(x)*, where *τ(x)* is the local rate of admissible substrate reconfiguration; the mathematical form of *τ* is open formal work (cf. Appendix A.6) and a natural target for the modelling programme. The clock is not wading through a thicker stretch of time; its surrounding runtime conditions are harder to reconfigure, and its process inherits that resistance. Conversely, an atomic clock raised to high altitude — where local tension is lower — ticks measurably *faster*, as evidenced both by aircraft-carried atomic clock experiments and by the general-relativistic corrections routinely applied to satellite-borne timing systems. Free fall, on this reading, is motion along a substrate tension gradient — not the discovery of an exotic temporal phenomenon but the regime-dependence of runtime ordering disclosing itself through a physical process whose rate the substrate locally sets. What varying clocks disclose is therefore not the flow-rate of a dimensional corridor but the regime-dependence of runtime ordering itself — the same regularities relativity measures, here given an ontological rather than a purely formal reading. As with space, this does not deny the technical accuracy of the relativistic formalism; it specifies what that formalism is tracking.
+**Temporality is downstream as well.** Time, in RS, is *runtime ordering*: the ordered sequencing of configurational change, not a corridor through which the substrate travels. Before-and-after relations are real because ordered transitions really occur, but there is no separate temporal container that would still be elapsing if no configurational change took place. This reframes phenomena ordinarily described as time *dilation*. A clock is a physical process — a coordinated run of substrate reconfiguration — and the local *tension* within the substrate governs the rate at which that process can reseat and advance. Where local tension is higher (in the neighbourhood of large mass-energy configurations, or for a region traversed at high relative velocity), the substrate reseats more slowly, and a clock running on it must tick more slowly because its own configurational steps depend on the same reseating. Schematically, *Delta t_local proportional to 1 / tau(x)*, where *tau(x)* is the local rate of admissible substrate reconfiguration; the form of *tau* remains open formal work. The clock is not wading through a thicker stretch of time; its surrounding runtime conditions are harder to reconfigure, and its process inherits that resistance. Conversely, an atomic clock raised to high altitude — where local tension is lower — ticks measurably *faster*, as evidenced both by aircraft-carried atomic clock experiments and by the general-relativistic corrections routinely applied to satellite-borne timing systems. Free fall, on this reading, is motion along a substrate tension gradient — not the discovery of an exotic temporal phenomenon but the regime-dependence of runtime ordering disclosing itself through a physical process whose rate the substrate locally sets. What varying clocks disclose is therefore not the flow-rate of a dimensional corridor but the regime-dependence of runtime ordering itself — the same regularities relativity measures, here given an ontological rather than a purely formal reading. As with space, this does not deny the technical accuracy of the relativistic formalism; it specifies what that formalism is tracking.
 
 **Relational primacy does not entail idealism.** The relational base is *given*, not constructed by being interpreted. To say that reality is structured in a way that is already meaning-bearing (a claim developed in the general volume) does not say that reality is brought into being by being read. The world is *interpretable* because it is first made real, ordered, and intelligible. Ontological language comes first; verbal language follows.
 
-The implications for the rest of the technical exposition are substantial but conservative. Vortons (Chapters 17–20) become stable configurations of *relation* — circulations of relational constraint — rather than tiny objects in a medium. Operations (Part VIII) become typed transformations of relational configurations, not movements of stuff. Topology (Part V) becomes the framework's central ontological discriminator because in a relational world, what something *is* is borne by how its relations are organised.
+The implications for the rest of the technical exposition are substantial but conservative. Closure Knots (Chapters 17–20) become stable configurations of *relation* — circulations of relational constraint — rather than tiny objects in a medium. Operations (Part VIII) become typed transformations of relational configurations, not movements of stuff. Topology (Part V) becomes the framework's central ontological discriminator because in a relational world, what something *is* is borne by how its relations are organised.
 
 ## Chapter 7 — The Hierarchical Order of Explanation
 
@@ -329,7 +331,7 @@ Once continuity is established, the next question is what kinds of state and org
 
 Together these primitives constitute what may be called **constraint geometry**. Constraint geometry does not mean geometry in the thin sense of shape-description. It means the ordered set of ways in which the substrate may be configured, stabilised, related, and transformed without ceasing to be itself. Geometry, in this ontological sense, is not an after-the-fact picture of structure. It is one of the fundamental conditions of structure.
 
-These primitives are intentionally placed here, before the chapters on topology, vortons, matter, and propagation, because every later distinction depends on them. A stable entity requires closure. A propagating disturbance requires torsion and ordered relation. Stored energy requires tension. Coupling requires alignment. If these capabilities are not treated as primitive, later chapters are forced to borrow them informally without ontological grounding.
+These primitives are intentionally placed here, before the chapters on topology, closure knots, matter, and propagation, because every later distinction depends on them. A stable entity requires closure. A propagating disturbance requires torsion and ordered relation. Stored energy requires tension. Coupling requires alignment. If these capabilities are not treated as primitive, later chapters are forced to borrow them informally without ontological grounding.
 
 ## Chapter 11 — Darkness as Ordered Ground State
 
@@ -369,7 +371,7 @@ A primary topology is *primary* because it does not depend on a higher-order org
 
 This stability does not mean immobility. A primary topological entity may propagate, shift, couple, or participate in larger structures. What makes it primary is that it retains ontological identity through such changes by virtue of its own configurational invariants. It is not merely a temporary pattern in transit, nor a large composite arrangement whose existence depends on many coordinated constituents.
 
-Within RS, primary topology is where discrete identity first arises in a continuous reality. It is therefore the correct ontological home for stable, identity-bearing torsional states such as vortons. Without this category, there is no clean place in the ontology for a real entity that is neither a fundamental particle nor a mere descriptive abstraction.
+Within RS, primary topology is where discrete identity first arises in a continuous reality. It is therefore the correct ontological home for stable, identity-bearing torsional states such as closure knots. Without this category, there is no clean place in the ontology for a real entity that is neither a fundamental particle nor a mere descriptive abstraction.
 
 Primary topology answers a very specific question: what can stably exist at the first level of differentiation within the substrate? It does not yet answer what larger structures may be built from such entities, nor how temporary coherent formations behave when they never become stable enough to bear enduring identity. Those require separate categories.
 
@@ -391,7 +393,7 @@ Secondary topology refers to composite, aggregate, or emergent organisations bui
 
 If primary topology answers the question of what can stably exist, secondary topology answers the question of what stable entities can collectively form. Lattices, interfaces, phase boundaries, material structures, standing organisations, and larger patterned regimes belong to this domain when their existence depends on coordinated relations among many lower-level entities or persistent boundary constraints.
 
-Secondary topology is therefore downstream from primary topology, but it is not reducible to a mere list of primary units. The arrangement itself matters. A lattice is not just many vortons counted together. An interface is not just a crowd of local identities. A phase boundary is not simply an arbitrary edge. In each case, relation, constraint, and coordinated organisation produce a real topological regime at a higher level than the individual identity-bearing state.
+Secondary topology is therefore downstream from primary topology, but it is not reducible to a mere list of primary units. The arrangement itself matters. A lattice is not just many closure knots counted together. An interface is not just a crowd of local identities. A phase boundary is not simply an arbitrary edge. In each case, relation, constraint, and coordinated organisation produce a real topological regime at a higher level than the individual identity-bearing state.
 
 This category also prevents another common confusion: not every structured reality is either an individual entity or a temporary wave-like event. Some structures are built, sustained, and constrained over larger scales. They have persistence without being primary entities, and organisation without being merely transient. Secondary topology gives them proper ontological placement.
 
@@ -417,69 +419,69 @@ A note on operations. The five-operation typology developed in Part VIII maps cl
 
 ---
 
-# Part VI — Vortons
+# Part VI — Closure Knots
 
-## Chapter 17 — What a Vorton Is
+## Chapter 17 — What a Closure Knot Is
 
-A vorton is a stable torsional knot-state of the relational substrate. It is a primary topological entity: a real, identity-bearing configuration of the continuous substrate that maintains itself as a coherent topological state rather than as a separable piece of substance.
+A closure knot is a stable torsional knot-state of the relational substrate. It is a primary topological entity: a real, identity-bearing configuration of the continuous substrate that maintains itself as a coherent topological state rather than as a separable piece of substance.
 
-This definition matters because the vorton must not be smuggled back into the ontology as a disguised particle. A vorton is not a point object, not a tiny bead in space, and not a miniature hard constituent from which larger things are mechanically assembled. It is a stable closure of torsional organisation within the substrate itself.
+This definition matters because the closure knot must not be smuggled back into the ontology as a disguised particle. A closure knot is not a point object, not a tiny bead in space, and not a miniature hard constituent from which larger things are mechanically assembled. It is a stable closure of torsional organisation within the substrate itself.
 
-The phrase *knot-state* is important, but it should not be trivialised into a loose metaphor. The claim is not merely that the vorton is complicated or twisted. The claim is that its identity is borne by organised closure and persistent configurational invariance in a continuous medium. If the substrate is primary, then the vorton is not placed into it. It is something the substrate stably does.
+The phrase *knot-state* is important, but it should not be trivialised into a loose metaphor. The claim is not merely that the closure knot is complicated or twisted. The claim is that its identity is borne by organised closure and persistent configurational invariance in a continuous medium. If the substrate is primary, then the closure knot is not placed into it. It is something the substrate stably does.
 
 The mechanism, stated as cleanly as we can without overclaiming: the substrate is capable of torsion, curvature, adjacency, and closure. When a local regime of twist and return folds back on itself in such a way that balanced outward release meets balanced inward retention, a persistent closure can form. The closure persists only when several conditions are met simultaneously. It must be locally bounded enough not to diffuse immediately. It must be distributed enough not to collapse into destructive overconcentration. It must return strain through a closed path. It must occupy an admissible neighbourhood within the deeper substrate grammar.
 
-This is also the point at which RS must distinguish the vorton from neighbouring concepts such as solitons, topological defects, or other stable structures in ordered media. Those categories are not irrelevant; they show that contemporary physics already has partial language for stability in continuity. But a vorton is not merely any persistent pattern, nor merely any defect relative to a background order. In RS it names a *primary identity-bearing torsional knot-state* that belongs to the first ontological level of stable runtime differentiation. A soliton may describe a self-preserving propagative form. A defect may describe a discontinuity or organised irregularity within an ordered medium. A vorton, by contrast, is posited as a stable primary topological entity from which matter itself is fundamentally constituted. The distinction is therefore not one of decorative vocabulary but of ontological rank.
+This is also the point at which RS must distinguish the closure knot from neighbouring concepts such as solitons, topological defects, or other stable structures in ordered media. Those categories are not irrelevant; they show that contemporary physics already has partial language for stability in continuity. But a closure knot is not merely any persistent pattern, nor merely any defect relative to a background order. In RS it names a *primary identity-bearing torsional knot-state* that belongs to the first ontological level of stable runtime differentiation. A soliton may describe a self-preserving propagative form. A defect may describe a discontinuity or organised irregularity within an ordered medium. A closure knot, by contrast, is posited as a stable primary topological entity from which matter itself is fundamentally constituted. The distinction is therefore not one of decorative vocabulary but of ontological rank.
 
-That difference also sharpens the question of species. RS does not need to pretend that every vorton class has already been mathematically catalogued, but it does require that vorton kinds be discriminable in principle by invariant topology, stability envelope, coupling behaviour, and permitted modes of reconfiguration. In other words, a vorton species is not merely "another persistent shape." It is a distinct class of primary knot-state with a different invariant profile and therefore a different role in the constitution of matter. The re-anchored modelling programme (Part XIII) puts empirical pressure on this requirement: a vorton's identity is now modelled as an integer linking (Hopf) invariant, and the species arithmetic — the self-linking of the charge flux — has been computed explicitly. This is a first structural instalment of the species mathematics, not yet the full catalogue.
+That difference also sharpens the question of species. RS does not claim that every closure knot class has already been formally catalogued, but it does require that closure knot kinds be discriminable in principle by invariant topology, stability envelope, coupling behaviour, and permitted modes of reconfiguration. In other words, a closure knot species is not merely "another persistent shape." It is a distinct class of primary knot-state with a different invariant profile and therefore a different role in the constitution of matter. The ontology sets this as a requirement for future formal work; it does not claim that the required catalogue yet exists.
 
-This also explains why the vorton belongs under primary topology rather than transient structures. A transient aether structure may be coherent and real without persisting as an independent identity. A vorton, by contrast, is stable enough to count as a continuing ontological unit within runtime reality. It can move, couple, and participate in larger structures without surrendering its identity, because that identity is carried topologically rather than materially.
+This also explains why the closure knot belongs under primary topology rather than transient structures. A transient aether structure may be coherent and real without persisting as an independent identity. A closure knot, by contrast, is stable enough to count as a continuing ontological unit within runtime reality. It can move, couple, and participate in larger structures without surrendering its identity, because that identity is carried topologically rather than materially.
 
-In RS, the vorton is therefore the first proper answer to a question that modern particle language leaves obscure: what is a stable physical unit if reality is continuous and relational? The answer is not an indivisible bit of matter. It is a self-maintaining topological state of the substrate.
+In RS, the closure knot is therefore the first proper answer to a question that modern particle language leaves obscure: what is a stable physical unit if reality is continuous and relational? The answer is not an indivisible bit of matter. It is a self-maintaining topological state of the substrate.
 
-## Chapter 18 — Vorton Identity and Invariants
+## Chapter 18 — Closure Knot Identity and Invariants
 
-If vortons are to function as genuine ontological units, their identity cannot be treated vaguely. A vorton must remain what it is through permitted change, and that requires a principled account of invariance.
+If closure knots are to function as genuine ontological units, their identity cannot be treated vaguely. A closure knot must remain what it is through permitted change, and that requires a principled account of invariance.
 
-Within RS, vorton identity is preserved not by retaining a parcel of substance, but by maintaining a stable class of topological organisation. The exact mathematical formalism may be refined later, but ontologically the point is already clear: a vorton is what it is because certain configurational features remain invariant through allowed transformations.
+Within RS, closure knot identity is preserved not by retaining a parcel of substance, but by maintaining a stable class of topological organisation. The exact mathematical formalism may be refined later, but ontologically the point is already clear: a closure knot is what it is because certain configurational features remain invariant through allowed transformations.
 
 These invariants may include closure class, winding relations, linking structure where applicable, continuity with the surrounding substrate, and a **stability envelope** within which the configuration can change without ceasing to be itself. The ontology does not need to pretend that every such invariant is already mathematically final in order to affirm that some such invariants are necessary. Without them, identity reduces to naming convention.
 
-The notion of a stability envelope is especially important. A vorton is not frozen. It may vary, orient, interact, and even undergo constrained deformation. But there are limits within which these changes preserve identity and beyond which the knot-state no longer counts as the same primary topology. This allows the ontology to speak clearly about persistence without implying rigidity.
+The notion of a stability envelope is especially important. A closure knot is not frozen. It may vary, orient, interact, and even undergo constrained deformation. But there are limits within which these changes preserve identity and beyond which the knot-state no longer counts as the same primary topology. This allows the ontology to speak clearly about persistence without implying rigidity.
 
-This is one of the most important differences between topological identity and classical particle identity. A particle is often imagined as being itself because it remains the same little thing. A vorton remains itself because it preserves the same organised kind of configurational closure across transformation. Identity is therefore borne by invariant organisation, not by miniature objecthood.
+This is one of the most important differences between topological identity and classical particle identity. A particle is often imagined as being itself because it remains the same little thing. A closure knot remains itself because it preserves the same organised kind of configurational closure across transformation. Identity is therefore borne by invariant organisation, not by miniature objecthood.
 
-That same point sharpens the distinction from generic topological defect language. A defect is often defined relative to the order it interrupts. A vorton is defined by the positive stability and identity of its own configurational closure. Likewise, a merely propagative persistent wave-form is not yet a vorton if it lacks the stable identity-bearing closure required of primary topology. The ontological claim of RS is therefore narrower and stronger than the generic claim that ordered media can support persistent forms.
+That same point sharpens the distinction from generic topological defect language. A defect is often defined relative to the order it interrupts. A closure knot is defined by the positive stability and identity of its own configurational closure. Likewise, a merely propagative persistent wave-form is not yet a closure knot if it lacks the stable identity-bearing closure required of primary topology. The ontological claim of RS is therefore narrower and stronger than the generic claim that ordered media can support persistent forms.
 
-This is also why the vorton chapters must be read as ontologically stronger than a loose appeal to contemporary analogies. The book is not claiming only that continuity can support stable patterns. It is claiming that runtime matter requires a specific class of stable primary torsional knot-state capable of bearing identity through change, coupling into higher regimes, and remaining distinct from both transient propagations and merely background-relative defects.
+This is also why the closure knot chapters must be read as ontologically stronger than a loose appeal to contemporary analogies. The book is not claiming only that continuity can support stable patterns. It is claiming that runtime matter requires a specific class of stable primary torsional knot-state capable of bearing identity through change, coupling into higher regimes, and remaining distinct from both transient propagations and merely background-relative defects.
 
-The framework's earlier (now retired) sandbox treated vorton identity as a continuous **identity-score** composed from six heuristic metrics (closure, return, boundedness, coherence, reseating, leakage) above a threshold. Those were *practical* proxies, not formal invariants. The re-anchored modelling programme replaces them with the genuine topological invariant the ontology's "knot-state" language always implied: an **integer linking (Hopf) invariant**, which has been computed explicitly for candidate vortons. Chapter 44 develops this.
+The framework does not identify a single completed mathematical invariant as the final carrier of closure-knot identity. It requires instead that a future account state which configurational features remain invariant through allowed transformations, and that it distinguish genuine identity from temporary persistence or naming convention.
 
-## Chapter 19 — Vorton Degrees of Freedom and Coupling
+## Chapter 19 — Closure Knot Degrees of Freedom and Coupling
 
-Once vortons are understood as stable primary topologies, a further question follows: in what ways can they vary, orient, interact, and participate in larger reality without ceasing to be what they are?
+Once closure knots are understood as stable primary topologies, a further question follows: in what ways can they vary, orient, interact, and participate in larger reality without ceasing to be what they are?
 
-This is the domain of vorton degrees of freedom and coupling.
+This is the domain of closure knot degrees of freedom and coupling.
 
-A vorton has internal organisation. Its torsional state is not a blank token but a structured configuration capable of maintaining closure under constraint. It also has orientation: not necessarily in the simplistic sense of a tiny object pointing through space, but in the deeper sense that its organised configuration may stand in different relational alignments to nearby structures and to the wider substrate.
+A closure knot has internal organisation. Its torsional state is not a blank token but a structured configuration capable of maintaining closure under constraint. It also has orientation: not necessarily in the simplistic sense of a tiny object pointing through space, but in the deeper sense that its organised configuration may stand in different relational alignments to nearby structures and to the wider substrate.
 
-A vorton also has an interaction boundary. This does not mean a hard shell. It means that a stable knot-state locally biases the substrate around it, and that this bias establishes the region and manner in which nearby configurations can couple to it. In a continuous ontology, interaction is not contact between already separate pieces. It is mediated configurational relation.
+A closure knot also has an interaction boundary. This does not mean a hard shell. It means that a stable knot-state locally biases the substrate around it, and that this bias establishes the region and manner in which nearby configurations can couple to it. In a continuous ontology, interaction is not contact between already separate pieces. It is mediated configurational relation.
 
-**Coupling strength** describes how strongly one vorton constrains or coordinates with others. Strong coupling supports rigid or highly constrained regimes. Moderate coupling allows persistence with increased mobility. Weak coupling permits looser relations and broader reconfiguration. These distinctions later become essential for explaining matter states, conductivity, phase behaviour, and resonance.
+**Coupling strength** describes how strongly one closure knot constrains or coordinates with others. Strong coupling supports rigid or highly constrained regimes. Moderate coupling allows persistence with increased mobility. Weak coupling permits looser relations and broader reconfiguration. These distinctions later become essential for explaining matter states, conductivity, phase behaviour, and resonance.
 
-**Mobility modes** must also be treated carefully. A vorton does not need to be imagined as a ball rolling through a void. Its movement is better understood as coherent re-expression, reseating, or displacement of stable topological identity through the substrate under allowed transitions. The details of such movement may vary by context, but the ontology must insist that mobility is real while remaining continuous with substrate behaviour.
+**Mobility modes** must also be treated carefully. A closure knot does not need to be imagined as a ball rolling through a void. Its movement is better understood as coherent re-expression, reseating, or displacement of stable topological identity through the substrate under allowed transitions. The details of such movement may vary by context, but the ontology must insist that mobility is real while remaining continuous with substrate behaviour.
 
-Taken together, these degrees of freedom allow vortons to be neither static abstractions nor disguised particles. They are stable primary topologies capable of relation, orientation, persistence, and participation in larger structures.
+Taken together, these degrees of freedom allow closure knots to be neither static abstractions nor disguised particles. They are stable primary topologies capable of relation, orientation, persistence, and participation in larger structures.
 
-The re-anchored programme (Chapters 44–45) exposes this coupling layer topologically: bound vortons combine by additive quantised charge and by the *linking* of their knots, and their derived Fermi statistics force the shell structure of the resulting composites. This replaces the earlier sandbox's heuristic coupling descriptors (route count, closure topology, polarity mode, and the like), which were candidate grammar categories rather than demonstrated primitives.
+Formal treatment of coupling remains future work. It must state how stable closures constrain one another, which changes preserve identity, and how higher-order material regimes can emerge without quietly reintroducing primitive particles or unexamined descriptive assumptions.
 
-## Chapter 20 — Vorton Slip and Reconfiguration
+## Chapter 20 — Closure Knot Slip and Reconfiguration
 
-**Vorton slip** is the name given to a permitted reconfiguration in which stable primary topologies reseat relative to one another or relative to an available pathway in the substrate without losing identity. This concept is indispensable because a continuous ontology must explain change without constantly reducing all transformation either to destruction or to the motion of tiny inert objects.
+**Closure Knot slip** is the name given to a permitted reconfiguration in which stable primary topologies reseat relative to one another or relative to an available pathway in the substrate without losing identity. This concept is indispensable because a continuous ontology must explain change without constantly reducing all transformation either to destruction or to the motion of tiny inert objects.
 
 Slip makes that possible. It allows stable identity to persist while relational arrangement changes.
 
-In material regimes, vorton slip helps explain rearrangement, conduction, and the differing behaviours associated with solids, liquids, gases, and more complex organised states. A highly constrained regime suppresses slip. A moderately constrained regime permits it under cost. A weakly constrained regime allows much broader reconfiguration. This gives the ontology a clean way of speaking about mobility and transport without abandoning its topological commitments.
+In material regimes, closure knot slip helps explain rearrangement, conduction, and the differing behaviours associated with solids, liquids, gases, and more complex organised states. A highly constrained regime suppresses slip. A moderately constrained regime permits it under cost. A weakly constrained regime allows much broader reconfiguration. This gives the ontology a clean way of speaking about mobility and transport without abandoning its topological commitments.
 
 Slip also provides a more coherent basis for electrical behaviour than the naive picture of little charges being pushed through wires like pellets through a tube. If conduction is a patterned reconfiguration of stable topological states through available pathways, then current can be treated as the rate of ordered reseating rather than the brute transport of miniature objects. This does not eliminate physical reality. It clarifies it.
 
@@ -495,17 +497,17 @@ In the operations typology of Part VIII, slip is a specific case of operation B 
 
 ## Chapter 21 — Matter as Stable Configuration
 
-If the substrate is continuous and relational, if primary topology yields stable identity-bearing states, and if vortons are the principal stable torsional knot-states within runtime ontology, then matter can no longer be treated as a primitive given. Matter must be redefined.
+If the substrate is continuous and relational, if primary topology yields stable identity-bearing states, and if closure knots are the principal stable torsional knot-states within runtime ontology, then matter can no longer be treated as a primitive given. Matter must be redefined.
 
 Within RS, matter is **stable configuration of the substrate**. More precisely, matter is the organised persistence of primary topological entities and their relations under runtime constraint. It is not a substance inserted into the substrate, nor a separate ontological category layered on top of it. Matter is what the substrate stably does under conditions that support enduring structured identity.
 
 This means that matter is real without being fundamental in the old particulate sense. It resists, persists, combines, interacts, and supports history. But it does so because stable torsional configurations and their organised relations are maintained, not because tiny inert objects exist in independence and merely happen to collide.
 
-This redefinition has a direct consequence for inertia and resistance that should be stated plainly. Inertia is not a property an isolated material object simply *has* in its own right. If a material body is itself a stable substrate configuration, then what is measured as its inertia is the resistance characteristic of substrate organisation being reconfigured — the cost of reseating a held closure into a new configurational pattern under runtime constraints. The mechanism can be made more concrete. In a vorton-class configuration, each torsional twist locks the admissible motions of the twists coupled to it, so reseating the configuration into a new pattern requires coordinating the entire interlocked structure rather than nudging an independent object. *That* coordination cost is what is measured as inertia. The resistance is fully real and measurable; it simply belongs to substrate-configurational interaction, not to a self-standing object adrift in empty space. Where configurations are tightly interwoven, the resistance scales accordingly — the empirical mass ratio of proton to electron (~1836) corresponds, on this reading, to a roughly proportional ratio of substrate-configurational constraint that must be coordinated to reseat one against the other. Mass therefore functions as a faithful descriptor of how strongly a configuration resists reconfiguration, not as the primitive from which material reality is to be built. The order of explanation runs from substrate and stable configuration to mass and inertia, never the reverse: *identity is geometric, not substantial.*
+This redefinition has a direct consequence for inertia and resistance that should be stated plainly. Inertia is not a property an isolated material object simply *has* in its own right. If a material body is itself a stable substrate configuration, then what is measured as its inertia is the resistance characteristic of substrate organisation being reconfigured — the cost of reseating a held closure into a new configurational pattern under runtime constraints. The mechanism can be made more concrete. In a closure knot-class configuration, each torsional twist locks the admissible motions of the twists coupled to it, so reseating the configuration into a new pattern requires coordinating the entire interlocked structure rather than nudging an independent object. *That* coordination cost is what is measured as inertia. The resistance is fully real and measurable; it simply belongs to substrate-configurational interaction, not to a self-standing object adrift in empty space. Where configurations are tightly interwoven, the resistance scales accordingly — the empirical mass ratio of proton to electron (~1836) corresponds, on this reading, to a roughly proportional ratio of substrate-configurational constraint that must be coordinated to reseat one against the other. Mass therefore functions as a faithful descriptor of how strongly a configuration resists reconfiguration, not as the primitive from which material reality is to be built. The order of explanation runs from substrate and stable configuration to mass and inertia, never the reverse: *identity is geometric, not substantial.*
 
 The practical importance of this redefinition is considerable. It allows solidity, stability, and material persistence to be treated as downstream consequences of substrate organisation. It also explains why matter is neither identical to the substrate in its undifferentiated sense nor separable from it as a foreign insertion. Matter is differentiated substrate stability.
 
-Matter is also not exhausted by the single vorton considered in isolation. The material world ordinarily encountered is a regime of organised stable configurations, not a field of lonely primary entities. Matter therefore belongs at the point where primary topology, coupling, boundary condition, and larger organisation begin to stabilise into persistent runtime structure.
+Matter is also not exhausted by the single closure knot considered in isolation. The material world ordinarily encountered is a regime of organised stable configurations, not a field of lonely primary entities. Matter therefore belongs at the point where primary topology, coupling, boundary condition, and larger organisation begin to stabilise into persistent runtime structure.
 
 ## Chapter 22 — Density, Temperature, and Pressure in RS Terms
 
@@ -566,7 +568,7 @@ In operations terms, a phase transition is typically a coordinated sequence of C
 
 Up to this point the framework has been almost entirely about *what exists*: the substrate, its primitive capacities, its topological articulations, its primary identities, the secondary structures built from them, and the material regimes those structures sustain. This is the **grammar layer**.
 
-But grammar alone is not enough. The substrate is not static. It changes. Vortons form and dissolve. Light propagates. Electricity reconfigures. Magnetism adjusts alignments. Phases shift. Materials degrade. Organisms grow and die.
+But grammar alone is not enough. The substrate is not static. It changes. Closure Knots form and dissolve. Light propagates. Electricity reconfigures. Magnetism adjusts alignments. Phases shift. Materials degrade. Organisms grow and die.
 
 Until now, the framework has handled these as *phenomena*: chapters on electricity, magnetism, light, resonance, phase. Each chapter implicitly treated substrate change as the relevant explanatory category, but the framework never made the typology of substrate change explicit. That left the ontology vulnerable to two kinds of drift.
 
@@ -603,7 +605,7 @@ The mapping from the five operations to the classical physical "lanes" (electric
 - **Light** is the paradigm of operation A (propagation). But many propagation events are not light — neural signal propagation, sound, ordered substrate disturbances in non-electromagnetic regimes.
 - **Electricity** is the paradigm of operation B (reconfiguration). But many reconfigurations are not electrical — phase changes, chemical state changes, biological signalling.
 - **Magnetism** is the paradigm of operation C (alignment adjustment). But many alignment adjustments are not magnetic — molecular orientation in liquids, biological pattern formation, ferroelectric ordering.
-- **Vortons** are the paradigm of operation D (closure formation). The most stable closures are vortons; but other forms of closure exist as transient or secondary structures.
+- **Closure Knots** are the paradigm of operation D (closure formation). The most stable closures are closure knots; but other forms of closure exist as transient or secondary structures.
 - **Decay** is the paradigm of operation E (dissolution). The framework currently has the *least* developed account of operation E — this is named openly as the largest gap in the typology (see Chapter 30 and Chapter 46).
 
 Chapters 26–30 develop each operation in turn.
@@ -624,7 +626,7 @@ The key technical features:
 
 **The speed of light** is bounded by the substrate's transmissive constraints, but the framing can be sharpened. *c* is not a property of the propagating pattern; it is a property of the substrate itself — the maximum rate at which the substrate can propagate a coherent torsional disturbance, its own *relaxation speed limit* under runtime conditions. A signal at *c* is travelling at the upper bound of admissible substrate reseating for an operation-A propagation, not at the inherent velocity of a self-existing object. The frequency-independent character of *c* in vacuum, the universality of the bound across reference frames, and the impossibility of accelerating a closure (Part VI) past *c* without dissolution all follow from this single substrate-property reading rather than from special properties of photons. Light is therefore both more real and less object-like than classical intuitions often allow.
 
-**In the topological model.** Propagation is a perturbation of the director grain that travels as an *unclosed, route-bearing* form — coherence carried along a route without self-linking. Light is its paradigm case: an open transient meeting closed vortons, whose outcomes (transmission, return, storage, scatter) are governed by coherence-compatibility and the conservation of the vortons' topological invariants rather than by energy alone (Part XIII).
+**Working interpretation.** Propagation is proposed as an unclosed, route-bearing form: coherence carried along a route without itself becoming a stable identity-bearing closure. A future formal treatment must show how this proposal relates to observed transmission, return, storage, and scattering without promoting the present interpretation into an established mechanism.
 
 ## Chapter 27 — Operation B — Reconfiguration (Electricity)
 
@@ -636,13 +638,13 @@ The key technical features:
 2. **Pathway dependence.** Reconfiguration occurs through available pathways, not through arbitrary jumps. The integrity of the pathway (its route identity — Chapter 13 of the general volume) governs what reconfigurations are possible.
 3. **Within stability envelope.** Reconfiguration that takes a stable identity outside its stability envelope is not reconfiguration; it is dissolution (operation E) followed possibly by new closure formation (operation D).
 
-**Electricity is the paradigm case.** Electrical behaviour, in RS terms, is ordered substrate reconfiguration along constrained pathways. **Voltage** names a difference in substrate tension between two regions, imposed by a source — a configurational gradient (often torsional in character) that constitutes structured non-equilibrium capable of driving ordered reconfiguration. **Current** is the rate and spatial extent of coordinated micro-slip and reconfiguration events within a conductor's vorton lattice — not the bulk transport of independent carriers, but the coherent reseating of a populated lattice along the available pathway. **Charge** is a directional bias in how vorton configurations respond to tension gradients — an effective description of stable asymmetry, boundary condition, or configurational imbalance, derivative in explanatory status, real in measurable consequence, and not a substance.
+**Electricity is the paradigm case.** Electrical behaviour, in RS terms, is ordered substrate reconfiguration along constrained pathways. **Voltage** names a difference in substrate tension between two regions, imposed by a source — a configurational gradient (often torsional in character) that constitutes structured non-equilibrium capable of driving ordered reconfiguration. **Current** is the rate and spatial extent of coordinated micro-slip and reconfiguration events within a conductor's closure knot lattice — not the bulk transport of independent carriers, but the coherent reseating of a populated lattice along the available pathway. **Charge** is a directional bias in how closure knot configurations respond to tension gradients — an effective description of stable asymmetry, boundary condition, or configurational imbalance, derivative in explanatory status, real in measurable consequence, and not a substance.
 
 **Conduction and insulation** follow naturally. A conductor is a material regime in which the organised constraints among stable entities permit ordered reseating and reconfiguration to propagate relatively easily. An insulator is a regime in which such propagation is strongly constrained, localised, or suppressed. **Resistance** is the cost, degradation, or dispersal associated with maintaining ordered reconfiguration within a constrained regime. When ordered motion of configuration degrades into less organised substrate behaviour, what is measured as electrical loss or heating appears.
 
-**Charge-language remains useful but secondary.** The book's earlier statement of A7 ("electricity as reconfiguration, often mediated by vorton slip and constrained pathways") remains technically central. What is new in the operations layer is that electricity is now identified as the paradigm of a *type* of substrate change, alongside other instances of the same type (chemical state change, biological signalling, controlled material reshaping).
+**Charge-language remains useful but secondary.** The book's earlier statement of A7 ("electricity as reconfiguration, often mediated by closure knot slip and constrained pathways") remains technically central. What is new in the operations layer is that electricity is now identified as the paradigm of a *type* of substrate change, alongside other instances of the same type (chemical state change, biological signalling, controlled material reshaping).
 
-**In the topological model.** Reconfiguration is the *writhe* of the emergent field — the re-routable, dynamic component of a vorton's electromagnetic bivector, the coiling of its route that can change while its identity (the conserved linking) does not. Electricity is its paradigm case, and the moving writhe is what the model identifies as the emergent electric field (Part XIII).
+**Working interpretation.** Reconfiguration is the re-routable change of relational organisation that can occur while a stable identity remains within its admissible range. The proposal must eventually be stated precisely enough to distinguish electrical behaviour from other kinds of reconfiguration and to expose the conditions under which it fails.
 
 ## Chapter 28 — Operation C — Alignment Adjustment (Magnetism)
 
@@ -662,11 +664,11 @@ What the operations layer adds is the recognition that magnetism is the paradigm
 
 **Inductance** is the macroscopic signature of held alignment. An inductor concentrates a region of substrate that can hold orientation when energy is supplied and release it as that orientation is allowed to dissipate. The energy is not stored in a literal container; it is held in the alignment state itself.
 
-**In the topological model.** Alignment appears as the *held twist* of the emergent field — a static torsional geometry whose handedness is magnetic polarity. Because it is held geometry rather than active flow, it dissipates no energy; magnetism is its paradigm case, and "north and south the opposite chirality of one held configuration" is the model's reading of magnetic polarity (Part XIII).
+**Working interpretation.** Alignment is proposed as held relational geometry rather than active transport. Magnetism is the paradigm case in RS, but the relation between this conceptual account and established physical descriptions remains open to future testing.
 
-## Chapter 29 — Operation D — Closure Formation (Vortons, Identity)
+## Chapter 29 — Operation D — Closure Formation (Closure Knots, Identity)
 
-**Definition.** Operation D — closure formation — is a substrate change in which topology folds into a stable, identity-bearing loop. It is the operation that generates primary topology (Chapter 13) and the operation through which vortons come into being.
+**Definition.** Operation D — closure formation — is a substrate change in which topology folds into a stable, identity-bearing loop. It is the operation that generates primary topology (Chapter 13) and the operation through which closure knots come into being.
 
 The key technical features:
 
@@ -674,13 +676,13 @@ The key technical features:
 2. **Closure satisfaction.** The four conditions stated in Chapter 17 must all be satisfied at once: local boundedness, distributed coherence, closed return-path, and admissible neighbourhood. A configuration that approximates closure without satisfying all four is not yet a stable identity — it is a transient configuration that may approach closure and dissipate.
 3. **Threshold non-linearity.** Closure formation is not gradual in the way that propagation or alignment adjustment is. There is a regime in which closure is not achieved (the configuration eventually dissipates) and a regime in which closure is achieved (the configuration becomes a stable identity). The transition is sharp because closure either holds or it doesn't.
 
-**Vortons are the paradigm case.** A vorton is the result of operation D acting at the primary topological level under conditions that satisfy the four closure conditions. Other instances of operation D include the formation of any stable closure: stable resonant locks in coupled systems, persistent biological pattern formation (when a developmental constraint produces a new stable structure), the formation of stable secondary topology (lattices, certain interfaces).
+**Closure Knots are the paradigm case.** A closure knot is the result of operation D acting at the primary topological level under conditions that satisfy the four closure conditions. Other instances of operation D include the formation of any stable closure: stable resonant locks in coupled systems, persistent biological pattern formation (when a developmental constraint produces a new stable structure), the formation of stable secondary topology (lattices, certain interfaces).
 
-**Sustained closure** is what life is, in part. A vorton is closure that holds. A living organism is closure on closure on closure, all maintained simultaneously under coupled constraints — closure formation maintained continuously rather than as a one-time event. This is why life is best understood as the substrate doing operation D continuously in a hierarchically constrained way (see Chapter 39).
+**Sustained closure** is what life is, in part. A closure knot is closure that holds. A living organism is closure on closure on closure, all maintained simultaneously under coupled constraints — closure formation maintained continuously rather than as a one-time event. This is why life is best understood as the substrate doing operation D continuously in a hierarchically constrained way (see Chapter 39).
 
 **The reverse of closure** is dissolution (operation E). The two operations together constitute the threshold dynamics by which identity comes into being and ceases to be. Closure formation is the upward transition; dissolution is the downward one. Most of the rest of substrate change — propagation, reconfiguration, alignment adjustment — happens *within* established closures.
 
-**In the topological model.** Closure formation is the birth of a vorton: a route of the director grain that returns and *self-links* into a stable knot. Its identity is not a scored proxy but a genuine topological invariant — an integer linking (Hopf) number — and this is the operation the model treats most fully, deriving from it the vorton's spin, charge, and species (Part XIII).
+**Formal requirement.** Any successful account of closure formation must identify the conditions under which a returning relational configuration becomes stable, which features preserve its identity, and which changes dissolve it. This book does not claim that those conditions have yet been fully formalised or that spin, charge, or material species have been derived from them.
 
 ## Chapter 30 — Operation E — Dissolution / Unwinding
 
@@ -711,11 +713,11 @@ The three regimes are not visible in any single instant. A clean and a cascading
 
 **Decay and death are paradigm cases.** Radioactive decay is partial dissolution of a primary topology. The death of an organism is dissolution at scale of the hierarchical closure-on-closure structure that constituted the living unity. Entropy at the local level is the statistical tendency of low-strain configurations to give way to higher-strain configurations as energy is dispersed, often through clean-regime dissolution events.
 
-**Operation E is the least developed operation in the existing corpus.** The book's earlier statements on decay, entropy, and death were scattered across chapters on life, agency, and material regimes; they were not systematically connected. The operations typology requires that they be. A scoping document (`operation-e-dissolution-scoping-2026-05-25.md`) and a single-region implementation specification (`operation-e-specification-2026-05-25.md`) have now begun the work. Chapter 46 carries the frontier sequencing.
+**Operation E is the least developed operation in the existing corpus.** The book's treatment of decay, entropy, and death remains a conceptual integration rather than a completed mechanism. It requires future work that can distinguish its proposed regimes without quietly turning a convenient formalisation into ontology.
 
 **Theological note.** When the general volume treats corruption as the persistence of misalignment without restoration (general volume Chapter 26), it is using operation E in the pathological regime: dissolution that propagates rather than disperses, that the substrate's normal restoration dynamics fail to recover from. Corruption is not a separate operation; it is operation E in cascade mode. The five modes named in CBO Ch. 13 — degradation, fragmentation, inversion, counterfeit, parasitism — are five recurring patterns by which pathological dissolution unfolds, distinguished by what restoration would have to look like in each case and how the failure of restoration manifests. The structural account of evil therefore depends on, and now has, a developing account of operation E.
 
-**In the topological model.** Dissolution is the loss of a vorton's closure — the *unwinding* of its linking, so that its topological identity ceases to be defined. Because the model's identity is an integer invariant, dissolution is sharp: a structure either retains its linking or does not. This operation remains the least developed in the topological treatment and is named explicitly as open work (Part XIII).
+**Open formal work.** Dissolution must eventually be described in terms precise enough to distinguish loss of identity from permitted deformation, and to identify whether released strain propagates, reconfigures, adjusts alignment, or contributes to new closure. The present account is ontological and directional, not a completed mechanism.
 
 ## Chapter 31 — Resonance, Circuits, and Engineered Systems as Operation Compositions
 
@@ -829,13 +831,13 @@ This is a *structural* property, not a moral feeling. Beauty, order, truth, and 
 
 **Alignment is not equilibrium.** A configuration can be in equilibrium without being aligned (a stable balance of opposing strains). A configuration can be aligned without being in equilibrium (an active, growing, dynamically maintained coherence). Equilibrium is a state; alignment is a quality of how well the state coheres.
 
-**Alignment is observable through identity persistence.** A configuration is well-aligned when the substrate's grammar elements — route, closure, phase, charge, continuity — hold together coherently, so that its identity survives the encounters it undergoes. Where alignment is low, some aspects hold while others compensate, and that compensation is the structural signature of strain. The topological model sharpens "does this configuration remain itself?" into a definite question: does the structure retain its conserved linking invariant, or not?
+**Alignment is observable through identity persistence.** A configuration is well-aligned when the substrate's grammar elements — route, closure, phase, charge, continuity — hold together coherently, so that its identity survives the encounters it undergoes. Where alignment is low, some aspects hold while others compensate, and that compensation is the structural signature of strain. A future formal treatment must state an adequate identity criterion rather than assume one.
 
 ## Chapter 35 — Strain, Threshold, and Cascade
 
 **Definition.** Strain is the inverse of alignment: the unresolved relational mismatch a configuration must hold to remain itself.
 
-The relation between alignment and strain is conceptually precise: alignment ∝ inverse(strain). The mathematical form of this relationship is not yet fixed; it is one of the open items in the modelling programme (Chapter 46). What is firm is the structural shape of the relationship.
+The relation between alignment and strain is conceptually precise: alignment ∝ inverse(strain). The formal expression of this relationship is not yet fixed. What is firm is the structural shape of the relationship.
 
 **Some strain is normal.** Nothing in a dynamic world is strain-free. Strain accumulates and is released as part of how the substrate carries change; a configuration holds strain in order to remain identity-bearing under conditions that would otherwise deform it.
 
@@ -845,7 +847,7 @@ The relation between alignment and strain is conceptually precise: alignment ∝
 
 **Compensation.** A configuration under strain can sometimes be held by external compensation — sustained input that absorbs the strain that the configuration cannot itself dissipate. Compensation is a real mechanism, but it is not a substitute for alignment. A compensated configuration is one that requires continuous input to remain itself; a truly aligned configuration is one that holds without such input.
 
-**Strain has structure.** Strain is the tension a configuration carries that has not been released through clean propagation or accommodation. When it exceeds what the configuration's closure can hold, identity is at risk. Giving this a precise, possibly tensor-valued, measure is named as open work: the topological model to date treats identity as an invariant that is either retained or lost, not yet as a graded strain field.
+**Strain has structure.** Strain is the tension a configuration carries that has not been released through clean propagation or accommodation. When it exceeds what the configuration's closure can hold, identity is at risk. Giving this a precise, possibly tensor-valued, measure remains open work.
 
 ## Chapter 36 — Alignment Dynamics — Restoration and Persistence
 
@@ -865,7 +867,7 @@ Strain that is not paid for accumulates. A wound that does not heal becomes infe
 
 **Evil, structurally.** In this framework, evil is not a rival ontology, not a separate operation, not a parallel grammar. It is the persistence of misalignment without restoration. The five modes of parasitic corruption recognised in the broader corpus — degradation, fragmentation, inversion, counterfeit, parasitism — are five ways misalignment can fail to restore.
 
-**Implication for modelling.** Distinguishing a misalignment on the *restoration* trajectory from one on the *persistence* (degradation) trajectory requires tracking dynamics across time — how a configuration's alignment evolves under repeated operation. This remains open work: the topological model's results to date are structural (invariants, signs, quantisation) rather than dynamical (Part XIII).
+**Implication for future work.** Distinguishing a misalignment on the *restoration* trajectory from one on the *persistence* (degradation) trajectory requires tracking dynamics across time — how a configuration's alignment evolves under repeated operation. That remains open work.
 
 ---
 
@@ -949,11 +951,11 @@ The axiom set below is the RS v2 statement. It is a refinement of the AMS-era ax
 
 **A4 — Secondary topological organisation.** Larger organised regimes arise through coordinated relations among stable entities, transient structures, and boundary conditions within the substrate.
 
-**A5 — Vorton matter.** Matter consists fundamentally of stable torsional knot-states of the substrate and their organised relations.
+**A5 — Closure Knot matter.** Matter consists fundamentally of stable torsional knot-states of the substrate and their organised relations.
 
 **A6 — Energy as retopologisation.** Energy is conserved as allowable configurational and topological reorganisation within the substrate under runtime constraints.
 
-**A7 — Electricity as reconfiguration.** Electrical behaviour is ordered substrate reconfiguration, often mediated by vorton slip and constrained pathways. *(In the operations layer, A7 names electricity as the paradigm of operation B.)*
+**A7 — Electricity as reconfiguration.** Electrical behaviour is ordered substrate reconfiguration, often mediated by closure knot slip and constrained pathways. *(In the operations layer, A7 names electricity as the paradigm of operation B.)*
 
 **A8 — Light as torsional propagation.** Light is a coherent transient torsional disturbance propagating through the ordered substrate. *(In the operations layer, A8 names light as the paradigm of operation A.)*
 
@@ -997,79 +999,61 @@ These boundaries are not merely defensive. They are constructive. They prevent t
 
 ---
 
-# Part XIII — The Mathematical Modelling Programme
+# Part XIII — Numerical Research Discipline and Current Status
 
-## Chapter 43 — Re-anchoring: From Rule-Grammar Sandbox to Topological Substrate
+## Chapter 43 — Scope, Evidence, and Guardrails
 
-The RS framework has a computational counterpart, and in 2026-07 that counterpart was **re-anchored**. This chapter records what the earlier modelling programme was, why it was retired as the framework's working spine, and what replaced it. The re-anchoring changed the *model*, not the *ontology*: the ontology of Part VI (the vorton as a *stable torsional knot-state*, Chapters 17–19) is unchanged and, if anything, vindicated — the new programme models it with the mathematics that "knot-state" language always pointed to.
+RS has a bounded numerical research line, designated **RS-H3S**. It examines the numerical behaviour of one declared finite carrier-field calculation under controlled changes in separation, relative phase, phase-profile width, cadence, and duration. Its role in this book is deliberately narrow: it establishes what that calculation has and has not earned as a numerical result.
 
-**What the earlier programme was.** The **topology-sandbox**: a browser-based JavaScript/Node.js project implementing a heuristic closure-gate rule grammar for the vorton/admissibility model. It scored configurations with six hand-weighted metrics (closure, return, bounded, coherence, reseat, leakage) combined into an identity score, calibrated those weights so that reference molecular geometries out-ranked generated perturbations and decoy controls, and ran source-anchored *ordering* benchmarks (H₂O₂ and ethane torsion, ionic lattices, silicate networks, surface scattering). It was an inspectable rule grammar, not a learned model, and it stayed carefully on the right side of the ontology boundary.
+The experiment is not a simulation of `T0`, a spatial-continuum demonstration, a derivation of a physical interaction, or a confirmation of the RS ontology. It is a test of whether a finite carrier-field construction has a stable regional limit under specified refinement and transfer conditions. That distinction is not modesty for its own sake. It is what makes a positive numerical result interpretable and a negative one useful.
 
-**Why it was retired as the spine.** Honestly, two reasons, both recorded in the programme's own validation status.
+The programme follows four rules:
 
-1. *It could calibrate, but not derive.* Against static physical observables the grammar was *fitted*, not used to predict; its one clean external pass (a held-out refractive index) reduced to an established chemistry method. The result was consistency at best, never independent evidence — a first-order, near-linear scoring apparatus incapable of magnitude or structure.
-2. *It drifted from the stated objective.* Seeking a distinctive, non-borrowed prediction, the programme settled on a **path-dependent order effect** — a "gentle-then-harsh preserves identity better" lens — and pursued it across metal fatigue, cardiac preconditioning, wildfire, and stress-resilience. That work was real and pre-registered, but it is a *directional lens over resilience phenomena*, and it was a drift away from the framework's actual objective: a substrate account of **atoms, light, electricity, and magnetism**. It is archived, not deleted, and is no longer the spine.
+1. Candidate correction rules, gates, tolerances, and stop conditions are committed before the corresponding carriers are opened.
+2. Confirmation cases remain sealed until discovery decisions are frozen.
+3. Reports, arrays, and delivery artefacts are independently checked for integrity.
+4. Every result states its scope: the exact parameter family, finite representation, time horizon, and claims it does not support.
 
-**The correction.** Chapters 17–19 define the vorton as a stable torsional knot-state whose identity is carried by *winding and linking* — a topological object. The re-anchored programme takes that literally and models the vorton with the mathematics of **topological solitons**: the lineage from Kelvin's vortex atom through the Skyrme model to **Hopfions** (closed, twisted, toroidal field-solitons whose identity is an integer linking invariant), with **geometric algebra** as the downstream language for the field-level expressions. The ontology already committed to a knot-state that is "not merely a soliton" but ontologically primary (Chapter 17); topological-soliton theory supplies its *equations and invariants* without demoting that ontological rank. This is *ontology before model*: the model was brought into alignment with the ontology, not the reverse.
+Under this discipline, a pass supports only the declared finite calculation at the declared scope. It does not silently become evidence for a spatial continuum, a new physical mode, or the truth of a larger ontology.
 
-**Method.** The re-anchored programme is *conceptual and coherence-based before it is numerical*. Because the substrate is non-material — not accessible to the send/transmit/receive of ordinary perception — it can only be described through *coherence*. The method therefore strips the buried assumptions (material, metric, background-space) out of borrowed mathematics, keeps only the background-free patterns, correlates patterns across independent models, and measures progress as **containment** of the admissible pattern-space rather than as fit. Invariants come before magnitudes; **no parameter is fitted**; every step carries a pre-registered falsifier. Only once the conceptual scaffold was tight did the programme touch computation.
+## Chapter 44 — H3S Local Transfer Results
 
-**Guardrails, unchanged.** T0 is not simulated. No material middle layer is inserted between T0 and T1 vortons. Model outputs are never treated as proof of RS.
+Four completed slices establish a connected but bounded result through `t = 1`. They begin with cadence correction along a separation family, transfer that correction across a relative-phase axis, test mixed separation-phase corners, and then vary the width of the phase transition.
 
-**Where the work lives.** The re-anchored programme is documented in the repository's `docs/` (the coherence-topology scaffold and its containment ledger; a decision log recording each choice with rationale; a completion summary) and exercised in `instantiation/` (explicit parameter-free computations). The retired sandbox itself survives only in the repository's version history (see Appendix C).
+| Slice | Frozen outcome | What was supported |
+| --- | --- | --- |
+| P4 | `receiver_stable_regional_limit_supported` | A receiver-blind Richardson correction transferred across the tested separation family. Both sealed confirmations passed 10/10 gates; the aggregate decision passed 12/12 and independent validation passed 37/37. |
+| P5 | `orthogonal_phase_axis_transfer_supported` | The same carrier rule transferred across the relative-phase axis. The two sealed `-pi/4` and `+pi/4` cases passed 10/10; the aggregate decision passed 13/13 and validation passed 32/32. |
+| P6 | `local_separation_phase_patch_supported_with_resolved_interaction` | All eight mixed separation-phase corners passed 10/10, with the three registered interactions resolved, correctly signed, and accurately predicted. Final confirmation passed 16/16 and independent validation passed 42/42. |
+| P7 | `phase_profile_width_transfer_supported_with_resolved_width_response` | Eight tanh-profile width cases from `1.5h` to `3.5h` passed 10/10 through `t = 1`; six sealed width effects and all three anchor-by-width interactions were resolved. Final decision passed 17/17 and independent validation passed 49/49. |
 
-## Chapter 44 — The Coherence-Topology Scaffold: Structural Results
+P4 also clarified an earlier receiver failure. The evidence supported carrier discretisation error amplified by cancellation, rather than a missing interaction mode. At separation `7.50`, receiver error changed from `0.7471%` at raw fine cadence to `0.1413%` after correction, while complete-field error changed from `0.8517%` to `0.6303%`. At `8.50`, receiver error changed from `1.1360%` to `0.1053%`, while complete-field error changed from `0.7661%` to `0.4055%`. The result supports a chart-cadence regional limit for this separation family, not continuum behaviour or wider physical identification.
 
-The re-anchored programme was built, first, as a *conceptual scaffold* — a graded sequence of topological thought experiments, each adding containment, none yet numerical. This chapter records what that scaffold derived. The striking feature is that a single ontological choice about the ground state forces a long chain of *structural* results — signs, discreteness, quantisation, complementarity — with no fitted parameter anywhere.
+P4 and P5 formed two supported intersecting axes, not yet a region. P6 turned that cross into a tested local two-coordinate patch, and P7 showed that the patch was not an artefact of a single `2.5h` phase-transition construction. The carrier rule predicted the registered response to width change within the stated finite `N = 61` model and through the stated temporal boundary.
 
-**The ground state.** The scaffold begins in darkness: not emptiness, but the substrate *at rest*. That rest state is a definite thing — a continuous medium carrying a uniform **rest orientation**, an unoriented director (an axis with no preferred head, values in the projective plane RP²) filling a three-dimensional bulk. This rest orientation is precisely the **magnetic constraint geometry of Axiom M1 in its ground state**. Light (Operation A) is a propagating perturbation of this grain; a vorton (Operation D) is a place where the grain folds, returns, and *self-links* into a closed knot.
+## Chapter 45 — Temporal Boundary and Cadence-Law Failure
 
-**The choice is the corner-stone, because it selects the mathematics.** An orientation field is a map into a sphere of directions, which is exactly the field of the **Hopfion** — so the topological-soliton description is *derived* from the ontology, not imported. From this one choice the following results follow in order, each could-fail and none calibrated:
+P8 tested temporal persistence without changing the already established local patch. It produced a valid negative result. All four cases reproduced P7 exactly through `t = 1`, but high- and low-cadence disagreement permanently crossed the registered `2%` limit between `t = 1.30` and `t = 1.45`. By `t = 2`, disagreement reached `9.58%` to `10.83%`, and observed orders lay outside the frozen range. Raw cadence refinement still improved, so the evidence indicates a changed extrapolation-error law rather than numerical collapse. Independent validation passed 53/53, while the exact `t > 1` extension remained sealed.
 
-- **Layered identity.** A vorton carries three stacked topological invariants: a two-valued **spin** (the fundamental group of RP² is ℤ₂), an integer **charge** (the second homotopy group is ℤ), and the **knot** itself (the third homotopy group is ℤ — the Hopf number).
-- **The vorton is a spin-½ fermion.** By the Finkelstein–Rubinstein construction, a 2π rotation of the vorton equals the exchange of two vortons equals the same ℤ₂ element — so it quantises as a spin-½ fermion. The same ℤ₂ gauges the *sign* of its charge (Volovik–Mineev). Fermionic matter is thus available *from the grain*, not inserted.
-- **Electricity and magnetism are one object, split.** The director defines a single emergent field 2-form, the bivector `F = n·(dn ∧ dn) = E + I·B` (this is where geometric algebra earns its place). Its *held* part is **magnetism** (Operation C: a static twist whose handedness is polarity — hence dissipationless, "north and south the opposite chirality of one held configuration"); its *dynamic* part is **electricity** (Operation B: the moving, re-routable reconfiguration). Because `F` is a pullback, `dF = 0` *identically* — and in four dimensions that is exactly the homogeneous half of Maxwell's equations: **no magnetic monopole, and Faraday's law (electromagnetic induction), are derived rather than assumed.** This is the first genuine instalment of the Maxwell equation-equivalence that earlier framings named only as a distant goal.
-- **Electric charge is quantised.** The mere existence of the emergent magnetic sector forces Dirac's quantisation condition on electric charge, and the Witten effect fixes the resulting dyon spectrum — both parameter-free.
-- **A species lattice.** The Hopf number is the self-linking (helicity) of the charge flux, a quadratic form on the constituent windings. Vorton kinds therefore live on a discrete lattice — the **vorton species mathematics** the framework has always required.
-- **Atoms, structurally.** Bound vortons carry additive quantised charge (a neutral atom is a charge-balanced cluster), and the *derived* Fermi statistics force Pauli exclusion, hence shell structure — the periodic organisation of matter as a structural consequence of the substrate's grain.
+The correct conclusion is a boundary, not a rescue: the P4-P7 rule is supported only through `t = 1` for the declared family. It is not licensed for the later interval.
 
-Every one of these is *structural*: a sign, a discreteness, a conserved integer, a complementarity — never a magnitude. That restriction is deliberate (invariants before magnitudes), and it is what lets the whole chain proceed without a single calibration. The full scaffold, with its containment ledger and pre-registered falsifiers, is recorded in `docs/`.
+P8D then asked a narrower prospective question before opening its sealed confirmation pair: would any of four predeclared cadence laws predict a new raw carrier at cadence `0.015625`? The two discovery carriers passed all eight numerical gates, but none of the candidate laws passed a complete endpoint. Their correction directions aligned with the realised finer-cadence correction only from `0.70` to `0.83`, below the committed `0.95` requirement. The error was rotating through field space rather than merely changing magnitude or convergence order.
 
-## Chapter 45 — Instantiation: Explicit Parameter-Free Computations
+This is another useful negative result. The best candidate magnitude law was not identified as a valid correction law, and the sealed confirmation pair remains unopened. No replacement law has been promoted.
 
-Only once the conceptual scaffold was tight — the containment ledger closed as far as topology honestly allows — did the programme touch computation. This chapter records that instantiation. The governing rule was unchanged from the scaffold: **no fitted parameter, ever.** Each check is a construction whose outcome is forced by topology, so it can only pass or fail; it cannot be tuned.
+## Chapter 46 — Standing, Limits, and the Next Question
 
-Five checks have been run, each parameter-free and each capable of failing:
+The H3S record currently supports three limited statements:
 
-1. **The vorton's identity is an integer.** An *explicit* elementary Hopfion director field, built by composing the standard maps from three-dimensional space onto the two-sphere of directions, computes its Hopf number to `0.9998` — the integer 1 — and does so *independently of the configuration's physical size*, exactly as a topological invariant must. The identity the ontology asserts is therefore real and computable, not merely posited.
+- a local separation-phase-width patch has passed prospectively registered transfer tests through `t = 1`;
+- the same correction rule has a defined temporal boundary and must not be extended beyond it;
+- four candidate cadence laws failed a genuinely finer-cadence directional test.
 
-2. **The species arithmetic holds.** The type-(p,q) construction computes Hopf number equal to the product `p·q` across a family of cases — confirming the quadratic combination rule that gives the vorton species their discrete lattice.
+It does not establish a spatial continuum, a universal convergence law, a new interaction mode, a physical identification of the carrier field, or the truth of the Relational Substrate ontology. It does not turn a numerical regularity into an ontological primitive.
 
-3. **The emergent magnetic sector is real.** A hedgehog configuration carries emergent flux exactly equal to its topological charge (an emergent magnetic monopole), while a *smooth* Hopfion carries none. This confirms both halves of the emergent-electromagnetism claim: the charge density *is* the emergent magnetic flux, and there is no magnetic monopole except at a singular hedgehog — the derived "no monopole" of Chapter 44 made concrete.
+The next legitimate question is why the finer-cadence correction rotates in field space. That question requires a new model class and a new preregistration before the sealed confirmation data are opened. The appropriate response to the P8D failure is not to select the nearest curve after the fact, but to retain the failure, state its boundary, and formulate a test that can genuinely lose.
 
-4. **The half-charge mechanism works.** A single fermionic mode in the hedgehog background binds exactly one topologically protected zero mode, giving the induced half-charge that underlies the vorton's fermionic statistics and its charge quantisation. In the trivial regime it binds none — a correct control.
-
-5. **Statistics follow parity.** With `N` such modes the bound-state count is `N`, so the induced charge is `N/2` and the statistics is fixed by whether `N` is odd (fermion) or even (boson).
-
-**What these establish, and what they do not.** They establish that the *mathematics and the mechanisms* of the framework's modelling account are real and computable — the identity, its arithmetic, the emergent magnetic sector, the half-charge, the parity of statistics — by explicit construction rather than by assertion or by fitting. They do **not** establish the physics of our world: no measured quantity of nature (no coupling strength, no mass, no spectral value) has been reproduced, and none was attempted. These are checks on the framework's internal mathematics, not on its correspondence to measured reality. The computations, with their code and honest caveats, live in the repository's `instantiation/` directory.
-
-## Chapter 46 — Honest Standing and the Frontier
-
-This chapter records, precisely, what the re-anchored programme has and has not established, and where the genuine risk lies. Two kinds of confidence must be kept strictly apart, and conflating them is exactly the error the re-anchoring exists to avoid.
-
-**Internal coherence — high, and earned.** From one ontological choice about the ground state, a long, self-consistent chain follows: fermionic matter, quantised charge, the electromagnetic field as one split object with half of Maxwell derived, a species lattice, and the shell structure of atoms — several of these *derived without any calibration*, and five of the underlying mathematical facts confirmed by explicit parameter-free computation. This is a real and substantial tightening of the framework's internal structure, well beyond the qualitative ordering the earlier programme could reach.
-
-**Empirical correctness — low, and capped.** No measured quantity of our world has been reproduced. Every magnitude — the strengths of the couplings, particle masses, binding energies, spectral values — is a dynamical input that the topology does not fix, and all are deliberately out of scope. The substrate itself, though motivated (it yields spin, gives magnetism its ground-state geometry, and respects background-independence), remains **chosen, not proven**. Tightening internal coherence is not the same as confirming physics, and the framework does not claim otherwise.
-
-**What re-anchoring achieved against the earlier frontier.** Earlier statements of this chapter named equation-equivalence to Maxwell, a vorton-species mathematics, and a commitment on substrate dimensionality as distant goals. Each has now been *engaged at the structural level*: the homogeneous half of Maxwell's equations (no magnetic monopole, and Faraday's law) is derived from the emergent field bivector; the species lattice is the self-linking arithmetic of the charge flux; and the substrate is now committed to a definite form — a nematic director field, valued in the projective plane, in three dimensions. These are structural achievements, not quantitative ones, but they are the *right* frontier, now genuinely joined.
-
-**The deepest open question, and its honest risk.** The fermion result and the charge quantisation that depends on it rest on the substrate occupying a particular class — technically, an *odd* fermionic sector (the value θ=π). That value is **not a free knob**: it is the same topological invariant as the vorton's derived fermionic statistics, and nothing was tuned to obtain it. But it is also **not forced**: the generic way a three-component order parameter fractionalises yields the *opposite* class (an even sector, giving a *bosonic* vorton), which would collapse the fermion-and-charge chain. This is a genuine vulnerability, recorded rather than concealed. It means the fermion and charge-quantisation results hold *only under an assumed, non-generic, could-fail condition* — and it lowers, honestly, the confidence those two results may carry. Settling it requires a concrete microscopic model of this substrate, and that inquiry could come out negative.
-
-**Discipline preserved.** The guardrails stand: T0 is not simulated; no material middle layer is inserted between T0 and T1 vortons; model outputs are never proof of RS. The claim-status discipline stands: each result is marked derived, mechanism-verified, structural, or open, and new claims are recorded in the modelling docs rather than smuggled into the ontology chapters. And the ontology-first method stands: a modelling success that contradicted the ontology would pressure the ontology to clarify, never be accommodated by silent drift.
-
-**What structural equation-equivalence would and would not prove.** That RS can derive the homogeneous Maxwell equations from its emergent field is evidence that the framework is *consistent with* classical electromagnetism at the level of effective description. It is *not* proof that RS is the correct underlying ontology — multiple ontologies can underwrite the same effective equations. Structural equation-equivalence is a necessary test, never a sufficient one; ontological clarity (Chapter 49) is a different test, and one no derived equation set can settle.
-
-**The book and the code, going forward.** This volume is the framework's current snapshot; the modelling programme is its laboratory. Both will move, and progress in either should be recorded honestly in both — including, as here, when deeper analysis *lowers* a confidence rather than raising it. That integrity, not the accumulation of successes, is what an open-ended research programme owes its readers. The next version of this book will record what has moved.
+The book and the research record should therefore move together by explicit status change: supported numerical region, defined boundary, unresolved mechanism, or rejected candidate law. That discipline is more valuable than an unbroken sequence of positive results.
 
 ---
 
@@ -1085,7 +1069,7 @@ It now also explains, with the operations layer, how the substrate's change is *
 
 It also explains why hierarchy matters. Field measurements, material structures, and technological systems are all preserved as real, but they are no longer forced to carry explanatory weight they were never suited to bear. The framework thereby restores a distinction between what is foundational and what is descriptive, between what exists first and what becomes intelligible later.
 
-And it now begins to explain these things *concretely*. Where the claim that electricity, magnetism, light, and matter are expressions of one substrate was, in earlier statements, an ontological assertion, the topological model (Part XIII) turns several parts of it into structural, checkable results: the electromagnetic field as one object whose held and moving aspects are magnetism and electricity; matter as fermionic, charged, knotted vortons; the shell structure of atoms as a consequence of that fermionic character. These are offered not as proof but as the framework's first concrete, could-fail contributions — the places where an interested reader can most directly test it, and where it is most honestly at risk.
+Part XIII does not establish those physical interpretations. Its contribution is methodological: it records a bounded numerical experiment that has been made capable of both prospective transfer and a meaningful negative result. That research discipline gives the framework a clearer way to distinguish a local numerical finding from a physical claim and a physical claim from an ontological commitment.
 
 In this sense, RS explains not everything, but the order in which many things become intelligible.
 
@@ -1105,7 +1089,7 @@ It does not claim that every current mathematical formalism must immediately be 
 
 It does not claim that the five-operation typology has been exhaustively stress-tested. It claims that no phenomenon to date has required a sixth operation; future analysis may pressure this claim.
 
-It does not claim that the modelling programme has validated the framework. The re-anchored programme has derived a chain of *structural* features of matter — fermionic statistics, quantised charge, the electromagnetic field as one split object carrying half of Maxwell's equations, and atomic shell structure — from a single ontological choice, without calibration, and has confirmed the underlying mathematics by explicit parameter-free computation. That is a real and substantial internal coherence. But it has reproduced no measured magnitude of our world, and one of its load-bearing results (the vorton's fermionic class) rests on a condition that is non-generic and could fail (Chapter 46). Internal structural coherence is not empirical validation, and the framework does not pretend otherwise.
+It does not claim that the numerical research record validates the framework. The current H3S results establish only a limited regional behaviour in one finite carrier-field calculation, a temporal boundary on that behaviour, and the failure of four candidate cadence laws. They do not reproduce physical quantities, identify the carrier field with a phenomenon of nature, or confirm any ontological claim. Numerical discipline is not empirical validation, and the framework does not pretend otherwise.
 
 It does not claim finality. The ontology may still require sharpening, formalisation, and correction. But those revisions must occur within a clarified commitment to ontological discipline rather than by relaxing back into vagueness.
 
@@ -1153,17 +1137,17 @@ The hierarchy is directional. Later levels may disclose, measure, organise, or i
 
 **The continuous relational substrate** is the foundational runtime physical reality from which physical phenomena arise as configurations, constraints, and transitions. *Relational primacy* is the deepest claim about its character.
 
-**Primary topology** names stable identity-bearing configurations of the substrate. Vortons belong here.
+**Primary topology** names stable identity-bearing configurations of the substrate. Closure knots belong here.
 
 **Transient aether structures** name real coherent substrate formations that are causally effective but do not persist as independent identity-bearing entities. Light, pulses, temporary resonance patterns, and non-knotted propagations belong here when they meet that description.
 
 **Secondary topology** names larger organised regimes built from stable entities, transient structures, and boundary conditions. Lattices, interfaces, phase boundaries, materials, and engineered field-extended systems belong here when they depend on coordinated relation rather than primary identity.
 
-## A.3 Vorton Discrimination Requirements
+## A.3 Closure Knot Discrimination Requirements
 
-A vorton is a stable torsional knot-state of the substrate and therefore a primary topological entity. It must not be treated as a disguised particle, a generic soliton, a mere defect, or a loose metaphor for persistence.
+A closure knot is a stable torsional knot-state of the substrate and therefore a primary topological entity. It must not be treated as a disguised particle, a generic soliton, a mere defect, or a loose metaphor for persistence.
 
-Any proposed vorton species should in principle be discriminable by:
+Any proposed closure knot species should in principle be discriminable by:
 
 - invariant topological profile
 - stability envelope
@@ -1171,7 +1155,7 @@ Any proposed vorton species should in principle be discriminable by:
 - permitted reconfiguration modes
 - relation to secondary material regimes
 
-This book does not claim to have completed the mathematical catalogue of vorton species. It states the ontological requirement that such discrimination must be possible if vortons are to do the explanatory work assigned to them. The re-anchored modelling programme has begun this at the level of the species-lattice arithmetic — the self-linking of the charge flux — and confirmed it computationally; see Chapters 44–45.
+This book does not claim to have completed a formal catalogue of closure knot species. It states the ontological requirement that such discrimination must be possible if closure knots are to do the explanatory work assigned to them. The required formal account remains future work.
 
 ## A.4 Core Axioms (RS v2)
 
@@ -1185,11 +1169,11 @@ This book does not claim to have completed the mathematical catalogue of vorton 
 
 **A4 — Secondary topological organisation.** Larger organised regimes arise through coordinated relations among stable entities, transient structures, and boundary conditions within the substrate.
 
-**A5 — Vorton matter.** Matter consists fundamentally of stable torsional knot-states of the substrate and their organised relations.
+**A5 — Closure Knot matter.** Matter consists fundamentally of stable torsional knot-states of the substrate and their organised relations.
 
 **A6 — Energy as retopologisation.** Energy is conserved as allowable configurational and topological reorganisation within the substrate under runtime constraints.
 
-**A7 — Electricity as reconfiguration.** Electrical behaviour is ordered substrate reconfiguration, often mediated by vorton slip and constrained pathways.
+**A7 — Electricity as reconfiguration.** Electrical behaviour is ordered substrate reconfiguration, often mediated by closure knot slip and constrained pathways.
 
 **A8 — Light as torsional propagation.** Light is a coherent transient torsional disturbance propagating through the ordered substrate.
 
@@ -1217,13 +1201,13 @@ This book does not claim to have completed the mathematical catalogue of vorton 
 
 ## A.6 Open Formal Work
 
-The remaining formal work is not hidden by the appendix. The framework still requires stronger mathematical treatment of vorton species, coupling regimes, stability envelopes, reconfiguration dynamics, the mathematical form of strain, time-evolution dynamics for alignment-restoration trajectories, and an explicit operation-E module for dissolution dynamics. It also requires (and does not yet have) equation equivalence to Maxwell's equations, to classical mechanics, and eventually to features of quantum mechanics. Future development should strengthen those areas without relaxing the category distinctions stated here. Chapter 46 records the frontier.
+The remaining formal work is not hidden by the appendix. The framework still requires stronger treatment of closure knot species, coupling regimes, stability envelopes, reconfiguration dynamics, the form of strain, time-evolution dynamics for alignment-restoration trajectories, and dissolution dynamics. It also requires a defensible account of its relation to established physical descriptions. Future development should strengthen those areas without relaxing the category distinctions stated here.
 
 ---
 
 # Appendix B — Operation, Permission, Admissibility, Alignment Glossary
 
-Compact definitions of the transformation-tier vocabulary used throughout the technical book, plus the dissolution-dynamics and projection-discipline vocabulary introduced by the operation-E specification and the projection-discipline document. Cross-reference to the chapters and companion documents where each term is fully developed.
+Compact definitions of the transformation-tier vocabulary used throughout the technical book, together with the research-discipline vocabulary used to keep future work bounded and auditable.
 
 ## Transformation-tier core
 
@@ -1232,7 +1216,7 @@ Compact definitions of the transformation-tier vocabulary used throughout the te
 - **Propagation (A)** — A pattern moves through compatible topology without restructuring it. Paradigm: light.
 - **Reconfiguration (B)** — Structure reshapes through available pathways. Paradigm: electricity.
 - **Alignment adjustment (C)** — Neighbouring regions adjust orientations to reduce mismatch. Paradigm: magnetism.
-- **Closure formation (D)** — Topology folds into a stable identity-bearing loop. Paradigm: vorton formation.
+- **Closure formation (D)** — Topology folds into a stable identity-bearing loop. Paradigm: closure knot formation.
 - **Dissolution (E)** — Structure loses coherence and collapses. Paradigm: decay/death.
 
 **Permission** (Ch. 32). What operations a particular agent can initiate or influence.
@@ -1251,114 +1235,116 @@ Compact definitions of the transformation-tier vocabulary used throughout the te
 
 **Restoration vs persistence** (Ch. 36). Two distinct trajectories for misalignment. Restoration produces higher alignment than before. Persistence produces degradation.
 
-**Vorton stability envelope** (Ch. 18). The range within which a vorton may deform while preserving identity. Outside the envelope, identity is lost (operation E).
+**Closure Knot stability envelope** (Ch. 18). The range within which a closure knot may deform while preserving identity. Outside the envelope, identity is lost (operation E).
 
 **Closure conditions** (Ch. 17). Four simultaneous conditions for operation D success: local boundedness, distributed coherence, closed return-path, admissible neighbourhood.
 
-**Linking (Hopf) invariant** (Ch. 44). The integer topological invariant that, in the re-anchored model, carries a vorton's identity — the self-linking of the director grain, replacing the earlier heuristic identity-score.
+**Invariance profile** (Chs. 17–18). The set of configurational features that a future formal account must specify as identity-preserving for a closure knot. The profile is required by the ontology but is not yet completed by the book.
 
-## Dissolution dynamics (operation-E specification)
+## Dissolution vocabulary
 
-The terms below are introduced by the operation-E scoping document (`operation-e-dissolution-scoping-2026-05-25.md`) and the implementation specifications (`operation-e-specification-2026-05-25.md` for step 1; `operation-e-step2-specification-2026-05-25.md` for step 2). They formalise the dynamics under which operation E proceeds.
+The terms below make the conceptual account of operation E precise enough to guide future work without presupposing a completed calculation.
 
-**Operation E (working definition)** (Ch. 30, sharpened by scoping §3). Operation E is a substrate change in which a configuration that had been satisfying its closure conditions ceases to do so, with the consequence that the identity borne by that closure is no longer maintained. Four jointly necessary features: prior identity, closure-condition failure, strain release, substrate persistence.
+**Operation E (working definition)** (Ch. 30). Operation E is a substrate change in which a configuration that had been satisfying its closure conditions ceases to do so, with the consequence that the identity borne by that closure is no longer maintained. Four jointly necessary features: prior identity, closure-condition failure, strain release, substrate persistence.
 
-**Three regimes of dissolution** (Ch. 30, scoping §4).
+**Three regimes of dissolution** (Ch. 30).
 
 - **Clean dissolution** — Closure fails; released strain disperses through propagation or local reconfiguration; substrate returns to a state available for new closure.
 - **Partial dissolution** — Closure fails but some structure persists as secondary or transient configuration; new (different) closure may form in the altered region.
 - **Pathological dissolution (cascade)** — Released strain exceeds local restoration capacity; dissolution propagates to neighbours; identity fails across coupled scales. The structural form of corruption.
 
-**Held strain** (specification §2.1). The accumulated strain that a stable or destabilising configuration is currently bearing within its stability envelope. Cannot fall below zero.
+**Held strain.** The accumulated strain that a stable or destabilising configuration is currently bearing within its stability envelope.
 
-**Dissolution phase** (specification §2.1, §3 Law 4). One of: `stable` / `destabilising` / `unwinding` / `dissolved` / `restoring`. Transitions between phases are constrained by the permitted-transitions table. Direct `dissolved → stable` is forbidden; restoration requires `dissolved → restoring → stable`.
+**Dissolution phase.** One of: `stable` / `destabilising` / `unwinding` / `dissolved` / `restoring`. Direct `dissolved -> stable` is forbidden; restoration requires `dissolved -> restoring -> stable`.
 
-**Closure viability** (specification §2.1). Per-condition scores [0,1] for each of the four closure conditions, plus a joint viability (typically the minimum or weighted product). When joint viability falls below the destabilising threshold, the phase transitions toward unwinding.
+**Closure viability.** The extent to which the four closure conditions are jointly satisfied. A future account must define this without turning a convenient score into ontology.
 
-**Release pathway** (specification §2.1, §4). The distribution of released strain across the five operations: propagation (A), reconfiguration (B), alignment adjustment (C), new closure formation (D), and neighbour cascade (E). Sum equals total released this tick (Conservation Law 2).
+**Release pathway.** The route by which released strain contributes to propagation (A), reconfiguration (B), alignment adjustment (C), new closure formation (D), or neighbouring dissolution (E).
 
-**Restoration window** (specification §2.1, §4). The number of ticks remaining after dissolution begins during which restoration could still succeed. Computed from substrate's restoration capacity in the region; consolidation of secondary structure shortens the window.
+**Restoration window.** The limited interval after dissolution begins during which restoration could still succeed. Consolidation of secondary structure may shorten it.
 
-**Restoration trigger** (scoping §5.5). What initiates restoration. Three candidate triggers: substrate-intrinsic (default tendency toward low-strain configuration), external operation D (an externally supplied seed), and coupled restoration (reference structure from an aligned neighbour). Single-region implementation supports external triggers only.
+**Restoration trigger.** What initiates restoration. Candidate forms include substrate-intrinsic recovery, external operation D, and coupled restoration from an aligned neighbour.
 
-**Cascade threshold** (step-2 specification §5). The amount of strain that a neighbouring region can absorb in a single delivery without its closure conditions being affected. Direction-specific (asymmetric coupling permitted). Above the threshold, the delivery itself is sufficient to destabilise the target.
+**Cascade threshold.** The amount of strain that a neighbouring region can absorb before its closure conditions are affected. Direction-specific asymmetric coupling remains possible.
 
-**Coupling descriptor** (step-2 specification §2.1). The structural relation between two coupled regions: strength, mode (`shared-boundary` / `route-coupled` / `alignment-coupled` / `mixed`), per-direction cascade thresholds, channel efficiency.
+**Coupling descriptor.** The structural relation between two coupled regions: strength, mode (`shared-boundary` / `route-coupled` / `alignment-coupled` / `mixed`), directional cascade thresholds, and channel efficiency.
 
-**Cascade event** (step-2 specification §2.1, §3 Law 6). A logged occurrence of strain delivery from one region to another. Records source release, delivered strain (after channel efficiency loss), whether the target's cascade threshold was exceeded, and target phases before and after the delivery.
+**Cascade event.** A transfer of released strain from one region to another that changes the second region's stability or phase.
 
 ## Projection discipline
 
-Introduced by `projection-discipline-2026-05-25.md`. The vocabulary for the equation-equivalence work (Tech Ch. 46, items 5–7), now reframed as projection invariance work.
+Projection language distinguishes an ontological claim from a reduced description that may be compared with established physical formalisms.
 
-**Projection** (projection discipline §2). A mapping from RS substrate state to classical equation variables at the field-level descriptive layer. Always lossy by design — substrate-level richness is reduced to field-level summary.
+**Projection.** A mapping from RS substrate state to variables at the field-level descriptive layer. It is lossy by design: substrate-level richness is reduced to field-level summary.
 
-**Projection function (P)** (projection discipline §2, §6). A named, versioned function with declared input variables, output variables, functional form, and domain. Examples: `P_Maxwell`, `P_FirstOrderDecay`, `P_NewtonianMechanics`.
+**Projection function (P).** A named, versioned function with declared input variables, output variables, functional form, and domain.
 
-**Descriptive layer** (projection discipline §5). A level of the hierarchy at which a description operates. Most projections land at level 7 (field-level descriptions and measurements). Some project to levels 8 (engineered systems) or 9 (biological / agency consequences).
+**Descriptive layer.** A level of the hierarchy at which a description operates. A projection must state the level at which it is intended to apply.
 
-**The four projection discipline rules** (projection discipline §3):
+**The four projection discipline rules:**
 
 - **Specifiability in advance** — The projection function must be stated before applying it to any test case.
 - **Invariance across cases** — The same projection must produce results matching the target equation across all admissible cases within its domain, without per-case tuning.
 - **Loss accounting** — The information discarded by the projection must be characterised in a loss ledger, not hidden.
 - **Domain specification** — Each projection has an explicit domain of applicability; applying it outside the domain is misuse.
 
-**Loss ledger** (projection discipline §3 Rule 3, §6). The catalogue of substrate-level distinctions that a projection collapses to produce its target-level output. Required for every projection.
+**Loss ledger.** The catalogue of substrate-level distinctions that a projection collapses to produce its target-level output.
 
-**Projection invariance** (projection discipline §7). The property that a projection produces results matching the target equation across all cases within its domain, without modification of the projection rule. The central operational claim of the projection discipline.
+**Projection invariance.** The property that one declared projection produces results matching its target description across cases within its stated domain, without modification of the rule.
 
-**Failure modes the discipline blocks** (projection discipline §4):
+**Failure modes the discipline blocks:**
 
 - **Post-hoc projection** — Adjusting the projection after seeing the test case. Blocked by Rule 1.
 - **Selective domain** — The projection works for some cases and not others, with "those are special" as the explanation. Blocked by Rule 2.
 - **Hidden information** — The projection secretly retains more information than the loss ledger acknowledges. Blocked by Rule 3.
 
-## Benchmark suite vocabulary
+## Numerical research discipline
 
-Introduced by `benchmark-suite-design-2026-05-25.md`.
+**Predeclaration.** Candidate rules, thresholds, outcome labels, and stop conditions are committed before the relevant data are opened.
 
-**Three benchmark tiers**:
+**Sealed confirmation.** A confirmation case remains unavailable until a discovery decision has been frozen, so that it can test transfer rather than repeat model selection.
 
-- **Tier 1 — Structural derivation** — The model derives a qualitative structural feature (a sign, a discreteness, a conserved integer) without calibration. Passing raises confidence in internal coherence.
-- **Tier 2 — Quantitative tolerance** — The model's output value falls within a predeclared tolerance around the published target. Passing raises confidence that the model's structural commitments produce quantitatively plausible values.
-- **Tier 3 — Quantitative equation** — Using a predeclared projection, projected values satisfy the target equation across all admissible cases within the projection's domain. Passing warrants consistency with the target equation; does not prove the underlying ontology.
+**Independent validation.** Arrays, reports, and artefacts are checked independently of the research decision.
 
-**Predeclaration block** (benchmark suite design §4). The version-controlled statement at the top of every benchmark script declaring, per tier: expected ordering, target value, tolerance, projection rule, domain bounds, loss ledger. Changes to the predeclaration constitute a new version of the benchmark.
+**Boundary result.** A result that defines where a previously supported rule no longer applies. P8 is such a result: it identifies the `t = 1` limit of the P4-P7 correction rule for its declared family.
 
-**Honest non-claims** (benchmark suite design §5). Even with all benchmarks passing, the framework does not claim ontological proof, replacement of specialist simulators, or scientific consensus. Benchmark passes warrant consistency claims, not proof claims.
+**Rejected candidate law.** A rule that has failed its prospective gates and must not be selected merely because it was closest after the fact. P8D supplies this status for its four cadence-law candidates.
+
+**Honest non-claims.** Even a supported numerical region does not establish the ontology, a spatial continuum, a physical interaction, or scientific consensus.
 
 ---
 
-# Appendix C — Modelling Programme Artifacts
+# Appendix C — Current Numerical Research Record
 
-The modelling programme's working artifacts are not reproduced in the book; they live in the companion repository and evolve faster than a printed catalogue could track. The re-anchored programme is recorded there as: the **coherence-topology scaffold** and its containment ledger, the **decision log** (each modelling choice with its rationale), and a **completion summary**, all under `docs/`; and the explicit **parameter-free computations** under `instantiation/`. The earlier JavaScript topology-sandbox — the retired heuristic programme described historically in Chapter 43 — remains in the repository's version history for provenance, but is no longer part of the framework's live modelling layer.
+The numerical research record is maintained with the active research deliverables and evolves faster than a printed catalogue. The current book records only the H3S status needed to interpret the research honestly: a supported local separation-phase-width patch through `t = 1`, its temporal boundary, and the rejected cadence-law candidates. Reproducible artefacts, frozen commitments, and independent validation records belong with the active research deliverables rather than in the ontology itself.
 
 ---
 
 # Appendix D — Claim-Status Map
 
-Every claim in this book is labelled by status. The labels are taken from the modelling-programme's own claim-status vocabulary and extended for use in the book:
+Every claim in this book is labelled by status. The labels keep ontological claims, current research results, and open work distinct:
 
 - **Foundational** — Load-bearing for the framework. Removing it collapses substantial structure. F0, A1–A8, M1, T1–T4 are foundational.
 - **Hard guardrail** — A discipline rule that protects ontology boundaries. Violating it commits a category error. The boundaries in Chapter 42 are hard guardrails.
 - **Working** — Currently in use, with some validation, but not yet stress-tested at high confidence. Most of the operations-layer mappings to physical lanes (Part VIII Chapters 26–30) are working.
-- **Interpretive** — A framing assumption that is theologically or philosophically load-bearing but not directly testable against the modelling programme. Relational primacy as interpreted in Chapter 6 includes interpretive content.
-- **Sanity check** — A test that, if it fails, indicates internal incoherence (not external falsification). An explicit computation confirming a claimed invariant — for example, that a constructed vorton's linking number is the expected integer — is a sanity check.
-- **Focused diagnostic** — A targeted test that the framework can be wrong about. Most of the molecular and material diagnostics in Chapter 45 are focused diagnostics.
-- **External benchmark** — A test against published, source-anchored facts whose verdict is not under the framework's control. The external benchmarks in Chapter 45 are external benchmarks.
-- **Frontier** — Work named as necessary but not yet undertaken or substantially incomplete. Equation equivalence to Maxwell, the explicit operation-E module, vorton species mathematics, and time-evolution alignment dynamics are frontier.
-- **Open** — A claim that the framework would like to make but currently cannot defend. The mathematical form of strain is open. The detailed permissions map for embodied human agents is open.
+- **Interpretive** — A framing assumption that is theologically or philosophically load-bearing but not directly testable by the present research. Relational primacy as interpreted in Chapter 6 includes interpretive content.
+- **Supported numerical result** — A result that has passed its predeclared gates within a stated finite experiment. The P4-P7 H3S patch has this status only through `t = 1` and within its declared axes.
+- **Boundary result** — A result that limits a previously supported rule. P8 establishes the temporal boundary of the P4-P7 correction rule for its declared family.
+- **Rejected candidate law** — A preregistered rule that failed the required prospective test. The four P8D cadence laws have this status.
+- **Focused diagnostic** — A targeted test that the framework can be wrong about.
+- **External benchmark** — A test against an independently sourced fact whose verdict is not under the framework's control.
+- **Frontier** — Work named as necessary but not yet undertaken or substantially incomplete. Closure-knot species mathematics, dissolution dynamics, and time-evolution alignment dynamics are frontier.
+- **Open** — A claim that the framework would like to make but currently cannot defend. The form of strain and the detailed permissions map for embodied human agents are open.
 
 A reader who wants to know what confidence to attach to any claim in the book can locate it by chapter and apply the status label. The status of any individual claim may change between versions of this book; the discipline of labelling is what allows the framework to mature without losing track of what has changed.
 
-This is part of what makes the book *living*. Future versions will move some frontier items into working, may demote some working items to focused diagnostics if they fail under pressure, and will add new frontier items as the modelling programme advances. The framework's strength is not that it is complete but that it is honest about its state. The book and the code together carry that honesty.
+This is part of what makes the book *living*. Future versions may move frontier items into working, may add supported numerical results or boundary results, and may reject candidates that fail under pressure. The framework's strength is not that it is complete but that it is honest about its state. The book and the research record together carry that honesty.
 
 ---
 
 # Appendix E — The Ontology as a Relationship Graph
 
-Appendix A gives the runtime hierarchy and core axioms. Appendix B defines the transformation-tier vocabulary. This appendix adds a complementary view: the ontology stated as a directed graph of typed relations between its entities. The point is to make the structure inspectable and machine-readable — to render in one consistent relational vocabulary what the chapters carry as argument, and to leave the framework in a form that can be ingested by knowledge-graph tooling, formal-ontology analysers, or the modelling programme (Part XIII).
+Appendix A gives the runtime hierarchy and core axioms. Appendix B defines the transformation-tier vocabulary. This appendix adds a complementary view: the ontology stated as a directed graph of typed relations between its entities. The point is to make the structure inspectable and machine-readable — to render in one consistent relational vocabulary what the chapters carry as argument, and to leave the framework in a form that can be used by knowledge-graph tooling, formal-ontology analysers, or future research tools.
 
 ## E.1 Relationship Types
 
@@ -1386,10 +1372,10 @@ The relations below are deliberately standard, so the graph can be read alongsid
 
 **Substrate to identity.**
 - `PrimaryTopology emerges-from RelationalSubstrate`
-- `Vorton is-a PrimaryTopology` (A2, A5)
-- `Vorton instantiates StableForm`
-- `Vorton maintains Identity` (by continuously sustaining admissible circulation)
-- `Vorton depends-on Torsion, Closure, Constraint`
+- `Closure Knot is-a PrimaryTopology` (A2, A5)
+- `Closure Knot instantiates StableForm`
+- `Closure Knot maintains Identity` (by continuously sustaining admissible circulation)
+- `Closure Knot depends-on Torsion, Closure, Constraint`
 - `TransientAetherStructure emerges-from RelationalSubstrate` (A3)
 - `SecondaryTopology emerges-from PrimaryTopology + BoundaryConditions` (A4)
 - `Materials is-a SecondaryTopology`
@@ -1435,7 +1421,7 @@ The relations below are deliberately standard, so the graph can be read alongsid
 ```
 CreationLevelConstraint
 └─ depends-on ─> RelationalSubstrate   [Continuity part-of; Constraint constrains]
-     ├─ emerges-from ─> PrimaryTopology   (Vorton: closure of torsion, op D)
+     ├─ emerges-from ─> PrimaryTopology   (Closure Knot: closure of torsion, op D)
      │     ├─> SecondaryTopology ─> Materials ─> Objects
      │     └─> TransientAetherStructure (op A bearers, e.g. light)
      │
@@ -1443,7 +1429,7 @@ CreationLevelConstraint
      │                    (emerge-from substrate-configurational interaction)
      │
      ├─ mediates ─> Routes ─> Operations {A, B, C, D, E}
-     │              · Light(A) · Electricity(B) · Magnetism(C) · Vorton(D) · Decay(E)
+     │              · Light(A) · Electricity(B) · Magnetism(C) · Closure Knot(D) · Decay(E)
      │              · Perception (A+B compound; Origin → Transmission → Reception → Recognition)
      │              · Resonance (compound; capacitive ↔ inductive)
      │
@@ -1466,7 +1452,7 @@ Second, the graph mirrors the prose; the prose remains primary. Where a relation
 
 Third, the graph has a single root. Everything in it, the substrate included, *depends-on* creation-level constraint. The framework is an account of created runtime physical reality; nothing in the graph is self-existent except that root.
 
-A machine-readable export of this graph (RDF-like triples) is a natural target for the modelling programme — it would allow the framework's typed-edge claims to be cross-checked against the claim-status map (Appendix D) under automated tooling.
+A machine-readable export of this graph (RDF-like triples) is a natural future tool: it would allow the framework's typed-edge claims to be cross-checked against the claim-status map (Appendix D) under automated tooling.
 
 ---
 
@@ -1486,22 +1472,24 @@ The framework's substrate proposal sits within a long history of attempts to art
 - **James MacCullagh** (1839) on an elastic-solid model of the ether — particularly relevant for the framework's torsional treatment of light.
 - **James Clerk Maxwell** on the electromagnetic field as a state of the ether and on the unified mathematical treatment that emerged. Maxwell's *A Treatise on Electricity and Magnetism* and the development from his model-with-mechanical-aether to the field equations is part of the historical drift the framework's Chapter 6 discusses.
 - **Hendrik Lorentz** on the electron and the electromagnetic ether.
-- **Lord Kelvin (William Thomson)** on vortex atoms (1867) — a direct historical antecedent to the vorton hypothesis. Kelvin proposed that atoms are stable knotted vortices in the ether, distinguished by their topological invariants. This is acknowledged as the deepest historical root for the framework's primary topology / vorton account.
+- **Lord Kelvin (William Thomson)** on vortex atoms (1867) — a direct historical antecedent to the closure knot hypothesis. Kelvin proposed that atoms are stable knotted vortices in the ether, distinguished by their topological invariants. This is acknowledged as the deepest historical root for the framework's primary topology / closure knot account.
 
 The framework does not revive the historical ether programme in its original form (the boundary statements in Chapter 5 are explicit about how RS differs from earlier ether theories). It does treat the historical instinct that drove these proposals — that continuity may require ontological grounding — as having been correct, even where specific historical implementations failed.
 
 ## Vortex, Soliton, And Knot Physics
 
-The framework's vorton hypothesis draws on a substantial twentieth-century physics literature:
+The framework's closure knot hypothesis draws on a substantial twentieth-century physics literature:
 
 - **Hermann von Helmholtz** on vortex dynamics (1858) — the conservation laws for vorticity that underlie Kelvin's vortex atom programme.
 - **John Scott Russell** on the soliton observation (1834) and the subsequent mathematical development through **Korteweg–de Vries** and others.
 - **Tony Skyrme** on the Skyrme model and topological solitons as particles (1961) — particularly relevant to the framework's "stable knot-state" treatment of identity-bearing primary topology.
 - **Ludvig Faddeev** and **Antti Niemi** on knotted solitons in non-linear field theory.
 - **Tom Kibble** on topological defects in cosmology and condensed matter.
+- **Richard L. Davis and E. Paul S. Shellard** on stable current-carrying loops in superconducting cosmic-string theory. Their work studies loops whose tension is balanced by charge, current, and angular momentum.
+- **Robert Brandenberger, Brandon Carter, Anne-Christine Davis, Mark Trodden, Carlos Martins, and E. Paul S. Shellard** on later formation, stability, and cosmological constraints for those loops. This literature provides a distant conceptual precedent for treating global constraint and stable extended configuration as physically serious rather than as decorative metaphor.
 - The broader **topological-defect** and **topological-soliton** traditions in mathematical physics, including connections to knot invariants developed by **Vaughan Jones** and others.
 
-The framework's vorton is not a soliton in the strict mathematical sense, and it is not a topological defect in the standard condensed-matter sense, but the conceptual genealogy is clear and the debt is acknowledged.
+The framework's closure knot is an ontology-specific proposal, not a direct identification with a soliton, a standard condensed-matter defect, or a QFT cosmic-string object. It takes no equation, physical mechanism, or direct correspondence from the cosmic-string literature. Its limited debt is the thought that stable extended identity may be carried by globally organised constraint; RS reframes that thought as primary identity-bearing closure within a relational substrate.
 
 ## Topology, Geometry, And Structural Physics
 
@@ -1522,18 +1510,15 @@ The framework's stance on description vs ontology and on the recovery of ontolog
 - **Bas van Fraassen** on constructive empiricism — the framework lands in the opposite position but engages the same questions.
 - **Tim Maudlin** (*The Metaphysics Within Physics*, *Philosophy of Physics: Space and Time*) on the legitimacy and necessity of metaphysical inquiry into the world physics describes.
 - **James Ladyman** and **Don Ross** (*Every Thing Must Go*) on ontic structural realism — the framework's relational primacy claim resonates here, while the framework's created-relational reading differs from their naturalised metaphysics.
-- **Mauricio Suárez** on models and modelling in physics — relevant to the framework's treatment of its modelling programme as a model that informs ontology without being mistaken for it.
+- **Mauricio Suárez** on models and modelling in physics — relevant to the framework's treatment of numerical models as informative without being mistaken for ontology.
 
-## Mathematics And Modelling Programme Sources
+## Research Method Sources
 
-The modelling programme (Chapters 43–46) draws on several methodological traditions:
+The current numerical research record (Chapters 43–46) draws on several methodological traditions:
 
 - Computational modelling philosophy from **Margaret Morrison** (*Reconstructing Reality*) and the broader literature on models as mediators.
-- The **falsification** discipline associated with **Karl Popper**, applied through the predeclaration requirements in the benchmark suite.
-- The **structural realism** tradition for the framing of projections from substrate state to classical equation variables.
-- The **topological-soliton** literature the re-anchored programme builds on: the Hopf invariant and Hopfions, the Skyrme model, and the Kelvin vortex-atom lineage, together with the results on soliton spin and statistics (Finkelstein–Rubinstein), induced topological terms (Abanov–Wiegmann), and the Witten effect — individually cited in the modelling `docs/`.
-
-The projection-discipline document explicitly engages with the historical difficulty of equation-equivalence in alternative-physics frameworks, with **loop quantum gravity**'s difficulties recovering general relativity as a salient cautionary example.
+- The **falsification** discipline associated with **Karl Popper**, expressed here through advance commitments, sealed confirmation cases, preserved negative results, and explicit scope limits.
+- Reproducible-research practice: independently validated artefacts, immutable commitments, and results that can be rerun without changing the question after the evidence is seen.
 
 ## Theological And Anthropological Sources
 
@@ -1560,14 +1545,14 @@ Several positions in the framework have no clear single antecedent and are offer
 - The **five-operation typology** (Chapters 24–31) as a closed set covering substrate change: propagation, reconfiguration, alignment adjustment, closure formation, dissolution.
 - The **three-layer admissibility distinction** (Chapter 33) — ontological, operational, moral — as a methodological discipline.
 - The structural account of **alignment as coherence-under-constraint** with strain as its inverse (Chapter 34), and the unification of beauty / order / truth / good as alignment variants.
-- The **projection discipline** for equation-equivalence work (Appendix B, projection-discipline companion document) as a falsifiability framework for substrate-level claims.
+- The **projection discipline** in Appendix B as a falsifiability framework for future substrate-level claims.
 - The integration of the **transformation tier across the ontological stack** as complementary rather than competing descriptions of the same created order.
 
 These contributions sit within and depend upon the broader traditions acknowledged above.
 
 ## A Note On Method And AI-Assisted Research
 
-Honesty about sources requires honesty about method. This volume was developed with substantial help from AI systems — principally ChatGPT (OpenAI) and Claude (Anthropic). The framework spans more disciplines than any one person can traverse unaided, and these systems were used for exploratory work and synthesis: summarising and correlating material across physics, mathematics, philosophy of science, and adjacent fields; navigating far more literature than could be read in full; surfacing relevant historical and contemporary antecedents; refining terminology; and testing the framework for internal coherence and consistency with the modelling programme. The author has not personally read every source in the broader research ecosystem the volume draws on, and it would be misleading to imply otherwise.
+Honesty about sources requires honesty about method. This volume was developed with substantial help from AI systems — principally ChatGPT (OpenAI) and Claude (Anthropic). The framework spans more disciplines than any one person can traverse unaided, and these systems were used for exploratory work and synthesis: summarising and correlating material across physics, mathematics, philosophy of science, and adjacent fields; navigating far more literature than could be read in full; surfacing relevant historical and contemporary antecedents; refining terminology; and testing the framework for internal coherence and consistency with the current research record. The author has not personally read every source in the broader research ecosystem the volume draws on, and it would be misleading to imply otherwise.
 
 What was not delegated is the judgement. The positions retained here were evaluated, corroborated, challenged, refined, and selected by the author; AI assistance accelerated exploration without conferring authority. Proposed connections were checked rather than accepted on trust, weak lines were discarded, and what survived did so because it was judged coherent, defensible under the guardrails this appendix specifies, and consistent with the discipline of Appendix D's claim-status map. The honest description of the process is a hybrid of human reasoning and AI-assisted synthesis, with final ontological and methodological judgement kept in human hands — an increasingly ordinary situation for interdisciplinary technical work at this scale, and one better stated openly than left implicit.
 

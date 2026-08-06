@@ -4,13 +4,13 @@ This directory contains the core book-length manuscripts of the Relational Subst
 
 ## Included Volumes
 
-- **relational-substrate.md** — *The Relational Substrate: A Hierarchical Ontology of Runtime Physical Reality*  
-  The technical volume. Detailed ontology, primitives, axioms, the transformation tier (operations/permissions/admissibility/alignment), and the modelling programme.
+- **relational-substrate.md** — *The Relational Substrate: A Hierarchical Ontology of Runtime Physical Reality*
+  The technical volume. Detailed ontology, primitives, axioms, the transformation tier (operations/permissions/admissibility/alignment), and the current numerical research record.
 
-- **coherent-biblical-ontology-bachelors.md** — *Coherent Biblical Ontology — Bachelor's Edition*  
-  Scripture-first presentation of the framework at sustained theological and conceptual depth (bachelor's level).
+- **coherent-biblical-ontology-bachelors.md** — *Coherent Biblical Ontology*
+  Scripture-first presentation of the framework at sustained theological and conceptual depth.
 
-These are the current master drafts (v1 for the technical volume, v2 for the CBO bachelor's edition) incorporating the rename from AMS to RS and the integration of the transformation tier.
+These are the current master drafts incorporating the rename from AMS to RS, the integration of the transformation tier, and the closure-knot terminology.
 
 Companion volumes exist in draft form elsewhere in the workspace (general volume *A Coherent World*, devotional *How to Hug the Right Tree*) and may be added here in the future.
 

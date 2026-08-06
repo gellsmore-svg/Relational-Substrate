@@ -103,7 +103,7 @@ Outputs are written under:
 analysis/out/
 ```
 
-This bench uses known simple molecular geometries as calibration data. It checks whether a transparent topology-and-constraint score ranks reference candidates above strained or incoherent variants. It does not treat atoms as vorton species.
+This bench uses known simple molecular geometries as calibration data. It checks whether a transparent topology-and-constraint score ranks reference candidates above strained or incoherent variants. It does not treat atoms as closure-knot species.
 
 Run the generated molecule perturbation sweep with:
 
@@ -229,7 +229,7 @@ Run the T1 coupling descriptor report with:
 npm run t1:coupling
 ```
 
-This reads the coordinate and calibration outputs, then writes candidate T1 coupling-pattern descriptors for each T2 molecule family. These descriptors are mechanism-facing hypotheses only: they do not prove the Relational Substrate theory and do not introduce cells, particles, lattices, or material components between `T0` substrate and T1 vortons.
+This reads the coordinate and calibration outputs, then writes candidate T1 coupling-pattern descriptors for each T2 molecule family. These descriptors are mechanism-facing hypotheses only: they do not prove the Relational Substrate theory and do not introduce cells, particles, lattices, or material components between `T0` substrate and T1 closure knots.
 
 Run the T1 coupling parameter sweep with:
 
@@ -579,7 +579,7 @@ No mesh, curve, tube, point, or rendered object should be read as a literal subs
 The primary texts of the framework are maintained in the `books/` directory:
 
 - `books/relational-substrate.md` — Technical ontology volume (*The Relational Substrate*)
-- `books/coherent-biblical-ontology-bachelors.md` — Coherent Biblical Ontology (Bachelor's Edition)
+- `books/coherent-biblical-ontology-bachelors.md` — Coherent Biblical Ontology
 
 These contain the full current statements of the RS (Relational Substrate) framework, including the rename from the earlier AMS terminology and the explicit transformation tier.
 
