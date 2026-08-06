@@ -1,6 +1,6 @@
 # Coherent Biblical Ontology
 
-Status: master draft v2 (2026-05-27)
+Status: master draft v3 (2026-08-06)
 Companion to: *A Coherent World* (general volume), *The Relational Substrate* (technical volume), *How to Hug the Right Tree* (devotional volume)
 
 This book presents the scriptural expression of the Relational Substrate framework. It begins from the authority of Scripture, receives creation as real and ordered, and asks how physical order, life, personhood, corruption, redemption, and restoration may be placed within one coherent Christian ontology.
@@ -105,7 +105,7 @@ The sequence is exact:
 - imparted life
 - living soul
 
-`Bara` opens a new threshold of substrate capability. `Yatsar` describes the geometrical and topological forming of a body fit to bear animation and, where applicable, living soul. Chapter 12 will return to this sequence in depth.
+`Bara` opens a new threshold of substrate capability. `Yatsar` describes the geometrical and topological forming of a body fit to bear animation and, where applicable, living soul. Chapter 14 will return to this sequence in depth.
 
 ## Darkness As A Real Condition Within Created Reality
 
@@ -577,7 +577,7 @@ Two trajectories for misalignment:
 - misalignment + restoration → higher alignment than before
 - misalignment + persistence → degradation
 
-The first trajectory is what discipline, judgment-as-mercy, repentance, and sanctification look like structurally. The second trajectory is what corruption is. Chapter 13 returns to this.
+The first trajectory is what discipline, judgment-as-mercy, repentance, and sanctification look like structurally. The second trajectory is what corruption is. Chapter 15 returns to this.
 
 ### The Tier Sits Across The Stack
 
@@ -906,7 +906,7 @@ Scripture does not use the terms `topology`, `closure knot`, or the RS stack lab
 > `And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.`
 > *Genesis 2:7*
 
-Formed reality matters. Embodiment matters. (Chapter 12 develops this in depth.)
+Formed reality matters. Embodiment matters. (Chapter 14 develops this in depth.)
 
 > `I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works.`
 > *Psalm 139:14*
@@ -1098,13 +1098,129 @@ Recovering these categories is therefore not a philosophical luxury. It is the c
 - mechanism belongs inside the ontology
 - the recovery of these categories has real theological consequences
 
-That leaves the next question. What does this mean for ordinary physical behaviour — motion, light, electricity, magnetism?
+That leaves the next question. By what standard should a description be granted ontological weight, and how does coherence guide that judgement?
 
 ---
 
-# Chapter 8: Motion, Light, Magnetism, and Ordered Physical Behaviour
+# Chapter 8: Coherence Before Description
 
-This chapter restates familiar physical behaviour within the framework of the previous seven chapters. None of what follows is meant to replace mathematical physics. It is meant to give that mathematical physics an ontological setting that does not undermine it.
+Chapter 6 traced a historical drift: successful description was allowed to stand in for ontology. Chapter 7 restored the explanatory categories that drift had thinned. One further distinction is now needed. A description may be accurate, useful, and predictively powerful without yet being a complete placement of reality.
+
+The proper horizon of inquiry is therefore not local predictive success by itself. It is coherence: the increasing placement of what is known into a structure that neither contradicts reality nor leaves its relationships unintelligible.
+
+## The Levels Of Coherence
+
+Coherence is not one undifferentiated achievement. It has levels.
+
+**Atomic coherence** means that one claim is internally well formed and non-contradictory.
+
+**Local coherence** means that a small cluster of claims fits together.
+
+**Regional coherence** means that a thought model organises a meaningful bounded domain, such as matter, life, personhood, or the relation between description and ontology.
+
+**Cross-regional coherence** means that several such models join without contradiction while preserving their distinctions.
+
+**Framework coherence** means that the principal models of a book or worldview form one ordered whole.
+
+**Humanly accessible global coherence** means the most coherent placement presently possible of everything available through revelation, perception, reason, observation, experience, and responsible inference. It remains incomplete because creaturely knowledge, access, interpretation, and formal development are incomplete.
+
+**Perfect global coherence** means that every real entity, relation, distinction, implication, level, and boundary is perfectly placed without contradiction, omission, distortion, or unresolved remainder. Perfect global coherence is identical with perfect truth. Any mismatch with reality would make the supposed coherence imperfect; a structure that omitted or mislocated anything real would not be perfectly true.
+
+This final level belongs fully to God alone. The Christian reader does not claim it for a human framework. The reader seeks greater humanly accessible coherence while receiving that God knows reality without the limits under which creatures reason.
+
+## Reality Before Its Description
+
+The direction of dependence matters:
+
+```text
+Coherent reality
+    ↓ permits
+Observable regularity
+    ↓ apprehended through
+Human observation
+    ↓ represented in
+Conceptual and mathematical description
+    ↓ enables
+Prediction and technological use
+```
+
+The sequence is not reversible. Reality does not become coherent because a formalism describes it. A mathematical representation is possible because created order already bears stable relations that can, in some degree, be observed and represented.
+
+This is not a demotion of mathematics. It is the condition of its dignity. Mathematics can disclose, compress, compare, and extend our grasp of regularities precisely because those regularities are real. But the representation remains downstream of the reality represented.
+
+## Local Success And Ontological Weight
+
+Predictive success establishes something important: a representation has captured a stable relation within its declared domain. It does not, by itself, establish what the represented quantities ultimately are, what kind of entity bears the relation, or how the relation belongs within the whole of reality.
+
+The same predictive formalism may be joined to more than one ontological interpretation. A measurement may be robust while the current account of its referent remains partial. A mathematical device may be indispensable to calculation while its physical status remains unsettled. These are not failures of science. They are reasons for ontology to remain open and disciplined.
+
+The legitimate ontological weight of a description grows through more than one dimension:
+
+- descriptive reliability;
+- reproducibility and independent support;
+- clarity about the domain in which the description works;
+- integration with neighbouring phenomena and models;
+- intelligible connection between the representation and what it represents;
+- resistance to ad hoc reinterpretation when new evidence arrives.
+
+High reliability with low ontological integration establishes a robust regularity. It does not confer sovereignty over the ontology of the whole.
+
+## Phenomenon And Representation
+
+A real phenomenon is not identical to its present representation.
+
+```text
+Phenomenon ≠ current representation of the phenomenon
+```
+
+The distinction is modest but decisive. A representation can approximate, compress, idealise, or isolate an aspect of a phenomenon without becoming the phenomenon itself. It may be replaced or reinterpreted while the observed regularity remains real.
+
+This is why a Christian ontology must receive robust observation seriously without treating every inherited formal feature as an ontological law. It must ask two questions at once: what has genuinely been observed, and what interpretation has been attached to the observation?
+
+## Faraday, Maxwell, And The Two Movements Of Science
+
+Faraday's lines-of-force work and Maxwell's later mathematical formalisation provide a useful historical contrast. Faraday pursued relations, continuity, and physical intelligibility through experiment and conceptual imagination. Maxwell gave powerful mathematical expression to related physical regularities. Both movements are scientific. Neither makes the other redundant.
+
+The contrast matters because later formal success must not be allowed to erase the legitimacy of ontology-led inquiry. A conceptual model that seeks what is there, how it is related, and why a regularity holds is not inferior merely because a later formalism can calculate more precisely. Formal articulation and ontological placement should cooperate. They should not be confused.
+
+## The Proper Burden Of Explanation
+
+When a proposed ontology is assessed, every demand placed upon it should be classified.
+
+- Does the demand arise from an observed phenomenon?
+- Does it arise from unavoidable logic?
+- Or does it arise from an inherited representation whose own ontology remains unsettled?
+
+The first two necessarily constrain any credible ontology. The third may be useful, but it is not automatically a debt that a new ontology must inherit.
+
+An incumbent formal apparatus often contains a mixture of reality-constrained structure and representational machinery adopted for calculation, approximation, or historical convenience. A candidate ontology must place robust phenomena and avoid contradiction. It is not automatically obliged to reproduce every unresolved feature of the incumbent apparatus before it may be considered.
+
+This is the no-transferred-debt principle. It prevents an ontology from being dismissed merely because it does not first reconstruct the whole machinery that an earlier description accumulated while its own foundations remained unclear.
+
+## Coherence, Revelation, And Honest Limits
+
+The Christian commitment to Scripture does not license a forced solution to every question. Scripture is received as truthful revelation; human interpretation of Scripture, observation, and theory remains corrigible. An apparent conflict may arise from any of these, or from a hidden philosophical premise brought into the comparison.
+
+The truthful response is neither to surrender revelation to a local descriptive framework nor to declare every first interpretation of revelation complete. It is to preserve the unresolved state, identify the relevant models and boundaries, and continue inquiry under the conviction that reality is coherent because God is true.
+
+## What This Chapter Establishes
+
+- coherence has distinguishable atomic, local, regional, cross-regional, framework, humanly accessible global, and perfect-global levels;
+- perfect global coherence is identical with perfect truth, while human frameworks remain finite and corrigible;
+- reality precedes and grounds description;
+- predictive success gives a description legitimate but bounded ontological weight;
+- phenomenon and representation must be distinguished;
+- ontology-led inquiry and mathematical formalisation are complementary scientific movements;
+- robust observation and unavoidable logic constrain ontology, while inherited representational debt must not be transferred automatically;
+- unresolved questions should be preserved honestly rather than resolved by surrendering revelation or forcing certainty.
+
+That distinction prepares the reader to examine ordinary physical behaviour without making an inherited description the sovereign judge of what may be real.
+
+---
+
+# Chapter 9: Motion, Light, Magnetism, and Ordered Physical Behaviour
+
+This chapter restates familiar physical behaviour within the framework of the previous eight chapters. None of what follows is meant to replace mathematical physics. It is meant to give that mathematical physics an ontological setting that does not undermine it.
 
 This is also where the transformation tier from Chapter 4 starts paying off concretely. Three of the five operations name physical lanes: propagation (light), reconfiguration (electricity), alignment adjustment (magnetism).
 
@@ -1176,7 +1292,7 @@ That leaves the next question. How do science, theology, and philosophy stand in
 
 ---
 
-# Chapter 9: Scripture, Science, and Theology in Their Proper Relation
+# Chapter 10: Scripture, Science, and Theology in Their Proper Relation
 
 This is the meta-frame chapter. It articulates explicitly what the rest of the book has been doing implicitly — and what makes the CBO distinct from the master volume.
 
@@ -1291,11 +1407,151 @@ These are not in competition. They are different forms of attention directed tow
 - the reduction is precision, not loss
 - the proper hierarchy of disciplines preserves their distinctness while keeping them in one truth-bearing inquiry
 
-That leaves the next question. What happens when the framework reaches life?
+That hierarchy must first be protected against the recurring move by which limited descriptive success claims authority over revelation itself.
 
 ---
 
-# Chapter 10: Life, Templating, Replication, and Biological Order
+# Chapter 11: Science Falsely So Called
+
+Chapter 10 established the proper relation of Scripture, theology, philosophy, science, and mathematics. The Bible also supplies a direct warning about a recurring corruption of knowledge.
+
+> `O Timothy, keep that which is committed to thy trust, avoiding profane and vain babblings, and oppositions of science falsely so called:`
+> `Which some professing have erred concerning the faith. Grace be with thee. Amen.`
+> *1 Timothy 6:20-21*
+
+This chapter does not treat Paul's warning as a narrow prediction of modern physics, nor does it use it as a blanket rejection of scientific study. It identifies a recurring structural offence: something professes knowledge, gains authority through a real but limited success, then claims more than it has established and sets that enlarged claim against truth.
+
+## A Structural Offence, Not A Rejection Of Inquiry
+
+The target is not observation, experiment, mathematics, medicine, engineering, or patient investigation of created order. Each can disclose genuine regularity and serve genuine human good. The target is knowledge falsely extended beyond its warrant.
+
+The structural pattern is:
+
+```text
+Claim to knowledge
+    ↓
+Genuine local success
+    ↓
+Authority exceeds what the success established
+    ↓
+Hidden metaphysical premises enter
+    ↓
+False opposition is constructed
+    ↓
+Revelation is subordinated
+    ↓
+People are led into error concerning faith
+```
+
+This pattern can occur in any discipline or institution. Modern institutional science may instantiate it when a method designed to study measurable regularities is treated as the final judge of what exists, what counts as knowledge, or what Scripture may truthfully say about reality.
+
+## When Method Becomes Metaphysical Prohibition
+
+Every method has a domain. An instrument detects some things and not others; an experiment isolates some relations and not others; a formalism represents selected quantities under selected conditions. Such limitation is normal and honest.
+
+The error begins when a methodological boundary is treated as a boundary of existence. The inability of a method to measure a reality does not establish that the reality is unreal. The method has shown only that the reality is not available to that method in that form.
+
+This distinction is essential for Christian inquiry. Observation may pressure an ontology. It may expose an incoherent claim or require a model to be revised. It cannot, by its own limits, prove that all reality outside its scope is impossible. To make that move is not to extend science; it is to introduce metaphysics without admitting it.
+
+## The Sisyphean Demand
+
+Institutional authority can create an asymmetric burden for any ontology that questions an inherited interpretation.
+
+```text
+Local descriptive success
+    ↓
+Institutional authority
+    ↓
+Accumulated formal apparatus
+    ↓
+Authority extended into ontology
+    ↓
+Alternative ontology must reproduce the whole apparatus
+    ↓
+Foundational uncertainty remains
+    ↓
+More description becomes the approved response
+    ↺
+```
+
+The image is Sisyphean because the hill grows as the challenger climbs it. A proposed ontology is told that it may not even be considered until it reproduces every successful calculation, convention, approximation, and unresolved debt of the incumbent apparatus. Yet the question it raises may concern precisely the ontological status of that apparatus.
+
+This does not make accumulated scientific work futile or dispensable. It identifies an invalid transfer of burden. A candidate ontology must engage robust phenomena, unavoidable logic, and any genuinely established constraint. It need not inherit every representational assumption merely because that assumption has been professionally entrenched.
+
+## Institutionalised Epistemic Arrogance
+
+No accusation of personal arrogance is needed for the problem to be real. Individual scientists may be careful, humble, and open about uncertainty while an institution still rewards descriptive success, treats ontology as professionally secondary, and grants social authority beyond the evidential scope of its conclusions.
+
+Institutionalised epistemic arrogance arises when genuine technical achievement combines with unexamined privilege and then expands into universal intellectual jurisdiction. It is visible when technical prestige is allowed to settle theological, metaphysical, or moral questions without the necessary argument at those levels.
+
+The point is structural, not personal. It asks what an institution permits, rewards, excludes, or treats as unthinkable. It does not presume the motives or character of every person working within it.
+
+## The Captivity Of Christian Reasoning
+
+The same pattern can constrain Christians before any explicit argument is made:
+
+```text
+Science is classified as knowledge
+    ↓
+Ontology is classified as speculation
+    ↓
+Scripture is classified as ontology
+    ↓
+Scripture is treated as intellectually inferior
+    ↓
+Apparent conflict is decided by descriptive frameworks
+    ↓
+Biblical claims retreat into metaphor or private meaning
+    ↓
+Christian intellectual freedom contracts
+```
+
+This is not humility. It is a hidden hierarchy of authorities. A Christian may receive Scripture as God's truthful revelation while acknowledging that his or her own interpretation must be corrected. The correction does not require Scripture to be placed beneath an ontology inherited from descriptive naturalism.
+
+The proper order is different:
+
+```text
+God is true
+    ↓
+God reveals
+    ↓
+Scripture is received as truth
+    ↓
+Human interpretation seeks correction
+    ↓
+Observation and description are placed within creation
+    ↓
+Increasingly coherent understanding develops
+```
+
+## The Legitimate Authority Of Description
+
+The correction offered here is not reactionary rejection. A description should exert real pressure on an ontology according to its reliability, its independent support, its domain of applicability, its relation to neighbouring phenomena, and the clarity of its connection to what is claimed to exist.
+
+That pressure is strongest where a proposed ontology contradicts a robust phenomenon or unavoidable logical relation. It is weaker where the demand arises only from one inherited representation among several possible interpretations. This is why Christian inquiry can preserve observation and mathematical discipline without granting either sovereign ontological authority.
+
+## Freedom Without Forced Certainty
+
+Showing that a naturalistic extrapolation exceeds its warrant does not, by itself, prove Scripture to an unbeliever. It does something more limited and necessary: it removes a false claim of automatic superiority and restores an honest field of inquiry.
+
+Christians are therefore free to begin from biblical ontology without pretending that every unresolved question has already been settled. They can investigate apparent conflicts without assuming either that Scripture is false or that their first interpretation is infallible. They can name genuine evidence, reject illegitimate sovereignty, and preserve unresolved states with intellectual courage.
+
+## What This Chapter Establishes
+
+- “science falsely so called” names a recurring structural offence, not a blanket condemnation of scientific inquiry;
+- genuine local success does not confer universal ontological authority;
+- methodological limitation becomes metaphysical prohibition when a method's boundary is treated as a boundary of existence;
+- the Sisyphean demand transfers unresolved incumbent burdens onto ontological challengers;
+- institutionalised epistemic arrogance is a systemic condition and does not require imputing personal arrogance to individual scientists;
+- Christians can identify false oppositions without rejecting robust observation, experiment, or mathematics;
+- Scripture is received as truthful revelation while human interpretation remains corrigible;
+- Christian intellectual freedom is restored through disciplined inquiry, not through forced certainty or anti-scientific reaction.
+
+That freedom is necessary before the book can ask how the ontology reaches life, organism, personhood, corruption, and restoration.
+
+---
+
+# Chapter 12: Life, Templating, Replication, and Biological Order
 
 The book can now ask a harder question. If created runtime order is real, if continuity and configuration are fundamental, if matter is stable form rather than brute ultimate stuff, and if physical behaviour can be read within one coherent ontology — what happens when that grammar reaches life?
 
@@ -1401,9 +1657,9 @@ That leaves the next question. If life, organism, and consciousness belong withi
 
 ---
 
-# Chapter 11: Organism, Persistence, Resonance, and Consciousness
+# Chapter 13: Organism, Persistence, Resonance, and Consciousness
 
-Chapter 10 brought the argument to the threshold of human life. This chapter handles organism, retention, and consciousness as a bridge to Chapter 12, where humanity itself is addressed in depth.
+Chapter 12 brought the argument to the threshold of human life. This chapter handles organism, retention, and consciousness as a bridge to Chapter 14, where humanity itself is addressed in depth.
 
 ## Organismal Unity
 
@@ -1488,7 +1744,7 @@ This does not solve every philosophical problem associated with consciousness. I
 
 A working framing: the soul functions as a relational or participatory interface, connecting embodied runtime existence with realities that transcend runtime. This preserves the genuine ontological insight that consciousness is embedded in created order while avoiding the opposite danger of unintentionally implying a closed ontological naturalism in which the runtime is the only reality consciousness participates in.
 
-Under this framing, consciousness in this framework is real, embodied, participatory in runtime — and also open, at the level of the soul, to what runtime cannot contain. The soul is not opposed to embodiment; it is what makes embodied human existence open to God in ways that mere biological coordination cannot account for. Embodied human persons are *both* genuinely in the runtime and genuinely in relation to what exceeds it. This is consistent with the broader biblical anthropology developed in Chapter 12: humanity unified across dust, breath, and living soul, where the breath of life and the living soul are not reducible to the dust even as they are not separable from it within embodied human life.
+Under this framing, consciousness in this framework is real, embodied, participatory in runtime — and also open, at the level of the soul, to what runtime cannot contain. The soul is not opposed to embodiment; it is what makes embodied human existence open to God in ways that mere biological coordination cannot account for. Embodied human persons are *both* genuinely in the runtime and genuinely in relation to what exceeds it. This is consistent with the broader biblical anthropology developed in Chapter 14: humanity unified across dust, breath, and living soul, where the breath of life and the living soul are not reducible to the dust even as they are not separable from it within embodied human life.
 
 **Shared reality.** If organisms and later persons are really to know, act, and relate within one world, reality must function as shared interface rather than as disconnected private projection. Created reality is public enough, ordered enough, and constrained enough that different embodied beings can encounter the same world. Consciousness is therefore not best understood as a sealed chamber. It is an interface of embodied presence within shared creation — and, for human persons, an interface that is also open to communion with God.
 
@@ -1531,11 +1787,11 @@ Embodied continuity matters even where the life of the person exceeds brute mech
 - shared reality is the condition for relation among embodied beings
 - inward awareness is real but does not drift free of embodiment
 
-These are bridge claims. They prepare the ground for Chapter 12, where humanity is addressed in depth.
+These are bridge claims. They prepare the ground for Chapter 14, where humanity is addressed in depth.
 
 ---
 
-# Chapter 12: Humanity — Dust, Embodiment, Personhood, and the Image of God
+# Chapter 14: Humanity — Dust, Embodiment, Personhood, and the Image of God
 
 This is the central chapter of the book. Everything earlier has been preparing the ground. Everything later depends on what is established here.
 
@@ -1825,9 +2081,9 @@ That leaves the next question. If humanity is what this chapter describes, why i
 
 ---
 
-# Chapter 13: Corruption, Disorder, Suffering, and Limitation
+# Chapter 15: Corruption, Disorder, Suffering, and Limitation
 
-Chapter 12 established that humanity is a creaturely, embodied, image-bearing agent within real meaning and real moral order, oriented toward relational participation with eternal consequence.
+Chapter 14 established that humanity is a creaturely, embodied, image-bearing agent within real meaning and real moral order, oriented toward relational participation with eternal consequence.
 
 This makes the next question unavoidable. If created order is real, if meaning is real, if moral seriousness is real, and if human action is answerable before God, why does the world appear so full of fracture, suffering, futility, distortion, and loss?
 
@@ -2071,7 +2327,7 @@ That structural contrast runs through scripture. Where alignment is preserved, b
 
 This is not to reduce corruption to a mechanical or merely aesthetic category. Biblically, corruption is profoundly moral, spiritual, and covenantal. But the ontology may provide a deeper structural account of *why* moral corruption manifests in these particular ways. Moral disorder is not an arbitrary category that produces arbitrary effects. It is misalignment within created relational order, and what it produces is exactly what such persistent misalignment must produce: degradation, fragmentation, inversion, counterfeit, parasitism — the experiential and historical signatures of the framework's five modes.
 
-This connection also strengthens the eschatological hope developed in Chapter 14. If corruption is the structural form of persistent misalignment, then *incorruption* is the structural form of alignment sustained without the threat of pathological propagation. The promised resurrection life — *this corruptible must put on incorruption* — is not merely the resumption of biological persistence. It is the structural condition under which the kind of dissolution that produces corruption is no longer available within created order.
+This connection also strengthens the eschatological hope developed in Chapter 16. If corruption is the structural form of persistent misalignment, then *incorruption* is the structural form of alignment sustained without the threat of pathological propagation. The promised resurrection life — *this corruptible must put on incorruption* — is not merely the resumption of biological persistence. It is the structural condition under which the kind of dissolution that produces corruption is no longer available within created order.
 
 ## Suffering, Thresholds, And Human Sin
 
@@ -2160,9 +2416,9 @@ That leaves the next question. If corruption is real but not ultimate, what woul
 
 ---
 
-# Chapter 14: Redemption, Hope, and Restoration
+# Chapter 16: Redemption, Hope, and Restoration
 
-Chapter 13 argued that corruption is real but not ultimate. Disorder wounds created order; it does not create reality.
+Chapter 15 argued that corruption is real but not ultimate. Disorder wounds created order; it does not create reality.
 
 This makes the next question necessary: if creation is wounded, what would restoration mean, and on what grounds could hope be more than disciplined self-comfort?
 
@@ -2219,7 +2475,7 @@ In the transformation tier from Chapter 4, restoration is operation D (closure f
 
 Biblical hope is larger than the continuation of individual consciousness. It includes resurrection, justice, healing, renewal, and the setting right of what has been disordered. Hope is cosmic without ceasing to be personal.
 
-The framework's continuity claim matters here. If identity is carried by ordered embodied form (Chapter 12), then redemption cannot be merely symbolic. It must address what has actually been harmed. Bodies matter. Truth matters. Creation matters. Moral history matters. Shared reality matters.
+The framework's continuity claim matters here. If identity is carried by ordered embodied form (Chapter 14), then redemption cannot be merely symbolic. It must address what has actually been harmed. Bodies matter. Truth matters. Creation matters. Moral history matters. Shared reality matters.
 
 If identity is borne by sustained closure of relational form rather than by a secret immaterial nugget hidden behind creaturely life, then resurrection is not best imagined as the return of a detachable self to an interchangeable body. It is the *restoration and renewal of real creaturely identity under God*.
 
@@ -2270,7 +2526,7 @@ The eschatological promise is therefore stronger than the resumption of original
 
 This is what makes the biblical hope not merely the restoration of Eden but the *consummation* of a creation in which corruption has been judged, paid for, and removed — a creation in which the matured creaturely alignment forged through confrontation with disorder is preserved without the possibility of that disorder returning.
 
-The connection between this and the alignment-trajectory mechanism in Chapter 13 is direct. The fallen condition is the condition in which misalignment can persist without restoration. The redemptive trajectory operates on individual creatures and on creation as a whole through Christ's work. The eschatological condition is the condition in which that trajectory has been completed at the cosmic scale, and the operative possibility of pathological dissolution is no longer available.
+The connection between this and the alignment-trajectory mechanism in Chapter 15 is direct. The fallen condition is the condition in which misalignment can persist without restoration. The redemptive trajectory operates on individual creatures and on creation as a whole through Christ's work. The eschatological condition is the condition in which that trajectory has been completed at the cosmic scale, and the operative possibility of pathological dissolution is no longer available.
 
 The biblical hope is therefore structurally larger than a return. It is the consummation of what the trajectory through the Fall, through Christ's death and resurrection, through the church's witness, through judgment and renewal, has been moving toward all along: a creation in which the alignment that has been tested and chosen against the experienced reality of corruption is preserved in glory, without the operative possibility of further fall.
 
@@ -2291,7 +2547,7 @@ Judgment must also remain visible. If corruption is real, then it is not enough 
 
 Without judgment, redemption becomes sentimental. With judgment, redemption becomes morally serious.
 
-One implication of the framework deserves to be drawn out here, carefully, because it gives the renewed creation a particular character. The resurrection life is not a simple reset to pre-Fall innocence. As Chapter 13 argued, alignment that has been tested — that has confronted disorder and consciously chosen against it — is a richer and more stable thing than innocence that was never tried. The renewed creation, on this reading, is not populated merely by beings who never met corruption. It is populated by creatures who encountered disorder, possessed genuine moral agency, knew the cost of misalignment, and chose alignment with God anyway — many of them under suffering, opposition, or temptation, and all of them at the cost of Christ's redeeming work.
+One implication of the framework deserves to be drawn out here, carefully, because it gives the renewed creation a particular character. The resurrection life is not a simple reset to pre-Fall innocence. As Chapter 15 argued, alignment that has been tested — that has confronted disorder and consciously chosen against it — is a richer and more stable thing than innocence that was never tried. The renewed creation, on this reading, is not populated merely by beings who never met corruption. It is populated by creatures who encountered disorder, possessed genuine moral agency, knew the cost of misalignment, and chose alignment with God anyway — many of them under suffering, opposition, or temptation, and all of them at the cost of Christ's redeeming work.
 
 This casts light on a feature of the resurrection state that Scripture states plainly:
 
@@ -2346,7 +2602,7 @@ That leaves one final task. If scripture, ontology, physical order, life, person
 
 ---
 
-# Chapter 15: Unified Ecology of Reality and Its Consequences
+# Chapter 17: Unified Ecology of Reality and Its Consequences
 
 The book has now reached its final task: the whole picture.
 
@@ -2503,51 +2759,69 @@ The point is not to argue against the foreclosed positions individually. They ar
 
 **Retained**: full range of explanatory categories appropriate to a created intelligible world.
 
-## Chapter 8 (Physical Behaviour)
+## Chapter 8 (Coherence Before Description)
+
+**Foreclosed**: predictive success as sovereign ontological authority; local coherence as a claim to global truth; reification of representations; transferred explanatory debt from an unresolved formalism.
+
+**Retained**: reality before representation; distinct levels of coherence; robust observation as a genuine constraint; ontology-led inquiry joined to, but not replaced by, mathematical description; unresolved states preserved honestly.
+
+## Chapter 9 (Physical Behaviour)
 
 **Foreclosed**: pellet-transport accounts of motion; charge-as-primitive readings of electricity; force-at-a-distance readings of magnetism; free-energy mythologies around resonance.
 
 **Retained**: continuity-preserving transfer; ordered reconfiguration through routes; geometric constraint behaviour; efficient mode exchange under conservation.
 
-## Chapter 9 (Disciplines)
+## Chapter 10 (Disciplines)
 
 **Foreclosed**: imperial physics; imperial biology; imperial theology; imperial philosophy. Any single discipline doing the work of all others.
 
 **Retained**: proper hierarchy under scriptural frame, with each discipline contributing within its proper level.
 
-## Chapter 10 (Life)
+## Chapter 11 (Science Falsely So Called)
+
+**Foreclosed**: scientism; method-as-metaphysical-prohibition; institutionalised descriptive sovereignty; false oppositions between Scripture and observation; transferred burden that excludes candidate ontology before it can be assessed.
+
+**Retained**: legitimate scientific description within its domain; methodological humility; Scripture as ontological revelation; Christian freedom to investigate from biblical commitments; explicit unresolved states.
+
+## Chapter 12 (Life)
 
 **Foreclosed**: fully undirected emergence as the whole story; vitalism; strong reductionism about life.
 
 **Retained**: life as sustained closure with hierarchical constraint and bounded generativity under God's continuing upholding.
 
-## Chapter 11 (Organism, Consciousness)
+## Chapter 13 (Organism, Consciousness)
 
 **Foreclosed**: consciousness as ontological anomaly; consciousness as sealed private chamber.
 
 **Retained**: organism as higher-order stable identity; consciousness as embodied interface within shared created reality.
 
-## Chapter 12 (Humanity) — most heavily contained
+## Chapter 14 (Humanity) — most heavily contained
 
 **Foreclosed**: human exceptionalism in substrate sense; reductive materialism about humanity; Cartesian substance dualism; embodiment-constitutive personhood; death as ontologically original; annihilationism-as-default; universalism-without-judgment; flat creation; deterministic readings of moral agency; Gnostic salvation as escape; unbounded creaturely epistemic ambition.
 
 **Retained**: humanity substrate-continuous with creation; distinguished by relational ordering, image-bearing, conscious agency, moral participation; unified dust-breath-soul personhood; personhood as deeper than embodiment; Trinitarian and Incarnational distinctions clean; death as consequence not design; eternal personhood; universal resurrection (righteous to life, unrighteous to judgment); humanity as climax of creation; freedom requiring embodied conditions; glorified embodiment in resurrection; two creaturely epistemic limits (substrate access, substrate expressibility).
 
-## Chapter 13 (Corruption)
+## Chapter 15 (Corruption)
 
 **Foreclosed**: cosmic dualism; denial of evil; evil as ultimate; human-sin denial; limitation-as-evil.
 
 **Retained**: corruption as persistent misalignment without restoration; five modes; suffering real; human sin real; limitation as creaturely good distinct from corruption.
 
-## Chapter 14 (Redemption)
+## Chapter 16 (Redemption)
 
 **Foreclosed**: Gnostic salvation as escape; annihilationism-as-final-rest; universalism-without-judgment; anthropocentric ecology in eschatology.
 
 **Retained**: redemption as restoration of order; resurrection as vindicated embodied identity; judgment as morally serious; local assembly as embodied foretaste.
 
+## Chapter 17 (Unified Ecology)
+
+**Foreclosed**: compartmentalised metaphysics; reduction of wisdom to technique; civilisation and technology treated as morally neutral abstractions detached from created order.
+
+**Retained**: one created ecology spanning physical, biological, personal, moral, social, and spiritual reality; truthful participation, worship, stewardship, and hope as consequences of ontology.
+
 ## Summary
 
-The book treats roughly 50 distinct historical positions as foreclosed by scriptural containment. These are not strawmen. Each has had serious defenders. Each takes substantial work to engage with. If the framework had to consider all of them as open options at every step, the development of the framework itself would have been impossible.
+The book treats more than 50 distinct historical positions as foreclosed by scriptural containment. These are not strawmen. Each has had serious defenders. Each takes substantial work to engage with. If the framework had to consider all of them as open options at every step, the development of the framework itself would have been impossible.
 
 Under scripture's containment, the framework reduces to a small and defensible set of commitments. The remaining space is small enough to be developed carefully, large enough to do real work, and shaped enough to remain recognisably Christian throughout.
 
@@ -2577,41 +2851,41 @@ These categories are not always sharp, and some debts span more than one of them
 
 ### Patristic and Medieval
 
-The framework's reading of **evil as parasitic and as privation of good** (Chapter 13) is a direct use of the tradition that begins with **Augustine** (*Confessions*, *City of God*, *Enchiridion*) and is developed by **Aquinas** (*Summa Theologiae* I, especially on the nature of evil). The structural account of evil as persistent misalignment without restoration is a reframing of this tradition in ontological-structural terms; the underlying claim that evil cannot generate its own being is Augustinian.
+The framework's reading of **evil as parasitic and as privation of good** (Chapter 15) is a direct use of the tradition that begins with **Augustine** (*Confessions*, *City of God*, *Enchiridion*) and is developed by **Aquinas** (*Summa Theologiae* I, especially on the nature of evil). The structural account of evil as persistent misalignment without restoration is a reframing of this tradition in ontological-structural terms; the underlying claim that evil cannot generate its own being is Augustinian.
 
 The treatment of **creation as good, intelligible, and given by God** (Chapters 1, 2, 3) draws on the broad patristic-medieval tradition: **Irenaeus** on creation against Gnosticism, **Athanasius** on the Word and creation (*On the Incarnation*), **Augustine** on the order of created reality, **Bonaventure** on the world as expressive of God (*Itinerarium*), **Aquinas** on creation and the analogy of being. The framework's "creation is intrinsically communicative" claim resonates particularly with **Hugh of St Victor**'s "two books" tradition (nature and scripture as both speaking of God) and with the broader medieval conviction that creation discloses its Maker.
 
-The **image of God** treatment in Chapter 12 draws on a long line: **Irenaeus** (image and likeness distinction), **Athanasius** and the Cappadocians (image as relational and participative), **Aquinas** (image as oriented toward God). The functional-and-relational synthesis owes particular debt to modern image-of-God scholarship, listed below.
+The **image of God** treatment in Chapter 14 draws on a long line: **Irenaeus** (image and likeness distinction), **Athanasius** and the Cappadocians (image as relational and participative), **Aquinas** (image as oriented toward God). The functional-and-relational synthesis owes particular debt to modern image-of-God scholarship, listed below.
 
-The **Trinitarian distinction between personhood and embodiment** (Chapter 12) draws directly on the Cappadocian Fathers' formulation of *hypostasis* and *ousia*, and on the developed Trinitarian theology of **Augustine** (*On the Trinity*) and **Aquinas**. The contemporary recovery of relational Trinitarian thought has been advanced especially by **John Zizioulas** (*Being as Communion*) and **Colin Gunton** (*The One, the Three, and the Many*), and the framework's account of personhood as the deeper category is a reframing in ontological terms of moves these authors have made.
+The **Trinitarian distinction between personhood and embodiment** (Chapter 14) draws directly on the Cappadocian Fathers' formulation of *hypostasis* and *ousia*, and on the developed Trinitarian theology of **Augustine** (*On the Trinity*) and **Aquinas**. The contemporary recovery of relational Trinitarian thought has been advanced especially by **John Zizioulas** (*Being as Communion*) and **Colin Gunton** (*The One, the Three, and the Many*), and the framework's account of personhood as the deeper category is a reframing in ontological terms of moves these authors have made.
 
 The **Logos theology** that grounds the "creation as language" claim (Chapter 4) draws on **Justin Martyr**'s *logos spermatikos*, **Origen**'s treatment of the Word, **Athanasius** on Christ as the Word through whom creation was made, and the patristic Christological tradition broadly. **Robert Jenson** (*Systematic Theology*) and **Colin Gunton** have developed contemporary versions.
 
-The **two-trajectories account of suffering** (chastening producing righteousness — Chapter 13) reframes the patristic and medieval discussion of *paideia* (discipline as formation), particularly developed in the monastic tradition (**Benedict**, **Bernard of Clairvaux** on degrees of love).
+The **two-trajectories account of suffering** (chastening producing righteousness — Chapter 15) reframes the patristic and medieval discussion of *paideia* (discipline as formation), particularly developed in the monastic tradition (**Benedict**, **Bernard of Clairvaux** on degrees of love).
 
 ### Reformation and Reformed
 
 The framework's **strong creator/creature distinction** (throughout) is in the Reformed tradition shaped especially by **John Calvin** (*Institutes*) and developed in twentieth-century apologetic theology by **Cornelius Van Til** (*The Defense of the Faith*) and **John Frame** (*The Doctrine of God*). The methodological commitment that scripture sets the frame for ontological inquiry rather than being subordinated to autonomous reason is most consistently held in this tradition.
 
-The **continuing-creation** / **sustaining providence** thread (Chapters 2, 5, 14) draws on Reformed treatments of providence — Calvin on providence as continuous upholding, **Jonathan Edwards** on continuous creation, and the broader confessional tradition (Westminster Confession, Belgic Confession on God's preservation of creation).
+The **continuing-creation** / **sustaining providence** thread (Chapters 2, 5, 16) draws on Reformed treatments of providence — Calvin on providence as continuous upholding, **Jonathan Edwards** on continuous creation, and the broader confessional tradition (Westminster Confession, Belgic Confession on God's preservation of creation).
 
-The **emphasis on local assembly** (Chapter 14) reflects Reformed and Free Church ecclesiology — **Edmund Clowney** (*The Church*), **Mark Dever** on the local church, **D.A. Carson** on ecclesial discipline. The framing of the church as concrete gathered community rather than abstract universal placeholder owes particular debt to this tradition.
+The **emphasis on local assembly** (Chapter 16) reflects Reformed and Free Church ecclesiology — **Edmund Clowney** (*The Church*), **Mark Dever** on the local church, **D.A. Carson** on ecclesial discipline. The framing of the church as concrete gathered community rather than abstract universal placeholder owes particular debt to this tradition.
 
 ### Modern Theological Sources
 
-The **image-of-God treatment** in Chapter 12 draws on twentieth- and twenty-first-century scholarship: **Karl Barth** (*Church Dogmatics* III.1 on the relational image), **Henri Blocher** (*In the Beginning*), **Anthony Hoekema** (*Created in God's Image* — functional/relational synthesis), **J. Richard Middleton** (*The Liberating Image* — royal/representational reading), **Stanley Grenz** (*The Social God and the Relational Self*). The framework's "capacity to be exercised, not possession to be admired" formulation reframes the functional reading particularly.
+The **image-of-God treatment** in Chapter 14 draws on twentieth- and twenty-first-century scholarship: **Karl Barth** (*Church Dogmatics* III.1 on the relational image), **Henri Blocher** (*In the Beginning*), **Anthony Hoekema** (*Created in God's Image* — functional/relational synthesis), **J. Richard Middleton** (*The Liberating Image* — royal/representational reading), **Stanley Grenz** (*The Social God and the Relational Self*). The framework's "capacity to be exercised, not possession to be admired" formulation reframes the functional reading particularly.
 
-The **embodied personhood** treatment (Chapter 12) resonates with **John Cooper**'s holistic dualism (*Body, Soul, and Life Everlasting*) and with the Aristotelian-hylomorphic accounts developed by **Eleonore Stump** (*Aquinas*) and others. The framework's "personhood as deeper category, embodiment as mode-of-expression for creaturely persons" reframes these in structural terms.
+The **embodied personhood** treatment (Chapter 14) resonates with **John Cooper**'s holistic dualism (*Body, Soul, and Life Everlasting*) and with the Aristotelian-hylomorphic accounts developed by **Eleonore Stump** (*Aquinas*) and others. The framework's "personhood as deeper category, embodiment as mode-of-expression for creaturely persons" reframes these in structural terms.
 
-The **new-creation eschatology** in Chapter 14 (creation renewed rather than escaped) owes considerable debt to **N.T. Wright** (*Surprised by Hope*, *The New Testament and the People of God*), **Anthony Hoekema** (*The Bible and the Future*), **Howard Snyder** (*Salvation Means Creation Healed*), and **Richard Bauckham** (*The Bible and Ecology*). The framework's "consummation not return to Eden" formulation reframes these.
+The **new-creation eschatology** in Chapter 16 (creation renewed rather than escaped) owes considerable debt to **N.T. Wright** (*Surprised by Hope*, *The New Testament and the People of God*), **Anthony Hoekema** (*The Bible and the Future*), **Howard Snyder** (*Salvation Means Creation Healed*), and **Richard Bauckham** (*The Bible and Ecology*). The framework's "consummation not return to Eden" formulation reframes these.
 
-The **bounded-knowing** treatment (Chapter 12, drawing on Job) resonates with **Susan Schneiders**'s and other recent scholarship on Job, but the structural reading (limits of substrate access; limits of substrate expressibility) is the framework's own reframing.
+The **bounded-knowing** treatment (Chapter 14, drawing on Job) resonates with **Susan Schneiders**'s and other recent scholarship on Job, but the structural reading (limits of substrate access; limits of substrate expressibility) is the framework's own reframing.
 
-The **privation/structural account of evil** (Chapter 13) engages with modern revivals of the Augustinian tradition — **David Bentley Hart** (*The Doors of the Sea*, though disagreement at some points), **Charles Mathewes** (*Evil and the Augustinian Tradition*), **Marilyn McCord Adams** on horrendous evils.
+The **privation/structural account of evil** (Chapter 15) engages with modern revivals of the Augustinian tradition — **David Bentley Hart** (*The Doors of the Sea*, though disagreement at some points), **Charles Mathewes** (*Evil and the Augustinian Tradition*), **Marilyn McCord Adams** on horrendous evils.
 
 The **speech-act / divine speech** treatment (Chapter 4) reframes **Kevin Vanhoozer**'s application of speech-act theory to scripture (*Is There a Meaning in This Text?*), in ontological rather than hermeneutical register.
 
-The **scripture-as-governing-frame** posture (Chapter 9, Appendix A) draws particularly on **John Frame**'s perspectival theology (*The Doctrine of the Knowledge of God*) and on **Herman Bavinck**'s *Reformed Dogmatics* (the doctrine of revelation as governing the structure of theological knowledge).
+The **scripture-as-governing-frame** posture (Chapter 10, Appendix A) draws particularly on **John Frame**'s perspectival theology (*The Doctrine of the Knowledge of God*) and on **Herman Bavinck**'s *Reformed Dogmatics* (the doctrine of revelation as governing the structure of theological knowledge).
 
 ## Philosophical Tradition
 
@@ -2623,25 +2897,27 @@ The framework's recovery of **multiple kinds of cause** (Chapter 7) is a direct 
 
 **Potency and act** (Chapter 7) is directly Aristotelian-Thomistic and is used in the framework's treatment of unfolding, becoming, and developmental dynamics.
 
-**Telos / final causation** (Chapter 11, on growth and morphogenesis) draws on Aristotle's *Physics* and *Metaphysics*, then on the long tradition that has defended teleology — Aquinas, then in modern philosophy of nature **Robert Spaemann** (*Persons*), **Etienne Gilson** (*From Aristotle to Darwin and Back Again*), **John Haldane**, **Edward Feser**. The framework's treatment is reframing rather than direct use; teleology in this framework is internal directedness toward characteristic form, articulated through the transformation tier's operations and alignment dynamics.
+**Telos / final causation** (Chapter 13, on growth and morphogenesis) draws on Aristotle's *Physics* and *Metaphysics*, then on the long tradition that has defended teleology — Aquinas, then in modern philosophy of nature **Robert Spaemann** (*Persons*), **Etienne Gilson** (*From Aristotle to Darwin and Back Again*), **John Haldane**, **Edward Feser**. The framework's treatment is reframing rather than direct use; teleology in this framework is internal directedness toward characteristic form, articulated through the transformation tier's operations and alignment dynamics.
 
 ### Continental Philosophy
 
 The **continuity-over-discreteness** claim (Chapters 2, 4) resonates with **Henri Bergson**'s *durée* (*Time and Free Will*, *Creative Evolution*) and with the broader process tradition. The framework does not adopt process metaphysics — it preserves the Creator/creature distinction that Whiteheadian process thought tends to soften — but the resonance with the continuity argument is substantial.
 
-The **embodied-personhood** treatment (Chapter 12) resonates with **Maurice Merleau-Ponty** (*Phenomenology of Perception*) on the body as the medium of existence. The framework reframes this within Christian anthropology rather than within phenomenological method; the debt is real but limited.
+The **embodied-personhood** treatment (Chapter 14) resonates with **Maurice Merleau-Ponty** (*Phenomenology of Perception*) on the body as the medium of existence. The framework reframes this within Christian anthropology rather than within phenomenological method; the debt is real but limited.
 
 ### Analytic Philosophy
 
-The **description/ontology distinction** (Chapters 2, 6, 7) reframes positions in philosophy of science — particularly **Pierre Duhem** on the limits of theory, **Bas van Fraassen** on constructive empiricism, and (in the opposite direction, on the side the framework lands) **Tim Maudlin** (*The Metaphysics Within Physics*) on the legitimacy of metaphysical inquiry into the world physics describes.
+The **description/ontology distinction** (Chapters 2, 6, 7, and 8) reframes positions in philosophy of science — particularly **Pierre Duhem** on the limits of theory, **Bas van Fraassen** on constructive empiricism, and (in the opposite direction, on the side the framework lands) **Tim Maudlin** (*The Metaphysics Within Physics*) on the legitimacy of metaphysical inquiry into the world physics describes.
 
-The **critique of scientism** that runs through Chapter 6 resonates with **Mary Midgley** (*Science and Poetry*), **Marilynne Robinson** (*Absence of Mind*), **Iain McGilchrist** (*The Master and His Emissary*), and **Edward Feser** (*The Last Superstition*).
+The **Faraday-Maxwell comparison** in Chapter 8 draws on Faraday's *Experimental Researches in Electricity* and Maxwell's *A Treatise on Electricity and Magnetism*. It is used only to distinguish ontology-led conceptual inquiry from later mathematical formalisation; the framework does not claim either historical programme as a direct technical predecessor.
+
+The **critique of scientism** that runs through Chapters 6 and 11 resonates with **Mary Midgley** (*Science and Poetry*), **Marilynne Robinson** (*Absence of Mind*), **Iain McGilchrist** (*The Master and His Emissary*), and **Edward Feser** (*The Last Superstition*).
 
 ## Pastoral and Devotional Tradition
 
-The treatment of **sanctification as ordered becoming** (Chapter 11's morphogenesis section, Chapter 13's restoration trajectory) resonates with the Christian formation tradition — **Augustine** in the *Confessions*, the monastic formation tradition (**Benedict**, **Bernard of Clairvaux**, **Thomas à Kempis**), the Reformation devotional tradition (**John Owen** on mortification and indwelling sin, **Jonathan Edwards** on religious affections), and modern formation writers (**Eugene Peterson**, **Dallas Willard**).
+The treatment of **sanctification as ordered becoming** (Chapter 13's morphogenesis section, Chapter 15's restoration trajectory) resonates with the Christian formation tradition — **Augustine** in the *Confessions*, the monastic formation tradition (**Benedict**, **Bernard of Clairvaux**, **Thomas à Kempis**), the Reformation devotional tradition (**John Owen** on mortification and indwelling sin, **Jonathan Edwards** on religious affections), and modern formation writers (**Eugene Peterson**, **Dallas Willard**).
 
-The **identity-not-output** thread that surfaces in Chapter 12 and is developed at length in the companion devotional *How to Hug the Right Tree* resonates with **Henri Nouwen** (*Life of the Beloved*, *The Wounded Healer*), **Brennan Manning** (*Abba's Child*), and the Heidelberg Catechism's opening question ("That I am not my own, but belong, with body and soul, both in life and in death, to my faithful Saviour Jesus Christ").
+The **identity-not-output** thread that surfaces in Chapter 14 and is developed at length in the companion devotional *How to Hug the Right Tree* resonates with **Henri Nouwen** (*Life of the Beloved*, *The Wounded Healer*), **Brennan Manning** (*Abba's Child*), and the Heidelberg Catechism's opening question ("That I am not my own, but belong, with body and soul, both in life and in death, to my faithful Saviour Jesus Christ").
 
 ## What The Framework Develops Independently
 
@@ -2914,11 +3190,11 @@ The compact formulation is:
 
 The book's outcomes are not all the same kind.
 
-**Epistemic outcomes** concern what the reader understands: creation is real, description is not ontology, relation is primary within runtime order, and Scripture functions as governing containment.
+**Epistemic outcomes** concern what the reader understands: creation is real, description is not ontology, relation is primary within runtime order, Scripture functions as governing containment, and perfect global coherence is identical with perfect truth while human coherence remains finite.
 
 **Discriminatory outcomes** concern distinctions the reader can make: Creator from creation, substrate from God, operation from agency, possibility from permission, personhood from embodiment, corruption from limitation, model from ontology, and metaphor from reality.
 
-**Reasoning outcomes** concern errors the reader can detect: reified mathematics, hidden primitives, descriptive sovereignty, transferred explanatory debt, false opposition, and collapsed unresolved states.
+**Reasoning outcomes** concern errors the reader can detect: reified mathematics, hidden primitives, descriptive sovereignty, transferred explanatory debt, method treated as metaphysical prohibition, false opposition, and collapsed unresolved states.
 
 **Orientational outcomes** concern authority and dependence: God reveals, Scripture governs, observation constrains without ruling sovereignly, and human interpretation remains corrigible.
 
@@ -2946,6 +3222,24 @@ The book contains several principal thought models.
 
 **Physics-drift model.** Successful mathematical description can outpace ontology, reify formal objects, and thin cause, form, identity, telos, and continuity.
 
+**Coherence-hierarchy model.** Atomic, local, regional, cross-regional, framework, humanly accessible global, and perfect-global coherence must not be conflated. Perfect global coherence is perfect truth; human inquiry seeks increasing but bounded coherence.
+
+**Reality-to-description model.** Coherent reality permits observable regularity; observation produces representation; representation permits mathematical description, prediction, and technological use. The dependency cannot be reversed.
+
+**Ontological-weight model.** Descriptive reliability, independent support, domain clarity, and ontological integration together determine the legitimate pressure a description exerts on an ontology. Predictive success alone does not settle ontology.
+
+**Phenomenon-representation model.** A real phenomenon is distinct from its current representation. A representation may approximate or isolate a relation without being identical to the reality represented.
+
+**Correct-burden model.** Robust phenomena and unavoidable logic constrain ontology. An unresolved inherited representation does not automatically transfer all of its formal debt to an ontology that questions its interpretation.
+
+**Science-falsely-so-called model.** Genuine local success gains authority, authority exceeds what has been established, hidden metaphysics enters, false opposition is constructed, and revelation is subordinated. The model identifies a structural offence rather than condemning scientific inquiry.
+
+**Sisyphean-demand model.** Accumulated descriptive apparatus can be used to require an ontological challenger to reproduce every inherited formal feature before it may be considered, leaving foundational uncertainty untouched and blocking the inquiry the challenge was meant to open.
+
+**Intellectual-captivity model.** When science is treated as knowledge, ontology as speculation, and Scripture as merely speculative ontology, apparent conflict is decided descriptively and Christian intellectual freedom contracts.
+
+**Pastoral-release model.** Name the hidden inhibition, distinguish genuine evidence from illegitimate authority, restore the truthful foundation, and invite humble disciplined inquiry without forced certainty.
+
 **Life-as-sustained-closure model.** Life is not an unexplained vital substance and not merely a heap of mechanisms; it is sustained, hierarchically constrained closure with repair, renewal, and bounded generativity.
 
 **Personhood-embodiment model.** Personhood is the deeper category; embodiment is a creaturely mode of expression; resurrection vindicates embodiment without reducing the person to current material arrangement.
@@ -2971,6 +3265,14 @@ Framework coherence means the principal models of the book form an ordered whole
 Humanly accessible global coherence means everything available through revelation, human perception, reasoning, observation, and responsible inference is placed into the most coherent structure presently achievable by finite human beings.
 
 Perfect global coherence means every real entity, relation, distinction, implication, level, and boundary is perfectly placed without contradiction, omission, distortion, or unresolved remainder. Perfect global coherence is identical with perfect truth and belongs fully to God.
+
+## Traceability For Chapters 8 And 11
+
+**Chapter 8 — Coherence Before Description** serves the intent of restoring reality-before-representation reasoning. It addresses general Christian readers, Christian scientists, philosophers of science, and technical readers. Its principal outcomes are that the reader can distinguish local descriptive success from wider ontological coherence, identify a representation as distinct from its referent, and preserve unresolved questions without assigning either revelation or a formalism an authority it has not established. It expresses the coherence-hierarchy, reality-to-description, ontological-weight, phenomenon-representation, and correct-burden models.
+
+**Chapter 11 — Science Falsely So Called** serves the intent of removing illegitimate descriptive sovereignty without diminishing genuine observation. It addresses Christians under intellectual pressure, pastors, Christian scientists, theologians, and technically educated sceptics. Its principal outcomes are that the reader can identify the move from method to metaphysical prohibition, distinguish institutional structures from personal motive, recognise transferred explanatory burden, and reason from biblical ontology without anti-scientific reaction. It expresses the science-falsely-so-called, Sisyphean-demand, intellectual-captivity, and pastoral-release models.
+
+The principal boundary for both chapters is the same: robust observation and unavoidable logical relation remain real constraints; a local success or a method's limit does not thereby become a complete ontology or a proof of non-existence.
 
 ## Metaphor Discipline
 
@@ -3016,6 +3318,11 @@ The book is serving its governing intent when a reader can:
 - explain why Scripture is treated as ontological revelation within Christian faith;
 - distinguish description, ontology, and metaphysics;
 - explain why local descriptive success does not confer sovereign ontological authority;
+- distinguish humanly accessible global coherence from perfect global coherence;
+- distinguish a robust phenomenon from the current representation attached to it;
+- identify a methodological boundary that has been enlarged into a metaphysical prohibition;
+- explain the Sisyphean demand and why it does not require rejection of genuine scientific work;
+- explain “science falsely so called” as a structural offence rather than a blanket condemnation of science;
 - state the Creator-creature boundary and apply it to the substrate;
 - explain relational primacy, continuity, and derivative discreteness;
 - describe closure knots without treating them as particles or persons;
