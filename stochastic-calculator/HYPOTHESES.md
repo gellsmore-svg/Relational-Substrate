@@ -41,3 +41,49 @@ protocols and error-control mechanisms are explicit competing explanations.
 | H10 | unsupported | SC-009/020/022: invariant classes, forced parity and survival explain results; no physical potential defined. |
 
 These statuses do not increase confidence in the empirical correctness of RS.
+
+## Predeclared SC-023 hypotheses
+
+Programming general constraints is legitimate in this research programme. Neither
+that fact nor correctness under deterministic scheduling is evidence of cheating.
+The prohibited shortcut is an answer oracle or hidden conventional expression
+solver. The new proposal kernel does not receive operands or an expected answer.
+
+| ID | Hypothesis | Initial status | Discriminating test |
+| --- | --- | --- | --- |
+| H11 | Conservation alone preserves identity but does not ensure stable readable output under ongoing proposals. | unsupported | Fixed-horizon C versus CGR ablation; observe charge and readability separately. |
+| H12 | Conservation, non-growth, and irreversible readiness together yield stable normal forms under a fixed broad proposal grammar. | unsupported | All eight constraint combinations, same random tape, 100 seeds, 2,000 steps. |
+| H13 | Removing conservation while retaining normalizing constraints can produce stable but incorrect outputs. | unsupported | GR ablation; log full terminal outcome distribution and charge violations. |
+
+These tests use bounded, grammar-defined randomness, not literally unrestricted
+randomness. The same constraints apply to every population. No per-number rule
+or comparison with an expected sum occurs in proposal acceptance. Neutral pairs
+are added at initialization to make cancellation and identity/readout separation
+observable. The horizon is fixed in advance; first capture is not a stopping rule.
+
+## SC-023 result and predeclared follow-ups
+
+H11-H13: supported within the new grammar/observer (800 trials). See
+`research/CONSTRAINT_LAB.md` for measurements and limitations.
+
+- H14 (unsupported): accumulated conservation leakage can create a steep
+  finite-horizon reliability curve without a phase transition. SC-024 tests five
+  enforcement strengths, selected after SC-023 but before the follow-up run.
+- H15 (unsupported): unchanged full constraints preserve identity across signed
+  inputs and scale; timely readability degrades with size/local matching. SC-025
+  uses fresh seeds; the earlier 17+28 engineering pilot is disclosed.
+
+## Update after SC-025
+
+- H11-H13 remain supported within the defined proposal grammar and readout.
+  Conservation alone preserved charge, while GR alone settled incorrectly at zero.
+- H14: supported for finite-horizon cumulative leakage; 0%, 0%, 48%, 95%, 100%
+  accuracy at enforcement .9, .99, .999, .9999, 1 (100 seeds each). No empirical
+  phase transition is established. A conditional eventual-zero argument is given
+  separately from observations.
+- H15: supported for the tested inputs. All 800 trials preserved identity; correct
+  readable completion varied from 0 to 100/100 with scale and locality. The larger
+  cases are horizon-censored, not successful calculations with an unreadable output.
+
+Generalization to other proposal distributions, alternative readouts, topology-led
+identities or the full operator suite remains untested by this extension.

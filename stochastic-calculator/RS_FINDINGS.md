@@ -1,5 +1,67 @@
 # RS findings
 
+## Fixed-proposal extension: SC-023 through SC-025
+
+General programmed constraints are the intended experimental subject. A successful
+deterministic scheduler does not invalidate that subject. The audit asks whether
+constraints inspect an answer oracle, not whether constraints exist. The new kernel
+receives state and general rules, neither operands nor an expected answer.
+
+### Strong within-model finding: distinct forms of stability
+
+Evidence: C alone preserved identity 100/100 but yielded no readable terminal
+state. CGR gave 100/100 correct with no escapes. G/GR gave readable wrong zeroes
+100/100. CG visited correct readout in 69/100, escaped 162 times, and ended there
+in only 1/100. All 100 full-constraint accepted-state trajectories differed.
+Experiment IDs: SC-023; full-constraint replication SC-024.
+Replications: 100 paired seeds per ablation; 100 independent full-replication seeds.
+Alternative explanations: conserved multiset invariant, normalization, chosen observer.
+Confidence: high within model; 100/100 Wilson interval [0.9630, 1.0000] per batch.
+Implication: identity preservation, readable capture and durable readout are distinct
+operational coherence factors. R stabilizes this readout, not the charge observable.
+
+### Moderate finding: reliability depends on duration and enforcement
+
+Evidence: at 2,000 proposals, .9/.99/.999/.9999/1 enforcement gave 0/0/48/95/100
+correct answers out of 100 each. At .99, 59 visited correct readout but none retained
+it at the horizon. The predeclared survival bound is consistent with these samples.
+Experiment IDs: SC-024.
+Replications: 100 new paired seeds per strength; one horizon only.
+Alternative explanations: cumulative death/flip/cancellation hazards. With no growth
+and any imperfect conservation enforcement, eventual zero follows almost surely
+under ideal independent draws; this is analytic, not an infinite-duration experiment.
+Confidence: high for sample counts; limited generality of one horizon.
+Implication: report observation duration with degrees of determinism. A steep curve
+alone establishes neither a physical probability well nor an unexplained transition.
+
+### Moderate finding: reusable constraints need not complete promptly
+
+Evidence: unchanged C/G/R preserved charge in all 800 transfer trials. 17+28 became
+readable in 87/100 global and 19/100 local trials; 50+50 in 0/100 in either mode.
+Zero and negative inputs used the same rules. No full-constraint cap hits occurred.
+Experiment IDs: SC-025.
+Replications: 100 paired seeds per input/locality cell.
+Alternative explanations: sparse matching and random activation of supplied readiness.
+Confidence: high within this size/horizon range; no universal complexity law.
+Implication: separate arithmetic invariant, readout cost and coordination cost.
+Local cancellation with global rewiring/selection is not full decentralization.
+
+### Negative findings and limits
+
+Evidence: C/CR each incurred 7,124 capacity rejections. Incidence remains inessential
+to global charge. Input joining explicitly establishes additive composition.
+No multiplication, division, higher-order or T-C-R extension was tested here.
+Experiment IDs: SC-023 through SC-025.
+Replications: counts above; no cap-sweep or alternate-observer replication yet.
+Alternative explanations: ordinary constrained stochastic computation is sufficient.
+Confidence: high about implementation boundaries, not all possible RS models.
+Implication: test cap sensitivity, reversible relaxation and alternative readouts;
+then audit multiplication's pair registry. No ontological amendment is warranted.
+
+Notebook: [CONSTRAINT_LAB.md](research/CONSTRAINT_LAB.md).
+Data and uncertainty: [RESULTS.md](research/constraint-analysis/RESULTS.md).
+The historical findings below retain their original scope.
+
 This report is suitable for transfer into the RS/Nexology programme. It distinguishes
 observations from interpretation and makes no physical-substrate claim. See the
 [notebook](RESEARCH.md), [mechanism audit](MECHANISMS.md), and

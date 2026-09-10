@@ -130,7 +130,22 @@ deepening-well explanation for this curve.
 - Code auditing is a check, not a formal proof of noninterference. Tests include
   an observer-blocked relational addition and an independent signed operand grid.
 
-## Engineering cost
+## Fixed-proposal constraint extension
+
+SC-023/025 use `proposal_kernel.py`, separate from the historical engine above.
+Eight primitive random proposals include identity-changing moves. Conservation
+checks only local rewrite polarity; growth and readiness gates independently
+restrict admissibility. No per-number constraint, answer-valued objective, or
+expected result enters the kernel. The grammar, cap, encoding and readout remain
+explicit model assumptions. See [the full specification](research/CONSTRAINT_LAB.md).
+
+This is the intended constraint-on-stochasticity experiment. Supplying general
+rules is legitimate; implementing a hidden numeric solver would not be. The
+same pseudorandom proposal tape is replayed across ablations; actual accepted
+state transitions differ. Correct terminal output and preserved identity are
+distinct measurements, especially under ongoing reverse-readiness proposals.
+
+## Engineering cost (historical calculator)
 
 Unary memory grows with magnitude; product obligations grow with the Cartesian
 pair count. The current engine scans lists and hashes structural traces, so wall

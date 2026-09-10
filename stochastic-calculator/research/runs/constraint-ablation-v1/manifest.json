@@ -1,0 +1,149 @@
+{
+  "config": {
+    "base_seed": 230000,
+    "capacity": 128,
+    "cells": [
+      {
+        "constraints": {
+          "conservation": 0,
+          "no_growth": false,
+          "readiness": false
+        },
+        "experiment": "SC-023",
+        "inputs": [
+          3,
+          4
+        ],
+        "label": "none"
+      },
+      {
+        "constraints": {
+          "conservation": 1,
+          "no_growth": false,
+          "readiness": false
+        },
+        "experiment": "SC-023",
+        "inputs": [
+          3,
+          4
+        ],
+        "label": "C"
+      },
+      {
+        "constraints": {
+          "conservation": 0,
+          "no_growth": true,
+          "readiness": false
+        },
+        "experiment": "SC-023",
+        "inputs": [
+          3,
+          4
+        ],
+        "label": "G"
+      },
+      {
+        "constraints": {
+          "conservation": 0,
+          "no_growth": false,
+          "readiness": true
+        },
+        "experiment": "SC-023",
+        "inputs": [
+          3,
+          4
+        ],
+        "label": "R"
+      },
+      {
+        "constraints": {
+          "conservation": 1,
+          "no_growth": true,
+          "readiness": false
+        },
+        "experiment": "SC-023",
+        "inputs": [
+          3,
+          4
+        ],
+        "label": "CG"
+      },
+      {
+        "constraints": {
+          "conservation": 1,
+          "no_growth": false,
+          "readiness": true
+        },
+        "experiment": "SC-023",
+        "inputs": [
+          3,
+          4
+        ],
+        "label": "CR"
+      },
+      {
+        "constraints": {
+          "conservation": 0,
+          "no_growth": true,
+          "readiness": true
+        },
+        "experiment": "SC-023",
+        "inputs": [
+          3,
+          4
+        ],
+        "label": "GR"
+      },
+      {
+        "constraints": {
+          "conservation": 1,
+          "no_growth": true,
+          "readiness": true
+        },
+        "experiment": "SC-023",
+        "inputs": [
+          3,
+          4
+        ],
+        "label": "CGR"
+      }
+    ],
+    "horizon": 2000,
+    "neutral_pairs": 3,
+    "regions": 8,
+    "runs": 100
+  },
+  "config_sha256": "178c0712d169fd411a298982f0f95e72cde248ae912a634f04ef660634c85d65",
+  "dirty": true,
+  "git_revision": "4880197b724b379ca7a6f251f2c6cc56a7cc6c33",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "rng": "random.Random / MT19937",
+  "seed_policy": "base_seed + replication index, SAME tape across all cells; paired, not independent cells",
+  "source_files": {
+    "configs/constraint-ablation.json": "f7c71b7d835f2044c4eb4fd8a2c0b7252790653c9bb035bd5d051442223e21ec",
+    "configs/followups.json": "d95e222463260d7ae849e568112ffcb86db152a1100965068970e8070a60ac0d",
+    "configs/foundation.json": "bf12777c552033f094b7523632e346be277f17d7e46373a161954e6b069f7f5c",
+    "configs/programme.json": "f1e2daf1e83cc72498b6f18b8ef50d9aed28fa663db8c860f6c6e07bd48a6029",
+    "configs/reliability-holdout.json": "acdb1c9ad030152142ca0ebc3ce5d8d169d2d0a8c3572e1ed6f80f703d3c6050",
+    "rs_calc/__init__.py": "819b93e1a0a85b2757f8bf80369bd9e2521262f45c7b29831a73dcb4b433d44f",
+    "rs_calc/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "rs_calc/analyze.py": "f67493c2a0c009271ab0c60edad16a064eed67833246a49164ae1e85524e7c22",
+    "rs_calc/calculator.py": "b9f6bc6e93a7d117408eae2b2959471a5201a0c3e1540fea80a7666252c90dd5",
+    "rs_calc/cli.py": "8fc4fb4a7067342fadf551e5f30cedf34917f9181e8c7c05c9de183ebddf4ab7",
+    "rs_calc/constraint_lab.py": "51649ccfdf5af3ed97b59fedc895e963f365cd887005553e299893685201a50d",
+    "rs_calc/engine.py": "4b2062ad8736d94fc6c972d0016eba147db8e146b8fc941633be6909d288e15c",
+    "rs_calc/experiments.py": "8f2172c83d36816463f3132267e4ad30d13652b1f7c5cf3354bde367f3891a26",
+    "rs_calc/foundation.py": "c717551ffe4c89f506a512e41cb654d4cf4d33ea998aaddf6b1c27666ed15681",
+    "rs_calc/metrics.py": "d7fdaaa1778a75c7a0e3668d41aec11b51cb81373704ec1c41fecf5e81b2a265",
+    "rs_calc/numbers.py": "5fb324e9f8ca9b4d4903fe2e49e51d8b4f11829fb001bd48d08692e74ab85289",
+    "rs_calc/operations.py": "6066bf446a7b06a0aafd6f5dac68eeba80ad42ccc23fe98dcfd966a1562b837a",
+    "rs_calc/proposal_kernel.py": "b726a826f89a4941d54bba7a6053b8af94a96013b89d9edd353bb3488301413d",
+    "rs_calc/provenance.py": "6e31a7d230eb3fb444c8b2c027684b1dd2b4c8de7061be59466a9804d7089c9a",
+    "rs_calc/radix.py": "175d9724a43d0a23f3ae942cff36466dc3a366b2b846e18130f090ae480cc95d",
+    "rs_calc/replay.py": "c60c4dbdd34e1cf7ce9c00aaae979db382b33bf7415db64df42f108e7e7f73c7",
+    "rs_calc/verification.py": "74e7b85cdd8c8714cb10a052455b98e9b0e35ed3441d5598e60bf0357676c3cb"
+  },
+  "source_sha256": "9f9e29098a8fdeca7c16c50db1af1172a33f7c877d8ba5930480a687ed2e0b9e",
+  "timestamp": "2026-09-10T19:11:42.332766+00:00"
+}

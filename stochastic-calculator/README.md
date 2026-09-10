@@ -14,6 +14,24 @@ Start with [RS_FINDINGS.md](RS_FINDINGS.md) for the research feedback, or
 [RESEARCH.md](RESEARCH.md) for the experiment sequence. The foundational experiment
 was run and interpreted before arithmetic was implemented.
 
+**New constraint study (SC-023 through SC-025):** 2,100 additional trials use a
+fixed broad random proposal grammar with separately switchable conservation,
+growth and readiness rules. Programmed constraints are the subject, not cheating;
+an answer oracle in the dynamics would be. Identity preservation, readable output
+and persistence are measured separately. See [the notebook](research/CONSTRAINT_LAB.md)
+and [actual results and intervals](research/constraint-analysis/RESULTS.md).
+
+```bash
+python3 -m rs_calc.constraint_lab --config configs/constraint-ablation.json --output research/runs/my-ablation
+python3 -m rs_calc.constraint_lab --config configs/constraint-followups.json --output research/runs/my-followups
+python3 -m rs_calc.constraint_lab --replay research/runs/constraint-ablation-v1
+.venv/bin/python -m rs_calc.analyze_constraints research/runs/constraint-ablation-v1 research/runs/constraint-followups-v1 --output research/constraint-analysis
+```
+
+Run these from `stochastic-calculator`. This lab is a separate research kernel;
+the usable calculator and its historical experiments remain unchanged. It tests
+addition/signed cancellation, not a replacement implementation of all operators.
+
 ## Run
 
 Python 3.11+; the calculator and tests require only the standard library.

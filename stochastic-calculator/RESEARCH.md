@@ -63,3 +63,13 @@ No confidence claim about physical substrates follows.
 Proceed with conservation-based addition (SC-004), trajectory replication (SC-005),
 and fault-admission sweeps (SC-003/006). Retain erasure failure. Introduce product
 and partition coordination only after the addition mechanism passes its audit.
+
+## Continuation: SC-023 through SC-025
+
+Following the user's correction that general constraints upon stochastic behavior
+are the experimental subject, a new fixed-proposal kernel tests constraint roles
+directly. The historical experiments remain unchanged. The complete structured
+notebook, predeclared hypotheses, actual 2,100-trial results, disclosed engineering
+pilot, alternative explanations and next questions are in
+[CONSTRAINT_LAB.md](research/CONSTRAINT_LAB.md). Machine-readable statistics and
+plots are in [constraint-analysis](research/constraint-analysis/RESULTS.md).

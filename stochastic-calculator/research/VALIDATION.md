@@ -86,3 +86,31 @@ below. This is outside the new calculator modules.
 After generating that missing prerequisite, **the full `npm run reports` completed
 successfully** in the native worktree. The clean-checkout ordering defect remains
 documented; no unrelated report-runner source change was included in this project.
+
+## Fixed-proposal extension validation
+
+- `python3 -m unittest discover -s tests -v`: 22 tests pass (the original 15 plus
+  seven new tests). New coverage includes 1,152 local conservation cases, matched
+  tapes, gate ablations, signed/zero states, no post-capture escape under full
+  constraints, capacity/locality, bounded encoding of huge inputs, logging and replay.
+- A pilot test incorrectly demanded readable completion for every 17+28 seed in
+  2,000 proposals; seeds 6, 8 and 9 failed while retaining charge 45. This is logged
+  in the notebook. Tests now distinguish invariance from finite-time completion;
+  the predeclared SC-023 horizon was not changed to hide this finding.
+- SC-023: 800 new records; SC-024/025: 1,300 new records. Source archives and
+  manifests were written before each run. Original source snapshots remain intact
+  after later boundary-validation and analysis improvements.
+- `python3 -m rs_calc.constraint_lab --replay research/runs/constraint-ablation-v1`
+  and the same command for `constraint-followups-v1` reproduce every field in all
+  2,100 records except timestamps and measured seconds. This reuses current source;
+  the archived source is retained to reconstruct the precise collection version.
+- Analysis verifies complete cell/seed coverage, absence of duplicate trials and
+  identical proposal-tape hashes across every cell of each paired seed. Trial-level
+  Wilson intervals and paired discordance counts are retained; cells are not
+  treated as independent samples. Two PNG/PDF plot pairs were generated and checked.
+- The source audit now includes `proposal_kernel.py`. It remains lint plus tests
+  and manual inspection, not a formal security or noninterference proof.
+
+The new lab does not modify the default calculator's transition mechanism or
+rewrite historical datasets. Website build/report checks above are historical;
+this extension changes no website source or dependencies.

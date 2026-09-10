@@ -93,3 +93,39 @@ Why it matters: reliability compounds with coordination cost; high-column errors
 RS connection: scale-sensitive coordination is a concrete experimental variable.
 Alternative explanations: independent replay opportunities and decimal positional weights.
 Next test: protected cascades, burst faults, and feedback damping.
+
+## D-010 - Identity, readability and persistence separate under matched proposals
+
+Status: Supported within the defined observer and grammar.
+Observation: C preserves identity without readout; CG repeatedly enters/exits readout;
+CGR stabilizes correct readout; GR stabilizes incorrect zero.
+Evidence: SC-023, 800 trials; full-constraint replication SC-024, 100 new seeds.
+Why it matters: neither readability nor microscopic motion alone measures correctness.
+RS connection: coherence factors can be separated through interventions.
+Alternative explanations: conservation, monotone normalization and chosen readout map.
+Next test: change observer and neutral-birth grammar while retaining matched tapes.
+
+## D-011 - Near-perfect enforcement can conceal eventual identity loss
+
+Status: Supported at finite horizon; conditional analytic long-time deduction.
+Observation: .999 enforcement gives 48/100 correct at 2,000 proposals; .9999 gives
+95/100. At .99, 59 visit correct readout but none end there. With no growth and any
+positive death-admission probability, eventual zero follows almost surely under
+ideal independent draws.
+Evidence: SC-024, 500 trials plus a conditional argument in the notebook.
+Why it matters: transient accuracy and indefinite durability are different claims.
+RS connection: constraint strength must be qualified by observation timescale.
+Alternative explanations: cumulative hazards and absorbing finite-state dynamics.
+Next test: horizon sweep and a charge-restoring redundancy model.
+
+## D-012 - Constraints transfer while completion cost changes
+
+Status: Supported for the tested scale/locality range.
+Observation: 800/800 transfer trials preserve charge, but 17+28 completes in
+87/100 global versus 19/100 local trials; 50+50 completes in neither mode in budget.
+Evidence: SC-025, identical constraints on zero, negative, 45 and 100 identities.
+Why it matters: no bespoke number constraint is needed, but preservation alone
+does not ensure a usable finite-time calculator.
+RS connection: identity durability and coordination costs separate.
+Alternative explanations: random activation, sparse matching and supplied readout.
+Next test: horizon/region sweeps and decentralized completion observation.

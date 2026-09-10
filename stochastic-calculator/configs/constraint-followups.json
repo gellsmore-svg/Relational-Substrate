@@ -1,0 +1,19 @@
+{
+  "base_seed": 240000, "runs": 100, "horizon": 2000,
+  "regions": 8, "capacity": 128, "neutral_pairs": 3,
+  "cells": [
+    {"experiment": "SC-024", "label": "s0.9", "inputs": [3,4], "constraints": {"conservation": 0.9}},
+    {"experiment": "SC-024", "label": "s0.99", "inputs": [3,4], "constraints": {"conservation": 0.99}},
+    {"experiment": "SC-024", "label": "s0.999", "inputs": [3,4], "constraints": {"conservation": 0.999}},
+    {"experiment": "SC-024", "label": "s0.9999", "inputs": [3,4], "constraints": {"conservation": 0.9999}},
+    {"experiment": "SC-024", "label": "s1", "inputs": [3,4], "constraints": {"conservation": 1}},
+    {"experiment": "SC-025", "label": "zero-global", "inputs": [0,0], "constraints": {}},
+    {"experiment": "SC-025", "label": "negative-global", "inputs": [3,-7], "constraints": {}},
+    {"experiment": "SC-025", "label": "45-global", "inputs": [17,28], "constraints": {}},
+    {"experiment": "SC-025", "label": "100-global", "inputs": [50,50], "constraints": {}},
+    {"experiment": "SC-025", "label": "zero-local", "inputs": [0,0], "constraints": {"local_cancel": true}},
+    {"experiment": "SC-025", "label": "negative-local", "inputs": [3,-7], "constraints": {"local_cancel": true}},
+    {"experiment": "SC-025", "label": "45-local", "inputs": [17,28], "constraints": {"local_cancel": true}},
+    {"experiment": "SC-025", "label": "100-local", "inputs": [50,50], "constraints": {"local_cancel": true}}
+  ]
+}
