@@ -41,6 +41,14 @@ Full reasoning and evidence: [`docs/relational-substrate-validation-status.md`](
 This concerns the modelling/validation layer only; the conceptual framework in `books/`
 is unaffected.
 
+## Stochastic Arithmetic Research
+
+The [stochastic calculator](stochastic-calculator/README.md) is a separate Python
+command-line apparatus for constrained relational arithmetic, with seeded trials,
+independent verification, raw datasets and an [RS feedback report](stochastic-calculator/RS_FINDINGS.md).
+It demonstrates repeatable arithmetic under varied stochastic rewrite trajectories;
+the findings retain conventional explanations and do not establish new physics.
+
 ## Run
 
 ```bash

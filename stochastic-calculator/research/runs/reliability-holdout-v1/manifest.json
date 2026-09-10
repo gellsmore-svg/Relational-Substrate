@@ -1,0 +1,114 @@
+{
+  "config": {
+    "base_seed": 1200000,
+    "cells": [
+      {
+        "a": 3,
+        "b": 4,
+        "experiment": "SC-022",
+        "fault_rate": 0.05,
+        "kind": "arithmetic",
+        "label": "noise-0.05-strength-0",
+        "op": "add",
+        "runs": 400,
+        "strength": 0.0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "experiment": "SC-022",
+        "fault_rate": 0.05,
+        "kind": "arithmetic",
+        "label": "noise-0.05-strength-0.5",
+        "op": "add",
+        "runs": 400,
+        "strength": 0.5
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "experiment": "SC-022",
+        "fault_rate": 0.05,
+        "kind": "arithmetic",
+        "label": "noise-0.05-strength-0.9",
+        "op": "add",
+        "runs": 400,
+        "strength": 0.9
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "experiment": "SC-022",
+        "fault_rate": 0.3,
+        "kind": "arithmetic",
+        "label": "noise-0.3-strength-0",
+        "op": "add",
+        "runs": 400,
+        "strength": 0.0
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "experiment": "SC-022",
+        "fault_rate": 0.3,
+        "kind": "arithmetic",
+        "label": "noise-0.3-strength-0.5",
+        "op": "add",
+        "runs": 400,
+        "strength": 0.5
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "experiment": "SC-022",
+        "fault_rate": 0.3,
+        "kind": "arithmetic",
+        "label": "noise-0.3-strength-0.9",
+        "op": "add",
+        "runs": 400,
+        "strength": 0.9
+      }
+    ],
+    "criteria": "Report the residual and Wilson interval for every cell. Overlapping intervals are compatibility evidence, not proof of equivalence; no refitting allowed.",
+    "engine": {
+      "max_relations": 20000,
+      "max_steps": 100000,
+      "regions": 8
+    },
+    "prediction": "For seven positive pending relations, handoff vs rewire probability 1/2, destructive probability d=fault_rate*(1-strength), P(correct)=((1-d)/(1+d))**7. A correct result requires no admitted deletion before all seven handoffs. This is derived after SC-006, locked before these holdout trials.",
+    "question": "Can a no-fit conventional survival model explain the constraint curve at previously untested noise rates?",
+    "replications": 2,
+    "runs_per_cell": 400,
+    "workers": 4
+  },
+  "config_sha256": "d4413a4ccf5b2c5651931cf9c3515b11cb793a6c241bae5cba9a68ebd187907c",
+  "dirty": true,
+  "git_revision": "06cb0dc0be6aa952639a3337cf95606f1feaa4c4",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "rng": "random.Random / MT19937",
+  "seed_policy": "base_seed plus trial ordinal; independent PRNG per trial",
+  "source_files": {
+    "configs/followups.json": "d95e222463260d7ae849e568112ffcb86db152a1100965068970e8070a60ac0d",
+    "configs/foundation.json": "bf12777c552033f094b7523632e346be277f17d7e46373a161954e6b069f7f5c",
+    "configs/programme.json": "f1e2daf1e83cc72498b6f18b8ef50d9aed28fa663db8c860f6c6e07bd48a6029",
+    "configs/reliability-holdout.json": "acdb1c9ad030152142ca0ebc3ce5d8d169d2d0a8c3572e1ed6f80f703d3c6050",
+    "rs_calc/__init__.py": "819b93e1a0a85b2757f8bf80369bd9e2521262f45c7b29831a73dcb4b433d44f",
+    "rs_calc/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "rs_calc/analyze.py": "a4baaf26c9ecc6552b81b3bc5ba12408e2c6ce3fdc39d6041f6ce91d6bdd1773",
+    "rs_calc/calculator.py": "b9f6bc6e93a7d117408eae2b2959471a5201a0c3e1540fea80a7666252c90dd5",
+    "rs_calc/cli.py": "59374a56397227d91ae024cc2056ab9aa6c068607c09e07bb38ff94efefe3dd1",
+    "rs_calc/engine.py": "f2996190dd23fc012292ee458abe3215fe5170c65c4fa65eb5279e287eed7709",
+    "rs_calc/experiments.py": "8adc06d6def0420fbb9bdcbbaefe61d4672b098c8582e214bdb6e52d23ff0a93",
+    "rs_calc/foundation.py": "4a21f95281e414a778e1211731cdc09b12d106c593675baac2bdee16f44155cf",
+    "rs_calc/metrics.py": "d7fdaaa1778a75c7a0e3668d41aec11b51cb81373704ec1c41fecf5e81b2a265",
+    "rs_calc/numbers.py": "5fb324e9f8ca9b4d4903fe2e49e51d8b4f11829fb001bd48d08692e74ab85289",
+    "rs_calc/operations.py": "054b0de2bed0893b52bb8110e8aa982758d6c635336801bbab167051cb541d18",
+    "rs_calc/provenance.py": "6e31a7d230eb3fb444c8b2c027684b1dd2b4c8de7061be59466a9804d7089c9a",
+    "rs_calc/radix.py": "a4db0789d591f2c7f3e40f51e28cf1a2569ae027114cd30c2380addf4b99b6b5",
+    "rs_calc/replay.py": "c60c4dbdd34e1cf7ce9c00aaae979db382b33bf7415db64df42f108e7e7f73c7",
+    "rs_calc/verification.py": "74e7b85cdd8c8714cb10a052455b98e9b0e35ed3441d5598e60bf0357676c3cb"
+  },
+  "source_sha256": "a416a539ea1ac278573ac1eb97216ba966bdef05911e201d2cf8a4e913371a61",
+  "timestamp": "2026-09-10T17:59:54.942857+00:00"
+}

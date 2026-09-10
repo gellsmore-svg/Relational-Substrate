@@ -1,0 +1,94 @@
+{
+  "config": {
+    "base_seed": 170000,
+    "cells": [
+      {
+        "a": 3,
+        "b": 4,
+        "experiment": "SC-004",
+        "kind": "arithmetic",
+        "label": "first-addition",
+        "op": "add",
+        "runs": 200
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "experiment": "SC-005",
+        "kind": "arithmetic",
+        "label": "trajectory-3-4",
+        "op": "add",
+        "runs": 10000
+      },
+      {
+        "a": 17,
+        "b": 28,
+        "experiment": "SC-005",
+        "kind": "arithmetic",
+        "label": "trajectory-17-28",
+        "op": "add",
+        "runs": 10000
+      }
+    ],
+    "comparators": [
+      "host arithmetic after decoding",
+      "ordered rewrite scheduler",
+      "repeated-addition multiplication",
+      "carry without replay exclusion",
+      "charge-destructive erasure"
+    ],
+    "criteria": {
+      "diversity": "Hash only structural events, excluding seeds, IDs and timestamps; report initial/final diversity separately.",
+      "exact_regime": "Every converged noiseless output matches the independent arithmetic oracle; any mismatch is a mechanism failure.",
+      "graded": "Report all outcomes, Wilson intervals, censored timeouts and entropies; do not infer a phase transition from a finite curve.",
+      "higher_order": "Compare replay exclusion present/absent under equal attempted replay probability, then a no-fault control.",
+      "locality": "Expose the global scheduler, enabled-event discovery and termination observer; no claim of fully decentralized calculation."
+    },
+    "engine": {
+      "max_relations": 20000,
+      "max_steps": 100000,
+      "regions": 8
+    },
+    "fault_rate": 0.15,
+    "replications": 2,
+    "runs_per_cell": 200,
+    "scope": "Exploratory algorithmic benchmark, not held-out physical prediction. All trial definitions are emitted before execution.",
+    "strengths": [
+      0.0,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      0.9,
+      0.95,
+      0.99,
+      1.0
+    ],
+    "trajectory_runs": 10000,
+    "workers": 4
+  },
+  "config_sha256": "a7bbe36c226a7f195b9f7c417232b4531344687f7c597b4cb04a52f39709de7c",
+  "dirty": true,
+  "git_revision": "06cb0dc0be6aa952639a3337cf95606f1feaa4c4",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "rng": "random.Random / MT19937",
+  "seed_policy": "base_seed plus trial ordinal; independent PRNG per trial",
+  "source_files": {
+    "configs/foundation.json": "bf12777c552033f094b7523632e346be277f17d7e46373a161954e6b069f7f5c",
+    "configs/programme.json": "f1e2daf1e83cc72498b6f18b8ef50d9aed28fa663db8c860f6c6e07bd48a6029",
+    "rs_calc/__init__.py": "819b93e1a0a85b2757f8bf80369bd9e2521262f45c7b29831a73dcb4b433d44f",
+    "rs_calc/calculator.py": "b9f6bc6e93a7d117408eae2b2959471a5201a0c3e1540fea80a7666252c90dd5",
+    "rs_calc/engine.py": "f2996190dd23fc012292ee458abe3215fe5170c65c4fa65eb5279e287eed7709",
+    "rs_calc/experiments.py": "640fa442cdf299260f2e720455794420f48f1c312f44a6d6dad8944a7b5515f6",
+    "rs_calc/foundation.py": "4a21f95281e414a778e1211731cdc09b12d106c593675baac2bdee16f44155cf",
+    "rs_calc/metrics.py": "d7fdaaa1778a75c7a0e3668d41aec11b51cb81373704ec1c41fecf5e81b2a265",
+    "rs_calc/numbers.py": "5fb324e9f8ca9b4d4903fe2e49e51d8b4f11829fb001bd48d08692e74ab85289",
+    "rs_calc/operations.py": "054b0de2bed0893b52bb8110e8aa982758d6c635336801bbab167051cb541d18",
+    "rs_calc/provenance.py": "6e31a7d230eb3fb444c8b2c027684b1dd2b4c8de7061be59466a9804d7089c9a",
+    "rs_calc/radix.py": "a4db0789d591f2c7f3e40f51e28cf1a2569ae027114cd30c2380addf4b99b6b5",
+    "rs_calc/verification.py": "3bbb660fc3990508b1aed9c01b6b6e2dec73dab3d146d802d684997f6ca2d772"
+  },
+  "source_sha256": "7d4ad2f97fafe216c4330df479c13a1958ccc8d14a64e6c4c99ab5af31dd0f43",
+  "timestamp": "2026-09-10T17:51:25.971329+00:00"
+}

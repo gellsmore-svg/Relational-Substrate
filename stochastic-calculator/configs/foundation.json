@@ -1,0 +1,10 @@
+{
+  "experiment": "SC-001",
+  "question": "Does conserved signed relational identity survive rewiring and neutral disturbances, and what happens after erasure?",
+  "identities": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "perturbations": ["rewire", "neutral", "erase"],
+  "runs": 200,
+  "base_seed": 41000,
+  "neutral_pairs": 6,
+  "engine": {"regions": 8, "locality": "global", "strength": 1.0, "fault_rate": 0.0, "max_steps": 10000, "max_relations": 20000}
+}
