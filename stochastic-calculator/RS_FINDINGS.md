@@ -1,5 +1,68 @@
 # RS findings
 
+## Observer and recurrence extension: SC-026/027/027R
+
+### Strong within-model finding: some instability belongs to the readout
+
+Evidence: on the same CG trajectories, pure readout was correct in 50/50 trials at
+500/2,000/8,000 proposals. Ready readout was correct in 0/50, 1/50, 1/50 and escaped
+393 times over 8,000 steps. For 50+50, pure readout was 50/50 at 2,000 while ready
+readout was 0/50; both were 50/50 by 8,000. Identity was never lost.
+Experiment IDs: SC-026.
+Replications: 50 paired seeds per cell; checkpoints/readouts share trajectories.
+Alternative explanations: a supplied readiness flag adds activation delay and flicker.
+Confidence: high within this representation; 50/50 Wilson interval [.9287, 1].
+Implication: refine the earlier stability finding: R is needed for persistent ready
+readout, not for persistent polarity-only numerical readout. Neither observer is
+automatically privileged by RS. Constraints remain legitimate programmed rules.
+
+### Supported finding: recurrent readability without permanent cleanup
+
+Evidence: with neutral births continuously admitted at b=.01, pure occupancy was
+.954335 and .949245 in separate seed batches. There were respectively 233/231
+departures and 227/229 complete returns. No growth or readiness irreversibility
+was enforced. All trajectories preserved charge; only readability was lost/restored.
+Experiment IDs: SC-027, SC-027R.
+Replications: two disjoint 50-seed batches for each nonzero cap32 condition.
+Alternative explanations: finite birth-death dynamics with a generic birth bias.
+Confidence: supported for 3+4 in the tested regime, not arbitrary operations or faults.
+Implication: frequent, reproducible access to a numerical class need not require an
+absorbing microscopic state. This is not recovery of destroyed identity, nor proof
+of full microscopic Markov reversibility or thermodynamic detailed balance.
+
+### Supported comparator and retained discrepancy
+
+Evidence: predeclared stationary pure-occupancy predictions .950231/.767740/.290238/
+.007700 for b=.01/.05/.2/.5 lie within the seed-bootstrap occupancy intervals in
+both batches. One primary terminal count, 44/50 at b=.01, marginally excluded its
+prediction under Wilson intervals; replication gave 48/50 and included it.
+Experiment IDs: SC-027, SC-027R.
+Replications: two 50-seed batches; replication was declared after the discrepancy.
+Alternative explanations: sampling variation, incomplete mixing, macro approximation.
+Confidence: useful quantitative comparator; not complete equilibrium validation.
+Implication: a defined statistical potential can describe a well-like distribution,
+but ordinary stochastic computation accounts for this evidence. No uniquely RS
+mechanism or physical energy landscape was established. Do not erase the first
+snapshot discrepancy or treat marginal intervals as simultaneous guarantees.
+
+### Negative findings and next test
+
+Evidence: C-only time-mean population changed from 29.13 to 387.79 when capacity
+changed from32 to512. At recurrent b=.5, cap interventions remained substantial.
+Paired cap32/cap128 paths were identical at b=.05/.2 where neither cap intervened.
+Experiment IDs: SC-026/027.
+Replications: 50 paired seeds per capacity/rule; matched duplicates are controls.
+Alternative explanations: reflecting boundaries and population drift, not spontaneous
+numerical attractor selection. Topology remains unnecessary for the global invariant.
+Confidence: high for the measured limits; no broad theorem about RS substrates.
+Implication: SC-028 needs an explicit redundancy/surviving-information model before
+claiming repair after charge loss. No new multiplication, division, higher-order
+coordination or T-C-R capability is established by this stage.
+
+Full protocol and qualifications: [RELAXATION_LAB.md](research/RELAXATION_LAB.md).
+Data, uncertainty and plots: [RESULTS.md](research/dynamics-analysis/RESULTS.md).
+Earlier findings below retain their original observer and model scope.
+
 ## Fixed-proposal extension: SC-023 through SC-025
 
 General programmed constraints are the intended experimental subject. A successful

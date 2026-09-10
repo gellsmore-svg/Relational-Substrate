@@ -1,0 +1,2235 @@
+{
+  "observer-controls-v1": {
+    "configuration": {
+      "base_seed": 260000,
+      "burn_in": 0,
+      "cells": [
+        {
+          "capacity": 32,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "C-cap32"
+        },
+        {
+          "capacity": 128,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "C-cap128"
+        },
+        {
+          "capacity": 512,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "C-cap512"
+        },
+        {
+          "capacity": 128,
+          "constraints": {
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "CG"
+        },
+        {
+          "capacity": 128,
+          "constraints": {},
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "CGR"
+        },
+        {
+          "capacity": 128,
+          "constraints": {},
+          "inputs": [
+            17,
+            28
+          ],
+          "label": "CGR-45"
+        },
+        {
+          "capacity": 128,
+          "constraints": {},
+          "inputs": [
+            50,
+            50
+          ],
+          "label": "CGR-100"
+        }
+      ],
+      "experiment": "SC-026",
+      "horizons": [
+        500,
+        2000,
+        8000
+      ],
+      "neutral_pairs": 3,
+      "regions": 8,
+      "runs": 50
+    },
+    "paired_readout_discordances": {
+      "C-cap128:2000": 0,
+      "C-cap128:500": 0,
+      "C-cap128:8000": 0,
+      "C-cap32:2000": 0,
+      "C-cap32:500": 0,
+      "C-cap32:8000": 0,
+      "C-cap512:2000": 0,
+      "C-cap512:500": 0,
+      "C-cap512:8000": 0,
+      "CG:2000": 49,
+      "CG:500": 50,
+      "CG:8000": 49,
+      "CGR-100:2000": 50,
+      "CGR-100:500": 22,
+      "CGR-100:8000": 0,
+      "CGR-45:2000": 6,
+      "CGR-45:500": 41,
+      "CGR-45:8000": 0,
+      "CGR:2000": 0,
+      "CGR:500": 0,
+      "CGR:8000": 0
+    },
+    "summary": {
+      "C-cap128:2000": {
+        "accepted_pair_births": 8893,
+        "capacity_rejections": 3590,
+        "identity_preserved_runs": 50,
+        "mean_population": 100.77706,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "C-cap128:500": {
+        "accepted_pair_births": 3106,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 48.42744,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "C-cap128:8000": {
+        "accepted_pair_births": 27653,
+        "capacity_rejections": 22488,
+        "identity_preserved_runs": 50,
+        "mean_population": 118.96044499999999,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "C-cap32:2000": {
+        "accepted_pair_births": 6248,
+        "capacity_rejections": 6235,
+        "identity_preserved_runs": 50,
+        "mean_population": 28.679759999999998,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 1,
+            "mean_correct_occupancy": 3e-05,
+            "occupancy_bootstrap95": [
+              0.0,
+              9e-05
+            ],
+            "runs_with_escape_and_return": 1,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 2,
+            "total_escapes": 2
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 2e-05,
+            "occupancy_bootstrap95": [
+              0.0,
+              6e-05
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 1,
+            "total_escapes": 1
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "C-cap32:500": {
+        "accepted_pair_births": 1833,
+        "capacity_rejections": 1273,
+        "identity_preserved_runs": 50,
+        "mean_population": 27.146160000000002,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "C-cap32:8000": {
+        "accepted_pair_births": 23992,
+        "capacity_rejections": 26149,
+        "identity_preserved_runs": 50,
+        "mean_population": 29.12672,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 1,
+            "mean_correct_occupancy": 7.5e-06,
+            "occupancy_bootstrap95": [
+              0.0,
+              2.25e-05
+            ],
+            "runs_with_escape_and_return": 1,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 2,
+            "total_escapes": 2
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 5e-06,
+            "occupancy_bootstrap95": [
+              0.0,
+              1.5e-05
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 1,
+            "total_escapes": 1
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "C-cap512:2000": {
+        "accepted_pair_births": 12483,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 143.14794,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "C-cap512:500": {
+        "accepted_pair_births": 3106,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 48.42744,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "C-cap512:8000": {
+        "accepted_pair_births": 37159,
+        "capacity_rejections": 12982,
+        "identity_preserved_runs": 50,
+        "mean_population": 387.79095,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "CG:2000": {
+        "accepted_pair_births": 0,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 7.1499,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.95872,
+            "occupancy_bootstrap95": [
+              0.95224,
+              0.96468
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 56,
+            "mean_correct_occupancy": 0.00707,
+            "occupancy_bootstrap95": [
+              0.00521,
+              0.00908
+            ],
+            "runs_with_escape_and_return": 26,
+            "terminal_correct": 1,
+            "terminal_wilson95": [
+              0.003539259271646236,
+              0.10495443589637815
+            ],
+            "total_captures": 95,
+            "total_escapes": 94
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "CG:500": {
+        "accepted_pair_births": 0,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 7.5996,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.83488,
+            "occupancy_bootstrap95": [
+              0.80896,
+              0.85872
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 11,
+            "mean_correct_occupancy": 0.00856,
+            "occupancy_bootstrap95": [
+              0.00448,
+              0.013
+            ],
+            "runs_with_escape_and_return": 8,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 28,
+            "total_escapes": 28
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "CG:8000": {
+        "accepted_pair_births": 0,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 7.037475,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.98968,
+            "occupancy_bootstrap95": [
+              0.98806,
+              0.99117
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 344,
+            "mean_correct_occupancy": 0.007885,
+            "occupancy_bootstrap95": [
+              0.00672,
+              0.0089375
+            ],
+            "runs_with_escape_and_return": 50,
+            "terminal_correct": 1,
+            "terminal_wilson95": [
+              0.003539259271646236,
+              0.10495443589637815
+            ],
+            "total_captures": 394,
+            "total_escapes": 393
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "CGR-100:2000": {
+        "accepted_pair_births": 0,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 101.163,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.65868,
+            "occupancy_bootstrap95": [
+              0.59736,
+              0.7156899999999999
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "CGR-100:500": {
+        "accepted_pair_births": 0,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 103.3708,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.16432,
+            "occupancy_bootstrap95": [
+              0.09688000000000001,
+              0.2324
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 22,
+            "terminal_wilson95": [
+              0.3116219921125717,
+              0.5769397197834315
+            ],
+            "total_captures": 22,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "CGR-100:8000": {
+        "accepted_pair_births": 0,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 100.29075,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.91467,
+            "occupancy_bootstrap95": [
+              0.89934,
+              0.9289225
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.4738425,
+            "occupancy_bootstrap95": [
+              0.4381425,
+              0.507775
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "CGR-45:2000": {
+        "accepted_pair_births": 0,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 45.52798,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.83341,
+            "occupancy_bootstrap95": [
+              0.79512,
+              0.86648
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.24002,
+            "occupancy_bootstrap95": [
+              0.19379000000000002,
+              0.2873
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 44,
+            "terminal_wilson95": [
+              0.7619518261679701,
+              0.9438239984906773
+            ],
+            "total_captures": 44,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "CGR-45:500": {
+        "accepted_pair_births": 0,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 46.91304,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.43308,
+            "occupancy_bootstrap95": [
+              0.35236,
+              0.5101600000000001
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 41,
+            "terminal_wilson95": [
+              0.6920394632569922,
+              0.9022980732976582
+            ],
+            "total_captures": 41,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.0,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "CGR-45:8000": {
+        "accepted_pair_births": 0,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 45.131995,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.9583525,
+            "occupancy_bootstrap95": [
+              0.94878,
+              0.96662
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.80147,
+            "occupancy_bootstrap95": [
+              0.784935,
+              0.8176875
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "CGR:2000": {
+        "accepted_pair_births": 0,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 7.1499,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.95872,
+            "occupancy_bootstrap95": [
+              0.95224,
+              0.96468
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.91372,
+            "occupancy_bootstrap95": [
+              0.90553,
+              0.9210699999999999
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "CGR:500": {
+        "accepted_pair_births": 0,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 7.5996,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.83488,
+            "occupancy_bootstrap95": [
+              0.80896,
+              0.85872
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.65488,
+            "occupancy_bootstrap95": [
+              0.62212,
+              0.68428
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "CGR:8000": {
+        "accepted_pair_births": 0,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 7.037475,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.98968,
+            "occupancy_bootstrap95": [
+              0.98806,
+              0.99117
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 0.97843,
+            "occupancy_bootstrap95": [
+              0.9763825,
+              0.9802675
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 50,
+            "total_escapes": 0
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      }
+    }
+  },
+  "recurrent-replication-v1": {
+    "configuration": {
+      "base_seed": 271000,
+      "burn_in": 4000,
+      "cells": [
+        {
+          "birth_admission": 0.01,
+          "capacity": 32,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "b0.01-cap32"
+        },
+        {
+          "birth_admission": 0.05,
+          "capacity": 32,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "b0.05-cap32"
+        },
+        {
+          "birth_admission": 0.2,
+          "capacity": 32,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "b0.2-cap32"
+        },
+        {
+          "birth_admission": 0.5,
+          "capacity": 32,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "b0.5-cap32"
+        }
+      ],
+      "experiment": "SC-027R",
+      "horizons": [
+        8000
+      ],
+      "neutral_pairs": 8,
+      "regions": 8,
+      "runs": 50
+    },
+    "paired_readout_discordances": {
+      "b0.01-cap32:8000": 48,
+      "b0.05-cap32:8000": 42,
+      "b0.2-cap32:8000": 14,
+      "b0.5-cap32:8000": 0
+    },
+    "stationary_comparator": {
+      "b0.01-cap32": {
+        "observed_distribution": [
+          0.949245,
+          0.048075,
+          0.002155,
+          0.000525,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "predicted_occupancy_inside_bootstrap95": true,
+        "stationary_distribution": [
+          0.9502309458432526,
+          0.04810544163331466,
+          0.0016168773437864087,
+          4.554204518331717e-05,
+          1.164427291618905e-06,
+          2.804329060648865e-08,
+          6.489505069834874e-10,
+          1.4601386407128467e-11,
+          3.2183889205712347e-13,
+          6.98435095610075e-15,
+          1.4975270138227827e-16,
+          3.1803540874367616e-18,
+          6.702456750058604e-20
+        ],
+        "stationary_pure_probability": 0.9502309458432526,
+        "total_variation_distance": 0.0010175806110303276
+      },
+      "b0.05-cap32": {
+        "observed_distribution": [
+          0.770425,
+          0.192055,
+          0.03283,
+          0.00406,
+          0.00063,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "predicted_occupancy_inside_bootstrap95": true,
+        "stationary_distribution": [
+          0.7677395179517187,
+          0.19433406548152884,
+          0.03265891933786804,
+          0.004599464473416418,
+          0.0005879997196128944,
+          7.080496623671932e-05,
+          8.192497695979375e-06,
+          9.21655990797679e-07,
+          1.015741706524942e-07,
+          1.1021502891980707e-08,
+          1.1815699423902828e-09,
+          1.2546721231694806e-10,
+          1.3220832350502985e-11
+        ],
+        "stationary_pure_probability": 0.7677395179517187,
+        "total_variation_distance": 0.0028985629908003453
+      },
+      "b0.2-cap32": {
+        "observed_distribution": [
+          0.29223,
+          0.299395,
+          0.193795,
+          0.106905,
+          0.052675,
+          0.026585,
+          0.013455,
+          0.005345,
+          0.00484,
+          0.00311,
+          0.00125,
+          0.00035,
+          6.5e-05
+        ],
+        "predicted_occupancy_inside_bootstrap95": true,
+        "stationary_distribution": [
+          0.2902380477037533,
+          0.29386602330005024,
+          0.19754327121836712,
+          0.11128270945301347,
+          0.05690593097029099,
+          0.02740969008402349,
+          0.012685766820939075,
+          0.005708595069422586,
+          0.002516538993103791,
+          0.001092247826867965,
+          0.0004683815681098507,
+          0.00019894388827292145,
+          8.385310378520947e-05
+        ],
+        "stationary_pure_probability": 0.2902380477037533,
+        "total_variation_distance": 0.013564049898902879
+      },
+      "b0.5-cap32": {
+        "observed_distribution": [
+          0.0093,
+          0.021875,
+          0.038785,
+          0.05211,
+          0.062465,
+          0.07117,
+          0.080085,
+          0.08638,
+          0.09426,
+          0.10611,
+          0.116515,
+          0.12642,
+          0.134525
+        ],
+        "predicted_occupancy_inside_bootstrap95": true,
+        "stationary_distribution": [
+          0.007699866395142583,
+          0.019490286812704663,
+          0.03275450978246201,
+          0.046129267943634006,
+          0.05897207549612302,
+          0.07101220757658148,
+          0.08216476581777538,
+          0.09243536154499728,
+          0.10187147136938242,
+          0.11053762084351389,
+          0.11850283175723769,
+          0.12583444634827892,
+          0.13259528831216671
+        ],
+        "stationary_pure_probability": 0.007699866395142583,
+        "total_variation_distance": 0.022162051332906628
+      }
+    },
+    "summary": {
+      "b0.01-cap32:8000": {
+        "accepted_pair_births": 244,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 7.10792,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 229,
+            "mean_correct_occupancy": 0.949245,
+            "occupancy_bootstrap95": [
+              0.94167,
+              0.956295
+            ],
+            "runs_with_escape_and_return": 50,
+            "terminal_correct": 48,
+            "terminal_wilson95": [
+              0.8653990931249297,
+              0.9889611156723802
+            ],
+            "total_captures": 232,
+            "total_escapes": 231
+          },
+          "ready": {
+            "complete_recovery_episodes": 140,
+            "mean_correct_occupancy": 0.007955,
+            "occupancy_bootstrap95": [
+              0.006515,
+              0.009430000000000001
+            ],
+            "runs_with_escape_and_return": 42,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 187,
+            "total_escapes": 188
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "b0.05-cap32:8000": {
+        "accepted_pair_births": 1220,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 7.54483,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 939,
+            "mean_correct_occupancy": 0.770425,
+            "occupancy_bootstrap95": [
+              0.754595,
+              0.78509
+            ],
+            "runs_with_escape_and_return": 50,
+            "terminal_correct": 42,
+            "terminal_wilson95": [
+              0.7148578393696501,
+              0.916625793219666
+            ],
+            "total_captures": 953,
+            "total_escapes": 947
+          },
+          "ready": {
+            "complete_recovery_episodes": 95,
+            "mean_correct_occupancy": 0.005855,
+            "occupancy_bootstrap95": [
+              0.00457,
+              0.00739
+            ],
+            "runs_with_escape_and_return": 37,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 139,
+            "total_escapes": 139
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "b0.2-cap32:8000": {
+        "accepted_pair_births": 5038,
+        "capacity_rejections": 1,
+        "identity_preserved_runs": 50,
+        "mean_population": 10.10662,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 1429,
+            "mean_correct_occupancy": 0.29223,
+            "occupancy_bootstrap95": [
+              0.275465,
+              0.310195
+            ],
+            "runs_with_escape_and_return": 50,
+            "terminal_correct": 14,
+            "terminal_wilson95": [
+              0.17474170665911232,
+              0.4166512369595657
+            ],
+            "total_captures": 1469,
+            "total_escapes": 1465
+          },
+          "ready": {
+            "complete_recovery_episodes": 32,
+            "mean_correct_occupancy": 0.00206,
+            "occupancy_bootstrap95": [
+              0.00132,
+              0.002945
+            ],
+            "runs_with_escape_and_return": 16,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 58,
+            "total_escapes": 58
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "b0.5-cap32:8000": {
+        "accepted_pair_births": 10921,
+        "capacity_rejections": 1652,
+        "identity_preserved_runs": 50,
+        "mean_population": 22.65159,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 70,
+            "mean_correct_occupancy": 0.0093,
+            "occupancy_bootstrap95": [
+              0.00584,
+              0.01343
+            ],
+            "runs_with_escape_and_return": 26,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 103,
+            "total_escapes": 103
+          },
+          "ready": {
+            "complete_recovery_episodes": 1,
+            "mean_correct_occupancy": 0.000135,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.000405
+            ],
+            "runs_with_escape_and_return": 1,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 2,
+            "total_escapes": 2
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      }
+    }
+  },
+  "recurrent-resolution-v1": {
+    "configuration": {
+      "base_seed": 270000,
+      "burn_in": 4000,
+      "cells": [
+        {
+          "birth_admission": 0,
+          "capacity": 32,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "b0-cap32"
+        },
+        {
+          "birth_admission": 0.01,
+          "capacity": 32,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "b0.01-cap32"
+        },
+        {
+          "birth_admission": 0.05,
+          "capacity": 32,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "b0.05-cap32"
+        },
+        {
+          "birth_admission": 0.2,
+          "capacity": 32,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "b0.2-cap32"
+        },
+        {
+          "birth_admission": 0.5,
+          "capacity": 32,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "b0.5-cap32"
+        },
+        {
+          "birth_admission": 0.05,
+          "capacity": 128,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "b0.05-cap128"
+        },
+        {
+          "birth_admission": 0.2,
+          "capacity": 128,
+          "constraints": {
+            "no_growth": false,
+            "readiness": false
+          },
+          "inputs": [
+            3,
+            4
+          ],
+          "label": "b0.2-cap128"
+        }
+      ],
+      "experiment": "SC-027",
+      "horizons": [
+        8000
+      ],
+      "neutral_pairs": 8,
+      "regions": 8,
+      "runs": 50
+    },
+    "paired_readout_discordances": {
+      "b0-cap32:8000": 50,
+      "b0.01-cap32:8000": 44,
+      "b0.05-cap128:8000": 35,
+      "b0.05-cap32:8000": 35,
+      "b0.2-cap128:8000": 16,
+      "b0.2-cap32:8000": 16,
+      "b0.5-cap32:8000": 1
+    },
+    "stationary_comparator": {
+      "b0-cap32": {
+        "observed_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "predicted_occupancy_inside_bootstrap95": true,
+        "stationary_distribution": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stationary_pure_probability": 1.0,
+        "total_variation_distance": 0.0
+      },
+      "b0.01-cap32": {
+        "observed_distribution": [
+          0.954335,
+          0.04452,
+          0.001145,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "predicted_occupancy_inside_bootstrap95": true,
+        "stationary_distribution": [
+          0.9502309458432526,
+          0.04810544163331466,
+          0.0016168773437864087,
+          4.554204518331717e-05,
+          1.164427291618905e-06,
+          2.804329060648865e-08,
+          6.489505069834874e-10,
+          1.4601386407128467e-11,
+          3.2183889205712347e-13,
+          6.98435095610075e-15,
+          1.4975270138227827e-16,
+          3.1803540874367616e-18,
+          6.702456750058604e-20
+        ],
+        "stationary_pure_probability": 0.9502309458432526,
+        "total_variation_distance": 0.004104054156747452
+      },
+      "b0.05-cap128": {
+        "observed_distribution": [
+          0.77569,
+          0.190935,
+          0.02923,
+          0.00367,
+          0.000475,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "predicted_occupancy_inside_bootstrap95": true,
+        "stationary_distribution": [
+          0.7677395179505324,
+          0.19433406548122856,
+          0.03265891933781758,
+          0.004599464473409311,
+          0.0005879997196119859,
+          7.080496623660991e-05,
+          8.192497695966717e-06,
+          9.216559907962549e-07,
+          1.0157417065233725e-07,
+          1.1021502891963677e-08,
+          1.1815699423884572e-09,
+          1.254672123167542e-10,
+          1.3220832350482558e-11,
+          1.3843736951611047e-12,
+          1.4420559324594858e-13,
+          1.4955867966189673e-14,
+          1.5453719549303268e-15,
+          1.591770990341841e-16,
+          1.6351025339678166e-17,
+          1.6756491049012276e-18,
+          1.713661515151303e-19,
+          1.749362796716957e-20,
+          1.7829516591931096e-21,
+          1.814605511113569e-22,
+          1.8444830884134942e-23,
+          1.872726735704819e-24,
+          1.8994643843206583e-25,
+          1.924811267444762e-26,
+          1.9488714082878157e-27,
+          1.9717389128390933e-28,
+          1.993499094534854e-29,
+          2.0142294543888916e-30,
+          2.034000536773728e-31,
+          2.052876678118775e-32,
+          2.070916663274409e-33,
+          2.0881743021350146e-34,
+          2.1046989372778681e-35,
+          2.120535891812057e-36,
+          2.1357268653060197e-37,
+          2.150310284536796e-38,
+          2.1643216148482808e-39,
+          2.1777936370951675e-40,
+          2.1907566944588216e-41,
+          2.203238912834241e-42,
+          2.2152663979867484e-43,
+          2.2268634122497071e-44,
+          2.2380525331685082e-45,
+          2.248854796183223e-46,
+          2.2592898231730795e-47,
+          2.2693759384551168e-48,
+          2.279130273629178e-49,
+          2.2885688624905704e-50,
+          2.2977067270816774e-51,
+          2.3065579558259384e-52,
+          2.3151357745748345e-53,
+          2.323452611301664e-54,
+          2.3315201550908974e-55,
+          2.3393494099976485e-56,
+          2.3469507442874084e-57,
+          2.3543339355091497e-58,
+          2.3615082118051562e-59
+        ],
+        "stationary_pure_probability": 0.7677395179505324,
+        "total_variation_distance": 0.007950482049467592
+      },
+      "b0.05-cap32": {
+        "observed_distribution": [
+          0.77569,
+          0.190935,
+          0.02923,
+          0.00367,
+          0.000475,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "predicted_occupancy_inside_bootstrap95": true,
+        "stationary_distribution": [
+          0.7677395179517187,
+          0.19433406548152884,
+          0.03265891933786804,
+          0.004599464473416418,
+          0.0005879997196128944,
+          7.080496623671932e-05,
+          8.192497695979375e-06,
+          9.21655990797679e-07,
+          1.015741706524942e-07,
+          1.1021502891980707e-08,
+          1.1815699423902828e-09,
+          1.2546721231694806e-10,
+          1.3220832350502985e-11
+        ],
+        "stationary_pure_probability": 0.7677395179517187,
+        "total_variation_distance": 0.00795048204828127
+      },
+      "b0.2-cap128": {
+        "observed_distribution": [
+          0.29141,
+          0.30137,
+          0.19527,
+          0.11534,
+          0.05445,
+          0.02262,
+          0.010325,
+          0.004575,
+          0.001985,
+          0.001425,
+          0.00112,
+          0.00011,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "predicted_occupancy_inside_bootstrap95": true,
+        "stationary_distribution": [
+          0.2902206087467058,
+          0.29384836635603967,
+          0.19753140182822668,
+          0.11127602302990103,
+          0.05690251177665394,
+          0.027408043172421646,
+          0.012685004596466938,
+          0.005708252068410124,
+          0.002516387786824131,
+          0.0010921821991424182,
+          0.00046835342539695444,
+          0.0001989319347266862,
+          8.384806547032698e-05,
+          3.511943972968698e-05,
+          1.4633099887369572e-05,
+          6.0705193169118055e-06,
+          2.5090380111475154e-06,
+          1.0337482590046506e-06,
+          4.247556735332445e-07,
+          1.7411543297668405e-07,
+          7.122610952694361e-08,
+          2.908399472350196e-08,
+          1.1856970262669046e-08,
+          4.826989777947448e-09,
+          1.9625865696627706e-09,
+          7.970554706042929e-10,
+          3.2337413673351327e-10,
+          1.3107572579361686e-10,
+          5.308566894641487e-11,
+          2.1483424453889168e-11,
+          8.688206520135899e-12,
+          3.511422006992102e-12,
+          1.4183556359973724e-12,
+          5.726073624416672e-13,
+          2.310556968245608e-13,
+          9.319246438590621e-14,
+          3.757197482121705e-14,
+          1.5141875110688294e-14,
+          6.100139043130516e-15,
+          2.4567170895550635e-15,
+          9.89089981427781e-16,
+          3.980986657972281e-16,
+          1.6018732028507514e-16,
+          6.444000619281951e-17,
+          2.591671372059692e-17,
+          1.0420955529790457e-17,
+          4.189326708263997e-18,
+          1.6838188239165137e-18,
+          6.766527993534202e-19,
+          2.7186942831164286e-19,
+          1.0921519595578908e-19,
+          4.3866996049720535e-20,
+          1.7616859789067975e-20,
+          7.073889391402822e-21,
+          2.840078542844646e-21,
+          1.1401124684164295e-21,
+          4.57628476906039e-22,
+          1.836660781354527e-22,
+          7.370514843796473e-23,
+          2.957480596669737e-23,
+          1.1865971279523918e-23
+        ],
+        "stationary_pure_probability": 0.2902206087467058,
+        "total_variation_distance": 0.013759466242814156
+      },
+      "b0.2-cap32": {
+        "observed_distribution": [
+          0.29141,
+          0.30137,
+          0.19527,
+          0.11534,
+          0.05445,
+          0.02262,
+          0.010325,
+          0.004575,
+          0.001985,
+          0.001425,
+          0.00112,
+          0.00011,
+          0.0
+        ],
+        "predicted_occupancy_inside_bootstrap95": true,
+        "stationary_distribution": [
+          0.2902380477037533,
+          0.29386602330005024,
+          0.19754327121836712,
+          0.11128270945301347,
+          0.05690593097029099,
+          0.02740969008402349,
+          0.012685766820939075,
+          0.005708595069422586,
+          0.002516538993103791,
+          0.001092247826867965,
+          0.0004683815681098507,
+          0.00019894388827292145,
+          8.385310378520947e-05
+        ],
+        "stationary_pure_probability": 0.2902380477037533,
+        "total_variation_distance": 0.013717590148205205
+      },
+      "b0.5-cap32": {
+        "observed_distribution": [
+          0.009475,
+          0.023015,
+          0.03917,
+          0.053935,
+          0.068145,
+          0.07738,
+          0.083865,
+          0.09447,
+          0.10361,
+          0.10619,
+          0.10896,
+          0.114645,
+          0.11714
+        ],
+        "predicted_occupancy_inside_bootstrap95": true,
+        "stationary_distribution": [
+          0.007699866395142583,
+          0.019490286812704663,
+          0.03275450978246201,
+          0.046129267943634006,
+          0.05897207549612302,
+          0.07101220757658148,
+          0.08216476581777538,
+          0.09243536154499728,
+          0.10187147136938242,
+          0.11053762084351389,
+          0.11850283175723769,
+          0.12583444634827892,
+          0.13259528831216671
+        ],
+        "stationary_pure_probability": 0.007699866395142583,
+        "total_variation_distance": 0.04053518726119718
+      }
+    },
+    "summary": {
+      "b0-cap32:8000": {
+        "accepted_pair_births": 0,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 7.0,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 1.0,
+            "occupancy_bootstrap95": [
+              1.0,
+              1.0
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 50,
+            "terminal_wilson95": [
+              0.9286524008666414,
+              1.0
+            ],
+            "total_captures": 0,
+            "total_escapes": 0
+          },
+          "ready": {
+            "complete_recovery_episodes": 190,
+            "mean_correct_occupancy": 0.00993,
+            "occupancy_bootstrap95": [
+              0.008025000000000001,
+              0.011635
+            ],
+            "runs_with_escape_and_return": 46,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 239,
+            "total_escapes": 239
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "b0.01-cap32:8000": {
+        "accepted_pair_births": 245,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 7.09362,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 227,
+            "mean_correct_occupancy": 0.954335,
+            "occupancy_bootstrap95": [
+              0.94636,
+              0.96184
+            ],
+            "runs_with_escape_and_return": 49,
+            "terminal_correct": 44,
+            "terminal_wilson95": [
+              0.7619518261679701,
+              0.9438239984906773
+            ],
+            "total_captures": 230,
+            "total_escapes": 233
+          },
+          "ready": {
+            "complete_recovery_episodes": 177,
+            "mean_correct_occupancy": 0.009385,
+            "occupancy_bootstrap95": [
+              0.00747,
+              0.011165
+            ],
+            "runs_with_escape_and_return": 46,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 225,
+            "total_escapes": 225
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "b0.05-cap128:8000": {
+        "accepted_pair_births": 1209,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 7.52461,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 928,
+            "mean_correct_occupancy": 0.77569,
+            "occupancy_bootstrap95": [
+              0.76042,
+              0.79067
+            ],
+            "runs_with_escape_and_return": 50,
+            "terminal_correct": 35,
+            "terminal_wilson95": [
+              0.562496495355466,
+              0.8089644649911906
+            ],
+            "total_captures": 939,
+            "total_escapes": 943
+          },
+          "ready": {
+            "complete_recovery_episodes": 138,
+            "mean_correct_occupancy": 0.0073750000000000005,
+            "occupancy_bootstrap95": [
+              0.00588,
+              0.00892
+            ],
+            "runs_with_escape_and_return": 39,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 186,
+            "total_escapes": 186
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "b0.05-cap32:8000": {
+        "accepted_pair_births": 1209,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 7.52461,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 928,
+            "mean_correct_occupancy": 0.77569,
+            "occupancy_bootstrap95": [
+              0.76042,
+              0.79067
+            ],
+            "runs_with_escape_and_return": 50,
+            "terminal_correct": 35,
+            "terminal_wilson95": [
+              0.562496495355466,
+              0.8089644649911906
+            ],
+            "total_captures": 939,
+            "total_escapes": 943
+          },
+          "ready": {
+            "complete_recovery_episodes": 138,
+            "mean_correct_occupancy": 0.0073750000000000005,
+            "occupancy_bootstrap95": [
+              0.00588,
+              0.00892
+            ],
+            "runs_with_escape_and_return": 39,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 186,
+            "total_escapes": 186
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "b0.2-cap128:8000": {
+        "accepted_pair_births": 4836,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 10.00784,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 1395,
+            "mean_correct_occupancy": 0.29141,
+            "occupancy_bootstrap95": [
+              0.272315,
+              0.310675
+            ],
+            "runs_with_escape_and_return": 50,
+            "terminal_correct": 16,
+            "terminal_wilson95": [
+              0.20758216260656845,
+              0.45810297308144077
+            ],
+            "total_captures": 1430,
+            "total_escapes": 1429
+          },
+          "ready": {
+            "complete_recovery_episodes": 29,
+            "mean_correct_occupancy": 0.00201,
+            "occupancy_bootstrap95": [
+              0.001345,
+              0.0026650000000000003
+            ],
+            "runs_with_escape_and_return": 18,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 62,
+            "total_escapes": 62
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "b0.2-cap32:8000": {
+        "accepted_pair_births": 4836,
+        "capacity_rejections": 0,
+        "identity_preserved_runs": 50,
+        "mean_population": 10.00784,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 1395,
+            "mean_correct_occupancy": 0.29141,
+            "occupancy_bootstrap95": [
+              0.272315,
+              0.310675
+            ],
+            "runs_with_escape_and_return": 50,
+            "terminal_correct": 16,
+            "terminal_wilson95": [
+              0.20758216260656845,
+              0.45810297308144077
+            ],
+            "total_captures": 1430,
+            "total_escapes": 1429
+          },
+          "ready": {
+            "complete_recovery_episodes": 29,
+            "mean_correct_occupancy": 0.00201,
+            "occupancy_bootstrap95": [
+              0.001345,
+              0.0026650000000000003
+            ],
+            "runs_with_escape_and_return": 18,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 62,
+            "total_escapes": 62
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      },
+      "b0.5-cap32:8000": {
+        "accepted_pair_births": 10711,
+        "capacity_rejections": 1553,
+        "identity_preserved_runs": 50,
+        "mean_population": 22.25617,
+        "observers": {
+          "pure": {
+            "complete_recovery_episodes": 86,
+            "mean_correct_occupancy": 0.009475,
+            "occupancy_bootstrap95": [
+              0.00686,
+              0.01254
+            ],
+            "runs_with_escape_and_return": 25,
+            "terminal_correct": 1,
+            "terminal_wilson95": [
+              0.003539259271646236,
+              0.10495443589637815
+            ],
+            "total_captures": 124,
+            "total_escapes": 123
+          },
+          "ready": {
+            "complete_recovery_episodes": 0,
+            "mean_correct_occupancy": 5.4999999999999995e-05,
+            "occupancy_bootstrap95": [
+              0.0,
+              0.000165
+            ],
+            "runs_with_escape_and_return": 0,
+            "terminal_correct": 0,
+            "terminal_wilson95": [
+              6.938893903907228e-18,
+              0.07134759913335872
+            ],
+            "total_captures": 1,
+            "total_escapes": 1
+          }
+        },
+        "runs": 50,
+        "unique_trajectories": 50
+      }
+    }
+  }
+}

@@ -73,3 +73,13 @@ notebook, predeclared hypotheses, actual 2,100-trial results, disclosed engineer
 pilot, alternative explanations and next questions are in
 [CONSTRAINT_LAB.md](research/CONSTRAINT_LAB.md). Machine-readable statistics and
 plots are in [constraint-analysis](research/constraint-analysis/RESULTS.md).
+
+## Continuation: SC-026, SC-027 and SC-027R
+
+[RELAXATION_LAB.md](research/RELAXATION_LAB.md) records passive observer controls,
+fixed-prefix horizon/capacity tests, recurrent neutral-defect dynamics and a
+fresh-seed replication prompted by a retained endpoint discrepancy. There are
+900 trial trajectories and 1,600 checkpoint records, not 1,600 independent runs.
+The pre-execution protocol is copied and hashed in each run directory. The
+stationary comparator was specified before SC-027 and never enters its kernel.
+See [results and plots](research/dynamics-analysis/RESULTS.md).

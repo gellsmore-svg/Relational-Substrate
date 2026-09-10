@@ -129,3 +129,38 @@ does not ensure a usable finite-time calculator.
 RS connection: identity durability and coordination costs separate.
 Alternative explanations: random activation, sparse matching and supplied readout.
 Next test: horizon/region sweeps and decentralized completion observation.
+
+## D-013 - A coherence measure can inherit instability from its observer
+
+Status: Supported within the model.
+Observation: CG pure readout remained stable after cancellation, while the ready
+readout escaped 393 times on those same trajectories. Large-input delay also
+depended strongly on the marker requirement.
+Evidence: SC-026, 350 trajectories with simultaneous readouts and three checkpoints.
+Why it matters: instability of an observation condition is not necessarily loss
+of the numerical structure being observed.
+RS connection: operational coherence factors require explicit observation maps.
+Alternative explanations: supplied readiness bits and random activation costs.
+Next test: observers tied to local accessibility rather than a global ready flag.
+
+## D-014 - High readability can coexist with repeated reversible defect formation
+
+Status: Supported for bidirectional macro-defect dynamics, not microscopic detailed balance.
+Observation: b=.01 gave 95.43% and 94.92% readable occupancy, with 227 and 229
+complete returns, without permanently prohibiting neutral births or unready moves.
+Evidence: SC-027/027R, two independent 50-seed batches for the reported condition.
+Why it matters: arithmetic accessibility need not depend on permanent microscopic cleanup.
+RS connection: stable equivalence classes can support fluctuating readable manifestations.
+Alternative explanations: conserved signed populations and biased birth-death dynamics.
+Next test: transfer to other charges and separate readout recovery from charge-loss repair.
+
+## D-015 - A well-like distribution has an ordinary quantitative comparator
+
+Status: Supported as a useful comparator; equilibrium not fully established.
+Observation: predeclared stationary occupancy predictions fit both batches' marginal
+time-occupancy intervals. One primary endpoint disagreement did not repeat; it remains logged.
+Evidence: SC-027/027R, four nonzero cap32 conditions, 50 seeds each per batch.
+Why it matters: recurrence and high occupancy do not alone establish a novel mechanism.
+RS connection: statistical potential is a defined descriptor, not an ontological conclusion.
+Alternative explanations: finite-sample variation, incomplete mixing and reflecting caps.
+Next test: initialization/horizon replication and a genuinely informative redundancy model.

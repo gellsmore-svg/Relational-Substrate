@@ -109,3 +109,16 @@ physical-descriptor scoring gate is inapplicable (its registry contains material
 descriptors). The dedicated runner records its configuration/hash before trials,
 uses conventional arithmetic only as an independent comparator, and hashes all
 mechanism sources. Later experiments must preserve their original manifest.
+
+## Passive observers and recurrent dynamics
+
+SC-026/027 use `dynamics_lab.py` for passive readouts, checkpoint measurements,
+censored episodes and replay. `recurrent_kernel.py` wraps the existing proposal
+kernel with a state-independent neutral-birth admission rule, retaining exact
+conservation but allowing growth and readiness reversals. No expected value enters
+either transition function. `defect_prediction.py` is an independent analytic
+instrument; `analyze_dynamics.py` compares its predictions with raw trajectories.
+
+Runs now archive the pre-execution protocol text and its hash alongside source
+and configuration. Multiple checkpoints and simultaneous readouts are observations
+of one trajectory, not independent runs. The default calculator is unaffected.

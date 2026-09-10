@@ -32,6 +32,22 @@ Run these from `stochastic-calculator`. This lab is a separate research kernel;
 the usable calculator and its historical experiments remain unchanged. It tests
 addition/signed cancellation, not a replacement implementation of all operators.
 
+**Observer and recurrence follow-up (SC-026/027/027R):** two passive readouts expose
+which earlier stability claims depend on readiness. A new answer-blind neutral-birth
+bias permits repeated loss and recovery of readable form, without irreversible
+growth/readiness gates. At 1% birth admission, pure readability occupied 95.43% and
+94.92% of time in independent batches; the predeclared comparator predicted 95.02%.
+This is readout recovery within a conserved identity, not repair of erased charge.
+See [protocol and findings](research/RELAXATION_LAB.md) and
+[measured results](research/dynamics-analysis/RESULTS.md).
+
+```bash
+python3 -m rs_calc.dynamics_lab --config configs/observer-controls.json --output research/runs/my-observers
+python3 -m rs_calc.dynamics_lab --config configs/recurrent-resolution.json --output research/runs/my-recurrence
+python3 -m rs_calc.dynamics_lab --replay research/runs/recurrent-resolution-v1
+.venv/bin/python -m rs_calc.analyze_dynamics research/runs/observer-controls-v1 research/runs/recurrent-resolution-v1 research/runs/recurrent-replication-v1 --output research/dynamics-analysis
+```
+
 ## Run
 
 Python 3.11+; the calculator and tests require only the standard library.

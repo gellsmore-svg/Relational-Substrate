@@ -154,3 +154,24 @@ time grows faster than the near-linear addition transition count. The default
 arbitrary precision at practical speed. Decimal carry is much more compact but is
 currently a separate additive experiment. Parallel trials never share PRNG state;
 worker count changes wall time, not a trial's transition semantics.
+
+## Recurrent defect mechanism (SC-026/027)
+
+The primary `pure` readout counts a population only after opposite signs are
+absent. The stricter `ready` readout adds the ready-marker requirement. Computing
+net charge for mixed states is an independent diagnostic, not a substitute for
+unperformed cancellation. Both readouts observe identical trajectories passively.
+
+SC-027 retains the eight-event proposal grammar and local charge-preservation
+predicate. A proposed neutral-pair birth is admitted with fixed probability b;
+opposite cancellation is allowed, and both ready/unready transitions remain active.
+The kernel never uses the operand, expected sum, defect count, or stationary target.
+Thus b>0 admits both directions of macro defect change. Microscopic detailed balance
+is not claimed. Zero birth is retained only as the absorbing comparison condition.
+
+The analysis-only macro chain has birth probability b/8 and death probability
+`2*k*(q+k)/(q+2*k)^2/8`, for conserved charge magnitude q and k neutral pairs.
+Its stationary ratio defines a testable distribution and a dimensionless statistical
+potential. This potential is not physical energy or a kernel search objective.
+See [the archived-protocol notebook](research/RELAXATION_LAB.md) for assumptions,
+measured agreement, endpoint discrepancy and fresh-seed replication.

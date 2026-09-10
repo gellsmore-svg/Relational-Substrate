@@ -114,3 +114,37 @@ documented; no unrelated report-runner source change was included in this projec
 The new lab does not modify the default calculator's transition mechanism or
 rewrite historical datasets. Website build/report checks above are historical;
 this extension changes no website source or dependencies.
+
+## Observer and recurrence stage validation
+
+- `python3 -m unittest discover -s tests -v`: 32 tests pass. Ten new methods cover
+  passive readout nesting, checkpoint-prefix replay, burn-in independence, episode
+  censoring, readiness/purity separation, protocol logging, duplicate/missing data,
+  CLI replay, bidirectional neutral changes, conservation, zero-birth comparison,
+  stationary probability flows and incompatible configuration rejection.
+- SC-026: 350 trajectories and 1,050 checkpoint records. SC-027: 350 trajectories;
+  SC-027R: 200 fresh-seed trajectories. Total: 900 trajectories and 1,600 records.
+  Paired cells and repeated checkpoints are not independent replications.
+- The `rs_calc.dynamics_lab --replay` command reproduces all 1,600 checkpoint
+  records exactly apart from timestamps and measured seconds. Completeness and
+  duplicate checks prevent a partial log from passing as a complete replay.
+- Every run retains the pre-execution protocol and its SHA-256 in the manifest,
+  plus code/configuration archives. Later documentation retains the initial
+  44/50 endpoint discrepancy and labels its subsequent fresh-seed replication.
+  Protocol hashes and every archived source/configuration hash were verified
+  against the manifests for all three new runs.
+- Raw-log analysis verifies all expected cells/seeds/checkpoints, matched proposal
+  tapes, readout nesting and occupancy denominators. Independent observer-side
+  stationary predictions were present before SC-027 ran. Their agreement is not
+  a claim of full equilibrium or microscopic detailed balance.
+- Full-trajectory hashes match for all 50 paired seeds in both cap32/cap128
+  comparisons at b=.05/.2; no cap intervened anywhere in those runs. They are
+  matched capacity controls, not additional independent replications.
+- Eight PNG/PDF plot pairs cover readouts, occupancy and the stationary comparator.
+  Readout and comparator figures were visually checked for labels and framing.
+- The emergence lint includes `recurrent_kernel.py` and rejects measuring-module
+  imports there. This is lint plus focused tests and inspection, not a formal proof.
+
+The default calculator, older trial logs, website source and dependencies are
+unchanged by this stage. SC-028 information repair and a multiplication redesign
+remain explicit future work, not completed capabilities.

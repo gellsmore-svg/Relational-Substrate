@@ -20,13 +20,13 @@ def expected_binary(op: str, a: int, b: int) -> dict:
 
 def audit_sources(root) -> list[str]:
     findings = []
-    for name in ["engine.py", "operations.py", "numbers.py", "calculator.py", "radix.py", "proposal_kernel.py"]:
+    for name in ["engine.py", "operations.py", "numbers.py", "calculator.py", "radix.py", "proposal_kernel.py", "recurrent_kernel.py"]:
         path = root / "rs_calc" / name
         if not path.exists():
             continue
         for node in ast.walk(ast.parse(path.read_text())):
             if isinstance(node, ast.ImportFrom) and node.module and any(
-                    word in node.module for word in ("verification", "metrics", "experiments", "constraint_lab")):
+                    word in node.module for word in ("verification", "metrics", "experiments", "constraint_lab", "dynamics_lab", "defect_prediction")):
                 findings.append(f"{name}:{node.lineno}: measuring instrument imported by mechanism")
             if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id in {
                     "eval", "exec", "compile", "sum", "divmod"}:

@@ -87,3 +87,40 @@ H11-H13: supported within the new grammar/observer (800 trials). See
 
 Generalization to other proposal distributions, alternative readouts, topology-led
 identities or the full operator suite remains untested by this extension.
+
+## Predeclared SC-026 hypotheses
+
+- H16 (unsupported): a passive polarity-only readout removes CG's readiness-induced
+  instability without changing its dynamics. Both observers measure the same trajectory.
+- H17 (unsupported): longer horizons improve full-constraint completion, while
+  ongoing unrestricted neutral births remain sensitive to population capacity.
+
+Protocol: `research/RELAXATION_LAB.md`; 350 new trajectories, three fixed checkpoints.
+
+## SC-026 result and SC-027 predeclaration
+
+- H16/H17: supported within the tested grammar/observers. CG pure readout was
+  correct in 50/50 trials at each horizon, although ready readout was unstable.
+  Larger full-constraint cases completed by 8,000; C-only populations hit the caps.
+- H18 (unsupported): state-independent neutral-birth bias yields high pure-readout
+  occupancy with ongoing departures/returns, without irreversible growth/readiness gates.
+- H19 (unsupported): an independently derived birth-death stationary comparator
+  accounts for defect occupancy. The comparator and configurations are archived
+  before SC-027, not fitted after seeing its outcomes.
+
+## Update after SC-027R
+
+- H16: supported within the model. Pure CG readout was stable while ready readout
+  escaped 393 times across the 50-seed 8,000-step checkpoint batch.
+- H17: supported in the measured range. Longer horizons completed the larger
+  full-constraint cases; C-only populations remained cap-sensitive.
+- H18: supported for 3+4 with continued neutral births. At b=.01 pure occupancy
+  was .954335 and .949245 in independent 50-seed batches, with 227 and 229 complete
+  returns. Charge-changing faults remain prohibited; this is not information repair.
+- H19: supported as a conventional time-occupancy comparator. All predicted pure
+  occupancies lie inside marginal seed-bootstrap intervals in both batches. One
+  primary terminal comparison disagreed; it was retained and did not repeat with
+  new seeds. Full stationarity and microscopic detailed balance remain unproven.
+
+SC-027R was declared after that endpoint discrepancy, not retroactively folded
+into SC-027's initial protocol. Every run archives its pre-execution protocol.
