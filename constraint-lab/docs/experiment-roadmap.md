@@ -70,7 +70,26 @@ E(N=3, A≤3, O=3, G=0, S=0, H=0, K≤2, L=0, semantics=hypergraph, W=W4)
 
 The semantics are independent hypergraph. The triple is its own bit. This cell does not search simplicial face-closure, count predicates, `N = 4`, or cardinality 3. `rho3 = 1/2` and `rho3 = 2` are a sensitivity check inside the same shards. They are not a second census.
 
-After that cell, one bounded extension was executed: `experiments/specs/generation-003b.json`, singletons at `K ≤ 3`. A constraint that reads both a pair and the triad has `K = 3`, so it is absent from the `K ≤ 2` grammar. The `K ≤ 3` pair combinations are 288,420 labelled and 50,365 canonical structurally-simple sets. The triple combinations are 72,874,120 labelled. Neither was executed. The reason is in the Generation 3 report. `N = 4` was not executed.
+After that cell, one bounded extension was executed: `experiments/specs/generation-003b.json`, singletons at `K ≤ 3`. A constraint that reads both a pair and the triad has `K = 3`, so it is absent from the `K ≤ 2` grammar. The `K ≤ 3` pair combinations are 288,420 labelled and 50,365 canonical structurally-simple sets. The triple combinations are 72,874,120 labelled. Neither was executed. The reason is in the Generation 3 report. At the close of Generation 3, `N = 4` had not been executed.
+
+## Generation 3c — two clocks on the Generation 3 kernels
+
+Specification: `experiments/specs/generation-003c.json`. Analysis `memory-clock-reanalysis`. Same cell as Generation 3: `N = 3`, `O = 3`, `K ≤ 2`, cardinalities `{1, 2}`, independent hypergraph. This is a reanalysis. It does not replace Generation 3 or Generation 3b, and it does not edit their reports.
+
+The two clocks are full-event-clock memory and pair-event-epoch memory. Alphabet sensitivity was not part of this reanalysis. `rho3 = 1/2` and `rho3 = 2` are recomputed inside the same shards for the clock statuses, the pair-jump boolean, and the triad-rate boolean.
+
+## Generation 4 — N=4 singleton reconfiguration
+
+Specification: `experiments/specs/generation-004.json`.
+
+```text
+E(N=4, A≤4, O=3, G=0, S=0, H=0, K≤2, L=0, semantics=hypergraph, W=W4)
+  cardinality {1}
+```
+
+Independent hypergraph. Four triadic bits, not one, and not a popcount. `K ≤ 1` is the subset of this cell that cannot express a triadic condition on a pairwise action. Cardinality 2 was counted and not executed: 85,175 canonical structurally-simple pairs. The one-step same-edge-count flux ranking is part of the specification and stays in the record. Simplicial semantics stay in `docs/simplicial-design.md`.
+
+The Generation 4 report recommends a later targeted cardinality-2 grid and does not execute it. `H`, `S`, `G`, and `L` stay 0.
 
 ## Later
 
