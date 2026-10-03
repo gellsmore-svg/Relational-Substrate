@@ -1,0 +1,16 @@
+body { font-family: Georgia, "DejaVu Serif", serif; line-height: 1.5; }
+h1 { font-size: 1.6em; margin-top: 1.2em; text-align: left; }
+h2 { font-size: 1.2em; margin-top: 1.4em; }
+p { margin: 0 0 0.8em 0; text-align: left; }
+blockquote { margin: 1em 1.5em; padding-left: 0.8em; border-left: 2px solid #b08a3e; }
+blockquote p { margin-bottom: 0.3em; }
+span.scripture { font-style: normal; }
+blockquote em { font-size: 0.9em; color: #5a4416; }
+table { border-collapse: collapse; margin: 1em 0; font-size: 0.9em; }
+th, td { border: 1px solid #999; padding: 0.3em 0.5em; vertical-align: top; }
+pre, code { font-family: "DejaVu Sans Mono", monospace; font-size: 0.85em; }
+pre { white-space: pre-wrap; background: #f5f2ea; padding: 0.6em; }
+img { max-width: 100%; }
+div.figure, figure { margin: 1.2em 0; text-align: center; }
+p.caption, figcaption { font-size: 0.85em; font-style: italic; text-align: left; }
+.backcover img { width: 100%; }

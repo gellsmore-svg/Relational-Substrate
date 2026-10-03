@@ -25,6 +25,7 @@
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "books:epub": "bash scripts/build-epubs.sh",
+    "books:epub:v2": "bash scripts/build-epubs.sh v2",
     "test": "npm run reports && npm run build",
     "test:visual": "npm run verify",
     "preview": "vite preview --host 0.0.0.0",

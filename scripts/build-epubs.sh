@@ -50,6 +50,41 @@ build_book() {
   epubcheck "$output"
 }
 
+build_second_edition() {
+  local output="$output_dir/coherent-biblical-ontology-second-edition.epub"
+
+  python3 books/v2/tools/assemble_manuscript.py --check || {
+    printf '%s\n' 'The second-edition manuscript is out of date: run python3 books/v2/tools/assemble_manuscript.py' >&2
+    exit 1
+  }
+
+  pandoc books/coherent-biblical-ontology-second-edition.md books/v2/epub-back-cover.md \
+    --to=epub2 \
+    --toc \
+    --toc-depth=1 \
+    --split-level=1 \
+    --resource-path=books \
+    --epub-cover-image=books/v2/covers/front-cover.png \
+    --css=books/v2/epub.css \
+    --lua-filter scripts/epub-v2.lua \
+    --metadata 'title=Coherent Biblical Ontology' \
+    --metadata 'subtitle=Second Edition' \
+    --metadata "author=$author" \
+    --metadata 'lang=en-GB' \
+    --metadata "rights=$rights" \
+    --metadata 'identifier=https://github.com/gellsmore-svg/Relational-Substrate#coherent-biblical-ontology-second-edition' \
+    --metadata 'date=2026-10' \
+    --metadata 'description=A Scripture-first account of a relational creation: physical order, life, persons, corruption and restoration.' \
+    --output "$output"
+
+  epubcheck "$output"
+}
+
+if [[ "${1:-all}" == 'v2' ]]; then
+  build_second_edition
+  exit 0
+fi
+
 build_book \
   books/relational-substrate.md \
   "$output_dir/relational-substrate.epub" \
@@ -65,3 +100,5 @@ build_book \
   'https://github.com/gellsmore-svg/Relational-Substrate#coherent-biblical-ontology' \
   1 \
   false
+
+build_second_edition

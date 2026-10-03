@@ -1,0 +1,4568 @@
+{
+ "version": "2.0",
+ "generated_by": "books/v2/tools/build_concept_graph.py",
+ "edge_types": [
+  "ANALOGOUS_TO",
+  "CAN_HIDE",
+  "CAN_REVEAL",
+  "CARRIES",
+  "CONSEQUENTIAL_FOR",
+  "CONSTRAINS",
+  "DISTINGUISHES",
+  "EVIDENCED_BY",
+  "EXPLAINS",
+  "GENERALISES",
+  "NOT_ESTABLISHED_BY",
+  "NOT_IDENTICAL_TO",
+  "PRESERVES",
+  "QUALIFIES",
+  "REQUIRES",
+  "SCRIPTURALLY_BOUNDED_BY",
+  "SPECIALISES",
+  "SUPERSEDES",
+  "SUPPORTS"
+ ],
+ "nodes": [
+  {
+   "id": "scripture",
+   "term": "Scripture as governing frame",
+   "definition": "Scripture is received as truthful revelation and bounds what the ontology may claim; interpretation remains corrigible.",
+   "epistemic_category": "scriptural commitment",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [],
+   "dependents": [
+    "creation-real",
+    "creator-creature"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 1",
+   "reactivation_points": [
+    "Ch 2",
+    "Ch 9",
+    "Ch 14"
+   ],
+   "example_needed": "Genesis 1 read as ontology, not a journal article",
+   "common_misunderstanding": "that Scripture supplies technical physics",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 2,
+   "simultaneously_interacting_concepts": 1,
+   "decomposable": false,
+   "context_load_hint": 5,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 1,
+    "transitive_dependents": 62,
+    "betweenness": 0.0251,
+    "cross_domain_reach": 2,
+    "rank_sum": 116,
+    "rank": 18
+   }
+  },
+  {
+   "id": "creator-creature",
+   "term": "Creator/creature distinction",
+   "definition": "God is uncreated and self-existent; everything else is created, dependent and not divine.",
+   "epistemic_category": "theological claim",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "scripture"
+   ],
+   "dependents": [
+    "category",
+    "purpose-upstream",
+    "substrate"
+   ],
+   "cross_domain_relations": [
+    "substrate"
+   ],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-ps100",
+    "S-rom120"
+   ],
+   "intended_first_introduction": "Ch 1",
+   "reactivation_points": [
+    "Ch 3",
+    "Ch 4",
+    "Ch 9",
+    "Ch 14",
+    "Ch 15"
+   ],
+   "example_needed": "Psalm 100:3; Romans 1:25",
+   "common_misunderstanding": "that the substrate is part of God",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 7,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 2,
+    "transitive_dependents": 59,
+    "betweenness": 0.0326,
+    "cross_domain_reach": 2,
+    "rank_sum": 106,
+    "rank": 15
+   }
+  },
+  {
+   "id": "creation-real",
+   "term": "Creation is real from the beginning",
+   "definition": "Genesis 1:1 is real instantiation; what follows is formation within created reality.",
+   "epistemic_category": "scriptural commitment",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "scripture"
+   ],
+   "dependents": [
+    "darkness",
+    "runtime"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-gen1"
+   ],
+   "intended_first_introduction": "Ch 1",
+   "reactivation_points": [
+    "Ch 3"
+   ],
+   "example_needed": "earth, waters and darkness present before light",
+   "common_misunderstanding": "that darkness means non-being",
+   "conceptual_difficulty": 1,
+   "abstraction_level": 2,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 5,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 2,
+    "transitive_dependents": 6,
+    "betweenness": 0.0257,
+    "cross_domain_reach": 2,
+    "rank_sum": 139,
+    "rank": 32
+   }
+  },
+  {
+   "id": "darkness",
+   "term": "Darkness as created condition",
+   "definition": "Genesis 1 darkness is a real, unmanifested condition of creation, not nothing and not evil.",
+   "epistemic_category": "theological inference",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "creation-real"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-gen1"
+   ],
+   "intended_first_introduction": "Ch 1",
+   "reactivation_points": [
+    "Ch 6"
+   ],
+   "example_needed": "a silent string under tension",
+   "common_misunderstanding": "moral darkness read back into Genesis 1",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 7,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 3,
+    "transitive_dependents": 0,
+    "betweenness": 0.0,
+    "cross_domain_reach": 1,
+    "rank_sum": 232,
+    "rank": 73
+   }
+  },
+  {
+   "id": "description",
+   "term": "Description",
+   "definition": "Observation, measurement, mathematical representation and prediction of how things behave.",
+   "epistemic_category": "philosophical claim",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [],
+   "dependents": [
+    "desc-not-ont",
+    "empirical-constraint",
+    "ontology"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 8"
+   ],
+   "example_needed": "an equation predicting an orbit",
+   "common_misunderstanding": "that description is trivial",
+   "conceptual_difficulty": 1,
+   "abstraction_level": 2,
+   "simultaneously_interacting_concepts": 1,
+   "decomposable": false,
+   "context_load_hint": 4,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 1,
+    "transitive_dependents": 65,
+    "betweenness": 0.0087,
+    "cross_domain_reach": 1,
+    "rank_sum": 169,
+    "rank": 49
+   }
+  },
+  {
+   "id": "ontology",
+   "term": "Ontology",
+   "definition": "The account of what must be there for described behaviour to be possible.",
+   "epistemic_category": "philosophical claim",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "description"
+   ],
+   "dependents": [
+    "assumptions",
+    "desc-not-ont"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 8"
+   ],
+   "example_needed": "asking what a field is, not only how it behaves",
+   "common_misunderstanding": "ontology as mere speculation",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 8,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 2,
+    "transitive_dependents": 63,
+    "betweenness": 0.0031,
+    "cross_domain_reach": 1,
+    "rank_sum": 175,
+    "rank": 53
+   }
+  },
+  {
+   "id": "desc-not-ont",
+   "term": "Description is not ontology",
+   "definition": "Predictive and mathematical success does not by itself settle what kind of reality is described.",
+   "epistemic_category": "philosophical claim",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "description",
+    "ontology"
+   ],
+   "dependents": [
+    "epistemic-levels",
+    "global-coherence",
+    "mathematics",
+    "not-proof"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-prov252"
+   ],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 8",
+    "Ch 9"
+   ],
+   "example_needed": "two interpretations of one quantum formalism",
+   "common_misunderstanding": "that this dismisses science",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": true,
+   "context_load_hint": 10,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 3,
+    "transitive_dependents": 5,
+    "betweenness": 0.0615,
+    "cross_domain_reach": 2,
+    "rank_sum": 122,
+    "rank": 23
+   }
+  },
+  {
+   "id": "assumptions",
+   "term": "Metaphysical assumptions are always present",
+   "definition": "Every ontology, scientific or theological, starts from assumptions that should be made visible.",
+   "epistemic_category": "philosophical claim",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "ontology"
+   ],
+   "dependents": [
+    "epistemic-levels",
+    "object-first"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 3",
+    "Ch 9"
+   ],
+   "example_needed": "methodological naturalism as a choice",
+   "common_misunderstanding": "that naming assumptions is relativism",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 7,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 3,
+    "transitive_dependents": 59,
+    "betweenness": 0.0049,
+    "cross_domain_reach": 2,
+    "rank_sum": 135,
+    "rank": 29
+   }
+  },
+  {
+   "id": "epistemic-levels",
+   "term": "Levels of claim",
+   "definition": "Observation, mathematical description, inference, model, interpretation, theology, Scripture and RS hypothesis are different kinds of claim.",
+   "epistemic_category": "methodological",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "assumptions",
+    "desc-not-ont"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 8",
+    "Ch 15"
+   ],
+   "example_needed": "a measured half-life versus its interpretation",
+   "common_misunderstanding": "that labelling claims weakens them",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": true,
+   "context_load_hint": 8,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 4,
+    "transitive_dependents": 0,
+    "betweenness": 0.0021,
+    "cross_domain_reach": 1,
+    "rank_sum": 228,
+    "rank": 72
+   }
+  },
+  {
+   "id": "coherence",
+   "term": "Coherence",
+   "definition": "Claims fitting together: non-contradiction is necessary, but coherence also requires real connection, faithful translation across boundaries and preserved distinctions.",
+   "epistemic_category": "philosophical claim",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [],
+   "dependents": [
+    "connectivity",
+    "knowing-coherence",
+    "local-coherence"
+   ],
+   "cross_domain_relations": [
+    "coherence-not-fidelity"
+   ],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 9"
+   ],
+   "example_needed": "a story whose parts do not contradict",
+   "common_misunderstanding": "coherence as mere consistency",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 1,
+   "decomposable": false,
+   "context_load_hint": 6,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 1,
+    "transitive_dependents": 10,
+    "betweenness": 0.0193,
+    "cross_domain_reach": 1,
+    "rank_sum": 183,
+    "rank": 56
+   }
+  },
+  {
+   "id": "local-coherence",
+   "term": "Local coherence",
+   "definition": "A model explains a bounded phenomenon internally.",
+   "epistemic_category": "philosophical claim",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "coherence"
+   ],
+   "dependents": [
+    "regional-coherence"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 9"
+   ],
+   "example_needed": "an equation fitting one regime",
+   "common_misunderstanding": "local success as truth",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 7,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 2,
+    "transitive_dependents": 4,
+    "betweenness": 0.0052,
+    "cross_domain_reach": 1,
+    "rank_sum": 210,
+    "rank": 63
+   }
+  },
+  {
+   "id": "regional-coherence",
+   "term": "Regional coherence",
+   "definition": "Several adjacent domains integrate (chemistry with physics).",
+   "epistemic_category": "philosophical claim",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "local-coherence"
+   ],
+   "dependents": [
+    "global-coherence"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 9"
+   ],
+   "example_needed": "molecular biology joining chemistry",
+   "common_misunderstanding": "",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 7,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 3,
+    "transitive_dependents": 3,
+    "betweenness": 0.0,
+    "cross_domain_reach": 1,
+    "rank_sum": 227,
+    "rank": 71
+   }
+  },
+  {
+   "id": "global-coherence",
+   "term": "Global coherence",
+   "definition": "The whole account of reality — physics, life, persons, morality, history, Scripture — is connected, translates faithfully across its boundaries, keeps its meaning through layers and cycles, and preserves its distinctions.",
+   "epistemic_category": "methodological thesis",
+   "research_maturity": "working",
+   "domain": "method",
+   "prerequisites": [
+    "desc-not-ont",
+    "empirical-constraint",
+    "propagation-cycle",
+    "regional-coherence"
+   ],
+   "dependents": [
+    "bridge",
+    "not-proof"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 9",
+    "Ch 15"
+   ],
+   "example_needed": "a worldview that explains physics but makes responsibility unintelligible fails globally",
+   "common_misunderstanding": "that it overrides evidence",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 5,
+   "decomposable": true,
+   "context_load_hint": 14,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 6,
+    "transitive_dependents": 2,
+    "betweenness": 0.1617,
+    "cross_domain_reach": 3,
+    "rank_sum": 102,
+    "rank": 13
+   }
+  },
+  {
+   "id": "knowing-coherence",
+   "term": "Human knowing is coherence-based",
+   "definition": "Ordinary knowledge assembles the most coherent account from incomplete evidence under uncertainty.",
+   "epistemic_category": "philosophical claim (supported by cognitive science)",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "coherence"
+   ],
+   "dependents": [
+    "coherence-not-fidelity"
+   ],
+   "cross_domain_relations": [
+    "constrained-stochasticity"
+   ],
+   "evidence": [
+    "E-cogsci"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 9"
+   ],
+   "example_needed": "a doctor's diagnosis; a jury's verdict",
+   "common_misunderstanding": "that the brain runs an RS algorithm",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 8,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 2,
+    "transitive_dependents": 1,
+    "betweenness": 0.0695,
+    "cross_domain_reach": 2,
+    "rank_sum": 150,
+    "rank": 34
+   }
+  },
+  {
+   "id": "coherence-not-fidelity",
+   "term": "Coherence is not fidelity",
+   "definition": "A coherent account can still be false; agreement can harden an early error (false attractor).",
+   "epistemic_category": "philosophical claim",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "knowing-coherence"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [
+    "coherence"
+   ],
+   "evidence": [
+    "E-multipath"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 9",
+   "reactivation_points": [
+    "Ch 15"
+   ],
+   "example_needed": "a confident consensus built on one mistaken premise",
+   "common_misunderstanding": "that coherence guarantees truth",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 3,
+    "transitive_dependents": 0,
+    "betweenness": 0.0045,
+    "cross_domain_reach": 1,
+    "rank_sum": 232,
+    "rank": 74
+   }
+  },
+  {
+   "id": "empirical-constraint",
+   "term": "Observation constrains ontology",
+   "definition": "Robust observation and logic rule out incompatible ontologies even when they cannot display the right one.",
+   "epistemic_category": "methodological",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "description"
+   ],
+   "dependents": [
+    "global-coherence",
+    "not-proof"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 8",
+    "Ch 9"
+   ],
+   "example_needed": "a model contradicting measured light speed is ruled out",
+   "common_misunderstanding": "that coherence ignores evidence",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 7,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 2,
+    "transitive_dependents": 3,
+    "betweenness": 0.0428,
+    "cross_domain_reach": 2,
+    "rank_sum": 151,
+    "rank": 35
+   }
+  },
+  {
+   "id": "connectivity",
+   "term": "Connectivity",
+   "definition": "Domains genuinely connected by intelligible transitions, not merely placed side by side.",
+   "epistemic_category": "methodological (author-supplied)",
+   "research_maturity": "working",
+   "domain": "method",
+   "prerequisites": [
+    "coherence"
+   ],
+   "dependents": [
+    "boundary-validity"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 9"
+   ],
+   "example_needed": "physics to chemistry to life",
+   "common_misunderstanding": "connection as mere juxtaposition",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 2,
+    "transitive_dependents": 5,
+    "betweenness": 0.0053,
+    "cross_domain_reach": 1,
+    "rank_sum": 212,
+    "rank": 64
+   }
+  },
+  {
+   "id": "boundary-validity",
+   "term": "Boundary validity",
+   "definition": "A concept crossing a domain boundary keeps what is relevant without collapsing categories.",
+   "epistemic_category": "methodological (author-supplied)",
+   "research_maturity": "working",
+   "domain": "method",
+   "prerequisites": [
+    "category",
+    "connectivity"
+   ],
+   "dependents": [
+    "propagation-cycle"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 9",
+    "Ch 11",
+    "Ch 12"
+   ],
+   "example_needed": "physical consequence to moral responsibility",
+   "common_misunderstanding": "translation as relabelling",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 4,
+    "transitive_dependents": 4,
+    "betweenness": 0.0244,
+    "cross_domain_reach": 1,
+    "rank_sum": 181,
+    "rank": 55
+   }
+  },
+  {
+   "id": "propagation-cycle",
+   "term": "Propagation stability and cycle consistency",
+   "definition": "A claim keeps its meaning through explanatory layers, and returns materially the same when translated round a cycle of domains.",
+   "epistemic_category": "methodological (author-supplied)",
+   "research_maturity": "working",
+   "domain": "method",
+   "prerequisites": [
+    "boundary-validity"
+   ],
+   "dependents": [
+    "global-coherence"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-conv"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 9",
+    "Ch 15"
+   ],
+   "example_needed": "identity: physical → organism → person → body",
+   "common_misunderstanding": "that plausible paragraphs add up to coherence",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 5,
+    "transitive_dependents": 3,
+    "betweenness": 0.014,
+    "cross_domain_reach": 1,
+    "rank_sum": 194,
+    "rank": 59
+   }
+  },
+  {
+   "id": "not-proof",
+   "term": "Not an empirical proof",
+   "definition": "The deep ontology behind observation is not directly measurable; RS is a coherence exercise constrained by observation, not a proof.",
+   "epistemic_category": "methodological",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "desc-not-ont",
+    "empirical-constraint",
+    "global-coherence"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 9",
+    "Ch 15"
+   ],
+   "example_needed": "no instrument displays 'relation as such'",
+   "common_misunderstanding": "that unprovable means unconstrained",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 4,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 7,
+    "transitive_dependents": 0,
+    "betweenness": 0.0025,
+    "cross_domain_reach": 1,
+    "rank_sum": 224,
+    "rank": 69
+   }
+  },
+  {
+   "id": "analogy-vs-identity",
+   "term": "Structural analogy is not ontological identity",
+   "definition": "Shared relational form across domains does not make the domains the same kind of thing.",
+   "epistemic_category": "philosophical claim",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "category"
+   ],
+   "dependents": [
+    "bridge"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 1",
+   "reactivation_points": [
+    "Ch 7",
+    "Ch 9",
+    "Ch 11",
+    "Ch 13"
+   ],
+   "example_needed": "a letter and a nerve impulse both transmit; neither is the other",
+   "common_misunderstanding": "that a shared grammar means a shared substance",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 4,
+    "transitive_dependents": 1,
+    "betweenness": 0.0108,
+    "cross_domain_reach": 2,
+    "rank_sum": 172,
+    "rank": 51
+   }
+  },
+  {
+   "id": "category",
+   "term": "Ontological categories",
+   "definition": "Material, biological, personal, spiritual and divine realities are genuinely distinct kinds.",
+   "epistemic_category": "philosophical/theological claim",
+   "research_maturity": "settled",
+   "domain": "method",
+   "prerequisites": [
+    "creator-creature"
+   ],
+   "dependents": [
+    "analogy-vs-identity",
+    "boundary-validity",
+    "consciousness",
+    "personhood"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 1",
+   "reactivation_points": [
+    "Ch 9",
+    "Ch 11",
+    "Ch 15"
+   ],
+   "example_needed": "a body and a person",
+   "common_misunderstanding": "that relation erases category",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": true,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 3,
+    "transitive_dependents": 16,
+    "betweenness": 0.0721,
+    "cross_domain_reach": 2,
+    "rank_sum": 114,
+    "rank": 17
+   }
+  },
+  {
+   "id": "relation",
+   "term": "Relation",
+   "definition": "A real standing-between of things in which each conditions the other; interactional relation holds between complete things, constitutive relation partly makes things what they are — RS proposes the latter at the base.",
+   "epistemic_category": "ontological interpretation",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "object-first"
+   ],
+   "dependents": [
+    "bridge",
+    "coordination",
+    "difference",
+    "mediation",
+    "substrate"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-relphys"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 3",
+   "reactivation_points": [
+    "Ch 7",
+    "Ch 9",
+    "Ch 11",
+    "Ch 15"
+   ],
+   "example_needed": "a knot exists only as the crossing of strands",
+   "common_misunderstanding": "relation as a mental association",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": true,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 5,
+    "transitive_dependents": 56,
+    "betweenness": 0.1579,
+    "cross_domain_reach": 3,
+    "rank_sum": 68,
+    "rank": 3
+   }
+  },
+  {
+   "id": "object-first",
+   "term": "Object-first picture",
+   "definition": "The assumption that reality is basically isolated objects in empty space with relations added afterwards.",
+   "epistemic_category": "philosophical claim",
+   "research_maturity": "settled",
+   "domain": "physical",
+   "prerequisites": [
+    "assumptions"
+   ],
+   "dependents": [
+    "relation"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 3",
+   "reactivation_points": [
+    "Ch 9"
+   ],
+   "example_needed": "billiard balls in a void",
+   "common_misunderstanding": "that rejecting it denies objects",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 7,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 4,
+    "transitive_dependents": 57,
+    "betweenness": 0.0236,
+    "cross_domain_reach": 2,
+    "rank_sum": 116,
+    "rank": 19
+   }
+  },
+  {
+   "id": "substrate",
+   "term": "Relational substrate",
+   "definition": "The proposed created relational order within which physical things are constituted and act; not matter, not a field, not God.",
+   "epistemic_category": "RS working hypothesis",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "creator-creature",
+    "relation"
+   ],
+   "dependents": [
+    "possibility",
+    "runtime"
+   ],
+   "cross_domain_relations": [
+    "creator-creature",
+    "soul-spirit"
+   ],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-col1",
+    "S-heb113"
+   ],
+   "intended_first_introduction": "Ch 3",
+   "reactivation_points": [
+    "Ch 4",
+    "Ch 9",
+    "Ch 15"
+   ],
+   "example_needed": "the order of a language within which words have their sense",
+   "common_misunderstanding": "a hidden jelly or ether; a second world; a deity",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": true,
+   "context_load_hint": 12,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 6,
+    "transitive_dependents": 52,
+    "betweenness": 0.1597,
+    "cross_domain_reach": 3,
+    "rank_sum": 65,
+    "rank": 2
+   }
+  },
+  {
+   "id": "runtime",
+   "term": "Created runtime order",
+   "definition": "Creation as operating, distinguished from its origin; the domain of ordinary physical process.",
+   "epistemic_category": "ontological interpretation",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "creation-real",
+    "substrate"
+   ],
+   "dependents": [
+    "non-agentic"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-heb13"
+   ],
+   "intended_first_introduction": "Ch 3",
+   "reactivation_points": [
+    "Ch 4",
+    "Ch 14"
+   ],
+   "example_needed": "the difference between composing and performing",
+   "common_misunderstanding": "that creation is software",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 10,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 7,
+    "transitive_dependents": 4,
+    "betweenness": 0.0335,
+    "cross_domain_reach": 2,
+    "rank_sum": 129,
+    "rank": 25
+   }
+  },
+  {
+   "id": "mediation",
+   "term": "Mediated influence",
+   "definition": "Nothing affects anything across a gap of non-relation; influence passes through relational continuity.",
+   "epistemic_category": "RS working hypothesis",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "relation"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 3",
+   "reactivation_points": [
+    "Ch 7"
+   ],
+   "example_needed": "a wave across a pond",
+   "common_misunderstanding": "that this denies fields or long-range effects",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 6,
+    "transitive_dependents": 0,
+    "betweenness": 0.0057,
+    "cross_domain_reach": 1,
+    "rank_sum": 223,
+    "rank": 68
+   }
+  },
+  {
+   "id": "possibility",
+   "term": "Constrained possibility (T0)",
+   "definition": "What creation is capable of: the space of admissible configurations and transitions.",
+   "epistemic_category": "RS working hypothesis",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "substrate"
+   ],
+   "dependents": [
+    "actualisation",
+    "admissibility",
+    "purpose-upstream"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 4",
+   "reactivation_points": [
+    "Ch 5",
+    "Ch 12"
+   ],
+   "example_needed": "the legal moves of chess, not a game",
+   "common_misunderstanding": "that possibility is a hidden stuff",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": true,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 7,
+    "transitive_dependents": 50,
+    "betweenness": 0.0559,
+    "cross_domain_reach": 1,
+    "rank_sum": 132,
+    "rank": 26
+   }
+  },
+  {
+   "id": "admissibility",
+   "term": "Admissibility",
+   "definition": "Whether a transition is possible at all — a hard boundary of the possible.",
+   "epistemic_category": "RS experimental result (formal) + interpretation",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "possibility"
+   ],
+   "dependents": [
+    "compatibility",
+    "constrained-stochasticity",
+    "constraint-generative",
+    "discriminability",
+    "memory-configuration",
+    "tendency",
+    "three-admissibility"
+   ],
+   "cross_domain_relations": [
+    "alignment"
+   ],
+   "evidence": [
+    "E-cl",
+    "E-cl2"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 4",
+   "reactivation_points": [
+    "Ch 5",
+    "Ch 7",
+    "Ch 12"
+   ],
+   "example_needed": "a door that exists versus one that does not",
+   "common_misunderstanding": "admissible as morally permitted",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 8,
+    "transitive_dependents": 44,
+    "betweenness": 0.1323,
+    "cross_domain_reach": 2,
+    "rank_sum": 78,
+    "rank": 8
+   }
+  },
+  {
+   "id": "tendency",
+   "term": "Tendency",
+   "definition": "How likely an admissible transition is relative to others; a weighting, not a permission.",
+   "epistemic_category": "RS experimental result (formal)",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "admissibility"
+   ],
+   "dependents": [
+    "stochasticity"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-cl"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 4",
+   "reactivation_points": [
+    "Ch 5"
+   ],
+   "example_needed": "a well-worn path",
+   "common_misunderstanding": "tendency as necessity",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 9,
+    "transitive_dependents": 40,
+    "betweenness": 0.0041,
+    "cross_domain_reach": 1,
+    "rank_sum": 164,
+    "rank": 45
+   }
+  },
+  {
+   "id": "actualisation",
+   "term": "Actualisation (T1)",
+   "definition": "The coming-to-be of one admissible configuration among the possible.",
+   "epistemic_category": "RS working hypothesis",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "possibility"
+   ],
+   "dependents": [
+    "constrained-stochasticity",
+    "time"
+   ],
+   "cross_domain_relations": [
+    "divine-action"
+   ],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 4",
+   "reactivation_points": [
+    "Ch 5",
+    "Ch 6"
+   ],
+   "example_needed": "one game actually played",
+   "common_misunderstanding": "actualisation as creation from nothing",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 8,
+    "transitive_dependents": 38,
+    "betweenness": 0.0485,
+    "cross_domain_reach": 2,
+    "rank_sum": 97,
+    "rank": 11
+   }
+  },
+  {
+   "id": "stochasticity",
+   "term": "Stochasticity",
+   "definition": "Description by probabilities over defined possibilities; neutral between epistemic probability and ontic indeterminacy; not lawlessness.",
+   "epistemic_category": "mathematical / scientific consensus",
+   "research_maturity": "settled",
+   "domain": "physical",
+   "prerequisites": [
+    "tendency"
+   ],
+   "dependents": [
+    "aggregation",
+    "constrained-stochasticity",
+    "joint-process"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 5",
+   "reactivation_points": [
+    "Ch 8"
+   ],
+   "example_needed": "dice: each roll open, the distribution fixed",
+   "common_misunderstanding": "stochastic = random = chaotic",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": true,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 10,
+    "transitive_dependents": 39,
+    "betweenness": 0.0103,
+    "cross_domain_reach": 1,
+    "rank_sum": 153,
+    "rank": 37
+   }
+  },
+  {
+   "id": "constrained-stochasticity",
+   "term": "Constrained stochastic actualisation",
+   "definition": "RS hypothesis that actualisation is ontically stochastic: genuinely open among admissible options until it occurs, shaped by constraint.",
+   "epistemic_category": "RS working hypothesis",
+   "research_maturity": "frontier",
+   "domain": "physical",
+   "prerequisites": [
+    "actualisation",
+    "admissibility",
+    "stochasticity"
+   ],
+   "dependents": [
+    "coordination",
+    "identity-invariant",
+    "regularity"
+   ],
+   "cross_domain_relations": [
+    "knowing-coherence"
+   ],
+   "evidence": [
+    "E-qm"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 5",
+   "reactivation_points": [
+    "Ch 6",
+    "Ch 8",
+    "Ch 9"
+   ],
+   "example_needed": "radioactive decay: open timing, exact half-life",
+   "common_misunderstanding": "that RS proves indeterminism",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 4,
+   "decomposable": true,
+   "context_load_hint": 13,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 11,
+    "transitive_dependents": 36,
+    "betweenness": 0.1431,
+    "cross_domain_reach": 2,
+    "rank_sum": 71,
+    "rank": 4
+   }
+  },
+  {
+   "id": "identity-invariant",
+   "term": "Invariant",
+   "definition": "What a class of admissible changes leaves unchanged; one carrier or certificate of identity, not necessarily all of it.",
+   "epistemic_category": "mathematical + RS model result",
+   "research_maturity": "settled",
+   "domain": "physical",
+   "prerequisites": [
+    "constrained-stochasticity"
+   ],
+   "dependents": [
+    "equivalence",
+    "information-loss",
+    "projection",
+    "regularity"
+   ],
+   "cross_domain_relations": [
+    "resurrection"
+   ],
+   "evidence": [
+    "E-noether",
+    "E-sc",
+    "E-topo"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 7",
+    "Ch 11",
+    "Ch 14"
+   ],
+   "example_needed": "a number reached by 4,000 different paths; a knot's type",
+   "common_misunderstanding": "identity = a conserved number",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 12,
+    "transitive_dependents": 32,
+    "betweenness": 0.1159,
+    "cross_domain_reach": 2,
+    "rank_sum": 75,
+    "rank": 7
+   }
+  },
+  {
+   "id": "equivalence",
+   "term": "Sameness as relational equivalence",
+   "definition": "Sameness of kind or state is preservation of the relevant relational equivalence class across admissible change, relative to what reachable future consequences can discriminate.",
+   "epistemic_category": "ontological interpretation (author-supplied research) + RS model support",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "discriminability",
+    "identity-invariant",
+    "projection"
+   ],
+   "dependents": [
+    "carry",
+    "individual-continuity",
+    "persistence",
+    "provenance",
+    "recovery-kinds",
+    "resurrection"
+   ],
+   "cross_domain_relations": [
+    "individual-continuity"
+   ],
+   "evidence": [
+    "E-conv"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 7",
+    "Ch 10",
+    "Ch 11",
+    "Ch 14"
+   ],
+   "example_needed": "two coins that look alike but one is counterfeit",
+   "common_misunderstanding": "that 'same' is purely observer-relative",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 4,
+   "decomposable": true,
+   "context_load_hint": 13,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 14,
+    "transitive_dependents": 27,
+    "betweenness": 0.0656,
+    "cross_domain_reach": 2,
+    "rank_sum": 80,
+    "rank": 9
+   }
+  },
+  {
+   "id": "recovery-kinds",
+   "term": "Kinds of recovery",
+   "definition": "Functional, structural, equivalence-class and lineage-specific recovery are distinct; reconstruction is not automatically restoration of identity.",
+   "epistemic_category": "ontological distinction (author-supplied research, negative results)",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "equivalence",
+    "individual-continuity",
+    "provenance"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-conv"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 10",
+    "Ch 14"
+   ],
+   "example_needed": "a rebuilt organisation without its lineage",
+   "common_misunderstanding": "that working again means the same again",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 4,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 17,
+    "transitive_dependents": 0,
+    "betweenness": 0.0014,
+    "cross_domain_reach": 2,
+    "rank_sum": 166,
+    "rank": 47
+   }
+  },
+  {
+   "id": "individual-continuity",
+   "term": "Individual continuity",
+   "definition": "Being the same continuing individual, not merely an equivalent replacement; requires lineage and history beyond equivalence; open in RS research.",
+   "epistemic_category": "ontological distinction",
+   "research_maturity": "open",
+   "domain": "physical",
+   "prerequisites": [
+    "equivalence",
+    "provenance"
+   ],
+   "dependents": [
+    "recovery-kinds",
+    "resurrection"
+   ],
+   "cross_domain_relations": [
+    "equivalence"
+   ],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 11",
+    "Ch 14",
+    "Ch 15"
+   ],
+   "example_needed": "two coins from the same die",
+   "common_misunderstanding": "that equivalence settles individuality",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 16,
+    "transitive_dependents": 2,
+    "betweenness": 0.0004,
+    "cross_domain_reach": 2,
+    "rank_sum": 161,
+    "rank": 42
+   }
+  },
+  {
+   "id": "provenance",
+   "term": "Provenance",
+   "definition": "Past distinctions that survive in present relational structure; part of identity where consequential, safely ignored only where no reachable future can consume them.",
+   "epistemic_category": "ontological interpretation (author-supplied research)",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "equivalence"
+   ],
+   "dependents": [
+    "individual-continuity",
+    "memory-configuration",
+    "recovery-kinds"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-conv"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 7",
+    "Ch 10",
+    "Ch 13"
+   ],
+   "example_needed": "a bent paper clip; a forged signature's history",
+   "common_misunderstanding": "provenance as a separate record or memory substance",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 10,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 15,
+    "transitive_dependents": 4,
+    "betweenness": 0.0161,
+    "cross_domain_reach": 1,
+    "rank_sum": 160,
+    "rank": 39
+   }
+  },
+  {
+   "id": "discriminability",
+   "term": "Future discriminability",
+   "definition": "Whether any admissible future interaction could tell two states apart; the criterion for 'same' in the relevant domain.",
+   "epistemic_category": "ontological interpretation (author-supplied research)",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "admissibility"
+   ],
+   "dependents": [
+    "equivalence"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 7"
+   ],
+   "example_needed": "two keys alike until one is tried in the lock",
+   "common_misunderstanding": "that it means what a human happens to measure",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 9,
+    "transitive_dependents": 28,
+    "betweenness": 0.0119,
+    "cross_domain_reach": 1,
+    "rank_sum": 160,
+    "rank": 40
+   }
+  },
+  {
+   "id": "projection",
+   "term": "Projection and coarse-graining",
+   "definition": "A description that maps several distinct underlying states to one visible state; it can hide distinctions that later matter.",
+   "epistemic_category": "mathematical + RS model result (constraint lab G1b)",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "identity-invariant"
+   ],
+   "dependents": [
+    "equivalence"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-cl1b",
+    "E-cl3"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 8",
+    "Ch 9"
+   ],
+   "example_needed": "one family label hiding 1,042 distinct kernels",
+   "common_misunderstanding": "that equal descriptions mean equal things",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 13,
+    "transitive_dependents": 28,
+    "betweenness": 0.0023,
+    "cross_domain_reach": 1,
+    "rank_sum": 169,
+    "rank": 50
+   }
+  },
+  {
+   "id": "persistence",
+   "term": "Persistence",
+   "definition": "Continued re-actualisation within the same relevant equivalence class.",
+   "epistemic_category": "ontological interpretation",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "equivalence"
+   ],
+   "dependents": [
+    "carry",
+    "life",
+    "matter"
+   ],
+   "cross_domain_relations": [
+    "personhood",
+    "restoration"
+   ],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 7",
+    "Ch 10",
+    "Ch 11"
+   ],
+   "example_needed": "a flame maintaining itself",
+   "common_misunderstanding": "persistence as inertness",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 15,
+    "transitive_dependents": 22,
+    "betweenness": 0.1363,
+    "cross_domain_reach": 2,
+    "rank_sum": 72,
+    "rank": 6
+   }
+  },
+  {
+   "id": "information-loss",
+   "term": "Preservation is not reconstruction",
+   "definition": "Admissible change preserves an equivalence class, but destroyed distinctions are not recovered by conservation; recovery needs surviving information.",
+   "epistemic_category": "RS experimental result (model)",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "identity-invariant"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-sc"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 14"
+   ],
+   "example_needed": "an erased relation never repaired (0/1,800)",
+   "common_misunderstanding": "that identity is indestructible",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 8,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 13,
+    "transitive_dependents": 0,
+    "betweenness": 0.0024,
+    "cross_domain_reach": 1,
+    "rank_sum": 216,
+    "rank": 65
+   }
+  },
+  {
+   "id": "memory-configuration",
+   "term": "Memory as persisting configuration",
+   "definition": "Past distinctions embodied in present relations so that they alter future admissibility, tendency, correlation or response; no separate memory substance required.",
+   "epistemic_category": "RS working hypothesis",
+   "research_maturity": "frontier",
+   "domain": "physical",
+   "prerequisites": [
+    "admissibility",
+    "provenance"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-cl3",
+    "E-hysteresis",
+    "E-order"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 11",
+    "Ch 13"
+   ],
+   "example_needed": "metal fatigue depending on loading order",
+   "common_misunderstanding": "memory as stored pictures",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 10,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 16,
+    "transitive_dependents": 0,
+    "betweenness": 0.0142,
+    "cross_domain_reach": 1,
+    "rank_sum": 187,
+    "rank": 58
+   }
+  },
+  {
+   "id": "difference",
+   "term": "Source distinction",
+   "definition": "A distinguishable state or relation at a source that could make a difference to something else.",
+   "epistemic_category": "ontological interpretation",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "relation"
+   ],
+   "dependents": [
+    "transmit"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 7",
+   "reactivation_points": [
+    "Ch 9"
+   ],
+   "example_needed": "a dark mark on white paper",
+   "common_misunderstanding": "difference as subjective contrast",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 7,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 6,
+    "transitive_dependents": 14,
+    "betweenness": 0.0339,
+    "cross_domain_reach": 1,
+    "rank_sum": 163,
+    "rank": 44
+   }
+  },
+  {
+   "id": "transmit",
+   "term": "Transmit (relational availability)",
+   "definition": "A source distinction becomes able to have consequence beyond its locality; depletion of the source is one subcase, not the definition.",
+   "epistemic_category": "RS interpretive grammar",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "difference"
+   ],
+   "dependents": [
+    "carry",
+    "tcr"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 7",
+   "reactivation_points": [
+    "Ch 13"
+   ],
+   "example_needed": "a lighthouse; an atom emitting light; a spoken name",
+   "common_misunderstanding": "that the source must lose what it transmits",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 7,
+    "transitive_dependents": 13,
+    "betweenness": 0.0024,
+    "cross_domain_reach": 1,
+    "rank_sum": 201,
+    "rank": 61
+   }
+  },
+  {
+   "id": "carry",
+   "term": "Carry (recoverable constrained continuity)",
+   "definition": "The relevant distinction stays recoverably constrained across one or more, possibly changing, carrier realisations.",
+   "epistemic_category": "RS interpretive grammar (implemented in model)",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "equivalence",
+    "persistence",
+    "transmit"
+   ],
+   "dependents": [
+    "endogenous-carrier",
+    "receive",
+    "substitutability",
+    "tcr"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 7",
+   "reactivation_points": [
+    "Ch 13"
+   ],
+   "example_needed": "a relay message; a certificate replaced at each step",
+   "common_misunderstanding": "the carrier as a travelling thing",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 4,
+   "decomposable": true,
+   "context_load_hint": 13,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 16,
+    "transitive_dependents": 12,
+    "betweenness": 0.0928,
+    "cross_domain_reach": 1,
+    "rank_sum": 120,
+    "rank": 22
+   }
+  },
+  {
+   "id": "substitutability",
+   "term": "Carrier substitutability",
+   "definition": "The vehicle may change while the carried correlation is preserved.",
+   "epistemic_category": "RS experimental result (model) + interpretation",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "carry"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 7",
+   "reactivation_points": [
+    "Ch 10"
+   ],
+   "example_needed": "a wave moving through water whose molecules stay",
+   "common_misunderstanding": "nothing persists",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 17,
+    "transitive_dependents": 0,
+    "betweenness": 0.0,
+    "cross_domain_reach": 1,
+    "rank_sum": 218,
+    "rank": 67
+   }
+  },
+  {
+   "id": "receive",
+   "term": "Receive (consequential reception)",
+   "definition": "A compatible receiver is changed in a way that depends on the carried distinction; arrival is not reception, and once-only is a property of some receivers.",
+   "epistemic_category": "RS interpretive grammar",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "carry",
+    "compatibility"
+   ],
+   "dependents": [
+    "tcr"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 7",
+   "reactivation_points": [
+    "Ch 13"
+   ],
+   "example_needed": "a letter read and acted on",
+   "common_misunderstanding": "reception as mere arrival; reception as necessarily once-only",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 10,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 17,
+    "transitive_dependents": 9,
+    "betweenness": 0.0266,
+    "cross_domain_reach": 1,
+    "rank_sum": 138,
+    "rank": 31
+   }
+  },
+  {
+   "id": "endogenous-carrier",
+   "term": "Endogenous carriers (open)",
+   "definition": "Whether created order generates carrier and lineage architecture from minimal relations; not demonstrated — models used designed protocols.",
+   "epistemic_category": "open question",
+   "research_maturity": "open",
+   "domain": "physical",
+   "prerequisites": [
+    "carry"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 7",
+   "reactivation_points": [],
+   "example_needed": "the calculator's designed certificate",
+   "common_misunderstanding": "that RS has shown carriers emerge by themselves",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 17,
+    "transitive_dependents": 0,
+    "betweenness": 0.0,
+    "cross_domain_reach": 1,
+    "rank_sum": 224,
+    "rank": 70
+   }
+  },
+  {
+   "id": "compatibility",
+   "term": "Receiver compatibility",
+   "definition": "What a receiver can register and how it responds (once, repeatedly, cumulatively, idempotently) is set by its own admissibility.",
+   "epistemic_category": "ontological interpretation + RS model example",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "admissibility"
+   ],
+   "dependents": [
+    "receive"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 7",
+   "reactivation_points": [
+    "Ch 10",
+    "Ch 14"
+   ],
+   "example_needed": "the eye and radio waves; a thermostat; a ledger",
+   "common_misunderstanding": "that every receiver must count arrivals once",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 9,
+    "transitive_dependents": 10,
+    "betweenness": 0.0092,
+    "cross_domain_reach": 1,
+    "rank_sum": 184,
+    "rank": 57
+   }
+  },
+  {
+   "id": "tcr",
+   "term": "Transmit–Carry–Receive",
+   "definition": "The grammar by which a source distinction becomes consequential beyond its locality: relational availability, recoverable constrained carriage, compatible consequential reception.",
+   "epistemic_category": "RS interpretive grammar",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "carry",
+    "receive",
+    "transmit"
+   ],
+   "dependents": [
+    "bridge",
+    "corruption",
+    "life",
+    "nested-tcr"
+   ],
+   "cross_domain_relations": [
+    "corruption",
+    "life",
+    "soul-spirit"
+   ],
+   "evidence": [
+    "E-sc"
+   ],
+   "scripture_bounds": [
+    "S-isa55",
+    "S-rom10"
+   ],
+   "intended_first_introduction": "Ch 7",
+   "reactivation_points": [
+    "Ch 8",
+    "Ch 9",
+    "Ch 10",
+    "Ch 11",
+    "Ch 13",
+    "Ch 14",
+    "Ch 15"
+   ],
+   "example_needed": "seeing a stone in daylight",
+   "common_misunderstanding": "that soul or revelation is a physical signal",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 4,
+   "decomposable": true,
+   "context_load_hint": 13,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 18,
+    "transitive_dependents": 8,
+    "betweenness": 0.1283,
+    "cross_domain_reach": 2,
+    "rank_sum": 71,
+    "rank": 5
+   }
+  },
+  {
+   "id": "nested-tcr",
+   "term": "Nested and composed T-C-R",
+   "definition": "Transmissions compose in sequence and in parallel, and nest across scales.",
+   "epistemic_category": "RS working hypothesis",
+   "research_maturity": "frontier",
+   "domain": "physical",
+   "prerequisites": [
+    "tcr"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 7",
+   "reactivation_points": [
+    "Ch 9",
+    "Ch 10"
+   ],
+   "example_needed": "nerve impulse within perception within conversation",
+   "common_misunderstanding": "that everything is one signal",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": true,
+   "context_load_hint": 11,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 19,
+    "transitive_dependents": 0,
+    "betweenness": 0.0,
+    "cross_domain_reach": 1,
+    "rank_sum": 216,
+    "rank": 66
+   }
+  },
+  {
+   "id": "joint-process",
+   "term": "Marginals versus joint process",
+   "definition": "Equal chances for each event do not fix how events are related; the joint process, covariance and global dynamics can differ.",
+   "epistemic_category": "mathematical + author-supplied research",
+   "research_maturity": "settled",
+   "domain": "physical",
+   "prerequisites": [
+    "stochasticity"
+   ],
+   "dependents": [
+    "coordination"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-conv"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 8",
+   "reactivation_points": [
+    "Ch 9"
+   ],
+   "example_needed": "two crowds of coin-tossers, one independent, one in pairs",
+   "common_misunderstanding": "same odds, same behaviour",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 11,
+    "transitive_dependents": 6,
+    "betweenness": 0.003,
+    "cross_domain_reach": 1,
+    "rank_sum": 198,
+    "rank": 60
+   }
+  },
+  {
+   "id": "aggregation",
+   "term": "Aggregation",
+   "definition": "Many independent or weakly dependent chance events average into a stable mean (laws of large numbers).",
+   "epistemic_category": "scientific consensus / mathematical",
+   "research_maturity": "settled",
+   "domain": "physical",
+   "prerequisites": [
+    "stochasticity"
+   ],
+   "dependents": [
+    "layered-stability",
+    "regularity"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-statmech"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 8",
+   "reactivation_points": [
+    "Ch 9"
+   ],
+   "example_needed": "steady tyre pressure",
+   "common_misunderstanding": "that averaging needs coordination",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 7,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 11,
+    "transitive_dependents": 3,
+    "betweenness": 0.0058,
+    "cross_domain_reach": 1,
+    "rank_sum": 206,
+    "rank": 62
+   }
+  },
+  {
+   "id": "layered-stability",
+   "term": "Layered stability",
+   "definition": "A whole may be stable in mean, concentrated, exactly conserved or still stochastic in different respects; mean closure is not fluctuation closure, which is not full relational closure.",
+   "epistemic_category": "mathematical + author-supplied research",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "aggregation",
+    "coordination"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 8",
+   "reactivation_points": [
+    "Ch 15"
+   ],
+   "example_needed": "same average, different fluctuations",
+   "common_misunderstanding": "that 'stable' means one thing",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 13,
+    "transitive_dependents": 0,
+    "betweenness": 0.0,
+    "cross_domain_reach": 1,
+    "rank_sum": 246,
+    "rank": 77
+   }
+  },
+  {
+   "id": "coordination",
+   "term": "Coordination of fluctuations",
+   "definition": "Consequence-aligned, state-dependent relations between stochastic events that stabilise aggregates; mean closure can hold while fluctuation closure stays open.",
+   "epistemic_category": "RS experimental result (model)",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "constrained-stochasticity",
+    "joint-process",
+    "relation"
+   ],
+   "dependents": [
+    "higher-order",
+    "layered-stability",
+    "local-global",
+    "regularity"
+   ],
+   "cross_domain_relations": [
+    "higher-order"
+   ],
+   "evidence": [
+    "E-conv",
+    "E-sc"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 8",
+   "reactivation_points": [
+    "Ch 10"
+   ],
+   "example_needed": "two errors that cancel because they are tied",
+   "common_misunderstanding": "coordination as a hidden controller",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 4,
+   "decomposable": true,
+   "context_load_hint": 13,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 12,
+    "transitive_dependents": 5,
+    "betweenness": 0.1073,
+    "cross_domain_reach": 2,
+    "rank_sum": 103,
+    "rank": 14
+   }
+  },
+  {
+   "id": "local-global",
+   "term": "Local and global constraint",
+   "definition": "What a local rule permits differs from what whole-system orchestration achieves; both must be stated.",
+   "epistemic_category": "RS experimental result (model)",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "coordination"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-sc"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 8",
+   "reactivation_points": [],
+   "example_needed": "local cancellation exact but slower",
+   "common_misunderstanding": "local rules always suffice",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 13,
+    "transitive_dependents": 0,
+    "betweenness": 0.0,
+    "cross_domain_reach": 1,
+    "rank_sum": 250,
+    "rank": 78
+   }
+  },
+  {
+   "id": "regularity",
+   "term": "Emergent regularity / effective determinism",
+   "definition": "Stable, law-like aggregate behaviour arising from constrained stochastic processes.",
+   "epistemic_category": "scientific consensus + RS interpretation",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "aggregation",
+    "constrained-stochasticity",
+    "coordination",
+    "identity-invariant"
+   ],
+   "dependents": [
+    "mathematics"
+   ],
+   "cross_domain_relations": [
+    "mathematics"
+   ],
+   "evidence": [
+    "E-decay",
+    "E-sc",
+    "E-statmech"
+   ],
+   "scripture_bounds": [
+    "S-gen822"
+   ],
+   "intended_first_introduction": "Ch 8",
+   "reactivation_points": [
+    "Ch 9"
+   ],
+   "example_needed": "gas laws from molecular chaos",
+   "common_misunderstanding": "that regularity proves determinism",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 5,
+   "decomposable": true,
+   "context_load_hint": 12,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 13,
+    "transitive_dependents": 1,
+    "betweenness": 0.0696,
+    "cross_domain_reach": 1,
+    "rank_sum": 174,
+    "rank": 52
+   }
+  },
+  {
+   "id": "mathematics",
+   "term": "Mathematics describes regularity",
+   "definition": "Mathematics captures stable relations and invariants with great success without thereby being the reality.",
+   "epistemic_category": "philosophical claim",
+   "research_maturity": "settled",
+   "domain": "physical",
+   "prerequisites": [
+    "desc-not-ont",
+    "regularity"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [
+    "regularity"
+   ],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 8",
+   "reactivation_points": [
+    "Ch 15"
+   ],
+   "example_needed": "Navier–Stokes as an effective description of fluids",
+   "common_misunderstanding": "that this demotes mathematics",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 10,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 14,
+    "transitive_dependents": 0,
+    "betweenness": 0.0297,
+    "cross_domain_reach": 2,
+    "rank_sum": 152,
+    "rank": 36
+   }
+  },
+  {
+   "id": "time",
+   "term": "Time as ordering of actualisation",
+   "definition": "Time is the ordering of change, not an independent container.",
+   "epistemic_category": "ontological interpretation",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "actualisation"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [],
+   "example_needed": "clocks as processes",
+   "common_misunderstanding": "that this denies relativity",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 9,
+    "transitive_dependents": 0,
+    "betweenness": 0.0,
+    "cross_domain_reach": 1,
+    "rank_sum": 267,
+    "rank": 80
+   }
+  },
+  {
+   "id": "matter",
+   "term": "Matter as stable form",
+   "definition": "Matter is real, stable relational form, not primitive substance.",
+   "epistemic_category": "ontological interpretation",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "persistence"
+   ],
+   "dependents": [
+    "embodiment",
+    "manifestation"
+   ],
+   "cross_domain_relations": [
+    "consciousness"
+   ],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 10",
+    "Ch 11"
+   ],
+   "example_needed": "a whirlpool or a knot",
+   "common_misunderstanding": "that matter is unreal",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 16,
+    "transitive_dependents": 12,
+    "betweenness": 0.0331,
+    "cross_domain_reach": 2,
+    "rank_sum": 100,
+    "rank": 12
+   }
+  },
+  {
+   "id": "manifestation",
+   "term": "Manifestation",
+   "definition": "Created order presenting itself to other things — detectable, encounterable; distinct from conscious awareness of it.",
+   "epistemic_category": "ontological interpretation",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "matter"
+   ],
+   "dependents": [
+    "consciousness"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 11"
+   ],
+   "example_needed": "the stone visible in daylight",
+   "common_misunderstanding": "manifestation as an explanation of consciousness",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 8,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 17,
+    "transitive_dependents": 1,
+    "betweenness": 0.0,
+    "cross_domain_reach": 2,
+    "rank_sum": 179,
+    "rank": 54
+   }
+  },
+  {
+   "id": "purpose-upstream",
+   "term": "Purpose shapes possibility",
+   "definition": "Divine purpose constrains what is possible; possibility constrains actualisation; the substrate itself intends nothing.",
+   "epistemic_category": "theological inference",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "creator-creature",
+    "possibility"
+   ],
+   "dependents": [
+    "non-agentic"
+   ],
+   "cross_domain_relations": [
+    "non-agentic"
+   ],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-john1"
+   ],
+   "intended_first_introduction": "Ch 4",
+   "reactivation_points": [
+    "Ch 10",
+    "Ch 14"
+   ],
+   "example_needed": "a composer's intention fixing the instrument's range",
+   "common_misunderstanding": "that the substrate is a mind",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 12,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 8,
+    "transitive_dependents": 4,
+    "betweenness": 0.0086,
+    "cross_domain_reach": 2,
+    "rank_sum": 168,
+    "rank": 48
+   }
+  },
+  {
+   "id": "non-agentic",
+   "term": "Non-agentic runtime",
+   "definition": "Created runtime order is ordered without being intelligent, purposive or divine in itself.",
+   "epistemic_category": "theological/ontological claim",
+   "research_maturity": "settled",
+   "domain": "physical",
+   "prerequisites": [
+    "purpose-upstream",
+    "runtime"
+   ],
+   "dependents": [
+    "divine-action"
+   ],
+   "cross_domain_relations": [
+    "purpose-upstream"
+   ],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-gen822"
+   ],
+   "intended_first_introduction": "Ch 4",
+   "reactivation_points": [
+    "Ch 8",
+    "Ch 14"
+   ],
+   "example_needed": "seedtime and harvest",
+   "common_misunderstanding": "that lawful runtime means God is absent",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 10,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 9,
+    "transitive_dependents": 3,
+    "betweenness": 0.0131,
+    "cross_domain_reach": 2,
+    "rank_sum": 164,
+    "rank": 46
+   }
+  },
+  {
+   "id": "constraint-generative",
+   "term": "Constraint is generative",
+   "definition": "Boundaries make stable form possible rather than merely limiting.",
+   "epistemic_category": "ontological interpretation + scriptural theme",
+   "research_maturity": "settled",
+   "domain": "physical",
+   "prerequisites": [
+    "admissibility"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 4",
+   "reactivation_points": [
+    "Ch 6",
+    "Ch 12"
+   ],
+   "example_needed": "riverbanks making a river",
+   "common_misunderstanding": "constraint as oppression",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 7,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 9,
+    "transitive_dependents": 0,
+    "betweenness": 0.0027,
+    "cross_domain_reach": 1,
+    "rank_sum": 255,
+    "rank": 79
+   }
+  },
+  {
+   "id": "bridge",
+   "term": "No metaphysical gulf",
+   "definition": "Because material order is relational at base, relational realities of life and persons are not bolted onto an alien, disconnected world.",
+   "epistemic_category": "philosophical inference",
+   "research_maturity": "working",
+   "domain": "theology",
+   "prerequisites": [
+    "analogy-vs-identity",
+    "global-coherence",
+    "relation",
+    "tcr"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 9",
+   "reactivation_points": [
+    "Ch 11",
+    "Ch 12",
+    "Ch 13",
+    "Ch 15"
+   ],
+   "example_needed": "a world of sealed objects cannot ground promise-keeping",
+   "common_misunderstanding": "that morality is physics",
+   "conceptual_difficulty": 5,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 5,
+   "decomposable": true,
+   "context_load_hint": 15,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 19,
+    "transitive_dependents": 0,
+    "betweenness": 0.0723,
+    "cross_domain_reach": 3,
+    "rank_sum": 94,
+    "rank": 10
+   }
+  },
+  {
+   "id": "life",
+   "term": "Life as sustained organisation",
+   "definition": "Living things maintain, repair and reproduce organised form under hierarchical constraint; life is given and sustained by God.",
+   "epistemic_category": "theological inference + scientific consensus",
+   "research_maturity": "working",
+   "domain": "theology",
+   "prerequisites": [
+    "persistence",
+    "tcr"
+   ],
+   "dependents": [
+    "higher-order"
+   ],
+   "cross_domain_relations": [
+    "tcr"
+   ],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-acts17"
+   ],
+   "intended_first_introduction": "Ch 10",
+   "reactivation_points": [
+    "Ch 11"
+   ],
+   "example_needed": "a cell repairing itself",
+   "common_misunderstanding": "life as a vital fluid; life as nothing but chemistry",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 19,
+    "transitive_dependents": 1,
+    "betweenness": 0.0177,
+    "cross_domain_reach": 2,
+    "rank_sum": 132,
+    "rank": 27
+   }
+  },
+  {
+   "id": "higher-order",
+   "term": "Higher-order wholes",
+   "definition": "A whole becomes real when its parts are coupled so that disturbance spreads and the whole retains properties no part has.",
+   "epistemic_category": "ontological interpretation",
+   "research_maturity": "working",
+   "domain": "theology",
+   "prerequisites": [
+    "coordination",
+    "life"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [
+    "coordination"
+   ],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 10",
+   "reactivation_points": [
+    "Ch 11"
+   ],
+   "example_needed": "an organism versus a crowd",
+   "common_misunderstanding": "every heap is a whole",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 10,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 20,
+    "transitive_dependents": 0,
+    "betweenness": 0.0071,
+    "cross_domain_reach": 2,
+    "rank_sum": 161,
+    "rank": 43
+   }
+  },
+  {
+   "id": "consciousness",
+   "term": "Consciousness",
+   "definition": "Real awareness, embodied and participating in shared reality, not reducible to physical configuration.",
+   "epistemic_category": "philosophical/theological claim",
+   "research_maturity": "open",
+   "domain": "theology",
+   "prerequisites": [
+    "category",
+    "manifestation"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [
+    "matter"
+   ],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 11",
+   "reactivation_points": [],
+   "example_needed": "seeing as an act, not only a signal",
+   "common_misunderstanding": "that RS explains consciousness",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 12,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 18,
+    "transitive_dependents": 0,
+    "betweenness": 0.0133,
+    "cross_domain_reach": 3,
+    "rank_sum": 133,
+    "rank": 28
+   }
+  },
+  {
+   "id": "personhood",
+   "term": "Personhood",
+   "definition": "A centre of awareness, relation, agency, address and responsibility; deeper than embodiment.",
+   "epistemic_category": "theological claim",
+   "research_maturity": "settled",
+   "domain": "theology",
+   "prerequisites": [
+    "category",
+    "embodiment"
+   ],
+   "dependents": [
+    "image",
+    "soul-spirit",
+    "three-admissibility"
+   ],
+   "cross_domain_relations": [
+    "embodiment",
+    "persistence"
+   ],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-john424"
+   ],
+   "intended_first_introduction": "Ch 11",
+   "reactivation_points": [
+    "Ch 12",
+    "Ch 14"
+   ],
+   "example_needed": "Father and Spirit are persons without bodies",
+   "common_misunderstanding": "person = body",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 18,
+    "transitive_dependents": 8,
+    "betweenness": 0.0953,
+    "cross_domain_reach": 3,
+    "rank_sum": 57,
+    "rank": 1
+   }
+  },
+  {
+   "id": "soul-spirit",
+   "term": "Soul and spirit",
+   "definition": "Scripture's vocabulary for the inner person, given by God and not reducible to runtime configuration.",
+   "epistemic_category": "scriptural commitment",
+   "research_maturity": "settled",
+   "domain": "theology",
+   "prerequisites": [
+    "personhood"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [
+    "substrate",
+    "tcr"
+   ],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-1thes523",
+    "S-eccl127"
+   ],
+   "intended_first_introduction": "Ch 11",
+   "reactivation_points": [
+    "Ch 14"
+   ],
+   "example_needed": "Ecclesiastes 12:7",
+   "common_misunderstanding": "soul as a physical signal or field",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 10,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 19,
+    "transitive_dependents": 0,
+    "betweenness": 0.0497,
+    "cross_domain_reach": 2,
+    "rank_sum": 137,
+    "rank": 30
+   }
+  },
+  {
+   "id": "embodiment",
+   "term": "Embodiment",
+   "definition": "The mode by which creaturely persons exist and act in created order; good and meaningful.",
+   "epistemic_category": "theological claim",
+   "research_maturity": "settled",
+   "domain": "theology",
+   "prerequisites": [
+    "matter"
+   ],
+   "dependents": [
+    "personhood"
+   ],
+   "cross_domain_relations": [
+    "personhood"
+   ],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-gen27"
+   ],
+   "intended_first_introduction": "Ch 11",
+   "reactivation_points": [
+    "Ch 14"
+   ],
+   "example_needed": "Genesis 2:7",
+   "common_misunderstanding": "body as prison",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 8,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 17,
+    "transitive_dependents": 9,
+    "betweenness": 0.0016,
+    "cross_domain_reach": 2,
+    "rank_sum": 148,
+    "rank": 33
+   }
+  },
+  {
+   "id": "image",
+   "term": "Image of God",
+   "definition": "Humanity's relational, representative, image-bearing calling before God.",
+   "epistemic_category": "scriptural commitment",
+   "research_maturity": "settled",
+   "domain": "theology",
+   "prerequisites": [
+    "personhood"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 11",
+   "reactivation_points": [
+    "Ch 12"
+   ],
+   "example_needed": "Genesis 1:27",
+   "common_misunderstanding": "image as a material feature",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 9,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 19,
+    "transitive_dependents": 0,
+    "betweenness": 0.0,
+    "cross_domain_reach": 1,
+    "rank_sum": 243,
+    "rank": 76
+   }
+  },
+  {
+   "id": "three-admissibility",
+   "term": "Three kinds of 'allowed'",
+   "definition": "Physical possibility, operational capability and moral rightness are different questions.",
+   "epistemic_category": "philosophical claim",
+   "research_maturity": "settled",
+   "domain": "theology",
+   "prerequisites": [
+    "admissibility",
+    "personhood"
+   ],
+   "dependents": [
+    "alignment"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 12",
+   "reactivation_points": [
+    "Ch 13"
+   ],
+   "example_needed": "lying is possible, within ability, and wrong",
+   "common_misunderstanding": "if it is possible it is permitted",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": true,
+   "context_load_hint": 10,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 19,
+    "transitive_dependents": 5,
+    "betweenness": 0.0179,
+    "cross_domain_reach": 2,
+    "rank_sum": 118,
+    "rank": 20
+   }
+  },
+  {
+   "id": "alignment",
+   "term": "Alignment",
+   "definition": "Fitting the order a thing or person is made for; in persons, a moral and relational reality, not only structural.",
+   "epistemic_category": "theological inference",
+   "research_maturity": "working",
+   "domain": "theology",
+   "prerequisites": [
+    "three-admissibility"
+   ],
+   "dependents": [
+    "corruption"
+   ],
+   "cross_domain_relations": [
+    "admissibility"
+   ],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 12",
+   "reactivation_points": [
+    "Ch 13",
+    "Ch 14"
+   ],
+   "example_needed": "an instrument in tune",
+   "common_misunderstanding": "alignment as a physics measure of goodness",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 10,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 20,
+    "transitive_dependents": 4,
+    "betweenness": 0.0125,
+    "cross_domain_reach": 2,
+    "rank_sum": 126,
+    "rank": 24
+   }
+  },
+  {
+   "id": "corruption",
+   "term": "Corruption as distortion",
+   "definition": "Real, parasitic disorder of what is good: wrongdoing (wrong in itself) and its entrenchment as misalignment persists and spreads — not a rival substance.",
+   "epistemic_category": "theological inference",
+   "research_maturity": "working",
+   "domain": "theology",
+   "prerequisites": [
+    "alignment",
+    "tcr"
+   ],
+   "dependents": [
+    "limitation",
+    "restoration"
+   ],
+   "cross_domain_relations": [
+    "limitation",
+    "tcr"
+   ],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-james1",
+    "S-rom8"
+   ],
+   "intended_first_introduction": "Ch 13",
+   "reactivation_points": [
+    "Ch 14"
+   ],
+   "example_needed": "a lie: transmission that misdirects",
+   "common_misunderstanding": "evil as a thing; or evil as unreal",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": true,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 21,
+    "transitive_dependents": 3,
+    "betweenness": 0.043,
+    "cross_domain_reach": 2,
+    "rank_sum": 108,
+    "rank": 16
+   }
+  },
+  {
+   "id": "limitation",
+   "term": "Limitation is not corruption",
+   "definition": "Finitude is good creaturehood; corruption is distortion.",
+   "epistemic_category": "theological claim",
+   "research_maturity": "settled",
+   "domain": "theology",
+   "prerequisites": [
+    "corruption"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [
+    "corruption"
+   ],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 13",
+   "reactivation_points": [],
+   "example_needed": "needing sleep",
+   "common_misunderstanding": "that being finite is sin",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 7,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 22,
+    "transitive_dependents": 0,
+    "betweenness": 0.0,
+    "cross_domain_reach": 1,
+    "rank_sum": 237,
+    "rank": 75
+   }
+  },
+  {
+   "id": "restoration",
+   "term": "Restoration and redemption",
+   "definition": "God's work in Christ restoring and consummating creation and persons; not substrate repair.",
+   "epistemic_category": "scriptural commitment + theological inference",
+   "research_maturity": "settled",
+   "domain": "theology",
+   "prerequisites": [
+    "corruption",
+    "divine-action"
+   ],
+   "dependents": [
+    "resurrection"
+   ],
+   "cross_domain_relations": [
+    "persistence"
+   ],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-rev21"
+   ],
+   "intended_first_introduction": "Ch 14",
+   "reactivation_points": [
+    "Ch 15"
+   ],
+   "example_needed": "resurrection of the same person",
+   "common_misunderstanding": "redemption as mechanism",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 22,
+    "transitive_dependents": 1,
+    "betweenness": 0.0373,
+    "cross_domain_reach": 2,
+    "rank_sum": 119,
+    "rank": 21
+   }
+  },
+  {
+   "id": "resurrection",
+   "term": "Resurrection",
+   "definition": "Embodied identity raised and transformed, continuous with the person who died.",
+   "epistemic_category": "scriptural commitment",
+   "research_maturity": "settled",
+   "domain": "theology",
+   "prerequisites": [
+    "equivalence",
+    "individual-continuity",
+    "restoration"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [
+    "identity-invariant"
+   ],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-1cor15"
+   ],
+   "intended_first_introduction": "Ch 14",
+   "reactivation_points": [],
+   "example_needed": "Luke 24:39",
+   "common_misunderstanding": "a new copy",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 4,
+   "decomposable": false,
+   "context_load_hint": 12,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 23,
+    "transitive_dependents": 0,
+    "betweenness": 0.0181,
+    "cross_domain_reach": 2,
+    "rank_sum": 154,
+    "rank": 38
+   }
+  },
+  {
+   "id": "divine-action",
+   "term": "Divine action is not substrate process",
+   "definition": "God acts as Creator and Lord, not as one more cause inside created admissibility.",
+   "epistemic_category": "theological claim",
+   "research_maturity": "settled",
+   "domain": "theology",
+   "prerequisites": [
+    "non-agentic"
+   ],
+   "dependents": [
+    "restoration"
+   ],
+   "cross_domain_relations": [
+    "actualisation"
+   ],
+   "evidence": [],
+   "scripture_bounds": [
+    "S-col1"
+   ],
+   "intended_first_introduction": "Ch 14",
+   "reactivation_points": [
+    "Ch 15"
+   ],
+   "example_needed": "the resurrection of Christ",
+   "common_misunderstanding": "miracles as hidden physics",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 10,
+    "transitive_dependents": 2,
+    "betweenness": 0.026,
+    "cross_domain_reach": 2,
+    "rank_sum": 160,
+    "rank": 41
+   }
+  }
+ ],
+ "evidence_nodes": [
+  {
+   "id": "E-sc",
+   "label": "Stochastic calculator SC-001–SC-027R (2026-09)"
+  },
+  {
+   "id": "E-cl",
+   "label": "Constraint Laboratory Generation 001 (2026-10-03)"
+  },
+  {
+   "id": "E-topo",
+   "label": "Topological instantiation anchors (2026-07)"
+  },
+  {
+   "id": "E-order",
+   "label": "Order-effect corroboration on fatigue data (2026-06)"
+  },
+  {
+   "id": "E-statmech",
+   "label": "Statistical mechanics and kinetic theory (mainstream)"
+  },
+  {
+   "id": "E-qm",
+   "label": "Quantum theory: Born-rule probabilities; interpretations divided (mainstream)"
+  },
+  {
+   "id": "E-decay",
+   "label": "Radioactive decay statistics (mainstream)"
+  },
+  {
+   "id": "E-relphys",
+   "label": "Relational positions in philosophy of physics (Leibniz, Rovelli, structural realism)"
+  },
+  {
+   "id": "E-cogsci",
+   "label": "Cognitive science of inference under uncertainty (predictive processing, Bayesian cognition)"
+  },
+  {
+   "id": "E-multipath",
+   "label": "False-attractor observations behind Multipath Reasoning (method origin; unvalidated)"
+  },
+  {
+   "id": "E-hysteresis",
+   "label": "Physical hysteresis and path dependence (mainstream)"
+  },
+  {
+   "id": "E-noether",
+   "label": "Conservation laws and symmetry (mainstream)"
+  },
+  {
+   "id": "E-cl1b",
+   "label": "Constraint Laboratory Generation 1b (2026-10-03): exact kernels hidden within coarse families"
+  },
+  {
+   "id": "E-cl2",
+   "label": "Constraint Laboratory Generation 2 (2026-10-03): count-gated prohibitions open supports; soft weights do not"
+  },
+  {
+   "id": "E-cl3",
+   "label": "Constraint Laboratory Generation 3 (2026-10-03): hidden triadic relation yields non-Markov pairwise process"
+  },
+  {
+   "id": "E-conv",
+   "label": "Author-supplied conversational research (502-series, ring, hidden fibres, coherence dimensions); not repository experiments"
+  }
+ ],
+ "scripture_nodes": [
+  {
+   "id": "S-gen1",
+   "reference": "Genesis 1:1–5"
+  },
+  {
+   "id": "S-gen27",
+   "reference": "Genesis 2:7"
+  },
+  {
+   "id": "S-col1",
+   "reference": "Colossians 1:16–17"
+  },
+  {
+   "id": "S-heb113",
+   "reference": "Hebrews 11:3"
+  },
+  {
+   "id": "S-rom120",
+   "reference": "Romans 1:20,25"
+  },
+  {
+   "id": "S-ps100",
+   "reference": "Psalm 100:3"
+  },
+  {
+   "id": "S-john1",
+   "reference": "John 1:1–4"
+  },
+  {
+   "id": "S-acts17",
+   "reference": "Acts 17:25–28"
+  },
+  {
+   "id": "S-rom8",
+   "reference": "Romans 8:19–22"
+  },
+  {
+   "id": "S-1cor15",
+   "reference": "1 Corinthians 15"
+  },
+  {
+   "id": "S-eccl127",
+   "reference": "Ecclesiastes 12:7"
+  },
+  {
+   "id": "S-john424",
+   "reference": "John 4:24"
+  },
+  {
+   "id": "S-gen822",
+   "reference": "Genesis 8:22; Jeremiah 31:35–36"
+  },
+  {
+   "id": "S-james1",
+   "reference": "James 1:14–15"
+  },
+  {
+   "id": "S-rev21",
+   "reference": "Revelation 21:1–5"
+  },
+  {
+   "id": "S-heb13",
+   "reference": "Hebrews 1:3"
+  },
+  {
+   "id": "S-prov252",
+   "reference": "Proverbs 25:2"
+  },
+  {
+   "id": "S-1thes523",
+   "reference": "1 Thessalonians 5:23"
+  },
+  {
+   "id": "S-isa55",
+   "reference": "Isaiah 55:10–11"
+  },
+  {
+   "id": "S-rom10",
+   "reference": "Romans 10:14–17"
+  }
+ ],
+ "edges": [
+  {
+   "source": "creator-creature",
+   "type": "REQUIRES",
+   "target": "scripture"
+  },
+  {
+   "source": "creation-real",
+   "type": "REQUIRES",
+   "target": "scripture"
+  },
+  {
+   "source": "darkness",
+   "type": "REQUIRES",
+   "target": "creation-real"
+  },
+  {
+   "source": "ontology",
+   "type": "REQUIRES",
+   "target": "description"
+  },
+  {
+   "source": "desc-not-ont",
+   "type": "REQUIRES",
+   "target": "ontology"
+  },
+  {
+   "source": "desc-not-ont",
+   "type": "REQUIRES",
+   "target": "description"
+  },
+  {
+   "source": "assumptions",
+   "type": "REQUIRES",
+   "target": "ontology"
+  },
+  {
+   "source": "epistemic-levels",
+   "type": "REQUIRES",
+   "target": "desc-not-ont"
+  },
+  {
+   "source": "epistemic-levels",
+   "type": "REQUIRES",
+   "target": "assumptions"
+  },
+  {
+   "source": "local-coherence",
+   "type": "REQUIRES",
+   "target": "coherence"
+  },
+  {
+   "source": "regional-coherence",
+   "type": "REQUIRES",
+   "target": "local-coherence"
+  },
+  {
+   "source": "global-coherence",
+   "type": "REQUIRES",
+   "target": "regional-coherence"
+  },
+  {
+   "source": "connectivity",
+   "type": "REQUIRES",
+   "target": "coherence"
+  },
+  {
+   "source": "boundary-validity",
+   "type": "REQUIRES",
+   "target": "connectivity"
+  },
+  {
+   "source": "boundary-validity",
+   "type": "REQUIRES",
+   "target": "category"
+  },
+  {
+   "source": "propagation-cycle",
+   "type": "REQUIRES",
+   "target": "boundary-validity"
+  },
+  {
+   "source": "global-coherence",
+   "type": "REQUIRES",
+   "target": "propagation-cycle"
+  },
+  {
+   "source": "global-coherence",
+   "type": "REQUIRES",
+   "target": "desc-not-ont"
+  },
+  {
+   "source": "global-coherence",
+   "type": "REQUIRES",
+   "target": "empirical-constraint"
+  },
+  {
+   "source": "knowing-coherence",
+   "type": "REQUIRES",
+   "target": "coherence"
+  },
+  {
+   "source": "coherence-not-fidelity",
+   "type": "REQUIRES",
+   "target": "knowing-coherence"
+  },
+  {
+   "source": "empirical-constraint",
+   "type": "REQUIRES",
+   "target": "description"
+  },
+  {
+   "source": "not-proof",
+   "type": "REQUIRES",
+   "target": "desc-not-ont"
+  },
+  {
+   "source": "not-proof",
+   "type": "REQUIRES",
+   "target": "global-coherence"
+  },
+  {
+   "source": "not-proof",
+   "type": "REQUIRES",
+   "target": "empirical-constraint"
+  },
+  {
+   "source": "analogy-vs-identity",
+   "type": "REQUIRES",
+   "target": "category"
+  },
+  {
+   "source": "category",
+   "type": "REQUIRES",
+   "target": "creator-creature"
+  },
+  {
+   "source": "object-first",
+   "type": "REQUIRES",
+   "target": "assumptions"
+  },
+  {
+   "source": "relation",
+   "type": "REQUIRES",
+   "target": "object-first"
+  },
+  {
+   "source": "substrate",
+   "type": "REQUIRES",
+   "target": "relation"
+  },
+  {
+   "source": "substrate",
+   "type": "REQUIRES",
+   "target": "creator-creature"
+  },
+  {
+   "source": "runtime",
+   "type": "REQUIRES",
+   "target": "substrate"
+  },
+  {
+   "source": "runtime",
+   "type": "REQUIRES",
+   "target": "creation-real"
+  },
+  {
+   "source": "mediation",
+   "type": "REQUIRES",
+   "target": "relation"
+  },
+  {
+   "source": "possibility",
+   "type": "REQUIRES",
+   "target": "substrate"
+  },
+  {
+   "source": "admissibility",
+   "type": "REQUIRES",
+   "target": "possibility"
+  },
+  {
+   "source": "tendency",
+   "type": "REQUIRES",
+   "target": "admissibility"
+  },
+  {
+   "source": "actualisation",
+   "type": "REQUIRES",
+   "target": "possibility"
+  },
+  {
+   "source": "stochasticity",
+   "type": "REQUIRES",
+   "target": "tendency"
+  },
+  {
+   "source": "constrained-stochasticity",
+   "type": "REQUIRES",
+   "target": "stochasticity"
+  },
+  {
+   "source": "constrained-stochasticity",
+   "type": "REQUIRES",
+   "target": "admissibility"
+  },
+  {
+   "source": "constrained-stochasticity",
+   "type": "REQUIRES",
+   "target": "actualisation"
+  },
+  {
+   "source": "identity-invariant",
+   "type": "REQUIRES",
+   "target": "constrained-stochasticity"
+  },
+  {
+   "source": "projection",
+   "type": "REQUIRES",
+   "target": "identity-invariant"
+  },
+  {
+   "source": "discriminability",
+   "type": "REQUIRES",
+   "target": "admissibility"
+  },
+  {
+   "source": "equivalence",
+   "type": "REQUIRES",
+   "target": "identity-invariant"
+  },
+  {
+   "source": "equivalence",
+   "type": "REQUIRES",
+   "target": "discriminability"
+  },
+  {
+   "source": "equivalence",
+   "type": "REQUIRES",
+   "target": "projection"
+  },
+  {
+   "source": "provenance",
+   "type": "REQUIRES",
+   "target": "equivalence"
+  },
+  {
+   "source": "persistence",
+   "type": "REQUIRES",
+   "target": "equivalence"
+  },
+  {
+   "source": "information-loss",
+   "type": "REQUIRES",
+   "target": "identity-invariant"
+  },
+  {
+   "source": "memory-configuration",
+   "type": "REQUIRES",
+   "target": "provenance"
+  },
+  {
+   "source": "memory-configuration",
+   "type": "REQUIRES",
+   "target": "admissibility"
+  },
+  {
+   "source": "difference",
+   "type": "REQUIRES",
+   "target": "relation"
+  },
+  {
+   "source": "transmit",
+   "type": "REQUIRES",
+   "target": "difference"
+  },
+  {
+   "source": "carry",
+   "type": "REQUIRES",
+   "target": "transmit"
+  },
+  {
+   "source": "carry",
+   "type": "REQUIRES",
+   "target": "persistence"
+  },
+  {
+   "source": "carry",
+   "type": "REQUIRES",
+   "target": "equivalence"
+  },
+  {
+   "source": "substitutability",
+   "type": "REQUIRES",
+   "target": "carry"
+  },
+  {
+   "source": "compatibility",
+   "type": "REQUIRES",
+   "target": "admissibility"
+  },
+  {
+   "source": "receive",
+   "type": "REQUIRES",
+   "target": "carry"
+  },
+  {
+   "source": "receive",
+   "type": "REQUIRES",
+   "target": "compatibility"
+  },
+  {
+   "source": "tcr",
+   "type": "REQUIRES",
+   "target": "transmit"
+  },
+  {
+   "source": "tcr",
+   "type": "REQUIRES",
+   "target": "carry"
+  },
+  {
+   "source": "tcr",
+   "type": "REQUIRES",
+   "target": "receive"
+  },
+  {
+   "source": "nested-tcr",
+   "type": "REQUIRES",
+   "target": "tcr"
+  },
+  {
+   "source": "joint-process",
+   "type": "REQUIRES",
+   "target": "stochasticity"
+  },
+  {
+   "source": "aggregation",
+   "type": "REQUIRES",
+   "target": "stochasticity"
+  },
+  {
+   "source": "layered-stability",
+   "type": "REQUIRES",
+   "target": "aggregation"
+  },
+  {
+   "source": "layered-stability",
+   "type": "REQUIRES",
+   "target": "coordination"
+  },
+  {
+   "source": "regularity",
+   "type": "REQUIRES",
+   "target": "aggregation"
+  },
+  {
+   "source": "recovery-kinds",
+   "type": "REQUIRES",
+   "target": "equivalence"
+  },
+  {
+   "source": "individual-continuity",
+   "type": "REQUIRES",
+   "target": "provenance"
+  },
+  {
+   "source": "individual-continuity",
+   "type": "REQUIRES",
+   "target": "equivalence"
+  },
+  {
+   "source": "resurrection",
+   "type": "REQUIRES",
+   "target": "individual-continuity"
+  },
+  {
+   "source": "recovery-kinds",
+   "type": "REQUIRES",
+   "target": "individual-continuity"
+  },
+  {
+   "source": "individual-continuity",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "equivalence"
+  },
+  {
+   "source": "recovery-kinds",
+   "type": "REQUIRES",
+   "target": "provenance"
+  },
+  {
+   "source": "endogenous-carrier",
+   "type": "REQUIRES",
+   "target": "carry"
+  },
+  {
+   "source": "coordination",
+   "type": "REQUIRES",
+   "target": "joint-process"
+  },
+  {
+   "source": "coordination",
+   "type": "REQUIRES",
+   "target": "constrained-stochasticity"
+  },
+  {
+   "source": "coordination",
+   "type": "REQUIRES",
+   "target": "relation"
+  },
+  {
+   "source": "local-global",
+   "type": "REQUIRES",
+   "target": "coordination"
+  },
+  {
+   "source": "regularity",
+   "type": "REQUIRES",
+   "target": "constrained-stochasticity"
+  },
+  {
+   "source": "regularity",
+   "type": "REQUIRES",
+   "target": "identity-invariant"
+  },
+  {
+   "source": "regularity",
+   "type": "REQUIRES",
+   "target": "coordination"
+  },
+  {
+   "source": "mathematics",
+   "type": "REQUIRES",
+   "target": "regularity"
+  },
+  {
+   "source": "mathematics",
+   "type": "REQUIRES",
+   "target": "desc-not-ont"
+  },
+  {
+   "source": "time",
+   "type": "REQUIRES",
+   "target": "actualisation"
+  },
+  {
+   "source": "matter",
+   "type": "REQUIRES",
+   "target": "persistence"
+  },
+  {
+   "source": "manifestation",
+   "type": "REQUIRES",
+   "target": "matter"
+  },
+  {
+   "source": "purpose-upstream",
+   "type": "REQUIRES",
+   "target": "possibility"
+  },
+  {
+   "source": "purpose-upstream",
+   "type": "REQUIRES",
+   "target": "creator-creature"
+  },
+  {
+   "source": "non-agentic",
+   "type": "REQUIRES",
+   "target": "runtime"
+  },
+  {
+   "source": "non-agentic",
+   "type": "REQUIRES",
+   "target": "purpose-upstream"
+  },
+  {
+   "source": "constraint-generative",
+   "type": "REQUIRES",
+   "target": "admissibility"
+  },
+  {
+   "source": "bridge",
+   "type": "REQUIRES",
+   "target": "relation"
+  },
+  {
+   "source": "bridge",
+   "type": "REQUIRES",
+   "target": "global-coherence"
+  },
+  {
+   "source": "bridge",
+   "type": "REQUIRES",
+   "target": "tcr"
+  },
+  {
+   "source": "bridge",
+   "type": "REQUIRES",
+   "target": "analogy-vs-identity"
+  },
+  {
+   "source": "life",
+   "type": "REQUIRES",
+   "target": "persistence"
+  },
+  {
+   "source": "life",
+   "type": "REQUIRES",
+   "target": "tcr"
+  },
+  {
+   "source": "higher-order",
+   "type": "REQUIRES",
+   "target": "coordination"
+  },
+  {
+   "source": "higher-order",
+   "type": "REQUIRES",
+   "target": "life"
+  },
+  {
+   "source": "consciousness",
+   "type": "REQUIRES",
+   "target": "manifestation"
+  },
+  {
+   "source": "consciousness",
+   "type": "REQUIRES",
+   "target": "category"
+  },
+  {
+   "source": "embodiment",
+   "type": "REQUIRES",
+   "target": "matter"
+  },
+  {
+   "source": "personhood",
+   "type": "REQUIRES",
+   "target": "embodiment"
+  },
+  {
+   "source": "personhood",
+   "type": "REQUIRES",
+   "target": "category"
+  },
+  {
+   "source": "soul-spirit",
+   "type": "REQUIRES",
+   "target": "personhood"
+  },
+  {
+   "source": "image",
+   "type": "REQUIRES",
+   "target": "personhood"
+  },
+  {
+   "source": "three-admissibility",
+   "type": "REQUIRES",
+   "target": "admissibility"
+  },
+  {
+   "source": "three-admissibility",
+   "type": "REQUIRES",
+   "target": "personhood"
+  },
+  {
+   "source": "alignment",
+   "type": "REQUIRES",
+   "target": "three-admissibility"
+  },
+  {
+   "source": "corruption",
+   "type": "REQUIRES",
+   "target": "alignment"
+  },
+  {
+   "source": "corruption",
+   "type": "REQUIRES",
+   "target": "tcr"
+  },
+  {
+   "source": "limitation",
+   "type": "REQUIRES",
+   "target": "corruption"
+  },
+  {
+   "source": "restoration",
+   "type": "REQUIRES",
+   "target": "corruption"
+  },
+  {
+   "source": "resurrection",
+   "type": "REQUIRES",
+   "target": "restoration"
+  },
+  {
+   "source": "resurrection",
+   "type": "REQUIRES",
+   "target": "equivalence"
+  },
+  {
+   "source": "divine-action",
+   "type": "REQUIRES",
+   "target": "non-agentic"
+  },
+  {
+   "source": "restoration",
+   "type": "REQUIRES",
+   "target": "divine-action"
+  },
+  {
+   "source": "projection",
+   "type": "CAN_HIDE",
+   "target": "provenance"
+  },
+  {
+   "source": "discriminability",
+   "type": "CAN_REVEAL",
+   "target": "provenance"
+  },
+  {
+   "source": "provenance",
+   "type": "CONSEQUENTIAL_FOR",
+   "target": "receive"
+  },
+  {
+   "source": "identity-invariant",
+   "type": "PRESERVES",
+   "target": "equivalence"
+  },
+  {
+   "source": "carry",
+   "type": "CARRIES",
+   "target": "difference"
+  },
+  {
+   "source": "equivalence",
+   "type": "QUALIFIES",
+   "target": "identity-invariant"
+  },
+  {
+   "source": "compatibility",
+   "type": "QUALIFIES",
+   "target": "receive"
+  },
+  {
+   "source": "joint-process",
+   "type": "QUALIFIES",
+   "target": "regularity"
+  },
+  {
+   "source": "equivalence",
+   "type": "SUPERSEDES",
+   "target": "information-loss"
+  },
+  {
+   "source": "tcr",
+   "type": "NOT_ESTABLISHED_BY",
+   "target": "E-sc"
+  },
+  {
+   "source": "constrained-stochasticity",
+   "type": "NOT_ESTABLISHED_BY",
+   "target": "E-qm"
+  },
+  {
+   "source": "relation",
+   "type": "NOT_ESTABLISHED_BY",
+   "target": "E-cl"
+  },
+  {
+   "source": "coordination",
+   "type": "QUALIFIES",
+   "target": "aggregation"
+  },
+  {
+   "source": "recovery-kinds",
+   "type": "DISTINGUISHES",
+   "target": "information-loss"
+  },
+  {
+   "source": "recovery-kinds",
+   "type": "CONSTRAINS",
+   "target": "resurrection"
+  },
+  {
+   "source": "endogenous-carrier",
+   "type": "NOT_ESTABLISHED_BY",
+   "target": "E-sc"
+  },
+  {
+   "source": "projection",
+   "type": "EVIDENCED_BY",
+   "target": "E-cl3"
+  },
+  {
+   "source": "memory-configuration",
+   "type": "EVIDENCED_BY",
+   "target": "E-cl3"
+  },
+  {
+   "source": "recovery-kinds",
+   "type": "EVIDENCED_BY",
+   "target": "E-conv"
+  },
+  {
+   "source": "aggregation",
+   "type": "EVIDENCED_BY",
+   "target": "E-statmech"
+  },
+  {
+   "source": "relation",
+   "type": "SUPPORTS",
+   "target": "global-coherence"
+  },
+  {
+   "source": "bridge",
+   "type": "SUPPORTS",
+   "target": "global-coherence"
+  },
+  {
+   "source": "knowing-coherence",
+   "type": "SUPPORTS",
+   "target": "global-coherence"
+  },
+  {
+   "source": "regularity",
+   "type": "EXPLAINS",
+   "target": "mathematics"
+  },
+  {
+   "source": "identity-invariant",
+   "type": "EXPLAINS",
+   "target": "persistence"
+  },
+  {
+   "source": "tcr",
+   "type": "EXPLAINS",
+   "target": "mediation"
+  },
+  {
+   "source": "admissibility",
+   "type": "CONSTRAINS",
+   "target": "actualisation"
+  },
+  {
+   "source": "purpose-upstream",
+   "type": "CONSTRAINS",
+   "target": "possibility"
+  },
+  {
+   "source": "scripture",
+   "type": "CONSTRAINS",
+   "target": "substrate"
+  },
+  {
+   "source": "empirical-constraint",
+   "type": "CONSTRAINS",
+   "target": "substrate"
+  },
+  {
+   "source": "coherence-not-fidelity",
+   "type": "CONSTRAINS",
+   "target": "global-coherence"
+  },
+  {
+   "source": "matter",
+   "type": "EXPLAINS",
+   "target": "manifestation"
+  },
+  {
+   "source": "constraint-generative",
+   "type": "SUPPORTS",
+   "target": "identity-invariant"
+  },
+  {
+   "source": "memory-configuration",
+   "type": "EXPLAINS",
+   "target": "persistence"
+  },
+  {
+   "source": "stochasticity",
+   "type": "DISTINGUISHES",
+   "target": "constrained-stochasticity"
+  },
+  {
+   "source": "admissibility",
+   "type": "DISTINGUISHES",
+   "target": "tendency"
+  },
+  {
+   "source": "regularity",
+   "type": "DISTINGUISHES",
+   "target": "mathematics"
+  },
+  {
+   "source": "receive",
+   "type": "DISTINGUISHES",
+   "target": "transmit"
+  },
+  {
+   "source": "limitation",
+   "type": "DISTINGUISHES",
+   "target": "corruption"
+  },
+  {
+   "source": "three-admissibility",
+   "type": "DISTINGUISHES",
+   "target": "admissibility"
+  },
+  {
+   "source": "local-coherence",
+   "type": "DISTINGUISHES",
+   "target": "global-coherence"
+  },
+  {
+   "source": "substrate",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "creator-creature"
+  },
+  {
+   "source": "substrate",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "soul-spirit"
+  },
+  {
+   "source": "tcr",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "soul-spirit"
+  },
+  {
+   "source": "personhood",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "embodiment"
+  },
+  {
+   "source": "alignment",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "admissibility"
+  },
+  {
+   "source": "corruption",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "limitation"
+  },
+  {
+   "source": "restoration",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "persistence"
+  },
+  {
+   "source": "regularity",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "mathematics"
+  },
+  {
+   "source": "coherence",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "coherence-not-fidelity"
+  },
+  {
+   "source": "consciousness",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "matter"
+  },
+  {
+   "source": "divine-action",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "actualisation"
+  },
+  {
+   "source": "purpose-upstream",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "non-agentic"
+  },
+  {
+   "source": "tcr",
+   "type": "ANALOGOUS_TO",
+   "target": "corruption"
+  },
+  {
+   "source": "tcr",
+   "type": "ANALOGOUS_TO",
+   "target": "life"
+  },
+  {
+   "source": "identity-invariant",
+   "type": "ANALOGOUS_TO",
+   "target": "resurrection"
+  },
+  {
+   "source": "persistence",
+   "type": "ANALOGOUS_TO",
+   "target": "personhood"
+  },
+  {
+   "source": "coordination",
+   "type": "ANALOGOUS_TO",
+   "target": "higher-order"
+  },
+  {
+   "source": "knowing-coherence",
+   "type": "ANALOGOUS_TO",
+   "target": "constrained-stochasticity"
+  },
+  {
+   "source": "global-coherence",
+   "type": "GENERALISES",
+   "target": "regional-coherence"
+  },
+  {
+   "source": "nested-tcr",
+   "type": "GENERALISES",
+   "target": "tcr"
+  },
+  {
+   "source": "constrained-stochasticity",
+   "type": "SPECIALISES",
+   "target": "stochasticity"
+  },
+  {
+   "source": "three-admissibility",
+   "type": "GENERALISES",
+   "target": "admissibility"
+  },
+  {
+   "source": "identity-invariant",
+   "type": "EVIDENCED_BY",
+   "target": "E-sc"
+  },
+  {
+   "source": "identity-invariant",
+   "type": "EVIDENCED_BY",
+   "target": "E-topo"
+  },
+  {
+   "source": "identity-invariant",
+   "type": "EVIDENCED_BY",
+   "target": "E-noether"
+  },
+  {
+   "source": "tcr",
+   "type": "EVIDENCED_BY",
+   "target": "E-sc"
+  },
+  {
+   "source": "projection",
+   "type": "EVIDENCED_BY",
+   "target": "E-cl1b"
+  },
+  {
+   "source": "equivalence",
+   "type": "EVIDENCED_BY",
+   "target": "E-conv"
+  },
+  {
+   "source": "provenance",
+   "type": "EVIDENCED_BY",
+   "target": "E-conv"
+  },
+  {
+   "source": "joint-process",
+   "type": "EVIDENCED_BY",
+   "target": "E-conv"
+  },
+  {
+   "source": "coordination",
+   "type": "EVIDENCED_BY",
+   "target": "E-conv"
+  },
+  {
+   "source": "propagation-cycle",
+   "type": "EVIDENCED_BY",
+   "target": "E-conv"
+  },
+  {
+   "source": "admissibility",
+   "type": "EVIDENCED_BY",
+   "target": "E-cl2"
+  },
+  {
+   "source": "admissibility",
+   "type": "EVIDENCED_BY",
+   "target": "E-cl"
+  },
+  {
+   "source": "tendency",
+   "type": "EVIDENCED_BY",
+   "target": "E-cl"
+  },
+  {
+   "source": "coordination",
+   "type": "EVIDENCED_BY",
+   "target": "E-sc"
+  },
+  {
+   "source": "local-global",
+   "type": "EVIDENCED_BY",
+   "target": "E-sc"
+  },
+  {
+   "source": "information-loss",
+   "type": "EVIDENCED_BY",
+   "target": "E-sc"
+  },
+  {
+   "source": "regularity",
+   "type": "EVIDENCED_BY",
+   "target": "E-statmech"
+  },
+  {
+   "source": "regularity",
+   "type": "EVIDENCED_BY",
+   "target": "E-decay"
+  },
+  {
+   "source": "regularity",
+   "type": "EVIDENCED_BY",
+   "target": "E-sc"
+  },
+  {
+   "source": "constrained-stochasticity",
+   "type": "EVIDENCED_BY",
+   "target": "E-qm"
+  },
+  {
+   "source": "memory-configuration",
+   "type": "EVIDENCED_BY",
+   "target": "E-order"
+  },
+  {
+   "source": "memory-configuration",
+   "type": "EVIDENCED_BY",
+   "target": "E-hysteresis"
+  },
+  {
+   "source": "relation",
+   "type": "EVIDENCED_BY",
+   "target": "E-relphys"
+  },
+  {
+   "source": "knowing-coherence",
+   "type": "EVIDENCED_BY",
+   "target": "E-cogsci"
+  },
+  {
+   "source": "coherence-not-fidelity",
+   "type": "EVIDENCED_BY",
+   "target": "E-multipath"
+  },
+  {
+   "source": "creation-real",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-gen1"
+  },
+  {
+   "source": "darkness",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-gen1"
+  },
+  {
+   "source": "creator-creature",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-ps100"
+  },
+  {
+   "source": "creator-creature",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-rom120"
+  },
+  {
+   "source": "substrate",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-col1"
+  },
+  {
+   "source": "substrate",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-heb113"
+  },
+  {
+   "source": "runtime",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-heb13"
+  },
+  {
+   "source": "non-agentic",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-gen822"
+  },
+  {
+   "source": "regularity",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-gen822"
+  },
+  {
+   "source": "desc-not-ont",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-prov252"
+  },
+  {
+   "source": "purpose-upstream",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-john1"
+  },
+  {
+   "source": "life",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-acts17"
+  },
+  {
+   "source": "embodiment",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-gen27"
+  },
+  {
+   "source": "personhood",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-john424"
+  },
+  {
+   "source": "soul-spirit",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-eccl127"
+  },
+  {
+   "source": "soul-spirit",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-1thes523"
+  },
+  {
+   "source": "corruption",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-james1"
+  },
+  {
+   "source": "corruption",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-rom8"
+  },
+  {
+   "source": "restoration",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-rev21"
+  },
+  {
+   "source": "resurrection",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-1cor15"
+  },
+  {
+   "source": "tcr",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-isa55"
+  },
+  {
+   "source": "tcr",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-rom10"
+  },
+  {
+   "source": "divine-action",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-col1"
+  }
+ ]
+}

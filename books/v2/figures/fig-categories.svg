@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="730" viewBox="0 0 1000 730" font-family="DejaVu Serif, Georgia, serif">
+  <title>Relation across categories</title>
+  <defs><marker id="d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5a4416"/></marker></defs>
+  <rect width="1000" height="730" fill="#ffffff"/>
+  <rect x="200" y="30" width="600" height="80" rx="14" fill="#fbf7ec" stroke="#8a6d2f" stroke-width="3"/>
+  <text x="500" y="66" font-size="24" text-anchor="middle" fill="#5a4416" font-weight="bold">God, the Creator</text>
+  <text x="500" y="95" font-size="17" text-anchor="middle" fill="#3a3a3a">not a category within creation; upholds all things</text>
+  <g stroke="#5a4416" stroke-width="2.5" marker-end="url(#d)"><line x1="320" y1="112" x2="320" y2="160"/><line x1="500" y1="112" x2="500" y2="160"/><line x1="680" y1="112" x2="680" y2="160"/></g>
+  <line x1="40" y1="172" x2="960" y2="172" stroke="#8a6d2f" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="960" y="196" font-size="15" text-anchor="end" fill="#5a4416" font-style="italic">creation</text>
+  <g font-size="21">
+    <rect x="40" y="210" width="920" height="76" fill="#eef1f6"/><text x="60" y="256" font-weight="bold" fill="#1f3654">Spiritual</text><text x="300" y="256" fill="#3a3a3a">communion with God; the inner person</text>
+    <rect x="40" y="292" width="920" height="76" fill="#f3f4f7"/><text x="60" y="338" font-weight="bold" fill="#1f3654">Moral</text><text x="300" y="338" fill="#3a3a3a">obligation, rightness, wrong</text>
+    <rect x="40" y="374" width="920" height="76" fill="#eef1f6"/><text x="60" y="420" font-weight="bold" fill="#1f3654">Personal</text><text x="300" y="420" fill="#3a3a3a">address and response, promise, love</text>
+    <rect x="40" y="456" width="920" height="76" fill="#f3f4f7"/><text x="60" y="502" font-weight="bold" fill="#1f3654">Living</text><text x="300" y="502" fill="#3a3a3a">metabolism, signalling, templating, repair</text>
+    <rect x="40" y="538" width="920" height="76" fill="#eef1f6"/><text x="60" y="584" font-weight="bold" fill="#1f3654">Material</text><text x="300" y="584" fill="#3a3a3a">constraint, invariance, coordination, T-C-R</text>
+  </g>
+  <line x1="250" y1="214" x2="250" y2="612" stroke="#b08a3e" stroke-width="5"/>
+  <text x="246" y="645" font-size="18" text-anchor="middle" fill="#5a4416" font-style="italic">relation runs through every category</text>
+  <text x="500" y="680" font-size="18" text-anchor="middle" fill="#7a2f2f" font-style="italic">Distinct kinds, not layers built one out of another.</text>
+  <text x="500" y="710" font-size="18" text-anchor="middle" fill="#7a2f2f" font-style="italic">Relation across categories does not erase category.</text>
+</svg>
