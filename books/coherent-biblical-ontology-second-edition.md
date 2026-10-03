@@ -12,7 +12,7 @@ Second edition, October 2026. Companion volumes: *The Relational Substrate* (tec
 
 This book asks what kind of world Scripture describes, and whether the world we observe can be understood coherently inside that description. It begins where the Bible begins, with God creating a world that is really there. It then asks what that world is made of, in the deepest sense available to us, and how its physical order relates to life, to persons, to the moral weight of human action, to the wounds of corruption and to the hope of restoration.
 
-The answer it develops is that created physical reality is *relational* from its foundation. Things do not first exist as sealed, self-contained objects and then acquire relationships. They are constituted within an order of relation that God made and upholds. That claim is called, in this project, the Relational Substrate. The book's central argument is that a relation-first physical world matters far beyond physics. It removes a gulf that otherwise opens between a supposedly disconnected material universe and a human life in which promise, consequence, responsibility and love are fundamental. A relational world does not turn morality into physics, and the book takes care to show why. It does mean that the moral and personal life Scripture describes is not bolted onto an alien order.
+The answer it develops is that created physical reality is *relational* from its foundation. Things do not first exist as sealed, self-contained objects and then acquire relationships. They are constituted within an order of relation that God made and upholds. That claim is called, in this project, the Relational Substrate. The book's central argument is that a relation-first physical world matters far beyond physics. It removes a gulf that otherwise opens between a supposedly disconnected material world and a human life in which promise, consequence, responsibility and love are fundamental. A relational world does not turn morality into physics, and the book takes care to show why. It does mean that the moral and personal life Scripture describes is not bolted onto an alien order.
 
 ## Why a second edition
 
@@ -28,7 +28,7 @@ None of these results proves anything about nature by itself. Several of them ar
 
 ## How to read this book
 
-The book makes several kinds of claim, and it tries never to blur them. Some things are stated because Scripture states them. Some are observed, measured and settled by science. Some are inferences, philosophical or theological. Some are proposals of the Relational Substrate project that remain hypotheses. A few are frank speculation. Chapter 2 sets out these levels, and the prose marks them where it matters. A reader who disagrees with one level need not throw out the others.
+The book makes several kinds of claim, and it tries never to blur them. Some things are stated because Scripture states them. Some are observed, measured and settled by science. Some are inferences, philosophical or theological. Some are proposals of the Relational Substrate project that remain hypotheses. Some come from the project's exploratory research sessions, whose conclusions have not yet been published as formal experiment records; the book marks these as exploratory and does not treat them as completed experiments. A few are frank speculation. Chapter 2 sets out these levels, and the prose marks them where it matters. A reader who disagrees with one level need not throw out the others.
 
 One claim governs all the rest, and it should be stated plainly at the outset. **This book is not an attempt to prove the Relational Substrate.** The deepest ontology behind what we observe cannot be read off instruments, however many measurements we take. Measurement can rule ideas out, reveal regularities and test predictions. It cannot by itself display what reality fundamentally is. The project is therefore a *coherence* exercise. It seeks the most coherent account of reality available, constrained by observation, mathematics, reason and lived experience, and in this book governed by Scripture. Chapter 2 explains why that is a legitimate way to know, and Chapter 9 explains why it is also a demanding one.
 
@@ -546,7 +546,7 @@ These cases show something an invariant alone does not capture. Whether two thin
 
 The project's constraint laboratory met exactly this in its own formal world. In October 2026 it re-analysed its census of small relational rule systems with exact calculation. It found that systems sorted into one family by their coarse behaviour, the patterns they could reach and the moves they favoured, often turned out to be many distinct systems once examined exactly. In one family there were 1,042 different exact behaviours under a single label. In the largest systems it studied, two rule systems shared every summary statistic the laboratory recorded, yet differed in a measure of how unpredictable their movement was. The laboratory put it plainly: observable equality is not kernel equality. A description can map many different underlying things onto one visible picture. When it does, the differences it hides may still matter for what those things do next.
 
-![Figure 2b. Same appearance, different identity. Two states that look identical under one description can differ in a hidden relational detail. If some reachable future interaction draws on that detail, the two states behave differently. They were never fully the same. If nothing reachable ever draws on it, treating them as one loses nothing.](v2/figures/fig-identity.png)
+![Figure 3. Same appearance, different identity. Two states that look identical under one description can differ in a hidden relational detail. If some reachable future interaction draws on that detail, the two states behave differently. They were never fully the same. If nothing reachable ever draws on it, treating them as one loses nothing.](v2/figures/fig-identity.png)
 
 That is the problem of **projection**, or coarse-graining. Every description summarises. Summaries are indispensable, and science could not proceed without them. But a summary can hide distinctions, and whether the hidden distinctions matter depends on whether anything that can actually happen will draw on them.
 
@@ -722,7 +722,7 @@ source distinction
                               on what was carried)
 ```
 
-![Figure 3. Transmit, Carry, Receive. A distinction at the source becomes available beyond it; the relevant distinction is carried recoverably across a succession of substitutable carriers; a compatible receiver is changed in a way that depends on it. The correlation persists while the vehicles change.](v2/figures/fig-tcr.png)
+![Figure 4. Transmit, Carry, Receive. A distinction at the source becomes available beyond it; the relevant distinction is carried recoverably across a succession of substitutable carriers; a compatible receiver is changed in a way that depends on it. The correlation persists while the vehicles change.](v2/figures/fig-tcr.png)
 
 Read the morning scene again with this in hand. Sunlight is emitted by the Sun, which is changed by emitting it, carried across space, and received by the stone, which is warmed and briefly excited. The stone's interaction with that light makes its own distinction available: the light it returns is now patterned by the difference between grey body and pale vein. That pattern is carried across the few feet to your eye by a succession of electromagnetic disturbances, none of which is "the stone". At your eye it is received, as a definite change in molecules able to admit it. That change becomes available again to cells and nerves. In the end, at a level the coming chapters approach carefully, it reaches *you*, as the seeing of a stone.
 
@@ -1050,7 +1050,7 @@ What distinguishes the woodlouse from the stone? Both are configurations within 
 
 The stone persists largely by being left alone: its crystal structure is stable, and the changes it ordinarily undergoes do not disturb it. A living thing persists in the opposite way. It is constantly taking in matter and energy, transforming them, and expelling what it no longer needs. A woodlouse is not a fixed collection of molecules. It is a pattern of organisation that keeps re-establishing itself through a continuous flow of material, like the flame of Chapter 6, but enormously more intricate and active. It maintains itself, repairs damage, responds to its surroundings, grows according to a characteristic pattern and reproduces.
 
-So life is **sustained organisation**: persistence that is actively maintained, under many layers of constraint, by the continual work of the living thing itself. In the terms of Chapter 6, a living thing preserves its identity by continually *re-actualising* itself within its invariant class, where the stone preserves its own largely by being undisturbed, and by actively correcting departures from it.
+So life is **sustained organisation**: persistence that is actively maintained, under many layers of constraint, by the continual work of the living thing itself. In the terms of Chapter 6, a living thing preserves its identity by continually *re-actualising* itself within its relevant equivalence class, where the stone preserves its own largely by being undisturbed, and by actively correcting departures from it. A living thing does not merely persist. It works to stay what it is.
 
 ## Signals within signals
 
@@ -1064,6 +1064,8 @@ Chapter 6 drew a firm lesson from the stochastic calculator: preserving an ident
 
 Life solves this problem, and the way it does so is one of its defining features. Living things carry **templates**: patterns from which their organisation can be re-established. The most famous is DNA. Every cell carries, in its DNA, information that takes part in shaping how proteins are built, when and where genes are active, and how the cell divides, repairs and specialises. When parts of a cell are damaged, that surviving information allows them to be rebuilt. When DNA itself is damaged, the cell often repairs it using the complementary strand, a second copy of the same information held in reverse. When an organism reproduces, the template is copied and passed on, so that a new organism of the same kind can grow.
 
+DNA is not the only surviving information a cell can draw on. The cell's current state, the chemical marks that switch genes on and off (studied as epigenetics), the shape and arrangement of its parts, chemical gradients across a developing tissue, and its surroundings all carry constraints that guide repair and development. Living repair uses whatever relevant distinctions have survived, wherever they are held.
+
 The first edition of this book described DNA as a *constraint map* rather than a program, and the description still serves. DNA does not generate life by issuing commands, the way software runs on a computer. It participates in a far larger web of constraints: the chemistry of the cell, its membranes, its surroundings and its history. Together these shape how living form is built, maintained and passed on. It is the surviving information that makes repair and reproduction possible, but only within the living whole that reads it. A strand of DNA in a test tube does nothing.
 
 ## Chance within life
@@ -1076,7 +1078,7 @@ Chance also plays a part in variation. The occasional errors in copying are one 
 
 ## Wholes that are more than their parts
 
-A tissue is more than a crowd of cells, and an organism is more than a crowd of tissues. What makes the difference? Chapter 8 showed that relations between events can stabilise a whole in ways that independent events cannot. That is the key here as well. A collection becomes a genuine **higher-order whole** when its parts are coupled so that they no longer behave independently. Then a disturbance to one part is redistributed through the whole, and the whole has properties, such as a temperature it regulates or a shape it restores, that no part has by itself.
+A tissue is more than a crowd of cells, and an organism is more than a crowd of tissues. That does not mean some extra substance is inserted at each level. It means the organisation itself makes a real difference to what happens, and explains things at its own level that a list of parts cannot. What makes the difference? Chapter 8 showed that relations between events can stabilise a whole in ways that independent events cannot, and that what matters is coordination aligned with consequence, not correlation for its own sake. That is the key here as well. A collection becomes a genuine **higher-order whole** when its parts are coupled so that they no longer behave independently. Then a disturbance to one part is redistributed through the whole, and the whole has properties, such as a temperature it regulates or a shape it restores, that no part has by itself.
 
 The living body is full of such coupling. The heartbeat couples with breathing, both couple with the rhythms of the nervous system, those couple with sleep and with hormonal cycles, and each rhythm both responds to the others and steadies them. Lose one major coupling, through illness or injury, and the effects spread far beyond the place of damage. Feedback keeps body temperature, blood sugar and oxygen within narrow ranges: when a quantity drifts, processes activate to bring it back. Other kinds of feedback push the body through thresholds that gradual change could not cross, as in blood clotting or birth.
 
@@ -1107,7 +1109,7 @@ This leaves living things where Genesis places them: real, active, fruitful, ord
 
 # Chapter 11: Dust, Breath, and Person
 
-Go back to the moment of seeing the stone. Light from its surface was released, carried and received in your eye, and a cascade of signals passed along your nerves. Chapter 7 followed that chain as far as physical description can follow it. But the chain did not end in a nerve. It ended in *you*: in someone who saw a stone, recognised it, found it beautiful or dull, and decided to pick it up. Every link before that point is a transmission between configurations. The last one is different. The one who sees is not one more configuration in the chain. The one who sees is a person.
+Go back to the moment of seeing the stone. Light from its surface carried its distinctions to your eye, where they were received, and a cascade of signals passed along your nerves. Chapter 7 followed that chain as far as physical description can follow it. But the chain did not end in a nerve. It ended in *you*: in someone who saw a stone, recognised it, found it beautiful or dull, and decided to pick it up. Every link before that point is a transmission between configurations. The last one is different. The one who sees is not one more configuration in the chain. The one who sees is a person.
 
 This chapter is about that person. It is the centre of the book's account of creation, as it is the climax of the creation account in Genesis. It is also the place where the distinction between categories, introduced in Chapter 1 and defended through every chapter since, matters most.
 
@@ -1200,9 +1202,9 @@ This verse speaks to Israel, but its pattern reveals something about personal id
 
 ## The identity of a person
 
-Chapter 6 proposed that physical things keep their identity by preserving what admissible change leaves unchanged. Human persons persist through bodily change in a way that resembles this. Much of the material of your body is replaced over the years, while you remain you. Your character, memories and commitments carry your history in your present, much as Chapter 6 suggested configuration can carry memory.
+Chapter 6 proposed that physical things keep their identity by remaining within their relevant equivalence class through change, carrying their history with them. Human persons persist through bodily change in a way that resembles this. Much of the material of your body is replaced over the years, while you remain you. Your character, memories and commitments carry your history in your present, much as Chapter 6 suggested configuration can carry memory.
 
-The resemblance is real and illuminating. It shows why personal identity does not depend on keeping the same atoms, and why the replacement of material is no threat to who you are. But it is a structural analogy, not the definition of a person. A person's identity is not merely an invariant of their configuration, because a person is not merely a configuration. Personal identity is grounded more deeply: in the continuity of the inner person Scripture describes, and ultimately in God's knowing and calling. This is why, as Chapter 14 will argue, death does not end a person, and why resurrection is not the making of a copy but the raising of the same person. Identity-as-invariant helps us see why bodily change does not threaten personal identity. It cannot carry the whole weight of what a person is.
+The resemblance is real and illuminating. It shows why personal identity does not depend on keeping the same atoms, and why the replacement of material is no threat to who you are. But it is a structural analogy, not the definition of a person. A person's identity is not merely an equivalence class of their bodily configuration, because a person is not merely a configuration. Personal identity is grounded more deeply: in the continuity of the inner person Scripture describes, and ultimately in God's knowing and calling. This is why, as Chapter 14 will argue, death does not end a person, and why resurrection is not the making of a copy but the raising of the same person. Identity-as-invariant helps us see why bodily change does not threaten personal identity. It cannot carry the whole weight of what a person is.
 
 ## Persons in a relational creation
 
@@ -1226,7 +1228,7 @@ Chapter 4 introduced **admissibility** as whether a transition is physically pos
 - **Is it within this agent's power?** Can this particular agent bring it about? This is *operational admissibility*. If the answer is no, the act is possible in principle but inaccessible to this agent.
 - **Is it right?** Should this act be done? This is *moral admissibility*. If the answer is no, the act may be both possible and within the agent's power, and still wrong.
 
-The three questions are independent, and the most serious confusions about human action come from running them together. Lying is physically possible: speech can carry false statements as easily as true ones. It is within ordinary human power: anyone who can speak can lie. And it is wrong. Sustaining the universe in being is physically admissible in the sense that it occurs, but it is within no creature's power; it belongs to God alone. Creating something beautiful is possible, within power and good. The scalpel and the knife are equally possible and equally within the power of their wielders; what divides them is the moral question.
+The three questions are independent, and the most serious confusions about human action come from running them together. Lying is physically possible: speech can carry false statements as easily as true ones. It is within ordinary human power: anyone who can speak can lie. And it is wrong. Sustaining creation in being is physically admissible in the sense that it occurs, but it is within no creature's power; it belongs to God alone. Creating something beautiful is possible, within power and good. The scalpel and the knife are equally possible and equally within the power of their wielders; what divides them is the moral question.
 
 The first edition of this book named three characteristic mistakes that follow from collapsing these layers, and they are worth repeating because they are so common.
 
@@ -1240,7 +1242,7 @@ Each loses a real distinction, and each has done real harm.
 
 This distinction is the book's firmest safeguard against misreading Chapter 9. That chapter argued that a relational physical world removes the gulf between the material creation and a human life in which consequence, relation and responsibility are fundamental. It is now possible to say exactly what that argument does and does not imply.
 
-It does imply that moral acts are real events in the world. When you lie, a falsehood is released, carried and received. It becomes a change in someone who now believes something untrue and acts on it. When you keep a promise, a commitment carried across days is honoured in a way that has real consequences for another. The relational physics of Chapters 3 to 8 describes the *kind of world* in which such acts can be real and consequential. Moral life is not a ghostly overlay on a world of sealed objects that it cannot touch.
+It does imply that moral acts are real events in the world. When you lie, a falsehood is sent out, carried and received. It becomes a change in someone who now believes something untrue and acts on it. When you keep a promise, a commitment carried across days is honoured in a way that has real consequences for another. The relational physics of Chapters 3 to 8 describes the *kind of world* in which such acts can be real and consequential. Moral life is not a ghostly overlay on a world of sealed objects that it cannot touch.
 
 It does not imply that physical admissibility, or any physical fact, settles moral admissibility. The physics of a lie and the physics of a true statement are the same physics. A relational account of the world can tell you that your words will be received and will have consequences. It cannot tell you that you ought to tell the truth. The moral question belongs to a different category, the category of persons answerable to one another and to God, and it is answered by a different authority.
 
@@ -1260,16 +1262,16 @@ For things, alignment is simple to picture. A bone set straight heals aligned. A
 
 The word needs one guard. The first edition of this book proposed that beauty, order, truth and goodness are "four perspectives on the same structural property". That went too far. It risked turning moral and aesthetic realities into a feature of physical configuration, which is exactly the collapse this chapter has argued against. It also contradicted the technical volume, which says plainly that alignment as a structural notion is not a synonym for goodness. This edition withdraws it. Goodness, truth and beauty are related, and in God they are one, but in creation they are not reducible to a single physical measure. When the book speaks of a person's alignment, it is speaking of a moral and relational condition, described in the language of Scripture, not of a quantity the substrate possesses.
 
-## Freedom and refusal
+## Agency and responsibility
 
-Moral admissibility only makes sense where there is genuine agency. If refusal were impossible, so that persons could not do otherwise, there would be nothing for "ought" to address. Love would be mechanism, obedience would be automation, and moral praise and blame would be category mistakes.
+Moral admissibility only makes sense where there is genuine personal agency: persons who act, respond and are answerable for what they do. Without that, love would be mechanism, obedience would be automation, and moral praise and blame would be category mistakes. Christian traditions differ on what such agency requires. Some hold that responsibility requires that a person could genuinely have done otherwise. Others hold that real responsibility is compatible with God's sovereign ordering of all things, so long as persons act willingly from their own desires and reasons. This book does not decide between them.
 
 Scripture presents human beings as genuinely able to choose, and as held responsible for their choices:
 
 > `I call heaven and earth to record this day against you, that I have set before you life and death, blessing and cursing: therefore choose life, that both thou and thy seed may live.`
 > *Deuteronomy 30:19*
 
-How human freedom relates to God's sovereignty is among the oldest questions in Christian theology, and different traditions answer it differently. This book does not resolve it. It does observe one thing within its own subject. A world of constrained possibility, in which not everything is fixed in advance at the level of actualisation (Chapter 5), is at least not hostile to genuine agency in the way a rigidly determined mechanism might seem to be. That is a modest observation. Constrained chance is not freedom. A coin toss is not a choice, and the book makes no claim that human freedom is a matter of molecular chance. Freedom belongs to persons, in their own category. But the physical order in which persons act need not be imagined as a closed machine.
+How human freedom relates to God's sovereignty is among the oldest questions in Christian theology, and different traditions answer it differently. This book does not resolve it. It does observe one thing within its own subject, and it is a limited observation. A world of constrained possibility, in which actualisation is not fixed in advance at every level (Chapter 5), does not settle the question of human freedom in either direction. Constrained chance is not freedom. A coin toss is not a choice, and the book makes no claim that human agency is a matter of molecular chance. Physics cannot prove free will, and the relational ontology does not try to. Agency belongs to persons, in their own category.
 
 ## Boundaries that free
 
@@ -1335,7 +1337,7 @@ Here a structural analogy from Chapter 6 becomes useful, held carefully as analo
 
 The grammar of Chapter 7 gives a second lens, again used only where it clarifies.
 
-Much human wrongdoing is wrongdoing in what is *transmitted*. A lie releases a false difference: a claim that the world is otherwise than it is, sent out to be received and acted on. Slander releases a false difference about a person. A broken promise breaks a carriage that was relied on: a commitment that should have persisted from the day it was made to the day it was due, and did not. Gossip distorts in carriage, so that what arrives is no longer what was released. Scripture's long catalogue of sins of the tongue reflects how much of human corruption runs through what people send to one another:
+Much human wrongdoing is wrongdoing in what is *transmitted*. A lie sends out a false distinction: a claim that the world is otherwise than it is, offered to be received and acted on. Slander sends out a false distinction about a person. A broken promise breaks a carriage that was relied on: a commitment that should have persisted from the day it was made to the day it was due, and did not. Gossip distorts in carriage, so that what arrives is no longer what was released. Scripture's long catalogue of sins of the tongue reflects how much of human corruption runs through what people send to one another:
 
 > `Death and life are in the power of the tongue: and they that love it shall eat the fruit thereof.`
 > *Proverbs 18:21*
@@ -1473,7 +1475,7 @@ Chapter 13 described corruption as, among other things, a failure of reception: 
 > `For our gospel came not unto you in word only, but also in power, and in the Holy Ghost, and in much assurance.`
 > *1 Thessalonians 1:5*
 
-A heart of stone does not receive; a heart of flesh does. The gospel that comes "in word only" has arrived. The gospel that comes "in power, and in the Holy Ghost" has been received. This is a structural analogy, and the book holds it as one. The Spirit's work in giving a new heart is not a physical process, and faith is not a change of state in a receptor. But the form Scripture uses here, of something sent, carried and finally received as a change in the one who hears, is the form that runs through the whole of creation. It is fitting that the God whose word "shall not return unto me void" (Isaiah 55:11) should, in redemption, make his creatures able to receive it.
+A heart of stone does not receive; a heart of flesh does. The gospel that comes "in word only" has arrived. The gospel that comes "in power, and in the Holy Ghost" has been received. This is a structural analogy, and the book holds it as one. The Spirit's work in giving a new heart is not a physical process, and faith is not a change of state in a receptor. Nor is hearing the gospel a transaction that must be recorded once, like a payment; Scripture speaks of a word received, rehearsed, remembered and received again. What the analogy shares is only the outline: something sent, carried and heard, and finally received as a change in the one who hears. That outline runs through the whole of creation. It is fitting that the God whose word "shall not return unto me void" (Isaiah 55:11) should, in redemption, make his creatures able to receive it.
 
 ## The same person, raised
 
@@ -1490,13 +1492,13 @@ The central hope of Christian faith is resurrection, and it is a hope about *ide
 
 The risen Christ is recognisably himself: *it is I myself*, with the wounds of the crucifixion. The resurrection of the dead is the raising of the same persons, transformed, not the manufacture of replacements. And Scripture is plain that it concerns everyone, the righteous and the unrighteous alike, to life or to judgment.
 
-How can the same person be raised, when the body has returned to dust? Chapter 6 offered an account of how physical things keep their identity: by preserving what admissible change leaves unchanged. It also showed the limit of that account: when what carries identity is destroyed, conservation cannot bring it back. Chapter 11 added that a person's identity is not merely an invariant of bodily configuration, but is grounded in the continuity of the inner person and in God's knowing and calling.
+How can the same person be raised, when the body has returned to dust? Chapter 6 offered an account of how physical things keep their identity: by remaining within their relevant equivalence class through admissible change. It also showed the limit of that account: when what carries identity is destroyed, conservation cannot bring it back. Chapter 11 added that a person's identity is not merely an invariant of bodily configuration, but is grounded in the continuity of the inner person and in God's knowing and calling.
 
 Put together, these give an honest answer. Resurrection is not the substrate preserving a person's invariants through death. Death destroys the configuration, and the dust returns to the earth (Ecclesiastes 12:7). The identity of the person raised is held by God. The spirit "shall return unto God who gave it". God, who calls his people by name, does not lose track of whom he has called. The book makes no claim about the mechanism of resurrection, and Scripture gives none: "it doth not yet appear what we shall be" (1 John 3:2). What the relational account contributes is a negative clarity. It shows exactly why resurrection cannot be a natural process of created order, and therefore why it must be, as Scripture says it is, the act of God.
 
-## Death is not original, and the Cross is not defeat
+## Human death and the Cross
 
-Scripture presents death as entering creation through sin, not as part of creation's original design (Romans 5:12), and as an enemy to be destroyed (1 Corinthians 15:26). Whatever readers conclude about the history of the natural world, and Christians who share this book's commitments read that history in different ways, the book holds the scriptural claim that the death of persons is not what God made them for.
+Scripture presents human death as bound up with sin (Romans 5:12) and as an enemy to be destroyed (1 Corinthians 15:26). Human death is not humanity's intended created end. Christians who share this book's commitments read the wider history of the natural world, including animal mortality, in different ways, and the book does not settle that question. It holds the narrower scriptural claim: the death of persons is not what God made them for.
 
 The death of Christ is presented in a striking way within that account. In the ordinary case, death is corruption prevailing over a creature that cannot resist it. The Gospels present Christ's death as yielded:
 
@@ -1515,7 +1517,7 @@ The ordinary sequence, death and then the decay that death lets loose, was inter
 
 ## Restored alignment can be higher than before
 
-One of the first edition's most valuable arguments concerned what restoration produces, and it deserves to be kept in condensed form. A restored life is not merely returned to where it was before the damage. It can become something richer.
+One of the first edition's most valuable reflections concerned what restoration produces, and it deserves to be kept in condensed form. It is offered as theological and pastoral reflection, drawn from Scripture and from Christian experience, not as a doctrine binding on every reader and not as a claim that evil was necessary. A restored life is not merely returned to where it was before the damage. It can become something richer.
 
 Innocence that has never been tested is real goodness, but it is unowned. Its loyalties are untried and its weaknesses hidden, because nothing has exposed them. When disorder comes, it exposes what was hidden. If it is then truthfully faced, repented of and repaired, the result can be an alignment that is conscious, tested, freely chosen and humbler than before. A marriage repaired after a serious rupture, a faith that has come through honest doubt, and a community rebuilt after a wound can each hold a kind of coherence that could not exist without the wound and the repair together. Scripture describes this pattern repeatedly:
 
@@ -1540,7 +1542,7 @@ Second, restoration is costly. At the scale of a single life it costs repentance
 > `Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold… But with the precious blood of Christ, as of a lamb without blemish and without spot.`
 > *1 Peter 1:18-19*
 
-Third, the freedom that makes owned alignment possible is a freedom to love and trust God, not a licence to corrupt. Refusal must be really possible for faith to be real, but a real possibility is not thereby a good one. Faith is the creature's willing trust in a God it does not yet see in full, extended across the very gap that testing opens:
+Third, the freedom that makes owned alignment possible is a freedom to love and trust God, not a licence to corrupt. Faith must be a genuine, willing response of the person, however the traditions describe the freedom that involves, and the possibility of turning away is not thereby a good one. Faith is the creature's willing trust in a God it does not yet see in full, extended across the very gap that testing opens:
 
 > `But without faith it is impossible to please him: for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him.`
 > *Hebrews 11:6*
@@ -1584,9 +1586,9 @@ And you, who see it, are formed from the same dust, alive by the same gift that 
 
 Gathered together, the book's account runs like this.
 
-God creates reality. Created physical order is real, and it is not self-grounding: it holds together because it is held. The deepest physical ontology the Relational Substrate proposes is relational rather than object-first. Possibility is constrained before anything happens, both by what is forbidden and by what is favoured. Actualisation is relationally constrained and may be fundamentally stochastic. That is a hypothesis, consistent with quantum theory but not established by it. Persistence, identity and regularity arise through structured relational continuity: identity is carried by what admissible change preserves, and regularity is the stable behaviour of many constrained and coordinated events. Transmit, carry and receive describe how a difference becomes consequential elsewhere: released at a cost to its source, carried as a correlation across substitutable carriers, and received as an admissible change in something else. Stable global behaviour does not require every underlying transition to be determined in advance. Mathematics describes that stable behaviour, often with astonishing precision, without thereby becoming the reality it describes.
+God creates reality. Created physical order is real, and it is not self-grounding: it holds together because it is held. The deepest physical ontology the Relational Substrate proposes is relational rather than object-first. Possibility is constrained before anything happens, both by what is forbidden and by what is favoured. Actualisation is relationally constrained and may be fundamentally stochastic. That is a hypothesis, consistent with quantum theory but not established by it. Persistence, identity and regularity arise through structured relational continuity. Identity is the preservation of a thing's relevant equivalence class, judged by what reachable futures could tell apart, with invariants as its certificates and provenance as part of it where it still matters. Regularity is the stable behaviour of many chance events, constrained and coordinated in the right way. Transmit, carry and receive describe how a distinction becomes consequential elsewhere: made available beyond its source, kept recoverably across substitutable carriers, and received as a dependent change in a compatible receiver. Stable global behaviour does not require every underlying transition to be determined in advance. Mathematics describes that stable behaviour, often with astonishing precision, without thereby becoming the reality it describes.
 
-Because material reality is relational from its foundation, the physical world does not begin as a universe of metaphysically isolated objects that must somehow acquire relation later. That matters for global coherence. Life, personhood, morality, consequence, corruption and restoration need not be bolted onto a physical world of a different kind. Yet material, biological, personal and spiritual categories remain genuinely distinct. Relation runs through all of them, and relation across categories does not erase category. The substrate is not the soul. Transmission is not revelation. A law of physics is not a commandment. Creation is not God.
+Because material reality is relational from its foundation, the physical world does not begin as a scatter of metaphysically isolated objects that must somehow acquire relation later. That matters for global coherence. Life, personhood, morality, consequence, corruption and restoration need not be bolted onto a physical world of a different kind. Yet material, biological, personal and spiritual categories remain genuinely distinct. Relation runs through all of them, and relation across categories does not erase category. The substrate is not the soul. Transmission is not revelation. A law of physics is not a commandment. Creation is not God.
 
 Science strongly constrains what can responsibly be claimed about the physical world, and the book has tried to give it full credit, but empirical description alone does not exhaust ontology. Scripture provides the governing frame within which this book seeks coherence. The whole project is not an empirical proof of ultimate ontology. It is an attempt to construct the most globally coherent account available, while remaining honest about observation, mathematics, experiment, metaphysics, uncertainty and revelation.
 
@@ -1624,7 +1626,7 @@ If the world is as described here, some practical consequences follow. They are 
 
 Science is to be honoured. It studies a real, ordered, intelligible creation, and its successes are possible precisely because creation is not chaos. It is also to be held in its place: it describes how the created order behaves, and the questions of what that order is, what it is for and how we should live in it are not answered by description alone.
 
-Consequence is to be taken seriously. In a relational world, what we release goes out from us, is carried, and is received in others and in the creation around us. Words, promises, neglect and care all travel. Responsibility is not an arbitrary overlay. It answers to real effects flowing through a real order.
+Consequence is to be taken seriously. In a relational world, what we say and do goes out from us, is carried, and is received in others and in the creation around us. Words, promises, neglect and care all travel. Responsibility is not an arbitrary overlay. It answers to real effects flowing through a real order.
 
 Wisdom is more than technique. A civilisation can learn to calculate brilliantly while forgetting what its calculations are about, and to build powerfully while forgetting what its buildings are for.
 
@@ -1692,34 +1694,49 @@ The first edition of this book devoted a chapter to Paul's warning against "oppo
 
 # Appendix B: Technical Notes and Research Status
 
-This appendix is for readers who want to know what lies behind the physical chapters: what the research has and has not shown, and where first-edition material has gone. The technical volume, *The Relational Substrate*, and the public research repository (<https://github.com/gellsmore-svg/Relational-Substrate>) give the detail.
+This appendix is for readers who want to know what lies behind the physical chapters: what the research has and has not shown, where first-edition material has gone, and which ideas came from exploratory work not yet published as formal records. The technical volume, *The Relational Substrate*, and the public research repository (<https://github.com/gellsmore-svg/Relational-Substrate>) give the detail.
 
-## The research behind this edition
+## Recorded research behind this edition
 
 | Programme | Date | What it established | What it did not establish |
 | --- | --- | --- | --- |
-| Validation and order effects | June 2026 | The direction of a history-dependence prediction in metal fatigue was confirmed on open data, and the same direction held in three further domains | The size of the effect; the model's magnitudes were many times too small. The project classifies the work as a directional lens, not a quantitative theory |
-| Topological modelling | July 2026 | A coherent derivation, from one assumed substrate structure, of several structural features of matter; computational checks that identity can be carried by a whole-number invariant, with no adjustable parameters | Any measured number. The derivation of fermion behaviour and charge quantisation holds only in a special, non-generic case that remains unproven. The substrate structure was chosen, not demonstrated |
-| Stochastic calculator (SC-001 to SC-027R) | September 2026 | Exact arithmetic outputs from very many distinct chance-driven paths; identity as a conserved equivalence class; no recovery after destruction; a working transmit–carry–receive procedure with once-only reception; stabilisation by designed covariance; reliability explained by an ordinary survival formula | Any unique Relational Substrate mechanism or physical implication. Its authors conclude that ordinary computer science and probability explain every result |
-| Constraint laboratory, Generation 001 | October 2026 | An exhaustive census of the smallest relational rule systems; prohibitions alone change reachability, period and halting, while weightings change only measure; constraint sets can cancel | Any claim about nature. The hoped-for pattern of "constructive dissolution" did not appear at this level, and the report records that as a tension |
+| Validation and order effects | June 2026 | The direction of a history-dependence prediction in metal fatigue was confirmed on open data, and the same direction held in three further domains | The size of the effect: the model's magnitudes were many times too small. Classified by the project as a directional lens, not a quantitative theory |
+| Topological modelling | July 2026 | A coherent derivation, from one assumed substrate structure, of several structural features of matter. Computational checks, with no adjustable parameters, that identity can be carried by a whole-number invariant | Any measured number. The derivation of fermion behaviour and charge quantisation holds only in a special, non-generic case that remains unproven. The substrate structure was chosen, not demonstrated |
+| Stochastic calculator (SC-001 to SC-027R) | September 2026 | Exact arithmetic outputs from very many distinct chance-driven paths. Identity as a conserved equivalence class. No recovery after destruction. A working transmit–carry–receive protocol for decimal carry, in which correctness depended on the receiver counting each carry once. Designed covariance stabilising an aggregate. Reliability explained by an ordinary survival formula | Any unique Relational Substrate mechanism or physical implication; its authors conclude that ordinary computer science and probability explain every result. The protocol's particular choices (consuming the source, once-only receipt) suit arithmetic and are not general features of T-C-R |
+| Constraint laboratory, Generation 1 | 3 Oct 2026 | Exhaustive census of the smallest relational rule systems (two to five points, links forming and dissolving). Forbidding rules alone change which patterns are reachable, the rhythm of movement and whether the system halts; favouring rules change only how time is distributed | Any claim about nature. Its report of a "cancelling pair" was later reclassified (next row) |
+| Constraint laboratory, Generation 1b | 3 Oct 2026 | The same census, re-analysed after removing sets that write one rule twice with two weights. That reclassifies the "cancelling pair" as a single rule with stacked weights. Genuine global cancellations at three points are 40 structured triples. Exact calculation reveals large hidden variety: one coarse family contains 1,042 distinct exact behaviours, and at five points two systems share every recorded summary yet differ in entropy ("observable equality is not kernel equality") | It does not replace Generation 1's committed records, which stand as the history |
+| Constraint laboratory, Generation 2 | 3 Oct 2026 | Rules allowed to respond to the total number of links. Of 10,430 such rule sets, 9,776 reproduce existing behaviour and 654 are new exact behaviours, in 189 new families. The 30 families with genuinely new patterns of possibility all come from pairs of count-gated *forbidding* rules; favouring rules opened none, and no single count rule opened a new family. 16 new genuine cancellations appear as reciprocal count pairs | A hoped-for sequence of "organisation, then dissolution, then genuinely new organisation" was **not found**. An automatic flag that seemed to suggest it turned out, on inspection, to mark ordinary reconnection, clearing and regrowth, simple loss, or a fixed two-state toggle. The laboratory lists memory of the previous state, and a genuinely three-way relation, as *candidate* next steps, not commitments |
+
+The negative result in Generation 2 is valuable. It shows that simple pairwise rules, even with a whole-system count added, do not produce the kind of constructive reorganisation the project was looking for, and it narrows the next question. It is not a failure of the ontology, and the positive results are not a confirmation of it.
+
+## Exploratory research not yet published as formal records
+
+Several lines of the project's research were carried out in conversational research sessions whose records are not in the repository. Their conclusions inform Chapters 6 to 9. They are described in the book as exploratory, and they should not be cited as completed experiments until formal records exist. The repository file `books/v2/analysis/conversational-research-import-v1.md` lists them with their status.
+
+- **Contextual identity and provenance** (Chapter 6). States can be equivalent under one description and distinguishable by a later interaction. A distinction may be ignored only where no reachable future can draw on it. Past paths can survive in present structure. *Adjacent recorded evidence:* Generation 1b's hidden variety; the calculator's equivalence classes.
+- **Coordination in rings of chancy units** (Chapter 8). Equal individual chances do not fix whole-system behaviour. What stabilises is coordination aligned with consequence, and stability of the mean is not stability of fluctuations. *Adjacent recorded evidence:* the calculator's covariance and ring-locality results.
+- **Effective laws** (Chapter 8). Deterministic continuum equations such as Navier–Stokes as effective descriptions; the open question of which relational conditions make stable effective laws possible. No derivation is claimed.
+- **Projection and hidden structure** (Chapters 6 and 8). The lesson was drawn while studying the geometry used in some modern calculations of particle interactions (the "positive Grassmannian" and "amplituhedron"). Distinct underlying configurations can project to one mathematical object and still differ in what they do. The book makes no claim about that physics itself.
 
 ## First-edition material now held here
 
-**The ontological stack.** The first edition subdivided actualised order into levels T1A to T1D2: primitive geometry, micro-organisation, objecthood, kinds, persistence of kinds, and created and creature-constructed relational orders. This edition uses only T0 (constrained possibility), T1 (actualised order) and T2 (lived manifestation). The finer levels remain useful for technical classification, but they did not carry argumentative weight in the book.
+**The ontological stack.** The first edition divided actual order into levels T1A to T1D2 (primitive geometry, micro-organisation, objecthood, kinds, persistence of kinds, created and creature-made orders), with T2 for lived manifestation. This edition uses T0 (constrained possibility) and T1 (actuality, understood as carrying its own history). The finer levels remain useful for technical classification. The T2 label is retired. "Manifestation" is described in ordinary words and kept distinct from conscious awareness, so that it cannot be mistaken for an explanation of consciousness.
 
-**The five operations.** The first edition proposed that every change in the substrate is one of five operations: propagation, reconfiguration, alignment adjustment, closure formation and dissolution. It associated light, electricity and magnetism with the first three. This is retained in the technical volume as a classificatory proposal. It has not been tested, and this edition does not rely on it.
+**The five operations.** The first edition proposed that every change in the substrate is one of five operations (propagation, reconfiguration, alignment adjustment, closure formation, dissolution), and associated light, electricity and magnetism with the first three. It is retained in the technical volume as a classificatory proposal. It has not been tested, and this edition does not rely on it.
 
-**Closure knots.** The first edition proposed that matter's stable identities are knot-like closures in the substrate, and offered a mechanism for their persistence. This edition keeps the general idea that identity can be carried by invariant organisation (Chapter 6), which the July 2026 computations support in principle. It treats the specific mechanism as the technical volume's candidate rather than as declared ontology.
+**Closure knots.** The first edition proposed that matter's stable identities are knot-like closures in the substrate, with a specific mechanism of persistence. This edition keeps the general idea that identity can be carried by invariant organisation, which the July 2026 computations support in principle. The specific mechanism is the technical volume's candidate, not declared ontology.
 
-**Light, electricity and magnetism.** The first edition described light as a coherent transient torsional disturbance of the substrate, magnetism as held twist and electricity as ordered reconfiguration. The July 2026 work derived the *structure* of the homogeneous Maxwell equations from an assumed substrate geometry, a notable internal result. No quantitative account of light or electromagnetism has been produced from the substrate, and these mappings are therefore not presented in the body of this book.
+**Light, electricity and magnetism.** The first edition described light as a coherent transient torsional disturbance, magnetism as held twist and electricity as ordered reconfiguration. The July 2026 work derived the *structure* of the homogeneous Maxwell equations from an assumed substrate geometry, a notable internal result. No quantitative account of light or electromagnetism has been produced from the substrate, so these mappings do not appear in the body of this book.
 
-**Time and relativity.** The first edition explained the slowing of clocks in gravitational fields and at high speeds by the substrate's resistance to reconfiguration. That explanation was never made quantitative. It added no prediction to general relativity, which describes these effects precisely. This edition retains only the interpretive reading of time as the ordering of actualisation (Chapter 6).
+**Time and relativity.** The first edition explained the slowing of clocks by the substrate's resistance to reconfiguration. That explanation was never made quantitative and added no prediction to general relativity, which describes these effects precisely. This edition retains only the reading of time as the ordering of actualisation (Chapter 6).
 
-**Agent "dialects" and miracles.** The first edition proposed that miracles are operations performed under wider permissions within the same created grammar. This edition withdraws the proposal from the main text. It risked placing God's action inside the possibilities of created order. Chapter 14 states the book's present position: Scripture's accounts of miracles are received as given, and the ontology offers no mechanism for them.
+**Agent "dialects" and miracles.** The first edition proposed that miracles are operations performed under wider permissions within the same created grammar. This edition withdraws that proposal, because it risked placing God's action inside the possibilities of created order. Chapter 14 states the present position: Scripture's accounts of miracles are received as given, and the ontology offers no mechanism for them.
+
+**Earlier T-C-R wording.** The first draft of this edition defined transmission as release "at a cost to the source" and reception as occurring "once". Both came from the calculator's arithmetic protocol. This version treats them as subcases: some sources are changed by transmitting and some receivers count once. Chapter 7 gives the general form.
 
 ## A note on the label T0
 
-The project's July 2026 research notes use "T0" to "T7" as names for the rungs of a ladder of thought experiments, in which "T0" means the substrate at rest. In this book, T0 always means constrained possibility, as in the first edition and the technical volume.
+The project's July 2026 research notes use "T0" to "T7" as names for the rungs of a ladder of thought experiments, in which "T0" means the substrate at rest. In this book T0 always means constrained possibility, as in the first edition and the technical volume.
 
 ---
 
@@ -1727,63 +1744,79 @@ The project's July 2026 research notes use "T0" to "T7" as names for the rungs o
 
 Each term is used in this book in the single sense given here. The chapter in brackets is where the term is first explained.
 
-**Actualisation (T1).** The coming-to-be of one admissible configuration or transition among those that are possible. (Ch 4)
+**Actuality, actualisation (T1).** Actualisation is the coming-to-be of one admissible configuration or transition among those that are possible. Actuality is what has come to be, and it is not a memoryless snapshot: it carries the relational traces of its own past. (Ch 4, Ch 6)
 
 **Admissibility.** Whether a transition is possible at all within created physical order: a hard boundary of the possible. Not to be confused with moral permission. Chapter 12 distinguishes physical, operational and moral admissibility; unqualified, the word means physical. (Ch 4)
 
-**Alignment.** Fitting the order a thing or person is made for. In persons it is a moral and relational condition, not a physical measurement. (Ch 12)
+**Alignment.** Fitting the order a thing or person is made for. In persons, a moral and relational condition, not a physical measurement. (Ch 12)
 
-**Carrier.** Whatever currently realises a carried correlation: a wave, a current, a fire, a record. Carriers may be substituted without the carried difference being lost. (Ch 7)
+**Attractor.** In the mathematics of changing systems, a state or set of states toward which a system tends from a wide range of starting points and to which it returns when disturbed. A reliable outcome is not by itself evidence of one. (Ch 8)
 
-**Category.** A genuinely distinct kind of reality: material, living, personal, spiritual. God is not a category within creation but its Creator. (Ch 1)
+**Carrier.** Whatever currently realises a carried distinction: a wave, a current, a fire, a record, a chain of local interactions. Carriers may be substituted without loss, provided the relevant distinction stays recoverable. (Ch 7)
+
+**Category.** A genuinely distinct kind of reality: material, living, personal, moral, spiritual. God is not a category within creation but its Creator. (Ch 1)
 
 **Chaotic.** Deterministic but so sensitive to its starting point that prediction becomes impractical. Distinct from stochastic. (Ch 5)
 
-**Coherence.** Fitting together without contradiction while preserving real distinctions. *Local*: a model explains a bounded phenomenon. *Regional*: neighbouring domains integrate. *Global*: the whole account of reality remains mutually compatible. Coherence is not the same as truth. (Ch 2, Ch 9)
+**Coherence.** Non-contradiction is necessary but not sufficient. Coherence also requires real connection between the parts of an account, faithful translation across their boundaries, meaning kept through explanatory layers and round trips, and preservation of real distinctions. *Local*: a model explains a bounded phenomenon. *Regional*: neighbouring domains integrate. *Global*: the whole account of reality passes these tests together. Coherence is not the same as truth. (Ch 2, Ch 9)
 
 **Constrained stochastic actualisation.** The Relational Substrate hypothesis that what becomes actual is a matter of chance among admissible options, weighted by tendency and shaped by constraint. (Ch 5)
 
-**Coordination.** A relation among chance events, such as shared outcomes or tied fluctuations, that can stabilise a whole. It is not a controller. (Ch 8)
+**Coordination.** Relations among chance events that make them vary together. What stabilises a whole is coordination aligned with consequence and responsive to the current state, not correlation as such. It is not a controller. (Ch 8)
 
-**Corruption.** Distortion of good order, persisting without being restored: misalignment, rupture, misdirected transmission, failed reception. It is parasitic and has no being of its own. (Ch 13)
+**Corruption.** Distortion of good order, persisting without being restored: misalignment, rupture, misdirected transmission, failed reception. Parasitic, with no being of its own. (Ch 13)
 
-**Created runtime order.** Creation as operating, the domain of ordinary physical process, as distinguished from creation's origin in God's act. The term is borrowed from computing, but creation is not a computer. (Ch 3)
+**Created runtime order.** Creation as operating, the domain of ordinary physical process, distinguished from creation's origin in God's act. The term is borrowed from computing, but creation is not a computer. (Ch 3)
 
-**Difference.** A distinguishable state or relation that could matter to something else. (Ch 7)
+**Distinction (source distinction).** A distinguishable state or relation at a source that could make a difference elsewhere. (Ch 7)
 
-**Effective determinism.** Regular, reliable, predictable behaviour at the scale observed, whatever the underlying process. A fact about regularity, not a metaphysical claim that nothing could be otherwise. (Ch 8)
+**Effective determinism.** Regular, reliable, predictable behaviour at the scale observed, whatever the underlying process. A fact about regularity, not a metaphysical claim. (Ch 8)
 
-**Identity (of physical things).** What admissible change preserves: an invariant. Personal identity resembles this but is not defined by it. (Ch 6)
+**Equivalence class.** All the states that count as "the same" for a given purpose: those that no relevant interaction could tell apart. (Ch 6)
 
-**Invariant.** A quantity or feature left unchanged by a set of transformations. (Ch 6)
+**Identity (of physical things).** Continuity of a thing's relevant equivalence class through admissible change, judged by what reachable future interactions could discriminate. Invariants are certificates of it, and provenance is part of it where it remains consequential. Personal identity resembles this but is not defined by it. (Ch 6)
 
-**Manifestation (T2).** Created order present as lived, perceived and embodied reality. (Ch 6)
+**Invariant.** A quantity or feature left unchanged by a set of transformations. One carrier or certificate of identity, not necessarily all of it. (Ch 6)
+
+**Joint process.** How chance events are related to one another, as distinct from the chance of each event alone (its *marginal* probability). Equal marginals do not imply the same joint process or the same behaviour of the whole. (Ch 8)
+
+**Manifestation.** Created order presenting itself to other things: detectable and encounterable. A physical matter, distinct from anyone's awareness of it. (Ch 6)
+
+**Mathematical determinism.** A property of equations: the state at one moment fixes the state at every later moment. Compatible with a non-deterministic world underneath. (Ch 8)
 
 **Matter.** Stable relational form, not primitive substance. Real, measurable and consequential. (Ch 6)
 
-**Ontology.** An account of what must be there for the behaviour we describe to be possible. Distinct from description. (Ch 2)
+**Memory (physical).** Past distinctions embodied in present relations so that they alter future admissibility, likelihood or response. No separate memory substance is required. A working hypothesis. (Ch 6)
 
-**Persistence.** Continued re-actualisation within the same invariant class. (Ch 6)
+**Ontology.** An account of what must be there for described behaviour to be possible. Distinct from description. (Ch 2)
+
+**Persistence.** Continued re-actualisation within the same relevant equivalence class, against some kind of disturbance, over some length of time. (Ch 6)
 
 **Person.** A centre of awareness, relation, agency, address and responsibility. Personhood is deeper than embodiment; human persons are persons in an embodied, creaturely mode. (Ch 11)
 
-**Possibility, constrained (T0).** What created order is capable of: the configurations and transitions that can occur at all. (Ch 4)
+**Possibility, constrained (T0).** What created order is capable of: the configurations and transitions that can occur at all, together with how they are weighted. (Ch 4)
 
-**Reception.** A carried difference becoming an admissible change of state in something else. Reception is consequence, not mere arrival, and it occurs once. (Ch 7)
+**Projection (coarse-graining).** A description that maps several distinct underlying states onto one visible state. It can hide distinctions that later matter. (Ch 6, Ch 8)
+
+**Provenance.** Past distinctions that survive in present relational structure. Part of a thing's identity where some reachable future could draw on them; safely ignored where none could. (Ch 6)
+
+**Reception.** A compatible receiver changed in a way that depends on the carried distinction. Reception is consequence, not mere arrival. How a receiver treats repeated or continuing arrivals (once, continuously, cumulatively, or harmlessly repeated) is a property of the receiver. (Ch 7)
+
+**Receiver compatibility.** What a receiver can register, and how it responds, as set by its own admissibility. (Ch 7)
 
 **Relation.** A real standing-between in which each relatum is conditioned by the other. (Ch 3)
 
-**Relational substrate.** The proposed created relational order within which physical things are constituted and act. It is not matter, not a field in the descriptive sense, not ether, not a mind, not a soul and not God. (Ch 3)
-
-**Release (transmit).** A difference ceasing to be only local, at a cost to its source. (Ch 7)
+**Relational substrate.** The proposed created relational order within which physical things are constituted and act. It is not matter, not ether, not a mind, not a soul and not God, and not a denial that fields are real. (Ch 3)
 
 **Stochastic.** Governed by probabilities over defined possibilities. Not lawless, not arbitrary, not chaotic. (Ch 5)
 
 **Structural analogy.** A likeness of form between realities of different kinds. Distinct from *ontological identity*, sameness of kind. (Ch 1)
 
-**Tendency.** The relative likelihood of an admissible transition compared with the others. A weighting, not a permission. (Ch 4)
+**Tendency.** The relative likelihood of an admissible transition compared with the others. A weighting, not a permission, and not a probability that anyone assigns. (Ch 4)
 
-**Transmit–Carry–Receive (T-C-R).** The grammar by which a difference becomes consequential beyond its locality: release, constrained continuity across substitutable carriers, and consequential reception. (Ch 7)
+**Transmission.** A source distinction becoming available to make a difference beyond its locality. The source may or may not be changed in the process. (Ch 7)
+
+**Transmit–Carry–Receive (T-C-R).** The grammar by which a distinction becomes consequential beyond its locality: made available, kept recoverably across substitutable carriers, and received as dependent change in a compatible receiver. (Ch 7)
 
 ---
 
@@ -1816,10 +1849,16 @@ Scripture is quoted from the King James Version throughout.
 
 **Chapter 5.**
 
+- On objective-collapse theories, which modify quantum dynamics and are experimentally testable: A. Bassi, M. Dorato and H. Ulbricht, "Collapse models: a theoretical, experimental and philosophical review", *Entropy* 25, 645 (2023).
+
 - On the Born rule and the variety of interpretations of quantum theory: the *Stanford Encyclopedia of Philosophy* entries "Philosophical Issues in Quantum Theory", "Bohmian Mechanics" and "The Many-Worlds Interpretation of Quantum Mechanics".
 - The stochastic calculator's findings, hypotheses and mechanism audit are in the project repository, branch `research/stochastic-calculator`, in `stochastic-calculator/RS_FINDINGS.md`, `HYPOTHESES.md` and `MECHANISMS.md`.
 
 **Chapter 6.**
+
+- On the mass of protons and neutrons arising mainly from the strong interaction: S. Dürr et al., "Ab initio determination of light hadron masses", *Science* 322, 1224 (2008).
+- The constraint laboratory's Generation 1b report (exact kernels within coarse families; "observable equality is not kernel equality") is in the project repository, branch `research/constraint-lab-v0.2`, `constraint-lab/reports/generation-001b-structurally-normalised.md`.
+- The exploratory research on contextual identity and provenance is recorded, with its status, in `books/v2/analysis/conversational-research-import-v1.md`.
 
 - On conservation laws and symmetry: E. Noether, "Invariante Variationsprobleme" (1918).
 - On the July 2026 topological work and its stated limits: `docs/conceptual-phase-completion-2026-07-12.md` and `docs/theta-origin-wpa-2026-07-13.md` in the project repository.
@@ -1827,10 +1866,18 @@ Scripture is quoted from the King James Version throughout.
 
 **Chapter 8.**
 
+- On laws of large numbers for dependent sequences (ergodic and mixing processes): R. Durrett, *Probability: Theory and Examples* (5th ed., Cambridge University Press, 2019), ch. 7.
+- On Bell's theorem and its assumptions: the *Stanford Encyclopedia of Philosophy* entry "Bell's Theorem".
+- The constraint laboratory's Generation 2 report (occupation-count rules; negative result on constructive reorganisation) is in `constraint-lab/reports/generation-002-occupation-threshold.md` on the same branch.
+
 - On Brownian motion: A. Einstein, *Annalen der Physik* 17 (1905).
 - On deriving fluid equations from kinetic theory: S. Chapman and T. G. Cowling, *The Mathematical Theory of Non-uniform Gases* (Cambridge University Press, 1970).
 - On the Navier–Stokes existence and smoothness problem: C. L. Fefferman's official problem description for the Clay Mathematics Institute Millennium Prize Problems.
 - E. Wigner, "The unreasonable effectiveness of mathematics in the natural sciences", *Communications on Pure and Applied Mathematics* 13 (1960).
+
+**Chapter 9.**
+
+- On powers (dispositional) ontologies: the *Stanford Encyclopedia of Philosophy* entry "Dispositions". On the Humean mosaic view: D. Lewis, *Philosophical Papers* vol. II (Oxford University Press, 1986), introduction. On emergence: the *Stanford Encyclopedia of Philosophy* entry "Emergent Properties".
 
 **Chapter 11.**
 

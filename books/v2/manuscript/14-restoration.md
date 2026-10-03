@@ -53,7 +53,7 @@ Chapter 13 described corruption as, among other things, a failure of reception: 
 > `For our gospel came not unto you in word only, but also in power, and in the Holy Ghost, and in much assurance.`
 > *1 Thessalonians 1:5*
 
-A heart of stone does not receive; a heart of flesh does. The gospel that comes "in word only" has arrived. The gospel that comes "in power, and in the Holy Ghost" has been received. This is a structural analogy, and the book holds it as one. The Spirit's work in giving a new heart is not a physical process, and faith is not a change of state in a receptor. But the form Scripture uses here, of something sent, carried and finally received as a change in the one who hears, is the form that runs through the whole of creation. It is fitting that the God whose word "shall not return unto me void" (Isaiah 55:11) should, in redemption, make his creatures able to receive it.
+A heart of stone does not receive; a heart of flesh does. The gospel that comes "in word only" has arrived. The gospel that comes "in power, and in the Holy Ghost" has been received. This is a structural analogy, and the book holds it as one. The Spirit's work in giving a new heart is not a physical process, and faith is not a change of state in a receptor. Nor is hearing the gospel a transaction that must be recorded once, like a payment; Scripture speaks of a word received, rehearsed, remembered and received again. What the analogy shares is only the outline: something sent, carried and heard, and finally received as a change in the one who hears. That outline runs through the whole of creation. It is fitting that the God whose word "shall not return unto me void" (Isaiah 55:11) should, in redemption, make his creatures able to receive it.
 
 ## The same person, raised
 
@@ -70,13 +70,13 @@ The central hope of Christian faith is resurrection, and it is a hope about *ide
 
 The risen Christ is recognisably himself: *it is I myself*, with the wounds of the crucifixion. The resurrection of the dead is the raising of the same persons, transformed, not the manufacture of replacements. And Scripture is plain that it concerns everyone, the righteous and the unrighteous alike, to life or to judgment.
 
-How can the same person be raised, when the body has returned to dust? Chapter 6 offered an account of how physical things keep their identity: by preserving what admissible change leaves unchanged. It also showed the limit of that account: when what carries identity is destroyed, conservation cannot bring it back. Chapter 11 added that a person's identity is not merely an invariant of bodily configuration, but is grounded in the continuity of the inner person and in God's knowing and calling.
+How can the same person be raised, when the body has returned to dust? Chapter 6 offered an account of how physical things keep their identity: by remaining within their relevant equivalence class through admissible change. It also showed the limit of that account: when what carries identity is destroyed, conservation cannot bring it back. Chapter 11 added that a person's identity is not merely an invariant of bodily configuration, but is grounded in the continuity of the inner person and in God's knowing and calling.
 
 Put together, these give an honest answer. Resurrection is not the substrate preserving a person's invariants through death. Death destroys the configuration, and the dust returns to the earth (Ecclesiastes 12:7). The identity of the person raised is held by God. The spirit "shall return unto God who gave it". God, who calls his people by name, does not lose track of whom he has called. The book makes no claim about the mechanism of resurrection, and Scripture gives none: "it doth not yet appear what we shall be" (1 John 3:2). What the relational account contributes is a negative clarity. It shows exactly why resurrection cannot be a natural process of created order, and therefore why it must be, as Scripture says it is, the act of God.
 
-## Death is not original, and the Cross is not defeat
+## Human death and the Cross
 
-Scripture presents death as entering creation through sin, not as part of creation's original design (Romans 5:12), and as an enemy to be destroyed (1 Corinthians 15:26). Whatever readers conclude about the history of the natural world, and Christians who share this book's commitments read that history in different ways, the book holds the scriptural claim that the death of persons is not what God made them for.
+Scripture presents human death as bound up with sin (Romans 5:12) and as an enemy to be destroyed (1 Corinthians 15:26). Human death is not humanity's intended created end. Christians who share this book's commitments read the wider history of the natural world, including animal mortality, in different ways, and the book does not settle that question. It holds the narrower scriptural claim: the death of persons is not what God made them for.
 
 The death of Christ is presented in a striking way within that account. In the ordinary case, death is corruption prevailing over a creature that cannot resist it. The Gospels present Christ's death as yielded:
 
@@ -95,7 +95,7 @@ The ordinary sequence, death and then the decay that death lets loose, was inter
 
 ## Restored alignment can be higher than before
 
-One of the first edition's most valuable arguments concerned what restoration produces, and it deserves to be kept in condensed form. A restored life is not merely returned to where it was before the damage. It can become something richer.
+One of the first edition's most valuable reflections concerned what restoration produces, and it deserves to be kept in condensed form. It is offered as theological and pastoral reflection, drawn from Scripture and from Christian experience, not as a doctrine binding on every reader and not as a claim that evil was necessary. A restored life is not merely returned to where it was before the damage. It can become something richer.
 
 Innocence that has never been tested is real goodness, but it is unowned. Its loyalties are untried and its weaknesses hidden, because nothing has exposed them. When disorder comes, it exposes what was hidden. If it is then truthfully faced, repented of and repaired, the result can be an alignment that is conscious, tested, freely chosen and humbler than before. A marriage repaired after a serious rupture, a faith that has come through honest doubt, and a community rebuilt after a wound can each hold a kind of coherence that could not exist without the wound and the repair together. Scripture describes this pattern repeatedly:
 
@@ -120,7 +120,7 @@ Second, restoration is costly. At the scale of a single life it costs repentance
 > `Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold… But with the precious blood of Christ, as of a lamb without blemish and without spot.`
 > *1 Peter 1:18-19*
 
-Third, the freedom that makes owned alignment possible is a freedom to love and trust God, not a licence to corrupt. Refusal must be really possible for faith to be real, but a real possibility is not thereby a good one. Faith is the creature's willing trust in a God it does not yet see in full, extended across the very gap that testing opens:
+Third, the freedom that makes owned alignment possible is a freedom to love and trust God, not a licence to corrupt. Faith must be a genuine, willing response of the person, however the traditions describe the freedom that involves, and the possibility of turning away is not thereby a good one. Faith is the creature's willing trust in a God it does not yet see in full, extended across the very gap that testing opens:
 
 > `But without faith it is impossible to please him: for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him.`
 > *Hebrews 11:6*

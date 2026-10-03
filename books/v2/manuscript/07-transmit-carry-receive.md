@@ -86,7 +86,7 @@ source distinction
                               on what was carried)
 ```
 
-![Figure 3. Transmit, Carry, Receive. A distinction at the source becomes available beyond it; the relevant distinction is carried recoverably across a succession of substitutable carriers; a compatible receiver is changed in a way that depends on it. The correlation persists while the vehicles change.](v2/figures/fig-tcr.png)
+![Figure 4. Transmit, Carry, Receive. A distinction at the source becomes available beyond it; the relevant distinction is carried recoverably across a succession of substitutable carriers; a compatible receiver is changed in a way that depends on it. The correlation persists while the vehicles change.](v2/figures/fig-tcr.png)
 
 Read the morning scene again with this in hand. Sunlight is emitted by the Sun, which is changed by emitting it, carried across space, and received by the stone, which is warmed and briefly excited. The stone's interaction with that light makes its own distinction available: the light it returns is now patterned by the difference between grey body and pale vein. That pattern is carried across the few feet to your eye by a succession of electromagnetic disturbances, none of which is "the stone". At your eye it is received, as a definite change in molecules able to admit it. That change becomes available again to cells and nerves. In the end, at a level the coming chapters approach carefully, it reaches *you*, as the seeing of a stone.
 

@@ -27,10 +27,16 @@ Scripture is quoted from the King James Version throughout.
 
 **Chapter 5.**
 
+- On objective-collapse theories, which modify quantum dynamics and are experimentally testable: A. Bassi, M. Dorato and H. Ulbricht, "Collapse models: a theoretical, experimental and philosophical review", *Entropy* 25, 645 (2023).
+
 - On the Born rule and the variety of interpretations of quantum theory: the *Stanford Encyclopedia of Philosophy* entries "Philosophical Issues in Quantum Theory", "Bohmian Mechanics" and "The Many-Worlds Interpretation of Quantum Mechanics".
 - The stochastic calculator's findings, hypotheses and mechanism audit are in the project repository, branch `research/stochastic-calculator`, in `stochastic-calculator/RS_FINDINGS.md`, `HYPOTHESES.md` and `MECHANISMS.md`.
 
 **Chapter 6.**
+
+- On the mass of protons and neutrons arising mainly from the strong interaction: S. Dürr et al., "Ab initio determination of light hadron masses", *Science* 322, 1224 (2008).
+- The constraint laboratory's Generation 1b report (exact kernels within coarse families; "observable equality is not kernel equality") is in the project repository, branch `research/constraint-lab-v0.2`, `constraint-lab/reports/generation-001b-structurally-normalised.md`.
+- The exploratory research on contextual identity and provenance is recorded, with its status, in `books/v2/analysis/conversational-research-import-v1.md`.
 
 - On conservation laws and symmetry: E. Noether, "Invariante Variationsprobleme" (1918).
 - On the July 2026 topological work and its stated limits: `docs/conceptual-phase-completion-2026-07-12.md` and `docs/theta-origin-wpa-2026-07-13.md` in the project repository.
@@ -38,10 +44,18 @@ Scripture is quoted from the King James Version throughout.
 
 **Chapter 8.**
 
+- On laws of large numbers for dependent sequences (ergodic and mixing processes): R. Durrett, *Probability: Theory and Examples* (5th ed., Cambridge University Press, 2019), ch. 7.
+- On Bell's theorem and its assumptions: the *Stanford Encyclopedia of Philosophy* entry "Bell's Theorem".
+- The constraint laboratory's Generation 2 report (occupation-count rules; negative result on constructive reorganisation) is in `constraint-lab/reports/generation-002-occupation-threshold.md` on the same branch.
+
 - On Brownian motion: A. Einstein, *Annalen der Physik* 17 (1905).
 - On deriving fluid equations from kinetic theory: S. Chapman and T. G. Cowling, *The Mathematical Theory of Non-uniform Gases* (Cambridge University Press, 1970).
 - On the Navier–Stokes existence and smoothness problem: C. L. Fefferman's official problem description for the Clay Mathematics Institute Millennium Prize Problems.
 - E. Wigner, "The unreasonable effectiveness of mathematics in the natural sciences", *Communications on Pure and Applied Mathematics* 13 (1960).
+
+**Chapter 9.**
+
+- On powers (dispositional) ontologies: the *Stanford Encyclopedia of Philosophy* entry "Dispositions". On the Humean mosaic view: D. Lewis, *Philosophical Papers* vol. II (Oxford University Press, 1986), introduction. On emergence: the *Stanford Encyclopedia of Philosophy* entry "Emergent Properties".
 
 **Chapter 11.**
 

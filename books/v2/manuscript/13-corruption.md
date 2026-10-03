@@ -39,7 +39,7 @@ Here a structural analogy from Chapter 6 becomes useful, held carefully as analo
 
 The grammar of Chapter 7 gives a second lens, again used only where it clarifies.
 
-Much human wrongdoing is wrongdoing in what is *transmitted*. A lie releases a false difference: a claim that the world is otherwise than it is, sent out to be received and acted on. Slander releases a false difference about a person. A broken promise breaks a carriage that was relied on: a commitment that should have persisted from the day it was made to the day it was due, and did not. Gossip distorts in carriage, so that what arrives is no longer what was released. Scripture's long catalogue of sins of the tongue reflects how much of human corruption runs through what people send to one another:
+Much human wrongdoing is wrongdoing in what is *transmitted*. A lie sends out a false distinction: a claim that the world is otherwise than it is, offered to be received and acted on. Slander sends out a false distinction about a person. A broken promise breaks a carriage that was relied on: a commitment that should have persisted from the day it was made to the day it was due, and did not. Gossip distorts in carriage, so that what arrives is no longer what was released. Scripture's long catalogue of sins of the tongue reflects how much of human corruption runs through what people send to one another:
 
 > `Death and life are in the power of the tongue: and they that love it shall eat the fruit thereof.`
 > *Proverbs 18:21*
