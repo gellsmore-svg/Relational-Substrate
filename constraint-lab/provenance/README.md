@@ -44,7 +44,7 @@ Prompt identifiers:
 | 002 | v0.2 robustness, structural normalisation, and Generation 2 | `content_status: pending_verbatim_import` |
 | 003 | Independent triadic relation and Generation 3 | agent input and the execution-time capture; authored Markdown externally verified and pending import |
 | 004 | Memory-clock refinement and N=4 higher-order reconfiguration | `prompts/004-v0.4-n4-higher-order-reconfiguration.md` is the agent input; authored Markdown externally verified and pending import. Execution 004 records the result. Review 004 records the external reading of v0.4 |
-| 005 | Provenance completion, controlled reconfiguration, eventual committors, and the targeted two-rule search | `prompts/005-v0.5-agent-input.md` is the agent input. No separate authored file was byte-compared. Execution 005 is written at close-out. Review 005 is pending |
+| 005 | Provenance completion, controlled reconfiguration, eventual committors, and the targeted two-rule search | `prompts/005-v0.5-agent-input.md` is the agent input. No separate authored file was byte-compared. Execution 005 records the result. Review 005 is pending |
 
 The verbatim text of 001 and 002 can be inserted later from the ChatGPT conversation, as new prompt files plus a new ledger line. Do not reconstruct them from memory.
 
@@ -63,4 +63,4 @@ Prompt 005 is stored at `prompts/005-v0.5-agent-input.md`. That file is the `use
 
 Reviews live in `reviews/`. Review 002 records an external ChatGPT reading of v0.2. Review 003 records an external ChatGPT reading of v0.3 at `e04e0d4dcf979197b62d8d73fd747a0a2084c2b6`. Review 004 records an external ChatGPT reading of v0.4 at `777ef71d123e8f85e6d1372225b5028744fc5ffe` and is linked to prompt 004 and execution 004. Each says what was inspected and what was concluded. None is a line-by-line audit of generated artifacts. Review 005 is not in this repository.
 
-Executions live in `executions/`. An execution record names the branch, the commit range, and the experiment ids a prompt produced. It may record divergences. It is not a review, and it does not rewrite the prompt. Execution 003 closes prompt 003. Execution 004 closes prompt 004. The close-out commit that adds an execution record is not inside the commit range that record lists.
+Executions live in `executions/`. An execution record names the branch, the commit range, and the experiment ids a prompt produced. It may record divergences. It is not a review, and it does not rewrite the prompt. Execution 003 closes prompt 003. Execution 004 closes prompt 004. Execution 005 closes prompt 005. The close-out commit that adds an execution record is not inside the commit range that record lists. Review 005 is not in this repository.
