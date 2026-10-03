@@ -1,0 +1,11 @@
+N,alphabet,set_id,expressions,K,A,equivalent_to_baseline,family_id,support_matches_baseline,n_deadlock,n_recurrent,periods,max_abs_dissolve_shift,closing_bias,mean_edge_density,entropy_rate_bits,tv_from_uniform,halt_mass,rise_then_release,rise_then_release_excess,reversibility_defect,triangle_mass,disjoint_pair_mass,stationary_arithmetic,stationary_residual
+2,W4,d0a7f4273f133311,form(0-1) => prohibit,1,2,False,c94820aa93795aaf,False,1,1,1,0.0,,0.0,0.0,0.5,1.0,0.0,0.0,0.0,,,rational,0.0
+2,W4,1ab3fa08d99328bd,form(0-1) => strong_suppress,1,2,True,4c6662103a3a3c53,True,0,1,2,0.0,,0.5,0.0,0.0,0.0,0.0,0.0,0.0,,,rational,0.0
+2,W4,57433002cd63e46b,form(0-1) => weak_suppress,1,2,True,4c6662103a3a3c53,True,0,1,2,0.0,,0.5,0.0,0.0,0.0,0.0,0.0,0.0,,,rational,0.0
+2,W4,29a295cd6fdeeb2a,form(0-1) => weak_favour,1,2,True,4c6662103a3a3c53,True,0,1,2,0.0,,0.5,0.0,0.0,0.0,0.0,0.0,0.0,,,rational,0.0
+2,W4,2f070fb2d57a7beb,form(0-1) => strong_favour,1,2,True,4c6662103a3a3c53,True,0,1,2,0.0,,0.5,0.0,0.0,0.0,0.0,0.0,0.0,,,rational,0.0
+2,W4,0718498469ed5aaa,dissolve(0-1) => prohibit,1,2,False,3123f72c952d59c6,False,1,1,1,0.0,,1.0,0.0,0.5,1.0,0.0,0.0,0.0,,,rational,0.0
+2,W4,dd960e8ed7074d12,dissolve(0-1) => strong_suppress,1,2,True,4c6662103a3a3c53,True,0,1,2,0.0,,0.5,0.0,0.0,0.0,0.0,0.0,0.0,,,rational,0.0
+2,W4,0ea422619385f212,dissolve(0-1) => weak_suppress,1,2,True,4c6662103a3a3c53,True,0,1,2,0.0,,0.5,0.0,0.0,0.0,0.0,0.0,0.0,,,rational,0.0
+2,W4,d1ac45ea61df004e,dissolve(0-1) => weak_favour,1,2,True,4c6662103a3a3c53,True,0,1,2,0.0,,0.5,0.0,0.0,0.0,0.0,0.0,0.0,,,rational,0.0
+2,W4,33851076d965a19f,dissolve(0-1) => strong_favour,1,2,True,4c6662103a3a3c53,True,0,1,2,0.0,,0.5,0.0,0.0,0.0,0.0,0.0,0.0,,,rational,0.0

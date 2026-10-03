@@ -1,0 +1,56 @@
+{
+  "canonical_constraint_set": [
+    "form(0-1) => prohibit"
+  ],
+  "coordinate": {
+    "A": 2,
+    "G": 0,
+    "H": 0,
+    "K": 1,
+    "L": 0,
+    "N": 4,
+    "O": 2,
+    "S": 0,
+    "alphabet": "W4",
+    "cardinality": 1,
+    "semantics": "graph"
+  },
+  "count_in_family": 27,
+  "evaluation_vector": {
+    "coverage": "exhaustive inside the cell coordinate",
+    "cross_substrate_recurrence": "not tested in this generation",
+    "global_coherence_relevance": "open; not scored",
+    "interpretability": "the observed sentence is structural; naming is left to the report",
+    "parameter_robustness": "geometric bases preserve the modal map and the support; magnitudes change",
+    "reproducibility": "exact kernel; stochastic runs are seeded replays",
+    "symmetry_robustness": "orbit representative under the full symmetric group",
+    "trajectory_distinctiveness": "rise_then_release_excess and reversibility_defect, where computed"
+  },
+  "known_equivalent_grammars": 27,
+  "motif_id": "a96b89819b653822",
+  "notes": {
+    "inferred": "not stored on the motif; inferences are written in the generation report",
+    "observed": "every state has at least one admissible toggle; 1 recurrent class(es) with periods [2]; the admissible transition graph is a proper subgraph of the toggle hypercube; the largest one-step dissolution-probability deviation from m/M is 0.166667.",
+    "speculative": "not stored on the motif"
+  },
+  "observed": "every state has at least one admissible toggle; 1 recurrent class(es) with periods [2]; the admissible transition graph is a proper subgraph of the toggle hypercube; the largest one-step dissolution-probability deviation from m/M is 0.166667.",
+  "parameter_regime": "W4",
+  "robustness_region": {
+    "closing_max": null,
+    "closing_min": null,
+    "shift_max": 0.16666666666666663,
+    "shift_min": 0.16666666666666663
+  },
+  "symmetry_class": "lexicographically least labelling under S_N",
+  "tags": [
+    "structural",
+    "screened"
+  ],
+  "trajectory_signature": {
+    "entropy_rate_bits": 2.3219280948873644,
+    "halt_mass": 0.0,
+    "mean_edge_density": 0.4166666666666665,
+    "rise_then_release": 0.608,
+    "rise_then_release_excess": 0.052444444444444405
+  }
+}
