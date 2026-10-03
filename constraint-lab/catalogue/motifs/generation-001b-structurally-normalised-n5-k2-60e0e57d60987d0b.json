@@ -1,0 +1,100 @@
+{
+  "canonical_constraint_set": [
+    "dissolve(0-1) => strong_favour"
+  ],
+  "coordinate": {
+    "A": 2,
+    "G": 0,
+    "H": 0,
+    "K": 1,
+    "L": 0,
+    "N": 5,
+    "O": 2,
+    "S": 0,
+    "alphabet": "W4",
+    "cardinality": 1,
+    "semantics": "graph"
+  },
+  "count_in_family": 2,
+  "evaluation_vector": {
+    "coverage": "exhaustive inside the cell coordinate",
+    "cross_substrate_recurrence": "not tested in this generation",
+    "global_coherence_relevance": "open; not scored",
+    "interpretability": "the observed sentence is structural; naming is left to the report",
+    "parameter_robustness": "geometric bases preserve the modal map and the support; magnitudes change",
+    "reproducibility": "exact kernel; stochastic runs are seeded replays",
+    "symmetry_robustness": "orbit representative under the full symmetric group",
+    "trajectory_distinctiveness": "rise_then_release_excess and reversibility_defect, where computed"
+  },
+  "known_equivalent_grammars": 2,
+  "motif_id": "60e0e57d60987d0be77aee14845871b9eda4f8873d7c579db3d190dd96f1a404",
+  "notes": {
+    "inferred": "not stored on the motif; inferences are written in the generation report",
+    "observed": "every state has at least one admissible toggle; 1 recurrent class(es) with periods [2]; the admissible transition graph is the full toggle hypercube; the largest one-step dissolution-probability deviation from m/M is 0.207692.",
+    "speculative": "not stored on the motif"
+  },
+  "observed": "every state has at least one admissible toggle; 1 recurrent class(es) with periods [2]; the admissible transition graph is the full toggle hypercube; the largest one-step dissolution-probability deviation from m/M is 0.207692.",
+  "parameter_regime": "W4",
+  "robustness_region": {
+    "closing_max": null,
+    "closing_min": null,
+    "shift_max": 0.2076923076923077,
+    "shift_min": 0.08181818181818182
+  },
+  "symmetry_class": "lexicographically least labelling under S_N",
+  "tags": [
+    "screened",
+    "measure"
+  ],
+  "trajectory_signature": {
+    "entropy_rate_bits": 3.306203538798802,
+    "halt_mass": 0.0,
+    "mean_edge_density": 0.4854838709677419,
+    "rise_then_release": null,
+    "rise_then_release_excess": null
+  },
+  "within_family": {
+    "count_literal_members": 0,
+    "equivalent_members": 0,
+    "exact_kernel_count": 2,
+    "observable_signature_count": 2,
+    "ranges": {
+      "entropy_rate_bits": {
+        "max": 3.306203538798802,
+        "max_exact": null,
+        "min": 3.263827172289526,
+        "min_exact": null
+      },
+      "halt_mass": {
+        "max": 0.0,
+        "max_exact": null,
+        "min": 0.0,
+        "min_exact": null
+      },
+      "max_abs_dissolve_shift": {
+        "max": 0.2076923076923077,
+        "max_exact": "27/130",
+        "min": 0.08181818181818182,
+        "min_exact": "9/110"
+      },
+      "mean_edge_density": {
+        "max": 0.4854838709677419,
+        "max_exact": null,
+        "min": 0.47452830188679185,
+        "min_exact": null
+      },
+      "reversibility_defect": {
+        "max": 1.357692170494973e-16,
+        "max_exact": null,
+        "min": 1.2202695451324352e-16,
+        "min_exact": null
+      },
+      "tv_from_uniform": {
+        "max": 0.2547169811320764,
+        "max_exact": null,
+        "min": 0.14516129032258096,
+        "min_exact": null
+      }
+    }
+  }
+}
