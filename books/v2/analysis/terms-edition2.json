@@ -25,6 +25,20 @@
    ]
   },
   {
+   "id": "boundary-validity",
+   "term": "boundary validity",
+   "aliases": [],
+   "requires": [
+    "category"
+   ]
+  },
+  {
+   "id": "propagation-cycle",
+   "term": "cycle consistency",
+   "aliases": [],
+   "requires": []
+  },
+  {
    "id": "analogy-vs-identity",
    "term": "structural analogy",
    "aliases": [],
@@ -124,12 +138,32 @@
    ]
   },
   {
-   "id": "persistence",
-   "term": "persistence",
+   "id": "equivalence",
+   "term": "equivalence class",
    "aliases": [],
    "requires": [
     "identity-invariant"
    ]
+  },
+  {
+   "id": "provenance",
+   "term": "provenance",
+   "aliases": [],
+   "requires": []
+  },
+  {
+   "id": "projection",
+   "term": "projection",
+   "aliases": [],
+   "requires": [
+    "identity-invariant"
+   ]
+  },
+  {
+   "id": "persistence",
+   "term": "persistence",
+   "aliases": [],
+   "requires": []
   },
   {
    "id": "difference",
@@ -161,8 +195,15 @@
    "term": "reception",
    "aliases": [],
    "requires": [
-    "admissibility",
     "carry"
+   ]
+  },
+  {
+   "id": "compatibility",
+   "term": "compatible receiver",
+   "aliases": [],
+   "requires": [
+    "admissibility"
    ]
   },
   {
@@ -177,6 +218,14 @@
     "carry",
     "receive",
     "transmit"
+   ]
+  },
+  {
+   "id": "joint-process",
+   "term": "joint process",
+   "aliases": [],
+   "requires": [
+    "stochasticity"
    ]
   },
   {

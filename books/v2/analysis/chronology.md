@@ -88,6 +88,15 @@ Generation 001 is an exhaustive census of memoryless pairwise grammars at N = 2�
 
 The v0.2 working tree (uncommitted, in progress at the time of writing) is not cited as evidence.
 
+## Phase 6b — Constraint Laboratory v0.2 (3 October 2026, afternoon)
+
+Branch `research/constraint-lab-v0.2` (head `0170189`). The engine now runs as resumable shards, and two generations are recorded.
+
+- **Generation 1b** removes stacked-weight artifacts from the Generation 1 census. Generation 1's own files are untouched. 1b also shows large exact-kernel variation hidden inside coarse family labels.
+- **Generation 2** adds an occupation-count literal. It found 654 new exact kernels, 189 new families and 30 new supports, all from hard count-gated prohibitions. Constructive dissolution was again not found.
+
+These post-date the first v2 draft and are integrated in v2.1.
+
 ## Threads named in the brief but not found in any record
 
 The following are named in the brief (§2.3–2.8). They were searched for across every branch, the GitHub organisation, the local workspace, the vector index and the ChatGPT export, and no records were found:
@@ -106,4 +115,4 @@ Partial counterparts do exist:
 - **Path-dependent memory.** The June order-effect corroboration.
 - **Admissibility.** Constraint-lab Generation 001.
 
-The second edition therefore uses these themes only to the extent the located evidence supports. Unlocated programmes are treated as *possibly existing elsewhere and unverified*, and are named as such in `research-baseline.md`.
+**v2.1 update:** the author has since supplied the conclusions of these threads from conversational research. They now inform the ontology, with their provenance recorded in `conversational-research-import-v1.md`, and they are still not cited as repository experiments. The v2 first draft used these themes only to the extent the located evidence supported. Unlocated programmes are treated as *possibly existing elsewhere and unverified*, and are named as such in `research-baseline.md`.

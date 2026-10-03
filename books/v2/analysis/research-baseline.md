@@ -1,6 +1,6 @@
 # Research baseline for *Coherent Biblical Ontology*, second edition
 
-Status: stabilised 2026-10-03, after the full corpus survey recorded in `chronology.md`. This document fixes what the second edition may claim, at what epistemic strength, and why. It governs the concept graph, the epistemic register and the manuscript.
+Status: stabilised 2026-10-03 after the corpus survey in `chronology.md`; **revised the same day for v2.1** (§7 below) after the author supplied conclusions from conversational research absent from the repository, and after Constraint Laboratory Generations 1b and 2 were committed. This document fixes what the second edition may claim, at what epistemic strength, and why. It governs the concept graph, the epistemic register and the manuscript.
 
 ## 1. The finding that reorganises the book
 
@@ -16,11 +16,13 @@ Across five months and four programmes, one pattern recurs in every line that su
 Read together, they converge on a reduced grammar:
 
 ```text
-constrained possibility      (what transitions are admissible at all)
-→ stochastic actualisation   (which admissible transition happens)
-→ preserved invariants       (what stays the same across all admissible paths = identity)
-→ transmitted consequence    (how a difference becomes a change elsewhere = T-C-R)
-→ stable regularity          (what many constrained paths do in aggregate = law-like behaviour)
+constrained possibility      (what transitions are admissible at all, and how they are weighted)
+→ stochastic actualisation   (which admissible transition happens; actuality carries its history)
+→ preserved equivalence      (identity = the relevant relational equivalence class, relative to what
+                              reachable futures can discriminate; invariants are one carrier of it)
+→ transmitted consequence    (T-C-R: a source distinction made available, recoverably carried,
+                              and received as dependent change in a compatible receiver)
+→ coordinated regularity     (law-like aggregate behaviour from relationally coordinated chance)
 ```
 
 This is the spine of the second edition. Its components carry different epistemic weight, which the book must keep visible:
@@ -152,3 +154,39 @@ Each entry records the assumption in the brief, what the repository shows, and t
 ## 6. Second-edition thesis (one paragraph)
 
 God creates a real world. Its physical order is relational from the beginning: things are constituted within relations, not first made as isolated objects and then connected. What is physically possible is constrained. What actually happens may be fundamentally stochastic, yet admissibility, conserved invariants and coordinated relations make identity persistent and regularity reliable. Differences become consequential elsewhere through transmission, carriage and reception. Mathematics describes the resulting regularities with extraordinary success without being the reality it describes. Because the material world is relational at base, the relational realities of life, personhood, responsibility, corruption and restoration are not bolted onto an alien order. Yet relation across categories does not erase category: the material is not the spiritual, the substrate is not the soul, and creation is not God. This is a coherence argument constrained by observation and governed by Scripture. It is not an empirical proof of ultimate ontology.
+
+## 7. v2.1 revision (2026-10-03, later the same day)
+
+**New inputs.**
+
+1. Conclusions from conversational research supplied by the author (the 502-series, the stochastic ring, Navier–Stokes, Grassmannian/hidden fibres, and stronger coherence dimensions). These are recorded with their provenance status in `conversational-research-import-v1.md`.
+2. Constraint Laboratory branch `research/constraint-lab-v0.2` through `0170189` (Generations 1b and 2, review v0.2).
+
+**Changes to the reduced ontology.**
+
+- **Identity.** It is no longer a bare invariant. Identity continuity is preservation of the relevant relational equivalence class, relative to the distinctions that reachable future consequences can consume. An invariant is one carrier or certificate of such a class. Provenance (past distinctions surviving in present relational structure) belongs to identity where it remains consequential, and may be quotiented away only where no reachable future can consume it.
+  - *Repository support:* Generation 1b. At N = 3, up to 1,042 exact kernels sit inside one coarse qualitative family. At N = 5, two kernels share one observable signature, so observable equality is not kernel equality. This is a formal instance of the hidden-fibre lesson.
+- **T-C-R.** It is decoupled from the calculator's carry protocol. Source depletion, a cost to the source, and exactly-once reception are subcases. They hold for emission-type sources and transactional receivers respectively; they are not part of the definition. The general form is source distinction → relational availability → recoverable constrained carriage → compatible consequential reception.
+- **Coordination.** Equal marginal probabilities do not fix the joint process, the covariance structure or the global dynamics. What stabilises aggregates is consequence-aligned, state-dependent coordination. Mean closure can hold while fluctuation closure stays open. This is author-supplied research; calculator SC-013 and SC-017 support adjacent points.
+- **T-levels.** T1 (actuality) explicitly carries embodied history and provenance. T2 is retired as a main-text label, and "manifestation" is described plainly and kept distinct from conscious awareness.
+- **Global coherence** now includes connectivity, boundary validity, propagation stability, cycle consistency and preservation of relevant distinctions.
+
+**Constraint Laboratory v0.2 facts adopted.**
+
+- **Generation 1b** reanalysed Generation 1 after removing stacked-weight sets. Generation 1's committed files are unchanged; its interpretation is superseded on one point. The "reciprocal pair" that Generation 1 reported as a cancellation was one structural rule with two stacked grades, a representational artifact. Genuine global cancellations at N = 3 are 40 structured triples. N = 3 has 61,929 qualitative families, 391,991 exact kernels and 379,177 observable signatures.
+- **Generation 2** (N = 3, K ≤ 2, cardinalities 1–2, occupation-count literal):
+  - 10,430 count-sets, of which 9,776 reproduce a 1b kernel and 654 are new kernels;
+  - the new kernels fall in 189 new qualitative families, 30 of them with new supports, all from pairs of count-gated prohibitions;
+  - soft weights produced no new supports, and no cardinality-1 count constraint opened a new family;
+  - 16 genuine cancellations appear as reciprocal count-literal pairs;
+  - constructive dissolution was not found, and the `post_release_new_edge` flag reduces to isomorphic reconnection, clearing and regrowth, edge loss, or a deterministic wedge/triangle toggle.
+- **Roadmap.** History depth `H = 1` and an irreducible triadic hyperrelation are listed as *candidates, not commitments*.
+
+**Divergences from the v2.1 instruction.**
+
+- None of substance. Its Generation 2 figures match the repository exactly.
+- Two nuances are recorded:
+  - Generation 2 also found genuine pairwise cancellations through count literals (16), so "genuine cancellation requires triples" holds for the edge-only grammar at N = 3, not universally.
+  - The roadmap does not commit to triadic relation as the next step; the book says only that it is a candidate.
+
+**Supersedes:** D-3 and D-5 in §3. Their conclusion that the programmes could not be cited as repository experiments stands. Their implied conclusion that the programmes need not inform the ontology does not.

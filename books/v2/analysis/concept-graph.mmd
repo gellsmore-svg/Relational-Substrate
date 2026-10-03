@@ -16,6 +16,9 @@ flowchart TB
   knowing_coherence["Human knowing is coherence-based"]
   coherence_not_fidelity["Coherence is not fidelity"]
   empirical_constraint["Observation constrains ontology"]
+  connectivity["Connectivity"]
+  boundary_validity["Boundary validity"]
+  propagation_cycle["Propagation stability and cycle consistency"]
   not_proof["Not an empirical proof"]
   analogy_vs_identity["Structural analogy is not ontological identity"]
   category["Ontological categories"]
@@ -30,24 +33,30 @@ flowchart TB
   actualisation["Actualisation (T1)"]
   stochasticity["Stochasticity"]
   constrained_stochasticity["Constrained stochastic actualisation"]
-  identity_invariant["Identity as preserved invariant"]
+  identity_invariant["Invariant"]
+  equivalence["Identity as relational equivalence"]
+  provenance["Provenance"]
+  discriminability["Future discriminability"]
+  projection["Projection and coarse-graining"]
   persistence["Persistence"]
   information_loss["Preservation is not reconstruction"]
   memory_configuration["Memory as persisting configuration"]
-  difference["Difference"]
-  transmit["Transmit (release)"]
-  carry["Carry (constrained continuity)"]
+  difference["Source distinction"]
+  transmit["Transmit (relational availability)"]
+  carry["Carry (recoverable constrained continuity)"]
   substitutability["Carrier substitutability"]
   receive["Receive (consequential reception)"]
+  compatibility["Receiver compatibility"]
   tcr["Transmit–Carry–Receive"]
   nested_tcr["Nested and composed T-C-R"]
+  joint_process["Marginals versus joint process"]
   coordination["Coordination of fluctuations"]
   local_global["Local and global constraint"]
   regularity["Emergent regularity / effective determinism"]
   mathematics["Mathematics describes regularity"]
   time["Time as ordering of actualisation"]
   matter["Matter as stable form"]
-  manifestation["Lived manifestation (T2)"]
+  manifestation["Manifestation"]
   purpose_upstream["Purpose shapes possibility"]
   non_agentic["Non-agentic runtime"]
   constraint_generative["Constraint is generative"]
@@ -78,6 +87,11 @@ flowchart TB
   coherence --> local_coherence
   local_coherence --> regional_coherence
   regional_coherence --> global_coherence
+  coherence --> connectivity
+  connectivity --> boundary_validity
+  category --> boundary_validity
+  boundary_validity --> propagation_cycle
+  propagation_cycle --> global_coherence
   desc_not_ont --> global_coherence
   empirical_constraint --> global_coherence
   coherence --> knowing_coherence
@@ -104,21 +118,31 @@ flowchart TB
   admissibility --> constrained_stochasticity
   actualisation --> constrained_stochasticity
   constrained_stochasticity --> identity_invariant
-  identity_invariant --> persistence
+  identity_invariant --> projection
+  admissibility --> discriminability
+  identity_invariant --> equivalence
+  discriminability --> equivalence
+  projection --> equivalence
+  equivalence --> provenance
+  equivalence --> persistence
   identity_invariant --> information_loss
-  persistence --> memory_configuration
+  provenance --> memory_configuration
   admissibility --> memory_configuration
   relation --> difference
   difference --> transmit
   transmit --> carry
   persistence --> carry
+  equivalence --> carry
   carry --> substitutability
+  admissibility --> compatibility
   carry --> receive
-  admissibility --> receive
+  compatibility --> receive
   transmit --> tcr
   carry --> tcr
   receive --> tcr
   tcr --> nested_tcr
+  stochasticity --> joint_process
+  joint_process --> coordination
   constrained_stochasticity --> coordination
   relation --> coordination
   coordination --> local_global
@@ -158,7 +182,7 @@ flowchart TB
   corruption --> limitation
   corruption --> restoration
   restoration --> resurrection
-  identity_invariant --> resurrection
+  equivalence --> resurrection
   non_agentic --> divine_action
   divine_action --> restoration
   substrate -. not identical .- creator_creature
@@ -174,10 +198,10 @@ flowchart TB
   divine_action -. not identical .- actualisation
   purpose_upstream -. not identical .- non_agentic
   subgraph Method["Method"]
-    analogy_vs_identity & assumptions & category & coherence & coherence_not_fidelity & creation_real & creator_creature & darkness & desc_not_ont & description & empirical_constraint & epistemic_levels & global_coherence & knowing_coherence & local_coherence & not_proof & ontology & regional_coherence & scripture
+    analogy_vs_identity & assumptions & boundary_validity & category & coherence & coherence_not_fidelity & connectivity & creation_real & creator_creature & darkness & desc_not_ont & description & empirical_constraint & epistemic_levels & global_coherence & knowing_coherence & local_coherence & not_proof & ontology & propagation_cycle & regional_coherence & scripture
   end
   subgraph Physical_ontology["Physical ontology"]
-    actualisation & admissibility & carry & constrained_stochasticity & constraint_generative & coordination & difference & identity_invariant & information_loss & local_global & manifestation & mathematics & matter & mediation & memory_configuration & nested_tcr & non_agentic & object_first & persistence & possibility & purpose_upstream & receive & regularity & relation & runtime & stochasticity & substitutability & substrate & tcr & tendency & time & transmit
+    actualisation & admissibility & carry & compatibility & constrained_stochasticity & constraint_generative & coordination & difference & discriminability & equivalence & identity_invariant & information_loss & joint_process & local_global & manifestation & mathematics & matter & mediation & memory_configuration & nested_tcr & non_agentic & object_first & persistence & possibility & projection & provenance & purpose_upstream & receive & regularity & relation & runtime & stochasticity & substitutability & substrate & tcr & tendency & time & transmit
   end
   subgraph Life["Life, persons, theology"]
     alignment & bridge & consciousness & corruption & divine_action & embodiment & higher_order & image & life & limitation & personhood & restoration & resurrection & soul_spirit & three_admissibility

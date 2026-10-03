@@ -436,6 +436,70 @@
    "reactivate": [
     "Ch 15"
    ]
+  },
+  "connectivity": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 9"
+   ]
+  },
+  "boundary-validity": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 9",
+    "Ch 11",
+    "Ch 12"
+   ]
+  },
+  "propagation-cycle": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 9",
+    "Ch 15"
+   ]
+  },
+  "projection": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 8",
+    "Ch 9"
+   ]
+  },
+  "discriminability": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 7"
+   ]
+  },
+  "equivalence": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 7",
+    "Ch 10",
+    "Ch 11",
+    "Ch 14"
+   ]
+  },
+  "provenance": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 7",
+    "Ch 10",
+    "Ch 13"
+   ]
+  },
+  "compatibility": {
+   "first": "Ch 7",
+   "reactivate": [
+    "Ch 10",
+    "Ch 14"
+   ]
+  },
+  "joint-process": {
+   "first": "Ch 8",
+   "reactivate": [
+    "Ch 9"
+   ]
   }
  }
 }
