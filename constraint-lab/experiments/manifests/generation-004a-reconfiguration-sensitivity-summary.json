@@ -1,0 +1,1314 @@
+{
+  "analysis": "n4-reconfiguration-sensitivity",
+  "analysis_version": "0.5.0",
+  "cells": [
+    {
+      "accounting": {
+        "edge": {
+          "labelled_constraints": 1900,
+          "labelled_states": 1024,
+          "outside_a_bound": 0,
+          "outside_k_bound": 0,
+          "raw_structural_templates": 380,
+          "relation_slots": 10,
+          "removed_redundant_normalisation": 0,
+          "removed_syntax_invalid": 0,
+          "structural_by_class": {
+            "P->P": 132,
+            "P->T": 96,
+            "T->P": 96,
+            "T->T": 56,
+            "mixed": 0
+          },
+          "structural_normal_forms": 380,
+          "weight_alphabet_size": 5
+        },
+        "grammar": {
+          "count_candidates": 0,
+          "count_outside_a": 0,
+          "count_outside_k": 0,
+          "count_structural": 0,
+          "count_tautology": 0,
+          "count_unsatisfiable": 0,
+          "edge_outside_a": 0,
+          "edge_structural": 380,
+          "labelled_constraints": 1900,
+          "outside_k_bound": 0,
+          "structural_by_class": {
+            "P->P": 132,
+            "P->T": 96,
+            "T->P": 96,
+            "T->T": 56,
+            "mixed": 0
+          },
+          "structural_normal_forms": 380,
+          "weight_alphabet_size": 5
+        }
+      },
+      "baseline_equivalent_families": 0,
+      "cancellations": {},
+      "canonical_states": null,
+      "cardinalities": {
+        "1": {
+          "analysed": 160,
+          "canonical": 160,
+          "labelled_combinations": 1900,
+          "labelled_simple": 1900,
+          "labelled_stacked": 0
+        }
+      },
+      "coordinate": {
+        "A_max": 4,
+        "G": 0,
+        "H": 0,
+        "K_max": 2,
+        "L": 0,
+        "N": 4,
+        "O": 3,
+        "S": 0,
+        "alphabet": "W4",
+        "analysis": "n4-reconfiguration-sensitivity",
+        "composition": "structural-simple",
+        "predicates": [
+          "pair",
+          "triad"
+        ],
+        "semantics": "hypergraph"
+      },
+      "extremes": {},
+      "families": 0,
+      "family_histogram": {},
+      "family_index_sha256": "",
+      "kernel_index_count": 0,
+      "kernel_index_sha256": "",
+      "labelled_states": 1024,
+      "observable_index_sha256": "",
+      "qualitative_index_sha256": "",
+      "relation_slots": 10,
+      "runtime_seconds": 236.631408,
+      "screened_families": 0,
+      "singles_sha256": "14dc029a6803eb8207f7c5c2dc49488471a29ee04feef068d98f29cbb5c51641",
+      "structural_families": 0,
+      "v05_census": {
+        "by_class": {
+          "P->P": 50,
+          "P->T": 40,
+          "T->P": 40,
+          "T->T": 30
+        },
+        "effect_floor": 1e-08,
+        "eventual_primary": {
+          "matching_to_path": {
+            "P->P": {
+              "controlled_eventual_nonzero": 50,
+              "max_abs_controlled_delta": 0.041220483357880866,
+              "max_abs_occupancy_contribution": 0.06794163860830515,
+              "max_abs_stationary_delta": 0.07027450980392103,
+              "median_abs_occupancy_contribution": 0.0032333309148921963,
+              "rows": 50,
+              "triad_changes_eventual": 0
+            },
+            "P->T": {
+              "controlled_eventual_nonzero": 0,
+              "max_abs_controlled_delta": 4.440892098500626e-16,
+              "max_abs_occupancy_contribution": 2.220446049250313e-16,
+              "max_abs_stationary_delta": 5.551115123125783e-16,
+              "median_abs_occupancy_contribution": 1.1102230246251565e-16,
+              "rows": 40,
+              "triad_changes_eventual": 0
+            },
+            "T->P": {
+              "controlled_eventual_nonzero": 40,
+              "max_abs_controlled_delta": 0.004788449266292405,
+              "max_abs_occupancy_contribution": 0.011221966393965999,
+              "max_abs_stationary_delta": 0.013957153696216085,
+              "median_abs_occupancy_contribution": 0.003327184010697759,
+              "rows": 40,
+              "triad_changes_eventual": 40
+            },
+            "T->T": {
+              "controlled_eventual_nonzero": 0,
+              "max_abs_controlled_delta": 6.661338147750939e-16,
+              "max_abs_occupancy_contribution": 4.440892098500626e-16,
+              "max_abs_stationary_delta": 6.661338147750939e-16,
+              "median_abs_occupancy_contribution": 1.1102230246251565e-16,
+              "rows": 30,
+              "triad_changes_eventual": 0
+            }
+          },
+          "path_to_matching": {
+            "P->P": {
+              "controlled_eventual_nonzero": 50,
+              "max_abs_controlled_delta": 0.03065683868166208,
+              "max_abs_occupancy_contribution": 0.016985409652076344,
+              "max_abs_stationary_delta": 0.034622761093342586,
+              "median_abs_occupancy_contribution": 0.0011739015650156504,
+              "rows": 50,
+              "triad_changes_eventual": 0
+            },
+            "P->T": {
+              "controlled_eventual_nonzero": 0,
+              "max_abs_controlled_delta": 1.1102230246251565e-16,
+              "max_abs_occupancy_contribution": 8.326672684688674e-17,
+              "max_abs_stationary_delta": 1.1102230246251565e-16,
+              "median_abs_occupancy_contribution": 2.7755575615628914e-17,
+              "rows": 40,
+              "triad_changes_eventual": 0
+            },
+            "T->P": {
+              "controlled_eventual_nonzero": 40,
+              "max_abs_controlled_delta": 0.0011971123165731568,
+              "max_abs_occupancy_contribution": 0.0028054915984914996,
+              "max_abs_stationary_delta": 0.0034892884240540767,
+              "median_abs_occupancy_contribution": 0.0008317960026744814,
+              "rows": 40,
+              "triad_changes_eventual": 40
+            },
+            "T->T": {
+              "controlled_eventual_nonzero": 0,
+              "max_abs_controlled_delta": 1.3877787807814457e-16,
+              "max_abs_occupancy_contribution": 2.7755575615628914e-17,
+              "max_abs_stationary_delta": 1.6653345369377348e-16,
+              "median_abs_occupancy_contribution": 2.7755575615628914e-17,
+              "rows": 30,
+              "triad_changes_eventual": 0
+            }
+          }
+        },
+        "horizon": 16,
+        "max_stationary_residual": 3.531246475785288e-15,
+        "primary_quantity_for_sensitivity": "STATIONARY_SOURCE_PASSAGE",
+        "ranking": {
+          "matching_to_path": {
+            "P->P_max_abs_controlled": 0.041220483357880866,
+            "P->P_max_abs_stationary_eventual": 0.07027450980392103,
+            "T->P_max_abs_controlled": 0.004788449266292405,
+            "T->P_max_abs_stationary_eventual": 0.013957153696216085
+          },
+          "path_to_matching": {
+            "P->P_max_abs_controlled": 0.03065683868166208,
+            "P->P_max_abs_stationary_eventual": 0.034622761093342586,
+            "T->P_max_abs_controlled": 0.0011971123165731568,
+            "T->P_max_abs_stationary_eventual": 0.0034892884240540767
+          }
+        },
+        "rows": 160,
+        "sensitivity": {
+          "W16": {
+            "matching_to_path": {
+              "P->P": {
+                "controlled_passage_nonzero": 50,
+                "rows": 50,
+                "stationary_passage_nonzero": 50,
+                "triad_changes_hit": 0
+              },
+              "P->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 40,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              },
+              "T->P": {
+                "controlled_passage_nonzero": 40,
+                "rows": 40,
+                "stationary_passage_nonzero": 40,
+                "triad_changes_hit": 40
+              },
+              "T->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 30,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              }
+            },
+            "path_to_matching": {
+              "P->P": {
+                "controlled_passage_nonzero": 50,
+                "rows": 50,
+                "stationary_passage_nonzero": 50,
+                "triad_changes_hit": 0
+              },
+              "P->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 40,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              },
+              "T->P": {
+                "controlled_passage_nonzero": 40,
+                "rows": 40,
+                "stationary_passage_nonzero": 40,
+                "triad_changes_hit": 40
+              },
+              "T->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 30,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              }
+            }
+          },
+          "W3": {
+            "matching_to_path": {
+              "P->P": {
+                "controlled_passage_nonzero": 50,
+                "rows": 50,
+                "stationary_passage_nonzero": 50,
+                "triad_changes_hit": 0
+              },
+              "P->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 40,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              },
+              "T->P": {
+                "controlled_passage_nonzero": 40,
+                "rows": 40,
+                "stationary_passage_nonzero": 40,
+                "triad_changes_hit": 40
+              },
+              "T->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 30,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              }
+            },
+            "path_to_matching": {
+              "P->P": {
+                "controlled_passage_nonzero": 50,
+                "rows": 50,
+                "stationary_passage_nonzero": 50,
+                "triad_changes_hit": 0
+              },
+              "P->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 40,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              },
+              "T->P": {
+                "controlled_passage_nonzero": 40,
+                "rows": 40,
+                "stationary_passage_nonzero": 40,
+                "triad_changes_hit": 40
+              },
+              "T->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 30,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              }
+            }
+          },
+          "primary": {
+            "matching_to_path": {
+              "P->P": {
+                "controlled_passage_nonzero": 50,
+                "rows": 50,
+                "stationary_passage_nonzero": 50,
+                "triad_changes_hit": 0
+              },
+              "P->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 40,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              },
+              "T->P": {
+                "controlled_passage_nonzero": 40,
+                "rows": 40,
+                "stationary_passage_nonzero": 40,
+                "triad_changes_hit": 40
+              },
+              "T->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 30,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              }
+            },
+            "path_to_matching": {
+              "P->P": {
+                "controlled_passage_nonzero": 50,
+                "rows": 50,
+                "stationary_passage_nonzero": 50,
+                "triad_changes_hit": 0
+              },
+              "P->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 40,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              },
+              "T->P": {
+                "controlled_passage_nonzero": 40,
+                "rows": 40,
+                "stationary_passage_nonzero": 40,
+                "triad_changes_hit": 40
+              },
+              "T->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 30,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              }
+            }
+          },
+          "rho1/2": {
+            "matching_to_path": {
+              "P->P": {
+                "controlled_passage_nonzero": 50,
+                "rows": 50,
+                "stationary_passage_nonzero": 50,
+                "triad_changes_hit": 0
+              },
+              "P->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 40,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              },
+              "T->P": {
+                "controlled_passage_nonzero": 40,
+                "rows": 40,
+                "stationary_passage_nonzero": 40,
+                "triad_changes_hit": 40
+              },
+              "T->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 30,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              }
+            },
+            "path_to_matching": {
+              "P->P": {
+                "controlled_passage_nonzero": 50,
+                "rows": 50,
+                "stationary_passage_nonzero": 50,
+                "triad_changes_hit": 0
+              },
+              "P->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 40,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              },
+              "T->P": {
+                "controlled_passage_nonzero": 40,
+                "rows": 40,
+                "stationary_passage_nonzero": 40,
+                "triad_changes_hit": 40
+              },
+              "T->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 30,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              }
+            }
+          },
+          "rho2": {
+            "matching_to_path": {
+              "P->P": {
+                "controlled_passage_nonzero": 50,
+                "rows": 50,
+                "stationary_passage_nonzero": 50,
+                "triad_changes_hit": 0
+              },
+              "P->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 40,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              },
+              "T->P": {
+                "controlled_passage_nonzero": 40,
+                "rows": 40,
+                "stationary_passage_nonzero": 40,
+                "triad_changes_hit": 40
+              },
+              "T->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 30,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              }
+            },
+            "path_to_matching": {
+              "P->P": {
+                "controlled_passage_nonzero": 50,
+                "rows": 50,
+                "stationary_passage_nonzero": 50,
+                "triad_changes_hit": 0
+              },
+              "P->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 40,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              },
+              "T->P": {
+                "controlled_passage_nonzero": 40,
+                "rows": 40,
+                "stationary_passage_nonzero": 40,
+                "triad_changes_hit": 40
+              },
+              "T->T": {
+                "controlled_passage_nonzero": 0,
+                "rows": 30,
+                "stationary_passage_nonzero": 0,
+                "triad_changes_hit": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "composition": "structural-simple",
+  "effect_floor": 1e-08,
+  "effect_floor_reason": "Declared before the Generation 4a census and before the Generation 5 census. On the reference kernels N=3 baseline, N=3 T->P strong_favour, N=4 baseline, N=4 T->P strong_favour, N=4 P->T strong_favour, and N=4 T->P prohibit, the maximum block-versus-dense landing gap was 5.55e-17, the maximum stationary residual was 8.40e-16, the maximum committor residual was 1.78e-15, and the maximum statewise committor gap was 4.44e-16. Committor condition numbers were between 10 and 14. The interaction residual subtracts four committors. 1e-8 is the existing float total-variation floor. It is about four orders of magnitude above a pessimistic thousand-fold amplification of the measured committor residual. Float64 solutions are not exact. The one-step same-edge-count flux remains the named invariant and is not a success criterion.",
+  "engine_version": "0.4.0",
+  "execution": {
+    "max_attempts": 3,
+    "multiprocessing": "spawn",
+    "principle": "Prefer bounded, independently reproducible, idempotent units of work with durable checkpoints, so completed progress is monotonic and interruption is cheap.",
+    "profile_note": "Measured 2026-10-03 on this development machine, one worker, OMP/OPENBLAS/MKL threads 1. Binding window: N=4, K<=2, cardinality 2, combination ranks 4000:8000, 3262 canonical-simple float64 kernels, 66.7s. N=3, K<=3, cardinality 3, ranks 180000:190000 analysed 9399 rational kernels in 13.6s. The N=3 opening prefix is cheap (ranks 0:1000 analysed nothing) because weights are innermost, so early combinations stack grades on the first structures. 4000 items keeps the measured worst window inside 60-90s and under 120s.",
+    "shard_count": 10,
+    "shard_items": 200,
+    "worker_history": [
+      {
+        "at": "2026-10-03T20:13:25+00:00",
+        "workers": 2
+      }
+    ],
+    "workers_last": 2
+  },
+  "experiment_id": "generation-004a-reconfiguration-sensitivity",
+  "generation": 4,
+  "git_commit": "1c7726f8d431ea54baeb478bf2171d0703046ea2",
+  "grammar_version": "independent-hypergraph-v1",
+  "normalisation_version": "structural-unique-v1",
+  "numpy": "2.5.3",
+  "platform": "linux",
+  "predicates": [
+    "pair",
+    "triad"
+  ],
+  "python": "3.12.3",
+  "receipt_fingerprint": "5fb6095899dedff68e496936c3d2e538d291779f50790c12ede8a7ab3f6519c0",
+  "runtime_seconds": 132.8163948400179,
+  "science": {
+    "cells": [
+      {
+        "K_max": 2,
+        "N": 4,
+        "baseline_equivalent_families": 0,
+        "cancellations": {},
+        "cardinalities": {
+          "1": {
+            "analysed": 160,
+            "canonical": 160,
+            "labelled_combinations": 1900,
+            "labelled_simple": 1900,
+            "labelled_stacked": 0
+          }
+        },
+        "extremes": {},
+        "families": 0,
+        "family_index_sha256": "",
+        "histogram": {},
+        "kernel_index_count": 0,
+        "kernel_index_sha256": "",
+        "observable_index_sha256": "",
+        "qualitative_index_sha256": "",
+        "screened_families": 0,
+        "singles_sha256": "14dc029a6803eb8207f7c5c2dc49488471a29ee04feef068d98f29cbb5c51641",
+        "structural_families": 0,
+        "territory": null,
+        "v05_census": {
+          "by_class": {
+            "P->P": 50,
+            "P->T": 40,
+            "T->P": 40,
+            "T->T": 30
+          },
+          "effect_floor": 1e-08,
+          "eventual_primary": {
+            "matching_to_path": {
+              "P->P": {
+                "controlled_eventual_nonzero": 50,
+                "max_abs_controlled_delta": 0.041220483357880866,
+                "max_abs_occupancy_contribution": 0.06794163860830515,
+                "max_abs_stationary_delta": 0.07027450980392103,
+                "median_abs_occupancy_contribution": 0.0032333309148921963,
+                "rows": 50,
+                "triad_changes_eventual": 0
+              },
+              "P->T": {
+                "controlled_eventual_nonzero": 0,
+                "max_abs_controlled_delta": 4.440892098500626e-16,
+                "max_abs_occupancy_contribution": 2.220446049250313e-16,
+                "max_abs_stationary_delta": 5.551115123125783e-16,
+                "median_abs_occupancy_contribution": 1.1102230246251565e-16,
+                "rows": 40,
+                "triad_changes_eventual": 0
+              },
+              "T->P": {
+                "controlled_eventual_nonzero": 40,
+                "max_abs_controlled_delta": 0.004788449266292405,
+                "max_abs_occupancy_contribution": 0.011221966393965999,
+                "max_abs_stationary_delta": 0.013957153696216085,
+                "median_abs_occupancy_contribution": 0.003327184010697759,
+                "rows": 40,
+                "triad_changes_eventual": 40
+              },
+              "T->T": {
+                "controlled_eventual_nonzero": 0,
+                "max_abs_controlled_delta": 6.661338147750939e-16,
+                "max_abs_occupancy_contribution": 4.440892098500626e-16,
+                "max_abs_stationary_delta": 6.661338147750939e-16,
+                "median_abs_occupancy_contribution": 1.1102230246251565e-16,
+                "rows": 30,
+                "triad_changes_eventual": 0
+              }
+            },
+            "path_to_matching": {
+              "P->P": {
+                "controlled_eventual_nonzero": 50,
+                "max_abs_controlled_delta": 0.03065683868166208,
+                "max_abs_occupancy_contribution": 0.016985409652076344,
+                "max_abs_stationary_delta": 0.034622761093342586,
+                "median_abs_occupancy_contribution": 0.0011739015650156504,
+                "rows": 50,
+                "triad_changes_eventual": 0
+              },
+              "P->T": {
+                "controlled_eventual_nonzero": 0,
+                "max_abs_controlled_delta": 1.1102230246251565e-16,
+                "max_abs_occupancy_contribution": 8.326672684688674e-17,
+                "max_abs_stationary_delta": 1.1102230246251565e-16,
+                "median_abs_occupancy_contribution": 2.7755575615628914e-17,
+                "rows": 40,
+                "triad_changes_eventual": 0
+              },
+              "T->P": {
+                "controlled_eventual_nonzero": 40,
+                "max_abs_controlled_delta": 0.0011971123165731568,
+                "max_abs_occupancy_contribution": 0.0028054915984914996,
+                "max_abs_stationary_delta": 0.0034892884240540767,
+                "median_abs_occupancy_contribution": 0.0008317960026744814,
+                "rows": 40,
+                "triad_changes_eventual": 40
+              },
+              "T->T": {
+                "controlled_eventual_nonzero": 0,
+                "max_abs_controlled_delta": 1.3877787807814457e-16,
+                "max_abs_occupancy_contribution": 2.7755575615628914e-17,
+                "max_abs_stationary_delta": 1.6653345369377348e-16,
+                "median_abs_occupancy_contribution": 2.7755575615628914e-17,
+                "rows": 30,
+                "triad_changes_eventual": 0
+              }
+            }
+          },
+          "horizon": 16,
+          "max_stationary_residual": 3.531246475785288e-15,
+          "primary_quantity_for_sensitivity": "STATIONARY_SOURCE_PASSAGE",
+          "ranking": {
+            "matching_to_path": {
+              "P->P_max_abs_controlled": 0.041220483357880866,
+              "P->P_max_abs_stationary_eventual": 0.07027450980392103,
+              "T->P_max_abs_controlled": 0.004788449266292405,
+              "T->P_max_abs_stationary_eventual": 0.013957153696216085
+            },
+            "path_to_matching": {
+              "P->P_max_abs_controlled": 0.03065683868166208,
+              "P->P_max_abs_stationary_eventual": 0.034622761093342586,
+              "T->P_max_abs_controlled": 0.0011971123165731568,
+              "T->P_max_abs_stationary_eventual": 0.0034892884240540767
+            }
+          },
+          "rows": 160,
+          "sensitivity": {
+            "W16": {
+              "matching_to_path": {
+                "P->P": {
+                  "controlled_passage_nonzero": 50,
+                  "rows": 50,
+                  "stationary_passage_nonzero": 50,
+                  "triad_changes_hit": 0
+                },
+                "P->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                },
+                "T->P": {
+                  "controlled_passage_nonzero": 40,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 40,
+                  "triad_changes_hit": 40
+                },
+                "T->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 30,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                }
+              },
+              "path_to_matching": {
+                "P->P": {
+                  "controlled_passage_nonzero": 50,
+                  "rows": 50,
+                  "stationary_passage_nonzero": 50,
+                  "triad_changes_hit": 0
+                },
+                "P->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                },
+                "T->P": {
+                  "controlled_passage_nonzero": 40,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 40,
+                  "triad_changes_hit": 40
+                },
+                "T->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 30,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                }
+              }
+            },
+            "W3": {
+              "matching_to_path": {
+                "P->P": {
+                  "controlled_passage_nonzero": 50,
+                  "rows": 50,
+                  "stationary_passage_nonzero": 50,
+                  "triad_changes_hit": 0
+                },
+                "P->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                },
+                "T->P": {
+                  "controlled_passage_nonzero": 40,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 40,
+                  "triad_changes_hit": 40
+                },
+                "T->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 30,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                }
+              },
+              "path_to_matching": {
+                "P->P": {
+                  "controlled_passage_nonzero": 50,
+                  "rows": 50,
+                  "stationary_passage_nonzero": 50,
+                  "triad_changes_hit": 0
+                },
+                "P->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                },
+                "T->P": {
+                  "controlled_passage_nonzero": 40,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 40,
+                  "triad_changes_hit": 40
+                },
+                "T->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 30,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                }
+              }
+            },
+            "primary": {
+              "matching_to_path": {
+                "P->P": {
+                  "controlled_passage_nonzero": 50,
+                  "rows": 50,
+                  "stationary_passage_nonzero": 50,
+                  "triad_changes_hit": 0
+                },
+                "P->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                },
+                "T->P": {
+                  "controlled_passage_nonzero": 40,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 40,
+                  "triad_changes_hit": 40
+                },
+                "T->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 30,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                }
+              },
+              "path_to_matching": {
+                "P->P": {
+                  "controlled_passage_nonzero": 50,
+                  "rows": 50,
+                  "stationary_passage_nonzero": 50,
+                  "triad_changes_hit": 0
+                },
+                "P->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                },
+                "T->P": {
+                  "controlled_passage_nonzero": 40,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 40,
+                  "triad_changes_hit": 40
+                },
+                "T->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 30,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                }
+              }
+            },
+            "rho1/2": {
+              "matching_to_path": {
+                "P->P": {
+                  "controlled_passage_nonzero": 50,
+                  "rows": 50,
+                  "stationary_passage_nonzero": 50,
+                  "triad_changes_hit": 0
+                },
+                "P->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                },
+                "T->P": {
+                  "controlled_passage_nonzero": 40,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 40,
+                  "triad_changes_hit": 40
+                },
+                "T->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 30,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                }
+              },
+              "path_to_matching": {
+                "P->P": {
+                  "controlled_passage_nonzero": 50,
+                  "rows": 50,
+                  "stationary_passage_nonzero": 50,
+                  "triad_changes_hit": 0
+                },
+                "P->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                },
+                "T->P": {
+                  "controlled_passage_nonzero": 40,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 40,
+                  "triad_changes_hit": 40
+                },
+                "T->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 30,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                }
+              }
+            },
+            "rho2": {
+              "matching_to_path": {
+                "P->P": {
+                  "controlled_passage_nonzero": 50,
+                  "rows": 50,
+                  "stationary_passage_nonzero": 50,
+                  "triad_changes_hit": 0
+                },
+                "P->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                },
+                "T->P": {
+                  "controlled_passage_nonzero": 40,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 40,
+                  "triad_changes_hit": 40
+                },
+                "T->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 30,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                }
+              },
+              "path_to_matching": {
+                "P->P": {
+                  "controlled_passage_nonzero": 50,
+                  "rows": 50,
+                  "stationary_passage_nonzero": 50,
+                  "triad_changes_hit": 0
+                },
+                "P->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                },
+                "T->P": {
+                  "controlled_passage_nonzero": 40,
+                  "rows": 40,
+                  "stationary_passage_nonzero": 40,
+                  "triad_changes_hit": 40
+                },
+                "T->T": {
+                  "controlled_passage_nonzero": 0,
+                  "rows": 30,
+                  "stationary_passage_nonzero": 0,
+                  "triad_changes_hit": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "composition": "structural-simple",
+    "predicates": [
+      "pair",
+      "triad"
+    ],
+    "semantic_version": "0.4.0",
+    "spec_hash": "9ec57d9ffa21c83a824650b4397f541daee40aed3eb327b4c304571ff4075fec",
+    "status": "COMPLETE"
+  },
+  "semantic_version": "0.4.0",
+  "shard_work_seconds": 236.631408,
+  "spec_hash": "9ec57d9ffa21c83a824650b4397f541daee40aed3eb327b4c304571ff4075fec",
+  "status": "COMPLETE",
+  "territory": null,
+  "unsearched_declared": [
+    "cardinality 2 and 3",
+    "K>2",
+    "stacked-weight composition",
+    "count predicates",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0",
+    "N other than 4"
+  ],
+  "v05": {
+    "by_class": {
+      "P->P": 50,
+      "P->T": 40,
+      "T->P": 40,
+      "T->T": 30
+    },
+    "effect_floor": 1e-08,
+    "eventual_primary": {
+      "matching_to_path": {
+        "P->P": {
+          "controlled_eventual_nonzero": 50,
+          "max_abs_controlled_delta": 0.041220483357880866,
+          "max_abs_occupancy_contribution": 0.06794163860830515,
+          "max_abs_stationary_delta": 0.07027450980392103,
+          "median_abs_occupancy_contribution": 0.0032333309148921963,
+          "rows": 50,
+          "triad_changes_eventual": 0
+        },
+        "P->T": {
+          "controlled_eventual_nonzero": 0,
+          "max_abs_controlled_delta": 4.440892098500626e-16,
+          "max_abs_occupancy_contribution": 2.220446049250313e-16,
+          "max_abs_stationary_delta": 5.551115123125783e-16,
+          "median_abs_occupancy_contribution": 1.1102230246251565e-16,
+          "rows": 40,
+          "triad_changes_eventual": 0
+        },
+        "T->P": {
+          "controlled_eventual_nonzero": 40,
+          "max_abs_controlled_delta": 0.004788449266292405,
+          "max_abs_occupancy_contribution": 0.011221966393965999,
+          "max_abs_stationary_delta": 0.013957153696216085,
+          "median_abs_occupancy_contribution": 0.003327184010697759,
+          "rows": 40,
+          "triad_changes_eventual": 40
+        },
+        "T->T": {
+          "controlled_eventual_nonzero": 0,
+          "max_abs_controlled_delta": 6.661338147750939e-16,
+          "max_abs_occupancy_contribution": 4.440892098500626e-16,
+          "max_abs_stationary_delta": 6.661338147750939e-16,
+          "median_abs_occupancy_contribution": 1.1102230246251565e-16,
+          "rows": 30,
+          "triad_changes_eventual": 0
+        }
+      },
+      "path_to_matching": {
+        "P->P": {
+          "controlled_eventual_nonzero": 50,
+          "max_abs_controlled_delta": 0.03065683868166208,
+          "max_abs_occupancy_contribution": 0.016985409652076344,
+          "max_abs_stationary_delta": 0.034622761093342586,
+          "median_abs_occupancy_contribution": 0.0011739015650156504,
+          "rows": 50,
+          "triad_changes_eventual": 0
+        },
+        "P->T": {
+          "controlled_eventual_nonzero": 0,
+          "max_abs_controlled_delta": 1.1102230246251565e-16,
+          "max_abs_occupancy_contribution": 8.326672684688674e-17,
+          "max_abs_stationary_delta": 1.1102230246251565e-16,
+          "median_abs_occupancy_contribution": 2.7755575615628914e-17,
+          "rows": 40,
+          "triad_changes_eventual": 0
+        },
+        "T->P": {
+          "controlled_eventual_nonzero": 40,
+          "max_abs_controlled_delta": 0.0011971123165731568,
+          "max_abs_occupancy_contribution": 0.0028054915984914996,
+          "max_abs_stationary_delta": 0.0034892884240540767,
+          "median_abs_occupancy_contribution": 0.0008317960026744814,
+          "rows": 40,
+          "triad_changes_eventual": 40
+        },
+        "T->T": {
+          "controlled_eventual_nonzero": 0,
+          "max_abs_controlled_delta": 1.3877787807814457e-16,
+          "max_abs_occupancy_contribution": 2.7755575615628914e-17,
+          "max_abs_stationary_delta": 1.6653345369377348e-16,
+          "median_abs_occupancy_contribution": 2.7755575615628914e-17,
+          "rows": 30,
+          "triad_changes_eventual": 0
+        }
+      }
+    },
+    "horizon": 16,
+    "max_stationary_residual": 3.531246475785288e-15,
+    "primary_quantity_for_sensitivity": "STATIONARY_SOURCE_PASSAGE",
+    "ranking": {
+      "matching_to_path": {
+        "P->P_max_abs_controlled": 0.041220483357880866,
+        "P->P_max_abs_stationary_eventual": 0.07027450980392103,
+        "T->P_max_abs_controlled": 0.004788449266292405,
+        "T->P_max_abs_stationary_eventual": 0.013957153696216085
+      },
+      "path_to_matching": {
+        "P->P_max_abs_controlled": 0.03065683868166208,
+        "P->P_max_abs_stationary_eventual": 0.034622761093342586,
+        "T->P_max_abs_controlled": 0.0011971123165731568,
+        "T->P_max_abs_stationary_eventual": 0.0034892884240540767
+      }
+    },
+    "rows": 160,
+    "sensitivity": {
+      "W16": {
+        "matching_to_path": {
+          "P->P": {
+            "controlled_passage_nonzero": 50,
+            "rows": 50,
+            "stationary_passage_nonzero": 50,
+            "triad_changes_hit": 0
+          },
+          "P->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 40,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          },
+          "T->P": {
+            "controlled_passage_nonzero": 40,
+            "rows": 40,
+            "stationary_passage_nonzero": 40,
+            "triad_changes_hit": 40
+          },
+          "T->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 30,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          }
+        },
+        "path_to_matching": {
+          "P->P": {
+            "controlled_passage_nonzero": 50,
+            "rows": 50,
+            "stationary_passage_nonzero": 50,
+            "triad_changes_hit": 0
+          },
+          "P->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 40,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          },
+          "T->P": {
+            "controlled_passage_nonzero": 40,
+            "rows": 40,
+            "stationary_passage_nonzero": 40,
+            "triad_changes_hit": 40
+          },
+          "T->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 30,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          }
+        }
+      },
+      "W3": {
+        "matching_to_path": {
+          "P->P": {
+            "controlled_passage_nonzero": 50,
+            "rows": 50,
+            "stationary_passage_nonzero": 50,
+            "triad_changes_hit": 0
+          },
+          "P->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 40,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          },
+          "T->P": {
+            "controlled_passage_nonzero": 40,
+            "rows": 40,
+            "stationary_passage_nonzero": 40,
+            "triad_changes_hit": 40
+          },
+          "T->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 30,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          }
+        },
+        "path_to_matching": {
+          "P->P": {
+            "controlled_passage_nonzero": 50,
+            "rows": 50,
+            "stationary_passage_nonzero": 50,
+            "triad_changes_hit": 0
+          },
+          "P->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 40,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          },
+          "T->P": {
+            "controlled_passage_nonzero": 40,
+            "rows": 40,
+            "stationary_passage_nonzero": 40,
+            "triad_changes_hit": 40
+          },
+          "T->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 30,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          }
+        }
+      },
+      "primary": {
+        "matching_to_path": {
+          "P->P": {
+            "controlled_passage_nonzero": 50,
+            "rows": 50,
+            "stationary_passage_nonzero": 50,
+            "triad_changes_hit": 0
+          },
+          "P->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 40,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          },
+          "T->P": {
+            "controlled_passage_nonzero": 40,
+            "rows": 40,
+            "stationary_passage_nonzero": 40,
+            "triad_changes_hit": 40
+          },
+          "T->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 30,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          }
+        },
+        "path_to_matching": {
+          "P->P": {
+            "controlled_passage_nonzero": 50,
+            "rows": 50,
+            "stationary_passage_nonzero": 50,
+            "triad_changes_hit": 0
+          },
+          "P->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 40,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          },
+          "T->P": {
+            "controlled_passage_nonzero": 40,
+            "rows": 40,
+            "stationary_passage_nonzero": 40,
+            "triad_changes_hit": 40
+          },
+          "T->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 30,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          }
+        }
+      },
+      "rho1/2": {
+        "matching_to_path": {
+          "P->P": {
+            "controlled_passage_nonzero": 50,
+            "rows": 50,
+            "stationary_passage_nonzero": 50,
+            "triad_changes_hit": 0
+          },
+          "P->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 40,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          },
+          "T->P": {
+            "controlled_passage_nonzero": 40,
+            "rows": 40,
+            "stationary_passage_nonzero": 40,
+            "triad_changes_hit": 40
+          },
+          "T->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 30,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          }
+        },
+        "path_to_matching": {
+          "P->P": {
+            "controlled_passage_nonzero": 50,
+            "rows": 50,
+            "stationary_passage_nonzero": 50,
+            "triad_changes_hit": 0
+          },
+          "P->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 40,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          },
+          "T->P": {
+            "controlled_passage_nonzero": 40,
+            "rows": 40,
+            "stationary_passage_nonzero": 40,
+            "triad_changes_hit": 40
+          },
+          "T->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 30,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          }
+        }
+      },
+      "rho2": {
+        "matching_to_path": {
+          "P->P": {
+            "controlled_passage_nonzero": 50,
+            "rows": 50,
+            "stationary_passage_nonzero": 50,
+            "triad_changes_hit": 0
+          },
+          "P->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 40,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          },
+          "T->P": {
+            "controlled_passage_nonzero": 40,
+            "rows": 40,
+            "stationary_passage_nonzero": 40,
+            "triad_changes_hit": 40
+          },
+          "T->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 30,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          }
+        },
+        "path_to_matching": {
+          "P->P": {
+            "controlled_passage_nonzero": 50,
+            "rows": 50,
+            "stationary_passage_nonzero": 50,
+            "triad_changes_hit": 0
+          },
+          "P->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 40,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          },
+          "T->P": {
+            "controlled_passage_nonzero": 40,
+            "rows": 40,
+            "stationary_passage_nonzero": 40,
+            "triad_changes_hit": 40
+          },
+          "T->T": {
+            "controlled_passage_nonzero": 0,
+            "rows": 30,
+            "stationary_passage_nonzero": 0,
+            "triad_changes_hit": 0
+          }
+        }
+      }
+    }
+  }
+}
