@@ -18,11 +18,11 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Coherence.** Non-contradiction is necessary but not sufficient. Coherence also requires real connection between the parts of an account, faithful translation across their boundaries, meaning kept through explanatory layers and round trips, and preservation of real distinctions. *Local*: a model explains a bounded phenomenon. *Regional*: neighbouring domains integrate. *Global*: the whole account of reality passes these tests together. Coherence is not the same as truth. (Ch 2, Ch 9)
 
-**Constrained stochastic actualisation.** The Relational Substrate hypothesis that what becomes actual is a matter of chance among admissible options, weighted by tendency and shaped by constraint. (Ch 5)
+**Constrained stochastic actualisation.** The Relational Substrate hypothesis that what becomes actual is stochastic in the ontic sense: genuinely open among admissible options until it occurs, weighted by tendency and shaped by constraint. (Ch 5)
 
 **Coordination.** Relations among chance events that make them vary together. What stabilises a whole is coordination aligned with consequence and responsive to the current state, not correlation as such. It is not a controller. (Ch 8)
 
-**Corruption.** Distortion of good order, persisting without being restored: misalignment, rupture, misdirected transmission, failed reception. Parasitic, with no being of its own. (Ch 13)
+**Corruption.** Distortion of good order: wrongdoing, which is wrong in itself, together with its entrenchment as misalignment persists and spreads without being restored. Parasitic, with no being of its own. (Ch 13)
 
 **Created runtime order.** Creation as operating, the domain of ordinary physical process, distinguished from creation's origin in God's act. The term is borrowed from computing, but creation is not a computer. (Ch 3)
 
@@ -32,7 +32,9 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Equivalence class.** All the states that count as "the same" for a given purpose: those that no relevant interaction could tell apart. (Ch 6)
 
-**Identity (of physical things).** Continuity of a thing's relevant equivalence class through admissible change, judged by what reachable future interactions could discriminate. Invariants are certificates of it, and provenance is part of it where it remains consequential. Personal identity resembles this but is not defined by it. (Ch 6)
+**Identity (of physical things).** Sameness of kind or state: continuity of a thing's relevant equivalence class through admissible change, judged by what reachable future interactions could discriminate. Invariants certify it, and provenance is part of it where it remains consequential. Distinct from *individual continuity*. Personal identity resembles both but is not defined by them. (Ch 6)
+
+**Individual continuity.** Being the same continuing individual, and not merely an equivalent replacement. It requires continuity of lineage and history in addition to equivalence. What carries it in physical things is an open question. (Ch 6)
 
 **Invariant.** A quantity or feature left unchanged by a set of transformations. One carrier or certificate of identity, not necessarily all of it. (Ch 6)
 
@@ -48,7 +50,7 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Ontology.** An account of what must be there for described behaviour to be possible. Distinct from description. (Ch 2)
 
-**Persistence.** Continued re-actualisation within the same relevant equivalence class, against some kind of disturbance, over some length of time. (Ch 6)
+**Persistence.** Continued re-actualisation within the same relevant equivalence class, against some kind of disturbance, over some length of time; for a continuing individual, along an unbroken history. (Ch 6)
 
 **Person.** A centre of awareness, relation, agency, address and responsibility. Personhood is deeper than embodiment; human persons are persons in an embodied, creaturely mode. (Ch 11)
 
@@ -62,11 +64,11 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Receiver compatibility.** What a receiver can register, and how it responds, as set by its own admissibility. (Ch 7)
 
-**Relation.** A real standing-between in which each relatum is conditioned by the other. (Ch 3)
+**Relation.** A real standing-between in which each relatum is conditioned by the other. *Interactional* relation holds between things already fully what they are. *Constitutive* relation partly makes things what they are. The Relational Substrate proposal concerns the second. (Ch 3)
 
 **Relational substrate.** The proposed created relational order within which physical things are constituted and act. It is not matter, not ether, not a mind, not a soul and not God, and not a denial that fields are real. (Ch 3)
 
-**Stochastic.** Governed by probabilities over defined possibilities. Not lawless, not arbitrary, not chaotic. (Ch 5)
+**Stochastic.** Described by probabilities over defined possibilities. The word itself does not say whether the probabilities are *epistemic* (ignorance of hidden details) or *ontic* (genuine openness). Not lawless, not arbitrary, not chaotic. (Ch 5)
 
 **Structural analogy.** A likeness of form between realities of different kinds. Distinct from *ontological identity*, sameness of kind. (Ch 1)
 

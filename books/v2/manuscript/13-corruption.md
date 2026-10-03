@@ -18,7 +18,7 @@ The way these fit together has been understood in Christian thought since August
 
 ## Corruption as persisting misalignment
 
-Chapter 12 described alignment as fitting the order one is made for. Misalignment, a departure from that order, is not by itself the whole of corruption. Every growing creature departs from its mature form, and every learner makes mistakes. What makes misalignment corrupt is that it **persists and spreads without being restored**.
+Chapter 12 described alignment as fitting the order one is made for. Misalignment, a departure from that order, is not by itself the whole of corruption. Every growing creature departs from its mature form, and every learner makes mistakes. A wrong act is wrong in itself, whether or not it is ever repeated: a single lie, swiftly repented of, was still a lie, and a single act of cruelty is still cruel. Its wrongness lies in what it is and whom it wrongs, judged by the moral order of Chapter 12, not in how long it lasts. What persistence explains is something else: how wrongdoing **entrenches**. Misalignment that is not restored persists and spreads, hardening into habit, narrowing what a person can see and choose, and reaching into others. Corruption, in the full sense this chapter describes, includes both the wrong and its entrenchment.
 
 Scripture describes sin in exactly these terms: not as a series of isolated lapses but as a trajectory that hardens, enslaves and narrows:
 
@@ -102,7 +102,7 @@ If every limit were treated as evil, creaturehood itself would become a fault, a
 
 ## Darkness, again
 
-Chapter 1 insisted that the darkness of Genesis 1:2 is not evil. It is a real, created condition of the world before light, unmanifested rather than malign. That distinction must hold even now. Later Scripture uses darkness for ignorance, concealment, judgment and sin, and rightly. But moral darkness is not a substance created alongside light. It is something more like *hiddenness turned to disorder*: the created capacity for concealment, which in God's purpose can be a place of rest, mystery and reverence, seized for evasion, deceit and revolt. "Men loved darkness rather than light, because their deeds were evil" (John 3:19). The darkness they love is not the darkness of Genesis 1. It is that darkness misused.
+Chapter 1 insisted that the darkness of Genesis 1:2 is not evil. On the reading given there, it is a real, created condition of the world before light, not yet made manifest, and not malign. That distinction must hold even now. Later Scripture uses darkness for ignorance, concealment, judgment and sin, and rightly. But moral darkness is not a substance created alongside light. It is something more like *hiddenness turned to disorder*: the created capacity for concealment, which in God's purpose can be a place of rest, mystery and reverence, seized for evasion, deceit and revolt. "Men loved darkness rather than light, because their deeds were evil" (John 3:19). The darkness they love is not the darkness of Genesis 1. It is that darkness misused.
 
 ## Remembrance
 

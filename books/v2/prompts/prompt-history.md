@@ -64,3 +64,11 @@ The brief's formulations that the research revised are recorded with reasons in 
   - READMEs.
 - **Divergence:** the instruction treated triadic relation and history as untested candidates. The repository had run Generation 3 (triadic), so its results are reported. Recorded in the baseline III.3.
 - **Resulting commits:** `cbbe8c0` and the v2.2 audit commit that records this entry.
+
+## 2026-10-03: v2.3 final surgical pass
+
+- **Instruction:** [`v2.3-final-surgical-review-prompt.md`](v2.3-final-surgical-review-prompt.md), verbatim. **Starting head:** `f658254`. No ref movement.
+- **Purpose:** eight residual issues (identity versus individual continuity; neutral stochasticity; Ch 4 structure; corruption; Genesis inference; Ch 9 target; interactional versus constitutive relation; unreceived transmission) and an optional Ch 8 midpoint reset.
+- **Files:** manuscript Chs 1, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 15 and Apps B, C; analysis (epistemic and terminology registers, research baseline, concept-graph builder and chapter map, v2.3 review record, final vector review); this history.
+- **Divergences:** none.
+- **Resulting commit:** the v2.3 commit that records this entry.

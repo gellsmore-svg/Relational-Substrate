@@ -523,6 +523,14 @@
   "endogenous-carrier": {
    "first": "Ch 7",
    "reactivate": []
+  },
+  "individual-continuity": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 11",
+    "Ch 14",
+    "Ch 15"
+   ]
   }
  }
 }

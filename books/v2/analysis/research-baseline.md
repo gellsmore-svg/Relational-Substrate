@@ -43,7 +43,7 @@ constrained possibility       T0: what transitions are admissible at all, and ho
 - The calculator's decimal carry is one implemented T-C-R protocol, not the ontology.
 - Carrier architecture in all models so far was designed. Endogenous emergence of carriers and lineages is an **open problem**.
 
-**Identity (physical).** Continuity of the relevant relational equivalence class through admissible change, relative to the distinctions reachable future consequences can consume.
+**Identity (physical).** Two questions are kept apart. *Sameness of kind or state* is continuity of the relevant relational equivalence class through admissible change, relative to the distinctions reachable future consequences can consume. *Individual continuity* (being the same individual, not an equivalent replacement) requires lineage and history in addition, and what carries it physically is an open question.
 
 - An invariant is a carrier or certificate of such equivalence in some systems, not the universal ontology of identity.
 - Provenance (past distinctions surviving in present structure) is part of identity where consequential. It may be quotiented away only where no reachable future can consume it.
@@ -66,7 +66,7 @@ constrained possibility       T0: what transitions are admissible at all, and ho
 | Component | Status |
 | --- | --- |
 | Admissibility distinct from tendency | **Formal result** (constraint lab G001, G1b, G002) with an RS interpretation |
-| Stochastic actualisation as fundamental | **RS working hypothesis.** Standard quantum mechanics is probabilistic in prediction. Its interpretations differ on whether that reflects fundamental indeterminacy, hidden variables, branching or other ontology, and they agree empirically so far. Objective-collapse models modify the dynamics and are empirically testable in principle |
+| Stochastic actualisation as fundamental | **RS working hypothesis** (in the ontic sense; "stochastic" as such is neutral between epistemic and ontic readings). Standard quantum mechanics is probabilistic in prediction. Its interpretations differ on whether that reflects fundamental indeterminacy, hidden variables, branching or other ontology, and they agree empirically so far. Objective-collapse models modify the dynamics and are empirically testable in principle |
 | Identity as relational equivalence | **Ontological interpretation** from author-supplied exploratory research (502), with repository analogues: SC-001/019, G1b ("observable equality is not kernel equality"), G3 (a hidden relation yields apparent memory) |
 | Invariants as identity certificates | **Model demonstrations** (SC-001/019; Hopf invariant) plus mainstream practice (conservation laws, topological charges) |
 | T-C-R | **RS interpretive grammar**, with one **implemented protocol** (SC-012/014) and many mainstream physical instances. Fundamentality is a hypothesis. Endogenous carrier emergence is not demonstrated |
@@ -205,3 +205,18 @@ The July ladder uses T0–T7 for rungs; the books use T0 for constrained possibi
   - this baseline is restructured to remove contradictory live definitions;
   - Generation 3 is integrated.
 - **Divergence from the v2.2 instruction:** the instruction treated history depth and triadic relation as untested candidates. The repository had since run the triadic generation, so the book reports its results. The instruction anticipated this ("if they have [moved], inspect the newer state and adapt").
+
+## III.4 v2.3 revision log (2026-10-03)
+
+- **Instruction:** `../prompts/v2.3-final-surgical-review-prompt.md`. **Starting head:** `f658254`.
+- **Changes:**
+  - equivalence separated from individual continuity (Ch 6 and propagation);
+  - stochasticity defined neutrally, with RS's ontic claim stated separately;
+  - Ch 4 structure language broadened (forbidding, weighting, coupling, higher-order relation);
+  - corruption: wrongness not defined by persistence;
+  - Genesis darkness descriptors marked as inference;
+  - the Ch 9 target narrowed to independently individuated entities;
+  - Ch 3 interactional versus constitutive relation;
+  - Ch 7 unreceived transmission as an incomplete chain;
+  - Ch 8 midpoint reset.
+- **Divergences:** none.

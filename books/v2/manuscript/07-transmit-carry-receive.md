@@ -70,7 +70,7 @@ Second, receivers differ in how they respond to repeated or continuing arrivals:
 
 The calculator was a receiver of the last kind. When the researchers deliberately allowed a carried ten to be received twice in the next column, the arithmetic went wrong. Without protection against duplication, the calculator was correct in only about 83 per cent of trials at a low replay rate and about 48 per cent at a high one. With protection it was correct every time. The lesson is exact and limited: *for a receiver whose consequence is a count*, duplicated reception is error. Exactly-once reception is a property of such transactional receivers, not a universal law of reception. What is universal is that reception has a definite character. How a receiver responds to what reaches it is part of what that receiver is.
 
-What, then, makes a transmission real? The relational answer is its connection to possible consequential reception. A distinction made available and carried, but which no receiver could ever be changed by, has a thin and strange reality. It has gone out, but it has gone nowhere. In a relation-first world, distinctions are real *as they can matter*, and they matter by being received.
+A distinction may be made available and carried without ever reaching consequential reception: light from a distant star that falls on nothing able to register it, or a letter lost in the post. The propagation is no less real for that. The T-C-R chain is simply incomplete at its receiving end. A distinction becomes *consequential* elsewhere only when it is received.
 
 ## The whole grammar
 

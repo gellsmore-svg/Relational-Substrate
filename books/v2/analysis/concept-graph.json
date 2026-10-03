@@ -54,11 +54,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 1,
-    "transitive_dependents": 61,
-    "betweenness": 0.0258,
+    "transitive_dependents": 62,
+    "betweenness": 0.0251,
     "cross_domain_reach": 2,
-    "rank_sum": 113,
-    "rank": 17
+    "rank_sum": 116,
+    "rank": 18
    }
   },
   {
@@ -102,10 +102,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 2,
-    "transitive_dependents": 58,
-    "betweenness": 0.0334,
+    "transitive_dependents": 59,
+    "betweenness": 0.0326,
     "cross_domain_reach": 2,
-    "rank_sum": 103,
+    "rank_sum": 106,
     "rank": 15
    }
   },
@@ -143,10 +143,10 @@
    "metrics": {
     "prerequisite_depth": 2,
     "transitive_dependents": 6,
-    "betweenness": 0.0261,
+    "betweenness": 0.0257,
     "cross_domain_reach": 2,
-    "rank_sum": 136,
-    "rank": 31
+    "rank_sum": 139,
+    "rank": 32
    }
   },
   {
@@ -182,8 +182,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 228,
-    "rank": 72
+    "rank_sum": 232,
+    "rank": 73
    }
   },
   {
@@ -216,11 +216,11 @@
    "load_bearing_declared": false,
    "metrics": {
     "prerequisite_depth": 1,
-    "transitive_dependents": 64,
-    "betweenness": 0.0089,
+    "transitive_dependents": 65,
+    "betweenness": 0.0087,
     "cross_domain_reach": 1,
-    "rank_sum": 167,
-    "rank": 46
+    "rank_sum": 169,
+    "rank": 49
    }
   },
   {
@@ -254,11 +254,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 2,
-    "transitive_dependents": 62,
+    "transitive_dependents": 63,
     "betweenness": 0.0031,
     "cross_domain_reach": 1,
-    "rank_sum": 173,
-    "rank": 52
+    "rank_sum": 175,
+    "rank": 53
    }
   },
   {
@@ -299,9 +299,9 @@
    "metrics": {
     "prerequisite_depth": 3,
     "transitive_dependents": 5,
-    "betweenness": 0.062,
+    "betweenness": 0.0615,
     "cross_domain_reach": 2,
-    "rank_sum": 120,
+    "rank_sum": 122,
     "rank": 23
    }
   },
@@ -337,10 +337,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 3,
-    "transitive_dependents": 58,
-    "betweenness": 0.005,
+    "transitive_dependents": 59,
+    "betweenness": 0.0049,
     "cross_domain_reach": 2,
-    "rank_sum": 134,
+    "rank_sum": 135,
     "rank": 29
    }
   },
@@ -377,8 +377,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0021,
     "cross_domain_reach": 1,
-    "rank_sum": 225,
-    "rank": 71
+    "rank_sum": 228,
+    "rank": 72
    }
   },
   {
@@ -414,10 +414,10 @@
    "metrics": {
     "prerequisite_depth": 1,
     "transitive_dependents": 10,
-    "betweenness": 0.0195,
+    "betweenness": 0.0193,
     "cross_domain_reach": 1,
-    "rank_sum": 181,
-    "rank": 55
+    "rank_sum": 183,
+    "rank": 56
    }
   },
   {
@@ -451,10 +451,10 @@
    "metrics": {
     "prerequisite_depth": 2,
     "transitive_dependents": 4,
-    "betweenness": 0.0053,
+    "betweenness": 0.0052,
     "cross_domain_reach": 1,
-    "rank_sum": 208,
-    "rank": 62
+    "rank_sum": 210,
+    "rank": 63
    }
   },
   {
@@ -490,8 +490,8 @@
     "transitive_dependents": 3,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 223,
-    "rank": 70
+    "rank_sum": 227,
+    "rank": 71
    }
   },
   {
@@ -530,9 +530,9 @@
    "metrics": {
     "prerequisite_depth": 6,
     "transitive_dependents": 2,
-    "betweenness": 0.1646,
+    "betweenness": 0.1617,
     "cross_domain_reach": 3,
-    "rank_sum": 100,
+    "rank_sum": 102,
     "rank": 13
    }
   },
@@ -571,9 +571,9 @@
    "metrics": {
     "prerequisite_depth": 2,
     "transitive_dependents": 1,
-    "betweenness": 0.0697,
+    "betweenness": 0.0695,
     "cross_domain_reach": 2,
-    "rank_sum": 147,
+    "rank_sum": 150,
     "rank": 34
    }
   },
@@ -610,10 +610,10 @@
    "metrics": {
     "prerequisite_depth": 3,
     "transitive_dependents": 0,
-    "betweenness": 0.0046,
+    "betweenness": 0.0045,
     "cross_domain_reach": 1,
-    "rank_sum": 229,
-    "rank": 73
+    "rank_sum": 232,
+    "rank": 74
    }
   },
   {
@@ -649,9 +649,9 @@
    "metrics": {
     "prerequisite_depth": 2,
     "transitive_dependents": 3,
-    "betweenness": 0.044,
+    "betweenness": 0.0428,
     "cross_domain_reach": 2,
-    "rank_sum": 148,
+    "rank_sum": 151,
     "rank": 35
    }
   },
@@ -686,10 +686,10 @@
    "metrics": {
     "prerequisite_depth": 2,
     "transitive_dependents": 5,
-    "betweenness": 0.0054,
+    "betweenness": 0.0053,
     "cross_domain_reach": 1,
-    "rank_sum": 210,
-    "rank": 63
+    "rank_sum": 212,
+    "rank": 64
    }
   },
   {
@@ -726,10 +726,10 @@
    "metrics": {
     "prerequisite_depth": 4,
     "transitive_dependents": 4,
-    "betweenness": 0.0249,
+    "betweenness": 0.0244,
     "cross_domain_reach": 1,
-    "rank_sum": 179,
-    "rank": 54
+    "rank_sum": 181,
+    "rank": 55
    }
   },
   {
@@ -766,10 +766,10 @@
    "metrics": {
     "prerequisite_depth": 5,
     "transitive_dependents": 3,
-    "betweenness": 0.0144,
+    "betweenness": 0.014,
     "cross_domain_reach": 1,
-    "rank_sum": 188,
-    "rank": 58
+    "rank_sum": 194,
+    "rank": 59
    }
   },
   {
@@ -806,7 +806,7 @@
     "transitive_dependents": 0,
     "betweenness": 0.0025,
     "cross_domain_reach": 1,
-    "rank_sum": 221,
+    "rank_sum": 224,
     "rank": 69
    }
   },
@@ -844,10 +844,10 @@
    "metrics": {
     "prerequisite_depth": 4,
     "transitive_dependents": 1,
-    "betweenness": 0.0111,
+    "betweenness": 0.0108,
     "cross_domain_reach": 2,
-    "rank_sum": 169,
-    "rank": 48
+    "rank_sum": 172,
+    "rank": 51
    }
   },
   {
@@ -886,16 +886,16 @@
    "metrics": {
     "prerequisite_depth": 3,
     "transitive_dependents": 16,
-    "betweenness": 0.073,
+    "betweenness": 0.0721,
     "cross_domain_reach": 2,
-    "rank_sum": 113,
-    "rank": 18
+    "rank_sum": 114,
+    "rank": 17
    }
   },
   {
    "id": "relation",
    "term": "Relation",
-   "definition": "A real standing-between of things in which each conditions the other; RS takes relation as constitutive, not added.",
+   "definition": "A real standing-between of things in which each conditions the other; interactional relation holds between complete things, constitutive relation partly makes things what they are — RS proposes the latter at the base.",
    "epistemic_category": "ontological interpretation",
    "research_maturity": "working",
    "domain": "physical",
@@ -931,10 +931,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 5,
-    "transitive_dependents": 55,
-    "betweenness": 0.1609,
+    "transitive_dependents": 56,
+    "betweenness": 0.1579,
     "cross_domain_reach": 3,
-    "rank_sum": 67,
+    "rank_sum": 68,
     "rank": 3
    }
   },
@@ -968,10 +968,10 @@
    "load_bearing_declared": false,
    "metrics": {
     "prerequisite_depth": 4,
-    "transitive_dependents": 56,
-    "betweenness": 0.0239,
+    "transitive_dependents": 57,
+    "betweenness": 0.0236,
     "cross_domain_reach": 2,
-    "rank_sum": 115,
+    "rank_sum": 116,
     "rank": 19
    }
   },
@@ -1015,10 +1015,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 6,
-    "transitive_dependents": 51,
-    "betweenness": 0.1634,
+    "transitive_dependents": 52,
+    "betweenness": 0.1597,
     "cross_domain_reach": 3,
-    "rank_sum": 64,
+    "rank_sum": 65,
     "rank": 2
    }
   },
@@ -1057,9 +1057,9 @@
    "metrics": {
     "prerequisite_depth": 7,
     "transitive_dependents": 4,
-    "betweenness": 0.0337,
+    "betweenness": 0.0335,
     "cross_domain_reach": 2,
-    "rank_sum": 127,
+    "rank_sum": 129,
     "rank": 25
    }
   },
@@ -1092,10 +1092,10 @@
    "metrics": {
     "prerequisite_depth": 6,
     "transitive_dependents": 0,
-    "betweenness": 0.0058,
+    "betweenness": 0.0057,
     "cross_domain_reach": 1,
-    "rank_sum": 220,
-    "rank": 67
+    "rank_sum": 223,
+    "rank": 68
    }
   },
   {
@@ -1131,10 +1131,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 7,
-    "transitive_dependents": 49,
-    "betweenness": 0.0567,
+    "transitive_dependents": 50,
+    "betweenness": 0.0559,
     "cross_domain_reach": 1,
-    "rank_sum": 129,
+    "rank_sum": 132,
     "rank": 26
    }
   },
@@ -1181,10 +1181,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 8,
-    "transitive_dependents": 43,
-    "betweenness": 0.1337,
+    "transitive_dependents": 44,
+    "betweenness": 0.1323,
     "cross_domain_reach": 2,
-    "rank_sum": 77,
+    "rank_sum": 78,
     "rank": 8
    }
   },
@@ -1220,11 +1220,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 9,
-    "transitive_dependents": 39,
-    "betweenness": 0.0042,
+    "transitive_dependents": 40,
+    "betweenness": 0.0041,
     "cross_domain_reach": 1,
-    "rank_sum": 162,
-    "rank": 43
+    "rank_sum": 164,
+    "rank": 45
    }
   },
   {
@@ -1261,17 +1261,17 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 8,
-    "transitive_dependents": 37,
-    "betweenness": 0.0494,
+    "transitive_dependents": 38,
+    "betweenness": 0.0485,
     "cross_domain_reach": 2,
-    "rank_sum": 96,
+    "rank_sum": 97,
     "rank": 11
    }
   },
   {
    "id": "stochasticity",
    "term": "Stochasticity",
-   "definition": "Outcomes governed by probabilities over defined possibilities; not lawlessness.",
+   "definition": "Description by probabilities over defined possibilities; neutral between epistemic probability and ontic indeterminacy; not lawlessness.",
    "epistemic_category": "mathematical / scientific consensus",
    "research_maturity": "settled",
    "domain": "physical",
@@ -1300,17 +1300,17 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 10,
-    "transitive_dependents": 38,
-    "betweenness": 0.0106,
+    "transitive_dependents": 39,
+    "betweenness": 0.0103,
     "cross_domain_reach": 1,
-    "rank_sum": 151,
+    "rank_sum": 153,
     "rank": 37
    }
   },
   {
    "id": "constrained-stochasticity",
    "term": "Constrained stochastic actualisation",
-   "definition": "RS hypothesis that what happens is probabilistic among admissible options shaped by constraint.",
+   "definition": "RS hypothesis that actualisation is ontically stochastic: genuinely open among admissible options until it occurs, shaped by constraint.",
    "epistemic_category": "RS working hypothesis",
    "research_maturity": "frontier",
    "domain": "physical",
@@ -1347,10 +1347,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 11,
-    "transitive_dependents": 35,
-    "betweenness": 0.1439,
+    "transitive_dependents": 36,
+    "betweenness": 0.1431,
     "cross_domain_reach": 2,
-    "rank_sum": 70,
+    "rank_sum": 71,
     "rank": 4
    }
   },
@@ -1395,10 +1395,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 12,
-    "transitive_dependents": 31,
-    "betweenness": 0.112,
+    "transitive_dependents": 32,
+    "betweenness": 0.1159,
     "cross_domain_reach": 2,
-    "rank_sum": 74,
+    "rank_sum": 75,
     "rank": 7
    }
   },
@@ -1416,12 +1416,15 @@
    ],
    "dependents": [
     "carry",
+    "individual-continuity",
     "persistence",
     "provenance",
     "recovery-kinds",
     "resurrection"
    ],
-   "cross_domain_relations": [],
+   "cross_domain_relations": [
+    "individual-continuity"
+   ],
    "evidence": [
     "E-conv"
    ],
@@ -1443,10 +1446,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 14,
-    "transitive_dependents": 26,
-    "betweenness": 0.0537,
+    "transitive_dependents": 27,
+    "betweenness": 0.0656,
     "cross_domain_reach": 2,
-    "rank_sum": 81,
+    "rank_sum": 80,
     "rank": 9
    }
   },
@@ -1459,6 +1462,7 @@
    "domain": "physical",
    "prerequisites": [
     "equivalence",
+    "individual-continuity",
     "provenance"
    ],
    "dependents": [],
@@ -1476,17 +1480,60 @@
    "common_misunderstanding": "that working again means the same again",
    "conceptual_difficulty": 3,
    "abstraction_level": 4,
-   "simultaneously_interacting_concepts": 3,
+   "simultaneously_interacting_concepts": 4,
    "decomposable": false,
-   "context_load_hint": 10,
+   "context_load_hint": 11,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 16,
+    "prerequisite_depth": 17,
     "transitive_dependents": 0,
     "betweenness": 0.0014,
     "cross_domain_reach": 2,
-    "rank_sum": 170,
-    "rank": 49
+    "rank_sum": 166,
+    "rank": 47
+   }
+  },
+  {
+   "id": "individual-continuity",
+   "term": "Individual continuity",
+   "definition": "Being the same continuing individual, not merely an equivalent replacement; requires lineage and history beyond equivalence; open in RS research.",
+   "epistemic_category": "ontological distinction",
+   "research_maturity": "open",
+   "domain": "physical",
+   "prerequisites": [
+    "equivalence",
+    "provenance"
+   ],
+   "dependents": [
+    "recovery-kinds",
+    "resurrection"
+   ],
+   "cross_domain_relations": [
+    "equivalence"
+   ],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 11",
+    "Ch 14",
+    "Ch 15"
+   ],
+   "example_needed": "two coins from the same die",
+   "common_misunderstanding": "that equivalence settles individuality",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 16,
+    "transitive_dependents": 2,
+    "betweenness": 0.0004,
+    "cross_domain_reach": 2,
+    "rank_sum": 161,
+    "rank": 42
    }
   },
   {
@@ -1500,6 +1547,7 @@
     "equivalence"
    ],
    "dependents": [
+    "individual-continuity",
     "memory-configuration",
     "recovery-kinds"
    ],
@@ -1524,11 +1572,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 15,
-    "transitive_dependents": 2,
-    "betweenness": 0.012,
+    "transitive_dependents": 4,
+    "betweenness": 0.0161,
     "cross_domain_reach": 1,
-    "rank_sum": 171,
-    "rank": 50
+    "rank_sum": 160,
+    "rank": 39
    }
   },
   {
@@ -1561,11 +1609,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 9,
-    "transitive_dependents": 27,
-    "betweenness": 0.0106,
+    "transitive_dependents": 28,
+    "betweenness": 0.0119,
     "cross_domain_reach": 1,
-    "rank_sum": 159,
-    "rank": 38
+    "rank_sum": 160,
+    "rank": 40
    }
   },
   {
@@ -1602,11 +1650,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 13,
-    "transitive_dependents": 27,
+    "transitive_dependents": 28,
     "betweenness": 0.0023,
     "cross_domain_reach": 1,
-    "rank_sum": 167,
-    "rank": 47
+    "rank_sum": 169,
+    "rank": 50
    }
   },
   {
@@ -1647,10 +1695,10 @@
    "metrics": {
     "prerequisite_depth": 15,
     "transitive_dependents": 22,
-    "betweenness": 0.1356,
+    "betweenness": 0.1363,
     "cross_domain_reach": 2,
-    "rank_sum": 70,
-    "rank": 5
+    "rank_sum": 72,
+    "rank": 6
    }
   },
   {
@@ -1684,10 +1732,10 @@
    "metrics": {
     "prerequisite_depth": 13,
     "transitive_dependents": 0,
-    "betweenness": 0.0025,
+    "betweenness": 0.0024,
     "cross_domain_reach": 1,
-    "rank_sum": 213,
-    "rank": 64
+    "rank_sum": 216,
+    "rank": 65
    }
   },
   {
@@ -1725,10 +1773,10 @@
    "metrics": {
     "prerequisite_depth": 16,
     "transitive_dependents": 0,
-    "betweenness": 0.0138,
+    "betweenness": 0.0142,
     "cross_domain_reach": 1,
-    "rank_sum": 183,
-    "rank": 57
+    "rank_sum": 187,
+    "rank": 58
    }
   },
   {
@@ -1762,7 +1810,7 @@
    "metrics": {
     "prerequisite_depth": 6,
     "transitive_dependents": 14,
-    "betweenness": 0.0334,
+    "betweenness": 0.0339,
     "cross_domain_reach": 1,
     "rank_sum": 163,
     "rank": 44
@@ -1802,8 +1850,8 @@
     "transitive_dependents": 13,
     "betweenness": 0.0024,
     "cross_domain_reach": 1,
-    "rank_sum": 199,
-    "rank": 60
+    "rank_sum": 201,
+    "rank": 61
    }
   },
   {
@@ -1842,9 +1890,9 @@
    "metrics": {
     "prerequisite_depth": 16,
     "transitive_dependents": 12,
-    "betweenness": 0.0913,
+    "betweenness": 0.0928,
     "cross_domain_reach": 1,
-    "rank_sum": 118,
+    "rank_sum": 120,
     "rank": 22
    }
   },
@@ -1879,8 +1927,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 214,
-    "rank": 66
+    "rank_sum": 218,
+    "rank": 67
    }
   },
   {
@@ -1915,10 +1963,10 @@
    "metrics": {
     "prerequisite_depth": 17,
     "transitive_dependents": 9,
-    "betweenness": 0.0254,
+    "betweenness": 0.0266,
     "cross_domain_reach": 1,
     "rank_sum": 138,
-    "rank": 32
+    "rank": 31
    }
   },
   {
@@ -1950,8 +1998,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 220,
-    "rank": 68
+    "rank_sum": 224,
+    "rank": 70
    }
   },
   {
@@ -1986,10 +2034,10 @@
    "metrics": {
     "prerequisite_depth": 9,
     "transitive_dependents": 10,
-    "betweenness": 0.0095,
+    "betweenness": 0.0092,
     "cross_domain_reach": 1,
-    "rank_sum": 182,
-    "rank": 56
+    "rank_sum": 184,
+    "rank": 57
    }
   },
   {
@@ -2043,10 +2091,10 @@
    "metrics": {
     "prerequisite_depth": 18,
     "transitive_dependents": 8,
-    "betweenness": 0.1294,
+    "betweenness": 0.1283,
     "cross_domain_reach": 2,
-    "rank_sum": 70,
-    "rank": 6
+    "rank_sum": 71,
+    "rank": 5
    }
   },
   {
@@ -2081,8 +2129,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 213,
-    "rank": 65
+    "rank_sum": 216,
+    "rank": 66
    }
   },
   {
@@ -2118,10 +2166,10 @@
    "metrics": {
     "prerequisite_depth": 11,
     "transitive_dependents": 6,
-    "betweenness": 0.0031,
+    "betweenness": 0.003,
     "cross_domain_reach": 1,
-    "rank_sum": 196,
-    "rank": 59
+    "rank_sum": 198,
+    "rank": 60
    }
   },
   {
@@ -2160,8 +2208,8 @@
     "transitive_dependents": 3,
     "betweenness": 0.0058,
     "cross_domain_reach": 1,
-    "rank_sum": 203,
-    "rank": 61
+    "rank_sum": 206,
+    "rank": 62
    }
   },
   {
@@ -2196,8 +2244,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 242,
-    "rank": 76
+    "rank_sum": 246,
+    "rank": 77
    }
   },
   {
@@ -2241,9 +2289,9 @@
    "metrics": {
     "prerequisite_depth": 12,
     "transitive_dependents": 5,
-    "betweenness": 0.1095,
+    "betweenness": 0.1073,
     "cross_domain_reach": 2,
-    "rank_sum": 101,
+    "rank_sum": 103,
     "rank": 14
    }
   },
@@ -2278,8 +2326,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 246,
-    "rank": 77
+    "rank_sum": 250,
+    "rank": 78
    }
   },
   {
@@ -2324,10 +2372,10 @@
    "metrics": {
     "prerequisite_depth": 13,
     "transitive_dependents": 1,
-    "betweenness": 0.0684,
+    "betweenness": 0.0696,
     "cross_domain_reach": 1,
-    "rank_sum": 172,
-    "rank": 51
+    "rank_sum": 174,
+    "rank": 52
    }
   },
   {
@@ -2362,9 +2410,9 @@
    "metrics": {
     "prerequisite_depth": 14,
     "transitive_dependents": 0,
-    "betweenness": 0.0291,
+    "betweenness": 0.0297,
     "cross_domain_reach": 2,
-    "rank_sum": 149,
+    "rank_sum": 152,
     "rank": 36
    }
   },
@@ -2397,8 +2445,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 263,
-    "rank": 79
+    "rank_sum": 267,
+    "rank": 80
    }
   },
   {
@@ -2436,9 +2484,9 @@
    "metrics": {
     "prerequisite_depth": 16,
     "transitive_dependents": 12,
-    "betweenness": 0.0332,
+    "betweenness": 0.0331,
     "cross_domain_reach": 2,
-    "rank_sum": 99,
+    "rank_sum": 100,
     "rank": 12
    }
   },
@@ -2475,8 +2523,8 @@
     "transitive_dependents": 1,
     "betweenness": 0.0,
     "cross_domain_reach": 2,
-    "rank_sum": 175,
-    "rank": 53
+    "rank_sum": 179,
+    "rank": 54
    }
   },
   {
@@ -2516,10 +2564,10 @@
    "metrics": {
     "prerequisite_depth": 8,
     "transitive_dependents": 4,
-    "betweenness": 0.0088,
+    "betweenness": 0.0086,
     "cross_domain_reach": 2,
-    "rank_sum": 165,
-    "rank": 45
+    "rank_sum": 168,
+    "rank": 48
    }
   },
   {
@@ -2559,10 +2607,10 @@
    "metrics": {
     "prerequisite_depth": 9,
     "transitive_dependents": 3,
-    "betweenness": 0.0123,
+    "betweenness": 0.0131,
     "cross_domain_reach": 2,
-    "rank_sum": 160,
-    "rank": 41
+    "rank_sum": 164,
+    "rank": 46
    }
   },
   {
@@ -2597,8 +2645,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0027,
     "cross_domain_reach": 1,
-    "rank_sum": 252,
-    "rank": 78
+    "rank_sum": 255,
+    "rank": 79
    }
   },
   {
@@ -2636,9 +2684,9 @@
    "metrics": {
     "prerequisite_depth": 19,
     "transitive_dependents": 0,
-    "betweenness": 0.0733,
+    "betweenness": 0.0723,
     "cross_domain_reach": 3,
-    "rank_sum": 93,
+    "rank_sum": 94,
     "rank": 10
    }
   },
@@ -2678,9 +2726,9 @@
    "metrics": {
     "prerequisite_depth": 19,
     "transitive_dependents": 1,
-    "betweenness": 0.0178,
+    "betweenness": 0.0177,
     "cross_domain_reach": 2,
-    "rank_sum": 129,
+    "rank_sum": 132,
     "rank": 27
    }
   },
@@ -2716,10 +2764,10 @@
    "metrics": {
     "prerequisite_depth": 20,
     "transitive_dependents": 0,
-    "betweenness": 0.0072,
+    "betweenness": 0.0071,
     "cross_domain_reach": 2,
-    "rank_sum": 159,
-    "rank": 39
+    "rank_sum": 161,
+    "rank": 43
    }
   },
   {
@@ -2752,9 +2800,9 @@
    "metrics": {
     "prerequisite_depth": 18,
     "transitive_dependents": 0,
-    "betweenness": 0.0136,
+    "betweenness": 0.0133,
     "cross_domain_reach": 3,
-    "rank_sum": 130,
+    "rank_sum": 133,
     "rank": 28
    }
   },
@@ -2798,7 +2846,7 @@
    "metrics": {
     "prerequisite_depth": 18,
     "transitive_dependents": 8,
-    "betweenness": 0.0957,
+    "betweenness": 0.0953,
     "cross_domain_reach": 3,
     "rank_sum": 57,
     "rank": 1
@@ -2839,9 +2887,9 @@
    "metrics": {
     "prerequisite_depth": 19,
     "transitive_dependents": 0,
-    "betweenness": 0.0506,
+    "betweenness": 0.0497,
     "cross_domain_reach": 2,
-    "rank_sum": 135,
+    "rank_sum": 137,
     "rank": 30
    }
   },
@@ -2880,9 +2928,9 @@
    "metrics": {
     "prerequisite_depth": 17,
     "transitive_dependents": 9,
-    "betweenness": 0.0017,
+    "betweenness": 0.0016,
     "cross_domain_reach": 2,
-    "rank_sum": 146,
+    "rank_sum": 148,
     "rank": 33
    }
   },
@@ -2917,8 +2965,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 240,
-    "rank": 75
+    "rank_sum": 243,
+    "rank": 76
    }
   },
   {
@@ -2953,9 +3001,9 @@
    "metrics": {
     "prerequisite_depth": 19,
     "transitive_dependents": 5,
-    "betweenness": 0.0183,
+    "betweenness": 0.0179,
     "cross_domain_reach": 2,
-    "rank_sum": 116,
+    "rank_sum": 118,
     "rank": 20
    }
   },
@@ -2993,16 +3041,16 @@
    "metrics": {
     "prerequisite_depth": 20,
     "transitive_dependents": 4,
-    "betweenness": 0.0128,
+    "betweenness": 0.0125,
     "cross_domain_reach": 2,
-    "rank_sum": 121,
+    "rank_sum": 126,
     "rank": 24
    }
   },
   {
    "id": "corruption",
    "term": "Corruption as distortion",
-   "definition": "Real, parasitic disorder of what is good: persisting misalignment, rupture, misdirected transmission, failed reception — not a rival substance.",
+   "definition": "Real, parasitic disorder of what is good: wrongdoing (wrong in itself) and its entrenchment as misalignment persists and spreads — not a rival substance.",
    "epistemic_category": "theological inference",
    "research_maturity": "working",
    "domain": "theology",
@@ -3038,9 +3086,9 @@
    "metrics": {
     "prerequisite_depth": 21,
     "transitive_dependents": 3,
-    "betweenness": 0.0437,
+    "betweenness": 0.043,
     "cross_domain_reach": 2,
-    "rank_sum": 107,
+    "rank_sum": 108,
     "rank": 16
    }
   },
@@ -3075,8 +3123,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 234,
-    "rank": 74
+    "rank_sum": 237,
+    "rank": 75
    }
   },
   {
@@ -3115,9 +3163,9 @@
    "metrics": {
     "prerequisite_depth": 22,
     "transitive_dependents": 1,
-    "betweenness": 0.0356,
+    "betweenness": 0.0373,
     "cross_domain_reach": 2,
-    "rank_sum": 117,
+    "rank_sum": 119,
     "rank": 21
    }
   },
@@ -3130,6 +3178,7 @@
    "domain": "theology",
    "prerequisites": [
     "equivalence",
+    "individual-continuity",
     "restoration"
    ],
    "dependents": [],
@@ -3146,17 +3195,17 @@
    "common_misunderstanding": "a new copy",
    "conceptual_difficulty": 4,
    "abstraction_level": 4,
-   "simultaneously_interacting_concepts": 3,
+   "simultaneously_interacting_concepts": 4,
    "decomposable": false,
-   "context_load_hint": 11,
+   "context_load_hint": 12,
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 23,
     "transitive_dependents": 0,
-    "betweenness": 0.0119,
+    "betweenness": 0.0181,
     "cross_domain_reach": 2,
-    "rank_sum": 160,
-    "rank": 42
+    "rank_sum": 154,
+    "rank": 38
    }
   },
   {
@@ -3194,10 +3243,10 @@
    "metrics": {
     "prerequisite_depth": 10,
     "transitive_dependents": 2,
-    "betweenness": 0.0252,
+    "betweenness": 0.026,
     "cross_domain_reach": 2,
-    "rank_sum": 159,
-    "rank": 40
+    "rank_sum": 160,
+    "rank": 41
    }
   }
  ],
@@ -3708,6 +3757,31 @@
   {
    "source": "recovery-kinds",
    "type": "REQUIRES",
+   "target": "equivalence"
+  },
+  {
+   "source": "individual-continuity",
+   "type": "REQUIRES",
+   "target": "provenance"
+  },
+  {
+   "source": "individual-continuity",
+   "type": "REQUIRES",
+   "target": "equivalence"
+  },
+  {
+   "source": "resurrection",
+   "type": "REQUIRES",
+   "target": "individual-continuity"
+  },
+  {
+   "source": "recovery-kinds",
+   "type": "REQUIRES",
+   "target": "individual-continuity"
+  },
+  {
+   "source": "individual-continuity",
+   "type": "NOT_IDENTICAL_TO",
    "target": "equivalence"
   },
   {

@@ -35,7 +35,7 @@ One caution about the word. In this book, *admissible* means "physically possibl
 
 ## Constraint makes things possible
 
-It is natural to think of constraint as negative: a limit, a fence, a restriction on freedom. The previous section suggests otherwise. Without forbidding, nothing is shaped; without favouring, nothing is distinctive. A river is a river because of its banks. Remove them and the water does not become freer; it becomes a marsh. The rules that bound which crystal forms water can take are the reason ice exists at all, rather than a formless slush that never settles into anything.
+It is natural to think of constraint as negative: a limit, a fence, a restriction on freedom. The previous section suggests otherwise. Forbidding gives the possible its shape, and favouring gives it its character. They are not the only sources of structure. How transitions are coupled to one another, and how relations of more than two things enter in, can change what a system does even where nothing new is forbidden. Later chapters show both. But constraint, in all these forms, makes things possible rather than merely limiting them. A river is a river because of its banks. Remove them and the water does not become freer; it becomes a marsh. The rules that bound which crystal forms water can take are the reason ice exists at all, rather than a formless slush that never settles into anything.
 
 Scripture presents created order in exactly these terms. Its account of creation is an account of division and bounding:
 

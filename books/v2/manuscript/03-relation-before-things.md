@@ -34,11 +34,13 @@ The Relational Substrate project makes a definite proposal in response. It can b
 
 It is important to be clear about what kind of claim this is. It is not an observation, because relation as such cannot be put on a laboratory bench. It is not a result of mathematics. It is an **ontological proposal**: a claim about what kind of reality best accounts for everything else we know. It will be judged by coherence. That means whether it sits comfortably with the robust findings of physics, whether it makes the stable regularities of the world intelligible, and whether it removes contradictions that the object picture creates elsewhere. The following chapters develop the proposal and test it. For now the reader is asked only to hold it as a proposal.
 
-Two clarifications prevent common misunderstandings.
+Three clarifications prevent common misunderstandings.
 
 First, relation-first does not deny that things are real or distinct. The stone is really there, and it really is not the path. Distinctness is real. It is simply *derivative*: the stone's distinctness is carried by a stable pattern of relations, not by some separating gap between it and everything else. A knot in a rope is a useful picture here, provided its limits are kept in view. The knot is real, it can be pointed to, counted and untied. Yet it is not a separate object added to the rope. It is a configuration of the rope itself, a way the rope crosses and holds itself. Where the picture fails is that a rope is a thing made of fibres, existing before any knot is tied, whereas the relational proposal does not imagine a pre-existing material that relations are then tied into. The picture shows how a real, distinct thing can be a configuration rather than an addition. It should not be taken further than that.
 
 Second, relation in this sense is not a mental association. When we say two things are related, we sometimes mean only that someone thinks of them together. Here relation means a real standing-between in which each relatum is conditioned by the other, whether or not anyone is thinking about it. The Earth and the stone stand in such a relation whether or not anyone weighs the stone.
+
+Third, relation-first is not the same as "everything interacts". Two things that are already fully what they are can interact without either one's identity depending on the interaction: two billiard balls collide and remain the same balls. That is *interactional* relation, and every ontology recognises it. The Relational Substrate proposal is stronger. It holds that physical things are *constituted* within relation, so that relation partly belongs to what they are, and is not only something that happens between them.
 
 ## The relational substrate
 

@@ -34,13 +34,28 @@ The project's exploratory work on this, carried out in conversational research s
 
 With these cases in hand, the account of identity can be stated more carefully.
 
-**A thing continues to be what it is when the changes it undergoes preserve its relevant equivalence class: the set of states that no admissible future interaction, of the kind that matters for that thing, could tell apart from it.**
+**A thing continues to be the same kind of thing, in the respect that matters, when the changes it undergoes preserve its relevant equivalence class: the set of states that no admissible future interaction, of the kind that matters for that thing, could tell apart from it.**
 
 "Equivalence class" is a technical phrase for a plain idea. It means all the states that count as "the same" for a given purpose. The coins were in the same class for shopping this morning and in different classes for a bank. The number in the calculator stayed in the same class through every rearrangement, because nothing the calculator could do would ever distinguish one arrangement from another as a different number.
 
 An invariant, then, is one way of *carrying* or *certifying* such a class. The calculator's total and the knot's whole number are excellent certificates. They mark, in a single quantity, what every admissible change preserves. But an invariant is not necessarily the whole of identity. Two states can share every invariant one has thought to measure and still differ in ways a later process will draw on, as the counterfeit coin shows.
 
-This is not a slide into "sameness is in the eye of the beholder". The criterion is not what a human happens to notice or measure. It is what admissible interactions *within created order* could discriminate, whether or not anyone is watching. The counterfeit was different whether or not it was ever tested. Identity is relational, because it concerns what can distinguish one state from another. It is not arbitrary.
+This is not a slide into "sameness is in the eye of the beholder". The criterion is not what a human happens to notice or measure. It is what admissible interactions *within created order* could discriminate, whether or not anyone is watching. The counterfeit was different whether or not it was ever tested. Sameness of this kind is relational, because it concerns what can distinguish one state from another. It is not arbitrary.
+
+## Two questions about sameness
+
+Everything so far answers one question: *what kind of thing, or what state, is this*, judged by what any reachable future interaction could tell apart? There is a second question, and it must not be folded into the first: *is this the same individual*? That is, is it the same continuing thing, and not merely an equivalent replacement?
+
+The two can come apart. Suppose a thing is destroyed, and later something is built that no defined future interaction could distinguish from it: same structure, same behaviour, same invariants. The new thing belongs to the same equivalence class as the old. That does not settle whether it *is* the old thing. Two coins struck from the same die can be indistinguishable in every test and still be two coins. A second coin minted to replace a lost one is not the lost coin found again.
+
+What answers the second question is not equivalence alone but continuity: an unbroken lineage, a history carried forward, the provenance described below. The project's exploratory research met this distinction sharply. In those explorations, systems sometimes rebuilt structure that worked, and even matched the lost organisation, without recovering the particular lineage that had been lost. Four achievements need to be kept apart:
+
+- restoring *function*, so that the thing does the job again;
+- restoring *organisation*, so that it has the same pattern again;
+- restoring the *equivalence class*, so that nothing reachable could tell it from the original;
+- restoring the *same individual*, the same lineage carried on.
+
+The first three can each happen without the fourth. What exactly carries individual continuity in physical things is a question the research has not fully answered, and the book leaves it open. For the rest of this chapter, *identity* means the first kind of sameness unless the second is named, and *individual continuity* means the second.
 
 ## Provenance: history in the present
 
@@ -52,7 +67,7 @@ This matters for how the book understands what is actual. Chapter 4 called the a
 
 ## Persistence
 
-**Persistence** can now be described more fully. It is the continued re-actualisation of a thing within its relevant equivalence class. The river persists because, moment by moment, flowing water keeps re-establishing a river-shaped pattern within its banks, carrying with it its channel's history. The flame persists because combustion keeps re-establishing a flame-shaped region of light and heat. On the relational proposal the stone persists in the same way, though far more slowly: its crystal lattices and the bonds that hold its grains keep re-establishing themselves through the small, ceaseless fluctuations of its atoms.
+**Persistence** can now be described more fully. It is the continued re-actualisation of a thing within its relevant equivalence class, and, for a continuing individual, along an unbroken history. The river persists because, moment by moment, flowing water keeps re-establishing a river-shaped pattern within its banks, carrying with it its channel's history. The flame persists because combustion keeps re-establishing a flame-shaped region of light and heat. On the relational proposal the stone persists in the same way, though far more slowly: its crystal lattices and the bonds that hold its grains keep re-establishing themselves through the small, ceaseless fluctuations of its atoms.
 
 Stability is always stability *of something*, *against some kind of disturbance*, *over some length of time*. The stone persists against rain for centuries and against a hammer for a moment. No created thing is stable against everything forever. To say that something persists is to say that the changes it actually undergoes stay within the class that preserves what it is.
 
@@ -60,7 +75,7 @@ Stability is always stability *of something*, *against some kind of disturbance*
 
 The calculator also drew a firm boundary. The researchers tested what happened if a relation was simply *deleted*: not rearranged or neutrally paired but destroyed, so that the total changed. In 1,800 such trials the system never once recovered the original number. It settled cleanly, and confidently, on a different one.
 
-An equivalence class survives every change that keeps a thing inside it. It does not survive changes that move the thing outside it, and conservation alone does not restore what is lost. Identity, on this account, is robust but not indestructible. There is a further caution, which the project's exploratory work made sharp. Rebuilding something that works again, or that shows the same organisation again, is not the same as restoring *the same* thing. In those explorations, systems sometimes regenerated useful, well-organised structure without recovering the particular lineage they had lost, and identity-specific recovery sometimes depended on help from the surrounding context. Function restored, organisation restored, the same equivalence class restored, and the same lineage restored are four different achievements. If anything is to be recovered after damage, the distinctions needed for recovery must survive somewhere: in redundancy, in a template, in a wider order, or in an agent able to restore them. The point will matter later. Living things repair themselves because they carry such surviving constraints (Chapter 10). Restoration in the theological sense is not the world's invariants reasserting themselves unaided (Chapter 14).
+An equivalence class survives every change that keeps a thing inside it. It does not survive changes that move the thing outside it, and conservation alone does not restore what is lost. Identity, on this account, is robust but not indestructible. And as the previous section showed, even rebuilding something into the same equivalence class would not by itself restore the same individual. In the project's explorations, recovery of the particular lineage sometimes depended on help from the surrounding context, and sometimes did not happen at all. If anything is to be recovered after damage, the distinctions needed for recovery must survive somewhere: in redundancy, in a template, in a wider order, or in an agent able to restore them. The point will matter later. Living things repair themselves because they carry such surviving constraints (Chapter 10). Restoration in the theological sense is not the world's invariants reasserting themselves unaided (Chapter 14).
 
 ## Memory without a memory substance
 
@@ -100,7 +115,7 @@ The psalms also guard against a confusion. Scripture speaks of another kind of s
 
 Created things persist by remaining within an equivalence class through change, and they can wear out like a garment. God does not persist in this way at all. His sameness is not the preservation of anything through admissible transitions, because God is not a configuration, does not undergo transitions, and has no admissibility imposed on him from beyond. The word "same" is used of both, truly, but across the deepest category boundary there is. Creaturely identity is received and sustained. God's is underived.
 
-The same caution applies, at a different boundary, to human persons. Persons have bodies, and bodies persist in the way described here. But whether a *person's* identity is simply an equivalence class of physical configuration is a different question, and the book's answer, given in Chapters 11 and 14, is no. Personal identity resembles the identity of stable forms, and the resemblance helps. It is not the same thing.
+The same caution applies, at a different boundary, to human persons. Persons have bodies, and bodies persist in the way described here. But whether a *person's* identity is simply an equivalence class of physical configuration is a different question, and the book's answer, given in Chapters 11 and 14, is no. Personal identity resembles both kinds of sameness described here, and the resemblance helps. It is not the same thing.
 
 ## A word about time
 

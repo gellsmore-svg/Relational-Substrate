@@ -25,6 +25,10 @@ Several lines of the project's research were carried out in conversational resea
 - **Effective laws** (Chapter 8). Deterministic continuum equations such as Navier–Stokes as effective descriptions; the open question of which relational conditions make stable effective laws possible. No derivation is claimed.
 - **Projection and hidden structure** (Chapters 6 and 8). The lesson was drawn while studying the geometry used in some modern calculations of particle interactions (the "positive Grassmannian" and "amplituhedron"). Distinct underlying configurations can project to one mathematical object and still differ in what they do. The book makes no claim about that physics itself.
 
+## Equivalence is not the same individual
+
+The exploratory research distinguished four kinds of recovery: of function, of organisation, of the relevant equivalence class, and of the same individual or lineage. The first three were sometimes achieved without the fourth, and recovery of the same lineage sometimes depended on contextual help. Chapter 6 therefore separates sameness of kind or state (equivalence) from individual continuity (lineage). The project has not established what carries individual continuity in physical systems.
+
 ## An open problem: where carriers come from
 
 The project has built models in which distinctions, provenance and equivalence are carried through explicitly designed relational protocols, and it has shown that carriers can be substituted while what matters is preserved. It has **not** shown that a physically adequate architecture of carriers and lineages emerges by itself from minimal relational rules, or that nature uses the project's carrier grammar. That is one of the most important open questions in the programme.

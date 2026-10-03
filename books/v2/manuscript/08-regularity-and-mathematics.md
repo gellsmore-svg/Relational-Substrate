@@ -61,6 +61,8 @@ The calculator drew one more distinction worth carrying forward. Its researchers
 
 Local rules can preserve global correctness. They do not make it cheap, and they do not always suffice. When this book speaks of the regularity of created order as a whole, it does not claim that local relations alone account for it. It claims that the regularity is real, and that local relation, coordination and constraint are part of how it holds.
 
+Three things are now on the table, and it is worth holding them apart before going on. Averaging can make a mean stable on its own. Coordination among events shapes everything else about the whole: its joint behaviour, its fluctuations, the quantities it holds exactly, and the paths it takes. And neither of these is yet the mathematics that describes the whole. The remaining sections turn to that mathematics, and to what it can leave out.
+
 ## What mathematics is doing
 
 The regularities of the physical world are described by mathematics, often with astonishing success. In 1960 the physicist Eugene Wigner wrote of "the unreasonable effectiveness of mathematics in the natural sciences": structures worked out by mathematicians for their own sake turn out, again and again, to describe nature with precision nobody expected. What is the mathematics doing?
@@ -116,7 +118,7 @@ These limits do not empty the proposals of value. They locate it. The value lies
 
 ## From the stone to everything else
 
-The physical arc of the book is now complete. The stone on the path is a stable configuration within a created order of relation. Its possible forms were bounded and weighted before any became actual. Its actual history unfolded by constrained chance, and that history is still partly present in it. It remains itself because its changes keep it within its relevant equivalence class. You see it because a distinction at its surface is made available to light, carried recoverably across changing carriers, and received by an eye able to be changed by it. And its behaviour, along with that of the light, is regular enough to be written in exact mathematics, because many chance events, constrained and coordinated, add up to a reliable whole.
+The physical arc of the book is now complete. The stone on the path is a stable configuration within a created order of relation. Its possible forms were bounded and weighted before any became actual. Its actual history unfolded by constrained chance, and that history is still partly present in it. It remains the same kind of thing because its changes keep it within its relevant equivalence class, and the same stone because its history continues unbroken. You see it because a distinction at its surface is made available to light, carried recoverably across changing carriers, and received by an eye able to be changed by it. And its behaviour, along with that of the light, is regular enough to be written in exact mathematics, because many chance events, constrained and coordinated, add up to a reliable whole.
 
 The problem underneath this whole chapter, then, is not merely how randomness averages out. Mainstream science already understands that well. It is what relational organisation makes stable identity, stable consequence and stable effective law possible across scales, while preserving the distinctions that still matter. Averaging, coordination, effective equations and hidden structure are four different parts of that one question. The Relational Substrate project has not answered it. It has learned to ask it more precisely.
 

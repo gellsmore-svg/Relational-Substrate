@@ -70,7 +70,7 @@ Genesis does not begin with an idea, a possibility or a meditation. It begins wi
 
 The order of the verses matters. The heaven and the earth are created in the first verse. In the second, the earth is already there, though unformed and empty. The deep is there. The waters are there. Darkness is upon the face of the deep. Only then is light spoken into being. Genesis 1:1 is therefore best read as a real beginning, the creation of a world that exists. What follows is formation, separation, filling and manifestation *within* that world, not the gradual appearance of reality out of nothing.
 
-This has a quiet but important consequence for the darkness of verse 2. In ordinary speech, darkness can mean the mere absence of light, or something threatening, or moral evil. Later Scripture uses darkness in all those senses, and rightly. But in Genesis 1:2 darkness belongs to created reality before light is spoken. It is a real condition of a real world: unmanifested, undifferentiated, not yet brought into visible order. It is not nothing, and it is not evil. Scripture elsewhere speaks of darkness as having its own created place:
+This has a quiet but important consequence for the darkness of verse 2. In ordinary speech, darkness can mean the mere absence of light, or something threatening, or moral evil. Later Scripture uses darkness in all those senses, and rightly. But in Genesis 1:2 darkness belongs to created reality before light is spoken. The text says only that darkness was upon the face of the deep, and that light then came. From that sequence the book draws an inference: darkness here is best understood as a real condition of a real world, not yet manifest in the visible order that follows. That reading is interpretation, not something Genesis states in so many words. What the text does make plain is that the darkness of verse 2 is not nothing, since the earth, the deep and the waters are already there with it, and that it is not presented as evil. Scripture elsewhere speaks of darkness as having its own created place:
 
 > `Where is the way where light dwelleth? and as for darkness, where is the place thereof.`
 > *Job 38:19*
@@ -134,7 +134,7 @@ And John's first letter says:
 > `This then is the message which we have heard of him, and declare unto you, that God is light, and in him is no darkness at all.`
 > *1 John 1:5*
 
-The same word is used for created light, for Christ and for God. It would be absurd to conclude that God is made of the light of Genesis 1:3, or that Christ is a kind of radiation. Yet the word is not used by accident either. Created light discloses, makes visible, brings order out of the unmanifested, and allows sight. These are structural features, and they are shared by what Christ does in bringing truth, life and the knowledge of God. The physical and the spiritual share a *form* of relation: one thing making another manifest. They do not share a *nature*.
+The same word is used for created light, for Christ and for God. It would be absurd to conclude that God is made of the light of Genesis 1:3, or that Christ is a kind of radiation. Yet the word is not used by accident either. Created light discloses, makes visible, brings what was hidden into view, and allows sight. These are structural features, and they are shared by what Christ does in bringing truth, life and the knowledge of God. The physical and the spiritual share a *form* of relation: one thing making another manifest. They do not share a *nature*.
 
 This is the distinction the whole book depends on, and it deserves a name. A **structural analogy** is a likeness of form between things of different kinds. **Ontological identity** would mean they are the same kind of thing. Scripture is full of structural analogies, such as light, bread, water, seed, word and body, and they are real. Creation was made by the Word, and it bears likenesses of its Maker and of the spiritual realities it serves. But likeness of form across categories never erases the categories. When this book later shows the same relational pattern in a beam of light, in a living cell, in a conversation and in the history of redemption, it will be pointing to analogies of form, not claiming that redemption is a physical process. The reader is entitled to hold the book to that promise.
 
@@ -296,11 +296,13 @@ The Relational Substrate project makes a definite proposal in response. It can b
 
 It is important to be clear about what kind of claim this is. It is not an observation, because relation as such cannot be put on a laboratory bench. It is not a result of mathematics. It is an **ontological proposal**: a claim about what kind of reality best accounts for everything else we know. It will be judged by coherence. That means whether it sits comfortably with the robust findings of physics, whether it makes the stable regularities of the world intelligible, and whether it removes contradictions that the object picture creates elsewhere. The following chapters develop the proposal and test it. For now the reader is asked only to hold it as a proposal.
 
-Two clarifications prevent common misunderstandings.
+Three clarifications prevent common misunderstandings.
 
 First, relation-first does not deny that things are real or distinct. The stone is really there, and it really is not the path. Distinctness is real. It is simply *derivative*: the stone's distinctness is carried by a stable pattern of relations, not by some separating gap between it and everything else. A knot in a rope is a useful picture here, provided its limits are kept in view. The knot is real, it can be pointed to, counted and untied. Yet it is not a separate object added to the rope. It is a configuration of the rope itself, a way the rope crosses and holds itself. Where the picture fails is that a rope is a thing made of fibres, existing before any knot is tied, whereas the relational proposal does not imagine a pre-existing material that relations are then tied into. The picture shows how a real, distinct thing can be a configuration rather than an addition. It should not be taken further than that.
 
 Second, relation in this sense is not a mental association. When we say two things are related, we sometimes mean only that someone thinks of them together. Here relation means a real standing-between in which each relatum is conditioned by the other, whether or not anyone is thinking about it. The Earth and the stone stand in such a relation whether or not anyone weighs the stone.
+
+Third, relation-first is not the same as "everything interacts". Two things that are already fully what they are can interact without either one's identity depending on the interaction: two billiard balls collide and remain the same balls. That is *interactional* relation, and every ontology recognises it. The Relational Substrate proposal is stronger. It holds that physical things are *constituted* within relation, so that relation partly belongs to what they are, and is not only something that happens between them.
 
 ## The relational substrate
 
@@ -389,7 +391,7 @@ One caution about the word. In this book, *admissible* means "physically possibl
 
 ## Constraint makes things possible
 
-It is natural to think of constraint as negative: a limit, a fence, a restriction on freedom. The previous section suggests otherwise. Without forbidding, nothing is shaped; without favouring, nothing is distinctive. A river is a river because of its banks. Remove them and the water does not become freer; it becomes a marsh. The rules that bound which crystal forms water can take are the reason ice exists at all, rather than a formless slush that never settles into anything.
+It is natural to think of constraint as negative: a limit, a fence, a restriction on freedom. The previous section suggests otherwise. Forbidding gives the possible its shape, and favouring gives it its character. They are not the only sources of structure. How transitions are coupled to one another, and how relations of more than two things enter in, can change what a system does even where nothing new is forbidden. Later chapters show both. But constraint, in all these forms, makes things possible rather than merely limiting them. A river is a river because of its banks. Remove them and the water does not become freer; it becomes a marsh. The rules that bound which crystal forms water can take are the reason ice exists at all, rather than a formless slush that never settles into anything.
 
 Scripture presents created order in exactly these terms. Its account of creation is an account of division and bounding:
 
@@ -465,7 +467,9 @@ They might mean that it was **lawless or arbitrary**: anything could have happen
 
 The third meaning is the one that matters here, and it is precisely not the first. A fair die is the simplest example. Each throw is open: any face can come up. But it cannot come up seven, and over thousands of throws each face appears very close to one time in six. The die is not lawless. It is governed by a probability distribution, and the distribution is exact.
 
-To keep this meaning clear, the book uses the word **stochastic**, from a Greek word for aiming at a target. A stochastic process is one whose outcomes are governed by probabilities over defined possibilities. Stochastic does not mean lawless. It does not mean that anything at all can happen. And it does not mean chaotic, which is a different idea again. A *chaotic* system, in the technical sense, is fully deterministic: each state follows from the last by fixed rules, but the system is so sensitive to its starting point that tiny differences grow into large ones, as in the weather. Chaos makes the future hard to predict even though nothing in it is chancy. Stochasticity makes the future open even though nothing in it is lawless.
+To keep this meaning clear, the book uses the word **stochastic**, from a Greek word for aiming at a target. A stochastic process is one whose outcomes are governed by probabilities over defined possibilities. Stochastic does not mean lawless. It does not mean that anything at all can happen. And it does not mean chaotic, which is a different idea again. A *chaotic* system, in the technical sense, is fully deterministic: each state follows from the last by fixed rules, but the system is so sensitive to its starting point that tiny differences grow into large ones, as in the weather. Chaos makes the future hard to predict even though nothing in it is chancy. A stochastic description makes the future a matter of definite probabilities, without being lawless.
+
+Notice what the word does not yet say. Calling a process stochastic says how it is *described*: by probabilities over defined possibilities. It does not by itself say why. The probabilities might express our ignorance of hidden details in a process that is deterministic underneath. Or they might express genuine openness in the world itself, so that the outcome is not fixed until it occurs. The first is called *epistemic* probability, the second *ontic* indeterminacy. The same stochastic description fits both.
 
 ## Chance in physics
 
@@ -477,7 +481,7 @@ So the book must be careful. It is scientific consensus that quantum predictions
 
 ## The proposal: constrained stochastic actualisation
 
-Into this open question, the Relational Substrate project puts a definite hypothesis. Recall the question left by the previous chapter: if nothing inside the substrate chooses which admissible transition becomes actual, what makes one rather than another actual? The proposal is that **actualisation is fundamentally stochastic**. Among the transitions that are admissible, which one occurs is a matter of chance, weighted by tendency.
+Into this open question, the Relational Substrate project puts a definite hypothesis. Recall the question left by the previous chapter: if nothing inside the substrate chooses which admissible transition becomes actual, what makes one rather than another actual? The proposal is that **actualisation is fundamentally stochastic** in the ontic sense. Among the transitions that are admissible, which one occurs is genuinely open until it occurs, a matter of chance weighted by tendency. The future, on this hypothesis, is really open within constrained possibility. That openness belongs to the Relational Substrate hypothesis, not to the meaning of the word "stochastic".
 
 The word *constrained* carries most of the weight in that sentence. **Unconstrained** stochasticity, where every conceivable outcome is equally open, would produce a world without stable form: a static of meaningless flicker. **Constrained** stochasticity is chance operating inside the shape of the possible. Admissibility rules out whole regions of possibility entirely. Tendency weights what remains. And, as the next chapters will show, what has already happened can change what is admissible or likely next. Chance, on this proposal, never acts on an open field. It acts within a structure that was there before it.
 
@@ -556,13 +560,28 @@ The project's exploratory work on this, carried out in conversational research s
 
 With these cases in hand, the account of identity can be stated more carefully.
 
-**A thing continues to be what it is when the changes it undergoes preserve its relevant equivalence class: the set of states that no admissible future interaction, of the kind that matters for that thing, could tell apart from it.**
+**A thing continues to be the same kind of thing, in the respect that matters, when the changes it undergoes preserve its relevant equivalence class: the set of states that no admissible future interaction, of the kind that matters for that thing, could tell apart from it.**
 
 "Equivalence class" is a technical phrase for a plain idea. It means all the states that count as "the same" for a given purpose. The coins were in the same class for shopping this morning and in different classes for a bank. The number in the calculator stayed in the same class through every rearrangement, because nothing the calculator could do would ever distinguish one arrangement from another as a different number.
 
 An invariant, then, is one way of *carrying* or *certifying* such a class. The calculator's total and the knot's whole number are excellent certificates. They mark, in a single quantity, what every admissible change preserves. But an invariant is not necessarily the whole of identity. Two states can share every invariant one has thought to measure and still differ in ways a later process will draw on, as the counterfeit coin shows.
 
-This is not a slide into "sameness is in the eye of the beholder". The criterion is not what a human happens to notice or measure. It is what admissible interactions *within created order* could discriminate, whether or not anyone is watching. The counterfeit was different whether or not it was ever tested. Identity is relational, because it concerns what can distinguish one state from another. It is not arbitrary.
+This is not a slide into "sameness is in the eye of the beholder". The criterion is not what a human happens to notice or measure. It is what admissible interactions *within created order* could discriminate, whether or not anyone is watching. The counterfeit was different whether or not it was ever tested. Sameness of this kind is relational, because it concerns what can distinguish one state from another. It is not arbitrary.
+
+## Two questions about sameness
+
+Everything so far answers one question: *what kind of thing, or what state, is this*, judged by what any reachable future interaction could tell apart? There is a second question, and it must not be folded into the first: *is this the same individual*? That is, is it the same continuing thing, and not merely an equivalent replacement?
+
+The two can come apart. Suppose a thing is destroyed, and later something is built that no defined future interaction could distinguish from it: same structure, same behaviour, same invariants. The new thing belongs to the same equivalence class as the old. That does not settle whether it *is* the old thing. Two coins struck from the same die can be indistinguishable in every test and still be two coins. A second coin minted to replace a lost one is not the lost coin found again.
+
+What answers the second question is not equivalence alone but continuity: an unbroken lineage, a history carried forward, the provenance described below. The project's exploratory research met this distinction sharply. In those explorations, systems sometimes rebuilt structure that worked, and even matched the lost organisation, without recovering the particular lineage that had been lost. Four achievements need to be kept apart:
+
+- restoring *function*, so that the thing does the job again;
+- restoring *organisation*, so that it has the same pattern again;
+- restoring the *equivalence class*, so that nothing reachable could tell it from the original;
+- restoring the *same individual*, the same lineage carried on.
+
+The first three can each happen without the fourth. What exactly carries individual continuity in physical things is a question the research has not fully answered, and the book leaves it open. For the rest of this chapter, *identity* means the first kind of sameness unless the second is named, and *individual continuity* means the second.
 
 ## Provenance: history in the present
 
@@ -574,7 +593,7 @@ This matters for how the book understands what is actual. Chapter 4 called the a
 
 ## Persistence
 
-**Persistence** can now be described more fully. It is the continued re-actualisation of a thing within its relevant equivalence class. The river persists because, moment by moment, flowing water keeps re-establishing a river-shaped pattern within its banks, carrying with it its channel's history. The flame persists because combustion keeps re-establishing a flame-shaped region of light and heat. On the relational proposal the stone persists in the same way, though far more slowly: its crystal lattices and the bonds that hold its grains keep re-establishing themselves through the small, ceaseless fluctuations of its atoms.
+**Persistence** can now be described more fully. It is the continued re-actualisation of a thing within its relevant equivalence class, and, for a continuing individual, along an unbroken history. The river persists because, moment by moment, flowing water keeps re-establishing a river-shaped pattern within its banks, carrying with it its channel's history. The flame persists because combustion keeps re-establishing a flame-shaped region of light and heat. On the relational proposal the stone persists in the same way, though far more slowly: its crystal lattices and the bonds that hold its grains keep re-establishing themselves through the small, ceaseless fluctuations of its atoms.
 
 Stability is always stability *of something*, *against some kind of disturbance*, *over some length of time*. The stone persists against rain for centuries and against a hammer for a moment. No created thing is stable against everything forever. To say that something persists is to say that the changes it actually undergoes stay within the class that preserves what it is.
 
@@ -582,7 +601,7 @@ Stability is always stability *of something*, *against some kind of disturbance*
 
 The calculator also drew a firm boundary. The researchers tested what happened if a relation was simply *deleted*: not rearranged or neutrally paired but destroyed, so that the total changed. In 1,800 such trials the system never once recovered the original number. It settled cleanly, and confidently, on a different one.
 
-An equivalence class survives every change that keeps a thing inside it. It does not survive changes that move the thing outside it, and conservation alone does not restore what is lost. Identity, on this account, is robust but not indestructible. There is a further caution, which the project's exploratory work made sharp. Rebuilding something that works again, or that shows the same organisation again, is not the same as restoring *the same* thing. In those explorations, systems sometimes regenerated useful, well-organised structure without recovering the particular lineage they had lost, and identity-specific recovery sometimes depended on help from the surrounding context. Function restored, organisation restored, the same equivalence class restored, and the same lineage restored are four different achievements. If anything is to be recovered after damage, the distinctions needed for recovery must survive somewhere: in redundancy, in a template, in a wider order, or in an agent able to restore them. The point will matter later. Living things repair themselves because they carry such surviving constraints (Chapter 10). Restoration in the theological sense is not the world's invariants reasserting themselves unaided (Chapter 14).
+An equivalence class survives every change that keeps a thing inside it. It does not survive changes that move the thing outside it, and conservation alone does not restore what is lost. Identity, on this account, is robust but not indestructible. And as the previous section showed, even rebuilding something into the same equivalence class would not by itself restore the same individual. In the project's explorations, recovery of the particular lineage sometimes depended on help from the surrounding context, and sometimes did not happen at all. If anything is to be recovered after damage, the distinctions needed for recovery must survive somewhere: in redundancy, in a template, in a wider order, or in an agent able to restore them. The point will matter later. Living things repair themselves because they carry such surviving constraints (Chapter 10). Restoration in the theological sense is not the world's invariants reasserting themselves unaided (Chapter 14).
 
 ## Memory without a memory substance
 
@@ -622,7 +641,7 @@ The psalms also guard against a confusion. Scripture speaks of another kind of s
 
 Created things persist by remaining within an equivalence class through change, and they can wear out like a garment. God does not persist in this way at all. His sameness is not the preservation of anything through admissible transitions, because God is not a configuration, does not undergo transitions, and has no admissibility imposed on him from beyond. The word "same" is used of both, truly, but across the deepest category boundary there is. Creaturely identity is received and sustained. God's is underived.
 
-The same caution applies, at a different boundary, to human persons. Persons have bodies, and bodies persist in the way described here. But whether a *person's* identity is simply an equivalence class of physical configuration is a different question, and the book's answer, given in Chapters 11 and 14, is no. Personal identity resembles the identity of stable forms, and the resemblance helps. It is not the same thing.
+The same caution applies, at a different boundary, to human persons. Persons have bodies, and bodies persist in the way described here. But whether a *person's* identity is simply an equivalence class of physical configuration is a different question, and the book's answer, given in Chapters 11 and 14, is no. Personal identity resembles both kinds of sameness described here, and the resemblance helps. It is not the same thing.
 
 ## A word about time
 
@@ -706,7 +725,7 @@ Second, receivers differ in how they respond to repeated or continuing arrivals:
 
 The calculator was a receiver of the last kind. When the researchers deliberately allowed a carried ten to be received twice in the next column, the arithmetic went wrong. Without protection against duplication, the calculator was correct in only about 83 per cent of trials at a low replay rate and about 48 per cent at a high one. With protection it was correct every time. The lesson is exact and limited: *for a receiver whose consequence is a count*, duplicated reception is error. Exactly-once reception is a property of such transactional receivers, not a universal law of reception. What is universal is that reception has a definite character. How a receiver responds to what reaches it is part of what that receiver is.
 
-What, then, makes a transmission real? The relational answer is its connection to possible consequential reception. A distinction made available and carried, but which no receiver could ever be changed by, has a thin and strange reality. It has gone out, but it has gone nowhere. In a relation-first world, distinctions are real *as they can matter*, and they matter by being received.
+A distinction may be made available and carried without ever reaching consequential reception: light from a distant star that falls on nothing able to register it, or a letter lost in the post. The propagation is no less real for that. The T-C-R chain is simply incomplete at its receiving end. A distinction becomes *consequential* elsewhere only when it is received.
 
 ## The whole grammar
 
@@ -839,6 +858,8 @@ The calculator drew one more distinction worth carrying forward. Its researchers
 
 Local rules can preserve global correctness. They do not make it cheap, and they do not always suffice. When this book speaks of the regularity of created order as a whole, it does not claim that local relations alone account for it. It claims that the regularity is real, and that local relation, coordination and constraint are part of how it holds.
 
+Three things are now on the table, and it is worth holding them apart before going on. Averaging can make a mean stable on its own. Coordination among events shapes everything else about the whole: its joint behaviour, its fluctuations, the quantities it holds exactly, and the paths it takes. And neither of these is yet the mathematics that describes the whole. The remaining sections turn to that mathematics, and to what it can leave out.
+
 ## What mathematics is doing
 
 The regularities of the physical world are described by mathematics, often with astonishing success. In 1960 the physicist Eugene Wigner wrote of "the unreasonable effectiveness of mathematics in the natural sciences": structures worked out by mathematicians for their own sake turn out, again and again, to describe nature with precision nobody expected. What is the mathematics doing?
@@ -894,7 +915,7 @@ These limits do not empty the proposals of value. They locate it. The value lies
 
 ## From the stone to everything else
 
-The physical arc of the book is now complete. The stone on the path is a stable configuration within a created order of relation. Its possible forms were bounded and weighted before any became actual. Its actual history unfolded by constrained chance, and that history is still partly present in it. It remains itself because its changes keep it within its relevant equivalence class. You see it because a distinction at its surface is made available to light, carried recoverably across changing carriers, and received by an eye able to be changed by it. And its behaviour, along with that of the light, is regular enough to be written in exact mathematics, because many chance events, constrained and coordinated, add up to a reliable whole.
+The physical arc of the book is now complete. The stone on the path is a stable configuration within a created order of relation. Its possible forms were bounded and weighted before any became actual. Its actual history unfolded by constrained chance, and that history is still partly present in it. It remains the same kind of thing because its changes keep it within its relevant equivalence class, and the same stone because its history continues unbroken. You see it because a distinction at its surface is made available to light, carried recoverably across changing carriers, and received by an eye able to be changed by it. And its behaviour, along with that of the light, is regular enough to be written in exact mathematics, because many chance events, constrained and coordinated, add up to a reliable whole.
 
 The problem underneath this whole chapter, then, is not merely how randomness averages out. Mainstream science already understands that well. It is what relational organisation makes stable identity, stable consequence and stable effective law possible across scales, while preserving the distinctions that still matter. Averaging, coordination, effective equations and hidden structure are four different parts of that one question. The Relational Substrate project has not answered it. It has learned to ask it more precisely.
 
@@ -932,11 +953,11 @@ These are serious positions held by serious people. Several of them converge, in
 
 ## Where relation enters
 
-Here is the difference that matters. In the relational picture this book proposes, relation is *constitutive* at the base. What a physical thing is cannot be specified apart from how it stands to others. Chapter 6 even defined the identity of a thing by what could distinguish it in relation to possible future interactions. In ontologies that begin with intrinsic bearers, even richly powerful ones, relation is something those bearers *have*, *exercise* or *enter into*. It is not what they *are*.
+Here is the difference that matters. In the relational picture this book proposes, relation is *constitutive* at the base. What a physical thing is cannot be specified apart from how it stands to others. Chapter 6 even defined the identity of a thing by what could distinguish it in relation to possible future interactions. The contrast that matters is with ontologies in which the fundamental entities are individuated wholly or substantially independently of constitutive relation, so that what a thing is can be fully specified before its relations are. In such ontologies relation is something already-complete bearers *have*, *exercise* or *enter into*. It is not what they *are*. Not every substance ontology is like this. A sophisticated powers theorist may hold that a thing's essential powers are other-directed from the start, and a hylomorphist may hold that form and its ordered capacities are constitutive from the beginning. Those views already share part of what this book defends, and the argument below is not aimed at them.
 
 That difference may look slight in physics, where both kinds of ontology describe the falling stone equally well. It becomes significant when the account must cross into human life, because human life is pervaded by relation that is not merely exercised but constitutive. You are, in part, *who you are* through your parents, your promises, your friendships, your history with others and your standing before God. A person is not a self-contained individual who then enters relationships, as a billiard ball enters collisions. Personal identity is relational in a much stronger sense.
 
-So an ontology that begins with intrinsic bearers must, at some point on the way from stones to persons, introduce constitutive relation as something new: a kind of reality that its base does not contain in any form. That is not impossible. But it is a discontinuity. It adds a bridge assumption that has to be explained, or accepted without explanation, somewhere between physics and personhood.
+So an ontology whose fundamental entities are individuated independently of constitutive relation must, at some point on the way from stones to persons, introduce constitutive relation as something new: a kind of reality that its base does not contain in any form. That is not impossible. But it is a discontinuity. It adds a bridge assumption that has to be explained, or accepted without explanation, somewhere between physics and personhood.
 
 A relation-first ontology does not need that bridge. Its base already has the *form* of what appears, transformed and deepened, in human life:
 
@@ -952,7 +973,7 @@ When relation becomes personal and moral, it does not appear as a stranger from 
 The central argument of the book can now be stated in steps:
 
 1. Human life, as we live it and as Scripture describes it, is pervaded by constitutive relation, identity through change, consequence that passes from one person to another, and responsibility.
-2. A physical ontology in which relation is not constitutive at the base must introduce constitutive relationality for the first time at some higher level, as a new kind of reality.
+2. A physical ontology whose fundamental entities are individuated independently of constitutive relation must introduce constitutive relationality for the first time at some higher level, as a new kind of reality.
 3. A physical ontology in which relation is constitutive at the base already contains the form of these features, so that living, personal and moral relation are continuous in form with the physical order they arise in, while remaining distinct in kind.
 4. Other things being equal, an account with fewer unexplained discontinuities and fewer ad hoc bridge assumptions between its domains is more globally coherent, by the tests of connection and faithful translation.
 5. Therefore, *if* a relation-first picture of physical order is consistent with everything we observe, it is to be preferred on grounds of global coherence.
@@ -983,7 +1004,7 @@ The most serious reply runs like this. Nobody claims that promises exist among p
 
 The book accepts emergence fully. Chapter 10 will argue that living organisation is genuinely new and genuinely explanatory at its own level. The disagreement is narrower. In familiar cases, what emerges is a new and higher expression of capacities the base already has. Wetness expresses the attraction molecules already have for one another. Life expresses chemistry that already includes catalysis, templating and self-assembly. The question is not whether new properties appear. It is whether the base already contains the *relational resources* that make the emergent structures intelligible.
 
-If the base contains intrinsic bearers whose relations are always something added or exercised, then constitutive relation emerges from a base where nothing is constituted by its relations. That can be asserted, but it is precisely the kind of discontinuity step 2 names. A powers ontology narrows the gap, because powers are already other-directed, and the book counts that as convergence. It does not count it as refutation. The relational picture's claim is a claim of *continuity of structural capacity*: what emerges in living, personal and moral life is new in kind, and it emerges from a base that already has its form. It is not a claim to derive moral truth from physics. That is a more coherent position, though not one that can be proved.
+If the base contains entities individuated independently of their relations, whose relations are always something added or exercised, then constitutive relation emerges from a base where nothing is constituted by its relations. That can be asserted, but it is precisely the kind of discontinuity step 2 names. A powers ontology narrows the gap, because powers are already other-directed, and the book counts that as convergence. It does not count it as refutation. The relational picture's claim is a claim of *continuity of structural capacity*: what emerges in living, personal and moral life is new in kind, and it emerges from a base that already has its form. It is not a claim to derive moral truth from physics. That is a more coherent position, though not one that can be proved.
 
 ## A second case: the poisoned river
 
@@ -1218,7 +1239,7 @@ This verse speaks to Israel, but its pattern reveals something about personal id
 
 ## The identity of a person
 
-Chapter 6 proposed that physical things keep their identity by remaining within their relevant equivalence class through change, carrying their history with them. Human persons persist through bodily change in a way that resembles this. Much of the material of your body is replaced over the years, while you remain you. Your character, memories and commitments carry your history in your present, much as Chapter 6 suggested configuration can carry memory.
+Chapter 6 proposed that physical things remain the same kind of thing by remaining within their relevant equivalence class through change, and the same individual through a continuing, history-bearing lineage. Human persons persist through bodily change in a way that resembles this. Much of the material of your body is replaced over the years, while you remain you. Your character, memories and commitments carry your history in your present, much as Chapter 6 suggested configuration can carry memory.
 
 The resemblance is real and illuminating. It shows why personal identity does not depend on keeping the same atoms, and why the replacement of material is no threat to who you are. But it is a structural analogy, not the definition of a person. A person's identity is not merely an equivalence class of their bodily configuration, because a person is not merely a configuration. Personal identity is grounded more deeply: in the continuity of the inner person Scripture describes, and ultimately in God's knowing and calling. This is why, as Chapter 14 will argue, death does not end a person, and why resurrection is not the making of a copy but the raising of the same person. Identity-as-invariant helps us see why bodily change does not threaten personal identity. It cannot carry the whole weight of what a person is.
 
@@ -1332,7 +1353,7 @@ The way these fit together has been understood in Christian thought since August
 
 ## Corruption as persisting misalignment
 
-Chapter 12 described alignment as fitting the order one is made for. Misalignment, a departure from that order, is not by itself the whole of corruption. Every growing creature departs from its mature form, and every learner makes mistakes. What makes misalignment corrupt is that it **persists and spreads without being restored**.
+Chapter 12 described alignment as fitting the order one is made for. Misalignment, a departure from that order, is not by itself the whole of corruption. Every growing creature departs from its mature form, and every learner makes mistakes. A wrong act is wrong in itself, whether or not it is ever repeated: a single lie, swiftly repented of, was still a lie, and a single act of cruelty is still cruel. Its wrongness lies in what it is and whom it wrongs, judged by the moral order of Chapter 12, not in how long it lasts. What persistence explains is something else: how wrongdoing **entrenches**. Misalignment that is not restored persists and spreads, hardening into habit, narrowing what a person can see and choose, and reaching into others. Corruption, in the full sense this chapter describes, includes both the wrong and its entrenchment.
 
 Scripture describes sin in exactly these terms: not as a series of isolated lapses but as a trajectory that hardens, enslaves and narrows:
 
@@ -1416,7 +1437,7 @@ If every limit were treated as evil, creaturehood itself would become a fault, a
 
 ## Darkness, again
 
-Chapter 1 insisted that the darkness of Genesis 1:2 is not evil. It is a real, created condition of the world before light, unmanifested rather than malign. That distinction must hold even now. Later Scripture uses darkness for ignorance, concealment, judgment and sin, and rightly. But moral darkness is not a substance created alongside light. It is something more like *hiddenness turned to disorder*: the created capacity for concealment, which in God's purpose can be a place of rest, mystery and reverence, seized for evasion, deceit and revolt. "Men loved darkness rather than light, because their deeds were evil" (John 3:19). The darkness they love is not the darkness of Genesis 1. It is that darkness misused.
+Chapter 1 insisted that the darkness of Genesis 1:2 is not evil. On the reading given there, it is a real, created condition of the world before light, not yet made manifest, and not malign. That distinction must hold even now. Later Scripture uses darkness for ignorance, concealment, judgment and sin, and rightly. But moral darkness is not a substance created alongside light. It is something more like *hiddenness turned to disorder*: the created capacity for concealment, which in God's purpose can be a place of rest, mystery and reverence, seized for evasion, deceit and revolt. "Men loved darkness rather than light, because their deeds were evil" (John 3:19). The darkness they love is not the darkness of Genesis 1. It is that darkness misused.
 
 ## Remembrance
 
@@ -1508,9 +1529,9 @@ The central hope of Christian faith is resurrection, and it is a hope about *ide
 
 The risen Christ is recognisably himself: *it is I myself*, with the wounds of the crucifixion. The resurrection of the dead is the raising of the same persons, transformed, not the manufacture of replacements. And Scripture is plain that it concerns everyone, the righteous and the unrighteous alike, to life or to judgment.
 
-How can the same person be raised, when the body has returned to dust? Chapter 6 offered an account of how physical things keep their identity: by remaining within their relevant equivalence class through admissible change. It also showed the limit of that account: when what carries identity is destroyed, conservation cannot bring it back. Chapter 11 added that a person's identity is not merely an invariant of bodily configuration, but is grounded in the continuity of the inner person and in God's knowing and calling.
+How can the same person be raised, when the body has returned to dust? Chapter 6 offered an account of how physical things remain the same kind of thing, by remaining within their relevant equivalence class through admissible change. It also drew a sharper line. Something reconstructed to be indistinguishable from what was lost may belong to the same equivalence class without being the same individual, and when what carries identity is destroyed, conservation cannot bring it back. Chapter 11 added that a person's identity is not merely an invariant of bodily configuration, but is grounded in the continuity of the inner person and in God's knowing and calling.
 
-Put together, these give an honest answer. Resurrection is not the substrate preserving a person's invariants through death. Death destroys the configuration, and the dust returns to the earth (Ecclesiastes 12:7). The identity of the person raised is held by God. The spirit "shall return unto God who gave it". God, who calls his people by name, does not lose track of whom he has called. The book makes no claim about the mechanism of resurrection, and Scripture gives none: "it doth not yet appear what we shall be" (1 John 3:2). What the relational account contributes is a negative clarity. It shows exactly why resurrection cannot be a natural process of created order, and therefore why it must be, as Scripture says it is, the act of God.
+Put together, these give an honest answer. Resurrection is not the substrate preserving a person's invariants through death, and it is not the reconstruction of an indistinguishable replacement. Death destroys the configuration, and the dust returns to the earth (Ecclesiastes 12:7). The identity of the person raised is held by God. The spirit "shall return unto God who gave it". God, who calls his people by name, does not lose track of whom he has called. The book makes no claim about the mechanism of resurrection, and Scripture gives none: "it doth not yet appear what we shall be" (1 John 3:2). What the relational account contributes is a negative clarity. It shows exactly why resurrection cannot be a natural process of created order, and therefore why it must be, as Scripture says it is, the act of God.
 
 ## Human death and the Cross
 
@@ -1602,7 +1623,7 @@ And you, who see it, are formed from the same dust, alive by the same gift that 
 
 Gathered together, the book's account runs like this.
 
-God creates reality. Created physical order is real, and it is not self-grounding: it holds together because it is held. The deepest physical ontology the Relational Substrate proposes is relational rather than object-first. Possibility is constrained before anything happens, both by what is forbidden and by what is favoured. Actualisation is relationally constrained and may be fundamentally stochastic. That is a hypothesis, consistent with quantum theory but not established by it. Persistence, identity and regularity arise through structured relational continuity. Identity is the preservation of a thing's relevant equivalence class, judged by what reachable futures could tell apart, with invariants as its certificates and provenance as part of it where it still matters. Regularity is the stable behaviour of many chance events, constrained and coordinated in the right way. Transmit, carry and receive describe how a distinction becomes consequential elsewhere: made available beyond its source, kept recoverably across substitutable carriers, and received as a dependent change in a compatible receiver. Stable global behaviour does not require every underlying transition to be determined in advance. Mathematics describes that stable behaviour, often with astonishing precision, without thereby becoming the reality it describes.
+God creates reality. Created physical order is real, and it is not self-grounding: it holds together because it is held. The deepest physical ontology the Relational Substrate proposes is relational rather than object-first. Possibility is constrained before anything happens, both by what is forbidden and by what is favoured. Actualisation is relationally constrained and may be fundamentally stochastic. That is a hypothesis, consistent with quantum theory but not established by it. Persistence, identity and regularity arise through structured relational continuity. A thing remains the same *kind* of thing by preserving its relevant equivalence class, judged by what reachable futures could tell apart, with invariants as its certificates and provenance as part of it where it still matters. Whether it is the same *individual* is a further question, of continuity and lineage, which the research has not fully answered. Regularity is the stable behaviour of many chance events, constrained and coordinated in the right way. Transmit, carry and receive describe how a distinction becomes consequential elsewhere: made available beyond its source, kept recoverably across substitutable carriers, and received as a dependent change in a compatible receiver. Stable global behaviour does not require every underlying transition to be determined in advance. Mathematics describes that stable behaviour, often with astonishing precision, without thereby becoming the reality it describes.
 
 Because material reality is relational from its foundation, the physical world does not begin as a scatter of metaphysically isolated objects that must somehow acquire relation later. That matters for global coherence. Life, personhood, morality, consequence, corruption and restoration need not be bolted onto a physical world of a different kind. Yet material, biological, personal and spiritual categories remain genuinely distinct. Relation runs through all of them, and relation across categories does not erase category. The substrate is not the soul. Transmission is not revelation. A law of physics is not a commandment. Creation is not God.
 
@@ -1735,6 +1756,10 @@ Several lines of the project's research were carried out in conversational resea
 - **Effective laws** (Chapter 8). Deterministic continuum equations such as Navier–Stokes as effective descriptions; the open question of which relational conditions make stable effective laws possible. No derivation is claimed.
 - **Projection and hidden structure** (Chapters 6 and 8). The lesson was drawn while studying the geometry used in some modern calculations of particle interactions (the "positive Grassmannian" and "amplituhedron"). Distinct underlying configurations can project to one mathematical object and still differ in what they do. The book makes no claim about that physics itself.
 
+## Equivalence is not the same individual
+
+The exploratory research distinguished four kinds of recovery: of function, of organisation, of the relevant equivalence class, and of the same individual or lineage. The first three were sometimes achieved without the fourth, and recovery of the same lineage sometimes depended on contextual help. Chapter 6 therefore separates sameness of kind or state (equivalence) from individual continuity (lineage). The project has not established what carries individual continuity in physical systems.
+
 ## An open problem: where carriers come from
 
 The project has built models in which distinctions, provenance and equivalence are carried through explicitly designed relational protocols, and it has shown that carriers can be substituted while what matters is preserved. It has **not** shown that a physically adequate architecture of carriers and lineages emerges by itself from minimal relational rules, or that nature uses the project's carrier grammar. That is one of the most important open questions in the programme.
@@ -1781,11 +1806,11 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Coherence.** Non-contradiction is necessary but not sufficient. Coherence also requires real connection between the parts of an account, faithful translation across their boundaries, meaning kept through explanatory layers and round trips, and preservation of real distinctions. *Local*: a model explains a bounded phenomenon. *Regional*: neighbouring domains integrate. *Global*: the whole account of reality passes these tests together. Coherence is not the same as truth. (Ch 2, Ch 9)
 
-**Constrained stochastic actualisation.** The Relational Substrate hypothesis that what becomes actual is a matter of chance among admissible options, weighted by tendency and shaped by constraint. (Ch 5)
+**Constrained stochastic actualisation.** The Relational Substrate hypothesis that what becomes actual is stochastic in the ontic sense: genuinely open among admissible options until it occurs, weighted by tendency and shaped by constraint. (Ch 5)
 
 **Coordination.** Relations among chance events that make them vary together. What stabilises a whole is coordination aligned with consequence and responsive to the current state, not correlation as such. It is not a controller. (Ch 8)
 
-**Corruption.** Distortion of good order, persisting without being restored: misalignment, rupture, misdirected transmission, failed reception. Parasitic, with no being of its own. (Ch 13)
+**Corruption.** Distortion of good order: wrongdoing, which is wrong in itself, together with its entrenchment as misalignment persists and spreads without being restored. Parasitic, with no being of its own. (Ch 13)
 
 **Created runtime order.** Creation as operating, the domain of ordinary physical process, distinguished from creation's origin in God's act. The term is borrowed from computing, but creation is not a computer. (Ch 3)
 
@@ -1795,7 +1820,9 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Equivalence class.** All the states that count as "the same" for a given purpose: those that no relevant interaction could tell apart. (Ch 6)
 
-**Identity (of physical things).** Continuity of a thing's relevant equivalence class through admissible change, judged by what reachable future interactions could discriminate. Invariants are certificates of it, and provenance is part of it where it remains consequential. Personal identity resembles this but is not defined by it. (Ch 6)
+**Identity (of physical things).** Sameness of kind or state: continuity of a thing's relevant equivalence class through admissible change, judged by what reachable future interactions could discriminate. Invariants certify it, and provenance is part of it where it remains consequential. Distinct from *individual continuity*. Personal identity resembles both but is not defined by them. (Ch 6)
+
+**Individual continuity.** Being the same continuing individual, and not merely an equivalent replacement. It requires continuity of lineage and history in addition to equivalence. What carries it in physical things is an open question. (Ch 6)
 
 **Invariant.** A quantity or feature left unchanged by a set of transformations. One carrier or certificate of identity, not necessarily all of it. (Ch 6)
 
@@ -1811,7 +1838,7 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Ontology.** An account of what must be there for described behaviour to be possible. Distinct from description. (Ch 2)
 
-**Persistence.** Continued re-actualisation within the same relevant equivalence class, against some kind of disturbance, over some length of time. (Ch 6)
+**Persistence.** Continued re-actualisation within the same relevant equivalence class, against some kind of disturbance, over some length of time; for a continuing individual, along an unbroken history. (Ch 6)
 
 **Person.** A centre of awareness, relation, agency, address and responsibility. Personhood is deeper than embodiment; human persons are persons in an embodied, creaturely mode. (Ch 11)
 
@@ -1825,11 +1852,11 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Receiver compatibility.** What a receiver can register, and how it responds, as set by its own admissibility. (Ch 7)
 
-**Relation.** A real standing-between in which each relatum is conditioned by the other. (Ch 3)
+**Relation.** A real standing-between in which each relatum is conditioned by the other. *Interactional* relation holds between things already fully what they are. *Constitutive* relation partly makes things what they are. The Relational Substrate proposal concerns the second. (Ch 3)
 
 **Relational substrate.** The proposed created relational order within which physical things are constituted and act. It is not matter, not ether, not a mind, not a soul and not God, and not a denial that fields are real. (Ch 3)
 
-**Stochastic.** Governed by probabilities over defined possibilities. Not lawless, not arbitrary, not chaotic. (Ch 5)
+**Stochastic.** Described by probabilities over defined possibilities. The word itself does not say whether the probabilities are *epistemic* (ignorance of hidden details) or *ontic* (genuine openness). Not lawless, not arbitrary, not chaotic. (Ch 5)
 
 **Structural analogy.** A likeness of form between realities of different kinds. Distinct from *ontological identity*, sameness of kind. (Ch 1)
 

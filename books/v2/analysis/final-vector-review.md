@@ -175,3 +175,7 @@ The v2.2 refinements are recorded in `v2.2-review-record.md`, along with the two
 | human-context-load | 74 | 73 | Ch 8 longer, offset by the orientation paragraph |
 
 **Recommendation unchanged:** ready for **human merge review**, not automatic merge. The open problems are listed in `v2.2-review-record.md`.
+
+## v2.3 update
+
+Eight residual issues were corrected surgically; see `v2.3-review-record.md`. The most important is that equivalence-class identity is now separated from individual continuity. That removes an ambiguity that had let "identity" stand for two different claims, and it strengthens the Chapter 14 guard: resurrection is neither invariant preservation nor reconstruction of an indistinguishable replacement. Scores are not re-issued. The checks in the v2.3 record are pass/fail, and the open problems remain open.

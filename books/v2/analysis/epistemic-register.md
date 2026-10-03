@@ -48,8 +48,8 @@ This register is the control against prose silently promoting a hypothesis to a 
 | 14 | Divine purpose constrains possibility; the substrate itself intends nothing | theological-inference | authored order and non-agentic runtime (first edition Ch 3); Gen 8:22; John 1:3 | Not derived by RS research; adopted to guard against reading the substrate as an agent | M | Ch 4 | research-baseline D-6 | working |
 | 15 | Quantum theory's predictions are probabilities (the Born rule) | scientific-consensus | standard quantum mechanics | — | H | Ch 5 | ledger S5 | settled |
 | 16 | **[superseded — see 16′ below]** Whether nature is fundamentally indeterministic is unresolved | scientifically-contested | Bohmian and Everettian interpretations are deterministic; collapse interpretations are not | — | H (that it is contested) | Ch 5 | ledger S5 | settled |
-| 17 | RS proposes that actualisation is fundamentally stochastic among admissible options | RS-working-hypothesis | consistency with quantum probabilities; calculator demonstrations that stochastic paths can yield exact invariants | Not established; deterministic interpretations remain viable | L | Ch 5 | research-baseline §1 | frontier |
-| 18 | "Stochastic" does not mean lawless: distributions can be exact while individual outcomes are open | mathematical / scientific-consensus | probability theory; decay statistics | — | H | Ch 5 | ledger S9 | settled |
+| 17 | **[superseded — see 17′ (v2.3)]** RS proposes that actualisation is fundamentally stochastic among admissible options | RS-working-hypothesis | consistency with quantum probabilities; calculator demonstrations that stochastic paths can yield exact invariants | Not established; deterministic interpretations remain viable | L | Ch 5 | research-baseline §1 | frontier |
+| 18 | **[superseded — see 18′ (v2.3)]** "Stochastic" does not mean lawless: distributions can be exact while individual outcomes are open | mathematical / scientific-consensus | probability theory; decay statistics | — | H | Ch 5 | ledger S9 | settled |
 | 19 | Exact macro-level identity can coexist with many different stochastic micro-paths | experimental-RS (model) | SC-005: 40,000/40,000; SC-019: 4,000 distinct paths from one initial state | Exactness came from programmed conservation, not spontaneously from noise; ordinary computer science explains it | H (within the model); L (as a statement about nature) | Chs 5, 6 | E-sc | supported in model |
 | 20 | **[superseded — see 20′ below]** Identity can be understood as what admissible change preserves (an invariant) | ontological interpretation | conservation laws (Noether); topological charges; SC-001 | Not all identity (for example personal identity) is an invariant of this kind; the book says so | M | Ch 6 | E-noether, E-topo, E-sc | working |
 | 21 | Preservation is not reconstruction: destroyed information is not recovered by conservation | experimental-RS (model) | SC-001/008: 0/1,800 recoveries | Redundancy could permit recovery; untested | H (model) | Ch 6 | E-sc | supported in model |
@@ -84,7 +84,7 @@ This register is the control against prose silently promoting a hypothesis to a 
 | 40 | Soul and spirit are not physical configurations or signals | theological claim | Eccl 12:7; Matt 10:28; categories | — | H | Chs 7, 11 | — | settled |
 | 41 | Consciousness participates in runtime order but is not explained by RS | philosophical | the hard problem; first edition Ch 13 | — | H (that RS does not explain it) | Ch 11 | — | open |
 | 42 | Physical possibility, operational capability and moral rightness are distinct | philosophical | lying example | — | H | Ch 12 | technical volume Ch 33 | settled |
-| 43 | Corruption is parasitic distortion of good order, not a rival substance | theological-inference | Augustine; Rom 8:20–22 | — | H | Ch 13 | — | settled |
+| 43 | **[superseded — see 43′ (v2.3)]** Corruption is parasitic distortion of good order, not a rival substance | theological-inference | Augustine; Rom 8:20–22 | — | H | Ch 13 | — | settled |
 | 44 | Some corruption can be described with T-C-R terms (misdirected transmission, failed reception) | theological-inference using RS lens | lie, slander, unheeded warning | Risk of vocabulary imperialism; used only where clarifying | L (as lens) | Ch 13 | — | working |
 | 45 | **[superseded — see 45′ below]** Death is not original to creation | scriptural/theological | Rom 5:12; 1 Cor 15 | Contested by some theistic evolutionists; the book's scriptural commitment is stated | H (as commitment) | Chs 11, 14 | — | settled |
 | 46 | Redemption is God's restoring and consummating work in Christ, not substrate repair | scriptural + theological | Col 1:20; Rev 21; 1 Cor 15 | — | H | Ch 14 | — | settled |
@@ -154,3 +154,17 @@ Grouped by provenance. Rows supersede v2.1 rows where noted.
 | H2 | Stable effective laws arise from relationally organised stochasticity | RS hypothesis | L | Ch 8 | stated as an open question |
 | H3 | Carrier and lineage architecture arises endogenously from minimal relational rules | **open, not demonstrated** | — | Ch 7, App B | all model carriers so far were designed |
 | H4 | Contextual relational identity holds at substrate level | RS hypothesis | L–M | Ch 6 | — |
+
+## v2.3 revisions (2026-10-03)
+
+| # | Claim | Category | Conf. | Location | Supersedes |
+|---|---|---|---|---|---|
+| 20″ | Equivalence-class continuity answers "same kind or state?"; it does not by itself establish that something is the same individual. Individual continuity needs lineage and history; what carries it physically is open | ontological distinction | H (distinction); open (mechanism) | Ch 6, 11, 14, 15, App B | 20′ in part |
+| 18′ | "Stochastic" describes processes by probabilities and is neutral between epistemic probability and ontic indeterminacy | mathematical/philosophical | H | Ch 5 | 18 |
+| 17′ | RS hypothesises ontic stochastic actualisation (a genuinely open future within constrained possibility) | RS working hypothesis | L | Ch 5 | 17 |
+| 13″ | Structure depends on what is forbidden, how possibilities are weighted, and how transitions are coupled and composed (including higher-order relation) | experimental-RS (formal) + interpretation | M | Ch 4 | 13′ rhetoric |
+| 43′ | A wrong act is wrong in itself; persistence and propagation explain entrenchment, not wrongness | theological/moral | H | Ch 13 | 43 in part |
+| G1 | Genesis 1:2 darkness as a created condition "not yet manifest" is the book's inference from the sequence, not explicit text | theological inference | M | Ch 1, 13 | — |
+| 33″ | The Ch 9 contrast targets ontologies whose fundamental entities are individuated independently of constitutive relation, not all substance, powers or hylomorphic views | philosophical | M | Ch 9 | 33′ scope |
+| R0 | Interactional relation ("everything interacts") is not yet the RS claim; RS proposes constitutive relation | philosophical | H | Ch 3 | — |
+| 27″ | Unreceived transmission is an incomplete T-C-R chain, not a lesser reality | philosophical | H | Ch 7 | — |
