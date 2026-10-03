@@ -91,6 +91,26 @@ Independent hypergraph. Four triadic bits, not one, and not a popcount. `K ≤ 1
 
 The Generation 4 report recommends a later targeted cardinality-2 grid and does not execute it. `H`, `S`, `G`, and `L` stay 0.
 
+## Generation 4a — reconfiguration sensitivity
+
+Specification: `experiments/specs/generation-004a.json`. Analysis `n4-reconfiguration-sensitivity`. This is a reanalysis of the 160 Generation 4 singletons. It does not replace Generation 4.
+
+The horizon-16 path/matching passage is recomputed at `rho3 ∈ {1/2, 1, 2}` and at alphabets `W3` and `W16`, each against the unconstrained baseline at the same rate and alphabet. The controlled-source passage and the eventual hit-before-return committor are part of the same reanalysis. The eventual committor is primary at `W4`, `rho3 = 1`. It is not recomputed on the sensitivity probes. The one-step same-edge-count flux stays an invariant and is not a success criterion.
+
+## Generation 5 — targeted T->P plus P->P pairs
+
+Specification: `experiments/specs/generation-005.json`. Analysis `n4-targeted-pairs`.
+
+```text
+E(N=4, A≤4, O=3, G=0, S=0, H=0, K≤2, L=0, semantics=hypergraph, W=W4)
+  one T->P rule and one P->P rule
+  weights {prohibit, strong_favour}
+```
+
+The complete two-rule set is canonicalised under `S4`. The label grid `8 × 10 × 2 × 2 = 320` is not the canonical count. The exact canonical weighted count is 2,304, from 50,688 weighted labelled pairs. The full cardinality-2 grammar of 85,175 canonical structurally-simple pairs stays unsearched. The primary observable is the controlled-source eventual committor between the two-edge path and the two-edge matching. Horizon 16 is a comparator.
+
+The interaction residual, the super-singleton gap, and the triad-spread increment are separate quantities. Simplicial semantics stay in `docs/simplicial-design.md`. `H`, `S`, `G`, and `L` stay 0.
+
 ## Later
 
 History-dependent choreography, constraints that rewrite constraints (`L > 0`), geometric embeddings, and cross-substrate recurrence of a motif discovered here. A recurrence across substrates would be recorded as substrate-robust recurrence to the degree observed. It would not be called a proof of universality.
