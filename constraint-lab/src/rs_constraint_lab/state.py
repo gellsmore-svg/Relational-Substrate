@@ -117,7 +117,8 @@ def slot_index(slots: list[tuple[int, ...]] | tuple[tuple[int, ...], ...]) -> di
 def slot_permutation_maps(n: int, slots: list[tuple[int, ...]] | tuple[tuple[int, ...], ...]) -> list[tuple[int, ...]]:
     """Image of every slot index under each entity permutation.
 
-    A triple on all N entities is fixed by S_N. Pairwise slots move.
+    A triple that contains every entity is fixed by S_N. At N=3 that is the
+    single triple. At N=4 the four triples move with the pairs.
     """
     index = slot_index(slots)
     maps: list[tuple[int, ...]] = []

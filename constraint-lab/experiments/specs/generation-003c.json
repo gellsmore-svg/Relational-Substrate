@@ -1,0 +1,43 @@
+{
+  "schema": "rs-constraint-lab.experiment/v1",
+  "experiment_id": "generation-003c-memory-clock-refinement",
+  "generation": 3,
+  "semantics": "hypergraph",
+  "G": 0,
+  "S": 0,
+  "H": 0,
+  "L": 0,
+  "O": 3,
+  "alphabet": "W4",
+  "composition": "structural-simple",
+  "analysis": "memory-clock-reanalysis",
+  "predicates": ["pair", "triad"],
+  "weights": ["prohibit", "strong_suppress", "weak_suppress", "weak_favour", "strong_favour"],
+  "cells": [
+    {"N": 3, "K_max": 2, "A_max": 3, "cardinalities": [1, 2]}
+  ],
+  "reference_expressions": [
+    "form(0-1) => strong_favour",
+    "form(0-1-2) => strong_favour",
+    "form(0-1-2) | present(0-1) => strong_favour",
+    "dissolve(0-1-2) | present(0-1) => prohibit",
+    "form(0-1) | present(0-1-2) => strong_favour",
+    "dissolve(0-1) | present(0-1-2) => strong_favour"
+  ],
+  "clocks": ["FULL_EVENT_CLOCK_MEMORY", "PAIR_EVENT_EPOCH_MEMORY"],
+  "rho3_sensitivity": ["1/2", "1", "2"],
+  "unsearched": [
+    "alphabet sensitivity W3 and W16",
+    "K>2",
+    "cardinality 3",
+    "N other than 3",
+    "stacked-weight composition",
+    "count predicates",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0"
+  ],
+  "note": "Reanalysis of the Generation 3 kernels. It does not replace generation-003 or generation-003b."
+}

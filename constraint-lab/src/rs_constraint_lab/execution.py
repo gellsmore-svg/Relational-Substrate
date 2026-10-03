@@ -84,6 +84,7 @@ from rs_constraint_lab.version import (
     PROFILE_NOTE,
     SEMANTIC_VERSION,
     engine_version_for,
+    hypergraph_version_for_n,
     semantic_version_for,
 )
 from rs_constraint_lab.weights import ENUMERATED_WEIGHTS, alphabet_factors
@@ -175,11 +176,21 @@ def _header(spec: dict, shard_items: int) -> dict:
         "principle": EXECUTION_PRINCIPLE,
     }
     if semantics == "hypergraph":
-        index = comparison_directory()
+        widest = max((int(cell["N"]) for cell in spec["cells"]), default=3)
+        engine, semantic = hypergraph_version_for_n(widest)
+        header["engine_version"] = engine
+        header["semantic_version"] = semantic
         header["rho3"] = "1"
-        header["comparison_kernel_index_sha256"] = file_sha256(index / "kernel-ids-n3-k3.txt")
-        header["comparison_qualitative_index_sha256"] = file_sha256(index / "qualitative-ids-n3-k3.txt")
-        header["comparison_support_index_sha256"] = file_sha256(index / "families-n3-k3.jsonl")
+        if widest <= 3:
+            index = comparison_directory()
+            header["comparison_kernel_index_sha256"] = file_sha256(index / "kernel-ids-n3-k3.txt")
+            header["comparison_qualitative_index_sha256"] = file_sha256(index / "qualitative-ids-n3-k3.txt")
+            header["comparison_support_index_sha256"] = file_sha256(index / "families-n3-k3.jsonl")
+        else:
+            catalogue = Path(__file__).resolve().parents[2] / "catalogue" / (
+                "generation-001b-structurally-normalised-kernel-ids-n4-k2.txt"
+            )
+            header["pairwise_n4_index_sha256"] = file_sha256(catalogue)
     return header
 
 
@@ -210,6 +221,7 @@ def _require_compatible(plan: dict, spec: dict, shard_items: int) -> None:
         "comparison_kernel_index_sha256",
         "comparison_qualitative_index_sha256",
         "comparison_support_index_sha256",
+        "pairwise_n4_index_sha256",
     ):
         if key in stored or key in current:
             if stored.get(key) != current.get(key):
@@ -252,9 +264,14 @@ def _shard_identity(spec: dict, header: dict, cell_index: int, cell: dict, cardi
         identity["semantic_version"] = header["semantic_version"]
         identity["semantics"] = "hypergraph"
         identity["rho3"] = header["rho3"]
-        identity["comparison_kernel_index_sha256"] = header["comparison_kernel_index_sha256"]
-        identity["comparison_qualitative_index_sha256"] = header["comparison_qualitative_index_sha256"]
-        identity["comparison_support_index_sha256"] = header["comparison_support_index_sha256"]
+        for key in (
+            "comparison_kernel_index_sha256",
+            "comparison_qualitative_index_sha256",
+            "comparison_support_index_sha256",
+            "pairwise_n4_index_sha256",
+        ):
+            if key in header:
+                identity[key] = header[key]
     return identity
 
 
@@ -266,8 +283,18 @@ def _shard_id(identity: dict) -> str:
 def build_plan(spec: dict, shard_items: int | None = None) -> dict:
     validate_spec(spec)
     options = effective_options(spec)
-    if options["analysis"] != ANALYSIS_HEAVY_EVERY:
+    if options["analysis"] not in {ANALYSIS_HEAVY_EVERY, "memory-clock-reanalysis", "n4-singleton"}:
         raise ValueError(f"analysis {options['analysis']!r} is not executable")
+    if options["analysis"] == "n4-singleton":
+        for cell in spec["cells"]:
+            if int(cell["N"]) != 4:
+                raise ValueError("n4-singleton analysis requires N=4")
+            if any(int(card) != 1 for card in cell["cardinalities"]):
+                raise ValueError("n4-singleton analysis refuses cardinality above 1")
+    if options["analysis"] == "memory-clock-reanalysis":
+        for cell in spec["cells"]:
+            if int(cell["N"]) != 3:
+                raise ValueError("memory-clock reanalysis executes N=3")
     items = int(shard_items or DEFAULT_SHARD_ITEMS)
     if items < 1:
         raise ValueError("shard item budget must be at least 1")
@@ -1116,6 +1143,10 @@ def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path
             if publish is not None:
                 _publish_run(existing, spec, publish, out_dir)
             return existing
+    if spec.get("analysis") in {"memory-clock-reanalysis", "n4-singleton"}:
+        from rs_constraint_lab.census import merge_census
+
+        return merge_census(out_dir, plan, publish)
     options = effective_options(spec)
     screens = spec.get("predeclared_screens", {})
     horizon = int(spec.get("rise_release_horizon", 4))
@@ -1398,6 +1429,10 @@ def _science(summary: dict) -> dict:
         )
         if cell.get("higher_order_science"):
             cells[-1]["higher_order"] = cell["higher_order_science"]
+        if cell.get("clock_census") is not None:
+            cells[-1]["clock_census"] = cell["clock_census"]
+        if cell.get("n4_census") is not None:
+            cells[-1]["n4_census"] = cell["n4_census"]
     return {
         "status": summary["status"],
         "spec_hash": summary["spec_hash"],

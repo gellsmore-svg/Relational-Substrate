@@ -234,6 +234,17 @@ def execute_shard_task(task: dict) -> dict:
 
 def _execute(task: dict) -> None:
     identity = task["identity"]
+    analysis = task["spec"].get("analysis")
+    if analysis == "memory-clock-reanalysis":
+        from rs_constraint_lab.census import execute_memory_clock_shard
+
+        execute_memory_clock_shard(task)
+        return
+    if analysis == "n4-singleton":
+        from rs_constraint_lab.census import execute_n4_shard
+
+        execute_n4_shard(task)
+        return
     if task["spec"].get("semantics") == "hypergraph":
         _execute_hypergraph(task)
         return

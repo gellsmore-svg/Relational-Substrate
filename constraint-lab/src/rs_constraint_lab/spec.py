@@ -23,7 +23,7 @@ SCHEMA = "rs-constraint-lab.experiment/v1"
 IMPLEMENTED_AXES = {"G": 0, "S": 0, "H": 0, "L": 0, "O": 2}
 HYPERGRAPH_AXES = {"G": 0, "S": 0, "H": 0, "L": 0, "O": 3}
 COMPOSITIONS = ("structural-simple", "stacked-weight")
-ANALYSES = ("heavy-every-canonical",)
+ANALYSES = ("heavy-every-canonical", "memory-clock-reanalysis", "n4-singleton")
 PREDICATES = ("edge", "count")
 HYPERGRAPH_PREDICATES = ("pair", "triad")
 

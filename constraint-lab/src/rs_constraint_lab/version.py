@@ -20,6 +20,12 @@ SEMANTIC_VERSION = "0.2.0"
 HYPERGRAPH_ENGINE_VERSION = "0.3.0"
 HYPERGRAPH_SEMANTIC_VERSION = "0.3.0"
 
+# N>3 independent hypergraph uses a larger state and numerical stationary
+# analysis. N<=3 shard ids keep the 0.3.0 pair above. The grammar name does
+# not change: the slots are still independent hyperedges.
+HYPERGRAPH_N4_ENGINE_VERSION = "0.4.0"
+HYPERGRAPH_N4_SEMANTIC_VERSION = "0.4.0"
+
 NORMALISATION_STRUCTURAL = "structural-unique-v1"
 NORMALISATION_STACKED = "stacked-weight-v1"
 GRAMMAR_EDGE = "pairwise-edge-v1"
@@ -70,3 +76,15 @@ def semantic_version_for(semantics: str) -> str:
     if semantics == "hypergraph":
         return HYPERGRAPH_SEMANTIC_VERSION
     return SEMANTIC_VERSION
+
+
+def hypergraph_version_for_n(n: int) -> tuple[str, str]:
+    """Engine and semantic versions for one independent-hypergraph cell.
+
+    N=3 stays 0.3.0 so existing shard ids do not move. A larger N records
+    0.4.0 because the hidden state is a triadic configuration, not one bit,
+    and stationary results above 16 states are numerical.
+    """
+    if int(n) <= 3:
+        return HYPERGRAPH_ENGINE_VERSION, HYPERGRAPH_SEMANTIC_VERSION
+    return HYPERGRAPH_N4_ENGINE_VERSION, HYPERGRAPH_N4_SEMANTIC_VERSION
