@@ -1,0 +1,23 @@
+{"terms": [
+ {"id":"substrate","term":"Relational Substrate","aliases":["substrate"]},
+ {"id":"runtime","term":"runtime physical order","aliases":["runtime"]},
+ {"id":"T0","term":"T0","requires":["substrate"]},
+ {"id":"T1-stack","term":"T1A","aliases":["T1B","T1C1","T1C2","T1C3","T1D1","T1D2"],"requires":["T0"]},
+ {"id":"T2","term":"T2","requires":["T1-stack"]},
+ {"id":"relation","term":"relational primacy","aliases":["relation"]},
+ {"id":"continuity","term":"continuity"},
+ {"id":"closure-knot","term":"closure knot","aliases":["closure knots"],"requires":["substrate","continuity"]},
+ {"id":"transformation-tier","term":"transformation tier","requires":["T0"]},
+ {"id":"operation-D","term":"operation D","aliases":["operation A","operation B","operation C","operation E"],"requires":["transformation-tier"]},
+ {"id":"dialect","term":"dialect","aliases":["dialects"],"requires":["transformation-tier"]},
+ {"id":"admissibility","term":"admissibility","aliases":["admissible"]},
+ {"id":"alignment","term":"alignment","aliases":["misalignment"]},
+ {"id":"containment","term":"containment"},
+ {"id":"coherence","term":"coherence"},
+ {"id":"description-ontology","term":"description","aliases":["ontology"]},
+ {"id":"torsion","term":"torsion","aliases":["torsional"],"requires":["substrate"]},
+ {"id":"corruption","term":"corruption","requires":["alignment"]},
+ {"id":"personhood","term":"personhood"},
+ {"id":"transmission","term":"transmission","aliases":["transmit","receiver"]},
+ {"id":"stochastic","term":"stochastic","aliases":["probability","probabilistic"]}
+]}
