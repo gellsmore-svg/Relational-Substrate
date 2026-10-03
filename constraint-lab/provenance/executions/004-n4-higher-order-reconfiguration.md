@@ -40,7 +40,7 @@ f076f80612d8605eda9e7c04207e4c66d8e45dd6
 aa0e6ea47b6ade629c2290cdefe030923ff87de1
 ```
 
-The ledger line that points at this record is the close-out commit after `aa0e6ea47b6ade629c2290cdefe030923ff87de1`. That close-out commit is not inside the range above, because a commit cannot contain its own hash.
+The execution file was added in `6d1977c27dc2711072dfea78af1be6a09fd96e00`. The ledger line that points at this record is the commit after that one. Neither commit is inside the analysis range above.
 
 Experiment ids:
 
