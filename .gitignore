@@ -1,10 +1,18 @@
+# Legacy modelling artefacts. Present locally under the archive; not source.
 node_modules/
 dist/
 verification/
-analysis/out/
-analysis/source-cache/
+**/analysis/out/
+**/analysis/source-cache/
 
-# Python (instantiation)
+# Python
 .venv/
 __pycache__/
-*.pyc
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.ruff_cache/
+
+# Constraint Laboratory bulk regeneration. Committed artefacts are summaries,
+# exemplars, and manifests. Everything under generated/ is disposable.
+constraint-lab/generated/

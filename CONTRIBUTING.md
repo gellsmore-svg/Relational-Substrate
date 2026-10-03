@@ -1,51 +1,54 @@
 # Contributing
 
-Relational Substrate is a research sandbox. Contributions should preserve the ontology boundaries and evidential discipline of the project.
+Relational Substrate currently has three active layers:
 
-## Ground Rules
+- `books/` — the manuscripts. Treat the prose as read-only unless the task is explicitly a book edit.
+- `constraint-lab/` — the active experimental programme.
+- `archive/pre-constraint-lab-2026-10-03/` — the historical modelling programme. Preserve it. Do not delete it, and do not silently import its physical assumptions into the laboratory grammar.
 
-- Do not claim that the sandbox proves a substrate exists.
-- Do not describe rendered geometry, molecules, lattices, materials, or interfaces as substrate objects.
-- Keep the T0 / T1 / T2 distinction explicit.
-- Use inferential convergence language rather than proof-framing.
-- Use equivalence-with-unification language rather than displacement or replacement claims.
-- Treat conventional domain models as comparators, not enemies.
-- Prefer held-out or externally anchored checks over same-layer expansion.
-- Quantify limitations when possible.
+The repository licence is the MIT licence at the root.
 
-## Expected Changes
+## Epistemic rules for the laboratory
 
-Good contributions usually do one of the following:
+The laboratory explores, observes, infers, compares, and updates coherence. It does not certify the ontology.
 
-- Add a benchmark with a named comparator and clear pass/fail criteria.
-- Tighten an existing benchmark tolerance or limitation.
-- Improve reproducibility of `npm run reports`.
-- Improve review documentation without strengthening claims beyond evidence.
-- Add a non-molecular/material validation target that exercises the unification thesis.
-- Add tooling or process improvements that strengthen predeclaration, provenance, guardrails, or conventional baseline visibility (see recommendations in .restart.md and research-task-map.md).
+- Keep observation, inference, and RS interpretation in separate layers.
+- Prefer: observed, generated, inferred, suggests, tensions with, coherent with, opens a question.
+- A formal proof is meaningful inside a declared formal system. It is not a proof of the ontology of reality.
+- Do not encode hoped-for outcomes (construction, repair, sacrificial persistence, self-transformation) as primitive search targets.
+- Preserve null results, baseline-equivalent rules, fragile parameters, and failed motif candidates.
+- Do not describe a sampled region as exhaustive.
 
-## Process Improvements (adopted from 2026-06 review)
+## Laboratory changes
 
-The following practices are now encouraged for all new model-form or descriptor work:
+A useful change does one of the following:
 
-- **Predeclaration**: Any new predictor or model form must explicitly declare the allowed descriptors (ideally from analysis/descriptor-registry.json or an extension) *before* any target is scored.
-- **Conventional baselines**: Every material-property or optical report must include a clean, non-endpoint-fitted conventional comparator (e.g. density + Lorentz-Lorenz) reported side-by-side. Conventional terms must be labelled as such and never counted as substrate evidence.
-- **Predeclaration gate (enforced)**: New scoring work must go through the hard gate in `analysis/predeclaration-gate.mjs` — call `predeclare({ target, modelForm, descriptors, heldOut })` then `requireScoringGate(...)` *before* scoring, and emit `formatPredeclaration(record)` into the report. The gate throws on unregistered descriptors (#1) or a missing conventional comparator (#2). Verify it with `npm run gate:check`; `npm run guardrails` also runs its self-test. (Retrofitting the existing RI chain is a separate change; this is the required path for new work.)
-- **Descriptor registry & provenance**: Prefer descriptors registered with units, extraction rules, and source requirements. Lock primary data rows (CIF + measured n + density) before prediction.
-- **Evidence ledger**: After regenerating reports, run `npm run evidence:ledger` to consolidate the cross-track accounting and flag any drift between declared (task map) and computed (summary) headline numbers.
-- **Guardrails script**: Run `npm run guardrails` (or `node scripts/guardrails.mjs`) as part of pre-PR checks when touching analysis or reports.
+- extends the grammar, the state semantics, or the exact analysis with a declared coordinate (`N`, `A`, `O`, `G`, `S`, `H`, `K`, `L`, and the relation semantics);
+- adds a test that locks a theorem, a canonicalisation orbit, or a replay;
+- records a generation with its coverage manifest, including the regions not searched;
+- corrects a methodological defect and reruns the affected cell.
 
-These strengthen the existing "predeclare before score" and "held-out + conventional comparator" discipline without relaxing ontology boundaries.
-
-## Before Opening a Pull Request
-
-Run:
+Before opening a pull request that touches the laboratory:
 
 ```bash
-npm ci
-npm run build
-npm run reports
+cd constraint-lab
+python -m pip install -e ".[dev]"
+python -m pytest -q
+python -m rs_constraint_lab run experiments/specs/generation-000.json --out generated/generation-000
 ```
 
-Generated files under `analysis/out/`, `dist/`, `node_modules/`, and `verification/` are ignored. If a generated report needs to become part of the public review packet, copy it into `docs/` deliberately and explain why.
+Generation 1 is exhaustive and is not part of CI. Rerun it when a change can alter its manifest, and say so in the pull request.
 
+## Books
+
+Rebuild the EPUB editions from the repository root:
+
+```bash
+npm run books:epub
+```
+
+That command needs `pandoc` and `epubcheck`. It reads `books/*.md` and `scripts/epub-cleanup.lua`.
+
+## Archive
+
+Run the historical programme from inside the archive directory. See `archive/pre-constraint-lab-2026-10-03/README.md`.
