@@ -91,4 +91,6 @@ These are recorded here. The prompt was not rewritten to match them.
 
 ## Local checks
 
-Before this close-out commit, `python -m pytest -q` in `constraint-lab` reported 60 passed in 55.84 seconds. These checks do not include the Generation 4a or Generation 5 censuses. CI runs Generation 0 only. The final-head Actions run id is not yet known and is not invented here.
+Before the close-out commit, `python -m pytest -q` in `constraint-lab` reported 60 passed in 55.84 seconds. These checks do not include the Generation 4a or Generation 5 censuses. CI runs Generation 0 only.
+
+`gh run view 37151793037` reported conclusion success on head `777191bdb1406f6ee97ebcceae91881ef088019c`. Jobs `constraint-lab` and `books` both completed. The ledger line that records that run is a later commit. It is not a run id for the commit that adds it. Review 005 remains pending.
