@@ -1,0 +1,40 @@
+{
+  "schema": "rs-constraint-lab.experiment/v1",
+  "experiment_id": "generation-005-targeted-tp-pp-pairs",
+  "generation": 5,
+  "semantics": "hypergraph",
+  "G": 0,
+  "S": 0,
+  "H": 0,
+  "L": 0,
+  "O": 3,
+  "alphabet": "W4",
+  "composition": "structural-simple",
+  "analysis": "n4-targeted-pairs",
+  "analysis_version": "0.5.0",
+  "predicates": ["pair", "triad"],
+  "weights": ["prohibit", "strong_favour"],
+  "cells": [
+    {"N": 4, "K_max": 2, "A_max": 4, "cardinalities": [2]}
+  ],
+  "reconfiguration_horizon": 16,
+  "focused_transition": ["e2-deg2110-tri0-comp2", "e2-deg1111-tri0-comp2"],
+  "stationary_arithmetic": "float64",
+  "effect_floor": 1e-8,
+  "effect_floor_reason": "Declared before the Generation 4a census and before the Generation 5 census. On the reference kernels N=3 baseline, N=3 T->P strong_favour, N=4 baseline, N=4 T->P strong_favour, N=4 P->T strong_favour, and N=4 T->P prohibit, the maximum block-versus-dense landing gap was 5.55e-17, the maximum stationary residual was 8.40e-16, the maximum committor residual was 1.78e-15, and the maximum statewise committor gap was 4.44e-16. Committor condition numbers were between 10 and 14. The interaction residual subtracts four committors. 1e-8 is the existing float total-variation floor. It is about four orders of magnitude above a pessimistic thousand-fold amplification of the measured committor residual. Float64 solutions are not exact.",
+  "unsearched": [
+    "the full cardinality-2 grammar of 85175 canonical structurally-simple pairs",
+    "weights other than prohibit and strong_favour",
+    "cardinality 3",
+    "K>2",
+    "stacked-weight composition",
+    "count predicates",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0",
+    "N other than 4"
+  ],
+  "note": "One T->P structural rule and one P->P structural rule, weights prohibit and strong_favour only. The complete two-rule set is canonicalised under S4. The product of singleton orbit counts, 8 x 10 x 2 x 2 = 320, is not the canonical pair count. The full cardinality-2 grammar is not executed."
+}

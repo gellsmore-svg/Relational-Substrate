@@ -1,0 +1,41 @@
+{
+  "schema": "rs-constraint-lab.experiment/v1",
+  "experiment_id": "generation-004a-reconfiguration-sensitivity",
+  "generation": 4,
+  "semantics": "hypergraph",
+  "G": 0,
+  "S": 0,
+  "H": 0,
+  "L": 0,
+  "O": 3,
+  "alphabet": "W4",
+  "composition": "structural-simple",
+  "analysis": "n4-reconfiguration-sensitivity",
+  "analysis_version": "0.5.0",
+  "predicates": ["pair", "triad"],
+  "sensitivity_alphabets": ["W3", "W16"],
+  "weights": ["prohibit", "strong_suppress", "weak_suppress", "weak_favour", "strong_favour"],
+  "cells": [
+    {"N": 4, "K_max": 2, "A_max": 4, "cardinalities": [1]}
+  ],
+  "reconfiguration_measure": "max_abs_stationary_pair_event_class_flux_delta",
+  "reconfiguration_horizon": 16,
+  "focused_transition": ["e2-deg2110-tri0-comp2", "e2-deg1111-tri0-comp2"],
+  "rho3_sensitivity": ["1/2", "1", "2"],
+  "stationary_arithmetic": "float64",
+  "effect_floor": 1e-8,
+  "effect_floor_reason": "Declared before the Generation 4a census and before the Generation 5 census. On the reference kernels N=3 baseline, N=3 T->P strong_favour, N=4 baseline, N=4 T->P strong_favour, N=4 P->T strong_favour, and N=4 T->P prohibit, the maximum block-versus-dense landing gap was 5.55e-17, the maximum stationary residual was 8.40e-16, the maximum committor residual was 1.78e-15, and the maximum statewise committor gap was 4.44e-16. Committor condition numbers were between 10 and 14. The interaction residual subtracts four committors. 1e-8 is the existing float total-variation floor. It is about four orders of magnitude above a pessimistic thousand-fold amplification of the measured committor residual. Float64 solutions are not exact. The one-step same-edge-count flux remains the named invariant and is not a success criterion.",
+  "unsearched": [
+    "cardinality 2 and 3",
+    "K>2",
+    "stacked-weight composition",
+    "count predicates",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0",
+    "N other than 4"
+  ],
+  "note": "Reanalysis of the 160 Generation 4 canonical weighted singletons. Generation 4 artifacts are not rewritten. Each sensitivity delta uses the unconstrained baseline at the same alphabet and rho3. The primary mechanistic quantity is the controlled-source eventual committor. Horizon 16 remains the historical comparator."
+}
