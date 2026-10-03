@@ -58,6 +58,8 @@ An analogy helps here, and it must be used with its limits stated. Think of ches
 
 The analogy captures three things well. Possibility is structured but not determining, since the rules never tell you which legal move will be made. The actual is always drawn from the admissible. And the same rules allow an endless variety of actual games. But the analogy fails at one point, and the failure is the most important part of it. In chess, the moves are chosen by *players*: minds with intentions, who want to win. In the relational substrate there are no players. Nothing inside created physical order is choosing which admissible transition to make, and nothing inside it wants anything. If the analogy is pressed to supply a player, it turns the substrate into a mind. That is precisely the error Scripture forbids.
 
+![Figure 2. Constrained possibility and actualisation. Circles are possible configurations and lines are admissible transitions; dashed, crossed lines are forbidden; shaded lines are favoured; the gold line is one actual history, reached by constrained chance from among the admissible routes.](v2/figures/fig-possibility.png)
+
 So how does one admissible transition, rather than another, come to be actual, if nobody inside the substrate selects it? That is the question of the next chapter, and the answer the project proposes is *constrained chance*. Before reaching it, one boundary has to be set, because it governs how the answer must be understood.
 
 ## Purpose shapes what is possible

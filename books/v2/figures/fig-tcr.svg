@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" font-family="DejaVu Serif, Georgia, serif">
+  <title>Transmit, Carry, Receive</title>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2b2b2b"/></marker></defs>
+  <rect width="1100" height="560" fill="#ffffff"/>
+  <text x="40" y="52" font-size="28" fill="#2b2b2b" font-weight="bold">Transmit – Carry – Receive</text>
+  <rect x="40" y="120" width="190" height="150" rx="16" fill="#f3efe4" stroke="#8a6d2f" stroke-width="3"/>
+  <text x="135" y="168" font-size="22" text-anchor="middle" fill="#5a4416" font-weight="bold">Source</text>
+  <text x="135" y="200" font-size="18" text-anchor="middle" fill="#3a3a3a">a difference</text>
+  <text x="135" y="226" font-size="18" text-anchor="middle" fill="#3a3a3a">(grey body,</text>
+  <text x="135" y="250" font-size="18" text-anchor="middle" fill="#3a3a3a">pale vein)</text>
+  <g fill="#e6edf4" stroke="#2c4a6e" stroke-width="3">
+    <rect x="330" y="150" width="120" height="90" rx="45"/><rect x="490" y="150" width="120" height="90" rx="45"/><rect x="650" y="150" width="120" height="90" rx="45"/>
+  </g>
+  <g font-size="17" text-anchor="middle" fill="#1f3654"><text x="390" y="201">carrier</text><text x="550" y="201">carrier</text><text x="710" y="201">carrier</text></g>
+  <rect x="870" y="120" width="190" height="150" rx="16" fill="#f3efe4" stroke="#8a6d2f" stroke-width="3"/>
+  <text x="965" y="168" font-size="22" text-anchor="middle" fill="#5a4416" font-weight="bold">Receiver</text>
+  <text x="965" y="200" font-size="18" text-anchor="middle" fill="#3a3a3a">admissible</text>
+  <text x="965" y="226" font-size="18" text-anchor="middle" fill="#3a3a3a">change of state,</text>
+  <text x="965" y="250" font-size="18" text-anchor="middle" fill="#3a3a3a">once</text>
+  <g stroke="#2b2b2b" stroke-width="3" marker-end="url(#a)"><line x1="232" y1="195" x2="326" y2="195"/><line x1="452" y1="195" x2="486" y2="195"/><line x1="612" y1="195" x2="646" y2="195"/><line x1="772" y1="195" x2="866" y2="195"/></g>
+  <path d="M330,280 Q550,330 770,280" fill="none" stroke="#b08a3e" stroke-width="3"/>
+  <text x="550" y="345" font-size="19" text-anchor="middle" fill="#5a4416" font-style="italic">the correlation persists; the vehicles change</text>
+  <g font-size="21" fill="#2b2b2b" font-weight="bold" text-anchor="middle"><text x="280" y="105">TRANSMIT</text><text x="550" y="105">CARRY</text><text x="818" y="105">RECEIVE</text></g>
+  <g font-size="18" fill="#3a3a3a" text-anchor="middle">
+    <text x="280" y="410">release:</text><text x="280" y="436">the difference stops</text><text x="280" y="460">being only here,</text><text x="280" y="484">at a cost to the source</text>
+    <text x="550" y="410">constrained continuity:</text><text x="550" y="436">a correlation carried</text><text x="550" y="460">across substitutable</text><text x="550" y="484">realisations</text>
+    <text x="818" y="410">consequential reception:</text><text x="818" y="436">the difference becomes</text><text x="818" y="460">a change elsewhere;</text><text x="818" y="484">arrival is not enough</text>
+  </g>
+  <text x="550" y="535" font-size="17" text-anchor="middle" fill="#7a2f2f" font-style="italic">A structural grammar of created order. Shared form across categories is not shared nature.</text>
+</svg>

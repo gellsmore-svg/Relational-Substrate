@@ -4,7 +4,7 @@ Begin with something ordinary. It is a clear morning, and a stone lies on the pa
 
 Nothing could be more familiar, and almost nothing about it is simple. What is the stone, at the deepest level we can reach? What is the light that brings it to you, and how does that light become your seeing? Why is it the same stone tomorrow, when much about it and about you will have changed? Why does light behave so regularly that we can calculate exactly how it will bend through glass? And who is the one who sees, recognises, names and decides to pick it up?
 
-This book will return to that stone many times. It was chosen because every idea the book needs is present in the scene, not because the scene proves anything. Before any of those questions can be asked well, though, a prior decision has to be made: where does the inquiry begin?
+The stone will return many times in what follows. It was chosen because every idea the book needs is present in the scene, not because the scene proves anything. Before any of those questions can be asked well, though, a prior decision has to be made: where does the inquiry begin?
 
 ## Scripture speaks first
 
@@ -78,7 +78,7 @@ The book does not rest its argument on a single Hebrew word. But the pattern the
 > `And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.`
 > *Genesis 2:7*
 
-Dust, breath and living soul: a body formed from the same material as the rest of creation, life imparted by God, and a living person who is more than the dust and yet not separable from it in this life. Chapter 11 will return to this verse at length. For now the point is simpler. Scripture distinguishes kinds of reality, and so this book will speak of **categories**. The material is one category. The living is another, built on the material but not reducible to it. The personal is another. The spiritual is another. And God is not a category within creation at all, but its Creator.
+Dust, breath and living soul: a body formed from the same material as the rest of creation, life imparted by God, and a living person who is more than the dust and yet not separable from it in this life. Chapter 11 will return to this verse at length. For now the point is simpler. Scripture distinguishes kinds of reality, which the book will call **categories**. The material is one category. The living is another, built on the material but not reducible to it. The personal is another. The spiritual is another. And God is not a category within creation at all, but its Creator.
 
 Categories matter because the argument of this book has a particular risk. It will claim that physical reality is relational at its foundation, and later that relation also runs through life, persons, morality and redemption. A careless reader, or a careless author, could slide from "relation appears everywhere" to "everything is the same kind of thing". That slide would be a serious error, and Scripture itself shows why.
 
@@ -100,7 +100,7 @@ This is the distinction the whole book depends on, and it deserves a name. A **s
 
 ## What Scripture leaves open, and what it rules out
 
-Scripture's boundaries are real, and they exclude a good deal. If God created the world, the world is not eternal and did not make itself. If the world is not God, it is not divine in whole or in part. If creation is good, matter is not evil or illusory. If darkness is a created condition, it is not a co-eternal rival to light. Historically, each of these exclusions answers a serious position that thoughtful people have held. They are gathered in Appendix A for readers who want to see the points of divergence. The body of this book will not spend its time on them, because its purpose is to build, not chiefly to refute.
+Scripture's boundaries are real, and they exclude a good deal. If God created the world, the world is not eternal and did not make itself. If the world is not God, it is not divine in whole or in part. If creation is good, matter is not evil or illusory. If darkness is a created condition, it is not a co-eternal rival to light. Historically, each of these exclusions answers a serious position that thoughtful people have held. They are gathered in Appendix A for readers who want to see the points of divergence. The chapters that follow do not dwell on them, because their purpose is to build rather than to refute.
 
 At the same time, Scripture leaves a great deal open. It does not tell us how electricity works, why the speed of light has the value it does, or what the deepest structure of matter is. It tells us the world is real, ordered, intelligible, dependent and good. It tells us the world is meant to be searched out:
 

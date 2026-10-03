@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" font-family="DejaVu Serif, Georgia, serif">
+  <title>Local, regional and global coherence</title>
+  <rect width="1000" height="620" fill="#ffffff"/>
+  <rect x="30" y="30" width="940" height="560" rx="28" fill="#f3efe4" stroke="#8a6d2f" stroke-width="3"/>
+  <text x="60" y="78" font-size="30" fill="#5a4416" font-weight="bold">Global coherence</text>
+  <text x="60" y="112" font-size="20" fill="#3a3a3a">the whole account of reality remains mutually compatible:</text>
+  <text x="60" y="140" font-size="20" fill="#3a3a3a">physics, life, persons, morality, history, Scripture, redemption</text>
+  <rect x="90" y="180" width="820" height="370" rx="22" fill="#e6edf4" stroke="#2c4a6e" stroke-width="3"/>
+  <text x="120" y="226" font-size="27" fill="#1f3654" font-weight="bold">Regional coherence</text>
+  <text x="120" y="258" font-size="20" fill="#3a3a3a">neighbouring domains integrate and check one another:</text>
+  <text x="120" y="286" font-size="20" fill="#3a3a3a">physics ↔ chemistry ↔ biology</text>
+  <rect x="160" y="330" width="680" height="180" rx="18" fill="#ffffff" stroke="#2b2b2b" stroke-width="2.5"/>
+  <text x="190" y="376" font-size="25" fill="#2b2b2b" font-weight="bold">Local coherence</text>
+  <text x="190" y="410" font-size="20" fill="#3a3a3a">a model explains one bounded phenomenon:</text>
+  <text x="190" y="438" font-size="20" fill="#3a3a3a">an equation fits the fall of a stone</text>
+  <text x="190" y="482" font-size="18" fill="#7a2f2f" font-style="italic">Local success alone does not establish an ontology.</text>
+</svg>

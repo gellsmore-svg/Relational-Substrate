@@ -71,6 +71,8 @@ difference
   → consequential reception  (receive: the difference becomes an admissible change elsewhere, once)
 ```
 
+![Figure 3. Transmit, Carry, Receive. A difference at the source is released, carried as a correlation across a succession of substitutable carriers, and received as an admissible change of state in the receiver. The correlation persists while the vehicles change.](v2/figures/fig-tcr.png)
+
 Read the morning scene again with all of this in hand. Sunlight is released from the Sun at a cost to the Sun, carried across space, and received by the stone, which is changed by it: warmed, and its surface electrons briefly excited. That reception is also a release: the stone returns light, now patterned by the difference between its grey body and its pale vein. The pattern is carried across the few feet to your eye by a succession of electromagnetic disturbances, none of which is "the stone". At your eye it is received, as a determinate change in molecules that can admit it. That change is released again into cells and nerves. In the end, at a level the next chapters will approach carefully, it is received by *you*, as the seeing of a stone.
 
 This chain shows two more features of T-C-R.
