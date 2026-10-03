@@ -1,0 +1,441 @@
+{
+ "chapters": "see architecture-vector-scores.md (D\u2032)",
+ "first_introduction": {
+  "scripture": {
+   "first": "Ch 1",
+   "reactivate": [
+    "Ch 2",
+    "Ch 9",
+    "Ch 14"
+   ]
+  },
+  "creator-creature": {
+   "first": "Ch 1",
+   "reactivate": [
+    "Ch 3",
+    "Ch 4",
+    "Ch 9",
+    "Ch 14",
+    "Ch 15"
+   ]
+  },
+  "creation-real": {
+   "first": "Ch 1",
+   "reactivate": [
+    "Ch 3"
+   ]
+  },
+  "darkness": {
+   "first": "Ch 1",
+   "reactivate": [
+    "Ch 6"
+   ]
+  },
+  "category": {
+   "first": "Ch 1",
+   "reactivate": [
+    "Ch 9",
+    "Ch 11",
+    "Ch 15"
+   ]
+  },
+  "analogy-vs-identity": {
+   "first": "Ch 1",
+   "reactivate": [
+    "Ch 7",
+    "Ch 9",
+    "Ch 11",
+    "Ch 13"
+   ]
+  },
+  "description": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 8"
+   ]
+  },
+  "ontology": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 8"
+   ]
+  },
+  "desc-not-ont": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 8",
+    "Ch 9"
+   ]
+  },
+  "assumptions": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 3",
+    "Ch 9"
+   ]
+  },
+  "epistemic-levels": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 8",
+    "Ch 15"
+   ]
+  },
+  "coherence": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 9"
+   ]
+  },
+  "local-coherence": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 9"
+   ]
+  },
+  "regional-coherence": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 9"
+   ]
+  },
+  "global-coherence": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 9",
+    "Ch 15"
+   ]
+  },
+  "knowing-coherence": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 9"
+   ]
+  },
+  "empirical-constraint": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 8",
+    "Ch 9"
+   ]
+  },
+  "not-proof": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 9",
+    "Ch 15"
+   ]
+  },
+  "coherence-not-fidelity": {
+   "first": "Ch 9",
+   "reactivate": [
+    "Ch 15"
+   ]
+  },
+  "object-first": {
+   "first": "Ch 3",
+   "reactivate": [
+    "Ch 9"
+   ]
+  },
+  "relation": {
+   "first": "Ch 3",
+   "reactivate": [
+    "Ch 7",
+    "Ch 9",
+    "Ch 11",
+    "Ch 15"
+   ]
+  },
+  "substrate": {
+   "first": "Ch 3",
+   "reactivate": [
+    "Ch 4",
+    "Ch 9",
+    "Ch 15"
+   ]
+  },
+  "runtime": {
+   "first": "Ch 3",
+   "reactivate": [
+    "Ch 4",
+    "Ch 14"
+   ]
+  },
+  "mediation": {
+   "first": "Ch 3",
+   "reactivate": [
+    "Ch 7"
+   ]
+  },
+  "possibility": {
+   "first": "Ch 4",
+   "reactivate": [
+    "Ch 5",
+    "Ch 12"
+   ]
+  },
+  "admissibility": {
+   "first": "Ch 4",
+   "reactivate": [
+    "Ch 5",
+    "Ch 7",
+    "Ch 12"
+   ]
+  },
+  "tendency": {
+   "first": "Ch 4",
+   "reactivate": [
+    "Ch 5"
+   ]
+  },
+  "actualisation": {
+   "first": "Ch 4",
+   "reactivate": [
+    "Ch 5",
+    "Ch 6"
+   ]
+  },
+  "purpose-upstream": {
+   "first": "Ch 4",
+   "reactivate": [
+    "Ch 10",
+    "Ch 14"
+   ]
+  },
+  "non-agentic": {
+   "first": "Ch 4",
+   "reactivate": [
+    "Ch 8",
+    "Ch 14"
+   ]
+  },
+  "constraint-generative": {
+   "first": "Ch 4",
+   "reactivate": [
+    "Ch 6",
+    "Ch 12"
+   ]
+  },
+  "stochasticity": {
+   "first": "Ch 5",
+   "reactivate": [
+    "Ch 8"
+   ]
+  },
+  "constrained-stochasticity": {
+   "first": "Ch 5",
+   "reactivate": [
+    "Ch 6",
+    "Ch 8",
+    "Ch 9"
+   ]
+  },
+  "identity-invariant": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 7",
+    "Ch 11",
+    "Ch 14"
+   ]
+  },
+  "persistence": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 7",
+    "Ch 10",
+    "Ch 11"
+   ]
+  },
+  "information-loss": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 14"
+   ]
+  },
+  "memory-configuration": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 11",
+    "Ch 13"
+   ]
+  },
+  "matter": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 10",
+    "Ch 11"
+   ]
+  },
+  "time": {
+   "first": "Ch 6",
+   "reactivate": []
+  },
+  "manifestation": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 11"
+   ]
+  },
+  "difference": {
+   "first": "Ch 7",
+   "reactivate": [
+    "Ch 9"
+   ]
+  },
+  "transmit": {
+   "first": "Ch 7",
+   "reactivate": [
+    "Ch 13"
+   ]
+  },
+  "carry": {
+   "first": "Ch 7",
+   "reactivate": [
+    "Ch 13"
+   ]
+  },
+  "substitutability": {
+   "first": "Ch 7",
+   "reactivate": [
+    "Ch 10"
+   ]
+  },
+  "receive": {
+   "first": "Ch 7",
+   "reactivate": [
+    "Ch 13"
+   ]
+  },
+  "tcr": {
+   "first": "Ch 7",
+   "reactivate": [
+    "Ch 8",
+    "Ch 9",
+    "Ch 10",
+    "Ch 11",
+    "Ch 13",
+    "Ch 14",
+    "Ch 15"
+   ]
+  },
+  "nested-tcr": {
+   "first": "Ch 7",
+   "reactivate": [
+    "Ch 9",
+    "Ch 10"
+   ]
+  },
+  "coordination": {
+   "first": "Ch 8",
+   "reactivate": [
+    "Ch 10"
+   ]
+  },
+  "local-global": {
+   "first": "Ch 8",
+   "reactivate": []
+  },
+  "regularity": {
+   "first": "Ch 8",
+   "reactivate": [
+    "Ch 9"
+   ]
+  },
+  "mathematics": {
+   "first": "Ch 8",
+   "reactivate": [
+    "Ch 15"
+   ]
+  },
+  "bridge": {
+   "first": "Ch 9",
+   "reactivate": [
+    "Ch 11",
+    "Ch 12",
+    "Ch 13",
+    "Ch 15"
+   ]
+  },
+  "life": {
+   "first": "Ch 10",
+   "reactivate": [
+    "Ch 11"
+   ]
+  },
+  "higher-order": {
+   "first": "Ch 10",
+   "reactivate": [
+    "Ch 11"
+   ]
+  },
+  "embodiment": {
+   "first": "Ch 11",
+   "reactivate": [
+    "Ch 14"
+   ]
+  },
+  "personhood": {
+   "first": "Ch 11",
+   "reactivate": [
+    "Ch 12",
+    "Ch 14"
+   ]
+  },
+  "soul-spirit": {
+   "first": "Ch 11",
+   "reactivate": [
+    "Ch 14"
+   ]
+  },
+  "consciousness": {
+   "first": "Ch 11",
+   "reactivate": []
+  },
+  "image": {
+   "first": "Ch 11",
+   "reactivate": [
+    "Ch 12"
+   ]
+  },
+  "three-admissibility": {
+   "first": "Ch 12",
+   "reactivate": [
+    "Ch 13"
+   ]
+  },
+  "alignment": {
+   "first": "Ch 12",
+   "reactivate": [
+    "Ch 13",
+    "Ch 14"
+   ]
+  },
+  "corruption": {
+   "first": "Ch 13",
+   "reactivate": [
+    "Ch 14"
+   ]
+  },
+  "limitation": {
+   "first": "Ch 13",
+   "reactivate": []
+  },
+  "restoration": {
+   "first": "Ch 14",
+   "reactivate": [
+    "Ch 15"
+   ]
+  },
+  "resurrection": {
+   "first": "Ch 14",
+   "reactivate": []
+  },
+  "divine-action": {
+   "first": "Ch 14",
+   "reactivate": [
+    "Ch 15"
+   ]
+  }
+ }
+}

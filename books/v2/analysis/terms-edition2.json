@@ -1,0 +1,235 @@
+{
+ "terms": [
+  {
+   "id": "local-coherence",
+   "term": "local coherence",
+   "aliases": [],
+   "requires": []
+  },
+  {
+   "id": "regional-coherence",
+   "term": "regional coherence",
+   "aliases": [],
+   "requires": [
+    "local-coherence"
+   ]
+  },
+  {
+   "id": "global-coherence",
+   "term": "global coherence",
+   "aliases": [
+    "globally coherent"
+   ],
+   "requires": [
+    "regional-coherence"
+   ]
+  },
+  {
+   "id": "analogy-vs-identity",
+   "term": "structural analogy",
+   "aliases": [],
+   "requires": [
+    "category"
+   ]
+  },
+  {
+   "id": "category",
+   "term": "category",
+   "aliases": [],
+   "requires": []
+  },
+  {
+   "id": "relation",
+   "term": "relation",
+   "aliases": [],
+   "requires": []
+  },
+  {
+   "id": "substrate",
+   "term": "substrate",
+   "aliases": [
+    "Relational Substrate"
+   ],
+   "requires": [
+    "relation"
+   ]
+  },
+  {
+   "id": "possibility",
+   "term": "constrained possibility",
+   "aliases": [
+    "T0"
+   ],
+   "requires": [
+    "substrate"
+   ]
+  },
+  {
+   "id": "admissibility",
+   "term": "admissibility",
+   "aliases": [
+    "admissible"
+   ],
+   "requires": [
+    "possibility"
+   ]
+  },
+  {
+   "id": "tendency",
+   "term": "tendency",
+   "aliases": [],
+   "requires": [
+    "admissibility"
+   ]
+  },
+  {
+   "id": "actualisation",
+   "term": "actualisation",
+   "aliases": [
+    "T1",
+    "actualised"
+   ],
+   "requires": [
+    "possibility"
+   ]
+  },
+  {
+   "id": "stochasticity",
+   "term": "stochasticity",
+   "aliases": [
+    "stochastic"
+   ],
+   "requires": [
+    "tendency"
+   ]
+  },
+  {
+   "id": "constrained-stochasticity",
+   "term": "constrained stochastic",
+   "aliases": [],
+   "requires": [
+    "actualisation",
+    "admissibility",
+    "stochasticity"
+   ]
+  },
+  {
+   "id": "identity-invariant",
+   "term": "invariant",
+   "aliases": [
+    "invariant"
+   ],
+   "requires": [
+    "constrained-stochasticity"
+   ]
+  },
+  {
+   "id": "persistence",
+   "term": "persistence",
+   "aliases": [],
+   "requires": [
+    "identity-invariant"
+   ]
+  },
+  {
+   "id": "difference",
+   "term": "difference",
+   "aliases": [],
+   "requires": [
+    "relation"
+   ]
+  },
+  {
+   "id": "transmit",
+   "term": "transmit",
+   "aliases": [],
+   "requires": [
+    "difference"
+   ]
+  },
+  {
+   "id": "carry",
+   "term": "carrier",
+   "aliases": [],
+   "requires": [
+    "persistence",
+    "transmit"
+   ]
+  },
+  {
+   "id": "receive",
+   "term": "reception",
+   "aliases": [],
+   "requires": [
+    "admissibility",
+    "carry"
+   ]
+  },
+  {
+   "id": "tcr",
+   "term": "Transmit–Carry–Receive",
+   "aliases": [
+    "T-C-R",
+    "TCR",
+    "Transmit, Carry, Receive"
+   ],
+   "requires": [
+    "carry",
+    "receive",
+    "transmit"
+   ]
+  },
+  {
+   "id": "coordination",
+   "term": "coordination",
+   "aliases": [],
+   "requires": [
+    "constrained-stochasticity",
+    "relation"
+   ]
+  },
+  {
+   "id": "regularity",
+   "term": "regularity",
+   "aliases": [
+    "effective determinism"
+   ],
+   "requires": [
+    "constrained-stochasticity",
+    "coordination",
+    "identity-invariant"
+   ]
+  },
+  {
+   "id": "personhood",
+   "term": "personhood",
+   "aliases": [],
+   "requires": [
+    "category"
+   ]
+  },
+  {
+   "id": "alignment",
+   "term": "alignment",
+   "aliases": [],
+   "requires": []
+  },
+  {
+   "id": "corruption",
+   "term": "corruption",
+   "aliases": [],
+   "requires": [
+    "alignment",
+    "tcr"
+   ]
+  },
+  {
+   "id": "restoration",
+   "term": "restoration",
+   "aliases": [],
+   "requires": [
+    "corruption"
+   ]
+  }
+ ]
+}
