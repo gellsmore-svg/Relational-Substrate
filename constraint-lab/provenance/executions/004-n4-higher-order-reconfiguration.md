@@ -81,7 +81,7 @@ Before the close-out commit, `python -m pytest -q` in `constraint-lab` reported 
 
 ## Continuous integration
 
-This branch had not been pushed when this record was written, so there is no Actions run for `research/constraint-lab-v0.4`. That absence is not a claim that the workflow is broken. A later ledger line may record a run id after a push. This record does not invent one.
+`gh run view 37142958088` reported conclusion success, event push, branch `research/constraint-lab-v0.4`, head `0c33263df89d80bb9885ff381c2a85f3edb82ad7`, title "provenance: link prompt 004 to its execution record", URL https://github.com/gellsmore-svg/Relational-Substrate/actions/runs/37142958088. Both jobs completed: `constraint-lab` (unit tests and the Generation 0 cell) and `books`. That check was made after the push. It is the run of `0c33263df89d80bb9885ff381c2a85f3edb82ad7`. The commit that writes this paragraph is later, so this paragraph is not a result for that later commit.
 
 The workflow file on this branch is `.github/workflows/ci.yml`. Push to `main` and to `research/**`, and pull requests, run two jobs: `constraint-lab` (pytest, then Generation 0 only) and `books` (`bash -n scripts/build-epubs.sh`, plus a presence check for the EPUB filter and sources).
 
