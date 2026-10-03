@@ -32,13 +32,15 @@ def sample_trajectory(
     kernel: Kernel,
     constraints: tuple[Constraint, ...],
     factors: dict[str, Fraction],
-    edge_list: list[tuple[int, int]],
+    edge_list: list[tuple[int, ...]],
     initial_state: int,
     seed: int,
     horizon: int,
     spec_hash: str,
     constraint_set_id: str,
+    engine_version: str | None = None,
 ) -> dict:
+    recorded_engine = ENGINE_VERSION if engine_version is None else engine_version
     generator = random.Random(seed)
     state = initial_state
     events = []
@@ -46,7 +48,11 @@ def sample_trajectory(
         weights = kernel.weights[state]
         candidates = []
         for edge, weight in enumerate(weights):
-            a, b = edge_list[edge]
+            slot = edge_list[edge]
+            if len(slot) == 2:
+                rendered = [slot[0], slot[1]]
+            else:
+                rendered = list(slot)
             polarity = "form" if ((state >> edge) & 1) == 0 else "dissolve"
             applied = []
             for constraint in constraints:
@@ -57,12 +63,15 @@ def sample_trajectory(
                             "factor": str(factors[constraint.weight]),
                         }
                     )
+            baseline = "1"
+            if kernel.baseline_weights:
+                baseline = str(kernel.baseline_weights[edge])
             candidates.append(
                 {
-                    "edge": [a, b],
+                    "edge": rendered,
                     "edge_index": edge,
                     "polarity": polarity,
-                    "baseline_weight": "1",
+                    "baseline_weight": baseline,
                     "constraint_factors": applied,
                     "weight": str(weight),
                 }
@@ -110,7 +119,7 @@ def sample_trajectory(
         )
         state = nxt
     identity_payload = {
-        "engine": ENGINE_VERSION,
+        "engine": recorded_engine,
         "spec_hash": spec_hash,
         "constraint_set_id": constraint_set_id,
         "initial_state": initial_state,
@@ -124,7 +133,7 @@ def sample_trajectory(
     ).hexdigest()[:16]
     return {
         "run_id": run_id,
-        "engine_version": ENGINE_VERSION,
+        "engine_version": recorded_engine,
         "spec_hash": spec_hash,
         "constraint_set_id": constraint_set_id,
         "initial_state": initial_state,

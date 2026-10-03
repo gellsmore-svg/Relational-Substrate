@@ -35,14 +35,16 @@ S = S_entity + S_relation + S_constraint
 
 The bit that says “this pair relation is present” is the relation itself. It is not a channel in `S`. Counting every edge bit as a dimension would make `S` a disguised copy of the hypercube, and the axis would no longer be able to record an extra field such as a threshold register or a constraint weight that itself changes.
 
-Generation 1 has `S_entity = S_relation = S_constraint = 0`.
+The independent triadic bit introduced at relation order 3 is the same kind of object. It is one more relational incidence, not an entity-state channel and not a history register. Generation 3 therefore keeps `S = 0` while raising `O` from 2 to 3. A later channel that stores a value other than presence of a named relation would be `S > 0`.
+
+Generation 1 has `S_entity = S_relation = S_constraint = 0`. Generation 3 does too.
 
 ## Further axes
 
 | Symbol | Meaning in this laboratory |
 | --- | --- |
 | `N` | Number of labelled entities |
-| `O` | Maximum relation order. Pairwise generation uses `O = 2` |
+| `O` | Maximum cardinality of an independently existing relation. Pairwise generations use `O = 2`. Generation 3 uses `O = 3` |
 | `H` | History depth. `H = 0` means the kernel is memoryless |
 | `K` | Expression complexity: 1 for the action literal, plus one per condition |
 | `L` | Meta-constraint depth. `L = 0` means constraints do not rewrite constraints |
@@ -53,10 +55,10 @@ Generation 1 has `S_entity = S_relation = S_constraint = 0`.
 A semantics flag sits beside the coordinate: `graph`, `hypergraph`, or `simplicial`. These are not three encodings of one object.
 
 - **Graph.** Independent binary incidences. The presence of `R(A,B,C)` is not a primitive.
-- **Hypergraph.** An irreducible hyperrelation `R(A,B,C)` need not imply `R(A,B)`, `R(A,C)`, or `R(B,C)`.
-- **Simplicial complex.** A higher simplex carries its faces.
+- **Independent hypergraph.** An irreducible hyperrelation `R(A,B,C)` is its own state bit. It does not imply `R(A,B)`, `R(A,C)`, or `R(B,C)`, and those three pairs do not imply it. This is not called simplicial.
+- **Simplicial complex.** A higher simplex carries its faces. That rule is represented and still refused. It is not compiled into the independent hypergraph bit.
 
-Generation 1 executes `graph` only. A specification that names `hypergraph` or `simplicial` is refused, with an explicit error, rather than compiled down to pairs.
+Generation 1 executes `graph` only. Generation 3 executes independent hypergraph at `N = 3`, `O = 3`, with `G = S = H = L = 0`. A specification that names `simplicial` is refused, with an explicit error. A graph specification that declares `O = 3` is also refused: order 3 belongs to the hypergraph semantics, not to a silent widening of the pairwise bitset.
 
 ## Choreography
 

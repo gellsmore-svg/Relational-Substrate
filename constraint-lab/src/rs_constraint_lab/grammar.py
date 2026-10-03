@@ -16,15 +16,18 @@ import itertools
 import math
 from dataclasses import dataclass
 
+from fractions import Fraction
+
 from rs_constraint_lab.constraints import (
     DISSOLVE,
     FORM,
     Constraint,
     count_candidates,
     count_literal_status,
+    cross_order_class,
     relabel_constraint,
 )
-from rs_constraint_lab.state import edge_count, edge_permutation_maps, edges
+from rs_constraint_lab.state import edge_count, edge_permutation_maps, edges, relation_slots, slot_permutation_maps
 
 
 @dataclass(frozen=True)
@@ -38,9 +41,19 @@ class Grammar:
     predicates: tuple[str, ...] = ("edge",)
     a_max: int | None = None
     stats: dict | None = None
+    semantics: str = "graph"
+    order: int = 2
+    relation_slots: tuple[tuple[int, ...], ...] = ()
+    baseline_weights: tuple[Fraction, ...] = ()
 
     def expression(self, constraint_id: int) -> str:
-        return self.labelled[constraint_id].expression(list(self.edge_list))
+        slots = list(self.relation_slots) if self.relation_slots else list(self.edge_list)
+        return self.labelled[constraint_id].expression(slots)
+
+    def slot_list(self) -> list[tuple[int, ...]]:
+        if self.relation_slots:
+            return list(self.relation_slots)
+        return list(self.edge_list)
 
 
 def _arity(edge_list, action: int, conditions) -> int:
@@ -72,7 +85,12 @@ def enumerate_labelled(
     *,
     a_max: int | None = None,
     predicates: tuple[str, ...] | list[str] = ("edge",),
+    order: int = 2,
 ) -> tuple[list[Constraint], dict]:
+    if order == 3:
+        return _enumerate_hypergraph(n, k_max, weights, a_max=a_max, predicates=predicates)
+    if order != 2:
+        raise ValueError(f"relation order {order} is not executable")
     if n < 2:
         raise ValueError("N must be at least 2")
     if k_max < 1:
@@ -157,12 +175,13 @@ def grammar_statistics(
     a_max: int | None = None,
     predicates: tuple[str, ...] | list[str] = ("edge",),
     weight_names: tuple[str, ...] | list[str] | None = None,
+    order: int = 2,
 ) -> dict:
     weights = tuple(weight_names) if weight_names is not None else tuple(f"w{i}" for i in range(n_weights))
     if len(weights) != n_weights:
         raise ValueError("weight_names and n_weights disagree")
     _labelled, stats = enumerate_labelled(
-        n, k_max, weights, a_max=a_max, predicates=predicates
+        n, k_max, weights, a_max=a_max, predicates=predicates, order=order
     )
     return stats
 
@@ -174,7 +193,12 @@ def build_grammar(
     *,
     a_max: int | None = None,
     predicates: tuple[str, ...] | list[str] = ("edge",),
+    order: int = 2,
 ) -> Grammar:
+    if order == 3:
+        return _build_hypergraph_grammar(n, k_max, weights, a_max=a_max, predicates=predicates)
+    if order != 2:
+        raise ValueError(f"relation order {order} is not executable")
     weight_tuple = tuple(weights)
     predicate_tuple = tuple(predicates)
     labelled, stats = enumerate_labelled(
@@ -235,6 +259,128 @@ def labelled_simple_count(structural: int, n_weights: int, cardinality: int) -> 
     if cardinality < 1 or structural < cardinality:
         return 0
     return math.comb(structural, cardinality) * (n_weights ** cardinality)
+
+
+def _enumerate_hypergraph(
+    n: int,
+    k_max: int,
+    weights: tuple[str, ...] | list[str],
+    *,
+    a_max: int | None,
+    predicates: tuple[str, ...] | list[str],
+) -> tuple[list[Constraint], dict]:
+    """Independent-hypergraph normal forms. Count literals are not generated."""
+    if n < 3:
+        raise ValueError("independent hypergraph order 3 requires N >= 3")
+    if k_max < 1:
+        raise ValueError("K_max must be at least 1")
+    predicate_set = tuple(predicates)
+    if not predicate_set or any(name not in {"pair", "triad"} for name in predicate_set):
+        raise ValueError(
+            "independent-hypergraph predicates must be a non-empty subset of pair, triad; "
+            f"got {predicate_set}"
+        )
+    weight_tuple = tuple(weights)
+    slots = relation_slots(n, 3)
+    n_pairs = edge_count(n)
+    stats = _empty_stats()
+    stats["structural_by_class"] = {"P->P": 0, "P->T": 0, "T->P": 0, "T->T": 0, "mixed": 0}
+    stats["outside_k_bound"] = 0
+    labelled: list[Constraint] = []
+
+    def kind(index: int) -> str:
+        return "pair" if len(slots[index]) == 2 else "triad"
+
+    actions = [index for index in range(len(slots)) if kind(index) in predicate_set]
+    for action in actions:
+        others = [index for index in range(len(slots)) if index != action and kind(index) in predicate_set]
+        for polarity in (FORM, DISSOLVE):
+            for size in range(k_max):
+                for chosen in itertools.combinations(others, size):
+                    for assignment in itertools.product((0, 1), repeat=size):
+                        conditions = tuple(sorted(zip(chosen, assignment)))
+                        if a_max is not None and _arity(slots, action, conditions) > a_max:
+                            stats["edge_outside_a"] += 1
+                            continue
+                        constraint = Constraint(polarity, action, conditions, weight_tuple[0], ())
+                        stats["structural_by_class"][cross_order_class(constraint, n_pairs)] += 1
+                        stats["edge_structural"] += 1
+                        stats["structural_normal_forms"] += 1
+                        for weight in weight_tuple:
+                            labelled.append(Constraint(polarity, action, conditions, weight, ()))
+    stats["labelled_constraints"] = len(labelled)
+    stats["weight_alphabet_size"] = len(weight_tuple)
+    return labelled, stats
+
+
+def _build_hypergraph_grammar(
+    n: int,
+    k_max: int,
+    weights: tuple[str, ...] | list[str],
+    *,
+    a_max: int | None,
+    predicates: tuple[str, ...] | list[str],
+) -> Grammar:
+    weight_tuple = tuple(weights)
+    predicate_tuple = tuple(predicates)
+    labelled, stats = _enumerate_hypergraph(
+        n, k_max, weight_tuple, a_max=a_max, predicates=predicate_tuple
+    )
+    index = {constraint.key(): i for i, constraint in enumerate(labelled)}
+    if len(index) != len(labelled):
+        raise RuntimeError("labelled hypergraph grammar produced duplicate normal forms")
+    slots = tuple(relation_slots(n, 3))
+    image_rows: list[tuple[int, ...]] = []
+    for slot_map in slot_permutation_maps(n, slots):
+        row = []
+        for constraint in labelled:
+            image = relabel_constraint(constraint, slot_map)
+            try:
+                row.append(index[image.key()])
+            except KeyError as exc:
+                raise RuntimeError("hypergraph grammar is not closed under relabelling") from exc
+        image_rows.append(tuple(row))
+    if labelled:
+        identity = image_rows[0]
+        if identity != tuple(range(len(labelled))):
+            raise RuntimeError("the first permutation is not the identity on constraints")
+    return Grammar(
+        n,
+        k_max,
+        weight_tuple,
+        tuple(edges(n)),
+        tuple(labelled),
+        tuple(image_rows),
+        predicate_tuple,
+        a_max,
+        stats,
+        "hypergraph",
+        3,
+        slots,
+        tuple(Fraction(1) for _ in slots),
+    )
+
+
+def count_canonical_simple_sets(grammar: Grammar, cardinality: int) -> int:
+    """Exact number of canonical structurally-simple sets. Not a symmetry estimate."""
+    from rs_constraint_lab.combinadic import next_combination, unrank_combination
+    from rs_constraint_lab.constraints import structurally_simple
+
+    labelled_n = len(grammar.labelled)
+    if cardinality < 1 or labelled_n < cardinality:
+        return 0
+    total = math.comb(labelled_n, cardinality)
+    count = 0
+    combo = unrank_combination(0, labelled_n, cardinality)
+    for _rank in range(total):
+        chosen = tuple(grammar.labelled[i] for i in combo)
+        if is_canonical_ids(combo, grammar.image) and structurally_simple(chosen):
+            count += 1
+        nxt = next_combination(combo, labelled_n)
+        if nxt is None:
+            break
+        combo = nxt
+    return count
 
 
 def canonical_id_tuple(ids: tuple[int, ...], image: tuple[tuple[int, ...], ...]) -> tuple[int, ...]:

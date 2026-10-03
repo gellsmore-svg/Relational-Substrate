@@ -16,12 +16,16 @@ from rs_constraint_lab.weights import ALPHABET_BASE, ENUMERATED_WEIGHTS
 
 SCHEMA = "rs-constraint-lab.experiment/v1"
 
-# Values the engine will execute. Any other declared value is refused.
-# Absence of an axis means the implemented value, which is the only legal one.
+# Pairwise values the graph engine will execute. Any other declared value is refused.
+# Absence of an axis means the implemented value, which is the only legal one
+# for graph semantics. Independent hypergraph executes O=3 and refuses the
+# graph default. Simplicial semantics are named and refused.
 IMPLEMENTED_AXES = {"G": 0, "S": 0, "H": 0, "L": 0, "O": 2}
+HYPERGRAPH_AXES = {"G": 0, "S": 0, "H": 0, "L": 0, "O": 3}
 COMPOSITIONS = ("structural-simple", "stacked-weight")
 ANALYSES = ("heavy-every-canonical",)
 PREDICATES = ("edge", "count")
+HYPERGRAPH_PREDICATES = ("pair", "triad")
 
 
 def load_spec(path: Path | str) -> dict:
@@ -45,12 +49,18 @@ def validate_spec(data: dict) -> None:
             raise ValueError(f"spec is missing {key}")
     if data["semantics"] not in semantics_names():
         raise ValueError(f"unknown semantics {data['semantics']!r}")
+    if data["semantics"] == "simplicial":
+        raise ValueError(
+            "simplicial semantics are represented and not executed; "
+            "a simplex is not compiled into independent hypergraph semantics"
+        )
     if data["alphabet"] not in ALPHABET_BASE:
         raise ValueError(f"unknown alphabet {data['alphabet']!r}")
-    for axis, implemented in IMPLEMENTED_AXES.items():
+    axes = HYPERGRAPH_AXES if data["semantics"] == "hypergraph" else IMPLEMENTED_AXES
+    for axis, implemented in axes.items():
         if axis not in data:
             continue
-        if not isinstance(data[axis], int):
+        if not isinstance(data[axis], int) or isinstance(data[axis], bool):
             raise ValueError(f"{axis} must be an integer")
         if data[axis] != implemented:
             raise ValueError(
@@ -62,11 +72,21 @@ def validate_spec(data: dict) -> None:
         )
     if "analysis" in data and data["analysis"] not in ANALYSES:
         raise ValueError(f"analysis must be one of {', '.join(ANALYSES)}")
-    predicates = data.get("predicates", ["edge"])
-    if not isinstance(predicates, list) or not predicates:
-        raise ValueError("predicates must be a non-empty list")
-    if any(name not in PREDICATES for name in predicates):
-        raise ValueError(f"predicates must be drawn from {', '.join(PREDICATES)}")
+    if data["semantics"] == "hypergraph":
+        predicates = data.get("predicates", ["pair", "triad"])
+        if not isinstance(predicates, list) or not predicates:
+            raise ValueError("predicates must be a non-empty list")
+        if any(name not in HYPERGRAPH_PREDICATES for name in predicates):
+            raise ValueError(
+                "independent-hypergraph predicates must be drawn from pair, triad; "
+                "count predicates are refused in this generation"
+            )
+    else:
+        predicates = data.get("predicates", ["edge"])
+        if not isinstance(predicates, list) or not predicates:
+            raise ValueError("predicates must be a non-empty list")
+        if any(name not in PREDICATES for name in predicates):
+            raise ValueError(f"predicates must be drawn from {', '.join(PREDICATES)}")
     weights = tuple(data.get("weights", ENUMERATED_WEIGHTS))
     if "neutral" in weights:
         raise ValueError("neutral is the multiplicative identity and is not enumerated")
@@ -80,6 +100,8 @@ def validate_spec(data: dict) -> None:
                 raise ValueError(f"cell is missing {key}")
         if cell["N"] < 2 or cell["K_max"] < 1:
             raise ValueError("cell N must be >= 2 and K_max >= 1")
+        if data["semantics"] == "hypergraph" and cell["N"] < 3:
+            raise ValueError("independent hypergraph order 3 requires N >= 3")
         if any(card not in (1, 2, 3) for card in cell["cardinalities"]):
             raise ValueError("cardinalities must be chosen from 1, 2, 3")
         if "A_max" in cell:
@@ -100,14 +122,17 @@ def effective_options(data: dict) -> dict:
     hash does not change when the default is applied; the semantic version
     and the normalisation version recorded on each shard do.
     """
-    predicates = tuple(data.get("predicates", ["edge"]))
+    hypergraph = data.get("semantics") == "hypergraph"
+    axes = HYPERGRAPH_AXES if hypergraph else IMPLEMENTED_AXES
+    default_predicates = ["pair", "triad"] if hypergraph else ["edge"]
+    predicates = tuple(data.get("predicates", default_predicates))
     return {
         "composition": data.get("composition", "structural-simple"),
         "analysis": data.get("analysis", "heavy-every-canonical"),
         "predicates": predicates,
-        "G": data.get("G", IMPLEMENTED_AXES["G"]),
-        "S": data.get("S", IMPLEMENTED_AXES["S"]),
-        "H": data.get("H", IMPLEMENTED_AXES["H"]),
-        "L": data.get("L", IMPLEMENTED_AXES["L"]),
-        "O": data.get("O", IMPLEMENTED_AXES["O"]),
+        "G": data.get("G", axes["G"]),
+        "S": data.get("S", axes["S"]),
+        "H": data.get("H", axes["H"]),
+        "L": data.get("L", axes["L"]),
+        "O": data.get("O", axes["O"]),
     }

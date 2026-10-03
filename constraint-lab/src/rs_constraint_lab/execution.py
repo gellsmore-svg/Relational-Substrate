@@ -51,12 +51,21 @@ from rs_constraint_lab.generation import (
 from rs_constraint_lab.grammar import (
     build_grammar,
     canonical_id_tuple,
+    count_canonical_simple_sets,
     grammar_statistics,
     labelled_simple_count,
 )
 from rs_constraint_lab.kernel import build_kernel
 from rs_constraint_lab.observables import equivalent_kernel, heavy_observables, light_observables
 from rs_constraint_lab.spec import effective_options, spec_hash, validate_spec
+from rs_constraint_lab.higher_order import (
+    absorb_higher_order,
+    comparison_directory,
+    file_sha256,
+    higher_order_science,
+    orbit_catalogue,
+    serialise_higher_order,
+)
 from rs_constraint_lab.state import canonical_states, n_states
 from rs_constraint_lab.trajectory import sample_trajectory
 from rs_constraint_lab.version import (
@@ -67,12 +76,15 @@ from rs_constraint_lab.version import (
     EXECUTION_PRINCIPLE,
     GRAMMAR_COUNT,
     GRAMMAR_EDGE,
+    GRAMMAR_HYPERGRAPH,
     MAX_ATTEMPTS,
     MAX_TASKS_PER_CHILD,
     NORMALISATION_STACKED,
     NORMALISATION_STRUCTURAL,
     PROFILE_NOTE,
     SEMANTIC_VERSION,
+    engine_version_for,
+    semantic_version_for,
 )
 from rs_constraint_lab.weights import ENUMERATED_WEIGHTS, alphabet_factors
 
@@ -105,7 +117,26 @@ def _python_mm() -> str:
     return ".".join(sys.version.split()[0].split(".")[:2])
 
 
-def _grammar_version(predicates) -> str:
+def _hypergraph_accounting(grammar) -> dict:
+    stats = grammar.stats or {}
+    return {
+        "labelled_states": 1 << len(grammar.relation_slots),
+        "relation_slots": len(grammar.relation_slots),
+        "raw_structural_templates": stats.get("structural_normal_forms", 0),
+        "removed_syntax_invalid": 0,
+        "removed_redundant_normalisation": 0,
+        "outside_k_bound": stats.get("outside_k_bound", 0),
+        "outside_a_bound": stats.get("edge_outside_a", 0),
+        "structural_normal_forms": stats.get("structural_normal_forms", 0),
+        "weight_alphabet_size": stats.get("weight_alphabet_size", 0),
+        "labelled_constraints": stats.get("labelled_constraints", 0),
+        "structural_by_class": dict(stats.get("structural_by_class") or {}),
+    }
+
+
+def _grammar_version(predicates, semantics: str = "graph") -> str:
+    if semantics == "hypergraph":
+        return GRAMMAR_HYPERGRAPH
     if "count" in predicates:
         return GRAMMAR_COUNT
     return GRAMMAR_EDGE
@@ -123,14 +154,15 @@ def _weights_of(spec: dict) -> list[str]:
 
 def _header(spec: dict, shard_items: int) -> dict:
     options = effective_options(spec)
-    return {
+    semantics = spec["semantics"]
+    header = {
         "experiment_id": spec["experiment_id"],
         "generation": spec["generation"],
         "spec_hash": spec_hash(spec),
-        "engine_version": ENGINE_VERSION,
-        "semantic_version": SEMANTIC_VERSION,
+        "engine_version": engine_version_for(semantics),
+        "semantic_version": semantic_version_for(semantics),
         "normalisation_version": _normalisation(options["composition"]),
-        "grammar_version": _grammar_version(options["predicates"]),
+        "grammar_version": _grammar_version(options["predicates"], semantics),
         "analysis": options["analysis"],
         "composition": options["composition"],
         "predicates": list(options["predicates"]),
@@ -142,6 +174,13 @@ def _header(spec: dict, shard_items: int) -> dict:
         "git_commit": _git_commit(),
         "principle": EXECUTION_PRINCIPLE,
     }
+    if semantics == "hypergraph":
+        index = comparison_directory()
+        header["rho3"] = "1"
+        header["comparison_kernel_index_sha256"] = file_sha256(index / "kernel-ids-n3-k3.txt")
+        header["comparison_qualitative_index_sha256"] = file_sha256(index / "qualitative-ids-n3-k3.txt")
+        header["comparison_support_index_sha256"] = file_sha256(index / "families-n3-k3.jsonl")
+    return header
 
 
 def _require_compatible(plan: dict, spec: dict, shard_items: int) -> None:
@@ -166,11 +205,23 @@ def _require_compatible(plan: dict, spec: dict, shard_items: int) -> None:
                 f"refusing to resume: {key} is {stored.get(key)!r} in the plan and {current[key]!r} now. "
                 "Use a new output directory. Completed shards were not modified."
             )
+    for key in (
+        "rho3",
+        "comparison_kernel_index_sha256",
+        "comparison_qualitative_index_sha256",
+        "comparison_support_index_sha256",
+    ):
+        if key in stored or key in current:
+            if stored.get(key) != current.get(key):
+                raise IncompatibleGeneration(
+                    f"refusing to resume: {key} is {stored.get(key)!r} in the plan and {current.get(key)!r} now. "
+                    "Use a new output directory. Completed shards were not modified."
+                )
 
 
 def _shard_identity(spec: dict, header: dict, cell_index: int, cell: dict, cardinality: int, start: int, end: int) -> dict:
     options = effective_options(spec)
-    return {
+    identity = {
         "G": options["G"],
         "H": options["H"],
         "L": options["L"],
@@ -196,6 +247,15 @@ def _shard_identity(spec: dict, header: dict, cell_index: int, cell: dict, cardi
         "start": start,
         "weights": _weights_of(spec),
     }
+    if spec.get("semantics") == "hypergraph":
+        identity["engine_version"] = header["engine_version"]
+        identity["semantic_version"] = header["semantic_version"]
+        identity["semantics"] = "hypergraph"
+        identity["rho3"] = header["rho3"]
+        identity["comparison_kernel_index_sha256"] = header["comparison_kernel_index_sha256"]
+        identity["comparison_qualitative_index_sha256"] = header["comparison_qualitative_index_sha256"]
+        identity["comparison_support_index_sha256"] = header["comparison_support_index_sha256"]
+    return identity
 
 
 def _shard_id(identity: dict) -> str:
@@ -220,21 +280,43 @@ def build_plan(spec: dict, shard_items: int | None = None) -> dict:
         n = int(cell["N"])
         k_max = int(cell["K_max"])
         a_max = cell.get("A_max")
-        stats = grammar_statistics(
-            n,
-            k_max,
-            len(weights),
-            a_max=a_max,
-            predicates=options["predicates"],
-            weight_names=tuple(weights),
-        )
-        edge = template_accounting(n, k_max, len(weights), a_max=a_max)
+        hypergraph_grammar = None
+        orbits = None
+        if spec["semantics"] == "hypergraph":
+            hypergraph_grammar = build_grammar(
+                n,
+                k_max,
+                weights,
+                a_max=a_max,
+                predicates=options["predicates"],
+                order=options["O"],
+            )
+            stats = hypergraph_grammar.stats
+            edge = _hypergraph_accounting(hypergraph_grammar)
+            orbits = orbit_catalogue(n) if n == 3 else None
+            labelled_state_count = edge["labelled_states"]
+            canonical_state_count = orbits["orbit_count"] if orbits else None
+        else:
+            stats = grammar_statistics(
+                n,
+                k_max,
+                len(weights),
+                a_max=a_max,
+                predicates=options["predicates"],
+                weight_names=tuple(weights),
+            )
+            edge = template_accounting(n, k_max, len(weights), a_max=a_max)
+            labelled_state_count = n_states(n)
+            canonical_state_count = len(canonical_states(n))
         labelled = stats["labelled_constraints"]
         structural = stats["structural_normal_forms"]
         card_estimates = {}
         for cardinality in cell["cardinalities"]:
             combinations = math.comb(labelled, cardinality) if labelled >= cardinality else 0
             simple = labelled_simple_count(structural, len(weights), cardinality)
+            exact_canonical = None
+            if hypergraph_grammar is not None and 0 < combinations <= 2_000_000:
+                exact_canonical = count_canonical_simple_sets(hypergraph_grammar, cardinality)
             shard_count = 0 if combinations == 0 else math.ceil(combinations / items)
             upper = simple * 400
             disk += upper
@@ -244,6 +326,7 @@ def build_plan(spec: dict, shard_items: int | None = None) -> dict:
                 "labelled_stacked": combinations - simple,
                 "canonicalisation_comparisons": combinations * math.factorial(n),
                 "symmetry_estimate_simple_over_factorial": simple / math.factorial(n) if n else 0,
+                "canonical_simple_exact": exact_canonical,
                 "shards": shard_count,
                 "disk_upper_bound_bytes": upper,
             }
@@ -271,8 +354,9 @@ def build_plan(spec: dict, shard_items: int | None = None) -> dict:
                 "N": n,
                 "K_max": k_max,
                 "A_max": a_max,
-                "labelled_states": n_states(n),
-                "canonical_states": len(canonical_states(n)),
+                "labelled_states": labelled_state_count,
+                "canonical_states": canonical_state_count,
+                "orbits": orbits,
                 "grammar": stats,
                 "edge_accounting": edge,
                 "cardinalities": card_estimates,
@@ -321,10 +405,24 @@ def format_plan(spec: dict, shard_items: int | None = None) -> str:
             f"cell N={cell['N']} K<={cell['K_max']} A_max={cell['A_max']} "
             f"states {cell['labelled_states']} canonical_states {cell['canonical_states']}"
         )
-        lines.append(
-            f"  edge structural {edge['structural_normal_forms']} edge labelled {edge['labelled_constraints']} "
-            f"outside A {edge['outside_a_bound']}"
-        )
+        if "structural_by_class" in edge:
+            classes = ", ".join(f"{name} {count}" for name, count in edge["structural_by_class"].items())
+            lines.append(
+                f"  relation structural {edge['structural_normal_forms']} "
+                f"labelled {edge['labelled_constraints']} slots {edge['relation_slots']} "
+                f"outside A {edge['outside_a_bound']}"
+            )
+            lines.append(f"  cross-order structural {classes}")
+            if cell.get("orbits"):
+                lines.append(
+                    f"  orbits {cell['orbits']['orbit_count']} "
+                    f"({', '.join(row['name'] + ' x' + str(row['size']) for row in cell['orbits']['orbits'])})"
+                )
+        else:
+            lines.append(
+                f"  edge structural {edge['structural_normal_forms']} edge labelled {edge['labelled_constraints']} "
+                f"outside A {edge['outside_a_bound']}"
+            )
         lines.append(
             f"  grammar structural {grammar['structural_normal_forms']} "
             f"count structural {grammar['count_structural']} "
@@ -337,6 +435,7 @@ def format_plan(spec: dict, shard_items: int | None = None) -> str:
                 f"  cardinality {cardinality}: combinations {info['labelled_combinations']} "
                 f"labelled-simple {info['labelled_simple']} labelled-stacked {info['labelled_stacked']} "
                 f"symmetry-estimate {info['symmetry_estimate_simple_over_factorial']:.1f} "
+                f"canonical-simple-exact {info.get('canonical_simple_exact')} "
                 f"canonicalisation-comparisons {info['canonicalisation_comparisons']} "
                 f"shards {info['shards']}"
             )
@@ -352,8 +451,8 @@ def _initial_progress(plan: dict) -> dict:
         "experiment_id": plan["header"]["experiment_id"],
         "generation": plan["header"]["generation"],
         "spec_hash": plan["header"]["spec_hash"],
-        "engine_version": ENGINE_VERSION,
-        "semantic_version": SEMANTIC_VERSION,
+        "engine_version": plan["header"]["engine_version"],
+        "semantic_version": plan["header"]["semantic_version"],
         "total_shards": len(plan["shards"]),
         "pending": len(plan["shards"]),
         "running": 0,
@@ -411,7 +510,9 @@ def _receipt_valid(out_dir: Path, shard: dict) -> bool:
         return False
     if receipt.get("identity") != shard["identity"]:
         return False
-    if receipt.get("engine_version") != ENGINE_VERSION or receipt.get("semantic_version") != SEMANTIC_VERSION:
+    if receipt.get("engine_version") != shard["identity"]["engine_version"]:
+        return False
+    if receipt.get("semantic_version") != shard["identity"]["semantic_version"]:
         return False
     if receipt.get("result_sha256") != sha256_file(result_path):
         return False
@@ -481,8 +582,8 @@ def _write_failure(out_dir: Path, shard: dict, attempt: int, payload: dict) -> N
         "message": payload.get("message", "worker exited without a receipt"),
         "traceback": payload.get("traceback", ""),
         "timestamp": _now(),
-        "engine_version": ENGINE_VERSION,
-        "semantic_version": SEMANTIC_VERSION,
+        "engine_version": shard["identity"]["engine_version"],
+        "semantic_version": shard["identity"]["semantic_version"],
         "spec_hash": shard["identity"]["spec_hash"],
     }
     atomic_write_json(out_dir / "shards" / shard["shard_id"] / "failure.json", body)
@@ -834,19 +935,45 @@ def _keep(bucket: list, expressions, limit: int = 8) -> None:
     del bucket[limit:]
 
 
+def _kernel_args(grammar) -> dict:
+    if grammar.relation_slots:
+        return {
+            "relation_slots": grammar.relation_slots,
+            "baseline_weights": grammar.baseline_weights,
+        }
+    return {}
+
+
+def _slim_higher_order(box: dict, science: dict) -> dict:
+    serial = serialise_higher_order(box)
+    for kind in ("kernel_ids_by_class", "support_ids_by_class", "qualitative_ids_by_class"):
+        serial[kind] = {name: len(values) for name, values in serial.get(kind, {}).items()}
+    serial["qualitative_family_count"] = len(serial.get("qualitative_ids") or [])
+    serial.pop("qualitative_ids", None)
+    for row in serial.get("sensitivity", {}).values():
+        row["qualitative_family_count"] = len(row.get("qualitative_ids") or [])
+        row.pop("qualitative_ids", None)
+    serial["id_digest"] = {
+        "qualitative_ids_sha256": science["qualitative_ids_sha256"],
+        "kernel_ids_sha256": science["kernel_ids_sha256"],
+    }
+    return serial
+
+
 def _reference_block(spec: dict, grammar, factors, tables, horizon: int) -> list[dict]:
     blocks = []
     alphabet = spec["alphabet"]
     for text in spec.get("reference_expressions", []):
+        slot_list = grammar.slot_list()
         try:
-            constraint = parse_expression(text, grammar.n)
+            constraint = parse_expression(text, grammar.n, order=grammar.order)
         except ValueError as exc:
             blocks.append({"expression": text, "in_grammar": False, "reason": str(exc)})
             continue
         if constraint.k() > grammar.k_max or constraint.weight not in grammar.weights:
             blocks.append({"expression": text, "in_grammar": False, "reason": "outside this cell's K bound or weight list"})
             continue
-        if grammar.a_max is not None and constraint.arity(list(grammar.edge_list)) > grammar.a_max:
+        if grammar.a_max is not None and constraint.arity(slot_list) > grammar.a_max:
             blocks.append({"expression": text, "in_grammar": False, "reason": "arity exceeds A_max"})
             continue
         found = next((i for i, item in enumerate(grammar.labelled) if item.key() == constraint.key()), None)
@@ -856,8 +983,9 @@ def _reference_block(spec: dict, grammar, factors, tables, horizon: int) -> list
         canon = canonical_id_tuple((found,), grammar.image)
         canonical_expression = grammar.expression(canon[0])
         constraints = (grammar.labelled[canon[0]],)
-        kernel = build_kernel(grammar.n, Choreography(0, 0, constraints), factors)
-        baseline = build_kernel(grammar.n, Choreography(0, 0, ()), factors)
+        kernel_args = _kernel_args(grammar)
+        kernel = build_kernel(grammar.n, Choreography(0, 0, constraints), factors, **kernel_args)
+        baseline = build_kernel(grammar.n, Choreography(0, 0, ()), factors, **kernel_args)
         light = light_observables(kernel, baseline)
         light.pop("modes", None)
         light["equivalent_to_baseline"] = equivalent_kernel(kernel, baseline)
@@ -889,13 +1017,15 @@ def _reference_block(spec: dict, grammar, factors, tables, horizon: int) -> list
 
 def _write_exemplars(spec, grammar, factors, digest, families, cancellations, out_dir: Path) -> list[dict]:
     written = []
-    edge_list = list(grammar.edge_list)
+    edge_list = grammar.slot_list()
     seeds = list(spec.get("trajectory", {}).get("seeds", [0]))
+    kernel_args = _kernel_args(grammar)
+    recorded_engine = engine_version_for(spec["semantics"]) if spec["semantics"] == "hypergraph" else None
     horizon = int(spec.get("trajectory", {}).get("horizon", 32))
     targets = [("baseline", [], [0])]
     for reference in spec.get("reference_expressions", [])[:6]:
         try:
-            constraint = parse_expression(reference, grammar.n)
+            constraint = parse_expression(reference, grammar.n, order=grammar.order)
         except ValueError:
             continue
         if any(item.key() == constraint.key() for item in grammar.labelled):
@@ -919,8 +1049,8 @@ def _write_exemplars(spec, grammar, factors, digest, families, cancellations, ou
             break
     complete = (1 << grammar.n_edges) - 1 if False else (1 << len(edge_list)) - 1
     for label, expressions, seed_list in targets:
-        constraints = tuple(parse_expression(text, grammar.n) for text in expressions)
-        kernel = build_kernel(grammar.n, Choreography(0, 0, constraints), factors)
+        constraints = tuple(parse_expression(text, grammar.n, order=grammar.order) for text in expressions)
+        kernel = build_kernel(grammar.n, Choreography(0, 0, constraints), factors, **kernel_args)
         set_id = _set_id(spec["alphabet"], expressions) if expressions else _set_id(spec["alphabet"], ["baseline"])
         for seed in seed_list:
             for initial, initial_name in ((0, "empty"), (complete, "complete")):
@@ -934,6 +1064,7 @@ def _write_exemplars(spec, grammar, factors, digest, families, cancellations, ou
                     horizon,
                     digest,
                     set_id,
+                    engine_version=recorded_engine,
                 )
                 record["n"] = grammar.n
                 record["alphabet"] = spec["alphabet"]
@@ -1004,6 +1135,7 @@ def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path
                 "threshold_motifs": [],
                 "counts": {},
                 "work_seconds": 0.0,
+                "higher_order": {},
             },
         )
         card = str(shard["cardinality"])
@@ -1034,6 +1166,8 @@ def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path
         for name in ("checks", "modal_unchanged", "support_unchanged"):
             bucket["sensitivity"][name] += result["sensitivity"][name]
         bucket["threshold_motifs"].extend(result["threshold_motifs"])
+        if result.get("higher_order"):
+            absorb_higher_order(bucket["higher_order"], result["higher_order"])
         receipt = read_json(out_dir / "shards" / shard["shard_id"] / "receipt.json")
         bucket["work_seconds"] += float(receipt.get("elapsed_seconds") or 0.0)
 
@@ -1049,18 +1183,22 @@ def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path
             "threshold_motifs": [],
             "counts": {},
             "work_seconds": 0.0,
+            "higher_order": {},
         }
         n = int(cell["N"])
         k_max = int(cell["K_max"])
+        grammar_order = 3 if spec["semantics"] == "hypergraph" else 2
         grammar = build_grammar(
             n,
             k_max,
             weights,
             a_max=cell.get("A_max"),
             predicates=tuple(options["predicates"]),
+            order=grammar_order,
         )
-        tables = RelabelTables(n)
-        baseline_kernel = build_kernel(n, Choreography(0, 0, ()), factors)
+        tables = RelabelTables(n, grammar.relation_slots or None)
+        kernel_args = _kernel_args(grammar)
+        baseline_kernel = build_kernel(n, Choreography(0, 0, ()), factors, **kernel_args)
         baseline_light = light_observables(baseline_kernel, baseline_kernel)
         baseline_light.pop("modes", None)
         baseline_heavy = heavy_observables(baseline_kernel, horizon, 0)
@@ -1169,6 +1307,9 @@ def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path
             "extremes": bucket["extremes"],
             "not_searched": _not_searched(n, k_max, list(cell["cardinalities"]), estimate["edge_accounting"]),
         }
+        if bucket.get("higher_order") and bucket["higher_order"].get("sets_by_class"):
+            cell_summary["higher_order_science"] = higher_order_science(bucket["higher_order"])
+            cell_summary["higher_order"] = _slim_higher_order(bucket["higher_order"], cell_summary["higher_order_science"])
         if compare_to is not None:
             cell_summary["territory"] = _classify_territory(bucket["threshold_motifs"], Path(compare_to), n)
             territory_cells.append({"N": n, "K_max": k_max, "territory": cell_summary["territory"]})
@@ -1180,10 +1321,16 @@ def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path
                         f"coverage gap at N={n} cardinality {cardinality}: "
                         f"scanned pieces do not sum to {counts['labelled_combinations']}"
                     )
+                planned = estimate["cardinalities"][cardinality].get("canonical_simple_exact")
+                if planned is not None and counts["canonical"] != planned:
+                    raise RuntimeError(
+                        f"canonical coverage at N={n} cardinality {cardinality} is "
+                        f"{counts['canonical']} and the exact plan count is {planned}"
+                    )
     summary = {
         "status": progress["status"],
-        "engine_version": ENGINE_VERSION,
-        "semantic_version": SEMANTIC_VERSION,
+        "engine_version": plan["header"]["engine_version"],
+        "semantic_version": plan["header"]["semantic_version"],
         "git_commit": _git_commit(),
         "python": sys.version.split()[0],
         "numpy": np.__version__,
@@ -1249,6 +1396,8 @@ def _science(summary: dict) -> dict:
                 "territory": cell.get("territory"),
             }
         )
+        if cell.get("higher_order_science"):
+            cells[-1]["higher_order"] = cell["higher_order_science"]
     return {
         "status": summary["status"],
         "spec_hash": summary["spec_hash"],

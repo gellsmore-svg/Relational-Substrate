@@ -233,9 +233,18 @@ def test_halt_completion_is_marked_and_not_a_silent_toggle():
 
 
 def test_hypergraph_is_not_compiled_into_pairs():
+    from rs_constraint_lab.state import relation_slots
+
     semantics = get_semantics("hypergraph")
-    with pytest.raises(NotImplementedError, match="not reduced to a collection of pairwise"):
-        semantics.relation_slots(3)
+    assert semantics.relation_slots(3) == 4
+    assert semantics.relation_slots(3) != get_semantics("graph").relation_slots(3)
+    slots = relation_slots(3, 3)
+    assert slots[:3] == [(0, 1), (0, 2), (1, 2)]
+    assert slots[3] == (0, 1, 2)
+    triad_only = 1 << 3
+    triangle = 0b111
+    assert (triad_only & 0b111) == 0
+    assert (triangle & (1 << 3)) == 0
     simplicial = get_semantics("simplicial")
     with pytest.raises(NotImplementedError, match="not identified with a hyperedge"):
         simplicial.relation_slots(3)

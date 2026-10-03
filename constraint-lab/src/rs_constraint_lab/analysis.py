@@ -234,6 +234,9 @@ def execute_shard_task(task: dict) -> dict:
 
 def _execute(task: dict) -> None:
     identity = task["identity"]
+    if task["spec"].get("semantics") == "hypergraph":
+        _execute_hypergraph(task)
+        return
     if identity["semantic_version"] != SEMANTIC_VERSION or identity["engine_version"] != ENGINE_VERSION:
         raise RuntimeError("shard identity does not match this engine")
     shard_dir = Path(task["shard_dir"])
@@ -497,3 +500,335 @@ def _analyse_one(
                 else False,
             }
         )
+
+
+def _execute_hypergraph(task: dict) -> None:
+    """Shard body for independent-hypergraph semantics.
+
+    The graph executor returns before this runs. Pairwise shard receipts
+    still record engine 0.2.0.
+    """
+    from rs_constraint_lab.higher_order import (
+        coupling_report,
+        fresh_higher_order,
+        kernel_at_rho,
+        load_comparison_indexes,
+        note_higher_order,
+        note_sensitivity,
+        serialise_higher_order,
+    )
+    from rs_constraint_lab.version import engine_version_for, semantic_version_for
+
+    identity = task["identity"]
+    if identity.get("engine_version") != engine_version_for("hypergraph"):
+        raise RuntimeError("shard identity does not match the independent-hypergraph engine")
+    if identity.get("semantic_version") != semantic_version_for("hypergraph"):
+        raise RuntimeError("shard identity does not match the independent-hypergraph semantics")
+    if int(task["n"]) != 3:
+        raise RuntimeError("this generation executes independent hypergraph only at N=3")
+    shard_dir = Path(task["shard_dir"])
+    shard_dir.mkdir(parents=True, exist_ok=True)
+    atomic_write_json(
+        shard_dir / "running.json",
+        {"shard_id": task["shard_id"], "attempt": task["attempt"], "started_at": _now(), "pid": os.getpid()},
+    )
+    _apply_fault(task, shard_dir)
+    started = time.perf_counter()
+    spec = task["spec"]
+    options = effective_options(spec)
+    n = int(task["n"])
+    k_max = int(task["k_max"])
+    cardinality = int(task["cardinality"])
+    grammar = build_grammar(
+        n,
+        k_max,
+        spec.get("weights", list(ENUMERATED_WEIGHTS)),
+        a_max=task["a_max"],
+        predicates=tuple(options["predicates"]),
+        order=3,
+    )
+    labelled_n = len(grammar.labelled)
+    factors = alphabet_factors(spec["alphabet"])
+    horizon = int(spec.get("rise_release_horizon", 4))
+    slots = grammar.relation_slots
+    baselines = grammar.baseline_weights
+    baseline_kernel = build_kernel(
+        n, Choreography(0, 0, ()), factors, relation_slots=slots, baseline_weights=baselines
+    )
+    baseline_heavy = heavy_observables(baseline_kernel, horizon, 0)
+    baseline_rise = baseline_heavy.get("rise_then_release_exact")
+    baseline_rise_float = baseline_heavy.get("rise_then_release")
+    tables = RelabelTables(n, slots) if labelled_n else None
+    indexes = load_comparison_indexes()
+    sensitivity_factors = [alphabet_factors(name) for name in spec.get("sensitivity_alphabets", [])]
+    slot_list = grammar.slot_list()
+    families: dict = {}
+    singles = []
+    extremes: dict = {}
+    cancellations = {
+        "genuine_global": 0,
+        "local": 0,
+        "inherited_baseline": 0,
+        "genuine_global_examples": [],
+        "local_examples": [],
+        "inherited_baseline_examples": [],
+    }
+    sensitivity = {"checks": 0, "modal_unchanged": 0, "support_unchanged": 0}
+    higher = fresh_higher_order(indexes)
+    counts = {
+        "scanned": 0,
+        "symmetry_removed": 0,
+        "stacked_canonical": 0,
+        "stacked_analysed": 0,
+        "analysed": 0,
+    }
+    start = int(task["start"])
+    end = int(task["end"])
+    rho_values = (("1/2", Fraction(1, 2)), ("2", Fraction(2)))
+    if labelled_n >= cardinality and end > start:
+        combo = unrank_combination(start, labelled_n, cardinality)
+        for _index in range(start, end):
+            ids = combo
+            counts["scanned"] += 1
+            constraints = tuple(grammar.labelled[i] for i in ids)
+            simple = structurally_simple(constraints)
+            if not is_canonical_ids(ids, grammar.image):
+                counts["symmetry_removed"] += 1
+            elif options["composition"] == "structural-simple" and not simple:
+                counts["stacked_canonical"] += 1
+            else:
+                if not simple:
+                    counts["stacked_analysed"] += 1
+                _analyse_hypergraph_one(
+                    grammar,
+                    constraints,
+                    factors,
+                    baseline_kernel,
+                    baseline_rise,
+                    baseline_rise_float,
+                    tables,
+                    indexes,
+                    horizon,
+                    sensitivity_factors,
+                    slot_list,
+                    spec["alphabet"],
+                    cardinality,
+                    families,
+                    singles,
+                    extremes,
+                    cancellations,
+                    sensitivity,
+                    higher,
+                    rho_values,
+                    n,
+                )
+                counts["analysed"] += 1
+            combo = next_combination(combo, labelled_n)
+            if combo is None and _index + 1 < end:
+                raise RuntimeError("combination index ended before the shard boundary")
+    counts["canonical_including_stacked"] = counts["stacked_canonical"] + counts["analysed"]
+    counts["canonical_simple"] = counts["analysed"] - counts["stacked_analysed"]
+    result = {
+        "identity": identity,
+        "counts": counts,
+        "families": _serialise_families(families),
+        "singles": singles,
+        "extremes": extremes,
+        "cancellations": cancellations,
+        "sensitivity": sensitivity,
+        "threshold_motifs": [],
+        "higher_order": serialise_higher_order(higher),
+    }
+    elapsed = time.perf_counter() - started
+    result_path = shard_dir / "result.json"
+    atomic_write_json(result_path, result)
+    digest = sha256_file(result_path)
+    receipt = {
+        "status": "completed",
+        "shard_id": task["shard_id"],
+        "identity": identity,
+        "result_sha256": digest,
+        "attempt": task["attempt"],
+        "engine_version": identity["engine_version"],
+        "semantic_version": identity["semantic_version"],
+        "spec_hash": identity["spec_hash"],
+        "grammar_version": identity["grammar_version"],
+        "normalisation_version": identity["normalisation_version"],
+        "python": sys.version.split()[0],
+        "numpy": __import__("numpy").__version__,
+        "counts": counts,
+        "elapsed_seconds": round(elapsed, 6),
+        "finished_at": _now(),
+    }
+    atomic_write_json(shard_dir / "receipt.json", receipt)
+    (shard_dir / "running.json").unlink(missing_ok=True)
+
+
+def _analyse_hypergraph_one(
+    grammar,
+    constraints,
+    factors,
+    baseline_kernel,
+    baseline_rise,
+    baseline_rise_float,
+    tables,
+    indexes,
+    horizon,
+    sensitivity_factors,
+    slot_list,
+    alphabet,
+    cardinality,
+    families,
+    singles,
+    extremes,
+    cancellations,
+    sensitivity,
+    higher,
+    rho_values,
+    n,
+) -> None:
+    from rs_constraint_lab.dynamics import classify_cancellation, family_ids
+    from rs_constraint_lab.higher_order import coupling_report, kernel_at_rho, note_higher_order, note_sensitivity
+
+    expressions = tuple(sorted(constraint.expression(slot_list) for constraint in constraints))
+    kernel = build_kernel(
+        n,
+        Choreography(0, 0, constraints),
+        factors,
+        relation_slots=grammar.relation_slots,
+        baseline_weights=grammar.baseline_weights,
+    )
+    light = light_observables(kernel, baseline_kernel)
+    light.pop("modes", None)
+    light.pop("deadlock_states", None)
+    same = equivalent_kernel(kernel, baseline_kernel)
+    light["equivalent_to_baseline"] = same
+    heavy = heavy_observables(kernel, horizon, 0)
+    report = coupling_report(kernel, constraints, indexes)
+    heavy["reducibility_class"] = report["reducibility_class"]
+    heavy["emergent_memory"] = report["emergent_memory"]
+    heavy["emergent_memory_tv_exact"] = report["emergent_memory_tv_exact"]
+    heavy["triad_predicts_next_pair"] = report["triad_predicts_next_pair"]
+    heavy["pair_predicts_next_triad"] = report["pair_predicts_next_triad"]
+    heavy["pairwise_jump_tv_exact"] = report["pairwise_jump_tv_exact"]
+    excess_exact = None
+    excess_float = None
+    if baseline_rise and heavy.get("rise_then_release_exact"):
+        excess = Fraction(heavy["rise_then_release_exact"]) - Fraction(baseline_rise)
+        excess_exact = f"{excess.numerator}/{excess.denominator}"
+        excess_float = float(excess)
+    elif baseline_rise_float is not None and heavy.get("rise_then_release") is not None:
+        excess_float = heavy["rise_then_release"] - baseline_rise_float
+    tokens = canonical_tokens(kernel, tables)
+    ids_map = family_ids(n, tokens)
+    signature = observable_signature(n, light, heavy)
+    named: set[int] = set()
+    for constraint in constraints:
+        named.update(slot_list[constraint.action])
+        for slot, _bit in constraint.conditions:
+            named.update(slot_list[slot])
+    arity = len(named)
+    k_here = max(constraint.k() for constraint in constraints)
+    qualitative = ids_map["qualitative_family"]
+    family = families.get(qualitative)
+    if family is None:
+        family = _fresh_family(qualitative, cardinality, expressions, k_here, arity, light, ids_map, n)
+        families[qualitative] = family
+    _note_family(family, cardinality, expressions, k_here, arity, light, same, False, ids_map, signature)
+    _record_ranges(family, light, heavy, excess_exact, excess_float)
+    kind = classify_cancellation(
+        n,
+        constraints,
+        factors,
+        kernel,
+        baseline_kernel,
+        relation_slots=grammar.relation_slots,
+        baseline_weights=grammar.baseline_weights,
+    )
+    if kind is not None:
+        cancellations[kind] += 1
+        _keep_examples(cancellations[f"{kind}_examples"], expressions)
+    kernel_id = ids_map["exact_kernel_family"]
+    consider_extreme(extremes, "rise_excess_max", _fraction(excess_exact) if excess_exact else excess_float, expressions, kernel_id, higher=True)
+    consider_extreme(extremes, "rise_excess_min", _fraction(excess_exact) if excess_exact else excess_float, expressions, kernel_id, higher=False)
+    consider_extreme(extremes, "closing_max", _fraction(light.get("closing_bias_exact")), expressions, kernel_id, higher=True)
+    consider_extreme(extremes, "closing_min", _fraction(light.get("closing_bias_exact")), expressions, kernel_id, higher=False)
+    consider_extreme(extremes, "shift_max", _fraction(light.get("max_abs_dissolve_shift_exact")), expressions, kernel_id, higher=True)
+    consider_extreme(extremes, "entropy_max", heavy.get("entropy_rate_bits"), expressions, kernel_id, higher=True)
+    consider_extreme(extremes, "entropy_min", heavy.get("entropy_rate_bits"), expressions, kernel_id, higher=False)
+    consider_extreme(extremes, "triad_occupancy_max", _fraction(heavy.get("triad_occupancy_exact")), expressions, kernel_id, higher=True)
+    consider_extreme(extremes, "triad_occupancy_min", _fraction(heavy.get("triad_occupancy_exact")), expressions, kernel_id, higher=False)
+    consider_extreme(extremes, "emergent_memory_tv_max", _fraction(report["emergent_memory_tv_exact"]), expressions, kernel_id, higher=True)
+    note_higher_order(higher, report, expressions, ids_map)
+    for rho_key, rho in rho_values:
+        other = kernel_at_rho(n, constraints, factors, grammar.relation_slots, rho)
+        other_ids = family_ids(n, canonical_tokens(other, tables))
+        other_report = coupling_report(other, constraints, indexes)
+        note_sensitivity(higher, rho_key, ids_map, other_ids, report, other_report)
+    if cardinality == 1:
+        singles.append(
+            {
+                "N": n,
+                "alphabet": alphabet,
+                "set_id": _set_id(alphabet, list(expressions)),
+                "expressions": " && ".join(expressions),
+                "K": k_here,
+                "A": arity,
+                "cross_order_class": report["cross_order_class"],
+                "reducibility_class": report["reducibility_class"],
+                "equivalent_to_baseline": same,
+                "family_id": qualitative,
+                "exact_kernel_family": kernel_id,
+                "support_matches_baseline": light["support_matches_baseline"],
+                "n_deadlock": light["n_deadlock"],
+                "n_recurrent": light["n_recurrent"],
+                "periods": " ".join(str(item) for item in light["periods"]),
+                "max_abs_dissolve_shift": light["max_abs_dissolve_shift"],
+                "max_abs_dissolve_shift_exact": light["max_abs_dissolve_shift_exact"],
+                "closing_bias": light["closing_bias"],
+                "closing_bias_exact": light["closing_bias_exact"],
+                "mean_edge_density": heavy.get("mean_edge_density"),
+                "mean_edge_density_exact": heavy.get("mean_edge_density_exact"),
+                "entropy_rate_bits": heavy.get("entropy_rate_bits"),
+                "tv_from_uniform": heavy.get("tv_from_uniform"),
+                "tv_from_uniform_exact": heavy.get("tv_from_uniform_exact"),
+                "halt_mass": heavy.get("halt_mass"),
+                "halt_mass_exact": heavy.get("halt_mass_exact"),
+                "rise_then_release": heavy.get("rise_then_release"),
+                "rise_then_release_exact": heavy.get("rise_then_release_exact"),
+                "rise_then_release_excess": excess_float,
+                "rise_then_release_excess_exact": excess_exact,
+                "reversibility_defect": heavy.get("reversibility_defect"),
+                "reversibility_defect_exact": heavy.get("reversibility_defect_exact"),
+                "triangle_mass": heavy.get("triangle_mass"),
+                "triangle_mass_exact": heavy.get("triangle_mass_exact"),
+                "disjoint_pair_mass": heavy.get("disjoint_pair_mass"),
+                "stationary_arithmetic": heavy.get("stationary_arithmetic"),
+                "stationary_residual": heavy.get("stationary_residual"),
+                "triad_occupancy_exact": heavy.get("triad_occupancy_exact"),
+                "pair_density_triad_absent_exact": heavy.get("pair_density_triad_absent_exact"),
+                "pair_density_triad_present_exact": heavy.get("pair_density_triad_present_exact"),
+                "triad_formation_flux_exact": heavy.get("triad_formation_flux_exact"),
+                "triad_dissolution_flux_exact": heavy.get("triad_dissolution_flux_exact"),
+                "emergent_memory": report["emergent_memory"],
+                "emergent_memory_tv_exact": report["emergent_memory_tv_exact"],
+                "triad_predicts_next_pair": report["triad_predicts_next_pair"],
+                "pair_predicts_next_triad": report["pair_predicts_next_triad"],
+                "cmi_triad_to_pair_bits": report["cmi_triad_to_pair_bits"],
+                "cmi_pair_to_triad_bits": report["cmi_pair_to_triad_bits"],
+            }
+        )
+        for extra in sensitivity_factors:
+            extra_kernel = build_kernel(
+                n,
+                Choreography(0, 0, constraints),
+                extra,
+                relation_slots=grammar.relation_slots,
+                baseline_weights=grammar.baseline_weights,
+            )
+            extra_ids = family_ids(n, canonical_tokens(extra_kernel, tables))
+            sensitivity["checks"] += 1
+            if extra_ids["modal_family"] == ids_map["modal_family"]:
+                sensitivity["modal_unchanged"] += 1
+            if extra_ids["support_family"] == ids_map["support_family"]:
+                sensitivity["support_unchanged"] += 1

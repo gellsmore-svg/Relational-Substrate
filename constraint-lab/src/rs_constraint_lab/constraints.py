@@ -82,22 +82,23 @@ class Constraint:
                     return False
         return True
 
-    def expression(self, edge_list: list[tuple[int, int]]) -> str:
-        a, b = edge_list[self.action]
+    def expression(self, edge_list: list[tuple[int, ...]]) -> str:
+        def render(slot: tuple[int, ...]) -> str:
+            return "-".join(str(entity) for entity in slot)
+
         verb = "form" if self.polarity == FORM else "dissolve"
-        head = f"{verb}({a}-{b})"
+        head = f"{verb}({render(edge_list[self.action])})"
         parts = []
         for conditioned, required in self.conditions:
-            i, j = edge_list[conditioned]
             kind = "present" if required else "absent"
-            parts.append(f"{kind}({i}-{j})")
+            parts.append(f"{kind}({render(edge_list[conditioned])})")
         for op, threshold in self.counts:
             parts.append(f"count{_COUNT_SYMBOL[op]}{threshold}")
         if not parts:
             return f"{head} => {self.weight}"
         return f"{head} | " + " & ".join(parts) + f" => {self.weight}"
 
-    def arity(self, edge_list: list[tuple[int, int]]) -> int:
+    def arity(self, edge_list: list[tuple[int, ...]]) -> int:
         named = set(edge_list[self.action])
         for conditioned, _required in self.conditions:
             named.update(edge_list[conditioned])
@@ -180,11 +181,126 @@ def relabel_constraint(constraint: Constraint, edge_map: tuple[int, ...]) -> Con
     )
 
 
-def parse_expression(text: str, n: int) -> Constraint:
+def cross_order_class(constraint: Constraint, n_pairs: int) -> str:
+    """Classify one constraint by what it reads and what it toggles.
+
+    Pair slots are the indexes below ``n_pairs``. Higher-order slots are the
+    rest. A bare pair action is ``P->P``. A bare triadic action is ``T->T``.
+    ``P->T`` reads a pair and toggles the higher-order relation. ``T->P``
+    reads the higher-order relation and toggles a pair. A condition list that
+    reads both orders is ``mixed``.
+    """
+    action_higher = constraint.action >= n_pairs
+    reads_pair = any(slot < n_pairs for slot, _bit in constraint.conditions)
+    reads_higher = any(slot >= n_pairs for slot, _bit in constraint.conditions)
+    if reads_pair and reads_higher:
+        return "mixed"
+    if action_higher and reads_pair:
+        return "P->T"
+    if (not action_higher) and reads_higher:
+        return "T->P"
+    if action_higher:
+        return "T->T"
+    return "P->P"
+
+
+def set_cross_order_class(constraints, n_pairs: int) -> str:
+    found = {cross_order_class(constraint, n_pairs) for constraint in constraints}
+    if not found:
+        return "P->P"
+    if len(found) == 1:
+        return found.pop()
+    return "mixed"
+
+
+_HEAD_SLOT = re.compile(r"^(form|dissolve)\(([^)]+)\)(?: \| (.+))?$")
+_COND_SLOT = re.compile(r"^(present|absent)\(([^)]+)\)$")
+
+
+def _relation_entities(body: str, n: int) -> tuple[int, ...]:
+    parts = [part.strip() for part in body.split("-")]
+    if not parts or any(not part.isdigit() for part in parts):
+        raise ValueError(f"unreadable relation {body!r}")
+    entities = tuple(int(part) for part in parts)
+    if len(entities) not in (2, 3):
+        raise ValueError(f"a relation literal names 2 or 3 entities, not {body!r}")
+    if len(set(entities)) != len(entities):
+        raise ValueError(f"repeated entity in {body!r}")
+    if any(entity < 0 or entity >= n for entity in entities):
+        raise ValueError(f"entity outside 0..{n - 1} in {body!r}")
+    return tuple(sorted(entities))
+
+
+def _parse_independent_hypergraph(text: str, n: int) -> Constraint:
+    """Order-3 parser. Pair literals stay pair slots. A triple is its own slot.
+
+    Count literals are refused. They would otherwise read the triad bit as
+    though it were another pairwise edge.
+    """
+    from rs_constraint_lab.state import relation_slots
+
     raw = text.strip()
     left, separator, weight = raw.rpartition(" => ")
     if not separator or _WEIGHT.fullmatch(weight) is None:
         raise ValueError(f"unreadable constraint expression: {text!r}")
+    match = _HEAD_SLOT.fullmatch(left)
+    if match is None:
+        raise ValueError(f"unreadable constraint expression: {text!r}")
+    verb, action_body, condition_text = match.groups()
+    slots = relation_slots(n, 3)
+    index = {slot: i for i, slot in enumerate(slots)}
+    try:
+        action = index[_relation_entities(action_body, n)]
+    except KeyError as exc:
+        raise ValueError(f"relation {action_body!r} is not a slot on N={n} at order 3") from exc
+    except ValueError as exc:
+        raise ValueError(f"unreadable constraint expression: {text!r}") from exc
+    conditions: list[tuple[int, int]] = []
+    if condition_text:
+        for part in condition_text.split("&"):
+            part = part.strip()
+            if _COUNT.match(part) is not None:
+                raise ValueError(
+                    "count predicates are not part of the independent-hypergraph grammar: "
+                    f"{text!r}"
+                )
+            cond = _COND_SLOT.fullmatch(part)
+            if cond is None:
+                raise ValueError(f"unreadable condition {part!r} in {text!r}")
+            kind, body = cond.groups()
+            try:
+                slot = index[_relation_entities(body, n)]
+            except KeyError as exc:
+                raise ValueError(f"relation {body!r} is not a slot on N={n} at order 3") from exc
+            if slot == action:
+                raise ValueError(f"condition on the action slot is not normal form: {text!r}")
+            conditions.append((slot, 1 if kind == "present" else 0))
+    conditions_tuple = tuple(sorted(conditions))
+    if len(conditions_tuple) != len(set(conditions)):
+        raise ValueError(f"repeated condition in {text!r}")
+    polarity = FORM if verb == "form" else DISSOLVE
+    return Constraint(polarity, action, conditions_tuple, weight, ())
+
+
+def match_entities_look_triadic(body: str) -> bool:
+    parts = [part.strip() for part in body.split("-")]
+    return len(parts) >= 3 and all(part.isdigit() for part in parts)
+
+
+def parse_expression(text: str, n: int, *, order: int = 2) -> Constraint:
+    if order == 3:
+        return _parse_independent_hypergraph(text, n)
+    if order != 2:
+        raise ValueError(f"relation order {order} is not executable")
+    raw = text.strip()
+    left, separator, weight = raw.rpartition(" => ")
+    if not separator or _WEIGHT.fullmatch(weight) is None:
+        raise ValueError(f"unreadable constraint expression: {text!r}")
+    slot_head = _HEAD_SLOT.fullmatch(left)
+    if slot_head is not None and match_entities_look_triadic(slot_head.group(2)):
+        raise ValueError(
+            f"a triadic literal is not a pairwise constraint: {text!r}"
+        )
     match = _HEAD.fullmatch(left)
     if match is None:
         raise ValueError(f"unreadable constraint expression: {text!r}")

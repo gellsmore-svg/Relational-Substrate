@@ -23,9 +23,9 @@ from rs_constraint_lab.grammar import build_grammar, is_canonical_ids
 from rs_constraint_lab.kernel import build_kernel
 from rs_constraint_lab.semantics import get_semantics, semantics_names
 from rs_constraint_lab.spec import effective_options, load_spec, spec_hash
-from rs_constraint_lab.state import canonical_states, edge_count, n_states
+from rs_constraint_lab.state import canonical_states, edge_count, n_states, relation_slots
 from rs_constraint_lab.trajectory import replay_matches, sample_trajectory
-from rs_constraint_lab.version import DEFAULT_WORKERS, ENGINE_VERSION
+from rs_constraint_lab.version import DEFAULT_WORKERS, ENGINE_VERSION, engine_version_for
 from rs_constraint_lab.weights import ENUMERATED_WEIGHTS, alphabet_factors
 
 
@@ -102,12 +102,12 @@ def _dispatch(args) -> int:
         return _enumerate(Path(args.spec), args.kind, args.n)
     if args.command == "plan":
         spec = load_spec(args.spec)
-        _require_graph(spec)
+        _require_executable(spec)
         print(format_plan(spec, args.shard_items))
         return 0
     if args.command in {"exact", "run"}:
         spec = load_spec(args.spec)
-        _require_graph(spec)
+        _require_executable(spec)
         summary = run_spec(
             spec,
             Path(args.out),
@@ -216,17 +216,23 @@ def _exit_for(summary: dict, *, intentional_stop: bool) -> int:
     return 2
 
 
-def _require_graph(spec: dict) -> None:
+def _require_executable(spec: dict) -> None:
+    """Graph and independent hypergraph run. Simplicial semantics still raise.
+
+    A simplex is not compiled into a free hyperedge. The slot counter is the
+    refusal, and specification validation says the same thing in words.
+    """
     semantics = get_semantics(spec["semantics"])
-    if semantics.name != "graph":
-        semantics.relation_slots(spec["cells"][0]["N"])
+    if semantics.name in {"graph", "hypergraph"}:
+        return
+    semantics.relation_slots(spec["cells"][0]["N"])
 
 
 def _inspect(path: Path) -> int:
     spec = load_spec(path)
     print(f"experiment {spec['experiment_id']}  schema {spec['schema']}")
     print(f"spec_hash {spec_hash(spec)}")
-    print(f"engine {ENGINE_VERSION}")
+    print(f"engine {engine_version_for(spec['semantics'])}")
     options = effective_options(spec)
     print(
         f"composition {options['composition']}  analysis {options['analysis']}  "
@@ -234,14 +240,40 @@ def _inspect(path: Path) -> int:
     )
     print(f"semantics axis: {', '.join(semantics_names())}")
     print(f"active semantics: {spec['semantics']}")
-    if spec["semantics"] != "graph":
+    if spec["semantics"] == "hypergraph":
+        print(
+            "independent hypergraph executes at O=3; "
+            "simplicial semantics remain refused and are not compiled into these bits"
+        )
+    elif spec["semantics"] != "graph":
         print("this generation executes graph only; the named semantics will be refused")
     for cell in spec["cells"]:
         n = cell["N"]
-        accounting = template_accounting(n, cell["K_max"], len(spec.get("weights", ENUMERATED_WEIGHTS)))
+        if spec["semantics"] == "hypergraph":
+            grammar = build_grammar(
+                n,
+                cell["K_max"],
+                spec.get("weights", ENUMERATED_WEIGHTS),
+                a_max=cell.get("A_max"),
+                predicates=tuple(options["predicates"]),
+                order=options["O"],
+            )
+            slots = len(grammar.relation_slots)
+            accounting = {
+                "labelled_states": 1 << slots,
+                "relation_slots": slots,
+                "raw_structural_templates": grammar.stats["structural_normal_forms"],
+                "removed_syntax_invalid": 0,
+                "removed_redundant_normalisation": 0,
+                "outside_k_bound": grammar.stats.get("outside_k_bound", 0),
+                "structural_normal_forms": grammar.stats["structural_normal_forms"],
+                "labelled_constraints": grammar.stats["labelled_constraints"],
+            }
+        else:
+            accounting = template_accounting(n, cell["K_max"], len(spec.get("weights", ENUMERATED_WEIGHTS)))
         print(
-            f"E(N={n}, K<={cell['K_max']}, O={spec.get('O', 2)}, G={spec.get('G', 0)}, "
-            f"S={spec.get('S', 0)}, H={spec.get('H', 0)}, L={spec.get('L', 0)}, "
+            f"E(N={n}, K<={cell['K_max']}, O={options['O']}, G={options['G']}, "
+            f"S={options['S']}, H={options['H']}, L={options['L']}, "
             f"semantics={spec['semantics']}, W={spec['alphabet']})"
         )
         print(
@@ -266,7 +298,21 @@ def _enumerate(path: Path, kind: str, n: int) -> int:
     if cell is None:
         print(f"N={n} is not a cell of {spec['experiment_id']}", file=sys.stderr)
         return 1
+    options = effective_options(spec)
     if kind == "states":
+        if spec["semantics"] == "hypergraph":
+            slots = relation_slots(n, options["O"])
+            from rs_constraint_lab.higher_order import orbit_catalogue
+
+            orbits = orbit_catalogue(n) if n == 3 else None
+            canonical = orbits["orbit_count"] if orbits else "unlisted"
+            print(f"N={n} labelled {1 << len(slots)} canonical {canonical} slots {len(slots)}")
+            if orbits:
+                print(
+                    "orbits:",
+                    " ".join(f"{row['name']}={row['representative']}" for row in orbits["orbits"]),
+                )
+            return 0
         states = canonical_states(n)
         print(f"N={n} labelled {n_states(n)} canonical {len(states)} slots {edge_count(n)}")
         print("canonical states:", " ".join(str(state) for state in states[:32]))
@@ -276,7 +322,8 @@ def _enumerate(path: Path, kind: str, n: int) -> int:
         cell["K_max"],
         spec["weights"],
         a_max=cell.get("A_max"),
-        predicates=tuple(spec.get("predicates", ["edge"])),
+        predicates=tuple(options["predicates"]),
+        order=options["O"] if spec["semantics"] == "hypergraph" else 2,
     )
     canonical = sum(1 for i in range(len(grammar.labelled)) if is_canonical_ids((i,), grammar.image))
     print(

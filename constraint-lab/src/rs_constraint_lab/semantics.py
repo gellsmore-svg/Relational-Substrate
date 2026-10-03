@@ -4,15 +4,20 @@
 encodings of one another.
 
 - A pairwise graph stores independent binary incidences.
-- An irreducible hyperrelation on three entities need not imply any of its pairs.
-- A simplicial relation carries its faces.
+- Independent hypergraph semantics add irreducible hyperrelations. At order 3
+  the triple is its own bit: it does not imply its pairs, and the pairs do
+  not imply it.
+- A simplicial relation would carry its faces. That rule is not compiled
+  into the hypergraph bit.
 
-Generation 1 executes only ``graph``. The other two classes exist so a later
-cell can be named in a specification and refused explicitly, rather than
-silently compiled into pairs.
+Generation 1 executes ``graph``. Generation 3 executes independent
+hypergraph at ``O = 3``. Simplicial semantics still raise, so a simplex is
+never stored as a free hyperedge.
 """
 
 from __future__ import annotations
+
+from rs_constraint_lab.state import relation_slots as independent_slots
 
 
 class PairwiseGraphSemantics:
@@ -23,13 +28,12 @@ class PairwiseGraphSemantics:
 
 
 class HypergraphSemantics:
+    """Independent hypergraph. Not a simplex and not a shorthand for its pairs."""
+
     name = "hypergraph"
 
     def relation_slots(self, n: int) -> int:
-        raise NotImplementedError(
-            "Hypergraph semantics are unsearched. An irreducible hyperrelation "
-            "is not reduced to a collection of pairwise edges."
-        )
+        return len(independent_slots(n, 3))
 
 
 class SimplicialSemantics:

@@ -26,6 +26,10 @@ def _fraction_text(value: Fraction | None) -> str | None:
 
 
 def light_observables(kernel: Kernel, baseline: Kernel) -> dict:
+    if kernel.relation_slots:
+        from rs_constraint_lab.higher_order import hypergraph_light_observables
+
+        return hypergraph_light_observables(kernel, baseline)
     deadlocks = [state for state, halted in enumerate(kernel.deadlock) if halted]
     recurrent = recurrent_components(kernel)
     periods = sorted({period_of(component, kernel.successors) for component in recurrent})
@@ -105,8 +109,14 @@ def _closing_bias_exact(kernel: Kernel) -> Fraction | None:
     return sum(values, Fraction(0)) / len(values) - Fraction(1, 3)
 
 
-def rise_then_release_probability(kernel: Kernel, horizon: int = 4, start: int = 0) -> Fraction:
+def rise_then_release_probability(
+    kernel: Kernel,
+    horizon: int = 4,
+    start: int = 0,
+    occupancy=None,
+) -> Fraction:
     """Probability that some length-``horizon`` path from ``start`` rises by 2 then falls by 1."""
+    occupied_of = occupancy or (lambda state: state.bit_count())
     total = Fraction(0)
 
     def matches(counts: list[int]) -> bool:
@@ -128,11 +138,11 @@ def rise_then_release_probability(kernel: Kernel, horizon: int = 4, start: int =
         for nxt, step in kernel.successors[state]:
             if step == 0:
                 continue
-            counts.append(nxt.bit_count())
+            counts.append(occupied_of(nxt))
             walk(nxt, prob * step, counts)
             counts.pop()
 
-    walk(start, Fraction(1), [start.bit_count()])
+    walk(start, Fraction(1), [occupied_of(start)])
     return total
 
 
@@ -143,6 +153,10 @@ def _text(value: Fraction | None) -> str | None:
 
 
 def heavy_observables(kernel: Kernel, horizon: int = 4, start: int = 0) -> dict:
+    if kernel.relation_slots:
+        from rs_constraint_lab.higher_order import hypergraph_heavy_observables
+
+        return hypergraph_heavy_observables(kernel, horizon, start)
     ran = long_run(kernel, start)
     pi_exact = ran["distribution_exact"]
     pi = ran["distribution"]

@@ -13,7 +13,16 @@ from fractions import Fraction
 
 from rs_constraint_lab.constraints import DISSOLVE, Choreography, Constraint
 from rs_constraint_lab.kernel import Kernel, build_kernel
-from rs_constraint_lab.state import edge_count, edge_index, edge_permutation_maps, edges, permutations, relabel_state
+from rs_constraint_lab.state import (
+    edge_count,
+    edge_index,
+    edge_permutation_maps,
+    edges,
+    permutations,
+    relabel_relation_state,
+    relabel_state,
+    slot_permutation_maps,
+)
 
 
 def _encode(value) -> str:
@@ -35,8 +44,22 @@ def token_id(token: tuple) -> str:
 class RelabelTables:
     """State and edge images of S_N, built once per worker."""
 
-    def __init__(self, n: int):
+    def __init__(self, n: int, relation_slots=None):
         self.n = n
+        if relation_slots is not None:
+            self.relation_slots = tuple(tuple(slot) for slot in relation_slots)
+            self.edge_list = list(self.relation_slots)
+            self.index = {tuple(slot): i for i, slot in enumerate(self.relation_slots)}
+            self.perms = permutations(n)
+            self.edge_maps = slot_permutation_maps(n, self.relation_slots)
+            size = 1 << len(self.relation_slots)
+            self.state_images = []
+            for perm in self.perms:
+                self.state_images.append(
+                    tuple(relabel_relation_state(state, perm, self.relation_slots) for state in range(size))
+                )
+            return
+        self.relation_slots = ()
         self.edge_list = edges(n)
         self.index = edge_index(n)
         self.perms = permutations(n)
@@ -121,6 +144,21 @@ def observable_signature(n: int, light: dict, heavy: dict) -> str:
         "defect": heavy.get("reversibility_defect_exact"),
         "arithmetic": heavy.get("stationary_arithmetic"),
     }
+    for key in (
+        "triad_occupancy_exact",
+        "pair_density_triad_absent_exact",
+        "pair_density_triad_present_exact",
+        "triad_formation_flux_exact",
+        "triad_dissolution_flux_exact",
+        "pairwise_jump_tv_exact",
+        "emergent_memory_tv_exact",
+        "triad_predicts_next_pair",
+        "pair_predicts_next_triad",
+        "emergent_memory",
+        "reducibility_class",
+    ):
+        if heavy.get(key) is not None:
+            payload[key] = heavy[key]
     if payload["density"] is None and heavy.get("mean_edge_density") is not None:
         payload["density_rounded"] = round(float(heavy["mean_edge_density"]), 10)
         payload["halt_rounded"] = round(float(heavy.get("halt_mass") or 0.0), 10)
@@ -132,7 +170,16 @@ def observable_signature(n: int, light: dict, heavy: dict) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
-def classify_cancellation(n: int, constraints: tuple[Constraint, ...], factors, kernel: Kernel, baseline: Kernel) -> str | None:
+def classify_cancellation(
+    n: int,
+    constraints: tuple[Constraint, ...],
+    factors,
+    kernel: Kernel,
+    baseline: Kernel,
+    *,
+    relation_slots=None,
+    baseline_weights=None,
+) -> str | None:
     """Distinguish inherited baseline from a genuine structural cancellation.
 
     ``inherited_baseline``: every member is already baseline on its own, which
@@ -149,7 +196,13 @@ def classify_cancellation(n: int, constraints: tuple[Constraint, ...], factors, 
     if kernel.successors == baseline.successors:
         own_baseline = True
         for constraint in constraints:
-            single = build_kernel(n, Choreography(0, 0, (constraint,)), factors)
+            single = build_kernel(
+                n,
+                Choreography(0, 0, (constraint,)),
+                factors,
+                relation_slots=relation_slots,
+                baseline_weights=baseline_weights,
+            )
             if single.successors != baseline.successors:
                 own_baseline = False
                 break

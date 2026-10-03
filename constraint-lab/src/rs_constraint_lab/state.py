@@ -82,6 +82,64 @@ def canonical_states(n: int) -> list[int]:
     return sorted(seen)
 
 
+def triples(n: int) -> list[tuple[int, int, int]]:
+    """Undirected 3-subsets in lexicographic order. Empty when N < 3."""
+    return [
+        (i, j, k)
+        for i in range(n)
+        for j in range(i + 1, n)
+        for k in range(j + 1, n)
+    ]
+
+
+def relation_slots(n: int, order: int = 2) -> list[tuple[int, ...]]:
+    """Independent relation slots.
+
+    Order 2 is the pairwise edge list, in the same order as ``edges``.
+    Order 3 appends every unordered triple after those pairs. The triple is
+    its own bit. It is not implied by the three pairs, and the three pairs
+    are not implied by the triple. This is independent-hypergraph layout,
+    not a simplex.
+    """
+    if order == 2:
+        return list(edges(n))
+    if order != 3:
+        raise NotImplementedError(f"relation order {order} is not implemented")
+    if n < 3:
+        raise ValueError("order 3 requires N >= 3")
+    return [*edges(n), *triples(n)]
+
+
+def slot_index(slots: list[tuple[int, ...]] | tuple[tuple[int, ...], ...]) -> dict[tuple[int, ...], int]:
+    return {tuple(slot): index for index, slot in enumerate(slots)}
+
+
+def slot_permutation_maps(n: int, slots: list[tuple[int, ...]] | tuple[tuple[int, ...], ...]) -> list[tuple[int, ...]]:
+    """Image of every slot index under each entity permutation.
+
+    A triple on all N entities is fixed by S_N. Pairwise slots move.
+    """
+    index = slot_index(slots)
+    maps: list[tuple[int, ...]] = []
+    for perm in permutations(n):
+        mapped = []
+        for slot in slots:
+            image = tuple(sorted(perm[entity] for entity in slot))
+            mapped.append(index[image])
+        maps.append(tuple(mapped))
+    return maps
+
+
+def relabel_relation_state(state: int, perm: tuple[int, ...], slots) -> int:
+    index = slot_index(slots)
+    out = 0
+    for bit, slot in enumerate(slots):
+        if (state >> bit) & 1:
+            image = tuple(sorted(perm[entity] for entity in slot))
+            out |= 1 << index[image]
+    return out
+
+
 def component_count(state: int, n: int, edge_list: list[tuple[int, int]] | None = None) -> int:
     if edge_list is None:
         edge_list = edges(n)

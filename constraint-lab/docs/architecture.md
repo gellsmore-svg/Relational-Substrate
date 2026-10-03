@@ -7,7 +7,7 @@
 | Module | Responsibility |
 | --- | --- |
 | `state` | Bitset states, edge order, exact `S_N` action on states |
-| `semantics` | Named graph / hypergraph / simplicial axes; only graph executes |
+| `semantics` | Named graph / hypergraph / simplicial axes; graph and independent hypergraph execute; simplicial raises |
 | `weights` | Grade table and geometric alphabets |
 | `constraints` | Normal-form constraint, parser, choreography hook |
 | `grammar` | Labelled enumeration, permutation image table, canonical id tuples |
@@ -15,6 +15,7 @@
 | `kernel` | Multiplicative toggle kernel, halt completion, modal and support maps |
 | `exact` | SCCs, period, rational and float64 stationary distributions, absorption |
 | `observables` | Light and heavy measurements, neutral sentences, exact fraction fields |
+| `higher_order` | Triadic observables, pairwise conditional kernels, reducibility, coarse-grained memory |
 | `dynamics` | Canonical support, modal, kernel, and observable-signature identities |
 | `combinadic` | Lexicographic combination rank and successor |
 | `durable` | Atomic write, fsync, and content hash |
@@ -77,8 +78,9 @@ Output belongs on the Linux filesystem when the laboratory is running under WSL.
 
 - `H > 0` or `L > 0` raises `NotImplementedError` from the choreography.
 - A non-empty history or constraint-state argument does the same.
-- `hypergraph` and `simplicial` raise `NotImplementedError` from their slot counters, and the CLI refuses to run them.
+- `simplicial` raises `NotImplementedError` from its slot counter and `ValueError` from specification validation. A simplex is not stored as an independent hyperedge.
+- Independent `hypergraph` executes at `O = 3` with predicates `pair` and `triad`. Count predicates on that semantics are refused, so a count literal cannot read the triadic bit as though it were another pair.
 - `neutral` in a specification is a validation error.
-- A declared `G`, `S`, `H`, `L`, or `O` other than the implemented value (`0, 0, 0, 0, 2`) is a validation error. Absence means that implemented value.
-- `A_max`, when present, drops every constraint whose arity exceeds it. Arity counts entities named by the action and the edge conditions. A count literal names no entity.
-- An unknown composition, analysis mode, or predicate is a validation error. The executable analysis is `heavy-every-canonical`. Compositions are `structural-simple` (the default) and `stacked-weight`. Predicates are `edge` and `count`.
+- On graph semantics, a declared `G`, `S`, `H`, `L`, or `O` other than `0, 0, 0, 0, 2` is a validation error. Absence means that implemented value. On independent hypergraph, the implemented order is `O = 3` and the other four axes remain 0. The graph engine version recorded on pairwise shards stays `0.2.0`. Hypergraph shards record `0.3.0`.
+- `A_max`, when present, drops every constraint whose arity exceeds it. Arity counts entities named by the action and the conditions. A count literal names no entity. A rule whose only literal is `form(0-1-2)` has arity 3.
+- An unknown composition, analysis mode, or predicate is a validation error. The executable analysis is `heavy-every-canonical`. Compositions are `structural-simple` (the default) and `stacked-weight`. Graph predicates are `edge` and `count`. Hypergraph predicates are `pair` and `triad`.

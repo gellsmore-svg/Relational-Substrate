@@ -13,10 +13,18 @@ of the shard id, so a documentation commit does not invalidate completed work.
 ENGINE_VERSION = "0.2.0"
 SEMANTIC_VERSION = "0.2.0"
 
+# Independent-hypergraph runs record these versions. The constants above stay
+# at 0.2.0 because they are part of every pairwise shard id. A hypergraph
+# shard must not resume as a graph shard, and a documentation change to the
+# pairwise engine must not move the hypergraph ids either.
+HYPERGRAPH_ENGINE_VERSION = "0.3.0"
+HYPERGRAPH_SEMANTIC_VERSION = "0.3.0"
+
 NORMALISATION_STRUCTURAL = "structural-unique-v1"
 NORMALISATION_STACKED = "stacked-weight-v1"
 GRAMMAR_EDGE = "pairwise-edge-v1"
 GRAMMAR_COUNT = "pairwise-count-v1"
+GRAMMAR_HYPERGRAPH = "independent-hypergraph-v1"
 
 COMPOSITION_STRUCTURAL = "structural-simple"
 COMPOSITION_STACKED = "stacked-weight"
@@ -50,3 +58,15 @@ EXECUTION_PRINCIPLE = (
     "with durable checkpoints, so completed progress is monotonic and "
     "interruption is cheap."
 )
+
+
+def engine_version_for(semantics: str) -> str:
+    if semantics == "hypergraph":
+        return HYPERGRAPH_ENGINE_VERSION
+    return ENGINE_VERSION
+
+
+def semantic_version_for(semantics: str) -> str:
+    if semantics == "hypergraph":
+        return HYPERGRAPH_SEMANTIC_VERSION
+    return SEMANTIC_VERSION
