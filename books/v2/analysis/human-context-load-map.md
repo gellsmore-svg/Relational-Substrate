@@ -66,3 +66,17 @@ The guard against T-C-R being read as a soul-signal (brief §45 Q12) goes at the
 2. **Chapter 7 exceeds four new load-bearing concepts.** This is accepted, because the four components acquire *serially* (low simultaneous interaction until the final synthesis). Mitigated by stepwise examples.
 3. **Physical-arc momentum.** Chapters 3–8 must each answer a question the reader holds. The stone scene supplies the questions: what is it? what could it be? why this? why the same stone tomorrow? how do I see it? why is it so regular?
 4. **Bullet-summary habit.** The first edition ends every chapter with a bulleted list. For v2 the rule is no chapter-end summaries. Chapters close on the open question their successor answers.
+
+## v2.1 reassessment
+
+The v2.1 corrections add concepts to three load-bearing chapters. These are re-estimated after drafting.
+
+| Ch | Added concepts | N (new) | I | X | S | Risk | Mitigation |
+| ---: | --- | ---: | ---: | ---: | ---: | --- | --- |
+| 2 | four coherence tests | +4 (separable, low interaction) | 2 | 1 | 3 | moderate | Bulleted, each with one example; applied concretely in Ch 9 rather than re-explained |
+| 6 | equivalence class, provenance, projection, future discriminability | +4 | 4 | 2 | 4 | **high** | Counterfeit coin and keys before the definition; Fig. 3; the definition stated once in bold; memory evidence sorted by strength |
+| 7 | relational availability, recoverability, receiver compatibility and semantics | +3 (replacing "release", "once") | 4 | 2 | 4 | high (unchanged) | Lighthouse, name and DNA against emission; five receiver types in a list; calculator kept as a worked instance |
+| 8 | marginal versus joint, consequence-aligned coordination, mean versus fluctuation, projection | +4 | 4 | 2 | 4 | **high** (up from moderate) | The two-rooms example carries the joint-process idea; the ring conclusions are stated in prose; the hidden-structure section reuses Ch 6 rather than re-teaching it |
+| 9 | serious alternatives (5 named), economy of continuity | +2 | 5 | 2 | 3 | high (unchanged) | Alternatives listed briefly with one line each; the argument stated in five steps; the non-reduction list |
+
+**Net.** Chapters 6 and 8 are now the densest in the physical arc, with Chapter 8 the highest-load chapter in the book (prompt §19.2 anticipated this). The mitigations rely on concrete cases preceding each abstraction. Chapter 8's research-status material is kept compact, and the detail is in Appendix B.

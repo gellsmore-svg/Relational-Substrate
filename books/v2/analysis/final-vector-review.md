@@ -1,162 +1,164 @@
-# Final recursive vector review: second edition
+# Final vector review: second edition, v2.1
 
-Scores are on a 0–100 scale. They are heuristic judgements recorded with reasons, not measurements. This review follows the passes and acceptance tests of the brief (§44–49, §55).
+This review supersedes the v2.0 review (preserved in git at `11495e0`). That review's conclusion, "no load-bearing dimension below 75; no serious conceptual defect remains", is **withdrawn**. The independent v2.1 review found five load-bearing defects:
 
-## Whole-book passes
+1. T-C-R was over-fitted to one calculator protocol.
+2. Identity was reduced to an invariant.
+3. Global coherence was defined as mere compatibility.
+4. Chapter 9 argued against a straw object ontology.
+5. The research baseline omitted both the conversational research and Constraint Lab v0.2.
 
-| Pass | Question | Result | Evidence and residual issue |
-| --- | --- | --- | --- |
-| A, continuity | Does every concept arrive after its prerequisites? | **Pass** | Chapter map is a topological order (script check: 0 violations). Text first-use flags are explained in `final-readability-review.md` §1 |
-| B, terminology | One sense per term? | **Pass, with two managed dual uses** | "admissibility" (physical, then three layers in Ch 12) and "identity" (things, then persons) are each disambiguated in place. T0 naming collision noted in Ch 4 and App B |
-| C, global coherence | Do physics, philosophy, theology, ethics, anthropology and redemption fit? | **Pass** | Ch 9 bridge; Ch 12 keeps moral admissibility independent of physics; Ch 14 places redemption outside substrate process. No chapter contradicts another (checked against the epistemic register) |
-| D, epistemic calibration | Any claim stronger than its evidence? | **Pass after revision** | Six first-edition overclaims removed (register, final table). In this draft: false-attractor evidence reworded to "exploratory"; quantum "no clock" flagged; stochastic hypothesis' untestability admitted (Ch 8) |
-| E, readability | Can a human hold the architecture? | **Pass with two accepted high-load chapters** | Chs 7 and 9 (see HCL) |
-| F, flow | A book rather than a specification? | **Pass** | Recurring scene; prose not lists; no chapter summaries |
-| G, compression | Volume without understanding removed? | **Pass** | About 8,000 words of polemic and apparatus removed; the body is 4% shorter while the physics arc and bridge are new |
-| H, category integrity | Has physical language swallowed spiritual ontology anywhere? | **Pass** | Explicit guards at Ch 1 (light), Ch 7 (Isaiah 55), Ch 9 (categories), Ch 11 (soul is not a configuration or signal), Ch 12 (commandment is not physical law), Ch 14 (resurrection is not substrate process). The first edition's beauty/truth/good collapse is withdrawn |
-| I, T-C-R | Is T-C-R understood, not merely named? | **Pass** (acceptance test below) | |
-| J, global-coherence thesis | Does the reader see why relation-first physics matters? | **Pass** | Ch 9 premises 1–5; promise and river cases; Ch 14 hope; Ch 15 restatement |
+There were also several scientific and theological calibration errors. The v2.0 self-review missed them because it checked the manuscript against the repository and against itself. Neither source contained the evidence. That limitation applies to this review too, and it is stated here rather than scored away.
 
-## Acceptance test: T-C-R (§45)
+The correction mapping is in `v2.1-correction-matrix.md`. Reader simulations and the red team are in `v2.1-reader-simulation-and-red-team.md`.
 
-| # | Question | Where the reader learns the answer | Answer the book equips |
-| --- | --- | --- | --- |
-| 1 | What is transmitted? | Ch 7, step one | A difference: a distinguishable state that could matter elsewhere |
-| 2 | What does "transmit" mean? | step two | Release: the difference stops being only here, at a cost to the source; governed by admissibility |
-| 3 | What is a carrier? | step three | Whatever currently realises a constrained correlation |
-| 4 | Must it remain materially identical? | step three | No; pond, signal fires, telephone, calculator certificate |
-| 5 | What does persistence mean? | Ch 6; Ch 7 step three | Re-actualisation within an invariant class; carriage is persistence of a correlation, against some disturbance, over some time |
-| 6 | What makes reception consequential? | step four | Admissible change of state in something else, once; arrival is not reception |
-| 7 | How can T-C-R recur? | "The whole grammar" | Each reception can be a release (sun → stone → eye → nerve) |
-| 8 | How do T-C-Rs compose? | same | In parallel (image) and in sequence (perception → conversation) |
-| 9 | Relation to stochastic actualisation? | "How T-C-R connects" | Emission and absorption are chancy; reliability comes from many coordinated events (Ch 8) |
-| 10 | Relation to identity? | same; step three | The carried difference is an invariant across changing vehicles; the receiver remains itself |
-| 11 | Why is it important to RS? | "Why this matters" | It is how a relational world is a world of consequence; it scaffolds life, communication, corruption and restoration |
-| 12 | Why does it not make soul or spirit a signal? | "What T-C-R does not mean"; Ch 11 | Shared form across categories is not shared nature (Ch 1); the soul is not a configuration of the substrate |
+## Acceptance test: T-C-R (instruction §28)
 
-**Result: pass.**
+| Question | Answer the v2.1 text gives (Ch 7 unless noted) |
+|---|---|
+| Source distinction? | a distinguishable state at a source that could make a difference elsewhere |
+| Transmission, generally? | the distinction becomes available to have consequence beyond its locality |
+| Must the source lose it? | no; lighthouse, name, DNA, broadcast |
+| When does source cost matter? | emission-type mechanisms (bell, atom); the calculator's arithmetic protocol |
+| What is carried? | the relevant distinction, kept recoverably constrained |
+| What can a carrier be? | object, wave, chain of local interactions, record, medium, correlation |
+| Materially identical? | no; pond, fires, telephone, certificate replacement |
+| How is substitution possible? | each carrier stays tied to the source closely enough that the receiver's change still depends on it |
+| Recoverable? | the receiver's change depends on what was at the source |
+| When does provenance matter? | when a receiver will act differently depending on origin (signature, chain of custody) |
+| What is reception? | a compatible receiver changed in a way that depends on the carried distinction |
+| Why is arrival not reception? | the window and the unopened letter |
+| Once only? | only for transactional receivers (ledger, calculator carry); the thermostat, ear, idempotent switch and choir differ |
+| Receiver compatibility? | the receiver's own admissibility: what it can register and how it responds |
+| Nesting, composition, coordination? | the nerve impulse; parallel and sequential chains; two eyes and two ears |
+| Survives implementation change? | the telephone |
+| Relation to identity and equivalence? | the carried distinction persists as an equivalence class; provenance travels where consumed |
+| Relation to stochasticity? | chancy emission and absorption, reliable in aggregate (Ch 8) |
+| What did the calculator demonstrate? | an operational protocol; receiver semantics decide correctness; its protocol choices are not general |
+| What remains hypothesis? | that T-C-R is fundamental to created order |
+| Physical and spiritual? | analogy of form, not nature; Isaiah 55; Ch 11 and Ch 14 |
 
-## Acceptance test: global coherence (§46)
+**Pass.** Source consumption and exactly-once are not taught as universal.
+
+## Acceptance test: identity and provenance (§29)
+
+The reader can explain each of the following:
+
+- material sameness not required (river, flame, body);
+- what an invariant is, and why it can carry identity (calculator, Noether, knot);
+- why it may not exhaust identity (counterfeit coin);
+- what an equivalence class is in plain words;
+- projection-equal but dynamically different states (keys, Generation 1b, Fig. 3);
+- provenance and its physical embodiment (paper clip, bone);
+- when provenance can be ignored (the quotient principle);
+- why future discriminability matters, without observer-relativity;
+- the link to carrier substitution (Ch 7) and to coarse-graining (Chs 6 and 8);
+- that none of this defines personal identity (Chs 6 and 11);
+- why resurrection is not invariant preservation (Ch 14).
+
+**Pass.**
+
+## Acceptance test: global coherence (§30)
 
 The reader can explain:
 
-1. **Local coherence** (Ch 2).
-2. **Regional coherence** (Ch 2).
-3. **Global coherence** (Ch 2, Fig. 1).
-4. **Why prediction is not ontology:** Ch 2 (gravity, quantum interpretations), Ch 8 (Navier–Stokes).
-5. **Why observation still constrains:** Ch 2, "Observation still decides a great deal".
-6. **Why global coherence does not ignore evidence:** Ch 2, and Ch 9 premise 5's conditional.
-7. **Why relation-first physics is relevant outside physics:** Ch 9.
-8. **Why that does not reduce morality or theology:** Ch 9 "does not provide", Ch 12.
-9. **Why incompatible assumptions matter:** Ch 2 "every account starts somewhere", Ch 9 gulf.
-10. **Why global coherence is a stronger test:** Ch 2 thesis, Ch 9 closing argument about false attractors.
+- local, regional and global coherence (Ch 2);
+- why non-contradiction is insufficient (compartments);
+- the tests of connection, boundary translation, meaning through layers and the round trip (Ch 2), applied to the promise and the river (Ch 9);
+- preserved distinctions;
+- the role of evidence (Chs 2 and 8);
+- local success alongside global discontinuity (Ch 9, step 2);
+- relevance outside physics without deriving norms or reducing spirit (Ch 9 non-reduction list, Ch 12);
+- why a coherent account can still be false (Ch 9, false attractor).
 
-**Result: pass.**
+**Pass.**
 
-## Acceptance test: stochasticity (§47)
+## Acceptance test: coordination and effective law (§31)
 
-| Concept | Where it is distinguished |
-| --- | --- |
-| randomness | Ch 5, three meanings of "random" |
-| stochasticity | Ch 5 |
-| unconstrained versus constrained | Ch 5 |
-| admissibility | Ch 4 |
-| probability distribution | Ch 5 (die) |
-| persistence | Ch 6 |
-| attractor | Ch 8, defined sense only |
-| coordination | Ch 8 |
-| global constraint | Ch 8, local versus global |
-| deterministic-looking behaviour / effective determinism | Ch 8 |
-| mathematical determinism | Ch 8 |
-| chaos | Ch 5, distinct from stochasticity |
+The reader can explain:
 
-"Stochastic" is never used as a synonym for random. **Result: pass.**
+- marginals versus the joint process (two rooms);
+- covariance (SC-017);
+- coordination without a controller;
+- state-dependent, consequence-aligned coordination;
+- mean versus fluctuation stability;
+- deterministic macro-laws from non-deterministic micro-processes;
+- deterministic equations versus deterministic ontology;
+- that RS has derived no law;
+- what remains open (the effective-law question; entanglement; the stochastic hypothesis' testability).
 
-## Acceptance test: science (§48)
+**Pass.** The ring material is labelled exploratory.
 
-| Requirement | Where it is met |
-| --- | --- |
-| Credit for successes | Chs 2 and 8 (GPS, LIGO, QED) |
-| Description versus ontology | Chs 2 and 8 |
-| Interpretive disagreement | Ch 5 |
-| Where assumptions enter | Ch 2 |
-| Where RS reads differently | Chs 3–7, labelled |
-| What would count against RS | Ch 8, five items, including the admission that the stochastic hypothesis is currently untestable and that the models do not single out RS |
-| What is unknown | consciousness (Ch 11), entanglement (Ch 8), θ-class conditionality (App B) |
+## Acceptance test: Constraint Laboratory (§32)
 
-**Result: pass.** A reasonable scientist could still disagree with the ontology. They should not be able to say it was dismissive.
+Appendix B and the research baseline state:
 
-## Acceptance test: theology (§49)
+- Generation 1 is superseded in interpretation, not deleted.
+- The stacked-grade artifact and its effect on the earlier cancellation claim.
+- Exact kernels hidden by coarse families.
+- Generation 2's count predicate and numbers: 10,430, 9,776, 654, 189 and 30.
+- The new supports all come from count-gated prohibitions; soft weights produced none.
+- The negative constructive-dissolution result.
+- The `post_release_new_edge` flag is explained, not taken as evidence.
+- The roadmap's next candidates are stated as candidates.
+- Nothing claims that nature uses the grammar.
 
-Scripture is quoted (KJV) and distinguished from inference throughout. Chapters 1, 3 and 7 state explicitly that Scripture bounds RS and does not teach it. Contested matters are named as such and not settled:
+Repository state was checked at `0170189` and has not advanced. **Pass.**
 
-- the age and history of life (Ch 10);
-- soul and spirit relations (Ch 11);
-- freedom and sovereignty (Ch 12);
-- ecclesiology (Ch 14).
+## Acceptance test: theology (§33)
 
-**Result: pass.**
+| Check | Result |
+|---|---|
+| substrate ≠ God | Chs 1, 3, 4 |
+| soul ≠ substrate pattern | Ch 11 |
+| T-C-R ≠ spiritual mechanism | Chs 7, 14 |
+| chance ≠ divine uncertainty | Ch 5 |
+| stochasticity ≠ freedom | Ch 12 (strengthened) |
+| physical admissibility ≠ moral permission | Ch 12 |
+| corruption ≠ entropy | Ch 9 list, Ch 13 |
+| restoration ≠ self-repair | Chs 6, 14 |
+| resurrection ≠ natural reconstruction | Ch 14 |
+| no claim about all biological death | Ch 14 (corrected) |
+| no libertarian commitment | Chs 12 and 14 (corrected) |
+| analogy not silently identity | Chs 1, 7, 9, 12, 14 |
 
-## Final vector (second edition, final draft)
+**Pass.**
 
-| Dimension | Score | Reason | Strongest weakness |
-| --- | ---: | --- | --- |
-| conceptual-fidelity | 86 | Reduced ontology taught in graph order | Bridge argument is a coherence preference, inherently contestable |
-| research-fidelity | 88 | Every RS result stated with its own authors' limits | Programmes named in the brief but absent from the record (502-series, Navier–Stokes, spectral) are not represented; deliberately so |
-| scriptural-fidelity | 87 | Dense KJV in theology chapters; Scripture bounds rather than decorates | Physical chapters carry fewer texts by design |
-| theological-category-integrity | 88 | Six explicit guards | Repetition of the guard risks a defensive tone |
-| scientific-accuracy | 84 | Facts checked against primary sources; four errors corrected in review | Some popular-level simplifications (photon, QFT particles) |
-| epistemic-calibration | 88 | Register enforced; overclaims withdrawn | Ch 3's "relation is foundational" is stated firmly; clearly labelled as a proposal |
-| global-coherence | 85 | No cross-chapter contradiction found | — |
-| local-coherence | 82 | | Ch 15 paratactic |
-| TCR-clarity | 86 | Five-step acquisition, figure, twelve-question test passed | Carriage-as-correlation remains abstract for some readers |
-| stochastic-integration | 85 | Integrated into identity, T-C-R and regularity, not appended | — |
-| material-spiritual-distinction | 89 | | — |
-| concept-dependency-order | 92 | Verified by script | — |
-| human-context-load | 78 | | Chs 7 and 9 high |
-| section-readability | 82 | | |
-| chapter-readability | 82 | | |
-| narrative-flow | 81 | | Ch 8 slows |
-| terminology-control | 85 | | |
-| semantic-density | 80 | | |
-| concision | 82 | Body shorter than edition 1 | App B compressed |
-| cross-chapter-continuity | 84 | Stone scene; reactivation plan executed | |
-| redundancy-control | 80 | | Guard repetition |
-| reader-orientation | 86 | | |
-| source-support | 82 | Ledger and App D notes | No inline citation markers, by design |
+## Vector (conceptual dimensions, v2.1)
 
-### Stabilisation
+| Dimension | v2.0 claimed | v2.1 | Reason | Weakness |
+|---|---:|---:|---|---|
+| conceptual-fidelity | 86 | 84 | corrected to the fuller corpus | some ontology now rests on exploratory, unrecorded research |
+| research-fidelity | 88 | 85 | v0.2 integrated; provenance separated | the v2.0 score was inflated, since that version was missing research |
+| epistemic-calibration | 88 | 86 | Bell, collapse, LLN, mass and freedom corrected | caveat density |
+| TCR-clarity | 86 | 86 | correct now, still pedagogical | "recoverable" abstract |
+| identity/provenance | — | 80 | new | criterion hard to apply in practice (stated) |
+| global-coherence | 85 | 84 | stronger tests; stronger opponent | the bridge remains a coherence preference |
+| material-spiritual-distinction | 89 | 89 | | |
+| human-context-load | 78 | 74 | richer concepts | Ch 8 |
+| scientific-accuracy | 84 | 87 | | popular-level photon and QFT simplifications |
 
-The last revision round (attractor paragraph, powers-ontology concession, quantum flag, factual corrections, T-C-R reactivation in Ch 10) moved the weakest dimensions by 2–6 points each. Further candidate changes trade one dimension against another:
+The lower scores are the honest consequence of withdrawing scores that v2.0 had not earned.
 
-- an identity figure would add length and help scaffolding;
-- merging Chs 5 and 8 would improve concision at the cost of dependency order;
-- removing guard repetitions would improve concision at the cost of category integrity.
+## Stabilisation
 
-**Stopping condition met:** no load-bearing dimension is below 75, and no serious conceptual defect remains.
+After the v2.1 corrections, the reader checkpoints produced one wording correction (the implied chooser at the end of Ch 4), and the red team produced none requiring structural change. The remaining issues are recorded limitations, not defects:
 
-## §55 first-principles questions
+- exploratory-research dependence;
+- Chapter 8 load;
+- the identity criterion's practical difficulty.
 
-| Question | Answer |
-| --- | --- |
-| Current RS, not August? | Yes. The September calculator and October constraint-lab results are central; the August mechanisms are demoted with reasons |
-| Stochastic research integrated, not appended? | Yes. It structures Chs 4–8 and feeds identity, T-C-R and regularity |
-| T-C-R a cornerstone? | Yes. It has its own chapter, and is reused in life, persons, corruption and restoration with guards |
-| Why relation matters, and why for global coherence? | Ch 9 |
-| Global coherence distinguished from local success? | Ch 2 |
-| Science respected? | Chs 2 and 8 |
-| Assumptions visible? | Ch 2 table; epistemic levels marked in prose |
-| Why RS cannot be "proved"? | Preface, Ch 2, Ch 15 |
-| Material/spiritual distinction robust? | Yes |
-| Worldview disqualification moved off the main path? | Yes, to App A |
-| Can a reader hold it? | Yes, with effort at Chs 7 and 9 |
-| Difficult material given space; easy material concise? | Chs 7 and 9 longest; Chs 10 and 12 concise |
-| Claims calibrated? | Yes; epistemic register |
-| Globally coherent? | No internal contradiction found; external adequacy remains the open test, as the book itself says |
+## Recommendation
 
-## Recorded limitations for the next edition
+The manuscript is recommended **for human merge review**, not for automatic merge. The reviewer should check four things:
 
-1. Locate and assess the research threads named in the brief but absent from the repository (502-series admissibility experiments, a relational stochastic ring, Navier–Stokes and spectral/Grassmannian work). Integrate them only if their records are published.
-2. Add a figure for identity-as-invariant (Ch 6).
-3. Test the book with real readers from the declared profile; the HCL estimates are editorial judgements.
-4. If the constraint laboratory adds history (H ≥ 1), revisit the memory-as-configuration hypothesis in Ch 6.
+1. that the conversational-research conclusions are represented as the author intended (`conversational-research-import-v1.md`);
+2. the new Chapter 9 argument;
+3. Chapter 8's load;
+4. whether the exploratory research should be reconstructed as formal records before publication.
+
+## Limitations for the next revision
+
+1. Reconstruct the 502-series, ring and hidden-fibre work as committed experiment records. Then update the chapters' "exploratory" labels.
+2. If the constraint laboratory runs history depth (H = 1) or a triadic relation, revisit Chapter 6 (memory) and Appendix B.
+3. Real-reader testing of Chapters 6 to 9.

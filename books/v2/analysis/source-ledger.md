@@ -24,6 +24,11 @@ Sources used for factual claims in the manuscript. "RS" entries are in this repo
 | S16 | Hysteresis and path dependence in materials | standard materials science; e.g. Bertotti, G. (1998). *Hysteresis in Magnetism*. Academic Press. |
 | S17 | Underdetermination of theory by evidence | Duhem, P. (1906/1954). *The Aim and Structure of Physical Theory*; SEP "Underdetermination of Scientific Theory". |
 | S18 | "Unreasonable effectiveness" of mathematics | Wigner, E. (1960). *Communications on Pure and Applied Mathematics* 13, 1–14. |
+| S20 | Laws of large numbers for dependent (ergodic, mixing) sequences | Durrett, R. (2019). *Probability: Theory and Examples* (5th ed.). Cambridge University Press, ch. 7; Hansen, B. E., "A weak law of large numbers under weak mixing" (working paper). |
+| S21 | Objective-collapse theories are empirically distinguishable | Bassi, A., Dorato, M., & Ulbricht, H. (2023). Collapse models: a theoretical, experimental and philosophical review. *Entropy* 25, 645. |
+| S22 | Nucleon mass dominated by strong-interaction dynamics | Dürr, S. et al. (2008). Ab initio determination of light hadron masses. *Science* 322, 1224. |
+| S23 | Bell's theorem and its assumptions | SEP "Bell's Theorem". |
+| S24 | Powers ontology; Humean mosaic; emergence | SEP "Dispositions"; Lewis, D. (1986) *Philosophical Papers* II, introduction; SEP "Emergent Properties". |
 | S19 | Brownian motion and diffusion as statistical regularities | Einstein, A. (1905). *Annalen der Physik* 17, 549–560. |
 
 ## Relational Substrate research (this repository)
@@ -34,6 +39,8 @@ Sources used for factual claims in the manuscript. "RS" entries are in this repo
 | RS2 | Constraint Laboratory Generation 001 | branch `research/constraint-lab-v0.1`: `constraint-lab/reports/generation-001-pregeometric-pairwise.md`; charter `constraint-lab/docs/research-charter.md` |
 | RS3 | Topological conceptual phase and instantiation anchors | `docs/conceptual-phase-completion-2026-07-12.md`; `docs/theta-origin-wpa-2026-07-13.md` |
 | RS4 | Lens verdict and order-effect corroboration | `docs/relational-substrate-validation-status.md`; `docs/cross-domain-directional-ledger.md` |
+| RS6 | Constraint Laboratory Generations 1b and 2; review v0.2 | branch `research/constraint-lab-v0.2` (head `0170189`): `constraint-lab/reports/generation-001b-structurally-normalised.md`, `generation-002-occupation-threshold.md`, `docs/review-v0.2.md` |
+| RS7 | Author-supplied conversational research (not repository experiments) | `books/v2/analysis/conversational-research-import-v1.md` |
 | RS5 | Technical volume | `books/relational-substrate.md` |
 
 ## Readability research

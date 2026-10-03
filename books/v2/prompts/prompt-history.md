@@ -32,3 +32,23 @@ No further instructions were given during the work. It was carried out in one au
 6. **Build.** Covers (seeded SVG), EPUB 2 build integrated into `scripts/build-epubs.sh`, epubcheck validation.
 
 The brief's formulations that the research revised are recorded with reasons in `../analysis/research-baseline.md` §3.
+
+## 2026-10-03: v2.1 follow-up review and correction
+
+- **Instruction:** [`v2.1-follow-up-review-prompt.md`](v2.1-follow-up-review-prompt.md), verbatim.
+- **Branch:** `book/coherent-biblical-ontology-v2`. Starting commit `11495e0`. Draft PR #3.
+- **Purpose:** an independent review compared the v2 manuscript with a larger conversational research corpus not in GitHub, and found the v2 reconstruction good but incomplete. v2.1 is a correction and completion pass, not a rewrite.
+- **Major corrections:**
+  - T-C-R decoupled from the calculator carry protocol (Ch 7).
+  - Identity as relational equivalence with provenance and future discriminability (Ch 6).
+  - Joint-process coordination and mean versus fluctuation stability (Ch 8).
+  - Global coherence beyond non-contradiction (Chs 2, 9).
+  - Ch 9 argued against serious alternatives.
+  - Constraint Lab v0.2 integrated: Generations 1b and 2, including the correction of v2's cancellation claim (Ch 4, App B).
+  - Calibration of LLN, Bell, collapse theories, mass and fields.
+  - Freedom, death and higher-alignment language made theologically neutral and calibrated.
+  - T2 retired.
+  - New identity figure.
+- **Provenance handling:** conclusions supplied from conversational research are recorded in `../analysis/conversational-research-import-v1.md`. In the manuscript they are labelled as exploratory and never cited as experiments.
+- **Divergences from the instruction:** none of substance. Nuances are recorded in the research baseline §7 (Generation 2's pairwise count cancellations; the roadmap candidates are not commitments).
+- **Resulting commits:** `cf5a49d`, `150f69a`, `fc0da70`, and the final v2.1 commit that records this entry.

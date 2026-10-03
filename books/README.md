@@ -9,6 +9,7 @@ This directory contains the book-length manuscripts of the Relational Substrate 
 
 - **coherent-biblical-ontology-second-edition.md** — *Coherent Biblical Ontology*, **Second Edition** (October 2026). *Current edition.*
   A Scripture-first account of a relational creation, rewritten from first principles around the current research: constrained possibility (admissibility and tendency), constrained stochastic actualisation, identity as preserved invariance, Transmit–Carry–Receive, emergent regularity and the place of mathematics, and the argument that a relation-first physical world matters for global coherence, while material, living, personal and spiritual categories remain distinct.
+  Revised the same day as **v2.1** after an independent review against the wider research corpus. Identity (relational equivalence and provenance), T-C-R (decoupled from the calculator protocol), coordination and global coherence were corrected, and Constraint Laboratory Generations 1b and 2 were integrated. Conclusions from conversational research that is not yet in the repository are labelled as exploratory (`v2/analysis/conversational-research-import-v1.md`).
   The chapters are edited in `v2/manuscript/` and assembled into this file with `python3 books/v2/tools/assemble_manuscript.py`.
 
 - **coherent-biblical-ontology-bachelors.md** — *Coherent Biblical Ontology*, first edition (master draft v3, August 2026). *Preserved as the historical baseline.*
