@@ -46,6 +46,7 @@ Scripture is quoted from the King James Version throughout.
 
 - On laws of large numbers for dependent sequences (ergodic and mixing processes): R. Durrett, *Probability: Theory and Examples* (5th ed., Cambridge University Press, 2019), ch. 7.
 - On Bell's theorem and its assumptions: the *Stanford Encyclopedia of Philosophy* entry "Bell's Theorem".
+- The constraint laboratory's Generation 3 report (an independent three-way relation; apparent memory under coarse-graining) is in `constraint-lab/reports/generation-003-independent-triadic-relation.md` on branch `research/constraint-lab-v0.3`.
 - The constraint laboratory's Generation 2 report (occupation-count rules; negative result on constructive reorganisation) is in `constraint-lab/reports/generation-002-occupation-threshold.md` on the same branch.
 
 - On Brownian motion: A. Einstein, *Annalen der Physik* 17 (1905).
