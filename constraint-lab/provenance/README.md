@@ -34,3 +34,5 @@ Prompt identifiers:
 The verbatim text of 001 and 002 can be inserted later from the ChatGPT conversation, as new prompt files plus a new ledger line. Do not reconstruct them from memory.
 
 Reviews live in `reviews/`. Review 002 records an external ChatGPT reading of v0.2. It says what was inspected and what was concluded. It is not a line-by-line audit of generated artifacts.
+
+Executions live in `executions/`. An execution record names the branch, the commit range, and the experiment ids a prompt produced. It may record divergences. It is not a review, and it does not rewrite the prompt.
