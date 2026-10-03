@@ -661,6 +661,97 @@ def epoch_kernel_float(kernel: Kernel) -> tuple[np.ndarray | None, float | None]
     return landing, defect
 
 
+def epoch_kernel_block(kernel: Kernel) -> tuple[np.ndarray | None, float | None]:
+    """Pair-event landing kernel by hidden-triad blocks.
+
+    Between pair events the pairwise bits are fixed and only triadic
+    relations toggle. At N=4 each of the 64 pair states has a 16-state
+    triadic block. The linear system is the same one ``epoch_kernel_float``
+    solves; it is block diagonal, so each block is solved on its own.
+    Rows, the 1e-12 landing floor, the missing-mass defect, and the
+    no-future-pair-event case keep that function's semantics. The result
+    is float64. It is not an exact kernel.
+    """
+    n_pairs, n_triads = layout(kernel)
+    mask = _pair_mask(n_pairs)
+    n_t = 1 << n_triads
+    n_p = 1 << n_pairs
+    size = kernel.n_states
+    succ = _successor_float(kernel)
+    landing = np.zeros((size, size), dtype=np.float64)
+    defect = 0.0
+    any_seen = False
+    for pair in range(n_p):
+        states = [pair | (triad << n_pairs) for triad in range(n_t)]
+        local_of = {state: index for index, state in enumerate(states)}
+        pair_exit = [False] * n_t
+        predecessors: list[list[int]] = [[] for _ in range(n_t)]
+        for local, state in enumerate(states):
+            if kernel.deadlock[state]:
+                continue
+            for target, prob in succ[state]:
+                if target == state:
+                    continue
+                if _is_pair_move(state, target, mask):
+                    pair_exit[local] = True
+                else:
+                    # A non-pair move stays inside this pair block. A target
+                    # outside the block is missing mass, as it would be when
+                    # the dense solver's seen set does not contain it.
+                    target_local = local_of.get(target)
+                    if target_local is None:
+                        continue
+                    predecessors[target_local].append(local)
+        seen_set = {local for local, flag in enumerate(pair_exit) if flag}
+        queue = list(seen_set)
+        while queue:
+            target = queue.pop()
+            for source in predecessors[target]:
+                if source not in seen_set:
+                    seen_set.add(source)
+                    queue.append(source)
+        if not seen_set:
+            continue
+        any_seen = True
+        seen = sorted(seen_set)
+        index = {local: row for row, local in enumerate(seen)}
+        width = len(seen)
+        system = np.eye(width, dtype=np.float64)
+        direct = np.zeros((width, size), dtype=np.float64)
+        for local in seen:
+            state = states[local]
+            row = index[local]
+            for target, prob in succ[state]:
+                if target == state:
+                    continue
+                if _is_pair_move(state, target, mask):
+                    direct[row, target] += prob
+                else:
+                    target_local = local_of.get(target)
+                    if target_local is not None and target_local in index:
+                        system[row, index[target_local]] -= prob
+        try:
+            absorbed = np.linalg.solve(system, direct)
+        except np.linalg.LinAlgError:
+            return None, None
+        raw_totals = absorbed.sum(axis=1)
+        missing = 1.0 - raw_totals
+        missing[np.abs(missing) < 1e-10] = 0.0
+        block_defect = float(max(0.0, float(np.max(missing)))) if width else 1.0
+        defect = max(defect, block_defect)
+        absorbed[np.abs(absorbed) < 1e-12] = 0.0
+        totals = absorbed.sum(axis=1)
+        positive = totals > 1e-15
+        for local in seen:
+            row = index[local]
+            if not positive[row]:
+                continue
+            landing[states[local]] = absorbed[row] / totals[row]
+    if not any_seen:
+        return landing, 1.0
+    return landing, defect
+
+
 def _epoch_flux_float(kernel: Kernel, pi: np.ndarray) -> np.ndarray:
     n_pairs, _n_triads = layout(kernel)
     mask = _pair_mask(n_pairs)
