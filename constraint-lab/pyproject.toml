@@ -1,0 +1,25 @@
+[project]
+name = "rs-constraint-lab"
+version = "0.1.0"
+description = "Exact and stochastic laboratory for constraint grammars on a pre-geometric relational substrate."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "gellsmore-svg" }]
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+rs-lab = "rs_constraint_lab.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

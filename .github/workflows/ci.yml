@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - "research/**"
+  pull_request:
+
+jobs:
+  constraint-lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the constraint laboratory
+        working-directory: constraint-lab
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: Unit tests
+        working-directory: constraint-lab
+        run: python -m pytest -q
+
+      - name: Generation 0 correctness cell
+        working-directory: constraint-lab
+        run: python -m rs_constraint_lab run experiments/specs/generation-000.json --out generated/generation-000
+
+  books:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Book build script parses
+        run: bash -n scripts/build-epubs.sh
+
+      - name: EPUB filter and sources are present
+        run: |
+          test -f scripts/epub-cleanup.lua
+          test -f books/README.md
+          test -f books/relational-substrate.md
+          test -f books/coherent-biblical-ontology-bachelors.md
+          test -f books/epub/relational-substrate.epub
+          test -f books/epub/coherent-biblical-ontology.epub
+          python3 -c "import json; package=json.load(open('package.json')); assert package['scripts']['books:epub']=='bash scripts/build-epubs.sh'"
