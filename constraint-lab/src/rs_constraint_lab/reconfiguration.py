@@ -16,6 +16,13 @@ The ranking scalar, fixed before the census, is the maximum absolute
 delta_flux over ordered pairs whose classes have the same edge count and
 are not isomorphic. The horizon below is not adjusted after results are seen.
 
+Structural invariant of this event model: one pair event toggles exactly
+one pair bit, so the pairwise edge count changes by exactly one. The
+same-edge-count non-isomorphic one-step flux is identically zero for every
+grammar that uses this independent-hypergraph event model, at any
+constraint cardinality. The zero is informative. It is not a success
+criterion, and the measure is retained.
+
 Different edge count, same edge count and isomorphic, and same edge count
 and non-isomorphic are recorded as separate categories. Only the last is
 called structural reconfiguration.
