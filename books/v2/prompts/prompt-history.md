@@ -52,3 +52,15 @@ The brief's formulations that the research revised are recorded with reasons in 
 - **Provenance handling:** conclusions supplied from conversational research are recorded in `../analysis/conversational-research-import-v1.md`. In the manuscript they are labelled as exploratory and never cited as experiments.
 - **Divergences from the instruction:** none of substance. Nuances are recorded in the research baseline §7 (Generation 2's pairwise count cancellations; the roadmap candidates are not commitments).
 - **Resulting commits:** `cf5a49d`, `150f69a`, `fc0da70`, and the final v2.1 commit that records this entry.
+
+## 2026-10-03: v2.2 follow-up refinement
+
+- **Instruction:** [`v2.2-follow-up-review-prompt.md`](v2.2-follow-up-review-prompt.md), verbatim.
+- **Starting head:** `62eca7d`. Constraint Lab refs verified: v0.2 `0170189` unchanged. A new branch, v0.3 (`e04e0d4`, Generation 3), had appeared and was integrated.
+- **Purpose:** refinement of Chapter 8 (aggregation versus coordination; dependence as an ontological, not mathematical, claim); negative and conditional 502 results; the endogenous carrier/lineage problem recorded as open; removal of stale baseline contradictions.
+- **Files changed:**
+  - manuscript: Chs 6, 7, 8 and Apps B, D;
+  - analysis: research-baseline (restructured), conversational-research-import-v2 (new; v1 marked superseded), epistemic register, HCL map, concept-graph builder, chapter map, v2.2 review record, final reviews;
+  - READMEs.
+- **Divergence:** the instruction treated triadic relation and history as untested candidates. The repository had run Generation 3 (triadic), so its results are reported. Recorded in the baseline III.3.
+- **Resulting commits:** `cbbe8c0` and the v2.2 audit commit that records this entry.

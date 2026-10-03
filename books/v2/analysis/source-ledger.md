@@ -40,7 +40,7 @@ Sources used for factual claims in the manuscript. "RS" entries are in this repo
 | RS3 | Topological conceptual phase and instantiation anchors | `docs/conceptual-phase-completion-2026-07-12.md`; `docs/theta-origin-wpa-2026-07-13.md` |
 | RS4 | Lens verdict and order-effect corroboration | `docs/relational-substrate-validation-status.md`; `docs/cross-domain-directional-ledger.md` |
 | RS6 | Constraint Laboratory Generations 1b and 2; review v0.2 | branch `research/constraint-lab-v0.2` (head `0170189`): `constraint-lab/reports/generation-001b-structurally-normalised.md`, `generation-002-occupation-threshold.md`, `docs/review-v0.2.md` |
-| RS7 | Author-supplied conversational research (not repository experiments) | `books/v2/analysis/conversational-research-import-v1.md` |
+| RS7 | Author-supplied conversational research (not repository experiments) | `books/v2/analysis/conversational-research-import-v2.md` |
 | RS5 | Technical volume | `books/relational-substrate.md` |
 
 ## Readability research

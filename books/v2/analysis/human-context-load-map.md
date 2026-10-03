@@ -29,7 +29,7 @@ The skill `human-book-readability` was applied to the outline. The HCL dimension
 1. *Difference*: a mark, a temperature, a configuration that could matter elsewhere.
 2. *Release*: the bell struck, ten units committed to a carry. Release costs the source.
 3. *Carriage*: the relay, the replaced certificate, the wave in water. The correlation persists while vehicles change.
-4. *Reception*: the letter read and acted on. Reception is consequence, and happens once.
+4. *Reception*: the letter read and acted on. Reception is consequence, and happens once. *(v2.0 plan wording; superseded in v2.1: once-only is a property of transactional receivers, see the v2.1 section below.)*
 5. *Whole and nesting*: the stone seen by daylight, re-read now with all four in hand. Then perception within conversation.
 
 The guard against T-C-R being read as a soul-signal (brief §45 Q12) goes at the end, after the reader has the concept. It is stated as category integrity, not as an afterthought.

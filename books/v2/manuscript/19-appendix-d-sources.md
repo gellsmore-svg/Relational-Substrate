@@ -36,7 +36,7 @@ Scripture is quoted from the King James Version throughout.
 
 - On the mass of protons and neutrons arising mainly from the strong interaction: S. Dürr et al., "Ab initio determination of light hadron masses", *Science* 322, 1224 (2008).
 - The constraint laboratory's Generation 1b report (exact kernels within coarse families; "observable equality is not kernel equality") is in the project repository, branch `research/constraint-lab-v0.2`, `constraint-lab/reports/generation-001b-structurally-normalised.md`.
-- The exploratory research on contextual identity and provenance is recorded, with its status, in `books/v2/analysis/conversational-research-import-v1.md`.
+- The exploratory research on contextual identity and provenance is recorded, with its status, in `books/v2/analysis/conversational-research-import-v2.md`.
 
 - On conservation laws and symmetry: E. Noether, "Invariante Variationsprobleme" (1918).
 - On the July 2026 topological work and its stated limits: `docs/conceptual-phase-completion-2026-07-12.md` and `docs/theta-origin-wpa-2026-07-13.md` in the project repository.

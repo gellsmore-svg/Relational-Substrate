@@ -1,3 +1,5 @@
+> **Superseded (v2.2, 2026-10-03)** by [`conversational-research-import-v2.md`](conversational-research-import-v2.md), which adds the negative and conditional 502 results, the open carrier/lineage problem and the Generation 3 links. This v1 record is kept as history.
+
 # Conversational research import, v1
 
 Recorded 2026-10-03 for the v2.1 revision of the second edition.

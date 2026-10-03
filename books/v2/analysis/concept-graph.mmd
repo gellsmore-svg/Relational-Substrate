@@ -35,6 +35,7 @@ flowchart TB
   constrained_stochasticity["Constrained stochastic actualisation"]
   identity_invariant["Invariant"]
   equivalence["Identity as relational equivalence"]
+  recovery_kinds["Kinds of recovery"]
   provenance["Provenance"]
   discriminability["Future discriminability"]
   projection["Projection and coarse-graining"]
@@ -46,10 +47,13 @@ flowchart TB
   carry["Carry (recoverable constrained continuity)"]
   substitutability["Carrier substitutability"]
   receive["Receive (consequential reception)"]
+  endogenous_carrier["Endogenous carriers (open)"]
   compatibility["Receiver compatibility"]
   tcr["Transmit–Carry–Receive"]
   nested_tcr["Nested and composed T-C-R"]
   joint_process["Marginals versus joint process"]
+  aggregation["Aggregation"]
+  layered_stability["Layered stability"]
   coordination["Coordination of fluctuations"]
   local_global["Local and global constraint"]
   regularity["Emergent regularity / effective determinism"]
@@ -142,6 +146,13 @@ flowchart TB
   receive --> tcr
   tcr --> nested_tcr
   stochasticity --> joint_process
+  stochasticity --> aggregation
+  aggregation --> layered_stability
+  coordination --> layered_stability
+  aggregation --> regularity
+  equivalence --> recovery_kinds
+  provenance --> recovery_kinds
+  carry --> endogenous_carrier
   joint_process --> coordination
   constrained_stochasticity --> coordination
   relation --> coordination
@@ -201,7 +212,7 @@ flowchart TB
     analogy_vs_identity & assumptions & boundary_validity & category & coherence & coherence_not_fidelity & connectivity & creation_real & creator_creature & darkness & desc_not_ont & description & empirical_constraint & epistemic_levels & global_coherence & knowing_coherence & local_coherence & not_proof & ontology & propagation_cycle & regional_coherence & scripture
   end
   subgraph Physical_ontology["Physical ontology"]
-    actualisation & admissibility & carry & compatibility & constrained_stochasticity & constraint_generative & coordination & difference & discriminability & equivalence & identity_invariant & information_loss & joint_process & local_global & manifestation & mathematics & matter & mediation & memory_configuration & nested_tcr & non_agentic & object_first & persistence & possibility & projection & provenance & purpose_upstream & receive & regularity & relation & runtime & stochasticity & substitutability & substrate & tcr & tendency & time & transmit
+    actualisation & admissibility & aggregation & carry & compatibility & constrained_stochasticity & constraint_generative & coordination & difference & discriminability & endogenous_carrier & equivalence & identity_invariant & information_loss & joint_process & layered_stability & local_global & manifestation & mathematics & matter & mediation & memory_configuration & nested_tcr & non_agentic & object_first & persistence & possibility & projection & provenance & purpose_upstream & receive & recovery_kinds & regularity & relation & runtime & stochasticity & substitutability & substrate & tcr & tendency & time & transmit
   end
   subgraph Life["Life, persons, theology"]
     alignment & bridge & consciousness & corruption & divine_action & embodiment & higher_order & image & life & limitation & personhood & restoration & resurrection & soul_spirit & three_admissibility

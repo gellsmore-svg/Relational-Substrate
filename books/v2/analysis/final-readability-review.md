@@ -49,3 +49,9 @@ See the v2.1 section of `human-context-load-map.md`. Chapter 8 is now the highes
 ## Red-team note on this review
 
 The v2.0 review scored conceptual dimensions it could not assess. That was a ceremonial-scoring failure. This review scores only readability. Conceptual correctness is assessed separately in `final-vector-review.md` and in `v2.1-reader-simulation-and-red-team.md`.
+
+## v2.2 update
+
+Chapter 8 went from 3,210 to 3,767 words. Mean sentence length fell from 16.7 to 16.5, adjacent-paragraph overlap held at 0.13, and the three "not … but" constructions are genuine distinctions.
+
+The new orientation paragraph lowers inferential burden: the reader is told in advance that coins, rings, fluids and hidden structure answer four different questions. The simulated first-time reader answered all five Chapter 8 test questions correctly (`v2.2-review-record.md`). Chapter 8 remains the highest-load chapter, and the extra words are mostly the aggregation/coordination distinction the review asked for. Chapters 6 and 7 grew by about 110 and 50 words for their caveats. Metrics: `../reviews/v2.2-metrics.md`.

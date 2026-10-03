@@ -1728,7 +1728,7 @@ The negative results in Generations 2 and 3 are valuable. It shows that simple p
 
 ## Exploratory research not yet published as formal records
 
-Several lines of the project's research were carried out in conversational research sessions whose records are not in the repository. Their conclusions inform Chapters 6 to 9. They are described in the book as exploratory, and they should not be cited as completed experiments until formal records exist. The repository file `books/v2/analysis/conversational-research-import-v1.md` lists them with their status.
+Several lines of the project's research were carried out in conversational research sessions whose records are not in the repository. Their conclusions inform Chapters 6 to 9. They are described in the book as exploratory, and they should not be cited as completed experiments until formal records exist. The repository file `books/v2/analysis/conversational-research-import-v2.md` lists them with their status.
 
 - **Contextual identity and provenance** (Chapter 6). States can be equivalent under one description and distinguishable by a later interaction. A distinction may be ignored only where no reachable future can draw on it. Past paths can survive in present structure. *Adjacent recorded evidence:* Generation 1b's hidden variety; the calculator's equivalence classes. *Limits from the same exploratory line:* rebuilt organisation or function was not always the same identity restored; some exploratory runs drifted toward one dominant regime; identity-specific recovery sometimes needed contextual help; no universal mechanism of identity was found.
 - **Coordination in rings of chancy units** (Chapter 8). Equal individual chances do not fix whole-system behaviour. What stabilises is coordination aligned with consequence, and stability of the mean is not stability of fluctuations. *Adjacent recorded evidence:* the calculator's covariance and ring-locality results.
@@ -1879,7 +1879,7 @@ Scripture is quoted from the King James Version throughout.
 
 - On the mass of protons and neutrons arising mainly from the strong interaction: S. Dürr et al., "Ab initio determination of light hadron masses", *Science* 322, 1224 (2008).
 - The constraint laboratory's Generation 1b report (exact kernels within coarse families; "observable equality is not kernel equality") is in the project repository, branch `research/constraint-lab-v0.2`, `constraint-lab/reports/generation-001b-structurally-normalised.md`.
-- The exploratory research on contextual identity and provenance is recorded, with its status, in `books/v2/analysis/conversational-research-import-v1.md`.
+- The exploratory research on contextual identity and provenance is recorded, with its status, in `books/v2/analysis/conversational-research-import-v2.md`.
 
 - On conservation laws and symmetry: E. Noether, "Invariante Variationsprobleme" (1918).
 - On the July 2026 topological work and its stated limits: `docs/conceptual-phase-completion-2026-07-12.md` and `docs/theta-origin-wpa-2026-07-13.md` in the project repository.

@@ -54,10 +54,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 1,
-    "transitive_dependents": 57,
-    "betweenness": 0.0276,
+    "transitive_dependents": 61,
+    "betweenness": 0.0258,
     "cross_domain_reach": 2,
-    "rank_sum": 107,
+    "rank_sum": 113,
     "rank": 17
    }
   },
@@ -102,11 +102,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 2,
-    "transitive_dependents": 54,
-    "betweenness": 0.0365,
+    "transitive_dependents": 58,
+    "betweenness": 0.0334,
     "cross_domain_reach": 2,
-    "rank_sum": 97,
-    "rank": 14
+    "rank_sum": 103,
+    "rank": 15
    }
   },
   {
@@ -143,9 +143,9 @@
    "metrics": {
     "prerequisite_depth": 2,
     "transitive_dependents": 6,
-    "betweenness": 0.0275,
+    "betweenness": 0.0261,
     "cross_domain_reach": 2,
-    "rank_sum": 133,
+    "rank_sum": 136,
     "rank": 31
    }
   },
@@ -182,8 +182,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 219,
-    "rank": 69
+    "rank_sum": 228,
+    "rank": 72
    }
   },
   {
@@ -216,11 +216,11 @@
    "load_bearing_declared": false,
    "metrics": {
     "prerequisite_depth": 1,
-    "transitive_dependents": 60,
-    "betweenness": 0.0099,
+    "transitive_dependents": 64,
+    "betweenness": 0.0089,
     "cross_domain_reach": 1,
-    "rank_sum": 158,
-    "rank": 44
+    "rank_sum": 167,
+    "rank": 46
    }
   },
   {
@@ -254,11 +254,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 2,
-    "transitive_dependents": 58,
-    "betweenness": 0.0035,
+    "transitive_dependents": 62,
+    "betweenness": 0.0031,
     "cross_domain_reach": 1,
-    "rank_sum": 168,
-    "rank": 50
+    "rank_sum": 173,
+    "rank": 52
    }
   },
   {
@@ -299,10 +299,10 @@
    "metrics": {
     "prerequisite_depth": 3,
     "transitive_dependents": 5,
-    "betweenness": 0.065,
+    "betweenness": 0.062,
     "cross_domain_reach": 2,
-    "rank_sum": 114,
-    "rank": 20
+    "rank_sum": 120,
+    "rank": 23
    }
   },
   {
@@ -337,10 +337,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 3,
-    "transitive_dependents": 54,
-    "betweenness": 0.0052,
+    "transitive_dependents": 58,
+    "betweenness": 0.005,
     "cross_domain_reach": 2,
-    "rank_sum": 129,
+    "rank_sum": 134,
     "rank": 29
    }
   },
@@ -375,10 +375,10 @@
    "metrics": {
     "prerequisite_depth": 4,
     "transitive_dependents": 0,
-    "betweenness": 0.0024,
+    "betweenness": 0.0021,
     "cross_domain_reach": 1,
-    "rank_sum": 216,
-    "rank": 68
+    "rank_sum": 225,
+    "rank": 71
    }
   },
   {
@@ -414,9 +414,9 @@
    "metrics": {
     "prerequisite_depth": 1,
     "transitive_dependents": 10,
-    "betweenness": 0.0206,
+    "betweenness": 0.0195,
     "cross_domain_reach": 1,
-    "rank_sum": 176,
+    "rank_sum": 181,
     "rank": 55
    }
   },
@@ -451,10 +451,10 @@
    "metrics": {
     "prerequisite_depth": 2,
     "transitive_dependents": 4,
-    "betweenness": 0.0058,
+    "betweenness": 0.0053,
     "cross_domain_reach": 1,
-    "rank_sum": 200,
-    "rank": 60
+    "rank_sum": 208,
+    "rank": 62
    }
   },
   {
@@ -490,8 +490,8 @@
     "transitive_dependents": 3,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 215,
-    "rank": 66
+    "rank_sum": 223,
+    "rank": 70
    }
   },
   {
@@ -530,9 +530,9 @@
    "metrics": {
     "prerequisite_depth": 6,
     "transitive_dependents": 2,
-    "betweenness": 0.1737,
+    "betweenness": 0.1646,
     "cross_domain_reach": 3,
-    "rank_sum": 95,
+    "rank_sum": 100,
     "rank": 13
    }
   },
@@ -571,10 +571,10 @@
    "metrics": {
     "prerequisite_depth": 2,
     "transitive_dependents": 1,
-    "betweenness": 0.0736,
+    "betweenness": 0.0697,
     "cross_domain_reach": 2,
-    "rank_sum": 140,
-    "rank": 33
+    "rank_sum": 147,
+    "rank": 34
    }
   },
   {
@@ -610,10 +610,10 @@
    "metrics": {
     "prerequisite_depth": 3,
     "transitive_dependents": 0,
-    "betweenness": 0.0051,
+    "betweenness": 0.0046,
     "cross_domain_reach": 1,
-    "rank_sum": 222,
-    "rank": 70
+    "rank_sum": 229,
+    "rank": 73
    }
   },
   {
@@ -649,10 +649,10 @@
    "metrics": {
     "prerequisite_depth": 2,
     "transitive_dependents": 3,
-    "betweenness": 0.0485,
+    "betweenness": 0.044,
     "cross_domain_reach": 2,
-    "rank_sum": 143,
-    "rank": 36
+    "rank_sum": 148,
+    "rank": 35
    }
   },
   {
@@ -686,10 +686,10 @@
    "metrics": {
     "prerequisite_depth": 2,
     "transitive_dependents": 5,
-    "betweenness": 0.006,
+    "betweenness": 0.0054,
     "cross_domain_reach": 1,
-    "rank_sum": 201,
-    "rank": 61
+    "rank_sum": 210,
+    "rank": 63
    }
   },
   {
@@ -726,10 +726,10 @@
    "metrics": {
     "prerequisite_depth": 4,
     "transitive_dependents": 4,
-    "betweenness": 0.0272,
+    "betweenness": 0.0249,
     "cross_domain_reach": 1,
-    "rank_sum": 171,
-    "rank": 52
+    "rank_sum": 179,
+    "rank": 54
    }
   },
   {
@@ -766,10 +766,10 @@
    "metrics": {
     "prerequisite_depth": 5,
     "transitive_dependents": 3,
-    "betweenness": 0.0153,
+    "betweenness": 0.0144,
     "cross_domain_reach": 1,
-    "rank_sum": 183,
-    "rank": 57
+    "rank_sum": 188,
+    "rank": 58
    }
   },
   {
@@ -804,10 +804,10 @@
    "metrics": {
     "prerequisite_depth": 7,
     "transitive_dependents": 0,
-    "betweenness": 0.0028,
+    "betweenness": 0.0025,
     "cross_domain_reach": 1,
-    "rank_sum": 214,
-    "rank": 65
+    "rank_sum": 221,
+    "rank": 69
    }
   },
   {
@@ -844,10 +844,10 @@
    "metrics": {
     "prerequisite_depth": 4,
     "transitive_dependents": 1,
-    "betweenness": 0.0119,
+    "betweenness": 0.0111,
     "cross_domain_reach": 2,
-    "rank_sum": 161,
-    "rank": 45
+    "rank_sum": 169,
+    "rank": 48
    }
   },
   {
@@ -886,9 +886,9 @@
    "metrics": {
     "prerequisite_depth": 3,
     "transitive_dependents": 16,
-    "betweenness": 0.0791,
+    "betweenness": 0.073,
     "cross_domain_reach": 2,
-    "rank_sum": 107,
+    "rank_sum": 113,
     "rank": 18
    }
   },
@@ -931,10 +931,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 5,
-    "transitive_dependents": 51,
-    "betweenness": 0.1508,
+    "transitive_dependents": 55,
+    "betweenness": 0.1609,
     "cross_domain_reach": 3,
-    "rank_sum": 63,
+    "rank_sum": 67,
     "rank": 3
    }
   },
@@ -968,10 +968,10 @@
    "load_bearing_declared": false,
    "metrics": {
     "prerequisite_depth": 4,
-    "transitive_dependents": 52,
-    "betweenness": 0.0247,
+    "transitive_dependents": 56,
+    "betweenness": 0.0239,
     "cross_domain_reach": 2,
-    "rank_sum": 111,
+    "rank_sum": 115,
     "rank": 19
    }
   },
@@ -1015,10 +1015,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 6,
-    "transitive_dependents": 47,
-    "betweenness": 0.1727,
+    "transitive_dependents": 51,
+    "betweenness": 0.1634,
     "cross_domain_reach": 3,
-    "rank_sum": 60,
+    "rank_sum": 64,
     "rank": 2
    }
   },
@@ -1057,9 +1057,9 @@
    "metrics": {
     "prerequisite_depth": 7,
     "transitive_dependents": 4,
-    "betweenness": 0.0354,
+    "betweenness": 0.0337,
     "cross_domain_reach": 2,
-    "rank_sum": 123,
+    "rank_sum": 127,
     "rank": 25
    }
   },
@@ -1092,9 +1092,9 @@
    "metrics": {
     "prerequisite_depth": 6,
     "transitive_dependents": 0,
-    "betweenness": 0.0056,
+    "betweenness": 0.0058,
     "cross_domain_reach": 1,
-    "rank_sum": 215,
+    "rank_sum": 220,
     "rank": 67
    }
   },
@@ -1131,10 +1131,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 7,
-    "transitive_dependents": 45,
-    "betweenness": 0.0619,
+    "transitive_dependents": 49,
+    "betweenness": 0.0567,
     "cross_domain_reach": 1,
-    "rank_sum": 123,
+    "rank_sum": 129,
     "rank": 26
    }
   },
@@ -1181,10 +1181,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 8,
-    "transitive_dependents": 39,
-    "betweenness": 0.1409,
+    "transitive_dependents": 43,
+    "betweenness": 0.1337,
     "cross_domain_reach": 2,
-    "rank_sum": 72,
+    "rank_sum": 77,
     "rank": 8
    }
   },
@@ -1220,10 +1220,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 9,
-    "transitive_dependents": 35,
-    "betweenness": 0.004,
+    "transitive_dependents": 39,
+    "betweenness": 0.0042,
     "cross_domain_reach": 1,
-    "rank_sum": 157,
+    "rank_sum": 162,
     "rank": 43
    }
   },
@@ -1261,10 +1261,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 8,
-    "transitive_dependents": 34,
-    "betweenness": 0.0519,
+    "transitive_dependents": 37,
+    "betweenness": 0.0494,
     "cross_domain_reach": 2,
-    "rank_sum": 90,
+    "rank_sum": 96,
     "rank": 11
    }
   },
@@ -1279,6 +1279,7 @@
     "tendency"
    ],
    "dependents": [
+    "aggregation",
     "constrained-stochasticity",
     "joint-process"
    ],
@@ -1299,10 +1300,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 10,
-    "transitive_dependents": 34,
-    "betweenness": 0.0079,
+    "transitive_dependents": 38,
+    "betweenness": 0.0106,
     "cross_domain_reach": 1,
-    "rank_sum": 149,
+    "rank_sum": 151,
     "rank": 37
    }
   },
@@ -1346,10 +1347,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 11,
-    "transitive_dependents": 32,
-    "betweenness": 0.1451,
+    "transitive_dependents": 35,
+    "betweenness": 0.1439,
     "cross_domain_reach": 2,
-    "rank_sum": 67,
+    "rank_sum": 70,
     "rank": 4
    }
   },
@@ -1394,10 +1395,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 12,
-    "transitive_dependents": 29,
-    "betweenness": 0.1039,
+    "transitive_dependents": 31,
+    "betweenness": 0.112,
     "cross_domain_reach": 2,
-    "rank_sum": 71,
+    "rank_sum": 74,
     "rank": 7
    }
   },
@@ -1417,6 +1418,7 @@
     "carry",
     "persistence",
     "provenance",
+    "recovery-kinds",
     "resurrection"
    ],
    "cross_domain_relations": [],
@@ -1441,11 +1443,50 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 14,
-    "transitive_dependents": 24,
-    "betweenness": 0.0427,
+    "transitive_dependents": 26,
+    "betweenness": 0.0537,
     "cross_domain_reach": 2,
-    "rank_sum": 83,
+    "rank_sum": 81,
     "rank": 9
+   }
+  },
+  {
+   "id": "recovery-kinds",
+   "term": "Kinds of recovery",
+   "definition": "Functional, structural, equivalence-class and lineage-specific recovery are distinct; reconstruction is not automatically restoration of identity.",
+   "epistemic_category": "ontological distinction (author-supplied research, negative results)",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "equivalence",
+    "provenance"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-conv"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 6",
+   "reactivation_points": [
+    "Ch 10",
+    "Ch 14"
+   ],
+   "example_needed": "a rebuilt organisation without its lineage",
+   "common_misunderstanding": "that working again means the same again",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 10,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 16,
+    "transitive_dependents": 0,
+    "betweenness": 0.0014,
+    "cross_domain_reach": 2,
+    "rank_sum": 170,
+    "rank": 49
    }
   },
   {
@@ -1459,7 +1500,8 @@
     "equivalence"
    ],
    "dependents": [
-    "memory-configuration"
+    "memory-configuration",
+    "recovery-kinds"
    ],
    "cross_domain_relations": [],
    "evidence": [
@@ -1482,11 +1524,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 15,
-    "transitive_dependents": 1,
-    "betweenness": 0.0081,
+    "transitive_dependents": 2,
+    "betweenness": 0.012,
     "cross_domain_reach": 1,
-    "rank_sum": 175,
-    "rank": 54
+    "rank_sum": 171,
+    "rank": 50
    }
   },
   {
@@ -1519,11 +1561,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 9,
-    "transitive_dependents": 25,
-    "betweenness": 0.0096,
+    "transitive_dependents": 27,
+    "betweenness": 0.0106,
     "cross_domain_reach": 1,
-    "rank_sum": 155,
-    "rank": 40
+    "rank_sum": 159,
+    "rank": 38
    }
   },
   {
@@ -1541,7 +1583,8 @@
    ],
    "cross_domain_relations": [],
    "evidence": [
-    "E-cl1b"
+    "E-cl1b",
+    "E-cl3"
    ],
    "scripture_bounds": [],
    "intended_first_introduction": "Ch 6",
@@ -1559,17 +1602,17 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 13,
-    "transitive_dependents": 25,
-    "betweenness": 0.0022,
+    "transitive_dependents": 27,
+    "betweenness": 0.0023,
     "cross_domain_reach": 1,
-    "rank_sum": 163,
-    "rank": 48
+    "rank_sum": 167,
+    "rank": 47
    }
   },
   {
    "id": "persistence",
    "term": "Persistence",
-   "definition": "Continued re-actualisation within the same invariant class.",
+   "definition": "Continued re-actualisation within the same relevant equivalence class.",
    "epistemic_category": "ontological interpretation",
    "research_maturity": "working",
    "domain": "physical",
@@ -1603,17 +1646,17 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 15,
-    "transitive_dependents": 21,
-    "betweenness": 0.1335,
+    "transitive_dependents": 22,
+    "betweenness": 0.1356,
     "cross_domain_reach": 2,
-    "rank_sum": 68,
+    "rank_sum": 70,
     "rank": 5
    }
   },
   {
    "id": "information-loss",
    "term": "Preservation is not reconstruction",
-   "definition": "An invariant survives admissible change but destroyed information is not recovered by conservation.",
+   "definition": "Admissible change preserves an equivalence class, but destroyed distinctions are not recovered by conservation; recovery needs surviving information.",
    "epistemic_category": "RS experimental result (model)",
    "research_maturity": "working",
    "domain": "physical",
@@ -1641,7 +1684,7 @@
    "metrics": {
     "prerequisite_depth": 13,
     "transitive_dependents": 0,
-    "betweenness": 0.0,
+    "betweenness": 0.0025,
     "cross_domain_reach": 1,
     "rank_sum": 213,
     "rank": 64
@@ -1661,6 +1704,7 @@
    "dependents": [],
    "cross_domain_relations": [],
    "evidence": [
+    "E-cl3",
     "E-hysteresis",
     "E-order"
    ],
@@ -1681,10 +1725,10 @@
    "metrics": {
     "prerequisite_depth": 16,
     "transitive_dependents": 0,
-    "betweenness": 0.0141,
+    "betweenness": 0.0138,
     "cross_domain_reach": 1,
-    "rank_sum": 179,
-    "rank": 56
+    "rank_sum": 183,
+    "rank": 57
    }
   },
   {
@@ -1717,11 +1761,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 6,
-    "transitive_dependents": 13,
-    "betweenness": 0.0276,
+    "transitive_dependents": 14,
+    "betweenness": 0.0334,
     "cross_domain_reach": 1,
-    "rank_sum": 161,
-    "rank": 46
+    "rank_sum": 163,
+    "rank": 44
    }
   },
   {
@@ -1755,11 +1799,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 7,
-    "transitive_dependents": 12,
-    "betweenness": 0.0026,
+    "transitive_dependents": 13,
+    "betweenness": 0.0024,
     "cross_domain_reach": 1,
-    "rank_sum": 192,
-    "rank": 59
+    "rank_sum": 199,
+    "rank": 60
    }
   },
   {
@@ -1775,6 +1819,7 @@
     "transmit"
    ],
    "dependents": [
+    "endogenous-carrier",
     "receive",
     "substitutability",
     "tcr"
@@ -1796,11 +1841,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 16,
-    "transitive_dependents": 11,
-    "betweenness": 0.0685,
+    "transitive_dependents": 12,
+    "betweenness": 0.0913,
     "cross_domain_reach": 1,
-    "rank_sum": 119,
-    "rank": 23
+    "rank_sum": 118,
+    "rank": 22
    }
   },
   {
@@ -1834,8 +1879,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 209,
-    "rank": 63
+    "rank_sum": 214,
+    "rank": 66
    }
   },
   {
@@ -1870,10 +1915,43 @@
    "metrics": {
     "prerequisite_depth": 17,
     "transitive_dependents": 9,
-    "betweenness": 0.0252,
+    "betweenness": 0.0254,
     "cross_domain_reach": 1,
     "rank_sum": 138,
     "rank": 32
+   }
+  },
+  {
+   "id": "endogenous-carrier",
+   "term": "Endogenous carriers (open)",
+   "definition": "Whether created order generates carrier and lineage architecture from minimal relations; not demonstrated — models used designed protocols.",
+   "epistemic_category": "open question",
+   "research_maturity": "open",
+   "domain": "physical",
+   "prerequisites": [
+    "carry"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 7",
+   "reactivation_points": [],
+   "example_needed": "the calculator's designed certificate",
+   "common_misunderstanding": "that RS has shown carriers emerge by themselves",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 17,
+    "transitive_dependents": 0,
+    "betweenness": 0.0,
+    "cross_domain_reach": 1,
+    "rank_sum": 220,
+    "rank": 68
    }
   },
   {
@@ -1908,10 +1986,10 @@
    "metrics": {
     "prerequisite_depth": 9,
     "transitive_dependents": 10,
-    "betweenness": 0.0099,
+    "betweenness": 0.0095,
     "cross_domain_reach": 1,
-    "rank_sum": 172,
-    "rank": 53
+    "rank_sum": 182,
+    "rank": 56
    }
   },
   {
@@ -1965,9 +2043,9 @@
    "metrics": {
     "prerequisite_depth": 18,
     "transitive_dependents": 8,
-    "betweenness": 0.1329,
+    "betweenness": 0.1294,
     "cross_domain_reach": 2,
-    "rank_sum": 69,
+    "rank_sum": 70,
     "rank": 6
    }
   },
@@ -2003,8 +2081,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 205,
-    "rank": 62
+    "rank_sum": 213,
+    "rank": 65
    }
   },
   {
@@ -2039,11 +2117,87 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 11,
-    "transitive_dependents": 5,
-    "betweenness": 0.0046,
+    "transitive_dependents": 6,
+    "betweenness": 0.0031,
     "cross_domain_reach": 1,
-    "rank_sum": 190,
-    "rank": 58
+    "rank_sum": 196,
+    "rank": 59
+   }
+  },
+  {
+   "id": "aggregation",
+   "term": "Aggregation",
+   "definition": "Many independent or weakly dependent chance events average into a stable mean (laws of large numbers).",
+   "epistemic_category": "scientific consensus / mathematical",
+   "research_maturity": "settled",
+   "domain": "physical",
+   "prerequisites": [
+    "stochasticity"
+   ],
+   "dependents": [
+    "layered-stability",
+    "regularity"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-statmech"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 8",
+   "reactivation_points": [
+    "Ch 9"
+   ],
+   "example_needed": "steady tyre pressure",
+   "common_misunderstanding": "that averaging needs coordination",
+   "conceptual_difficulty": 2,
+   "abstraction_level": 3,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 7,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 11,
+    "transitive_dependents": 3,
+    "betweenness": 0.0058,
+    "cross_domain_reach": 1,
+    "rank_sum": 203,
+    "rank": 61
+   }
+  },
+  {
+   "id": "layered-stability",
+   "term": "Layered stability",
+   "definition": "A whole may be stable in mean, concentrated, exactly conserved or still stochastic in different respects; mean closure is not fluctuation closure, which is not full relational closure.",
+   "epistemic_category": "mathematical + author-supplied research",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "aggregation",
+    "coordination"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 8",
+   "reactivation_points": [
+    "Ch 15"
+   ],
+   "example_needed": "same average, different fluctuations",
+   "common_misunderstanding": "that 'stable' means one thing",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 3,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 13,
+    "transitive_dependents": 0,
+    "betweenness": 0.0,
+    "cross_domain_reach": 1,
+    "rank_sum": 242,
+    "rank": 76
    }
   },
   {
@@ -2060,6 +2214,7 @@
    ],
    "dependents": [
     "higher-order",
+    "layered-stability",
     "local-global",
     "regularity"
    ],
@@ -2085,11 +2240,11 @@
    "load_bearing_declared": false,
    "metrics": {
     "prerequisite_depth": 12,
-    "transitive_dependents": 4,
-    "betweenness": 0.0821,
+    "transitive_dependents": 5,
+    "betweenness": 0.1095,
     "cross_domain_reach": 2,
-    "rank_sum": 102,
-    "rank": 15
+    "rank_sum": 101,
+    "rank": 14
    }
   },
   {
@@ -2123,8 +2278,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 231,
-    "rank": 73
+    "rank_sum": 246,
+    "rank": 77
    }
   },
   {
@@ -2135,6 +2290,7 @@
    "research_maturity": "working",
    "domain": "physical",
    "prerequisites": [
+    "aggregation",
     "constrained-stochasticity",
     "coordination",
     "identity-invariant"
@@ -2161,17 +2317,17 @@
    "common_misunderstanding": "that regularity proves determinism",
    "conceptual_difficulty": 3,
    "abstraction_level": 4,
-   "simultaneously_interacting_concepts": 4,
+   "simultaneously_interacting_concepts": 5,
    "decomposable": true,
-   "context_load_hint": 11,
+   "context_load_hint": 12,
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 13,
     "transitive_dependents": 1,
-    "betweenness": 0.057,
+    "betweenness": 0.0684,
     "cross_domain_reach": 1,
-    "rank_sum": 166,
-    "rank": 49
+    "rank_sum": 172,
+    "rank": 51
    }
   },
   {
@@ -2206,10 +2362,10 @@
    "metrics": {
     "prerequisite_depth": 14,
     "transitive_dependents": 0,
-    "betweenness": 0.0281,
+    "betweenness": 0.0291,
     "cross_domain_reach": 2,
-    "rank_sum": 141,
-    "rank": 34
+    "rank_sum": 149,
+    "rank": 36
    }
   },
   {
@@ -2241,8 +2397,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 247,
-    "rank": 75
+    "rank_sum": 263,
+    "rank": 79
    }
   },
   {
@@ -2280,9 +2436,9 @@
    "metrics": {
     "prerequisite_depth": 16,
     "transitive_dependents": 12,
-    "betweenness": 0.0333,
+    "betweenness": 0.0332,
     "cross_domain_reach": 2,
-    "rank_sum": 94,
+    "rank_sum": 99,
     "rank": 12
    }
   },
@@ -2319,8 +2475,8 @@
     "transitive_dependents": 1,
     "betweenness": 0.0,
     "cross_domain_reach": 2,
-    "rank_sum": 168,
-    "rank": 51
+    "rank_sum": 175,
+    "rank": 53
    }
   },
   {
@@ -2360,10 +2516,10 @@
    "metrics": {
     "prerequisite_depth": 8,
     "transitive_dependents": 4,
-    "betweenness": 0.0099,
+    "betweenness": 0.0088,
     "cross_domain_reach": 2,
-    "rank_sum": 156,
-    "rank": 42
+    "rank_sum": 165,
+    "rank": 45
    }
   },
   {
@@ -2403,10 +2559,10 @@
    "metrics": {
     "prerequisite_depth": 9,
     "transitive_dependents": 3,
-    "betweenness": 0.0125,
+    "betweenness": 0.0123,
     "cross_domain_reach": 2,
-    "rank_sum": 154,
-    "rank": 39
+    "rank_sum": 160,
+    "rank": 41
    }
   },
   {
@@ -2439,10 +2595,10 @@
    "metrics": {
     "prerequisite_depth": 9,
     "transitive_dependents": 0,
-    "betweenness": 0.0031,
+    "betweenness": 0.0027,
     "cross_domain_reach": 1,
-    "rank_sum": 239,
-    "rank": 74
+    "rank_sum": 252,
+    "rank": 78
    }
   },
   {
@@ -2480,9 +2636,9 @@
    "metrics": {
     "prerequisite_depth": 19,
     "transitive_dependents": 0,
-    "betweenness": 0.0763,
+    "betweenness": 0.0733,
     "cross_domain_reach": 3,
-    "rank_sum": 89,
+    "rank_sum": 93,
     "rank": 10
    }
   },
@@ -2522,10 +2678,10 @@
    "metrics": {
     "prerequisite_depth": 19,
     "transitive_dependents": 1,
-    "betweenness": 0.0176,
+    "betweenness": 0.0178,
     "cross_domain_reach": 2,
-    "rank_sum": 127,
-    "rank": 28
+    "rank_sum": 129,
+    "rank": 27
    }
   },
   {
@@ -2560,10 +2716,10 @@
    "metrics": {
     "prerequisite_depth": 20,
     "transitive_dependents": 0,
-    "betweenness": 0.0058,
+    "betweenness": 0.0072,
     "cross_domain_reach": 2,
-    "rank_sum": 155,
-    "rank": 41
+    "rank_sum": 159,
+    "rank": 39
    }
   },
   {
@@ -2596,10 +2752,10 @@
    "metrics": {
     "prerequisite_depth": 18,
     "transitive_dependents": 0,
-    "betweenness": 0.0151,
+    "betweenness": 0.0136,
     "cross_domain_reach": 3,
-    "rank_sum": 125,
-    "rank": 27
+    "rank_sum": 130,
+    "rank": 28
    }
   },
   {
@@ -2642,9 +2798,9 @@
    "metrics": {
     "prerequisite_depth": 18,
     "transitive_dependents": 8,
-    "betweenness": 0.1006,
+    "betweenness": 0.0957,
     "cross_domain_reach": 3,
-    "rank_sum": 56,
+    "rank_sum": 57,
     "rank": 1
    }
   },
@@ -2683,9 +2839,9 @@
    "metrics": {
     "prerequisite_depth": 19,
     "transitive_dependents": 0,
-    "betweenness": 0.0544,
+    "betweenness": 0.0506,
     "cross_domain_reach": 2,
-    "rank_sum": 129,
+    "rank_sum": 135,
     "rank": 30
    }
   },
@@ -2724,10 +2880,10 @@
    "metrics": {
     "prerequisite_depth": 17,
     "transitive_dependents": 9,
-    "betweenness": 0.0019,
+    "betweenness": 0.0017,
     "cross_domain_reach": 2,
-    "rank_sum": 142,
-    "rank": 35
+    "rank_sum": 146,
+    "rank": 33
    }
   },
   {
@@ -2761,8 +2917,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 228,
-    "rank": 72
+    "rank_sum": 240,
+    "rank": 75
    }
   },
   {
@@ -2797,10 +2953,10 @@
    "metrics": {
     "prerequisite_depth": 19,
     "transitive_dependents": 5,
-    "betweenness": 0.0202,
+    "betweenness": 0.0183,
     "cross_domain_reach": 2,
-    "rank_sum": 114,
-    "rank": 21
+    "rank_sum": 116,
+    "rank": 20
    }
   },
   {
@@ -2837,9 +2993,9 @@
    "metrics": {
     "prerequisite_depth": 20,
     "transitive_dependents": 4,
-    "betweenness": 0.0138,
+    "betweenness": 0.0128,
     "cross_domain_reach": 2,
-    "rank_sum": 120,
+    "rank_sum": 121,
     "rank": 24
    }
   },
@@ -2882,9 +3038,9 @@
    "metrics": {
     "prerequisite_depth": 21,
     "transitive_dependents": 3,
-    "betweenness": 0.0466,
+    "betweenness": 0.0437,
     "cross_domain_reach": 2,
-    "rank_sum": 104,
+    "rank_sum": 107,
     "rank": 16
    }
   },
@@ -2919,8 +3075,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 222,
-    "rank": 71
+    "rank_sum": 234,
+    "rank": 74
    }
   },
   {
@@ -2959,10 +3115,10 @@
    "metrics": {
     "prerequisite_depth": 22,
     "transitive_dependents": 1,
-    "betweenness": 0.0355,
+    "betweenness": 0.0356,
     "cross_domain_reach": 2,
-    "rank_sum": 116,
-    "rank": 22
+    "rank_sum": 117,
+    "rank": 21
    }
   },
   {
@@ -2997,10 +3153,10 @@
    "metrics": {
     "prerequisite_depth": 23,
     "transitive_dependents": 0,
-    "betweenness": 0.0065,
+    "betweenness": 0.0119,
     "cross_domain_reach": 2,
-    "rank_sum": 161,
-    "rank": 47
+    "rank_sum": 160,
+    "rank": 42
    }
   },
   {
@@ -3040,8 +3196,8 @@
     "transitive_dependents": 2,
     "betweenness": 0.0252,
     "cross_domain_reach": 2,
-    "rank_sum": 153,
-    "rank": 38
+    "rank_sum": 159,
+    "rank": 40
    }
   }
  ],
@@ -3101,6 +3257,10 @@
   {
    "id": "E-cl2",
    "label": "Constraint Laboratory Generation 2 (2026-10-03): count-gated prohibitions open supports; soft weights do not"
+  },
+  {
+   "id": "E-cl3",
+   "label": "Constraint Laboratory Generation 3 (2026-10-03): hidden triadic relation yields non-Markov pairwise process"
   },
   {
    "id": "E-conv",
@@ -3526,6 +3686,41 @@
    "target": "stochasticity"
   },
   {
+   "source": "aggregation",
+   "type": "REQUIRES",
+   "target": "stochasticity"
+  },
+  {
+   "source": "layered-stability",
+   "type": "REQUIRES",
+   "target": "aggregation"
+  },
+  {
+   "source": "layered-stability",
+   "type": "REQUIRES",
+   "target": "coordination"
+  },
+  {
+   "source": "regularity",
+   "type": "REQUIRES",
+   "target": "aggregation"
+  },
+  {
+   "source": "recovery-kinds",
+   "type": "REQUIRES",
+   "target": "equivalence"
+  },
+  {
+   "source": "recovery-kinds",
+   "type": "REQUIRES",
+   "target": "provenance"
+  },
+  {
+   "source": "endogenous-carrier",
+   "type": "REQUIRES",
+   "target": "carry"
+  },
+  {
    "source": "coordination",
    "type": "REQUIRES",
    "target": "joint-process"
@@ -3799,6 +3994,46 @@
    "source": "relation",
    "type": "NOT_ESTABLISHED_BY",
    "target": "E-cl"
+  },
+  {
+   "source": "coordination",
+   "type": "QUALIFIES",
+   "target": "aggregation"
+  },
+  {
+   "source": "recovery-kinds",
+   "type": "DISTINGUISHES",
+   "target": "information-loss"
+  },
+  {
+   "source": "recovery-kinds",
+   "type": "CONSTRAINS",
+   "target": "resurrection"
+  },
+  {
+   "source": "endogenous-carrier",
+   "type": "NOT_ESTABLISHED_BY",
+   "target": "E-sc"
+  },
+  {
+   "source": "projection",
+   "type": "EVIDENCED_BY",
+   "target": "E-cl3"
+  },
+  {
+   "source": "memory-configuration",
+   "type": "EVIDENCED_BY",
+   "target": "E-cl3"
+  },
+  {
+   "source": "recovery-kinds",
+   "type": "EVIDENCED_BY",
+   "target": "E-conv"
+  },
+  {
+   "source": "aggregation",
+   "type": "EVIDENCED_BY",
+   "target": "E-statmech"
   },
   {
    "source": "relation",

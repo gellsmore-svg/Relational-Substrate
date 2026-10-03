@@ -162,3 +162,16 @@ The manuscript is recommended **for human merge review**, not for automatic merg
 1. Reconstruct the 502-series, ring and hidden-fibre work as committed experiment records. Then update the chapters' "exploratory" labels.
 2. If the constraint laboratory runs history depth (H = 1) or a triadic relation, revisit Chapter 6 (memory) and Appendix B.
 3. Real-reader testing of Chapters 6 to 9.
+
+## v2.2 update
+
+The v2.2 refinements are recorded in `v2.2-review-record.md`, along with the two new acceptance tests (502 honesty; baseline consistency), both passed, and the Chapter 8 reader test, passed. Constraint Lab Generation 3, which appeared after the v2.2 instruction was written, is integrated.
+
+| Dimension | v2.1 | v2.2 | Reason |
+|---|---:|---:|---|
+| epistemic-calibration | 86 | 88 | aggregation credited to mainstream; RS dependence claim made ontological; negative 502 results recorded |
+| research-fidelity | 85 | 87 | Generation 3 integrated; the 502 record no longer one-sided |
+| audit consistency | — | 88 | baseline restructured; superseded rows marked |
+| human-context-load | 74 | 73 | Ch 8 longer, offset by the orientation paragraph |
+
+**Recommendation unchanged:** ready for **human merge review**, not automatic merge. The open problems are listed in `v2.2-review-record.md`.

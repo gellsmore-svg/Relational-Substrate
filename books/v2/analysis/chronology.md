@@ -115,4 +115,4 @@ Partial counterparts do exist:
 - **Path-dependent memory.** The June order-effect corroboration.
 - **Admissibility.** Constraint-lab Generation 001.
 
-**v2.1 update:** the author has since supplied the conclusions of these threads from conversational research. They now inform the ontology, with their provenance recorded in `conversational-research-import-v1.md`, and they are still not cited as repository experiments. The v2 first draft used these themes only to the extent the located evidence supported. Unlocated programmes are treated as *possibly existing elsewhere and unverified*, and are named as such in `research-baseline.md`.
+**v2.1 update:** the author has since supplied the conclusions of these threads from conversational research. They now inform the ontology, with their provenance recorded in `conversational-research-import-v2.md`, and they are still not cited as repository experiments. The v2 first draft used these themes only to the extent the located evidence supported. Unlocated programmes are treated as *possibly existing elsewhere and unverified*, and are named as such in `research-baseline.md`.

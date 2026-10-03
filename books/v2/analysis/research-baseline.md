@@ -1,192 +1,207 @@
 # Research baseline for *Coherent Biblical Ontology*, second edition
 
-Status: stabilised 2026-10-03 after the corpus survey in `chronology.md`; **revised the same day for v2.1** (§7 below) after the author supplied conclusions from conversational research absent from the repository, and after Constraint Laboratory Generations 1b and 2 were committed. This document fixes what the second edition may claim, at what epistemic strength, and why. It governs the concept graph, the epistemic register and the manuscript.
+**Status:** current as of v2.2 (2026-10-03). This document fixes what the second edition may claim, at what strength, and why. It governs the concept graph, the epistemic register and the manuscript.
 
-## 1. The finding that reorganises the book
+**Structure:**
 
-Across five months and four programmes, one pattern recurs in every line that survived. The programmes differ in substance:
+- **Part I** is the single current canonical baseline.
+- **Part II** lists first-edition material that was demoted.
+- **Part III** is history: the original v2.0 divergence records and the v2.1 and v2.2 revision logs. Where a historical entry conflicts with Part I, Part I governs, and the historical entry carries an explicit supersession note.
 
-| Period | Programme | Substance |
-| --- | --- | --- |
-| July | Topological programme | Identity is an integer invariant of a field configuration, unchanged by smooth deformation |
-| September | Stochastic calculator | A number's identity is a conserved equivalence class, unchanged across thousands of distinct stochastic paths and lost only when an unpaired relation is destroyed |
-| September | Carry experiments | A difference reaches the next column through consumption, a persisting certificate and fresh instantiation; nothing travels intact |
-| October | Constraint laboratory | Hard prohibitions decide which transitions exist; soft weights only shift their likelihood |
+---
 
-Read together, they converge on a reduced grammar:
+# Part I — Current baseline
+
+## I.1 The organising question
+
+The research programmes (topological modelling, the stochastic calculator, the constraint laboratory, and the exploratory ring, 502, Navier–Stokes and projection work) circle one question:
+
+> How can a relationally constrained, possibly stochastic underlying reality yield stable identity, stable consequence and mathematically reliable higher-level order, without the higher-level description being mistaken for the ontology beneath it?
+
+## I.2 The reduced ontology (canonical order)
 
 ```text
-constrained possibility      (what transitions are admissible at all, and how they are weighted)
-→ stochastic actualisation   (which admissible transition happens; actuality carries its history)
-→ preserved equivalence      (identity = the relevant relational equivalence class, relative to what
-                              reachable futures can discriminate; invariants are one carrier of it)
-→ transmitted consequence    (T-C-R: a source distinction made available, recoverably carried,
-                              and received as dependent change in a compatible receiver)
-→ coordinated regularity     (law-like aggregate behaviour from relationally coordinated chance)
+constrained possibility       T0: what transitions are admissible at all, and how they are weighted
+→ stochastic actualisation    T1: which admissible transition happens; actuality carries its own
+                              history (provenance, inherited constraints, accessibility)
+→ relational equivalence      identity = the relevant equivalence class, relative to what reachable
+                              futures can discriminate; invariants certify it in some systems;
+                              provenance belongs to it where consequential
+→ T-C-R                       source distinction → relational availability → recoverable constrained
+                              carriage → compatible consequential reception
+→ layered regularity          aggregation stabilises means; coordination shapes fluctuations, exact
+                              conservation, paths and response; effective laws describe scales;
+                              projection can hide distinctions that later matter
 ```
 
-This is the spine of the second edition. Its components carry different epistemic weight, which the book must keep visible:
+## I.3 Current canonical definitions
+
+**T-C-R.** *Transmit:* a source distinction becomes relationally available beyond its locality. *Carry:* the relevant distinction stays recoverably constrained across one or more, possibly changing, carriers. *Receive:* a compatible receiver is changed in a way that depends on the carried distinction.
+
+- Source depletion is a subcase (emission, for example), and energetic cost depends on the mechanism.
+- Exactly-once reception is a property of transactional receivers.
+- The calculator's decimal carry is one implemented T-C-R protocol, not the ontology.
+- Carrier architecture in all models so far was designed. Endogenous emergence of carriers and lineages is an **open problem**.
+
+**Identity (physical).** Continuity of the relevant relational equivalence class through admissible change, relative to the distinctions reachable future consequences can consume.
+
+- An invariant is a carrier or certificate of such equivalence in some systems, not the universal ontology of identity.
+- Provenance (past distinctions surviving in present structure) is part of identity where consequential. It may be quotiented away only where no reachable future can consume it.
+- Four restoration concepts are kept distinct: functional, structural/recursive, equivalence-class, and lineage/identity-specific. Reconstruction is not automatically restoration of identity.
+- Personal identity resembles physical identity but is not defined by it.
+
+**T-levels.**
+
+- **T0** is constrained possibility.
+- **T1** is actuality (actualised runtime order), including embodied history and provenance. It is not memoryless snapshots.
+- **The T2 label is retired** from the main ontology. "Manifestation" is an ordinary descriptive term for created order presenting itself to other things. Conscious awareness belongs to the personal category and is not a substrate tier.
+- The historical T1A–T1D2 sub-levels are technical history (Appendix B).
+
+**Regularity.** Effective determinism is regularity stable to the precision observed. Mathematical determinism is a property of equations. Different quantities of a whole may be stable in mean, sharply concentrated, exactly conserved or still stochastic. "Deterministic" is never used as a universal label for the global level.
+
+**Global coherence.** Non-contradiction plus connectivity, boundary validity, propagation stability, cycle consistency and preserved distinctions.
+
+## I.4 Status of each component
 
 | Component | Status |
 | --- | --- |
-| Constrained possibility (admissibility distinct from tendency) | **Formal result** (constraint-lab G001), RS interpretation of it |
-| Stochastic actualisation as *fundamental* | **RS working hypothesis**. Mainstream physics is probabilistic in its predictions at the quantum level, but whether nature is fundamentally indeterministic is interpretation-dependent |
-| Identity as preserved invariant | **Constructive demonstration in models** (SC-001/019; Hopf invariant). It is mainstream practice in physics to classify by conserved quantities and topological charges. Its RS reading as ontology is an **ontological interpretation** |
-| T-C-R | **Implemented protocol** (SC-012/014) plus an **RS interpretive grammar**. It is not an empirical discovery |
-| Stable regularity from stochastic micro-processes | **Mainstream science** (statistical mechanics, kinetic theory, radioactive decay), **reproduced in models** (SC-005/019/022) |
-| Relation-first physical ontology | **Philosophical/ontological thesis** (F0), defended by coherence argument. It is not experimentally established |
+| Admissibility distinct from tendency | **Formal result** (constraint lab G001, G1b, G002) with an RS interpretation |
+| Stochastic actualisation as fundamental | **RS working hypothesis.** Standard quantum mechanics is probabilistic in prediction. Its interpretations differ on whether that reflects fundamental indeterminacy, hidden variables, branching or other ontology, and they agree empirically so far. Objective-collapse models modify the dynamics and are empirically testable in principle |
+| Identity as relational equivalence | **Ontological interpretation** from author-supplied exploratory research (502), with repository analogues: SC-001/019, G1b ("observable equality is not kernel equality"), G3 (a hidden relation yields apparent memory) |
+| Invariants as identity certificates | **Model demonstrations** (SC-001/019; Hopf invariant) plus mainstream practice (conservation laws, topological charges) |
+| T-C-R | **RS interpretive grammar**, with one **implemented protocol** (SC-012/014) and many mainstream physical instances. Fundamentality is a hypothesis. Endogenous carrier emergence is not demonstrated |
+| Aggregation yields stable means | **Mainstream** (laws of large numbers, including under weak dependence; statistical mechanics) |
+| Dependence structure shapes joint behaviour | **Mainstream mathematics.** RS adds the ontological reading that dependence may be *constitutive* of the physical whole |
+| Consequence-aligned, state-dependent coordination; mean versus fluctuation closure | **Author-supplied exploratory** (ring work), with repository-adjacent support (SC-013, SC-017) |
+| Effective continuum laws (Navier–Stokes) | **Mainstream.** The RS question (which relational conditions make stable effective law possible) is open. No RS derivation exists |
+| Projection can hide consequential distinctions | **Mathematical point**, with repository instances (G1b; G3) and an exploratory provenance (Grassmannian/amplituhedron) |
+| Relation-first physical ontology | **Philosophical/ontological thesis**, defended by coherence (economy and continuity of relational form). Not experimentally established |
 
-## 2. What is superseded or demoted
+## I.5 Constraint Laboratory status
+
+Repository branches `research/constraint-lab-v0.2` (head `0170189`) and `research/constraint-lab-v0.3` (head `e04e0d4`).
+
+- **Generation 1** reported a cancelling reciprocal pair. Generation 1b reclassified that pair as one structural rule with stacked grades, a representational artifact. G1's committed records remain as history.
+- **Generation 1b:**
+  - genuine global cancellation in the N = 3 edge grammar uses structured triples (40);
+  - exact kernels hide inside coarse families (up to 1,042 in one family);
+  - observable equality is not kernel equality.
+- **Generation 2** (occupation-count literal):
+  - 654 new exact kernels, 189 new families and 30 new supports, all from count-gated prohibitions;
+  - soft weights opened no supports;
+  - 16 genuine cancellations as reciprocal count-literal pairs;
+  - constructive dissolution not found.
+- **There is no universal slogan** such as "cancellation requires triples".
+- **Generation 3** (independent three-way relation, N = 3):
+  - irreducible dynamic coupling arises when a triadic condition governs a pairwise action (2,940 of 7,385 sets);
+  - hiding the triad makes the pairwise process non-Markov in 5,250 sets: apparent memory with H = 0;
+  - pure pairwise rules produce neither effect;
+  - no new pairwise supports and no global cancellations;
+  - constructive reorganisation is not expressible at N = 3;
+  - the laboratory's next justified step is an N = 4 probe, not H = 1.
+- None of these results shows that nature uses the grammar. Negative results are treated as constraints on the programme.
+
+## I.6 Theological constraints
+
+- Scripture first; KJV quotation. The Creator/creature distinction.
+- Covenant-neutral and denomination-neutral, including on freedom: libertarian and compatibilist accounts are both left open, and stochasticity is not a proof of free will.
+- Fallibility is located in interpretation, never in Scripture or measurement as such.
+- Personhood is deeper than embodiment. The anthropology of dust, breath and living soul is unified.
+- **Human death is not humanity's intended created end** and is treated in Scripture as an enemy bound up with sin. There is no blanket claim about all pre-Fall biological death.
+- Universal resurrection with judgment. Resurrection is God's act, not natural reconstruction.
+- Corruption is parasitic and not ultimate.
+- Redemption is restoration and consummation accomplished by God, not substrate repair. "Restored alignment can be higher" is theological reflection, not binding doctrine, and does not claim that evil was necessary.
+
+## I.7 Second-edition thesis (one paragraph)
+
+God creates a real world. Its physical order is relational from the beginning: things are constituted within relations, not first made as isolated objects and then connected. What is physically possible is constrained. What actually happens may be fundamentally stochastic, and what happens leaves its history in the present. Things remain themselves by remaining within their relevant equivalence class, judged by what reachable futures could tell apart. A distinction here becomes consequential there by being made available, carried recoverably and received by something able to be changed by it. Regularity is layered: averaging stabilises means, and the relational coordination of events shapes the rest. Mathematics describes the resulting regularities with extraordinary success without being the reality it describes, and coarse descriptions can hide distinctions that later matter. Because the material world is relational at base, the relational realities of life, personhood, responsibility, corruption and restoration are continuous in form with the order they arise in and are not bolted onto an alien world. Yet relation across categories does not erase category: the material is not the spiritual, the substrate is not the soul, and creation is not God. This is a coherence argument constrained by observation and governed by Scripture. It is not an empirical proof of ultimate ontology.
+
+---
+
+# Part II — First-edition material demoted
 
 | First-edition element | Second-edition handling | Reason |
 | --- | --- | --- |
-| Closure knot "twist and return" mechanism stated as declared ontology | Reduced to: identity is carried by invariant organisation; the closure-knot proposal is named as the technical volume's candidate | No measured support for the mechanism; the July results are structural and conditional (θ = π class); the technical volume owns the detail |
-| Closed five-operation typology (A–E) as structural axiom | Moved to an appendix as a technical-volume proposal | Not tested; never used in experiments; it is a vocabulary, not a finding |
-| Light = "coherent transient torsional disturbance", magnetism = "held twist", electricity = reconfiguration | Out of the main text; at most an appendix pointer | Proposed mappings, not results; overclaims in a book for non-specialists |
-| Time explained via substrate tension slowing clocks | Kept only as "time as the ordering of actualisation" (an ontological reading), with relativity's success stated plainly | The tension mechanism is unquantified; relativity is quantitatively confirmed |
-| T1A–T1D2 sub-stack | Collapsed to T0 (constrained possibility), T1 (actualised runtime order), T2 (lived manifestation); sub-tiers in an appendix | Reader load; only the T0/T1 distinction does argumentative work |
-| Agent "dialects" explaining miracles | Removed from the main path; Scripture's reports stand; RS offers no mechanism for divine action | Theologically contested inference; it risks placing God's action inside creaturely admissibility |
-| Ch. 6 "How physics lost ontology", Ch. 11 "Science falsely so called", Sisyphean demand, institutional arrogance | Main text keeps the description/ontology distinction; polemic moves to Appendix B | The brief (§13) and credibility (§48) |
-| About fifty foreclosure lists (Appendix A, containment notes) | One appendix on points of divergence | The body must build the positive ontology |
-| "Exponential reduction" | Stated once, modestly, in the methods chapter | Overclaimed as the book's most important feature |
-| Thought-work architecture appendix | Removed (development tooling, not reader content); its function is replaced by `books/v2/analysis/` | Reader-irrelevant |
-| Stress-history / order-effect "lens" programme | One illustration of path dependence (memory as configuration), flagged as directional | Corroborated directionally; declared drift for the physics objective |
-| H3S numerical record | Not used | Records not in the repository; its narrow numerical scope adds nothing to CBO's argument |
+| Closure-knot "twist and return" mechanism stated as declared ontology | Reduced to: identity can be carried by invariant organisation; closure knots named as the technical volume's candidate | No measured support for the mechanism; the July results are structural and conditional (θ = π class) |
+| Closed five-operation typology (A–E) as a structural axiom | Appendix B, as a technical-volume proposal | Untested vocabulary |
+| Light as torsional disturbance; magnetism as held twist; electricity as reconfiguration | Out of the main text; Appendix B pointer | Proposed mappings, not results |
+| Time explained by substrate tension slowing clocks | Only "time as the ordering of actualisation", with relativity's success stated plainly | Unquantified mechanism |
+| T1A–T1D2 sub-stack, plus T2 | T0 and T1 only; T2 retired in v2.1; sub-levels in Appendix B | Reader load; T2 risked conflating manifestation with awareness |
+| Agent "dialects" explaining miracles | Withdrawn; RS offers no mechanism for divine action | Theologically contested; risks placing God's action within creaturely admissibility |
+| Polemic chapters (physics lost ontology; science falsely so called) | The main text keeps the description/ontology distinction; the rest goes to Appendix A | Brief §13; credibility |
+| Foreclosure lists | One appendix of divergences | The body builds the positive ontology |
+| "Exponential reduction" | Stated once, modestly | Overclaimed |
+| Thought-work architecture appendix | Removed; replaced by `books/v2/analysis/` | Reader-irrelevant |
+| Order-effect "lens" programme | One directional illustration of path dependence | Corroborated directionally only |
+| H3S numerical record | Not used | Records not in repository |
+| Beauty, truth and good as one structural property | Withdrawn | Category collapse |
 
-## 3. Prompt-versus-evidence divergences (brief §50)
+---
 
-Each entry records the assumption in the brief, what the repository shows, and the formulation the book adopts.
+# Part III — History
+
+## III.1 Original v2.0 prompt-versus-evidence divergences (first rewrite brief §50)
+
+These records are preserved as written at the v2.0 stage, each with a supersession note where later work changed the conclusion.
 
 ### D-1 The slogan "stochastic locally / constrained relationally / deterministic globally"
 
-- **Prompt assumption:** the slogan is a candidate summary of the research.
-- **Repository evidence:**
-  - Exact global outputs were obtained, but only relative to *programmed* conservation rules and a designed encoding. Exactness was not spontaneously produced by noise (MECHANISMS audit).
-  - Random scheduling is compatible with exact outputs but unnecessary for them: ordered schedules give the same answers (SC-016).
-  - Locality is partial. Multiplication, division and completion detection used global orchestration (H9 inconclusive).
-  - "Deterministic" outputs at a finite horizon depend on enforcement strength and duration (SC-024).
-- **Revised formulation:** *Stochastic in path, constrained in admissibility, stable in invariant.* The macro-level regularity is **effective determinism**: a regularity that is stable to the precision observed. It is not a metaphysical claim that nothing could have gone otherwise.
-- **Reason:** the original slogan quietly moves from "the model produced exact results" to "the world is globally deterministic". The revision keeps the experiment's real lesson: invariants survive path diversity.
+The slogan was replaced at v2.0 by *stochastic in path, constrained in admissibility, stable in invariant*, with "effective determinism" defined, because the calculator's exactness came from programmed conservation, not from noise.
 
-### D-2 T-C-R wording
+> **Refined (v2.2):** stability is layered (mean, concentration, exact conservation, residual stochasticity). "Invariant" is generalised to "equivalence". See I.3, Regularity.
 
-- **Prompt assumption:** "Transmit relational difference → Carry persistent constrained correlation → Receive state change". Candidate grammar: "difference → transmissibility → constrained continuity → consequential reception".
-- **Repository evidence (SC-012/014, MECHANISMS):**
-  - At transmit, source relations *cease to be active* at their boundary. The difference is committed and the local state is consumed.
-  - At carry, the gate *instance is replaced*: "the certificate's information persists, though the same entity does not travel".
-  - At receive, a *fresh* relation is instantiated, and only once. Replay exclusion is what keeps reception exact under duplication faults.
-  - The constraint-lab charter adds the interpretive premise that the deepest receiver may be non-material. This is a premise, not a result.
-- **Revised formulation:**
-  - **Transmit:** a difference is released from its locality. It stops being only *here*, at a cost to the source configuration.
-  - **Carry:** the difference persists as constrained correlation across a succession of substitutable realisations. What persists is the correlation, not necessarily the vehicle.
-  - **Receive:** the difference becomes an admissible change of state *elsewhere*. Reception is consequence, and it happens once.
-- **Book grammar:** `difference → release → constrained continuity → consequential reception`.
-- **Reason:** "transmissibility" names a capacity. The experiments show an *event* of release with a cost at the source, which is a stronger and more teachable idea.
+### D-2 T-C-R wording (v2.0)
+
+The v2.0 formulation read the calculator protocol as the definition: transmit = "release … at a cost to the source configuration"; receive = "an admissible change of state elsewhere … and it happens once". The book grammar was `difference → release → constrained continuity → consequential reception`.
+
+> **Superseded (v2.1):** source consumption and once-only reception were features of one arithmetic protocol, not of T-C-R. The current definition is in I.3.
 
 ### D-3 "Recursive relational admissibility plus recursive composability"
 
-- **Prompt assumption:** possibly the current reduced ontology, from the 502-series.
-- **Repository evidence:** the 502-series is not in any located record. The nearest verified material:
-  - constraint-lab G001 (admissibility distinct from tendency);
-  - calculator H5 (relations over relations are operationally useful, but their necessity is untested).
-- **Revised formulation:** the book uses *admissibility* (verified as a formal distinction) and *composition* of relations and transmissions (illustrated, not established as necessary). It does not canonise the phrase.
-- **Reason:** brief §51 — do not invent results.
+At v2.0 the 502-series was not located, so the phrase was not canonised and only verified admissibility and illustrated composition were used.
+
+> **Superseded (v2.1, v2.2):** the 502 conclusions entered as author-supplied exploratory research, both positive and negative (`conversational-research-import-v2.md` §1). The phrase itself is still not canonised.
 
 ### D-4 Memory as persistent configuration
 
-- **Prompt assumption:** experiments showed persistent prior configuration altering later probabilities.
-- **Repository evidence:**
-  - *Directional* corroboration of path dependence in fatigue data and three further domains (June). Magnitude failed.
-  - Readiness gates in SC-023 to SC-027 show that state carried forward changes what can happen next.
-  - Constraint-lab history depth `H` is still 0. `H = 1` is a named future step, untested.
-- **Revised formulation:** *memory can be embodied in persisting configuration that alters what is admissible or likely next (state-dependent admissibility).* This is a working hypothesis with directional support, and it is consistent with ordinary physical hysteresis, which is mainstream.
-- **Reason:** calibrated to the evidence actually located.
+At v2.0 memory was treated as a working hypothesis, with directional order-effect support and calculator carried state. History depth H was then 0.
+
+> **Updated (v2.2):** Generation 3 shows apparent memory arising from a hidden present relation at H = 0. Memory remains a working hypothesis at the level of physical generality.
 
 ### D-5 Navier–Stokes, spectral/Grassmannian and population research
 
-- **Prompt assumption:** RS research exists in these areas.
-- **Repository evidence:**
-  - No RS records were located.
-  - Population/convergence ideas survive only as the origin story of Multipath Reasoning, a method whose experiments directory "ships empty of results".
-- **Revised formulation:** the book draws on *mainstream* fluid dynamics and statistical mechanics to make the general point that deterministic continuum equations are effective descriptions of many-body stochastic motion. No RS-specific Navier–Stokes or amplituhedron claim is made. The population insight that coherence is not fidelity, and that false attractors exist, is used in the epistemology chapter as a caution about coherence reasoning itself.
-- **Reason:** brief §51. These may exist outside the inspected records; if located later, they can be integrated in a future revision.
+At v2.0 none of this was located, and only mainstream fluid dynamics was used.
+
+> **Superseded (v2.1):** the conclusions entered as author-supplied exploratory research. Still no RS Navier–Stokes derivation and no amplitude-physics claim.
 
 ### D-6 Teleology and T0
 
-- **Prompt assumption:** teleology constrains T0; T0 constrains admissible stochastic T1; the substrate is not an agent.
-- **Repository evidence:**
-  - Not stated in any located RS document.
-  - Consistent with the first edition's "authored order, non-agentic runtime" (Ch. 3).
-  - Consistent with the constraint-lab charter (design upstream; constraints as measures over transitions).
-  - Consistent with G001's admissibility/tendency split.
-- **Revised formulation:** adopted as a **theological inference**, not an RS result: *purpose shapes what is possible; possibility shapes what can be actualised; actualisation proceeds without the substrate itself intending anything.*
-- **Reason:** it is the cleanest available safeguard against the substrate being read as a mind or deity, and it coheres with every located source.
+Adopted as a theological inference: purpose shapes possibility; possibility shapes actualisation; the substrate intends nothing.
+
+> **Unchanged.**
 
 ### D-7 T0 naming collision
 
-- **Repository evidence:**
-  - The July thought-experiment ladder uses T0–T7 for rungs (T0 = "substrate at rest").
-  - The books use T0 for substrate possibility.
-- **Resolution:** the book uses T0/T1/T2 in the *books'* sense only, and the glossary notes the collision.
+The July ladder uses T0–T7 for rungs; the books use T0 for constrained possibility.
 
-## 4. Mainstream science the book relies on (to be verified in the source ledger)
+> **Unchanged.** T2 was retired in v2.1.
 
-- **Statistical mechanics.** Deterministic macroscopic laws (gas laws, diffusion, hydrodynamics) are derived as effective descriptions of very many stochastic or chaotic molecular motions.
-- **Radioactive decay.** Individual decay times are, in standard quantum theory, unpredictable; ensemble half-lives are measured to high precision.
-- **Quantum theory.** Predictions are probabilities via the Born rule. Interpretations divide on whether nature is fundamentally indeterministic (Copenhagen-style and collapse theories versus Bohmian and Everettian accounts).
-- **Relational positions in mainstream philosophy of physics.** Leibnizian relationalism about space; relational quantum mechanics (Rovelli 1996); ontic structural realism (Ladyman and Ross 2007). Relation-first ontology is a live option in the literature, not an eccentricity.
-- **Predictive success.** General relativity (GPS corrections, gravitational waves) and quantum electrodynamics (electron magnetic moment) are among the most precisely confirmed theories ever. Their ontological interpretation remains debated.
-- **Conservation laws and symmetry** (Noether): identity of a kind through invariants is a central practice in physics.
+## III.2 v2.1 revision log (2026-10-03)
 
-## 5. Theological constraints carried forward unchanged
+- **Inputs:** the author-supplied conversational research, and Constraint Lab v0.2 (G1b, G2).
+- **Changes:** identity as relational equivalence and provenance; T-C-R decoupled from the calculator protocol; joint-process coordination; T2 retired; stronger global-coherence dimensions; the G1 cancellation claim corrected.
+- **Divergences from the v2.1 instruction:** none of substance. Two nuances: Generation 2 also yields pairwise count cancellations; and, at that date, the roadmap's triadic step was a candidate only.
 
-- Scripture first; KJV quotation.
-- Creator/creature distinction.
-- Covenant-neutral and denomination-neutral.
-- Fallibility located in interpretation, never in Scripture or measurement as such.
-- Personhood deeper than embodiment (Trinitarian containment).
-- Unified dust–breath–living-soul anthropology.
-- Death not original.
-- Universal resurrection with judgment.
-- Corruption parasitic and not ultimate.
-- Redemption as restoration and consummation, accomplished by God, not by substrate repair.
+## III.3 v2.2 revision log (2026-10-03)
 
-## 6. Second-edition thesis (one paragraph)
-
-God creates a real world. Its physical order is relational from the beginning: things are constituted within relations, not first made as isolated objects and then connected. What is physically possible is constrained. What actually happens may be fundamentally stochastic, yet admissibility, conserved invariants and coordinated relations make identity persistent and regularity reliable. Differences become consequential elsewhere through transmission, carriage and reception. Mathematics describes the resulting regularities with extraordinary success without being the reality it describes. Because the material world is relational at base, the relational realities of life, personhood, responsibility, corruption and restoration are not bolted onto an alien order. Yet relation across categories does not erase category: the material is not the spiritual, the substrate is not the soul, and creation is not God. This is a coherence argument constrained by observation and governed by Scripture. It is not an empirical proof of ultimate ontology.
-
-## 7. v2.1 revision (2026-10-03, later the same day)
-
-**New inputs.**
-
-1. Conclusions from conversational research supplied by the author (the 502-series, the stochastic ring, Navier–Stokes, Grassmannian/hidden fibres, and stronger coherence dimensions). These are recorded with their provenance status in `conversational-research-import-v1.md`.
-2. Constraint Laboratory branch `research/constraint-lab-v0.2` through `0170189` (Generations 1b and 2, review v0.2).
-
-**Changes to the reduced ontology.**
-
-- **Identity.** It is no longer a bare invariant. Identity continuity is preservation of the relevant relational equivalence class, relative to the distinctions that reachable future consequences can consume. An invariant is one carrier or certificate of such a class. Provenance (past distinctions surviving in present relational structure) belongs to identity where it remains consequential, and may be quotiented away only where no reachable future can consume it.
-  - *Repository support:* Generation 1b. At N = 3, up to 1,042 exact kernels sit inside one coarse qualitative family. At N = 5, two kernels share one observable signature, so observable equality is not kernel equality. This is a formal instance of the hidden-fibre lesson.
-- **T-C-R.** It is decoupled from the calculator's carry protocol. Source depletion, a cost to the source, and exactly-once reception are subcases. They hold for emission-type sources and transactional receivers respectively; they are not part of the definition. The general form is source distinction → relational availability → recoverable constrained carriage → compatible consequential reception.
-- **Coordination.** Equal marginal probabilities do not fix the joint process, the covariance structure or the global dynamics. What stabilises aggregates is consequence-aligned, state-dependent coordination. Mean closure can hold while fluctuation closure stays open. This is author-supplied research; calculator SC-013 and SC-017 support adjacent points.
-- **T-levels.** T1 (actuality) explicitly carries embodied history and provenance. T2 is retired as a main-text label, and "manifestation" is described plainly and kept distinct from conscious awareness.
-- **Global coherence** now includes connectivity, boundary validity, propagation stability, cycle consistency and preservation of relevant distinctions.
-
-**Constraint Laboratory v0.2 facts adopted.**
-
-- **Generation 1b** reanalysed Generation 1 after removing stacked-weight sets. Generation 1's committed files are unchanged; its interpretation is superseded on one point. The "reciprocal pair" that Generation 1 reported as a cancellation was one structural rule with two stacked grades, a representational artifact. Genuine global cancellations at N = 3 are 40 structured triples. N = 3 has 61,929 qualitative families, 391,991 exact kernels and 379,177 observable signatures.
-- **Generation 2** (N = 3, K ≤ 2, cardinalities 1–2, occupation-count literal):
-  - 10,430 count-sets, of which 9,776 reproduce a 1b kernel and 654 are new kernels;
-  - the new kernels fall in 189 new qualitative families, 30 of them with new supports, all from pairs of count-gated prohibitions;
-  - soft weights produced no new supports, and no cardinality-1 count constraint opened a new family;
-  - 16 genuine cancellations appear as reciprocal count-literal pairs;
-  - constructive dissolution was not found, and the `post_release_new_edge` flag reduces to isomorphic reconnection, clearing and regrowth, edge loss, or a deterministic wedge/triangle toggle.
-- **Roadmap.** History depth `H = 1` and an irreducible triadic hyperrelation are listed as *candidates, not commitments*.
-
-**Divergences from the v2.1 instruction.**
-
-- None of substance. Its Generation 2 figures match the repository exactly.
-- Two nuances are recorded:
-  - Generation 2 also found genuine pairwise cancellations through count literals (16), so "genuine cancellation requires triples" holds for the edge-only grammar at N = 3, not universally.
-  - The roadmap does not commit to triadic relation as the next step; the book says only that it is a candidate.
-
-**Supersedes:** D-3 and D-5 in §3. Their conclusion that the programmes could not be cited as repository experiments stands. Their implied conclusion that the programmes need not inform the ontology does not.
+- **Inputs:**
+  - the v2.2 instruction;
+  - Constraint Lab branch `research/constraint-lab-v0.3` (Generation 3, head `e04e0d4`), committed after the instruction was written.
+- **Changes:**
+  - aggregation is separated from coordination, and mean, fluctuation and relational closure are layered;
+  - the RS claim about dependence is restated as ontological, not mathematical;
+  - the 502 negative and conditional results and the four restoration concepts are recorded;
+  - the endogenous carrier/lineage problem is recorded as open;
+  - this baseline is restructured to remove contradictory live definitions;
+  - Generation 3 is integrated.
+- **Divergence from the v2.2 instruction:** the instruction treated history depth and triadic relation as untested candidates. The repository had since run the triadic generation, so the book reports its results. The instruction anticipated this ("if they have [moved], inspect the newer state and adapt").

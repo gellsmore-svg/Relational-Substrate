@@ -500,6 +500,29 @@
    "reactivate": [
     "Ch 9"
    ]
+  },
+  "aggregation": {
+   "first": "Ch 8",
+   "reactivate": [
+    "Ch 9"
+   ]
+  },
+  "layered-stability": {
+   "first": "Ch 8",
+   "reactivate": [
+    "Ch 15"
+   ]
+  },
+  "recovery-kinds": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 10",
+    "Ch 14"
+   ]
+  },
+  "endogenous-carrier": {
+   "first": "Ch 7",
+   "reactivate": []
   }
  }
 }
