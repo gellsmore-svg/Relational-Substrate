@@ -32,6 +32,17 @@ The immutable source commit is tag `pre-constraint-lab-2026-10-03` (`06cb0dc0be6
 
 The Constraint Laboratory is the active experimental programme on `research/constraint-lab-v0.1`. Its charter, engine, and generation records live under `constraint-lab/`.
 
+Generation 1 searched the memoryless pairwise grammar at `N = 2, 3, 4` and the singletons at `N = 5`, with no geometry. The report is `constraint-lab/reports/generation-001-pregeometric-pairwise.md`. From `constraint-lab/`:
+
+```bash
+python -m pip install -e ".[dev]"
+python -m rs_constraint_lab inspect-space experiments/specs/generation-001.json
+python -m rs_constraint_lab run experiments/specs/generation-001.json --out generated/generation-001 --publish .
+python -m rs_constraint_lab replay exemplars/01fce7a65bc87c75.json
+```
+
+`npm run books:epub` still rebuilds the books. The laboratory does not rewrite them.
+
 ## Licence
 
 [MIT](LICENSE). Copyright (c) 2026 gellsmore-svg.
