@@ -1,0 +1,125 @@
+{
+  "canonical_constraint_set": [
+    "dissolve(0-1) => prohibit",
+    "dissolve(0-2) | absent(1-2) => prohibit"
+  ],
+  "coordinate": {
+    "A": 3,
+    "G": 0,
+    "H": 0,
+    "K": 2,
+    "L": 0,
+    "N": 3,
+    "O": 3,
+    "S": 0,
+    "alphabet": "W4",
+    "cardinality": 2,
+    "semantics": "hypergraph"
+  },
+  "count_in_family": 1,
+  "evaluation_vector": {
+    "coverage": "exhaustive inside the cell coordinate",
+    "cross_substrate_recurrence": "not tested in this generation",
+    "global_coherence_relevance": "open; not scored",
+    "interpretability": "the observed sentence is structural; naming is left to the report",
+    "parameter_robustness": "geometric bases preserve the modal map and the support; magnitudes change",
+    "reproducibility": "exact kernel; stochastic runs are seeded replays",
+    "symmetry_robustness": "orbit representative under the full symmetric group",
+    "trajectory_distinctiveness": "rise_then_release_excess and reversibility_defect, where computed"
+  },
+  "known_equivalent_grammars": 1,
+  "motif_id": "a502896d1bb22b88f66812c0ae9d512f981d45b2131a650237b5e18b3045a6a2",
+  "notes": {
+    "inferred": "not stored on the motif; inferences are written in the generation report",
+    "observed": "every state has at least one admissible toggle; 1 recurrent class(es) with periods [2]; the admissible transition graph is a proper subgraph of the toggle hypercube; the largest one-step dissolution-probability deviation from m/M is 0.666667; the two-edge closing probability differs from 1/3 by 0.277778.",
+    "speculative": "not stored on the motif"
+  },
+  "observed": "every state has at least one admissible toggle; 1 recurrent class(es) with periods [2]; the admissible transition graph is a proper subgraph of the toggle hypercube; the largest one-step dissolution-probability deviation from m/M is 0.666667; the two-edge closing probability differs from 1/3 by 0.277778.",
+  "parameter_regime": "W4",
+  "robustness_region": {
+    "closing_max": 0.2777777777777778,
+    "closing_min": 0.2777777777777778,
+    "shift_max": 0.6666666666666666,
+    "shift_min": 0.6666666666666666
+  },
+  "symmetry_class": "lexicographically least labelling under S_N",
+  "tags": [
+    "structural",
+    "screened"
+  ],
+  "trajectory_signature": {
+    "entropy_rate_bits": 1.4049740389608005,
+    "halt_mass": 0.0,
+    "mean_edge_density": 0.7435897435897436,
+    "rise_then_release": 0.3347800925925926,
+    "rise_then_release_excess": -0.06365740740740741
+  },
+  "within_family": {
+    "count_literal_members": 0,
+    "equivalent_members": 0,
+    "exact_kernel_count": 1,
+    "observable_signature_count": 1,
+    "ranges": {
+      "closing_bias": {
+        "max": 0.2777777777777778,
+        "max_exact": "5/18",
+        "min": 0.2777777777777778,
+        "min_exact": "5/18"
+      },
+      "entropy_rate_bits": {
+        "max": 1.4049740389608005,
+        "max_exact": null,
+        "min": 1.4049740389608005,
+        "min_exact": null
+      },
+      "halt_mass": {
+        "max": 0.0,
+        "max_exact": "0/1",
+        "min": 0.0,
+        "min_exact": "0/1"
+      },
+      "max_abs_dissolve_shift": {
+        "max": 0.6666666666666666,
+        "max_exact": "2/3",
+        "min": 0.6666666666666666,
+        "min_exact": "2/3"
+      },
+      "mean_edge_density": {
+        "max": 0.7435897435897436,
+        "max_exact": "29/39",
+        "min": 0.7435897435897436,
+        "min_exact": "29/39"
+      },
+      "reversibility_defect": {
+        "max": 0.019230769230769232,
+        "max_exact": "1/52",
+        "min": 0.019230769230769232,
+        "min_exact": "1/52"
+      },
+      "rise_then_release": {
+        "max": 0.3347800925925926,
+        "max_exact": "1157/3456",
+        "min": 0.3347800925925926,
+        "min_exact": "1157/3456"
+      },
+      "rise_then_release_excess": {
+        "max": -0.06365740740740741,
+        "max_exact": "-55/864",
+        "min": -0.06365740740740741,
+        "min_exact": "-55/864"
+      },
+      "triangle_mass": {
+        "max": 0.34615384615384615,
+        "max_exact": "9/26",
+        "min": 0.34615384615384615,
+        "min_exact": "9/26"
+      },
+      "tv_from_uniform": {
+        "max": 0.5096153846153846,
+        "max_exact": "53/104",
+        "min": 0.5096153846153846,
+        "min_exact": "53/104"
+      }
+    }
+  }
+}
