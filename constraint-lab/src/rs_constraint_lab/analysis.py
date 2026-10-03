@@ -245,6 +245,16 @@ def _execute(task: dict) -> None:
 
         execute_n4_shard(task)
         return
+    if analysis == "n4-reconfiguration-sensitivity":
+        from rs_constraint_lab.v05 import execute_4a_shard
+
+        execute_4a_shard(task)
+        return
+    if analysis == "n4-targeted-pairs":
+        from rs_constraint_lab.v05 import execute_5_shard
+
+        execute_5_shard(task)
+        return
     if task["spec"].get("semantics") == "hypergraph":
         _execute_hypergraph(task)
         return

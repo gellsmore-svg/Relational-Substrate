@@ -272,6 +272,10 @@ def _shard_identity(spec: dict, header: dict, cell_index: int, cell: dict, cardi
         ):
             if key in header:
                 identity[key] = header[key]
+    if "analysis_version" in spec:
+        identity["analysis_version"] = spec["analysis_version"]
+    if "effect_floor" in spec:
+        identity["effect_floor"] = float(spec["effect_floor"])
     return identity
 
 
@@ -283,14 +287,26 @@ def _shard_id(identity: dict) -> str:
 def build_plan(spec: dict, shard_items: int | None = None) -> dict:
     validate_spec(spec)
     options = effective_options(spec)
-    if options["analysis"] not in {ANALYSIS_HEAVY_EVERY, "memory-clock-reanalysis", "n4-singleton"}:
+    if options["analysis"] not in {
+        ANALYSIS_HEAVY_EVERY,
+        "memory-clock-reanalysis",
+        "n4-singleton",
+        "n4-reconfiguration-sensitivity",
+        "n4-targeted-pairs",
+    }:
         raise ValueError(f"analysis {options['analysis']!r} is not executable")
-    if options["analysis"] == "n4-singleton":
+    if options["analysis"] in {"n4-singleton", "n4-reconfiguration-sensitivity"}:
         for cell in spec["cells"]:
             if int(cell["N"]) != 4:
-                raise ValueError("n4-singleton analysis requires N=4")
+                raise ValueError(f"{options['analysis']} requires N=4")
             if any(int(card) != 1 for card in cell["cardinalities"]):
-                raise ValueError("n4-singleton analysis refuses cardinality above 1")
+                raise ValueError(f"{options['analysis']} refuses cardinality above 1")
+    if options["analysis"] == "n4-targeted-pairs":
+        for cell in spec["cells"]:
+            if int(cell["N"]) != 4:
+                raise ValueError("n4-targeted-pairs requires N=4")
+            if list(cell["cardinalities"]) != [2]:
+                raise ValueError("n4-targeted-pairs executes cardinality 2 only")
     if options["analysis"] == "memory-clock-reanalysis":
         for cell in spec["cells"]:
             if int(cell["N"]) != 3:
@@ -299,6 +315,10 @@ def build_plan(spec: dict, shard_items: int | None = None) -> dict:
     if items < 1:
         raise ValueError("shard item budget must be at least 1")
     header = _header(spec, items)
+    if options["analysis"] == "n4-targeted-pairs":
+        from rs_constraint_lab.v05 import build_targeted_plan
+
+        return build_targeted_plan(spec, items, header)
     weights = _weights_of(spec)
     estimates = []
     shards = []
@@ -1147,6 +1167,10 @@ def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path
         from rs_constraint_lab.census import merge_census
 
         return merge_census(out_dir, plan, publish)
+    if spec.get("analysis") in {"n4-reconfiguration-sensitivity", "n4-targeted-pairs"}:
+        from rs_constraint_lab.v05 import merge_v05
+
+        return merge_v05(out_dir, plan, publish)
     options = effective_options(spec)
     screens = spec.get("predeclared_screens", {})
     horizon = int(spec.get("rise_release_horizon", 4))
@@ -1433,6 +1457,8 @@ def _science(summary: dict) -> dict:
             cells[-1]["clock_census"] = cell["clock_census"]
         if cell.get("n4_census") is not None:
             cells[-1]["n4_census"] = cell["n4_census"]
+        if cell.get("v05_census") is not None:
+            cells[-1]["v05_census"] = cell["v05_census"]
     return {
         "status": summary["status"],
         "spec_hash": summary["spec_hash"],
