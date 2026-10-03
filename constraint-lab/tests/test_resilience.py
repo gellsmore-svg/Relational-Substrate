@@ -10,6 +10,7 @@ import pytest
 from rs_constraint_lab.cli import main
 from rs_constraint_lab.execution import (
     IncompatibleGeneration,
+    merge_directory,
     resume_directory,
     run_spec,
     scientific_projection,
@@ -116,6 +117,21 @@ def test_plan_prints_without_writing_and_interruption_matches(tmp_path, monkeypa
     again = _receipts(clean)
     assert main(["run", str(spec_path), "--out", str(clean), "--resume", "--workers", "2"]) == 0
     assert _receipts(clean) == again
+
+
+def test_published_runtime_is_the_run_wall_clock(tmp_path):
+    spec = _spec()
+    out = tmp_path / "out"
+    publish = tmp_path / "pub"
+    summary = run_spec(spec, out, workers=1, shard_items=2, publish=publish)
+    manifest = publish / "experiments" / "manifests" / f"{spec['experiment_id']}-summary.json"
+    stored = json.loads(manifest.read_text(encoding="utf-8"))
+    assert stored["runtime_seconds"] == summary["runtime_seconds"]
+    assert stored["runtime_seconds"] > 0
+    merged = merge_directory(out, publish=publish)
+    republished = json.loads(manifest.read_text(encoding="utf-8"))
+    assert merged["runtime_seconds"] == summary["runtime_seconds"]
+    assert republished["runtime_seconds"] == summary["runtime_seconds"]
 
 
 def test_fault_injection_quarantines_or_retries(tmp_path, monkeypatch):

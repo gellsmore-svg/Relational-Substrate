@@ -310,8 +310,9 @@ def format_plan(spec: dict, shard_items: int | None = None) -> str:
         f"estimated shards {plan['estimates']['shard_count']}",
         f"disk upper bound {plan['estimates']['disk_upper_bound_bytes']} bytes "
         "(400 bytes times each labelled structurally-simple set; aggregates are smaller)",
-        "lexicographic combination order front-loads canonical representatives; "
-        "the item budget is sized for that prefix, so later shards are shorter.",
+        "combination order is lexicographic. Weights are generated innermost, so "
+        "the opening range is often stacked grades rather than the slowest range. "
+        "The item budget was measured on the slowest window.",
     ]
     for cell in plan["estimates"]["cells"]:
         grammar = cell["grammar"]
@@ -953,6 +954,19 @@ def _write_exemplars(spec, grammar, factors, digest, families, cancellations, ou
     return written
 
 
+def _publish_run(summary: dict, spec: dict, publish: Path, out_dir: Path) -> None:
+    """Copy a finished summary. The caller must already have set the wall clock."""
+    if summary.get("status") != "COMPLETE":
+        return
+    _publish(summary, spec, Path(publish), out_dir)
+    catalogue = Path(publish) / "catalogue"
+    catalogue.mkdir(parents=True, exist_ok=True)
+    for path in out_dir.glob("kernel-ids-*.txt"):
+        if path.stat().st_size <= FAMILY_INDEX_COMMIT_LIMIT_BYTES:
+            target = catalogue / f"{spec['experiment_id']}-{path.name}"
+            target.write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
+
+
 def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path | None = None) -> dict:
     out_dir = Path(out_dir)
     plan = read_json(out_dir / "plan.json")
@@ -968,6 +982,8 @@ def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path
             and progress["status"] == "COMPLETE"
             and (compare_to is None or existing.get("territory") is not None)
         ):
+            if publish is not None:
+                _publish_run(existing, spec, publish, out_dir)
             return existing
     options = effective_options(spec)
     screens = spec.get("predeclared_screens", {})
@@ -1164,7 +1180,6 @@ def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path
                         f"coverage gap at N={n} cardinality {cardinality}: "
                         f"scanned pieces do not sum to {counts['labelled_combinations']}"
                     )
-    started = time.perf_counter()
     summary = {
         "status": progress["status"],
         "engine_version": ENGINE_VERSION,
@@ -1197,19 +1212,13 @@ def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path
         "unsearched_declared": list(spec.get("unsearched", [])),
         "territory": territory_cells or None,
     }
-    summary["science"] = _science(summary)
-    summary["runtime_seconds"] = time.perf_counter() - started
-    # The science block is independent of this merge's wall clock. Recompute it
-    # after the clock is stored so the stored science hash excludes the clock.
+    # runtime_seconds is the coordinator wall clock. run_spec sets it. A merge
+    # keeps the value already stored on a completed summary and does not time
+    # its own assembly.
     summary["science"] = _science(summary)
     atomic_write_json(out_dir / "summary.json", summary)
-    if publish is not None and summary["status"] == "COMPLETE":
-        _publish(summary, spec, Path(publish), out_dir)
-        catalogue = Path(publish) / "catalogue"
-        for path in out_dir.glob("kernel-ids-*.txt"):
-            if path.stat().st_size <= FAMILY_INDEX_COMMIT_LIMIT_BYTES:
-                target = catalogue / f"{spec['experiment_id']}-{path.name}"
-                target.write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
+    if publish is not None:
+        _publish_run(summary, spec, publish, out_dir)
     return summary
 
 
@@ -1376,10 +1385,26 @@ def run_spec(
     if compare_to is not None:
         _require_comparison_index(Path(compare_to), spec)
     progress = _reconcile(out_dir, plan)
+    previous_runtime = 0.0
+    summary_path = out_dir / "summary.json"
+    if summary_path.exists():
+        try:
+            previous_runtime = float(read_json(summary_path).get("runtime_seconds") or 0.0)
+        except (OSError, json.JSONDecodeError, TypeError, ValueError):
+            previous_runtime = 0.0
+    unfinished = any(state.get("status") != "completed" for state in progress.get("shards", {}).values())
     wall = time.perf_counter()
     _execute(out_dir, plan, progress, workers, max_shards)
-    summary = merge_directory(out_dir, publish=publish, compare_to=compare_to)
-    summary["runtime_seconds"] = time.perf_counter() - wall
+    summary = merge_directory(out_dir, publish=None, compare_to=compare_to)
+    elapsed = time.perf_counter() - wall
+    if unfinished:
+        summary["runtime_seconds"] = previous_runtime + elapsed
+    elif previous_runtime:
+        summary["runtime_seconds"] = previous_runtime
+    else:
+        summary["runtime_seconds"] = elapsed
     summary["science"] = _science(summary)
-    atomic_write_json(out_dir / "summary.json", summary)
+    atomic_write_json(summary_path, summary)
+    if publish is not None:
+        _publish_run(summary, plan["spec"], publish, out_dir)
     return summary
