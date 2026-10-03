@@ -30,7 +30,7 @@ archive/pre-constraint-lab-2026-10-03/
 
 The immutable source commit is tag `pre-constraint-lab-2026-10-03` (`06cb0dc0be6aa952639a3337cf95606f1feaa4c4`). Archival does not repudiate that work. Run instructions and the locations of the old root README, package definition, restart notes, and CI workflow are in the archive README.
 
-The Constraint Laboratory is the active experimental programme on `research/constraint-lab-v0.1`. Its charter, engine, and generation records live under `constraint-lab/`.
+The Constraint Laboratory lives under `constraint-lab/`. Generation 1 was produced on `research/constraint-lab-v0.1`. Engine 0.2, on `research/constraint-lab-v0.2`, keeps that record and runs later generations as resumable shards.
 
 Generation 1 searched the memoryless pairwise grammar at `N = 2, 3, 4` and the singletons at `N = 5`, with no geometry. The report is `constraint-lab/reports/generation-001-pregeometric-pairwise.md`. From `constraint-lab/`:
 

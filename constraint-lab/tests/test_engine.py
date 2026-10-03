@@ -107,8 +107,10 @@ def test_accounting_matches_the_generator():
             accounting["removed_syntax_invalid"]
             + accounting["removed_redundant_normalisation"]
             + accounting["outside_k_bound"]
+            + accounting["outside_a_bound"]
             + accounting["structural_normal_forms"]
         )
+        assert accounting["outside_a_bound"] == 0
 
 
 def test_n5_baseline_uses_iterative_components_and_stays_uniform():

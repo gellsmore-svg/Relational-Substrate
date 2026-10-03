@@ -9,14 +9,23 @@ from pathlib import Path
 
 from rs_constraint_lab.accounting import template_accounting
 from rs_constraint_lab.constraints import Choreography, parse_expression
-from rs_constraint_lab.generation import run_experiment
+from rs_constraint_lab.execution import (
+    IncompatibleGeneration,
+    format_plan,
+    merge_directory,
+    resume_directory,
+    retry_failed,
+    run_spec,
+    status_text,
+    verify_directory,
+)
 from rs_constraint_lab.grammar import build_grammar, is_canonical_ids
 from rs_constraint_lab.kernel import build_kernel
 from rs_constraint_lab.semantics import get_semantics, semantics_names
-from rs_constraint_lab.spec import load_spec, spec_hash
+from rs_constraint_lab.spec import effective_options, load_spec, spec_hash
 from rs_constraint_lab.state import canonical_states, edge_count, n_states
 from rs_constraint_lab.trajectory import replay_matches, sample_trajectory
-from rs_constraint_lab.version import ENGINE_VERSION
+from rs_constraint_lab.version import DEFAULT_WORKERS, ENGINE_VERSION
 from rs_constraint_lab.weights import ENUMERATED_WEIGHTS, alphabet_factors
 
 
@@ -33,10 +42,34 @@ def main(argv: list[str] | None = None) -> int:
     enumerate.add_argument("spec")
     enumerate.add_argument("--n", type=int, required=True)
 
+    plan = sub.add_parser("plan", help="print the shard plan without writing it")
+    plan.add_argument("spec")
+    plan.add_argument("--shard-items", type=int)
+
     exact = sub.add_parser("exact", help="run the exact finite-state generation")
     _add_run_args(exact)
-    run = sub.add_parser("run", help="run a generation, including selected replays")
+    run = sub.add_parser("run", help="run or resume a generation")
     _add_run_args(run)
+
+    resume = sub.add_parser("resume", help="continue a generation from its output directory")
+    resume.add_argument("output", type=Path)
+    _add_control_args(resume)
+
+    status = sub.add_parser("status", help="print the durable progress manifest")
+    status.add_argument("output", type=Path)
+
+    verify = sub.add_parser("verify", help="check receipts, hashes, and completion")
+    verify.add_argument("output", type=Path)
+
+    merge = sub.add_parser("merge", help="merge completed shard receipts into a summary")
+    merge.add_argument("output", type=Path)
+    merge.add_argument("--publish", type=Path)
+    merge.add_argument("--compare-to", type=Path)
+
+    retry = sub.add_parser("retry", help="requeue failed and quarantined shards")
+    retry.add_argument("output", type=Path)
+    retry.add_argument("--failed", action="store_true")
+    retry.add_argument("--workers", type=int, default=DEFAULT_WORKERS)
 
     replay = sub.add_parser("replay", help="regenerate a stored trajectory and compare it")
     replay.add_argument("run_file")
@@ -55,29 +88,69 @@ def main(argv: list[str] | None = None) -> int:
     catalogue.add_argument("summary")
 
     args = parser.parse_args(argv)
+    try:
+        return _dispatch(args)
+    except IncompatibleGeneration as exc:
+        print(str(exc), file=sys.stderr)
+        return 3
+
+
+def _dispatch(args) -> int:
     if args.command == "inspect-space":
         return _inspect(Path(args.spec))
     if args.command == "enumerate":
         return _enumerate(Path(args.spec), args.kind, args.n)
+    if args.command == "plan":
+        spec = load_spec(args.spec)
+        _require_graph(spec)
+        print(format_plan(spec, args.shard_items))
+        return 0
     if args.command in {"exact", "run"}:
         spec = load_spec(args.spec)
         _require_graph(spec)
-        summary = run_experiment(spec, Path(args.out), Path(args.publish) if args.publish else None)
-        print(json.dumps({
-            "experiment_id": summary["experiment_id"],
-            "spec_hash": summary["spec_hash"],
-            "runtime_seconds": round(summary["runtime_seconds"], 3),
-            "cells": [
-                {
-                    "N": cell["coordinate"]["N"],
-                    "K_max": cell["coordinate"]["K_max"],
-                    "families": cell["families"],
-                    "canonical": {key: value["canonical"] for key, value in cell["cardinalities"].items()},
-                }
-                for cell in summary["cells"]
-            ],
-        }, indent=2))
+        summary = run_spec(
+            spec,
+            Path(args.out),
+            workers=args.workers,
+            shard_items=args.shard_items,
+            max_shards=args.max_shards,
+            publish=Path(args.publish) if args.publish else None,
+            compare_to=Path(args.compare_to) if args.compare_to else None,
+        )
+        _print_run(summary)
+        return _exit_for(summary, intentional_stop=args.max_shards is not None)
+    if args.command == "resume":
+        summary = resume_directory(
+            Path(args.output),
+            workers=args.workers,
+            max_shards=args.max_shards,
+            publish=Path(args.publish) if args.publish else None,
+            compare_to=Path(args.compare_to) if args.compare_to else None,
+        )
+        _print_run(summary)
+        return _exit_for(summary, intentional_stop=args.max_shards is not None)
+    if args.command == "status":
+        print(status_text(Path(args.output)))
         return 0
+    if args.command == "verify":
+        report = verify_directory(Path(args.output))
+        print(json.dumps(report, indent=2, sort_keys=True))
+        return 0 if report["ok"] else 1
+    if args.command == "merge":
+        summary = merge_directory(
+            Path(args.output),
+            publish=Path(args.publish) if args.publish else None,
+            compare_to=Path(args.compare_to) if args.compare_to else None,
+        )
+        _print_run(summary)
+        return _exit_for(summary, intentional_stop=False)
+    if args.command == "retry":
+        if not args.failed:
+            print("retry requires --failed", file=sys.stderr)
+            return 2
+        summary = retry_failed(Path(args.output), workers=args.workers)
+        _print_run(summary)
+        return _exit_for(summary, intentional_stop=False)
     if args.command == "replay":
         return _replay(Path(args.run_file))
     if args.command == "compare":
@@ -89,10 +162,58 @@ def main(argv: list[str] | None = None) -> int:
     return 2
 
 
+def _add_control_args(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=DEFAULT_WORKERS,
+        help=f"worker processes (default {DEFAULT_WORKERS}; steady progress is preferred to filling the machine)",
+    )
+    parser.add_argument("--max-shards", type=int, help="stop after this many successful shards in this invocation")
+    parser.add_argument("--publish", type=Path, help="copy summaries, tables, and selected exemplars here")
+    parser.add_argument("--compare-to", type=Path, help="directory whose kernel indexes classify new motifs")
+
+
 def _add_run_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("spec")
     parser.add_argument("--out", type=Path, required=True)
-    parser.add_argument("--publish", type=Path, help="copy summaries, tables, and selected exemplars here")
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="accepted for clarity; resume is already the default when plan.json exists",
+    )
+    parser.add_argument("--shard-items", type=int, help="maximum combinations in one shard; stored on the plan")
+    _add_control_args(parser)
+
+
+def _print_run(summary: dict) -> None:
+    print(json.dumps({
+        "experiment_id": summary["experiment_id"],
+        "status": summary["status"],
+        "spec_hash": summary["spec_hash"],
+        "semantic_version": summary.get("semantic_version"),
+        "runtime_seconds": round(summary["runtime_seconds"], 3),
+        "cells": [
+            {
+                "N": cell["coordinate"]["N"],
+                "K_max": cell["coordinate"]["K_max"],
+                "families": cell["families"],
+                "canonical": {key: value["canonical"] for key, value in cell["cardinalities"].items()},
+            }
+            for cell in summary["cells"]
+        ],
+    }, indent=2))
+
+
+def _exit_for(summary: dict, *, intentional_stop: bool) -> int:
+    status = summary.get("status")
+    if status == "COMPLETE":
+        return 0
+    if status == "IN_PROGRESS" and intentional_stop:
+        return 0
+    if status == "FAILED":
+        return 1
+    return 2
 
 
 def _require_graph(spec: dict) -> None:
@@ -106,6 +227,11 @@ def _inspect(path: Path) -> int:
     print(f"experiment {spec['experiment_id']}  schema {spec['schema']}")
     print(f"spec_hash {spec_hash(spec)}")
     print(f"engine {ENGINE_VERSION}")
+    options = effective_options(spec)
+    print(
+        f"composition {options['composition']}  analysis {options['analysis']}  "
+        f"predicates {', '.join(options['predicates'])}"
+    )
     print(f"semantics axis: {', '.join(semantics_names())}")
     print(f"active semantics: {spec['semantics']}")
     if spec["semantics"] != "graph":
@@ -145,7 +271,13 @@ def _enumerate(path: Path, kind: str, n: int) -> int:
         print(f"N={n} labelled {n_states(n)} canonical {len(states)} slots {edge_count(n)}")
         print("canonical states:", " ".join(str(state) for state in states[:32]))
         return 0
-    grammar = build_grammar(n, cell["K_max"], spec["weights"])
+    grammar = build_grammar(
+        n,
+        cell["K_max"],
+        spec["weights"],
+        a_max=cell.get("A_max"),
+        predicates=tuple(spec.get("predicates", ["edge"])),
+    )
     canonical = sum(1 for i in range(len(grammar.labelled)) if is_canonical_ids((i,), grammar.image))
     print(
         f"N={n} K<={cell['K_max']} labelled constraints {len(grammar.labelled)} "

@@ -198,15 +198,25 @@ def _absorption_weights(
     start: int,
     recurrent: list[list[int]],
     rational: bool,
-) -> list[float]:
+):
+    """Absorption probabilities. Rational when requested, otherwise float64.
+
+    The rational branch stays in ``Fraction`` so callers can keep exact
+    stationary mixtures. The float list returned for the historical
+    ``absorption`` field is derived from those fractions at the boundary.
+    """
     member_class: dict[int, int] = {}
     for index, component in enumerate(recurrent):
         for state in component:
             member_class[state] = index
     if start in member_class:
-        weights = [0.0] * len(recurrent)
-        weights[member_class[start]] = 1.0
-        return weights
+        if rational:
+            weights = [Fraction(0) for _ in recurrent]
+            weights[member_class[start]] = Fraction(1)
+            return weights
+        weights_float = [0.0] * len(recurrent)
+        weights_float[member_class[start]] = 1.0
+        return weights_float
     transient = [state for state in range(kernel.n_states) if state not in member_class]
     position = {state: i for i, state in enumerate(transient)}
     size = len(transient)
@@ -226,7 +236,7 @@ def _absorption_weights(
                     if nxt in members:
                         vector[position[state]] += prob
             heights.append(_solve_fraction(matrix, vector))
-        raw = [float(height[position[start]]) for height in heights]
+        raw = [height[position[start]] for height in heights]
     else:
         base = np.zeros((size, size))
         for state in transient:
@@ -252,24 +262,39 @@ def _absorption_weights(
 def long_run(kernel: Kernel, start: int = 0) -> dict:
     recurrent = recurrent_components(kernel)
     rational = kernel.n_states <= 16
-    class_distributions = []
+    exact_classes = []
+    float_classes = []
     residual = 0.0
     method = "rational" if rational else "float64"
     for component in recurrent:
         if rational:
             exact = _stationary_rational(component, kernel.successors)
-            class_distributions.append({state: float(value) for state, value in exact.items()})
+            exact_classes.append(exact)
+            float_classes.append({state: float(value) for state, value in exact.items()})
         else:
             dist, class_residual, class_method = _stationary_float(component, kernel.successors)
-            class_distributions.append(dist)
+            exact_classes.append(None)
+            float_classes.append(dist)
             residual = max(residual, class_residual)
             if class_method != "float64":
                 method = class_method
     weights = _absorption_weights(kernel, start, recurrent, rational)
     pi: dict[int, float] = {}
-    for weight, dist in zip(weights, class_distributions):
-        for state, prob in dist.items():
-            pi[state] = pi.get(state, 0.0) + weight * prob
+    pi_exact: dict[int, Fraction] | None
+    if rational:
+        pi_exact = {}
+        for weight, dist in zip(weights, exact_classes):
+            for state, prob in dist.items():
+                pi_exact[state] = pi_exact.get(state, Fraction(0)) + weight * prob
+        for state, prob in pi_exact.items():
+            pi[state] = float(prob)
+        weights_float = [float(weight) for weight in weights]
+    else:
+        pi_exact = None
+        weights_float = list(weights)
+        for weight, dist in zip(weights_float, float_classes):
+            for state, prob in dist.items():
+                pi[state] = pi.get(state, 0.0) + weight * prob
     reachable = reachable_from(kernel, start)
     reachable_recurrent = []
     for index, component in enumerate(recurrent):
@@ -278,7 +303,9 @@ def long_run(kernel: Kernel, start: int = 0) -> dict:
     periods = sorted({period_of(component, kernel.successors) for component in recurrent})
     return {
         "distribution": pi,
-        "absorption": weights,
+        "distribution_exact": pi_exact,
+        "absorption": weights_float,
+        "absorption_exact": list(weights) if rational else None,
         "n_recurrent": len(recurrent),
         "n_recurrent_reachable_from_start": len(reachable_recurrent),
         "periods": periods,

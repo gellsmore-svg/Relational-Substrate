@@ -49,7 +49,23 @@ rs-lab catalogue build experiments/manifests/generation-001-pregeometric-pairwis
 rs-lab report experiments/manifests/generation-001-pregeometric-pairwise-summary.json
 ```
 
-`exact` and `run` both execute the exhaustive cell, including the selected stochastic replays. `run --publish` copies the summary, the singleton tables, family indexes at most 2 MB, selected motif files, and the seed-0 exemplars (plus every N=3 reference seed) into this directory. Bulk output remains under `generated/`.
+Those commands are the Generation 1 record. Engine `0.1.0` at `fd7758d0be29877b6a306455fd81ca3eca49df8b` produced it. Re-running the Generation 1 specification with the current engine does not replace that record: engine 0.2 applies structural-simple composition by default and writes a new output directory.
+
+Engine 0.2 adds a shard runner. `plan` only prints. `run` resumes when the output directory already holds a compatible `plan.json`.
+
+```bash
+rs-lab plan experiments/specs/generation-000.json
+rs-lab run experiments/specs/generation-000.json --out generated/generation-000 --workers 2
+rs-lab status generated/generation-000
+rs-lab verify generated/generation-000
+rs-lab resume generated/generation-000
+rs-lab merge generated/generation-000
+rs-lab retry generated/generation-000 --failed
+```
+
+`scripts/run-lab.sh` and `scripts/run-lab.ps1` call the same module. Under WSL, put `generated/` on the Linux filesystem. The default worker count is 2. `--workers` raises it; filling the machine is not the goal.
+
+`exact` and `run` both execute the exhaustive cell, including the selected stochastic replays. `run --publish` copies the summary, the singleton tables, family indexes at most 2 MB, selected motif files, and the seed-0 exemplars into the publish directory. Bulk output remains under `generated/`.
 
 Generation 0 is the correctness cell and is what CI runs. Generation 1 is the first research census and is too large for CI.
 

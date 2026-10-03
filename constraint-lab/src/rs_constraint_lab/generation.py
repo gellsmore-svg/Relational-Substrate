@@ -608,6 +608,12 @@ def _motif_record(row: dict) -> dict:
     }
 
 
+def _attach_within_family(record: dict, row: dict) -> dict:
+    if row.get("within_family"):
+        record["within_family"] = row["within_family"]
+    return record
+
+
 def _select_motifs(rows: list[dict]) -> list[dict]:
     """Deterministic cap. The full family index remains in the generated jsonl."""
     chosen: list[dict] = []
@@ -617,7 +623,7 @@ def _select_motifs(rows: list[dict]) -> list[dict]:
         if row["motif_id"] in seen or len(chosen) >= 48:
             return
         seen.add(row["motif_id"])
-        chosen.append(_motif_record(row))
+        chosen.append(_attach_within_family(_motif_record(row), row))
 
     for row in rows:
         if "baseline-equivalent" in row["tags"]:
@@ -731,7 +737,7 @@ def _publish(summary, spec, publish_root: Path, out_dir: Path) -> None:
     # Pedagogical and baseline exemplars are small enough to keep.
     for path in (out_dir / "exemplars").glob("*.json"):
         record = json.loads(path.read_text(encoding="utf-8"))
-        if record.get("label") in {"baseline", "reference", "family"} and record.get("seed") == 0:
+        if record.get("label") in {"baseline", "reference", "family", "cancellation", "threshold"} and record.get("seed") == 0:
             target = exemplars / path.name
             target.write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
         elif record.get("label") == "reference" and record.get("n") == 3:

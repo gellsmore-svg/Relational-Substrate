@@ -54,3 +54,32 @@ Expressions are the human-readable canonical form. Sets are stored as sorted exp
 ## Extension
 
 A later literal, such as a threshold or a hyperedge, should be a new production in this language, with its own `K` and `A` rules, and a coverage partition that still sums to the raw count. Silent overloading of `present` to mean “a count” would make the Generation 1 census unreadable.
+
+## Structural identity (engine 0.2)
+
+Generation 1 treated each weighted expression as its own constraint. Two copies of one rule with reciprocal grades, `form(0-1) => strong_favour` and `form(0-1) => strong_suppress`, were therefore a cardinality-2 set. Their factors multiply to 1, and the pair reproduces the baseline kernel. That is legitimate multiplicative composition. It is not two structurally different constraints.
+
+The structural identity is polarity, action, edge conditions, and count literals. The weight is an attribute of that identity. In the primary mode, `structural-simple`, a set may contain at most one weighted instance of each structural identity. The reciprocal pair above is a stacked-weight composition. It remains available under the named mode `stacked-weight`. It does not count toward cardinality, minimal motif size, or the number of independent constraints in the primary census.
+
+A missing `composition` field means `structural-simple`. Generation 1 specifications have no such field. Their committed manifests were produced before this filter and are not rewritten. A fresh run of those specifications under engine 0.2 applies the filter; the semantic version on the shard says so.
+
+## Occupation count (engine 0.2)
+
+```text
+form(0-1) | count>=2 => strong_favour
+dissolve(0-1) | count==1 => strong_suppress
+```
+
+`count` is the number of present pairwise edges in the whole state. It is not a rise in relation order and it is not a hyperedge. The three relations are `count>=q`, `count<=q`, and `count==q`. A normal form carries at most one of them. `K` gains one for that literal. `A` does not: the literal names no entity.
+
+Some literals never change a match, given the action precondition, and are excluded from the grammar. Formation can fire only while its own edge is absent, so the count is at most `M - 1`. Dissolution can fire only while its own edge is present, so the count is at least 1. `count>=0` and `count<=M` are tautologies on every state. `count==q` is not the same object as the pair of inequalities: under multiplicative composition those two constraints would apply the weight twice.
+
+Edge constraints are still generated first, in the Generation 1 order. Count constraints are appended. An edge-only grammar keeps the Generation 1 ids.
+
+The edge-template partition now also removes templates outside `A_max`:
+
+```text
+raw = syntax-invalid + redundant + outside K + outside A + structural normal forms
+```
+
+Count literals have their own partition (`candidates = tautology + unsatisfiable + outside K + outside A + structural forms`). They are not folded into the edge identity `2 * M * 3^M`.
