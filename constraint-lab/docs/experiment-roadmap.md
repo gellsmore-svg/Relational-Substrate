@@ -59,6 +59,19 @@ The smallest justified next cell is chosen in the Generation 1 report, after the
 
 Geometry (`G ≥ 1`) waits until a pre-geometric motif is stable enough that an embedding would be a real comparison rather than a new foundation.
 
+## Generation 3 — one independent triadic relation
+
+Specification: `experiments/specs/generation-003.json`.
+
+```text
+E(N=3, A≤3, O=3, G=0, S=0, H=0, K≤2, L=0, semantics=hypergraph, W=W4)
+  cardinalities {1, 2}
+```
+
+The semantics are independent hypergraph. The triple is its own bit. This cell does not search simplicial face-closure, count predicates, `N = 4`, or cardinality 3. `rho3 = 1/2` and `rho3 = 2` are a sensitivity check inside the same shards. They are not a second census.
+
+After that cell, one bounded extension was executed: `experiments/specs/generation-003b.json`, singletons at `K ≤ 3`. A constraint that reads both a pair and the triad has `K = 3`, so it is absent from the `K ≤ 2` grammar. The `K ≤ 3` pair combinations are 288,420 labelled and 50,365 canonical structurally-simple sets. The triple combinations are 72,874,120 labelled. Neither was executed. The reason is in the Generation 3 report. `N = 4` was not executed.
+
 ## Later
 
 History-dependent choreography, constraints that rewrite constraints (`L > 0`), geometric embeddings, and cross-substrate recurrence of a motif discovered here. A recurrence across substrates would be recorded as substrate-robust recurrence to the degree observed. It would not be called a proof of universality.
