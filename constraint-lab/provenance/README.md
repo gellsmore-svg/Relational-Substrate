@@ -43,12 +43,12 @@ Prompt identifiers:
 | 001 | Constraint Laboratory bootstrap / repository reorganisation / Generation 1 | `content_status: pending_verbatim_import` |
 | 002 | v0.2 robustness, structural normalisation, and Generation 2 | `content_status: pending_verbatim_import` |
 | 003 | Independent triadic relation and Generation 3 | agent input and the execution-time capture; authored Markdown pending |
-| 004 | Memory-clock refinement and N=4 higher-order reconfiguration | `prompts/004-v0.4-n4-higher-order-reconfiguration.md` is the agent input; authored Markdown pending |
+| 004 | Memory-clock refinement and N=4 higher-order reconfiguration | `prompts/004-v0.4-n4-higher-order-reconfiguration.md` is the agent input; authored Markdown pending. Execution 004 records the result. Review 004 is pending |
 
 The verbatim text of 001 and 002 can be inserted later from the ChatGPT conversation, as new prompt files plus a new ledger line. Do not reconstruct them from memory.
 
 Prompt 003 has two stored representations. `prompts/003-v0.3-higher-order-relations.md` is the file captured at execution time (25,995 bytes, sha256 `9ac0de2c5d4cdd33749fec03a232f2d35fe5f6dbead9b0f572cafce4e23cbccb`). `prompts/003-v0.3-agent-input.md` is the `user_query` body from the implementing session (25,996 bytes). The captured file is that body with the leading newline removed. Neither file is the ChatGPT-authored Markdown, which the external review reported at 27,580 bytes and which is not in this working environment. `content_status: verbatim` on the original ledger line means verbatim relative to the execution-time capture. It does not mean byte identity with the authored file. A later ledger line records that qualification. Do not overwrite either file.
 
-Reviews live in `reviews/`. Review 002 records an external ChatGPT reading of v0.2. It says what was inspected and what was concluded. It is not a line-by-line audit of generated artifacts.
+Reviews live in `reviews/`. Review 002 records an external ChatGPT reading of v0.2. Review 003 records an external ChatGPT reading of v0.3 at `e04e0d4dcf979197b62d8d73fd747a0a2084c2b6`. Each says what was inspected and what was concluded. Neither is a line-by-line audit of generated artifacts. Review 004 is not in this repository.
 
-Executions live in `executions/`. An execution record names the branch, the commit range, and the experiment ids a prompt produced. It may record divergences. It is not a review, and it does not rewrite the prompt.
+Executions live in `executions/`. An execution record names the branch, the commit range, and the experiment ids a prompt produced. It may record divergences. It is not a review, and it does not rewrite the prompt. Execution 003 closes prompt 003. Execution 004 closes prompt 004. The close-out commit that adds an execution record is not inside the commit range that record lists.
