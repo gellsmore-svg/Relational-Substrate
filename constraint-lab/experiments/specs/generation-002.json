@@ -1,0 +1,46 @@
+{
+  "schema": "rs-constraint-lab.experiment/v1",
+  "experiment_id": "generation-002-occupation-threshold",
+  "generation": 2,
+  "semantics": "graph",
+  "G": 0,
+  "S": 0,
+  "H": 0,
+  "L": 0,
+  "O": 2,
+  "alphabet": "W4",
+  "composition": "structural-simple",
+  "analysis": "heavy-every-canonical",
+  "predicates": ["edge", "count"],
+  "sensitivity_alphabets": ["W3", "W16"],
+  "weights": ["prohibit", "strong_suppress", "weak_suppress", "weak_favour", "strong_favour"],
+  "cells": [
+    {"N": 3, "K_max": 2, "A_max": 3, "cardinalities": [1, 2]}
+  ],
+  "trajectory": {"horizon": 32, "seeds": [0, 1, 2, 3, 4]},
+  "rise_release_horizon": 4,
+  "reference_expressions": [
+    "form(0-1) | count>=2 => strong_favour",
+    "form(0-1) | count>=1 => strong_favour",
+    "dissolve(0-1) | count>=2 => strong_favour"
+  ],
+  "predeclared_screens": {
+    "max_abs_dissolve_shift_notable": 0.1,
+    "closing_bias_abs_notable": 0.1,
+    "rise_release_excess_notable": 0.05
+  },
+  "unsearched": [
+    "cardinality 3",
+    "N other than 3",
+    "K>2",
+    "stacked-weight composition",
+    "a count scoped to a subset of edges",
+    "hypergraph semantics",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0",
+    "O>2"
+  ]
+}

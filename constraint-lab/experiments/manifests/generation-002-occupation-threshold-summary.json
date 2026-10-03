@@ -1,0 +1,1688 @@
+{
+  "cells": [
+    {
+      "accounting": {
+        "edge": {
+          "labelled_constraints": 150,
+          "labelled_states": 8,
+          "outside_a_bound": 0,
+          "outside_k_bound": 24,
+          "raw_structural_templates": 162,
+          "relation_slots": 3,
+          "removed_redundant_normalisation": 54,
+          "removed_syntax_invalid": 54,
+          "structural_normal_forms": 30,
+          "weight_alphabet_size": 5
+        },
+        "grammar": {
+          "count_candidates": 72,
+          "count_outside_a": 0,
+          "count_outside_k": 0,
+          "count_structural": 42,
+          "count_tautology": 18,
+          "count_unsatisfiable": 12,
+          "edge_outside_a": 0,
+          "edge_structural": 30,
+          "labelled_constraints": 360,
+          "structural_normal_forms": 72,
+          "weight_alphabet_size": 5
+        }
+      },
+      "baseline": {
+        "heavy": {
+          "disjoint_pair_mass": null,
+          "disjoint_pair_mass_exact": null,
+          "edge_count_occupancy": [
+            0.125,
+            0.375,
+            0.375,
+            0.125
+          ],
+          "edge_count_occupancy_exact": [
+            "1/8",
+            "3/8",
+            "3/8",
+            "1/8"
+          ],
+          "entropy_rate_bits": 1.584962500721156,
+          "entropy_rate_nats": 1.0986122886681096,
+          "halt_mass": 0.0,
+          "halt_mass_exact": "0/1",
+          "mean_component_count": 1.625,
+          "mean_edge_density": 0.5,
+          "mean_edge_density_exact": "1/2",
+          "n_recurrent": 1,
+          "periods": [
+            2
+          ],
+          "reachable_count": 8,
+          "reversibility_defect": 0.0,
+          "reversibility_defect_exact": "0/1",
+          "rise_then_release": 0.6666666666666666,
+          "rise_then_release_exact": "2/3",
+          "stationary_arithmetic": "rational",
+          "stationary_residual": 0.0,
+          "triangle_mass": 0.125,
+          "triangle_mass_exact": "1/8",
+          "tv_from_uniform": 0.0,
+          "tv_from_uniform_exact": "0/1"
+        },
+        "light": {
+          "closing_bias": 0.0,
+          "closing_bias_exact": "0/1",
+          "deadlock_states": [],
+          "max_abs_dissolve_shift": 0.0,
+          "max_abs_dissolve_shift_exact": "0/1",
+          "mean_abs_dissolve_shift": 0.0,
+          "mean_abs_dissolve_shift_exact": "0/1",
+          "modal_family": "c61a3c7b2250444b",
+          "n_deadlock": 0,
+          "n_recurrent": 1,
+          "n_recurrent_reachable_from_empty": 1,
+          "periods": [
+            2
+          ],
+          "reachable_from_empty": 8,
+          "support_family": "c726c559413d730e",
+          "support_matches_baseline": true
+        }
+      },
+      "baseline_equivalent_families": 1,
+      "cancellations": {
+        "genuine_global": 16,
+        "genuine_global_examples": [
+          [
+            "dissolve(0-1) | count<=1 => strong_favour",
+            "dissolve(0-1) | count==1 => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) | count<=1 => strong_suppress",
+            "dissolve(0-1) | count==1 => strong_favour"
+          ],
+          [
+            "dissolve(0-1) | count<=1 => weak_favour",
+            "dissolve(0-1) | count==1 => weak_suppress"
+          ],
+          [
+            "dissolve(0-1) | count<=1 => weak_suppress",
+            "dissolve(0-1) | count==1 => weak_favour"
+          ],
+          [
+            "dissolve(0-1) | count==3 => strong_favour",
+            "dissolve(0-1) | count>=3 => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) | count==3 => strong_suppress",
+            "dissolve(0-1) | count>=3 => strong_favour"
+          ],
+          [
+            "dissolve(0-1) | count==3 => weak_favour",
+            "dissolve(0-1) | count>=3 => weak_suppress"
+          ],
+          [
+            "dissolve(0-1) | count==3 => weak_suppress",
+            "dissolve(0-1) | count>=3 => weak_favour"
+          ]
+        ],
+        "inherited_baseline": 0,
+        "inherited_baseline_examples": [],
+        "local": 224,
+        "local_examples": [
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | count<=1 => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | count<=2 => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | count==1 => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | count==2 => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | count==3 => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | count>=2 => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | count>=3 => strong_suppress"
+          ]
+        ]
+      },
+      "canonical_states": 4,
+      "cardinalities": {
+        "1": {
+          "analysed": 100,
+          "canonical": 100,
+          "canonical_including_stacked": 100,
+          "labelled_combinations": 360,
+          "labelled_simple": 360,
+          "labelled_stacked": 0,
+          "removed_by_symmetry": 260,
+          "stacked_canonical": 0
+        },
+        "2": {
+          "analysed": 12220,
+          "canonical": 12220,
+          "canonical_including_stacked": 12420,
+          "labelled_combinations": 64620,
+          "labelled_simple": 63900,
+          "labelled_stacked": 720,
+          "removed_by_symmetry": 52200,
+          "stacked_canonical": 200
+        }
+      },
+      "coordinate": {
+        "A_max": 3,
+        "G": 0,
+        "H": 0,
+        "K_max": 2,
+        "L": 0,
+        "N": 3,
+        "O": 2,
+        "S": 0,
+        "alphabet": "W4",
+        "composition": "structural-simple",
+        "predicates": [
+          "edge",
+          "count"
+        ],
+        "semantics": "graph"
+      },
+      "exemplars": [
+        {
+          "expressions": [],
+          "initial": "empty",
+          "label": "baseline",
+          "run_id": "c186e6df6aa16af1",
+          "seed": 0
+        },
+        {
+          "expressions": [],
+          "initial": "complete",
+          "label": "baseline",
+          "run_id": "8e47058236163f63",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "49b266804ddefc2e",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "562cc0ecd0561b61",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "f56424dfbe7d93ab",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "1c124b5dbcdae055",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "421a5b2eb789a4c0",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "641d44a81b9a898c",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "79c70542d7844c92",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "ac06546ee6f98e47",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "d14af71ace87c233",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "e9a176bfb3c57c4b",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=1 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "959febde1fae106f",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=1 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "5a97d468b0e30af9",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=1 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "b83deecf44ebf729",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=1 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "3ad561f3d497e4d1",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=1 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "e4bb8cf55a4c0a7a",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=1 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "b179e4fe038573dc",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=1 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "e862bf11e6d4afcd",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=1 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "b9f9b3fd4f27515a",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=1 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "60c6b0d02be4a069",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | count>=1 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "694f0d004421a448",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "e3059df49396dcbf",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "0d87669d0f8964c7",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "58e61884a9a530e7",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "d8d2e52efd8d4bfd",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "942a7226fa21316e",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "7dfa703aaf9d2450",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "8b5395653fe8565e",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "ae5b7fe82e38303e",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "cdd469880556dd52",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | count>=2 => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "1be1829996f23bba",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "8725185970ba8faf",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "f8911658eb83aa37",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "305c76ae48c3f2fa",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "73f50a00b46b7980",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "871d5a96a167d4b2",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "7ea1a4703364dc36",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | absent(0-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "8aa983e309db1ee4",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | absent(0-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "f3c5dda70447ec19",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | count<=1 => strong_favour",
+            "dissolve(0-1) | count==1 => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "cancellation",
+          "run_id": "71ff1808fb07e6c1",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | count<=1 => strong_favour",
+            "dissolve(0-1) | count==1 => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "cancellation",
+          "run_id": "cf83e0e2f5e6f1ec",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "cancellation",
+          "run_id": "1f4e83264e4719cb",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "cancellation",
+          "run_id": "e77901bfb2c8b931",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "threshold",
+          "run_id": "8725185970ba8faf",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "threshold",
+          "run_id": "f8911658eb83aa37",
+          "seed": 0
+        }
+      ],
+      "extremes": {
+        "closing_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => prohibit"
+          ],
+          "kernel": "ada3ac088c155beb053c08c9104dbf673acc826cf902cd2dd7d89ba9103cf79f",
+          "kind": "fraction",
+          "value": "1/3"
+        },
+        "closing_min": {
+          "expressions": [
+            "dissolve(0-1) => strong_favour",
+            "form(0-1) => prohibit"
+          ],
+          "kernel": "554413c183ed235fbf79ca55b2154e8bcc66ea25ef00ed517a56fe3c0c001a91",
+          "kind": "fraction",
+          "value": "-2/9"
+        },
+        "entropy_max": {
+          "expressions": [
+            "dissolve(0-1) | count<=1 => strong_favour",
+            "dissolve(0-1) | count==1 => strong_suppress"
+          ],
+          "kernel": "305575f09f9ce0779426f9f447ca5145ce20bc0e9ca8b449af629209ad9473fa",
+          "kind": "float",
+          "value": 1.584962500721156
+        },
+        "entropy_min": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => prohibit"
+          ],
+          "kernel": "ada3ac088c155beb053c08c9104dbf673acc826cf902cd2dd7d89ba9103cf79f",
+          "kind": "float",
+          "value": 0.0
+        },
+        "rise_excess_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "form(0-1) => strong_favour"
+          ],
+          "kernel": "59941e2e839c39c791465df6bbb521b8298065aa5e139b9f742f673cc0b237c0",
+          "kind": "fraction",
+          "value": "5/18"
+        },
+        "rise_excess_min": {
+          "expressions": [
+            "form(0-1) => prohibit",
+            "form(0-2) => prohibit"
+          ],
+          "kernel": "e88e3722e9a50e2e218da88e09a666d25810b5aea49837331d9b36ea5ca08006",
+          "kind": "fraction",
+          "value": "-2/3"
+        },
+        "shift_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => prohibit"
+          ],
+          "kernel": "ada3ac088c155beb053c08c9104dbf673acc826cf902cd2dd7d89ba9103cf79f",
+          "kind": "fraction",
+          "value": "2/3"
+        }
+      },
+      "families": 2501,
+      "family_histogram": {
+        "closing_max": {
+          "0": -0.2222222222222222,
+          "0.25": -0.044444444444444446,
+          "0.5": 0.0,
+          "0.75": 0.07407407407407407,
+          "0.9": 0.1111111111111111,
+          "0.99": 0.24814814814814815,
+          "1": 0.3333333333333333
+        },
+        "families": 2501,
+        "n_deadlock": {
+          "0": 2501
+        },
+        "periods": {
+          "2": 2501
+        },
+        "rise_then_release_excess": {
+          "0": -0.6666666666666666,
+          "0.25": -0.09259259259259259,
+          "0.5": 0.0,
+          "0.75": 0.07407407407407407,
+          "0.9": 0.1111111111111111,
+          "0.99": 0.2222222222222222,
+          "1": 0.2777777777777778
+        },
+        "shift_max": {
+          "0": 0.0,
+          "0.25": 0.16666666666666666,
+          "0.5": 0.3333333333333333,
+          "0.75": 0.3333333333333333,
+          "0.9": 0.3333333333333333,
+          "0.99": 0.6666666666666666,
+          "1": 0.6666666666666666
+        },
+        "support_matches_baseline": 1063
+      },
+      "family_index_bytes": 10201372,
+      "family_index_commit_limit_bytes": 2000000,
+      "family_index_sha256": "43170bdc0f930599ce7909bcaedb3a76e60c9b9a397f17172b0bed892c720cee",
+      "kernel_index_count": 7559,
+      "kernel_index_sha256": "96d3f2217622d190daf43518b01bbee2e9392121504102391f5a52a3cba1e598",
+      "labelled_states": 8,
+      "measure_scope": {
+        "exact_kernel": "full rational kernel reduced under S_N before hashing",
+        "heavy": "every analysed set, including exact rational observables when the state count is at most 16",
+        "light": "every analysed set",
+        "observable_signature": "labelling-invariant scalars; not a kernel identity",
+        "qualitative_family": "S_N-canonical support token and modal token",
+        "rise_then_release": "from the empty state when the labelled state count is at most 64",
+        "search": "every canonical set at the requested cardinalities; structural-simple drops stacked weights before analysis",
+        "sensitivity": "every analysed cardinality-1 set, on the declared geometric alphabets",
+        "shards": "half-open lexicographic combination ranges, atomic result plus receipt",
+        "stationary": "Fraction end to end at <=16 states; float64 beyond. Entropy is always float"
+      },
+      "motif_ids": [
+        "bfffb52740e15d93a3e99695a687968f78c7ff61091ad495fc66bd2fa495da49",
+        "037facb9f3d363380fd7ad59ec1e61f7e3d030b227c6c7db0790a5e862e331b3",
+        "804e70bdf3c72b9fe84038950e0eb342ae4f907c87c35f68e5bfe6059b6c182b",
+        "f6c465a109b3f351212a661b87647d7e5f60037df0e6e9e78f48def75fbd3e7a",
+        "ef0b4d8e99ecb7a24fbc2fc46ad93dada758f98b3f82720cde90252c7e690df2",
+        "7c06c94d163c5c1804329ed0af478a8d9c74e73e45e70eb5a4bbe6c11da6eb15",
+        "c415003eae1aca27f77bd89f64c2610223c2272a6ec3920277ad27cdf4181319",
+        "7f1ead20544bcd8470c13556d2f743907f22ad19d4aa463274df16609ee3c3ef",
+        "b4342682704c427a986ade0c37e06d83313c25dd65e5e4d2e84324fb4e9cee96",
+        "9efd8c9e3a309610047fec73ad0599f48e93c0f9cd21fdc831a6fa6215ba75a5",
+        "30ffcc2ebbef3fbf8af5a3246cb01eedfd09ffbd99259b8600f1a6a66103cb12",
+        "5f579e26cd921b0a5ed723f16c63a8bb2aa6c258f4e97b78a894aa2a94a10f81",
+        "be7bad6400b0d6c0fe6c68951adb0fdf989fd7a58e4a0198b00d397741fd79ca",
+        "07a74352c753920ff67b2c79194079a59bbc307befb6a698959e9fbf240da398",
+        "19dd88584a3bfc81ffbca5f969cc1c68c91ed1052db8fecbfb2c13e0a53e10e3",
+        "20786a4465771fc16687dc0ced6f155db50146ebb02294ecbab49177f569798c",
+        "42ffba01582cb792fa5b537e2487501a8a86b4421f2e87d8389e9dbede5e9888",
+        "48d9be095a253d82cd0e90cf55f55cd1c8d2e25a9dc4845e5356435828442a1a",
+        "5925cd75dd57a0dca069842aa3d49c78877a690795891698f68c8317efc6dc0d",
+        "6bf08d86a1a99254dba55c358334646df47c86cb46a98c811a73b8d47ea57a89",
+        "884b20349631c234ca70c924af607c1d095a3a0acd312c3377ea25af96c8fb52",
+        "24c994ca8f64a8d57d6505707d2e86bb8121c97693d1104ccc00ffc41e07d1e5",
+        "662c15e37c9043f6c8024af8986b9bb2dec3a1598e859a35ab55fc07658342f6",
+        "b78eac8146ea64bddeacb3aa7cfc8f6fbc86fb65043e0982916a312a4e22b8ca",
+        "da3bab0855409706693f0b8ce8295d719b10f0afa82ff909f4d2151c8fcd0a3d",
+        "db9befaa59c626190c8e6d348471e4bc32cb8ddce2d13c4f3d990718988ad618",
+        "faa29555fd05317369c8eb05854c3e7fc79167c55afbec858402da88d8e35a5d",
+        "07735894e061f0b59513b67564617cd8d16c5a4352f62845e15f47a868fed8f1",
+        "1b998e803917246a554217755bd82ab879a1660bf74fa5e235d5b13becc68031",
+        "2bca048f6fb873e5da2d69f3bea0e850206b9ff657f8bcaa2e54a6555d631fe1",
+        "2f0e9c1debb428f1e76b96b3e210b22ef473c78b29b32873a25c5e6586c9ada2",
+        "53799ae8c4222e1e4761a330f9c22c66bdd3ffd9ea1a609fe4f99e32c4ed8ba4",
+        "5a9ba0b23e1e1c13f94789ab337e5e1a15e47f9b93bf1d9f72c47541ba4b1e0b"
+      ],
+      "not_searched": [
+        "cardinality 3 at N=3 was not searched",
+        "24 structural templates at N=3 have K>2 and were not searched",
+        "multisets that repeat one constraint were not searched; repetition is a weight change"
+      ],
+      "observable_index_sha256": "d2da0a5fe0fa6dc0e8372ab54b2c9d375090c5412523a4302d92b23212fe4433",
+      "observable_signature_count": 7408,
+      "qualitative_index_sha256": "2e5a48d893ea2586408a79426a10a03b1d5a9fad8f9878c823ccdaf8cdaadb51",
+      "references": [
+        {
+          "canonical_expression": "form(0-1) | count>=2 => strong_favour",
+          "expression": "form(0-1) | count>=2 => strong_favour",
+          "in_grammar": true,
+          "same_labelling": true,
+          "single": {
+            "closing_bias_exact": "1/9",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "191cea0e1e952fc2683bf8545516e0ea3b470006a4ee42740a1808b0ef88fde1",
+            "expressions": [
+              "form(0-1) | count>=2 => strong_favour"
+            ],
+            "family_id": "5a9ba0b23e1e1c13f94789ab337e5e1a15e47f9b93bf1d9f72c47541ba4b1e0b",
+            "max_abs_dissolve_shift_exact": "1/3",
+            "mean_edge_density_exact": "13/24",
+            "modal_family": "4981660c5ba9adac2649a704cd4234b747be5e865a50cf7738b1d32bf74a2922",
+            "set_id": "e61b6d0b66847c31",
+            "triangle_mass_exact": "11/64"
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | count>=1 => strong_favour",
+          "expression": "form(0-1) | count>=1 => strong_favour",
+          "in_grammar": true,
+          "same_labelling": true,
+          "single": {
+            "closing_bias_exact": "1/9",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "24aae2e3d93ad79567f88276be6919bec2e34b3e69e0aac271c0190dec9284ed",
+            "expressions": [
+              "form(0-1) | count>=1 => strong_favour"
+            ],
+            "family_id": "7f77abcbd06f70ab0cd55343cf03110a66fbba9b825388872041639370ec8d57",
+            "max_abs_dissolve_shift_exact": "1/3",
+            "mean_edge_density_exact": "91/162",
+            "modal_family": "ade849c3a55329dca21da4924ab221378465c0190b49f610a156ab89bafa8e26",
+            "set_id": "434dac79f593d435",
+            "triangle_mass_exact": "23/135"
+          }
+        },
+        {
+          "canonical_expression": "dissolve(0-1) | count>=2 => strong_favour",
+          "expression": "dissolve(0-1) | count>=2 => strong_favour",
+          "in_grammar": true,
+          "same_labelling": true,
+          "single": {
+            "closing_bias_exact": "-1/9",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "c81e335046a31ae31acf8a805b4c2005c5d3adcce06bb535049a45a4e1f20990",
+            "expressions": [
+              "dissolve(0-1) | count>=2 => strong_favour"
+            ],
+            "family_id": "fd0f1fc6f519e24a12b2d4c35454552967834cd168d9044c46602d366f5b6765",
+            "max_abs_dissolve_shift_exact": "1/6",
+            "mean_edge_density_exact": "379/810",
+            "modal_family": "19dfe88fb45ac1a7abe9df2cbb315ea062eceef6bc4064385429fb8fd9c51b56",
+            "set_id": "ad92f15046631fb3",
+            "triangle_mass_exact": "4/45"
+          }
+        }
+      ],
+      "relation_slots": 3,
+      "runtime_seconds": 20.21978,
+      "screened_families": 2464,
+      "sensitivity": {
+        "alphabets": [
+          "W3",
+          "W16"
+        ],
+        "checks": 200,
+        "modal_unchanged": 200,
+        "support_unchanged": 200
+      },
+      "singles_sha256": "3e057ebe2282bd4a25f82dc10f83a4ca85fa6c15dd4b5980867f0c8bb2e0b030",
+      "structural_families": 1438,
+      "territory": {
+        "exact_kernel_new": 654,
+        "examples": {
+          "exact_kernel_new": [
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => strong_suppress"
+            ]
+          ],
+          "new_kernel_same_qualitative_family": [
+            [
+              "dissolve(0-1) | count<=2 => strong_favour",
+              "dissolve(0-1) | count==2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_favour",
+              "dissolve(0-1) | count==2 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_favour",
+              "dissolve(0-1) | count>=2 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_favour",
+              "dissolve(0-2) | count==2 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_favour",
+              "dissolve(0-2) | count==2 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_favour",
+              "dissolve(0-2) | count==2 => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_suppress",
+              "dissolve(0-1) | count==2 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_suppress",
+              "dissolve(0-1) | count==2 => weak_suppress"
+            ]
+          ],
+          "observable_signature_new": [
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => strong_suppress"
+            ]
+          ],
+          "qualitatively_new": [
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => strong_suppress"
+            ]
+          ],
+          "syntactically_new_dynamically_equivalent": [
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=1 => prohibit"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=1 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=1 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=1 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=1 => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=2 => strong_suppress"
+            ]
+          ]
+        },
+        "kernel_in_index_but_qualitative_missing": 0,
+        "new_kernel_same_qualitative_family": 200,
+        "observable_signature_new": 639,
+        "post_release_new_edge": 2045,
+        "qualitatively_new": 454,
+        "syntactically_new_dynamically_equivalent": 9776,
+        "threshold_motifs": 10430
+      }
+    }
+  ],
+  "composition": "structural-simple",
+  "engine_version": "0.2.0",
+  "execution": {
+    "max_attempts": 3,
+    "multiprocessing": "spawn",
+    "principle": "Prefer bounded, independently reproducible, idempotent units of work with durable checkpoints, so completed progress is monotonic and interruption is cheap.",
+    "profile_note": "Measured 2026-10-03 on this development machine, one worker, OMP/OPENBLAS/MKL threads 1. Binding window: N=4, K<=2, cardinality 2, combination ranks 4000:8000, 3262 canonical-simple float64 kernels, 66.7s. N=3, K<=3, cardinality 3, ranks 180000:190000 analysed 9399 rational kernels in 13.6s. The N=3 opening prefix is cheap (ranks 0:1000 analysed nothing) because weights are innermost, so early combinations stack grades on the first structures. 4000 items keeps the measured worst window inside 60-90s and under 120s.",
+    "shard_count": 18,
+    "shard_items": 4000,
+    "worker_history": [
+      {
+        "at": "2026-10-03T12:09:42+00:00",
+        "workers": 2
+      }
+    ],
+    "workers_last": 2
+  },
+  "experiment_id": "generation-002-occupation-threshold",
+  "generation": 2,
+  "git_commit": "112b6b11d0f5b901a755b6ba5c9e740032006536",
+  "grammar_version": "pairwise-count-v1",
+  "normalisation_version": "structural-unique-v1",
+  "numpy": "2.5.3",
+  "platform": "linux",
+  "predicates": [
+    "edge",
+    "count"
+  ],
+  "python": "3.12.3",
+  "receipt_fingerprint": "4f69ad9ac60733dc9e872a11740012e141f9bbd68c39ee287902ae4c20e063de",
+  "runtime_seconds": 13.168965634977212,
+  "science": {
+    "cells": [
+      {
+        "K_max": 2,
+        "N": 3,
+        "baseline_equivalent_families": 1,
+        "cancellations": {
+          "genuine_global": 16,
+          "genuine_global_examples": [
+            [
+              "dissolve(0-1) | count<=1 => strong_favour",
+              "dissolve(0-1) | count==1 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=1 => strong_suppress",
+              "dissolve(0-1) | count==1 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=1 => weak_favour",
+              "dissolve(0-1) | count==1 => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=1 => weak_suppress",
+              "dissolve(0-1) | count==1 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | count==3 => strong_favour",
+              "dissolve(0-1) | count>=3 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | count==3 => strong_suppress",
+              "dissolve(0-1) | count>=3 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count==3 => weak_favour",
+              "dissolve(0-1) | count>=3 => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) | count==3 => weak_suppress",
+              "dissolve(0-1) | count>=3 => weak_favour"
+            ]
+          ],
+          "inherited_baseline": 0,
+          "inherited_baseline_examples": [],
+          "local": 224,
+          "local_examples": [
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | absent(0-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | count<=1 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | count<=2 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | count==1 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | count==2 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | count==3 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | count>=2 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | count>=3 => strong_suppress"
+            ]
+          ]
+        },
+        "cardinalities": {
+          "1": {
+            "analysed": 100,
+            "canonical": 100,
+            "canonical_including_stacked": 100,
+            "labelled_combinations": 360,
+            "labelled_simple": 360,
+            "labelled_stacked": 0,
+            "removed_by_symmetry": 260,
+            "stacked_canonical": 0
+          },
+          "2": {
+            "analysed": 12220,
+            "canonical": 12220,
+            "canonical_including_stacked": 12420,
+            "labelled_combinations": 64620,
+            "labelled_simple": 63900,
+            "labelled_stacked": 720,
+            "removed_by_symmetry": 52200,
+            "stacked_canonical": 200
+          }
+        },
+        "extremes": {
+          "closing_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => prohibit"
+            ],
+            "kernel": "ada3ac088c155beb053c08c9104dbf673acc826cf902cd2dd7d89ba9103cf79f",
+            "kind": "fraction",
+            "value": "1/3"
+          },
+          "closing_min": {
+            "expressions": [
+              "dissolve(0-1) => strong_favour",
+              "form(0-1) => prohibit"
+            ],
+            "kernel": "554413c183ed235fbf79ca55b2154e8bcc66ea25ef00ed517a56fe3c0c001a91",
+            "kind": "fraction",
+            "value": "-2/9"
+          },
+          "entropy_max": {
+            "expressions": [
+              "dissolve(0-1) | count<=1 => strong_favour",
+              "dissolve(0-1) | count==1 => strong_suppress"
+            ],
+            "kernel": "305575f09f9ce0779426f9f447ca5145ce20bc0e9ca8b449af629209ad9473fa",
+            "kind": "float",
+            "value": 1.584962500721156
+          },
+          "entropy_min": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => prohibit"
+            ],
+            "kernel": "ada3ac088c155beb053c08c9104dbf673acc826cf902cd2dd7d89ba9103cf79f",
+            "kind": "float",
+            "value": 0.0
+          },
+          "rise_excess_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "form(0-1) => strong_favour"
+            ],
+            "kernel": "59941e2e839c39c791465df6bbb521b8298065aa5e139b9f742f673cc0b237c0",
+            "kind": "fraction",
+            "value": "5/18"
+          },
+          "rise_excess_min": {
+            "expressions": [
+              "form(0-1) => prohibit",
+              "form(0-2) => prohibit"
+            ],
+            "kernel": "e88e3722e9a50e2e218da88e09a666d25810b5aea49837331d9b36ea5ca08006",
+            "kind": "fraction",
+            "value": "-2/3"
+          },
+          "shift_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => prohibit"
+            ],
+            "kernel": "ada3ac088c155beb053c08c9104dbf673acc826cf902cd2dd7d89ba9103cf79f",
+            "kind": "fraction",
+            "value": "2/3"
+          }
+        },
+        "families": 2501,
+        "family_index_sha256": "43170bdc0f930599ce7909bcaedb3a76e60c9b9a397f17172b0bed892c720cee",
+        "histogram": {
+          "closing_max": {
+            "0": -0.2222222222222222,
+            "0.25": -0.044444444444444446,
+            "0.5": 0.0,
+            "0.75": 0.07407407407407407,
+            "0.9": 0.1111111111111111,
+            "0.99": 0.24814814814814815,
+            "1": 0.3333333333333333
+          },
+          "families": 2501,
+          "n_deadlock": {
+            "0": 2501
+          },
+          "periods": {
+            "2": 2501
+          },
+          "rise_then_release_excess": {
+            "0": -0.6666666666666666,
+            "0.25": -0.09259259259259259,
+            "0.5": 0.0,
+            "0.75": 0.07407407407407407,
+            "0.9": 0.1111111111111111,
+            "0.99": 0.2222222222222222,
+            "1": 0.2777777777777778
+          },
+          "shift_max": {
+            "0": 0.0,
+            "0.25": 0.16666666666666666,
+            "0.5": 0.3333333333333333,
+            "0.75": 0.3333333333333333,
+            "0.9": 0.3333333333333333,
+            "0.99": 0.6666666666666666,
+            "1": 0.6666666666666666
+          },
+          "support_matches_baseline": 1063
+        },
+        "kernel_index_count": 7559,
+        "kernel_index_sha256": "96d3f2217622d190daf43518b01bbee2e9392121504102391f5a52a3cba1e598",
+        "observable_index_sha256": "d2da0a5fe0fa6dc0e8372ab54b2c9d375090c5412523a4302d92b23212fe4433",
+        "qualitative_index_sha256": "2e5a48d893ea2586408a79426a10a03b1d5a9fad8f9878c823ccdaf8cdaadb51",
+        "screened_families": 2464,
+        "singles_sha256": "3e057ebe2282bd4a25f82dc10f83a4ca85fa6c15dd4b5980867f0c8bb2e0b030",
+        "structural_families": 1438,
+        "territory": {
+          "exact_kernel_new": 654,
+          "examples": {
+            "exact_kernel_new": [
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => prohibit"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => strong_favour"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => strong_suppress"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => weak_favour"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => weak_suppress"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count==2 => prohibit"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count==2 => strong_favour"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count==2 => strong_suppress"
+              ]
+            ],
+            "new_kernel_same_qualitative_family": [
+              [
+                "dissolve(0-1) | count<=2 => strong_favour",
+                "dissolve(0-1) | count==2 => strong_favour"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => strong_favour",
+                "dissolve(0-1) | count==2 => weak_favour"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => strong_favour",
+                "dissolve(0-1) | count>=2 => weak_favour"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => strong_favour",
+                "dissolve(0-2) | count==2 => strong_suppress"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => strong_favour",
+                "dissolve(0-2) | count==2 => weak_favour"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => strong_favour",
+                "dissolve(0-2) | count==2 => weak_suppress"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => strong_suppress",
+                "dissolve(0-1) | count==2 => strong_suppress"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => strong_suppress",
+                "dissolve(0-1) | count==2 => weak_suppress"
+              ]
+            ],
+            "observable_signature_new": [
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => prohibit"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => strong_favour"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => strong_suppress"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => weak_favour"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => weak_suppress"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count==2 => prohibit"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count==2 => strong_favour"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count==2 => strong_suppress"
+              ]
+            ],
+            "qualitatively_new": [
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => prohibit"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => strong_favour"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => strong_suppress"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => weak_favour"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count<=2 => weak_suppress"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count==2 => prohibit"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count==2 => strong_favour"
+              ],
+              [
+                "dissolve(0-1) | count<=2 => prohibit",
+                "dissolve(0-2) | count==2 => strong_suppress"
+              ]
+            ],
+            "syntactically_new_dynamically_equivalent": [
+              [
+                "dissolve(0-1) => prohibit",
+                "dissolve(0-1) | count<=1 => prohibit"
+              ],
+              [
+                "dissolve(0-1) => prohibit",
+                "dissolve(0-1) | count<=1 => strong_favour"
+              ],
+              [
+                "dissolve(0-1) => prohibit",
+                "dissolve(0-1) | count<=1 => strong_suppress"
+              ],
+              [
+                "dissolve(0-1) => prohibit",
+                "dissolve(0-1) | count<=1 => weak_favour"
+              ],
+              [
+                "dissolve(0-1) => prohibit",
+                "dissolve(0-1) | count<=1 => weak_suppress"
+              ],
+              [
+                "dissolve(0-1) => prohibit",
+                "dissolve(0-1) | count<=2 => prohibit"
+              ],
+              [
+                "dissolve(0-1) => prohibit",
+                "dissolve(0-1) | count<=2 => strong_favour"
+              ],
+              [
+                "dissolve(0-1) => prohibit",
+                "dissolve(0-1) | count<=2 => strong_suppress"
+              ]
+            ]
+          },
+          "kernel_in_index_but_qualitative_missing": 0,
+          "new_kernel_same_qualitative_family": 200,
+          "observable_signature_new": 639,
+          "post_release_new_edge": 2045,
+          "qualitatively_new": 454,
+          "syntactically_new_dynamically_equivalent": 9776,
+          "threshold_motifs": 10430
+        }
+      }
+    ],
+    "composition": "structural-simple",
+    "predicates": [
+      "edge",
+      "count"
+    ],
+    "semantic_version": "0.2.0",
+    "spec_hash": "04c477360e7227f9af4ea26fe86530b148f8407ad6983d48e75cee8941659a8a",
+    "status": "COMPLETE"
+  },
+  "semantic_version": "0.2.0",
+  "shard_work_seconds": 20.21978,
+  "spec_hash": "04c477360e7227f9af4ea26fe86530b148f8407ad6983d48e75cee8941659a8a",
+  "status": "COMPLETE",
+  "territory": [
+    {
+      "K_max": 2,
+      "N": 3,
+      "territory": {
+        "exact_kernel_new": 654,
+        "examples": {
+          "exact_kernel_new": [
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => strong_suppress"
+            ]
+          ],
+          "new_kernel_same_qualitative_family": [
+            [
+              "dissolve(0-1) | count<=2 => strong_favour",
+              "dissolve(0-1) | count==2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_favour",
+              "dissolve(0-1) | count==2 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_favour",
+              "dissolve(0-1) | count>=2 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_favour",
+              "dissolve(0-2) | count==2 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_favour",
+              "dissolve(0-2) | count==2 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_favour",
+              "dissolve(0-2) | count==2 => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_suppress",
+              "dissolve(0-1) | count==2 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => strong_suppress",
+              "dissolve(0-1) | count==2 => weak_suppress"
+            ]
+          ],
+          "observable_signature_new": [
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => strong_suppress"
+            ]
+          ],
+          "qualitatively_new": [
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count<=2 => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | count<=2 => prohibit",
+              "dissolve(0-2) | count==2 => strong_suppress"
+            ]
+          ],
+          "syntactically_new_dynamically_equivalent": [
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=1 => prohibit"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=1 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=1 => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=1 => weak_favour"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=1 => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=2 => prohibit"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=2 => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | count<=2 => strong_suppress"
+            ]
+          ]
+        },
+        "kernel_in_index_but_qualitative_missing": 0,
+        "new_kernel_same_qualitative_family": 200,
+        "observable_signature_new": 639,
+        "post_release_new_edge": 2045,
+        "qualitatively_new": 454,
+        "syntactically_new_dynamically_equivalent": 9776,
+        "threshold_motifs": 10430
+      }
+    }
+  ],
+  "unsearched_declared": [
+    "cardinality 3",
+    "N other than 3",
+    "K>2",
+    "stacked-weight composition",
+    "a count scoped to a subset of edges",
+    "hypergraph semantics",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0",
+    "O>2"
+  ]
+}

@@ -32,7 +32,7 @@ The immutable source commit is tag `pre-constraint-lab-2026-10-03` (`06cb0dc0be6
 
 The Constraint Laboratory lives under `constraint-lab/`. Generation 1 was produced on `research/constraint-lab-v0.1`. Engine 0.2, on `research/constraint-lab-v0.2`, keeps that record and runs later generations as resumable shards.
 
-Generation 1 searched the memoryless pairwise grammar at `N = 2, 3, 4` and the singletons at `N = 5`, with no geometry. The report is `constraint-lab/reports/generation-001-pregeometric-pairwise.md`. From `constraint-lab/`:
+Generation 1 searched the memoryless pairwise grammar at `N = 2, 3, 4` and the singletons at `N = 5`, with no geometry. The report is `constraint-lab/reports/generation-001-pregeometric-pairwise.md`. Generation 1b, on `research/constraint-lab-v0.2`, reanalyses that search under structural constraint identity. Generation 2 adds an occupation-count predicate at `N = 3`. Neither rewrites the Generation 1 record. From `constraint-lab/`:
 
 ```bash
 python -m pip install -e ".[dev]"
