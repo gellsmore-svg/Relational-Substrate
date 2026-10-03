@@ -4,7 +4,7 @@ Look again at the stone and list what you know about it. It is grey. It is hard.
 
 Now notice something about each item on the list. Its greyness is how it answers daylight: which colours of light it returns and which it absorbs, as registered by an eye. In the dark it has no visible colour at all, though it remains disposed to answer light in that way. Its hardness is how it resists being pressed or scratched by other things. Its weight is the pull between it and the Earth; on the Moon the same stone would weigh about a sixth as much. Its coldness is the direction in which heat flows between it and your hand. Even its shape is the boundary at which it stops admitting things into its space and begins to resist them.
 
-Every property on the list turns out to be a way the stone stands in relation to something else: light, pressure, the Earth, your hand, the space around it. Strip away all those relations and ask what is left. It is surprisingly hard to say.
+Every property on the list turns out to be a way the stone stands in relation to something else: light, pressure, the Earth, your hand, the region around it. Strip away all those relations and ask what is left. It is surprisingly hard to say.
 
 This chapter asks whether that difficulty is telling us something about what the stone, and the physical world, fundamentally is.
 
@@ -49,7 +49,7 @@ The project's answer is the **relational substrate**: the created relational ord
 Because the word can mislead, it helps to say plainly what the substrate is not.
 
 - It is not matter. Matter, as Chapter 6 will argue, is a stable form *within* the substrate, not the substrate itself.
-- It is not a field in the usual sense of physics. A field is a mathematical assignment of values to points, which describes behaviour. The substrate is a proposal about what is there to be described.
+- It is not simply a field of physics under another name. Physics represents a field mathematically by assigning values to points, and many physicists regard fields as physically real. The substrate is a proposal about the relational order such representations describe, not a rival to the mathematics or a denial that fields are real.
 - It is not the old luminiferous ether, a jelly-like medium filling an otherwise empty space. The relational proposal does not begin with a space to be filled.
 - It is not information or code, detached from anything physical.
 - It is not a hidden second world behind the visible one. It is the deep order of this world.
@@ -62,7 +62,7 @@ The language of a *language* can help, with its own limits. The words of a langu
 
 One consequence follows directly. If relation is foundational, nothing acts on anything else by leaping across a gap of non-relation. Influence is always **mediated**: it passes through an order that connects the source to what it affects. The stone affects your eye through light; the Earth affects the stone through gravitation; your hand affects the stone through the contact of surfaces. In each case something real connects one thing to another.
 
-This should not be confused with a denial that influences can reach a long way. Gravity acts across the solar system, and light crosses the universe. The claim concerns mediation, not distance. There is no such thing as an effect produced across literally nothing. Physics, too, has steadily moved away from instantaneous action at a distance toward influences carried by fields at finite speed. The relational proposal is consonant with that direction. It does not claim credit for it. Chapter 7 will develop how a difference in one place becomes a consequence in another, which is the heart of mediated influence.
+This should not be confused with a denial that influences can reach a long way. Gravity acts across the solar system, and light reaches us from the most distant galaxies we can observe. The claim concerns mediation, not distance. There is no such thing as an effect produced across literally nothing. Physics, too, has steadily moved away from instantaneous action at a distance toward influences carried by fields at finite speed. The relational proposal is consonant with that direction. It does not claim credit for it. Chapter 7 will develop how a difference in one place becomes a consequence in another, which is the heart of mediated influence.
 
 ## Created order as operating
 
