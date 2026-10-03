@@ -6,7 +6,7 @@ This chapter asks what restoration means within the account the book has given, 
 
 ## Restoration is God's act
 
-Chapter 6 drew a lesson from the stochastic calculator: preserving an identity is not the same as repairing it. When information was destroyed, nothing in the system brought it back. Conservation kept what remained. It did not restore what was lost. Chapter 10 showed how living things partly overcome this, by carrying templates from which damage can be repaired. But that capacity is itself limited, and it fails in the end: every living thing dies.
+Chapter 6 drew a lesson from the stochastic calculator: preserving an equivalence class is not the same as repairing it. When information was destroyed, nothing in the system brought it back. Conservation kept what remained. It did not restore what was lost. Chapter 10 showed how living things partly overcome this, by carrying templates from which damage can be repaired. But that capacity is itself limited, and it fails in the end: every living thing dies.
 
 So the healing of creation cannot be expected from creation's own resources. If restoration came only from the persistence of the world's invariants, there would be no restoration of what corruption has destroyed: no raising of the dead, no righting of wrongs, no new creation. Scripture places restoration elsewhere, in the action of God:
 

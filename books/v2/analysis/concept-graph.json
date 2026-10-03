@@ -1404,8 +1404,8 @@
   },
   {
    "id": "equivalence",
-   "term": "Identity as relational equivalence",
-   "definition": "Identity continuity is preservation of the relevant relational equivalence class across admissible change, relative to what reachable future consequences can discriminate.",
+   "term": "Sameness as relational equivalence",
+   "definition": "Sameness of kind or state is preservation of the relevant relational equivalence class across admissible change, relative to what reachable future consequences can discriminate.",
    "epistemic_category": "ontological interpretation (author-supplied research) + RS model support",
    "research_maturity": "working",
    "domain": "physical",

@@ -72,3 +72,10 @@ The brief's formulations that the research revised are recorded with reasons in 
 - **Files:** manuscript Chs 1, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 15 and Apps B, C; analysis (epistemic and terminology registers, research baseline, concept-graph builder and chapter map, v2.3 review record, final vector review); this history.
 - **Divergences:** none.
 - **Resulting commit:** the v2.3 commit that records this entry.
+
+## 2026-10-03: v2.3.1 final cleanup
+
+- **Instruction:** [`v2.3.1-final-cleanup-prompt.md`](v2.3.1-final-cleanup-prompt.md), verbatim. **Starting head:** `f5aef30`.
+- **Purpose:** propagation of the v2.3 identity distinction; metadata cleanup.
+- **Changes:** Chs 0 (preface), 5, 10, 11, 14, 15 and App B; research-baseline status and identity lines; concept-graph `equivalence` label. Details in `../analysis/v2.3.1-cleanup-record.md`.
+- **Divergences:** none.

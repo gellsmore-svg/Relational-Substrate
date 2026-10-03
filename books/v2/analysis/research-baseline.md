@@ -1,6 +1,6 @@
 # Research baseline for *Coherent Biblical Ontology*, second edition
 
-**Status:** current as of v2.2 (2026-10-03). This document fixes what the second edition may claim, at what strength, and why. It governs the concept graph, the epistemic register and the manuscript.
+**Status:** current as of v2.3.1 (2026-10-03). This document fixes what the second edition may claim, at what strength, and why. It governs the concept graph, the epistemic register and the manuscript.
 
 **Structure:**
 
@@ -24,9 +24,10 @@ The research programmes (topological modelling, the stochastic calculator, the c
 constrained possibility       T0: what transitions are admissible at all, and how they are weighted
 → stochastic actualisation    T1: which admissible transition happens; actuality carries its own
                               history (provenance, inherited constraints, accessibility)
-→ relational equivalence      identity = the relevant equivalence class, relative to what reachable
-                              futures can discriminate; invariants certify it in some systems;
-                              provenance belongs to it where consequential
+→ relational equivalence      sameness of kind/state = the relevant equivalence class, relative to what
+                              reachable futures can discriminate; invariants certify it in some
+                              systems; provenance belongs to it where consequential; individual
+                              continuity (lineage) is a further, open question
 → T-C-R                       source distinction → relational availability → recoverable constrained
                               carriage → compatible consequential reception
 → layered regularity          aggregation stabilises means; coordination shapes fluctuations, exact
@@ -114,7 +115,7 @@ Repository branches `research/constraint-lab-v0.2` (head `0170189`) and `researc
 
 ## I.7 Second-edition thesis (one paragraph)
 
-God creates a real world. Its physical order is relational from the beginning: things are constituted within relations, not first made as isolated objects and then connected. What is physically possible is constrained. What actually happens may be fundamentally stochastic, and what happens leaves its history in the present. Things remain themselves by remaining within their relevant equivalence class, judged by what reachable futures could tell apart. A distinction here becomes consequential there by being made available, carried recoverably and received by something able to be changed by it. Regularity is layered: averaging stabilises means, and the relational coordination of events shapes the rest. Mathematics describes the resulting regularities with extraordinary success without being the reality it describes, and coarse descriptions can hide distinctions that later matter. Because the material world is relational at base, the relational realities of life, personhood, responsibility, corruption and restoration are continuous in form with the order they arise in and are not bolted onto an alien world. Yet relation across categories does not erase category: the material is not the spiritual, the substrate is not the soul, and creation is not God. This is a coherence argument constrained by observation and governed by Scripture. It is not an empirical proof of ultimate ontology.
+God creates a real world. Its physical order is relational from the beginning: things are constituted within relations, not first made as isolated objects and then connected. What is physically possible is constrained. What actually happens may be fundamentally stochastic, and what happens leaves its history in the present. Things remain the same kind of thing by remaining within their relevant equivalence class, judged by what reachable futures could tell apart; whether something is the same individual is a further question of lineage. A distinction here becomes consequential there by being made available, carried recoverably and received by something able to be changed by it. Regularity is layered: averaging stabilises means, and the relational coordination of events shapes the rest. Mathematics describes the resulting regularities with extraordinary success without being the reality it describes, and coarse descriptions can hide distinctions that later matter. Because the material world is relational at base, the relational realities of life, personhood, responsibility, corruption and restoration are continuous in form with the order they arise in and are not bolted onto an alien world. Yet relation across categories does not erase category: the material is not the spiritual, the substrate is not the soul, and creation is not God. This is a coherence argument constrained by observation and governed by Scripture. It is not an empirical proof of ultimate ontology.
 
 ---
 

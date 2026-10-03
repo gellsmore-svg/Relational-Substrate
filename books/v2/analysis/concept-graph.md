@@ -18,7 +18,7 @@ Ranked by **rank-sum** across four separately reported measures (no weighted sca
 | 6 | Persistence | 22 | 0.136 | 15 | 2 | yes | 3 | 4 |
 | 7 | Invariant | 32 | 0.116 | 12 | 2 | yes | 3 | 4 |
 | 8 | Admissibility | 44 | 0.132 | 8 | 2 | yes | 3 | 4 |
-| 9 | Identity as relational equivalence | 27 | 0.066 | 14 | 2 | yes | 4 | 5 |
+| 9 | Sameness as relational equivalence | 27 | 0.066 | 14 | 2 | yes | 4 | 5 |
 | 10 | No metaphysical gulf | 0 | 0.072 | 19 | 3 | yes | 5 | 5 |
 | 11 | Actualisation (T1) | 38 | 0.048 | 8 | 2 | yes | 4 | 5 |
 | 12 | Matter as stable form | 12 | 0.033 | 16 | 2 | yes | 3 | 4 |
@@ -294,7 +294,7 @@ Ranked by **rank-sum** across four separately reported measures (no weighted sca
 - example: a number reached by 4,000 different paths; a knot's type; common misunderstanding: identity = a conserved number
 - evidence: Conservation laws and symmetry (mainstream), Stochastic calculator SC-001–SC-027R (2026-09), Topological instantiation anchors (2026-07); Scripture: —
 
-**Identity as relational equivalence** (`equivalence`) — Identity continuity is preservation of the relevant relational equivalence class across admissible change, relative to what reachable future consequences can discriminate.
+**Sameness as relational equivalence** (`equivalence`) — Sameness of kind or state is preservation of the relevant relational equivalence class across admissible change, relative to what reachable future consequences can discriminate.
 
 - category: ontological interpretation (author-supplied research) + RS model support; maturity: working; difficulty 4/5; abstraction 5/5; decomposable: yes; interacting concepts at introduction: 4
 - requires: discriminability, identity-invariant, projection; direct dependents: carry, individual-continuity, persistence, provenance, recovery-kinds, resurrection
@@ -642,7 +642,7 @@ Ranked by **rank-sum** across four separately reported measures (no weighted sca
 
 ## Guardrail edges (NOT_IDENTICAL_TO)
 
-- Individual continuity ≠ Identity as relational equivalence
+- Individual continuity ≠ Sameness as relational equivalence
 - Relational substrate ≠ Creator/creature distinction
 - Relational substrate ≠ Soul and spirit
 - Transmit–Carry–Receive ≠ Soul and spirit

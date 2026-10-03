@@ -30,7 +30,7 @@ What distinguishes the woodlouse from the stone? Both are configurations within 
 
 The stone persists largely by being left alone: its crystal structure is stable, and the changes it ordinarily undergoes do not disturb it. A living thing persists in the opposite way. It is constantly taking in matter and energy, transforming them, and expelling what it no longer needs. A woodlouse is not a fixed collection of molecules. It is a pattern of organisation that keeps re-establishing itself through a continuous flow of material, like the flame of Chapter 6, but enormously more intricate and active. It maintains itself, repairs damage, responds to its surroundings, grows according to a characteristic pattern and reproduces.
 
-So life is **sustained organisation**: persistence that is actively maintained, under many layers of constraint, by the continual work of the living thing itself. In the terms of Chapter 6, a living thing preserves its identity by continually *re-actualising* itself within its relevant equivalence class, where the stone preserves its own largely by being undisturbed, and by actively correcting departures from it. A living thing does not merely persist. It works to stay what it is.
+So life is **sustained organisation**: persistence that is actively maintained, under many layers of constraint, by the continual work of the living thing itself. In the terms of Chapter 6, a living thing maintains its organised continuity by continually *re-actualising* itself within its relevant equivalence class, where the stone keeps its own largely by being undisturbed, and by actively correcting departures from it. Its continuing individuality also depends on the unbroken history of that living process. A living thing does not merely persist. It works to stay what it is.
 
 ## Signals within signals
 
@@ -40,7 +40,7 @@ A living body is, among other things, a vast composition of transmissions, neste
 
 ## Templates and repair
 
-Chapter 6 drew a firm lesson from the stochastic calculator: preserving an identity is not the same as repairing it. When information was destroyed, nothing in the system could bring it back. Recovery after damage requires that the information needed for recovery survive somewhere.
+Chapter 6 drew a firm lesson from the stochastic calculator: preserving an equivalence class is not the same as repairing it. When information was destroyed, nothing in the system could bring it back. Recovery after damage requires that the information needed for recovery survive somewhere.
 
 Life solves this problem, and the way it does so is one of its defining features. Living things carry **templates**: patterns from which their organisation can be re-established. The most famous is DNA. Every cell carries, in its DNA, information that takes part in shaping how proteins are built, when and where genes are active, and how the cell divides, repairs and specialises. When parts of a cell are damaged, that surviving information allows them to be rebuilt. When DNA itself is damaged, the cell often repairs it using the complementary strand, a second copy of the same information held in reverse. When an organism reproduces, the template is copied and passed on, so that a new organism of the same kind can grow.
 

@@ -18,11 +18,11 @@ The answer it develops is that created physical reality is *relational* from its
 
 The first edition was written while the physical side of the project still rested on a set of proposed mechanisms: knotted structures in a continuous medium, a closed list of five kinds of change, specific accounts of light and magnetism. Research since then has moved underneath those proposals. Three programmes, each recorded in the project's public repository, changed the picture.
 
-- **Topological modelling** showed how a stable identity can be carried by an invariant of organisation rather than by a hard little particle.
+- **Topological modelling** showed how a stable kind of thing can be marked by an invariant of organisation rather than by a hard little particle.
 - **A stochastic calculator** produced exact arithmetic from thousands of different chance-driven paths. A number kept its identity across every one of those paths and lost it only when information was destroyed.
 - **The constraint laboratory**, begun in October 2026, exhibited a clean distinction between what a rule *forbids* and what it merely makes *more or less likely*.
 
-Together these point to a more foundational picture than the first edition offered. It runs from constrained possibility, through chance-driven actualisation and preserved identity, to the way a difference becomes consequential somewhere else: transmission, carriage and reception.
+Together these point to a more foundational picture than the first edition offered. It runs from constrained possibility, through chance-driven actualisation and sameness preserved through change, to the way a difference becomes consequential somewhere else: transmission, carriage and reception.
 
 None of these results proves anything about nature by itself. Several of them are demonstrations inside models, and the book says so each time. What they do is clarify which ideas are doing real work, and they have reorganised the book around those ideas. This edition is therefore a rewrite, not a revision. It keeps much of the first edition's theology, which has stood up well. It removes or relegates the mechanisms that research has not supported, together with most of the first edition's arguments against other worldviews. Those now sit in an appendix so that the body of the book can spend its attention on what the ontology *is*.
 
