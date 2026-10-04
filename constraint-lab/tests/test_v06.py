@@ -279,6 +279,26 @@ def test_generation6_resume_keeps_the_completed_receipt(tmp_path):
     assert again["completed"] == 2
 
 
+def test_generation_006_spec_freezes_the_preflight_floor():
+    spec = json.loads((LAB / "experiments" / "specs" / "generation-006.json").read_text(encoding="utf-8"))
+    validate_spec(spec)
+    assert spec["experiment_id"] == "generation-006-graded-matched-control-lattice"
+    assert spec["analysis"] == ANALYSIS_6
+    assert spec["analysis_version"] == "0.6.0"
+    assert spec["effect_floor"] == FLOOR
+    assert spec["weights"] == list(WEIGHT_ORDER)
+    assert spec["sensitivity_alphabets"] == ["W3", "W16"]
+    assert spec["rho3_sensitivity"] == ["1/2", "1", "2"]
+    assert spec["G"] == spec["S"] == spec["H"] == spec["L"] == 0
+    assert spec["O"] == 3
+    assert "3.397282455352979e-14" in spec["effect_floor_reason"]
+    assert "below 1e-10" in spec["effect_floor_reason"]
+    assert "not an input to the floor" in spec["effect_floor_reason"]
+    assert "60a80a31dacb92798c2e9f1ed1a846666b21f5eb8ffdf8934c6708689f5cfd7f" in spec["note"]
+    assert "simplicial semantics" in spec["unsearched"]
+    assert spec["semantics"] != "simplicial"
+
+
 def test_simplicial_semantics_and_nonzero_axes_stay_refused():
     spec = _minimal_spec()
     validate_spec(spec)
