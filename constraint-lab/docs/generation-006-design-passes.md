@@ -138,3 +138,56 @@ CI, IN, IG, and PR were not claims about counts or runtime. They stay as written
 ### Decision
 
 The selected design is unchanged: the target motif, condition erasure, and pair-face controls. Control 3 is not added. No coordinate changed.
+
+## Pass 3 — after the primary lattice
+
+Written after the 100-target run. Passes 1 and 2 are unchanged. The run finished in 96.0 seconds of wall clock, with 0 failed shards and 0 quarantined shards. That clock is a measurement. It is not a reason to start another family.
+
+The primary result splits the three explanations. Finite-grade `|I|` stays above the floor and stays below every row's matched control envelope. `Delta_S` stays on the target. Pairwise controls are triad-flat. The prohibit cell is the magnitude peak and is smaller than its own condition-erased control.
+
+### Ambiguities
+
+Ambiguity A does not survive. The finite-grade target is distinguishable from its face gates and from erasure: the interaction margin is negative on every row, and the triad spread is carried by the target.
+
+Ambiguity B does not block this classification. The higher-order gate is distinct where `Delta_S` is concerned. It is not distinct by producing a larger interaction than the matched pairwise systems. A second higher-order rule would open a new question.
+
+Ambiguity C does not materially survive. Both passage directions agree on the negative interaction margin, the deletion peak, and positive `Delta_S` on most finite rows. Two small matching-to-path `G_margin` values are positive and have negative `Delta_S`.
+
+### Scores for the candidate secondary families
+
+| Candidate | CI | CF | CB | IN | IG | CR | PR |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Broader matched P->P + P->P census | 2 | 2 | 3 | 2 | 2 | 2 | 5 |
+| Small T->P + T->P family | 3 | 2 | 4 | 3 | 3 | 3 | 5 |
+| Second graph-class passage | 4 | 4 | 4 | 4 | 3 | 4 | 5 |
+
+The broader census loses IG because the matched erasure and the matched faces already show that ordinary composition produces the interaction. A second higher-order family would ask whether any other triad gate also carries `Delta_S`. That is a new isolation, and CF is 2 because it is not the same action pair. The second passage holds the motif still and changes the graphs. Its IG is 3 because the two directions of the present passage already agree, so the passage confound is not what the result is hanging on.
+
+### Decision
+
+No secondary family is executed. There is no second experiment id.
+
+## Pass 4 — final next-step selection
+
+Written after Pass 3. The candidates are ways to continue, or to stop. Interesting structure is not a reason to add a channel.
+
+| Candidate | CI | CF | CB | IN | IG | CR | PR |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Stop this motif | 5 | 5 | 5 | 5 | 4 | 4 | 5 |
+| Second graph-class passage, later | 4 | 4 | 4 | 4 | 3 | 4 | 5 |
+| Small T->P + T->P family, later | 3 | 2 | 4 | 3 | 3 | 3 | 5 |
+| Broad P->P + P->P census | 2 | 2 | 3 | 2 | 2 | 2 | 5 |
+| Simplicial semantics | 1 | 1 | 3 | 2 | 2 | 1 | 5 |
+| Add H, S, G, L, or a larger N | 1 | 1 | 2 | 2 | 1 | 1 | 4 |
+
+### What drove the choice
+
+The chosen next step is to stop this motif.
+
+CI, IN, and CB carry that choice. The lattice already separates deletion, generic composition, and higher-order selectivity on this passage, the split is readable without a new grammar, and another run would spend a bounded budget on a question this one has answered. IG of stopping is 4 rather than 5 because a second passage could still move the passage confound. CR of stopping is 4 because the claim is about path versus matching. That limit is stated in the report. It is not repaired by adding history, geometry, entity state, meta-constraints, simplicial face closure, or a larger `N`.
+
+### Why the other forks stay deferred
+
+The second passage is the strongest deferred fork. It would keep the graded motif and the matched controls, and it would change the graphs. Both directions of the present passage already agree, so the fork does not have to run in order to classify this result.
+
+A `T->P` plus `T->P` family would ask whether triad selectivity appears for a second higher-order rule. The present evidence already locates selectivity on the one gate that reads a triad. A broad pairwise census would leave the matched edges. Simplicial semantics would change the event. Extra channels and a larger `N` would change the ontology in response to a weak interaction margin, which is the move this round refuses.

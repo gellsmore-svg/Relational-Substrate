@@ -111,6 +111,19 @@ The complete two-rule set is canonicalised under `S4`. The label grid `8 × 10 �
 
 The interaction residual, the super-singleton gap, and the triad-spread increment are separate quantities. Simplicial semantics stay in `docs/simplicial-design.md`. `H`, `S`, `G`, and `L` stay 0.
 
+## Generation 6 — graded matched controls
+
+Specification: `experiments/specs/generation-006.json`. Analysis `n4-graded-matched-controls`.
+
+```text
+E(N=4, A≤4, O=3, G=0, S=0, H=0, K≤2, L=0, semantics=hypergraph, W=W4)
+  the v0.5 disjoint-edge dissolution motif
+  full grade lattice on each rule
+  condition erasure and the three pair faces as matched controls
+```
+
+The complete two-rule set is canonicalised under `S4`. Pair-face substitution is a control construction. It does not introduce simplicial semantics. Optional control 3 is not added. The primary observable remains the controlled-source eventual committor between the two-edge path and the two-edge matching. Findings belong in `reports/generation-006-graded-matched-control-lattice.md`.
+
 ## Later
 
 History-dependent choreography, constraints that rewrite constraints (`L > 0`), geometric embeddings, and cross-substrate recurrence of a motif discovered here. A recurrence across substrates would be recorded as substrate-robust recurrence to the degree observed. It would not be called a proof of universality.
