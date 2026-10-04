@@ -1,0 +1,14 @@
+{
+  "base_seed": 230000, "runs": 100, "horizon": 2000,
+  "regions": 8, "capacity": 128, "neutral_pairs": 3,
+  "cells": [
+    {"experiment": "SC-023", "label": "none", "inputs": [3,4], "constraints": {"conservation": 0, "no_growth": false, "readiness": false}},
+    {"experiment": "SC-023", "label": "C", "inputs": [3,4], "constraints": {"conservation": 1, "no_growth": false, "readiness": false}},
+    {"experiment": "SC-023", "label": "G", "inputs": [3,4], "constraints": {"conservation": 0, "no_growth": true, "readiness": false}},
+    {"experiment": "SC-023", "label": "R", "inputs": [3,4], "constraints": {"conservation": 0, "no_growth": false, "readiness": true}},
+    {"experiment": "SC-023", "label": "CG", "inputs": [3,4], "constraints": {"conservation": 1, "no_growth": true, "readiness": false}},
+    {"experiment": "SC-023", "label": "CR", "inputs": [3,4], "constraints": {"conservation": 1, "no_growth": false, "readiness": true}},
+    {"experiment": "SC-023", "label": "GR", "inputs": [3,4], "constraints": {"conservation": 0, "no_growth": true, "readiness": true}},
+    {"experiment": "SC-023", "label": "CGR", "inputs": [3,4], "constraints": {"conservation": 1, "no_growth": true, "readiness": true}}
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "b0.01-cap32:8000": {
+    "accepted_pair_births": 244,
+    "capacity_rejections": 0,
+    "identity_preserved_runs": 50,
+    "mean_population": 7.10792,
+    "observers": {
+      "pure": {
+        "complete_recovery_episodes": 229,
+        "mean_correct_occupancy": 0.949245,
+        "occupancy_bootstrap95": [
+          0.94167,
+          0.956295
+        ],
+        "runs_with_escape_and_return": 50,
+        "terminal_correct": 48,
+        "terminal_wilson95": [
+          0.8653990931249297,
+          0.9889611156723802
+        ],
+        "total_captures": 232,
+        "total_escapes": 231
+      },
+      "ready": {
+        "complete_recovery_episodes": 140,
+        "mean_correct_occupancy": 0.007955,
+        "occupancy_bootstrap95": [
+          0.006515,
+          0.009430000000000001
+        ],
+        "runs_with_escape_and_return": 42,
+        "terminal_correct": 0,
+        "terminal_wilson95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "total_captures": 187,
+        "total_escapes": 188
+      }
+    },
+    "runs": 50,
+    "unique_trajectories": 50
+  },
+  "b0.05-cap32:8000": {
+    "accepted_pair_births": 1220,
+    "capacity_rejections": 0,
+    "identity_preserved_runs": 50,
+    "mean_population": 7.54483,
+    "observers": {
+      "pure": {
+        "complete_recovery_episodes": 939,
+        "mean_correct_occupancy": 0.770425,
+        "occupancy_bootstrap95": [
+          0.754595,
+          0.78509
+        ],
+        "runs_with_escape_and_return": 50,
+        "terminal_correct": 42,
+        "terminal_wilson95": [
+          0.7148578393696501,
+          0.916625793219666
+        ],
+        "total_captures": 953,
+        "total_escapes": 947
+      },
+      "ready": {
+        "complete_recovery_episodes": 95,
+        "mean_correct_occupancy": 0.005855,
+        "occupancy_bootstrap95": [
+          0.00457,
+          0.00739
+        ],
+        "runs_with_escape_and_return": 37,
+        "terminal_correct": 0,
+        "terminal_wilson95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "total_captures": 139,
+        "total_escapes": 139
+      }
+    },
+    "runs": 50,
+    "unique_trajectories": 50
+  },
+  "b0.2-cap32:8000": {
+    "accepted_pair_births": 5038,
+    "capacity_rejections": 1,
+    "identity_preserved_runs": 50,
+    "mean_population": 10.10662,
+    "observers": {
+      "pure": {
+        "complete_recovery_episodes": 1429,
+        "mean_correct_occupancy": 0.29223,
+        "occupancy_bootstrap95": [
+          0.275465,
+          0.310195
+        ],
+        "runs_with_escape_and_return": 50,
+        "terminal_correct": 14,
+        "terminal_wilson95": [
+          0.17474170665911232,
+          0.4166512369595657
+        ],
+        "total_captures": 1469,
+        "total_escapes": 1465
+      },
+      "ready": {
+        "complete_recovery_episodes": 32,
+        "mean_correct_occupancy": 0.00206,
+        "occupancy_bootstrap95": [
+          0.00132,
+          0.002945
+        ],
+        "runs_with_escape_and_return": 16,
+        "terminal_correct": 0,
+        "terminal_wilson95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "total_captures": 58,
+        "total_escapes": 58
+      }
+    },
+    "runs": 50,
+    "unique_trajectories": 50
+  },
+  "b0.5-cap32:8000": {
+    "accepted_pair_births": 10921,
+    "capacity_rejections": 1652,
+    "identity_preserved_runs": 50,
+    "mean_population": 22.65159,
+    "observers": {
+      "pure": {
+        "complete_recovery_episodes": 70,
+        "mean_correct_occupancy": 0.0093,
+        "occupancy_bootstrap95": [
+          0.00584,
+          0.01343
+        ],
+        "runs_with_escape_and_return": 26,
+        "terminal_correct": 0,
+        "terminal_wilson95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "total_captures": 103,
+        "total_escapes": 103
+      },
+      "ready": {
+        "complete_recovery_episodes": 1,
+        "mean_correct_occupancy": 0.000135,
+        "occupancy_bootstrap95": [
+          0.0,
+          0.000405
+        ],
+        "runs_with_escape_and_return": 1,
+        "terminal_correct": 0,
+        "terminal_wilson95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "total_captures": 2,
+        "total_escapes": 2
+      }
+    },
+    "runs": 50,
+    "unique_trajectories": 50
+  }
+}

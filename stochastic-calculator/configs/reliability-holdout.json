@@ -1,0 +1,17 @@
+{
+  "base_seed": 1200000,
+  "replications": 2,
+  "runs_per_cell": 400,
+  "engine": {"regions": 8, "max_steps": 100000, "max_relations": 20000},
+  "question": "Can a no-fit conventional survival model explain the constraint curve at previously untested noise rates?",
+  "prediction": "For seven positive pending relations, handoff vs rewire probability 1/2, destructive probability d=fault_rate*(1-strength), P(correct)=((1-d)/(1+d))**7. A correct result requires no admitted deletion before all seven handoffs. This is derived after SC-006, locked before these holdout trials.",
+  "criteria": "Report the residual and Wilson interval for every cell. Overlapping intervals are compatibility evidence, not proof of equivalence; no refitting allowed.",
+  "cells": [
+    {"experiment": "SC-022", "label": "noise-0.05-strength-0", "kind": "arithmetic", "runs": 400, "op": "add", "a": 3, "b": 4, "fault_rate": 0.05, "strength": 0.0},
+    {"experiment": "SC-022", "label": "noise-0.05-strength-0.5", "kind": "arithmetic", "runs": 400, "op": "add", "a": 3, "b": 4, "fault_rate": 0.05, "strength": 0.5},
+    {"experiment": "SC-022", "label": "noise-0.05-strength-0.9", "kind": "arithmetic", "runs": 400, "op": "add", "a": 3, "b": 4, "fault_rate": 0.05, "strength": 0.9},
+    {"experiment": "SC-022", "label": "noise-0.3-strength-0", "kind": "arithmetic", "runs": 400, "op": "add", "a": 3, "b": 4, "fault_rate": 0.3, "strength": 0.0},
+    {"experiment": "SC-022", "label": "noise-0.3-strength-0.5", "kind": "arithmetic", "runs": 400, "op": "add", "a": 3, "b": 4, "fault_rate": 0.3, "strength": 0.5},
+    {"experiment": "SC-022", "label": "noise-0.3-strength-0.9", "kind": "arithmetic", "runs": 400, "op": "add", "a": 3, "b": 4, "fault_rate": 0.3, "strength": 0.9}
+  ]
+}

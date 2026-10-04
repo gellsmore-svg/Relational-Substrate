@@ -1,0 +1,18 @@
+{
+  "base_seed": 170000,
+  "replications": 2,
+  "runs_per_cell": 200,
+  "trajectory_runs": 10000,
+  "strengths": [0.0, 0.2, 0.4, 0.6, 0.8, 0.9, 0.95, 0.99, 1.0],
+  "fault_rate": 0.15,
+  "engine": {"regions": 8, "max_steps": 100000, "max_relations": 20000},
+  "scope": "Exploratory algorithmic benchmark, not held-out physical prediction. All trial definitions are emitted before execution.",
+  "comparators": ["host arithmetic after decoding", "ordered rewrite scheduler", "repeated-addition multiplication", "carry without replay exclusion", "charge-destructive erasure"],
+  "criteria": {
+    "exact_regime": "Every converged noiseless output matches the independent arithmetic oracle; any mismatch is a mechanism failure.",
+    "diversity": "Hash only structural events, excluding seeds, IDs and timestamps; report initial/final diversity separately.",
+    "graded": "Report all outcomes, Wilson intervals, censored timeouts and entropies; do not infer a phase transition from a finite curve.",
+    "locality": "Expose the global scheduler, enabled-event discovery and termination observer; no claim of fully decentralized calculation.",
+    "higher_order": "Compare replay exclusion present/absent under equal attempted replay probability, then a no-fault control."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "experiment": "SC-026", "base_seed": 260000, "runs": 50,
+  "regions": 8, "neutral_pairs": 3, "horizons": [500, 2000, 8000], "burn_in": 0,
+  "cells": [
+    {"label": "C-cap32", "inputs": [3,4], "capacity": 32, "constraints": {"no_growth": false, "readiness": false}},
+    {"label": "C-cap128", "inputs": [3,4], "capacity": 128, "constraints": {"no_growth": false, "readiness": false}},
+    {"label": "C-cap512", "inputs": [3,4], "capacity": 512, "constraints": {"no_growth": false, "readiness": false}},
+    {"label": "CG", "inputs": [3,4], "capacity": 128, "constraints": {"readiness": false}},
+    {"label": "CGR", "inputs": [3,4], "capacity": 128, "constraints": {}},
+    {"label": "CGR-45", "inputs": [17,28], "capacity": 128, "constraints": {}},
+    {"label": "CGR-100", "inputs": [50,50], "capacity": 128, "constraints": {}}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "experiment": "SC-027", "base_seed": 270000, "runs": 50,
+  "regions": 8, "neutral_pairs": 8, "horizons": [8000], "burn_in": 4000,
+  "cells": [
+    {"label": "b0-cap32", "inputs": [3,4], "capacity": 32, "birth_admission": 0, "constraints": {"no_growth": false, "readiness": false}},
+    {"label": "b0.01-cap32", "inputs": [3,4], "capacity": 32, "birth_admission": 0.01, "constraints": {"no_growth": false, "readiness": false}},
+    {"label": "b0.05-cap32", "inputs": [3,4], "capacity": 32, "birth_admission": 0.05, "constraints": {"no_growth": false, "readiness": false}},
+    {"label": "b0.2-cap32", "inputs": [3,4], "capacity": 32, "birth_admission": 0.2, "constraints": {"no_growth": false, "readiness": false}},
+    {"label": "b0.5-cap32", "inputs": [3,4], "capacity": 32, "birth_admission": 0.5, "constraints": {"no_growth": false, "readiness": false}},
+    {"label": "b0.05-cap128", "inputs": [3,4], "capacity": 128, "birth_admission": 0.05, "constraints": {"no_growth": false, "readiness": false}},
+    {"label": "b0.2-cap128", "inputs": [3,4], "capacity": 128, "birth_admission": 0.2, "constraints": {"no_growth": false, "readiness": false}}
+  ]
+}
