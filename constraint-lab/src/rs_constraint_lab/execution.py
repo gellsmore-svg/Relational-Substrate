@@ -1154,6 +1154,12 @@ def _publish_run(summary: dict, spec: dict, publish: Path, out_dir: Path) -> Non
         if path.stat().st_size <= FAMILY_INDEX_COMMIT_LIMIT_BYTES:
             target = catalogue / f"{spec['experiment_id']}-{path.name}"
             target.write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
+    surface = out_dir / "graded-surface.json"
+    if surface.exists() and surface.stat().st_size <= FAMILY_INDEX_COMMIT_LIMIT_BYTES:
+        tables = Path(publish) / "reports" / "tables"
+        tables.mkdir(parents=True, exist_ok=True)
+        target = tables / f"{spec['experiment_id']}-graded-surface.json"
+        target.write_text(surface.read_text(encoding="utf-8"), encoding="utf-8")
 
 
 def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path | None = None) -> dict:
