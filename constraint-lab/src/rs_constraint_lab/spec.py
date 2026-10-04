@@ -29,6 +29,7 @@ ANALYSES = (
     "n4-singleton",
     "n4-reconfiguration-sensitivity",
     "n4-targeted-pairs",
+    "n4-graded-matched-controls",
 )
 PREDICATES = ("edge", "count")
 HYPERGRAPH_PREDICATES = ("pair", "triad")

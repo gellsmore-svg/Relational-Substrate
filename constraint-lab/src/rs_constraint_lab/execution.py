@@ -293,6 +293,7 @@ def build_plan(spec: dict, shard_items: int | None = None) -> dict:
         "n4-singleton",
         "n4-reconfiguration-sensitivity",
         "n4-targeted-pairs",
+        "n4-graded-matched-controls",
     }:
         raise ValueError(f"analysis {options['analysis']!r} is not executable")
     if options["analysis"] in {"n4-singleton", "n4-reconfiguration-sensitivity"}:
@@ -307,6 +308,12 @@ def build_plan(spec: dict, shard_items: int | None = None) -> dict:
                 raise ValueError("n4-targeted-pairs requires N=4")
             if list(cell["cardinalities"]) != [2]:
                 raise ValueError("n4-targeted-pairs executes cardinality 2 only")
+    if options["analysis"] == "n4-graded-matched-controls":
+        for cell in spec["cells"]:
+            if int(cell["N"]) != 4:
+                raise ValueError("n4-graded-matched-controls requires N=4")
+            if list(cell["cardinalities"]) != [2]:
+                raise ValueError("n4-graded-matched-controls executes cardinality 2 only")
     if options["analysis"] == "memory-clock-reanalysis":
         for cell in spec["cells"]:
             if int(cell["N"]) != 3:
@@ -319,6 +326,10 @@ def build_plan(spec: dict, shard_items: int | None = None) -> dict:
         from rs_constraint_lab.v05 import build_targeted_plan
 
         return build_targeted_plan(spec, items, header)
+    if options["analysis"] == "n4-graded-matched-controls":
+        from rs_constraint_lab.v06 import build_graded_plan
+
+        return build_graded_plan(spec, items, header)
     weights = _weights_of(spec)
     estimates = []
     shards = []
@@ -1171,6 +1182,10 @@ def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path
         from rs_constraint_lab.v05 import merge_v05
 
         return merge_v05(out_dir, plan, publish)
+    if spec.get("analysis") == "n4-graded-matched-controls":
+        from rs_constraint_lab.v06 import merge_v06
+
+        return merge_v06(out_dir, plan, publish)
     options = effective_options(spec)
     screens = spec.get("predeclared_screens", {})
     horizon = int(spec.get("rise_release_horizon", 4))
@@ -1459,6 +1474,8 @@ def _science(summary: dict) -> dict:
             cells[-1]["n4_census"] = cell["n4_census"]
         if cell.get("v05_census") is not None:
             cells[-1]["v05_census"] = cell["v05_census"]
+        if cell.get("v06_census") is not None:
+            cells[-1]["v06_census"] = cell["v06_census"]
     return {
         "status": summary["status"],
         "spec_hash": summary["spec_hash"],

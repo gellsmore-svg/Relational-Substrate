@@ -255,6 +255,11 @@ def _execute(task: dict) -> None:
 
         execute_5_shard(task)
         return
+    if analysis == "n4-graded-matched-controls":
+        from rs_constraint_lab.v06 import execute_6_shard
+
+        execute_6_shard(task)
+        return
     if task["spec"].get("semantics") == "hypergraph":
         _execute_hypergraph(task)
         return
