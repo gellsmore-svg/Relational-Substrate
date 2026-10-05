@@ -124,6 +124,19 @@ E(N=4, A≤4, O=3, G=0, S=0, H=0, K≤2, L=0, semantics=hypergraph, W=W4)
 
 The complete two-rule set is canonicalised under `S4`. Pair-face substitution is a control construction. It does not introduce simplicial semantics. Optional control 3 is not added. The primary observable remains the controlled-source eventual committor between the two-edge path and the two-edge matching. Findings belong in `reports/generation-006-graded-matched-control-lattice.md`.
 
+## Generation 7 — effect-matched controls
+
+Specification: `experiments/specs/generation-007.json`. Analysis `n4-effect-matched-controls`.
+
+```text
+E(N=4, A≤4, O=3, G=0, S=0, H=0, K≤2, L=0, semantics=hypergraph, W=W4)
+  the same disjoint-edge dissolution motif
+  predeclared grade cells, not the full 5 by 5 lattice
+  continuous multiplier on condition erasure and on live pair faces
+```
+
+The lower-order control is calibrated to the higher-order singleton's controlled committor before the two-rule comparison. The named weight alphabet is not redefined. Pair-face substitution remains a control construction. Findings belong in `reports/generation-007-effect-matched-controls.md`.
+
 ## Later
 
 History-dependent choreography, constraints that rewrite constraints (`L > 0`), geometric embeddings, and cross-substrate recurrence of a motif discovered here. A recurrence across substrates would be recorded as substrate-robust recurrence to the degree observed. It would not be called a proof of universality.
