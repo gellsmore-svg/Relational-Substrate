@@ -260,6 +260,11 @@ def _execute(task: dict) -> None:
 
         execute_6_shard(task)
         return
+    if analysis == "n4-effect-matched-controls":
+        from rs_constraint_lab.v07 import execute_7_shard
+
+        execute_7_shard(task)
+        return
     if task["spec"].get("semantics") == "hypergraph":
         _execute_hypergraph(task)
         return
