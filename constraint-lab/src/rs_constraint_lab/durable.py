@@ -11,6 +11,7 @@ import hashlib
 import json
 import math
 import os
+import tempfile
 from fractions import Fraction
 from pathlib import Path
 
@@ -55,14 +56,25 @@ def _fsync_directory(directory: Path) -> None:
         os.close(descriptor)
 
 
+def _temporary_path(path: Path) -> Path:
+    descriptor, name = tempfile.mkstemp(prefix=f".{path.name}.", suffix=".tmp", dir=path.parent)
+    os.close(descriptor)
+    return Path(name)
+
+
 def atomic_write_bytes(path: Path, data: bytes) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_name(path.name + ".tmp")
-    with temporary.open("wb") as handle:
-        handle.write(data)
-        handle.flush()
-        os.fsync(handle.fileno())
-    os.replace(temporary, path)
+    temporary = _temporary_path(path)
+    try:
+        with temporary.open("wb") as handle:
+            handle.write(data)
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temporary, path)
+        path.with_name(path.name + ".tmp").unlink(missing_ok=True)
+    except Exception:
+        temporary.unlink(missing_ok=True)
+        raise
     _fsync_directory(path.parent)
 
 
@@ -73,16 +85,20 @@ def atomic_write_text(path: Path, text: str) -> None:
 def atomic_write_json(path: Path, payload) -> None:
     data = (json.dumps(json_ready(payload), indent=2, sort_keys=True) + "\n").encode("utf-8")
     path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_name(path.name + ".tmp")
-    with temporary.open("wb") as handle:
-        handle.write(data)
-        handle.flush()
-        os.fsync(handle.fileno())
-    parsed = json.loads(temporary.read_text(encoding="utf-8"))
-    if not isinstance(parsed, (dict, list)):
+    temporary = _temporary_path(path)
+    try:
+        with temporary.open("wb") as handle:
+            handle.write(data)
+            handle.flush()
+            os.fsync(handle.fileno())
+        parsed = json.loads(temporary.read_text(encoding="utf-8"))
+        if not isinstance(parsed, (dict, list)):
+            raise ValueError(f"refusing to publish a non-object JSON file at {path}")
+        os.replace(temporary, path)
+        path.with_name(path.name + ".tmp").unlink(missing_ok=True)
+    except Exception:
         temporary.unlink(missing_ok=True)
-        raise ValueError(f"refusing to publish a non-object JSON file at {path}")
-    os.replace(temporary, path)
+        raise
     _fsync_directory(path.parent)
 
 

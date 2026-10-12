@@ -170,6 +170,79 @@ def test_killed_worker_is_rescheduled(tmp_path: Path) -> None:
             proc.wait(timeout=5)
 
 
+def test_running_batches_lists_each_live_worker(tmp_path: Path) -> None:
+    from rs_constraint_lab.supervisor import build_status
+
+    layout = Layout(tmp_path)
+    layout.ensure()
+    atomic_write_json(layout.manifest_path(), {"experiment_id": "fault", "spec_hash": "fault-spec", "watchdog_seconds": 30})
+    payload = build_status(
+        layout,
+        supervisor_pid=1,
+        phase="01_COARSE",
+        state_name="RUNNING",
+        current=None,
+        started_at="2026-10-12T00:00:00Z",
+        last_error=None,
+        running=[
+            {"batch_id": "000001", "items": 2, "pid": 11, "started_at": "2026-10-12T00:00:01Z", "started_epoch": time.time()},
+            {"batch_id": "000002", "items": 3, "pid": 12, "started_at": "2026-10-12T00:00:02Z", "started_epoch": time.time()},
+        ],
+    )
+    assert [row["batch_id"] for row in payload["running_batches"]] == ["000001", "000002"]
+    assert [row["worker_pid"] for row in payload["running_batches"]] == [11, 12]
+    assert [row["items"] for row in payload["running_batches"]] == [2, 3]
+    assert payload["current_batch_id"] == "000001"
+    assert payload["watchdog_seconds"] == 30
+    _request(
+        tmp_path / "live",
+        [
+            {"behavior": "sleep", "key": "a", "seconds": 3},
+            {"behavior": "sleep", "key": "b", "seconds": 3},
+        ],
+        heartbeat_seconds=0.2,
+        watchdog_seconds=30,
+    )
+    proc = _start_batch(
+        tmp_path / "live",
+        "supervise",
+        "--workers",
+        "2",
+        "--batch-size",
+        "1",
+        "--heartbeat",
+        "0.2",
+        "--watchdog",
+        "30",
+        "--max-wall",
+        "12",
+    )
+    try:
+        deadline = time.time() + 10
+        seen = None
+        while time.time() < deadline:
+            path = tmp_path / "live" / "progress" / "status.json"
+            if path.exists():
+                seen = json.loads(path.read_text(encoding="utf-8"))
+                if len(seen.get("running_batches") or []) >= 2:
+                    break
+            time.sleep(0.05)
+        assert seen is not None
+        rows = seen["running_batches"]
+        assert len(rows) == 2
+        assert seen["current_batch_id"] == rows[0]["batch_id"]
+        assert len({row["worker_pid"] for row in rows}) == 2
+        for row in rows:
+            assert row["items"] == 1
+            assert row["watchdog_seconds"] == 30
+            assert row["started_at"]
+            assert row["elapsed_seconds"] is not None
+    finally:
+        if proc.poll() is None:
+            proc.send_signal(15)
+            proc.wait(timeout=20)
+
+
 def test_status_is_visible_before_the_heartbeat_interval(tmp_path: Path) -> None:
     _request(tmp_path, [{"behavior": "sleep", "key": "slow", "seconds": 2}], heartbeat_seconds=5, watchdog_seconds=30)
     proc = _start_batch(tmp_path, "supervise", "--workers", "1", "--batch-size", "1", "--heartbeat", "5", "--watchdog", "30", "--max-wall", "8")

@@ -265,6 +265,11 @@ def _execute(task: dict) -> None:
 
         execute_7_shard(task)
         return
+    if analysis == "n4-two-level-pair-face":
+        raise RuntimeError(
+            "generation 007B refuses a monolithic shard. "
+            "Use python -m rs_constraint_lab generation007b supervise"
+        )
     if task["spec"].get("semantics") == "hypergraph":
         _execute_hypergraph(task)
         return

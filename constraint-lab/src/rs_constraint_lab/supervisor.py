@@ -500,7 +500,29 @@ def _experiment_counts(layout: Layout) -> dict:
     return function(layout.root)
 
 
-def build_status(layout: Layout, *, supervisor_pid: int | None, phase: str, state_name: str, current: dict | None, started_at: str, last_error: str | None) -> dict:
+def _running_rows(running: list[dict] | None, current: dict | None, watchdog_seconds: float) -> list[dict]:
+    """One public row per live worker. `current` remains the compatibility alias."""
+    source = list(running or [])
+    if not source and current is not None:
+        source = [current]
+    rows = []
+    for job in source:
+        started_epoch = job.get("started_epoch")
+        elapsed = None if started_epoch is None else round(time.time() - float(started_epoch), 3)
+        rows.append(
+            {
+                "batch_id": job.get("batch_id"),
+                "elapsed_seconds": elapsed,
+                "items": int(job.get("items") or 0),
+                "started_at": job.get("started_at"),
+                "watchdog_seconds": watchdog_seconds,
+                "worker_pid": job.get("pid", job.get("worker_pid")),
+            }
+        )
+    return rows
+
+
+def build_status(layout: Layout, *, supervisor_pid: int | None, phase: str, state_name: str, current: dict | None, started_at: str, last_error: str | None, running: list[dict] | None = None) -> dict:
     state = load_state(layout)
     counts = _counts(layout, state)
     extra = _experiment_counts(layout) if layout.manifest_path().exists() else {}
@@ -527,6 +549,9 @@ def build_status(layout: Layout, *, supervisor_pid: int | None, phase: str, stat
     visible = _visible_error(state)
     if visible:
         last_error = visible
+    watchdog_seconds = manifest.get("watchdog_seconds", DEFAULT_WATCHDOG)
+    running_rows = _running_rows(running, current, float(watchdog_seconds))
+    primary = running_rows[0] if running_rows else None
     return {
         "cache_hits": extra.get("cache_hits", 0),
         "cache_misses": extra.get("cache_misses", 0),
@@ -535,9 +560,9 @@ def build_status(layout: Layout, *, supervisor_pid: int | None, phase: str, stat
         "calibrations_unresolved": extra.get("calibrations_unresolved", 0),
         "completed_batches": sum(1 for row in receipts if not row.get("timed_out") and not row.get("failed_item_ids")),
         "completed_items": counts["completed_items"],
-        "current_batch_elapsed_seconds": None if current is None else round(time.time() - current["started_epoch"], 3),
-        "current_batch_id": None if current is None else current["batch_id"],
-        "current_batch_items": 0 if current is None else current["items"],
+        "current_batch_elapsed_seconds": None if primary is None else primary["elapsed_seconds"],
+        "current_batch_id": None if primary is None else primary["batch_id"],
+        "current_batch_items": 0 if primary is None else primary["items"],
         "estimated_completion_time": completion,
         "estimated_remaining_seconds": None if remaining is None else round(remaining, 3),
         "eta_label": "ETA for current plan",
@@ -553,13 +578,14 @@ def build_status(layout: Layout, *, supervisor_pid: int | None, phase: str, stat
         "quarantined_items": counts["quarantined_items"],
         "recent_items_per_second": round(recent_rate, 6),
         "retried_batches": sum(1 for row in receipts if row.get("failed_item_ids")),
+        "running_batches": running_rows,
         "running_items": counts["running_items"],
         "spec_hash": manifest.get("spec_hash"),
         "started_at": started_at,
         "state": state_name,
         "supervisor_pid": supervisor_pid,
         "timed_out_batches": sum(1 for row in receipts if row.get("timed_out")),
-        "watchdog_seconds": manifest.get("watchdog_seconds", DEFAULT_WATCHDOG),
+        "watchdog_seconds": watchdog_seconds,
     }
 
 
@@ -592,6 +618,7 @@ def format_status(payload: dict, *, last_progress: str | None = None) -> str:
         f"Phase: {payload.get('phase')}",
         f"Batch: {payload.get('current_batch_id') or '-'}",
         f"Worker: {worker_line}",
+        _running_text(payload),
         f"Items: {payload.get('completed_items')} complete / {payload.get('planned_items_current')} currently planned",
         f"Calibrations: {payload.get('calibrations_complete')} / {payload.get('calibrations_total')} complete",
         f"Failures: {payload.get('failed_items')}",
@@ -603,6 +630,19 @@ def format_status(payload: dict, *, last_progress: str | None = None) -> str:
         f"Last progress: {last_progress or '-'}",
         f"Last error: {payload.get('last_error') or '-'}",
     ]
+    return "\n".join(lines)
+
+
+def _running_text(payload: dict) -> str:
+    rows = payload.get("running_batches") or []
+    if not rows:
+        return "Running batches: -"
+    lines = ["Running batches:"]
+    for row in rows:
+        lines.append(
+            f"  {row.get('batch_id')} pid={row.get('worker_pid')} items={row.get('items')} "
+            f"started={row.get('started_at')} elapsed={row.get('elapsed_seconds')}s / {row.get('watchdog_seconds')}s"
+        )
     return "\n".join(lines)
 
 
@@ -744,6 +784,7 @@ def supervise(root: Path, *, max_batches: int | None = None, max_wall: float | N
         "last_completed": None,
         "last_error": None,
         "phase": _phase(layout),
+        "running": [],
         "stop": False,
     }
     finished = threading.Event()
@@ -785,6 +826,7 @@ def supervise(root: Path, *, max_batches: int | None = None, max_wall: float | N
                 current=current,
                 started_at=started_at,
                 last_error=state_box["last_error"],
+                running=state_box.get("running"),
             ),
         )
 
@@ -798,6 +840,20 @@ def supervise(root: Path, *, max_batches: int | None = None, max_wall: float | N
     thread = threading.Thread(target=beat, name="supervisor-heartbeat", daemon=True)
     thread.start()
     jobs = {}
+
+    def publish_jobs() -> None:
+        state_box["running"] = [
+            {
+                "batch_id": job["batch_id"],
+                "items": job["items"],
+                "pid": job["pid"],
+                "started_at": job["started_at"],
+                "started_epoch": job["started_epoch"],
+            }
+            for job in jobs.values()
+        ]
+        state_box["current"] = next(iter(jobs.values()), None) if jobs else None
+
     launched = 0
     wall_start = time.time()
     final_state = "STOPPED"
@@ -839,7 +895,8 @@ def supervise(root: Path, *, max_batches: int | None = None, max_wall: float | N
                         "started_at": worker_meta["started_at"],
                         "started_epoch": worker_meta["started_epoch"],
                     }
-                    state_box["current"] = jobs[batch_id]
+                    publish_jobs()
+                    emit_running()
                     launched += 1
                     continue
             if not jobs:
@@ -865,7 +922,14 @@ def supervise(root: Path, *, max_batches: int | None = None, max_wall: float | N
                 if receipt["failed_item_ids"]:
                     state_box["last_error"] = f"batch {batch_id} failed_items={len(receipt['failed_item_ids'])}"
                 jobs.pop(batch_id)
-                state_box["current"] = next(iter(jobs.values()), None) if jobs else None
+                publish_jobs()
+                emit_running()
+    except Exception as exc:
+        # A planner exception is not a requested stop. Record it before the
+        # exit status is published, and keep the existing STOPPED vocabulary.
+        state_box["last_error"] = f"{type(exc).__name__}: {exc}"[:500]
+        log_progress(layout, f"EXCEPTION {state_box['last_error']}")
+        raise
     finally:
         for job in jobs.values():
             if job["process"].poll() is None and (state_box["stop"] or stop_requested(layout)):
@@ -886,7 +950,7 @@ def supervise(root: Path, *, max_batches: int | None = None, max_wall: float | N
         phase = state_box["phase"] if final_state != "COMPLETE" else "COMPLETE"
         write_status(
             layout,
-            build_status(layout, supervisor_pid=None, phase=phase, state_name=final_state, current=None, started_at=started_at, last_error=state_box["last_error"]),
+            build_status(layout, supervisor_pid=None, phase=phase, state_name=final_state, current=None, started_at=started_at, last_error=state_box["last_error"], running=None),
         )
         log_progress(layout, f"{final_state} phase={phase}")
         log_event(layout, "supervisor_exit", final_state, phase=phase)
@@ -1014,8 +1078,15 @@ def verify_root(root: Path, *, require_complete: bool = False) -> dict:
     if layout.calibration().exists():
         for path in sorted(layout.calibration().glob("*.json")):
             row = read_json(path)
-            calibrations.append({"calibration_id": row.get("calibration_id"), "convergence_status": row.get("convergence_status")})
-            if "convergence_status" not in row:
+            seven_b = "gen007b_exec" in str(manifest.get("executor") or "")
+            recorded = row.get("convergence_status")
+            if recorded is None and seven_b:
+                recorded = row.get("status")
+            calibrations.append({"calibration_id": row.get("calibration_id"), "convergence_status": recorded})
+            if seven_b:
+                if row.get("status") not in {"represented", "unrepresented", "unresolved_at_cap"}:
+                    problems.append(f"calibration {path.name} is not terminal")
+            elif "convergence_status" not in row:
                 problems.append(f"calibration {path.name} has no convergence_status")
     status = read_status(layout)
     complete = status.get("state") == "COMPLETE" and not missing and not quarantined
@@ -1040,18 +1111,33 @@ def verify_root(root: Path, *, require_complete: bool = False) -> dict:
             if path.name[:-5] not in listed:
                 problems.append(f"merge row {path.name[:-5]} is absent from the summary")
         science = [row for row in summary.get("rows", []) if isinstance(row, dict) and row.get("target_id")]
-        listed_targets = {row["target_id"] for row in science}
-        for target_id in sorted(listed_targets):
-            path = layout.merge() / "rows" / f"{target_id}.json"
-            if not path.exists():
-                problems.append(f"merge summary cites missing row {target_id}")
-                continue
-            stored = read_json(path).get("row") or {}
-            if stored.get("target_id") != target_id:
-                problems.append(f"merge row {target_id} target_id drifted")
-        for path in merge_science_rows:
-            if path.name[:-5] not in listed_targets:
-                problems.append(f"merge row {path.name[:-5]} is absent from the summary")
+        seven_b = "gen007b_exec" in str(manifest.get("executor") or "")
+        if seven_b:
+            listed_ids = {row["calibration_id"] for row in science if row.get("calibration_id")}
+            for calibration_id in sorted(listed_ids):
+                path = layout.merge() / "rows" / f"{calibration_id}.json"
+                if not path.exists():
+                    problems.append(f"merge summary cites missing row {calibration_id}")
+                    continue
+                stored = read_json(path).get("row") or {}
+                if stored.get("calibration_id") != calibration_id:
+                    problems.append(f"merge row {calibration_id} calibration_id drifted")
+            for path in merge_science_rows:
+                if path.name[:-5] not in listed_ids:
+                    problems.append(f"merge row {path.name[:-5]} is absent from the summary")
+        else:
+            listed_targets = {row["target_id"] for row in science}
+            for target_id in sorted(listed_targets):
+                path = layout.merge() / "rows" / f"{target_id}.json"
+                if not path.exists():
+                    problems.append(f"merge summary cites missing row {target_id}")
+                    continue
+                stored = read_json(path).get("row") or {}
+                if stored.get("target_id") != target_id:
+                    problems.append(f"merge row {target_id} target_id drifted")
+            for path in merge_science_rows:
+                if path.name[:-5] not in listed_targets:
+                    problems.append(f"merge row {path.name[:-5]} is absent from the summary")
     elif merge_item_rows or merge_science_rows:
         problems.append("merge summary missing")
     report = {

@@ -295,6 +295,7 @@ def build_plan(spec: dict, shard_items: int | None = None) -> dict:
         "n4-targeted-pairs",
         "n4-graded-matched-controls",
         "n4-effect-matched-controls",
+        "n4-two-level-pair-face",
     }:
         raise ValueError(f"analysis {options['analysis']!r} is not executable")
     if options["analysis"] in {"n4-singleton", "n4-reconfiguration-sensitivity"}:
@@ -341,6 +342,11 @@ def build_plan(spec: dict, shard_items: int | None = None) -> dict:
         raise IncompatibleGeneration(
             "generation 007 refuses a monolithic shard run. "
             "Use python -m rs_constraint_lab generation007 plan"
+        )
+    if options["analysis"] == "n4-two-level-pair-face":
+        raise IncompatibleGeneration(
+            "generation 007B refuses a monolithic shard run. "
+            "Use python -m rs_constraint_lab generation007b plan"
         )
     weights = _weights_of(spec)
     estimates = []
@@ -1220,6 +1226,11 @@ def merge_directory(out_dir: Path, publish: Path | None = None, compare_to: Path
         from rs_constraint_lab.v07 import merge_v07
 
         return merge_v07(out_dir, plan, publish)
+    if spec.get("analysis") == "n4-two-level-pair-face":
+        raise RuntimeError(
+            "generation 007B refuses a monolithic merge. "
+            "Use python -m rs_constraint_lab generation007b merge"
+        )
     options = effective_options(spec)
     screens = spec.get("predeclared_screens", {})
     horizon = int(spec.get("rise_release_horizon", 4))

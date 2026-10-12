@@ -31,6 +31,7 @@ ANALYSES = (
     "n4-targeted-pairs",
     "n4-graded-matched-controls",
     "n4-effect-matched-controls",
+    "n4-two-level-pair-face",
 )
 PREDICATES = ("edge", "count")
 HYPERGRAPH_PREDICATES = ("pair", "triad")

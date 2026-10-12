@@ -34,6 +34,10 @@ def _default_generation_root() -> Path:
     return _lab_root() / "generated" / "generation-007"
 
 
+def _default_generation_b_root() -> Path:
+    return _lab_root() / "generated" / "generation-007b"
+
+
 def main(argv: list[str]) -> int:
     if not argv:
         print("usage: python -m rs_constraint_lab generation007 <command>", file=sys.stderr)
@@ -42,6 +46,8 @@ def main(argv: list[str]) -> int:
         return worker_main(argv[1:])
     if argv[0] == "generation007":
         return _generation(argv[1:])
+    if argv[0] == "generation007b":
+        return _generation_b(argv[1:])
     if argv[0] == "batch":
         return _batch(argv[1:])
     print(f"unknown command {argv[0]}", file=sys.stderr)
@@ -86,7 +92,7 @@ def _generation(argv: list[str]) -> int:
     if args.command == "supervise":
         return _supervise(root, max_batches=None, max_wall=None, workers=args.workers)
     if args.command == "start":
-        return _start(root, workers=args.workers)
+        return _start(root, workers=args.workers, command="generation007")
     if args.command == "status":
         if args.watch is None:
             print(status_text(root))
@@ -176,7 +182,75 @@ def _supervise(root: Path, *, max_batches: int | None, max_wall: float | None, w
     return 0
 
 
-def _start(root: Path, *, workers: int) -> int:
+def _generation_b(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(prog="rs_constraint_lab generation007b")
+    parser.add_argument("command", choices=["plan", "run-next", "run-batches", "supervise", "start", "restart", "status", "verify", "merge", "retry", "stop", "benchmark", "smoke", "preflight"])
+    parser.add_argument("--root", type=Path, default=None)
+    parser.add_argument("--watch", type=float, default=None)
+    parser.add_argument("--max-snapshots", type=int, default=None)
+    parser.add_argument("--count", type=int, default=5)
+    parser.add_argument("--max-wall", type=float, default=60.0)
+    parser.add_argument("--workers", type=int, default=2)
+    parser.add_argument("--require-complete", action="store_true")
+    args = parser.parse_args(argv)
+    root = args.root or _default_generation_b_root()
+    if args.command == "plan":
+        from rs_constraint_lab.gen007b_exec import plan
+
+        summary = plan(root)
+        print(json.dumps(summary, indent=2, sort_keys=True))
+        return 0
+    if args.command == "benchmark":
+        from rs_constraint_lab.gen007b_exec import benchmark
+
+        summary = benchmark(root)
+        print(json.dumps(summary, indent=2, sort_keys=True))
+        return 0
+    if args.command == "smoke":
+        from rs_constraint_lab.gen007b_exec import plan_smoke
+
+        smoke_root = args.root or (_lab_root() / "generated" / "generation-007b-smoke")
+        summary = plan_smoke(smoke_root)
+        print(json.dumps(summary, indent=2, sort_keys=True))
+        return 0
+    if args.command == "preflight":
+        from rs_constraint_lab.gen007b_exec import plan_preflight
+
+        preflight_root = args.root or (_lab_root() / "generated" / "generation-007b-preflight")
+        summary = plan_preflight(preflight_root)
+        print(json.dumps(summary, indent=2, sort_keys=True))
+        return 0
+    if args.command == "run-next":
+        return _supervise(root, max_batches=1, max_wall=args.max_wall, workers=args.workers)
+    if args.command == "run-batches":
+        return _supervise(root, max_batches=args.count, max_wall=None, workers=args.workers)
+    if args.command == "supervise":
+        return _supervise(root, max_batches=None, max_wall=None, workers=args.workers)
+    if args.command in {"start", "restart"}:
+        return _start(root, workers=args.workers, command="generation007b")
+    if args.command == "status":
+        if args.watch is None:
+            print(status_text(root))
+            return 0
+        return watch_status(root, args.watch, args.max_snapshots)
+    if args.command == "verify":
+        report = verify_root(root, require_complete=args.require_complete)
+        print(json.dumps(report, indent=2, sort_keys=True))
+        return 0 if report["ok"] else 1
+    if args.command == "merge":
+        summary = merge_root(root)
+        print(json.dumps({"rows": len(summary.get("rows", []))}, indent=2, sort_keys=True))
+        return 0
+    if args.command == "retry":
+        return _retry(root)
+    if args.command == "stop":
+        request_stop(root)
+        print(f"stop requested for {root}")
+        return 0
+    return 2
+
+
+def _start(root: Path, *, workers: int, command: str = "generation007") -> int:
     layout = Layout(root)
     layout.ensure()
     log_path = layout.progress() / "supervisor.out"
@@ -185,7 +259,7 @@ def _start(root: Path, *, workers: int) -> int:
         sys.executable,
         "-m",
         "rs_constraint_lab",
-        "generation007",
+        command,
         "supervise",
         "--root",
         str(root),
