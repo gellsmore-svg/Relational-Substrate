@@ -488,9 +488,11 @@ def _empirical_from_kernel(system_id: str, laws: dict, indexed: dict) -> list[di
         exact_mask = empirical_slot_cmi(visits, laws["conditional"])
         coarse = coarse_class_cmi(weight, laws["conditional"])
         if system_id in ZERO_SYSTEMS:
-            assert_zero_floor(exact_mask, f"{system_id} {source} empirical-source CMI")
-            for label, value in coarse.items():
-                assert_zero_floor(value, f"{system_id} {source} empirical {label}")
+            # Given the full pair mask the local slot law ignores the triad, so
+            # this conditional information is an identity. Conditioning only on
+            # the graph class is not: sampled mask occupancy inside a class can
+            # still vary with the triad, and the slot law varies with the mask.
+            assert_zero_floor(exact_mask, f"{system_id} {source} empirical-source full-mask CMI")
         rows.append(
             {
                 "exact_next_pair_class_given_pair_class": coarse["next_pair_class_given_pair_class"],
