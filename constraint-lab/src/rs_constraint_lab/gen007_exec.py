@@ -633,6 +633,8 @@ def advance(root: Path) -> int:
         added += _ensure_robustness(layout, problems, ensure_planned)
         problems = _load_problems(layout)
     for problem in problems:
+        if problem["role"] == "robustness":
+            added += _ensure_fixed_control(layout, problem, ensure_planned)
         existing = _read_calibration(layout, problem["calibration_id"])
         if existing and existing.get("convergence_status") in TERMINAL:
             added += _ensure_matched_compositions(layout, problem, existing, ensure_planned)
@@ -905,6 +907,54 @@ def _ensure_robustness(layout, problems, ensure_planned) -> int:
     return added
 
 
+def _primary_held_multiplier(layout: Layout, problem: dict) -> str | None:
+    """The primary joint multiplier, held fixed at a robustness rho."""
+    if problem["role"] != "robustness":
+        return None
+    for row in _load_problems(layout):
+        if row["role"] != "primary" or row["target_id"] != problem["target_id"]:
+            continue
+        if row["relation"] != problem["relation"] or row["alphabet"] != problem["alphabet"]:
+            continue
+        if row["rho"] != str(PRIMARY_RHO):
+            continue
+        existing = _read_calibration(layout, row["calibration_id"]) or {}
+        joint = existing.get("joint") or {}
+        if joint.get("matched") and joint.get("m_text"):
+            return joint["m_text"]
+    return None
+
+
+def _ensure_fixed_control(layout: Layout, problem: dict, ensure_planned) -> int:
+    text = _primary_held_multiplier(layout, problem)
+    if not text:
+        return 0
+    state = load_state(layout)
+    singleton = _singleton_item(problem["t_expression"], problem["rho"], problem["alphabet"])
+    composition = _target_composition_item(problem)
+    if state.get(singleton["item_id"], {}).get("status") != "complete":
+        return 0
+    if state.get(composition["item_id"], {}).get("status") != "complete":
+        return 0
+    added = 0
+    point = _grid_item(problem["control_expression"], text, problem["rho"], problem["alphabet"])
+    if ensure_planned(layout, point):
+        added += 1
+    record = _control_composition_item(problem, text)
+    if ensure_planned(layout, record):
+        added += 1
+    return added
+
+
+def _composition_probe(layout: Layout, problem: dict, text: str | None) -> dict | None:
+    if not text:
+        return None
+    payload = read_valid_item(layout, _control_composition_item(problem, text)["item_id"], _digest())
+    if payload is None:
+        return None
+    return {"directions": payload["result"]["directions"], "m_text": text}
+
+
 def _safe_multiplier(existing: dict, strategy: str) -> str | None:
     if strategy == "joint":
         joint = existing.get("joint") or {}
@@ -1028,6 +1078,7 @@ def merge_items(root: Path) -> dict:
         "analysis_version": ANALYSIS_VERSION,
         "calibration_version": CALIBRATION_VERSION,
         "experiment_id": read_json(layout.manifest_path()).get("experiment_id"),
+        "items": _completed_item_index(layout),
         "operational": operational,
         "questions": questions,
         "rows": rows,
@@ -1039,11 +1090,45 @@ def merge_items(root: Path) -> dict:
     return summary
 
 
+def _completed_item_index(layout: Layout) -> list[dict]:
+    state = load_state(layout)
+    rows = []
+    for item_id, slot in sorted(state.items()):
+        if slot.get("status") != "complete":
+            continue
+        payload = read_valid_item(layout, item_id, _digest())
+        if payload is None:
+            continue
+        rows.append({"item_id": item_id, "result_hash": payload["result_hash"]})
+    return rows
+
+
 def _group_stamp(layout: Layout, group: list[dict]) -> str:
     parts = []
-    for problem in group:
+    target_id = group[0]["target_id"]
+    related = [problem for problem in _load_problems(layout) if problem["target_id"] == target_id]
+    for problem in related:
         existing = _read_calibration(layout, problem["calibration_id"]) or {}
-        parts.append({"calibration": existing.get("last_updated"), "id": problem["calibration_id"], "status": existing.get("convergence_status")})
+        texts = []
+        for strategy in ("forward", "reverse", "joint"):
+            text = _safe_multiplier(existing, strategy)
+            if text:
+                texts.append(text)
+        held = _primary_held_multiplier(layout, problem)
+        if held:
+            texts.append(held)
+        probes = []
+        for text in sorted(set(texts)):
+            payload = read_valid_item(layout, _control_composition_item(problem, text)["item_id"], _digest())
+            probes.append({"hash": None if payload is None else payload["result_hash"], "m": text})
+        parts.append(
+            {
+                "calibration": existing.get("last_updated"),
+                "id": problem["calibration_id"],
+                "probes": probes,
+                "status": existing.get("convergence_status"),
+            }
+        )
     from rs_constraint_lab.durable import canonical_json
 
     return sha256_bytes(canonical_json(parts).encode("utf-8"))
@@ -1182,14 +1267,28 @@ def _robustness_row(layout, problem, floor: float) -> dict | None:
     out = {"alphabet": {}, "rho": {}}
     for row in problems:
         existing = _read_calibration(layout, row["calibration_id"]) or {}
+        joint = existing.get("joint") or {}
+        held = _primary_held_multiplier(layout, row)
+        recalibrated_text = joint.get("m_text") if joint.get("matched") else None
+        fixed = _composition_probe(layout, row, held)
         label = row["rho"]
         bucket = out["rho"].setdefault(label, {"controls": []})
+        if fixed is not None:
+            fixed_status = "matched_probe"
+        elif held:
+            fixed_status = "missing"
+        else:
+            fixed_status = "not_matched"
         bucket["controls"].append(
             {
-                "recalibrated_class": None if not existing.get("joint") else existing["joint"].get("match_class"),
-                "recalibrated_distance": None if not existing.get("joint") else existing["joint"].get("distance"),
-                "recalibrated_m": None if not existing.get("joint") else existing["joint"].get("m_text"),
-                "recalibrated_matched": bool(existing.get("joint") and existing["joint"].get("matched")),
+                "fixed_control": fixed,
+                "fixed_m": held,
+                "fixed_status": fixed_status,
+                "recalibrated_class": joint.get("match_class"),
+                "recalibrated_control": _composition_probe(layout, row, recalibrated_text),
+                "recalibrated_distance": joint.get("distance"),
+                "recalibrated_m": joint.get("m_text"),
+                "recalibrated_matched": bool(joint.get("matched")),
                 "relation": row["relation"],
             }
         )

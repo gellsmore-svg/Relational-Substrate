@@ -163,6 +163,22 @@ def test_killed_worker_is_rescheduled(tmp_path: Path) -> None:
         fresh = json.loads((tmp_path / "progress" / "heartbeat.json").read_text(encoding="utf-8"))
         assert fresh["supervisor_pid"] == proc.pid or _alive(proc.pid)
     finally:
+        # The replacement batch is a 30s sleeper. Graceful stop waits for it.
+        # This test has already checked survival. Cleanup must not wait that out.
+        if proc.poll() is None:
+            proc.kill()
+            proc.wait(timeout=5)
+
+
+def test_status_is_visible_before_the_heartbeat_interval(tmp_path: Path) -> None:
+    _request(tmp_path, [{"behavior": "sleep", "key": "slow", "seconds": 2}], heartbeat_seconds=5, watchdog_seconds=30)
+    proc = _start_batch(tmp_path, "supervise", "--workers", "1", "--batch-size", "1", "--heartbeat", "5", "--watchdog", "30", "--max-wall", "8")
+    try:
+        status = _wait_json(tmp_path / "progress" / "status.json", "state", timeout=1)
+        assert status["state"] == "RUNNING"
+        assert status["phase"]
+        assert status["supervisor_pid"] == proc.pid
+    finally:
         proc.send_signal(15)
         proc.wait(timeout=20)
 

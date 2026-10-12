@@ -632,7 +632,10 @@ class _Lock:
     def acquire(self) -> None:
         path = self.layout.lock_path()
         path.parent.mkdir(parents=True, exist_ok=True)
-        self.handle = path.open("a+", encoding="utf-8")
+        # r+ replaces the inode in place. Append mode would ignore seek() and
+        # glue a second JSON object onto the lock on every heartbeat.
+        path.touch(exist_ok=True)
+        self.handle = path.open("r+", encoding="utf-8")
         try:
             import fcntl
 
@@ -753,41 +756,45 @@ def supervise(root: Path, *, max_batches: int | None = None, max_wall: float | N
     previous_term = signal.signal(signal.SIGTERM, on_signal)
     previous_int = signal.signal(signal.SIGINT, on_signal)
 
+    def emit_running() -> None:
+        current = state_box["current"]
+        counts = _counts(layout, load_state(layout))
+        payload = {
+            "completed_items": counts["completed_items"],
+            "current_batch_id": None if current is None else current["batch_id"],
+            "failed_items": counts["failed_items"],
+            "last_completed_item_id": state_box["last_completed"],
+            "pending_items": counts["pending_items"],
+            "phase": state_box["phase"],
+            "quarantined_items": counts["quarantined_items"],
+            "supervisor_pid": os.getpid(),
+            "timestamp": utc_now(),
+            "worker_elapsed_seconds": None if current is None else round(time.time() - current["started_epoch"], 3),
+            "worker_pid": None if current is None else current["pid"],
+            "worker_started_at": None if current is None else current["started_at"],
+        }
+        write_heartbeat(layout, payload)
+        lock.update(started_at=started_at, phase=state_box["phase"])
+        write_status(
+            layout,
+            build_status(
+                layout,
+                supervisor_pid=os.getpid(),
+                phase=state_box["phase"],
+                state_name="RUNNING",
+                current=current,
+                started_at=started_at,
+                last_error=state_box["last_error"],
+            ),
+        )
+
     def beat() -> None:
         while not finished.wait(heartbeat_seconds):
-            current = state_box["current"]
-            counts = _counts(layout, load_state(layout))
-            payload = {
-                "completed_items": counts["completed_items"],
-                "current_batch_id": None if current is None else current["batch_id"],
-                "failed_items": counts["failed_items"],
-                "last_completed_item_id": state_box["last_completed"],
-                "pending_items": counts["pending_items"],
-                "phase": state_box["phase"],
-                "quarantined_items": counts["quarantined_items"],
-                "supervisor_pid": os.getpid(),
-                "timestamp": utc_now(),
-                "worker_elapsed_seconds": None if current is None else round(time.time() - current["started_epoch"], 3),
-                "worker_pid": None if current is None else current["pid"],
-                "worker_started_at": None if current is None else current["started_at"],
-            }
-            write_heartbeat(layout, payload)
-            lock.update(started_at=started_at, phase=state_box["phase"])
-            write_status(
-                layout,
-                build_status(
-                    layout,
-                    supervisor_pid=os.getpid(),
-                    phase=state_box["phase"],
-                    state_name="RUNNING",
-                    current=current,
-                    started_at=started_at,
-                    last_error=state_box["last_error"],
-                ),
-            )
+            emit_running()
 
-    # The first heartbeat exists before the first wait, so a reader does not see an empty file.
-    write_heartbeat(layout, {"supervisor_pid": os.getpid(), "timestamp": utc_now(), "phase": state_box["phase"], "worker_pid": None, "worker_elapsed_seconds": None, "current_batch_id": None, "completed_items": 0, "pending_items": 0, "failed_items": 0, "quarantined_items": 0, "last_completed_item_id": None, "worker_started_at": None})
+    # Status and heartbeat exist before the first wait. A second terminal must
+    # not see an empty status file for a whole heartbeat interval.
+    emit_running()
     thread = threading.Thread(target=beat, name="supervisor-heartbeat", daemon=True)
     thread.start()
     jobs = {}
@@ -1013,20 +1020,39 @@ def verify_root(root: Path, *, require_complete: bool = False) -> dict:
     status = read_status(layout)
     complete = status.get("state") == "COMPLETE" and not missing and not quarantined
     merge_summary = layout.merge() / "summary.json"
-    merge_rows = list((layout.merge() / "items").glob("*.json")) if (layout.merge() / "items").exists() else []
+    merge_item_rows = list((layout.merge() / "items").glob("*.json")) if (layout.merge() / "items").exists() else []
+    merge_science_rows = list((layout.merge() / "rows").glob("*.json")) if (layout.merge() / "rows").exists() else []
     if merge_summary.exists():
         summary = read_json(merge_summary)
         listed = {row.get("item_id"): row.get("result_hash") for row in summary.get("items", []) if isinstance(row, dict)}
         for item_id, digest in listed.items():
             path = layout.merge() / "items" / f"{item_id}.json"
-            if not path.exists():
+            if path.exists():
+                stored = read_json(path)
+                if stored.get("result_hash") not in {None, digest}:
+                    problems.append(f"merge file hash mismatch {item_id}")
+            if item_id in seen:
+                if digest not in {None, seen[item_id]}:
+                    problems.append(f"merge hash mismatch {item_id}")
+            elif not path.exists():
                 problems.append(f"merge summary cites missing {item_id}")
-            elif item_id in seen and digest not in {None, seen[item_id]}:
-                problems.append(f"merge hash mismatch {item_id}")
-        for path in merge_rows:
+        for path in merge_item_rows:
             if path.name[:-5] not in listed:
                 problems.append(f"merge row {path.name[:-5]} is absent from the summary")
-    elif merge_rows:
+        science = [row for row in summary.get("rows", []) if isinstance(row, dict) and row.get("target_id")]
+        listed_targets = {row["target_id"] for row in science}
+        for target_id in sorted(listed_targets):
+            path = layout.merge() / "rows" / f"{target_id}.json"
+            if not path.exists():
+                problems.append(f"merge summary cites missing row {target_id}")
+                continue
+            stored = read_json(path).get("row") or {}
+            if stored.get("target_id") != target_id:
+                problems.append(f"merge row {target_id} target_id drifted")
+        for path in merge_science_rows:
+            if path.name[:-5] not in listed_targets:
+                problems.append(f"merge row {path.name[:-5]} is absent from the summary")
+    elif merge_item_rows or merge_science_rows:
         problems.append("merge summary missing")
     report = {
         "calibrations": calibrations,

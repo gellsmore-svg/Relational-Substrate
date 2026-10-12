@@ -57,7 +57,7 @@ Status:
 python -m rs_constraint_lab generation007 status --watch 5
 ```
 
-`status.json` is `constraint-lab/generated/generation-007/progress/status.json`. The ETA line is the ETA for the current plan. Adaptive calibration can add points after that plan.
+`status.json` is `constraint-lab/generated/generation-007/progress/status.json`. The supervisor writes it when it starts, before the first heartbeat interval, and rewrites it on every heartbeat. The ETA line is the ETA for the current plan. Adaptive calibration can add points after that plan.
 
 ## Background start and stop
 
