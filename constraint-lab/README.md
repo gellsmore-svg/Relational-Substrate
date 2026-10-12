@@ -108,6 +108,8 @@ python -m rs_constraint_lab generation008 atlas replay <episode-id> --root gener
 
 `scripts/start-generation-008.sh`, `scripts/watch-generation-008.sh`, and `scripts/stop-generation-008.sh` talk to that supervisor. The same three commands exist as `.ps1` files for Windows.
 
+Execution `provenance/executions/008-open-relational-exploration.md` closes prompt 008.
+
 ## Reading order
 
 1. [docs/research-charter.md](docs/research-charter.md)
