@@ -1,0 +1,593 @@
+{
+  "alphabet": "W4",
+  "attention": {
+    "S14": {
+      "CB": 4,
+      "CG": 2,
+      "CN": 1,
+      "EC": 4,
+      "RC": 1,
+      "RD": 2
+    },
+    "S15": {
+      "CB": 4,
+      "CG": 2,
+      "CN": 1,
+      "EC": 4,
+      "RC": 1,
+      "RD": 2
+    },
+    "S16": {
+      "CB": 4,
+      "CG": 3,
+      "CN": 3,
+      "EC": 5,
+      "RC": 2,
+      "RD": 3
+    },
+    "S17": {
+      "CB": 4,
+      "CG": 3,
+      "CN": 2,
+      "EC": 4,
+      "RC": 2,
+      "RD": 2
+    }
+  },
+  "batch_item_count": 120,
+  "batch_note": "episodes are shorter than the 30s batch floor; item count is capped at 120 so one watchdog still isolates a small set",
+  "checkpoints": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "contexts": [
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 0,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o00",
+      "members": [
+        0
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "star",
+      "start_state": 7
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 1,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o01",
+      "members": [
+        1,
+        2,
+        4
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "star",
+      "start_state": 71
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 3,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o02",
+      "members": [
+        3,
+        5,
+        6
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "star",
+      "start_state": 199
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 7,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o03",
+      "members": [
+        7
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "star",
+      "start_state": 455
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 8,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o04",
+      "members": [
+        8
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "star",
+      "start_state": 519
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 9,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o05",
+      "members": [
+        9,
+        10,
+        12
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "star",
+      "start_state": 583
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 11,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o06",
+      "members": [
+        11,
+        13,
+        14
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "star",
+      "start_state": 711
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 15,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o07",
+      "members": [
+        15
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "star",
+      "start_state": 967
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 0,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o00",
+      "members": [
+        0
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "path",
+      "start_state": 13
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 1,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o01",
+      "members": [
+        1,
+        2
+      ],
+      "orbit_size": 2,
+      "source_graph_class": "path",
+      "start_state": 77
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 3,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o02",
+      "members": [
+        3
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "path",
+      "start_state": 205
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 4,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o03",
+      "members": [
+        4,
+        8
+      ],
+      "orbit_size": 2,
+      "source_graph_class": "path",
+      "start_state": 269
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 5,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o04",
+      "members": [
+        5,
+        10
+      ],
+      "orbit_size": 2,
+      "source_graph_class": "path",
+      "start_state": 333
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 6,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o05",
+      "members": [
+        6,
+        9
+      ],
+      "orbit_size": 2,
+      "source_graph_class": "path",
+      "start_state": 397
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 7,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o06",
+      "members": [
+        7,
+        11
+      ],
+      "orbit_size": 2,
+      "source_graph_class": "path",
+      "start_state": 461
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 12,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o07",
+      "members": [
+        12
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "path",
+      "start_state": 781
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 13,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o08",
+      "members": [
+        13,
+        14
+      ],
+      "orbit_size": 2,
+      "source_graph_class": "path",
+      "start_state": 845
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 15,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o09",
+      "members": [
+        15
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "path",
+      "start_state": 973
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 0,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o00",
+      "members": [
+        0
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "triangle",
+      "start_state": 11
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 1,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o01",
+      "members": [
+        1
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "triangle",
+      "start_state": 75
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 2,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o02",
+      "members": [
+        2,
+        4,
+        8
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "triangle",
+      "start_state": 139
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 3,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o03",
+      "members": [
+        3,
+        5,
+        9
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "triangle",
+      "start_state": 203
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 6,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o04",
+      "members": [
+        6,
+        10,
+        12
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "triangle",
+      "start_state": 395
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 7,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o05",
+      "members": [
+        7,
+        11,
+        13
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "triangle",
+      "start_state": 459
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 14,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o06",
+      "members": [
+        14
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "triangle",
+      "start_state": 907
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 15,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o07",
+      "members": [
+        15
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "triangle",
+      "start_state": 971
+    }
+  ],
+  "decision": {
+    "chosen": [
+      "S14",
+      "S15",
+      "S16",
+      "S17"
+    ],
+    "deferred": [
+      "64 replicates of S08 star-o00",
+      "prohibit on the unconditional dissolve"
+    ],
+    "parent_result_commit": "7b7dc28b4631f1d2a675b7a43135da2d6d06ead4",
+    "parent_round_plan_commit": "509e80fbb5b472d8da61ba7ba85fcedba15939c1",
+    "why": "Place the two middle grades on the S01 rule, and test whether strong_favour reverses the unconditional dissolve and the off-edge conditional dissolve."
+  },
+  "experiment_id": "generation-008-open-relational-exploration",
+  "full_event_cap": 16384,
+  "horizon_note": "Horizon stays 512. The wall estimate scales the Round 0 per-episode benchmark by 1664 episodes. It was not chosen from route outcomes.",
+  "mode": "B",
+  "observables": [
+    "pair_class_sequence",
+    "edge_count_sequence",
+    "triad_count_sequence",
+    "visitation",
+    "transition_counts",
+    "residence",
+    "first_entry",
+    "source_returns",
+    "entropy",
+    "triad_only_fraction",
+    "routing",
+    "motifs_length_2_3_4",
+    "context_divergence",
+    "context_information",
+    "context_persistence"
+  ],
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": 4,
+    "O": 3,
+    "S": 0,
+    "grammar": "independent-hypergraph"
+  },
+  "operators": [
+    "weight_shift",
+    "condition_polarity_flip",
+    "structural_tp_neighbour",
+    "add_pp_companion",
+    "remove_rule"
+  ],
+  "pair_horizon": 512,
+  "plan_hash": "d5141d33f817357cf028ac97de8d7dad486113685f86a0c71734003cfef437a0",
+  "prohibit_in_round": false,
+  "replay_fraction": 0.1,
+  "replicates": 16,
+  "round_id": "round-002",
+  "round_limits": {
+    "max_rounds": 4,
+    "max_rules": 2,
+    "max_systems_per_adaptive_round": 4
+  },
+  "schema": "rs-constraint-lab.exploration-plan/v1",
+  "seed_fields": [
+    "experiment_id",
+    "round_id",
+    "system_id",
+    "source_graph_class",
+    "hidden_context_orbit_id",
+    "replicate_index"
+  ],
+  "seed_function": "sha256-u64-v1",
+  "source_graph_class_count": 3,
+  "source_summaries": {
+    "path": {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "orbit_count": 10
+    },
+    "star": {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "orbit_count": 8
+    },
+    "triangle": {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "orbit_count": 8
+    }
+  },
+  "systems": [
+    {
+      "expressions": [
+        "dissolve(0-1) | absent(0-1-2) => weak_suppress"
+      ],
+      "note": "middle grade on the S01 dissolve rule",
+      "operator": {
+        "grade": "weak_suppress",
+        "op": "weight_shift",
+        "rule_index": 0,
+        "system_id": "S14"
+      },
+      "parent_system_id": "S01",
+      "role": "perturbation",
+      "system_id": "S14"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) | absent(0-1-2) => weak_favour"
+      ],
+      "note": "middle grade on the S01 dissolve rule",
+      "operator": {
+        "grade": "weak_favour",
+        "op": "weight_shift",
+        "rule_index": 0,
+        "system_id": "S15"
+      },
+      "parent_system_id": "S01",
+      "role": "perturbation",
+      "system_id": "S15"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) => strong_favour"
+      ],
+      "note": "unconditional dissolve regraded to strong_favour",
+      "operator": {
+        "grade": "strong_favour",
+        "op": "weight_shift",
+        "rule_index": 0,
+        "system_id": "S16"
+      },
+      "parent_system_id": "S10",
+      "role": "perturbation",
+      "system_id": "S16"
+    },
+    {
+      "expressions": [
+        "dissolve(2-3) | present(0-1-2) => strong_favour"
+      ],
+      "note": "off-edge conditional dissolve regraded to strong_favour",
+      "operator": {
+        "grade": "strong_favour",
+        "op": "weight_shift",
+        "rule_index": 0,
+        "system_id": "S17"
+      },
+      "parent_system_id": "S11",
+      "role": "perturbation",
+      "system_id": "S17"
+    }
+  ],
+  "work_count": {
+    "batch_item_count": 120,
+    "benchmark_episode_microseconds": 66279,
+    "benchmark_replay_microseconds": 59554,
+    "benchmark_source": "round-000 measured S00/S01 sample, scaled linearly",
+    "compressed_bytes_per_benchmark_episode": 28670,
+    "episode_pair_horizon": 512,
+    "estimated_compressed_bytes": 47706880,
+    "estimated_event_records": 1465984,
+    "estimated_raw_bytes": 757980288,
+    "estimated_wall_seconds": 55,
+    "hidden_context_orbits": {
+      "path": 10,
+      "star": 8,
+      "triangle": 8
+    },
+    "new_systems": 4,
+    "raw_bytes_per_benchmark_episode": 455517,
+    "replicates_per_start": 16,
+    "source_graph_classes": 3,
+    "total_hidden_context_starts": 26,
+    "total_round_episodes": 1664,
+    "worst_case_full_events": 27262976
+  }
+}
