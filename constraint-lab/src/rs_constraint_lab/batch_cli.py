@@ -64,6 +64,8 @@ def main(argv: list[str]) -> int:
         return _generation_008(argv[1:])
     if argv[0] == "generation008a":
         return _generation_008a(argv[1:])
+    if argv[0] == "generation008b":
+        return _generation_008b(argv[1:])
     if argv[0] == "batch":
         return _batch(argv[1:])
     print(f"unknown command {argv[0]}", file=sys.stderr)
@@ -529,6 +531,156 @@ def _generation_008a(argv: list[str]) -> int:
         print(f"stop requested for {root}")
         return 0
     return 2
+
+
+def _default_generation_008b_root() -> Path:
+    return _lab_root() / "generated" / "generation-008b" / "round-b0"
+
+
+def _generation_008b(argv: list[str]) -> int:
+    if not argv:
+        print("usage: python -m rs_constraint_lab generation008b <command>", file=sys.stderr)
+        return 2
+    parser = argparse.ArgumentParser(prog="rs_constraint_lab generation008b")
+    parser.add_argument(
+        "command",
+        choices=["write-plan", "exact", "permute-initial", "permute-current", "assemble", "reproduce", "verify"],
+    )
+    parser.add_argument("--root", type=Path, default=None)
+    parser.add_argument("--plan", type=Path, default=None)
+    parser.add_argument("--output", type=Path, default=None)
+    parser.add_argument("--frozen-plan-commit", default=None)
+    parser.add_argument("--result-commit", default=None)
+    parser.add_argument("--repo", type=Path, default=None)
+    parser.add_argument("--relpath", default=None)
+    parser.add_argument("--system", default=None)
+    parser.add_argument("--source", default=None)
+    parser.add_argument("--allow-unpushed", action="store_true")
+    args = parser.parse_args(argv)
+    from rs_constraint_lab.explore08 import FrozenPlanError
+    from rs_constraint_lab.explore08a import ChronologyError, verify_plan_result_chronology
+    from rs_constraint_lab.explore08b import CalibrationError, load_a0_palette, reproduce_plugin_tables
+    from rs_constraint_lab.gen008b_exec import (
+        PARENT_TABLES_RELPATH,
+        PLAN_RELPATH,
+        SOURCES,
+        _index_tables,
+        _load_tables,
+        _system_row,
+        analyse_exact,
+        assemble_tables,
+        permute_current,
+        permute_initial,
+        prepare_b0_plan,
+        require_b0_execution,
+        write_payload,
+    )
+
+    root = args.root or _default_generation_008b_root()
+    repo = args.repo or _repo_root()
+    if args.command == "write-plan":
+        from rs_constraint_lab.durable import atomic_write_json
+
+        if args.output is None:
+            print("write-plan requires --output", file=sys.stderr)
+            return 2
+        plan = prepare_b0_plan()
+        atomic_write_json(args.output, plan)
+        print(json.dumps({"output": str(args.output), "plan_hash": plan["plan_hash"], "systems": len(plan["systems"])}, indent=2, sort_keys=True))
+        return 0
+    if args.command == "reproduce":
+        report = reproduce_plugin_tables(_load_tables())
+        print(
+            json.dumps(
+                {
+                    "cell_count": len(report["cells"]),
+                    "max_abs_gap": report["max_abs_gap"],
+                    "within_tolerance": report["within_tolerance"],
+                },
+                indent=2,
+                sort_keys=True,
+            )
+        )
+        return 0 if report["within_tolerance"] else 1
+    if args.command == "verify":
+        if args.frozen_plan_commit and args.result_commit:
+            relpath = args.relpath or PLAN_RELPATH
+            try:
+                report = verify_plan_result_chronology(repo, args.frozen_plan_commit, args.result_commit, relpath)
+            except ChronologyError as exc:
+                print(str(exc), file=sys.stderr)
+                return 1
+            print(json.dumps(report, indent=2, sort_keys=True))
+        missing = []
+        for row in load_a0_palette():
+            system_id = row["system_id"]
+            for kind in ("exact", "permute-initial"):
+                if not (root / kind / f"{system_id}.json").is_file():
+                    missing.append(f"{kind}/{system_id}.json")
+            for source in SOURCES:
+                if not (root / "permute-current" / f"{system_id}-{source}.json").is_file():
+                    missing.append(f"permute-current/{system_id}-{source}.json")
+        print(json.dumps({"complete": not missing, "missing": missing, "root": str(root)}, indent=2, sort_keys=True))
+        return 0 if not missing else 1
+
+    relpath = args.relpath or (args.plan.resolve().relative_to(repo.resolve()).as_posix() if args.plan else PLAN_RELPATH)
+    plan_path = args.plan or (repo / PLAN_RELPATH)
+    try:
+        plan = require_b0_execution(
+            repo,
+            args.frozen_plan_commit,
+            relpath,
+            disk_path=plan_path,
+            require_remote=not args.allow_unpushed,
+        )
+    except (FrozenPlanError, CalibrationError) as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
+    indexed = _index_tables(_load_tables())
+    try:
+        if args.command == "exact":
+            if not args.system:
+                print("exact requires --system", file=sys.stderr)
+                return 2
+            payload = analyse_exact(_system_row(plan, args.system), indexed)
+            path = root / "exact" / f"{args.system}.json"
+        elif args.command == "permute-initial":
+            if not args.system:
+                print("permute-initial requires --system", file=sys.stderr)
+                return 2
+            payload = permute_initial(_system_row(plan, args.system), indexed)
+            path = root / "permute-initial" / f"{args.system}.json"
+        elif args.command == "permute-current":
+            if not args.system or args.source not in SOURCES:
+                print("permute-current requires --system and --source star|path|triangle", file=sys.stderr)
+                return 2
+            payload = permute_current(_system_row(plan, args.system), indexed, args.source)
+            path = root / "permute-current" / f"{args.system}-{args.source}.json"
+        elif args.command == "assemble":
+            exact_payloads = []
+            initial_payloads = []
+            current_payloads = []
+            for row in plan["systems"]:
+                system_id = row["system_id"]
+                exact_payloads.append(json.loads((root / "exact" / f"{system_id}.json").read_text(encoding="utf-8")))
+                initial_payloads.append(json.loads((root / "permute-initial" / f"{system_id}.json").read_text(encoding="utf-8")))
+                for source in SOURCES:
+                    current_payloads.append(
+                        json.loads((root / "permute-current" / f"{system_id}-{source}.json").read_text(encoding="utf-8"))
+                    )
+            payload = assemble_tables(exact_payloads, initial_payloads, current_payloads, indexed)
+            payload["frozen_plan_commit"] = args.frozen_plan_commit
+            payload["parent_tables"] = PARENT_TABLES_RELPATH
+            payload["plan_hash"] = plan["plan_hash"]
+            path = args.output or (_lab_root() / "reports" / "generation-008b-round-b0-tables.json")
+        else:
+            return 2
+        written = write_payload(path, payload)
+    except (CalibrationError, FrozenPlanError, FileNotFoundError, KeyError) as exc:
+        print(str(exc), file=sys.stderr)
+        return 1
+    print(json.dumps({"bytes_sha256": written["payload_sha256"], "output": str(path), "system": args.system}, indent=2, sort_keys=True))
+    return 0
 
 
 def _atlas008(argv: list[str]) -> int:
