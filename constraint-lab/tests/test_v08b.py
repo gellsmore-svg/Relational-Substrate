@@ -389,6 +389,18 @@ def test_journey_without_a_result_is_skipped(tmp_path: Path) -> None:
         )
 
 
+def test_recorded_journeys_descend_from_their_frozen_plans() -> None:
+    expected = {
+        "constraint-lab/exploration/generation-008a/journey.jsonl": "61ed53075238284850e792aff5743f0a8a7b6695",
+        "constraint-lab/exploration/generation-008b/journey.jsonl": "466d54339738d315ed621ea4256a239cb026498a",
+    }
+    for relative, frozen in expected.items():
+        reports = verify_journey_chronology(REPO, REPO / relative)
+        assert reports
+        assert {row["frozen_plan_commit"] for row in reports} == {frozen}
+        assert all(row["result_commit"] for row in reports)
+
+
 def test_engine_language_stays_descriptive() -> None:
     forbidden = ("disprove rs", "confirm rs", "null hypothesis", "p_value", "route to star")
     for name in ("explore08b.py", "gen008b_exec.py"):
