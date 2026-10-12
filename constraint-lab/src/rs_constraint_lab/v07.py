@@ -739,7 +739,7 @@ def _boundary_of(grid, values, target: float) -> str | None:
     return None
 
 
-def calibrate_control(rule: Constraint, target_effects: dict, nominal: Fraction, book: EffectBook, tolerance: float, scale_floor: float) -> dict:
+def calibrate_control(rule: Constraint, target_effects: dict, nominal: Fraction, book: EffectBook, tolerance: float, scale_floor: float, stage: str = "all") -> dict:
     curve = book.curve(rule)
     scales = joint_scales(
         target_effects["path_to_matching"]["delta"],
@@ -866,6 +866,11 @@ def calibrate_control(rule: Constraint, target_effects: dict, nominal: Fraction,
             "only_exact_solution_is_zero": only_zero,
             "selection": None if selected is None else selected.get("selection", "closest_log_nominal"),
         }
+    if stage == "directions":
+        return {"directions": directions, "joint": None}
+    if stage != "all":
+        raise ValueError(f"unknown calibration stage {stage}")
+
     def evaluate_pair(multiplier: Fraction) -> tuple[float, float]:
         solved = book.evaluate(rule, multiplier)
         return (
@@ -1744,9 +1749,11 @@ def build_effect_plan(spec: dict, items: int, header: dict) -> dict:
 
 
 def execute_7_shard(task: dict) -> None:
-    from rs_constraint_lab.census import _finish_receipt, _require_version
-
-    _require_version(task)
+    del task
+    raise RuntimeError(
+        "generation 007 refuses a monolithic shard. "
+        "Use python -m rs_constraint_lab generation007 supervise"
+    )
     spec = dict(task["spec"])
     _require_v07_spec(spec)
     if task["identity"].get("calibration_version") != CALIBRATION_VERSION:

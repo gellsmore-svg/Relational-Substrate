@@ -338,9 +338,10 @@ def build_plan(spec: dict, shard_items: int | None = None) -> dict:
 
         return build_graded_plan(spec, items, header)
     if options["analysis"] == "n4-effect-matched-controls":
-        from rs_constraint_lab.v07 import build_effect_plan
-
-        return build_effect_plan(spec, items, header)
+        raise IncompatibleGeneration(
+            "generation 007 refuses a monolithic shard run. "
+            "Use python -m rs_constraint_lab generation007 plan"
+        )
     weights = _weights_of(spec)
     estimates = []
     shards = []
