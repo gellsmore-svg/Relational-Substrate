@@ -189,3 +189,15 @@ Exploration decisions happen between rounds. No stochastic trajectory is rewarde
 Open exploration still requires a frozen round plan, bounded work, deterministic seeds, complete event provenance, replay, durable outputs, explicit branch decisions, and separate observation and inference. The difference from Mode A is the question, not the engineering.
 
 A crisp distinction found here may later be isolated by a Mode A experiment on another branch. Generation 8 does not turn that isolation into an unbounded discriminating census inside this prompt. At most four rounds are executed: Round 0, Round 1, Round 2, and Round 3. The charter is `constraint-lab/exploration/generation-008/charter.md`.
+
+## Information calibration
+
+Whenever a descriptive information statistic is estimated from finite trajectories, first identify structural zero-information controls or exact-kernel comparators. Do not interpret the plug-in value directly when the estimator has a non-negligible finite-sample bias. Where the state space permits, prefer exact transition-law information to bias-corrected trajectory estimates.
+
+This applies to later Mode A work and to later Mode B work.
+
+A plug-in mutual information computed from a finite contingency table is one layer of the observation. A permutation of the labels, with the outcome marginals held fixed, estimates the finite-table bias of that same plug-in. An exact-kernel quantity, computed from the known transition law, is a third layer. The three layers answer different questions. A table names its layer.
+
+Structural zero-information controls are part of the model. A system whose pair-event law does not read the triad is a calibration instrument for any statistic that claims triad-context information on the pair-event clock. If that statistic is large on the control, it is describing the estimator before it is describing the dynamics. The control is not a null hypothesis, and the comparison is not a pass/fail test.
+
+Negative values of `observed plug-in − null mean` stay in the stored tables. They say the finite sample landed below the estimated null mean. Only an exact mutual information is mathematically non-negative. A float64 kernel result is a deterministic kernel result. It is not called a mathematical identity unless the arithmetic is exact.
