@@ -205,3 +205,50 @@ CI, IG, and PR stay. The action edge is still the isolated variable. The sample 
 Both control types stay, in the Pass 1 order: effect-matched erasure, then the adjacent face, then the disjoint face where v0.6 marks it live. The sample says erasure and pair-face are not interchangeable. Pair-face joint failure on these cells is a representability observation. It is not yet a reason to add a second lower-order parameter. That decision waits for the census and Pass 3.
 
 The full 28-cell set stays. No cell is dropped for cost, for a duplicated structure, or for a boundary solution. The prohibit anchor is not forced onto `m = 0`. No second passage, no simplicial semantics, and no richer control is started in this pass.
+
+## 007R Pass 1 — before the resumable executor
+
+Written after the aborted attempt and before the micro-batch supervisor. Pass 1 and Pass 2 above are unchanged. No composed margin is read in this section. Costs below are expectations.
+
+The scientific design stays the combined effect-matched design already selected. This pass asks how that design is allowed to run.
+
+### External requirement
+
+Prompt 007R requires that no expensive computation depend on one long-lived process, that the largest unit of work be a loss the laboratory is willing to repeat, and that another terminal be able to tell running, progressing, stalled, failed, stopped, complete, and safely resumable apart. A process that consumes CPU for hours without useful progress is a failed design.
+
+### Grok vector — execution architectures
+
+Assigned before the supervisor was written. Not averaged with the scientific vectors above.
+
+| Candidate | CI | CF | CB | IN | IG | CR | PR |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Resume the two-shard Generation 7 process | 4 | 4 | 1 | 2 | 4 | 3 | 1 |
+| Micro-batch supervisor over persisted multiplier evaluations | 5 | 4 | 5 | 4 | 5 | 4 | 5 |
+| Two-parameter lower-order control before the scalar census | 3 | 4 | 3 | 3 | 3 | 3 | 4 |
+
+### Disagreements with resuming the shard
+
+The shard runner isolates the same scientific objects, so CI and CF do not fall to the floor. CB is 1 because one shard of fourteen cells held calibration, composition, and robustness inside one process, and the forensic record shows that process still marked running many hours after it started, with no item file. IN is 2 because an observer could not tell a slow kernel from a hang. PR is 1 because a partial shard result has no per-evaluation identity and cannot be validated as a completed item. That architecture is rejected.
+
+The micro-batch design keeps the action fixed and the calibration rule unchanged, so CI stays 5. CF stays 4 for the same reason as the scientific Pass 1: an aggregate singleton match is not a state-shape match. CB moves to 5 because each worker owns one batch with a 120-second watchdog, and a batch is sized from a measurement rather than from a cell count. IN is 4 rather than 5 because adaptive refinement means the final number of evaluations is not known at the start; the status line has to say "current plan" or it will overclaim. IG stays 5. CR stays 4 because forward and reverse multipliers may still differ. PR is 5 when item hashes, receipts, and the prompt identity are on disk before the census.
+
+A two-parameter control is not started in this pass. The scalar census has not been completed under a trustworthy executor. Opening it now would change the control before the representability failure is measured.
+
+### Execution-health expectation
+
+These scores are operational, not scientific, and they are not summed.
+
+```text
+B batch boundedness        5
+O observability            5
+R resumability             5
+F fault isolation          5
+D durability               5
+T token efficiency         4
+```
+
+T is 4 because status and the tail of the progress log are concise, while a later report still has to read the merged summary. O, R, and F below 4 would reject the executor even if the arithmetic succeeded.
+
+### What this pass does not do
+
+It does not drop a control, a cell, or a passage direction. It does not import the forensic shard. It does not treat the in-process Pass 2 sample as a generation result. That sample remains a preflight note. The batch measurement and the census still have to be produced by the new executor.

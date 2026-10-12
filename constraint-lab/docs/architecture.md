@@ -60,6 +60,14 @@ From engine 0.2 the executed family identifiers are full SHA-256 digests of toke
 
 The scientific unit of work must be smaller than the lifetime of the machine or process executing it. Once a valid research shard has been completed, an unrelated crash should never require it to be recomputed.
 
+Three further rules are permanent:
+
+- No expensive computation may depend on one long-lived process completing successfully.
+- The largest unit of work is determined by how much completed computation we are willing to lose in a crash or hang.
+- Every expensive experiment must expose durable progress sufficient for an observer in another terminal to distinguish running, progressing, stalled, failed, stopped, complete, and safely resumable.
+
+A process that consumes CPU for hours while showing no useful progress is a failed design even if it might eventually finish. Generation 7 and later adaptive experiments use the micro-batch supervisor (`python -m rs_constraint_lab generation007`). They do not put a root search inside one shard.
+
 The operational form is: prefer bounded, independently reproducible, idempotent units of work with durable checkpoints, so completed progress is monotonic and interruption is cheap. No expensive research result may depend on one long-lived process completing successfully.
 
 A generation is a cell, then a cardinality, then a deterministic shard, then a range of canonical constraint-set work items. The shard id is a hash of the engine semantic identity, the specification hash, the cell coordinate, the cardinality, the half-open combination range, and the analysis mode. It does not include the clock, the process id, or the attempt number. The git commit is provenance on the run header only.

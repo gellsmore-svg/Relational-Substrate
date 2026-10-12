@@ -65,6 +65,14 @@ EXECUTION_PRINCIPLE = (
     "interruption is cheap."
 )
 
+# Permanent bounds added after the aborted Generation 7 attempt. They do not
+# replace EXECUTION_PRINCIPLE and they are not part of a shard id.
+EXECUTION_BOUNDS = (
+    "No expensive computation may depend on one long-lived process completing successfully.",
+    "The largest unit of work is determined by how much completed computation we are willing to lose in a crash or hang.",
+    "Every expensive experiment must expose durable progress sufficient for an observer in another terminal to distinguish running, progressing, stalled, failed, stopped, complete, and safely resumable.",
+)
+
 
 def engine_version_for(semantics: str) -> str:
     if semantics == "hypergraph":

@@ -2,6 +2,8 @@
 
 The scientific unit of work must be smaller than the lifetime of the machine or process executing it. Once a valid research shard has been completed, an unrelated crash should never require it to be recomputed.
 
+No expensive computation may depend on one long-lived process completing successfully. The largest unit of work is the amount of completed computation we are willing to lose in a crash or hang. Every expensive experiment must expose durable progress that lets an observer in another terminal distinguish running, progressing, stalled, failed, stopped, complete, and safely resumable. A process that consumes CPU for hours without useful progress is a failed design.
+
 ## Item budget
 
 Measured on this development machine on 2026-10-03, one worker, with `OMP_NUM_THREADS`, `OPENBLAS_NUM_THREADS`, and `MKL_NUM_THREADS` set to 1.
