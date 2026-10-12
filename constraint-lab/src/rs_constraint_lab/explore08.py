@@ -17,6 +17,7 @@ import platform
 import random
 import re
 from collections import Counter
+from collections.abc import Iterable, Iterator
 from fractions import Fraction
 from pathlib import Path
 
@@ -1278,6 +1279,28 @@ def atlas_from_summaries(rows: list[dict], sources: dict[str, dict]) -> dict:
                     }
                 )
     motifs, motifs_omitted = _motifs(enriched)
+    occupancy = {}
+    terminations: dict[str, dict[str, int]] = {}
+    for system_id in systems:
+        system_rows = [row for row in enriched if row["system_id"] == system_id]
+        counts = [0] * 11
+        triad_sum = 0.0
+        triad_n = 0
+        reasons: dict[str, int] = {}
+        for row in system_rows:
+            for index, count in enumerate(row.get("pair_class_occupancy") or []):
+                counts[index] += int(count)
+            if row.get("triad_only_fraction") is not None:
+                triad_sum += float(row["triad_only_fraction"])
+                triad_n += 1
+            reason = str(row.get("termination_reason"))
+            reasons[reason] = reasons.get(reason, 0) + 1
+        occupancy[system_id] = {
+            "counts": counts,
+            "names": list(CLASS_NAMES),
+            "triad_only_fraction_mean": (triad_sum / triad_n) if triad_n else None,
+        }
+        terminations[system_id] = reasons
     return {
         "context_divergences": divergences,
         "context_information": information,
@@ -1306,7 +1329,10 @@ def atlas_from_summaries(rows: list[dict], sources: dict[str, dict]) -> dict:
         "motif_clock": "pair_class_change",
         "motifs": motifs,
         "motifs_omitted": motifs_omitted,
+        "occupancy": occupancy,
+        "representatives": representative_episodes(enriched),
         "residence": residence,
+        "terminations": terminations,
         "routing": routing,
         "transition_matrices": matrices,
     }
@@ -1452,9 +1478,31 @@ def write_stream(path: Path, payload: bytes) -> str:
     return sha256_bytes(raw)
 
 
-def read_stream(path: Path) -> list[dict]:
+def write_jsonl_gzip(path: Path, lines: Iterable[str]) -> int:
+    """Write JSONL into gzip with mtime 0. The iterator is consumed once."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    count = 0
+    with temporary.open("wb") as raw:
+        with gzip.GzipFile(filename="", mode="wb", fileobj=raw, mtime=0) as handle:
+            for line in lines:
+                if not line.endswith("\n"):
+                    line = line + "\n"
+                handle.write(line.encode("utf-8"))
+                count += 1
+    temporary.replace(path)
+    return count
+
+
+def iter_jsonl_gzip(path: Path) -> Iterator[dict]:
     with gzip.open(path, "rt", encoding="utf-8") as handle:
-        return [json.loads(line) for line in handle if line.strip()]
+        for line in handle:
+            if line.strip():
+                yield json.loads(line)
+
+
+def read_stream(path: Path) -> list[dict]:
+    return list(iter_jsonl_gzip(path))
 
 
 def inspect_lines(events: list[dict], limit: int = 40) -> list[str]:
@@ -1471,7 +1519,7 @@ def inspect_lines(events: list[dict], limit: int = 40) -> list[str]:
     return lines
 
 
-def query_transitions(markers: list[dict], *, source_class: str | None = None, target_class: str | None = None, orbit_id: str | None = None, system_id: str | None = None, triad_count: int | None = None, motif: list[str] | None = None, episodes: list[dict] | None = None, limit: int = 50) -> list[dict]:
+def query_transitions(markers: Iterable[dict], *, source_class: str | None = None, target_class: str | None = None, orbit_id: str | None = None, system_id: str | None = None, triad_count: int | None = None, motif: list[str] | None = None, episodes: list[dict] | None = None, limit: int = 50) -> list[dict]:
     """Filter transition markers. A class name filters the pair class.
 
     A source key such as ``path`` filters the episode's source graph.

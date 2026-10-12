@@ -33,6 +33,7 @@ from rs_constraint_lab.explore08 import (
     episode_id_for,
     episode_row,
     inspect_lines,
+    iter_jsonl_gzip,
     plan_hash,
     query_transitions,
     read_stream,
@@ -41,8 +42,13 @@ from rs_constraint_lab.explore08 import (
     require_frozen_plan,
     run_episode,
     select_replay_ids,
+    write_jsonl_gzip,
     write_stream,
 )
+
+# These summary fields stay on the item files. The atlas does not read them,
+# and holding one copy per episode exceeds a comfortable merge footprint.
+_ATLAS_OMIT = frozenset({"edge_count_sequence", "markers", "triad_count_sequence"})
 from rs_constraint_lab.supervisor import ensure_planned
 from rs_constraint_lab.workstore import (
     Layout,
@@ -601,33 +607,59 @@ def merge_items(root: Path) -> dict:
     listed = []
     replay_exact = 0
     replay_mismatch = 0
-    for record in load_work_items(layout):
-        if state.get(record["item_id"], {}).get("status") != "complete":
-            continue
-        stored = read_valid_item(layout, record["item_id"], manifest["spec_hash"])
-        if stored is None:
-            continue
-        listed.append({"item_id": record["item_id"], "result_hash": stored["result_hash"]})
-        atomic_write_json(layout.merge() / "items" / f"{record['item_id']}.json", stored)
-        if record["kind"] == "episode":
-            rows.append(stored["result"]["summary"])
-        elif record["kind"] == "replay":
-            if stored["result"].get("verification") == "exact":
-                replay_exact += 1
-            else:
-                replay_mismatch += 1
+    index = layout.root / "index"
+    index.mkdir(parents=True, exist_ok=True)
+    run_lines: list[str] = []
+    marker_count = 0
+
+    def marker_lines():
+        nonlocal marker_count, replay_exact, replay_mismatch
+        seen = 0
+        for record in load_work_items(layout):
+            if state.get(record["item_id"], {}).get("status") != "complete":
+                continue
+            stored = read_valid_item(layout, record["item_id"], manifest["spec_hash"])
+            if stored is None:
+                continue
+            listed.append({"item_id": record["item_id"], "result_hash": stored["result_hash"]})
+            atomic_write_json(layout.merge() / "items" / f"{record['item_id']}.json", stored)
+            seen += 1
+            if seen % 400 == 0:
+                log_progress(layout, f"MERGE scanned={seen}")
+            if record["kind"] == "episode":
+                summary = stored["result"]["summary"]
+                for marker in summary.get("markers") or []:
+                    marker_count += 1
+                    yield json.dumps(marker, sort_keys=True)
+                run_lines.append(json.dumps(
+                    {
+                        "class_runs": summary["class_runs"],
+                        "episode_id": summary["episode_id"],
+                        "hidden_context_orbit_id": summary["hidden_context_orbit_id"],
+                        "initial_source_residence": summary["initial_source_residence"],
+                        "source_graph_class": summary["source_graph_class"],
+                        "source_returns": summary["source_returns"],
+                        "system_id": summary["system_id"],
+                    },
+                    sort_keys=True,
+                ))
+                rows.append({key: value for key, value in summary.items() if key not in _ATLAS_OMIT})
+            elif record["kind"] == "replay":
+                if stored["result"].get("verification") == "exact":
+                    replay_exact += 1
+                else:
+                    replay_mismatch += 1
+            del stored
+
+    written = write_jsonl_gzip(index / "transitions.jsonl.gz", marker_lines())
+    if written != marker_count:
+        raise RuntimeError("transition index line count drifted")
+    write_jsonl_gzip(index / "class-runs.jsonl.gz", run_lines)
     if replay_mismatch:
         raise RuntimeError("replay mismatches are present; scientific merge is refused")
     sources = enumerate_hidden_contexts()
     atlas = atlas_from_summaries(rows, sources) if rows else {"episodes": 0}
     atomic_write_json(layout.merge() / "atlas.json", atlas)
-    markers = []
-    for row in rows:
-        markers.extend(row.get("markers") or [])
-    index = layout.root / "index"
-    index.mkdir(parents=True, exist_ok=True)
-    payload = "".join(json.dumps(marker, sort_keys=True) + "\n" for marker in markers).encode("utf-8")
-    write_stream(index / "transitions.jsonl.gz", payload)
     summary = {
         "episodes": len(rows),
         "experiment_id": plan["experiment_id"],
@@ -638,10 +670,10 @@ def merge_items(root: Path) -> dict:
         "replay_mismatch": replay_mismatch,
         "round_id": plan["round_id"],
         "rows": [],
-        "transition_markers": len(markers),
+        "transition_markers": marker_count,
     }
     atomic_write_json(layout.merge() / "summary.json", summary)
-    log_progress(layout, f"MERGE episodes={len(rows)} replay_exact={replay_exact} markers={len(markers)}")
+    log_progress(layout, f"MERGE episodes={len(rows)} replay_exact={replay_exact} markers={marker_count}")
     return summary
 
 
@@ -865,9 +897,11 @@ def transitions_view(
     path = layout.root / "index" / "transitions.jsonl.gz"
     if not path.exists():
         raise FileNotFoundError(path)
-    markers = read_stream(path)
     episodes = None
-    if motif:
+    runs_path = layout.root / "index" / "class-runs.jsonl.gz"
+    if motif and runs_path.exists():
+        episodes = list(iter_jsonl_gzip(runs_path))
+    elif motif:
         episodes = []
         manifest = read_json(layout.manifest_path())
         for record in load_work_items(layout):
@@ -877,7 +911,7 @@ def transitions_view(
             if stored is not None:
                 episodes.append(stored["result"]["summary"])
     chosen = query_transitions(
-        markers,
+        iter_jsonl_gzip(path),
         source_class=source_class,
         target_class=target_class,
         orbit_id=orbit_id,
