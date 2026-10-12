@@ -252,3 +252,109 @@ T is 4 because status and the tail of the progress log are concise, while a late
 ### What this pass does not do
 
 It does not drop a control, a cell, or a passage direction. It does not import the forensic shard. It does not treat the in-process Pass 2 sample as a generation result. That sample remains a preflight note. The batch measurement and the census still have to be produced by the new executor.
+
+## 007R Pass 2 — after the batch measurement and the smoke
+
+Written after the measured batch policy and the smoke run, and before the census margins were read. Pass 1, the scientific Pass 2, and 007R Pass 1 are unchanged. No composed census margin is an input to this section.
+
+### What was measured
+
+The batch count is `floor(45 / p90)`, reduced while `count * p90 > 60` or `count * max > 100`, with the watchdog left at 120 seconds. On this machine, with numeric threads pinned to 1:
+
+```text
+multiplier            p90 0.315s    142 items
+target singleton      p90 0.307s    146 items
+target composition    p90 0.533s     84 items
+control composition   p90 0.545s     82 items
+```
+
+The smoke supervisor started in its own session, pid 35071, at `2026-10-12T08:51:31Z`, and reached `COMPLETE` at `08:51:48Z`. The plan opened at 72 items and closed at 76. Five receipts. The slowest batch was 68 items in 13.386 seconds. Timeouts, splits, retries, and quarantines were 0. Both calibrations are `smoke_capped`. The smoke merge, checked at close-out, has `used_as_matched` false on every strategy. The joint text `m = 1` is the cap marker. Smoke verify `--require-complete` accepted 76 items and 5 receipts.
+
+The platform fault tests had already passed in the suite at the executor commit: partial writes, reuse, receipts, process-tree kill, batch split, quarantine, killed-worker reschedule, heartbeat, status before the first interval, status watch, graceful stop, duplicate-supervisor refusal, stale-lock recovery, restartable merge, and a deliberate missing item.
+
+### Grok vector
+
+The micro-batch design, scored again after those measurements. Not averaged with the scientific vectors.
+
+```text
+CI 5, CF 4, CB 5, IN 4, IG 5, CR 4, PR 5
+```
+
+No coordinate moves. CB stays 5 because the measured batches sit inside a minute and the smoke's slowest batch was 13.4 seconds, with the 120-second watchdog unused. IN stays 4 because the smoke plan grew from 72 to 76, so a status line during adaptive work has to say "current plan". CF stays 4 because the smoke did not turn an aggregate evaluation into a state-shape result, and the cap marker is not a match. CR stays 4 because forward and reverse multipliers have not yet been compared on the census. PR stays 5 because the smoke items, receipts, and verify report are on disk.
+
+The execution-health expectation from 007R Pass 1 is not re-scored here. The census had not run. A process that finishes the smoke and then hides the census inside one foreground command would drop O and T. The census is required to start detached.
+
+### Decision
+
+Run the 28-cell census through the detached supervisor. Keep both control types. Keep both directions. Do not open a two-parameter control. Do not import the forensic shard. Do not treat the smoke `m = 1` texts as matches. Do not retune the `1e-8` floors. The in-process Pass 2 sample stays a preflight note.
+
+## 007R Pass 3 — after the primary census
+
+Written after the detached census reached `COMPLETE`, the merge wrote 28 rows, and verify accepted 3,880 items, 238 receipts, and 104 converged calibrations. The report is `reports/generation-007-effect-matched-controls.md`. No earlier pass is edited. The floors, the grid, and the Pass 1 scores are not retuned.
+
+### What the census changed in the picture
+
+Condition-erased controls match all 28 cells in each direction and jointly. Pair-face controls match each named direction and miss the joint vector on all 42 problems, with distances from about 1.28 to 1.34. One-direction erasure margins `M_I` and `M_G` are negative on all 24 finite cells. The joint erasure match keeps that sign on 16 of 24 and reverses `M_I` on 8, because the joint root is about `m = 1.102` where the one-direction roots are about `m = 0.462`. All 48 finite erasure joint state-shape reports are poorly state-shape matched. Target `delta_S` remains, and the controls stay triad-flat. `m = 0` is not selected. Recalibration at `rho3 = 2` can flip the prohibit sign; the held primary multiplier does not.
+
+### Grok vector
+
+```text
+CI 5, CF 4, CB 5, IN 4, IG 5, CR 4, PR 5
+```
+
+No coordinate moves. The reasons are now measured.
+
+CI stays 5. The action edge is still the isolated variable. Rho robustness does not add a second action.
+
+CF stays 4. Erasure can match the aggregate singleton, including jointly, and the statewise residual is still mixed. Median `max_abs` on the finite joint reports is about 0.011, and the largest is about 0.039. Pair-face is not a fair two-direction control: using its one-direction margins as a joint comparison would drop CF further, and the census does not do that.
+
+CB stays 5. The slowest batch was 27.5 seconds. The watchdog did not fire. The closed plan is 3,880 items, of which 3,662 were requested after the initial 218.
+
+IN stays 4. The final count is now known, which removes the execution-time reason for this score. The scientific reason remains. Sixteen erasure curves in each direction have two roots, and the sign of `M_I` on eight finite cells depends on which root the strategy selects. A single quoted multiplier would overclaim.
+
+IG stays 5. The census separates scalar representability from composition magnitude, and it separates both from selectivity and from state shape.
+
+CR stays 4. Erasure forward and reverse roots agree to a relative gap of about `3e-6`. Pair-face ratios run from about 0.114 to 1.34. The joint selector and the one-direction selector disagree on the sign of eight finite erasure cells. That disagreement is recorded. It is not removed.
+
+PR stays 5. Item hashes, receipts, the spec hash, and verify are on disk. The forensic shard stayed out.
+
+### Execution-health vector, scored from the run
+
+```text
+B batch boundedness        5
+O observability            5
+R resumability             5
+F fault isolation          5
+D durability               5
+T token efficiency         4
+```
+
+These are not summed and not averaged into the design vector. R is the fault-test result. The census operational block records `resume_events` 0. T stays 4 because the report reads the merged summary. O, R, and F are all above the rejection line.
+
+### What this pass does not do
+
+It does not drop the eight sign-flip cells. It does not prefer the strategy with the larger higher-order margin. It does not start 007B. It does not schedule `W3` or `W16`. It does not move the `1e-8` floors.
+
+## 007R Pass 4 — next step
+
+Written after Pass 3. The question is which single next experiment the census justifies. None of these candidates is run in this branch.
+
+### Candidates
+
+| Candidate | CI | CF | CB | IN | IG | CR | PR |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Stop, and leave the pair-face joint gap untested | 5 | 4 | 5 | 4 | 2 | 4 | 5 |
+| 007B, a frozen two-parameter pair-face control, scored and counted before any run, executed later by this supervisor | 4 | 4 | 4 | 3 | 5 | 3 | 4 |
+| Graph-class routing now, among the 3-edge star, the triangle plus an isolated vertex, and the 3-edge path | 2 | 3 | 3 | 3 | 3 | 2 | 4 |
+
+### Why these coordinates
+
+Stopping keeps the erasure result readable and adds no new confound. IG is 2 because the census isolated a concrete representability failure and then declined to test the obvious next control. That is a completed finding only if the face question is closed. It is not closed.
+
+007B aims at the failure the census measured: 42 pair-face joints, one valley each, distance about 1.28 to 1.34. CI is 4 rather than 5 because a second free weight can become a second exposure unless the parameterisation is frozen before the run and the erasure scalar remains the comparison. IN is 3 because two parameters are harder to read than one multiplier. CR is 3 because a richer control can fit more, and a fit is not by itself evidence of higher-order magnitude. PR is 4 until the control, the work count, and the spec hash exist before execution. CB is 4 because the same supervisor can bound the run, and the work count is still uncalculated. IG is 5 because this is the gap in hand.
+
+Graph-class routing now changes the graph while the face control is still a one-direction object and while the erasure magnitude sign still depends on the selector. CI is 2 and CR is 2 for that reason. The fork stays in the report as a later experiment. It is not the smallest next step.
+
+### Decision
+
+The next experiment is 007B. It is not started. Before any run the laboratory has to name the two parameters, freeze them in a specification, score that specification against the erasure scalar, and calculate the item count under the same batch policy. The scientific question it is allowed to answer is whether a second lower-order parameter can represent the pair-face singleton in both directions, and what `M_I` and `M_G` do after that representation. It is not allowed to replace the erasure result, and it is not allowed to run as one opaque process.
