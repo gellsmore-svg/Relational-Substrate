@@ -90,6 +90,24 @@ rs-lab run experiments/specs/generation-002.json \
 
 Those commands cite engine `0.2.0`. They write new directories. The `N = 3` family index and kernel index of Generation 1b are above the 2 MB commit limit and stay under `generated/`.
 
+## Generation 8
+
+Generation 8 is Mode B, open relational exploration. A round executes only after its plan file is committed and the commit is on a remote-tracking branch. `write-plan` records the palette, context orbits, seed schedule, horizon, and work count. It does not run the atlas.
+
+```bash
+python -m rs_constraint_lab generation008 write-plan \
+  --output exploration/generation-008/round-000-plan.json
+python -m rs_constraint_lab generation008 plan \
+  --plan exploration/generation-008/round-000-plan.json \
+  --frozen-plan-commit <sha> \
+  --root generated/generation-008/round-000
+python -m rs_constraint_lab generation008 status --root generated/generation-008/round-000
+python -m rs_constraint_lab generation008 atlas summary --root generated/generation-008/round-000
+python -m rs_constraint_lab generation008 atlas replay <episode-id> --root generated/generation-008/round-000
+```
+
+`scripts/start-generation-008.sh`, `scripts/watch-generation-008.sh`, and `scripts/stop-generation-008.sh` talk to that supervisor. The same three commands exist as `.ps1` files for Windows.
+
 ## Reading order
 
 1. [docs/research-charter.md](docs/research-charter.md)

@@ -552,7 +552,7 @@ def build_status(layout: Layout, *, supervisor_pid: int | None, phase: str, stat
     watchdog_seconds = manifest.get("watchdog_seconds", DEFAULT_WATCHDOG)
     running_rows = _running_rows(running, current, float(watchdog_seconds))
     primary = running_rows[0] if running_rows else None
-    return {
+    payload = {
         "cache_hits": extra.get("cache_hits", 0),
         "cache_misses": extra.get("cache_misses", 0),
         "calibrations_complete": extra.get("calibrations_complete", 0),
@@ -587,6 +587,20 @@ def build_status(layout: Layout, *, supervisor_pid: int | None, phase: str, stat
         "timed_out_batches": sum(1 for row in receipts if row.get("timed_out")),
         "watchdog_seconds": watchdog_seconds,
     }
+    for key in (
+        "disk_used_bytes",
+        "episodes_complete",
+        "episodes_planned",
+        "events_written",
+        "generation",
+        "last_completed_episode",
+        "round_id",
+        "systems_complete",
+        "systems_planned",
+    ):
+        if key in extra:
+            payload[key] = extra[key]
+    return payload
 
 
 def utc_now_plus(seconds: float) -> str:
@@ -630,6 +644,21 @@ def format_status(payload: dict, *, last_progress: str | None = None) -> str:
         f"Last progress: {last_progress or '-'}",
         f"Last error: {payload.get('last_error') or '-'}",
     ]
+    if payload.get("round_id"):
+        disk = payload.get("disk_used_bytes")
+        disk_text = "unknown" if disk is None else f"{disk} bytes"
+        lines.extend(
+            [
+                f"Round: {payload.get('round_id')}",
+                f"Systems: {payload.get('systems_complete')} / {payload.get('systems_planned')} complete",
+                f"Episodes: {payload.get('episodes_complete')} / {payload.get('episodes_planned')} complete",
+                f"Events written: {payload.get('events_written')}",
+                f"Recent episode rate: {payload.get('recent_items_per_second')} items/s",
+                f"Disk used: {disk_text}",
+                f"ETA current round: {eta_text}",
+                f"Last completed episode: {payload.get('last_completed_episode') or '-'}",
+            ]
+        )
     return "\n".join(lines)
 
 

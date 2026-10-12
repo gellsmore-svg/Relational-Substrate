@@ -38,6 +38,14 @@ def _default_generation_b_root() -> Path:
     return _lab_root() / "generated" / "generation-007b"
 
 
+def _default_generation_008_root() -> Path:
+    return _lab_root() / "generated" / "generation-008" / "round-000"
+
+
+def _repo_root() -> Path:
+    return _lab_root().parent
+
+
 def main(argv: list[str]) -> int:
     if not argv:
         print("usage: python -m rs_constraint_lab generation007 <command>", file=sys.stderr)
@@ -48,6 +56,8 @@ def main(argv: list[str]) -> int:
         return _generation(argv[1:])
     if argv[0] == "generation007b":
         return _generation_b(argv[1:])
+    if argv[0] == "generation008":
+        return _generation_008(argv[1:])
     if argv[0] == "batch":
         return _batch(argv[1:])
     print(f"unknown command {argv[0]}", file=sys.stderr)
@@ -248,6 +258,177 @@ def _generation_b(argv: list[str]) -> int:
         print(f"stop requested for {root}")
         return 0
     return 2
+
+
+def _generation_008(argv: list[str]) -> int:
+    if not argv:
+        print("usage: python -m rs_constraint_lab generation008 <command>", file=sys.stderr)
+        return 2
+    if argv[0] == "atlas":
+        return _atlas008(argv[1:])
+    if argv[0] == "transitions":
+        return _transitions008(argv[1:])
+    parser = argparse.ArgumentParser(prog="rs_constraint_lab generation008")
+    parser.add_argument(
+        "command",
+        choices=[
+            "benchmark",
+            "write-plan",
+            "plan",
+            "run-next",
+            "run-batches",
+            "supervise",
+            "start",
+            "restart",
+            "status",
+            "verify",
+            "merge",
+            "retry",
+            "stop",
+        ],
+    )
+    parser.add_argument("--root", type=Path, default=None)
+    parser.add_argument("--plan", type=Path, default=None)
+    parser.add_argument("--output", type=Path, default=None)
+    parser.add_argument("--frozen-plan-commit", default=None)
+    parser.add_argument("--repo", type=Path, default=None)
+    parser.add_argument("--relpath", default=None)
+    parser.add_argument("--horizon", type=int, default=None)
+    parser.add_argument("--watch", type=float, default=None)
+    parser.add_argument("--max-snapshots", type=int, default=None)
+    parser.add_argument("--count", type=int, default=5)
+    parser.add_argument("--max-wall", type=float, default=60.0)
+    parser.add_argument("--workers", type=int, default=2)
+    parser.add_argument("--require-complete", action="store_true")
+    args = parser.parse_args(argv)
+    root = args.root or _default_generation_008_root()
+    if args.command == "benchmark":
+        from rs_constraint_lab.gen008_exec import benchmark_cost, choose_horizon
+        from rs_constraint_lab.explore08 import REPLICATES, build_round0_systems, enumerate_hidden_contexts
+
+        sample = benchmark_cost(horizon=args.horizon or 512)
+        sources = enumerate_hidden_contexts()
+        episodes = len(build_round0_systems()) * sum(row["orbit_count"] for row in sources.values()) * REPLICATES
+        decision = choose_horizon(sample, episodes)
+        print(json.dumps({"decision": decision, "episodes": episodes, "sample": sample}, indent=2, sort_keys=True))
+        return 0 if not decision["refused"] else 2
+    if args.command == "write-plan":
+        from rs_constraint_lab.durable import atomic_write_json
+        from rs_constraint_lab.gen008_exec import prepare_round0_plan
+
+        if args.output is None:
+            print("write-plan requires --output", file=sys.stderr)
+            return 2
+        prepared = prepare_round0_plan(horizon=args.horizon)
+        if prepared["plan"] is None:
+            print(json.dumps({"decision": prepared["decision"], "refused": True}, indent=2, sort_keys=True))
+            return 2
+        atomic_write_json(args.output, prepared["plan"])
+        work = prepared["plan"]["work_count"]
+        print(json.dumps(
+            {
+                "episodes": work["total_round_episodes"],
+                "output": str(args.output),
+                "pair_horizon": prepared["plan"]["pair_horizon"],
+                "plan_hash": prepared["plan"]["plan_hash"],
+            },
+            indent=2,
+            sort_keys=True,
+        ))
+        return 0
+    if args.command == "plan":
+        from rs_constraint_lab.gen008_exec import install_plan
+
+        if args.plan is None or not args.frozen_plan_commit or args.root is None:
+            print("plan requires --plan, --frozen-plan-commit, and --root", file=sys.stderr)
+            return 2
+        repo = args.repo or _repo_root()
+        relpath = args.relpath or str(args.plan.resolve().relative_to(repo.resolve()))
+        try:
+            summary = install_plan(args.root, args.plan, args.frozen_plan_commit, repo, relpath)
+        except Exception as exc:
+            print(str(exc), file=sys.stderr)
+            return 2
+        print(json.dumps(summary, indent=2, sort_keys=True))
+        return 0
+    if args.command == "run-next":
+        return _supervise(root, max_batches=1, max_wall=args.max_wall, workers=args.workers)
+    if args.command == "run-batches":
+        return _supervise(root, max_batches=args.count, max_wall=None, workers=args.workers)
+    if args.command == "supervise":
+        return _supervise(root, max_batches=None, max_wall=None, workers=args.workers)
+    if args.command in {"start", "restart"}:
+        return _start(root, workers=args.workers, command="generation008")
+    if args.command == "status":
+        if args.watch is None:
+            print(status_text(root))
+            return 0
+        return watch_status(root, args.watch, args.max_snapshots)
+    if args.command == "verify":
+        from rs_constraint_lab.gen008_exec import verify_generation
+
+        report = verify_generation(root, require_complete=args.require_complete)
+        print(json.dumps(report, indent=2, sort_keys=True))
+        return 0 if report["ok"] else 1
+    if args.command == "merge":
+        summary = merge_root(root)
+        print(json.dumps({"episodes": summary.get("episodes"), "replay_exact": summary.get("replay_exact")}, indent=2, sort_keys=True))
+        return 0
+    if args.command == "retry":
+        return _retry(root)
+    if args.command == "stop":
+        request_stop(root)
+        print(f"stop requested for {root}")
+        return 0
+    return 2
+
+
+def _atlas008(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(prog="rs_constraint_lab generation008 atlas")
+    parser.add_argument("view", choices=["summary", "routes", "contexts", "motifs", "episode", "replay", "compare"])
+    parser.add_argument("selectors", nargs="*")
+    parser.add_argument("--root", type=Path, default=None)
+    parser.add_argument("--limit", type=int, default=20)
+    args = parser.parse_args(argv)
+    from rs_constraint_lab.gen008_exec import atlas_view
+
+    try:
+        print(atlas_view(args.root or _default_generation_008_root(), args.view, args.selectors, limit=args.limit))
+    except (FileNotFoundError, KeyError, ValueError) as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
+    return 0
+
+
+def _transitions008(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(prog="rs_constraint_lab generation008 transitions")
+    parser.add_argument("--root", type=Path, default=None)
+    parser.add_argument("--source", default=None)
+    parser.add_argument("--target", default=None)
+    parser.add_argument("--orbit", default=None)
+    parser.add_argument("--system", default=None)
+    parser.add_argument("--triad-count", type=int, default=None)
+    parser.add_argument("--motif", default=None)
+    parser.add_argument("--limit", type=int, default=50)
+    args = parser.parse_args(argv)
+    from rs_constraint_lab.gen008_exec import transitions_view
+
+    motif = [part for part in args.motif.split(",") if part] if args.motif else None
+    try:
+        print(transitions_view(
+            args.root or _default_generation_008_root(),
+            source_class=args.source,
+            target_class=args.target,
+            orbit_id=args.orbit,
+            system_id=args.system,
+            triad_count=args.triad_count,
+            motif=motif,
+            limit=args.limit,
+        ))
+    except FileNotFoundError as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
+    return 0
 
 
 def _start(root: Path, *, workers: int, command: str = "generation007") -> int:
