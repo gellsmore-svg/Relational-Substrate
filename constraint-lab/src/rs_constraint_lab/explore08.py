@@ -340,10 +340,17 @@ def build_round0_systems() -> list[dict]:
     return systems
 
 
-def derive_seed(fields: dict) -> int:
-    payload = {key: fields[key] for key in SEED_FIELDS}
-    digest = hashlib.sha256(canonical_json(payload).encode("utf-8")).digest()
+def _seed_from_identity(identity: dict) -> int:
+    digest = hashlib.sha256(canonical_json(identity).encode("utf-8")).digest()
     return int.from_bytes(digest[:8], "big")
+
+
+def _episode_id_from_identity(identity: dict) -> str:
+    return sha256_bytes(canonical_json(identity).encode("utf-8"))[:24]
+
+
+def derive_seed(fields: dict) -> int:
+    return _seed_from_identity({key: fields[key] for key in SEED_FIELDS})
 
 
 def episode_identity(fields: dict) -> dict:
@@ -351,7 +358,7 @@ def episode_identity(fields: dict) -> dict:
 
 
 def episode_id_for(fields: dict) -> str:
-    return sha256_bytes(canonical_json(episode_identity(fields)).encode("utf-8"))[:24]
+    return _episode_id_from_identity(episode_identity(fields))
 
 
 def plan_hash(document: dict) -> str:
@@ -586,21 +593,32 @@ def run_episode(
     pair_epoch_limit: int | None = None,
     cache: dict | None = None,
     stall_seconds: float | None = None,
+    identity: dict | None = None,
+    header_extra: dict | None = None,
 ) -> dict:
+    """Run one trajectory.
+
+    ``identity``, when supplied, is the complete seed document. Generation 8
+    leaves it empty and keeps the six historical seed fields. Analysis labels
+    belong in ``header_extra`` and are not part of the seed.
+    """
     if stall_seconds:
         import time
 
         time.sleep(stall_seconds)
-    identity = {
-        "experiment_id": experiment_id,
-        "hidden_context_orbit_id": context["hidden_context_orbit_id"],
-        "replicate_index": replicate,
-        "round_id": round_id,
-        "source_graph_class": context["source_graph_class"],
-        "system_id": system["system_id"],
-    }
-    seed = derive_seed(identity)
-    episode_id = episode_id_for(identity)
+    if identity is None:
+        identity = {
+            "experiment_id": experiment_id,
+            "hidden_context_orbit_id": context["hidden_context_orbit_id"],
+            "replicate_index": replicate,
+            "round_id": round_id,
+            "source_graph_class": context["source_graph_class"],
+            "system_id": system["system_id"],
+        }
+    else:
+        identity = dict(identity)
+    seed = _seed_from_identity(identity)
+    episode_id = _episode_id_from_identity(identity)
     rules, factors = _compiled(list(system.get("expressions") or []))
     dynamic = cache if cache is not None else dynamic_cache()
     if resume is None:
@@ -719,6 +737,12 @@ def run_episode(
         "termination_reason": reason,
         "trajectory_hash": rolling,
     }
+    if header_extra:
+        locked = {"episode_id", "event_count", "event_payload_sha256", "seed", "trajectory_hash"}
+        overlap = locked.intersection(header_extra)
+        if overlap:
+            raise RuntimeError(f"header analysis fields overwrote execution identity: {sorted(overlap)}")
+        header.update(header_extra)
     cursor = {
         "episode_id": episode_id,
         "full_events": full_events if resume is None else int(resume["full_events"]) + len(events),

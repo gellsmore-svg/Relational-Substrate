@@ -42,6 +42,10 @@ def _default_generation_008_root() -> Path:
     return _lab_root() / "generated" / "generation-008" / "round-000"
 
 
+def _default_generation_008a_root() -> Path:
+    return _lab_root() / "generated" / "generation-008a" / "round-a0"
+
+
 def _repo_root() -> Path:
     return _lab_root().parent
 
@@ -58,6 +62,8 @@ def main(argv: list[str]) -> int:
         return _generation_b(argv[1:])
     if argv[0] == "generation008":
         return _generation_008(argv[1:])
+    if argv[0] == "generation008a":
+        return _generation_008a(argv[1:])
     if argv[0] == "batch":
         return _batch(argv[1:])
     print(f"unknown command {argv[0]}", file=sys.stderr)
@@ -366,6 +372,148 @@ def _generation_008(argv: list[str]) -> int:
         return watch_status(root, args.watch, args.max_snapshots)
     if args.command == "verify":
         from rs_constraint_lab.gen008_exec import verify_generation
+
+        report = verify_generation(root, require_complete=args.require_complete)
+        print(json.dumps(report, indent=2, sort_keys=True))
+        return 0 if report["ok"] else 1
+    if args.command == "merge":
+        summary = merge_root(root)
+        print(json.dumps({"episodes": summary.get("episodes"), "replay_exact": summary.get("replay_exact")}, indent=2, sort_keys=True))
+        return 0
+    if args.command == "retry":
+        return _retry(root)
+    if args.command == "stop":
+        request_stop(root)
+        print(f"stop requested for {root}")
+        return 0
+    return 2
+
+
+def _generation_008a(argv: list[str]) -> int:
+    if not argv:
+        print("usage: python -m rs_constraint_lab generation008a <command>", file=sys.stderr)
+        return 2
+    parser = argparse.ArgumentParser(prog="rs_constraint_lab generation008a")
+    parser.add_argument(
+        "command",
+        choices=[
+            "benchmark",
+            "write-plan",
+            "plan",
+            "run-next",
+            "run-batches",
+            "supervise",
+            "start",
+            "restart",
+            "status",
+            "verify",
+            "merge",
+            "retry",
+            "stop",
+            "chronology",
+        ],
+    )
+    parser.add_argument("--root", type=Path, default=None)
+    parser.add_argument("--plan", type=Path, default=None)
+    parser.add_argument("--output", type=Path, default=None)
+    parser.add_argument("--frozen-plan-commit", default=None)
+    parser.add_argument("--result-commit", default=None)
+    parser.add_argument("--repo", type=Path, default=None)
+    parser.add_argument("--relpath", default=None)
+    parser.add_argument("--expect-hash", default=None)
+    parser.add_argument("--horizon", type=int, default=None)
+    parser.add_argument("--watch", type=float, default=None)
+    parser.add_argument("--max-snapshots", type=int, default=None)
+    parser.add_argument("--count", type=int, default=5)
+    parser.add_argument("--max-wall", type=float, default=60.0)
+    parser.add_argument("--workers", type=int, default=2)
+    parser.add_argument("--require-complete", action="store_true")
+    args = parser.parse_args(argv)
+    root = args.root or _default_generation_008a_root()
+    if args.command == "benchmark":
+        from rs_constraint_lab.gen008_exec import choose_horizon
+        from rs_constraint_lab.gen008a_exec import benchmark_cost
+
+        sample = benchmark_cost(horizon=args.horizon or 512)
+        episodes = 8 * 48 * 16
+        decision = choose_horizon(sample, episodes)
+        print(json.dumps({"decision": decision, "episodes": episodes, "sample": sample}, indent=2, sort_keys=True))
+        return 0 if not decision["refused"] else 2
+    if args.command == "write-plan":
+        from rs_constraint_lab.durable import atomic_write_json
+        from rs_constraint_lab.gen008a_exec import prepare_a0_plan
+
+        if args.output is None:
+            print("write-plan requires --output", file=sys.stderr)
+            return 2
+        prepared = prepare_a0_plan(sample_horizon=args.horizon or 512)
+        if prepared["plan"] is None:
+            print(json.dumps({"decision": prepared["decision"], "refused": True}, indent=2, sort_keys=True))
+            return 2
+        atomic_write_json(args.output, prepared["plan"])
+        work = prepared["plan"]["work_count"]
+        print(json.dumps(
+            {
+                "episodes": work["total_round_episodes"],
+                "output": str(args.output),
+                "pair_horizon": prepared["plan"]["pair_horizon"],
+                "plan_hash": prepared["plan"]["plan_hash"],
+                "starts_per_system": work["starts_per_system"],
+            },
+            indent=2,
+            sort_keys=True,
+        ))
+        return 0
+    if args.command == "plan":
+        from rs_constraint_lab.gen008a_exec import install_plan
+
+        if args.plan is None or not args.frozen_plan_commit or args.root is None:
+            print("plan requires --plan, --frozen-plan-commit, and --root", file=sys.stderr)
+            return 2
+        repo = args.repo or _repo_root()
+        relpath = args.relpath or str(args.plan.resolve().relative_to(repo.resolve()))
+        try:
+            summary = install_plan(args.root, args.plan, args.frozen_plan_commit, repo, relpath)
+        except Exception as exc:
+            print(str(exc), file=sys.stderr)
+            return 2
+        print(json.dumps(summary, indent=2, sort_keys=True))
+        return 0
+    if args.command == "chronology":
+        from rs_constraint_lab.explore08a import ChronologyError, verify_plan_result_chronology
+
+        if not args.frozen_plan_commit or not args.result_commit or not args.relpath:
+            print("chronology requires --frozen-plan-commit, --result-commit, and --relpath", file=sys.stderr)
+            return 2
+        repo = args.repo or _repo_root()
+        try:
+            report = verify_plan_result_chronology(
+                repo,
+                args.frozen_plan_commit,
+                args.result_commit,
+                args.relpath,
+                args.expect_hash,
+            )
+        except ChronologyError as exc:
+            print(str(exc), file=sys.stderr)
+            return 1
+        print(json.dumps(report, indent=2, sort_keys=True))
+        return 0
+    if args.command == "run-next":
+        return _supervise(root, max_batches=1, max_wall=args.max_wall, workers=args.workers)
+    if args.command == "run-batches":
+        return _supervise(root, max_batches=args.count, max_wall=None, workers=args.workers)
+    if args.command == "supervise":
+        return _supervise(root, max_batches=None, max_wall=None, workers=args.workers)
+    if args.command in {"start", "restart"}:
+        return _start(root, workers=args.workers, command="generation008a")
+    if args.command == "status":
+        if args.watch is None:
+            print(status_text(root))
+            return 0
+        return watch_status(root, args.watch, args.max_snapshots)
+    if args.command == "verify":
+        from rs_constraint_lab.gen008a_exec import verify_generation
 
         report = verify_generation(root, require_complete=args.require_complete)
         print(json.dumps(report, indent=2, sort_keys=True))
