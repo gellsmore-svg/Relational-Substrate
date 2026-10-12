@@ -1,0 +1,262 @@
+{
+  "analysis_only": true,
+  "analysis_version": "generation-008b-information/v1",
+  "checkpoints": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "epoch_solver": "block",
+  "estimators": {
+    "layer_a": "Generation 8A plug-in mutual information recomputed from the committed counts",
+    "layer_b": "deterministic permutation of those counts; negative excess is stored",
+    "layer_c": "deterministic kernel result from the pair-event epoch kernel and the full-event stationary distribution"
+  },
+  "execution": {
+    "commands": [
+      "exact --system one of R00-R07",
+      "permute-initial --system one of R00-R07",
+      "permute-current --system one of R00-R07 --source one of star/path/triangle"
+    ],
+    "cross_solver_check": "dense epoch kernel compared with the block kernel for every B0 system",
+    "heartbeat": "stderr stage lines",
+    "horizon_matched_mutual_information": "omitted when unabsorbed mass at pair epoch 512 is below unabsorbed_horizon_tolerance; the validation table stores that mass",
+    "target_seconds": "30-60",
+    "watchdog_seconds": 120,
+    "workers": 2
+  },
+  "experiment_id": "generation-008b-information-calibration",
+  "first_destination": {
+    "definition": "eventual hitting distribution of the other two 3-edge classes; the source class is transient and return to it is allowed",
+    "prior": "uniform over the 16 raw triads",
+    "route": "route_from_runs"
+  },
+  "miller_madow_reference": {
+    "checkpoint_class": {
+      "contexts": 16,
+      "formula": "((dx-1)*(dy-1))/(2N)",
+      "outcomes": 11,
+      "samples": 256
+    },
+    "current_slot_given_full_mask_if_every_mask_is_occupied": {
+      "conditioners": 64,
+      "contexts": 16,
+      "formula": "conditioners * ((dx-1)*(dy-1)) / (2N)",
+      "outcomes": 6,
+      "samples": 131072
+    },
+    "first_destination": {
+      "contexts": 16,
+      "formula": "((dx-1)*(dy-1))/(2N)",
+      "outcomes": 2,
+      "samples": 256
+    },
+    "role": "sanity check beside permutation and kernel results"
+  },
+  "mode": "B",
+  "occupancy": {
+    "epochs": "1..512 inclusive",
+    "excludes_initial_epoch": true,
+    "observables": [
+      "11 graph classes",
+      "edge count via the class decomposition",
+      "sparse",
+      "3-edge",
+      "dense"
+    ]
+  },
+  "parent_round_id": "round-a0",
+  "parent_tables": "constraint-lab/reports/generation-008a-round-a0-tables.json",
+  "parent_tables_sha256": "39ff873576a0d4266fba2fefaafa008e0a999023df1992735f026fb2b65e3cea",
+  "permutations": {
+    "current_context": 2000,
+    "current_context_estimands": [
+      "current_triad_next_pair_slot_given_full_pair_mask",
+      "current_triad_next_pair_slot_given_pair_class",
+      "current_triad_next_pair_class_given_pair_class"
+    ],
+    "current_context_null": "permute the triad inside each conditioner stratum; finite-table bias calibration, not a trajectory interval",
+    "initial_context": 10000,
+    "initial_context_estimands": [
+      "first_destination",
+      "checkpoint_class_1",
+      "checkpoint_class_2",
+      "checkpoint_class_4",
+      "checkpoint_class_8",
+      "checkpoint_class_16",
+      "checkpoint_class_32",
+      "checkpoint_class_64",
+      "checkpoint_class_128",
+      "checkpoint_class_256",
+      "checkpoint_class_512"
+    ],
+    "initial_context_null": "permute raw-triad labels inside system x source; preserve episode outcomes and the 16-label multiset",
+    "seed": "sha256-u64-v1 of experiment id, estimand id, system id, source graph, permutation index"
+  },
+  "plan_hash": "279857bb2ee82eefd430ba56c9fa3758238ebea9e0b652c01b56b97dbc1bf618",
+  "round_id": "round-b0",
+  "schema": "rs-constraint-lab.information-calibration-plan/v1",
+  "solver_preflight": {
+    "block_epoch_seconds_baseline": 0.029,
+    "chain_rule_gap_magnitude": "below 1e-15",
+    "conditional_permutation_2000_seconds_estimate": 11.0,
+    "cross_solver_gap_magnitude": "below 1e-15",
+    "dense_epoch_seconds_baseline": 0.38,
+    "initial_permutation_10000_seconds_estimate": 0.95,
+    "kernel_build_seconds_baseline": 0.016,
+    "max_unabsorbed_mass_at_512": 2.46e-22,
+    "plugin_reproduction_cell_count": 336,
+    "plugin_reproduction_max_abs_gap": 2.81e-16,
+    "propagation_one_source_512_seconds": 4.58,
+    "stationary_seconds_baseline": 0.21,
+    "zero_control_identity_magnitude": "below 1e-14"
+  },
+  "sources": [
+    "star",
+    "path",
+    "triangle"
+  ],
+  "stochastic_trajectories": false,
+  "structural_zero_controls": [
+    "R00",
+    "R03",
+    "R07"
+  ],
+  "structural_zero_reason": "pair-event weight does not read a triad slot or a full-state count literal, so the pair-mask trajectory is independent of the triad",
+  "systems": [
+    {
+      "expressions": [],
+      "parent_round_id": "round-000",
+      "parent_system_id": "S00",
+      "role": "baseline relational dynamics",
+      "system_id": "R00"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) | absent(0-1-2) => strong_suppress"
+      ],
+      "parent_round_id": "round-000",
+      "parent_system_id": "S01",
+      "role": "tp_structural_archetype",
+      "system_id": "R01"
+    },
+    {
+      "expressions": [
+        "form(0-1) | absent(0-1-2) => strong_suppress"
+      ],
+      "parent_round_id": "round-000",
+      "parent_system_id": "S05",
+      "role": "tp_structural_archetype",
+      "system_id": "R02"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) => strong_suppress"
+      ],
+      "parent_round_id": "round-001",
+      "parent_system_id": "S10",
+      "role": "perturbation",
+      "system_id": "R03"
+    },
+    {
+      "expressions": [
+        "dissolve(2-3) | present(0-1-2) => strong_suppress"
+      ],
+      "parent_round_id": "round-001",
+      "parent_system_id": "S11",
+      "role": "perturbation",
+      "system_id": "R04"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) => strong_suppress",
+        "dissolve(2-3) | present(0-1-2) => strong_suppress"
+      ],
+      "parent_round_id": "round-000",
+      "parent_system_id": "S09",
+      "role": "composite_anchor",
+      "system_id": "R05"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) | absent(0-1-2) => strong_favour"
+      ],
+      "parent_round_id": "round-001",
+      "parent_system_id": "S12",
+      "role": "perturbation",
+      "system_id": "R06"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) => strong_favour"
+      ],
+      "parent_round_id": "round-002",
+      "parent_system_id": "S16",
+      "role": "perturbation",
+      "system_id": "R07"
+    }
+  ],
+  "tables": [
+    "first_destination",
+    "checkpoints",
+    "occupancy",
+    "occupancy_ranges",
+    "current_context",
+    "numerical_validation"
+  ],
+  "tolerances": {
+    "chain_rule_tolerance": 1e-09,
+    "checkpoints": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512
+    ],
+    "cross_solver_tolerance": 1e-08,
+    "current_permutations": 2000,
+    "hitting_residual_tolerance": 1e-08,
+    "initial_permutations": 10000,
+    "kernel_row_tolerance": 1e-09,
+    "occupancy_epochs": "1..512 inclusive",
+    "occupancy_horizon": 512,
+    "plugin_reproduction_tolerance": 1e-09,
+    "stationary_residual_tolerance": 1e-08,
+    "unabsorbed_horizon_tolerance": 1e-08,
+    "zero_information_floor": 1e-10,
+    "zero_systems": [
+      "R00",
+      "R03",
+      "R07"
+    ]
+  },
+  "weightings": [
+    {
+      "id": "balanced_law",
+      "question": "does the rule make the next pair-slot law depend on the triad once the pair mask is fixed",
+      "state_weight": "uniform over the 1024 full states"
+    },
+    {
+      "id": "a0_empirical_event_source",
+      "question": "how much of that dependence was present in the states visited by the 512-pair-event atlas",
+      "state_weight": "Generation 8A pre-pair-event state counts; the next slot is the exact local law"
+    },
+    {
+      "id": "stationary_pair_event",
+      "question": "how much of that dependence is experienced under the system's own long-run pair-event occupancy",
+      "state_weight": "pi(s) times the probability the next full event is a pair event"
+    }
+  ]
+}
