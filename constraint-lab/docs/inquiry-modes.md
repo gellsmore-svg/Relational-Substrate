@@ -138,3 +138,54 @@ A possible future experiment should:
 7. Compare accumulated patterns for global coherence. A pass/fail status is not assigned at each step.
 
 That fork is not part of the 007B execution.
+
+## Generation 8 executes Mode B
+
+Generation 8 is the first laboratory execution of Mode B. Generations 1 through 7B remain Mode A records. Their reports are historical evidence and are not reinterpreted by editing them.
+
+Generation 8 asks:
+
+```text
+What happens when higher-order relational context is allowed to participate in an evolving stochastic relational system, and what recurrent structures, routes, transformations, and context dependencies actually appear?
+```
+
+The governing loop is:
+
+```text
+exploration
+→ observation
+→ inference
+→ coherence comparison
+→ revised exploration
+```
+
+A completed trajectory has no scientific pass or fail. Unexpected behaviour is an observation.
+
+Scientific language for Generation 8 is:
+
+```text
+observed
+not observed
+common
+rare
+context-dependent
+context-insensitive
+recurrent
+transient
+robust
+sensitive
+suggestive
+unresolved
+```
+
+Pass and fail remain appropriate for software, CI, validation, and execution contracts. They are not the vocabulary of a trajectory atlas.
+
+The unconstrained system in Round 0 is baseline relational dynamics. It is not called a null hypothesis in this generation.
+
+The model contains state, possible events, constraint weights, and stochastic event selection. Organisation, persistence, dissolution, reorganisation, return, recurrence, routing, context dependence, repair-like return, and boundary-like persistence may be observed afterwards. They are not encoded as a reward, a target, or a semantic goal.
+
+Exploration decisions happen between rounds. No stochastic trajectory is rewarded for reaching a desired state. There is no optimisation against maximum routing divergence, entropy, organisation, or persistence.
+
+Open exploration still requires a frozen round plan, bounded work, deterministic seeds, complete event provenance, replay, durable outputs, explicit branch decisions, and separate observation and inference. The difference from Mode A is the question, not the engineering.
+
+A crisp distinction found here may later be isolated by a Mode A experiment on another branch. Generation 8 does not turn that isolation into an unbounded discriminating census inside this prompt. At most four rounds are executed: Round 0, Round 1, Round 2, and Round 3. The charter is `constraint-lab/exploration/generation-008/charter.md`.
