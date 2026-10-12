@@ -13,7 +13,7 @@ import pytest
 
 from rs_constraint_lab.cli import main
 from rs_constraint_lab.constraints import DISSOLVE, Constraint
-from rs_constraint_lab.execution import build_plan
+from rs_constraint_lab.execution import IncompatibleGeneration, build_plan
 from rs_constraint_lab.spec import validate_spec
 from rs_constraint_lab.v05 import _grammar
 from rs_constraint_lab.v06 import WEIGHT_ORDER, graded_catalogue
@@ -376,10 +376,8 @@ def test_predeclared_cells_keep_action_edge_polarity_and_companion():
             if face["relation_to_action"] == "same":
                 assert face["status"] != "live"
     assert disjoint_geometries == {"contains_p_companion_edge"}
-    built = build_plan(spec, 14)
-    assert built["estimates"]["shard_count"] == 2
-    assert built["estimates"]["calibration_coverage"]["target_cells"] == 28
-    assert built["header"]["calibration_version"] == CALIBRATION_VERSION
+    with pytest.raises(IncompatibleGeneration, match="generation007"):
+        build_plan(spec, 14)
 
 
 def test_v07_spec_refuses_simplicial_semantics_and_nonzero_axes():
@@ -430,7 +428,7 @@ def test_relabelled_continuous_kernel_is_equivariant():
     assert relabelled_kernel_gap(Fraction(1, 4)) == 0.0
 
 
-def test_generation7_resume_keeps_the_completed_receipt(tmp_path):
+def test_generation7_monolithic_run_is_refused(tmp_path):
     spec = _minimal_spec(
         experiment_id="miniature-effect-matched-resume",
         rho3_sensitivity=["1"],
@@ -438,40 +436,5 @@ def test_generation7_resume_keeps_the_completed_receipt(tmp_path):
     )
     path = tmp_path / "spec.json"
     path.write_text(json.dumps(spec), encoding="utf-8")
-    out = tmp_path / "out"
-    assert main(["run", str(path), "--out", str(out), "--workers", "1", "--shard-items", "1", "--max-shards", "1"]) == 0
-    progress = json.loads((out / "progress.json").read_text(encoding="utf-8"))
-    assert progress["status"] == "IN_PROGRESS"
-    assert progress["completed"] == 1
-    plan = json.loads((out / "plan.json").read_text(encoding="utf-8"))
-    assert plan["estimates"]["calibration_coverage"]["target_cells"] == 28
-    assert plan["header"]["calibration_version"] == CALIBRATION_VERSION
-    done = next(
-        shard["shard_id"]
-        for shard in plan["shards"]
-        if progress["shards"][shard["shard_id"]]["status"] == "completed"
-    )
-    receipt = (out / "shards" / done / "receipt.json").read_bytes()
-    result = json.loads((out / "shards" / done / "result.json").read_text(encoding="utf-8"))
-    row = result["calibrated_rows"][0]
-    assert row["calibration_version"] == CALIBRATION_VERSION
-    assert row["w_P"] == "prohibit" and row["w_T"] == "prohibit"
-    for control in row["controls"]:
-        for strategy, claim in control["strategies"].items():
-            if not claim.get("used_as_matched"):
-                continue
-            assert claim["control_action"] == claim["target_action"]
-            composition = claim["composition"]
-            directions = DIRECTIONS if strategy == "joint" else (
-                ("path_to_matching",) if strategy == "forward" else ("matching_to_path",)
-            )
-            for direction in directions:
-                assert composition[direction]["singleton_mismatch"] <= MATCH_TOLERANCE_DEFAULT
-            for direction in DIRECTIONS:
-                spread = composition[direction]["delta_S_control"]
-                if spread is not None:
-                    assert abs(spread) <= 1e-8
-    assert main(["run", str(path), "--out", str(out), "--workers", "1", "--shard-items", "1", "--max-shards", "1"]) == 0
-    assert (out / "shards" / done / "receipt.json").read_bytes() == receipt
-    again = json.loads((out / "progress.json").read_text(encoding="utf-8"))
-    assert again["completed"] == 2
+    code = main(["run", str(path), "--out", str(tmp_path / "out"), "--workers", "1", "--shard-items", "1", "--max-shards", "1"])
+    assert code != 0
