@@ -110,6 +110,22 @@ python -m rs_constraint_lab generation008 atlas replay <episode-id> --root gener
 
 Execution `provenance/executions/008-open-relational-exploration.md` closes prompt 008.
 
+## Generation 8A
+
+Generation 8A is Mode B, context-alignment repair. A round executes only after its plan file is committed and the commit is on a remote-tracking branch. Round A0 executes every raw hidden triad configuration. Rule-aware symmetry is computed after those trajectories exist. Rounds A1 and A2 were not opened.
+
+```bash
+python -m rs_constraint_lab generation008a plan \
+  --plan exploration/generation-008a/round-a0-plan.json \
+  --frozen-plan-commit <sha> \
+  --root generated/generation-008a/round-a0
+python -m rs_constraint_lab generation008a status --root generated/generation-008a/round-a0
+python -m rs_constraint_lab generation008a verify --require-complete \
+  --root generated/generation-008a/round-a0
+```
+
+Execution `provenance/executions/008A-context-alignment-repair.md` closes prompt 008A.
+
 ## Reading order
 
 1. [docs/research-charter.md](docs/research-charter.md)
