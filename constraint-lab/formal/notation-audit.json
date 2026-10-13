@@ -1,0 +1,22 @@
+{
+  "generation": "008G",
+  "audited_paths": [
+    "books",
+    "constraint-lab/docs",
+    "constraint-lab/src/rs_constraint_lab"
+  ],
+  "queries": [
+    "\\bJ\\b|\\\\mathcal\\{J\\}|\\\\mathbf\\{J\\}|rule cardinality|relation arity|constraint arity",
+    "C|R|T|S|K|L|H in dimension-model.md, formalism.md and book formal appendices"
+  ],
+  "existing_J_use": "Personal initial J. Richard Middleton, not a mathematical rule-cardinality descriptor.",
+  "decision": "J = number of simultaneous rule occurrences; CL-Txx namespaced theorem IDs.",
+  "rationale": "No mathematical J conflict found in audited scope; preserves C/R/T/S/K/L/H and book T1-T4.",
+  "scope": "New formal area only; historical symbols remain unchanged.",
+  "evidence_refs": [
+    "constraint-lab/docs/dimension-model.md",
+    "constraint-lab/docs/formalism.md",
+    "books/relational-substrate.md",
+    "books/coherent-biblical-ontology-bachelors.md"
+  ]
+}
