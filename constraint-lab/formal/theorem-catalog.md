@@ -1,0 +1,741 @@
+# Formal statement catalogue
+
+Generated from theorem-catalog.jsonl. Historical layers are not rewritten.
+
+## CL-T01: Multiplicative weights and additive event log weights
+
+**ALGEBRAIC_THEOREM**
+
+Matching fixed rules multiply event weights; their logarithms add.
+
+Assumptions: Positive baseline and multipliers; H=L=0; fixed rule occurrences.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t01", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py), [kernel.py](../../constraint-lab/src/rs_constraint_lab/kernel.py)
+Coherence: `F8D-LOG-ADDITIVITY`, `F8D-ADDITIVE-FEATURE-GRAMMAR`
+Dependencies: none
+Source generations: 008D, 008G
+Boundary: Zero prohibit is outside logarithmic algebra.
+Notes: Zero prohibit is outside logarithmic algebra.
+
+## CL-T02: Rule-order commutativity, not idempotence
+
+**ALGEBRAIC_THEOREM**
+
+Rule permutations preserve exact weights and kernels; duplicate occurrences still multiply repeatedly.
+
+Assumptions: Exact arithmetic; Same factor map and rule multiset.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t02", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py), [grammar.py](../../constraint-lab/src/rs_constraint_lab/grammar.py)
+Coherence: `F8D-LOG-ADDITIVITY`
+Dependencies: CL-T01
+Source generations: 008D, 008G
+Boundary: Structurally simple census sets forbid repeated structural identity; backend multisets do not deduplicate.
+Notes: Structurally simple census sets forbid repeated structural identity; backend multisets do not deduplicate.
+
+## CL-T03: Six pair-slot normalised law
+
+**ALGEBRAIC_THEOREM**
+
+One weighted admissible pair slot has q(action)=m/(m+5), all alternatives 1/(m+5).
+
+Assumptions: Six pair slots; Other five weights 1; Immediate pair-event conditioning.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t03", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8C-CLOSED-FORM-CMI`, `F8C-TWO-COORDINATES`
+Dependencies: CL-T01
+Source generations: 008C, 008G
+Boundary: Outside the stated feature, support, positivity and clock assumptions; no physical universality claim.
+
+## CL-T04: Complementary equal-gate elimination
+
+**ALGEBRAIC_THEOREM**
+
+Equal same-direction factors on G and NOT G equal an unconditional factor, including the full kernel.
+
+Assumptions: Binary complementary gate; Equal positive multipliers; Same action and direction.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t04", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8D-COMPLEMENTARY-ELIMINATION`, `F009-TWO-LEVEL-COLLAPSE`
+Dependencies: CL-T01
+Source generations: 007B, 008D, 008G
+Boundary: Outside the stated feature, support, positivity and clock assumptions; no physical universality claim.
+
+## CL-T05: Equal-direction elimination
+
+**ALGEBRAIC_THEOREM**
+
+Equal form and dissolve factors on the same gate remove action-bit dependence of slot weight but retain gate dependence.
+
+Assumptions: One action slot; Same positive multiplier and gate in both directions.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t05", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8D-DIRECTION-ELIMINATION`
+Dependencies: CL-T01
+Source generations: 008D, 008G
+Boundary: Outside the stated feature, support, positivity and clock assumptions; no physical universality claim.
+
+## CL-T06: K2 literal additive-gate bound
+
+**ALGEBRAIC_THEOREM**
+
+Same-action one-literal rules give c+aG1+bG2 and zero second discrete log-weight derivative.
+
+Assumptions: Fixed admissible direction; Pure literal fragment; One-action gauge.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t06", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8D-NO-GATE-PRODUCT`, `F8D-ADDITIVE-FEATURE-GRAMMAR`
+Dependencies: CL-T01
+Source generations: 008D, 008E, 008G
+Boundary: Not a bound for count predicates, probabilities or arbitrary higher-K rules.
+Notes: Not a bound for count predicates, probabilities or arbitrary higher-K rules.
+
+## CL-T07: K3 conjunction and polarity sign
+
+**ALGEBRAIC_THEOREM**
+
+A non-neutral two-distinct-literal rule has literal second derivative ln(m); raw-bit coefficient changes sign with each absent literal.
+
+Assumptions: Two distinct satisfiable gate variables; Admissible action; m>0 and m!=1.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t07", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8E-K3-CONJUNCTION-INTERACTION`, `F8E-K2-K3-NONREPRESENTABILITY`
+Dependencies: CL-T01
+Source generations: 008E, 008G
+Boundary: Outside the stated feature, support, positivity and clock assumptions; no physical universality claim.
+
+## CL-T08: Scoped general conjunction degree
+
+**ALGEBRAIC_THEOREM**
+
+A non-neutral rule over r distinct jointly satisfiable literals has nonzero degree-r raw-gate coefficient ln(m)*(-1)^number_absent.
+
+Assumptions: Distinct gate variables; Joint satisfiability; Positive non-neutral factor; Admissible action.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t08", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8E-GENERAL-K-INTERACTION`, `F8F-GENERAL-K-SCOPE`, `F8E-CARDINALITY-VS-K`
+Dependencies: CL-T01
+Source generations: 008E, 008F, 008G
+Boundary: Contradiction, repeated variable, neutral multiplier or cross-rule cancellation defeats naive syntactic degree claims.
+Notes: Contradiction, repeated variable, neutral multiplier or cross-rule cancellation defeats naive syntactic degree claims.
+
+## CL-T09: Unique Boolean Mobius expansion
+
+**ALGEBRAIC_THEOREM**
+
+Every real function on r Boolean gates has unique multilinear coefficients given by alternating subset sums.
+
+Assumptions: Finite Boolean cube; Real-valued table.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t09", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8E-BOOLEAN-LOGIT-BASIS`
+Dependencies: none
+Source generations: 008E, 008G
+Boundary: Outside the stated feature, support, positivity and clock assumptions; no physical universality claim.
+
+## CL-T10: Corner-indicator basis
+
+**ALGEBRAIC_THEOREM**
+
+Complete literal corners are mutually exclusive basis vectors, transformed to monomials by expanding absent literals.
+
+Assumptions: r distinct Boolean gates; All cube corners available.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t10", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8E-CORNER-BASIS`, `F8E-BOOLEAN-LOGIT-BASIS`
+Dependencies: CL-T09
+Source generations: 008E, 008G
+Boundary: Outside the stated feature, support, positivity and clock assumptions; no physical universality claim.
+
+## CL-T11: Continuous one-action weight expressivity
+
+**ALGEBRAIC_THEOREM**
+
+Arbitrary positive corner multipliers construct any positive action-weight table with at most 2^r rules and K=r+1.
+
+Assumptions: One fixed action and admissible direction; Arbitrary positive factors; Unbounded rule budget; Literal parser permits all selected non-action gates.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t11", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8E-BOOLEAN-LOGIT-BASIS`, `F8E-CORNER-BASIS`
+Dependencies: CL-T10
+Source generations: 008E, 008G
+Boundary: Continuous algebraic completeness is not W4 coverage or arbitrary full-kernel universality.
+Notes: Continuous algebraic completeness is not W4 coverage or arbitrary full-kernel universality.
+
+## CL-T12: Restricted full current-state expressivity
+
+**ALGEBRAIC_THEOREM**
+
+The unbounded literal parser/backend constructs every positive event-weight table on its finite single-toggle support using K<=D and J<=D*2^D.
+
+Assumptions: O=2 or O=3 independent relation bits; Both event directions and all non-action literals; Positive slot baselines; Custom positive factor map; No experiment-runner J/W bound.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t12", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py), [constraints.py](../../constraint-lab/src/rs_constraint_lab/constraints.py), [spec.py](../../constraint-lab/src/rs_constraint_lab/spec.py)
+Coherence: `F8D-ADDITIVE-FEATURE-GRAMMAR`, `F8E-BOOLEAN-LOGIT-BASIS`, `Q-H-POSITIVE`, `Q-META-CONSTRAINT`
+Dependencies: CL-T10, CL-T11
+Source generations: 008G
+Boundary: Not arbitrary support, self-loop, multibit, history or standard finite-alphabet experiment expressivity.
+Notes: Not arbitrary support, self-loop, multibit, history or standard finite-alphabet experiment expressivity.
+
+## CL-T13: Rule cardinality preserves a fixed feature span
+
+**ALGEBRAIC_THEOREM**
+
+Adding more terms from a fixed feature family cannot create an absent log-weight monomial.
+
+Assumptions: Fixed multiplicative current-state grammar; Fixed primitive feature family and gauge.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t13", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8E-CARDINALITY-VS-K`, `F8D-GATE-DIMENSION`
+Dependencies: CL-T01, CL-T09
+Source generations: 008D, 008E, 008G
+Boundary: Outside the stated feature, support, positivity and clock assumptions; no physical universality claim.
+
+## CL-T14: Count-token counterexample to a blanket K bound
+
+**ALGEBRAIC_THEOREM**
+
+At O=2,N=3 on a form-admissible action, one K2 count>=1 token equals G1+G2-G1G2 and has interaction order 2.
+
+Assumptions: Two remaining pair bits; Action bit fixed absent; O=2 count semantics.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t14", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py), [constraints.py](../../constraint-lab/src/rs_constraint_lab/constraints.py)
+Coherence: `F8E-CARDINALITY-VS-K`, `F8F-GENERAL-K-SCOPE`
+Dependencies: CL-T09
+Source generations: 008G
+Boundary: The K-1 degree hierarchy applies to pure literal conjunctions, not the entire count-token DSL.
+Notes: The K-1 degree hierarchy applies to pure literal conjunctions, not the entire count-token DSL.
+
+## CL-T15: Next-pair resolvent and stationary arrival weighting
+
+**ALGEBRAIC_THEOREM**
+
+If P=T+B and rho(T)<1, E=(I-T)^-1 B; full-event stationary pi induces epoch stationary rho proportional to pi B.
+
+Assumptions: Finite kernel; T hidden-only and B pair-event transitions; Almost-sure pair arrival and rho(T)<1.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t15", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F003-CLOCK-SPLIT`, `F8C-CHECKPOINT-EPOCH`, `F8F-COMPLEMENT-PERIOD`
+Dependencies: none
+Source generations: 003C, 008C, 008F, 008G
+Boundary: Outside the stated feature, support, positivity and clock assumptions; no physical universality claim.
+
+## CL-T16: Nested projection information chain
+
+**ALGEBRAIC_THEOREM**
+
+I(M;mask)=I(M;edges)+I(M;class|edges)+I(M;mask|class) for deterministic nested projections.
+
+Assumptions: Class is a function of mask; Edge count is a function of class; Well-defined finite joint distribution.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t16", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8F-INTERACTION-ROUTING`, `F8C-PROJECTION-GEOMETRY`
+Dependencies: none
+Source generations: 008C, 008F, 008G
+Boundary: Outside the stated feature, support, positivity and clock assumptions; no physical universality claim.
+
+## CL-T17: Pair-epoch parity and period two
+
+**ALGEBRAIC_THEOREM**
+
+One-bit pair epochs flip parity; irreducibility and positive two-step reverse moves imply period exactly two.
+
+Assumptions: Positive finite single-toggle support; At least one pair slot; Next-pair absorption.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t17", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8F-COMPLEMENT-PERIOD`
+Dependencies: CL-T15
+Source generations: 008F, 008G
+Boundary: Bipartiteness alone only implies even return lengths, not period exactly two.
+Notes: Bipartiteness alone only implies even return lengths, not period exactly two.
+
+## CL-T18: Autonomous single-action stationary factorisation
+
+**ALGEBRAIC_THEOREM**
+
+One action depending only on its bit and hidden bits yields action occupancy times uniform other pair bits under both full and pair-arrival stationary clocks.
+
+Assumptions: Action weight w(b,y)>0 independent of other pairs z; Other pair and hidden flip rates symmetric unit; Complete independent-bit support.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t18", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8F-SHAPE-WASHES-OUT`, `F8F-INTERACTION-ROUTING`
+Dependencies: CL-T15
+Source generations: 008F, 008G
+Boundary: Explicit other-pair-conditioned action counterexample in derivations; does not cover multiple coupled actions.
+Notes: Explicit other-pair-conditioned action counterexample in derivations; does not cover multiple coupled actions.
+
+## CL-T19: Stationary shape-given-edge invariance
+
+**ALGEBRAIC_THEOREM**
+
+In the factorised family, graph-class conditional probabilities at fixed edge count are orbit sizes divided by binomial(p,k), independent of action occupancy.
+
+Assumptions: CL-T18 hypotheses; Vertex group transitive on pair slots; Declared unlabelled graph classes.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t19", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8F-SHAPE-WASHES-OUT`, `F8F-INTERACTION-ROUTING`, `Q-SCALE-N`
+Dependencies: CL-T18
+Source generations: 008F, 008G
+Boundary: Scales beyond N=4 within the same family; N alone or XOR alone cannot defeat this theorem.
+Notes: Scales beyond N=4 within the same family; N alone or XOR alone cannot defeat this theorem.
+
+## CL-T20: Strong-lumpability symmetry criterion
+
+**ALGEBRAIC_THEOREM**
+
+Kernel-automorphism orbits are strongly lumpable; visible isomorphism alone does not justify quotienting a fixed labelled law.
+
+Assumptions: Entire transition law preserved; State partition and clock declared.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t20", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F011-QUOTIENT-INVALID`, `F8F-INCIDENCE-SILENT`
+Dependencies: none
+Source generations: 008A, 008F, 008G
+Boundary: Outside the stated feature, support, positivity and clock assumptions; no physical universality claim.
+
+## CL-T21: Selected two-gate minimal representation vectors
+
+**ALGEBRAIC_THEOREM**
+
+Analytic lower bounds and constructions give baseline, scalar, switch, two-level, AND, XOR and XNOR [min J,min max-K], with separate W4 exceptions.
+
+Assumptions: One admissible action; At most two raw gates; Structurally simple positive literal grammar; Specified target factors and no extra weighted actions.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t21", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8E-CARDINALITY-VS-K`, `F8E-XOR-XNOR-FROM-K3`
+Dependencies: CL-T06, CL-T07, CL-T10
+Source generations: 008E, 008G
+Boundary: No representation census: selected cases proved algebraically; see continuous/W4 and stacked distinctions.
+Notes: No representation census: selected cases proved algebraically; see continuous/W4 and stacked distinctions.
+
+## CL-T22: W4 arithmetic boundary
+
+**ALGEBRAIC_THEOREM**
+
+Every finite positive W4 product is an integer power of two; arbitrary real tables are unreachable even with unbounded multiplicity.
+
+Assumptions: W4 soft multipliers only; Positive weights; Unit baseline.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t22", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8E-W4-COVERAGE`
+Dependencies: CL-T01, CL-T10
+Source generations: 008E, 008G
+Boundary: Outside the stated feature, support, positivity and clock assumptions; no physical universality claim.
+
+## CL-T23: Centered lower-order projection
+
+**ALGEBRAIC_THEOREM**
+
+The uniform-corner projection of cU1U2 is -c/4+(c/2)U1+(c/2)U2; the residual has zero mean and first moments.
+
+Assumptions: Uniform independent gate corners; Log-weight inner product.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t23", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8F-PROJECTION-PERSISTS`
+Dependencies: CL-T09
+Source generations: 008F, 008G
+Boundary: Outside the stated feature, support, positivity and clock assumptions; no physical universality claim.
+
+## CL-T24: Unique positive balanced-drift root
+
+**ALGEBRAIC_THEOREM**
+
+2p(r)+p(r^2)=2p(1)+p(m) has a unique positive root, continuous through r=1 at m=1.
+
+Assumptions: p(w)=w/(w+5); m>0; Uniform balanced gates.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t24", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8F-DRIFT-MATCHED-RESIDUAL`
+Dependencies: CL-T03
+Source generations: 008F, 008G
+Boundary: One balanced moment is not stationary or dynamically experienced weighting.
+Notes: One balanced moment is not stationary or dynamically experienced weighting.
+
+## CL-T25: Independent hidden-bit conjugacy
+
+**ALGEBRAIC_THEOREM**
+
+Selected hidden-bit permutations and literal-complement maps fixing pair labels conjugate the autonomous baseline laws and their pair projections under uniform hidden priors.
+
+Assumptions: Independent symmetric hidden flips; Mapped feature coordinates and polarities; Mapped priors; Pair labels fixed.
+Scope: Declared finite fixed-current-state DSL; see assumptions, not an ontology theorem.
+
+Proof/verification: `{"derivation_ref": "constraint-lab/formal/derivations.md#cl-t25", "proof_sketch": "Constructive derivation or exact identity in the linked proof section; implementation fixtures in test_formal.py."}`
+Evidence: [derivations.md](../../constraint-lab/formal/derivations.md), [test_formal.py](../../constraint-lab/tests/test_formal.py)
+Coherence: `F8F-INCIDENCE-SILENT`
+Dependencies: CL-T01, CL-T15
+Source generations: 008F, 008G
+Boundary: Does not preserve arbitrary incidence-coupled laws.
+Notes: Does not preserve arbitrary incidence-coupled laws.
+
+## CL-F01: Two-K2 exhaustive local atlas
+
+**FINITE_EXHAUSTIVE_RESULT**
+
+3,584 weighted two-rule systems split into effective gate dimensions 0:16, 1:960, 2:2608.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: Generation 8D two-K2 T-to-P W4 labelled systems
+
+Proof/verification: `{"enumerated_domain": "Generation 8D two-K2 T-to-P W4 labelled systems", "exact_count": 3584, "verification_implementation": "constraint-lab/src/rs_constraint_lab/explore08d.py"}`
+Evidence: [generation-008d-weighted-systems.json](../../constraint-lab/reports/tables/generation-008d-weighted-systems.json), [generation-008d-two-gate-composition-atlas.md](../../constraint-lab/reports/generation-008d-two-gate-composition-atlas.md)
+Coherence: `F8D-GATE-DIMENSION`, `F8D-INFORMATION-NOT-DIMENSION`
+Dependencies: none
+Source generations: 008D
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-F02: K3 census and K2 nonmatches
+
+**FINITE_EXHAUSTIVE_RESULT**
+
+288 labelled rules, 20 S4 orbits and 80 W4 systems have nonzero conjunction interaction; none matches the 3,584 two-K2 local laws.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: Generation 8E N4 pair actions with two distinct triad conditions, W4; comparison to 8D
+
+Proof/verification: `{"enumerated_domain": "Generation 8E N4 pair actions with two distinct triad conditions, W4; comparison to 8D", "exact_count": 80, "verification_implementation": "constraint-lab/src/rs_constraint_lab/explore08e.py"}`
+Evidence: [generation-008e-comparison-8d.json](../../constraint-lab/reports/tables/generation-008e-comparison-8d.json), [generation-008e-interaction.json](../../constraint-lab/reports/tables/generation-008e-interaction.json)
+Coherence: `F8E-K3-CONJUNCTION-INTERACTION`, `F8E-K2-K3-NONREPRESENTABILITY`
+Dependencies: CL-T06, CL-T07
+Source generations: 008D, 008E
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-F03: Restricted W4 basis coverage
+
+**FINITE_EXHAUSTIVE_RESULT**
+
+The two predeclared four-feature W4-or-neutral coefficient grids each yield 625 tables with intersection 279.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: 8E monomial and corner bases with each of four coefficients from five declared levels
+
+Proof/verification: `{"enumerated_domain": "8E monomial and corner bases with each of four coefficients from five declared levels", "exact_count": 625, "verification_implementation": "constraint-lab/src/rs_constraint_lab/explore08e.py"}`
+Evidence: [generation-008e-basis.json](../../constraint-lab/reports/tables/generation-008e-basis.json)
+Coherence: `F8E-W4-COVERAGE`
+Dependencies: CL-T09, CL-T10
+Source generations: 008E
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+Notes: Not a census of all W4 structural identities or arbitrary rule cardinality.
+
+## CL-F04: Incidence motif law conjugacy verification
+
+**FINITE_EXHAUSTIVE_RESULT**
+
+All 48 labelled F0 laws reduce to 16 cached canonical laws by hidden-bit permutations fixing pair labels; B/O/N are projected-dynamically identical in that family.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: 8F 12 targets times K3/ENDPOINT/PROJECTION/DRIFT
+
+Proof/verification: `{"enumerated_domain": "8F 12 targets times K3/ENDPOINT/PROJECTION/DRIFT", "exact_count": 48, "verification_implementation": "constraint-lab/src/rs_constraint_lab/explore08f.py"}`
+Evidence: [generation-008f-law-equivalence.json](../../constraint-lab/reports/tables/generation-008f-law-equivalence.json), [generation-008f-polarity-conjugacy.json](../../constraint-lab/reports/tables/generation-008f-polarity-conjugacy.json)
+Coherence: `F8F-INCIDENCE-SILENT`
+Dependencies: CL-T25
+Source generations: 008F
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-N01: Apparent memory depends on clock
+
+**NUMERICAL_KERNEL_RESULT**
+
+8F/8B initial information decay and 3C full-versus-pair clock separation are finite-model results, not universal forgetting theorems.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: 3C N3 and 8B fixed N4 palette at committed horizons
+
+Proof/verification: `{"caveat": "3C threshold details remain in its own report; no shared retrospective floor is imposed.", "domain": "3C N3 and 8B fixed N4 palette at committed horizons", "method": "Deterministic finite-kernel propagation and declared projections", "tolerances": {"information_floor_8b": 1e-10}}`
+Evidence: [generation-003c-memory-clock-refinement.md](../../constraint-lab/reports/generation-003c-memory-clock-refinement.md), [generation-008b-information-calibration.md](../../constraint-lab/reports/generation-008b-information-calibration.md)
+Coherence: `F003-CLOCK-SPLIT`, `F015-TRANSIENT-CLASS-MEMORY`, `F018-LOCAL-VERSUS-INITIAL`
+Dependencies: CL-T15
+Source generations: 003C, 008B
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-N02: Controlled passage and composition
+
+**NUMERICAL_KERNEL_RESULT**
+
+Controlled passage effects remain after occupancy matching in 4a; 5 shows observable composition is not a sum of single-rule effects.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: 4a 160 kernels and 5 predeclared matched pairs
+
+Proof/verification: `{"domain": "4a 160 kernels and 5 predeclared matched pairs", "method": "Committed deterministic finite-kernel passage and control calculations", "tolerances": {"effect_floor": 1e-08, "gen005_iterative_committor_tolerance": 1e-12}}`
+Evidence: [generation-004a-reconfiguration-sensitivity.md](../../constraint-lab/reports/generation-004a-reconfiguration-sensitivity.md), [generation-005-targeted-tp-pp-pairs.md](../../constraint-lab/reports/generation-005-targeted-tp-pp-pairs.md)
+Coherence: `F004-PASSAGE-AFTER-OCCUPANCY`, `F005-COMPOSITION-NOT-SUM`, `F008-COMPOSITION-REPRESENTATION`
+Dependencies: CL-T01
+Source generations: 004A, 005
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-N03: 7B aggregate control collapse
+
+**NUMERICAL_KERNEL_RESULT**
+
+42/42 logical aggregate fit problems meet 1e-8; all 52 stored solutions lie on equal complementary coefficients, without full process equivalence being implied by fitting.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: 7B 42 predeclared logical problems, 52 stored fits
+
+Proof/verification: `{"domain": "7B 42 predeclared logical problems, 52 stored fits", "method": "Deterministic bounded aggregate control fitting", "tolerances": {"joint_fit_tolerance": 1e-08}}`
+Evidence: [generation-007b-two-level-pair-face-control.md](../../constraint-lab/reports/generation-007b-two-level-pair-face-control.md)
+Coherence: `F009-TWO-LEVEL-COLLAPSE`, `F006-SCALAR-AGGREGATE`, `F007-SELECTIVITY-SURVIVES`
+Dependencies: CL-T04
+Source generations: 007B
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+Notes: The equal-coefficient local collapse is algebraic; the fitted diagonal outcome is numerical.
+
+## CL-N04: Information estimator calibration
+
+**NUMERICAL_KERNEL_RESULT**
+
+8B plugin information exceeds exact finite-state reference under the tested balanced finite samples; symmetry-aware raw-state reference repairs the interpretation.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: 8B 336 estimator cells on the frozen palette
+
+Proof/verification: `{"domain": "8B 336 estimator cells on the frozen palette", "method": "Exact-reference finite-kernel calculations plus historical Monte Carlo calibration, not new sampling", "tolerances": {"reported_reference_reproduction_gap": 2.81e-16}}`
+Evidence: [generation-008b-information-calibration.md](../../constraint-lab/reports/generation-008b-information-calibration.md)
+Coherence: `F013-PLUGIN-OVERSTATES`, `F011-QUOTIENT-INVALID`
+Dependencies: CL-T20
+Source generations: 008A, 008B
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+Notes: Includes historical sampling; not every output is an algebraic identity.
+
+## CL-N05: Persistent tiny projection residual
+
+**NUMERICAL_KERNEL_RESULT**
+
+K3-versus-PROJECTION stationary pair JS is 2.811226056e-5 at m=1/4 and 6.210311362e-6 at m=4; both exceed the 1e-12 information floor.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: 8F frozen single-action N4 strong-grade palette
+
+Proof/verification: `{"domain": "8F frozen single-action N4 strong-grade palette", "method": "80-digit multiplier references and float64 deterministic epoch/stationary analysis", "tolerances": {"information_floor": 1e-12, "local_reference_gap": 1e-13, "stationary_residual": 1e-11}}`
+Evidence: [generation-008f-stationary-bridge.json](../../constraint-lab/reports/tables/generation-008f-stationary-bridge.json), [generation-008f-numeric-validation.json](../../constraint-lab/reports/tables/generation-008f-numeric-validation.json), [generation-008f-stationary-context.json](../../constraint-lab/reports/tables/generation-008f-stationary-context.json)
+Coherence: `F8F-PROJECTION-PERSISTS`, `F8F-LOCAL-GLOBAL-DECOUPLING`
+Dependencies: CL-T23, CL-T15
+Source generations: 008F
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-N06: Projection routing and drift-matched occupancy
+
+**NUMERICAL_KERNEL_RESULT**
+
+Path-first admissible dissolution exposes shape remainder; stationary shape is below floor, while DRIFT-matched laws still differ in edge and labelled occupancy.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: 8C canonical three-edge sources and 8F three sources/checkpoints 1,2,4,8,16,32,64
+
+Proof/verification: `{"domain": "8C canonical three-edge sources and 8F three sources/checkpoints 1,2,4,8,16,32,64", "method": "Deterministic epoch propagation and nested equal-prior JS decomposition", "tolerances": {"balanced_drift_gap": 1e-14, "chain_rule_gap": 1e-12, "information_floor_8f": 1e-12}}`
+Evidence: [generation-008f-checkpoint-bridge.json](../../constraint-lab/reports/tables/generation-008f-checkpoint-bridge.json), [generation-008f-stationary-bridge.json](../../constraint-lab/reports/tables/generation-008f-stationary-bridge.json), [generation-008c-mechanistic-decomposition.md](../../constraint-lab/reports/generation-008c-mechanistic-decomposition.md)
+Coherence: `F8F-FIRST-PATH-SHAPE`, `F8F-PATH-NOT-UNIVERSAL`, `F8F-SHAPE-WASHES-OUT`, `F8F-DRIFT-MATCHED-RESIDUAL`, `F8C-PATH-CONVERTS-SLOT`
+Dependencies: CL-T16, CL-T19, CL-T24
+Source generations: 008C, 008F
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-I01: Current efficacy is not historical memory
+
+**MODEL_INFERENCE**
+
+A current hidden gate can remain effective after initial-gate information is lost in the tested visible projections.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: Interpretation of current versus initial variables in 8B-8F
+
+Proof/verification: `{"argument": "The variables and conditioning differ; positive current CMI is not an initial-memory claim.", "domain": "Interpretation of current versus initial variables in 8B-8F"}`
+Evidence: [generation-008c-mechanistic-decomposition.md](../../constraint-lab/reports/generation-008c-mechanistic-decomposition.md), [generation-008f-interaction-to-topology-bridge.md](../../constraint-lab/reports/generation-008f-interaction-to-topology-bridge.md)
+Coherence: `F018-LOCAL-VERSUS-INITIAL`, `F8C-CURRENT-SURVIVES`, `F8F-LOCAL-GLOBAL-DECOUPLING`
+Dependencies: CL-N01, CL-N05
+Source generations: 008B, 008C, 008F
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-I02: Bounded occupancy and pairwise scope
+
+**MODEL_INFERENCE**
+
+Early bounded pairwise results and Generation 8 occupancy observations constrain this programme, not all pairwise theories or physical systems.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: Interpretation of Generations 1 and 8 historical domains
+
+Proof/verification: `{"argument": "Evidence includes exhaustive bounded rules and historical stochastic trajectories; neither is a universal expressivity theorem.", "domain": "Interpretation of Generations 1 and 8 historical domains"}`
+Evidence: [generation-001-pregeometric-pairwise.md](../../constraint-lab/reports/generation-001-pregeometric-pairwise.md), [generation-008-exploration-synthesis.md](../../constraint-lab/reports/generation-008-exploration-synthesis.md)
+Coherence: `F001-PAIRWISE-RISE`, `F010-OCCUPANCY-AXIS`, `F012-RAW-CONTEXT-AXIS`
+Dependencies: none
+Source generations: 001, 008
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+Notes: Generation 8 trajectory observations retain their observational layer; no new Monte Carlo was run.
+
+## CL-M01: Compilation before ontology-axis claims
+
+**METHODOLOGICAL_PRINCIPLE**
+
+Before claiming a new axis, declare preserved state, support, clock, projection, priors and budgets, and test compilation into ordinary current-state rules.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: Research-method or explicitly open scope.
+
+Proof/verification: `{"argument": "A representation change is not automatically new dynamical expressivity."}`
+Evidence: [expressivity-boundaries.md](../../constraint-lab/formal/expressivity-boundaries.md), [open-problems.md](../../constraint-lab/formal/open-problems.md)
+Coherence: `Q-H-POSITIVE`, `Q-META-CONSTRAINT`, `F8E-ORDINARY-K-SUPPLIES-INTERACTION`
+Dependencies: CL-T12
+Source generations: 008G
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-M02: Freeze actual scientific cells before execution
+
+**METHODOLOGICAL_PRINCIPLE**
+
+Plumbing tests before a scientific freeze should use synthetic/historical fixtures; actual exposed cells require declaration.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: Research-method or explicitly open scope.
+
+Proof/verification: `{"argument": "8E qualification and 8F zero-target prefreeze pattern distinguish provenance from scientific correction."}`
+Evidence: [008F-chatgpt-review-v0.8f.md](../../constraint-lab/provenance/reviews/008F-chatgpt-review-v0.8f.md), [generation-008e-errata.md](../../constraint-lab/reports/generation-008e-errata.md)
+Coherence: `F8F-PREFREEZE-SCIENCE-GATE`
+Dependencies: none
+Source generations: 008E, 008F, 008G
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-M03: Evidence dimensions are not one score
+
+**METHODOLOGICAL_PRINCIPLE**
+
+Magnitude, robustness, temporal character, structural role, projection sensitivity and epistemic layer remain distinct.
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: Research-method or explicitly open scope.
+
+Proof/verification: `{"argument": "A tiny persistent projection residue can be structurally diagnostic without ranking ontology."}`
+Evidence: [README.md](../../constraint-lab/coherence/README.md), [local-to-global.md](../../constraint-lab/formal/local-to-global.md)
+Coherence: `F8F-PROJECTION-PERSISTS`, `F8F-RS-BRIDGE-INTERPRETATION`
+Dependencies: none
+Source generations: 008G
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-Q01: General minimal representation frontier
+
+**OPEN_QUESTION**
+
+What are the joint K/J representation frontiers for arbitrary small target tables under each alphabet and normal form?
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: Research-method or explicitly open scope.
+
+Proof/verification: `{"next_test": "Analytic lower bounds first; separately frozen bounded searches only if needed.", "resolution": "open"}`
+Evidence: [open-problems.md](../../constraint-lab/formal/open-problems.md)
+Coherence: `F8E-CARDINALITY-VS-K`, `F8E-W4-COVERAGE`
+Dependencies: CL-T21, CL-T22
+Source generations: 008G
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-Q02: Genuine same-current-state history witness
+
+**OPEN_QUESTION**
+
+Can a common H>0 rule distinguish futures of two reachable histories ending in the identical complete ordinary relational state?
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: Research-method or explicitly open scope.
+
+Proof/verification: `{"next_test": "Identical full material x, different last-event histories, fixed common controller and clock.", "resolution": "open"}`
+Evidence: [open-problems.md](../../constraint-lab/formal/open-problems.md)
+Coherence: `Q-H-POSITIVE`, `F018-LOCAL-VERSUS-INITIAL`
+Dependencies: CL-T12, CL-M01
+Source generations: 008G
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-Q03: Dynamic rule state versus compilable meta syntax
+
+**OPEN_QUESTION**
+
+Which proposed L>0 mechanisms cannot be compiled into a fixed ordinary current-state law without adding constraint state?
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: Research-method or explicitly open scope.
+
+Proof/verification: `{"next_test": "Same full material x, different reachable constraint states under one common program; explicit compilation test.", "resolution": "open"}`
+Evidence: [open-problems.md](../../constraint-lab/formal/open-problems.md)
+Coherence: `Q-META-CONSTRAINT`
+Dependencies: CL-T12, CL-M01
+Source generations: 008G
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-Q04: Breaking autonomous incidence silence and shape wash-out
+
+**OPEN_QUESTION**
+
+Which incidence-aware, pair-coupled or multiple-action mechanisms defeat the single-action symmetry/factorisation assumptions?
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: Research-method or explicitly open scope.
+
+Proof/verification: `{"next_test": "Name the broken hypothesis before scaling N; no N5 or XOR round opened.", "resolution": "open"}`
+Evidence: [open-problems.md](../../constraint-lab/formal/open-problems.md)
+Coherence: `Q-SCALE-N`, `F8F-INCIDENCE-SILENT`, `F8F-SHAPE-WASHES-OUT`
+Dependencies: CL-T19, CL-T25
+Source generations: 008G
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+
+## CL-Q05: Transition-enabling dissolution
+
+**OPEN_QUESTION**
+
+When does controlled dissolution enable a distinct configuration rather than merely remove one?
+
+Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
+Scope: Research-method or explicitly open scope.
+
+Proof/verification: `{"next_test": "Matched occupancy/support passage controls; no purpose inferred from fragility.", "resolution": "open"}`
+Evidence: [open-problems.md](../../constraint-lab/formal/open-problems.md)
+Coherence: `F004-PASSAGE-AFTER-OCCUPANCY`
+Dependencies: none
+Source generations: 008G
+Boundary: No claim beyond the declared support, parameter palette, clock and observable.
+

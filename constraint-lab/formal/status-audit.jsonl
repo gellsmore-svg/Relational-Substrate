@@ -1,0 +1,38 @@
+{"finding_id":"F001-PAIRWISE-RISE","formal_reading":"FINITE_EXHAUSTIVE_RESULT","theorem_refs":["CL-I02"],"qualification":"Bounded tested grammar only; no universal pairwise impossibility."}
+{"finding_id":"F003-CLOCK-SPLIT","formal_reading":"NUMERICAL_KERNEL_RESULT","theorem_refs":["CL-N01","CL-T15"],"qualification":"Historical clock contrast is finite; resolvent identity is separately proved."}
+{"finding_id":"F004-PASSAGE-AFTER-OCCUPANCY","formal_reading":"NUMERICAL_KERNEL_RESULT","theorem_refs":["CL-N02"],"qualification":"Controlled source law and passage observable fixed."}
+{"finding_id":"F005-COMPOSITION-NOT-SUM","formal_reading":"NUMERICAL_KERNEL_RESULT","theorem_refs":["CL-N02","CL-T01"],"qualification":"Observable nonadditivity is not a log-weight product."}
+{"finding_id":"F008-COMPOSITION-REPRESENTATION","formal_reading":"MODEL_INFERENCE","theorem_refs":["CL-N02"],"qualification":"Historical inference preserved, not promoted to theorem."}
+{"finding_id":"F009-TWO-LEVEL-COLLAPSE","formal_reading":"NUMERICAL_KERNEL_RESULT","theorem_refs":["CL-N03","CL-T04"],"qualification":"Fitted diagonal is numerical; equal-coefficient local identity is algebraic."}
+{"finding_id":"F010-OCCUPANCY-AXIS","formal_reading":"HISTORICAL_SAMPLED_OBSERVATION","theorem_refs":["CL-I02"],"qualification":"Historical trajectories, not an exact-kernel theorem."}
+{"finding_id":"F011-QUOTIENT-INVALID","formal_reading":"METHODOLOGICAL_PRINCIPLE","theorem_refs":["CL-T20"],"qualification":"The repair motivates a proved whole-law quotient criterion."}
+{"finding_id":"F013-PLUGIN-OVERSTATES","formal_reading":"NUMERICAL_KERNEL_RESULT","theorem_refs":["CL-N04"],"qualification":"Exact reference plus historical finite-sample calibration; no new sampling."}
+{"finding_id":"F018-LOCAL-VERSUS-INITIAL","formal_reading":"MODEL_INFERENCE","theorem_refs":["CL-I01"],"qualification":"Different time-indexed variables, not contradictory information claims."}
+{"finding_id":"F8C-CLOSED-FORM-CMI","formal_reading":"ALGEBRAIC_THEOREM","theorem_refs":["CL-T03"],"qualification":"Six-slot law is algebraic; historical CMI magnitudes retain their own evidence."}
+{"finding_id":"F8C-LOCAL-EQUIVALENCE","formal_reading":"FINITE_EXHAUSTIVE_RESULT","theorem_refs":["CL-T03"],"qualification":"Coordinate-pattern agreement is not arbitrary labelled full-kernel equality."}
+{"finding_id":"F8C-R05-DENOMINATOR","formal_reading":"NUMERICAL_KERNEL_RESULT","theorem_refs":["CL-T01","CL-N02"],"qualification":"Normalisation couples probabilities despite additive logits."}
+{"finding_id":"F8C-PATH-CONVERTS-SLOT","formal_reading":"MODEL_INFERENCE","theorem_refs":["CL-N06","CL-T16"],"qualification":"Finite-source routing inference; path dominance is not universal."}
+{"finding_id":"F8C-CURRENT-SURVIVES","formal_reading":"MODEL_INFERENCE","theorem_refs":["CL-I01"],"qualification":"Current efficacy is not initial-state retention or H."}
+{"finding_id":"F8D-LOG-ADDITIVITY","formal_reading":"ALGEBRAIC_THEOREM","theorem_refs":["CL-T01","CL-T02"],"qualification":"Implementation semantics support a separate formal proof."}
+{"finding_id":"F8D-COMPLEMENTARY-ELIMINATION","formal_reading":"ALGEBRAIC_THEOREM","theorem_refs":["CL-T04"],"qualification":"Binary complementary gates, equal factors and same direction."}
+{"finding_id":"F8D-DIRECTION-ELIMINATION","formal_reading":"ALGEBRAIC_THEOREM","theorem_refs":["CL-T05"],"qualification":"Removes action-bit weighting guard, not gate dependence."}
+{"finding_id":"F8D-NO-GATE-PRODUCT","formal_reading":"ALGEBRAIC_THEOREM","theorem_refs":["CL-T06","CL-T14"],"qualification":"Qualified literal-only bound; count token exception explicit."}
+{"finding_id":"F8D-GATE-DIMENSION","formal_reading":"FINITE_EXHAUSTIVE_RESULT","theorem_refs":["CL-F01"],"qualification":"3,584-system domain, separate from information magnitude."}
+{"finding_id":"F8D-ADDITIVE-FEATURE-GRAMMAR","formal_reading":"MODEL_INFERENCE","theorem_refs":["CL-T01","CL-T06","CL-T12"],"qualification":"Qualified historical inference gains separate scoped algebraic statements."}
+{"finding_id":"F8E-K3-CONJUNCTION-INTERACTION","formal_reading":"FINITE_EXHAUSTIVE_RESULT","theorem_refs":["CL-F02","CL-T07"],"qualification":"80-system census and general local identity are distinct."}
+{"finding_id":"F8E-K2-K3-NONREPRESENTABILITY","formal_reading":"ALGEBRAIC_THEOREM","theorem_refs":["CL-T06","CL-T07","CL-F02"],"qualification":"Span obstruction plus separate finite census corroboration."}
+{"finding_id":"F8E-BOOLEAN-LOGIT-BASIS","formal_reading":"ALGEBRAIC_THEOREM","theorem_refs":["CL-T09","CL-T11"],"qualification":"Continuous local basis, not finite W4 completeness."}
+{"finding_id":"F8E-CORNER-BASIS","formal_reading":"ALGEBRAIC_THEOREM","theorem_refs":["CL-T10"],"qualification":"Complete assignments over distinct gates."}
+{"finding_id":"F8E-W4-COVERAGE","formal_reading":"FINITE_EXHAUSTIVE_RESULT","theorem_refs":["CL-F03","CL-T22"],"qualification":"Restricted coefficient grid only."}
+{"finding_id":"F8E-GENERAL-K-INTERACTION","formal_reading":"ALGEBRAIC_THEOREM","theorem_refs":["CL-T08","CL-T14"],"qualification":"Historical qualified status retained; distinct satisfiable literals only."}
+{"finding_id":"F8E-CARDINALITY-VS-K","formal_reading":"MODEL_INFERENCE","theorem_refs":["CL-T13","CL-T14","CL-T21"],"qualification":"Literal feature hierarchy; count predicates are compound features."}
+{"finding_id":"F8E-RS-COMPOSITIONAL-HIERARCHY","formal_reading":"INTERPRETATION","theorem_refs":["CL-T08","CL-M01"],"qualification":"Ontology interpretation is not promoted to a physical theorem."}
+{"finding_id":"F8F-PREFREEZE-SCIENCE-GATE","formal_reading":"METHODOLOGICAL_PRINCIPLE","theorem_refs":["CL-M02"],"qualification":"Preferred future execution pattern; old deviation remains visible."}
+{"finding_id":"F8F-PROJECTION-PERSISTS","formal_reading":"NUMERICAL_KERNEL_RESULT","theorem_refs":["CL-N05","CL-T23"],"qualification":"Tiny palette-specific residue above frozen floor."}
+{"finding_id":"F8F-INCIDENCE-SILENT","formal_reading":"FINITE_EXHAUSTIVE_RESULT","theorem_refs":["CL-F04","CL-T25"],"qualification":"Explicit selected hidden-coordinate maps; no arbitrary incidence claim."}
+{"finding_id":"F8F-SHAPE-WASHES-OUT","formal_reading":"NUMERICAL_KERNEL_RESULT","theorem_refs":["CL-N06","CL-T18","CL-T19"],"qualification":"Historical numeric observation now has a separate autonomous-family proof."}
+{"finding_id":"F8F-PATH-NOT-UNIVERSAL","formal_reading":"NUMERICAL_KERNEL_RESULT","theorem_refs":["CL-N06"],"qualification":"Negative finding retained; no most-important-number selection."}
+{"finding_id":"F8F-DRIFT-MATCHED-RESIDUAL","formal_reading":"NUMERICAL_KERNEL_RESULT","theorem_refs":["CL-N06","CL-T24"],"qualification":"Balanced local moment does not match stationary experience."}
+{"finding_id":"F8F-COMPLEMENT-PERIOD","formal_reading":"FINITE_EXHAUSTIVE_RESULT","theorem_refs":["CL-T17"],"qualification":"Period theorem needs positivity and two-step returns; direction complement retains tested scope."}
+{"finding_id":"F8F-LOCAL-GLOBAL-DECOUPLING","formal_reading":"NUMERICAL_KERNEL_RESULT","theorem_refs":["CL-N05","CL-I01"],"qualification":"No fitted predictive law."}
+{"finding_id":"F8F-INTERACTION-ROUTING","formal_reading":"MODEL_INFERENCE","theorem_refs":["CL-T16","CL-T18","CL-T19"],"qualification":"Mechanism proof is separate from historical inference."}
