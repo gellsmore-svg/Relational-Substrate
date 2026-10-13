@@ -1,0 +1,13 @@
+{
+  "frozen_analysis_plan_commit": "e9f8f3b5b6fae99932ce6a289b6d15c39336a4c4",
+  "plan_hash": "77fc2950ea394245cb0bcd441b35fed608c413961d41d8f44fa0e2ccd34ceb3a",
+  "plan_file_sha256": "62c95c57e5d0fe03a91198c5d90f1164e5be2b035b3e28e6f76bb7ff05ba4ff8",
+  "remote_branch": "origin/research/constraint-lab-v0.8h-history-as-state",
+  "pre_freeze_actual_non_neutral_H0_rows_kernels_cells": 0,
+  "neutral_preobserved": true,
+  "analytic_expectations": "externally predeclared symbolic; non-neutral numerical/exact verification unopened until committed and pushed",
+  "source_commit": "8595741",
+  "history_clock": "pair",
+  "workers": 1,
+  "stochastic_trajectories": 0
+}

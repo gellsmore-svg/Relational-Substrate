@@ -1,0 +1,17 @@
+[
+  {
+    "fixed_state_non_compilability": "one H0 row cannot equal two unequal history-conditioned rows",
+    "full_and_pair_rows_diverge_iff_non_neutral": true,
+    "same_complete_x": true,
+    "scope": "unchanged ordinary x; finite state augmentation remains possible",
+    "verified": true
+  },
+  {
+    "H_pair": 1,
+    "material_bits": 10,
+    "scope": "Markov on (x,h), not unchanged-state H0 compilation",
+    "sentinel": null,
+    "updates_checked": 71680,
+    "verified": true
+  }
+]

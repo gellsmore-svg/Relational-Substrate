@@ -1,0 +1,41 @@
+[
+  {
+    "analytic_numeric_gap": "3E-161",
+    "eigenvalue_gap": 8.326672684688674e-17,
+    "full_vs_pair_quotient_gap": "0/1",
+    "information_formula_gap": "0E-161",
+    "m": "1/4",
+    "matrix_power_gap": "0/1",
+    "order2_sufficiency_gap": "0/1",
+    "precision_decimal_digits": 160,
+    "row_sum_gap": "0/1",
+    "stationary_residual": "0/1",
+    "uniform_joint_gap": "0/1"
+  },
+  {
+    "analytic_numeric_gap": "0.0",
+    "eigenvalue_gap": 2.220446049250313e-16,
+    "full_vs_pair_quotient_gap": "0/1",
+    "information_formula_gap": "0E-161",
+    "m": "1/1",
+    "matrix_power_gap": "0/1",
+    "order2_sufficiency_gap": "0/1",
+    "precision_decimal_digits": 160,
+    "row_sum_gap": "0/1",
+    "stationary_residual": "0/1",
+    "uniform_joint_gap": "0/1"
+  },
+  {
+    "analytic_numeric_gap": "1E-160",
+    "eigenvalue_gap": 4.440892098500626e-16,
+    "full_vs_pair_quotient_gap": "0/1",
+    "information_formula_gap": "2E-160",
+    "m": "4/1",
+    "matrix_power_gap": "0/1",
+    "order2_sufficiency_gap": "0/1",
+    "precision_decimal_digits": 160,
+    "row_sum_gap": "0/1",
+    "stationary_residual": "0/1",
+    "uniform_joint_gap": "0/1"
+  }
+]

@@ -1,0 +1,123 @@
+{
+  "analysis_version": "generation-008h-history/v1",
+  "detail_sha256": {
+    "constraint-lab/reports/tables/generation-008h-formal-checks.json": "e8e57d35c39907fd191eebb9979b255e9b2400f27d0c067733b9638bc447ab3e",
+    "constraint-lab/reports/tables/generation-008h-history-chain.json": "931e221288c1742fffdfb9ac60591102d46c2cbecff7c3c2cf31d3c4ed60be40",
+    "constraint-lab/reports/tables/generation-008h-initial-history-decay.json": "4594b2cf60766a2b911198654e4ae1dc78f38ee5561053268381f49998fb4558",
+    "constraint-lab/reports/tables/generation-008h-kernels.json": "bbb05f51fd937bb25d4a76b316dbdeb77c56048f445bb33329d8c983011aa7a1",
+    "constraint-lab/reports/tables/generation-008h-pair-epoch.json": "9d4093187eef806e1111f9e957f23e4aea27185e5ec1c3aa20c4cce5244517fb",
+    "constraint-lab/reports/tables/generation-008h-projected-process.json": "0021f934bb19aa3913972b4f16b6d9bef9c6a65de2eaafe916ae90624d12682b",
+    "constraint-lab/reports/tables/generation-008h-validation.json": "5b747e9facbbaa78955b5371bef8f122c565a16b3889e247ce33f7e97d90f03e",
+    "constraint-lab/reports/tables/generation-008h-witness.json": "742e73abd299f33ce606a269ffb141e29e429209d96304d24c70693b6ff002ef"
+  },
+  "experiment_id": "generation-008h-history-as-state",
+  "frozen_analysis_plan_commit": "e9f8f3b5b6fae99932ce6a289b6d15c39336a4c4",
+  "item_sha256": {
+    "H-FORMAL-NONLUMPABILITY": "59533df08e157a341a0635e82d4e20275e91cf95765e9a5c4a6486feb28a96c5",
+    "H-KERNEL-m025": "e51554075da27518a2177850912dc633c128ca931d9260dc232bc2bbb1ea99ff",
+    "H-KERNEL-m1": "37bdb511aae1e051dbd86d4baae011e705309203f830c30ebeefbed48e4a355d",
+    "H-KERNEL-m4": "3ec1917824d477ea8e0943dd06d47f0a6b39ce754cb98463d8997fd34db77962",
+    "H-STATE-AUGMENTATION": "f81c7300e6cf3a9c201bbbf13aeeaf356ad0dc7f38272c5744baa586d27dded3",
+    "H-TEMPORAL-m025": "6db5314efd9f398726252c4ae7492e29f1e0ad1dfcdd9a85f5f35d80e09221a6",
+    "H-TEMPORAL-m1": "fc854e127fc2a61827de1ec3b60953b6331634498cfcbf5c9092cd81e53a0964",
+    "H-TEMPORAL-m4": "affe92d2004ec084e46b9a4830a456d70261d00099768a8d8f05ab25e67e6126",
+    "H-WITNESS-m025": "13ca0a9c18ff60722e588b0ba8262b19830199a617a115ffdc876b9b00d3cfdc",
+    "H-WITNESS-m1": "5f52c0908ffe5b75712602daa76795a43f6441f301168c14053bd6f85219186d",
+    "H-WITNESS-m4": "f4067e3649205b9d583d3e747356c4c274ee04710a29b9cbd25d0f5ba71be2b3"
+  },
+  "numpy": "2.5.3",
+  "plan_file_sha256": "62c95c57e5d0fe03a91198c5d90f1164e5be2b035b3e28e6f76bb7ff05ba4ff8",
+  "plan_hash": "77fc2950ea394245cb0bcd441b35fed608c413961d41d8f44fa0e2ccd34ceb3a",
+  "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "precision_decimal_digits": 160,
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "round_id": "H0",
+  "schema": "rs-constraint-lab.history-tables/v1",
+  "status": "COMPLETE",
+  "stochastic_trajectories": 0,
+  "timings": [
+    {
+      "item_id": "H-WITNESS-m025",
+      "sha256": "13ca0a9c18ff60722e588b0ba8262b19830199a617a115ffdc876b9b00d3cfdc",
+      "wall_seconds": 0.004616634003468789
+    },
+    {
+      "item_id": "H-KERNEL-m025",
+      "sha256": "e51554075da27518a2177850912dc633c128ca931d9260dc232bc2bbb1ea99ff",
+      "wall_seconds": 0.17771733900008257
+    },
+    {
+      "item_id": "H-TEMPORAL-m025",
+      "sha256": "6db5314efd9f398726252c4ae7492e29f1e0ad1dfcdd9a85f5f35d80e09221a6",
+      "wall_seconds": 0.24727090899978066
+    },
+    {
+      "item_id": "H-WITNESS-m1",
+      "sha256": "5f52c0908ffe5b75712602daa76795a43f6441f301168c14053bd6f85219186d",
+      "wall_seconds": 0.0007371100000455044
+    },
+    {
+      "item_id": "H-KERNEL-m1",
+      "sha256": "37bdb511aae1e051dbd86d4baae011e705309203f830c30ebeefbed48e4a355d",
+      "wall_seconds": 0.1664593489986146
+    },
+    {
+      "item_id": "H-TEMPORAL-m1",
+      "sha256": "fc854e127fc2a61827de1ec3b60953b6331634498cfcbf5c9092cd81e53a0964",
+      "wall_seconds": 0.20895016699796543
+    },
+    {
+      "item_id": "H-WITNESS-m4",
+      "sha256": "f4067e3649205b9d583d3e747356c4c274ee04710a29b9cbd25d0f5ba71be2b3",
+      "wall_seconds": 0.004373397998278961
+    },
+    {
+      "item_id": "H-KERNEL-m4",
+      "sha256": "3ec1917824d477ea8e0943dd06d47f0a6b39ce754cb98463d8997fd34db77962",
+      "wall_seconds": 0.1702585379971424
+    },
+    {
+      "item_id": "H-TEMPORAL-m4",
+      "sha256": "affe92d2004ec084e46b9a4830a456d70261d00099768a8d8f05ab25e67e6126",
+      "wall_seconds": 0.24845726400235435
+    },
+    {
+      "item_id": "H-FORMAL-NONLUMPABILITY",
+      "sha256": "59533df08e157a341a0635e82d4e20275e91cf95765e9a5c4a6486feb28a96c5",
+      "wall_seconds": 0.015711881998868193
+    },
+    {
+      "item_id": "H-STATE-AUGMENTATION",
+      "sha256": "f81c7300e6cf3a9c201bbbf13aeeaf356ad0dc7f38272c5744baa586d27dded3",
+      "wall_seconds": 0.0631926249989192
+    }
+  ],
+  "tolerances": {
+    "eigenvalue_gap": "1e-13",
+    "history_pair_independence_gap": "exact",
+    "information_formula_gap": "1e-13",
+    "neutral_lumpability_gap": "exact",
+    "rational_identities": "exact",
+    "row_sums": "exact",
+    "stationary_residual": "exact",
+    "uniform_joint_gap": "exact"
+  },
+  "work_counts": {
+    "atomic_items": 11,
+    "consistent_material_triples": 6912,
+    "deterministic_full_state_updates": 71680,
+    "direct_full_to_pair_block_solves": 63,
+    "direct_raw_triad_rows": 1008,
+    "direct_slot_probability_checks": 6048,
+    "event_history_matrices": 3,
+    "full_witness_rows": 6,
+    "initial_history_checkpoint_cells": 24,
+    "pair_epoch_kernels": 3,
+    "pair_epoch_states_per_kernel": 384,
+    "pair_epoch_transition_entries": 6912,
+    "pair_witness_rows": 6,
+    "target_models": 3,
+    "two_step_augmented_paths": 41472,
+    "witness_paths": 6
+  }
+}
