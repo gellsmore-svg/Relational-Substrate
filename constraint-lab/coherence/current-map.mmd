@@ -1,0 +1,62 @@
+%% Generated from findings.jsonl and relations.jsonl.
+%% Historical nodes appear when a later finding supersedes their interpretation.
+flowchart TD
+  subgraph OBSERVATION [Observed dynamics]
+    F001_PAIRWISE_RISE["F001-PAIRWISE-RISE: In the searched memoryless pairwise cells, reweighting moves stationary triangle mass a..."]
+    F003_CLOCK_SPLIT["F003-CLOCK-SPLIT: Separating the full-event clock from the pair-event epoch shows that some apparent pair..."]
+    F004_PASSAGE_AFTER_OCCUPANCY["F004-PASSAGE-AFTER-OCCUPANCY: After source occupancy is separated from future dynamics, N=4 higher-order state still ..."]
+    F005_COMPOSITION_NOT_SUM["F005-COMPOSITION-NOT-SUM: One higher-order-conditioned pairwise rule and one ordinary pairwise rule do not add on..."]
+    F006_SCALAR_AGGREGATE["F006-SCALAR-AGGREGATE: An unconditional scalar pair control can be matched to aggregate passage in a way that ..."]
+    F007_SELECTIVITY_SURVIVES["F007-SELECTIVITY-SURVIVES: After a two-level pair-face control has matched the two aggregate passage numbers, the ..."]
+    F009_TWO_LEVEL_COLLAPSE["F009-TWO-LEVEL-COLLAPSE: The two-parameter pair-face representation that matches aggregate passage uses its two ..."]
+    F010_OCCUPANCY_AXIS["F010-OCCUPANCY-AXIS: Mode B exploration finds a large finite-grade sparse/dense occupancy axis. On the S01 e..."]
+    F012_RAW_CONTEXT_AXIS["F012-RAW-CONTEXT-AXIS: Exhaustive raw-context starts preserve the edge-count axis. Copied dense-minus-sparse v..."]
+    F008A_PLUGIN_INITIAL_MI["F008A-PLUGIN-INITIAL-MI: Under the uniform raw prior, the plug-in mutual information about the first other 3-edg..."]
+    F014_EXACT_FIRST_DESTINATION["F014-EXACT-FIRST-DESTINATION: Exact first-destination mutual information is at the 1e-10 floor for R00, R03, and R07,..."]
+    F015_TRANSIENT_CLASS_MEMORY["F015-TRANSIENT-CLASS-MEMORY: Exact initial-context graph-class information is transient. The largest value is R06 pa..."]
+    F016_CURRENT_SLOT_INFORMATION["F016-CURRENT-SLOT-INFORMATION: The current triad carries exact local next-slot information only where the rule reads t..."]
+    F017_CLASS_PROJECTION_LOSS["F017-CLASS-PROJECTION-LOSS: Replacing the full labelled pair mask by graph isomorphism class retains 0.661 of the s..."]
+    F008_EDGE_VERSUS_SHAPE["F008-EDGE-VERSUS-SHAPE: At checkpoint 1, star and triangle carry only edge-count information: class information..."]
+    F008B_FINITE_HORIZON_RANGE["F008B-FINITE-HORIZON-RANGE: Exact dense-minus-sparse context ranges over 512 pair epochs are at the floor for R00, ..."]
+  end
+  subgraph INFERENCE [Inferences]
+    F008_COMPOSITION_REPRESENTATION["F008-COMPOSITION-REPRESENTATION: The magnitude of a two-rule interaction residual depends on the representation and the ..."]
+    F018_LOCAL_VERSUS_INITIAL["F018-LOCAL-VERSUS-INITIAL: Local higher-order dependence and long-lived initial-condition memory are distinct. The..."]
+  end
+  subgraph METHODOLOGICAL [Methodological corrections]
+    F011_QUOTIENT_INVALID["F011-QUOTIENT-INVALID: Graph-only hidden-context quotienting is formally invalid for labelled rules. The wrong..."]
+    F013_PLUGIN_OVERSTATES["F013-PLUGIN-OVERSTATES: Plug-in mutual information from these finite tables substantially overstates hidden-con..."]
+  end
+  subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
+    F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
+  end
+  subgraph OPEN_QUESTION [Open questions]
+    Q_PATH_SHAPE["Q-PATH-SHAPE: Why does path topology convert early triadic context into shape information at the firs..."]
+    Q_LOCAL_SLOT["Q-LOCAL-SLOT: What minimal state coordinates and normalisation produce the balanced full-mask slot in..."]
+    Q_CLASS_REMAINDER["Q-CLASS-REMAINDER: Which labelled alignments inside a graph class carry the slot information that isomorph..."]
+    Q_H_POSITIVE["Q-H-POSITIVE: What changes when relational history itself becomes part of the constraint state? Rapid..."]
+    Q_SCALE_N["Q-SCALE-N: How does the local gate, the normalisation, and the occupancy axis scale when N moves p..."]
+    Q_THREE_EDGE_LAYER["Q-THREE-EDGE-LAYER: What keeps the 3-edge occupancy layer near 0.314 across the Generation 8 palette?"]
+  end
+  F014_EXACT_FIRST_DESTINATION -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
+  F015_TRANSIENT_CLASS_MEMORY -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
+  F013_PLUGIN_OVERSTATES -->|explains| F008A_PLUGIN_INITIAL_MI
+  F016_CURRENT_SLOT_INFORMATION -->|contrasts_with| F015_TRANSIENT_CLASS_MEMORY
+  F018_LOCAL_VERSUS_INITIAL -->|derived_from| F016_CURRENT_SLOT_INFORMATION
+  F018_LOCAL_VERSUS_INITIAL -->|derived_from| F015_TRANSIENT_CLASS_MEMORY
+  F003_CLOCK_SPLIT -->|motivates| F016_CURRENT_SLOT_INFORMATION
+  F011_QUOTIENT_INVALID -->|motivates| F012_RAW_CONTEXT_AXIS
+  F012_RAW_CONTEXT_AXIS -->|refines| F010_OCCUPANCY_AXIS
+  F004_PASSAGE_AFTER_OCCUPANCY -->|bounds| F010_OCCUPANCY_AXIS
+  F007_SELECTIVITY_SURVIVES -->|supports| F016_CURRENT_SLOT_INFORMATION
+  F009_TWO_LEVEL_COLLAPSE -->|explains| F006_SCALAR_AGGREGATE
+  F017_CLASS_PROJECTION_LOSS -->|is_coarse_graining_of| F016_CURRENT_SLOT_INFORMATION
+  F008_EDGE_VERSUS_SHAPE -->|raises_question| Q_PATH_SHAPE
+  F016_CURRENT_SLOT_INFORMATION -->|raises_question| Q_LOCAL_SLOT
+  F017_CLASS_PROJECTION_LOSS -->|raises_question| Q_CLASS_REMAINDER
+  F015_TRANSIENT_CLASS_MEMORY -->|raises_question| Q_H_POSITIVE
+  F010_OCCUPANCY_AXIS -->|raises_question| Q_SCALE_N
+  F010_OCCUPANCY_AXIS -->|raises_question| Q_THREE_EDGE_LAYER
+  F_RS_SEPARATION -->|derived_from| F018_LOCAL_VERSUS_INITIAL
+  F008_COMPOSITION_REPRESENTATION -->|qualifies| F005_COMPOSITION_NOT_SUM
+  F008B_FINITE_HORIZON_RANGE -->|bounds| F012_RAW_CONTEXT_AXIS
