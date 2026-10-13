@@ -186,3 +186,21 @@ def test_generation_008d_composition_nodes_answer_the_open_questions() -> None:
     markdown = build_markdown(findings, relations)
     assert "F8D-NO-GATE-PRODUCT" in markdown
     assert "Q-META-CONSTRAINT" in markdown
+
+
+def test_generation_008e_scope_correction_qualifies_without_rewriting() -> None:
+    findings, relations = load_ledger(ROOT)
+    by_id = {row["finding_id"]: row for row in findings}
+    for node in ("F8D-NO-GATE-PRODUCT", "F8D-ADDITIVE-FEATURE-GRAMMAR", "F8D-RS-COMPOSITIONAL-BOUND"):
+        assert by_id[node]["status"] == "qualified"
+        assert by_id[node]["created_generation"] == "008D"
+    assert "no independent conjunction coefficient exists" in by_id["F8D-NO-GATE-PRODUCT"]["statement"]
+    assert by_id["Q-META-CONSTRAINT"]["status"] == "unresolved"
+    assert by_id["Q-K3-CONJUNCTION"]["epistemic_layer"] == "OPEN_QUESTION"
+    assert by_id["F8E-K2-SCOPE-CORRECTION"]["status"] == "active"
+    typed = {(row["relation_type"], row["from_finding"], row["to_finding"]) for row in relations}
+    assert ("raises_question", "F8E-K2-SCOPE-CORRECTION", "Q-K3-CONJUNCTION") in typed
+    assert ("qualifies", "F8E-K2-SCOPE-CORRECTION", "F8D-NO-GATE-PRODUCT") in typed
+    assert ("raises_question", "F8D-NO-GATE-PRODUCT", "Q-META-CONSTRAINT") in typed
+    markdown = build_markdown(findings, relations)
+    assert "F8E-K2-SCOPE-CORRECTION" in markdown and "Q-K3-CONJUNCTION" in markdown
