@@ -70,6 +70,8 @@ def main(argv: list[str]) -> int:
         return _generation_008c(argv[1:])
     if argv[0] == "generation008d":
         return _generation_008d(argv[1:])
+    if argv[0] == "generation008e":
+        return _generation_008e(argv[1:])
     if argv[0] == "batch":
         return _batch(argv[1:])
     print(f"unknown command {argv[0]}", file=sys.stderr)
@@ -998,3 +1000,90 @@ def _generation_008d(argv: list[str]) -> int:
         print(str(exc), file=sys.stderr)
         return 1
     return 2
+
+
+def _generation_008e(argv: list[str]) -> int:
+    if not argv:
+        print("usage: python -m rs_constraint_lab generation008e <command>", file=sys.stderr)
+        return 2
+    parser = argparse.ArgumentParser(prog="rs_constraint_lab generation008e")
+    parser.add_argument("command", choices=["write-plan", "execute-item", "run-e0", "assemble", "verify"])
+    parser.add_argument("--root", type=Path, default=None)
+    parser.add_argument("--plan", type=Path, default=None)
+    parser.add_argument("--output", type=Path, default=None)
+    parser.add_argument("--frozen-plan-commit", default=None)
+    parser.add_argument("--repo", type=Path, default=None)
+    parser.add_argument("--relpath", default=None)
+    parser.add_argument("--kind", default=None)
+    parser.add_argument("--orbit", default=None)
+    parser.add_argument("--allow-unpushed", action="store_true")
+    parser.add_argument("--publish", action="store_true")
+    args = parser.parse_args(argv)
+    from rs_constraint_lab.durable import atomic_write_json
+    from rs_constraint_lab.explore08 import FrozenPlanError
+    from rs_constraint_lab.explore08e import ConjunctionError
+    from rs_constraint_lab.gen008e_exec import (
+        PLAN_RELPATH,
+        ConjunctionRunError,
+        assemble_tables,
+        execute_plan_item,
+        item_path,
+        prepare_e0_plan,
+        publish_tables,
+        require_e0_execution,
+        run_e0,
+    )
+
+    repo = args.repo or _repo_root()
+    root = args.root or (_lab_root() / "generated" / "generation-008e" / "round-e0")
+    if args.command == "write-plan":
+        if args.output is None:
+            print("write-plan requires --output", file=sys.stderr)
+            return 2
+        plan = prepare_e0_plan(repo)
+        atomic_write_json(args.output, plan)
+        print(json.dumps({"items": len(plan["items"]), "output": str(args.output), "plan_hash": plan["plan_hash"], "weighted_system_count": plan["universe"]["weighted_system_count"]}, indent=2, sort_keys=True))
+        return 0
+    relpath = args.relpath or PLAN_RELPATH
+    plan_path = args.plan or (repo / PLAN_RELPATH)
+    try:
+        plan = require_e0_execution(repo, args.frozen_plan_commit, relpath, disk_path=plan_path, require_remote=not args.allow_unpushed)
+    except (FrozenPlanError, ConjunctionRunError) as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
+    if args.command == "verify":
+        missing = [item["kind"] for item in plan["items"] if not item_path(root, item).is_file()]
+        print(json.dumps({"complete": not missing, "missing_count": len(missing), "plan_hash": plan["plan_hash"]}, indent=2, sort_keys=True))
+        return 0 if not missing else 1
+    try:
+        if args.command == "execute-item":
+            matches = [item for item in plan["items"] if item["kind"] == args.kind and item.get("orbit_id") == (args.orbit if args.kind == "orbit" else None)]
+            if len(matches) != 1:
+                print("execute-item requires --kind orbit --orbit K3-id, or an algebra kind", file=sys.stderr)
+                return 2
+            payload = execute_plan_item(matches[0], repo=repo)
+            path = item_path(root, matches[0])
+            atomic_write_json(path, payload)
+            print(json.dumps({"item_id": payload["item_id"], "output": str(path), "wall_seconds": payload["wall_seconds"]}, indent=2, sort_keys=True))
+            return 0
+        if args.command == "run-e0":
+            written = run_e0(root, plan, repo=repo)
+            print(json.dumps({"items": len(written), "max_wall_seconds": max(row["wall_seconds"] for row in written), "root": str(root), "skipped": sum(1 for row in written if row["skipped"])}, indent=2, sort_keys=True))
+            return 0
+        if args.command == "assemble":
+            payload = assemble_tables(root, plan, frozen_plan_commit=args.frozen_plan_commit)
+            if not payload["validation"]["ok"]:
+                print(json.dumps(payload["validation"], indent=2, sort_keys=True), file=sys.stderr)
+                return 1
+            output = args.output or (root / "round-e0-tables.json")
+            atomic_write_json(output, {key: value for key, value in payload.items() if key != "tables"})
+            hashes = {}
+            if args.publish:
+                hashes = publish_tables(payload, _lab_root() / "reports")
+            print(json.dumps({"output": str(output), "payload_sha256": hashes.get("payload_sha256"), "validation": "ok"}, indent=2, sort_keys=True))
+            return 0
+    except (ConjunctionRunError, ConjunctionError) as exc:
+        print(str(exc), file=sys.stderr)
+        return 1
+    return 2
+
