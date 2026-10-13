@@ -112,3 +112,25 @@ A later ledger line records an externally verified authored Markdown file suppli
 Prompt 008E is stored at `prompts/008E-v0.8e-agent-input.md`. Unlike the earlier agent-input files, it is a transcription by the implementing agent of the pasted session input, not a byte capture: 44,734 bytes, sha256 `ce1efd0a5463496bd26dd0d171d7111ec1414ccc27a6481bd0ea48ea4194f6a2`, with one leading and one trailing newline. One transcription slip was corrected before storage. Byte identity with the authored prompt is not established, and the relationship stays `unknown`. Prompt 008D is not overwritten. The file is stored before the Generation 8E K3 analysis.
 
 Execution 008E closes prompt 008E. The inclusive range runs from `70a931cb486a8178cad3e05630b2fbb0f4a5c8aa` through `fa46cb5a5bd2618076e96d4d7a090287062abb24`. The close-out commit is outside that range. It records Actions run `38412283706` on the snapshot head; that run id is not a run of the close-out commit. Round E0 is the only round. No stochastic trajectories were run. The coherence snapshot through Generation 008E is `constraint-lab/coherence/snapshots/through-generation-008e.md`, sha256 `4df5e866fcb494b4ebe94d3a7421a599badd3e3cb4a9f1beb4bee485b7947e63`. Its canonical ledger sha256 is `64c0493701fb703e573fcd550a2428bc90aa2034d95754c652ad4157fed06470`.
+
+## Prompt 008F and Review 008E
+
+Review 008E targets the exact 8E close-out head and records successful Actions
+run 38412783401 there. The authored Prompt 008E metadata is separately appended:
+44,720 bytes, sha256 33d535be12b1120f959ad4b04201afc9ad93759675e0dfa0470800b35cbcf01d.
+The stored 44,734-byte transcription keeps its own ce1efd0a... hash and unknown
+relationship. The authored hash is not assigned to that file.
+
+Prompt 008F is transcribed at prompts/008F-v0.8f-agent-input.md: 44,967 bytes,
+sha256 990fd3373921677a4a5d0451fa20247a6e61513b122be6d3a3d5a69a29de2078.
+It is not a byte capture or a comparison with an independently authored artifact.
+Authored metadata remains null and relationship unknown. Execution 008F records
+the initial storage-order deviation: an unexecuted preliminary draft existed
+before this transcription was stored. No actual F0 scientific cell had executed.
+The root-created venv was removed; continuation work ran as cello.
+
+Execution 008F closes F0 and records the separate frozen-plan and result commits,
+the exact snapshot hashes, 92 findings/118 relations and snapshot-head Actions
+run 38425985438, with 263 passed and both jobs successful. That run is not
+silently reassigned to the later provenance close-out commit. The final closing
+head's CI is verified separately in the implementing session. F1 was not opened.

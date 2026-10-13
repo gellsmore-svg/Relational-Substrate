@@ -349,7 +349,7 @@ pair differences are above the 1e-12 floor. See
 [stationary marginals](tables/generation-008f-stationary-distributions.json).
 
 Observed stationary pair marginals factor as one distinguished action bit times
-a uniform measure on the other five bits (maximum entry gap about 2.3e-15).
+a uniform measure on the other five bits (maximum entry gap about 2.6e-15).
 For formation, K3 action occupancy is .448979591837 at m=1/4 and .580645161290
 at m=4; PROJECTION gives .441526411096 and .577165036124.
 
