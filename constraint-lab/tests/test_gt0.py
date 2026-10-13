@@ -111,3 +111,35 @@ def test_sparse_and_dense_absorption_agree(monkeypatch: pytest.MonkeyPatch) -> N
         assert abs(dense["expected_steps_to_absorption"] - sparse["expected_steps_to_absorption"]) <= 1e-10 * dense["expected_steps_to_absorption"]
         for key, value in dense["absorption_probabilities"].items():
             assert abs(value - sparse["absorption_probabilities"][key]) < 1e-10
+
+
+def test_gibbs_identity_on_an_n4_fixture() -> None:
+    from rs_constraint_lab.state import edges
+
+    el = edges(4)
+    for family, grade, m in (("CLOSE", "strong_favour", 4.0), ("HOLD", "strong_suppress", 4.0), ("DENS", "weak_favour", 2.0)):
+        kernel = gt0.build(family, 4, grade, "FREE")
+        states = gt0.reachable(kernel, 0)
+        pi, _ = gt0.stationary_dense(kernel, states)
+        ct = gt0.continuous_time(pi, gt0.total_rates(kernel, states))
+        stat = (lambda s: s.bit_count()) if family == "DENS" else (lambda s: gt0.triangles(s, 4, el))
+        g = np.array([m ** stat(s) for s in states])
+        assert float(np.abs(ct - g / g.sum()).max()) < 1e-12
+
+
+def test_g1_fixture_and_plan_contract() -> None:
+    from rs_constraint_lab import gt1
+
+    plan = gt1.prepare_plan()
+    assert plan["plan_hash"] == plan_hash(plan) and len(plan["items"]) == 18
+    item = {"family": "CLOSE", "grade": "strong_favour", "item_id": "fixture", "mode": "HELD", "n": 4}
+    result = gt1.analyse_item(item)
+    assert set(result) >= {"jump", "continuous"} and result["stationary_residual"] < 1e-12
+
+
+def test_g0_journey_descends_from_its_frozen_plan() -> None:
+    from rs_constraint_lab.explore08a import verify_journey_chronology
+
+    reports = verify_journey_chronology(REPO, REPO / "gravity-time" / "plans" / "journey.jsonl")
+    g0 = [r for r in reports if r["frozen_plan_commit"] == "b45f10b148fe7df1f54ffb7db35d4ea828b170ef"]
+    assert g0 and g0[0]["result_commit"] == "97c2daa5d445e57110fa64baa690e64934a6373a"
