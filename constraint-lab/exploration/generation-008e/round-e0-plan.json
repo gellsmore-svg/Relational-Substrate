@@ -1,0 +1,238 @@
+{
+  "analysis_only": true,
+  "analysis_version": "generation-008e-conjunction/v1",
+  "canonicalisation": {
+    "bit_complement": false,
+    "condition_order": "sorted by triad slot",
+    "vertex_permutations": 24,
+    "weight_reciprocity": false
+  },
+  "comparison": {
+    "d8_table": "constraint-lab/reports/tables/generation-008d-weighted-systems.json",
+    "d8_table_sha256": "e5acbf8b02c75bc732d79f9444f820044a7c53a0a4a8ef8191de8d039b238e07",
+    "d8_weighted_systems": 3584,
+    "fingerprints": [
+      "labelled_law_sha256",
+      "local_law_class (S4 minimum)"
+    ],
+    "one_rule_catalogue": "the 433 empty, unconditional and one-gate laws of Generation 8D"
+  },
+  "estimands": [
+    "labelled K3 rules: pair action, two distinct triad literals, one weight",
+    "S4 structural orbits and W4 weighted systems",
+    "parser semantics and K for a two-triad conjunction",
+    "exact local law and truth table in literal coordinates",
+    "minimal raw coordinates and effective gate dimension",
+    "literal and raw second discrete differences of the action log multiplier",
+    "gate interaction order",
+    "balanced I(current triad; next pair slot | full pair mask), enumerated and analytic",
+    "balanced rule-induced edge drift, enumerated and analytic",
+    "exact labelled and S4 law matches against the Generation 8D weighted systems",
+    "symbolic additive non-representability by exact rank",
+    "Moebius and corner bases and their transformation",
+    "W4 coverage of the two bases",
+    "targeted XOR, XNOR and four-corner constructions",
+    "targeted check of the r-literal monomial law for r = 1..4"
+  ],
+  "execution": {
+    "atomic_item": "one K3 structural orbit at its four W4 grades, or one algebra item",
+    "commands": [
+      "execute-item",
+      "run-e0",
+      "assemble"
+    ],
+    "heartbeat": "status.json rewritten after each completed or skipped item",
+    "resume": "an item file that already exists is not recomputed",
+    "stochastic_trajectories": false,
+    "supervisor": "not used; the whole round is a few seconds",
+    "watchdog_seconds": 120,
+    "workers": 1
+  },
+  "experiment_id": "generation-008e-conjunctive-gates",
+  "history": false,
+  "items": [
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-00"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-01"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-02"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-03"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-04"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-05"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-06"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-07"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-08"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-09"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-10"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-11"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-12"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-13"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-14"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-15"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-16"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-17"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-18"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "K3-19"
+    },
+    {
+      "kind": "parser",
+      "orbit_id": null
+    },
+    {
+      "kind": "symbolic",
+      "orbit_id": null
+    },
+    {
+      "kind": "basis",
+      "orbit_id": null
+    },
+    {
+      "kind": "w4-coverage",
+      "orbit_id": null
+    },
+    {
+      "kind": "boolean",
+      "orbit_id": null
+    },
+    {
+      "kind": "general-r",
+      "orbit_id": null
+    },
+    {
+      "kind": "surface",
+      "orbit_id": null
+    }
+  ],
+  "meta_constraints": false,
+  "mode": "B",
+  "new_controls": false,
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": 4,
+    "O": 3,
+    "S": 0,
+    "hypergraph": "independent"
+  },
+  "parameter_fit": false,
+  "plan_hash": "ec515306c2d3fa669f15ce31a86cdaac78f5fcab0d01ea7ad82533fde71c9be6",
+  "question": "What genuinely new local relational structure appears when one ordinary constraint can read two higher-order relations conjunctively?",
+  "round_id": "round-e0",
+  "schema": "rs-constraint-lab.conjunction-plan/v1",
+  "stochastic_trajectories": false,
+  "timing_sample": {
+    "note": "Before this plan was frozen, orbit K3-00 was analysed as a smoke test, and the unit tests analysed K3-00 and K3-03 as representatives and ran every algebra item. Those values were seen. The smoke test took about 3.7 seconds of process time, including the universe build and the 8D index load. No other orbit was analysed before the freeze.",
+    "pre_freeze_algebra_items_run_by_tests": [
+      "parser",
+      "symbolic",
+      "basis",
+      "w4-coverage",
+      "boolean",
+      "general-r"
+    ],
+    "smoke_test_orbits": [
+      "K3-00",
+      "K3-03"
+    ]
+  },
+  "tolerances": {
+    "basis_reconstruction": 1e-12,
+    "canonicalisation": "exact",
+    "cmi": 1e-12,
+    "d8_comparison_law_equality": 1e-12,
+    "fraction_law_equality": "exact",
+    "interaction_coefficient": 1e-12,
+    "probability_gap": 1e-12
+  },
+  "universe": {
+    "labelled_rule_count": 288,
+    "sha256": "beed18264cac347a8352ad5aeaf0bfccabdb005ae59dfe7e963563da86580a1b",
+    "structural_orbit_count": 20,
+    "weighted_system_count": 80
+  },
+  "weight_alphabet": {
+    "factors": {
+      "strong_favour": "4/1",
+      "strong_suppress": "1/4",
+      "weak_favour": "2/1",
+      "weak_suppress": "1/2"
+    },
+    "grades": [
+      "strong_suppress",
+      "weak_suppress",
+      "weak_favour",
+      "strong_favour"
+    ],
+    "name": "W4",
+    "neutral_excluded": true
+  },
+  "work_count": {
+    "algebra_items": 7,
+    "d8_comparison_fingerprints": 160,
+    "disk_estimate_bytes": 5000000,
+    "full_state_evaluations": 81920,
+    "items": 27,
+    "kernel_agreement_evaluations": 81920,
+    "s4_law_images": 1920,
+    "structural_orbit_items": 20,
+    "wall_time_estimate_seconds": 120
+  }
+}
