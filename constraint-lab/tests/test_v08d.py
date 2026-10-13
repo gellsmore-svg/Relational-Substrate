@@ -1,9 +1,8 @@
 """Generation 8D two-gate composition contracts.
 
 These tests check the labelled universe, the local algebra, and the
-execution refusal. They do not publish the Round D0 tables, and they do
-not pin the D0 plan hash. That pin belongs with the journey line that
-names the result commit.
+execution refusal. They do not publish the Round D0 tables. The D0 plan
+hash is pinned only in the journey test, beside the result commit.
 """
 
 from __future__ import annotations
@@ -20,9 +19,9 @@ from pathlib import Path
 import pytest
 
 from rs_constraint_lab.constraints import DISSOLVE, FORM, structurally_simple
-from rs_constraint_lab.durable import atomic_write_json
+from rs_constraint_lab.durable import atomic_write_json, canonical_json, sha256_bytes
 from rs_constraint_lab.explore08 import FrozenPlanError, plan_hash
-from rs_constraint_lab.explore08a import repository_root
+from rs_constraint_lab.explore08a import repository_root, verify_journey_chronology
 from rs_constraint_lab.explore08d import (
     GRADES,
     SLOT_MAPS,
@@ -340,6 +339,85 @@ def test_cli_refuses_an_unfrozen_plan() -> None:
     )
     assert completed.returncode == 2
     assert "frozen plan" in completed.stderr.lower()
+
+
+def test_recorded_d0_journey_descends_from_the_frozen_plan() -> None:
+    path = REPO / "constraint-lab" / "exploration" / "generation-008d" / "journey.jsonl"
+    reports = verify_journey_chronology(REPO, path)
+    assert len(reports) == 1
+    assert reports[0]["frozen_plan_commit"] == "ac037f32df81271e04381c79efebf6f5b3d0b607"
+    assert reports[0]["result_commit"] == "093e460e9992e3ddc4fd24cdb43d6d5397de4e29"
+    assert reports[0]["plan_hash"] == "10a3114bcf7a1a914e9eff19e08f77a9fbcf71852bc4a22f14f04d723912ce07"
+
+
+def test_published_d0_tables_match_their_recorded_hashes() -> None:
+    reports = REPO / "constraint-lab" / "reports"
+    body = json.loads((reports / "generation-008d-round-d0-tables.json").read_text(encoding="utf-8"))
+    summary = {key: value for key, value in body.items() if key != "payload_sha256"}
+    assert sha256_bytes(canonical_json(summary).encode("utf-8")) == body["payload_sha256"]
+    assert body["validation"] == {"ok": True, "problems": []}
+    assert body["summary"]["system_count"] == 3584
+    assert body["summary"]["reducibility_counts"] == {"R0": 0, "R1G": 0, "R1T": 48, "R1U": 16, "R2G": 2608, "R2S": 912}
+    tables = reports / "tables"
+    for name in ("ablations", "identities", "information", "structural_orbits", "weighted_systems"):
+        rows = json.loads((tables / f"generation-008d-{name.replace('_', '-')}.json").read_text(encoding="utf-8"))
+        assert sha256_bytes(canonical_json(rows).encode("utf-8")) == body["detail_sha256"][name]
+    lines = (tables / "generation-008d-truth-tables.jsonl").read_text(encoding="utf-8").splitlines()
+    rows = [json.loads(line) for line in lines]
+    assert sha256_bytes(canonical_json(rows).encode("utf-8")) == body["detail_sha256"]["truth_tables"]
+
+
+SLOT_01 = 0
+TRIAD_012 = 6
+TRIAD_023 = 8
+
+
+def test_reciprocal_literal_flip_gives_the_same_law() -> None:
+    # On one slot the log multiplier is c + b1*G1 + b2*G2. An absent literal
+    # adds its log weight to c, so flipping both literals keeps c only when the
+    # two log weights cancel.
+    flipped = (
+        constraint_from_key((DISSOLVE, SLOT_01, TRIAD_012, 0), "strong_favour"),
+        constraint_from_key((DISSOLVE, SLOT_01, TRIAD_023, 0), "strong_suppress"),
+    )
+    direct = (
+        constraint_from_key((DISSOLVE, SLOT_01, TRIAD_012, 1), "strong_suppress"),
+        constraint_from_key((DISSOLVE, SLOT_01, TRIAD_023, 1), "strong_favour"),
+    )
+    assert product_weights(flipped) == product_weights(direct)
+    unbalanced = (
+        constraint_from_key((DISSOLVE, SLOT_01, TRIAD_012, 1), "weak_suppress"),
+        constraint_from_key((DISSOLVE, SLOT_01, TRIAD_023, 1), "strong_favour"),
+    )
+    unbalanced_flip = (
+        constraint_from_key((DISSOLVE, SLOT_01, TRIAD_012, 0), "weak_favour"),
+        constraint_from_key((DISSOLVE, SLOT_01, TRIAD_023, 0), "strong_suppress"),
+    )
+    assert product_weights(unbalanced) != product_weights(unbalanced_flip)
+
+
+def test_equal_form_and_dissolve_on_one_gate_drop_the_slot_bit() -> None:
+    toggle = (
+        constraint_from_key((FORM, SLOT_01, TRIAD_012, 1), "strong_favour"),
+        constraint_from_key((DISSOLVE, SLOT_01, TRIAD_012, 1), "strong_favour"),
+    )
+    rows = product_weights(toggle)
+    for state, row in enumerate(rows):
+        gate = (state >> TRIAD_012) & 1
+        assert row[SLOT_01] == (Fraction(4) if gate else Fraction(1))
+        assert all(weight == 1 for slot, weight in enumerate(row) if slot != SLOT_01)
+
+
+def test_opposite_literals_on_opposite_directions_realise_slot_gate_xor() -> None:
+    xor = (
+        constraint_from_key((DISSOLVE, SLOT_01, TRIAD_012, 0), "strong_favour"),
+        constraint_from_key((FORM, SLOT_01, TRIAD_012, 1), "strong_favour"),
+    )
+    rows = product_weights(xor)
+    for state, row in enumerate(rows):
+        edge = (state >> SLOT_01) & 1
+        gate = (state >> TRIAD_012) & 1
+        assert row[SLOT_01] == (Fraction(4) if edge ^ gate else Fraction(1))
 
 
 def test_engine_language_stays_descriptive() -> None:
