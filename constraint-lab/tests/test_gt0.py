@@ -159,3 +159,16 @@ def test_g1_journey_and_published_tables() -> None:
     g1t = json.loads((REPO / "gravity-time" / "reports" / "round-g1-tables.json").read_text(encoding="utf-8"))
     assert all(v["holds"] for k, v in g1t["frozen_predictions"].items() if k.startswith(("P1", "P3")))
     assert sum(v["holds"] for k, v in g1t["frozen_predictions"].items() if k.startswith("P2")) == 1
+
+
+def test_gt_coherence_ledger_is_valid_and_views_match() -> None:
+    from rs_constraint_lab.coherence import build_markdown, build_mermaid, load_ledger, validate_ledger
+
+    root = REPO / "gravity-time" / "coherence"
+    findings, relations = load_ledger(root)
+    assert validate_ledger(findings, relations) == []
+    assert (root / "current-map.md").read_text(encoding="utf-8") == build_markdown(findings, relations)
+    assert (root / "current-map.mmd").read_text(encoding="utf-8") == build_mermaid(findings, relations)
+    statuses = {row["finding_id"]: row["status"] for row in findings}
+    assert statuses["GT-Q01-KINETIC-CONVENTION"] == "unresolved"
+    assert all("overall_score" not in row for row in findings)

@@ -1,0 +1,42 @@
+%% Generated from findings.jsonl and relations.jsonl.
+%% Historical nodes appear when a later finding supersedes their interpretation.
+flowchart TD
+  subgraph OBSERVATION [Observed dynamics]
+    GT_F01_DENS_NULL["GT-F01-DENS-NULL: The density template DENS leaves the density-controlled attachment fraction exactly at ..."]
+    GT_F02_INCIDENCE_SELECTIVITY["GT-F02-INCIDENCE-SELECTIVITY: ADJ, CLOSE and HOLD raise the density-controlled attachment fraction above null under b..."]
+    GT_F04_RETENTION_NOT_APPROACH["GT-F04-RETENTION-NOT-APPROACH: Under the continuous clock HOLD's frontier drift equals NULL's exactly at N=5; its jump..."]
+    GT_F05_RELATIONAL_POTENTIAL["GT-F05-RELATIONAL-POTENTIAL: For every template the continuous-time stationary law is m^S/Z with S the edge count (D..."]
+    GT_F06_LOCK_ARREST["GT-F06-LOCK-ARREST: LOCK is certainly absorbed into the complete graph, where no event is admissible, after..."]
+    GT_F07_SHARED_BASIN_DIFFERENT_CLOCKS["GT-F07-SHARED-BASIN-DIFFERENT-CLOCKS: CLOSE(m) and HOLD(1/m) have identical continuous-time shell masses (gap 0) and differen..."]
+    GT_F08_NEAR_SOURCE_SLOWING["GT-F08-NEAR-SOURCE-SLOWING: The near/far activity ratio is below 1 in 16 of 16 non-null cells under the jump clock ..."]
+  end
+  subgraph INFERENCE [Inferences]
+    GT_F09_POTENTIAL_AS_MECHANISM["GT-F09-POTENTIAL-AS-MECHANISM: In the existing grammar a basin around a held relational structure arises from minimal ..."]
+    GT_F10_KINETICS_NOT_POTENTIAL["GT-F10-KINETICS-NOT-POTENTIAL: Near-source slowing of local activity accompanies every basin tested, density included,..."]
+  end
+  subgraph METHODOLOGICAL [Methodological corrections]
+    GT_F03_DRIFT_CRITERION_CONFOUNDED["GT-F03-DRIFT-CRITERION-CONFOUNDED: The frozen G0 inward-drift criterion does not separate attraction from density: DENS pa..."]
+  end
+  subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
+    GT_F11_RS_POTENTIAL_AND_CLOCK["GT-F11-RS-POTENTIAL-AND-CLOCK: Inside this model, relational primacy yields basins as potentials without a primitive c..."]
+  end
+  subgraph OPEN_QUESTION [Open questions]
+    GT_Q01_KINETIC_CONVENTION["GT-Q01-KINETIC-CONVENTION: Is there a principled kinetic convention under which local recurrence rate is a functio..."]
+    GT_Q02_RADIAL["GT-Q02-RADIAL: Does attachment or activity have a stable dependence on relational distance across seve..."]
+    GT_Q03_SOURCE_DEPENDENCE["GT-Q03-SOURCE-DEPENDENCE: Does basin depth depend on the held structure's motif content (triangle, 4-clique, path)?"]
+    GT_Q04_ARREST_AND_SUCCESSION["GT-Q04-ARREST-AND-SUCCESSION: Does total admissibility arrest bear on the open candidate of a limit on primitive even..."]
+  end
+  GT_F02_INCIDENCE_SELECTIVITY -->|contrasts_with| GT_F01_DENS_NULL
+  GT_F03_DRIFT_CRITERION_CONFOUNDED -->|qualifies| GT_F02_INCIDENCE_SELECTIVITY
+  GT_F05_RELATIONAL_POTENTIAL -->|explains| GT_F02_INCIDENCE_SELECTIVITY
+  GT_F05_RELATIONAL_POTENTIAL -->|explains| GT_F04_RETENTION_NOT_APPROACH
+  GT_F09_POTENTIAL_AS_MECHANISM -->|derived_from| GT_F05_RELATIONAL_POTENTIAL
+  GT_F07_SHARED_BASIN_DIFFERENT_CLOCKS -->|refines| GT_F05_RELATIONAL_POTENTIAL
+  GT_F10_KINETICS_NOT_POTENTIAL -->|derived_from| GT_F07_SHARED_BASIN_DIFFERENT_CLOCKS
+  GT_F10_KINETICS_NOT_POTENTIAL -->|derived_from| GT_F08_NEAR_SOURCE_SLOWING
+  GT_F11_RS_POTENTIAL_AND_CLOCK -->|derived_from| GT_F10_KINETICS_NOT_POTENTIAL
+  GT_F10_KINETICS_NOT_POTENTIAL -->|raises_question| GT_Q01_KINETIC_CONVENTION
+  GT_F09_POTENTIAL_AS_MECHANISM -->|raises_question| GT_Q02_RADIAL
+  GT_F09_POTENTIAL_AS_MECHANISM -->|raises_question| GT_Q03_SOURCE_DEPENDENCE
+  GT_F06_LOCK_ARREST -->|raises_question| GT_Q04_ARREST_AND_SUCCESSION
+  GT_F06_LOCK_ARREST -->|contrasts_with| GT_F04_RETENTION_NOT_APPROACH
