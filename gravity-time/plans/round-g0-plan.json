@@ -1,0 +1,449 @@
+{
+  "analysis_only": true,
+  "analysis_version": "gt-g0/v1",
+  "basin_criteria": {
+    "attachment_above_null": "jump and continuous attachment fraction each exceed the HELD null fraction by more than 1e-09",
+    "classification": {
+      "capture": "absorbing regime; reported by absorption, not as a stationary basin",
+      "clock_dependent": "recurrent; the pair of criterion flags differs between the clocks",
+      "none": "recurrent; neither criterion under either clock",
+      "partial": "recurrent; the same single criterion holds under both clocks",
+      "relational_basin": "recurrent; both criteria true under both clocks"
+    },
+    "inward_drift_beyond_null": "radial drift at shell 2 is below the NULL value at the same N under both clocks by more than 1e-09",
+    "scope": "HELD mode only; FREE mode reports clustering against the uniform conditional law"
+  },
+  "clocks": {
+    "continuous": "per-slot exponential rates equal to the event weights; stationary law proportional to jump law divided by total rate; drift per unit time",
+    "jump": "lab full-event kernel, one admissible toggle per event, normalised weights; drift per event"
+  },
+  "experiment_id": "gt-round-g0-relational-basin",
+  "families": {
+    "ADJ": {
+      "K": 2,
+      "grades": [
+        "weak_favour",
+        "strong_favour"
+      ],
+      "template_example": "form(0-1) | present(0-2) => weak_favour"
+    },
+    "CLOSE": {
+      "K": 3,
+      "grades": [
+        "weak_favour",
+        "strong_favour"
+      ],
+      "template_example": "form(0-1) | present(0-2) & present(1-2) => weak_favour"
+    },
+    "DENS": {
+      "K": 1,
+      "grades": [
+        "weak_favour",
+        "strong_favour"
+      ],
+      "template_example": "form(0-1) => weak_favour"
+    },
+    "HOLD": {
+      "K": 3,
+      "grades": [
+        "weak_suppress",
+        "strong_suppress"
+      ],
+      "template_example": "dissolve(0-1) | present(0-2) & present(1-2) => weak_suppress"
+    },
+    "LOCK": {
+      "K": 3,
+      "grades": [
+        "prohibit"
+      ],
+      "template_example": "dissolve(0-1) | present(0-2) & present(1-2) => prohibit"
+    },
+    "NULL": {
+      "K": null,
+      "grades": [],
+      "template_example": null
+    }
+  },
+  "frozen_comparison_targets": {
+    "T1_dens_attachment_equals_null": "HELD DENS attachment fraction equals the HELD null fraction under both clocks within 1e-12 (exchangeable free relations; CL-T18-type factorisation)",
+    "T2_dens_triangles_equal_uniform_conditional": "FREE DENS triangles given edge count equal the uniform conditional mean within 1e-12 under both clocks",
+    "T3_null_uniform": "NULL stationary law is uniform on the reachable class under both clocks within 1e-12",
+    "T4_lock_absorbs_to_complete_graph": "LOCK is absorbing in both modes and the only absorbing state is the complete graph (derivation: formations stay admissible, and an edge in a triangle can never dissolve)"
+  },
+  "history": false,
+  "items": [
+    {
+      "family": "NULL",
+      "grade": null,
+      "item_id": "HELD-N5-NULL-none",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "DENS",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-DENS-weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "DENS",
+      "grade": "strong_favour",
+      "item_id": "HELD-N5-DENS-strong_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "ADJ",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-ADJ-weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "ADJ",
+      "grade": "strong_favour",
+      "item_id": "HELD-N5-ADJ-strong_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "CLOSE",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-CLOSE-weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "CLOSE",
+      "grade": "strong_favour",
+      "item_id": "HELD-N5-CLOSE-strong_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "HOLD",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N5-HOLD-weak_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "HOLD",
+      "grade": "strong_suppress",
+      "item_id": "HELD-N5-HOLD-strong_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "LOCK",
+      "grade": "prohibit",
+      "item_id": "HELD-N5-LOCK-prohibit",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "NULL",
+      "grade": null,
+      "item_id": "FREE-N5-NULL-none",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "DENS",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-DENS-weak_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "DENS",
+      "grade": "strong_favour",
+      "item_id": "FREE-N5-DENS-strong_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "ADJ",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-ADJ-weak_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "ADJ",
+      "grade": "strong_favour",
+      "item_id": "FREE-N5-ADJ-strong_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "CLOSE",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-CLOSE-weak_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "CLOSE",
+      "grade": "strong_favour",
+      "item_id": "FREE-N5-CLOSE-strong_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "HOLD",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N5-HOLD-weak_suppress",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "HOLD",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N5-HOLD-strong_suppress",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "LOCK",
+      "grade": "prohibit",
+      "item_id": "FREE-N5-LOCK-prohibit",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "NULL",
+      "grade": null,
+      "item_id": "HELD-N6-NULL-none",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "DENS",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-DENS-weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "DENS",
+      "grade": "strong_favour",
+      "item_id": "HELD-N6-DENS-strong_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "ADJ",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-ADJ-weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "ADJ",
+      "grade": "strong_favour",
+      "item_id": "HELD-N6-ADJ-strong_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "CLOSE",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-CLOSE-weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "CLOSE",
+      "grade": "strong_favour",
+      "item_id": "HELD-N6-CLOSE-strong_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "HOLD",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N6-HOLD-weak_suppress",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "HOLD",
+      "grade": "strong_suppress",
+      "item_id": "HELD-N6-HOLD-strong_suppress",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "LOCK",
+      "grade": "prohibit",
+      "item_id": "HELD-N6-LOCK-prohibit",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "NULL",
+      "grade": null,
+      "item_id": "FREE-N6-NULL-none",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "DENS",
+      "grade": "weak_favour",
+      "item_id": "FREE-N6-DENS-weak_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "DENS",
+      "grade": "strong_favour",
+      "item_id": "FREE-N6-DENS-strong_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "ADJ",
+      "grade": "weak_favour",
+      "item_id": "FREE-N6-ADJ-weak_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "ADJ",
+      "grade": "strong_favour",
+      "item_id": "FREE-N6-ADJ-strong_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "CLOSE",
+      "grade": "weak_favour",
+      "item_id": "FREE-N6-CLOSE-weak_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "CLOSE",
+      "grade": "strong_favour",
+      "item_id": "FREE-N6-CLOSE-strong_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "HOLD",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N6-HOLD-weak_suppress",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "HOLD",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N6-HOLD-strong_suppress",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "LOCK",
+      "grade": "prohibit",
+      "item_id": "FREE-N6-LOCK-prohibit",
+      "mode": "FREE",
+      "n": 6
+    }
+  ],
+  "meta_constraints": false,
+  "mode": "B",
+  "modes": {
+    "FREE": "no held structure; full state space from the empty graph",
+    "HELD": {
+      "scaffold": [
+        "dissolve(0-1) => prohibit",
+        "dissolve(0-2) => prohibit",
+        "dissolve(1-2) => prohibit"
+      ],
+      "source": [
+        0,
+        1,
+        2
+      ],
+      "start": "the source triangle alone"
+    }
+  },
+  "new_primitives": false,
+  "null_triangles_given_edges": {
+    "5": {
+      "0": 0.0,
+      "1": 0.0,
+      "10": 10.0,
+      "2": 0.0,
+      "3": 0.08333333333333333,
+      "4": 0.3333333333333333,
+      "5": 0.8333333333333334,
+      "6": 1.6666666666666667,
+      "7": 2.9166666666666665,
+      "8": 4.666666666666667,
+      "9": 7.0
+    },
+    "6": {
+      "0": 0.0,
+      "1": 0.0,
+      "10": 5.274725274725275,
+      "11": 7.252747252747253,
+      "12": 9.67032967032967,
+      "13": 12.571428571428571,
+      "14": 16.0,
+      "15": 20.0,
+      "2": 0.0,
+      "3": 0.04395604395604396,
+      "4": 0.17582417582417584,
+      "5": 0.43956043956043955,
+      "6": 0.8791208791208791,
+      "7": 1.5384615384615385,
+      "8": 2.4615384615384617,
+      "9": 3.6923076923076925
+    }
+  },
+  "observables": [
+    "reachable class size, recurrent classes, absorbing states",
+    "jump-chain and continuous-time stationary laws (recurrent regime)",
+    "HELD: probe-to-source distance distribution, attachment fraction and its conditional on free-edge count, radial drift among finite moves by shell, escape and capture rates",
+    "FREE: edge-count distribution, expected triangles, triangles given edge count",
+    "absorbing regime: absorption probabilities and expected steps from the start state"
+  ],
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      5,
+      6
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL"
+  },
+  "parameter_fit": false,
+  "plan_hash": "30fba33af15509f6e46458532490f5e34a928487b09863592fb438a6d344e92a",
+  "pre_freeze_exposure": {
+    "note": "Before freezing, the implementation was exercised on N=4 fixtures (not a G0 size) for NULL, DENS, CLOSE and LOCK in both modes; on N=6 FREE NULL to time the lazy solver (theorem-fixed uniform law); and on N=5 FREE DENS to compare the dense and lazy solvers' stationary vectors only. No G0 observable of any family other than NULL was computed."
+  },
+  "programme": "GT",
+  "question": "Does any minimal, label-covariant, relation-reading rule template on the O=2 pair grammar produce a stable relational basin distinct from density, boundary, combinatorial and clock artefacts?",
+  "round_id": "round-g0",
+  "schema": "rs-gt.basin-plan/v1",
+  "stochastic_trajectories": false,
+  "tolerances": {
+    "basin_margin": 1e-09,
+    "null_identity": 1e-12,
+    "stationary_residual": 1e-12
+  },
+  "work_count": {
+    "items": 40,
+    "largest_state_space": 32768,
+    "wall_time_estimate_seconds": 600,
+    "watchdog_seconds": 120,
+    "workers": 1
+  }
+}
