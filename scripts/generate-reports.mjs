@@ -30,6 +30,9 @@ const reportSteps = [
   'interface:phase-continuity',
   'interface:roughness-scatter',
   'model:assumptions',
+  // model:external-roadmap reads model-frontier-report.json, so the frontier
+  // report must run first. Its inputs come from molecule:calibration and t1:stability.
+  'model:frontier',
   'model:external-roadmap',
   'benchmark:h2o2',
   'model:parameter-experiments',
@@ -63,7 +66,6 @@ const reportSteps = [
   'molecule:peroxide-v2-source-availability',
   'molecule:peroxide-methyl-chloro-reserve',
   'molecule:peroxide-methyl-chloro-source-lock',
-  'model:frontier',
   'benchmark:hydrazine-cation',
   'benchmark:neutral-hydrazine-reserve',
   'benchmark:neutral-hydrazine-source-lock',
