@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import subprocess
 from dataclasses import replace
 from decimal import Decimal
 from fractions import Fraction
@@ -185,6 +186,7 @@ def test_review_prompt_representation_and_historical_qualification():
     assert hashlib.sha256(raw).hexdigest() == prompt["agent_input_prompt_sha256"]
     assert prompt["relationship"] == "unknown"
     assert prompt["authored_prompt_sha256"] is None
+    assert prompt["agent_input_prompt_sha256"].encode() not in raw
     authored = next(r for r in ledger if r.get("prompt_id") == "008E" and r["record_type"] == "prompt_representation")
     assert authored["authored_prompt_bytes"] == 44720
     assert authored["agent_input_prompt_bytes"] == 44734
@@ -193,6 +195,12 @@ def test_review_prompt_representation_and_historical_qualification():
     assert validate_ledger(findings, relations) == []
     by_id = {r["finding_id"]: r for r in findings}
     assert by_id["F8E-GENERAL-K-INTERACTION"]["status"] == "qualified"
+    historical = subprocess.run(
+        ["git", "-C", str(ROOT), "show", "19d243a83105d0082866b38190ec269d78294e94:constraint-lab/coherence/findings.jsonl"],
+        check=True, capture_output=True, text=True,
+    ).stdout
+    original = next(json.loads(line) for line in historical.splitlines() if json.loads(line)["finding_id"] == "F8E-GENERAL-K-INTERACTION")
+    assert by_id["F8E-GENERAL-K-INTERACTION"]["statement"] == original["statement"]
     assert "a rule reading r literals has gate interaction order exactly r" in by_id["F8E-GENERAL-K-INTERACTION"]["statement"]
     assert "F8F-GENERAL-K-SCOPE" in by_id
     assert "F8F-PREFREEZE-SCIENCE-GATE" in by_id
@@ -205,9 +213,24 @@ def test_published_cells_reproduce_independent_chain_rule_and_precision():
     stationary = json.loads((TABLES / "generation-008f-stationary-bridge.json").read_text())
     assert len(checkpoint) == 756
     assert len(stationary) == 36
+    distributions = json.loads((TABLES / "generation-008f-checkpoint-distributions.json").read_text())
+    by_key = {(r["target_id"], r["model"], r["source"], r["checkpoint"]): r for r in distributions}
+    stationary_dist = json.loads((TABLES / "generation-008f-stationary-distributions.json").read_text())
+    stationary_by_key = {(r["target_id"], r["model"]): r for r in stationary_dist}
     for row in checkpoint + stationary:
         assert abs(row["pairmask_chain_gap"]) <= 1e-12
         assert abs(row["class_chain_gap"]) <= 1e-12
+        if "checkpoint" in row:
+            left = by_key[row["target_id"], "K3", row["source"], row["checkpoint"]]
+            right = by_key[row["target_id"], row["comparator"], row["source"], row["checkpoint"]]
+        else:
+            left = stationary_by_key[row["target_id"], "K3"]
+            right = stationary_by_key[row["target_id"], row["comparator"]]
+        independent = decomposition(left["pair_mask"], right["pair_mask"])
+        assert all(abs(row[field] - value) <= 1e-12 for field, value in independent.items())
+    summary = json.loads((ROOT / "constraint-lab/reports/generation-008f-round-f0-tables.json").read_text())
+    for name, digest in summary["detail_sha256"].items():
+        assert sha256_file(TABLES / ("generation-008f-" + name.replace("_", "-") + ".json")) == digest
     numeric = json.loads((TABLES / "generation-008f-numeric-validation.json").read_text())
     assert len(numeric) == 48
     for row in numeric:
@@ -231,4 +254,6 @@ def test_8f_snapshot_is_deterministic_and_observations_cite_committed_tables():
         if row["created_generation"] == "008F" and row["epistemic_layer"] == "OBSERVATION":
             assert any("reports/tables/generation-008f-" in path for path in row["evidence_refs"])
             assert all((ROOT / path).exists() for path in row["evidence_refs"])
+            for path in row["evidence_refs"]:
+                subprocess.run(["git", "-C", str(ROOT), "cat-file", "-e", "HEAD:" + path], check=True, capture_output=True)
             assert "overall_score" not in row and "master_score" not in row

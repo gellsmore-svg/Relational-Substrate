@@ -52,6 +52,14 @@ flowchart TD
     F8E_W4_COVERAGE["F8E-W4-COVERAGE: With at most one W4 rule per basis element, the corner basis reaches 625 four-corner ta..."]
     F8E_XOR_XNOR_FROM_K3["F8E-XOR-XNOR-FROM-K3: Two K=3 rules, A | G1 & NOT G2 => m and A | NOT G1 & G2 => m, give an exact XOR-gated a..."]
     F8E_GENERAL_K_INTERACTION["F8E-GENERAL-K-INTERACTION: On one placement, for r = 1 to 4 triad literals (K = 2 to 5) and every literal pattern,..."]
+    F8F_PROJECTION_PERSISTS["F8F-PROJECTION-PERSISTS: The K3-versus-PROJECTION centered second-order logit difference remains visible at chec..."]
+    F8F_FIRST_PATH_SHAPE["F8F-FIRST-PATH-SHAPE: At the first pair event for dissolution, path K3-versus-PROJECTION shape-given-edge inf..."]
+    F8F_PATH_NOT_UNIVERSAL["F8F-PATH-NOT-UNIVERSAL: The path is not the largest shape converter at every horizon. For formation K3-versus-P..."]
+    F8F_SHAPE_WASHES_OUT["F8F-SHAPE-WASHES-OUT: Every stationary comparison has shape-given-edge information below the 1e-12 floor, wit..."]
+    F8F_DRIFT_MATCHED_RESIDUAL["F8F-DRIFT-MATCHED-RESIDUAL: DRIFT matches K3 balanced local action probability and edge drift with published float ..."]
+    F8F_INCIDENCE_SILENT["F8F-INCIDENCE-SILENT: BOTH, ONE and NEITHER produce identical checkpoint and stationary bridge outputs. All 4..."]
+    F8F_COMPLEMENT_PERIOD["F8F-COMPLEMENT-PERIOD: Form and dissolve full and epoch kernels are conjugate with gap 0 under s xor 63 for ev..."]
+    F8F_LOCAL_GLOBAL_DECOUPLING["F8F-LOCAL-GLOBAL-DECOUPLING: Stationary current-context slot CMI does not monotonically rank K3-versus-PROJECTION vi..."]
   end
   subgraph INFERENCE [Inferences]
     F008_COMPOSITION_REPRESENTATION["F008-COMPOSITION-REPRESENTATION: The magnitude of a two-rule interaction residual depends on the representation and the ..."]
@@ -63,6 +71,7 @@ flowchart TD
     F8D_SYNTAX_CAN_VANISH["F8D-SYNTAX-CAN-VANISH: Contextual syntax can be dynamically redundant. Complementary conditions with one weigh..."]
     F8E_CARDINALITY_VS_K["F8E-CARDINALITY-VS-K: Within this DSL, rule cardinality and expression complexity are different operations on..."]
     F8E_ORDINARY_K_SUPPLIES_INTERACTION["F8E-ORDINARY-K-SUPPLIES-INTERACTION: Ordinary expression complexity already introduces gate-by-gate interaction and two-gate..."]
+    F8F_INTERACTION_ROUTING["F8F-INTERACTION-ROUTING: Within this single-action grammar, pair topology routes a centered gate interaction int..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     F011_QUOTIENT_INVALID["F011-QUOTIENT-INVALID: Graph-only hidden-context quotienting is formally invalid for labelled rules. The wrong..."]
@@ -80,6 +89,7 @@ flowchart TD
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
     F8D_RS_COMPOSITIONAL_BOUND["F8D-RS-COMPOSITIONAL-BOUND: Inside this model a small constraint grammar is compositional in event-logit space and ..."]
     F8E_RS_COMPOSITIONAL_HIERARCHY["F8E-RS-COMPOSITIONAL-HIERARCHY: Inside this model a small constraint grammar has an ordinary compositional hierarchy: i..."]
+    F8F_RS_BRIDGE_INTERPRETATION["F8F-RS-BRIDGE-INTERPRETATION: The local expressive hierarchy needs a dynamical scope: a new coefficient may become tr..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     Q_PATH_SHAPE["Q-PATH-SHAPE: Why does path topology convert early triadic context into shape information at the firs..."]
@@ -192,3 +202,22 @@ flowchart TD
   F8F_GENERAL_K_SCOPE -->|qualifies| F8E_GENERAL_K_INTERACTION
   F8F_PREFREEZE_SCIENCE_GATE -->|refines| F8C_METHOD_GEOMETRY
   F8F_PREFREEZE_SCIENCE_GATE -->|supports| F8C_METHOD_DIMENSIONS
+  F8F_PROJECTION_PERSISTS -->|supports| F8E_K3_CONJUNCTION_INTERACTION
+  F8F_PROJECTION_PERSISTS -->|refines| F8E_K2_K3_NONREPRESENTABILITY
+  F8F_FIRST_PATH_SHAPE -->|supports| F8C_PATH_CONVERTS_SLOT
+  F8F_PATH_NOT_UNIVERSAL -->|bounds| F8F_FIRST_PATH_SHAPE
+  F8F_SHAPE_WASHES_OUT -->|qualifies| F8F_FIRST_PATH_SHAPE
+  F8F_DRIFT_MATCHED_RESIDUAL -->|refines| F8E_K3_DRIFT_SURFACE
+  F8F_INCIDENCE_SILENT -->|bounds| F8E_RS_COMPOSITIONAL_HIERARCHY
+  F8F_INCIDENCE_SILENT -->|contrasts_with| F8F_FIRST_PATH_SHAPE
+  F8F_COMPLEMENT_PERIOD -->|explains| F8F_PROJECTION_PERSISTS
+  F8F_LOCAL_GLOBAL_DECOUPLING -->|supports| F8C_METHOD_DIMENSIONS
+  F8F_LOCAL_GLOBAL_DECOUPLING -->|refines| F8C_CURRENT_SURVIVES
+  F8F_INTERACTION_ROUTING -->|explains| F8F_FIRST_PATH_SHAPE
+  F8F_INTERACTION_ROUTING -->|explains| F8F_SHAPE_WASHES_OUT
+  F8F_INTERACTION_ROUTING -->|explains| F8F_DRIFT_MATCHED_RESIDUAL
+  F8F_RS_BRIDGE_INTERPRETATION -->|derived_from| F8F_INTERACTION_ROUTING
+  F8F_RS_BRIDGE_INTERPRETATION -->|refines| F8E_RS_COMPOSITIONAL_HIERARCHY
+  F8F_SHAPE_WASHES_OUT -->|raises_question| Q_H_POSITIVE
+  F8F_RS_BRIDGE_INTERPRETATION -->|compatible_with| Q_META_CONSTRAINT
+  F8F_SHAPE_WASHES_OUT -->|raises_question| Q_SCALE_N
