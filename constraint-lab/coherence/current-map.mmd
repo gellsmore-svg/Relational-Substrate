@@ -58,6 +58,7 @@ flowchart TD
     F8C_METHOD_DIMENSIONS["F8C-METHOD-DIMENSIONS: A finding has several dimensions. Magnitude, robustness, persistence, explanatory reach..."]
     F8D_CORRECT_GRADE_ASYMMETRY["F8D-CORRECT-GRADE-ASYMMETRY: The favour/suppress total-variation ratio is (5/18)/(5/42) = 7/3, and the one-gate edge..."]
     F8D_DRIFT_MAGNITUDE_SCOPE["F8D-DRIFT-MAGNITUDE-SCOPE: The large magnitude belongs to F010-OCCUPANCY-AXIS. F8C-DRIFT-DIRECTION explains the si..."]
+    F8E_K2_SCOPE_CORRECTION["F8E-K2-SCOPE-CORRECTION: The 8D no-gate-product result bounds the two-rule one-literal K=2 feature grammar. It d..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
@@ -73,6 +74,7 @@ flowchart TD
     Q_WEAK_GRADE["Q-WEAK-GRADE: How do the local slot information and the rule-induced edge drift move when the multipl..."]
     Q_GATE_COMPOSITION["Q-GATE-COMPOSITION: How do two higher-order gates compose in the local coordinates? A second gate can add a..."]
     Q_META_CONSTRAINT["Q-META-CONSTRAINT: What new local expressivity appears when one constraint can modulate another constraint..."]
+    Q_K3_CONJUNCTION["Q-K3-CONJUNCTION: What new local expressivity appears when one ordinary constraint reads two higher-order..."]
   end
   F014_EXACT_FIRST_DESTINATION -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
   F015_TRANSIENT_CLASS_MEMORY -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
@@ -142,3 +144,8 @@ flowchart TD
   F8D_SYNTAX_CAN_VANISH -->|derived_from| F8D_RECIPROCAL_TWINS
   F8D_RS_COMPOSITIONAL_BOUND -->|derived_from| F8D_ADDITIVE_FEATURE_GRAMMAR
   F8D_RS_COMPOSITIONAL_BOUND -->|compatible_with| F_RS_SEPARATION
+  F8E_K2_SCOPE_CORRECTION -->|qualifies| F8D_NO_GATE_PRODUCT
+  F8E_K2_SCOPE_CORRECTION -->|qualifies| F8D_ADDITIVE_FEATURE_GRAMMAR
+  F8E_K2_SCOPE_CORRECTION -->|qualifies| F8D_RS_COMPOSITIONAL_BOUND
+  F8E_K2_SCOPE_CORRECTION -->|qualifies| Q_META_CONSTRAINT
+  F8E_K2_SCOPE_CORRECTION -->|raises_question| Q_K3_CONJUNCTION
