@@ -51,6 +51,7 @@ from rs_constraint_lab.gen008d_exec import (
     prepare_d0_plan,
     require_d0_execution,
     run_d0,
+    validate_orbit_result,
 )
 from rs_constraint_lab.weights import alphabet_factors
 
@@ -86,9 +87,11 @@ def _commit_plan(repo: Path, document: dict) -> str:
     return _git(repo, "rev-parse", "HEAD").stdout.strip()
 
 
-def _find(family: str, predicate) -> tuple[dict, dict]:
+def _find(family: str, predicate, descriptor_predicate=None) -> tuple[dict, dict]:
     for orbit in load_universe()["orbits"]:
         if orbit["descriptors"]["composition_family"] != family:
+            continue
+        if descriptor_predicate is not None and not descriptor_predicate(orbit["descriptors"]):
             continue
         for system in orbit["systems"]:
             if predicate(system):
@@ -167,7 +170,16 @@ def test_family_representatives_have_the_expected_local_law() -> None:
     equal_orbit, equal_system = _find("complementary_gate", lambda system: system["weights"][0] == system["weights"][1])
     unequal_orbit, unequal_system = _find("complementary_gate", lambda system: system["weights"][0] != system["weights"][1])
     same_orbit, same_system = _find("same_action_different_gates", lambda system: system["weights"] == ["weak_suppress", "weak_suppress"])
-    shared_orbit, shared_system = _find("different_actions_same_gate", lambda system: system["weights"] == ["strong_favour", "strong_favour"])
+    shared_orbit, shared_system = _find(
+        "different_actions_same_gate",
+        lambda system: system["weights"] == ["strong_favour", "strong_favour"],
+        lambda descriptors: descriptors["polarity_relation"] == "same_polarity",
+    )
+    partition_orbit, partition_system = _find(
+        "different_actions_same_gate",
+        lambda system: system["weights"] == ["strong_favour", "strong_favour"],
+        lambda descriptors: descriptors["polarity_relation"] == "opposite_polarity",
+    )
     split_orbit, split_system = _find("different_actions_different_gates", lambda system: True)
     opposed_orbit, opposed_system = _find("same_slot_opposite_directions", lambda system: True)
     equal = analyse_system(equal_orbit, equal_system)
@@ -176,6 +188,7 @@ def test_family_representatives_have_the_expected_local_law() -> None:
     shared = analyse_system(shared_orbit, shared_system)
     split = analyse_system(split_orbit, split_system)
     opposed = analyse_system(opposed_orbit, opposed_system)
+    partition = analyse_system(partition_orbit, partition_system)
 
     assert equal["reducibility_class"] == "R1U"
     assert equal["effective_gate_dimension"] == 0
@@ -192,7 +205,13 @@ def test_family_representatives_have_the_expected_local_law() -> None:
     assert same["identities"]["same_action_gap"] == 0.0
     assert shared["reducibility_class"] == "R2S"
     assert shared["effective_gate_dimension"] == 1
+    assert shared["identities"]["different_action_both_active_checks"] > 0
     assert shared["identities"]["different_action_gap"] == 0.0
+    assert partition_orbit["descriptors"]["gate_relation"] == "same_triad"
+    assert partition["reducibility_class"] == "R2S"
+    assert partition["effective_gate_dimension"] == 1
+    assert partition["identities"]["different_action_both_active_checks"] == 0
+    assert partition["identities"]["different_action_gap"] == 0.0
     assert split["reducibility_class"] == "R2G"
     assert split["effective_gate_dimension"] == 2
     assert opposed["identities"]["same_action_both_active_checks"] == 0
@@ -200,7 +219,7 @@ def test_family_representatives_have_the_expected_local_law() -> None:
     assert same["information"]["balanced_full_triad_cmi"] < shared["information"]["balanced_full_triad_cmi"]
     favour = next(row for row in one_gate_surface()["grades"] if row["grade"] == "strong_favour")
     assert equal["information"]["balanced_full_triad_cmi"] < favour["analytic_balanced_cmi"]
-    for row in (equal, unequal, same, shared, split, opposed):
+    for row in (equal, unequal, same, shared, split, opposed, partition):
         assert row["kernel_max_abs_gap"] <= 1e-12
         assert row["log_weight_gap"] <= 1e-12
         assert row["minimal_coordinate_sets"]
@@ -210,6 +229,31 @@ def test_family_representatives_have_the_expected_local_law() -> None:
             weights = [Fraction(item) for item in cell["normalised_slot_law"]]
             assert all(weight > 0 for weight in weights)
             assert sum(weights, Fraction(0)) == 1
+
+
+def test_opposite_directions_are_not_a_repeated_structural_rule() -> None:
+    base = {
+        "action_relation": "same_pair",
+        "composition_family": "same_slot_opposite_directions",
+        "gate_relation": "same_triad",
+        "polarity_relation": "same_polarity",
+    }
+    opposite = validate_orbit_result(
+        {
+            "descriptors": {**base, "direction_relation": "opposite_direction"},
+            "orbit_id": "X",
+            "systems": [],
+        }
+    )
+    repeated = validate_orbit_result(
+        {
+            "descriptors": {**base, "direction_relation": "same_direction"},
+            "orbit_id": "X",
+            "systems": [],
+        }
+    )
+    assert opposite == []
+    assert repeated == ["X repeats a structural rule"]
 
 
 def test_local_law_hash_is_the_minimum_s4_image() -> None:

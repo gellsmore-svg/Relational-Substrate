@@ -332,7 +332,15 @@ def validate_orbit_result(result: dict) -> list[str]:
     family = descriptors["composition_family"]
     if family not in FAMILIES:
         problems.append(f"{result['orbit_id']} has an unclassified family {family}")
-    if descriptors["action_relation"] == "same_pair" and descriptors["gate_relation"] == "same_triad" and descriptors["polarity_relation"] == "same_polarity":
+    # A repeated rule is the same slot, the same gate, the same literal, and
+    # the same direction. Form and dissolve on that slot are two rules.
+    repeated = (
+        descriptors["action_relation"] == "same_pair"
+        and descriptors["gate_relation"] == "same_triad"
+        and descriptors["polarity_relation"] == "same_polarity"
+        and descriptors["direction_relation"] == "same_direction"
+    )
+    if repeated:
         problems.append(f"{result['orbit_id']} repeats a structural rule")
     for system in result["systems"]:
         label = system["system_id"]
@@ -380,7 +388,13 @@ def validate_orbit_result(result: dict) -> list[str]:
             if identities["same_action_gap"] > REDUCIBILITY_TOLERANCE or identities["same_action_both_active_checks"] <= 0:
                 problems.append(f"{label} same-action normalisation was not verified")
         if family in {"different_actions_same_gate", "different_actions_different_gates"}:
-            if identities["different_action_gap"] > REDUCIBILITY_TOLERANCE or identities["different_action_both_active_checks"] <= 0:
+            # Opposite literals of one gate cannot be true together, so the
+            # shared denominator has no realised state.
+            exclusive = descriptors["polarity_relation"] == "opposite_polarity"
+            if exclusive:
+                if identities["different_action_both_active_checks"] or identities["different_action_gap"] > REDUCIBILITY_TOLERANCE:
+                    problems.append(f"{label} opposite gate literals were both active")
+            elif identities["different_action_gap"] > REDUCIBILITY_TOLERANCE or identities["different_action_both_active_checks"] <= 0:
                 problems.append(f"{label} different-action normalisation was not verified")
         if family == "same_slot_opposite_directions":
             if identities["same_action_both_active_checks"] or identities["different_action_both_active_checks"]:
