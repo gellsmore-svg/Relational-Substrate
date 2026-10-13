@@ -196,25 +196,79 @@ def continuous_time(pi: np.ndarray, rates: np.ndarray) -> np.ndarray:
     return raw / raw.sum()
 
 
+DENSE_ABSORPTION_LIMIT = 4096
+ABSORPTION_ITERATION_TOLERANCE = 1e-13
+ABSORPTION_ITERATION_CAP = 2_000_000
+
+
 def absorption(kernel: Kernel, states: list[int], start: int, absorbing: list[int]) -> dict:
-    transient = [s for s in states if s not in set(absorbing)]
+    """Absorption probabilities and expected steps from ``start``.
+
+    Dense LU on reachable sets of at most 4,096 states; above that, an
+    iterative fixed-point solve h = Q h + r and t = 1 + Q t on the sparse
+    transient matrix. The two paths agree on every set small enough for both.
+    """
+    absorbing_set = set(absorbing)
+    if start in absorbing_set:
+        return {"absorption_method": "start_absorbed", "absorption_probabilities": {str(s): (1.0 if s == start else 0.0) for s in absorbing}, "expected_steps_to_absorption": 0.0}
+    transient = [s for s in states if s not in absorbing_set]
     tpos = {s: i for i, s in enumerate(transient)}
-    q = np.zeros((len(transient), len(transient)))
-    r = np.zeros((len(transient), len(absorbing)))
     apos = {s: i for i, s in enumerate(absorbing)}
+    if len(states) <= DENSE_ABSORPTION_LIMIT:
+        q = np.zeros((len(transient), len(transient)))
+        r = np.zeros((len(transient), len(absorbing)))
+        for s in transient:
+            for t, p in kernel.successors[s]:
+                if t in tpos:
+                    q[tpos[s], tpos[t]] += float(p)
+                else:
+                    r[tpos[s], apos[t]] += float(p)
+        fundamental = np.eye(len(transient)) - q
+        probabilities = np.linalg.solve(fundamental, r)
+        steps = np.linalg.solve(fundamental, np.ones(len(transient)))
+        return {
+            "absorption_method": "dense_solve",
+            "absorption_probabilities": {str(s): float(probabilities[tpos[start], apos[s]]) for s in absorbing},
+            "expected_steps_to_absorption": float(steps[tpos[start]]),
+        }
+    rows, cols, vals = [], [], []
+    r = np.zeros((len(transient), len(absorbing)))
     for s in transient:
         for t, p in kernel.successors[s]:
             if t in tpos:
-                q[tpos[s], tpos[t]] += float(p)
+                rows.append(tpos[s])
+                cols.append(tpos[t])
+                vals.append(float(p))
             else:
                 r[tpos[s], apos[t]] += float(p)
-    fundamental = np.eye(len(transient)) - q
-    probabilities = np.linalg.solve(fundamental, r)
-    steps = np.linalg.solve(fundamental, np.ones(len(transient)))
-    if start in apos:
-        return {"absorption_probabilities": {str(s): (1.0 if s == start else 0.0) for s in absorbing}, "expected_steps_to_absorption": 0.0}
+    rows_a, cols_a, vals_a = np.array(rows), np.array(cols), np.array(vals)
+    size = len(transient)
+
+    def apply(vector: np.ndarray) -> np.ndarray:
+        return np.bincount(rows_a, weights=vals_a * vector[cols_a], minlength=size)
+
+    steps = np.zeros(size)
+    iterations = 0
+    for iterations in range(1, ABSORPTION_ITERATION_CAP + 1):
+        nxt = 1.0 + apply(steps)
+        delta = float(np.abs(nxt - steps).max())
+        steps = nxt
+        if delta < ABSORPTION_ITERATION_TOLERANCE * max(1.0, float(steps.max())):
+            break
+    probabilities = {}
+    for s, column in apos.items():
+        h = r[:, column].copy()
+        for _ in range(ABSORPTION_ITERATION_CAP):
+            nxt = r[:, column] + apply(h)
+            delta = float(np.abs(nxt - h).max())
+            h = nxt
+            if delta < ABSORPTION_ITERATION_TOLERANCE:
+                break
+        probabilities[str(s)] = float(h[tpos[start]])
     return {
-        "absorption_probabilities": {str(s): float(probabilities[tpos[start], apos[s]]) for s in absorbing},
+        "absorption_iterations": iterations,
+        "absorption_method": "sparse_iteration",
+        "absorption_probabilities": probabilities,
         "expected_steps_to_absorption": float(steps[tpos[start]]),
     }
 

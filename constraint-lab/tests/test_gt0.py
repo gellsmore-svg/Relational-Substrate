@@ -95,3 +95,19 @@ def test_cli_refuses_without_a_frozen_plan() -> None:
     completed = subprocess.run([sys.executable, "-m", "rs_constraint_lab", "gt0", "verify", "--allow-unpushed"], cwd=REPO, capture_output=True, text=True, check=False)
     assert completed.returncode == 2
     assert "frozen plan" in completed.stderr.lower()
+
+
+def test_sparse_and_dense_absorption_agree(monkeypatch: pytest.MonkeyPatch) -> None:
+    for n, mode in ((4, "FREE"), (4, "HELD")):
+        kernel = gt0.build("LOCK", n, "prohibit", mode)
+        start = gt0.start_state(n, mode)
+        states = gt0.reachable(kernel, start)
+        absorbing = gt0.class_structure(kernel, states)["absorbing_states"]
+        dense = gt0.absorption(kernel, states, start, absorbing)
+        monkeypatch.setattr(gt0, "DENSE_ABSORPTION_LIMIT", 0)
+        sparse = gt0.absorption(kernel, states, start, absorbing)
+        monkeypatch.setattr(gt0, "DENSE_ABSORPTION_LIMIT", 4096)
+        assert sparse["absorption_method"] == "sparse_iteration"
+        assert abs(dense["expected_steps_to_absorption"] - sparse["expected_steps_to_absorption"]) <= 1e-10 * dense["expected_steps_to_absorption"]
+        for key, value in dense["absorption_probabilities"].items():
+            assert abs(value - sparse["absorption_probabilities"][key]) < 1e-10
