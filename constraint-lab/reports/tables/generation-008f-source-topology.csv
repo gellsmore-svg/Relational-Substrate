@@ -1,0 +1,4 @@
+action_pair,action_pair_name,action_present,action_topology_category,dissolve_admissible,form_admissible,pair_mask,source
+0,0-1,True,star_spoke,True,False,7,star
+0,0-1,True,triangle_edge,True,False,11,triangle
+0,0-1,True,path_middle_edge,True,False,13,path

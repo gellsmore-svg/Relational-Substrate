@@ -1,0 +1,66 @@
+[
+  {
+    "epoch_kernel_gap": 0.0,
+    "full_kernel_gap": 0.0,
+    "grade": "strong_suppress",
+    "model": "K3",
+    "same_labelled_source_mapped": false,
+    "state_map": "s xor 63"
+  },
+  {
+    "epoch_kernel_gap": 0.0,
+    "full_kernel_gap": 0.0,
+    "grade": "strong_suppress",
+    "model": "ENDPOINT",
+    "same_labelled_source_mapped": false,
+    "state_map": "s xor 63"
+  },
+  {
+    "epoch_kernel_gap": 0.0,
+    "full_kernel_gap": 0.0,
+    "grade": "strong_suppress",
+    "model": "PROJECTION",
+    "same_labelled_source_mapped": false,
+    "state_map": "s xor 63"
+  },
+  {
+    "epoch_kernel_gap": 0.0,
+    "full_kernel_gap": 0.0,
+    "grade": "strong_suppress",
+    "model": "DRIFT",
+    "same_labelled_source_mapped": false,
+    "state_map": "s xor 63"
+  },
+  {
+    "epoch_kernel_gap": 0.0,
+    "full_kernel_gap": 0.0,
+    "grade": "strong_favour",
+    "model": "K3",
+    "same_labelled_source_mapped": false,
+    "state_map": "s xor 63"
+  },
+  {
+    "epoch_kernel_gap": 0.0,
+    "full_kernel_gap": 0.0,
+    "grade": "strong_favour",
+    "model": "ENDPOINT",
+    "same_labelled_source_mapped": false,
+    "state_map": "s xor 63"
+  },
+  {
+    "epoch_kernel_gap": 0.0,
+    "full_kernel_gap": 0.0,
+    "grade": "strong_favour",
+    "model": "PROJECTION",
+    "same_labelled_source_mapped": false,
+    "state_map": "s xor 63"
+  },
+  {
+    "epoch_kernel_gap": 0.0,
+    "full_kernel_gap": 0.0,
+    "grade": "strong_favour",
+    "model": "DRIFT",
+    "same_labelled_source_mapped": false,
+    "state_map": "s xor 63"
+  }
+]

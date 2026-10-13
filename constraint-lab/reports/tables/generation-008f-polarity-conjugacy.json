@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "exact_weight_gap": "0",
+      "full_kernel_gap": 0.0,
+      "grade": "strong_suppress",
+      "pair_epoch_gap": 2.7755575615628914e-17,
+      "stationary_visible_gap": 6.245004513516506e-16,
+      "uniform_raw_triad_map_gap": 0.0
+    },
+    {
+      "exact_weight_gap": "0",
+      "full_kernel_gap": 0.0,
+      "grade": "strong_favour",
+      "pair_epoch_gap": 4.163336342344337e-17,
+      "stationary_visible_gap": 2.2447321779139884e-15,
+      "uniform_raw_triad_map_gap": 0.0
+    }
+  ],
+  "holds": true,
+  "state_map": "s xor (1 << 7) in canonical hidden coordinates"
+}
