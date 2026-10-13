@@ -66,6 +66,8 @@ def main(argv: list[str]) -> int:
         return _generation_008a(argv[1:])
     if argv[0] == "generation008b":
         return _generation_008b(argv[1:])
+    if argv[0] == "generation008c":
+        return _generation_008c(argv[1:])
     if argv[0] == "batch":
         return _batch(argv[1:])
     print(f"unknown command {argv[0]}", file=sys.stderr)
@@ -780,3 +782,117 @@ def _retry(root: Path) -> int:
     save_state(layout, state)
     print(json.dumps({"requeued": reset}, sort_keys=True))
     return 0
+
+
+def _default_generation_008c_root() -> Path:
+    return _lab_root() / "generated" / "generation-008c" / "round-c0"
+
+
+def _generation_008c(argv: list[str]) -> int:
+    if not argv:
+        print("usage: python -m rs_constraint_lab generation008c <command>", file=sys.stderr)
+        return 2
+    parser = argparse.ArgumentParser(prog="rs_constraint_lab generation008c")
+    parser.add_argument("command", choices=["write-plan", "execute-item", "run-c0", "assemble", "verify"])
+    parser.add_argument("--root", type=Path, default=None)
+    parser.add_argument("--plan", type=Path, default=None)
+    parser.add_argument("--output", type=Path, default=None)
+    parser.add_argument("--frozen-plan-commit", default=None)
+    parser.add_argument("--repo", type=Path, default=None)
+    parser.add_argument("--relpath", default=None)
+    parser.add_argument("--kind", default=None)
+    parser.add_argument("--system", default=None)
+    parser.add_argument("--source", default=None)
+    parser.add_argument("--allow-unpushed", action="store_true")
+    parser.add_argument("--publish", action="store_true")
+    args = parser.parse_args(argv)
+    from rs_constraint_lab.durable import atomic_write_json
+    from rs_constraint_lab.explore08 import FrozenPlanError
+    from rs_constraint_lab.explore08c import MechanismError
+    from rs_constraint_lab.gen008c_exec import (
+        PLAN_RELPATH,
+        assemble_tables,
+        execute_plan_item,
+        item_path,
+        prepare_c0_plan,
+        publish_tables,
+        require_c0_execution,
+        run_c0,
+        write_payload,
+    )
+
+    repo = args.repo or _repo_root()
+    root = args.root or _default_generation_008c_root()
+    if args.command == "write-plan":
+        if args.output is None:
+            print("write-plan requires --output", file=sys.stderr)
+            return 2
+        plan = prepare_c0_plan(repo)
+        atomic_write_json(args.output, plan)
+        print(json.dumps({"items": len(plan["items"]), "output": str(args.output), "plan_hash": plan["plan_hash"]}, indent=2, sort_keys=True))
+        return 0
+    if args.command == "verify":
+        relpath = args.relpath or PLAN_RELPATH
+        plan_path = args.plan or (repo / PLAN_RELPATH)
+        try:
+            plan = require_c0_execution(
+                repo,
+                args.frozen_plan_commit,
+                relpath,
+                disk_path=plan_path,
+                require_remote=not args.allow_unpushed,
+            )
+        except (FrozenPlanError, MechanismError) as exc:
+            print(str(exc), file=sys.stderr)
+            return 2
+        missing = [item["kind"] for item in plan["items"] if not item_path(root, item).is_file()]
+        print(json.dumps({"complete": not missing, "missing_count": len(missing), "plan_hash": plan["plan_hash"]}, indent=2, sort_keys=True))
+        return 0 if not missing else 1
+
+    relpath = args.relpath or PLAN_RELPATH
+    plan_path = args.plan or (repo / PLAN_RELPATH)
+    try:
+        plan = require_c0_execution(
+            repo,
+            args.frozen_plan_commit,
+            relpath,
+            disk_path=plan_path,
+            require_remote=not args.allow_unpushed,
+        )
+    except (FrozenPlanError, MechanismError) as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
+    try:
+        if args.command == "execute-item":
+            matches = [
+                item
+                for item in plan["items"]
+                if item["kind"] == args.kind and item.get("system") == args.system and item.get("source") == args.source
+            ]
+            if len(matches) != 1:
+                print("execute-item requires one --kind and the matching --system/--source", file=sys.stderr)
+                return 2
+            payload = execute_plan_item(matches[0])
+            path = item_path(root, matches[0])
+            atomic_write_json(path, payload)
+            print(json.dumps({"item_id": payload["item_id"], "output": str(path), "wall_seconds": payload["wall_seconds"]}, indent=2, sort_keys=True))
+            return 0
+        if args.command == "run-c0":
+            written = run_c0(root, plan)
+            print(json.dumps({"items": len(written), "max_wall_seconds": max(row["wall_seconds"] for row in written), "root": str(root)}, indent=2, sort_keys=True))
+            return 0
+        if args.command == "assemble":
+            payload = assemble_tables(root, plan, repo=repo, frozen_plan_commit=args.frozen_plan_commit)
+            if not payload["validation"]["ok"]:
+                print(json.dumps(payload["validation"], indent=2, sort_keys=True), file=sys.stderr)
+                return 1
+            output = args.output or (root / "round-c0-tables.json")
+            written = write_payload(output, payload)
+            if args.publish:
+                publish_tables(payload, _lab_root() / "reports")
+            print(json.dumps({"bytes_sha256": written["payload_sha256"], "output": str(output), "validation": "ok"}, indent=2, sort_keys=True))
+            return 0
+    except MechanismError as exc:
+        print(str(exc), file=sys.stderr)
+        return 1
+    return 2
