@@ -144,4 +144,4 @@ L compilation, coupled incidence, scale, XOR routing, controlled fragility and b
 
 New formal nodes and theorem links append to the historical ledgers. Count/literal scope is qualified additively; existing qualified statuses remain visible. The stationary theorem adds a negative constraint on future scale/XOR claims. Existing H/L/N questions remain unresolved.
 
-The generated through-generation-008g snapshot and canonical ledger hashes, local verification outcomes, exact closing-head CI run and commit chronology are recorded in [execution provenance](../provenance/executions/008G-formal-integration.md). The final CI run is checked after the closing commit to avoid a self-referential head assertion in this report.
+The generated through-generation-008g snapshot and canonical ledger hashes, local verification outcomes, snapshot-head CI and commit chronology are recorded in [execution provenance](../provenance/executions/008G-formal-integration.md). Exact closing-head CI is checked and reported after the closing commit, avoiding a self-referential head assertion inside that commit.

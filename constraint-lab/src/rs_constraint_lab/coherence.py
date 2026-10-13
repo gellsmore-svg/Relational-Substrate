@@ -66,6 +66,8 @@ ROBUSTNESS_KEYS = (
     "projection_robustness",
 )
 RELATION_TYPES = {
+    "formalises",
+    "proves_local_identity_for",
     "supports",
     "undermines",
     "refines",

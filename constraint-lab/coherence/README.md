@@ -22,4 +22,6 @@ A published finding statement is not rewritten to match later knowledge. Add a n
 
 Open questions are findings with epistemic layer `OPEN_QUESTION`.
 
+Generation 8G adds `formalises` (a scoped formal representation of a historical finding) and `proves_local_identity_for` (a linked proof of its declared local model identity, not a promotion of every historical observation to theorem). New nodes carry `formal_refs` into the separate canonical theorem catalogue. Historical statements/layers remain unchanged. The formal validator checks reciprocal catalogue links.
+
 Before a future generation, load this ledger and name the nodes that motivate the next question. Most new results should connect first to nearby structural findings. A global-coherence interpretation is a separate layer.

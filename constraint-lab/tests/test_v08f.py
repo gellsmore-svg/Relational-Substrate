@@ -245,9 +245,14 @@ def test_published_cells_reproduce_independent_chain_rule_and_precision():
 
 
 @pytest.mark.skipif(not (ROOT / "constraint-lab/coherence/snapshots/through-generation-008f.md").exists(), reason="8F snapshot checked after scientific close-out")
-def test_8f_snapshot_is_deterministic_and_observations_cite_committed_tables():
+def test_8f_snapshot_is_deterministic_and_observations_cite_committed_tables(tmp_path):
     directory = ROOT / "constraint-lab/coherence"
-    text = snapshot_text(directory, title="Through Generation 008F")
+    # A historical snapshot is generated from its closing ledger, not later appends.
+    closing = "ec319f24faa66ca9898363ccd7531334e82544c1"
+    for name in ("findings.jsonl", "relations.jsonl"):
+        content = subprocess.run(["git", "-C", str(ROOT), "show", f"{closing}:constraint-lab/coherence/{name}"], check=True, capture_output=True).stdout
+        (tmp_path / name).write_bytes(content)
+    text = snapshot_text(tmp_path, title="Through Generation 008F")
     assert (directory / "snapshots/through-generation-008f.md").read_text() == text
     findings, _ = load_ledger(directory)
     for row in findings:

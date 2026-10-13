@@ -60,6 +60,14 @@ flowchart TD
     F8F_INCIDENCE_SILENT["F8F-INCIDENCE-SILENT: BOTH, ONE and NEITHER produce identical checkpoint and stationary bridge outputs. All 4..."]
     F8F_COMPLEMENT_PERIOD["F8F-COMPLEMENT-PERIOD: Form and dissolve full and epoch kernels are conjugate with gap 0 under s xor 63 for ev..."]
     F8F_LOCAL_GLOBAL_DECOUPLING["F8F-LOCAL-GLOBAL-DECOUPLING: Stationary current-context slot CMI does not monotonically rank K3-versus-PROJECTION vi..."]
+    F8G_FORMAL_ADDITIVE_LOGIT_GRAMMAR["F8G-FORMAL-ADDITIVE-LOGIT-GRAMMAR: Fixed positive rules compose by multiplication of event weights and addition of event l..."]
+    F8G_FORMAL_K_INTERACTION_HIERARCHY["F8G-FORMAL-K-INTERACTION-HIERARCHY: A non-neutral admissible conjunction over r distinct jointly satisfiable literals has n..."]
+    F8G_FORMAL_RULE_CARDINALITY_DISTINCTION["F8G-FORMAL-RULE-CARDINALITY-DISTINCTION: Rule count J, maximum per-rule K, relation order O and derived gate dimension are indep..."]
+    F8G_FORMAL_BOOLEAN_BASIS["F8G-FORMAL-BOOLEAN-BASIS: Unique multilinear Mobius coefficients and complete literal corner indicators supply eq..."]
+    F8G_FORMAL_CURRENT_STATE_EXPRESSIVITY["F8G-FORMAL-CURRENT-STATE-EXPRESSIVITY: The unbounded O2/O3 literal parser/backend can represent every positive event-weight ta..."]
+    F8G_FORMAL_COUNT_SCOPE["F8G-FORMAL-COUNT-SCOPE: The K-1 gate-degree bound is literal-only: an O2 K2 count>=1 predicate on two non-actio..."]
+    F8G_FORMAL_STATIONARY_FACTORISATION["F8G-FORMAL-STATIONARY-FACTORISATION: If an action rate depends only on its own pair bit and hidden bits, with all other pair..."]
+    F8G_FORMAL_SHAPE_INVARIANCE["F8G-FORMAL-SHAPE-INVARIANCE: Under autonomous single-action factorisation, graph class conditional on edge count is ..."]
   end
   subgraph INFERENCE [Inferences]
     F008_COMPOSITION_REPRESENTATION["F008-COMPOSITION-REPRESENTATION: The magnitude of a two-rule interaction residual depends on the representation and the ..."]
@@ -84,12 +92,17 @@ flowchart TD
     F8E_PARSER_SAME_TRIAD["F8E-PARSER-SAME-TRIAD: The order-3 parser rejects a repeated literal, a condition on the action slot and a cou..."]
     F8F_GENERAL_K_SCOPE["F8F-GENERAL-K-SCOPE: The general interaction-order statement applies to non-neutral rules over distinct, joi..."]
     F8F_PREFREEZE_SCIENCE_GATE["F8F-PREFREEZE-SCIENCE-GATE: Before a scientific plan is frozen, execution tests may validate plumbing, synthetic fi..."]
+    F8G_FORMAL_EQUIVALENCE_HIERARCHY["F8G-FORMAL-EQUIVALENCE-HIERARCHY: Canonical syntax, weights, full local law, full kernel, conjugacy, projected process an..."]
+    F8G_FORMAL_INCIDENCE_SCOPE["F8G-FORMAL-INCIDENCE-SCOPE: Independent hidden-bit permutations can conjugate single-action gate laws while fixing ..."]
+    F8G_FORMAL_H_L_DISTINCTION["F8G-FORMAL-H-L-DISTINCTION: H asks for different reachable histories at identical complete ordinary material state;..."]
+    F8G_FORMAL_COMPILATION_TEST["F8G-FORMAL-COMPILATION-TEST: Before claiming a new ontology axis, test compilation into fixed ordinary rules while d..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
     F8D_RS_COMPOSITIONAL_BOUND["F8D-RS-COMPOSITIONAL-BOUND: Inside this model a small constraint grammar is compositional in event-logit space and ..."]
     F8E_RS_COMPOSITIONAL_HIERARCHY["F8E-RS-COMPOSITIONAL-HIERARCHY: Inside this model a small constraint grammar has an ordinary compositional hierarchy: i..."]
     F8F_RS_BRIDGE_INTERPRETATION["F8F-RS-BRIDGE-INTERPRETATION: The local expressive hierarchy needs a dynamical scope: a new coefficient may become tr..."]
+    F8G_FORMAL_INTEGRATION_RS["F8G-FORMAL-INTEGRATION-RS: The laboratory has a scoped compositional current-relation language and a precise histo..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     Q_PATH_SHAPE["Q-PATH-SHAPE: Why does path topology convert early triadic context into shape information at the firs..."]
@@ -221,3 +234,34 @@ flowchart TD
   F8F_SHAPE_WASHES_OUT -->|raises_question| Q_H_POSITIVE
   F8F_RS_BRIDGE_INTERPRETATION -->|compatible_with| Q_META_CONSTRAINT
   F8F_SHAPE_WASHES_OUT -->|raises_question| Q_SCALE_N
+  F8G_FORMAL_ADDITIVE_LOGIT_GRAMMAR -->|proves_local_identity_for| F8D_LOG_ADDITIVITY
+  F8G_FORMAL_ADDITIVE_LOGIT_GRAMMAR -->|formalises| F8D_ADDITIVE_FEATURE_GRAMMAR
+  F8G_FORMAL_K_INTERACTION_HIERARCHY -->|proves_local_identity_for| F8E_K3_CONJUNCTION_INTERACTION
+  F8G_FORMAL_K_INTERACTION_HIERARCHY -->|qualifies| F8E_GENERAL_K_INTERACTION
+  F8G_FORMAL_K_INTERACTION_HIERARCHY -->|explains| F8E_K2_K3_NONREPRESENTABILITY
+  F8G_FORMAL_RULE_CARDINALITY_DISTINCTION -->|formalises| F8E_CARDINALITY_VS_K
+  F8G_FORMAL_RULE_CARDINALITY_DISTINCTION -->|explains| F8D_GATE_DIMENSION
+  F8G_FORMAL_BOOLEAN_BASIS -->|proves_local_identity_for| F8E_BOOLEAN_LOGIT_BASIS
+  F8G_FORMAL_BOOLEAN_BASIS -->|proves_local_identity_for| F8E_CORNER_BASIS
+  F8G_FORMAL_BOOLEAN_BASIS -->|bounds| F8E_W4_COVERAGE
+  F8G_FORMAL_CURRENT_STATE_EXPRESSIVITY -->|depends_on| F8G_FORMAL_BOOLEAN_BASIS
+  F8G_FORMAL_CURRENT_STATE_EXPRESSIVITY -->|bounds| Q_H_POSITIVE
+  F8G_FORMAL_CURRENT_STATE_EXPRESSIVITY -->|bounds| Q_META_CONSTRAINT
+  F8G_FORMAL_COUNT_SCOPE -->|qualifies| F8E_CARDINALITY_VS_K
+  F8G_FORMAL_COUNT_SCOPE -->|qualifies| F8D_NO_GATE_PRODUCT
+  F8G_FORMAL_COUNT_SCOPE -->|refines| F8F_GENERAL_K_SCOPE
+  F8G_FORMAL_EQUIVALENCE_HIERARCHY -->|formalises| F011_QUOTIENT_INVALID
+  F8G_FORMAL_EQUIVALENCE_HIERARCHY -->|bounds| F009_TWO_LEVEL_COLLAPSE
+  F8G_FORMAL_INCIDENCE_SCOPE -->|explains| F8F_INCIDENCE_SILENT
+  F8G_FORMAL_STATIONARY_FACTORISATION -->|proves_local_identity_for| F8F_INTERACTION_ROUTING
+  F8G_FORMAL_STATIONARY_FACTORISATION -->|explains| F8F_SHAPE_WASHES_OUT
+  F8G_FORMAL_SHAPE_INVARIANCE -->|depends_on| F8G_FORMAL_STATIONARY_FACTORISATION
+  F8G_FORMAL_SHAPE_INVARIANCE -->|explains| F8F_SHAPE_WASHES_OUT
+  F8G_FORMAL_SHAPE_INVARIANCE -->|bounds| Q_SCALE_N
+  F8G_FORMAL_H_L_DISTINCTION -->|refines| Q_H_POSITIVE
+  F8G_FORMAL_H_L_DISTINCTION -->|refines| Q_META_CONSTRAINT
+  F8G_FORMAL_COMPILATION_TEST -->|formalises| F8E_ORDINARY_K_SUPPLIES_INTERACTION
+  F8G_FORMAL_COMPILATION_TEST -->|compatible_with| F8F_PREFREEZE_SCIENCE_GATE
+  F8G_FORMAL_INTEGRATION_RS -->|bounds| F8E_RS_COMPOSITIONAL_HIERARCHY
+  F8G_FORMAL_INTEGRATION_RS -->|refines| F8F_RS_BRIDGE_INTERPRETATION
+  F8G_FORMAL_EQUIVALENCE_HIERARCHY -->|compatible_with| F8C_PATH_CONVERTS_SLOT

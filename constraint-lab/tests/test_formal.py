@@ -277,6 +277,8 @@ def test_catalog_schema_generated_views_and_namespaces():
     (lambda r: r.update(assumptions=[]), "assumptions"),
     (lambda r: r.update(dependencies=["CL-MISSING"]), "unknown dependency"),
     (lambda r: r.update(evidence_refs=["../outside.md"]), "missing evidence"),
+    (lambda r: r.update(evidence_refs=None), "must be a string list"),
+    (lambda r: r.update(dependencies=None), "must be a string list"),
     (lambda r: r.update(coherence_refs=["MISSING"]), "unknown coherence"),
     (lambda r: r.update(overall_score=1), "scalar score"),
     (lambda r: r["proof_or_verification"].update(proof_sketch=""), "needs assumptions and proof"),
@@ -325,3 +327,34 @@ def test_prompt_representation_is_not_authored_hash():
     assert hashlib.sha256(contents).hexdigest() == "81703b51e2d869da5fda862d9528c854846cdf8b037f54aac6ad400a7f1e704e"
     assert b"81703b51e2d869da5fda862d9528c854846cdf8b037f54aac6ad400a7f1e704e" not in contents
     assert not (ROOT / "constraint-lab/exploration/generation-008g/round-g0-plan.json").exists()
+
+def test_formal_coherence_join_cites_committed_derivations():
+    findings, relations = load_ledger()
+    catalogue = {row["theorem_id"]: row for row in load_catalog()}
+    new = [row for row in findings if row["created_generation"] == "008G"]
+    assert len(new) == 13
+    for row in new:
+        assert row["formal_refs"]
+        for reference in row["formal_refs"]:
+            assert row["finding_id"] in catalogue[reference]["coherence_refs"]
+        for path in row["evidence_refs"]:
+            assert (ROOT / path).exists()
+            _git("cat-file", "-e", "HEAD:" + path)
+        assert "overall_score" not in row
+    assert any(row["from_finding"] == "F8G-FORMAL-COUNT-SCOPE" and row["relation_type"] == "qualifies" for row in relations)
+    assert any(row["from_finding"] == "F8G-FORMAL-SHAPE-INVARIANCE" and row["to_finding"] == "Q-SCALE-N" and row["relation_type"] == "bounds" for row in relations)
+    assert all(next(f for f in findings if f["finding_id"] == question)["status"] == "unresolved" for question in ("Q-H-POSITIVE", "Q-META-CONSTRAINT", "Q-SCALE-N"))
+
+
+def test_8g_snapshot_from_immutable_ledger_prefix(tmp_path):
+    from rs_constraint_lab.coherence import canonical_ledger_bytes, snapshot_text
+
+    directory = ROOT / "constraint-lab/coherence"
+    for name, count in (("findings.jsonl", 105), ("relations.jsonl", 149)):
+        prefix = b"".join((directory / name).read_bytes().splitlines(keepends=True)[:count])
+        (tmp_path / name).write_bytes(prefix)
+    expected = snapshot_text(tmp_path, title="Through Generation 008G")
+    assert snapshot_text(tmp_path, title="Through Generation 008G") == expected
+    assert (directory / "snapshots/through-generation-008g.md").read_text() == expected
+    assert hashlib.sha256(expected.encode()).hexdigest() == "0ef6f87567e45a006eb14b80dde4cb98e6542fa8ae30097b587f2ecb90111e4c"
+    assert hashlib.sha256(canonical_ledger_bytes(tmp_path)).hexdigest() == "c3fb60db0d338d83069e52015a0a5d78d972ec6775ad8fc08c29dd11fadec0e3"

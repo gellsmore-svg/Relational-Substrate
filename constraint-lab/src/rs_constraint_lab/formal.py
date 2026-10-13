@@ -69,6 +69,17 @@ def validate_catalog(rows: list[dict], root: Path | None = None) -> list[str]:
         problems.append("theorem ids missing or not unique")
     findings, _relations = load_ledger(root / "constraint-lab/coherence")
     coherence_ids = {r["finding_id"] for r in findings}
+    by_id = {r["theorem_id"]: r for r in rows if isinstance(r.get("theorem_id"), str)}
+    for finding in findings:
+        refs = finding.get("formal_refs", [])
+        if not isinstance(refs, list) or any(not isinstance(ref, str) for ref in refs):
+            problems.append(f"{finding['finding_id']}: invalid formal_refs")
+            continue
+        for ref in refs:
+            if ref not in known:
+                problems.append(f"{finding['finding_id']}: unknown formal ref {ref}")
+            elif finding["finding_id"] not in by_id[ref].get("coherence_refs", []):
+                problems.append(f"{ref}: missing reciprocal formal coherence link")
     graph = {}
     for row in rows:
         identifier = row.get("theorem_id")
@@ -91,14 +102,16 @@ def validate_catalog(rows: list[dict], root: Path | None = None) -> list[str]:
                 continue
             if field != "dependencies" and not values:
                 problems.append(f"{label}: empty {field}")
-        for ref in row.get("evidence_refs", []):
+        evidence = row.get("evidence_refs", [])
+        for ref in evidence if isinstance(evidence, list) else []:
             if not _check_reference(root, ref):
                 problems.append(f"{label}: missing evidence {ref}")
-        for ref in row.get("coherence_refs", []):
-            if ref not in coherence_ids:
+        coherence = row.get("coherence_refs", [])
+        for ref in coherence if isinstance(coherence, list) else []:
+            if not isinstance(ref, str) or ref not in coherence_ids:
                 problems.append(f"{label}: unknown coherence id {ref}")
         dependencies = row.get("dependencies", [])
-        if isinstance(dependencies, list):
+        if isinstance(dependencies, list) and isinstance(identifier, str):
             graph[identifier] = [d for d in dependencies if isinstance(d, str)]
             for dependency in graph[identifier]:
                 if dependency not in known:
@@ -161,7 +174,18 @@ def render_catalog(rows: list[dict]) -> str:
             "Scope: " + row["scope"], "",
         ]
         verification = row["proof_or_verification"]
-        lines.append("Proof/verification: " + chr(96) + json.dumps(verification, sort_keys=True, ensure_ascii=True) + chr(96))
+        if "derivation_ref" in verification:
+            lines.append("Proof: " + _link(verification["derivation_ref"]) + ". " + verification["proof_sketch"])
+        elif "enumerated_domain" in verification:
+            lines.append(f"Enumeration: {verification['enumerated_domain']}; exact count {verification['exact_count']}. Verifier: " + _link(verification["verification_implementation"]))
+        elif "method" in verification:
+            lines.append("Method: " + verification["method"])
+            lines.append("Domain: " + verification["domain"])
+            lines.append("Tolerances: " + chr(96) + json.dumps(verification["tolerances"], sort_keys=True) + chr(96))
+            if verification.get("caveat"):
+                lines.append("Method caveat: " + verification["caveat"])
+        else:
+            lines.append("Argument/next test: " + verification.get("argument", verification.get("next_test", "Open.")))
         lines.append("Evidence: " + ", ".join(_link(r) for r in row["evidence_refs"]))
         lines.append("Coherence: " + ", ".join(chr(96) + r + chr(96) for r in row["coherence_refs"]))
         lines.append("Dependencies: " + (", ".join(row["dependencies"]) or "none"))
