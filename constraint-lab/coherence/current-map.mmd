@@ -18,14 +18,29 @@ flowchart TD
     F017_CLASS_PROJECTION_LOSS["F017-CLASS-PROJECTION-LOSS: Replacing the full labelled pair mask by graph isomorphism class retains 0.661 of the s..."]
     F008_EDGE_VERSUS_SHAPE["F008-EDGE-VERSUS-SHAPE: At checkpoint 1, star and triangle carry only edge-count information: class information..."]
     F008B_FINITE_HORIZON_RANGE["F008B-FINITE-HORIZON-RANGE: Exact dense-minus-sparse context ranges over 512 pair epochs are at the floor for R00, ..."]
+    F8C_TWO_COORDINATES["F8C-TWO-COORDINATES: On each single conditional pair rule in the A0 palette, the six-slot pair-event law is ..."]
+    F8C_CLOSED_FORM_CMI["F8C-CLOSED-FORM-CMI: An inactive single pair rule gives probability 1/6 on each of the six slots. An active ..."]
+    F8C_GRADE_ASYMMETRY["F8C-GRADE-ASYMMETRY: At m=1/4 the action slot has probability 1/21 and each other slot has probability 4/21...."]
+    F8C_LOCAL_EQUIVALENCE["F8C-LOCAL-EQUIVALENCE: R01, R02, and R04 have the same balanced full-mask slot information. Each reweights one..."]
+    F8C_R05_DENOMINATOR["F8C-R05-DENOMINATOR: R05's balanced slot information is 0.010413087564075357 nats. It equals (1/4) JS(unifor..."]
+    F8C_TOPOLOGY_ATLAS["F8C-TOPOLOGY-ATLAS: From the canonical star, and from the canonical triangle, every one-edge toggle with th..."]
+    F8C_CHECKPOINT_EPOCH["F8C-CHECKPOINT-EPOCH: Checkpoint 1 is the law of the first pair event after zero or more triad-only toggles. ..."]
+    F8C_GATE_REFRESH["F8C-GATE-REFRESH: On R01 and on R06, exact propagation gives I(initial full triad; current pair mask) equ..."]
+    F8C_PROJECTION_GEOMETRY["F8C-PROJECTION-GEOMETRY: Under stationary pair-event weighting, conditioning on graph isomorphism class retains ..."]
+    F8C_EDGE_DRIFT["F8C-EDGE-DRIFT: On an active strong-suppress dissolution the rule-induced expected edge change is (6-k)..."]
   end
   subgraph INFERENCE [Inferences]
     F008_COMPOSITION_REPRESENTATION["F008-COMPOSITION-REPRESENTATION: The magnitude of a two-rule interaction residual depends on the representation and the ..."]
     F018_LOCAL_VERSUS_INITIAL["F018-LOCAL-VERSUS-INITIAL: Local higher-order dependence and long-lived initial-condition memory are distinct. The..."]
+    F8C_PATH_CONVERTS_SLOT["F8C-PATH-CONVERTS-SLOT: On the canonical path the action slot of R01 and of R06 is the middle edge. Reweighting..."]
+    F8C_CURRENT_SURVIVES["F8C-CURRENT-SURVIVES: The balanced current-context slot information remains the closed-form value, 0.00974856..."]
+    F8C_DRIFT_DIRECTION["F8C-DRIFT-DIRECTION: Suppressing a dissolution raises expected edge count, favouring a dissolution lowers it..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     F011_QUOTIENT_INVALID["F011-QUOTIENT-INVALID: Graph-only hidden-context quotienting is formally invalid for labelled rules. The wrong..."]
     F013_PLUGIN_OVERSTATES["F013-PLUGIN-OVERSTATES: Plug-in mutual information from these finite tables substantially overstates hidden-con..."]
+    F8C_METHOD_GEOMETRY["F8C-METHOD-GEOMETRY: After exploratory statistics identify a stable non-zero structure, search for a minimal..."]
+    F8C_METHOD_DIMENSIONS["F8C-METHOD-DIMENSIONS: A finding has several dimensions. Magnitude, robustness, persistence, explanatory reach..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
@@ -37,6 +52,8 @@ flowchart TD
     Q_H_POSITIVE["Q-H-POSITIVE: What changes when relational history itself becomes part of the constraint state? Rapid..."]
     Q_SCALE_N["Q-SCALE-N: How does the local gate, the normalisation, and the occupancy axis scale when N moves p..."]
     Q_THREE_EDGE_LAYER["Q-THREE-EDGE-LAYER: What keeps the 3-edge occupancy layer near 0.314 across the Generation 8 palette?"]
+    Q_WEAK_GRADE["Q-WEAK-GRADE: How do the local slot information and the rule-induced edge drift move when the multipl..."]
+    Q_GATE_COMPOSITION["Q-GATE-COMPOSITION: How do two higher-order gates compose in the local coordinates? A second gate can add a..."]
   end
   F014_EXACT_FIRST_DESTINATION -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
   F015_TRANSIENT_CLASS_MEMORY -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
@@ -60,3 +77,25 @@ flowchart TD
   F_RS_SEPARATION -->|derived_from| F018_LOCAL_VERSUS_INITIAL
   F008_COMPOSITION_REPRESENTATION -->|qualifies| F005_COMPOSITION_NOT_SUM
   F008B_FINITE_HORIZON_RANGE -->|bounds| F012_RAW_CONTEXT_AXIS
+  F8C_CLOSED_FORM_CMI -->|derived_from| F8C_TWO_COORDINATES
+  F8C_CLOSED_FORM_CMI -->|explains| F016_CURRENT_SLOT_INFORMATION
+  F8C_GRADE_ASYMMETRY -->|derived_from| F8C_CLOSED_FORM_CMI
+  F8C_LOCAL_EQUIVALENCE -->|derived_from| F8C_CLOSED_FORM_CMI
+  F8C_R05_DENOMINATOR -->|contrasts_with| F8C_CLOSED_FORM_CMI
+  F8C_PATH_CONVERTS_SLOT -->|derived_from| F8C_TOPOLOGY_ATLAS
+  F8C_PATH_CONVERTS_SLOT -->|explains| F008_EDGE_VERSUS_SHAPE
+  F8C_CHECKPOINT_EPOCH -->|explains| F008_EDGE_VERSUS_SHAPE
+  F8C_GATE_REFRESH -->|explains| F015_TRANSIENT_CLASS_MEMORY
+  F8C_CURRENT_SURVIVES -->|derived_from| F8C_GATE_REFRESH
+  F8C_CURRENT_SURVIVES -->|derived_from| F8C_CLOSED_FORM_CMI
+  F8C_CURRENT_SURVIVES -->|refines| F018_LOCAL_VERSUS_INITIAL
+  F8C_PROJECTION_GEOMETRY -->|explains| F017_CLASS_PROJECTION_LOSS
+  F8C_DRIFT_DIRECTION -->|derived_from| F8C_EDGE_DRIFT
+  F8C_DRIFT_DIRECTION -->|qualifies| F010_OCCUPANCY_AXIS
+  Q_LOCAL_SLOT -->|partially_answered_by| F8C_CLOSED_FORM_CMI
+  Q_PATH_SHAPE -->|partially_answered_by| F8C_PATH_CONVERTS_SLOT
+  Q_CLASS_REMAINDER -->|partially_answered_by| F8C_PROJECTION_GEOMETRY
+  F8C_CLOSED_FORM_CMI -->|raises_question| Q_WEAK_GRADE
+  F8C_R05_DENOMINATOR -->|raises_question| Q_GATE_COMPOSITION
+  F8C_GATE_REFRESH -->|motivates| Q_H_POSITIVE
+  F8C_CLOSED_FORM_CMI -->|motivates| F8C_METHOD_GEOMETRY

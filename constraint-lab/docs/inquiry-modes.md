@@ -201,3 +201,13 @@ A plug-in mutual information computed from a finite contingency table is one lay
 Structural zero-information controls are part of the model. A system whose pair-event law does not read the triad is a calibration instrument for any statistic that claims triad-context information on the pair-event clock. If that statistic is large on the control, it is describing the estimator before it is describing the dynamics. The control is not a null hypothesis, and the comparison is not a pass/fail test.
 
 Negative values of `observed plug-in − null mean` stay in the stored tables. They say the finite sample landed below the estimated null mean. Only an exact mutual information is mathematically non-negative. A float64 kernel result is a deterministic kernel result. It is not called a mathematical identity unless the arithmetic is exact.
+
+## Mechanistic representation
+
+After exploratory statistics identify a stable non-zero structure, search for a minimal mechanistic representation before expanding the experiment. Prefer a small exact causal geometry inside the explicit model transition law over repeated measurement of the same effect. The phrase "causal geometry" here means a dependence in that declared law. It is not, without a further qualification, a claim about a system outside the model.
+
+## Finding dimensions
+
+A finding has several dimensions. Magnitude, robustness, persistence, explanatory reach, and structural role must not be collapsed into a single strength score. A small or fragile phenomenon may be structurally essential. A large robust phenomenon may be mechanistically generic. Preserve the literal observation and let later relational evidence establish significance.
+
+The coherence ledger is `constraint-lab/coherence/`. `findings.jsonl` and `relations.jsonl` are the record. The Markdown and Mermaid views are generated. A substantive generation appends findings and relations, regenerates the views, and writes an immutable snapshot under `constraint-lab/coherence/snapshots/`. The snapshot hash belongs in that generation's provenance. Future prompts name the coherence nodes that motivated them.
