@@ -28,6 +28,19 @@ flowchart TD
     F8C_GATE_REFRESH["F8C-GATE-REFRESH: On R01 and on R06, exact propagation gives I(initial full triad; current pair mask) equ..."]
     F8C_PROJECTION_GEOMETRY["F8C-PROJECTION-GEOMETRY: Under stationary pair-event weighting, conditioning on graph isomorphism class retains ..."]
     F8C_EDGE_DRIFT["F8C-EDGE-DRIFT: On an active strong-suppress dissolution the rule-induced expected edge change is (6-k)..."]
+    F8D_LOG_ADDITIVITY["F8D-LOG-ADDITIVITY: On every one of the 3584 weighted two-rule systems, the implementation kernel weights e..."]
+    F8D_NORMALISATION_INTERACTION["F8D-NORMALISATION-INTERACTION: When two rules on different slots are both active the pair law is m1/(m1+m2+4), m2/(m1+..."]
+    F8D_COMPLEMENTARY_ELIMINATION["F8D-COMPLEMENTARY-ELIMINATION: A | G => m together with A | NOT G => m has the same full ten-slot weight table as the ..."]
+    F8D_DIRECTION_ELIMINATION["F8D-DIRECTION-ELIMINATION: A formation and a dissolution of one slot, on the same triad literal with equal weights..."]
+    F8D_NO_GATE_PRODUCT["F8D-NO-GATE-PRODUCT: On one action slot with two distinct gates, L11 - L10 - L01 + L00 = 0 on all 272 system..."]
+    F8D_RECIPROCAL_TWINS["F8D-RECIPROCAL-TWINS: On one slot the local law determines the affine log multiplier c + beta1 G1 + beta2 G2,..."]
+    F8D_GATE_DIMENSION["F8D-GATE-DIMENSION: Effective gate dimension is 0 on 16 systems, 1 on 960, and 2 on 2608. The local reducib..."]
+    F8D_SWITCHED_DIMENSION["F8D-SWITCHED-DIMENSION: 256 of the 2608 dimension-two systems never activate both rules in one state. They are ..."]
+    F8D_SLOT_GATE_XOR["F8D-SLOT-GATE-XOR: A dissolution on one triad literal and a formation of the same slot on the opposite lit..."]
+    F8D_NO_REDUNDANT_RULE["F8D-NO-REDUNDANT-RULE: In no weighted two-rule system does removing either rule leave the local law unchanged...."]
+    F8D_INFORMATION_BLINDNESS["F8D-INFORMATION-BLINDNESS: The balanced current-triad slot information is constant on 80 groups defined by family,..."]
+    F8D_INFORMATION_NOT_DIMENSION["F8D-INFORMATION-NOT-DIMENSION: The largest balanced information in the census, 0.059365300578680294 nats, belongs to a..."]
+    F8D_WEAK_GRADE_SURFACE["F8D-WEAK-GRADE-SURFACE: For one conditional rule, balanced slot information is 0.009748566529643857, 0.00323867..."]
   end
   subgraph INFERENCE [Inferences]
     F008_COMPOSITION_REPRESENTATION["F008-COMPOSITION-REPRESENTATION: The magnitude of a two-rule interaction residual depends on the representation and the ..."]
@@ -35,6 +48,8 @@ flowchart TD
     F8C_PATH_CONVERTS_SLOT["F8C-PATH-CONVERTS-SLOT: On the canonical path the action slot of R01 and of R06 is the middle edge. Reweighting..."]
     F8C_CURRENT_SURVIVES["F8C-CURRENT-SURVIVES: The balanced current-context slot information remains the closed-form value, 0.00974856..."]
     F8C_DRIFT_DIRECTION["F8C-DRIFT-DIRECTION: Suppressing a dissolution raises expected edge count, favouring a dissolution lowers it..."]
+    F8D_ADDITIVE_FEATURE_GRAMMAR["F8D-ADDITIVE-FEATURE-GRAMMAR: In the current multiplicative-weight DSL, constraints compose as additive features in e..."]
+    F8D_SYNTAX_CAN_VANISH["F8D-SYNTAX-CAN-VANISH: Contextual syntax can be dynamically redundant. Complementary conditions with one weigh..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     F011_QUOTIENT_INVALID["F011-QUOTIENT-INVALID: Graph-only hidden-context quotienting is formally invalid for labelled rules. The wrong..."]
@@ -46,6 +61,7 @@ flowchart TD
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
+    F8D_RS_COMPOSITIONAL_BOUND["F8D-RS-COMPOSITIONAL-BOUND: Inside this model a small constraint grammar is compositional in event-logit space and ..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     Q_PATH_SHAPE["Q-PATH-SHAPE: Why does path topology convert early triadic context into shape information at the firs..."]
@@ -56,6 +72,7 @@ flowchart TD
     Q_THREE_EDGE_LAYER["Q-THREE-EDGE-LAYER: What keeps the 3-edge occupancy layer near 0.314 across the Generation 8 palette?"]
     Q_WEAK_GRADE["Q-WEAK-GRADE: How do the local slot information and the rule-induced edge drift move when the multipl..."]
     Q_GATE_COMPOSITION["Q-GATE-COMPOSITION: How do two higher-order gates compose in the local coordinates? A second gate can add a..."]
+    Q_META_CONSTRAINT["Q-META-CONSTRAINT: What new local expressivity appears when one constraint can modulate another constraint..."]
   end
   F014_EXACT_FIRST_DESTINATION -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
   F015_TRANSIENT_CLASS_MEMORY -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
@@ -103,3 +120,25 @@ flowchart TD
   F8C_CLOSED_FORM_CMI -->|motivates| F8C_METHOD_GEOMETRY
   F8D_CORRECT_GRADE_ASYMMETRY -->|corrects| F8C_GRADE_ASYMMETRY
   F8D_DRIFT_MAGNITUDE_SCOPE -->|qualifies| F8C_DRIFT_DIRECTION
+  F8D_COMPLEMENTARY_ELIMINATION -->|compatible_with| F009_TWO_LEVEL_COLLAPSE
+  F8D_NORMALISATION_INTERACTION -->|refines| F8C_R05_DENOMINATOR
+  F8D_INFORMATION_BLINDNESS -->|refines| F8C_LOCAL_EQUIVALENCE
+  F8D_INFORMATION_BLINDNESS -->|derived_from| F8C_CLOSED_FORM_CMI
+  F8D_NO_GATE_PRODUCT -->|raises_question| Q_META_CONSTRAINT
+  F8D_SLOT_GATE_XOR -->|contrasts_with| F8D_NO_GATE_PRODUCT
+  F8D_SWITCHED_DIMENSION -->|refines| F8D_GATE_DIMENSION
+  F8D_NO_REDUNDANT_RULE -->|qualifies| F8D_COMPLEMENTARY_ELIMINATION
+  F8D_INFORMATION_NOT_DIMENSION -->|supports| F8C_METHOD_DIMENSIONS
+  F8D_WEAK_GRADE_SURFACE -->|supports| F8D_CORRECT_GRADE_ASYMMETRY
+  Q_WEAK_GRADE -->|partially_answered_by| F8D_WEAK_GRADE_SURFACE
+  Q_GATE_COMPOSITION -->|partially_answered_by| F8D_ADDITIVE_FEATURE_GRAMMAR
+  Q_GATE_COMPOSITION -->|partially_answered_by| F8D_GATE_DIMENSION
+  F8D_ADDITIVE_FEATURE_GRAMMAR -->|derived_from| F8D_LOG_ADDITIVITY
+  F8D_ADDITIVE_FEATURE_GRAMMAR -->|derived_from| F8D_NORMALISATION_INTERACTION
+  F8D_ADDITIVE_FEATURE_GRAMMAR -->|derived_from| F8D_NO_GATE_PRODUCT
+  F8D_ADDITIVE_FEATURE_GRAMMAR -->|compatible_with| F005_COMPOSITION_NOT_SUM
+  F8D_SYNTAX_CAN_VANISH -->|derived_from| F8D_COMPLEMENTARY_ELIMINATION
+  F8D_SYNTAX_CAN_VANISH -->|derived_from| F8D_DIRECTION_ELIMINATION
+  F8D_SYNTAX_CAN_VANISH -->|derived_from| F8D_RECIPROCAL_TWINS
+  F8D_RS_COMPOSITIONAL_BOUND -->|derived_from| F8D_ADDITIVE_FEATURE_GRAMMAR
+  F8D_RS_COMPOSITIONAL_BOUND -->|compatible_with| F_RS_SEPARATION

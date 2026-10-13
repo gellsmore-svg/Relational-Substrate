@@ -163,3 +163,26 @@ def test_generation_008d_corrections_keep_the_historical_statements() -> None:
         if row["epistemic_layer"] == "OBSERVATION":
             assert row["evidence_refs"]
         assert "overall_score" not in row
+
+
+def test_generation_008d_composition_nodes_answer_the_open_questions() -> None:
+    findings, relations = load_ledger(ROOT)
+    by_id = {row["finding_id"]: row for row in findings}
+    for question in ("Q-GATE-COMPOSITION", "Q-WEAK-GRADE"):
+        assert by_id[question]["epistemic_layer"] == "OPEN_QUESTION"
+        assert by_id[question]["status"] == "qualified"
+        assert by_id[question]["created_generation"] == "008C"
+    assert by_id["Q-META-CONSTRAINT"]["status"] == "unresolved"
+    typed = {(row["relation_type"], row["from_finding"], row["to_finding"]) for row in relations}
+    assert ("partially_answered_by", "Q-GATE-COMPOSITION", "F8D-ADDITIVE-FEATURE-GRAMMAR") in typed
+    assert ("partially_answered_by", "Q-WEAK-GRADE", "F8D-WEAK-GRADE-SURFACE") in typed
+    assert ("compatible_with", "F8D-COMPLEMENTARY-ELIMINATION", "F009-TWO-LEVEL-COLLAPSE") in typed
+    assert ("raises_question", "F8D-NO-GATE-PRODUCT", "Q-META-CONSTRAINT") in typed
+    layers = {row["epistemic_layer"] for row in findings if row["created_generation"] == "008D"}
+    assert {"OBSERVATION", "INFERENCE", "RS_GLOBAL_COHERENCE_INTERPRETATION", "OPEN_QUESTION", "METHODOLOGICAL"} <= layers
+    for row in findings:
+        if row["created_generation"] == "008D" and row["epistemic_layer"] == "OBSERVATION":
+            assert any(ref.startswith("constraint-lab/reports/") for ref in row["evidence_refs"])
+    markdown = build_markdown(findings, relations)
+    assert "F8D-NO-GATE-PRODUCT" in markdown
+    assert "Q-META-CONSTRAINT" in markdown
