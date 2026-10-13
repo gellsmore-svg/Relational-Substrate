@@ -1,0 +1,5661 @@
+{
+  "analysis_source_sha256": {
+    "constraint-lab/src/rs_constraint_lab/explore08f.py": "1e4acc55ecfe003dfdd0cb1de14a16a296c78acb1c46566e03b4a31df747edd2",
+    "constraint-lab/src/rs_constraint_lab/gen008f_exec.py": "c05944eed3aca32c2e354b8f8f2f4c98d004e8c39a9f85505e1f6bf956a7ee22"
+  },
+  "analysis_version": "generation-008f-bridge/v2",
+  "calibration_sha256": "bb554abab6a2d22af02636cc75e3aa0aadf696248f3f6844986028d7624c5ad8",
+  "checkpoints": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "decimal_digits": 80,
+  "drift_roots": {
+    "strong_favour": {
+      "final_bracket": [
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237087",
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088"
+      ],
+      "initial_bracket": [
+        "0",
+        "4"
+      ],
+      "precision_digits": 80,
+      "residual_decimal": "2.5E-81",
+      "residual_tolerance": "1e-70",
+      "root_decimal": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+      "root_float": 1.5113054085201032,
+      "solver": "monotone Decimal bisection, maximum 320 iterations"
+    },
+    "strong_suppress": {
+      "final_bracket": [
+        "0.78470524945570418674451727416763313699951214109784460001217309421599504203072055",
+        "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206"
+      ],
+      "initial_bracket": [
+        "0",
+        "2"
+      ],
+      "precision_digits": 80,
+      "residual_decimal": "8E-81",
+      "residual_tolerance": "1e-70",
+      "root_decimal": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+      "root_float": 0.7847052494557042,
+      "solver": "monotone Decimal bisection, maximum 320 iterations"
+    }
+  },
+  "estimands": [
+    "binary model JS at pair-mask, class and edge-count projections",
+    "conditional shape and label CMI",
+    "stationary pair-event occupancy",
+    "secondary full-event stationary pair-weighted slot CMI"
+  ],
+  "execution": {
+    "atomic_item": "one canonical law and its three source propagation blocks",
+    "calibration": "historical R01, with single BLAS thread; actual timing stored separately before freeze",
+    "expected_disk_bytes": 160000000,
+    "expected_wall_seconds": [
+      30,
+      120
+    ],
+    "heartbeat_seconds": 5,
+    "resume": true,
+    "watchdog_seconds": 120,
+    "worker_count": 1
+  },
+  "experiment_id": "generation-008f-interaction-to-topology-bridge",
+  "fingerprints": [
+    {
+      "hidden_permutation_canonical": "626fd388028ab1847fa5c0bb54222893246e5d92c06619991d5a45fd92689d07",
+      "labelled": "626fd388028ab1847fa5c0bb54222893246e5d92c06619991d5a45fd92689d07",
+      "model": "K3",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "626fd388028ab1847fa5c0bb54222893246e5d92c06619991d5a45fd92689d07",
+      "target_id": "F0-BOTH-form-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "498c53302e759ed82e26a2ca9275d9edb934cf928c73785cdb06bf5a199fb6af",
+      "labelled": "498c53302e759ed82e26a2ca9275d9edb934cf928c73785cdb06bf5a199fb6af",
+      "model": "ENDPOINT",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "498c53302e759ed82e26a2ca9275d9edb934cf928c73785cdb06bf5a199fb6af",
+      "target_id": "F0-BOTH-form-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "706529359a7501191c214df2aeac146eb1b3afbde9dc854773a2cdaedbe5f102",
+      "labelled": "706529359a7501191c214df2aeac146eb1b3afbde9dc854773a2cdaedbe5f102",
+      "model": "PROJECTION",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "706529359a7501191c214df2aeac146eb1b3afbde9dc854773a2cdaedbe5f102",
+      "target_id": "F0-BOTH-form-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "702dc0106935785d5ae5c9a8b80f9613039fe472e628e2fd6c0d5223f2cc7416",
+      "labelled": "702dc0106935785d5ae5c9a8b80f9613039fe472e628e2fd6c0d5223f2cc7416",
+      "model": "DRIFT",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "702dc0106935785d5ae5c9a8b80f9613039fe472e628e2fd6c0d5223f2cc7416",
+      "target_id": "F0-BOTH-form-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "e2b8a43075d83981e35f61431e76d88c7b5312070eb90b864058d39d611f9107",
+      "labelled": "e2b8a43075d83981e35f61431e76d88c7b5312070eb90b864058d39d611f9107",
+      "model": "K3",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "e2b8a43075d83981e35f61431e76d88c7b5312070eb90b864058d39d611f9107",
+      "target_id": "F0-BOTH-form-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "ba8f8c64a910b2f4ce66a4d469b9489cfcf3f20ce1889159db65f69c4f0a019d",
+      "labelled": "ba8f8c64a910b2f4ce66a4d469b9489cfcf3f20ce1889159db65f69c4f0a019d",
+      "model": "ENDPOINT",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "ba8f8c64a910b2f4ce66a4d469b9489cfcf3f20ce1889159db65f69c4f0a019d",
+      "target_id": "F0-BOTH-form-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "7fc8a20ea5055c671a97e7f389bf2c7f9e067782e8749cb0607eb6c3a9e645c0",
+      "labelled": "7fc8a20ea5055c671a97e7f389bf2c7f9e067782e8749cb0607eb6c3a9e645c0",
+      "model": "PROJECTION",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "7fc8a20ea5055c671a97e7f389bf2c7f9e067782e8749cb0607eb6c3a9e645c0",
+      "target_id": "F0-BOTH-form-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "be9686e8112f73273738f1626d9bfe6ad209897c3ddf537eb273753d3317b1ce",
+      "labelled": "be9686e8112f73273738f1626d9bfe6ad209897c3ddf537eb273753d3317b1ce",
+      "model": "DRIFT",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "be9686e8112f73273738f1626d9bfe6ad209897c3ddf537eb273753d3317b1ce",
+      "target_id": "F0-BOTH-form-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "9ca31836583a57d294024e3bf87efd1eb9c2c12ec99499280c9198871b8888f6",
+      "labelled": "9ca31836583a57d294024e3bf87efd1eb9c2c12ec99499280c9198871b8888f6",
+      "model": "K3",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "9ca31836583a57d294024e3bf87efd1eb9c2c12ec99499280c9198871b8888f6",
+      "target_id": "F0-BOTH-dissolve-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "00afcb9f33a32b6f2dfd640447eb74bfc4585d36c6ef499cf0a643f8c8e38dc5",
+      "labelled": "00afcb9f33a32b6f2dfd640447eb74bfc4585d36c6ef499cf0a643f8c8e38dc5",
+      "model": "ENDPOINT",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "00afcb9f33a32b6f2dfd640447eb74bfc4585d36c6ef499cf0a643f8c8e38dc5",
+      "target_id": "F0-BOTH-dissolve-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "20163651cb8fdbd268c0abd17b0a11aaed1dcee9d358f12947f2c7465682d581",
+      "labelled": "20163651cb8fdbd268c0abd17b0a11aaed1dcee9d358f12947f2c7465682d581",
+      "model": "PROJECTION",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "20163651cb8fdbd268c0abd17b0a11aaed1dcee9d358f12947f2c7465682d581",
+      "target_id": "F0-BOTH-dissolve-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "0e6b96b7a3c6495daea910414900e60e3efcd1b669aa482509e395580b4ab10f",
+      "labelled": "0e6b96b7a3c6495daea910414900e60e3efcd1b669aa482509e395580b4ab10f",
+      "model": "DRIFT",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "0e6b96b7a3c6495daea910414900e60e3efcd1b669aa482509e395580b4ab10f",
+      "target_id": "F0-BOTH-dissolve-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "149a58ec76206c2b39966598c7dc679f0233da60cb970b2f3459ffa4b685f467",
+      "labelled": "149a58ec76206c2b39966598c7dc679f0233da60cb970b2f3459ffa4b685f467",
+      "model": "K3",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "149a58ec76206c2b39966598c7dc679f0233da60cb970b2f3459ffa4b685f467",
+      "target_id": "F0-BOTH-dissolve-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "24584a6647eff025938210253bcb62adc1f806b824383f41b1fc0dd177a556db",
+      "labelled": "24584a6647eff025938210253bcb62adc1f806b824383f41b1fc0dd177a556db",
+      "model": "ENDPOINT",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "24584a6647eff025938210253bcb62adc1f806b824383f41b1fc0dd177a556db",
+      "target_id": "F0-BOTH-dissolve-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "cb86b0c2de92719cbbc7e3046c6ac986c26f6986af1ecf875c8c0aebe1d759d0",
+      "labelled": "cb86b0c2de92719cbbc7e3046c6ac986c26f6986af1ecf875c8c0aebe1d759d0",
+      "model": "PROJECTION",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "cb86b0c2de92719cbbc7e3046c6ac986c26f6986af1ecf875c8c0aebe1d759d0",
+      "target_id": "F0-BOTH-dissolve-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "9bdfe66765afb4d4d7b1d0e8bd7d1d18b6655e92d2ae300fb14a4bf88b548a81",
+      "labelled": "9bdfe66765afb4d4d7b1d0e8bd7d1d18b6655e92d2ae300fb14a4bf88b548a81",
+      "model": "DRIFT",
+      "raw_to_canonical_triad_order": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "s4": "9bdfe66765afb4d4d7b1d0e8bd7d1d18b6655e92d2ae300fb14a4bf88b548a81",
+      "target_id": "F0-BOTH-dissolve-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "626fd388028ab1847fa5c0bb54222893246e5d92c06619991d5a45fd92689d07",
+      "labelled": "79d0b11ef03527d1a90f25491c9340d0a290ad140bd32e2c7819b1d4c61018eb",
+      "model": "K3",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "79d0b11ef03527d1a90f25491c9340d0a290ad140bd32e2c7819b1d4c61018eb",
+      "target_id": "F0-ONE-form-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "498c53302e759ed82e26a2ca9275d9edb934cf928c73785cdb06bf5a199fb6af",
+      "labelled": "c25097e6f06ccb957f1dc5925c872ebaac5d9ce267f6e62f61df899eab78464a",
+      "model": "ENDPOINT",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "c25097e6f06ccb957f1dc5925c872ebaac5d9ce267f6e62f61df899eab78464a",
+      "target_id": "F0-ONE-form-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "706529359a7501191c214df2aeac146eb1b3afbde9dc854773a2cdaedbe5f102",
+      "labelled": "a92b22c76fa7d3f32126ed76ea280165ff39da39a8e94478a90a2594e65ef31e",
+      "model": "PROJECTION",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "a92b22c76fa7d3f32126ed76ea280165ff39da39a8e94478a90a2594e65ef31e",
+      "target_id": "F0-ONE-form-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "702dc0106935785d5ae5c9a8b80f9613039fe472e628e2fd6c0d5223f2cc7416",
+      "labelled": "55404b47d971223ba73a78ed95b0d59c67472284eeb569ea0a35d30eceb08c80",
+      "model": "DRIFT",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "55404b47d971223ba73a78ed95b0d59c67472284eeb569ea0a35d30eceb08c80",
+      "target_id": "F0-ONE-form-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "e2b8a43075d83981e35f61431e76d88c7b5312070eb90b864058d39d611f9107",
+      "labelled": "8a232291346924b4ed55de41d7e0885c3ce09e1ee054c3debbe0a631b09364b1",
+      "model": "K3",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "8a232291346924b4ed55de41d7e0885c3ce09e1ee054c3debbe0a631b09364b1",
+      "target_id": "F0-ONE-form-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "ba8f8c64a910b2f4ce66a4d469b9489cfcf3f20ce1889159db65f69c4f0a019d",
+      "labelled": "3396407d8e7f27fa26de478baf493ebba115e2fce7fcef274a738cfa48a4b57d",
+      "model": "ENDPOINT",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "3396407d8e7f27fa26de478baf493ebba115e2fce7fcef274a738cfa48a4b57d",
+      "target_id": "F0-ONE-form-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "7fc8a20ea5055c671a97e7f389bf2c7f9e067782e8749cb0607eb6c3a9e645c0",
+      "labelled": "cbfa752e41972d30fba4bb73ba1ac3ff5448fa5f1f0275acf0ebbffe3e00ed53",
+      "model": "PROJECTION",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "cbfa752e41972d30fba4bb73ba1ac3ff5448fa5f1f0275acf0ebbffe3e00ed53",
+      "target_id": "F0-ONE-form-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "be9686e8112f73273738f1626d9bfe6ad209897c3ddf537eb273753d3317b1ce",
+      "labelled": "d70631634de955ad4df8129db3becad5c52345c07b68b35aa982b268d300e99f",
+      "model": "DRIFT",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "d70631634de955ad4df8129db3becad5c52345c07b68b35aa982b268d300e99f",
+      "target_id": "F0-ONE-form-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "9ca31836583a57d294024e3bf87efd1eb9c2c12ec99499280c9198871b8888f6",
+      "labelled": "c78f680112cc3dc6f93ea12999b26e15e81dad39f785005e6bb69e3c46e4d91c",
+      "model": "K3",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "c78f680112cc3dc6f93ea12999b26e15e81dad39f785005e6bb69e3c46e4d91c",
+      "target_id": "F0-ONE-dissolve-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "00afcb9f33a32b6f2dfd640447eb74bfc4585d36c6ef499cf0a643f8c8e38dc5",
+      "labelled": "3ac92a62887f94f4af8f9dcf638561cdf1f1413d1fd6cc2e047594e0f395cdc8",
+      "model": "ENDPOINT",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "3ac92a62887f94f4af8f9dcf638561cdf1f1413d1fd6cc2e047594e0f395cdc8",
+      "target_id": "F0-ONE-dissolve-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "20163651cb8fdbd268c0abd17b0a11aaed1dcee9d358f12947f2c7465682d581",
+      "labelled": "7a13b8b871bdf5ad6db5b69fa4bc54c718f851545d89d413084a8bd91c78ca95",
+      "model": "PROJECTION",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "7a13b8b871bdf5ad6db5b69fa4bc54c718f851545d89d413084a8bd91c78ca95",
+      "target_id": "F0-ONE-dissolve-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "0e6b96b7a3c6495daea910414900e60e3efcd1b669aa482509e395580b4ab10f",
+      "labelled": "72137ba33ef566ffbd77a8e27fd3bf575396a01d477eaa92720f9eda7cbbb965",
+      "model": "DRIFT",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "72137ba33ef566ffbd77a8e27fd3bf575396a01d477eaa92720f9eda7cbbb965",
+      "target_id": "F0-ONE-dissolve-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "149a58ec76206c2b39966598c7dc679f0233da60cb970b2f3459ffa4b685f467",
+      "labelled": "e19877033345d49c5d73d23b471e7da13278ec55bcbb1be54bfc016f65cd217d",
+      "model": "K3",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "e19877033345d49c5d73d23b471e7da13278ec55bcbb1be54bfc016f65cd217d",
+      "target_id": "F0-ONE-dissolve-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "24584a6647eff025938210253bcb62adc1f806b824383f41b1fc0dd177a556db",
+      "labelled": "3948f34fd5a7dc251f05d21d37383e4371e12f1fa34cb2d412062319b4aad4c4",
+      "model": "ENDPOINT",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "3948f34fd5a7dc251f05d21d37383e4371e12f1fa34cb2d412062319b4aad4c4",
+      "target_id": "F0-ONE-dissolve-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "cb86b0c2de92719cbbc7e3046c6ac986c26f6986af1ecf875c8c0aebe1d759d0",
+      "labelled": "5d117f9e36c5721157c00ca4785a82a245deee1960205f64fa52c75b91d4661b",
+      "model": "PROJECTION",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "5d117f9e36c5721157c00ca4785a82a245deee1960205f64fa52c75b91d4661b",
+      "target_id": "F0-ONE-dissolve-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "9bdfe66765afb4d4d7b1d0e8bd7d1d18b6655e92d2ae300fb14a4bf88b548a81",
+      "labelled": "bea9bea1f2074da2b6ce8ccc16dbabe012b8af5615a1b86099cf3fb00147d6fa",
+      "model": "DRIFT",
+      "raw_to_canonical_triad_order": [
+        6,
+        8,
+        7,
+        9
+      ],
+      "s4": "bea9bea1f2074da2b6ce8ccc16dbabe012b8af5615a1b86099cf3fb00147d6fa",
+      "target_id": "F0-ONE-dissolve-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "626fd388028ab1847fa5c0bb54222893246e5d92c06619991d5a45fd92689d07",
+      "labelled": "759654af23f3868276e8ee242260024968a17c4b3eff4fdde203550603b22603",
+      "model": "K3",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "759654af23f3868276e8ee242260024968a17c4b3eff4fdde203550603b22603",
+      "target_id": "F0-NEITHER-form-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "498c53302e759ed82e26a2ca9275d9edb934cf928c73785cdb06bf5a199fb6af",
+      "labelled": "214c66374dbcabd3afe333b6e81172eb2f45ff6778e995cab67c2dce45deba29",
+      "model": "ENDPOINT",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "214c66374dbcabd3afe333b6e81172eb2f45ff6778e995cab67c2dce45deba29",
+      "target_id": "F0-NEITHER-form-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "706529359a7501191c214df2aeac146eb1b3afbde9dc854773a2cdaedbe5f102",
+      "labelled": "4c35c75953ff5da980bc32bbc042d5399f9f139f168f5c89f54c25fe062c9308",
+      "model": "PROJECTION",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "4c35c75953ff5da980bc32bbc042d5399f9f139f168f5c89f54c25fe062c9308",
+      "target_id": "F0-NEITHER-form-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "702dc0106935785d5ae5c9a8b80f9613039fe472e628e2fd6c0d5223f2cc7416",
+      "labelled": "2b5e2b689de5fbd2b646ec81b395eea99f3ec4cc9cb9c7b1c6e3a8494e344450",
+      "model": "DRIFT",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "2b5e2b689de5fbd2b646ec81b395eea99f3ec4cc9cb9c7b1c6e3a8494e344450",
+      "target_id": "F0-NEITHER-form-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "e2b8a43075d83981e35f61431e76d88c7b5312070eb90b864058d39d611f9107",
+      "labelled": "4db1393f6917b6fe2479f6608990aa613a56e5a4118e03740205b31e211c039a",
+      "model": "K3",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "4db1393f6917b6fe2479f6608990aa613a56e5a4118e03740205b31e211c039a",
+      "target_id": "F0-NEITHER-form-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "ba8f8c64a910b2f4ce66a4d469b9489cfcf3f20ce1889159db65f69c4f0a019d",
+      "labelled": "43b96dcf27b594437da89ec6f93868db168f1a62e31e3877a86a871b2d1d9e6b",
+      "model": "ENDPOINT",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "43b96dcf27b594437da89ec6f93868db168f1a62e31e3877a86a871b2d1d9e6b",
+      "target_id": "F0-NEITHER-form-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "7fc8a20ea5055c671a97e7f389bf2c7f9e067782e8749cb0607eb6c3a9e645c0",
+      "labelled": "1e303b85708c59a40e8688134f2d8a1e938762b38baf54e4168310fd43306a4f",
+      "model": "PROJECTION",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "1e303b85708c59a40e8688134f2d8a1e938762b38baf54e4168310fd43306a4f",
+      "target_id": "F0-NEITHER-form-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "be9686e8112f73273738f1626d9bfe6ad209897c3ddf537eb273753d3317b1ce",
+      "labelled": "087c2d2bb476db36a064331f3075c060ce8adb1ed0542e0bb4f92a26e8b12a2b",
+      "model": "DRIFT",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "087c2d2bb476db36a064331f3075c060ce8adb1ed0542e0bb4f92a26e8b12a2b",
+      "target_id": "F0-NEITHER-form-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "9ca31836583a57d294024e3bf87efd1eb9c2c12ec99499280c9198871b8888f6",
+      "labelled": "e883fb1a8320e0bbb6934bacafc61a2e5fb5cfb9fc09176b61da4be2074cf75d",
+      "model": "K3",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "e883fb1a8320e0bbb6934bacafc61a2e5fb5cfb9fc09176b61da4be2074cf75d",
+      "target_id": "F0-NEITHER-dissolve-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "00afcb9f33a32b6f2dfd640447eb74bfc4585d36c6ef499cf0a643f8c8e38dc5",
+      "labelled": "63d902bb0b6d69c1ee27fea1976278870ec0520b8d0f4f47e06d63f1cdb92a6a",
+      "model": "ENDPOINT",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "63d902bb0b6d69c1ee27fea1976278870ec0520b8d0f4f47e06d63f1cdb92a6a",
+      "target_id": "F0-NEITHER-dissolve-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "20163651cb8fdbd268c0abd17b0a11aaed1dcee9d358f12947f2c7465682d581",
+      "labelled": "3e0be70c515a02049f74a364273c8fb66527f70242b6a80a44acd26438cac7ff",
+      "model": "PROJECTION",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "3e0be70c515a02049f74a364273c8fb66527f70242b6a80a44acd26438cac7ff",
+      "target_id": "F0-NEITHER-dissolve-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "0e6b96b7a3c6495daea910414900e60e3efcd1b669aa482509e395580b4ab10f",
+      "labelled": "1bff6f30ea21cc42210e593e8d5ab576b4d4f957d559549014cf03511378d2e9",
+      "model": "DRIFT",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "1bff6f30ea21cc42210e593e8d5ab576b4d4f957d559549014cf03511378d2e9",
+      "target_id": "F0-NEITHER-dissolve-strong_suppress"
+    },
+    {
+      "hidden_permutation_canonical": "149a58ec76206c2b39966598c7dc679f0233da60cb970b2f3459ffa4b685f467",
+      "labelled": "fa8fb52a8dbae34b8e23b9a9f87636bddd774b72508d53705fe0551458d4d96e",
+      "model": "K3",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "fa8fb52a8dbae34b8e23b9a9f87636bddd774b72508d53705fe0551458d4d96e",
+      "target_id": "F0-NEITHER-dissolve-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "24584a6647eff025938210253bcb62adc1f806b824383f41b1fc0dd177a556db",
+      "labelled": "37096ffe439ed730cee57ece1cb4f20b4ecf2274065b6fa056f5cd4085c31ca4",
+      "model": "ENDPOINT",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "37096ffe439ed730cee57ece1cb4f20b4ecf2274065b6fa056f5cd4085c31ca4",
+      "target_id": "F0-NEITHER-dissolve-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "cb86b0c2de92719cbbc7e3046c6ac986c26f6986af1ecf875c8c0aebe1d759d0",
+      "labelled": "6ab222e14e10d2106984e6e868dbfb0e3bddee5777c2234a9ccf22073740707a",
+      "model": "PROJECTION",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "6ab222e14e10d2106984e6e868dbfb0e3bddee5777c2234a9ccf22073740707a",
+      "target_id": "F0-NEITHER-dissolve-strong_favour"
+    },
+    {
+      "hidden_permutation_canonical": "9bdfe66765afb4d4d7b1d0e8bd7d1d18b6655e92d2ae300fb14a4bf88b548a81",
+      "labelled": "421fb7a87bffc043b047bf3e34fe32d72e87479dad2e3657f146c9ce5132bf6f",
+      "model": "DRIFT",
+      "raw_to_canonical_triad_order": [
+        8,
+        9,
+        6,
+        7
+      ],
+      "s4": "421fb7a87bffc043b047bf3e34fe32d72e87479dad2e3657f146c9ce5132bf6f",
+      "target_id": "F0-NEITHER-dissolve-strong_favour"
+    }
+  ],
+  "laws": [
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "0.25"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "K3",
+      "target_id": "F0-BOTH-form-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "ENDPOINT",
+      "target_id": "F0-BOTH-form-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5",
+        "unconditional": "1.4142135623730950488016887242096980785696718753769480731766797379907324784621070"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "PROJECTION",
+      "target_id": "F0-BOTH-form-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "u2": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "DRIFT",
+      "target_id": "F0-BOTH-form-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "4"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "K3",
+      "target_id": "F0-BOTH-form-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "ENDPOINT",
+      "target_id": "F0-BOTH-form-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2",
+        "unconditional": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "PROJECTION",
+      "target_id": "F0-BOTH-form-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "u2": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "DRIFT",
+      "target_id": "F0-BOTH-form-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "0.25"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "K3",
+      "target_id": "F0-BOTH-dissolve-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "ENDPOINT",
+      "target_id": "F0-BOTH-dissolve-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5",
+        "unconditional": "1.4142135623730950488016887242096980785696718753769480731766797379907324784621070"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "PROJECTION",
+      "target_id": "F0-BOTH-dissolve-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "u2": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "DRIFT",
+      "target_id": "F0-BOTH-dissolve-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "4"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "K3",
+      "target_id": "F0-BOTH-dissolve-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "ENDPOINT",
+      "target_id": "F0-BOTH-dissolve-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2",
+        "unconditional": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "PROJECTION",
+      "target_id": "F0-BOTH-dissolve-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "u2": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "DRIFT",
+      "target_id": "F0-BOTH-dissolve-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "0.25"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "K3",
+      "target_id": "F0-ONE-form-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "ENDPOINT",
+      "target_id": "F0-ONE-form-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5",
+        "unconditional": "1.4142135623730950488016887242096980785696718753769480731766797379907324784621070"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "PROJECTION",
+      "target_id": "F0-ONE-form-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "u2": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "DRIFT",
+      "target_id": "F0-ONE-form-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "4"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "K3",
+      "target_id": "F0-ONE-form-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "ENDPOINT",
+      "target_id": "F0-ONE-form-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2",
+        "unconditional": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "PROJECTION",
+      "target_id": "F0-ONE-form-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "u2": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "DRIFT",
+      "target_id": "F0-ONE-form-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "0.25"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "K3",
+      "target_id": "F0-ONE-dissolve-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "ENDPOINT",
+      "target_id": "F0-ONE-dissolve-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5",
+        "unconditional": "1.4142135623730950488016887242096980785696718753769480731766797379907324784621070"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "PROJECTION",
+      "target_id": "F0-ONE-dissolve-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "u2": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "DRIFT",
+      "target_id": "F0-ONE-dissolve-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "4"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "K3",
+      "target_id": "F0-ONE-dissolve-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "ENDPOINT",
+      "target_id": "F0-ONE-dissolve-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2",
+        "unconditional": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "PROJECTION",
+      "target_id": "F0-ONE-dissolve-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "u2": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "DRIFT",
+      "target_id": "F0-ONE-dissolve-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "0.25"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "K3",
+      "target_id": "F0-NEITHER-form-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "ENDPOINT",
+      "target_id": "F0-NEITHER-form-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5",
+        "unconditional": "1.4142135623730950488016887242096980785696718753769480731766797379907324784621070"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "PROJECTION",
+      "target_id": "F0-NEITHER-form-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "u2": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "DRIFT",
+      "target_id": "F0-NEITHER-form-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "4"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "K3",
+      "target_id": "F0-NEITHER-form-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "ENDPOINT",
+      "target_id": "F0-NEITHER-form-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2",
+        "unconditional": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "PROJECTION",
+      "target_id": "F0-NEITHER-form-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "u2": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "DRIFT",
+      "target_id": "F0-NEITHER-form-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "0.25"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "K3",
+      "target_id": "F0-NEITHER-dissolve-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "ENDPOINT",
+      "target_id": "F0-NEITHER-dissolve-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5",
+        "unconditional": "1.4142135623730950488016887242096980785696718753769480731766797379907324784621070"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "PROJECTION",
+      "target_id": "F0-NEITHER-dissolve-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "u2": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "1/4",
+      "model": "DRIFT",
+      "target_id": "F0-NEITHER-dissolve-strong_suppress"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "4"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "K3",
+      "target_id": "F0-NEITHER-dissolve-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "ENDPOINT",
+      "target_id": "F0-NEITHER-dissolve-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2",
+        "unconditional": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "PROJECTION",
+      "target_id": "F0-NEITHER-dissolve-strong_favour"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "u2": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "m": "4",
+      "model": "DRIFT",
+      "target_id": "F0-NEITHER-dissolve-strong_favour"
+    }
+  ],
+  "local_matching": [
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.0,
+        0.0,
+        -1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0",
+        "0",
+        "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.0,
+        1.0,
+        0.25
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1",
+        "1",
+        "0.25"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.00676138441373586,
+      "balanced_action_probability": 0.13690476190476192,
+      "balanced_edge_drift": -0.01488095238095238,
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "0.25"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -1.3862943611198906,
+      "local_delta12_reference": "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894",
+      "m": "1/4",
+      "model": "K3",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.047619047619047616
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "1/21"
+      ],
+      "target_id": "F0-BOTH-form-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        -0.6931471805599453,
+        -0.6931471805599453,
+        -1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "-0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "-0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        0.5,
+        0.5,
+        0.25
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "0.5",
+        "0.5",
+        "0.25"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.005059081105795756,
+      "balanced_action_probability": 0.09902597402597403,
+      "balanced_edge_drift": -0.03382034632034632,
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 4e-80,
+      "local_delta12_reference": "4E-80",
+      "m": "1/4",
+      "model": "ENDPOINT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.09090909090909091,
+        0.09090909090909091,
+        0.047619047619047616
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/11",
+        "1/11",
+        "1/21"
+      ],
+      "target_id": "F0-BOTH-form-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.34657359027997264,
+        -0.34657359027997264,
+        -0.34657359027997264,
+        -1.0397207708399179
+      ],
+      "action_log_multiplier_reference": [
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484733",
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484739",
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484739",
+        "-1.0397207708399179641258481821872648521132502015403828811810200142400904329545421"
+      ],
+      "action_multiplier": [
+        1.4142135623730951,
+        0.7071067811865476,
+        0.7071067811865476,
+        0.3535533905932738
+      ],
+      "action_multiplier_reference": [
+        "1.414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "0.7071067811865475244008443621048490392848359376884740365883398689953662392310535",
+        "0.7071067811865475244008443621048490392848359376884740365883398689953662392310535",
+        "0.35355339059327376220042218105242451964241796884423701829416993449768311961552675"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.006563466019497364,
+      "balanced_action_probability": 0.13358019448536113,
+      "balanced_edge_drift": -0.016543236090652766,
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5",
+        "unconditional": "1.4142135623730950488016887242096980785696718753769480731766797379907324784621070"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1e-80,
+      "local_delta12_reference": "1E-80",
+      "m": "1/4",
+      "model": "PROJECTION",
+      "six_slot_action_probability": [
+        0.2204812092115424,
+        0.12389934309929541,
+        0.12389934309929541,
+        0.06604088253131131
+      ],
+      "six_slot_action_probability_fraction": [
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/6414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/11414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/11414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/21414213562373095048801688724209698078569671875376948073176679737990732478462107"
+      ],
+      "target_id": "F0-BOTH-form-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        -0.2424471101097705,
+        -0.2424471101097705,
+        -0.484894220219541
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "-0.24244711010977048350550948824622045681242380269735933561402514938429525048627399",
+        "-0.24244711010977048350550948824622045681242380269735933561402514938429525048627399",
+        "-0.48489422021954096701101897649244091362484760539471867122805029876859050097254798"
+      ],
+      "action_multiplier": [
+        1.0,
+        0.7847052494557042,
+        0.7847052494557042,
+        0.6157623285233389
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "0.61576232852333893586706415983750953034901271913739549415392772732225002257757063"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.0008618843933333099,
+      "balanced_action_probability": 0.13690476190476192,
+      "balanced_edge_drift": -0.01488095238095238,
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "u2": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 0.0,
+      "local_delta12_reference": "0E-80",
+      "m": "1/4",
+      "model": "DRIFT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.13565172564834463,
+        0.13565172564834463,
+        0.10964892965569169
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "3923526247278520933722586370838165684997560705489223000060865471079975210153603/28923526247278520933722586370838165684997560705489223000060865471079975210153603",
+        "3923526247278520933722586370838165684997560705489223000060865471079975210153603/28923526247278520933722586370838165684997560705489223000060865471079975210153603",
+        "15394058213083473396676603995937738258725317978434887353848193183056250564439265752230876700657618698095044747885628763983969539613042092123138964386853881609/140394058213083473396676603995937738258725317978434887353848193183056250564439265752230876700657618698095044747885628763983969539613042092123138964386853881609"
+      ],
+      "target_id": "F0-BOTH-form-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.0,
+        0.0,
+        1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0",
+        "0",
+        "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.0,
+        1.0,
+        4.0
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1",
+        "1",
+        "4"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.01844718663112595,
+      "balanced_action_probability": 0.2361111111111111,
+      "balanced_edge_drift": 0.034722222222222224,
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "4"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1.3862943611198906,
+      "local_delta12_reference": "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894",
+      "m": "4",
+      "model": "K3",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.4444444444444444
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "4/9"
+      ],
+      "target_id": "F0-BOTH-form-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.6931471805599453,
+        0.6931471805599453,
+        1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "2",
+        "2",
+        "4"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.011802397784148676,
+      "balanced_action_probability": 0.29563492063492064,
+      "balanced_edge_drift": 0.06448412698412699,
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -4e-80,
+      "local_delta12_reference": "-4E-80",
+      "m": "4",
+      "model": "ENDPOINT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.2857142857142857,
+        0.2857142857142857,
+        0.4444444444444444
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "2/7",
+        "2/7",
+        "4/9"
+      ],
+      "target_id": "F0-BOTH-form-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        -0.34657359027997264,
+        0.34657359027997264,
+        0.34657359027997264,
+        1.0397207708399179
+      ],
+      "action_log_multiplier_reference": [
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484733",
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484740",
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484740",
+        "1.0397207708399179641258481821872648521132502015403828811810200142400904329545421"
+      ],
+      "action_multiplier": [
+        0.7071067811865476,
+        1.4142135623730951,
+        1.4142135623730951,
+        2.8284271247461903
+      ],
+      "action_multiplier_reference": [
+        "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354",
+        "1.4142135623730950488016887242096980785696718753769480731766797379907324784621071",
+        "1.4142135623730950488016887242096980785696718753769480731766797379907324784621071",
+        "2.8284271247461900976033774484193961571393437507538961463533594759814649569242142"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.01008840602552824,
+      "balanced_action_probability": 0.23154096425899137,
+      "balanced_edge_drift": 0.03243714879616236,
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2",
+        "unconditional": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -3e-80,
+      "local_delta12_reference": "-3E-80",
+      "m": "4",
+      "model": "PROJECTION",
+      "six_slot_action_probability": [
+        0.12389934309929541,
+        0.2204812092115424,
+        0.2204812092115424,
+        0.36130209551358533
+      ],
+      "six_slot_action_probability_fraction": [
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/285355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/160355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/160355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/97855339059327376220042218105242451964241796884423701829416993449768311961552677"
+      ],
+      "target_id": "F0-BOTH-form-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.4129737863079096,
+        0.4129737863079096,
+        0.8259475726158192
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0.41297378630790956968652970981351571300262784129188794766508353977680091805134448",
+        "0.41297378630790956968652970981351571300262784129188794766508353977680091805134448",
+        "0.82594757261581913937305941962703142600525568258377589533016707955360183610268897"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.5113054085201032,
+        1.5113054085201032,
+        2.284044037822116
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "2.2840440378221157744946228229116010305900589865687841248491131221152219052586471"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.0037651630759527707,
+      "balanced_action_probability": 0.2361111111111111,
+      "balanced_edge_drift": 0.034722222222222224,
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "u2": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1e-80,
+      "local_delta12_reference": "1E-80",
+      "m": "4",
+      "model": "DRIFT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.23210482594512402,
+        0.23210482594512402,
+        0.31356812588752975
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "472282940162532224408289854889586256993716928165243158266419434540650308632409/2034782940162532224408289854889586256993716928165243158266419434540650308632409",
+        "472282940162532224408289854889586256993716928165243158266419434540650308632409/2034782940162532224408289854889586256993716928165243158266419434540650308632409",
+        "223051175568565993602990510049961038143560447907107824692296203331564639185414752110119071484056349735995578277428693284251703343090195897331105663885143281/711332425568565993602990510049961038143560447907107824692296203331564639185414752110119071484056349735995578277428693284251703343090195897331105663885143281"
+      ],
+      "target_id": "F0-BOTH-form-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.0,
+        0.0,
+        -1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0",
+        "0",
+        "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.0,
+        1.0,
+        0.25
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1",
+        "1",
+        "0.25"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.00676138441373586,
+      "balanced_action_probability": 0.13690476190476192,
+      "balanced_edge_drift": 0.01488095238095238,
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "0.25"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -1.3862943611198906,
+      "local_delta12_reference": "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894",
+      "m": "1/4",
+      "model": "K3",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.047619047619047616
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "1/21"
+      ],
+      "target_id": "F0-BOTH-dissolve-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        -0.6931471805599453,
+        -0.6931471805599453,
+        -1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "-0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "-0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        0.5,
+        0.5,
+        0.25
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "0.5",
+        "0.5",
+        "0.25"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.005059081105795756,
+      "balanced_action_probability": 0.09902597402597403,
+      "balanced_edge_drift": 0.03382034632034632,
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 4e-80,
+      "local_delta12_reference": "4E-80",
+      "m": "1/4",
+      "model": "ENDPOINT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.09090909090909091,
+        0.09090909090909091,
+        0.047619047619047616
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/11",
+        "1/11",
+        "1/21"
+      ],
+      "target_id": "F0-BOTH-dissolve-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.34657359027997264,
+        -0.34657359027997264,
+        -0.34657359027997264,
+        -1.0397207708399179
+      ],
+      "action_log_multiplier_reference": [
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484733",
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484739",
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484739",
+        "-1.0397207708399179641258481821872648521132502015403828811810200142400904329545421"
+      ],
+      "action_multiplier": [
+        1.4142135623730951,
+        0.7071067811865476,
+        0.7071067811865476,
+        0.3535533905932738
+      ],
+      "action_multiplier_reference": [
+        "1.414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "0.7071067811865475244008443621048490392848359376884740365883398689953662392310535",
+        "0.7071067811865475244008443621048490392848359376884740365883398689953662392310535",
+        "0.35355339059327376220042218105242451964241796884423701829416993449768311961552675"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.006563466019497364,
+      "balanced_action_probability": 0.13358019448536113,
+      "balanced_edge_drift": 0.016543236090652766,
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5",
+        "unconditional": "1.4142135623730950488016887242096980785696718753769480731766797379907324784621070"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1e-80,
+      "local_delta12_reference": "1E-80",
+      "m": "1/4",
+      "model": "PROJECTION",
+      "six_slot_action_probability": [
+        0.2204812092115424,
+        0.12389934309929541,
+        0.12389934309929541,
+        0.06604088253131131
+      ],
+      "six_slot_action_probability_fraction": [
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/6414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/11414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/11414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/21414213562373095048801688724209698078569671875376948073176679737990732478462107"
+      ],
+      "target_id": "F0-BOTH-dissolve-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        -0.2424471101097705,
+        -0.2424471101097705,
+        -0.484894220219541
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "-0.24244711010977048350550948824622045681242380269735933561402514938429525048627399",
+        "-0.24244711010977048350550948824622045681242380269735933561402514938429525048627399",
+        "-0.48489422021954096701101897649244091362484760539471867122805029876859050097254798"
+      ],
+      "action_multiplier": [
+        1.0,
+        0.7847052494557042,
+        0.7847052494557042,
+        0.6157623285233389
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "0.61576232852333893586706415983750953034901271913739549415392772732225002257757063"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.0008618843933333099,
+      "balanced_action_probability": 0.13690476190476192,
+      "balanced_edge_drift": 0.01488095238095238,
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "u2": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 0.0,
+      "local_delta12_reference": "0E-80",
+      "m": "1/4",
+      "model": "DRIFT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.13565172564834463,
+        0.13565172564834463,
+        0.10964892965569169
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "3923526247278520933722586370838165684997560705489223000060865471079975210153603/28923526247278520933722586370838165684997560705489223000060865471079975210153603",
+        "3923526247278520933722586370838165684997560705489223000060865471079975210153603/28923526247278520933722586370838165684997560705489223000060865471079975210153603",
+        "15394058213083473396676603995937738258725317978434887353848193183056250564439265752230876700657618698095044747885628763983969539613042092123138964386853881609/140394058213083473396676603995937738258725317978434887353848193183056250564439265752230876700657618698095044747885628763983969539613042092123138964386853881609"
+      ],
+      "target_id": "F0-BOTH-dissolve-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.0,
+        0.0,
+        1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0",
+        "0",
+        "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.0,
+        1.0,
+        4.0
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1",
+        "1",
+        "4"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.01844718663112595,
+      "balanced_action_probability": 0.2361111111111111,
+      "balanced_edge_drift": -0.034722222222222224,
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "4"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1.3862943611198906,
+      "local_delta12_reference": "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894",
+      "m": "4",
+      "model": "K3",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.4444444444444444
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "4/9"
+      ],
+      "target_id": "F0-BOTH-dissolve-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.6931471805599453,
+        0.6931471805599453,
+        1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "2",
+        "2",
+        "4"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.011802397784148676,
+      "balanced_action_probability": 0.29563492063492064,
+      "balanced_edge_drift": -0.06448412698412699,
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -4e-80,
+      "local_delta12_reference": "-4E-80",
+      "m": "4",
+      "model": "ENDPOINT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.2857142857142857,
+        0.2857142857142857,
+        0.4444444444444444
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "2/7",
+        "2/7",
+        "4/9"
+      ],
+      "target_id": "F0-BOTH-dissolve-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        -0.34657359027997264,
+        0.34657359027997264,
+        0.34657359027997264,
+        1.0397207708399179
+      ],
+      "action_log_multiplier_reference": [
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484733",
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484740",
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484740",
+        "1.0397207708399179641258481821872648521132502015403828811810200142400904329545421"
+      ],
+      "action_multiplier": [
+        0.7071067811865476,
+        1.4142135623730951,
+        1.4142135623730951,
+        2.8284271247461903
+      ],
+      "action_multiplier_reference": [
+        "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354",
+        "1.4142135623730950488016887242096980785696718753769480731766797379907324784621071",
+        "1.4142135623730950488016887242096980785696718753769480731766797379907324784621071",
+        "2.8284271247461900976033774484193961571393437507538961463533594759814649569242142"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.01008840602552824,
+      "balanced_action_probability": 0.23154096425899137,
+      "balanced_edge_drift": -0.03243714879616236,
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2",
+        "unconditional": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -3e-80,
+      "local_delta12_reference": "-3E-80",
+      "m": "4",
+      "model": "PROJECTION",
+      "six_slot_action_probability": [
+        0.12389934309929541,
+        0.2204812092115424,
+        0.2204812092115424,
+        0.36130209551358533
+      ],
+      "six_slot_action_probability_fraction": [
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/285355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/160355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/160355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/97855339059327376220042218105242451964241796884423701829416993449768311961552677"
+      ],
+      "target_id": "F0-BOTH-dissolve-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.4129737863079096,
+        0.4129737863079096,
+        0.8259475726158192
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0.41297378630790956968652970981351571300262784129188794766508353977680091805134448",
+        "0.41297378630790956968652970981351571300262784129188794766508353977680091805134448",
+        "0.82594757261581913937305941962703142600525568258377589533016707955360183610268897"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.5113054085201032,
+        1.5113054085201032,
+        2.284044037822116
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "2.2840440378221157744946228229116010305900589865687841248491131221152219052586471"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.0037651630759527707,
+      "balanced_action_probability": 0.2361111111111111,
+      "balanced_edge_drift": -0.034722222222222224,
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "u2": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-1-3"
+      ],
+      "condition_triads": [
+        6,
+        7
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "BOTH",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1e-80,
+      "local_delta12_reference": "1E-80",
+      "m": "4",
+      "model": "DRIFT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.23210482594512402,
+        0.23210482594512402,
+        0.31356812588752975
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "472282940162532224408289854889586256993716928165243158266419434540650308632409/2034782940162532224408289854889586256993716928165243158266419434540650308632409",
+        "472282940162532224408289854889586256993716928165243158266419434540650308632409/2034782940162532224408289854889586256993716928165243158266419434540650308632409",
+        "223051175568565993602990510049961038143560447907107824692296203331564639185414752110119071484056349735995578277428693284251703343090195897331105663885143281/711332425568565993602990510049961038143560447907107824692296203331564639185414752110119071484056349735995578277428693284251703343090195897331105663885143281"
+      ],
+      "target_id": "F0-BOTH-dissolve-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.0,
+        0.0,
+        -1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0",
+        "0",
+        "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.0,
+        1.0,
+        0.25
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1",
+        "1",
+        "0.25"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.00676138441373586,
+      "balanced_action_probability": 0.13690476190476192,
+      "balanced_edge_drift": -0.01488095238095238,
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "0.25"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -1.3862943611198906,
+      "local_delta12_reference": "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894",
+      "m": "1/4",
+      "model": "K3",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.047619047619047616
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "1/21"
+      ],
+      "target_id": "F0-ONE-form-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        -0.6931471805599453,
+        -0.6931471805599453,
+        -1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "-0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "-0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        0.5,
+        0.5,
+        0.25
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "0.5",
+        "0.5",
+        "0.25"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.005059081105795756,
+      "balanced_action_probability": 0.09902597402597403,
+      "balanced_edge_drift": -0.03382034632034632,
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 4e-80,
+      "local_delta12_reference": "4E-80",
+      "m": "1/4",
+      "model": "ENDPOINT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.09090909090909091,
+        0.09090909090909091,
+        0.047619047619047616
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/11",
+        "1/11",
+        "1/21"
+      ],
+      "target_id": "F0-ONE-form-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.34657359027997264,
+        -0.34657359027997264,
+        -0.34657359027997264,
+        -1.0397207708399179
+      ],
+      "action_log_multiplier_reference": [
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484733",
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484739",
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484739",
+        "-1.0397207708399179641258481821872648521132502015403828811810200142400904329545421"
+      ],
+      "action_multiplier": [
+        1.4142135623730951,
+        0.7071067811865476,
+        0.7071067811865476,
+        0.3535533905932738
+      ],
+      "action_multiplier_reference": [
+        "1.414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "0.7071067811865475244008443621048490392848359376884740365883398689953662392310535",
+        "0.7071067811865475244008443621048490392848359376884740365883398689953662392310535",
+        "0.35355339059327376220042218105242451964241796884423701829416993449768311961552675"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.006563466019497364,
+      "balanced_action_probability": 0.13358019448536113,
+      "balanced_edge_drift": -0.016543236090652766,
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5",
+        "unconditional": "1.4142135623730950488016887242096980785696718753769480731766797379907324784621070"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1e-80,
+      "local_delta12_reference": "1E-80",
+      "m": "1/4",
+      "model": "PROJECTION",
+      "six_slot_action_probability": [
+        0.2204812092115424,
+        0.12389934309929541,
+        0.12389934309929541,
+        0.06604088253131131
+      ],
+      "six_slot_action_probability_fraction": [
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/6414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/11414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/11414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/21414213562373095048801688724209698078569671875376948073176679737990732478462107"
+      ],
+      "target_id": "F0-ONE-form-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        -0.2424471101097705,
+        -0.2424471101097705,
+        -0.484894220219541
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "-0.24244711010977048350550948824622045681242380269735933561402514938429525048627399",
+        "-0.24244711010977048350550948824622045681242380269735933561402514938429525048627399",
+        "-0.48489422021954096701101897649244091362484760539471867122805029876859050097254798"
+      ],
+      "action_multiplier": [
+        1.0,
+        0.7847052494557042,
+        0.7847052494557042,
+        0.6157623285233389
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "0.61576232852333893586706415983750953034901271913739549415392772732225002257757063"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.0008618843933333099,
+      "balanced_action_probability": 0.13690476190476192,
+      "balanced_edge_drift": -0.01488095238095238,
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "u2": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 0.0,
+      "local_delta12_reference": "0E-80",
+      "m": "1/4",
+      "model": "DRIFT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.13565172564834463,
+        0.13565172564834463,
+        0.10964892965569169
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "3923526247278520933722586370838165684997560705489223000060865471079975210153603/28923526247278520933722586370838165684997560705489223000060865471079975210153603",
+        "3923526247278520933722586370838165684997560705489223000060865471079975210153603/28923526247278520933722586370838165684997560705489223000060865471079975210153603",
+        "15394058213083473396676603995937738258725317978434887353848193183056250564439265752230876700657618698095044747885628763983969539613042092123138964386853881609/140394058213083473396676603995937738258725317978434887353848193183056250564439265752230876700657618698095044747885628763983969539613042092123138964386853881609"
+      ],
+      "target_id": "F0-ONE-form-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.0,
+        0.0,
+        1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0",
+        "0",
+        "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.0,
+        1.0,
+        4.0
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1",
+        "1",
+        "4"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.01844718663112595,
+      "balanced_action_probability": 0.2361111111111111,
+      "balanced_edge_drift": 0.034722222222222224,
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "4"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1.3862943611198906,
+      "local_delta12_reference": "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894",
+      "m": "4",
+      "model": "K3",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.4444444444444444
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "4/9"
+      ],
+      "target_id": "F0-ONE-form-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.6931471805599453,
+        0.6931471805599453,
+        1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "2",
+        "2",
+        "4"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.011802397784148676,
+      "balanced_action_probability": 0.29563492063492064,
+      "balanced_edge_drift": 0.06448412698412699,
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -4e-80,
+      "local_delta12_reference": "-4E-80",
+      "m": "4",
+      "model": "ENDPOINT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.2857142857142857,
+        0.2857142857142857,
+        0.4444444444444444
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "2/7",
+        "2/7",
+        "4/9"
+      ],
+      "target_id": "F0-ONE-form-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        -0.34657359027997264,
+        0.34657359027997264,
+        0.34657359027997264,
+        1.0397207708399179
+      ],
+      "action_log_multiplier_reference": [
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484733",
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484740",
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484740",
+        "1.0397207708399179641258481821872648521132502015403828811810200142400904329545421"
+      ],
+      "action_multiplier": [
+        0.7071067811865476,
+        1.4142135623730951,
+        1.4142135623730951,
+        2.8284271247461903
+      ],
+      "action_multiplier_reference": [
+        "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354",
+        "1.4142135623730950488016887242096980785696718753769480731766797379907324784621071",
+        "1.4142135623730950488016887242096980785696718753769480731766797379907324784621071",
+        "2.8284271247461900976033774484193961571393437507538961463533594759814649569242142"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.01008840602552824,
+      "balanced_action_probability": 0.23154096425899137,
+      "balanced_edge_drift": 0.03243714879616236,
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2",
+        "unconditional": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -3e-80,
+      "local_delta12_reference": "-3E-80",
+      "m": "4",
+      "model": "PROJECTION",
+      "six_slot_action_probability": [
+        0.12389934309929541,
+        0.2204812092115424,
+        0.2204812092115424,
+        0.36130209551358533
+      ],
+      "six_slot_action_probability_fraction": [
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/285355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/160355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/160355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/97855339059327376220042218105242451964241796884423701829416993449768311961552677"
+      ],
+      "target_id": "F0-ONE-form-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.4129737863079096,
+        0.4129737863079096,
+        0.8259475726158192
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0.41297378630790956968652970981351571300262784129188794766508353977680091805134448",
+        "0.41297378630790956968652970981351571300262784129188794766508353977680091805134448",
+        "0.82594757261581913937305941962703142600525568258377589533016707955360183610268897"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.5113054085201032,
+        1.5113054085201032,
+        2.284044037822116
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "2.2840440378221157744946228229116010305900589865687841248491131221152219052586471"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.0037651630759527707,
+      "balanced_action_probability": 0.2361111111111111,
+      "balanced_edge_drift": 0.034722222222222224,
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "u2": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1e-80,
+      "local_delta12_reference": "1E-80",
+      "m": "4",
+      "model": "DRIFT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.23210482594512402,
+        0.23210482594512402,
+        0.31356812588752975
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "472282940162532224408289854889586256993716928165243158266419434540650308632409/2034782940162532224408289854889586256993716928165243158266419434540650308632409",
+        "472282940162532224408289854889586256993716928165243158266419434540650308632409/2034782940162532224408289854889586256993716928165243158266419434540650308632409",
+        "223051175568565993602990510049961038143560447907107824692296203331564639185414752110119071484056349735995578277428693284251703343090195897331105663885143281/711332425568565993602990510049961038143560447907107824692296203331564639185414752110119071484056349735995578277428693284251703343090195897331105663885143281"
+      ],
+      "target_id": "F0-ONE-form-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.0,
+        0.0,
+        -1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0",
+        "0",
+        "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.0,
+        1.0,
+        0.25
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1",
+        "1",
+        "0.25"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.00676138441373586,
+      "balanced_action_probability": 0.13690476190476192,
+      "balanced_edge_drift": 0.01488095238095238,
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "0.25"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -1.3862943611198906,
+      "local_delta12_reference": "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894",
+      "m": "1/4",
+      "model": "K3",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.047619047619047616
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "1/21"
+      ],
+      "target_id": "F0-ONE-dissolve-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        -0.6931471805599453,
+        -0.6931471805599453,
+        -1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "-0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "-0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        0.5,
+        0.5,
+        0.25
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "0.5",
+        "0.5",
+        "0.25"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.005059081105795756,
+      "balanced_action_probability": 0.09902597402597403,
+      "balanced_edge_drift": 0.03382034632034632,
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 4e-80,
+      "local_delta12_reference": "4E-80",
+      "m": "1/4",
+      "model": "ENDPOINT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.09090909090909091,
+        0.09090909090909091,
+        0.047619047619047616
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/11",
+        "1/11",
+        "1/21"
+      ],
+      "target_id": "F0-ONE-dissolve-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.34657359027997264,
+        -0.34657359027997264,
+        -0.34657359027997264,
+        -1.0397207708399179
+      ],
+      "action_log_multiplier_reference": [
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484733",
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484739",
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484739",
+        "-1.0397207708399179641258481821872648521132502015403828811810200142400904329545421"
+      ],
+      "action_multiplier": [
+        1.4142135623730951,
+        0.7071067811865476,
+        0.7071067811865476,
+        0.3535533905932738
+      ],
+      "action_multiplier_reference": [
+        "1.414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "0.7071067811865475244008443621048490392848359376884740365883398689953662392310535",
+        "0.7071067811865475244008443621048490392848359376884740365883398689953662392310535",
+        "0.35355339059327376220042218105242451964241796884423701829416993449768311961552675"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.006563466019497364,
+      "balanced_action_probability": 0.13358019448536113,
+      "balanced_edge_drift": 0.016543236090652766,
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5",
+        "unconditional": "1.4142135623730950488016887242096980785696718753769480731766797379907324784621070"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1e-80,
+      "local_delta12_reference": "1E-80",
+      "m": "1/4",
+      "model": "PROJECTION",
+      "six_slot_action_probability": [
+        0.2204812092115424,
+        0.12389934309929541,
+        0.12389934309929541,
+        0.06604088253131131
+      ],
+      "six_slot_action_probability_fraction": [
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/6414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/11414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/11414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/21414213562373095048801688724209698078569671875376948073176679737990732478462107"
+      ],
+      "target_id": "F0-ONE-dissolve-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        -0.2424471101097705,
+        -0.2424471101097705,
+        -0.484894220219541
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "-0.24244711010977048350550948824622045681242380269735933561402514938429525048627399",
+        "-0.24244711010977048350550948824622045681242380269735933561402514938429525048627399",
+        "-0.48489422021954096701101897649244091362484760539471867122805029876859050097254798"
+      ],
+      "action_multiplier": [
+        1.0,
+        0.7847052494557042,
+        0.7847052494557042,
+        0.6157623285233389
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "0.61576232852333893586706415983750953034901271913739549415392772732225002257757063"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.0008618843933333099,
+      "balanced_action_probability": 0.13690476190476192,
+      "balanced_edge_drift": 0.01488095238095238,
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "u2": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 0.0,
+      "local_delta12_reference": "0E-80",
+      "m": "1/4",
+      "model": "DRIFT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.13565172564834463,
+        0.13565172564834463,
+        0.10964892965569169
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "3923526247278520933722586370838165684997560705489223000060865471079975210153603/28923526247278520933722586370838165684997560705489223000060865471079975210153603",
+        "3923526247278520933722586370838165684997560705489223000060865471079975210153603/28923526247278520933722586370838165684997560705489223000060865471079975210153603",
+        "15394058213083473396676603995937738258725317978434887353848193183056250564439265752230876700657618698095044747885628763983969539613042092123138964386853881609/140394058213083473396676603995937738258725317978434887353848193183056250564439265752230876700657618698095044747885628763983969539613042092123138964386853881609"
+      ],
+      "target_id": "F0-ONE-dissolve-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.0,
+        0.0,
+        1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0",
+        "0",
+        "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.0,
+        1.0,
+        4.0
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1",
+        "1",
+        "4"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.01844718663112595,
+      "balanced_action_probability": 0.2361111111111111,
+      "balanced_edge_drift": -0.034722222222222224,
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "4"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1.3862943611198906,
+      "local_delta12_reference": "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894",
+      "m": "4",
+      "model": "K3",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.4444444444444444
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "4/9"
+      ],
+      "target_id": "F0-ONE-dissolve-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.6931471805599453,
+        0.6931471805599453,
+        1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "2",
+        "2",
+        "4"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.011802397784148676,
+      "balanced_action_probability": 0.29563492063492064,
+      "balanced_edge_drift": -0.06448412698412699,
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -4e-80,
+      "local_delta12_reference": "-4E-80",
+      "m": "4",
+      "model": "ENDPOINT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.2857142857142857,
+        0.2857142857142857,
+        0.4444444444444444
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "2/7",
+        "2/7",
+        "4/9"
+      ],
+      "target_id": "F0-ONE-dissolve-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        -0.34657359027997264,
+        0.34657359027997264,
+        0.34657359027997264,
+        1.0397207708399179
+      ],
+      "action_log_multiplier_reference": [
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484733",
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484740",
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484740",
+        "1.0397207708399179641258481821872648521132502015403828811810200142400904329545421"
+      ],
+      "action_multiplier": [
+        0.7071067811865476,
+        1.4142135623730951,
+        1.4142135623730951,
+        2.8284271247461903
+      ],
+      "action_multiplier_reference": [
+        "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354",
+        "1.4142135623730950488016887242096980785696718753769480731766797379907324784621071",
+        "1.4142135623730950488016887242096980785696718753769480731766797379907324784621071",
+        "2.8284271247461900976033774484193961571393437507538961463533594759814649569242142"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.01008840602552824,
+      "balanced_action_probability": 0.23154096425899137,
+      "balanced_edge_drift": -0.03243714879616236,
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2",
+        "unconditional": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -3e-80,
+      "local_delta12_reference": "-3E-80",
+      "m": "4",
+      "model": "PROJECTION",
+      "six_slot_action_probability": [
+        0.12389934309929541,
+        0.2204812092115424,
+        0.2204812092115424,
+        0.36130209551358533
+      ],
+      "six_slot_action_probability_fraction": [
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/285355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/160355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/160355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/97855339059327376220042218105242451964241796884423701829416993449768311961552677"
+      ],
+      "target_id": "F0-ONE-dissolve-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.4129737863079096,
+        0.4129737863079096,
+        0.8259475726158192
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0.41297378630790956968652970981351571300262784129188794766508353977680091805134448",
+        "0.41297378630790956968652970981351571300262784129188794766508353977680091805134448",
+        "0.82594757261581913937305941962703142600525568258377589533016707955360183610268897"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.5113054085201032,
+        1.5113054085201032,
+        2.284044037822116
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "2.2840440378221157744946228229116010305900589865687841248491131221152219052586471"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.0037651630759527707,
+      "balanced_action_probability": 0.2361111111111111,
+      "balanced_edge_drift": -0.034722222222222224,
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "u2": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088"
+      },
+      "condition_triad_names": [
+        "0-1-2",
+        "0-2-3"
+      ],
+      "condition_triads": [
+        6,
+        8
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "ONE",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1e-80,
+      "local_delta12_reference": "1E-80",
+      "m": "4",
+      "model": "DRIFT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.23210482594512402,
+        0.23210482594512402,
+        0.31356812588752975
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "472282940162532224408289854889586256993716928165243158266419434540650308632409/2034782940162532224408289854889586256993716928165243158266419434540650308632409",
+        "472282940162532224408289854889586256993716928165243158266419434540650308632409/2034782940162532224408289854889586256993716928165243158266419434540650308632409",
+        "223051175568565993602990510049961038143560447907107824692296203331564639185414752110119071484056349735995578277428693284251703343090195897331105663885143281/711332425568565993602990510049961038143560447907107824692296203331564639185414752110119071484056349735995578277428693284251703343090195897331105663885143281"
+      ],
+      "target_id": "F0-ONE-dissolve-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.0,
+        0.0,
+        -1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0",
+        "0",
+        "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.0,
+        1.0,
+        0.25
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1",
+        "1",
+        "0.25"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.00676138441373586,
+      "balanced_action_probability": 0.13690476190476192,
+      "balanced_edge_drift": -0.01488095238095238,
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "0.25"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -1.3862943611198906,
+      "local_delta12_reference": "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894",
+      "m": "1/4",
+      "model": "K3",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.047619047619047616
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "1/21"
+      ],
+      "target_id": "F0-NEITHER-form-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        -0.6931471805599453,
+        -0.6931471805599453,
+        -1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "-0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "-0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        0.5,
+        0.5,
+        0.25
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "0.5",
+        "0.5",
+        "0.25"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.005059081105795756,
+      "balanced_action_probability": 0.09902597402597403,
+      "balanced_edge_drift": -0.03382034632034632,
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 4e-80,
+      "local_delta12_reference": "4E-80",
+      "m": "1/4",
+      "model": "ENDPOINT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.09090909090909091,
+        0.09090909090909091,
+        0.047619047619047616
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/11",
+        "1/11",
+        "1/21"
+      ],
+      "target_id": "F0-NEITHER-form-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.34657359027997264,
+        -0.34657359027997264,
+        -0.34657359027997264,
+        -1.0397207708399179
+      ],
+      "action_log_multiplier_reference": [
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484733",
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484739",
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484739",
+        "-1.0397207708399179641258481821872648521132502015403828811810200142400904329545421"
+      ],
+      "action_multiplier": [
+        1.4142135623730951,
+        0.7071067811865476,
+        0.7071067811865476,
+        0.3535533905932738
+      ],
+      "action_multiplier_reference": [
+        "1.414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "0.7071067811865475244008443621048490392848359376884740365883398689953662392310535",
+        "0.7071067811865475244008443621048490392848359376884740365883398689953662392310535",
+        "0.35355339059327376220042218105242451964241796884423701829416993449768311961552675"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.006563466019497364,
+      "balanced_action_probability": 0.13358019448536113,
+      "balanced_edge_drift": -0.016543236090652766,
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5",
+        "unconditional": "1.4142135623730950488016887242096980785696718753769480731766797379907324784621070"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1e-80,
+      "local_delta12_reference": "1E-80",
+      "m": "1/4",
+      "model": "PROJECTION",
+      "six_slot_action_probability": [
+        0.2204812092115424,
+        0.12389934309929541,
+        0.12389934309929541,
+        0.06604088253131131
+      ],
+      "six_slot_action_probability_fraction": [
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/6414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/11414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/11414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/21414213562373095048801688724209698078569671875376948073176679737990732478462107"
+      ],
+      "target_id": "F0-NEITHER-form-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        -0.2424471101097705,
+        -0.2424471101097705,
+        -0.484894220219541
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "-0.24244711010977048350550948824622045681242380269735933561402514938429525048627399",
+        "-0.24244711010977048350550948824622045681242380269735933561402514938429525048627399",
+        "-0.48489422021954096701101897649244091362484760539471867122805029876859050097254798"
+      ],
+      "action_multiplier": [
+        1.0,
+        0.7847052494557042,
+        0.7847052494557042,
+        0.6157623285233389
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "0.61576232852333893586706415983750953034901271913739549415392772732225002257757063"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.0008618843933333099,
+      "balanced_action_probability": 0.13690476190476192,
+      "balanced_edge_drift": -0.01488095238095238,
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "u2": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 0.0,
+      "local_delta12_reference": "0E-80",
+      "m": "1/4",
+      "model": "DRIFT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.13565172564834463,
+        0.13565172564834463,
+        0.10964892965569169
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "3923526247278520933722586370838165684997560705489223000060865471079975210153603/28923526247278520933722586370838165684997560705489223000060865471079975210153603",
+        "3923526247278520933722586370838165684997560705489223000060865471079975210153603/28923526247278520933722586370838165684997560705489223000060865471079975210153603",
+        "15394058213083473396676603995937738258725317978434887353848193183056250564439265752230876700657618698095044747885628763983969539613042092123138964386853881609/140394058213083473396676603995937738258725317978434887353848193183056250564439265752230876700657618698095044747885628763983969539613042092123138964386853881609"
+      ],
+      "target_id": "F0-NEITHER-form-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.0,
+        0.0,
+        1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0",
+        "0",
+        "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.0,
+        1.0,
+        4.0
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1",
+        "1",
+        "4"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.01844718663112595,
+      "balanced_action_probability": 0.2361111111111111,
+      "balanced_edge_drift": 0.034722222222222224,
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "4"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1.3862943611198906,
+      "local_delta12_reference": "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894",
+      "m": "4",
+      "model": "K3",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.4444444444444444
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "4/9"
+      ],
+      "target_id": "F0-NEITHER-form-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.6931471805599453,
+        0.6931471805599453,
+        1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "2",
+        "2",
+        "4"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.011802397784148676,
+      "balanced_action_probability": 0.29563492063492064,
+      "balanced_edge_drift": 0.06448412698412699,
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -4e-80,
+      "local_delta12_reference": "-4E-80",
+      "m": "4",
+      "model": "ENDPOINT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.2857142857142857,
+        0.2857142857142857,
+        0.4444444444444444
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "2/7",
+        "2/7",
+        "4/9"
+      ],
+      "target_id": "F0-NEITHER-form-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        -0.34657359027997264,
+        0.34657359027997264,
+        0.34657359027997264,
+        1.0397207708399179
+      ],
+      "action_log_multiplier_reference": [
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484733",
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484740",
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484740",
+        "1.0397207708399179641258481821872648521132502015403828811810200142400904329545421"
+      ],
+      "action_multiplier": [
+        0.7071067811865476,
+        1.4142135623730951,
+        1.4142135623730951,
+        2.8284271247461903
+      ],
+      "action_multiplier_reference": [
+        "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354",
+        "1.4142135623730950488016887242096980785696718753769480731766797379907324784621071",
+        "1.4142135623730950488016887242096980785696718753769480731766797379907324784621071",
+        "2.8284271247461900976033774484193961571393437507538961463533594759814649569242142"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.01008840602552824,
+      "balanced_action_probability": 0.23154096425899137,
+      "balanced_edge_drift": 0.03243714879616236,
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2",
+        "unconditional": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -3e-80,
+      "local_delta12_reference": "-3E-80",
+      "m": "4",
+      "model": "PROJECTION",
+      "six_slot_action_probability": [
+        0.12389934309929541,
+        0.2204812092115424,
+        0.2204812092115424,
+        0.36130209551358533
+      ],
+      "six_slot_action_probability_fraction": [
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/285355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/160355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/160355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/97855339059327376220042218105242451964241796884423701829416993449768311961552677"
+      ],
+      "target_id": "F0-NEITHER-form-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.4129737863079096,
+        0.4129737863079096,
+        0.8259475726158192
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0.41297378630790956968652970981351571300262784129188794766508353977680091805134448",
+        "0.41297378630790956968652970981351571300262784129188794766508353977680091805134448",
+        "0.82594757261581913937305941962703142600525568258377589533016707955360183610268897"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.5113054085201032,
+        1.5113054085201032,
+        2.284044037822116
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "2.2840440378221157744946228229116010305900589865687841248491131221152219052586471"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.0037651630759527707,
+      "balanced_action_probability": 0.2361111111111111,
+      "balanced_edge_drift": 0.034722222222222224,
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "u2": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "form",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1e-80,
+      "local_delta12_reference": "1E-80",
+      "m": "4",
+      "model": "DRIFT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.23210482594512402,
+        0.23210482594512402,
+        0.31356812588752975
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "472282940162532224408289854889586256993716928165243158266419434540650308632409/2034782940162532224408289854889586256993716928165243158266419434540650308632409",
+        "472282940162532224408289854889586256993716928165243158266419434540650308632409/2034782940162532224408289854889586256993716928165243158266419434540650308632409",
+        "223051175568565993602990510049961038143560447907107824692296203331564639185414752110119071484056349735995578277428693284251703343090195897331105663885143281/711332425568565993602990510049961038143560447907107824692296203331564639185414752110119071484056349735995578277428693284251703343090195897331105663885143281"
+      ],
+      "target_id": "F0-NEITHER-form-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.0,
+        0.0,
+        -1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0",
+        "0",
+        "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.0,
+        1.0,
+        0.25
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1",
+        "1",
+        "0.25"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.00676138441373586,
+      "balanced_action_probability": 0.13690476190476192,
+      "balanced_edge_drift": 0.01488095238095238,
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "0.25"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -1.3862943611198906,
+      "local_delta12_reference": "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894",
+      "m": "1/4",
+      "model": "K3",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.047619047619047616
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "1/21"
+      ],
+      "target_id": "F0-NEITHER-dissolve-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        -0.6931471805599453,
+        -0.6931471805599453,
+        -1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "-0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "-0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "-1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        0.5,
+        0.5,
+        0.25
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "0.5",
+        "0.5",
+        "0.25"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.005059081105795756,
+      "balanced_action_probability": 0.09902597402597403,
+      "balanced_edge_drift": 0.03382034632034632,
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 4e-80,
+      "local_delta12_reference": "4E-80",
+      "m": "1/4",
+      "model": "ENDPOINT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.09090909090909091,
+        0.09090909090909091,
+        0.047619047619047616
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/11",
+        "1/11",
+        "1/21"
+      ],
+      "target_id": "F0-NEITHER-dissolve-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.34657359027997264,
+        -0.34657359027997264,
+        -0.34657359027997264,
+        -1.0397207708399179
+      ],
+      "action_log_multiplier_reference": [
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484733",
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484739",
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484739",
+        "-1.0397207708399179641258481821872648521132502015403828811810200142400904329545421"
+      ],
+      "action_multiplier": [
+        1.4142135623730951,
+        0.7071067811865476,
+        0.7071067811865476,
+        0.3535533905932738
+      ],
+      "action_multiplier_reference": [
+        "1.414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "0.7071067811865475244008443621048490392848359376884740365883398689953662392310535",
+        "0.7071067811865475244008443621048490392848359376884740365883398689953662392310535",
+        "0.35355339059327376220042218105242451964241796884423701829416993449768311961552675"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.006563466019497364,
+      "balanced_action_probability": 0.13358019448536113,
+      "balanced_edge_drift": 0.016543236090652766,
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "0.5",
+        "u2": "0.5",
+        "unconditional": "1.4142135623730950488016887242096980785696718753769480731766797379907324784621070"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1e-80,
+      "local_delta12_reference": "1E-80",
+      "m": "1/4",
+      "model": "PROJECTION",
+      "six_slot_action_probability": [
+        0.2204812092115424,
+        0.12389934309929541,
+        0.12389934309929541,
+        0.06604088253131131
+      ],
+      "six_slot_action_probability_fraction": [
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/6414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/11414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/11414213562373095048801688724209698078569671875376948073176679737990732478462107",
+        "1414213562373095048801688724209698078569671875376948073176679737990732478462107/21414213562373095048801688724209698078569671875376948073176679737990732478462107"
+      ],
+      "target_id": "F0-NEITHER-dissolve-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        -0.2424471101097705,
+        -0.2424471101097705,
+        -0.484894220219541
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "-0.24244711010977048350550948824622045681242380269735933561402514938429525048627399",
+        "-0.24244711010977048350550948824622045681242380269735933561402514938429525048627399",
+        "-0.48489422021954096701101897649244091362484760539471867122805029876859050097254798"
+      ],
+      "action_multiplier": [
+        1.0,
+        0.7847052494557042,
+        0.7847052494557042,
+        0.6157623285233389
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "0.61576232852333893586706415983750953034901271913739549415392772732225002257757063"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.0008618843933333099,
+      "balanced_action_probability": 0.13690476190476192,
+      "balanced_edge_drift": 0.01488095238095238,
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206",
+        "u2": "0.7847052494557041867445172741676331369995121410978446000121730942159950420307206"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_suppress",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 0.0,
+      "local_delta12_reference": "0E-80",
+      "m": "1/4",
+      "model": "DRIFT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.13565172564834463,
+        0.13565172564834463,
+        0.10964892965569169
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "3923526247278520933722586370838165684997560705489223000060865471079975210153603/28923526247278520933722586370838165684997560705489223000060865471079975210153603",
+        "3923526247278520933722586370838165684997560705489223000060865471079975210153603/28923526247278520933722586370838165684997560705489223000060865471079975210153603",
+        "15394058213083473396676603995937738258725317978434887353848193183056250564439265752230876700657618698095044747885628763983969539613042092123138964386853881609/140394058213083473396676603995937738258725317978434887353848193183056250564439265752230876700657618698095044747885628763983969539613042092123138964386853881609"
+      ],
+      "target_id": "F0-NEITHER-dissolve-strong_suppress"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.0,
+        0.0,
+        1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0",
+        "0",
+        "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.0,
+        1.0,
+        4.0
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1",
+        "1",
+        "4"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.01844718663112595,
+      "balanced_action_probability": 0.2361111111111111,
+      "balanced_edge_drift": -0.034722222222222224,
+      "comparator": null,
+      "comparator_parameters": {
+        "k3": "4"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1.3862943611198906,
+      "local_delta12_reference": "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894",
+      "m": "4",
+      "model": "K3",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.4444444444444444
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "4/9"
+      ],
+      "target_id": "F0-NEITHER-dissolve-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.6931471805599453,
+        0.6931471805599453,
+        1.3862943611198906
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+        "1.3862943611198906188344642429163531361510002687205105082413600189867872439393894"
+      ],
+      "action_multiplier": [
+        1.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "2",
+        "2",
+        "4"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.011802397784148676,
+      "balanced_action_probability": 0.29563492063492064,
+      "balanced_edge_drift": -0.06448412698412699,
+      "comparator": "ENDPOINT",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -4e-80,
+      "local_delta12_reference": "-4E-80",
+      "m": "4",
+      "model": "ENDPOINT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.2857142857142857,
+        0.2857142857142857,
+        0.4444444444444444
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "2/7",
+        "2/7",
+        "4/9"
+      ],
+      "target_id": "F0-NEITHER-dissolve-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        -0.34657359027997264,
+        0.34657359027997264,
+        0.34657359027997264,
+        1.0397207708399179
+      ],
+      "action_log_multiplier_reference": [
+        "-0.34657359027997265470861606072908828403775006718012762706034000474669681098484733",
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484740",
+        "0.34657359027997265470861606072908828403775006718012762706034000474669681098484740",
+        "1.0397207708399179641258481821872648521132502015403828811810200142400904329545421"
+      ],
+      "action_multiplier": [
+        0.7071067811865476,
+        1.4142135623730951,
+        1.4142135623730951,
+        2.8284271247461903
+      ],
+      "action_multiplier_reference": [
+        "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354",
+        "1.4142135623730950488016887242096980785696718753769480731766797379907324784621071",
+        "1.4142135623730950488016887242096980785696718753769480731766797379907324784621071",
+        "2.8284271247461900976033774484193961571393437507538961463533594759814649569242142"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.01008840602552824,
+      "balanced_action_probability": 0.23154096425899137,
+      "balanced_edge_drift": -0.03243714879616236,
+      "comparator": "PROJECTION",
+      "comparator_parameters": {
+        "u1": "2",
+        "u2": "2",
+        "unconditional": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": -3e-80,
+      "local_delta12_reference": "-3E-80",
+      "m": "4",
+      "model": "PROJECTION",
+      "six_slot_action_probability": [
+        0.12389934309929541,
+        0.2204812092115424,
+        0.2204812092115424,
+        0.36130209551358533
+      ],
+      "six_slot_action_probability_fraction": [
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/285355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/160355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/160355339059327376220042218105242451964241796884423701829416993449768311961552677",
+        "35355339059327376220042218105242451964241796884423701829416993449768311961552677/97855339059327376220042218105242451964241796884423701829416993449768311961552677"
+      ],
+      "target_id": "F0-NEITHER-dissolve-strong_favour"
+    },
+    {
+      "action_log_multiplier": [
+        0.0,
+        0.4129737863079096,
+        0.4129737863079096,
+        0.8259475726158192
+      ],
+      "action_log_multiplier_reference": [
+        "0",
+        "0.41297378630790956968652970981351571300262784129188794766508353977680091805134448",
+        "0.41297378630790956968652970981351571300262784129188794766508353977680091805134448",
+        "0.82594757261581913937305941962703142600525568258377589533016707955360183610268897"
+      ],
+      "action_multiplier": [
+        1.0,
+        1.5113054085201032,
+        1.5113054085201032,
+        2.284044037822116
+      ],
+      "action_multiplier_reference": [
+        "1",
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "2.2840440378221157744946228229116010305900589865687841248491131221152219052586471"
+      ],
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "balanced_CMI": 0.0037651630759527707,
+      "balanced_action_probability": 0.2361111111111111,
+      "balanced_edge_drift": -0.034722222222222224,
+      "comparator": "DRIFT",
+      "comparator_parameters": {
+        "u1": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088",
+        "u2": "1.5113054085201031181065275356466760223798941701287781064525421905300809876237088"
+      },
+      "condition_triad_names": [
+        "0-2-3",
+        "1-2-3"
+      ],
+      "condition_triads": [
+        8,
+        9
+      ],
+      "corner_order": [
+        "00",
+        "10",
+        "01",
+        "11"
+      ],
+      "direction": "dissolve",
+      "grade": "strong_favour",
+      "incidence_motif": "NEITHER",
+      "literal_polarities": [
+        1,
+        1
+      ],
+      "local_delta12": 1e-80,
+      "local_delta12_reference": "1E-80",
+      "m": "4",
+      "model": "DRIFT",
+      "six_slot_action_probability": [
+        0.16666666666666666,
+        0.23210482594512402,
+        0.23210482594512402,
+        0.31356812588752975
+      ],
+      "six_slot_action_probability_fraction": [
+        "1/6",
+        "472282940162532224408289854889586256993716928165243158266419434540650308632409/2034782940162532224408289854889586256993716928165243158266419434540650308632409",
+        "472282940162532224408289854889586256993716928165243158266419434540650308632409/2034782940162532224408289854889586256993716928165243158266419434540650308632409",
+        "223051175568565993602990510049961038143560447907107824692296203331564639185414752110119071484056349735995578277428693284251703343090195897331105663885143281/711332425568565993602990510049961038143560447907107824692296203331564639185414752110119071484056349735995578277428693284251703343090195897331105663885143281"
+      ],
+      "target_id": "F0-NEITHER-dissolve-strong_favour"
+    }
+  ],
+  "mode": "B",
+  "numeric_method": {
+    "cache": [
+      "law fingerprint",
+      "analysis version",
+      "80-digit weights/float64 matrices"
+    ],
+    "epoch": "existing Generation 8B block landing solve; residual (I-T)E-R checked independently",
+    "kernel_analysis": "float64, cross-checked against frozen high-precision local reference",
+    "stationary": "normalised linear solve after communicating-structure and period checks, no arbitrary class weighting",
+    "symmetry": "16 hidden-bit-permutation canonical laws; pairs fixed, raw 16-state prior retained. 48 labelled laws and S4 classes remain separately recorded.",
+    "weights": "exact Fractions for W4; exact rational representations of frozen 80-digit Decimal approximations for continuous comparators"
+  },
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": 4,
+    "O": 3,
+    "S": 0,
+    "hypergraph": "independent"
+  },
+  "plan_hash": "1d5f57b970c112225e78e35a7ed53d625ef4204fb3e6d43c576750959c39027a",
+  "polarity_conjugacy": {
+    "holds_structurally": true,
+    "map": "state xor (1 << second_condition_triad)",
+    "numeric_checks": "after freeze, PP versus PA on BOTH for both strong grades",
+    "pre_freeze_actual_target_kernels": 0,
+    "proof": "Triad toggles have state-independent weight 1. Bit complementation preserves each toggle and every pair bit. Flipping the corresponding required literal preserves all active rule weights, normalisation and successors. Consequently it conjugates the full and pair-event kernels, preserves uniform raw-triad starts and stationary visible marginals."
+  },
+  "pre_freeze_exposure": {
+    "actual_scientific_cells": [],
+    "actual_scientific_target_kernels": [],
+    "allowed": [
+      "symbolic local tables",
+      "80-digit root and multiplier construction",
+      "law specification fingerprints",
+      "structural conjugacy proof",
+      "historical/synthetic propagation and timing"
+    ],
+    "prompt_storage_deviation": "unexecuted preliminary draft preceded prompt transcription; see Execution 008F"
+  },
+  "round_id": "round-f0",
+  "schema": "rs-constraint-lab.bridge-plan/v2",
+  "source_topology": [
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "action_present": true,
+      "action_topology_category": "star_spoke",
+      "dissolve_admissible": true,
+      "form_admissible": false,
+      "pair_mask": 7,
+      "source": "star"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "action_present": true,
+      "action_topology_category": "triangle_edge",
+      "dissolve_admissible": true,
+      "form_admissible": false,
+      "pair_mask": 11,
+      "source": "triangle"
+    },
+    {
+      "action_pair": 0,
+      "action_pair_name": "0-1",
+      "action_present": true,
+      "action_topology_category": "path_middle_edge",
+      "dissolve_admissible": true,
+      "form_admissible": false,
+      "pair_mask": 13,
+      "source": "path"
+    }
+  ],
+  "stochastic_trajectories": false,
+  "tolerances": {
+    "conjugacy": 1e-12,
+    "drift_balanced_action_match": 1e-14,
+    "epoch_solve_residual": 1e-11,
+    "float_local_probability_gap": 1e-13,
+    "information_chain_rule": 1e-12,
+    "information_floor": 1e-12,
+    "kernel_row_sum": 1e-12,
+    "logit_second_difference": 1e-13,
+    "rational_local_probability": 1e-15,
+    "stationary_nonnegative": 1e-13,
+    "stationary_residual": 1e-11
+  },
+  "work_count": {
+    "additional_polarity_laws": 2,
+    "comparators_per_target": 3,
+    "conjugacy_prerequisite_checks": 2,
+    "epoch_solves_including_prerequisites": 20,
+    "full_kernel_builds_including_labelled_validation": 84,
+    "full_state_weight_evaluations": 86016,
+    "labelled_kernel_materialisations": 48,
+    "labelled_laws": 48,
+    "labelled_source_checkpoint_distribution_cells": 1008,
+    "s4_laws": 48,
+    "source_checkpoint_comparison_cells": 756,
+    "source_checkpoint_distribution_cells": 336,
+    "source_comparison_blocks": 108,
+    "source_law_blocks": 48,
+    "stationary_comparison_cells": 36,
+    "targets": 12,
+    "unique_full_kernels": 16,
+    "unique_law_count": 16,
+    "unique_pair_event_kernels": 16
+  }
+}
