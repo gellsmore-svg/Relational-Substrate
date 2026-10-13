@@ -1,0 +1,298 @@
+{
+  "analysis_source_sha256": {
+    "constraint-lab/src/rs_constraint_lab/durable.py": "3b5c705847c7b2a15b9e66a74d34fa1c2a333abf2cc5cf6fb15f0c79f9e1ae41",
+    "constraint-lab/src/rs_constraint_lab/exact.py": "ec8976dc3f10dac6842bccce0669382deb85fb2d1c16082ad30cf19a7e18efb1",
+    "constraint-lab/src/rs_constraint_lab/explore08.py": "457a993ba7cfc0b66c9805d700871dc39abda474d1d7650cd23dbe148343a5ec",
+    "constraint-lab/src/rs_constraint_lab/gen008h_exec.py": "60790eec207069baadb4b10f7565d7fa419c6b0dd2401437ea0827999819f44f",
+    "constraint-lab/src/rs_constraint_lab/graphs.py": "78381488bacebc1a8b2719a3fb9b342811af724950d75a1f463784aee0f5a287",
+    "constraint-lab/src/rs_constraint_lab/history.py": "ffe2b960828b6c1143cb20d1dd5d2df18533f52de1346cc7e9936f3285444048",
+    "constraint-lab/src/rs_constraint_lab/memory_clocks.py": "edd18c5734c3a7b42c3801747a864f0f5e5f1cf9594ef74d0a98530426b5644a",
+    "constraint-lab/src/rs_constraint_lab/state.py": "a5132429fa8697b5b3f98d985516356d9e997b32ca90b05c19a96e7fc726108c"
+  },
+  "analysis_version": "generation-008h-history/v1",
+  "calibration_sha256": "7cc07548340781152062bb25e590166e43d547c7bd4507decc2f2e210d182a4b",
+  "coherence_inputs": [
+    "F018-LOCAL-VERSUS-INITIAL",
+    "F8C-CURRENT-SURVIVES",
+    "F8G-FORMAL-CURRENT-STATE-EXPRESSIVITY",
+    "F8G-FORMAL-EQUIVALENCE-HIERARCHY",
+    "F8G-FORMAL-H-L-DISTINCTION",
+    "F8G-FORMAL-COMPILATION-TEST",
+    "Q-H-POSITIVE",
+    "F011-QUOTIENT-INVALID"
+  ],
+  "controller": {
+    "baseline_weights": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "full_state_index": "7*x + (0 if h is None else h+1)",
+    "history_depth_clock": "pair event",
+    "name": "RECENT-REVERSAL",
+    "ordinary_constraints": [],
+    "pair_update": "history := event slot",
+    "positive_multiplier": true,
+    "recurrent_pair_index": "6*pair_mask+h",
+    "start_sentinel": null,
+    "triad_update": "history unchanged"
+  },
+  "decay_checkpoints": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "decimal_precision": 160,
+  "estimands": [
+    "common-start equal-probability full-event histories with byte-identical ten-bit material endpoint",
+    "full/pair row JS, exact row differences, and same edge-count/different graph-class laws",
+    "strong lumpability of history erasure and fixed-state non-compilability",
+    "exact next-pair closure against full-event absorption on all 16 raw triads",
+    "384-state rational kernel, communicating structure, period and stationary joint balance",
+    "pair/history independence, stationary material occupancy and history-averaged one-step pair law",
+    "six-slot eigenstructure, repeat probability, consecutive-event MI and initial-history decay",
+    "two-step material backtracking and order-two sufficiency against all consistent triples",
+    "deterministic augmented-state update semantics and first-order Markov restoration"
+  ],
+  "execution": {
+    "disk_estimate_bytes": 10000000,
+    "expected_total_wall_seconds": 60,
+    "inline_atomic_items": true,
+    "item_opacity_limit_seconds": 60,
+    "overrun_policy": "stop; freeze a supervised amendment before further items",
+    "resume": "atomic item envelopes validated against plan hash, source version and exact invariants",
+    "stochastic_trajectories": 0,
+    "workers": 1
+  },
+  "experiment_id": "generation-008h-history-as-state",
+  "items": [
+    {
+      "item_id": "H-WITNESS-m025",
+      "kind": "witness",
+      "m": "1/4"
+    },
+    {
+      "item_id": "H-KERNEL-m025",
+      "kind": "kernel",
+      "m": "1/4"
+    },
+    {
+      "item_id": "H-TEMPORAL-m025",
+      "kind": "temporal",
+      "m": "1/4"
+    },
+    {
+      "item_id": "H-WITNESS-m1",
+      "kind": "witness",
+      "m": "1"
+    },
+    {
+      "item_id": "H-KERNEL-m1",
+      "kind": "kernel",
+      "m": "1"
+    },
+    {
+      "item_id": "H-TEMPORAL-m1",
+      "kind": "temporal",
+      "m": "1"
+    },
+    {
+      "item_id": "H-WITNESS-m4",
+      "kind": "witness",
+      "m": "4"
+    },
+    {
+      "item_id": "H-KERNEL-m4",
+      "kind": "kernel",
+      "m": "4"
+    },
+    {
+      "item_id": "H-TEMPORAL-m4",
+      "kind": "temporal",
+      "m": "4"
+    },
+    {
+      "item_id": "H-FORMAL-NONLUMPABILITY",
+      "kind": "nonlumpability",
+      "m": null
+    },
+    {
+      "item_id": "H-STATE-AUGMENTATION",
+      "kind": "augmentation",
+      "m": null
+    }
+  ],
+  "mode": "A",
+  "non_claims": [
+    "No absolute non-Markovianity or irreducible time claim.",
+    "Order two and one-step H0 agreement refer to the pair-event clock.",
+    "State augmentation changes representation and joint update support; it is not unchanged-state K/J compilation.",
+    "No purpose, repair, fragility, adaptation, design or theology inferred."
+  ],
+  "ontology": {
+    "G": 0,
+    "H": 1,
+    "H_clock": "pair",
+    "H_pair": 1,
+    "L": 0,
+    "N": 4,
+    "O": 3,
+    "S": 0,
+    "hypergraph": "independent"
+  },
+  "parent_commit": "22e252e560cc711d337b6ae506b0fb76728247d6",
+  "plan_hash": "77fc2950ea394245cb0bcd441b35fed608c413961d41d8f44fa0e2ccd34ceb3a",
+  "planning_coherence_ledger_sha256": "c3fb60db0d338d83069e52015a0a5d78d972ec6775ad8fc08c29dd11fadec0e3",
+  "pre_freeze_exposure": {
+    "actual_non_neutral_H0_rows_kernels_cells": 0,
+    "analytic_expectations": "externally predeclared symbolic derivations; no target-grade numerical verification",
+    "neutral_six_slot_plumbing": "declared; the neutral law is pre-observed, not claimed unopened",
+    "synthetic_fixture": "three pair slots, one hidden slot, multiplier 2"
+  },
+  "quotient_pair_masks": [
+    0,
+    41,
+    63
+  ],
+  "round_id": "H0",
+  "schema": "rs-constraint-lab.history-tables/v1",
+  "targets": [
+    {
+      "label": "m025",
+      "m": "1/4"
+    },
+    {
+      "label": "m1",
+      "m": "1"
+    },
+    {
+      "label": "m4",
+      "m": "4"
+    }
+  ],
+  "tolerances": {
+    "eigenvalue_gap": "1e-13",
+    "history_pair_independence_gap": "exact",
+    "information_formula_gap": "1e-13",
+    "neutral_lumpability_gap": "exact",
+    "rational_identities": "exact",
+    "row_sums": "exact",
+    "stationary_residual": "exact",
+    "uniform_joint_gap": "exact"
+  },
+  "witness": {
+    "canonical_path_class": 13,
+    "end_slot": 5,
+    "endpoint_state": 41,
+    "endpoint_triad_mask": 0,
+    "history_E_events": [
+      3,
+      5
+    ],
+    "history_M_events": [
+      5,
+      3
+    ],
+    "middle_slot": 3,
+    "start_history": null,
+    "start_state": 1,
+    "toggles": [
+      {
+        "direction": "dissolve",
+        "graph_class": 3,
+        "pair": [
+          0,
+          1
+        ],
+        "shape": "two_edge_path",
+        "slot": 0,
+        "target_pair_mask": 40
+      },
+      {
+        "direction": "form",
+        "graph_class": 15,
+        "pair": [
+          0,
+          2
+        ],
+        "shape": "triangle_pendant",
+        "slot": 1,
+        "target_pair_mask": 43
+      },
+      {
+        "direction": "form",
+        "graph_class": 30,
+        "pair": [
+          0,
+          3
+        ],
+        "shape": "four_cycle",
+        "slot": 2,
+        "target_pair_mask": 45
+      },
+      {
+        "direction": "dissolve",
+        "graph_class": 12,
+        "pair": [
+          1,
+          2
+        ],
+        "shape": "two_edge_matching",
+        "slot": 3,
+        "target_pair_mask": 33
+      },
+      {
+        "direction": "form",
+        "graph_class": 15,
+        "pair": [
+          1,
+          3
+        ],
+        "shape": "triangle_pendant",
+        "slot": 4,
+        "target_pair_mask": 57
+      },
+      {
+        "direction": "dissolve",
+        "graph_class": 3,
+        "pair": [
+          2,
+          3
+        ],
+        "shape": "two_edge_path",
+        "slot": 5,
+        "target_pair_mask": 9
+      }
+    ]
+  },
+  "work_counts": {
+    "atomic_items": 11,
+    "consistent_material_triples": 6912,
+    "deterministic_full_state_updates": 71680,
+    "direct_full_to_pair_block_solves": 63,
+    "direct_raw_triad_rows": 1008,
+    "direct_slot_probability_checks": 6048,
+    "event_history_matrices": 3,
+    "full_witness_rows": 6,
+    "initial_history_checkpoint_cells": 24,
+    "pair_epoch_kernels": 3,
+    "pair_epoch_states_per_kernel": 384,
+    "pair_epoch_transition_entries": 6912,
+    "pair_witness_rows": 6,
+    "target_models": 3,
+    "two_step_augmented_paths": 41472,
+    "witness_paths": 6
+  }
+}
