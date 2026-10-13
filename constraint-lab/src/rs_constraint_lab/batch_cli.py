@@ -72,9 +72,54 @@ def main(argv: list[str]) -> int:
         return _generation_008d(argv[1:])
     if argv[0] == "generation008e":
         return _generation_008e(argv[1:])
+    if argv[0] == "generation008f":
+        return _generation_008f(argv[1:])
     if argv[0] == "batch":
         return _batch(argv[1:])
     print(f"unknown command {argv[0]}", file=sys.stderr)
+    return 2
+
+
+def _generation_008f(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(prog="rs_constraint_lab generation008f")
+    parser.add_argument("command", choices=["plan", "run-f0", "publish", "verify", "status"])
+    parser.add_argument("--root", type=Path, default=None)
+    parser.add_argument("--frozen-plan-commit", default=None)
+    args = parser.parse_args(argv)
+    repo = _repo_root()
+    root = args.root or (_lab_root() / "generated" / "generation-008f" / "round-f0")
+    if args.command == "plan":
+        from rs_constraint_lab.gen008f_exec import write_plan
+
+        document = write_plan(repo)
+        print(json.dumps({"path": "constraint-lab/exploration/generation-008f/round-f0-plan.json", "plan_hash": document["plan_hash"]}, indent=2, sort_keys=True))
+        return 0
+    if args.command == "run-f0":
+        from rs_constraint_lab.gen008f_exec import execute, require_f0_execution
+
+        plan = require_f0_execution(repo, args.frozen_plan_commit)
+        payload = execute(root, plan, frozen_plan_commit=args.frozen_plan_commit)
+        print(json.dumps({"summary": payload["summary"], "validation": payload["validation"]}, indent=2, sort_keys=True))
+        return 0 if payload["validation"]["ok"] else 1
+    if args.command == "publish":
+        from rs_constraint_lab.durable import read_json
+        from rs_constraint_lab.gen008f_exec import publish_tables
+
+        payload = read_json(root / "round-f0-tables.json")
+        hashes = publish_tables(payload, _lab_root() / "reports")
+        print(json.dumps(hashes, indent=2, sort_keys=True))
+        return 0
+    if args.command == "verify":
+        from rs_constraint_lab.gen008f_exec import verify_payload
+
+        report = verify_payload(root / "round-f0-tables.json")
+        print(json.dumps(report, indent=2, sort_keys=True))
+        return 0 if report["complete"] else 1
+    if args.command == "status":
+        from rs_constraint_lab.durable import read_json
+
+        print(json.dumps(read_json(root / "status.json"), indent=2, sort_keys=True))
+        return 0
     return 2
 
 
