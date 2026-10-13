@@ -62,7 +62,7 @@ def prepare_h0_plan() -> dict:
         "experiment_id": "generation-008h-history-as-state", "round_id": "H0", "mode": "A",
         "analysis_version": ANALYSIS_VERSION, "schema": SCHEMA,
         "parent_commit": "22e252e560cc711d337b6ae506b0fb76728247d6",
-        "ontology": {"N": 4, "O": 3, "G": 0, "S": 0, "L": 0, "H_pair": 1, "hypergraph": "independent"},
+        "ontology": {"N": 4, "O": 3, "G": 0, "S": 0, "L": 0, "H": 1, "H_clock": "pair", "H_pair": 1, "hypergraph": "independent"},
         "controller": {
             "name": "RECENT-REVERSAL", "positive_multiplier": True, "ordinary_constraints": [],
             "baseline_weights": [1] * 10, "pair_update": "history := event slot", "triad_update": "history unchanged",
@@ -124,6 +124,34 @@ def prepare_h0_plan() -> dict:
     }
     document["plan_hash"] = plan_hash(document)
     return document
+
+
+def calibrate(root: Path | None = None) -> dict:
+    root = root or repository_root()
+    if (root / PLAN_RELPATH).exists():
+        raise HistoryRunError("calibration must precede plan creation; frozen calibration is not rewritten")
+    measurements = []
+    cases = (
+        ("neutral-production-kernel", "kernel", RecentReversal(Fraction(1))),
+        ("synthetic-three-slot-temporal", "temporal", RecentReversal(Fraction(2), 3, 1)),
+    )
+    for name, kind, model in cases:
+        started = time.monotonic()
+        result = analyse_kernel(model, (0, 41, 63)) if kind == "kernel" else analyse_temporal(model)
+        validate_result(kind, result)
+        measurements.append({
+            "fixture": name, "m": model.multiplier, "pair_slots": model.pair_slots,
+            "hidden_slots": model.triad_slots, "wall_seconds": time.monotonic() - started,
+            "state_count": (1 << model.pair_slots) * model.pair_slots,
+        })
+    record = {
+        "scope": "neutral production plumbing and explicitly synthetic three-slot fixture only",
+        "actual_non_neutral_H0_rows_kernels_cells": 0, "measurements": measurements,
+        "execution_choice": "direct inline atomic items; stop and amend if any exceeds 60 seconds",
+        "disk_budget_bytes": 10_000_000,
+    }
+    atomic_write_json(root / "constraint-lab/exploration/generation-008h/calibration.json", record)
+    return record
 
 
 def write_plan(root: Path | None = None) -> dict:
@@ -331,12 +359,14 @@ def verify(root: Path, output: Path, commit: str | None) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=("plan", "execute", "verify"))
+    parser.add_argument("command", choices=("calibrate", "plan", "execute", "verify"))
     parser.add_argument("--frozen-plan-commit")
     parser.add_argument("--output", type=Path, default=repository_root() / "constraint-lab/generated/generation-008h/round-h0")
     args = parser.parse_args()
     root = repository_root()
-    if args.command == "plan":
+    if args.command == "calibrate":
+        print(calibrate(root))
+    elif args.command == "plan":
         plan = write_plan(root)
         print({"plan": PLAN_RELPATH, "plan_hash": plan["plan_hash"], "work_counts": plan["work_counts"]})
     elif args.command == "execute":
