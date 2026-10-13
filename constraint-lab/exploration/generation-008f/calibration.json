@@ -1,0 +1,10 @@
+{
+  "historical_law": "R01",
+  "scope": "historical Generation 8C law, no actual F0 scientific kernel",
+  "single_blas_thread": true,
+  "full_matrix_epoch_stationary_path_propagation_wall_seconds": 0.16878319500028738,
+  "epoch_solve_residual": 2.7755575615628914e-17,
+  "stationary_residual": 3.5973828083069037e-16,
+  "epoch_period": 2,
+  "checkpoint_count": 7
+}

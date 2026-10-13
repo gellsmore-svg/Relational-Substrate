@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import csv
 import io
-import os
 import subprocess
 import sys
 import time
@@ -42,6 +41,8 @@ def write_plan(repo: Path | None = None) -> dict:
     root = repo or _repo_root()
     document = prepare_f0_plan()
     document["analysis_source_sha256"] = {path: sha256_file(root / path) for path in SOURCE_PATHS}
+    calibration = "constraint-lab/exploration/generation-008f/calibration.json"
+    document["calibration_sha256"] = sha256_file(root / calibration)
     from rs_constraint_lab.explore08 import plan_hash
 
     document["plan_hash"] = plan_hash(document)
@@ -152,6 +153,7 @@ def _polarity_prerequisite(laws: list[LawSpec]) -> dict:
             kernel = build_law_kernel(canonical_law(law))
             epoch, _ = epoch_landing(kernel)
             cache[canonical_fingerprint(law)] = {
+                "kernel": kernel,
                 "full": full_transition_matrix(kernel), "epoch": epoch,
                 "stationary": stationary_distribution(epoch)["pi"],
             }
@@ -265,6 +267,13 @@ def assemble(plan: dict, laws: list[LawSpec], results: dict, matrices: dict, pol
         "stationary_context": context, "numeric_validation": validation,
         "law_equivalence": equivalence, "comparator_distance_order": rankings,
         "polarity_conjugacy": polarity, "direction_complement": complement,
+        "kernel_cache_manifest": [
+            {"canonical_law_id": key, "cache_key": row["cache_key"],
+             "matrix_sha256": row["matrix_sha256"], "analysis_version": ANALYSIS_VERSION,
+             "matrix_contents": ["full", "epoch", "stationary", "stationary_full"],
+             "precision": "80 decimal digits for continuous weights; float64 matrices"}
+            for key, row in sorted(results.items())
+        ],
     }
     payload = {
         "schema": SCHEMA, "analysis_version": ANALYSIS_VERSION,

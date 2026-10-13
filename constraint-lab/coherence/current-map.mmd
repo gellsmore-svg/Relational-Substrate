@@ -73,6 +73,8 @@ flowchart TD
     F8D_DRIFT_MAGNITUDE_SCOPE["F8D-DRIFT-MAGNITUDE-SCOPE: The large magnitude belongs to F010-OCCUPANCY-AXIS. F8C-DRIFT-DIRECTION explains the si..."]
     F8E_K2_SCOPE_CORRECTION["F8E-K2-SCOPE-CORRECTION: The 8D no-gate-product result bounds the two-rule one-literal K=2 feature grammar. It d..."]
     F8E_PARSER_SAME_TRIAD["F8E-PARSER-SAME-TRIAD: The order-3 parser rejects a repeated literal, a condition on the action slot and a cou..."]
+    F8F_GENERAL_K_SCOPE["F8F-GENERAL-K-SCOPE: The general interaction-order statement applies to non-neutral rules over distinct, joi..."]
+    F8F_PREFREEZE_SCIENCE_GATE["F8F-PREFREEZE-SCIENCE-GATE: Before a scientific plan is frozen, execution tests may validate plumbing, synthetic fi..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
@@ -187,3 +189,6 @@ flowchart TD
   F8E_ORDINARY_K_SUPPLIES_INTERACTION -->|qualifies| Q_META_CONSTRAINT
   F8E_RS_COMPOSITIONAL_HIERARCHY -->|derived_from| F8E_CARDINALITY_VS_K
   F8E_RS_COMPOSITIONAL_HIERARCHY -->|qualifies| F8D_RS_COMPOSITIONAL_BOUND
+  F8F_GENERAL_K_SCOPE -->|qualifies| F8E_GENERAL_K_INTERACTION
+  F8F_PREFREEZE_SCIENCE_GATE -->|refines| F8C_METHOD_GEOMETRY
+  F8F_PREFREEZE_SCIENCE_GATE -->|supports| F8C_METHOD_DIMENSIONS

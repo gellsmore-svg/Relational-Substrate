@@ -334,6 +334,10 @@ def prepare_f0_plan() -> dict:
             "source_checkpoint_comparison_cells": 12 * 3 * 3 * len(CHECKPOINTS),
             "stationary_comparison_cells": 12 * 3,
             "conjugacy_prerequisite_checks": 2,
+            "additional_polarity_laws": 2,
+            "epoch_solves_including_prerequisites": 20,
+            "full_kernel_builds_including_labelled_validation": 84,
+            "full_state_weight_evaluations": 86016,
         },
     }
     document["plan_hash"] = plan_hash(document)
@@ -565,7 +569,8 @@ def polarity_conjugacy_check(laws: list[LawSpec], cache: dict) -> dict:
             continue
         base = canonical_law(law)
         changed = replace(base, literal_polarities=(1, 0))
-        kernel = build_law_kernel(base)
+        original = cache[canonical_fingerprint(law)]
+        kernel = original["kernel"]
         flipped = build_law_kernel(changed)
         mapping = np.arange(1024) ^ (1 << 7)
         exact = all(kernel.weights[s] == flipped.weights[int(mapping[s])] for s in range(1024))
@@ -573,7 +578,6 @@ def polarity_conjugacy_check(laws: list[LawSpec], cache: dict) -> dict:
             raise BridgeError("exact polarity weight conjugacy failed")
         full = full_transition_matrix(flipped)
         epoch, _ = epoch_landing(flipped)
-        original = cache[canonical_fingerprint(law)]
         full_gap = float(np.max(np.abs(original["full"] - full[np.ix_(mapping, mapping)])))
         epoch_gap = float(np.max(np.abs(original["epoch"] - epoch[np.ix_(mapping, mapping)])))
         pi = stationary_distribution(epoch)["pi"]
