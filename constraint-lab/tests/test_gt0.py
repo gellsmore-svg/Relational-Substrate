@@ -143,3 +143,19 @@ def test_g0_journey_descends_from_its_frozen_plan() -> None:
     reports = verify_journey_chronology(REPO, REPO / "gravity-time" / "plans" / "journey.jsonl")
     g0 = [r for r in reports if r["frozen_plan_commit"] == "b45f10b148fe7df1f54ffb7db35d4ea828b170ef"]
     assert g0 and g0[0]["result_commit"] == "97c2daa5d445e57110fa64baa690e64934a6373a"
+
+
+def test_g1_journey_and_published_tables() -> None:
+    from rs_constraint_lab.durable import canonical_json, sha256_bytes
+    from rs_constraint_lab.explore08a import verify_journey_chronology
+
+    reports = verify_journey_chronology(REPO, REPO / "gravity-time" / "plans" / "journey.jsonl")
+    g1 = [r for r in reports if r["frozen_plan_commit"] == "331d5197dc5332aaf14b57c8661eb7004b54e259"]
+    assert g1 and g1[0]["result_commit"] == "3dccd0a3f0e5227ef7e373d1aada7d01f6fcfba9"
+    for name in ("round-g0-tables.json", "round-g1-tables.json"):
+        body = json.loads((REPO / "gravity-time" / "reports" / name).read_text(encoding="utf-8"))
+        payload = {k: v for k, v in body.items() if k != "payload_sha256"}
+        assert sha256_bytes(canonical_json(payload).encode("utf-8")) == body["payload_sha256"]
+    g1t = json.loads((REPO / "gravity-time" / "reports" / "round-g1-tables.json").read_text(encoding="utf-8"))
+    assert all(v["holds"] for k, v in g1t["frozen_predictions"].items() if k.startswith(("P1", "P3")))
+    assert sum(v["holds"] for k, v in g1t["frozen_predictions"].items() if k.startswith("P2")) == 1
