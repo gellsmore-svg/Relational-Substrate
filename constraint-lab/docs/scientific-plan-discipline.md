@@ -27,3 +27,21 @@ precision; items have a 120-second watchdog, resumable state and status/heartbea
 Scientific results never enter plan construction. All tolerances are fixed in
 the plan before results. Failures halt the affected analysis for debugging or an
 explicit amendment; they do not select a different comparator or target.
+
+## Formal integration and compilation gate (Generation 8G)
+
+Before introducing a new ontology axis, ask:
+
+> Can the proposed new behaviour be compiled into the existing ontology by increasing K, rule cardinality J, or explicit current state?
+
+Declare the preserved state, event support, clock, projection, initial priors,
+weight alphabet and K/J budget. If compilation succeeds, record the representation
+tradeoff before claiming new dynamical expressivity. If it fails, state an exact
+non-compilability witness. Static syntax novelty or aggregate fit is insufficient.
+See the formal expressivity boundary and open-problem architecture.
+
+Pure algebraic derivation, parser audit and fixed proof-verification fixtures do
+not require an artificial experiment freeze. A genuinely new bounded scientific
+search or representation enumeration does: freeze and push its domain, grammar,
+work count and tolerances before execution. Generation 8G uses analytic
+constructions/lower bounds and opens no G0 computation.

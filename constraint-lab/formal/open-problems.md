@@ -13,7 +13,7 @@ No next experimental branch is opened by 8G. Proofs replace a new representation
 
 Recommend a narrowly defined **same-full-current-state history witness** as the next research question.
 
-Take a complete ordinary material state x=0, including every triad bit. Two legal histories can arrive at x by dissolving pair slot 0 from state 1, or pair slot 1 from state 2. Under a common proposed controller, a past-event selector could alter the future weight of a third slot according to which event occurred.
+Start both histories from the same complete ordinary material state x=0, including every triad bit. One legal history forms then dissolves pair slot 0 (0 -> 1 -> 0); the other forms then dissolves pair slot 1 (0 -> 2 -> 0). They end at identical x with different last events. Under a common proposed controller, a past-event selector could alter the future weight of a third slot according to which event occurred.
 
 The task is to implement and test that common historical selector, not merely initialise different memory counters and report a difference. Declare reachable histories, common priors/clock and exact identical current material configurations. A demonstrated difference in future laws at the same x cannot be expressed by any single fixed ordinary K/J law on that unchanged state.
 

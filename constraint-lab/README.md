@@ -142,3 +142,16 @@ Execution `provenance/executions/008A-context-alignment-repair.md` closes prompt
 ## Reproducibility
 
 A published summary records the engine version, the git commit of the engine, the Python version, the NumPy version, the platform, the specification hash, the coverage counts, and the runtime. A stochastic run replays from the specification hash, the engine version, the constraint-set id, the initial state, the PRNG name (`python-random-MT19937`), and the seed. Selection uses integer weights and `randrange`.
+
+## Generation 8G: formal integration
+
+The [formal area](formal/README.md) integrates the current constraint grammar,
+scoped theorem catalogue, expressivity boundaries, equivalence hierarchy and
+local-to-global pipeline. The [8G report](reports/generation-008g-formal-integration.md)
+distinguishes algebraic identities from historical finite/numerical observations.
+No new experimental or stochastic round is opened, and books remain unchanged.
+
+Use `python -m rs_constraint_lab.formal --verify` to validate the canonical JSONL
+catalogue and generated Markdown/Mermaid views; `--generate` regenerates them.
+The [compilation gate](docs/scientific-plan-discipline.md) applies before future
+history, meta-depth or other ontology-axis claims.
