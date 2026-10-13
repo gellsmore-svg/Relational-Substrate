@@ -16,3 +16,4 @@ __pycache__/
 # Constraint Laboratory bulk regeneration. Committed artefacts are summaries,
 # exemplars, and manifests. Everything under generated/ is disposable.
 constraint-lab/generated/
+gravity-time/generated/

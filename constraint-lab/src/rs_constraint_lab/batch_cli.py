@@ -74,6 +74,8 @@ def main(argv: list[str]) -> int:
         return _generation_008e(argv[1:])
     if argv[0] == "generation008f":
         return _generation_008f(argv[1:])
+    if argv[0] == "gt0":
+        return _gt0(argv[1:])
     if argv[0] == "batch":
         return _batch(argv[1:])
     print(f"unknown command {argv[0]}", file=sys.stderr)
@@ -1131,4 +1133,46 @@ def _generation_008e(argv: list[str]) -> int:
         print(str(exc), file=sys.stderr)
         return 1
     return 2
+
+
+def _gt0(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(prog="rs_constraint_lab gt0")
+    parser.add_argument("command", choices=["write-plan", "run", "verify", "assemble"])
+    parser.add_argument("--root", type=Path, default=None)
+    parser.add_argument("--frozen-plan-commit", default=None)
+    parser.add_argument("--allow-unpushed", action="store_true")
+    parser.add_argument("--output", type=Path, default=None)
+    args = parser.parse_args(argv)
+    from rs_constraint_lab.durable import atomic_write_json
+    from rs_constraint_lab.explore08 import FrozenPlanError
+    from rs_constraint_lab.gt0_exec import PLAN_RELPATH, BasinRunError, assemble, item_path, prepare_g0_plan, publish, require_g0_execution, run_g0
+
+    repo = _repo_root()
+    root = args.root or (repo / "gravity-time" / "generated" / "round-g0")
+    if args.command == "write-plan":
+        plan = prepare_g0_plan()
+        atomic_write_json(repo / PLAN_RELPATH, plan)
+        print(json.dumps({"items": len(plan["items"]), "plan_hash": plan["plan_hash"]}, indent=2))
+        return 0
+    try:
+        plan = require_g0_execution(repo, args.frozen_plan_commit, require_remote=not args.allow_unpushed)
+    except (FrozenPlanError, BasinRunError) as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
+    if args.command == "verify":
+        missing = [i["item_id"] for i in plan["items"] if not item_path(root, i).is_file()]
+        print(json.dumps({"complete": not missing, "missing": missing, "plan_hash": plan["plan_hash"]}, indent=2))
+        return 0 if not missing else 1
+    if args.command == "run":
+        rows = run_g0(root, plan)
+        print(json.dumps({"items": len(rows), "max_wall_seconds": max(r["wall_seconds"] for r in rows), "skipped": sum(r["skipped"] for r in rows)}, indent=2))
+        return 0
+    payload = assemble(root, plan, frozen_plan_commit=args.frozen_plan_commit)
+    if not payload["validation"]["ok"]:
+        print(json.dumps(payload["validation"], indent=2), file=sys.stderr)
+        return 1
+    out = args.output or (repo / "gravity-time" / "reports" / "round-g0-tables.json")
+    digest = publish(payload, out)
+    print(json.dumps({"output": str(out), "payload_sha256": digest}, indent=2))
+    return 0
 
