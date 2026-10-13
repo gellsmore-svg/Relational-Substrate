@@ -1,0 +1,454 @@
+{
+  "analysis_only": true,
+  "analysis_version": "generation-008c-mechanism/v1",
+  "comparison_contract": {
+    "closed_form_balanced_cmi_candidates": {
+      "strong_favour": 0.02336844477204944,
+      "strong_suppress": 0.009748566529643855
+    },
+    "parent_tables_relpath": "constraint-lab/reports/generation-008b-round-b0-tables.json",
+    "parent_tables_sha256": "d7bc06d027eabb62f5f2e5bed312c746ef3f062198a25a35bd5246ce23590e09",
+    "role": "Previously published Generation 8B figures and the closed-form candidates. C0 does not read them as inputs to the derivation.",
+    "rounded_checkpoint_1": [
+      {
+        "class_given_edge_count": 0.01918,
+        "class_information": 0.02798,
+        "edge_count_information": 0.008801,
+        "source": "path",
+        "system": "R06"
+      },
+      {
+        "class_given_edge_count": 0.008838,
+        "class_information": 0.01023,
+        "edge_count_information": 0.001393,
+        "source": "path",
+        "system": "R01"
+      }
+    ],
+    "rounded_checkpoint_tolerance": 5e-06
+  },
+  "estimands": [
+    "minimal sufficient coordinates of the six-slot pair-event law",
+    "closed-form six-slot law and balanced I(current triad; next pair slot | full pair mask)",
+    "R05 stratum mixture of that conditional mutual information",
+    "one-step toggle atlas from each canonical 3-edge source",
+    "checkpoint-1 joint of the initial triad, edge count, and graph class, from the pair-event epoch kernel",
+    "triad-only excursion length and gate survival before the first pair event",
+    "gate-bit and full-triad memory at pair-event checkpoints 0, 1, 2, 4, 8, 16, 32, 64",
+    "per-mask contribution to full-mask slot information",
+    "labelled information discarded by graph-isomorphism projection",
+    "expected pair-event edge-count drift and its rule-induced part"
+  ],
+  "execution": {
+    "commands": [
+      "execute-item",
+      "run-c0",
+      "assemble"
+    ],
+    "heartbeat": "one JSON file per item",
+    "stochastic_trajectories": false,
+    "supervisor": "not used; each item is an in-process kernel read under the watchdog",
+    "watchdog_seconds": 120
+  },
+  "experiment_id": "generation-008c-mechanistic-decomposition",
+  "items": [
+    {
+      "kind": "local-law",
+      "source": null,
+      "system": "R01"
+    },
+    {
+      "kind": "local-law",
+      "source": null,
+      "system": "R02"
+    },
+    {
+      "kind": "local-law",
+      "source": null,
+      "system": "R04"
+    },
+    {
+      "kind": "local-law",
+      "source": null,
+      "system": "R06"
+    },
+    {
+      "kind": "local-law",
+      "source": null,
+      "system": "R05"
+    },
+    {
+      "kind": "topology",
+      "source": "star",
+      "system": null
+    },
+    {
+      "kind": "topology",
+      "source": "path",
+      "system": null
+    },
+    {
+      "kind": "topology",
+      "source": "triangle",
+      "system": null
+    },
+    {
+      "kind": "checkpoint",
+      "source": "star",
+      "system": "R00"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "path",
+      "system": "R00"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "triangle",
+      "system": "R00"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "star",
+      "system": "R01"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "path",
+      "system": "R01"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "triangle",
+      "system": "R01"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "star",
+      "system": "R02"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "path",
+      "system": "R02"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "triangle",
+      "system": "R02"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "star",
+      "system": "R04"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "path",
+      "system": "R04"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "triangle",
+      "system": "R04"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "star",
+      "system": "R06"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "path",
+      "system": "R06"
+    },
+    {
+      "kind": "checkpoint",
+      "source": "triangle",
+      "system": "R06"
+    },
+    {
+      "kind": "excursion",
+      "source": "star",
+      "system": "R00"
+    },
+    {
+      "kind": "memory",
+      "source": "star",
+      "system": "R00"
+    },
+    {
+      "kind": "excursion",
+      "source": "path",
+      "system": "R00"
+    },
+    {
+      "kind": "memory",
+      "source": "path",
+      "system": "R00"
+    },
+    {
+      "kind": "excursion",
+      "source": "triangle",
+      "system": "R00"
+    },
+    {
+      "kind": "memory",
+      "source": "triangle",
+      "system": "R00"
+    },
+    {
+      "kind": "excursion",
+      "source": "star",
+      "system": "R01"
+    },
+    {
+      "kind": "memory",
+      "source": "star",
+      "system": "R01"
+    },
+    {
+      "kind": "excursion",
+      "source": "path",
+      "system": "R01"
+    },
+    {
+      "kind": "memory",
+      "source": "path",
+      "system": "R01"
+    },
+    {
+      "kind": "excursion",
+      "source": "triangle",
+      "system": "R01"
+    },
+    {
+      "kind": "memory",
+      "source": "triangle",
+      "system": "R01"
+    },
+    {
+      "kind": "excursion",
+      "source": "star",
+      "system": "R06"
+    },
+    {
+      "kind": "memory",
+      "source": "star",
+      "system": "R06"
+    },
+    {
+      "kind": "excursion",
+      "source": "path",
+      "system": "R06"
+    },
+    {
+      "kind": "memory",
+      "source": "path",
+      "system": "R06"
+    },
+    {
+      "kind": "excursion",
+      "source": "triangle",
+      "system": "R06"
+    },
+    {
+      "kind": "memory",
+      "source": "triangle",
+      "system": "R06"
+    },
+    {
+      "kind": "atlas",
+      "source": null,
+      "system": "R00"
+    },
+    {
+      "kind": "drift",
+      "source": null,
+      "system": "R00"
+    },
+    {
+      "kind": "atlas",
+      "source": null,
+      "system": "R01"
+    },
+    {
+      "kind": "drift",
+      "source": null,
+      "system": "R01"
+    },
+    {
+      "kind": "atlas",
+      "source": null,
+      "system": "R02"
+    },
+    {
+      "kind": "drift",
+      "source": null,
+      "system": "R02"
+    },
+    {
+      "kind": "atlas",
+      "source": null,
+      "system": "R03"
+    },
+    {
+      "kind": "drift",
+      "source": null,
+      "system": "R03"
+    },
+    {
+      "kind": "atlas",
+      "source": null,
+      "system": "R04"
+    },
+    {
+      "kind": "drift",
+      "source": null,
+      "system": "R04"
+    },
+    {
+      "kind": "atlas",
+      "source": null,
+      "system": "R05"
+    },
+    {
+      "kind": "drift",
+      "source": null,
+      "system": "R05"
+    },
+    {
+      "kind": "atlas",
+      "source": null,
+      "system": "R06"
+    },
+    {
+      "kind": "drift",
+      "source": null,
+      "system": "R06"
+    },
+    {
+      "kind": "atlas",
+      "source": null,
+      "system": "R07"
+    },
+    {
+      "kind": "drift",
+      "source": null,
+      "system": "R07"
+    },
+    {
+      "kind": "symmetry",
+      "source": null,
+      "system": null
+    },
+    {
+      "kind": "counterfactual",
+      "source": null,
+      "system": null
+    },
+    {
+      "kind": "hierarchy",
+      "source": null,
+      "system": null
+    }
+  ],
+  "mode": "B",
+  "new_controls": false,
+  "parameter_fit": false,
+  "plan_hash": "febde3989a8b2f2461440e708897fe78c1fdac436375c0c628b393309932c897",
+  "question": "How does a higher-order triadic condition alter the local lower-order event law, how does visible graph topology convert that local event bias into edge-count versus shape changes, and why is the influence of the initial triadic context rapidly forgotten?",
+  "round_id": "round-c0",
+  "schema": "rs-constraint-lab.mechanism-plan/v1",
+  "sources": [
+    "star",
+    "path",
+    "triangle"
+  ],
+  "stochastic_trajectories": false,
+  "systems": [
+    {
+      "expressions": [],
+      "parent_round_id": "round-000",
+      "parent_system_id": "S00",
+      "role": "baseline relational dynamics",
+      "system_id": "R00"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) | absent(0-1-2) => strong_suppress"
+      ],
+      "parent_round_id": "round-000",
+      "parent_system_id": "S01",
+      "role": "tp_structural_archetype",
+      "system_id": "R01"
+    },
+    {
+      "expressions": [
+        "form(0-1) | absent(0-1-2) => strong_suppress"
+      ],
+      "parent_round_id": "round-000",
+      "parent_system_id": "S05",
+      "role": "tp_structural_archetype",
+      "system_id": "R02"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) => strong_suppress"
+      ],
+      "parent_round_id": "round-001",
+      "parent_system_id": "S10",
+      "role": "perturbation",
+      "system_id": "R03"
+    },
+    {
+      "expressions": [
+        "dissolve(2-3) | present(0-1-2) => strong_suppress"
+      ],
+      "parent_round_id": "round-001",
+      "parent_system_id": "S11",
+      "role": "perturbation",
+      "system_id": "R04"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) => strong_suppress",
+        "dissolve(2-3) | present(0-1-2) => strong_suppress"
+      ],
+      "parent_round_id": "round-000",
+      "parent_system_id": "S09",
+      "role": "composite_anchor",
+      "system_id": "R05"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) | absent(0-1-2) => strong_favour"
+      ],
+      "parent_round_id": "round-001",
+      "parent_system_id": "S12",
+      "role": "perturbation",
+      "system_id": "R06"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) => strong_favour"
+      ],
+      "parent_round_id": "round-002",
+      "parent_system_id": "S16",
+      "role": "perturbation",
+      "system_id": "R07"
+    }
+  ],
+  "tolerances": {
+    "chain_rule": 1e-12,
+    "checkpoint_kernel_reproduction": 1e-08,
+    "closed_form": 1e-12,
+    "cmi_equality": 1e-12,
+    "drift_identity": 1e-12,
+    "gate_memory": 1e-12,
+    "kernel_row": 1e-12,
+    "stationary_drift": 1e-09,
+    "symmetry": 1e-12,
+    "zero_information_floor": 1e-10
+  }
+}
