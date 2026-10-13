@@ -113,3 +113,53 @@ def test_views_raise_on_an_invalid_ledger(tmp_path: Path) -> None:
     (tmp_path / "relations.jsonl").write_text("", encoding="utf-8")
     with pytest.raises(CoherenceError):
         write_views(tmp_path)
+
+
+GRADE_ASYMMETRY_STATEMENT = (
+    "At m=1/4 the action slot has probability 1/21 and each other slot has probability 4/21. "
+    "Total variation from the uniform six-slot law is 5/42. At m=4 the action slot has probability 4/9 "
+    "and each other slot has probability 1/9. Total variation is 5/18. The ratio of those total variations "
+    "is 7/3, which is also the ratio of the balanced informations' Jensen-Shannon terms and of the "
+    "closed-form edge drifts. Five unweighted slots remain in the normalising total, so the reciprocal "
+    "grades sit at different distances from uniformity."
+)
+DRIFT_DIRECTION_STATEMENT = (
+    "Suppressing a dissolution raises expected edge count, favouring a dissolution lowers it, and "
+    "suppressing a formation lowers it. The reweighted slot is a dissolution that would have removed an "
+    "edge, or a formation that would have added one, and the grade moves the probability of that slot. "
+    "This is the local sign of the Generation 8 sparse/dense occupancy axis. Unconditional rules move the "
+    "balanced mean by twice the one-gate conditional mean, because the gate no longer switches the rule off. "
+    "The sign does not determine how much stationary mass sits on each edge-count layer."
+)
+
+
+def test_generation_008d_corrections_keep_the_historical_statements() -> None:
+    findings, relations = load_ledger(ROOT)
+    by_id = {row["finding_id"]: row for row in findings}
+    historical = by_id["F8C-GRADE-ASYMMETRY"]
+    assert historical["statement"] == GRADE_ASYMMETRY_STATEMENT
+    assert historical["status"] == "qualified"
+    assert "7/3" in historical["statement"]
+    drift = by_id["F8C-DRIFT-DIRECTION"]
+    assert drift["statement"] == DRIFT_DIRECTION_STATEMENT
+    assert drift["status"] == "qualified"
+    assert drift["magnitude_class"] == "large"
+    correction = by_id["F8D-CORRECT-GRADE-ASYMMETRY"]
+    assert correction["status"] == "active"
+    assert "information geometry" in correction["statement"].lower() or "Information geometry" in correction["statement"]
+    scope = by_id["F8D-DRIFT-MAGNITUDE-SCOPE"]
+    assert "F010-OCCUPANCY-AXIS" in scope["statement"]
+    typed = {(row["relation_type"], row["from_finding"], row["to_finding"]) for row in relations}
+    assert ("corrects", "F8D-CORRECT-GRADE-ASYMMETRY", "F8C-GRADE-ASYMMETRY") in typed
+    assert ("qualifies", "F8D-DRIFT-MAGNITUDE-SCOPE", "F8C-DRIFT-DIRECTION") in typed
+    markdown = build_markdown(findings, relations)
+    mermaid = build_mermaid(findings, relations)
+    assert "F8D-CORRECT-GRADE-ASYMMETRY" in markdown
+    assert "F8D-DRIFT-MAGNITUDE-SCOPE" in markdown
+    assert "F8D_CORRECT_GRADE_ASYMMETRY" in mermaid
+    assert "corrects" in mermaid
+    assert "F8C_GRADE_ASYMMETRY" in mermaid
+    for row in findings:
+        if row["epistemic_layer"] == "OBSERVATION":
+            assert row["evidence_refs"]
+        assert "overall_score" not in row

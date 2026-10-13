@@ -86,6 +86,7 @@ RELATION_TYPES = {
     "motivated_by",
     "partially_answered_by",
     "enables",
+    "corrects",
 }
 STATUSES = {"active", "qualified", "superseded", "unresolved", "historical_observation"}
 SCORE_FIELDS = {

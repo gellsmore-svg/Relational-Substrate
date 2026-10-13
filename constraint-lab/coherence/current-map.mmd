@@ -41,6 +41,8 @@ flowchart TD
     F013_PLUGIN_OVERSTATES["F013-PLUGIN-OVERSTATES: Plug-in mutual information from these finite tables substantially overstates hidden-con..."]
     F8C_METHOD_GEOMETRY["F8C-METHOD-GEOMETRY: After exploratory statistics identify a stable non-zero structure, search for a minimal..."]
     F8C_METHOD_DIMENSIONS["F8C-METHOD-DIMENSIONS: A finding has several dimensions. Magnitude, robustness, persistence, explanatory reach..."]
+    F8D_CORRECT_GRADE_ASYMMETRY["F8D-CORRECT-GRADE-ASYMMETRY: The favour/suppress total-variation ratio is (5/18)/(5/42) = 7/3, and the one-gate edge..."]
+    F8D_DRIFT_MAGNITUDE_SCOPE["F8D-DRIFT-MAGNITUDE-SCOPE: The large magnitude belongs to F010-OCCUPANCY-AXIS. F8C-DRIFT-DIRECTION explains the si..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
@@ -99,3 +101,5 @@ flowchart TD
   F8C_R05_DENOMINATOR -->|raises_question| Q_GATE_COMPOSITION
   F8C_GATE_REFRESH -->|motivates| Q_H_POSITIVE
   F8C_CLOSED_FORM_CMI -->|motivates| F8C_METHOD_GEOMETRY
+  F8D_CORRECT_GRADE_ASYMMETRY -->|corrects| F8C_GRADE_ASYMMETRY
+  F8D_DRIFT_MAGNITUDE_SCOPE -->|qualifies| F8C_DRIFT_DIRECTION
