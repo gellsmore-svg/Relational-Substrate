@@ -1,0 +1,21 @@
+orbit_id,canonical_rule,orbit_size,action_direction,literal_polarity_relation,literal_pattern,incidence_class,shared_pair_relation
+K3-00,dissolve(0-1) | absent(0-1-2) & absent(0-1-3),6,dissolve,same,absent_absent,face_of_both,action_is_shared_pair
+K3-01,dissolve(0-1) | absent(0-1-2) & present(0-1-3),12,dissolve,mixed,present_absent,face_of_both,action_is_shared_pair
+K3-02,dissolve(0-1) | absent(0-1-2) & absent(0-2-3),24,dissolve,same,absent_absent,face_of_exactly_one,action_is_not_shared_pair
+K3-03,dissolve(0-1) | absent(0-1-2) & present(0-2-3),24,dissolve,mixed,face_absent_other_present,face_of_exactly_one,action_is_not_shared_pair
+K3-04,dissolve(0-1) | present(0-1-2) & present(0-1-3),6,dissolve,same,present_present,face_of_both,action_is_shared_pair
+K3-05,dissolve(0-1) | present(0-1-2) & absent(0-2-3),24,dissolve,mixed,face_present_other_absent,face_of_exactly_one,action_is_not_shared_pair
+K3-06,dissolve(0-1) | present(0-1-2) & present(0-2-3),24,dissolve,same,present_present,face_of_exactly_one,action_is_not_shared_pair
+K3-07,dissolve(0-1) | absent(0-2-3) & absent(1-2-3),6,dissolve,same,absent_absent,face_of_neither,action_is_not_shared_pair
+K3-08,dissolve(0-1) | absent(0-2-3) & present(1-2-3),12,dissolve,mixed,present_absent,face_of_neither,action_is_not_shared_pair
+K3-09,dissolve(0-1) | present(0-2-3) & present(1-2-3),6,dissolve,same,present_present,face_of_neither,action_is_not_shared_pair
+K3-10,form(0-1) | absent(0-1-2) & absent(0-1-3),6,form,same,absent_absent,face_of_both,action_is_shared_pair
+K3-11,form(0-1) | absent(0-1-2) & present(0-1-3),12,form,mixed,present_absent,face_of_both,action_is_shared_pair
+K3-12,form(0-1) | absent(0-1-2) & absent(0-2-3),24,form,same,absent_absent,face_of_exactly_one,action_is_not_shared_pair
+K3-13,form(0-1) | absent(0-1-2) & present(0-2-3),24,form,mixed,face_absent_other_present,face_of_exactly_one,action_is_not_shared_pair
+K3-14,form(0-1) | present(0-1-2) & present(0-1-3),6,form,same,present_present,face_of_both,action_is_shared_pair
+K3-15,form(0-1) | present(0-1-2) & absent(0-2-3),24,form,mixed,face_present_other_absent,face_of_exactly_one,action_is_not_shared_pair
+K3-16,form(0-1) | present(0-1-2) & present(0-2-3),24,form,same,present_present,face_of_exactly_one,action_is_not_shared_pair
+K3-17,form(0-1) | absent(0-2-3) & absent(1-2-3),6,form,same,absent_absent,face_of_neither,action_is_not_shared_pair
+K3-18,form(0-1) | absent(0-2-3) & present(1-2-3),12,form,mixed,present_absent,face_of_neither,action_is_not_shared_pair
+K3-19,form(0-1) | present(0-2-3) & present(1-2-3),6,form,same,present_present,face_of_neither,action_is_not_shared_pair
