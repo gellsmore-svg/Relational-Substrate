@@ -22,12 +22,16 @@ flowchart TB
   not_proof["Not an empirical proof"]
   analogy_vs_identity["Structural analogy is not ontological identity"]
   category["Ontological categories"]
+  bidirectional["Bidirectional coherence"]
   relation["Relation"]
+  interoperability["Universal interoperability"]
   object_first["Object-first picture"]
   substrate["Relational substrate"]
   runtime["Created runtime order"]
   mediation["Mediated influence"]
-  possibility["Constrained possibility (T0)"]
+  possibility["T0: conditions of actualisation"]
+  t0_open["The ontology of T0 (open)"]
+  reachable["Currently reachable versus total admissibility"]
   admissibility["Admissibility"]
   tendency["Tendency"]
   actualisation["Actualisation (T1)"]
@@ -44,13 +48,15 @@ flowchart TB
   information_loss["Preservation is not reconstruction"]
   memory_configuration["Memory as persisting configuration"]
   difference["Source distinction"]
-  transmit["Transmit (relational availability)"]
-  carry["Carry (recoverable constrained continuity)"]
+  transmit["Transmit"]
+  carry["Carry (preserved dependency)"]
   substitutability["Carrier substitutability"]
   receive["Receive (consequential reception)"]
   endogenous_carrier["Endogenous carriers (open)"]
   compatibility["Receiver compatibility"]
   tcr["Transmit–Carry–Receive"]
+  tcr_recursive["Recursive T-C-R"]
+  causation["Cause as consequential relation"]
   nested_tcr["Nested and composed T-C-R"]
   joint_process["Marginals versus joint process"]
   aggregation["Aggregation"]
@@ -176,6 +182,21 @@ flowchart TB
   runtime --> non_agentic
   purpose_upstream --> non_agentic
   admissibility --> constraint_generative
+  global_coherence --> bidirectional
+  desc_not_ont --> bidirectional
+  epistemic_levels --> bidirectional
+  object_first --> interoperability
+  interoperability --> relation
+  possibility --> t0_open
+  possibility --> reachable
+  actualisation --> reachable
+  provenance --> reachable
+  tcr --> tcr_recursive
+  tcr --> causation
+  admissibility --> causation
+  tendency --> causation
+  tcr -. not identical .- consciousness
+  t0_open -. not identical .- creator_creature
   relation --> bridge
   global_coherence --> bridge
   tcr --> bridge
@@ -215,10 +236,10 @@ flowchart TB
   divine_action -. not identical .- actualisation
   purpose_upstream -. not identical .- non_agentic
   subgraph Method["Method"]
-    analogy_vs_identity & assumptions & boundary_validity & category & coherence & coherence_not_fidelity & connectivity & creation_real & creator_creature & darkness & desc_not_ont & description & empirical_constraint & epistemic_levels & global_coherence & knowing_coherence & local_coherence & not_proof & ontology & propagation_cycle & regional_coherence & scripture
+    analogy_vs_identity & assumptions & bidirectional & boundary_validity & category & coherence & coherence_not_fidelity & connectivity & creation_real & creator_creature & darkness & desc_not_ont & description & empirical_constraint & epistemic_levels & global_coherence & knowing_coherence & local_coherence & not_proof & ontology & propagation_cycle & regional_coherence & scripture
   end
   subgraph Physical_ontology["Physical ontology"]
-    actualisation & admissibility & aggregation & carry & compatibility & constrained_stochasticity & constraint_generative & coordination & difference & discriminability & endogenous_carrier & equivalence & identity_invariant & individual_continuity & information_loss & joint_process & layered_stability & local_global & manifestation & mathematics & matter & mediation & memory_configuration & nested_tcr & non_agentic & object_first & persistence & possibility & projection & provenance & purpose_upstream & receive & recovery_kinds & regularity & relation & runtime & stochasticity & substitutability & substrate & tcr & tendency & time & transmit
+    actualisation & admissibility & aggregation & carry & causation & compatibility & constrained_stochasticity & constraint_generative & coordination & difference & discriminability & endogenous_carrier & equivalence & identity_invariant & individual_continuity & information_loss & interoperability & joint_process & layered_stability & local_global & manifestation & mathematics & matter & mediation & memory_configuration & nested_tcr & non_agentic & object_first & persistence & possibility & projection & provenance & purpose_upstream & reachable & receive & recovery_kinds & regularity & relation & runtime & stochasticity & substitutability & substrate & t0_open & tcr & tcr_recursive & tendency & time & transmit
   end
   subgraph Life["Life, persons, theology"]
     alignment & bridge & consciousness & corruption & divine_action & embodiment & higher_order & image & life & limitation & personhood & restoration & resurrection & soul_spirit & three_admissibility

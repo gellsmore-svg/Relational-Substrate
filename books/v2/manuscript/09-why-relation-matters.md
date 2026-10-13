@@ -24,7 +24,7 @@ The serious alternatives already contain a great deal of relation.
 - **Process philosophies** take events and their connections to be more basic than enduring substances.
 - **Structural realism** holds that what our best theories most securely describe is structure, the pattern of relations.
 
-These are serious positions held by serious people. Several of them converge, in important ways, with the view this book defends. The question is therefore not whether the alternatives can make room for relation. Many of them can. It is *where* relation enters, and what that costs.
+These are serious positions held by serious people. Several of them converge, in important ways, with the view this book defends. The question is therefore not whether the alternatives can make room for relation. Many of them can. It is *where* relation enters, and what that costs. Chapter 3 named one cost every ontology must meet: independently located things everywhere share one grammar of interaction. Where an alternative supplies that common interface through a field, a law, a form or a set of powers, the fair question is what work that common structure is doing, and whether it is constitutive relation under another name.
 
 ## Where relation enters
 
@@ -38,7 +38,7 @@ A relation-first ontology does not need that bridge. Its base already has the *f
 
 - constitutive relation (Chapter 3);
 - identity as relational equivalence carrying its own history (Chapter 6);
-- distinctions made available, carried and received as consequence (Chapter 7);
+- distinctions preserved by dependency and received as consequence (Chapter 7);
 - wholes stabilised by the coordination of their parts (Chapter 8).
 
 When relation becomes personal and moral, it does not appear as a stranger from a different reality. It appears in a world whose grain it already follows.
@@ -107,7 +107,7 @@ Scripture describes a world in which relation is fundamental at every level. God
 
 A book that argues for coherence must face its limits here.
 
-A coherent account can be wrong. A detective story can be perfectly coherent and accuse the wrong suspect. More subtly, an argument can become *more* coherent as it proceeds while moving *further* from the truth, if every step builds on an early mistake nobody questions. The research behind this project met this directly, though in exploratory work rather than in formally recorded experiments. While developing a method of reasoning that runs several independent lines of thought on one problem, the researchers observed that when the lines were repeatedly merged into a shared summary and fed back, agreement rose steadily, and an error present in one early line could harden into a confident consensus. They called this a *false attractor*. The lesson, which this book adopts, is that coherence is not the same as fidelity to the truth. Agreement can be produced by a shared hidden premise as easily as by a shared grasp of reality.
+A coherent account can be wrong. A detective story can be perfectly coherent and accuse the wrong suspect. More subtly, an argument can become *more* coherent as it proceeds while moving *further* from the truth, if every step builds on an early mistake nobody questions. The research behind this project met this directly, though in exploratory work rather than in formally recorded experiments. While developing an AI-assisted method of reasoning that runs several independent lines of thought on one problem, the author observed that when the lines were repeatedly merged into a shared summary and fed back, agreement rose steadily, and an error present in one early line could harden into a confident consensus. The project calls this a *false attractor*. The lesson, which this book adopts, is that coherence is not the same as fidelity to the truth. Agreement can be produced by a shared hidden premise as easily as by a shared grasp of reality.
 
 That applies to this book. Its argument is coherent, but that does not make it true, and its own coherence could be a false attractor. The safeguards are those already described. The argument stays accountable to observation wherever observation can reach (Chapter 8 named where it cannot). It keeps its levels of claim distinct. It keeps alternatives in view (Appendix A). And it submits its conclusions to Scripture, which is not one more input to the coherence but the frame within which coherence is sought.
 

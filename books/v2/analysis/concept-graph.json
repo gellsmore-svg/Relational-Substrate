@@ -54,11 +54,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 1,
-    "transitive_dependents": 62,
-    "betweenness": 0.0251,
+    "transitive_dependents": 67,
+    "betweenness": 0.0239,
     "cross_domain_reach": 2,
-    "rank_sum": 116,
-    "rank": 18
+    "rank_sum": 121,
+    "rank": 16
    }
   },
   {
@@ -77,7 +77,8 @@
     "substrate"
    ],
    "cross_domain_relations": [
-    "substrate"
+    "substrate",
+    "t0-open"
    ],
    "evidence": [],
    "scripture_bounds": [
@@ -102,11 +103,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 2,
-    "transitive_dependents": 59,
-    "betweenness": 0.0326,
+    "transitive_dependents": 64,
+    "betweenness": 0.0328,
     "cross_domain_reach": 2,
-    "rank_sum": 106,
-    "rank": 15
+    "rank_sum": 109,
+    "rank": 12
    }
   },
   {
@@ -143,10 +144,10 @@
    "metrics": {
     "prerequisite_depth": 2,
     "transitive_dependents": 6,
-    "betweenness": 0.0257,
+    "betweenness": 0.0239,
     "cross_domain_reach": 2,
-    "rank_sum": 139,
-    "rank": 32
+    "rank_sum": 145,
+    "rank": 30
    }
   },
   {
@@ -182,8 +183,8 @@
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 232,
-    "rank": 73
+    "rank_sum": 248,
+    "rank": 80
    }
   },
   {
@@ -216,11 +217,11 @@
    "load_bearing_declared": false,
    "metrics": {
     "prerequisite_depth": 1,
-    "transitive_dependents": 65,
-    "betweenness": 0.0087,
+    "transitive_dependents": 71,
+    "betweenness": 0.0077,
     "cross_domain_reach": 1,
-    "rank_sum": 169,
-    "rank": 49
+    "rank_sum": 178,
+    "rank": 51
    }
   },
   {
@@ -254,11 +255,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 2,
-    "transitive_dependents": 63,
-    "betweenness": 0.0031,
+    "transitive_dependents": 69,
+    "betweenness": 0.0024,
     "cross_domain_reach": 1,
-    "rank_sum": 175,
-    "rank": 53
+    "rank_sum": 192,
+    "rank": 57
    }
   },
   {
@@ -273,6 +274,7 @@
     "ontology"
    ],
    "dependents": [
+    "bidirectional",
     "epistemic-levels",
     "global-coherence",
     "mathematics",
@@ -298,11 +300,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 3,
-    "transitive_dependents": 5,
-    "betweenness": 0.0615,
+    "transitive_dependents": 6,
+    "betweenness": 0.0437,
     "cross_domain_reach": 2,
-    "rank_sum": 122,
-    "rank": 23
+    "rank_sum": 130,
+    "rank": 22
    }
   },
   {
@@ -337,10 +339,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 3,
-    "transitive_dependents": 59,
-    "betweenness": 0.0049,
+    "transitive_dependents": 65,
+    "betweenness": 0.0044,
     "cross_domain_reach": 2,
-    "rank_sum": 135,
+    "rank_sum": 143,
     "rank": 29
    }
   },
@@ -355,7 +357,9 @@
     "assumptions",
     "desc-not-ont"
    ],
-   "dependents": [],
+   "dependents": [
+    "bidirectional"
+   ],
    "cross_domain_relations": [],
    "evidence": [],
    "scripture_bounds": [],
@@ -374,11 +378,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 4,
-    "transitive_dependents": 0,
-    "betweenness": 0.0021,
+    "transitive_dependents": 1,
+    "betweenness": 0.0029,
     "cross_domain_reach": 1,
-    "rank_sum": 228,
-    "rank": 72
+    "rank_sum": 229,
+    "rank": 71
    }
   },
   {
@@ -413,11 +417,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 1,
-    "transitive_dependents": 10,
-    "betweenness": 0.0193,
+    "transitive_dependents": 11,
+    "betweenness": 0.0161,
     "cross_domain_reach": 1,
-    "rank_sum": 183,
-    "rank": 56
+    "rank_sum": 196,
+    "rank": 59
    }
   },
   {
@@ -450,11 +454,11 @@
    "load_bearing_declared": false,
    "metrics": {
     "prerequisite_depth": 2,
-    "transitive_dependents": 4,
-    "betweenness": 0.0052,
+    "transitive_dependents": 5,
+    "betweenness": 0.0047,
     "cross_domain_reach": 1,
-    "rank_sum": 210,
-    "rank": 63
+    "rank_sum": 219,
+    "rank": 68
    }
   },
   {
@@ -487,17 +491,17 @@
    "load_bearing_declared": false,
    "metrics": {
     "prerequisite_depth": 3,
-    "transitive_dependents": 3,
+    "transitive_dependents": 4,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 227,
-    "rank": 71
+    "rank_sum": 239,
+    "rank": 76
    }
   },
   {
    "id": "global-coherence",
    "term": "Global coherence",
-   "definition": "The whole account of reality — physics, life, persons, morality, history, Scripture — is connected, translates faithfully across its boundaries, keeps its meaning through layers and cycles, and preserves its distinctions.",
+   "definition": "The whole account of reality — physics, life, persons, morality, history, Scripture — is connected, has valid interfaces, keeps its meaning through layers and cycles, stays stable under repair, keeps kinds of knowing accountable, and preserves its distinctions. It runs both ways (see bidirectional coherence).",
    "epistemic_category": "methodological thesis",
    "research_maturity": "working",
    "domain": "method",
@@ -508,6 +512,7 @@
     "regional-coherence"
    ],
    "dependents": [
+    "bidirectional",
     "bridge",
     "not-proof"
    ],
@@ -529,10 +534,10 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 6,
-    "transitive_dependents": 2,
-    "betweenness": 0.1617,
+    "transitive_dependents": 3,
+    "betweenness": 0.1685,
     "cross_domain_reach": 3,
-    "rank_sum": 102,
+    "rank_sum": 109,
     "rank": 13
    }
   },
@@ -571,10 +576,10 @@
    "metrics": {
     "prerequisite_depth": 2,
     "transitive_dependents": 1,
-    "betweenness": 0.0695,
+    "betweenness": 0.0619,
     "cross_domain_reach": 2,
-    "rank_sum": 150,
-    "rank": 34
+    "rank_sum": 158,
+    "rank": 35
    }
   },
   {
@@ -610,10 +615,10 @@
    "metrics": {
     "prerequisite_depth": 3,
     "transitive_dependents": 0,
-    "betweenness": 0.0045,
+    "betweenness": 0.0041,
     "cross_domain_reach": 1,
-    "rank_sum": 232,
-    "rank": 74
+    "rank_sum": 246,
+    "rank": 79
    }
   },
   {
@@ -648,11 +653,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 2,
-    "transitive_dependents": 3,
-    "betweenness": 0.0428,
+    "transitive_dependents": 4,
+    "betweenness": 0.0419,
     "cross_domain_reach": 2,
-    "rank_sum": 151,
-    "rank": 35
+    "rank_sum": 154,
+    "rank": 34
    }
   },
   {
@@ -685,11 +690,11 @@
    "load_bearing_declared": false,
    "metrics": {
     "prerequisite_depth": 2,
-    "transitive_dependents": 5,
-    "betweenness": 0.0053,
+    "transitive_dependents": 6,
+    "betweenness": 0.004,
     "cross_domain_reach": 1,
-    "rank_sum": 212,
-    "rank": 64
+    "rank_sum": 229,
+    "rank": 72
    }
   },
   {
@@ -725,11 +730,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 4,
-    "transitive_dependents": 4,
-    "betweenness": 0.0244,
+    "transitive_dependents": 5,
+    "betweenness": 0.0207,
     "cross_domain_reach": 1,
-    "rank_sum": 181,
-    "rank": 55
+    "rank_sum": 191,
+    "rank": 56
    }
   },
   {
@@ -765,11 +770,11 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 5,
-    "transitive_dependents": 3,
-    "betweenness": 0.014,
+    "transitive_dependents": 4,
+    "betweenness": 0.0102,
     "cross_domain_reach": 1,
-    "rank_sum": 194,
-    "rank": 59
+    "rank_sum": 204,
+    "rank": 63
    }
   },
   {
@@ -804,10 +809,10 @@
    "metrics": {
     "prerequisite_depth": 7,
     "transitive_dependents": 0,
-    "betweenness": 0.0025,
+    "betweenness": 0.0019,
     "cross_domain_reach": 1,
-    "rank_sum": 224,
-    "rank": 69
+    "rank_sum": 244,
+    "rank": 78
    }
   },
   {
@@ -844,10 +849,10 @@
    "metrics": {
     "prerequisite_depth": 4,
     "transitive_dependents": 1,
-    "betweenness": 0.0108,
+    "betweenness": 0.0046,
     "cross_domain_reach": 2,
-    "rank_sum": 172,
-    "rank": 51
+    "rank_sum": 192,
+    "rank": 58
    }
   },
   {
@@ -885,11 +890,49 @@
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 3,
-    "transitive_dependents": 16,
-    "betweenness": 0.0721,
+    "transitive_dependents": 17,
+    "betweenness": 0.0563,
     "cross_domain_reach": 2,
-    "rank_sum": 114,
-    "rank": 17
+    "rank_sum": 124,
+    "rank": 18
+   }
+  },
+  {
+   "id": "bidirectional",
+   "term": "Bidirectional coherence",
+   "definition": "RS must not contradict observation, measurement or successful mathematics; equally, the metaphysics that commonly travels with physics (container space, independent objects, fields as furniture) is a proposal tested for coherence, with no exemption from familiarity or consensus.",
+   "epistemic_category": "methodological thesis",
+   "research_maturity": "working",
+   "domain": "method",
+   "prerequisites": [
+    "desc-not-ont",
+    "epistemic-levels",
+    "global-coherence"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 2",
+   "reactivation_points": [
+    "Ch 8",
+    "Ch 15"
+   ],
+   "example_needed": "measurement versus a picture of what was measured",
+   "common_misunderstanding": "that this rejects physics",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 4,
+   "decomposable": false,
+   "context_load_hint": 12,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 7,
+    "transitive_dependents": 0,
+    "betweenness": 0.0144,
+    "cross_domain_reach": 2,
+    "rank_sum": 174,
+    "rank": 45
    }
   },
   {
@@ -900,6 +943,7 @@
    "research_maturity": "working",
    "domain": "physical",
    "prerequisites": [
+    "interoperability",
     "object-first"
    ],
    "dependents": [
@@ -925,17 +969,54 @@
    "common_misunderstanding": "relation as a mental association",
    "conceptual_difficulty": 3,
    "abstraction_level": 4,
-   "simultaneously_interacting_concepts": 2,
+   "simultaneously_interacting_concepts": 3,
    "decomposable": true,
+   "context_load_hint": 10,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 6,
+    "transitive_dependents": 60,
+    "betweenness": 0.1639,
+    "cross_domain_reach": 3,
+    "rank_sum": 73,
+    "rank": 4
+   }
+  },
+  {
+   "id": "interoperability",
+   "term": "Universal interoperability",
+   "definition": "Independently located things share one interaction grammar: they affect one another, have compatible receptivity and commensurable quantities, and compose into stable structures. Every ontology must account for the common interface.",
+   "epistemic_category": "empirical observation + ontological inference",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "object-first"
+   ],
+   "dependents": [
+    "relation"
+   ],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 3",
+   "reactivation_points": [
+    "Ch 9"
+   ],
+   "example_needed": "granite from Hampshire and Western Australia",
+   "common_misunderstanding": "a probability argument; a caricature of alternatives",
+   "conceptual_difficulty": 3,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
    "context_load_hint": 9,
    "load_bearing_declared": true,
    "metrics": {
     "prerequisite_depth": 5,
-    "transitive_dependents": 56,
-    "betweenness": 0.1579,
-    "cross_domain_reach": 3,
-    "rank_sum": 68,
-    "rank": 3
+    "transitive_dependents": 61,
+    "betweenness": 0.0,
+    "cross_domain_reach": 1,
+    "rank_sum": 204,
+    "rank": 64
    }
   },
   {
@@ -949,6 +1030,7 @@
     "assumptions"
    ],
    "dependents": [
+    "interoperability",
     "relation"
    ],
    "cross_domain_relations": [],
@@ -968,17 +1050,17 @@
    "load_bearing_declared": false,
    "metrics": {
     "prerequisite_depth": 4,
-    "transitive_dependents": 57,
-    "betweenness": 0.0236,
+    "transitive_dependents": 62,
+    "betweenness": 0.0215,
     "cross_domain_reach": 2,
-    "rank_sum": 116,
-    "rank": 19
+    "rank_sum": 123,
+    "rank": 17
    }
   },
   {
    "id": "substrate",
    "term": "Relational substrate",
-   "definition": "The proposed created relational order within which physical things are constituted and act; not matter, not a field, not God.",
+   "definition": "The proposed created relational order within which physical things are constituted and act; not matter, not a field, not God. Its spatiality (intrinsic, emergent or proto-spatial) is open.",
    "epistemic_category": "RS working hypothesis",
    "research_maturity": "working",
    "domain": "physical",
@@ -997,7 +1079,8 @@
    "evidence": [],
    "scripture_bounds": [
     "S-col1",
-    "S-heb113"
+    "S-heb113",
+    "S-isa4022"
    ],
    "intended_first_introduction": "Ch 3",
    "reactivation_points": [
@@ -1014,12 +1097,12 @@
    "context_load_hint": 12,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 6,
-    "transitive_dependents": 52,
-    "betweenness": 0.1597,
+    "prerequisite_depth": 7,
+    "transitive_dependents": 56,
+    "betweenness": 0.1567,
     "cross_domain_reach": 3,
-    "rank_sum": 65,
-    "rank": 2
+    "rank_sum": 72,
+    "rank": 3
    }
   },
   {
@@ -1055,18 +1138,18 @@
    "context_load_hint": 10,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 7,
+    "prerequisite_depth": 8,
     "transitive_dependents": 4,
-    "betweenness": 0.0335,
+    "betweenness": 0.0308,
     "cross_domain_reach": 2,
-    "rank_sum": 129,
-    "rank": 25
+    "rank_sum": 140,
+    "rank": 28
    }
   },
   {
    "id": "mediation",
    "term": "Mediated influence",
-   "definition": "Nothing affects anything across a gap of non-relation; influence passes through relational continuity.",
+   "definition": "Nothing affects anything across a gap of non-relation; every consequence depends on a relation connecting it to its source. Not a claim about travel or distance.",
    "epistemic_category": "RS working hypothesis",
    "research_maturity": "working",
    "domain": "physical",
@@ -1090,19 +1173,19 @@
    "context_load_hint": 9,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 6,
+    "prerequisite_depth": 7,
     "transitive_dependents": 0,
-    "betweenness": 0.0057,
+    "betweenness": 0.0095,
     "cross_domain_reach": 1,
-    "rank_sum": 223,
-    "rank": 68
+    "rank_sum": 226,
+    "rank": 70
    }
   },
   {
    "id": "possibility",
-   "term": "Constrained possibility (T0)",
-   "definition": "What creation is capable of: the space of admissible configurations and transitions.",
-   "epistemic_category": "RS working hypothesis",
+   "term": "T0: conditions of actualisation",
+   "definition": "Minimal commitment: whatever is logically prior to, and conditions, actualisation. Working reading: constrained possibility, the admissible configurations and transitions and their weighting.",
+   "epistemic_category": "ontological inference (minimal) + RS working reading",
    "research_maturity": "working",
    "domain": "physical",
    "prerequisites": [
@@ -1111,7 +1194,9 @@
    "dependents": [
     "actualisation",
     "admissibility",
-    "purpose-upstream"
+    "purpose-upstream",
+    "reachable",
+    "t0-open"
    ],
    "cross_domain_relations": [],
    "evidence": [],
@@ -1122,7 +1207,7 @@
     "Ch 12"
    ],
    "example_needed": "the legal moves of chess, not a game",
-   "common_misunderstanding": "that possibility is a hidden stuff",
+   "common_misunderstanding": "that T0 is a realm, store or second world",
    "conceptual_difficulty": 4,
    "abstraction_level": 5,
    "simultaneously_interacting_concepts": 2,
@@ -1130,12 +1215,87 @@
    "context_load_hint": 11,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 7,
-    "transitive_dependents": 50,
-    "betweenness": 0.0559,
+    "prerequisite_depth": 8,
+    "transitive_dependents": 54,
+    "betweenness": 0.0794,
     "cross_domain_reach": 1,
-    "rank_sum": 132,
-    "rank": 26
+    "rank_sum": 133,
+    "rank": 25
+   }
+  },
+  {
+   "id": "t0-open",
+   "term": "The ontology of T0 (open)",
+   "definition": "What kind of thing T0 is: an admissibility structure, a created potential order, a generative constraint architecture, the substrate itself prior to a particular actualisation, or something not yet formulated.",
+   "epistemic_category": "open question",
+   "research_maturity": "open",
+   "domain": "physical",
+   "prerequisites": [
+    "possibility"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [
+    "creator-creature"
+   ],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 4",
+   "reactivation_points": [
+    "App E"
+   ],
+   "example_needed": "three usages of the label across the project",
+   "common_misunderstanding": "that possibility space is settled ontology",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": false,
+   "metrics": {
+    "prerequisite_depth": 9,
+    "transitive_dependents": 0,
+    "betweenness": 0.0023,
+    "cross_domain_reach": 2,
+    "rank_sum": 200,
+    "rank": 60
+   }
+  },
+  {
+   "id": "reachable",
+   "term": "Currently reachable versus total admissibility",
+   "definition": "What can happen next depends on present state and provenance; total admissibility is everything created order could bear. History changes the former without changing T0.",
+   "epistemic_category": "RS working hypothesis (model support)",
+   "research_maturity": "working",
+   "domain": "physical",
+   "prerequisites": [
+    "actualisation",
+    "possibility",
+    "provenance"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 4",
+   "reactivation_points": [
+    "Ch 6",
+    "Ch 7"
+   ],
+   "example_needed": "a cracked stone can now split along its crack",
+   "common_misunderstanding": "a one-way pipeline from hidden store to output",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 4,
+   "simultaneously_interacting_concepts": 4,
+   "decomposable": false,
+   "context_load_hint": 12,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 17,
+    "transitive_dependents": 0,
+    "betweenness": 0.0277,
+    "cross_domain_reach": 1,
+    "rank_sum": 174,
+    "rank": 46
    }
   },
   {
@@ -1149,6 +1309,7 @@
     "possibility"
    ],
    "dependents": [
+    "causation",
     "compatibility",
     "constrained-stochasticity",
     "constraint-generative",
@@ -1180,11 +1341,11 @@
    "context_load_hint": 9,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 8,
-    "transitive_dependents": 44,
-    "betweenness": 0.1323,
+    "prerequisite_depth": 9,
+    "transitive_dependents": 47,
+    "betweenness": 0.1226,
     "cross_domain_reach": 2,
-    "rank_sum": 78,
+    "rank_sum": 85,
     "rank": 8
    }
   },
@@ -1199,6 +1360,7 @@
     "admissibility"
    ],
    "dependents": [
+    "causation",
     "stochasticity"
    ],
    "cross_domain_relations": [],
@@ -1219,12 +1381,12 @@
    "context_load_hint": 9,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 9,
-    "transitive_dependents": 40,
-    "betweenness": 0.0041,
+    "prerequisite_depth": 10,
+    "transitive_dependents": 43,
+    "betweenness": 0.0077,
     "cross_domain_reach": 1,
-    "rank_sum": 164,
-    "rank": 45
+    "rank_sum": 165,
+    "rank": 39
    }
   },
   {
@@ -1239,6 +1401,7 @@
    ],
    "dependents": [
     "constrained-stochasticity",
+    "reachable",
     "time"
    ],
    "cross_domain_relations": [
@@ -1260,11 +1423,11 @@
    "context_load_hint": 11,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 8,
-    "transitive_dependents": 38,
-    "betweenness": 0.0485,
+    "prerequisite_depth": 9,
+    "transitive_dependents": 41,
+    "betweenness": 0.0552,
     "cross_domain_reach": 2,
-    "rank_sum": 97,
+    "rank_sum": 101,
     "rank": 11
    }
   },
@@ -1299,12 +1462,12 @@
    "context_load_hint": 9,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 10,
-    "transitive_dependents": 39,
-    "betweenness": 0.0103,
+    "prerequisite_depth": 11,
+    "transitive_dependents": 42,
+    "betweenness": 0.0102,
     "cross_domain_reach": 1,
-    "rank_sum": 153,
-    "rank": 37
+    "rank_sum": 158,
+    "rank": 36
    }
   },
   {
@@ -1346,12 +1509,12 @@
    "context_load_hint": 13,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 11,
-    "transitive_dependents": 36,
-    "betweenness": 0.1431,
+    "prerequisite_depth": 12,
+    "transitive_dependents": 39,
+    "betweenness": 0.1307,
     "cross_domain_reach": 2,
-    "rank_sum": 71,
-    "rank": 4
+    "rank_sum": 78,
+    "rank": 5
    }
   },
   {
@@ -1385,7 +1548,7 @@
     "Ch 11",
     "Ch 14"
    ],
-   "example_needed": "a number reached by 4,000 different paths; a knot's type",
+   "example_needed": "a conserved total; a knot's type",
    "common_misunderstanding": "identity = a conserved number",
    "conceptual_difficulty": 3,
    "abstraction_level": 4,
@@ -1394,12 +1557,12 @@
    "context_load_hint": 9,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 12,
-    "transitive_dependents": 32,
-    "betweenness": 0.1159,
+    "prerequisite_depth": 13,
+    "transitive_dependents": 35,
+    "betweenness": 0.0937,
     "cross_domain_reach": 2,
-    "rank_sum": 75,
-    "rank": 7
+    "rank_sum": 81,
+    "rank": 6
    }
   },
   {
@@ -1445,11 +1608,11 @@
    "context_load_hint": 13,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 14,
-    "transitive_dependents": 27,
-    "betweenness": 0.0656,
+    "prerequisite_depth": 15,
+    "transitive_dependents": 30,
+    "betweenness": 0.055,
     "cross_domain_reach": 2,
-    "rank_sum": 80,
+    "rank_sum": 88,
     "rank": 9
    }
   },
@@ -1485,12 +1648,12 @@
    "context_load_hint": 11,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 17,
+    "prerequisite_depth": 18,
     "transitive_dependents": 0,
-    "betweenness": 0.0014,
+    "betweenness": 0.0019,
     "cross_domain_reach": 2,
-    "rank_sum": 166,
-    "rank": 47
+    "rank_sum": 179,
+    "rank": 52
    }
   },
   {
@@ -1528,12 +1691,12 @@
    "context_load_hint": 11,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 16,
+    "prerequisite_depth": 17,
     "transitive_dependents": 2,
-    "betweenness": 0.0004,
+    "betweenness": 0.0006,
     "cross_domain_reach": 2,
-    "rank_sum": 161,
-    "rank": 42
+    "rank_sum": 173,
+    "rank": 43
    }
   },
   {
@@ -1549,6 +1712,7 @@
    "dependents": [
     "individual-continuity",
     "memory-configuration",
+    "reachable",
     "recovery-kinds"
    ],
    "cross_domain_relations": [],
@@ -1571,12 +1735,12 @@
    "context_load_hint": 10,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 15,
-    "transitive_dependents": 4,
-    "betweenness": 0.0161,
+    "prerequisite_depth": 16,
+    "transitive_dependents": 5,
+    "betweenness": 0.0316,
     "cross_domain_reach": 1,
-    "rank_sum": 160,
-    "rank": 39
+    "rank_sum": 150,
+    "rank": 33
    }
   },
   {
@@ -1608,12 +1772,12 @@
    "context_load_hint": 11,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 9,
-    "transitive_dependents": 28,
-    "betweenness": 0.0119,
+    "prerequisite_depth": 10,
+    "transitive_dependents": 31,
+    "betweenness": 0.007,
     "cross_domain_reach": 1,
-    "rank_sum": 160,
-    "rank": 40
+    "rank_sum": 177,
+    "rank": 49
    }
   },
   {
@@ -1640,7 +1804,7 @@
     "Ch 8",
     "Ch 9"
    ],
-   "example_needed": "one family label hiding 1,042 distinct kernels",
+   "example_needed": "one coarse family label hiding many distinct exact laws",
    "common_misunderstanding": "that equal descriptions mean equal things",
    "conceptual_difficulty": 3,
    "abstraction_level": 4,
@@ -1649,12 +1813,12 @@
    "context_load_hint": 9,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 13,
-    "transitive_dependents": 28,
-    "betweenness": 0.0023,
+    "prerequisite_depth": 14,
+    "transitive_dependents": 31,
+    "betweenness": 0.002,
     "cross_domain_reach": 1,
-    "rank_sum": 169,
-    "rank": 50
+    "rank_sum": 183,
+    "rank": 53
    }
   },
   {
@@ -1693,12 +1857,12 @@
    "context_load_hint": 9,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 15,
-    "transitive_dependents": 22,
-    "betweenness": 0.1363,
+    "prerequisite_depth": 16,
+    "transitive_dependents": 24,
+    "betweenness": 0.0892,
     "cross_domain_reach": 2,
-    "rank_sum": 72,
-    "rank": 6
+    "rank_sum": 82,
+    "rank": 7
    }
   },
   {
@@ -1721,7 +1885,7 @@
    "reactivation_points": [
     "Ch 14"
    ],
-   "example_needed": "an erased relation never repaired (0/1,800)",
+   "example_needed": "an erased relation never repaired",
    "common_misunderstanding": "that identity is indestructible",
    "conceptual_difficulty": 3,
    "abstraction_level": 3,
@@ -1730,18 +1894,18 @@
    "context_load_hint": 8,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 13,
+    "prerequisite_depth": 14,
     "transitive_dependents": 0,
-    "betweenness": 0.0024,
+    "betweenness": 0.0021,
     "cross_domain_reach": 1,
-    "rank_sum": 216,
-    "rank": 65
+    "rank_sum": 234,
+    "rank": 73
    }
   },
   {
    "id": "memory-configuration",
    "term": "Memory as persisting configuration",
-   "definition": "Past distinctions embodied in present relations so that they alter future admissibility, tendency, correlation or response; no separate memory substance required.",
+   "definition": "Past distinctions embodied in present relations so that they alter what is currently reachable, tendency, correlation or response; no separate memory substance required.",
    "epistemic_category": "RS working hypothesis",
    "research_maturity": "frontier",
    "domain": "physical",
@@ -1771,18 +1935,18 @@
    "context_load_hint": 10,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 16,
+    "prerequisite_depth": 17,
     "transitive_dependents": 0,
-    "betweenness": 0.0142,
+    "betweenness": 0.0075,
     "cross_domain_reach": 1,
-    "rank_sum": 187,
-    "rank": 58
+    "rank_sum": 210,
+    "rank": 66
    }
   },
   {
    "id": "difference",
    "term": "Source distinction",
-   "definition": "A distinguishable state or relation at a source that could make a difference to something else.",
+   "definition": "A distinguishable state or relation that could make a difference to something other than itself.",
    "epistemic_category": "ontological interpretation",
    "research_maturity": "working",
    "domain": "physical",
@@ -1808,18 +1972,18 @@
    "context_load_hint": 7,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 6,
-    "transitive_dependents": 14,
-    "betweenness": 0.0339,
+    "prerequisite_depth": 7,
+    "transitive_dependents": 16,
+    "betweenness": 0.0309,
     "cross_domain_reach": 1,
-    "rank_sum": 163,
-    "rank": 44
+    "rank_sum": 174,
+    "rank": 47
    }
   },
   {
    "id": "transmit",
-   "term": "Transmit (relational availability)",
-   "definition": "A source distinction becomes able to have consequence beyond its locality; depletion of the source is one subcase, not the definition.",
+   "term": "Transmit",
+   "definition": "A distinction in one relational condition is capable of constraining something other than itself; depletion of the source is one subcase, not the definition.",
    "epistemic_category": "RS interpretive grammar",
    "research_maturity": "working",
    "domain": "physical",
@@ -1846,19 +2010,19 @@
    "context_load_hint": 9,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 7,
-    "transitive_dependents": 13,
-    "betweenness": 0.0024,
+    "prerequisite_depth": 8,
+    "transitive_dependents": 15,
+    "betweenness": 0.003,
     "cross_domain_reach": 1,
-    "rank_sum": 201,
-    "rank": 61
+    "rank_sum": 209,
+    "rank": 65
    }
   },
   {
    "id": "carry",
-   "term": "Carry (recoverable constrained continuity)",
-   "definition": "The relevant distinction stays recoverably constrained across one or more, possibly changing, carrier realisations.",
-   "epistemic_category": "RS interpretive grammar (implemented in model)",
+   "term": "Carry (preserved dependency)",
+   "definition": "The dependency between source distinction and consequence preserves enough of the distinction for the consequence to depend on it; the carrier need not be a separate object, and at the most primitive level may be the relation itself.",
+   "epistemic_category": "RS interpretive grammar",
    "research_maturity": "working",
    "domain": "physical",
    "prerequisites": [
@@ -1879,7 +2043,7 @@
    "reactivation_points": [
     "Ch 13"
    ],
-   "example_needed": "a relay message; a certificate replaced at each step",
+   "example_needed": "signal fires; a telephone call; a constitutive relation",
    "common_misunderstanding": "the carrier as a travelling thing",
    "conceptual_difficulty": 4,
    "abstraction_level": 5,
@@ -1888,12 +2052,12 @@
    "context_load_hint": 13,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 16,
-    "transitive_dependents": 12,
-    "betweenness": 0.0928,
+    "prerequisite_depth": 17,
+    "transitive_dependents": 14,
+    "betweenness": 0.0811,
     "cross_domain_reach": 1,
-    "rank_sum": 120,
-    "rank": 22
+    "rank_sum": 128,
+    "rank": 20
    }
   },
   {
@@ -1923,18 +2087,18 @@
    "context_load_hint": 9,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 17,
+    "prerequisite_depth": 18,
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 218,
-    "rank": 67
+    "rank_sum": 235,
+    "rank": 74
    }
   },
   {
    "id": "receive",
    "term": "Receive (consequential reception)",
-   "definition": "A compatible receiver is changed in a way that depends on the carried distinction; arrival is not reception, and once-only is a property of some receivers.",
+   "definition": "Another state becomes actual, or its admissible actualisation is constrained, because of the source distinction; arrival is not reception, and once-only is a property of transactional receivers.",
    "epistemic_category": "RS interpretive grammar",
    "research_maturity": "working",
    "domain": "physical",
@@ -1961,11 +2125,11 @@
    "context_load_hint": 10,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 17,
-    "transitive_dependents": 9,
-    "betweenness": 0.0266,
+    "prerequisite_depth": 18,
+    "transitive_dependents": 11,
+    "betweenness": 0.0227,
     "cross_domain_reach": 1,
-    "rank_sum": 138,
+    "rank_sum": 148,
     "rank": 31
    }
   },
@@ -1985,7 +2149,7 @@
    "scripture_bounds": [],
    "intended_first_introduction": "Ch 7",
    "reactivation_points": [],
-   "example_needed": "the calculator's designed certificate",
+   "example_needed": "designed carrier protocols in every model so far",
    "common_misunderstanding": "that RS has shown carriers emerge by themselves",
    "conceptual_difficulty": 4,
    "abstraction_level": 5,
@@ -1994,12 +2158,12 @@
    "context_load_hint": 11,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 17,
+    "prerequisite_depth": 18,
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 224,
-    "rank": 70
+    "rank_sum": 241,
+    "rank": 77
    }
   },
   {
@@ -2032,19 +2196,19 @@
    "context_load_hint": 9,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 9,
-    "transitive_dependents": 10,
-    "betweenness": 0.0092,
+    "prerequisite_depth": 10,
+    "transitive_dependents": 12,
+    "betweenness": 0.0043,
     "cross_domain_reach": 1,
-    "rank_sum": 184,
-    "rank": 57
+    "rank_sum": 202,
+    "rank": 61
    }
   },
   {
    "id": "tcr",
    "term": "Transmit–Carry–Receive",
-   "definition": "The grammar by which a source distinction becomes consequential beyond its locality: relational availability, recoverable constrained carriage, compatible consequential reception.",
-   "epistemic_category": "RS interpretive grammar",
+   "definition": "The grammar of consequential manifestation: distinction → preserved dependency → consequence. Presupposes no travel, metric space, intermediate object, encoding, layer stack, exactly-once reception or source consumption. Hypothesis: the operational form of consequential relation itself.",
+   "epistemic_category": "RS working hypothesis",
    "research_maturity": "working",
    "domain": "physical",
    "prerequisites": [
@@ -2054,18 +2218,19 @@
    ],
    "dependents": [
     "bridge",
+    "causation",
     "corruption",
     "life",
-    "nested-tcr"
+    "nested-tcr",
+    "tcr-recursive"
    ],
    "cross_domain_relations": [
+    "consciousness",
     "corruption",
     "life",
     "soul-spirit"
    ],
-   "evidence": [
-    "E-sc"
-   ],
+   "evidence": [],
    "scripture_bounds": [
     "S-isa55",
     "S-rom10"
@@ -2081,7 +2246,7 @@
     "Ch 15"
    ],
    "example_needed": "seeing a stone in daylight",
-   "common_misunderstanding": "that soul or revelation is a physical signal",
+   "common_misunderstanding": "packet transport; that soul or revelation is a physical signal",
    "conceptual_difficulty": 4,
    "abstraction_level": 5,
    "simultaneously_interacting_concepts": 4,
@@ -2089,12 +2254,86 @@
    "context_load_hint": 13,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 18,
-    "transitive_dependents": 8,
-    "betweenness": 0.1283,
+    "prerequisite_depth": 19,
+    "transitive_dependents": 10,
+    "betweenness": 0.1953,
     "cross_domain_reach": 2,
-    "rank_sum": 71,
-    "rank": 5
+    "rank_sum": 69,
+    "rank": 2
+   }
+  },
+  {
+   "id": "tcr-recursive",
+   "term": "Recursive T-C-R",
+   "definition": "Every receiver can transmit, so consequence forms a network: present actuality is received history and a source of what can happen next.",
+   "epistemic_category": "RS working hypothesis",
+   "research_maturity": "frontier",
+   "domain": "physical",
+   "prerequisites": [
+    "tcr"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 7",
+   "reactivation_points": [
+    "Ch 15"
+   ],
+   "example_needed": "molecule to cell to nerve to speech",
+   "common_misunderstanding": "a linear pipeline",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 2,
+   "decomposable": false,
+   "context_load_hint": 11,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 20,
+    "transitive_dependents": 0,
+    "betweenness": 0.0074,
+    "cross_domain_reach": 1,
+    "rank_sum": 203,
+    "rank": 62
+   }
+  },
+  {
+   "id": "causation",
+   "term": "Cause as consequential relation",
+   "definition": "A distinction in one relational condition modifies the admissible actualisation or consequential state of another through a distinction-preserving dependency: by excluding, admitting or weighting states, constraining correlations, preserving an invariant or changing accessibility.",
+   "epistemic_category": "RS working hypothesis (checked against constraint lab)",
+   "research_maturity": "frontier",
+   "domain": "physical",
+   "prerequisites": [
+    "admissibility",
+    "tcr",
+    "tendency"
+   ],
+   "dependents": [],
+   "cross_domain_relations": [],
+   "evidence": [
+    "E-cl8"
+   ],
+   "scripture_bounds": [],
+   "intended_first_introduction": "Ch 7",
+   "reactivation_points": [
+    "Ch 15"
+   ],
+   "example_needed": "a current gate weighting the next event; its initial value forgotten",
+   "common_misunderstanding": "cause as deterministic production only",
+   "conceptual_difficulty": 4,
+   "abstraction_level": 5,
+   "simultaneously_interacting_concepts": 4,
+   "decomposable": false,
+   "context_load_hint": 13,
+   "load_bearing_declared": true,
+   "metrics": {
+    "prerequisite_depth": 20,
+    "transitive_dependents": 0,
+    "betweenness": 0.0191,
+    "cross_domain_reach": 1,
+    "rank_sum": 190,
+    "rank": 55
    }
   },
   {
@@ -2125,12 +2364,12 @@
    "context_load_hint": 11,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 19,
+    "prerequisite_depth": 20,
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 216,
-    "rank": 66
+    "rank_sum": 237,
+    "rank": 75
    }
   },
   {
@@ -2164,12 +2403,12 @@
    "context_load_hint": 9,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 11,
+    "prerequisite_depth": 12,
     "transitive_dependents": 6,
-    "betweenness": 0.003,
+    "betweenness": 0.0024,
     "cross_domain_reach": 1,
-    "rank_sum": 198,
-    "rank": 60
+    "rank_sum": 217,
+    "rank": 67
    }
   },
   {
@@ -2204,12 +2443,12 @@
    "context_load_hint": 7,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 11,
+    "prerequisite_depth": 12,
     "transitive_dependents": 3,
-    "betweenness": 0.0058,
+    "betweenness": 0.0049,
     "cross_domain_reach": 1,
-    "rank_sum": 206,
-    "rank": 62
+    "rank_sum": 221,
+    "rank": 69
    }
   },
   {
@@ -2240,12 +2479,12 @@
    "context_load_hint": 11,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 13,
+    "prerequisite_depth": 14,
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 246,
-    "rank": 77
+    "rank_sum": 268,
+    "rank": 83
    }
   },
   {
@@ -2287,11 +2526,11 @@
    "context_load_hint": 13,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 12,
+    "prerequisite_depth": 13,
     "transitive_dependents": 5,
-    "betweenness": 0.1073,
+    "betweenness": 0.0985,
     "cross_domain_reach": 2,
-    "rank_sum": 103,
+    "rank_sum": 110,
     "rank": 14
    }
   },
@@ -2322,12 +2561,12 @@
    "context_load_hint": 9,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 13,
+    "prerequisite_depth": 14,
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 250,
-    "rank": 78
+    "rank_sum": 272,
+    "rank": 84
    }
   },
   {
@@ -2370,12 +2609,12 @@
    "context_load_hint": 12,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 13,
+    "prerequisite_depth": 14,
     "transitive_dependents": 1,
-    "betweenness": 0.0696,
+    "betweenness": 0.0644,
     "cross_domain_reach": 1,
-    "rank_sum": 174,
-    "rank": 52
+    "rank_sum": 185,
+    "rank": 54
    }
   },
   {
@@ -2408,12 +2647,12 @@
    "context_load_hint": 10,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 14,
+    "prerequisite_depth": 15,
     "transitive_dependents": 0,
-    "betweenness": 0.0297,
+    "betweenness": 0.0313,
     "cross_domain_reach": 2,
-    "rank_sum": 152,
-    "rank": 36
+    "rank_sum": 160,
+    "rank": 37
    }
   },
   {
@@ -2441,12 +2680,12 @@
    "context_load_hint": 11,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 9,
+    "prerequisite_depth": 10,
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 267,
-    "rank": 80
+    "rank_sum": 289,
+    "rank": 86
    }
   },
   {
@@ -2482,12 +2721,12 @@
    "context_load_hint": 9,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 16,
+    "prerequisite_depth": 17,
     "transitive_dependents": 12,
-    "betweenness": 0.0331,
+    "betweenness": 0.0128,
     "cross_domain_reach": 2,
-    "rank_sum": 100,
-    "rank": 12
+    "rank_sum": 124,
+    "rank": 19
    }
   },
   {
@@ -2519,12 +2758,12 @@
    "context_load_hint": 8,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 17,
+    "prerequisite_depth": 18,
     "transitive_dependents": 1,
-    "betweenness": 0.0,
+    "betweenness": 0.0043,
     "cross_domain_reach": 2,
-    "rank_sum": 179,
-    "rank": 54
+    "rank_sum": 168,
+    "rank": 41
    }
   },
   {
@@ -2562,12 +2801,12 @@
    "context_load_hint": 12,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 8,
+    "prerequisite_depth": 9,
     "transitive_dependents": 4,
-    "betweenness": 0.0086,
+    "betweenness": 0.0078,
     "cross_domain_reach": 2,
-    "rank_sum": 168,
-    "rank": 48
+    "rank_sum": 177,
+    "rank": 50
    }
   },
   {
@@ -2605,12 +2844,12 @@
    "context_load_hint": 10,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 9,
+    "prerequisite_depth": 10,
     "transitive_dependents": 3,
-    "betweenness": 0.0131,
+    "betweenness": 0.0099,
     "cross_domain_reach": 2,
-    "rank_sum": 164,
-    "rank": 46
+    "rank_sum": 174,
+    "rank": 48
    }
   },
   {
@@ -2641,12 +2880,12 @@
    "context_load_hint": 7,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 9,
+    "prerequisite_depth": 10,
     "transitive_dependents": 0,
-    "betweenness": 0.0027,
+    "betweenness": 0.0025,
     "cross_domain_reach": 1,
-    "rank_sum": 255,
-    "rank": 79
+    "rank_sum": 275,
+    "rank": 85
    }
   },
   {
@@ -2682,11 +2921,11 @@
    "context_load_hint": 15,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 19,
+    "prerequisite_depth": 20,
     "transitive_dependents": 0,
-    "betweenness": 0.0723,
+    "betweenness": 0.0829,
     "cross_domain_reach": 3,
-    "rank_sum": 94,
+    "rank_sum": 100,
     "rank": 10
    }
   },
@@ -2724,11 +2963,11 @@
    "context_load_hint": 9,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 19,
+    "prerequisite_depth": 20,
     "transitive_dependents": 1,
-    "betweenness": 0.0177,
+    "betweenness": 0.0151,
     "cross_domain_reach": 2,
-    "rank_sum": 132,
+    "rank_sum": 139,
     "rank": 27
    }
   },
@@ -2762,12 +3001,12 @@
    "context_load_hint": 10,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 20,
+    "prerequisite_depth": 21,
     "transitive_dependents": 0,
-    "betweenness": 0.0071,
+    "betweenness": 0.0065,
     "cross_domain_reach": 2,
-    "rank_sum": 161,
-    "rank": 43
+    "rank_sum": 173,
+    "rank": 44
    }
   },
   {
@@ -2783,7 +3022,8 @@
    ],
    "dependents": [],
    "cross_domain_relations": [
-    "matter"
+    "matter",
+    "tcr"
    ],
    "evidence": [],
    "scripture_bounds": [],
@@ -2798,12 +3038,12 @@
    "context_load_hint": 12,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 18,
+    "prerequisite_depth": 19,
     "transitive_dependents": 0,
-    "betweenness": 0.0133,
+    "betweenness": 0.0221,
     "cross_domain_reach": 3,
-    "rank_sum": 133,
-    "rank": 28
+    "rank_sum": 132,
+    "rank": 24
    }
   },
   {
@@ -2844,11 +3084,11 @@
    "context_load_hint": 11,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 18,
+    "prerequisite_depth": 19,
     "transitive_dependents": 8,
-    "betweenness": 0.0953,
+    "betweenness": 0.0739,
     "cross_domain_reach": 3,
-    "rank_sum": 57,
+    "rank_sum": 63,
     "rank": 1
    }
   },
@@ -2885,12 +3125,12 @@
    "context_load_hint": 10,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 19,
+    "prerequisite_depth": 20,
     "transitive_dependents": 0,
-    "betweenness": 0.0497,
+    "betweenness": 0.0433,
     "cross_domain_reach": 2,
-    "rank_sum": 137,
-    "rank": 30
+    "rank_sum": 148,
+    "rank": 32
    }
   },
   {
@@ -2926,12 +3166,12 @@
    "context_load_hint": 8,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 17,
+    "prerequisite_depth": 18,
     "transitive_dependents": 9,
-    "betweenness": 0.0016,
+    "betweenness": 0.0009,
     "cross_domain_reach": 2,
-    "rank_sum": 148,
-    "rank": 33
+    "rank_sum": 161,
+    "rank": 38
    }
   },
   {
@@ -2961,12 +3201,12 @@
    "context_load_hint": 9,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 19,
+    "prerequisite_depth": 20,
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 243,
-    "rank": 76
+    "rank_sum": 263,
+    "rank": 82
    }
   },
   {
@@ -2999,12 +3239,12 @@
    "context_load_hint": 10,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 19,
+    "prerequisite_depth": 20,
     "transitive_dependents": 5,
-    "betweenness": 0.0179,
+    "betweenness": 0.0132,
     "cross_domain_reach": 2,
-    "rank_sum": 118,
-    "rank": 20
+    "rank_sum": 131,
+    "rank": 23
    }
   },
   {
@@ -3039,12 +3279,12 @@
    "context_load_hint": 10,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 20,
+    "prerequisite_depth": 21,
     "transitive_dependents": 4,
-    "betweenness": 0.0125,
+    "betweenness": 0.0089,
     "cross_domain_reach": 2,
-    "rank_sum": 126,
-    "rank": 24
+    "rank_sum": 136,
+    "rank": 26
    }
   },
   {
@@ -3084,12 +3324,12 @@
    "context_load_hint": 11,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 21,
+    "prerequisite_depth": 22,
     "transitive_dependents": 3,
-    "betweenness": 0.043,
+    "betweenness": 0.0399,
     "cross_domain_reach": 2,
-    "rank_sum": 108,
-    "rank": 16
+    "rank_sum": 113,
+    "rank": 15
    }
   },
   {
@@ -3119,12 +3359,12 @@
    "context_load_hint": 7,
    "load_bearing_declared": false,
    "metrics": {
-    "prerequisite_depth": 22,
+    "prerequisite_depth": 23,
     "transitive_dependents": 0,
     "betweenness": 0.0,
     "cross_domain_reach": 1,
-    "rank_sum": 237,
-    "rank": 75
+    "rank_sum": 255,
+    "rank": 81
    }
   },
   {
@@ -3146,6 +3386,7 @@
    ],
    "evidence": [],
    "scripture_bounds": [
+    "S-gen216",
     "S-rev21"
    ],
    "intended_first_introduction": "Ch 14",
@@ -3161,11 +3402,11 @@
    "context_load_hint": 11,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 22,
+    "prerequisite_depth": 23,
     "transitive_dependents": 1,
-    "betweenness": 0.0373,
+    "betweenness": 0.0274,
     "cross_domain_reach": 2,
-    "rank_sum": 119,
+    "rank_sum": 129,
     "rank": 21
    }
   },
@@ -3200,12 +3441,12 @@
    "context_load_hint": 12,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 23,
+    "prerequisite_depth": 24,
     "transitive_dependents": 0,
-    "betweenness": 0.0181,
+    "betweenness": 0.0139,
     "cross_domain_reach": 2,
-    "rank_sum": 154,
-    "rank": 38
+    "rank_sum": 167,
+    "rank": 40
    }
   },
   {
@@ -3241,12 +3482,12 @@
    "context_load_hint": 11,
    "load_bearing_declared": true,
    "metrics": {
-    "prerequisite_depth": 10,
+    "prerequisite_depth": 11,
     "transitive_dependents": 2,
-    "betweenness": 0.026,
+    "betweenness": 0.0209,
     "cross_domain_reach": 2,
-    "rank_sum": 160,
-    "rank": 41
+    "rank_sum": 171,
+    "rank": 42
    }
   }
  ],
@@ -3310,6 +3551,10 @@
   {
    "id": "E-cl3",
    "label": "Constraint Laboratory Generation 3 (2026-10-03): hidden triadic relation yields non-Markov pairwise process"
+  },
+  {
+   "id": "E-cl8",
+   "label": "Constraint Laboratory Generations 4–8D (2026-10): current gate efficacy versus forgotten initial value; two-gate log-weight composition"
   },
   {
    "id": "E-conv",
@@ -3396,6 +3641,14 @@
   {
    "id": "S-rom10",
    "reference": "Romans 10:14–17"
+  },
+  {
+   "id": "S-gen216",
+   "reference": "Genesis 2:16–17; 1:31"
+  },
+  {
+   "id": "S-isa4022",
+   "reference": "Isaiah 40:22"
   }
  ],
  "edges": [
@@ -3880,6 +4133,121 @@
    "target": "admissibility"
   },
   {
+   "source": "bidirectional",
+   "type": "REQUIRES",
+   "target": "global-coherence"
+  },
+  {
+   "source": "bidirectional",
+   "type": "REQUIRES",
+   "target": "desc-not-ont"
+  },
+  {
+   "source": "bidirectional",
+   "type": "REQUIRES",
+   "target": "epistemic-levels"
+  },
+  {
+   "source": "interoperability",
+   "type": "REQUIRES",
+   "target": "object-first"
+  },
+  {
+   "source": "relation",
+   "type": "REQUIRES",
+   "target": "interoperability"
+  },
+  {
+   "source": "interoperability",
+   "type": "SUPPORTS",
+   "target": "relation"
+  },
+  {
+   "source": "t0-open",
+   "type": "REQUIRES",
+   "target": "possibility"
+  },
+  {
+   "source": "reachable",
+   "type": "REQUIRES",
+   "target": "possibility"
+  },
+  {
+   "source": "reachable",
+   "type": "REQUIRES",
+   "target": "actualisation"
+  },
+  {
+   "source": "reachable",
+   "type": "REQUIRES",
+   "target": "provenance"
+  },
+  {
+   "source": "tcr-recursive",
+   "type": "REQUIRES",
+   "target": "tcr"
+  },
+  {
+   "source": "tcr-recursive",
+   "type": "EXPLAINS",
+   "target": "reachable"
+  },
+  {
+   "source": "causation",
+   "type": "REQUIRES",
+   "target": "tcr"
+  },
+  {
+   "source": "causation",
+   "type": "REQUIRES",
+   "target": "admissibility"
+  },
+  {
+   "source": "causation",
+   "type": "REQUIRES",
+   "target": "tendency"
+  },
+  {
+   "source": "causation",
+   "type": "EVIDENCED_BY",
+   "target": "E-cl8"
+  },
+  {
+   "source": "causation",
+   "type": "NOT_ESTABLISHED_BY",
+   "target": "E-cl8"
+  },
+  {
+   "source": "bidirectional",
+   "type": "CONSTRAINS",
+   "target": "mathematics"
+  },
+  {
+   "source": "tcr",
+   "type": "EXPLAINS",
+   "target": "manifestation"
+  },
+  {
+   "source": "substrate",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-isa4022"
+  },
+  {
+   "source": "restoration",
+   "type": "SCRIPTURALLY_BOUNDED_BY",
+   "target": "S-gen216"
+  },
+  {
+   "source": "tcr",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "consciousness"
+  },
+  {
+   "source": "t0-open",
+   "type": "NOT_IDENTICAL_TO",
+   "target": "creator-creature"
+  },
+  {
    "source": "bridge",
    "type": "REQUIRES",
    "target": "relation"
@@ -4338,11 +4706,6 @@
    "source": "identity-invariant",
    "type": "EVIDENCED_BY",
    "target": "E-noether"
-  },
-  {
-   "source": "tcr",
-   "type": "EVIDENCED_BY",
-   "target": "E-sc"
   },
   {
    "source": "projection",

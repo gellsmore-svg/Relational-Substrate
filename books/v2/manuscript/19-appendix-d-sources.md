@@ -76,14 +76,14 @@ The book stands within a long Christian intellectual tradition, and the followin
 
 Several elements of the Relational Substrate framework have, as far as the project has been able to determine, no direct precedent:
 
-- the use of constrained possibility, constrained chance and preserved invariance together as an account of created physical order;
-- the T-C-R grammar as a cross-scale account of consequence;
+- the use of conditioned possibility, constrained chance and preserved equivalence together as an account of created physical order;
+- the T-C-R grammar as a cross-scale account of consequence, and as a candidate form of consequential relation itself;
 - the argument that a relation-first physical ontology removes a metaphysical gulf between the physical world and human moral life.
 
 These are offered as contributions within the tradition, not departures from it.
 
 ## A note on method
 
-This framework was developed with substantial help from AI systems, including ChatGPT (OpenAI) and Claude (Anthropic). They were used for surveying literature across physics, philosophy, biology and theology, for building and running the computational experiments, for testing the framework's internal coherence, and in drafting. The second edition was restructured with the help of an explicit concept-dependency analysis and a readability review, whose records are kept with the manuscript in the project repository.
+This framework was developed with substantial help from AI systems, including ChatGPT and Codex (OpenAI), Claude (Anthropic) and Grok (xAI). They were used for surveying literature across physics, philosophy, biology and theology, for building and running the computational experiments, for testing the framework's internal coherence, and in drafting. The second edition was restructured with the help of an explicit concept-dependency analysis and a readability review, and revision 2.4 followed a full human reading of the finished book. The records are kept with the manuscript in the project repository. There is one human author. The AI systems were tools of analysis and drafting, not members of a research team.
 
 What was not delegated is judgement. The positions retained in the book were evaluated, challenged and selected by the author. Where AI assistance produced a claim, it was checked against sources and against the research record, not accepted on trust. Several first-edition claims were withdrawn in this edition precisely because that checking found them unsupported. The honest description of the process is a collaboration between human reasoning and machine-assisted research and synthesis, with responsibility for coherence, theological containment and final judgement kept in human hands.

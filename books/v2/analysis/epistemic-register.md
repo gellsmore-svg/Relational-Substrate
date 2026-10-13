@@ -168,3 +168,21 @@ Grouped by provenance. Rows supersede v2.1 rows where noted.
 | 33″ | The Ch 9 contrast targets ontologies whose fundamental entities are individuated independently of constitutive relation, not all substance, powers or hylomorphic views | philosophical | M | Ch 9 | 33′ scope |
 | R0 | Interactional relation ("everything interacts") is not yet the RS claim; RS proposes constitutive relation | philosophical | H | Ch 3 | — |
 | 27″ | Unreceived transmission is an incomplete T-C-R chain, not a lesser reality | philosophical | H | Ch 7 | — |
+
+## v2.4 revisions (2026-10-13)
+
+| # | Claim | Category | Conf. | Location | Supersedes |
+|---|---|---|---|---|---|
+| C2 | Global coherence is bidirectional: the metaphysics commonly carried by physics is tested for coherence and gains no evidential weight from familiarity or consensus; observation, measurement and successful mathematics constrain every ontology | methodological thesis | M–H | Ch 2, 8, 15 | coherence framed one-way |
+| C3 | Universal interoperability (one interaction grammar for independently located things) is an observation requiring ontological explanation; a common relational ground explains it directly | empirical observation + ontological inference | M | Ch 3, 9 | — |
+| T0′ | T0 names whatever conditions actualisation (minimal commitment); its ontology is open; "constrained possibility" is the working reading | ontological inference + open question | H (minimal); open (ontology) | Ch 4, App B, App E | T0 = constrained possibility |
+| T1′ | Currently reachable admissibility depends on present state and provenance; total admissibility does not; history changes the former without changing T0 | RS working hypothesis | M | Ch 4 | one-way T0 → T1 |
+| 25″ | T-C-R is the grammar of consequential manifestation: distinction → preserved dependency → consequence; no travel, metric space, intermediate object, layer stack, exactly-once reception or source consumption presupposed; the carrier may be the relation | RS working hypothesis | M (grammar) | Ch 7, App E | 25′ |
+| 25b | T-C-R is the operational form of consequential relation itself, and recursive | RS working hypothesis (stronger) | L–M | Ch 7 | — |
+| 25c | Causal relation = a distinction modifying another state's admissible actualisation through a distinction-preserving dependency | RS working hypothesis; checked against constraint lab Generations 4–8D | L–M | Ch 7 | — |
+| M1 | A consequence-preserving relationship holds between substrate distinctions and manifest actuality; its architecture (including "transformation") is not assumed | ontological inference | M | Ch 7, App E | — |
+| SP | Substrate spatiality is open (intrinsic, emergent, proto-spatial) | open question | — | Ch 3, App E | — |
+| 22″ | Memory alters what is currently reachable, tendency or response | RS working hypothesis | L–M | Ch 6 | 22′ wording |
+| E1 | A real command and real possibility of disobedience before the Fall show that moral freedom did not require actualised evil | theological inference from Genesis 1:31; 2:16–17 | H | Ch 14 | — |
+| SC | The stochastic calculator is an illustration (Ch 5) and provenance (App B), not evidence for T-C-R or the ontology | methodological | H | Ch 5, App B | calculator as recurring evidence |
+

@@ -13,11 +13,18 @@ This book begins with Scripture. That is a decision with consequences, and it sh
 > `All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness: That the man of God may be perfect, throughly furnished unto all good works.`
 > *2 Timothy 3:16-17*
 
-Scripture claims its own authority, and this book receives that claim. Receiving it does not mean Scripture supplies a vocabulary for physics, or that the Bible is a textbook written in the genre of a modern laboratory report. Genesis is narrative, theological and liturgical. It is authoritative in the form it actually takes. Nor does Scripture-first mean that every first interpretation of a text is correct. Scripture does not overstep its own truthfulness, but human interpretation of Scripture can overstep, and so can human interpretation of observation. When the Bible and some scientific account seem to collide, the fault almost always lies in a human extension on one side or the other: an imported philosophical assumption, a reading pressed beyond what the text says, or a metaphysical conclusion drawn beyond what the measurements show. It rarely lies in revelation or in careful measurement as such.
+Scripture claims its own authority, and this book receives that claim. Scripture is authoritative in the form it actually takes. Genesis is narrative, theological and liturgical, not a laboratory report, and it is not a hidden vocabulary for physics. Scripture does not overstep its own truthfulness. Human interpretation can overstep, on both sides. When the Bible and a scientific account seem to collide, the fault almost always lies in a human extension: a reading pressed beyond what the text says, or a metaphysical conclusion drawn beyond what the measurements show. It does not lie in revelation, or in careful measurement as such.
 
 What Scripture-first does mean is this: Scripture sets the boundaries within which an account of reality may be built. It tells us what kind of world exists, who made it, what has gone wrong with it, and what God is doing about it. Inside those boundaries there is room for patient inquiry into how the world works. A proposal that contradicts what Scripture teaches about creation is ruled out, however elegant it is. A proposal that Scripture neither teaches nor forbids may be explored, but it must never be presented as though the Bible taught it.
 
-That last point will govern the whole book. The Relational Substrate is a modern proposal. Scripture never mentions it, and the book will not pretend otherwise. What the book will show, chapter by chapter, is how Scripture bounds the proposal: what any true account of created order must respect, and where the proposal sits inside those bounds.
+That last point will govern the whole book. The Relational Substrate is a modern proposal. Scripture never mentions it. So the book keeps four relations between Scripture and its proposal carefully apart:
+
+- *Scripture teaches* something: the world is created, held, good, and distinct from God.
+- The proposal *is consistent with* what Scripture teaches.
+- The proposal offers *a possible mechanism compatible with* a scriptural claim, without Scripture teaching the mechanism.
+- Scripture *provokes a question* that the proposal explores.
+
+The first sets real boundaries. The others never borrow its authority.
 
 ## A world that is really there
 
@@ -30,7 +37,7 @@ Genesis does not begin with an idea, a possibility or a meditation. It begins wi
 
 The order of the verses matters. The heaven and the earth are created in the first verse. In the second, the earth is already there, though unformed and empty. The deep is there. The waters are there. Darkness is upon the face of the deep. Only then is light spoken into being. Genesis 1:1 is therefore best read as a real beginning, the creation of a world that exists. What follows is formation, separation, filling and manifestation *within* that world, not the gradual appearance of reality out of nothing.
 
-This has a quiet but important consequence for the darkness of verse 2. In ordinary speech, darkness can mean the mere absence of light, or something threatening, or moral evil. Later Scripture uses darkness in all those senses, and rightly. But in Genesis 1:2 darkness belongs to created reality before light is spoken. The text says only that darkness was upon the face of the deep, and that light then came. From that sequence the book draws an inference: darkness here is best understood as a real condition of a real world, not yet manifest in the visible order that follows. That reading is interpretation, not something Genesis states in so many words. What the text does make plain is that the darkness of verse 2 is not nothing, since the earth, the deep and the waters are already there with it, and that it is not presented as evil. Scripture elsewhere speaks of darkness as having its own created place:
+This has a quiet but important consequence for the darkness of verse 2. In ordinary speech, darkness can mean the mere absence of light, or something threatening, or moral evil. Later Scripture uses darkness in all those senses, and rightly. But in Genesis 1:2 darkness belongs to created reality before light is spoken. The text says only that darkness was upon the face of the deep, and that light then came. Two things are plain in the text: the darkness of verse 2 is not nothing, since the earth, the deep and the waters are already there with it, and it is not presented as evil. From the sequence the book draws an inference, and labels it as one: darkness here is a real condition of a real world, not yet manifest in the visible order that follows. Scripture elsewhere speaks of darkness as having its own created place:
 
 > `Where is the way where light dwelleth? and as for darkness, where is the place thereof.`
 > *Job 38:19*
@@ -107,10 +114,17 @@ At the same time, Scripture leaves a great deal open. It does not tell us how el
 > `It is the glory of God to conceal a thing: but the honour of kings is to search out a matter.`
 > *Proverbs 25:2*
 
+Some of Scripture's language provokes questions without answering them. The prophet speaks of the One
+
+> `that stretcheth out the heavens as a curtain, and spreadeth them out as a tent to dwell in.`
+> *Isaiah 40:22*
+
+Language like this sits uneasily with the habit of imagining space as an empty container that simply exists, and it invites the question of what extension itself is. It does not supply a geometry for the deep order of creation, and this book does not extract one from it. Scripture constrains and provokes. It is not a hidden physics textbook.
+
 There is a practical benefit in beginning this way. An inquiry that treats every conceivable account of origins as equally likely has no way to focus. Beginning from one Creator and one created order narrows the field to what can actually be investigated. It is not a cage on inquiry. It is a starting point that makes careful inquiry possible.
 
 ## The questions the book will answer
 
 Return to the stone on the path. Scripture has told us that the stone and the light and the one who sees them all belong to a real, created, ordered, dependent world. It has told us that the world is not God, that it holds together in Christ, and that its deepest order is not necessarily visible. It has told us that creation contains distinct kinds of reality, which may share forms of relation without sharing a nature.
 
-That is the frame. It does not yet tell us what the stone is, how the light reaches us, or why the stone will still be a stone tomorrow. To ask those questions well, one more thing is needed first. We need to be clear about the difference between describing how something behaves and knowing what it is, and about how human beings come to know anything at all when the deepest things cannot simply be seen. That is the work of the next chapter.
+That is the frame. It does not yet tell us what the stone is, how the light reaches us, or why the stone will still be a stone tomorrow. Those questions belong together, because the same world answers them all, and any account of the stone must also leave room for the one who sees it and for everything Scripture says about that person. To ask them well, one more thing is needed first. We need to be clear about the difference between describing how something behaves and knowing what it is, and about how human beings come to know anything at all when the deepest things cannot simply be seen. That is the work of the next chapter.

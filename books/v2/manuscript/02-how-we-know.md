@@ -1,24 +1,27 @@
 # Chapter 2: How We Come to Know What Is There
 
-Suppose you drop the stone from the path. It falls. If you time the fall and measure the height, you can calculate how fast it was moving when it struck the ground, and your answer will be very nearly right. You can do better still: with Isaac Newton's law of gravitation you can calculate the orbit of the Moon, and with Albert Einstein's general relativity you can calculate the tiny corrections that make satellite navigation work. The clocks on navigation satellites run fast relative to clocks on the ground by about thirty-eight millionths of a second each day. That is a mixture of two relativistic effects, and without correcting for it, positions on the ground would drift by kilometres within a day. In 2015 detectors in the United States registered gravitational waves from two black holes merging over a billion light-years away. The waveform matched what general relativity predicted.
+Suppose you drop the stone from the path. It falls. Time the fall and measure the height, and you can calculate how fast it struck the ground. With Newton's law you can calculate the orbit of the Moon, and with Einstein's general relativity the corrections that keep satellite navigation accurate to within metres. Physics knows how gravity behaves with extraordinary precision.
 
-This is one of the great achievements of human understanding, and it should be said without reservation. Physics knows how gravity behaves with extraordinary precision.
+Now ask a different question. What *is* gravity? Is it a force reaching across space, as Newton's equations seem to say? Is it the curvature of a spacetime that exists as a kind of thing in its own right? Or is spacetime itself a set of relations between events, with no existence apart from them? Physicists and philosophers who accept every one of those measurements still disagree about these questions, and nobody yet knows how gravity fits with quantum theory. The disagreement is not about whether the stone falls, or how fast. It is about what kind of reality the equations describe.
 
-Now ask a different question. What *is* gravity? Is it a force reaching across space, as Newton's equations seem to say? Is it the curvature of a spacetime that exists as a kind of thing in its own right? Or is spacetime itself a set of relations between events, with no existence apart from them? Physicists and philosophers who accept every one of the measurements just described still disagree about these questions. Nobody yet knows how gravity fits with quantum theory. The disagreement is not about whether the stone falls, or how fast, or where the satellite is. It is about what kind of reality the extremely successful equations are describing.
+That gap, between describing how something behaves and knowing what it is, is the subject of this chapter. It runs through all of our knowledge of the physical world. A discipline can be locally exact and still leave globally consequential questions about what exists unanswered, and seeing that clearly is the key to everything this book attempts.
 
-That gap, between describing how something behaves and knowing what it is, is the subject of this chapter. It is not a weakness peculiar to gravity. It runs through all of our knowledge of the physical world, and seeing it clearly is the key to everything this book attempts.
+## Six layers of knowing
 
-## Six ways of knowing about a thing
+When we say we "know" something about the stone, we can mean several different things, and they must be kept apart.
 
-When we say we "know" something about the stone, we might mean any of several different things, and they are worth separating.
+1. We have **observed** it: seen it, touched it, noticed that it falls.
+2. We have **measured** it, attaching numbers by a defined procedure: its mass, its temperature, the time of its fall.
+3. We have found a **mathematical relation** that predicts the measurements, such as distance fallen growing with the square of the time.
+4. We have a **physical model** that organises the behaviour, such as Earth's mass pulling on the stone's mass, or the stone following a straight path through curved spacetime.
+5. We hold an **ontological interpretation** of the model: what must actually be there for the behaviour to happen at all.
+6. We live within a **worldview** in which that interpretation feels natural.
 
-We may have **observed** it: seen it, touched it, noticed that it falls. We may have **measured** it, attaching numbers by a defined procedure: its mass, its temperature, the time of its fall. We may have **described it mathematically**, finding an equation whose solutions match the measurements, such as distance fallen increasing with the square of time. We may be able to **predict** it, using the description to say in advance what will be measured. We may have **modelled a mechanism**: a picture of what produces the behaviour, such as Earth's mass pulling on the stone's mass. And we may claim to know its **ontology**: what must actually be there for the behaviour to happen at all.
+Each layer depends on the ones before it, but the later layers are not guaranteed by the earlier ones. An equation can predict perfectly while different pictures of the mechanism remain possible. A mechanism can be useful while the question of what fundamentally exists remains open. The history of physics shows this repeatedly. Newton's law of gravitation predicted superbly for more than two centuries, yet the picture of a force acting instantly across empty space, which Newton himself found troubling, was eventually replaced by a very different picture in general relativity. The *predictions* were largely preserved, and many of them still underpin practical calculation today. The *account of what is there* changed profoundly.
 
-Each step is genuine knowledge, and each depends on the steps before it. But the later steps are not guaranteed by the earlier ones. An equation can predict perfectly while different pictures of the mechanism remain possible. A mechanism can be useful while the question of what fundamentally exists remains open. The history of physics shows this repeatedly. Newton's law of gravitation predicted superbly for more than two centuries, yet the picture of a force acting instantly across empty space, which Newton himself found troubling, was eventually replaced by a very different picture in general relativity. The *predictions* were largely preserved, and many of them still underpin practical calculation today. The *account of what is there* changed profoundly.
+Quantum theory makes the point sharper. Its mathematical machinery is among the most precisely confirmed in science. Yet the same mathematics is read in strikingly different ways. On some readings the world is fundamentally a matter of chance at the smallest scales. On others it is entirely deterministic, with hidden variables or branching worlds. These readings disagree about what reality is while agreeing about every measurement made so far. (A further family of theories modifies the quantum dynamics itself and predicts slight differences, which experiments are now testing.) A successful description can be joined to more than one ontology.
 
-Quantum theory makes the point sharper. Its mathematical machinery is perhaps the most precisely confirmed in science. Its account of the electron's magnetic strength agrees with measurement to about one part in a trillion. Yet the same mathematics is read in strikingly different ways. On some readings the world is fundamentally a matter of chance at the smallest scales. On others it is entirely deterministic, with hidden variables or branching worlds. These readings disagree about what reality is while agreeing about every measurement made so far. (A further family of theories modifies the quantum dynamics itself and predicts slight differences, which experiments are now testing.) A successful description can be joined to more than one ontology.
-
-None of this belittles science. It is simply what descriptions are. A description tells us how things behave. An ontology asks what kind of thing has to be there for that behaviour to be possible. The two cannot be interchanged, and confusing them causes trouble in both directions. When descriptive success is quietly treated as though it had settled ontology, metaphysical assumptions enter unexamined. When the gap between description and ontology is used as an excuse to ignore description, the result is fantasy. This book tries to avoid both.
+This is simply what descriptions are. A description tells us how things behave. An ontology asks what kind of thing has to be there for that behaviour to be possible. Mathematics can describe regularity without being identical to the reality it describes, and a model can predict without settling what fundamentally exists. Confusing the layers causes trouble in both directions. When descriptive success is treated as though it had settled ontology, metaphysical assumptions enter unexamined. When the gap is used as an excuse to ignore description, the result is fantasy.
 
 ## Every account starts somewhere
 
@@ -37,16 +40,18 @@ Because of that, the book keeps track of what kind of claim it is making. It doe
 | Scriptural commitment | God created the heaven and the earth. |
 | Observation | A dropped stone falls. |
 | Mathematical description | Distance fallen grows with the square of the time. |
-| Scientific consensus | General relativity is precisely confirmed. |
-| Scientifically contested | Whether quantum events are fundamentally chancy. |
-| Philosophical claim | Description does not by itself settle ontology. |
-| Theological inference | The substrate, if it exists, is a creature and not divine. |
-| Relational Substrate hypothesis | Physical things are constituted within relations. |
-| Relational Substrate model result | A number kept its identity across 4,000 different stochastic paths in a computer model. |
+| Well-tested physical model | General relativity's predictions are precisely confirmed. |
+| Contested interpretation | Whether quantum events are fundamentally chancy. |
+| Philosophical or ontological inference | Description does not by itself settle ontology. |
+| Theological inference | The substrate is a creature and not divine. |
+| Relational Substrate working hypothesis | Physical things are constituted within relations. |
+| Model result | In a computer model, a rule that forbids a change differs exactly from one that merely makes it unlikely. |
 | Exploratory research, not yet a formal record | Two states that look the same can differ in ways a later interaction reveals. |
 | Open question | How consciousness relates to physical order. |
 
-The difference between the last few rows is especially important. When the book reports that something happened in one of the project's computer models, it means exactly that: it happened in a model built on stated assumptions. Some of the project's work was also done in exploratory research sessions whose conclusions have not yet been published as formal experiment records; where the book uses those conclusions, it says so. A model can show that an idea is possible, coherent and capable of doing work. It cannot show that nature works that way. Where the book moves from a model to a claim about the world, it will say that it is doing so.
+Appendix E applies the same vocabulary to every major claim in the book.
+
+When the book reports something from one of the project's computer models, it means that it happened in a model built on stated assumptions. A model can show that an idea is possible, coherent and capable of doing work. It cannot show that nature works that way. Some conclusions come from exploratory sessions not yet published as formal records, and the book marks them.
 
 ## Local, regional and global coherence
 
@@ -60,22 +65,32 @@ How, then, does one judge an ontology, if no measurement can display it directly
 
 ![Figure 1. Three scopes of coherence, nested: local coherence (a model explains one bounded phenomenon), within regional coherence (neighbouring domains such as physics, chemistry and biology integrate), within global coherence (the whole account of reality, from physics to Scripture, remains mutually compatible).](v2/figures/fig-coherence.png)
 
-What makes global coherence demanding is not only that nothing may contradict anything else. Four further tests matter, and they can be stated in ordinary terms.
+What makes global coherence demanding is not only that nothing may contradict anything else. Several further tests matter, and they can be stated in ordinary terms.
 
 - **Real connection.** The domains must be joined by intelligible transitions, not merely placed side by side. It is not enough that an account says true things about physics and true things about persons. It must be possible to see how the one bears on the other.
-- **Faithful translation across boundaries.** When an idea crosses from one domain to another, as when a physical consequence becomes a biological signal or a capacity to act becomes a moral responsibility, it must keep what is relevant and must not quietly turn into something of a different kind.
+- **Valid interfaces.** Where one kind of reality meets another, as when a physical consequence becomes a biological signal or a capacity to act becomes a moral responsibility, the meeting must be explained, not assumed. An idea crossing a boundary must keep what is relevant and must not quietly turn into something of a different kind.
 - **Meaning kept through the layers.** A claim carried through several explanatory levels should still be recognisably itself at the end. If a word like "identity" or "cause" changes meaning a little at each step, the account can sound plausible paragraph by paragraph and still fail as a whole.
+- **Stability under repair.** Solving a problem in one domain must not break what already held together in another.
 - **The round trip.** Take a claim from one domain through others and back again, for example from bodily identity to the identity of an organism to the identity of a person and back to the body. It should return materially the same. Hidden drift shows up most clearly on the way home.
+- **Accountable kinds of knowing.** Observation, mathematics, philosophical inference and revelation are different kinds of knowing. They must be kept distinct, and none may silently overrule the others.
 
-And through all of these, the real distinctions must survive: Creator and creature, the material and the spiritual, description and ontology, probability and arbitrariness, analogy and identity, what is possible and what is right, a person and a configuration. An account that achieves smooth connection by erasing these is not more coherent. It has simply lost something real.
+And through all of these, the real distinctions must survive: Creator and creature, the material and the spiritual, description and ontology, probability and arbitrariness, analogy and identity, what is possible and what is right, a person and a configuration. Connection is not reduction. An account that achieves smooth connection by erasing these is not more coherent. It has simply lost something real.
 
 The book's central methodological thesis can now be stated. **Local explanatory success is not sufficient evidence that an ontology is true if that ontology produces contradiction elsewhere.** An account of physical reality may explain falling stones perfectly. If it also makes promises, responsibility or love unintelligible, so that they must be explained away as illusions, then it has a global problem that its local success cannot cure. Conversely, an account that coheres across all these domains, while respecting every robust observation, has a strong claim on our attention even if its deepest commitments cannot be measured directly.
 
-This is the book's own thesis, and it should not be presented as more than that. It is not a rule that contemporary science has adopted. Most working scientists are, rightly, occupied with local and regional coherence, and many would regard questions of global coherence as belonging to philosophy. The book argues for the thesis, chiefly in Chapter 9. Its standing is that of a philosophical argument, open to challenge.
+This is a philosophical thesis, and Chapter 9 argues for it. Most working scientists are rightly occupied with local and regional coherence. Global coherence asks what their successes jointly require.
+
+## Coherence runs both ways
+
+The test applies in both directions. The Relational Substrate must not contradict what has been observed and measured, or what successful mathematics predicts. Any proposal that does is finished, however elegant it is.
+
+But the picture of reality that commonly travels with physics is also a proposal. Space is a container. The world is a collection of independent objects. Fields and particles are the furniture of reality. Laws are rules things obey. These belong to layers four to six above, not to layers one to three. They are often well motivated, and some may be right. They gain no evidential weight from being familiar, mainstream, widely published or taught in every school. Consensus is a fact about people, not a measurement of the world. So the conventional metaphysics of physics is held to the same standard of global coherence as the proposal of this book, and it receives no exemption for being physics.
+
+This is not a rejection of modern physics. It is a refusal to confuse what was measured with a picture of what was measured.
 
 ## Human knowing is already like this
 
-The appeal to coherence may sound like a special pleading invented to protect a framework that cannot be tested. In fact it describes how human beings come to know almost everything they know.
+The appeal to coherence is not a special method invented for this book. It is how human beings come to know almost everything they know.
 
 Consider a doctor diagnosing an illness. She has a set of symptoms, some test results and a patient's history, none of which is conclusive alone. She forms the diagnosis that best accounts for all of them together, and remains ready to revise it if a new result does not fit. A jury does the same with testimony and evidence. So does a historian reconstructing what happened in a century no living person saw. So, on a smaller scale, do you, when you recognise a friend's voice on a crackling telephone line, or decide that a noise downstairs is the cat. Philosophers call the pattern *inference to the best explanation*. Studies of reasoning describe how people weigh competing hypotheses by how much of the evidence each explains and how well the pieces hang together.
 
@@ -85,16 +100,16 @@ If that is how ordinary knowing works, then asking for the most globally coheren
 
 ## Observation still decides a great deal
 
-Coherence does not mean ignoring evidence, and it must never become an excuse for doing so. A worldview can be internally coherent and false. A detailed and consistent story about a flat Earth is still wrong. Observation constrains ontology powerfully, and in three ways.
+Coherence is not proof of truth. A worldview can be internally coherent and false; a detailed and consistent story about a flat Earth is still wrong. The book says this once, here, and takes it as read from now on. Observation constrains ontology powerfully, and in three ways.
 
 First, robust observation rules out accounts that contradict it. Any ontology of the physical world must account for the measured speed of light, the stability of atoms and the precise predictions of quantum theory, or it fails, however elegant it is. Second, observation reveals regularities that any account must respect, even when it cannot yet explain them. Third, observation can test specific proposals. If a framework predicts something definite, measurement can confirm it or reject it. Several proposals of the Relational Substrate project have been tested in exactly this way. Some survived, some failed, and the failures are recorded in the project's public research history.
 
 What observation cannot do by itself is display the deepest ontology as one more visible object. It narrows the field. It rarely, if ever, picks out a single winner. The deepest account is chosen, provisionally, by asking which of the accounts that observation still permits makes the most coherent sense of everything else we know.
 
-## What this book is not trying to do
+## What kind of argument this is
 
-One consequence follows, and the book wants to state it before making any physical proposal at all. **This book is not trying to prove empirically that the Relational Substrate is the ultimate ontology of reality.** That would be the wrong target. Empirical work can test predictions, reject incompatible models, reveal regularities and compare explanatory adequacy. It does not convert an interpretation of what lies beneath all measurements into something directly measured.
+No measurement can display the deepest structure of created reality as one more visible object. Empirical work tests predictions, rejects incompatible models and reveals regularities. It does not convert an interpretation of what lies beneath all measurement into something measured. So the book does not offer an empirical proof of the Relational Substrate.
 
-The project is better described as a **global coherence exercise**. It asks what account of physical reality fits most coherently with everything we know: observation, experiment and mathematics, reason and lived human experience, and, in this book specifically, Scripture. It holds itself accountable to evidence at every point it can be tested, and it holds itself accountable to coherence everywhere else. If it fails, it should fail in ways that can be seen. Chapter 8 names some of the observations that would count against particular claims.
+What it offers is a **global coherence argument**, and it holds itself to a plain standard. Here is what the book proposes. Here is why. Here is what supports it. Here is what would count against it. Here is what remains unknown. Then it follows the consequences. A hypothesis that is stated clearly enough to be wrong can be improved. One that is hedged until it says nothing cannot. Chapter 8 names observations that would count against particular claims.
 
 With these tools in hand, the book can return to the stone and ask the first ontological question. The stone appears to be a separate thing, sitting on the path, distinct from the light, the air and you. Is that what it fundamentally is?

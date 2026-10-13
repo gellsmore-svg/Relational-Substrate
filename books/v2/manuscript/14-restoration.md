@@ -6,7 +6,7 @@ This chapter asks what restoration means within the account the book has given, 
 
 ## Restoration is God's act
 
-Chapter 6 drew a lesson from the stochastic calculator: preserving an equivalence class is not the same as repairing it. When information was destroyed, nothing in the system brought it back. Conservation kept what remained. It did not restore what was lost. Chapter 10 showed how living things partly overcome this, by carrying templates from which damage can be repaired. But that capacity is itself limited, and it fails in the end: every living thing dies.
+Chapter 6 drew a lesson: preserving an equivalence class is not the same as repairing it. When information was destroyed, nothing in the system brought it back. Conservation kept what remained. It did not restore what was lost. Chapter 10 showed how living things partly overcome this, by carrying templates from which damage can be repaired. But that capacity is itself limited, and it fails in the end: every living thing dies.
 
 So the healing of creation cannot be expected from creation's own resources. If restoration came only from the persistence of the world's invariants, there would be no restoration of what corruption has destroyed: no raising of the dead, no righting of wrongs, no new creation. Scripture places restoration elsewhere, in the action of God:
 
@@ -108,7 +108,7 @@ Innocence that has never been tested is real goodness, but it is unowned. Its lo
 > `But he knoweth the way that I take: when he hath tried me, I shall come forth as gold.`
 > *Job 23:10*
 
-Three clarifications keep this from being misheard.
+Four clarifications keep this from being misheard.
 
 First, disorder is not good in itself, suffering is not valuable in itself, and evil is not God's means of producing good. The higher alignment comes only when disorder is truthfully confronted and repaired, "unto them which are exercised thereby". Otherwise corruption simply deepens. God redeems evil that has occurred. That is a different and greater claim than that evil was needed.
 
@@ -124,6 +124,18 @@ Third, the freedom that makes owned alignment possible is a freedom to love and 
 
 > `But without faith it is impossible to please him: for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him.`
 > *Hebrews 11:6*
+
+Fourth, Genesis itself shows that freedom never required evil to be actualised. Before the Fall the command was real, and so was the possibility of disobeying it:
+
+> `And the LORD God commanded the man, saying, Of every tree of the garden thou mayest freely eat: But of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.`
+> *Genesis 2:16-17*
+
+Yet the creation in which that command stood had already been pronounced good without reserve:
+
+> `And God saw every thing that he had made, and, behold, it was very good.`
+> *Genesis 1:31*
+
+A genuine moral choice was present in a creation that contained no actualised evil. So moral agency does not need evil as one of its ingredients, and the good creation was complete without it. What restoration achieves after the Fall is God's answer to evil that did occur, not the fulfilment of a plan that needed it. Whether humanity, had it obeyed, would have come to know good and evil in some other and rightful way is an interesting theological possibility. The text does not say so, and this book offers it only as speculation.
 
 ## Consummation, not return
 

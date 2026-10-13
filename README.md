@@ -580,7 +580,7 @@ The primary texts of the framework are maintained in the `books/` directory:
 
 - `books/relational-substrate.md` — Technical ontology volume (*The Relational Substrate*)
 - `books/coherent-biblical-ontology-bachelors.md` — Coherent Biblical Ontology
-- `books/coherent-biblical-ontology-second-edition.md` — Coherent Biblical Ontology, Second Edition (October 2026; rebuilt around the stochastic, T-C-R and constraint-laboratory research; working record in `books/v2/`)
+- `books/coherent-biblical-ontology-second-edition.md` — Coherent Biblical Ontology, Second Edition (October 2026, revision 2.4; a relation-first ontology judged by global coherence, with T-C-R as the grammar of consequential manifestation; working record in `books/v2/`)
 
 These contain the full current statements of the RS (Relational Substrate) framework, including the rename from the earlier AMS terminology and the explicit transformation tier.
 

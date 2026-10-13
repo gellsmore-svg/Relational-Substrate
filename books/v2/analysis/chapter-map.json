@@ -531,6 +531,44 @@
     "Ch 14",
     "Ch 15"
    ]
+  },
+  "bidirectional": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 8",
+    "Ch 15"
+   ]
+  },
+  "interoperability": {
+   "first": "Ch 3",
+   "reactivate": [
+    "Ch 9"
+   ]
+  },
+  "t0-open": {
+   "first": "Ch 4",
+   "reactivate": [
+    "App E"
+   ]
+  },
+  "reachable": {
+   "first": "Ch 4",
+   "reactivate": [
+    "Ch 6",
+    "Ch 7"
+   ]
+  },
+  "tcr-recursive": {
+   "first": "Ch 7",
+   "reactivate": [
+    "Ch 15"
+   ]
+  },
+  "causation": {
+   "first": "Ch 7",
+   "reactivate": [
+    "Ch 15"
+   ]
   }
  }
 }
