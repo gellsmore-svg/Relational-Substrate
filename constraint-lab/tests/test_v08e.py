@@ -245,3 +245,54 @@ def test_single_k3_rule_is_structurally_simple() -> None:
     rule = Constraint(FORM, 0, ((6, 1), (7, 0)), "weak_favour", ())
     assert structurally_simple((rule,))
     assert product_weights((rule,))[0][0] == 1
+
+
+def test_recorded_e0_journey_descends_from_the_frozen_plan() -> None:
+    from rs_constraint_lab.explore08a import verify_journey_chronology
+
+    path = REPO / "constraint-lab" / "exploration" / "generation-008e" / "journey.jsonl"
+    reports = verify_journey_chronology(REPO, path)
+    assert len(reports) == 1
+    assert reports[0]["frozen_plan_commit"] == "5303388815a3695ac6bf4eb4176c0102b9ca460c"
+    assert reports[0]["result_commit"] == "2daf1ce3f54f8bacbc331b6bc575b44ed3f20c27"
+    assert reports[0]["plan_hash"] == "ec515306c2d3fa669f15ce31a86cdaac78f5fcab0d01ea7ad82533fde71c9be6"
+
+
+def _published() -> tuple[dict, dict]:
+    from rs_constraint_lab.durable import canonical_json, sha256_bytes
+
+    reports = REPO / "constraint-lab" / "reports"
+    body = json.loads((reports / "generation-008e-round-e0-tables.json").read_text(encoding="utf-8"))
+    summary = {key: value for key, value in body.items() if key != "payload_sha256"}
+    assert sha256_bytes(canonical_json(summary).encode("utf-8")) == body["payload_sha256"]
+    tables = {}
+    for name, digest in body["detail_sha256"].items():
+        rows = json.loads((reports / "tables" / f"generation-008e-{name.replace('_', '-')}.json").read_text(encoding="utf-8"))
+        assert sha256_bytes(canonical_json(rows).encode("utf-8")) == digest
+        tables[name] = rows
+    return body, tables
+
+
+def test_every_published_e0_system_is_a_single_corner_conjunction() -> None:
+    body, tables = _published()
+    assert body["validation"] == {"ok": True, "problems": []}
+    systems = tables["weighted_systems"]
+    assert len(systems) == 80
+    for s in systems:
+        assert (s["K"], s["rule_cardinality"], s["minimal_coordinate_count"], s["effective_gate_dimension"], s["gate_interaction_order"], s["distinct_local_law_rows"]) == (3, 1, 3, 2, 2, 2)
+    by_system: dict[str, list[dict]] = {}
+    for row in tables["truth_tables"]:
+        by_system.setdefault(row["system_id"], []).append(row)
+    for rows in by_system.values():
+        assert sum(r["state_count"] for r in rows) == 1024
+        active = [r for r in rows if r["active"]]
+        assert len(active) == 1 and active[0]["state_count"] == 128
+        assert active[0]["literal_1_truth"] == active[0]["literal_2_truth"] == 1
+        for r in rows:
+            if not r["active"]:
+                assert r["normalised_slot_law"] == ["1/6"] * 6
+    for row in tables["interaction"]:
+        assert row["gap"] <= 1e-12 and row["literal_delta12"] != 0
+    for row in tables["comparison_8d"]:
+        assert row["8d_exact_labelled_match_count"] == 0 and row["8d_exact_s4_match_count"] == 0
+        assert row["symbolic_additive_representable"] is False
