@@ -19,7 +19,7 @@ import pytest
 
 from rs_constraint_lab.durable import atomic_write_json
 from rs_constraint_lab.explore08 import FrozenPlanError, plan_hash
-from rs_constraint_lab.explore08a import repository_root
+from rs_constraint_lab.explore08a import repository_root, verify_journey_chronology
 from rs_constraint_lab.explore08c import (
     CHECKPOINT_REPRODUCTION_TOLERANCE,
     CLOSED_FORM_TOLERANCE,
@@ -442,6 +442,15 @@ def test_one_executor_item_is_bounded() -> None:
     assert payload["item_id"] == "local-law-R01"
     assert payload["wall_seconds"] < 120
     assert payload["result"]["gap"] < CLOSED_FORM_TOLERANCE
+
+
+def test_recorded_c0_journey_descends_from_the_frozen_plan() -> None:
+    path = REPO / "constraint-lab" / "exploration" / "generation-008c" / "journey.jsonl"
+    reports = verify_journey_chronology(REPO, path)
+    assert len(reports) == 1
+    assert reports[0]["frozen_plan_commit"] == "3e783387cd2c8050559c29bac059beae03555ab7"
+    assert reports[0]["result_commit"] == "f962000d7c6c750565843426d46bcd3fdbb43026"
+    assert reports[0]["plan_hash"] == "febde3989a8b2f2461440e708897fe78c1fdac436375c0c628b393309932c897"
 
 
 def test_engine_language_stays_descriptive() -> None:
