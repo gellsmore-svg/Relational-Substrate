@@ -97,5 +97,5 @@ The brief's formulations that the research revised are recorded with reasons in 
   - Eden clarification on the non-necessity of evil (Ch 14).
   - New Appendix E, Current Ontological Reference.
 - **Records:** `../analysis/v2.4-reader-review-constraint-record.md`; research baseline Part I rewritten; concept graph, epistemic register and terminology register updated.
-- **Divergences from the instruction:** none of substance. The covers were not regenerated, because their text is unaffected.
+- **Divergences from the instruction:** none of substance. Covers: the back-cover text was rewritten to the v2.4 framing and both covers were regenerated deterministically. The front PNG is byte-identical; only the back changed.
 
