@@ -41,6 +41,17 @@ flowchart TD
     F8D_INFORMATION_BLINDNESS["F8D-INFORMATION-BLINDNESS: The balanced current-triad slot information is constant on 80 groups defined by family,..."]
     F8D_INFORMATION_NOT_DIMENSION["F8D-INFORMATION-NOT-DIMENSION: The largest balanced information in the census, 0.059365300578680294 nats, belongs to a..."]
     F8D_WEAK_GRADE_SURFACE["F8D-WEAK-GRADE-SURFACE: For one conditional rule, balanced slot information is 0.009748566529643857, 0.00323867..."]
+    F8E_K3_CONJUNCTION_INTERACTION["F8E-K3-CONJUNCTION-INTERACTION: On every one of the 80 single K=3 rules, the action log multiplier in literal coordinat..."]
+    F8E_RAW_SIGN["F8E-RAW-SIGN: In raw triad-bit coordinates the second difference of a K=3 conjunction is +ln(m) when ..."]
+    F8E_K2_K3_NONREPRESENTABILITY["F8E-K2-K3-NONREPRESENTABILITY: Over the four literal corners, the one-literal additive features 1, U1, U2 have rank 3 ..."]
+    F8E_NO_8D_MATCH["F8E-NO-8D-MATCH: None of the 80 K3 laws matches any of the 3584 Generation 8D weighted two-rule laws, la..."]
+    F8E_K3_INFORMATION_SURFACE["F8E-K3-INFORMATION-SURFACE: Balanced current-triad slot information of one K=3 conjunction is (1/2) JS_(1/4,3/4)(q_..."]
+    F8E_K3_DRIFT_SURFACE["F8E-K3-DRIFT-SURFACE: The rule-induced balanced edge drift of one K=3 conjunction is 5(1-m)/[48(m+5)] for dis..."]
+    F8E_BOOLEAN_LOGIT_BASIS["F8E-BOOLEAN-LOGIT-BASIS: Every four-corner action-logit table has the unique raw expansion c + a G1 + b G2 + d G..."]
+    F8E_CORNER_BASIS["F8E-CORNER-BASIS: The four K=3 corner indicators are a second basis of the same space, related to (1, G1,..."]
+    F8E_W4_COVERAGE["F8E-W4-COVERAGE: With at most one W4 rule per basis element, the corner basis reaches 625 four-corner ta..."]
+    F8E_XOR_XNOR_FROM_K3["F8E-XOR-XNOR-FROM-K3: Two K=3 rules, A | G1 & NOT G2 => m and A | NOT G1 & G2 => m, give an exact XOR-gated a..."]
+    F8E_GENERAL_K_INTERACTION["F8E-GENERAL-K-INTERACTION: On one placement, for r = 1 to 4 triad literals (K = 2 to 5) and every literal pattern,..."]
   end
   subgraph INFERENCE [Inferences]
     F008_COMPOSITION_REPRESENTATION["F008-COMPOSITION-REPRESENTATION: The magnitude of a two-rule interaction residual depends on the representation and the ..."]
@@ -50,6 +61,8 @@ flowchart TD
     F8C_DRIFT_DIRECTION["F8C-DRIFT-DIRECTION: Suppressing a dissolution raises expected edge count, favouring a dissolution lowers it..."]
     F8D_ADDITIVE_FEATURE_GRAMMAR["F8D-ADDITIVE-FEATURE-GRAMMAR: In the current multiplicative-weight DSL, constraints compose as additive features in e..."]
     F8D_SYNTAX_CAN_VANISH["F8D-SYNTAX-CAN-VANISH: Contextual syntax can be dynamically redundant. Complementary conditions with one weigh..."]
+    F8E_CARDINALITY_VS_K["F8E-CARDINALITY-VS-K: Within this DSL, rule cardinality and expression complexity are different operations on..."]
+    F8E_ORDINARY_K_SUPPLIES_INTERACTION["F8E-ORDINARY-K-SUPPLIES-INTERACTION: Ordinary expression complexity already introduces gate-by-gate interaction and two-gate..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     F011_QUOTIENT_INVALID["F011-QUOTIENT-INVALID: Graph-only hidden-context quotienting is formally invalid for labelled rules. The wrong..."]
@@ -59,10 +72,12 @@ flowchart TD
     F8D_CORRECT_GRADE_ASYMMETRY["F8D-CORRECT-GRADE-ASYMMETRY: The favour/suppress total-variation ratio is (5/18)/(5/42) = 7/3, and the one-gate edge..."]
     F8D_DRIFT_MAGNITUDE_SCOPE["F8D-DRIFT-MAGNITUDE-SCOPE: The large magnitude belongs to F010-OCCUPANCY-AXIS. F8C-DRIFT-DIRECTION explains the si..."]
     F8E_K2_SCOPE_CORRECTION["F8E-K2-SCOPE-CORRECTION: The 8D no-gate-product result bounds the two-rule one-literal K=2 feature grammar. It d..."]
+    F8E_PARSER_SAME_TRIAD["F8E-PARSER-SAME-TRIAD: The order-3 parser rejects a repeated literal, a condition on the action slot and a cou..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
     F8D_RS_COMPOSITIONAL_BOUND["F8D-RS-COMPOSITIONAL-BOUND: Inside this model a small constraint grammar is compositional in event-logit space and ..."]
+    F8E_RS_COMPOSITIONAL_HIERARCHY["F8E-RS-COMPOSITIONAL-HIERARCHY: Inside this model a small constraint grammar has an ordinary compositional hierarchy: i..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     Q_PATH_SHAPE["Q-PATH-SHAPE: Why does path topology convert early triadic context into shape information at the firs..."]
@@ -149,3 +164,26 @@ flowchart TD
   F8E_K2_SCOPE_CORRECTION -->|qualifies| F8D_RS_COMPOSITIONAL_BOUND
   F8E_K2_SCOPE_CORRECTION -->|qualifies| Q_META_CONSTRAINT
   F8E_K2_SCOPE_CORRECTION -->|raises_question| Q_K3_CONJUNCTION
+  Q_K3_CONJUNCTION -->|partially_answered_by| F8E_K3_CONJUNCTION_INTERACTION
+  Q_K3_CONJUNCTION -->|partially_answered_by| F8E_BOOLEAN_LOGIT_BASIS
+  F8E_K3_CONJUNCTION_INTERACTION -->|contrasts_with| F8D_NO_GATE_PRODUCT
+  F8E_K2_K3_NONREPRESENTABILITY -->|refines| F8D_NO_GATE_PRODUCT
+  F8E_NO_8D_MATCH -->|supports| F8E_K2_K3_NONREPRESENTABILITY
+  F8E_RAW_SIGN -->|derived_from| F8E_K3_CONJUNCTION_INTERACTION
+  F8E_RAW_SIGN -->|compatible_with| F8D_RECIPROCAL_TWINS
+  F8E_K3_INFORMATION_SURFACE -->|supports| F8D_INFORMATION_BLINDNESS
+  F8E_K3_INFORMATION_SURFACE -->|supports| F8C_METHOD_DIMENSIONS
+  F8E_K3_DRIFT_SURFACE -->|supports| F8D_CORRECT_GRADE_ASYMMETRY
+  F8E_K3_DRIFT_SURFACE -->|refines| F8D_WEAK_GRADE_SURFACE
+  F8E_CORNER_BASIS -->|is_equivalent_to| F8E_BOOLEAN_LOGIT_BASIS
+  F8E_W4_COVERAGE -->|qualifies| F8E_BOOLEAN_LOGIT_BASIS
+  F8E_XOR_XNOR_FROM_K3 -->|qualifies| F8D_NO_GATE_PRODUCT
+  F8E_XOR_XNOR_FROM_K3 -->|contrasts_with| F8D_SLOT_GATE_XOR
+  F8E_GENERAL_K_INTERACTION -->|refines| F8E_K3_CONJUNCTION_INTERACTION
+  F8E_CARDINALITY_VS_K -->|derived_from| F8E_K3_CONJUNCTION_INTERACTION
+  F8E_CARDINALITY_VS_K -->|derived_from| F8E_CORNER_BASIS
+  F8E_CARDINALITY_VS_K -->|refines| F8D_ADDITIVE_FEATURE_GRAMMAR
+  F8E_ORDINARY_K_SUPPLIES_INTERACTION -->|derived_from| F8E_XOR_XNOR_FROM_K3
+  F8E_ORDINARY_K_SUPPLIES_INTERACTION -->|qualifies| Q_META_CONSTRAINT
+  F8E_RS_COMPOSITIONAL_HIERARCHY -->|derived_from| F8E_CARDINALITY_VS_K
+  F8E_RS_COMPOSITIONAL_HIERARCHY -->|qualifies| F8D_RS_COMPOSITIONAL_BOUND

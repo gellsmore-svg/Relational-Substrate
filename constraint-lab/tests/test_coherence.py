@@ -204,3 +204,18 @@ def test_generation_008e_scope_correction_qualifies_without_rewriting() -> None:
     assert ("raises_question", "F8D-NO-GATE-PRODUCT", "Q-META-CONSTRAINT") in typed
     markdown = build_markdown(findings, relations)
     assert "F8E-K2-SCOPE-CORRECTION" in markdown and "Q-K3-CONJUNCTION" in markdown
+
+
+def test_generation_008e_e0_nodes_keep_the_meta_question_open() -> None:
+    findings, relations = load_ledger(ROOT)
+    by_id = {row["finding_id"]: row for row in findings}
+    assert by_id["Q-K3-CONJUNCTION"]["status"] == "qualified"
+    assert by_id["Q-META-CONSTRAINT"]["status"] == "unresolved"
+    typed = {(row["relation_type"], row["from_finding"], row["to_finding"]) for row in relations}
+    assert ("partially_answered_by", "Q-K3-CONJUNCTION", "F8E-K3-CONJUNCTION-INTERACTION") in typed
+    assert ("qualifies", "F8E-ORDINARY-K-SUPPLIES-INTERACTION", "Q-META-CONSTRAINT") in typed
+    layers = {row["epistemic_layer"] for row in findings if row["created_generation"] == "008E"}
+    assert {"OBSERVATION", "INFERENCE", "RS_GLOBAL_COHERENCE_INTERPRETATION", "METHODOLOGICAL", "OPEN_QUESTION"} <= layers
+    for row in findings:
+        if row["created_generation"] == "008E" and row["epistemic_layer"] == "OBSERVATION":
+            assert any(ref.startswith("constraint-lab/reports/") for ref in row["evidence_refs"])
