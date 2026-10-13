@@ -23,10 +23,10 @@ The full O=2 DSL also admits a single count predicate (count >=, <= or == thresh
 
 ## 3. Weight semantics
 
-Let \(\phi_i(x,e)\) be 1 exactly when event, direction guard and all conditions of rule i match. With baseline weights \(b_e(x)>0\) and positive multipliers:
+Let \(\phi_i(x,e)\) be 1 exactly when event, direction guard and all conditions of rule i match. With the implemented slot-constant baseline weights \(b_e>0\) and positive multipliers:
 
 \[
-w(e\mid x,\mathcal C)=b_e(x)\prod_{i=1}^J m_i^{\phi_i(x,e)}.
+w(e\mid x,\mathcal C)=b_e\prod_{i=1}^J m_i^{\phi_i(x,e)}.
 \]
 
 The unnormalised full-event law is divided by the sum over all D candidate slots. All integrated single-action formulas take baseline weights to be 1.
@@ -36,7 +36,7 @@ Zero prohibit is supported elsewhere in the DSL but excluded from positive-log a
 ## 4. Logit representation
 
 \[
-\ell_e(x)=\log b_e(x)+\sum_i \lambda_i\phi_i(x,e),\qquad \lambda_i=\log m_i.
+\ell_e(x)=\log b_e+\sum_i \lambda_i\phi_i(x,e),\qquad \lambda_i=\log m_i.
 \]
 
 This additive expression is a model-level meaning of 'constraints as language': syntax selects features, semantics assigns log weights, composition sums features, and interpretation produces transitions. Probabilities are not additive because normalisation couples all event slots.

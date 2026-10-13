@@ -484,7 +484,7 @@ Boundary: No claim beyond the declared support, parameter palette, clock and obs
 
 **NUMERICAL_KERNEL_RESULT**
 
-8F/8B initial information decay and 3C full-versus-pair clock separation are finite-model results, not universal forgetting theorems.
+8B initial information decay and 3C full-versus-pair clock separation are finite-model results, not universal forgetting theorems.
 
 Assumptions: Historical domain and method retained; not extrapolated beyond cited scope..
 Scope: 3C N3 and 8B fixed N4 palette at committed horizons
