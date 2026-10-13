@@ -127,36 +127,35 @@ def front() -> str:
 
 
 BACK = [
-    "This second edition of Coherent Biblical Ontology begins",
-    "where Scripture begins, with God creating a world that is",
-    "really there, and asks what that world is made of.",
+    "Physics predicts with astonishing precision. It does",
+    "not thereby tell us what kind of created reality lets",
+    "physical order, life, persons, moral consequence and",
+    "Scripture belong coherently to one world. This book asks.",
     "",
     "Its answer is that created physical reality is relational",
-    "from its foundation. Possibility is shaped before anything",
-    "happens; what happens unfolds by constrained chance; things",
-    "persist by preserving what they are; and a difference here",
-    "becomes a consequence there through transmission, carriage",
-    "and reception. Mathematics describes this order with",
-    "extraordinary precision without being the order itself.",
+    "from its foundation, which is why independently located",
+    "things everywhere share one grammar of interaction. What",
+    "happens is drawn by constrained chance from what created",
+    "order makes possible, and it carries its history into",
+    "the present. A distinction becomes consequential through",
+    "one recurring grammar: transmit, carry, receive.",
     "",
-    "Because the material world is relational at its base, the",
-    "relational life Scripture describes (promise, consequence,",
-    "responsibility, love) is not bolted onto an alien world.",
-    "Yet material, living, personal and spiritual realities",
-    "remain distinct: relation across categories does not",
-    "erase category, and creation is not God.",
+    "Because the material world is relational at its base,",
+    "promise, responsibility and love are not bolted onto an",
+    "alien world. Yet material, living, personal and spiritual",
+    "realities remain distinct, and creation is not God.",
     "",
-    "The book is not an empirical proof of ultimate ontology.",
-    "It is an argument for the most globally coherent account",
-    "available, honest about evidence, uncertainty and",
-    "revelation, and governed throughout by Scripture.",
+    "The argument is one of global coherence, constrained by",
+    "observation, governed by Scripture, and stated clearly",
+    "enough to be wrong. An appendix sets out the book's",
+    "current ontology, claim by claim.",
 ]
 
 
 def back() -> str:
     beam = (1480, 160, 760, 1300)
     lines = [text(W / 2, 330, "COHERENT BIBLICAL ONTOLOGY", 56, weight="bold", spacing=6),
-             text(W / 2, 398, "Second Edition", 40, colour="#d6b875", style="italic")]
+             text(W / 2, 398, "Second Edition, revision 2.4", 40, colour="#d6b875", style="italic")]
     y = 560
     for ln in BACK:
         if ln:

@@ -78,7 +78,7 @@ Consciousness clearly participates in physical order. It depends on the body, on
 
 But how physical processes relate to felt awareness, why there is anything it is like to see grey at all, is one of the hardest open questions in philosophy. Philosophers call it the hard problem of consciousness, and no account of physics, mainstream or relational, has solved it. **The Relational Substrate does not explain consciousness.** It claims something far smaller: a relational physical world is a more fitting setting for conscious persons than a world of sealed objects, because it is already a world in which differences become consequences for something else. But the step from consequence to awareness, from a changed molecule in the retina to the experience of seeing, is not taken by the substrate. The book does not pretend otherwise.
 
-The research charter of the project's newest laboratory states, as a working premise and not a result, that the ultimate receiver of what physical order transmits may be non-material. The book's own position is more cautious and more scriptural. The one who finally receives the seeing of the stone is a person, and persons are not one more stage in a physical chain. Physical transmission brings the world to the person. The person's knowing of it belongs to another category.
+The book's position here is scriptural. The one who finally receives the seeing of the stone is a person, and persons are not one more stage in a physical chain. Physical transmission brings the world to the person. The person's knowing of it belongs to another category.
 
 ## Image, calling and relation
 

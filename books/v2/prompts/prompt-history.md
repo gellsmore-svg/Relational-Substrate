@@ -79,3 +79,23 @@ The brief's formulations that the research revised are recorded with reasons in 
 - **Purpose:** propagation of the v2.3 identity distinction; metadata cleanup.
 - **Changes:** Chs 0 (preface), 5, 10, 11, 14, 15 and App B; research-baseline status and identity lines; concept-graph `equivalence` label. Details in `../analysis/v2.3.1-cleanup-record.md`.
 - **Divergences:** none.
+
+## 2026-10-13: v2.4 reader-review coherence revision
+
+- **Instruction:** [`v2.4-reader-review-coherence-prompt.md`](v2.4-reader-review-coherence-prompt.md), verbatim. It records a human reading of the completed book.
+- **Branch:** `book/coherent-biblical-ontology-v2.4-reader-review`, from `main` at `0af98c2` (verified live).
+- **Purpose:** a coherence-governance pass, not a rewrite. The book's framing and early chapters are re-centred on global coherence. Chapters 9–14 are protected.
+- **Major changes:**
+  - Preface rewritten around the book's organising problem.
+  - Global coherence made bidirectional and defined more strongly (Ch 2).
+  - Universal interoperability added as a datum (Ch 3).
+  - T0 reopened: minimal commitment plus open ontology. Currently reachable versus total admissibility (Ch 4).
+  - T-C-R deepened to the grammar of consequential manifestation, with recursion, a working causal formulation and manifestation without assumed transformation (Ch 7).
+  - Substrate spatiality recorded as open.
+  - Calculator reduced to one labelled illustration (Ch 5), with its details in App B.
+  - Research-history narration and "researchers" removed. One author is stated (Preface, App B, App D).
+  - Eden clarification on the non-necessity of evil (Ch 14).
+  - New Appendix E, Current Ontological Reference.
+- **Records:** `../analysis/v2.4-reader-review-constraint-record.md`; research baseline Part I rewritten; concept graph, epistemic register and terminology register updated.
+- **Divergences from the instruction:** none of substance. Covers: the back-cover text was rewritten to the v2.4 framing and both covers were regenerated deterministically. The front PNG is byte-identical; only the back changed.
+

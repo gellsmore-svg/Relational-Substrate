@@ -7,7 +7,7 @@ Drafting rule: every term below is used **only** in the stated sense. Where ordi
 | relation | a real standing-between in which each relatum is conditioned by the other; interactional versus constitutive distinguished, RS proposing constitutive | a mental association; a family tie (unless the ordinary sense is meant and context makes that clear) | Ch 3 |
 | relational substrate (substrate) | the proposed created relational order within which physical things are constituted and act | matter, ether, field, God, soul, a second world | Ch 3 |
 | runtime | created order as operating; ordinary physical process | software execution; "God's operating system" | Ch 3 |
-| T0 / possibility | what creation is capable of: admissible configurations and transitions | the July ladder's "substrate at rest"; a hidden stuff | Ch 4 |
+| T0 | whatever conditions actualisation (minimal commitment); ontology open; working reading: constrained possibility | a realm, store or second world; the July ladder's "substrate at rest" | Ch 4, App E |
 | T1 / actualisation, actuality | the coming-to-be of one admissible configuration; actuality carries its own history | creation from nothing (that is *bara*, a divine act) | Ch 4 |
 | manifestation (T2 label retired in v2.1) | created order presenting itself to other things; physical, distinct from awareness | an explanation of consciousness | Ch 6 |
 | admissible / admissibility | whether a transition is possible at all (physical layer). In Ch 12 it is qualified as *physical*, *operational* or *moral* admissibility, and the unqualified word then always means physical | morally permitted | Ch 4 |
@@ -24,10 +24,12 @@ Drafting rule: every term below is used **only** in the stated sense. Where ordi
 | joint process | relations among chance events, distinct from marginals | — | Ch 8 |
 | persistence | continued re-actualisation within one relevant equivalence class | inertness | Ch 6 |
 | distinction (source distinction; "difference" in ordinary prose) | a distinguishable state at a source that could make a difference elsewhere | subjective contrast | Ch 7 |
-| transmit / transmission | a source distinction becoming available beyond its locality; the source may or may not change | throwing an object; necessary depletion | Ch 7 |
-| carry / carrier | the relevant distinction kept recoverably across possibly changing realisations; *carrier* is whatever currently bears it | a travelling particle by definition | Ch 7 |
-| receive / reception | a compatible receiver changed in a way that depends on the carried distinction; repetition semantics belong to the receiver | arrival; necessarily once-only | Ch 7 |
-| T-C-R | the whole grammar of transmit, carry, receive | any signal; soul; revelation itself | Ch 7 |
+| transmit / transmission | a distinction in one relational condition capable of constraining something other than itself; the source may or may not change | throwing an object; travel; necessary depletion | Ch 7 |
+| carry / carrier | a dependency that preserves enough of the distinction for the consequence to depend on it; *carrier* is whatever bears the dependency, possibly the relation itself | a travelling particle by definition | Ch 7 |
+| receive / reception | another state made actual, or constrained in its admissible actualisation, because of the source distinction; repetition semantics belong to the receiver | arrival; necessarily once-only | Ch 7 |
+| T-C-R | the grammar of consequential manifestation: distinction → preserved dependency → consequence | packet transport; any signal; soul; revelation itself | Ch 7 |
+| universe | used only to name proposals ("many universes", "mathematical universe"); otherwise creation, created order, cosmos, world | a bounded container established by the book | App A |
+| currently reachable | what can happen next given present state and provenance, distinct from total admissibility | a change to T0 | Ch 4 |
 | coordination | consequence-aligned, state-dependent relation among stochastic events | a controller; correlation as such | Ch 8 |
 | regularity / effective determinism | stable aggregate behaviour to the precision observed | metaphysical determinism | Ch 8 |
 | attractor | reserved for a defined dynamical property; used once, carefully | any outcome reached often | Ch 8 |
