@@ -117,6 +117,8 @@ class RecentReversal:
 
     def direct_next_pair_slots(self, pair_mask: int, history: int | None) -> list[list[Fraction]]:
         """Resolve hidden-only excursions from full rows, for every raw hidden mask."""
+        if type(pair_mask) is not int or not 0 <= pair_mask < 1 << self.pair_slots:
+            raise HistoryError("pair mask out of range")
         size = 1 << self.triad_slots
         matrix = [[Fraction(i == j) for j in range(size)] for i in range(size)]
         direct = [[Fraction(0) for _ in range(size)] for _ in range(self.pair_slots)]
@@ -370,10 +372,14 @@ def _matrix_product(left, right):
 
 def analyse_temporal(model: RecentReversal) -> dict:
     slots = model.pair_slots
+    if slots < 2:
+        raise HistoryError("the temporal comparison requires at least two pair slots")
     q = [list(model.pair_probabilities(h)) for h in range(slots)]
     uniform = [Fraction(1, slots)] * slots
     lam = (model.multiplier - 1) / (model.multiplier + slots - 1)
     constant_gap = max(abs(sum(row) - 1) for row in q)
+    stationary_gap = max(abs(sum(uniform[i] * q[i][j] for i in range(slots)) - uniform[j]) for j in range(slots))
+    symmetry_gap = max(abs(q[i][j] - q[j][i]) for i in range(slots) for j in range(slots))
     eigen_gap = Fraction(0)
     for basis in range(slots - 1):
         vector = [Fraction(i == basis) - Fraction(i == slots - 1) for i in range(slots)]
@@ -440,6 +446,7 @@ def analyse_temporal(model: RecentReversal) -> dict:
         "repeat_probability": q[0][0], "nontrivial_eigenvalue": lam, "multiplicity": slots - 1,
         "float_eigenvalues": float_eigenvalues.tolist(), "exact_eigen_gap": eigen_gap,
         "eigenvalue_gap": float_eigen_gap, "history_row_sum_gap": constant_gap,
+        "history_stationary_residual": stationary_gap, "history_symmetry_gap": symmetry_gap,
         "consecutive_event_MI": str(information), "analytic_consecutive_event_MI": str(analytic_information),
         "information_formula_gap": str(information_gap), "initial_history_decay": decay, "matrix_power_gap": power_gap,
         "two_step_backtrack_probability": backtrack, "H0_backtrack_probability": Fraction(1, slots),
