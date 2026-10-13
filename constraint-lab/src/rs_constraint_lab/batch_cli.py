@@ -76,6 +76,8 @@ def main(argv: list[str]) -> int:
         return _generation_008f(argv[1:])
     if argv[0] == "gt0":
         return _gt0(argv[1:])
+    if argv[0] == "gt1":
+        return _gt1(argv[1:])
     if argv[0] == "batch":
         return _batch(argv[1:])
     print(f"unknown command {argv[0]}", file=sys.stderr)
@@ -1174,5 +1176,36 @@ def _gt0(argv: list[str]) -> int:
     out = args.output or (repo / "gravity-time" / "reports" / "round-g0-tables.json")
     digest = publish(payload, out)
     print(json.dumps({"output": str(out), "payload_sha256": digest}, indent=2))
+    return 0
+
+
+def _gt1(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(prog="rs_constraint_lab gt1")
+    parser.add_argument("command", choices=["write-plan", "run", "publish"])
+    parser.add_argument("--frozen-plan-commit", default=None)
+    parser.add_argument("--allow-unpushed", action="store_true")
+    args = parser.parse_args(argv)
+    from rs_constraint_lab import gt1
+    from rs_constraint_lab.durable import atomic_write_json
+    from rs_constraint_lab.explore08 import FrozenPlanError
+
+    repo = _repo_root()
+    root = repo / "gravity-time" / "generated" / "round-g1"
+    if args.command == "write-plan":
+        plan = gt1.prepare_plan()
+        atomic_write_json(repo / gt1.PLAN_RELPATH, plan)
+        print(json.dumps({"items": len(plan["items"]), "plan_hash": plan["plan_hash"]}, indent=2))
+        return 0
+    try:
+        plan = gt1.require_execution(repo, args.frozen_plan_commit, require_remote=not args.allow_unpushed)
+    except FrozenPlanError as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
+    if args.command == "run":
+        rows = gt1.run(root, plan)
+        print(json.dumps({"items": len(rows), "max_wall_seconds": max(r["wall_seconds"] for r in rows)}, indent=2))
+        return 0
+    digest = gt1.publish(root, plan, repo / "gravity-time" / "reports" / "round-g1-tables.json", frozen_plan_commit=args.frozen_plan_commit)
+    print(json.dumps({"payload_sha256": digest}, indent=2))
     return 0
 
