@@ -78,6 +78,8 @@ def main(argv: list[str]) -> int:
         return _gt0(argv[1:])
     if argv[0] == "gt1":
         return _gt1(argv[1:])
+    if argv[0] == "gte0a":
+        return _gte0a(argv[1:])
     if argv[0] == "batch":
         return _batch(argv[1:])
     print(f"unknown command {argv[0]}", file=sys.stderr)
@@ -1209,3 +1211,33 @@ def _gt1(argv: list[str]) -> int:
     print(json.dumps({"payload_sha256": digest}, indent=2))
     return 0
 
+
+def _gte0a(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(prog="rs_constraint_lab gte0a")
+    parser.add_argument("command", choices=["write-plan", "run", "publish"])
+    parser.add_argument("--frozen-plan-commit", default=None)
+    parser.add_argument("--allow-unpushed", action="store_true")
+    args = parser.parse_args(argv)
+    from rs_constraint_lab import gte0a
+    from rs_constraint_lab.durable import atomic_write_json
+    from rs_constraint_lab.explore08 import FrozenPlanError
+
+    repo = _repo_root()
+    root = repo / gte0a.GENERATED_RELPATH
+    if args.command == "write-plan":
+        plan = gte0a.prepare_plan()
+        atomic_write_json(repo / gte0a.PLAN_RELPATH, plan)
+        print(json.dumps({"items": len(plan["items"]), "plan_hash": plan["plan_hash"]}, indent=2))
+        return 0
+    try:
+        plan = gte0a.require_execution(repo, args.frozen_plan_commit, require_remote=not args.allow_unpushed)
+    except FrozenPlanError as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
+    if args.command == "run":
+        rows = gte0a.run(root, plan)
+        print(json.dumps({"items": len(rows), "max_wall_seconds": max(r["wall_seconds"] for r in rows)}, indent=2))
+        return 0
+    digest = gte0a.publish(root, plan, repo / gte0a.TABLES_RELPATH, frozen_plan_commit=args.frozen_plan_commit)
+    print(json.dumps({"payload_sha256": digest}, indent=2))
+    return 0
