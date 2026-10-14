@@ -1,0 +1,33 @@
+{
+  "historical_tests_run": [
+    "constraint-lab/tests/test_v08k.py"
+  ],
+  "initial_test_issue": "neutral decimal-zero formatting assertion; corrected to numerical equality before calibration",
+  "neutral_measurements": [
+    {
+      "kind": "witness",
+      "result_bytes": 1476,
+      "wall_seconds": 0.0014767859975108877
+    },
+    {
+      "kind": "kernel",
+      "result_bytes": 179478,
+      "wall_seconds": 0.24623712000175146
+    },
+    {
+      "kind": "refinement",
+      "result_bytes": 11229,
+      "wall_seconds": 0.30709989900060464
+    },
+    {
+      "kind": "temporal",
+      "result_bytes": 740324,
+      "wall_seconds": 1.7918039889991633
+    }
+  ],
+  "new_N4_non_neutral_H2_target_executions": 0,
+  "numeric_threads": 1,
+  "plumbing_tests": "test_v08l_plumbing.py: neutral N4 and multiplier-two three-slot synthetic only",
+  "prior_knowledge": "Prompt 008L and 8K symbolic H2 design; existing H1 information magnitudes; not independent discovery",
+  "workers": 1
+}
