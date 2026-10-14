@@ -1,0 +1,378 @@
+{
+  "OTR_stop": "complete I0 first; retain all findings; >=5 next probes; at most two complementary frozen I1 probes or justified stop",
+  "analysis_source_sha256": {
+    "constraint-lab/src/rs_constraint_lab/coherence.py": "a99d65438d3d332b7331d9b108f28a31e42228197f5d4d74956ec967ad8b9c2e",
+    "constraint-lab/src/rs_constraint_lab/durable.py": "3b5c705847c7b2a15b9e66a74d34fa1c2a333abf2cc5cf6fb15f0c79f9e1ae41",
+    "constraint-lab/src/rs_constraint_lab/exact.py": "ec8976dc3f10dac6842bccce0669382deb85fb2d1c16082ad30cf19a7e18efb1",
+    "constraint-lab/src/rs_constraint_lab/explore08.py": "457a993ba7cfc0b66c9805d700871dc39abda474d1d7650cd23dbe148343a5ec",
+    "constraint-lab/src/rs_constraint_lab/gen008i_exec.py": "82e62d24034dcc926b9b42de77f2c4101e69d26713791d3cb8a98469740cc249",
+    "constraint-lab/src/rs_constraint_lab/graphs.py": "78381488bacebc1a8b2719a3fb9b342811af724950d75a1f463784aee0f5a287",
+    "constraint-lab/src/rs_constraint_lab/history.py": "ffe2b960828b6c1143cb20d1dd5d2df18533f52de1346cc7e9936f3285444048",
+    "constraint-lab/src/rs_constraint_lab/history_roles.py": "2c6a4f128e16d17cc3b0ff3ecf09b469abcc42186f838daa8aa8a385b274561b",
+    "constraint-lab/src/rs_constraint_lab/memory_clocks.py": "edd18c5734c3a7b42c3801747a864f0f5e5f1cf9594ef74d0a98530426b5644a",
+    "constraint-lab/src/rs_constraint_lab/role_atlas.py": "ede26da073cef793b3ee926bdc8ff585ef4a99354e4ba50fb3d8057482211700",
+    "constraint-lab/src/rs_constraint_lab/state.py": "a5132429fa8697b5b3f98d985516356d9e997b32ca90b05c19a96e7fc726108c"
+  },
+  "analysis_version": "generation-008i-historical-roles/v1",
+  "arithmetic": {
+    "full_oracle": "independent 384-state float overdetermined balance least-squares; no power iteration",
+    "information_decimal_digits": 160,
+    "stationary": "exact rational balance on 28 role orbits and 11 material classes for KU",
+    "transition": "Fraction"
+  },
+  "calibration_sha256": "0b2c588b5e3dfc693d924b43e1d2c26a3c869e70d7b21ed8f8561f94b2d3dda4",
+  "estimands": [
+    "exact augmented/orbit stationarity, irreducibility and period",
+    "material mask/class/count/class-given-count laws",
+    "equal-model neutral JS: pairmask, class, edge, conditional shape, conditional label",
+    "pair/history, edge/history and class/history MI",
+    "R,A_h,D_h,C_h marginal and RA,RC,DC joint role distributions",
+    "SAME/ADJACENT/DISJOINT next-event mass, split FORM/DISSOLVE",
+    "consecutive-slot joint/MI, repeat, adjacent, disjoint and two-step backtracking",
+    "exact edge-count means, variance and lag-1/lag-2 correlation",
+    "history-erasure strong lumpability and positive-past order-one witness",
+    "all consistent triple-conditioned rows for order-two sufficiency",
+    "KU uniform-history rows, exact material stationary law and JS decomposition",
+    "Kpi stationary-history rows and exact marginal stationary balance",
+    "augmented, quotient and material-projection reversibility kept separate",
+    "nonzero quotient probability currents if present",
+    "exact kernel/joint/material/Kpi/KU equivalence fingerprints",
+    "explicit graph-complement feature conjugacy and grade reciprocity under identity/complement"
+  ],
+  "execution": {
+    "disk_budget_bytes": 50000000,
+    "expected_wall_seconds": 240,
+    "item_watchdog_seconds": 120,
+    "overrun": "stop and freeze an amendment before continuing; retain completed items",
+    "resume": "reuse only hash-valid item matching frozen plan/version/identity",
+    "stochastic_scientific_trajectories": 0,
+    "workers": 1
+  },
+  "experiment_id": "generation-008i-history-role-grammar",
+  "features": [
+    {
+      "direction": null,
+      "family": "A",
+      "name": "SAME_ANY",
+      "relation": "SAME"
+    },
+    {
+      "direction": null,
+      "family": "A",
+      "name": "ADJ_ANY",
+      "relation": "ADJACENT"
+    },
+    {
+      "direction": null,
+      "family": "A",
+      "name": "DISJ_ANY",
+      "relation": "DISJOINT"
+    },
+    {
+      "direction": "FORM",
+      "family": "B",
+      "name": "FORM_ANY",
+      "relation": null
+    },
+    {
+      "direction": "DISSOLVE",
+      "family": "B",
+      "name": "DISSOLVE_ANY",
+      "relation": null
+    },
+    {
+      "direction": "FORM",
+      "family": "C",
+      "name": "SAME_FORM",
+      "relation": "SAME"
+    },
+    {
+      "direction": "DISSOLVE",
+      "family": "C",
+      "name": "SAME_DISSOLVE",
+      "relation": "SAME"
+    },
+    {
+      "direction": "FORM",
+      "family": "C",
+      "name": "ADJ_FORM",
+      "relation": "ADJACENT"
+    },
+    {
+      "direction": "DISSOLVE",
+      "family": "C",
+      "name": "ADJ_DISSOLVE",
+      "relation": "ADJACENT"
+    },
+    {
+      "direction": "FORM",
+      "family": "C",
+      "name": "DISJ_FORM",
+      "relation": "DISJOINT"
+    },
+    {
+      "direction": "DISSOLVE",
+      "family": "C",
+      "name": "DISJ_DISSOLVE",
+      "relation": "DISJOINT"
+    }
+  ],
+  "frozen_input_sha256": {
+    "constraint-lab/exploration/generation-008i/charter.md": "db0a4e5fce4935c8d4d294956c4236e9760a98292aad05e5767faea151f2eeb3",
+    "constraint-lab/exploration/generation-008i/open-thetical-possibilities.md": "1cc1ed5dd4a09dfc8a1a28e8b3e992f9e36ba9eb73abc7f09beafa1dbc537e23",
+    "constraint-lab/exploration/generation-008i/structural-orbits.json": "75a2abe94d41619588b4e275c903fe1f75129291f89bced646201560492d2f2d",
+    "constraint-lab/methodology/open-thetical-application.md": "26e06ffe88f87c968abf2f68b02b1da8358db161051ff0358514fb5e0d0e0e80",
+    "research-methods/open-thetical-research.md": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd"
+  },
+  "grades": [
+    [
+      "m025",
+      "1/4"
+    ],
+    [
+      "m4",
+      "4"
+    ]
+  ],
+  "independent_full_check_features": [
+    "ADJ_ANY",
+    "FORM_ANY",
+    "ADJ_FORM"
+  ],
+  "items": [
+    {
+      "feature": "SAME_ANY",
+      "item_id": "I0-NEUTRAL",
+      "kind": "neutral",
+      "m": "1"
+    },
+    {
+      "feature": "SAME_ANY",
+      "item_id": "I0-SAME_ANY-m025",
+      "kind": "controller",
+      "m": "1/4"
+    },
+    {
+      "feature": "SAME_ANY",
+      "item_id": "I0-SAME_ANY-m4",
+      "kind": "controller",
+      "m": "4"
+    },
+    {
+      "feature": "ADJ_ANY",
+      "item_id": "I0-ADJ_ANY-m025",
+      "kind": "controller",
+      "m": "1/4"
+    },
+    {
+      "feature": "ADJ_ANY",
+      "item_id": "I0-ADJ_ANY-m4",
+      "kind": "controller",
+      "m": "4"
+    },
+    {
+      "feature": "DISJ_ANY",
+      "item_id": "I0-DISJ_ANY-m025",
+      "kind": "controller",
+      "m": "1/4"
+    },
+    {
+      "feature": "DISJ_ANY",
+      "item_id": "I0-DISJ_ANY-m4",
+      "kind": "controller",
+      "m": "4"
+    },
+    {
+      "feature": "FORM_ANY",
+      "item_id": "I0-FORM_ANY-m025",
+      "kind": "controller",
+      "m": "1/4"
+    },
+    {
+      "feature": "FORM_ANY",
+      "item_id": "I0-FORM_ANY-m4",
+      "kind": "controller",
+      "m": "4"
+    },
+    {
+      "feature": "DISSOLVE_ANY",
+      "item_id": "I0-DISSOLVE_ANY-m025",
+      "kind": "controller",
+      "m": "1/4"
+    },
+    {
+      "feature": "DISSOLVE_ANY",
+      "item_id": "I0-DISSOLVE_ANY-m4",
+      "kind": "controller",
+      "m": "4"
+    },
+    {
+      "feature": "SAME_FORM",
+      "item_id": "I0-SAME_FORM-m025",
+      "kind": "controller",
+      "m": "1/4"
+    },
+    {
+      "feature": "SAME_FORM",
+      "item_id": "I0-SAME_FORM-m4",
+      "kind": "controller",
+      "m": "4"
+    },
+    {
+      "feature": "SAME_DISSOLVE",
+      "item_id": "I0-SAME_DISSOLVE-m025",
+      "kind": "controller",
+      "m": "1/4"
+    },
+    {
+      "feature": "SAME_DISSOLVE",
+      "item_id": "I0-SAME_DISSOLVE-m4",
+      "kind": "controller",
+      "m": "4"
+    },
+    {
+      "feature": "ADJ_FORM",
+      "item_id": "I0-ADJ_FORM-m025",
+      "kind": "controller",
+      "m": "1/4"
+    },
+    {
+      "feature": "ADJ_FORM",
+      "item_id": "I0-ADJ_FORM-m4",
+      "kind": "controller",
+      "m": "4"
+    },
+    {
+      "feature": "ADJ_DISSOLVE",
+      "item_id": "I0-ADJ_DISSOLVE-m025",
+      "kind": "controller",
+      "m": "1/4"
+    },
+    {
+      "feature": "ADJ_DISSOLVE",
+      "item_id": "I0-ADJ_DISSOLVE-m4",
+      "kind": "controller",
+      "m": "4"
+    },
+    {
+      "feature": "DISJ_FORM",
+      "item_id": "I0-DISJ_FORM-m025",
+      "kind": "controller",
+      "m": "1/4"
+    },
+    {
+      "feature": "DISJ_FORM",
+      "item_id": "I0-DISJ_FORM-m4",
+      "kind": "controller",
+      "m": "4"
+    },
+    {
+      "feature": "DISJ_DISSOLVE",
+      "item_id": "I0-DISJ_DISSOLVE-m025",
+      "kind": "controller",
+      "m": "1/4"
+    },
+    {
+      "feature": "DISJ_DISSOLVE",
+      "item_id": "I0-DISJ_DISSOLVE-m4",
+      "kind": "controller",
+      "m": "4"
+    },
+    {
+      "item_id": "I0-EQUIVALENCE-SYMMETRY",
+      "kind": "equivalence"
+    }
+  ],
+  "method_source": {
+    "authored_byte_status": "source itself is agent_transcription_pending_byte_comparison",
+    "path": "research-methods/open-thetical-research.md",
+    "resolved_ref": "05b15b0d903d46070b99ac84f9cab1bd898046ba",
+    "sha256": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd",
+    "source_blob": "669754b54e4374d7f8c9a606b1faf4811b7b8569",
+    "source_commit": "3840a7c2d566a520b2c7f98b2e699f81fb409675"
+  },
+  "mode": "B / OTR",
+  "ontology": {
+    "G": 0,
+    "H_pair": 1,
+    "L": 0,
+    "N": 4,
+    "O": 3,
+    "S": 0,
+    "hypergraph": "independent"
+  },
+  "parent_commit": "ad5b656e26fe66610b583aedccdd34593e13791a",
+  "plan_hash": "42afdec5605b170bc2499ace6d20d6e2b3312a2f0ab1c784503674598cc60a65",
+  "planning_coherence_sha256": "9cc9ae02baaaaba64adc9350ca5f677e4c9699521cd0112f588185fb032a28dd",
+  "pre_freeze_exposure": {
+    "actual_non_neutral_I0_cells": 0,
+    "historical_8H": "available control; no new role-atlas grade used as a smoke test",
+    "neutral_production": "pre-observed and calibrated",
+    "structural": "all state orbits, descriptor collisions and Boolean covariance observed before freeze as authorised",
+    "synthetic": "N=3 ADJ_FORM m=2; not a primary I0 cell"
+  },
+  "probe_complementarity": {
+    "A": "history relation without current direction, complements B/C; does not isolate conjunction",
+    "B": "current direction without historical efficacy, complements A/C; not an H discovery",
+    "C": "conjunction, contrasted with both controls; not a unique causal decomposition"
+  },
+  "raw_triad_histories": [
+    null,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "raw_triad_pair_masks": [
+    0,
+    41,
+    63
+  ],
+  "reciprocity_scope": "identity or graph-complement maps among the declared palette; not proof of absence of every possible transformation",
+  "round_id": "I0",
+  "semantics": {
+    "S4_action": "simultaneous vertex relabelling of pair mask, h and event; every member's block row checked",
+    "descriptor_use": "diagnostic only; collision orbits retained separately",
+    "history_update": "pair e -> h=e; triad -> preserve h",
+    "orbit_count": 28,
+    "pair_clock_closure": "w_e/(sum_pair_weights+4) geometric triad excursions -> w_e/sum_pair_weights",
+    "sentinel": "relation predicates inactive; current-only direction predicates remain active",
+    "state_count": 384,
+    "triads": "four unit-weight toggles, unread by controller",
+    "weight": "m**BooleanFeature"
+  },
+  "tolerances": {
+    "KU_stationary_residual": "exact",
+    "Markov_order_conditional_gap": "exact",
+    "S4_covariance": "exact",
+    "full_quotient_crosscheck": 1e-14,
+    "information_chain_gap": "1e-25",
+    "labelled_remainder": "1e-25",
+    "quotient_aggregation": "exact",
+    "rational_identities": "exact",
+    "stationary_normalisation": "exact",
+    "stationary_residual": "exact"
+  },
+  "work_counts": {
+    "atomic_items": 24,
+    "directed_complement_checks": 22,
+    "equivalence_symmetry_items": 1,
+    "full_states_per_cell": 384,
+    "neutral_items": 1,
+    "primary_cells": 22,
+    "primary_consistent_material_triples": 50688,
+    "primary_exact_stationary_solves": 44,
+    "primary_full_transition_entries": 50688,
+    "primary_independent_full_solves": 6,
+    "primary_quotient_supported_entries": 1848,
+    "primary_raw_slot_checks": 44352,
+    "primary_raw_triad_block_solves": 462,
+    "primary_raw_triad_rows": 7392,
+    "primary_transition_covariance_comparisons": 1216512,
+    "primary_two_step_augmented_paths": 304128,
+    "quotient_supported_entries_per_cell": 84,
+    "role_orbits": 28
+  }
+}
