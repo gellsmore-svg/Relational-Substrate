@@ -214,9 +214,10 @@ def source_distances(states: np.ndarray, n: int) -> np.ndarray:
         bit = (states >> e) & 1
         adj[a] |= bit << b
         adj[b] |= bit << a
-    source_mask = sum(1 << v for v in SOURCE)
+    src = gt0.source()
+    source_mask = sum(1 << v for v in src)
     D = np.full((len(states), n), UNREACHED, dtype=np.int8)
-    D[:, list(SOURCE)] = 0
+    D[:, list(src)] = 0
     reached = np.full(len(states), source_mask, dtype=np.int64)
     frontier = reached.copy()
     level = 0
@@ -240,10 +241,9 @@ def _shell_key(d: int) -> str:
 def held_observables(chain: Chain, law: np.ndarray, n: int, D: np.ndarray, *, per_unit_time: bool = False) -> dict:
     """``gt0.held_observables`` on arrays: same keys, definitions and clock conventions."""
     edge_list = edges(n)
-    probes = [p for p in range(n) if p not in SOURCE]
-    source_slots = {i for i, (a, b) in enumerate(edge_list) if a in SOURCE and b in SOURCE}
-    attach_slots = [i for i, (a, b) in enumerate(edge_list) if (a in SOURCE) != (b in SOURCE)]
-    free_slots = [i for i in range(len(edge_list)) if i not in source_slots]
+    probes = [p for p in range(n) if p not in gt0.source()]
+    attach_slots = gt0.attach_slot_indices(n)
+    free_slots = gt0.free_slot_indices(n)
     bits = (chain.states[:, None] >> np.arange(chain.n_slots)) & 1
     attach = bits[:, attach_slots].sum(axis=1)
     free = bits[:, free_slots].sum(axis=1)
@@ -300,7 +300,7 @@ def held_observables(chain: Chain, law: np.ndarray, n: int, D: np.ndarray, *, pe
 def shell_activity(chain: Chain, ct: np.ndarray, jump: np.ndarray, n: int, D: np.ndarray) -> dict:
     """``gte0a.shell_activity`` on arrays: activity A(d) of probe-incident slots by shell, both clocks."""
     edge_list = edges(n)
-    probes = [p for p in range(n) if p not in SOURCE]
+    probes = [p for p in range(n) if p not in gt0.source()]
     R = chain.rates
     out = {}
     for clock, law in (("jump", jump), ("continuous", ct)):
@@ -359,7 +359,7 @@ def event_pattern_probabilities(chain: Chain, jump: np.ndarray, n: int, mode: st
     edge_list = edges(n)
     P = chain.W / chain.rates[:, None]
     if mode == "HELD":
-        klass = ["A" if (a in SOURCE) != (b in SOURCE) else ("S" if a in SOURCE else "P") for a, b in edge_list]
+        klass = gt0.slot_classes(n)
     else:
         klass = ["X"] * len(edge_list)
     names = ("F", "D")
@@ -579,8 +579,8 @@ def hub_structure(degree: np.ndarray, law: np.ndarray, n: int, mode: str) -> dic
     }
     if mode == "HELD":
         hubs = degree == top[:, None]
-        source_hub = hubs[:, list(SOURCE)].any(axis=1)
-        probe_hub = hubs[:, [v for v in range(n) if v not in SOURCE]].any(axis=1)
+        source_hub = hubs[:, list(gt0.source())].any(axis=1)
+        probe_hub = hubs[:, [v for v in range(n) if v not in gt0.source()]].any(axis=1)
         out["hub_includes_source"] = float(law[source_hub].sum())
         out["hub_includes_probe"] = float(law[probe_hub].sum())
         out["hub_probe_only"] = float(law[probe_hub & ~source_hub].sum())
@@ -599,9 +599,9 @@ def held_additions(chain: Chain, ct: np.ndarray, jump: np.ndarray, n: int, D: np
     compared at one reference density profile.
     """
     edge_list = edges(n)
-    probes = [p for p in range(n) if p not in SOURCE]
-    attach_slots = [i for i, (a, b) in enumerate(edge_list) if (a in SOURCE) != (b in SOURCE)]
-    free_slots = [i for i, (a, b) in enumerate(edge_list) if not (a in SOURCE and b in SOURCE)]
+    probes = [p for p in range(n) if p not in gt0.source()]
+    attach_slots = gt0.attach_slot_indices(n)
+    free_slots = gt0.free_slot_indices(n)
     bits = arrays["bits"]
     attach = bits[:, attach_slots].sum(axis=1, dtype=np.int64)
     free = bits[:, free_slots].sum(axis=1, dtype=np.int64)
@@ -712,8 +712,8 @@ def analyse(
     timings["event_order"] = time.perf_counter() - t0
     edge_list = edges(n)
     if mode == "HELD":
-        attach_slots = [i for i, (a, b) in enumerate(edge_list) if (a in SOURCE) != (b in SOURCE)]
-        free_slots = [i for i, (a, b) in enumerate(edge_list) if not (a in SOURCE and b in SOURCE)]
+        attach_slots = gt0.attach_slot_indices(n)
+        free_slots = gt0.free_slot_indices(n)
         free_edges = arrays["bits"][:, free_slots].sum(axis=1, dtype=np.int64)
         attachments = arrays["bits"][:, attach_slots].sum(axis=1, dtype=np.int64)
         width = int(attachments.max()) + 1

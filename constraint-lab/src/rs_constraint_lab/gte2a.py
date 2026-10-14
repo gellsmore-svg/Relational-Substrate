@@ -47,7 +47,7 @@ from pathlib import Path
 
 import numpy as np
 
-from rs_constraint_lab import gte0a, gte0b, gte1, gtkernel, gtobs
+from rs_constraint_lab import gt0, gte0a, gte0b, gte1, gtkernel, gtobs
 from rs_constraint_lab.gte0a import SOURCE
 from rs_constraint_lab.state import edges
 
@@ -206,7 +206,7 @@ def _degrees(chain, n: int) -> np.ndarray:
 def slot_classes(n: int, mode: str) -> list[str]:
     if mode != "HELD":
         return ["X"] * len(edges(n))
-    return ["A" if (a in SOURCE) != (b in SOURCE) else ("S" if a in SOURCE else "P") for a, b in edges(n)]
+    return gt0.slot_classes(n)
 
 
 def square_role(n: int, mode: str, e: int, f: int) -> str:
@@ -218,7 +218,7 @@ def square_role(n: int, mode: str, e: int, f: int) -> str:
         return "adjacent"
     k = slot_classes(n, mode)
     (p,) = shared
-    where = "src" if p in SOURCE else "prb"
+    where = "src" if p in gt0.source() else "prb"
     return "".join(sorted(k[e] + k[f])) + "@" + where
 
 
@@ -444,7 +444,7 @@ def relation_class(n: int, mode: str, g: int, f: int) -> str:
     E = edges(n)
     shared = set(E[g]) & set(E[f])
     k = slot_classes(n, mode)
-    rel = "disjoint" if not shared else ("adj@src" if (mode == "HELD" and next(iter(shared)) in SOURCE) else ("adj@prb" if mode == "HELD" else "adjacent"))
+    rel = "disjoint" if not shared else ("adj@src" if (mode == "HELD" and next(iter(shared)) in gt0.source()) else ("adj@prb" if mode == "HELD" else "adjacent"))
     return f"{k[g]}->{k[f]}:{rel}"
 
 

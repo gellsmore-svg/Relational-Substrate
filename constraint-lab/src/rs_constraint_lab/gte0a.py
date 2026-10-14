@@ -330,7 +330,7 @@ def event_order(chain: Chain, jump: np.ndarray, n: int, mode: str) -> dict:
     R = chain.rates
     P = chain.W / R[:, None]
     if mode == "HELD":
-        klass = ["A" if (a in SOURCE) != (b in SOURCE) else ("S" if a in SOURCE else "P") for a, b in edge_list]
+        klass = gt0.slot_classes(n)
     else:
         klass = ["X"] * len(edge_list)
     probs: dict[tuple, float] = {}
@@ -465,17 +465,7 @@ def structure_arrays(chain: Chain, n: int) -> dict:
 def group_permutations(n: int, mode: str) -> list[tuple[int, ...]]:
     if mode == "FREE":
         return list(itertools.permutations(range(n)))
-    probes = [v for v in range(n) if v not in SOURCE]
-    out = []
-    for s in itertools.permutations(SOURCE):
-        for p in itertools.permutations(probes):
-            perm = list(range(n))
-            for old, new in zip(SOURCE, s):
-                perm[old] = new
-            for old, new in zip(probes, p):
-                perm[old] = new
-            out.append(tuple(perm))
-    return out
+    return gt0.active_scaffold().automorphisms(n)
 
 
 def permuted_codes(states: np.ndarray, n: int, perm: tuple[int, ...]) -> np.ndarray:
@@ -621,7 +611,7 @@ def trajectory_summary(chain: Chain, path: dict, arrays: dict, start_index: int)
 def shell_activity(chain: Chain, ct: np.ndarray, jump: np.ndarray, n: int) -> dict:
     """G1 shell activity and near/far ratio rho = A(1)/A(2) for every probe, both clocks."""
     edge_list = edges(n)
-    probes = [p for p in range(n) if p not in SOURCE]
+    probes = [p for p in range(n) if p not in gt0.source()]
     incident = {p: [i for i, (a, b) in enumerate(edge_list) if p in (a, b)] for p in probes}
     R = chain.rates
     out = {}
@@ -688,8 +678,8 @@ def analyse_item(item: dict, *, with_trajectories: bool = True, families: dict |
     timings["event_order"] = time.perf_counter() - t0
     edge_list = edges(n)
     if mode == "HELD":
-        attach_slots = [i for i, (a, b) in enumerate(edge_list) if (a in SOURCE) != (b in SOURCE)]
-        free_slots = [i for i, (a, b) in enumerate(edge_list) if not (a in SOURCE and b in SOURCE)]
+        attach_slots = gt0.attach_slot_indices(n)
+        free_slots = gt0.free_slot_indices(n)
         free_edges = arrays["bits"][:, free_slots].sum(axis=1)
         attachments = arrays["bits"][:, attach_slots].sum(axis=1)
         width = int(attachments.max()) + 1

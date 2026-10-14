@@ -37,7 +37,7 @@ from pathlib import Path
 
 import numpy as np
 
-from rs_constraint_lab import gte0a, gte0b, gtkernel, gtobs
+from rs_constraint_lab import gt0, gte0a, gte0b, gtkernel, gtobs
 from rs_constraint_lab.gte0a import SOURCE
 from rs_constraint_lab.state import edges
 from rs_constraint_lab.weights import alphabet_factors
@@ -259,9 +259,9 @@ def analyse_item(item: dict, *, with_trajectories: bool = True, checks: bool = T
     return result, trajectories
 
 
-def numerical_checks(item: dict, chain, start: int, stat: dict | None) -> dict:
+def numerical_checks(item: dict, chain, start: int, stat: dict | None, *, families: dict | None = None, round_id: str = ROUND_ID) -> dict:
     n = item["n"]
-    out: dict = {"kernel_sample": kernel_sample_check(item, chain, start)}
+    out: dict = {"kernel_sample": kernel_sample_check(item, chain, start, families=families, round_id=round_id)}
     if stat is None:
         return out
     ct, jump = stat["ct"], stat["jump"]
@@ -359,7 +359,7 @@ def channels(r: dict) -> dict | None:
     hc, hj = r["held_continuous"], r["held_jump"]
     add = r["e1_additions"]["held"]
     r0 = hc["null_attachment_fraction"]
-    out: dict = {"null_attachment_fraction": r0, "source_share": len(SOURCE) / r["n"]}
+    out: dict = {"null_attachment_fraction": r0, "source_share": len(gt0.source()) / r["n"]}
     for clock, h, a in (("ct", hc, add["continuous"]), ("jump", hj, add["jump"])):
         af = h["attachment_fraction"]
         out[f"attachment_fraction_{clock}"] = af

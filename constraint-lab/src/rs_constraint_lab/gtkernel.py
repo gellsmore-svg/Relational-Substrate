@@ -115,7 +115,7 @@ def weights(states: np.ndarray, n: int, mode: str, components: list[tuple[str, s
         acts_on = ~present if kind.endswith("_form") else present
         W = np.where(acts_on, W * term, W)
     if mode == "HELD":
-        source_slots = [i for i, (a, b) in enumerate(edges(n)) if a in SOURCE and b in SOURCE]
+        source_slots = gt0.held_slot_indices(n)
         for e in source_slots:
             W[present[:, e], e] = 0.0
     return W

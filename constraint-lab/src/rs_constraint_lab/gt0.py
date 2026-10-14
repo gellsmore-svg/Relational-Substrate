@@ -31,8 +31,130 @@ PROGRAMME = "GT"
 ROUND_ID = "round-g0"
 EXPERIMENT_ID = "gt-round-g0-relational-basin"
 ANALYSIS_VERSION = "gt-g0/v1"
-SOURCE = (0, 1, 2)
+SOURCE = (0, 1, 2)  # legacy name: the source vertices of the default held triangle (K3)
 FACTORS = alphabet_factors("W4")
+
+
+# --- held-reference scaffold (GT-P007) -----------------------------------------------------
+#
+# A scaffold is a declared boundary condition: a set of pair relations held
+# present and non-dissolvable. Its source vertex set (for measurements only) is
+# the set of vertices incident on held edges. Rules never read the scaffold:
+# rates depend on it only through the held relations being present and the
+# prohibition of their dissolution, exactly as for the original triangle.
+
+
+class Scaffold:
+    __slots__ = ("name", "held")
+
+    def __init__(self, name: str, held):
+        pairs = tuple(sorted((min(a, b), max(a, b)) for a, b in held))
+        if len(set(pairs)) != len(pairs) or any(a == b for a, b in pairs):
+            raise ValueError("held edges must be distinct pairs")
+        self.name = name
+        self.held = pairs
+
+    @property
+    def source(self) -> tuple[int, ...]:
+        return tuple(sorted({v for e in self.held for v in e}))
+
+    def __repr__(self) -> str:
+        return f"Scaffold({self.name!r}, {self.held!r})"
+
+    def __eq__(self, other) -> bool:
+        return isinstance(other, Scaffold) and self.held == other.held and self.name == other.name
+
+    def __hash__(self) -> int:
+        return hash((self.name, self.held))
+
+    def automorphisms(self, n: int) -> list[tuple[int, ...]]:
+        """Vertex permutations of range(n) that map the held edge set onto itself (identity first)."""
+        src = self.source
+        probes = [v for v in range(n) if v not in src]
+        held = set(self.held)
+        out = []
+        for s in itertools.permutations(src):
+            mapping = dict(zip(src, s))
+            if {(min(mapping[a], mapping[b]), max(mapping[a], mapping[b])) for a, b in held} != held:
+                continue
+            for p in itertools.permutations(probes):
+                perm = list(range(n))
+                for old, new in mapping.items():
+                    perm[old] = new
+                for old, new in zip(probes, p):
+                    perm[old] = new
+                out.append(tuple(perm))
+        return out
+
+
+SCAFFOLDS = {
+    "K3": Scaffold("K3", ((0, 1), (0, 2), (1, 2))),
+    "P3": Scaffold("P3", ((0, 1), (1, 2))),
+    "K2": Scaffold("K2", ((0, 1),)),
+}
+_ACTIVE = [SCAFFOLDS["K3"]]
+
+
+def active_scaffold() -> Scaffold:
+    return _ACTIVE[-1]
+
+
+def source() -> tuple[int, ...]:
+    """Source vertices of the active scaffold (measurements only)."""
+    return _ACTIVE[-1].source
+
+
+def held_pairs() -> tuple[tuple[int, int], ...]:
+    return _ACTIVE[-1].held
+
+
+def held_slot_indices(n: int) -> list[int]:
+    held = set(held_pairs())
+    return [i for i, pair in enumerate(edges(n)) if pair in held]
+
+
+def slot_classes(n: int) -> list[str]:
+    """Measurement classes of every slot under the active scaffold.
+
+    A: source-probe (attachment); S: held; C: both ends in the source but not held
+    (a free source chord, e.g. the P3 closing chord); P: probe-probe. Under the
+    default triangle no slot is C, so legacy classes are unchanged.
+    """
+    src = set(source())
+    held = set(held_pairs())
+    out = []
+    for a, b in edges(n):
+        if (a in src) != (b in src):
+            out.append("A")
+        elif a in src:
+            out.append("S" if (a, b) in held else "C")
+        else:
+            out.append("P")
+    return out
+
+
+def free_slot_indices(n: int) -> list[int]:
+    held = set(held_slot_indices(n))
+    return [i for i in range(len(edges(n))) if i not in held]
+
+
+def attach_slot_indices(n: int) -> list[int]:
+    return [i for i, c in enumerate(slot_classes(n)) if c == "A"]
+
+
+class use_scaffold:
+    """Context manager: make ``scaffold`` the active held reference within the block."""
+
+    def __init__(self, scaffold: Scaffold | str):
+        self.scaffold = SCAFFOLDS[scaffold] if isinstance(scaffold, str) else scaffold
+
+    def __enter__(self):
+        _ACTIVE.append(self.scaffold)
+        return self.scaffold
+
+    def __exit__(self, *exc):
+        _ACTIVE.pop()
+        return False
 STATIONARY_RESIDUAL_TOLERANCE = 1e-12
 NULL_IDENTITY_TOLERANCE = 1e-12
 FAMILY_GRADES = {
@@ -85,7 +207,7 @@ def scaffold_expressions(mode: str) -> list[str]:
     if mode == "FREE":
         return []
     if mode == "HELD":
-        return [f"dissolve({_e(a, b)}) => prohibit" for a, b in itertools.combinations(SOURCE, 2)]
+        return [f"dissolve({_e(a, b)}) => prohibit" for a, b in held_pairs()]
     raise BasinError(f"unknown mode {mode}")
 
 
@@ -103,7 +225,7 @@ def start_state(n: int, mode: str) -> int:
         return 0
     index = edge_index(n)
     state = 0
-    for a, b in itertools.combinations(SOURCE, 2):
+    for a, b in held_pairs():
         state |= 1 << index[(a, b)]
     return state
 
@@ -291,7 +413,7 @@ def distance_to_source(state: int, n: int, edge_list: list[tuple[int, int]], pro
     queue = deque([probe])
     while queue:
         node = queue.popleft()
-        if node in SOURCE:
+        if node in source():
             return float(seen[node])
         for nxt in adj[node]:
             if nxt not in seen:
@@ -313,9 +435,10 @@ def held_observables(kernel: Kernel, states: list[int], law: np.ndarray, n: int,
     """Jump clock: drift per event. Continuous clock: drift per unit time (event weights as rates)."""
     edge_list = edges(n)
     index = edge_index(n)
-    probes = [p for p in range(n) if p not in SOURCE]
-    source_slots = {i for i, (a, b) in enumerate(edge_list) if a in SOURCE and b in SOURCE}
-    attach_slots = {i for i, (a, b) in enumerate(edge_list) if (a in SOURCE) != (b in SOURCE)}
+    src = source()
+    probes = [p for p in range(n) if p not in src]
+    source_slots = set(held_slot_indices(n))
+    attach_slots = {i for i, (a, b) in enumerate(edge_list) if (a in src) != (b in src)}
     free_slots = [i for i in range(len(edge_list)) if i not in source_slots]
     del index
     dist = {p: {} for p in probes}
