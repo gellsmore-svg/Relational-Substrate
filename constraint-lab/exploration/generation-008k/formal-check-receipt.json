@@ -1,0 +1,21 @@
+{
+  "method": "multipath-reasoning skill, bounded formal subtask",
+  "completion_status": "STABLE_WITH_UNCERTAINTY",
+  "independence": "full",
+  "independence_meaning": "context isolation, not error independence",
+  "error_correlation_risk": "high",
+  "population": 2,
+  "generations": 1,
+  "path_invocations": 2,
+  "recursive_confidence_claim": false,
+  "false_attractor_warnings": [],
+  "remaining_uncertainty": "L semantics/compiler restrictions and practical value of future H2 remain unresolved; agreement is not proof.",
+  "project_head_during_paths": "30ddfc6fe5cb84a3eb6894f94d791f730950143c",
+  "project_tree_unchanged": true,
+  "private_audit_directory": "/tmp/rs-8k-multipath-20261014",
+  "paths": ["gen-0/path-1.md", "gen-0/path-2.md"],
+  "structural_validator": "STRUCTURAL_OK; schema only, not mathematical verification",
+  "adjudication": "Canonical proof sketches, tiny exact fixtures and primary literature, not population voting",
+  "scientific_computation": false,
+  "notes": "Original Prompt 008K is retained verbatim as the source transcription; both paths read it from the immutable absolute source file. No recursive stability or closing-blind-audit claim."
+}
