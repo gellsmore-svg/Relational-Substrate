@@ -21,7 +21,7 @@ The GT programme adopts OTR 1.0 from prompt GT-P002 onward. In GT terms:
 
 ## Sharing one version across branches
 
-A file on one branch does not appear on another. This file was first committed on `research/gravity-time-admissibility`. That commit touches only `research-methods/` and GT provenance, so the methodology can be carried across in one of two ways. Neither has been done; both await the author's direction.
+A file on one branch does not appear on another. This file was first committed on `research/gravity-time-admissibility` in commit `4efcd02`, which touches only `research-methods/`. The methodology can be carried across in one of two ways. Neither has been done; both await the author's direction.
 
 1. **Recommended: land on `main`.** Open a small PR that adds only `research-methods/` to `main`. Each research branch then picks it up by a merge from `main` or by a cherry-pick of that one commit. Every programme cites the version and sha256 in the table above.
 2. **Cherry-pick between research branches.** Cherry-pick the commit that adds `research-methods/` onto the Constraint Laboratory branch in use (8H or its successor). Record the resulting commit and the file sha256 in that branch's provenance. This must not happen while a laboratory generation is mid-execution without the author's explicit direction, because it would change that branch's history during a frozen round.
