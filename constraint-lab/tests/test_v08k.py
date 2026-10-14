@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
+from hashlib import sha256
 from fractions import Fraction as F
 from itertools import product
 import json
@@ -309,3 +310,48 @@ def test_prompt_and_review_representations_remain_distinct():
     assert authored["agent_input_prompt_sha256"] != authored["authored_prompt_sha256"]
     review = (ROOT / "constraint-lab/provenance/reviews/008I-predictive-state-chatgpt-review-v0.8i.md").read_text()
     assert "No rerun required" in review and "not blind" in review
+
+
+def test_only_recorded_historical_question_status_fields_change():
+    path = "constraint-lab/coherence/findings.jsonl"
+    before = subprocess.run(["git", "-C", str(ROOT), "show", BASE + ":" + path],
+                            capture_output=True, check=True).stdout.splitlines()
+    after = (ROOT / path).read_bytes().splitlines()
+    record_path = ROOT / "constraint-lab/provenance/status-changes/008K-h-questions.json"
+    record = json.loads(record_path.read_text())
+    transitions = {row["finding_id"]: row for row in record["transitions"]}
+    assert set(transitions) == {"Q-H-MINIMAL-STATE", "Q-H-COARSE-GRAINING"}
+    assert len(after) >= len(before)
+    for old, new in zip(before, after):
+        original = json.loads(old)
+        identifier = original["finding_id"]
+        if identifier not in transitions:
+            assert old == new
+            continue
+        change = transitions[identifier]
+        assert original["status"] == change["from"] == "unresolved"
+        assert json.loads(new) == {**original, "status": change["to"]}
+        assert change["to"] == "qualified" and change["changed_fields"] == ["status"]
+        assert sha256(old).hexdigest() == change["before_row_sha256"]
+        assert sha256(new).hexdigest() == change["after_row_sha256"]
+    relations = [json.loads(line) for line in (ROOT / "constraint-lab/coherence/relations.jsonl").read_text().splitlines()]
+    assert all(any(r["from_finding"] == identifier and r["relation_type"] == "partially_answered_by"
+                   for r in relations) for identifier in transitions)
+    ledger = [json.loads(line) for line in (ROOT / "constraint-lab/provenance/ledger.jsonl").read_text().splitlines()]
+    status_record = next(r for r in ledger if r["record_type"] == "coherence_status_change" and r["prompt_id"] == "008K")
+    assert status_record["transitions"] == record["transitions"]
+
+
+def test_canonical_historical_artifacts_immutable_and_ledgers_append_only():
+    def git(*args):
+        return subprocess.run(["git", "-C", str(ROOT), *args], capture_output=True, check=True).stdout
+    original = set(git("ls-tree", "-r", "--name-only", BASE).decode().splitlines())
+    changed = set(git("diff", "--name-only", BASE, "--", "books", "constraint-lab/reports",
+                      "constraint-lab/exploration", "constraint-lab/provenance",
+                      "constraint-lab/coherence/snapshots").decode().splitlines())
+    assert original & changed <= {"constraint-lab/provenance/ledger.jsonl"}
+    for path in ("constraint-lab/formal/theorem-catalog.jsonl",
+                 "constraint-lab/formal/status-audit.jsonl",
+                 "constraint-lab/coherence/relations.jsonl",
+                 "constraint-lab/provenance/ledger.jsonl"):
+        assert (ROOT / path).read_bytes().startswith(git("show", BASE + ":" + path))

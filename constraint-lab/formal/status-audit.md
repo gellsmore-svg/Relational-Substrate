@@ -42,3 +42,16 @@ Generated from status-audit.jsonl and the historical coherence ledger. The sugge
 | F8F-COMPLEMENT-PERIOD / OBSERVATION | FINITE_EXHAUSTIVE_RESULT | CL-T17 | Period theorem needs positivity and two-step returns; direction complement retains tested scope. |
 | F8F-LOCAL-GLOBAL-DECOUPLING / OBSERVATION | NUMERICAL_KERNEL_RESULT | CL-N05, CL-I01 | No fitted predictive law. |
 | F8F-INTERACTION-ROUTING / INFERENCE | MODEL_INFERENCE | CL-T16, CL-T18, CL-T19 | Mechanism proof is separate from historical inference. |
+| F8G-FORMAL-CURRENT-STATE-EXPRESSIVITY / OBSERVATION | ALGEBRAIC_THEOREM | CL-T12 | Positive fixed-support current-row theorem, not arbitrary-kernel universality. |
+| F8G-FORMAL-EQUIVALENCE-HIERARCHY / METHODOLOGICAL | METHODOLOGICAL_PRINCIPLE | CL-T20, CL-M01 | Whole-law quotient/compilation obligations; the separate algebraic criterion remains scoped. |
+| F8H-SAME-STATE-DIVERGENT-FUTURES / OBSERVATION | ALGEBRAIC_THEOREM | CL-T26, CL-T28 | Same common start/process and complete endpoint; no absolute non-Markovianity. |
+| F8H-STATIONARY-OCCUPANCY-INVARIANCE / OBSERVATION | ALGEBRAIC_THEOREM | CL-T31 | Uniform joint occupancy and stationary one-step equality; period-two qualification retained. |
+| F8H-TEMPORAL-CORRELATION / OBSERVATION | NUMERICAL_KERNEL_RESULT | CL-T34, CL-N07 | Exact backtracking identities and separately evaluated log-information values are not conflated. |
+| F8IP-PREDICTIVE-COMPRESSION-LADDER / OBSERVATION | FINITE_EXHAUSTIVE_RESULT | CL-F08, CL-T53, CL-T55, CL-T56, CL-T57 | Finite N4 counts plus separately proved all-positive-m structure; not an ontology hierarchy. |
+| F8IP-GRAPH-STRUCTURAL-HISTORY / INFERENCE | MODEL_INFERENCE | CL-T54, CL-T55 | Structural interpretation is model-scoped; count minimality has a separate finite certificate. |
+| F8IP-PARITY-HISTORY-ERASURE / OBSERVATION | ALGEBRAIC_THEOREM | CL-T57 | Pathwise all-order parity erasure, not inference from CMI zero. |
+| F8IP-TEMPORAL-INFORMATION-SURVIVES / OBSERVATION | NUMERICAL_KERNEL_RESULT | CL-N08 | Grade/projection-specific decimal logs; no general conditional-information monotonicity. |
+| F8IP-MINIMALITY-SCOPE / METHODOLOGICAL | METHODOLOGICAL_PRINCIPLE | CL-T52, CL-F08 | Fixed-state strong refinement; immediate-row separation is special, not arbitrary HMM minimisation. |
+| F8IP-PROJECTION-RELATIVE-MEMORY / RS_GLOBAL_COHERENCE_INTERPRETATION | INTERPRETATION | CL-T55, CL-T56, CL-T57 | RS reading remains separate from proof and physical claims. |
+| Q-H-MINIMAL-STATE / OPEN_QUESTION | OPEN_QUESTION | CL-Q06, CL-T53, CL-T55, CL-T56 | Qualified scoped answer, not global hidden-model minimisation closed. |
+| Q-H-COARSE-GRAINING / OPEN_QUESTION | OPEN_QUESTION | CL-T55, CL-T56, CL-T57 | Class/count survival and parity erasure answered for RR; broader questions remain open. |

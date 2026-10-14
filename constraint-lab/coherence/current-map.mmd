@@ -102,6 +102,8 @@ flowchart TD
     F8H_PROCESS_GRAMMAR_WITHOUT_OCCUPANCY["F8H-PROCESS-GRAMMAR-WITHOUT-OCCUPANCY: History can alter process grammar without altering one-time stationary material structu..."]
     F8IP_GRAPH_STRUCTURAL_HISTORY["F8IP-GRAPH-STRUCTURAL-HISTORY: For graph-class prediction the sufficient and necessary remembered datum is the automor..."]
     F8IP_EDGE_DIRECTION_HISTORY["F8IP-EDGE-DIRECTION-HISTORY: At edge-count resolution historical pair identity and graph role compress to whether th..."]
+    F8K_H_L_BOUNDARY["F8K-H-L-BOUNDARY: History summarises prior ordinary events; candidate eta configures constraint machinery..."]
+    F8K_H2_NEXT_CAPABILITY["F8K-H2-NEXT-CAPABILITY: Recommend an unexecuted H2 same-(X,h_1), different-h_2 design as the next clean nested ..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     F011_QUOTIENT_INVALID["F011-QUOTIENT-INVALID: Graph-only hidden-context quotienting is formally invalid for labelled rules. The wrong..."]
@@ -122,6 +124,21 @@ flowchart TD
     F8H_H_QUESTION_RESOLUTION["F8H-H-QUESTION-RESOLUTION: Q-H-POSITIVE changes status from unresolved to qualified after H0. The scoped same-stat..."]
     F8IP_MINIMALITY_SCOPE["F8IP-MINIMALITY-SCOPE: The generic utility computes coarsest strong refinement, not globally smallest hidden-s..."]
     F8IP_PRIOR_EXPOSURE["F8IP-PRIOR-EXPOSURE: This alternative 8I is not blind: related 8I/8J quotient, synchronization and informati..."]
+    F8K_STATE_TAXONOMY["F8K-STATE-TAXONOMY: Ordinary X, hidden current coordinates, historical H, augmented Z, observation Y, stron..."]
+    F8K_PREDICTIVE_REFINEMENT["F8K-PREDICTIVE-REFINEMENT: The coarsest strong refinement is a projection-dependent partition of fixed Z, not glob..."]
+    F8K_OBSERVATION_COARSENING_MONOTONICITY["F8K-OBSERVATION-COARSENING-MONOTONICITY: For one fixed finite chain, if Pi_1 refines Pi_2 then their coarsest strong refinements..."]
+    F8K_QUOTIENT_LADDER["F8K-QUOTIENT-LADDER: Nested strong partitions of one base kernel induce strong quotient maps, and direct/sta..."]
+    F8K_TRACE_STRONG_DISTINCTION["F8K-TRACE-STRONG-DISTINCTION: Observation-preserving strong blocks imply all finite observed-word equality, but the c..."]
+    F8K_STATIONARY_WEAK_DISTINCTION["F8K-STATIONARY-WEAK-DISTINCTION: Actual weak lumpability under a declared prior is different from stationary adjacent-la..."]
+    F8K_SYNCHRONIZATION_MARKOV_BOUND["F8K-SYNCHRONIZATION-MARKOV-BOUND: Worst-case synchronization in s outputs bounds observed order by s; supported same-(s-1..."]
+    F8K_HISTORY_AUGMENTATION["F8K-HISTORY-AUGMENTATION: A closed homogeneous event/material law with a finite recursively updated history summa..."]
+    F8K_CONSTRAINT_STATE_FLATTENING["F8K-CONSTRAINT-STATE-FLATTENING: Finite constraint-state dynamics flatten to a fixed product-state kernel only under clo..."]
+    F8K_COMPILATION_CLASS["F8K-COMPILATION-CLASS: Axis novelty must specify permitted state/hidden variables, support, clock, observation..."]
+    F8K_NOVELTY_TAXONOMY["F8K-NOVELTY-TAXONOMY: Process-expressive, representation, semantic/modular, compression and observational nov..."]
+    F8K_BRANCH_RECONCILIATION["F8K-BRANCH-RECONCILIATION: Pinned canonical predictive 8I, alternate role 8I and coarse-process 8J have no conflic..."]
+    F8K_H_QUESTION_STATUS["F8K-H-QUESTION-STATUS: Q-H-MINIMAL-STATE and Q-H-COARSE-GRAINING change status from unresolved to qualified, w..."]
+    F8K_REVIEW_VERDICT["F8K-REVIEW-VERDICT: External Review 008I-predictive-state permanently retains prior exposure and the litera..."]
+    F8K_EXPLANATORY_COMPRESSION["F8K-EXPLANATORY-COMPRESSION: A small sufficient representation may improve explanation only relative to declared pre..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
@@ -131,6 +148,7 @@ flowchart TD
     F8G_FORMAL_INTEGRATION_RS["F8G-FORMAL-INTEGRATION-RS: The laboratory has a scoped compositional current-relation language and a precise histo..."]
     F8H_RS_HISTORY_INTERPRETATION["F8H-RS-HISTORY-INTERPRETATION: In the model, the same ordinary relational configuration can receive different futures ..."]
     F8IP_PROJECTION_RELATIVE_MEMORY["F8IP-PROJECTION-RELATIVE-MEMORY: Within this model, historical information can survive as structural role after relation..."]
+    F8K_LOCAL_RS_READING["F8K-LOCAL-RS-READING: Predictive sufficiency and historical information are representation/observation-relati..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     Q_PATH_SHAPE["Q-PATH-SHAPE: Why does path topology convert early triadic context into shape information at the firs..."]
@@ -150,6 +168,8 @@ flowchart TD
     Q_H_CONSEQUENTIAL_FUNCTIONS["Q-H-CONSEQUENTIAL-FUNCTIONS: Which functions of legal relational history change future laws beyond information alrea..."]
     Q_H_PREDICTIVE_COARSE_DEPTH["Q-H-PREDICTIVE-COARSE-DEPTH: Can coarse-graining increase necessary temporal depth even while reducing the observed ..."]
     Q_H_PREDICTIVE_N5_SYNCHRONIZATION["Q-H-PREDICTIVE-N5-SYNCHRONIZATION: Which graph sizes or controllers break the N4 bijection between predecessor/current gra..."]
+    Q_L_COMPILER_SEMANTICS["Q-L-COMPILER-SEMANTICS: Which independently declared rule-decoder, support or resource contract makes dynamic c..."]
+    Q_H2_LAST_PAIR_COMPILER["Q-H2-LAST-PAIR-COMPILER: Which depth-two examples offer useful structural consequences beyond an engineered larg..."]
   end
   F014_EXACT_FIRST_DESTINATION -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
   F015_TRANSIENT_CLASS_MEMORY -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
@@ -356,3 +376,33 @@ flowchart TD
   F8IP_TWO_SNAPSHOT_SYNCHRONIZATION -->|raises_question| Q_H_PREDICTIVE_N5_SYNCHRONIZATION
   F8IP_EDGE_DIRECTION_HISTORY -->|is_coarse_graining_of| F8IP_GRAPH_STRUCTURAL_HISTORY
   Q_H_CONSEQUENTIAL_FUNCTIONS -->|partially_answered_by| F8IP_EDGE_DIRECTION_HISTORY
+  F8K_STATE_TAXONOMY -->|explains| F8C_CURRENT_SURVIVES
+  F8K_OBSERVATION_COARSENING_MONOTONICITY -->|formalises| F8IP_PREDICTIVE_COMPRESSION_LADDER
+  F8K_QUOTIENT_LADDER -->|formalises| F8IP_QUOTIENT_CORRECTNESS
+  F8K_TRACE_STRONG_DISTINCTION -->|qualifies| F8IP_MINIMALITY_SCOPE
+  F8K_STATIONARY_WEAK_DISTINCTION -->|qualifies| F8IP_ONE_STEP_INVISIBILITY_PERSISTS
+  F8K_SYNCHRONIZATION_MARKOV_BOUND -->|formalises| F8IP_TWO_SNAPSHOT_SYNCHRONIZATION
+  F8K_HISTORY_AUGMENTATION -->|formalises| F8H_AUGMENTED_MARKOV_RESTORATION
+  F8K_CONSTRAINT_STATE_FLATTENING -->|qualifies| F8G_FORMAL_H_L_DISTINCTION
+  F8K_COMPILATION_CLASS -->|refines| F8G_FORMAL_COMPILATION_TEST
+  F8K_COMPILATION_CLASS -->|bounds| F8G_FORMAL_CURRENT_STATE_EXPRESSIVITY
+  F8K_H_L_BOUNDARY -->|depends_on| F8K_STATE_TAXONOMY
+  F8K_H_L_BOUNDARY -->|depends_on| F8K_HISTORY_AUGMENTATION
+  F8K_H_L_BOUNDARY -->|depends_on| F8K_CONSTRAINT_STATE_FLATTENING
+  F8K_H_L_BOUNDARY -->|depends_on| F8K_COMPILATION_CLASS
+  F8K_NOVELTY_TAXONOMY -->|derived_from| F8K_COMPILATION_CLASS
+  F8K_EXPLANATORY_COMPRESSION -->|qualifies| F8IP_PREDICTIVE_COMPRESSION_LADDER
+  F8K_BRANCH_RECONCILIATION -->|qualifies| F8K_PREDICTIVE_REFINEMENT
+  F8K_H_QUESTION_STATUS -->|qualifies| Q_H_MINIMAL_STATE
+  F8K_H_QUESTION_STATUS -->|qualifies| Q_H_COARSE_GRAINING
+  F8K_REVIEW_VERDICT -->|qualifies| F8IP_PRIOR_EXPOSURE
+  F8K_H2_NEXT_CAPABILITY -->|motivated_by| Q_H_DEPTH
+  F8K_H2_NEXT_CAPABILITY -->|depends_on| F8K_COMPILATION_CLASS
+  F8K_H2_NEXT_CAPABILITY -->|raises_question| Q_H2_LAST_PAIR_COMPILER
+  Q_L_COMPILER_SEMANTICS -->|refines| Q_META_CONSTRAINT
+  Q_L_COMPILER_SEMANTICS -->|raised_by| F8K_CONSTRAINT_STATE_FLATTENING
+  F8K_LOCAL_RS_READING -->|derived_from| F8K_STATE_TAXONOMY
+  F8K_LOCAL_RS_READING -->|depends_on| F8K_NOVELTY_TAXONOMY
+  F8K_PREDICTIVE_REFINEMENT -->|explains| F8K_OBSERVATION_COARSENING_MONOTONICITY
+  Q_H_PREDICTIVE_COARSE_DEPTH -->|partially_answered_by| F8K_SYNCHRONIZATION_MARKOV_BOUND
+  F8K_NOVELTY_TAXONOMY -->|compatible_with| F8K_EXPLANATORY_COMPRESSION

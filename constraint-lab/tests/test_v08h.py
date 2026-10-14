@@ -367,4 +367,5 @@ def test_8h_snapshot_and_formal_links_match_canonical_ledgers(tmp_path):
     assert len([row for row in catalog if row["status"] == "ALGEBRAIC_THEOREM" and row["source_generations"] == ["008H"]]) == 10
     findings, relations = load_ledger(directory)
     assert any(row["from_finding"] == "Q-H-POSITIVE" and row["relation_type"] == "partially_answered_by" for row in relations)
-    assert next(row for row in findings if row["finding_id"] == "Q-H-MINIMAL-STATE")["status"] == "unresolved"
+    historical_findings, _ = load_ledger(tmp_path)
+    assert next(row for row in historical_findings if row["finding_id"] == "Q-H-MINIMAL-STATE")["status"] == "unresolved"

@@ -1147,3 +1147,173 @@ Source generations: 008I
 Boundary: No generic monotonicity of conditional MI under coarsening conditioning; numerical decimals are not exact irrational expressions.
 Notes: Maximum quotient KL gap 1e-160; labelled formula gap 1.62e-158. External rounded values are review checks, not inputs.
 
+## CL-T60: Strong-refinement monotonicity under observation coarsening
+
+**ALGEBRAIC_THEOREM**
+
+For a fixed finite kernel T, Pi_1 finer than Pi_2 implies Ref_T(Pi_1) finer than Ref_T(Pi_2); strong block count cannot increase under deterministic observation coarsening.
+
+Assumptions: Finite homogeneous stochastic T; Deterministic observations on the same Z; Refinement means finer than.
+Scope: Prior-free; arbitrary finite probabilities, with Fraction fixtures for exact implementation checks.
+
+Proof: [predictive-state-theory.md](../../constraint-lab/formal/predictive-state-theory.md#cl-t60). Ref_T(Pi_1) is an eligible strongly lumpable refinement of Pi_2; the coarsest-refinement universal property gives the direction. Idempotence and Ref_T(Pi)<=Pi follow from the same definition.
+Evidence: [predictive-state-theory.md](../../constraint-lab/formal/predictive-state-theory.md), [generation-008k-predictive-state-synthesis.md](../../constraint-lab/reports/generation-008k-predictive-state-synthesis.md), [test_v08k.py](../../constraint-lab/tests/test_v08k.py), [predictive-state-counterexamples.md](../../constraint-lab/formal/predictive-state-counterexamples.md), [predictive-state-literature-map.md](../../constraint-lab/formal/predictive-state-literature-map.md)
+Coherence: `F8K-PREDICTIVE-REFINEMENT`, `F8K-OBSERVATION-COARSENING-MONOTONICITY`
+Dependencies: CL-T52
+Source generations: 008K
+Boundary: Declared finite representation and equivalence. No physical ontology, unrestricted minimal HMM, or unexecuted H2/L empirical claim.
+Notes: Standard mathematics integrated as synthesis, not a mathematical priority claim. Tiny exact proof fixtures are not new laboratory scientific cells. Reserved above all three pinned branch namespaces.
+
+## CL-T61: General induced strong quotient and commuting ladder
+
+**ALGEBRAIC_THEOREM**
+
+Nested strongly lumpable partitions of one finite chain induce a strong quotient map between their quotient chains, with direct and staged quotient kernels identical.
+
+Assumptions: Same base chain; Both partitions strongly lumpable; Fine partition refines coarse partition.
+Scope: Prior-free; no positivity, irreducibility, period or stationary-law requirement.
+
+Proof: [predictive-state-theory.md](../../constraint-lab/formal/predictive-state-theory.md#cl-t61). Sum fine-target block probabilities within a coarse block; the sum equals the direct coarse row by base strong lumpability, independent of fine source block. Stationary pushforwards then compose.
+Evidence: [predictive-state-theory.md](../../constraint-lab/formal/predictive-state-theory.md), [generation-008k-predictive-state-synthesis.md](../../constraint-lab/reports/generation-008k-predictive-state-synthesis.md), [test_v08k.py](../../constraint-lab/tests/test_v08k.py), [predictive-state-counterexamples.md](../../constraint-lab/formal/predictive-state-counterexamples.md), [predictive-state-literature-map.md](../../constraint-lab/formal/predictive-state-literature-map.md)
+Coherence: `F8K-PREDICTIVE-REFINEMENT`, `F8K-QUOTIENT-LADDER`
+Dependencies: CL-T20
+Source generations: 008K
+Boundary: Declared finite representation and equivalence. No physical ontology, unrestricted minimal HMM, or unexecuted H2/L empirical claim.
+Notes: Standard mathematics integrated as synthesis, not a mathematical priority claim. Tiny exact proof fixtures are not new laboratory scientific cells. Reserved above all three pinned branch namespaces.
+
+## CL-T62: Strong-block trace implication with strict converse failure
+
+**ALGEBRAIC_THEOREM**
+
+An observation-preserving strong block has identical finite future observed-word laws, but all-word equality need not imply common strong-refinement membership.
+
+Assumptions: Finite homogeneous labelled Markov chain; Deterministic observation; Strong partition refines the observation.
+Scope: Known-state future-word equivalence, not causal-state observed-history minimisation.
+
+Proof: [predictive-state-theory.md](../../constraint-lab/formal/predictive-state-theory.md#cl-t62). Induct on word likelihood functions using equal block sums. The seven-state CE-TRACE has the same B then equal absorbing C/D mixtures from two states, but successor branching separates them under strong refinement.
+Evidence: [predictive-state-theory.md](../../constraint-lab/formal/predictive-state-theory.md), [generation-008k-predictive-state-synthesis.md](../../constraint-lab/reports/generation-008k-predictive-state-synthesis.md), [test_v08k.py](../../constraint-lab/tests/test_v08k.py), [predictive-state-counterexamples.md](../../constraint-lab/formal/predictive-state-counterexamples.md), [predictive-state-literature-map.md](../../constraint-lab/formal/predictive-state-literature-map.md)
+Coherence: `F8K-TRACE-STRONG-DISTINCTION`
+Dependencies: CL-T20
+Source generations: 008K
+Boundary: Declared finite representation and equivalence. No physical ontology, unrestricted minimal HMM, or unexecuted H2/L empirical claim.
+Notes: Standard mathematics integrated as synthesis, not a mathematical priority claim. Tiny exact proof fixtures are not new laboratory scientific cells. Reserved above all three pinned branch namespaces.
+
+## CL-T63: Synchronization upper bound and supported Markov-order witness
+
+**ALGEBRAIC_THEOREM**
+
+If a strong quotient block is determined by the last s observed symbols on every compatible supported history, observed stationary Markov order is at most s; supported same-(s-1)-suffix row differences give equality for s>=2.
+
+Assumptions: Declared compatible-history law; Worst-case finite suffix synchronization; Stationarity for stationary least-order terminology; First-order means least positive order.
+Scope: Conditional finite-past implication also holds without stationarity after the observation window. Converse and state-count bounds are not asserted.
+
+Proof: [predictive-state-theory.md](../../constraint-lab/formal/predictive-state-theory.md#cl-t63). Condition next output first on the strong quotient state; substitute its deterministic suffix representation. A lower-order law would equate every same-shorter-suffix row, contradicting the witness. CE-WEAK and CE-EVEN refute tempting converses.
+Evidence: [predictive-state-theory.md](../../constraint-lab/formal/predictive-state-theory.md), [generation-008k-predictive-state-synthesis.md](../../constraint-lab/reports/generation-008k-predictive-state-synthesis.md), [test_v08k.py](../../constraint-lab/tests/test_v08k.py), [predictive-state-counterexamples.md](../../constraint-lab/formal/predictive-state-counterexamples.md), [predictive-state-literature-map.md](../../constraint-lab/formal/predictive-state-literature-map.md)
+Coherence: `F8K-SYNCHRONIZATION-MARKOV-BOUND`
+Dependencies: CL-T20, CL-T62
+Source generations: 008K
+Boundary: Declared finite representation and equivalence. No physical ontology, unrestricted minimal HMM, or unexecuted H2/L empirical claim.
+Notes: Standard mathematics integrated as synthesis, not a mathematical priority claim. Tiny exact proof fixtures are not new laboratory scientific cells. Reserved above all three pinned branch namespaces.
+
+## CL-T64: Finite recursively updated history Markov augmentation
+
+**ALGEBRAIC_THEOREM**
+
+A closed homogeneous event/material law depending only on current finite (X,H), together with a finite recursive update, induces an exact first-order kernel on (X,H).
+
+Assumptions: Finite X,H and event alphabet; Full-past conditional event/material law closes on current (X,H); Declared deterministic or stochastic normalized update.
+Scope: Prior-free representation theorem given an initial joint law; not existing-support grammar compilation.
+
+Proof: [axis-compilation.md](../../constraint-lab/formal/axis-compilation.md#cl-t64). Sum W(e,x'|x,h) against the update indicator/kernel. Nonnegative rows normalize to one and depend only on current augmented state; iterated conditioning reproduces the joint path law.
+Evidence: [axis-compilation.md](../../constraint-lab/formal/axis-compilation.md), [generation-008k-predictive-state-synthesis.md](../../constraint-lab/reports/generation-008k-predictive-state-synthesis.md), [test_v08k.py](../../constraint-lab/tests/test_v08k.py), [predictive-state-counterexamples.md](../../constraint-lab/formal/predictive-state-counterexamples.md), [predictive-state-literature-map.md](../../constraint-lab/formal/predictive-state-literature-map.md)
+Coherence: `F8K-STATE-TAXONOMY`, `F8K-HISTORY-AUGMENTATION`, `F8K-H-L-BOUNDARY`
+Dependencies: none
+Source generations: 008K
+Boundary: Declared finite representation and equivalence. No physical ontology, unrestricted minimal HMM, or unexecuted H2/L empirical claim.
+Notes: Standard mathematics integrated as synthesis, not a mathematical priority claim. Tiny exact proof fixtures are not new laboratory scientific cells. Reserved above all three pinned branch namespaces.
+
+## CL-T65: Finite closed constraint-state kernel flattening
+
+**ALGEBRAIC_THEOREM**
+
+A finite constraint-state process under one fixed meta-programme flattens to a fixed finite kernel on (X,H,eta) when the current product is jointly sufficient and its update homogeneous.
+
+Assumptions: Finite represented coordinates and events; Closed homogeneous joint next-event and update law; All relevant interpreter/driver/clock state included.
+Scope: Raw finite-state kernel representation, not automatic ontology-preserving or support-preserving compilation.
+
+Proof: [axis-compilation.md](../../constraint-lab/formal/axis-compilation.md#cl-t65). The CL-T64 conditional-update summation applies to the full product. Finiteness or marginal Markovity of eta alone does not ensure the hypothesis; CE-CLOSURE refutes that stronger claim.
+Evidence: [axis-compilation.md](../../constraint-lab/formal/axis-compilation.md), [generation-008k-predictive-state-synthesis.md](../../constraint-lab/reports/generation-008k-predictive-state-synthesis.md), [test_v08k.py](../../constraint-lab/tests/test_v08k.py), [predictive-state-counterexamples.md](../../constraint-lab/formal/predictive-state-counterexamples.md), [predictive-state-literature-map.md](../../constraint-lab/formal/predictive-state-literature-map.md)
+Coherence: `F8K-STATE-TAXONOMY`, `F8K-CONSTRAINT-STATE-FLATTENING`, `F8K-H-L-BOUNDARY`, `Q-L-COMPILER-SEMANTICS`
+Dependencies: CL-T64
+Source generations: 008K
+Boundary: Declared finite representation and equivalence. No physical ontology, unrestricted minimal HMM, or unexecuted H2/L empirical claim.
+Notes: Standard mathematics integrated as synthesis, not a mathematical priority claim. Tiny exact proof fixtures are not new laboratory scientific cells. Reserved above all three pinned branch namespaces.
+
+## CL-T66: Preserved ordinary-support obstruction to compilation
+
+**ALGEBRAIC_THEOREM**
+
+A grammar restricted to one preserved ordinary bit flip per unchanged clock tick cannot match a source one-step row assigning positive mass to an ordinary jump of different Hamming distance.
+
+Assumptions: Ordinary coordinates and observation preserved; Exactly one ordinary bit changes per grammar event; Clock preserves one event per target tick.
+Scope: Any allowed hidden variables, factors or K/J within this declared support class.
+
+Proof: [axis-compilation.md](../../constraint-lab/formal/axis-compilation.md#cl-t66). Every target row has support only at ordinary Hamming distance one. A positive source mass outside that invariant contradicts row equality; CE-SUPPORT retains all single-bit moves and adds a two-bit move.
+Evidence: [axis-compilation.md](../../constraint-lab/formal/axis-compilation.md), [generation-008k-predictive-state-synthesis.md](../../constraint-lab/reports/generation-008k-predictive-state-synthesis.md), [test_v08k.py](../../constraint-lab/tests/test_v08k.py), [predictive-state-counterexamples.md](../../constraint-lab/formal/predictive-state-counterexamples.md), [predictive-state-literature-map.md](../../constraint-lab/formal/predictive-state-literature-map.md)
+Coherence: `F8K-COMPILATION-CLASS`
+Dependencies: CL-T12
+Source generations: 008K
+Boundary: Declared finite representation and equivalence. No physical ontology, unrestricted minimal HMM, or unexecuted H2/L empirical claim.
+Notes: Standard mathematics integrated as synthesis, not a mathematical priority claim. Tiny exact proof fixtures are not new laboratory scientific cells. Reserved above all three pinned branch namespaces.
+
+## CL-T67: Stationary one/two-time Markov representation without path equivalence
+
+**ALGEBRAIC_THEOREM**
+
+Any deterministic finite observation of a stationary finite chain has a stationary current-observation Markov kernel matching its one-time and adjacent two-time laws, but not necessarily longer words.
+
+Assumptions: Finite stationary chain mu T=mu; Deterministic observation; Conditional rows defined on positive stationary observation support.
+Scope: Prior-dependent representation; zero-mass rows arbitrary. Does not imply weak lumpability.
+
+Proof: [predictive-state-theory.md](../../constraint-lab/formal/predictive-state-theory.md#cl-t67). Define Q_mu by the stationary adjacent joint divided by pi_Y; row normalization and pi_Y balance follow by summation. CE-EVEN or canonical 8H/8I show a triple mismatch despite matching pairs.
+Evidence: [predictive-state-theory.md](../../constraint-lab/formal/predictive-state-theory.md), [generation-008k-predictive-state-synthesis.md](../../constraint-lab/reports/generation-008k-predictive-state-synthesis.md), [test_v08k.py](../../constraint-lab/tests/test_v08k.py), [predictive-state-counterexamples.md](../../constraint-lab/formal/predictive-state-counterexamples.md), [predictive-state-literature-map.md](../../constraint-lab/formal/predictive-state-literature-map.md)
+Coherence: `F8K-STATIONARY-WEAK-DISTINCTION`
+Dependencies: none
+Source generations: 008K
+Boundary: Declared finite representation and equivalence. No physical ontology, unrestricted minimal HMM, or unexecuted H2/L empirical claim.
+Notes: Standard mathematics integrated as synthesis, not a mathematical priority claim. Tiny exact proof fixtures are not new laboratory scientific cells. Reserved above all three pinned branch namespaces.
+
+## CL-M04: Compiler-relative axis-novelty contract
+
+**METHODOLOGICAL_PRINCIPLE**
+
+Axis novelty claims must declare baseline state, support, clock, observation, permitted compiler transformations, grammar/alphabet/K/J budgets, equivalence and priors, and distinguish process, representation, semantic, compression and observational novelty.
+
+Assumptions: A declared source/target modelling task; No unqualified irreducibility claim.
+Scope: Permanent methodology, not a theorem of physical ontology or an executed H2/L result.
+
+Argument/next test: Open.
+Evidence: [axis-compilation.md](../../constraint-lab/formal/axis-compilation.md), [generation-008k-predictive-state-synthesis.md](../../constraint-lab/reports/generation-008k-predictive-state-synthesis.md), [test_v08k.py](../../constraint-lab/tests/test_v08k.py), [predictive-state-counterexamples.md](../../constraint-lab/formal/predictive-state-counterexamples.md), [predictive-state-literature-map.md](../../constraint-lab/formal/predictive-state-literature-map.md)
+Coherence: `F8K-STATE-TAXONOMY`, `F8K-COMPILATION-CLASS`, `F8K-NOVELTY-TAXONOMY`, `F8K-H-L-BOUNDARY`, `F8K-H2-NEXT-CAPABILITY`, `Q-L-COMPILER-SEMANTICS`, `Q-H2-LAST-PAIR-COMPILER`
+Dependencies: CL-M01, CL-T28, CL-T64, CL-T65, CL-T66
+Source generations: 008K
+Boundary: Declared finite representation and equivalence. No physical ontology, unrestricted minimal HMM, or unexecuted H2/L empirical claim.
+Notes: Standard mathematics integrated as synthesis, not a mathematical priority claim. Tiny exact proof fixtures are not new laboratory scientific cells. Reserved above all three pinned branch namespaces.
+
+## CL-M05: Scoped explanatory compression discipline
+
+**METHODOLOGICAL_PRINCIPLE**
+
+A small sufficient representation may aid explanation relative to declared predictions and equivalence, but state count, history alphabet/depth, synchronization, order and compilation costs must not be summed or treated as ontology.
+
+Assumptions: Prediction target and equivalence explicit; Costs reported separately.
+Scope: Model-design principle; usefulness is not a universal mathematical fact.
+
+Argument/next test: Open.
+Evidence: [axis-compilation.md](../../constraint-lab/formal/axis-compilation.md), [generation-008k-predictive-state-synthesis.md](../../constraint-lab/reports/generation-008k-predictive-state-synthesis.md), [test_v08k.py](../../constraint-lab/tests/test_v08k.py), [predictive-state-counterexamples.md](../../constraint-lab/formal/predictive-state-counterexamples.md), [predictive-state-literature-map.md](../../constraint-lab/formal/predictive-state-literature-map.md)
+Coherence: `F8K-NOVELTY-TAXONOMY`, `F8K-EXPLANATORY-COMPRESSION`
+Dependencies: CL-M03, CL-T52, CL-T60, CL-T63
+Source generations: 008K
+Boundary: Declared finite representation and equivalence. No physical ontology, unrestricted minimal HMM, or unexecuted H2/L empirical claim.
+Notes: Standard mathematics integrated as synthesis, not a mathematical priority claim. Tiny exact proof fixtures are not new laboratory scientific cells. Reserved above all three pinned branch namespaces.
+

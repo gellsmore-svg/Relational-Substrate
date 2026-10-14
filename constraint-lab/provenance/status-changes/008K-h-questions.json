@@ -1,0 +1,37 @@
+{
+  "record_type": "coherence_status_change",
+  "prompt_id": "008K",
+  "date": "2026-10-14",
+  "baseline_commit": "6c8f052c2d3361516e08c5a3def10a15474096cc",
+  "evidence_commit": "0af0d8441860a252f295c3b7bb0a2da2e3219075",
+  "authorized_by": "Prompt 008K sections 12/68 and supplied external review",
+  "transitions": [
+    {
+      "finding_id": "Q-H-MINIMAL-STATE",
+      "from": "unresolved",
+      "to": "qualified",
+      "changed_fields": [
+        "status"
+      ],
+      "before_row_sha256": "7da3fcff838c38ba5a170386e1f82920f4ea1d8d2909c6f95e3715281b1c28bf",
+      "after_row_sha256": "efd8578b2fbf9a848dbde77db023a8c3f78b3d43afc71241cdc6d75b807cd950",
+      "row_hash_convention": "UTF-8 JSONL line excluding newline",
+      "resolution_finding": "F8K-H-QUESTION-STATUS",
+      "meaning": "Scoped partial answer established; general question remains open."
+    },
+    {
+      "finding_id": "Q-H-COARSE-GRAINING",
+      "from": "unresolved",
+      "to": "qualified",
+      "changed_fields": [
+        "status"
+      ],
+      "before_row_sha256": "ca4d29cef65a836bc2bf30111123a3893a312a1f00a272cf8e69fdfab6b6cff8",
+      "after_row_sha256": "8ce13f2cab6a29b362de53403a40e6bbcd5d8a82591a595370cd9f03893517ba",
+      "row_hash_convention": "UTF-8 JSONL line excluding newline",
+      "resolution_finding": "F8K-H-QUESTION-STATUS",
+      "meaning": "Scoped partial answer established; general question remains open."
+    }
+  ],
+  "notes": "Statements, epistemic layers, creation fields and historical snapshots unchanged. Existing 8I partial-answer relations retained; no general question closed."
+}

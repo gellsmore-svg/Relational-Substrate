@@ -206,7 +206,11 @@ def test_predictive_snapshot_uses_immutable_ledger_prefix(tmp_path):
     if not snapshot.exists():
         pytest.skip("snapshot not yet published")
     for name, count in (("findings.jsonl", 140), ("relations.jsonl", 205)):
-        lines = (ROOT / "constraint-lab/coherence" / name).read_bytes().splitlines(keepends=True)
+        historical = subprocess.run(
+            ["git", "-C", str(ROOT), "show", "6c8f052c2d3361516e08c5a3def10a15474096cc:constraint-lab/coherence/" + name],
+            capture_output=True, check=True,
+        ).stdout
+        lines = historical.splitlines(keepends=True)
         (tmp_path / name).write_bytes(b"".join(lines[:count]))
     assert snapshot.read_text() == snapshot_text(tmp_path, title="Through Generation 008I (Predictive State)")
 
@@ -224,4 +228,14 @@ def test_prompt_variant_and_reviewed_artifacts_preserved():
     assert previous & changed <= {"constraint-lab/provenance/ledger.jsonl"}
     for name in ("formal/theorem-catalog.jsonl", "coherence/findings.jsonl",
                  "coherence/relations.jsonl", "provenance/ledger.jsonl"):
-        assert (ROOT / "constraint-lab" / name).read_bytes().startswith(git("show", BASE + ":constraint-lab/" + name))
+        before = git("show", BASE + ":constraint-lab/" + name)
+        after = (ROOT / "constraint-lab" / name).read_bytes()
+        if name != "coherence/findings.jsonl":
+            assert after.startswith(before)
+            continue
+        for old, current in zip(before.splitlines(), after.splitlines()):
+            row = json.loads(old)
+            if row["finding_id"] in {"Q-H-MINIMAL-STATE", "Q-H-COARSE-GRAINING"}:
+                assert json.loads(current) == {**row, "status": "qualified"}
+            else:
+                assert current == old
