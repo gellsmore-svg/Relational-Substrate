@@ -79,3 +79,25 @@ H>0 enters only through the laboratory's compilation test (8G CL-M01, 8H).
 ## G5 — Unification test
 
 A joint test across phases: a single template family must account for the basin, the radial dependence and the recurrence-rate difference, with no per-phenomenon rule. If no family does, record which phenomena separate.
+
+## E0 — Open-thetical rounds (GT-P002, executed)
+
+Method OTR 1.0. E0A (plan `2e5c97e`) crossed the gradient / non-gradient boundary of the grammar. E0B (plan `50c4b2c`) was chosen from E0A's result: attractive plus non-gradient composites, a PCOMP control and an emergent hub frame. E0C was not run, because the remaining question needs N≥7. Report: `reports/gt-e0-report.md`.
+
+What changed for the phases below:
+
+- **Kinetic convention (GT-Q01)** is demoted. A rule making rate a function of potential presupposes reversibility, and E0 showed that under irreversibility kinetics sets occupancy (OP-6).
+- **G2 (radial structure)** stays a candidate. In the gradient class its answer follows from a known potential, so it is informative mainly in non-gradient composites. It needs the same N≥7 kernel as the recommended next step.
+- **G3 (source dependence)** stays a candidate. For gradient templates it is predictable from the motif potential.
+- **G4 (inertia)** is unchanged. A directed order exists at H=0 for non-gradient rules, so "direction needs history" must be checked against H=0 compilations first.
+
+## Recommended next experiment: E1 — scale test of the handover and of basin–arrow coexistence
+
+1. **Machinery, as a separate commit with its own tests.** A vectorised label-covariant template kernel that computes rates by motif counting instead of per-rule matching. Validate it against `build_kernel` on every E0 cell at N=5 and 6 to 1e-12. Use sparse stationary solves to reach N=7 (HELD 262,144 states; FREE 2,097,152 states, sparse iteration only).
+2. **A frozen round at N=7, with the same grades as E0B.**
+   - Cells: CSPH and CSPF, CWPH and CWPF, PATHF weak_suppress and PATHH weak_favour, with NULL and CLOSEW controls; HELD first.
+   - Questions: Does the CSPH selectivity margin survive (GT-Q07)? Does the handover orientation persist? Does the equal-ratio occupancy gap keep growing? Is the hub-frame arrow still legible?
+   - The radial channel (attachment and activity by shell 1–4) comes for free, so G2 is asked in the non-gradient setting.
+3. **Stop rule.** If the margin crosses null at N=7, record coexistence as a finite-size effect and do not tune grades.
+
+Alternatives kept open, in order: an O=3 laboratory question (does the single-witness Gibbs theorem extend to triad relations?); the mechanism of local persistence (GT-Q06); a second held structure (G3), only after E1.

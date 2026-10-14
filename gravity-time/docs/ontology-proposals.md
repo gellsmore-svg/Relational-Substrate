@@ -26,3 +26,22 @@ This file records proposals that GT findings might make to the RS ontology. Each
 **Proposal.** Note, under the open candidate on limits of primitive event succession, that hard admissibility can drive a relational system into a configuration where no event is admissible. In the model this is total arrest. Whether that bears on T-LIMIT is open.
 
 **Status if adopted:** open question.
+
+## OP-5. Directed succession requires non-gradient constraint (from E0A, E0B)
+
+**Proposal.** Record, as a model-scoped mechanism candidate, that the grammar separates two kinds of tendency. Gradient tendencies, where the log rate ratio is the gradient of a relational configuration function, produce potentials: basins with no stationary direction of succession. Non-gradient tendencies produce a stationary, directed order of relational succession. Any RS account that ties the direction of temporal ordering to constraint structure would need a non-gradient component. The baseline's "time as the ordering of actualisation" is untouched as an interpretation; the proposal concerns *direction*, not ordering.
+
+**Status if adopted:** mechanism candidate, model-scoped.
+**Would count against:** a directed stationary order produced by gradient constraint, which is excluded by GT-F12 inside this grammar, so the test would have to come from a richer grammar; or a physical arrow shown to need no constraint asymmetry.
+
+## OP-6. Under direction, kinetics and occupancy are not separable (from E0A, E0B)
+
+**Proposal.** Amend the framing of OP-2. In reversible dynamics, potential (occupancy) and kinetics are independent primitives. Under irreversibility, the kinetic channel a constraint acts through (formation or dissolution) changes occupancy itself (GT-F17, GT-F27). Any principle linking clock rate to potential presupposes reversibility.
+
+**Status if adopted:** refinement of OP-2; open question.
+
+## OP-7. Release of supporting relations as a relational motif (from E0A, E0B)
+
+**Proposal.** Note, as a candidate under persistence and identity, the handover motif. An attachment to a reference structure is followed by dissolution of the peripheral relation that supported it, in a stationary, oriented cycle. The motif is legible relative to an imposed source and relative to an emergent hub. Bears on the laboratory's CL-Q05.
+
+**Status if adopted:** candidate motif, model-scoped, mechanism sketched not derived.

@@ -9,13 +9,35 @@ flowchart TD
     GT_F06_LOCK_ARREST["GT-F06-LOCK-ARREST: LOCK is certainly absorbed into the complete graph, where no event is admissible, after..."]
     GT_F07_SHARED_BASIN_DIFFERENT_CLOCKS["GT-F07-SHARED-BASIN-DIFFERENT-CLOCKS: CLOSE(m) and HOLD(1/m) have identical continuous-time shell masses (gap 0) and differen..."]
     GT_F08_NEAR_SOURCE_SLOWING["GT-F08-NEAR-SOURCE-SLOWING: The near/far activity ratio is below 1 in 16 of 16 non-null cells under the jump clock ..."]
+    GT_F13_NONGRADIENT_ARROW["GT-F13-NONGRADIENT-ARROW: Unsaturated two-witness PATH cells (PATHF weak_suppress, PATHH weak_favour) carry a sta..."]
+    GT_F14_SATURATION_HIDES_ARROW["GT-F14-SATURATION-HIDES-ARROW: Frozen expectation X4 failed in 4/16 PATH cells: favour-sign PATH at N=6 saturates to t..."]
+    GT_F15_SOURCE_CIRCULATION["GT-F15-SOURCE-CIRCULATION: In HELD, the non-gradient arrow is a source-relative circulation on (free edges, attach..."]
+    GT_F16_ARROW_PROJECTION_LOSS["GT-F16-ARROW-PROJECTION-LOSS: In FREE mode the same non-gradient arrow is nearly invisible to class-free event order:..."]
+    GT_F17_EQUAL_RATIO_DIVERGENT_OCCUPANCY["GT-F17-EQUAL-RATIO-DIVERGENT-OCCUPANCY: Non-gradient cells with identical local rate ratios (PATHF weak_suppress, PATHH weak_fa..."]
+    GT_F18_ARROW_WITH_REPULSION["GT-F18-ARROW-WITH-REPULSION: Every unsaturated arrow cell in E0A is an anti-basin: probe detached 53-55% (null 4-7%)..."]
+    GT_F19_ACTIVITY_WITHOUT_BASIN["GT-F19-ACTIVITY-WITHOUT-BASIN: COMPETE (closure-supported formation and dissolution both favoured) has a stationary la..."]
+    GT_F20_TRIAD_CLOCK_REVERSAL["GT-F20-TRIAD-CLOCK-REVERSAL: At one shared law, CLOSE, SPLIT and HOLD relax in opposite orders under the two clocks:..."]
+    GT_F21_REPULSION_MIRROR["GT-F21-REPULSION-MIRROR: Closure suppression repels probes from the held source and hard exclusion repels more: ..."]
+    GT_F22_NO_EMERGENT_CENTRE["GT-F22-NO-EMERGENT-CENTRE: No E0A cell produced degree heterogeneity above NULL in FREE mode; FRUST (wedges reward..."]
+    GT_F23_LOCAL_PERSISTENCE_SPARSE["GT-F23-LOCAL-PERSISTENCE-SPARSE: The localisation persistence index tau(degree)/tau(edges) exceeds 1 only in sparse, tri..."]
+    GT_F26_SELECTIVE_BASIN_WITH_ARROW["GT-F26-SELECTIVE-BASIN-WITH-ARROW: Strong closure plus dissolution-acting non-gradient support (CSPH) gives attachment sel..."]
+    GT_F27_KINETICS_SETS_BASIN_DEPTH["GT-F27-KINETICS-SETS-BASIN-DEPTH: In every equal-ratio composite pair the dissolution-acting non-gradient version is more..."]
+    GT_F28_HUB_FRAME_LEGIBILITY["GT-F28-HUB-FRAME-LEGIBILITY: An emergent hub frame (slot touches a maximum-degree vertex of the edge-present state) ..."]
+    GT_F29_HANDOVER_ORIENTATION_INVARIANT["GT-F29-HANDOVER-ORIENTATION-INVARIANT: The handover orientation is the same in every arrow-bearing cell, with or without a bas..."]
+    GT_F30_ARROW_BELONGS_TO_RATIO["GT-F30-ARROW-BELONGS-TO-RATIO: PCOMP (path formation and path dissolution both favoured, non-gradient rules with ratio..."]
   end
   subgraph INFERENCE [Inferences]
     GT_F09_POTENTIAL_AS_MECHANISM["GT-F09-POTENTIAL-AS-MECHANISM: In the existing grammar a basin around a held relational structure arises from minimal ..."]
     GT_F10_KINETICS_NOT_POTENTIAL["GT-F10-KINETICS-NOT-POTENTIAL: Near-source slowing of local activity accompanies every basin tested, density included,..."]
+    GT_F12_SINGLE_WITNESS_REVERSIBLE["GT-F12-SINGLE-WITNESS-REVERSIBLE: Every label-covariant single-witness template composition on the O=2 pair grammar (form..."]
+    GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY["GT-F25-KINETICS-SETS-OCCUPANCY-UNDER-IRREVERSIBILITY: G1's decomposition (local ratio fixes the basin; the formation/dissolution split fixes ..."]
+    GT_F33_DISSOLUTION_CHANNEL_INFERENCE["GT-F33-DISSOLUTION-CHANNEL-INFERENCE: In this grammar, a source-relative stationary arrow arises only from non-gradient suppo..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     GT_F03_DRIFT_CRITERION_CONFOUNDED["GT-F03-DRIFT-CRITERION-CONFOUNDED: The frozen G0 inward-drift criterion does not separate attraction from density: DENS pa..."]
+    GT_F24_GIBBS_PROJECTION_NONCONVERGENCE["GT-F24-GIBBS-PROJECTION-NONCONVERGENCE: The moment-matched triple-Gibbs KL did not converge for the six saturated gradient FREE..."]
+    GT_F31_E0A_REPLICATION["GT-F31-E0A-REPLICATION: NULL, PATHF weak_suppress and PATHH weak_favour recomputed in E0B reproduce their E0A c..."]
+    GT_F32_E0C_NOT_RUN["GT-F32-E0C-NOT-RUN: No E0C round was run. The only consequential remaining ambiguity, whether basin-arrow c..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     GT_F11_RS_POTENTIAL_AND_CLOCK["GT-F11-RS-POTENTIAL-AND-CLOCK: Inside this model, relational primacy yields basins as potentials without a primitive c..."]
@@ -25,6 +47,9 @@ flowchart TD
     GT_Q02_RADIAL["GT-Q02-RADIAL: Does attachment or activity have a stable dependence on relational distance across seve..."]
     GT_Q03_SOURCE_DEPENDENCE["GT-Q03-SOURCE-DEPENDENCE: Does basin depth depend on the held structure's motif content (triangle, 4-clique, path)?"]
     GT_Q04_ARREST_AND_SUCCESSION["GT-Q04-ARREST-AND-SUCCESSION: Does total admissibility arrest bear on the open candidate of a limit on primitive even..."]
+    GT_Q05_ARROW_AND_BASIN["GT-Q05-ARROW-AND-BASIN: Can a basin (attachment above null) and a stationary arrow coexist in the existing gram..."]
+    GT_Q06_LOCAL_PERSISTENCE_MECHANISM["GT-Q06-LOCAL-PERSISTENCE-MECHANISM: Why does local degree memory outlast global edge-count memory in sparse, triangle-poor ..."]
+    GT_Q07_COEXISTENCE_SCALING["GT-Q07-COEXISTENCE-SCALING: Does selective basin-with-arrow coexistence (GT-F26) survive at N>=7, vanish, or invert?"]
   end
   GT_F02_INCIDENCE_SELECTIVITY -->|contrasts_with| GT_F01_DENS_NULL
   GT_F03_DRIFT_CRITERION_CONFOUNDED -->|qualifies| GT_F02_INCIDENCE_SELECTIVITY
@@ -40,3 +65,37 @@ flowchart TD
   GT_F09_POTENTIAL_AS_MECHANISM -->|raises_question| GT_Q03_SOURCE_DEPENDENCE
   GT_F06_LOCK_ARREST -->|raises_question| GT_Q04_ARREST_AND_SUCCESSION
   GT_F06_LOCK_ARREST -->|contrasts_with| GT_F04_RETENTION_NOT_APPROACH
+  GT_F12_SINGLE_WITNESS_REVERSIBLE -->|explains| GT_F05_RELATIONAL_POTENTIAL
+  GT_F12_SINGLE_WITNESS_REVERSIBLE -->|contrasts_with| GT_F13_NONGRADIENT_ARROW
+  GT_F14_SATURATION_HIDES_ARROW -->|bounds| GT_F13_NONGRADIENT_ARROW
+  GT_F15_SOURCE_CIRCULATION -->|refines| GT_F13_NONGRADIENT_ARROW
+  GT_F16_ARROW_PROJECTION_LOSS -->|qualifies| GT_F15_SOURCE_CIRCULATION
+  GT_F17_EQUAL_RATIO_DIVERGENT_OCCUPANCY -->|qualifies| GT_F07_SHARED_BASIN_DIFFERENT_CLOCKS
+  GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY -->|derived_from| GT_F17_EQUAL_RATIO_DIVERGENT_OCCUPANCY
+  GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY -->|derived_from| GT_F12_SINGLE_WITNESS_REVERSIBLE
+  GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY -->|qualifies| GT_F10_KINETICS_NOT_POTENTIAL
+  GT_F18_ARROW_WITH_REPULSION -->|qualifies| GT_F13_NONGRADIENT_ARROW
+  GT_F18_ARROW_WITH_REPULSION -->|raises_question| GT_Q05_ARROW_AND_BASIN
+  GT_F19_ACTIVITY_WITHOUT_BASIN -->|contrasts_with| GT_F08_NEAR_SOURCE_SLOWING
+  GT_F19_ACTIVITY_WITHOUT_BASIN -->|qualifies| GT_F10_KINETICS_NOT_POTENTIAL
+  GT_F20_TRIAD_CLOCK_REVERSAL -->|refines| GT_F07_SHARED_BASIN_DIFFERENT_CLOCKS
+  GT_F21_REPULSION_MIRROR -->|contrasts_with| GT_F02_INCIDENCE_SELECTIVITY
+  GT_F21_REPULSION_MIRROR -->|contrasts_with| GT_F06_LOCK_ARREST
+  GT_F22_NO_EMERGENT_CENTRE -->|contrasts_with| GT_F02_INCIDENCE_SELECTIVITY
+  GT_F23_LOCAL_PERSISTENCE_SPARSE -->|raises_question| GT_Q06_LOCAL_PERSISTENCE_MECHANISM
+  GT_F24_GIBBS_PROJECTION_NONCONVERGENCE -->|qualifies| GT_F17_EQUAL_RATIO_DIVERGENT_OCCUPANCY
+  GT_F26_SELECTIVE_BASIN_WITH_ARROW -->|partially_answered_by| GT_Q05_ARROW_AND_BASIN
+  GT_Q05_ARROW_AND_BASIN -->|partially_answered_by| GT_F26_SELECTIVE_BASIN_WITH_ARROW
+  GT_F26_SELECTIVE_BASIN_WITH_ARROW -->|qualifies| GT_F18_ARROW_WITH_REPULSION
+  GT_F26_SELECTIVE_BASIN_WITH_ARROW -->|raises_question| GT_Q07_COEXISTENCE_SCALING
+  GT_F27_KINETICS_SETS_BASIN_DEPTH -->|refines| GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY
+  GT_F27_KINETICS_SETS_BASIN_DEPTH -->|supports| GT_F17_EQUAL_RATIO_DIVERGENT_OCCUPANCY
+  GT_F28_HUB_FRAME_LEGIBILITY -->|qualifies| GT_F16_ARROW_PROJECTION_LOSS
+  GT_F29_HANDOVER_ORIENTATION_INVARIANT -->|refines| GT_F15_SOURCE_CIRCULATION
+  GT_F30_ARROW_BELONGS_TO_RATIO -->|supports| GT_F12_SINGLE_WITNESS_REVERSIBLE
+  GT_F30_ARROW_BELONGS_TO_RATIO -->|refines| GT_F19_ACTIVITY_WITHOUT_BASIN
+  GT_F31_E0A_REPLICATION -->|supports| GT_F13_NONGRADIENT_ARROW
+  GT_F32_E0C_NOT_RUN -->|motivated_by| GT_Q07_COEXISTENCE_SCALING
+  GT_F33_DISSOLUTION_CHANNEL_INFERENCE -->|derived_from| GT_F27_KINETICS_SETS_BASIN_DEPTH
+  GT_F33_DISSOLUTION_CHANNEL_INFERENCE -->|derived_from| GT_F29_HANDOVER_ORIENTATION_INVARIANT
+  GT_F33_DISSOLUTION_CHANNEL_INFERENCE -->|derived_from| GT_F26_SELECTIVE_BASIN_WITH_ARROW
