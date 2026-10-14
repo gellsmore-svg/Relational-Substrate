@@ -19,3 +19,23 @@ is committed and pushed, no non-neutral I0 stationary solve, material projection
 shape information, feedback comparison, equivalence fingerprint or temporal
 statistic may execute. Neutral/historical/synthetic fixtures, symbolic covariance,
 structural orbit enumeration and work counts are allowed and will be recorded.
+
+## OTR source resolution before scientific planning
+
+The starting worktree and initially accessible refs contained no canonical file.
+After fetching origin, all-ref path/history/content searches found the shared
+method on origin/main. Resolved ref: 05b15b0d903d46070b99ac84f9cab1bd898046ba.
+Path: research-methods/open-thetical-research.md. Blob:
+669754b54e4374d7f8c9a606b1faf4811b7b8569. SHA256:
+2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd.
+Method-only source commit: 3840a7c2d566a520b2c7f98b2e699f81fb409675;
+cherry-picked with provenance as 26212cd5c18c2323fe21094406e0465a6ef35b6d.
+The source was read, including its research-direction/result-bias distinction,
+recursive freeze cycle, multidimensional coherence and honest-stop provision.
+Its own authored-byte relationship remains pending; source resolution is exact
+at the repository level. No fallback source was fabricated.
+
+Before I0 planning, all 124 findings, 181 relations and 58 catalogue entries were
+loaded. The exact 12 motivating IDs listed in Prompt 008I were inspected, with
+their relevant relations and CL-T20/30/31/33 and CL-Q06. Historical statements
+remain unchanged. The adapter is constraint-lab/methodology/open-thetical-application.md.
