@@ -1,0 +1,24 @@
+{
+  "record_type": "coherence_status_change",
+  "prompt_id": "008L",
+  "date": "2026-10-14",
+  "baseline_commit": "e81e7d5f67fa00f1d629f8bd4b365352d25c9eb1",
+  "evidence_commit": "ccf19a80da0500ff64dd1cf6b43f8c57213f641e",
+  "authorized_by": "Prompt 008L section 76 after successful fixed-(X,h1) capability verification",
+  "transitions": [
+    {
+      "finding_id": "Q-H2-LAST-PAIR-COMPILER",
+      "from": "unresolved",
+      "to": "qualified",
+      "changed_fields": [
+        "status"
+      ],
+      "before_row_sha256": "b1282fa76c298d95be36c23b032d7533dd0785cf976e9b0a50a3b51a19b1cc29",
+      "after_row_sha256": "af6ad4ca58fb283f6da0ce76d4c2ea467ff6e832ccf6fd2ec99de2e90221bf55",
+      "row_hash_convention": "UTF-8 JSONL line excluding newline",
+      "resolution_finding": "F8L-H2-QUESTION-QUALIFICATION",
+      "meaning": "Capability prerequisite established; structural utility beyond engineered delay remains open."
+    }
+  ],
+  "notes": "Statement, creation fields, formal references and all historical snapshots unchanged; no general question closed."
+}

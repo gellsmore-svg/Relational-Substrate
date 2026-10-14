@@ -362,3 +362,14 @@ Support/clock/category-preserving compilers ask different questions.
 H2 and L sketches are written but unexecuted. The proposed H2 witness holds
 complete X and last pair fixed while varying the second-last pair. Any necessity
 claim excludes enlarged history alphabets and hidden-state recoding explicitly.
+
+## Generation 8L: depth-two capability, after separate freeze
+
+The prior paragraphs preserve 8K's historical state. H2-0 now executes the
+SECOND-RECENT design: same complete X and same most-recent pair, different
+second-most-recent pair and future row. Pair-clock material order is three;
+adjacent event MI and three-time material CMI are exact nulls, while lag-two
+event MI and four-time conditional information are positive non-neutrally.
+Uniform pair-epoch occupancy remains unchanged. See
+[history depth](history-depth.md) for compiler restrictions, exact proofs,
+finite verification and explicit absence of a raw full-clock order claim.

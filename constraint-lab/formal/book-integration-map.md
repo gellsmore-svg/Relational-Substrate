@@ -64,3 +64,17 @@ The prior maturity assessments remain historical. Neither book is edited.
 | Unique operational definition of L / semantic advantage | PROVISIONAL | Research questions only | H origin and constraint-configuring role can overlap; no L execution or compiler-resource separation |
 | H2 next-witness design | PROVISIONAL | Laboratory research plan sketch | Not executed; excludes enlarged/reinterpreted H1 alphabets explicitly |
 | Dynamic constraint-state physical ontology | DO_NOT_INTEGRATE_YET | None | Raw kernel flattening is not evidence of physical meta-laws |
+
+## Generation 8L: depth semantics and matched temporal diagnostics
+
+Earlier maturity rows remain historical. Neither book is edited.
+
+| Content | Maturity | Proposed location | Scope |
+| --- | --- | --- | --- |
+| Semantic depth versus register alphabet | READY_WITH_SCOPE | Modelling appendix | H_pair=2 is last-two-pair meaning, not number of current variables or bits |
+| Same-(X,h1) depth-two capability | READY_WITH_SCOPE | Relational process example | Common-start fixed controller and unchanged ordinary support; no physical memory claim |
+| Strict H1 compiler boundary | READY_WITH_SCOPE | Formal expressivity appendix | No hidden recoding, phase or alphabet enlargement; arbitrary positive K/J allowed |
+| Multi-round predictive refinement | READY_WITH_SCOPE | Predictive-state technical appendix | Fixed-state strong refinement; 2304 blocks is not unrestricted HMM minimality |
+| Adjacent null versus lag-two dependence | READY_WITH_SCOPE | Temporal diagnostics example | Stationary pair-event clock and this fixed controller only |
+| SECOND-RECENT numerical magnitudes | PROVISIONAL | Supporting tables | Frozen three-grade, 160-digit natural-log evaluations; external review pending |
+| Physical historical depth | DO_NOT_INTEGRATE_YET | None | Formal capability does not establish event stacks or H2 memory in nature |

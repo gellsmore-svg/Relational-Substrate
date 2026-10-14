@@ -303,3 +303,13 @@ encoding; [tiny exact counterexamples](predictive-state-counterexamples.md)
 show the false converses. 8I's immediate observed-row separation is what proves
 the stronger particular-process minimality. One-step stationary invisibility
 does not imply weak lumpability or full observed path equality.
+
+## Generation 8L extension: delayed predictive separation
+
+The preceding 8I compression ladder is unchanged. SECOND-RECENT provides a
+different, separately frozen H_pair=2 process. Its labelled-mask strong
+refinement is 64->384->2304 non-neutrally, with h2 then h1 distinguished.
+Same h2/different h1 states have equal immediate rows but different two-step
+words, so repeated splitting is essential. The finite alphabet is 36, history
+depth two, observed mask order three; these are separate coordinates.
+No full graph-class/count H2 atlas is opened. See [history-depth.md](history-depth.md).

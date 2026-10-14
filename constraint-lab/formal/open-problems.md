@@ -96,3 +96,20 @@ compiler, not a new branch or experiment opened here. L remains attractive as
 semantic architecture but is underdetermined until its compiler/decoder scope
 and falsification criterion are independently fixed. See
 [axis compilation](axis-compilation.md) and the 8K report.
+
+## Generation 8L scoped answer and next questions
+
+H2-0 establishes the strict-(X,h1) capability boundary with SECOND-RECENT.
+Q-H2-LAST-PAIR-COMPILER is qualified, not globally closed: structural utility
+beyond engineered delay remains unresolved. Q-L-COMPILER-SEMANTICS is unchanged.
+
+- Laboratory-specific: which H2 functions produce structural/passaging effects beyond a delayed-copy selector, under matched support and stationary controls?
+- Laboratory-specific: can H2 change persistent visible structure, and which current-state comparators isolate the historical contribution?
+- General mathematics: which shift summaries admit smaller observation-relative strong refinements or different observed order?
+- Methodology: choose temporal lags/depths from a declared mechanism and compiler, not an arbitrary search for nonzero information.
+- Architecture/ontology: H2 remains a fixed L=0 controller; an independent L-positive compiler/semantic witness is still needed.
+
+H3 is not automatic: another engineered delay needs a new scientific question.
+No next controller, branch or experiment is opened; seven separate attention
+vectors and reasons are recorded in the 8L report. Broader scale and controlled
+dissolution questions remain available, not executed.

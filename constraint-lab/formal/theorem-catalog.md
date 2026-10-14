@@ -1317,3 +1317,209 @@ Source generations: 008K
 Boundary: Declared finite representation and equivalence. No physical ontology, unrestricted minimal HMM, or unexecuted H2/L empirical claim.
 Notes: Standard mathematics integrated as synthesis, not a mathematical priority claim. Tiny exact proof fixtures are not new laboratory scientific cells. Reserved above all three pinned branch namespaces.
 
+## CL-T68: Same-(X,h1) depth-two divergent futures
+
+**ALGEBRAIC_THEOREM**
+
+The common-start (a,b,c)/(b,a,c) witness has identical complete X, h1 and last two masks, equal positive path probabilities, and different ordinary full/pair rows iff m!=1.
+
+Assumptions: m>0; non-neutral conclusions require m!=1; Fixed SECOND-RECENT, six pair and four triad slots, one common program; Declared semantic compiler, pair-event clock and stationary law where stated.
+Scope: N4 O3 independent hypergraph, fixed SECOND-RECENT, H_pair=2, ontology L=0. Temporal/stationary statements use pair-event epochs; full-event claims limited to rows/witness paths. Strict semantic H1 compiler and declared priors.
+
+Proof: [history-depth.md](../../constraint-lab/formal/history-depth.md#cl-t68). Common-start path calculation and exchanged row coordinates; JS follows from their two-coordinate mixture.
+Evidence: [history-depth.md](../../constraint-lab/formal/history-depth.md), [generation-008l-history-depth-two.md](../../constraint-lab/reports/generation-008l-history-depth-two.md), [generation-008l-h2-0-tables.json](../../constraint-lab/reports/generation-008l-h2-0-tables.json), [history_depth.py](../../constraint-lab/src/rs_constraint_lab/history_depth.py), [test_v08l.py](../../constraint-lab/tests/test_v08l.py)
+Coherence: `F8L-SAME-X-H1-DIVERGENT-FUTURES`
+Dependencies: CL-T64
+Source generations: 008L
+Boundary: No absolute non-Markovianity, arbitrary hidden-model minimality, full-clock order or physical-memory claim. Neutral distinctions collapse.
+Notes: Symbolic all-positive-m derivation is separate from the three-grade exact checks and numerical logs.
+
+## CL-T69: Strict semantic H1 non-compilability
+
+**ALGEBRAIC_THEOREM**
+
+For m!=1 no fixed first-order kernel on exactly (X,most-recent pair h1) reproduces all conditioned SECOND-RECENT ordinary rows, independent of positive K/J; unrestricted augmented kernel encoding remains possible.
+
+Assumptions: m>0; non-neutral conclusions require m!=1; Fixed SECOND-RECENT, six pair and four triad slots, one common program; Declared semantic compiler, pair-event clock and stationary law where stated.
+Scope: N4 O3 independent hypergraph, fixed SECOND-RECENT, H_pair=2, ontology L=0. Temporal/stationary statements use pair-event epochs; full-event claims limited to rows/witness paths. Strict semantic H1 compiler and declared priors.
+
+Proof: [history-depth.md](../../constraint-lab/formal/history-depth.md#cl-t69). One represented endpoint requires two unequal rows. Excluded compiler transformations are explicit; no unrestricted augmentation impossibility is claimed.
+Evidence: [history-depth.md](../../constraint-lab/formal/history-depth.md), [generation-008l-history-depth-two.md](../../constraint-lab/reports/generation-008l-history-depth-two.md), [generation-008l-h2-0-tables.json](../../constraint-lab/reports/generation-008l-h2-0-tables.json), [history_depth.py](../../constraint-lab/src/rs_constraint_lab/history_depth.py), [test_v08l.py](../../constraint-lab/tests/test_v08l.py)
+Coherence: `F8L-H1-NONCOMPILABILITY`, `F8L-DEPTH-NOT-ALPHABET`
+Dependencies: CL-T68, CL-M04
+Source generations: 008L
+Boundary: No absolute non-Markovianity, arbitrary hidden-model minimality, full-clock order or physical-memory claim. Neutral distinctions collapse.
+Notes: Symbolic all-positive-m derivation is separate from the three-grade exact checks and numerical logs.
+
+## CL-T70: Two-slot exact pair-event closure and Markov sufficiency
+
+**ALGEBRAIC_THEOREM**
+
+Triad-only excursions sum out exactly; the closed recurrent transition is (p,i,j)->(p xor 2^e,e,i) with q_j(e), and the augmented full representation is first-order Markov.
+
+Assumptions: m>0; non-neutral conclusions require m!=1; Fixed SECOND-RECENT, six pair and four triad slots, one common program; Declared semantic compiler, pair-event clock and stationary law where stated.
+Scope: N4 O3 independent hypergraph, fixed SECOND-RECENT, H_pair=2, ontology L=0. Temporal/stationary statements use pair-event epochs; full-event claims limited to rows/witness paths. Strict semantic H1 compiler and declared priors.
+
+Proof: [history-depth.md](../../constraint-lab/formal/history-depth.md#cl-t70). Geometric pair absorption under unit triads preserves both history slots; the finite shifted product state closes.
+Evidence: [history-depth.md](../../constraint-lab/formal/history-depth.md), [generation-008l-history-depth-two.md](../../constraint-lab/reports/generation-008l-history-depth-two.md), [generation-008l-h2-0-tables.json](../../constraint-lab/reports/generation-008l-h2-0-tables.json), [history_depth.py](../../constraint-lab/src/rs_constraint_lab/history_depth.py), [test_v08l.py](../../constraint-lab/tests/test_v08l.py)
+Coherence: `F8L-PAIR-EVENT-QUOTIENT`, `F8L-H2-MARKOV-SUFFICIENCY`
+Dependencies: CL-T30, CL-T64
+Source generations: 008L
+Boundary: No absolute non-Markovianity, arbitrary hidden-model minimality, full-clock order or physical-memory claim. Neutral distinctions collapse.
+Notes: Symbolic all-positive-m derivation is separate from the three-grade exact checks and numerical logs.
+
+## CL-T71: SECOND-RECENT uniform stationary joint and period
+
+**ALGEBRAIC_THEOREM**
+
+For every positive m, the 2304-state recurrent pair chain is irreducible with unique uniform stationary law, independent uniform pair/history marginals and period two.
+
+Assumptions: m>0; non-neutral conclusions require m!=1; Fixed SECOND-RECENT, six pair and four triad slots, one common program; Declared semantic compiler, pair-event clock and stationary law where stated.
+Scope: N4 O3 independent hypergraph, fixed SECOND-RECENT, H_pair=2, ontology L=0. Temporal/stationary statements use pair-event epochs; full-event claims limited to rows/witness paths. Strict semantic H1 compiler and declared priors.
+
+Proof: [history-depth.md](../../constraint-lab/formal/history-depth.md#cl-t71). Direct column sums prove uniformity; an XOR-prefix followed by target h2,h1 proves reachability; parity and a diagonal-history two-step return prove period.
+Evidence: [history-depth.md](../../constraint-lab/formal/history-depth.md), [generation-008l-history-depth-two.md](../../constraint-lab/reports/generation-008l-history-depth-two.md), [generation-008l-h2-0-tables.json](../../constraint-lab/reports/generation-008l-h2-0-tables.json), [history_depth.py](../../constraint-lab/src/rs_constraint_lab/history_depth.py), [test_v08l.py](../../constraint-lab/tests/test_v08l.py)
+Coherence: `F8L-H2-STATIONARY-INVARIANCE`
+Dependencies: CL-T70
+Source generations: 008L
+Boundary: No absolute non-Markovianity, arbitrary hidden-model minimality, full-clock order or physical-memory claim. Neutral distinctions collapse.
+Notes: Symbolic all-positive-m derivation is separate from the three-grade exact checks and numerical logs.
+
+## CL-T72: Two-round labelled predictive refinement minimality
+
+**ALGEBRAIC_THEOREM**
+
+For positive m!=1, coarsest labelled-mask strong refinement is 64->384->2304 singleton states. Neutral gives 64; all same-mask history pairs are future-distinct non-neutrally, including delayed separation at fixed h2.
+
+Assumptions: m>0; non-neutral conclusions require m!=1; Fixed SECOND-RECENT, six pair and four triad slots, one common program; Declared semantic compiler, pair-event clock and stationary law where stated.
+Scope: N4 O3 independent hypergraph, fixed SECOND-RECENT, H_pair=2, ontology L=0. Temporal/stationary statements use pair-event epochs; full-event claims limited to rows/witness paths. Strict semantic H1 compiler and declared priors.
+
+Proof: [history-depth.md](../../constraint-lab/formal/history-depth.md#cl-t72). Different h2 separates immediate rows; fixed h2/different h1 separates a common positive two-event observed word after register shifting.
+Evidence: [history-depth.md](../../constraint-lab/formal/history-depth.md), [generation-008l-history-depth-two.md](../../constraint-lab/reports/generation-008l-history-depth-two.md), [generation-008l-h2-0-tables.json](../../constraint-lab/reports/generation-008l-h2-0-tables.json), [history_depth.py](../../constraint-lab/src/rs_constraint_lab/history_depth.py), [test_v08l.py](../../constraint-lab/tests/test_v08l.py)
+Coherence: `F8L-H2-PREDICTIVE-2304`, `F8L-MULTIROUND-REFINEMENT`
+Dependencies: CL-T52, CL-T62, CL-T70
+Source generations: 008L
+Boundary: No absolute non-Markovianity, arbitrary hidden-model minimality, full-clock order or physical-memory claim. Neutral distinctions collapse.
+Notes: Symbolic all-positive-m derivation is separate from the three-grade exact checks and numerical logs.
+
+## CL-T73: Lag-two slot order and stationary subsequence factorisation
+
+**ALGEBRAIC_THEOREM**
+
+The pair-slot process has stationary order exactly two for m!=1 and is iid uniform at m=1. Under stationary product initialisation even and odd subsequences are independent six-slot first-order chains.
+
+Assumptions: m>0; non-neutral conclusions require m!=1; Fixed SECOND-RECENT, six pair and four triad slots, one common program; Declared semantic compiler, pair-event clock and stationary law where stated.
+Scope: N4 O3 independent hypergraph, fixed SECOND-RECENT, H_pair=2, ontology L=0. Temporal/stationary statements use pair-event epochs; full-event claims limited to rows/witness paths. Strict semantic H1 compiler and declared priors.
+
+Proof: [history-depth.md](../../constraint-lab/formal/history-depth.md#cl-t73). The conditional law reads E_(t-1), same-current/different-previous slots rule out order one; finite path products factor over index parity.
+Evidence: [history-depth.md](../../constraint-lab/formal/history-depth.md), [generation-008l-history-depth-two.md](../../constraint-lab/reports/generation-008l-history-depth-two.md), [generation-008l-h2-0-tables.json](../../constraint-lab/reports/generation-008l-h2-0-tables.json), [history_depth.py](../../constraint-lab/src/rs_constraint_lab/history_depth.py), [test_v08l.py](../../constraint-lab/tests/test_v08l.py)
+Coherence: `F8L-EVENT-ORDER2`
+Dependencies: CL-T71
+Source generations: 008L
+Boundary: No absolute non-Markovianity, arbitrary hidden-model minimality, full-clock order or physical-memory claim. Neutral distinctions collapse.
+Notes: Symbolic all-positive-m derivation is separate from the three-grade exact checks and numerical logs.
+
+## CL-T74: Labelled pair-mask exact order three
+
+**ALGEBRAIC_THEOREM**
+
+At stationary pair epochs SECOND-RECENT labelled masks have order exactly three for m!=1 and one neutrally; three masks recover the shifted register and the common-start witness excludes order two.
+
+Assumptions: m>0; non-neutral conclusions require m!=1; Fixed SECOND-RECENT, six pair and four triad slots, one common program; Declared semantic compiler, pair-event clock and stationary law where stated.
+Scope: N4 O3 independent hypergraph, fixed SECOND-RECENT, H_pair=2, ontology L=0. Temporal/stationary statements use pair-event epochs; full-event claims limited to rows/witness paths. Strict semantic H1 compiler and declared priors.
+
+Proof: [history-depth.md](../../constraint-lab/formal/history-depth.md#cl-t74). Consecutive XORs recover h1/h2; supported same-last-two-mask histories have unequal next rows.
+Evidence: [history-depth.md](../../constraint-lab/formal/history-depth.md), [generation-008l-history-depth-two.md](../../constraint-lab/reports/generation-008l-history-depth-two.md), [generation-008l-h2-0-tables.json](../../constraint-lab/reports/generation-008l-h2-0-tables.json), [history_depth.py](../../constraint-lab/src/rs_constraint_lab/history_depth.py), [test_v08l.py](../../constraint-lab/tests/test_v08l.py)
+Coherence: `F8L-PAIR-MASK-ORDER3`
+Dependencies: CL-T63, CL-T68, CL-T70
+Source generations: 008L
+Boundary: No absolute non-Markovianity, arbitrary hidden-model minimality, full-clock order or physical-memory claim. Neutral distinctions collapse.
+Notes: Symbolic all-positive-m derivation is separate from the three-grade exact checks and numerical logs.
+
+## CL-T75: Adjacent null and lag-two conditional-information identity
+
+**ALGEBRAIC_THEOREM**
+
+At stationary pair epochs adjacent slots are independent and three-mask CMI is exactly zero, while lag-two slot MI equals four-mask conditional information and is positive iff m!=1.
+
+Assumptions: m>0; non-neutral conclusions require m!=1; Fixed SECOND-RECENT, six pair and four triad slots, one common program; Declared semantic compiler, pair-event clock and stationary law where stated.
+Scope: N4 O3 independent hypergraph, fixed SECOND-RECENT, H_pair=2, ontology L=0. Temporal/stationary statements use pair-event epochs; full-event claims limited to rows/witness paths. Strict semantic H1 compiler and declared priors.
+
+Proof: [history-depth.md](../../constraint-lab/formal/history-depth.md#cl-t75). Exact stationary joint sums give adjacent 1/36 and lagged q_j(e)/6. Mask XOR recovery transports the lagged conditional information; exact triple law equals H0.
+Evidence: [history-depth.md](../../constraint-lab/formal/history-depth.md), [generation-008l-history-depth-two.md](../../constraint-lab/reports/generation-008l-history-depth-two.md), [generation-008l-h2-0-tables.json](../../constraint-lab/reports/generation-008l-h2-0-tables.json), [history_depth.py](../../constraint-lab/src/rs_constraint_lab/history_depth.py), [test_v08l.py](../../constraint-lab/tests/test_v08l.py)
+Coherence: `F8L-ADJACENT-TEMPORAL-NULL`, `F8L-LAG2-TEMPORAL-MEMORY`
+Dependencies: CL-T71, CL-T73, CL-T74
+Source generations: 008L
+Boundary: No absolute non-Markovianity, arbitrary hidden-model minimality, full-clock order or physical-memory claim. Neutral distinctions collapse.
+Notes: Symbolic all-positive-m derivation is separate from the three-grade exact checks and numerical logs.
+
+## CL-T76: Pure graph-shape depth-two witness
+
+**ALGEBRAIC_THEOREM**
+
+At the canonical identical-(X,h1) endpoint, middle/end h2 have equal next edge-count laws but unequal graph-class laws iff m!=1; equal-prior class information equals class-given-count information.
+
+Assumptions: m>0; non-neutral conclusions require m!=1; Fixed SECOND-RECENT, six pair and four triad slots, one common program; Declared semantic compiler, pair-event clock and stationary law where stated.
+Scope: N4 O3 independent hypergraph, fixed SECOND-RECENT, H_pair=2, ontology L=0. Temporal/stationary statements use pair-event epochs; full-event claims limited to rows/witness paths. Strict semantic H1 compiler and declared priors.
+
+Proof: [history-depth.md](../../constraint-lab/formal/history-depth.md#cl-t76). Mechanically classified six pair toggles yield the four class rows and common dissolution/formation totals; information chain rule removes the zero count term.
+Evidence: [history-depth.md](../../constraint-lab/formal/history-depth.md), [generation-008l-history-depth-two.md](../../constraint-lab/reports/generation-008l-history-depth-two.md), [generation-008l-h2-0-tables.json](../../constraint-lab/reports/generation-008l-h2-0-tables.json), [history_depth.py](../../constraint-lab/src/rs_constraint_lab/history_depth.py), [test_v08l.py](../../constraint-lab/tests/test_v08l.py)
+Coherence: `F8L-H2-PURE-SHAPE`
+Dependencies: CL-T68, CL-T70
+Source generations: 008L
+Boundary: No absolute non-Markovianity, arbitrary hidden-model minimality, full-clock order or physical-memory claim. Neutral distinctions collapse.
+Notes: Symbolic all-positive-m derivation is separate from the three-grade exact checks and numerical logs.
+
+## CL-F09: Frozen H2-0 exact finite verification
+
+**FINITE_EXHAUSTIVE_RESULT**
+
+Twelve frozen atomic items verify the common-start H2 witness, three 2304-state kernels, non-neutral 64/384/2304 and neutral 64 refinements, exact stationary/null/order certificates and independent word reconstructions.
+
+Assumptions: Committed and pushed H2-0 plan precedes all new N4 non-neutral targets; Palette exactly 1/4,1,4.
+Scope: N4 O3 independent hypergraph, fixed SECOND-RECENT, H_pair=2, ontology L=0. Temporal/stationary statements use pair-event epochs; full-event claims limited to rows/witness paths. Strict semantic H1 compiler and declared priors.
+
+Enumeration: Four atomic analysis types times three grades; six generic refinement runs including reverse enumeration; 13824 transitions and 497664 forward quadruple terms per grade; exact count 12. Verifier: [gen008l_exec.py](../../constraint-lab/src/rs_constraint_lab/gen008l_exec.py)
+Evidence: [history-depth.md](../../constraint-lab/formal/history-depth.md), [generation-008l-history-depth-two.md](../../constraint-lab/reports/generation-008l-history-depth-two.md), [generation-008l-h2-0-tables.json](../../constraint-lab/reports/generation-008l-h2-0-tables.json), [history_depth.py](../../constraint-lab/src/rs_constraint_lab/history_depth.py), [test_v08l.py](../../constraint-lab/tests/test_v08l.py)
+Coherence: `F8L-H2-PREDICTIVE-2304`, `F8L-MULTIROUND-REFINEMENT`, `F8L-EVENT-ORDER2`, `F8L-PAIR-MASK-ORDER3`, `F8L-ADJACENT-TEMPORAL-NULL`, `F8L-H2-STATIONARY-INVARIANCE`, `F8L-PAIR-EVENT-QUOTIENT`
+Dependencies: CL-T68, CL-T69, CL-T70, CL-T71, CL-T72, CL-T73, CL-T74, CL-T75, CL-T76
+Source generations: 008L
+Boundary: Exact finite verification does not independently prove all-m or physical claims.
+Notes: Frozen plan and all full rational item outputs remain durable; raw triad states checked by exact absorption.
+
+## CL-N09: H2 row, shape and lag-two information values
+
+**NUMERICAL_KERNEL_RESULT**
+
+At m=1/4,4, lag-two event MI/four-mask CMI are approximately 0.06751737542833736 and 0.21066571905623145 nats; row/shape JS values are evaluated from exact probabilities with 160-digit natural logs. Neutral and adjacent nulls have separate exact certificates.
+
+Assumptions: Exact rational frozen outputs; 160 decimal digits, natural logarithm.
+Scope: N4 O3 independent hypergraph, fixed SECOND-RECENT, H_pair=2, ontology L=0. Temporal/stationary statements use pair-event epochs; full-event claims limited to rows/witness paths. Strict semantic H1 compiler and declared priors.
+
+Method: 160-digit Decimal logarithms from exact joints; closed formulas versus independently enumerated stationary words
+Domain: H2-0 palette m=1/4,1,4; full/pair witness rows, local graph shape and pair-epoch lag-two information
+Tolerances: `{"information_formula_enumeration_gap": "1e-25", "rational_probabilities": "exact"}`
+Evidence: [history-depth.md](../../constraint-lab/formal/history-depth.md), [generation-008l-history-depth-two.md](../../constraint-lab/reports/generation-008l-history-depth-two.md), [generation-008l-h2-0-tables.json](../../constraint-lab/reports/generation-008l-h2-0-tables.json), [history_depth.py](../../constraint-lab/src/rs_constraint_lab/history_depth.py), [test_v08l.py](../../constraint-lab/tests/test_v08l.py)
+Coherence: `F8L-LAG2-TEMPORAL-MEMORY`, `F8L-H2-PURE-SHAPE`
+Dependencies: CL-T68, CL-T75, CL-T76
+Source generations: 008L
+Boundary: Numeric information values are not state counts, memory-depth scores or general monotonicity claims.
+Notes: External decimal candidates used only after freeze as checks; maximum information gap below 3e-157.
+
+## CL-M06: Mechanism-matched temporal diagnostics
+
+**METHODOLOGICAL_PRINCIPLE**
+
+Temporal tests should match the declared history mechanism and compiler: one fixed lag or three-time conditional test can be exactly blind to depth-two dependence. This does not prescribe arbitrary-depth searches.
+
+Assumptions: Candidate temporal mechanism and compiler explicit.
+Scope: Research methodology informed by SECOND-RECENT's exact adjacent nulls and lag-two effects; not an obligation to test all depths.
+
+Argument/next test: Open.
+Evidence: [history-depth.md](../../constraint-lab/formal/history-depth.md), [generation-008l-history-depth-two.md](../../constraint-lab/reports/generation-008l-history-depth-two.md), [generation-008l-h2-0-tables.json](../../constraint-lab/reports/generation-008l-h2-0-tables.json), [history_depth.py](../../constraint-lab/src/rs_constraint_lab/history_depth.py), [test_v08l.py](../../constraint-lab/tests/test_v08l.py)
+Coherence: `F8L-TEMPORAL-DIAGNOSTIC-SCOPE`
+Dependencies: CL-T75
+Source generations: 008L
+Boundary: Controller-specific lag-depth alignment is not a general theorem for arbitrary H_pair=d.
+Notes: No master memory score or automatic H3 escalation.
+

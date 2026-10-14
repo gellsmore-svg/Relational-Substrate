@@ -167,3 +167,15 @@ No category here denotes minimal physical memory, an ontology hierarchy,
 irreducible time, observer-created history, purpose, design or theology.
 All ontology/global-coherence readings remain separate from algebraic,
 finite exact, numerical, model-inference and methodological claims.
+
+## Generation 8L: semantic temporal depth two
+
+Verified SECOND-RECENT retains (h1,h2), the two most recent PAIR slots.
+The alphabet has 36 recurrent values; its temporal depth is two, regardless of
+whether it is encoded in two variables, one 36-valued variable or several bits.
+The strict H1 class preserves h1's last-pair meaning, not arbitrary recoding.
+At identical complete X and h1, different reachable h2 gives different ordinary
+rows. The augmented (X,h1,h2) is nevertheless first-order Markov.
+At labelled pair resolution its strong predictive refinement has 2304 blocks,
+while its observed order is three: neither number defines depth.
+See [history depth](history-depth.md); no L-positive state is introduced.

@@ -225,3 +225,23 @@ Extensional finite kernels do not uniquely classify a coordinate as H or L.
 Joint sufficiency permits flattening; representation, semantics and costs may
 still justify maintaining the distinction. No L-positive empirical result,
 ontology axis or claim of irreducible time is established by 8K.
+
+## Generation 8L: executed strict-H1 compiler boundary
+
+The earlier 8K designs remain historical and unexecuted THERE. H2-0 now verifies
+the proposed common-start (a,b,c)/(b,a,c) witness at all three frozen grades.
+At identical ten-bit X and last-pair h1=c, h2=b/a gives unequal ordinary full
+and pair rows iff m!=1. CL-T69 rules out every fixed first-order compiler whose
+state is exactly (X,h1), independent of positive K/J complexity.
+
+Preserved: ordinary coordinates, single-toggle support, event clock,
+observation, most-recent-pair semantics and all conditioned-row equivalence.
+Excluded: hidden state, persistent random seed, phase/time, enlarged history
+alphabet, recoding and per-history programs. The common-start witness makes
+both conditions reachable under one law, not selected across experiments.
+
+Unrestricted finite augmentation can encode the two-slot register in 36 values.
+This does not satisfy the declared semantic H1 contract. The result applies
+CL-M04; it does not defeat raw kernel flattening or resolve L semantics.
+SECOND-RECENT is fixed throughout, so ontology L=0 remains unchanged.
+See [history-depth proofs](history-depth.md#cl-t69).

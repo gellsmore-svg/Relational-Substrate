@@ -279,3 +279,32 @@ Ordinal 0..5, separate judgments, never summed or optimised.
 Prefer clarifying H2 structural usefulness, with formal integration also
 available, rather than automatically testing H3. This is a recommendation,
 not an opened round. No new branch/controller or follow-up is executed.
+
+## Z. Engineering amendment A, preserving the original record
+
+After the original result/report commits, combined tests found that an untyped
+cache could equate invalid boolean True with valid slot 1 and bypass validation
+after a valid cached call. All original scientific histories used legal integer
+slots; no scientific result was invalidated.
+
+The corrected caches use typed keys. Amendment A was separately committed and
+pushed at a889f6a62db7cba51a82d216c4991d118b42bf69 BEFORE corrected-source
+non-neutral replay. Its canonical plan hash is
+df27a5078059fbea70836727023b03fa10cde7ccf8e09b8791c8bf1a5193b8d2,
+plan-file SHA256
+417f1adfb126b178ac0a7e736a799637690c67d28488fcbbf0c4bfbf7d9c6311.
+Unlike the original freeze, this amendment explicitly had all twelve original
+results already exposed. No retrospective zero-exposure claim is made.
+
+The original v1 plan, receipt, item files, tables and manifest are preserved.
+Amendment-A outputs have separate paths/version; all twelve scientific
+result_sha256 values and all four summary-table hashes match v1 exactly.
+The original verifier also passes in its own 3e71f06 result worktree.
+Replay took 22.74 item seconds. A valid-call-then-invalid-call cache regression
+guards this boundary. Active checked source is sealed by the amended plan;
+the original source remains reproducible at its committed hashes.
+
+No scientific law, grade, estimator, tolerance, compiler or outcome was changed.
+The amendment and full comparison receipts are durable under
+exploration/generation-008l; final full-suite and closing-head CI are recorded
+at close-out.

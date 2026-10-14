@@ -254,4 +254,19 @@ history partitions are different objects. See the
 [literature map](predictive-state-literature-map.md).
 No new laboratory process is introduced or scientifically analysed in 8K.
 Historical regression-suite replays are verification, not new scientific cells.
+
+## Generation 8L: a verified multi-round natural process example
+
+For SECOND-RECENT, fixed current pair mask and h2 with different h1 have exactly
+equal immediate observed rows. After a common next event, h1 shifts to h2 and
+changes following labelled rows. Thus equal immediate observed rows do not
+imply trace equivalence or membership in one strong predictive block.
+
+The unchanged generic utility produces 64->384->2304 at non-neutral grades,
+with identical memberships under reversed enumeration; neutral stays 64.
+CL-T72 proves the all-positive-m separation independently of those three-grade
+finite checks. CL-T74 recovers both slots from three masks and excludes order
+two. This is a new worked instance of CL-T52/CL-T63, not a redefinition of
+history depth as splitting rounds. No graph/count H2 minimisation is claimed.
+See [proofs and compact certificates](history-depth.md#cl-t72).
 No physical ontology, observer or irreversible-time conclusion follows.

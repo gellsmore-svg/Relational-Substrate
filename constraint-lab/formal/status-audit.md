@@ -55,3 +55,11 @@ Generated from status-audit.jsonl and the historical coherence ledger. The sugge
 | F8IP-PROJECTION-RELATIVE-MEMORY / RS_GLOBAL_COHERENCE_INTERPRETATION | INTERPRETATION | CL-T55, CL-T56, CL-T57 | RS reading remains separate from proof and physical claims. |
 | Q-H-MINIMAL-STATE / OPEN_QUESTION | OPEN_QUESTION | CL-Q06, CL-T53, CL-T55, CL-T56 | Qualified scoped answer, not global hidden-model minimisation closed. |
 | Q-H-COARSE-GRAINING / OPEN_QUESTION | OPEN_QUESTION | CL-T55, CL-T56, CL-T57 | Class/count survival and parity erasure answered for RR; broader questions remain open. |
+| F8L-SAME-X-H1-DIVERGENT-FUTURES / OBSERVATION | ALGEBRAIC_THEOREM | CL-T68 | Common-start all-positive-m proof; finite three-grade replay separate. |
+| F8L-H1-NONCOMPILABILITY / INFERENCE | ALGEBRAIC_THEOREM | CL-T69 | Strict semantic H1 compiler; no unrestricted augmentation impossibility. |
+| F8L-H2-PREDICTIVE-2304 / OBSERVATION | FINITE_EXHAUSTIVE_RESULT | CL-F09, CL-T72 | Exact N4 three-grade generic memberships; all-m separation has a separate proof. |
+| F8L-H2-STATIONARY-INVARIANCE / OBSERVATION | ALGEBRAIC_THEOREM | CL-T71 | Exact balance and reachability proof; stationary does not mean parity-start convergence. |
+| F8L-ADJACENT-TEMPORAL-NULL / OBSERVATION | ALGEBRAIC_THEOREM | CL-T75 | Rational independence certificate, not rounded numerical zero. |
+| F8L-LAG2-TEMPORAL-MEMORY / OBSERVATION | NUMERICAL_KERNEL_RESULT | CL-N09, CL-T75 | All-m identity and separately evaluated 160-digit logarithmic values. |
+| F8L-TEMPORAL-DIAGNOSTIC-SCOPE / METHODOLOGICAL | METHODOLOGICAL_PRINCIPLE | CL-M06 | Mechanism-matched tests, no arbitrary-depth mandate. |
+| F8L-LOCAL-RS-READING / RS_GLOBAL_COHERENCE_INTERPRETATION | INTERPRETATION | CL-T68, CL-T75 | Model-scoped, not physical time or memory ontology. |

@@ -85,6 +85,16 @@ flowchart TD
     F8IP_TEMPORAL_INFORMATION_SURVIVES["F8IP-TEMPORAL-INFORMATION-SURVIVES: Stationary temporal conditional information remains positive in graph class and edge co..."]
     F8IP_ONE_STEP_INVISIBILITY_PERSISTS["F8IP-ONE-STEP-INVISIBILITY-PERSISTS: At stationarity all four projected one-step laws equal H0 exactly. This does not imply ..."]
     F8IP_QUOTIENT_CORRECTNESS["F8IP-QUOTIENT-CORRECTNESS: Transforming graph and remembered pair together gives a valid dynamical quotient. All n..."]
+    F8L_SAME_X_H1_DIVERGENT_FUTURES["F8L-SAME-X-H1-DIVERGENT-FUTURES: Common-start paths (01,12,23)/(12,01,23) have identical complete ten-bit X, h1=23 and l..."]
+    F8L_H2_PREDICTIVE_2304["F8L-H2-PREDICTIVE-2304: Generic labelled-mask strong refinement has 2304 non-neutral singleton states and 64 ne..."]
+    F8L_MULTIROUND_REFINEMENT["F8L-MULTIROUND-REFINEMENT: Non-neutral refinement genuinely takes two strict splits, 64->384->2304: h2 separates i..."]
+    F8L_EVENT_ORDER2["F8L-EVENT-ORDER2: The pair-slot process reads E_(t-1) to predict E_(t+1): stationary order exactly two no..."]
+    F8L_PAIR_MASK_ORDER3["F8L-PAIR-MASK-ORDER3: Three consecutive labelled pair masks recover h2 and suffice, while supported same-last..."]
+    F8L_ADJACENT_TEMPORAL_NULL["F8L-ADJACENT-TEMPORAL-NULL: At stationary pair epochs adjacent event joint is exactly 1/36 and I(P_prev;P_next|P)=0..."]
+    F8L_LAG2_TEMPORAL_MEMORY["F8L-LAG2-TEMPORAL-MEMORY: Lag-two event repetition is m/(m+5). Lag-two event MI equals I(P_(t-2);P_(t+1)|P_(t-1),..."]
+    F8L_H2_STATIONARY_INVARIANCE["F8L-H2-STATIONARY-INVARIANCE: The irreducible 2304-state chain has unique uniform stationary joint 1/2304 and period ..."]
+    F8L_H2_PURE_SHAPE["F8L-H2-PURE-SHAPE: At identical X and h1, middle versus end h2 gives equal next-count laws but different g..."]
+    F8L_PAIR_EVENT_QUOTIENT["F8L-PAIR-EVENT-QUOTIENT: Triad excursions preserve pair mask and both historical slots; exact absorption gives t..."]
   end
   subgraph INFERENCE [Inferences]
     F008_COMPOSITION_REPRESENTATION["F008-COMPOSITION-REPRESENTATION: The magnitude of a two-rule interaction residual depends on the representation and the ..."]
@@ -104,6 +114,7 @@ flowchart TD
     F8IP_EDGE_DIRECTION_HISTORY["F8IP-EDGE-DIRECTION-HISTORY: At edge-count resolution historical pair identity and graph role compress to whether th..."]
     F8K_H_L_BOUNDARY["F8K-H-L-BOUNDARY: History summarises prior ordinary events; candidate eta configures constraint machinery..."]
     F8K_H2_NEXT_CAPABILITY["F8K-H2-NEXT-CAPABILITY: Recommend an unexecuted H2 same-(X,h_1), different-h_2 design as the next clean nested ..."]
+    F8L_H1_NONCOMPILABILITY["F8L-H1-NONCOMPILABILITY: No fixed first-order kernel on exactly (X,last-pair h1) can reproduce all conditioned S..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     F011_QUOTIENT_INVALID["F011-QUOTIENT-INVALID: Graph-only hidden-context quotienting is formally invalid for labelled rules. The wrong..."]
@@ -139,6 +150,10 @@ flowchart TD
     F8K_H_QUESTION_STATUS["F8K-H-QUESTION-STATUS: Q-H-MINIMAL-STATE and Q-H-COARSE-GRAINING change status from unresolved to qualified, w..."]
     F8K_REVIEW_VERDICT["F8K-REVIEW-VERDICT: External Review 008I-predictive-state permanently retains prior exposure and the litera..."]
     F8K_EXPLANATORY_COMPRESSION["F8K-EXPLANATORY-COMPRESSION: A small sufficient representation may improve explanation only relative to declared pre..."]
+    F8L_DEPTH_NOT_ALPHABET["F8L-DEPTH-NOT-ALPHABET: H_pair=2 is semantic last-two-pair depth, not 36-valued alphabet, two current variables..."]
+    F8L_TEMPORAL_DIAGNOSTIC_SCOPE["F8L-TEMPORAL-DIAGNOSTIC-SCOPE: Choose temporal lags/depths to match a declared candidate mechanism and compiler. The H..."]
+    F8L_H2_MARKOV_SUFFICIENCY["F8L-H2-MARKOV-SUFFICIENCY: SECOND-RECENT law and deterministic update close on (X,h1,h2); H2 is sufficient and aug..."]
+    F8L_H2_QUESTION_QUALIFICATION["F8L-H2-QUESTION-QUALIFICATION: Q-H2-LAST-PAIR-COMPILER changes unresolved->qualified with a recorded status-only trans..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
@@ -149,6 +164,7 @@ flowchart TD
     F8H_RS_HISTORY_INTERPRETATION["F8H-RS-HISTORY-INTERPRETATION: In the model, the same ordinary relational configuration can receive different futures ..."]
     F8IP_PROJECTION_RELATIVE_MEMORY["F8IP-PROJECTION-RELATIVE-MEMORY: Within this model, historical information can survive as structural role after relation..."]
     F8K_LOCAL_RS_READING["F8K-LOCAL-RS-READING: Predictive sufficiency and historical information are representation/observation-relati..."]
+    F8L_LOCAL_RS_READING["F8L-LOCAL-RS-READING: Within this model, earlier historical order can affect predictive futures beyond identi..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     Q_PATH_SHAPE["Q-PATH-SHAPE: Why does path topology convert early triadic context into shape information at the firs..."]
@@ -170,6 +186,7 @@ flowchart TD
     Q_H_PREDICTIVE_N5_SYNCHRONIZATION["Q-H-PREDICTIVE-N5-SYNCHRONIZATION: Which graph sizes or controllers break the N4 bijection between predecessor/current gra..."]
     Q_L_COMPILER_SEMANTICS["Q-L-COMPILER-SEMANTICS: Which independently declared rule-decoder, support or resource contract makes dynamic c..."]
     Q_H2_LAST_PAIR_COMPILER["Q-H2-LAST-PAIR-COMPILER: Which depth-two examples offer useful structural consequences beyond an engineered larg..."]
+    Q_H2_STRUCTURAL_UTILITY["Q-H2-STRUCTURAL-UTILITY: Which depth-two history functions yield structural or controlled-passage consequences b..."]
   end
   F014_EXACT_FIRST_DESTINATION -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
   F015_TRANSIENT_CLASS_MEMORY -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
@@ -406,3 +423,33 @@ flowchart TD
   F8K_PREDICTIVE_REFINEMENT -->|explains| F8K_OBSERVATION_COARSENING_MONOTONICITY
   Q_H_PREDICTIVE_COARSE_DEPTH -->|partially_answered_by| F8K_SYNCHRONIZATION_MARKOV_BOUND
   F8K_NOVELTY_TAXONOMY -->|compatible_with| F8K_EXPLANATORY_COMPRESSION
+  F8L_SAME_X_H1_DIVERGENT_FUTURES -->|refines| F8H_SAME_STATE_DIVERGENT_FUTURES
+  F8L_H1_NONCOMPILABILITY -->|derived_from| F8L_SAME_X_H1_DIVERGENT_FUTURES
+  F8L_H1_NONCOMPILABILITY -->|formalises| F8K_COMPILATION_CLASS
+  F8L_H1_NONCOMPILABILITY -->|compatible_with| F8K_NOVELTY_TAXONOMY
+  Q_H2_LAST_PAIR_COMPILER -->|partially_answered_by| F8L_H1_NONCOMPILABILITY
+  F8L_MULTIROUND_REFINEMENT -->|depends_on| F8L_H2_PREDICTIVE_2304
+  F8L_H2_PREDICTIVE_2304 -->|depends_on| F8L_PAIR_EVENT_QUOTIENT
+  F8L_MULTIROUND_REFINEMENT -->|formalises| F8K_PREDICTIVE_REFINEMENT
+  F8L_PAIR_MASK_ORDER3 -->|contrasts_with| F8IP_COARSE_GRAINED_ORDER2
+  F8L_PAIR_MASK_ORDER3 -->|compatible_with| F8L_H2_PREDICTIVE_2304
+  F8L_EVENT_ORDER2 -->|depends_on| F8L_PAIR_EVENT_QUOTIENT
+  F8L_ADJACENT_TEMPORAL_NULL -->|contrasts_with| F8L_LAG2_TEMPORAL_MEMORY
+  F8L_TEMPORAL_DIAGNOSTIC_SCOPE -->|derived_from| F8L_ADJACENT_TEMPORAL_NULL
+  F8L_TEMPORAL_DIAGNOSTIC_SCOPE -->|derived_from| F8L_LAG2_TEMPORAL_MEMORY
+  F8L_H2_STATIONARY_INVARIANCE -->|refines| F8H_PROCESS_GRAMMAR_WITHOUT_OCCUPANCY
+  F8L_H2_STATIONARY_INVARIANCE -->|depends_on| F8L_PAIR_EVENT_QUOTIENT
+  F8L_H2_PURE_SHAPE -->|derived_from| F8L_SAME_X_H1_DIVERGENT_FUTURES
+  F8L_H2_PURE_SHAPE -->|compatible_with| F8L_H2_STATIONARY_INVARIANCE
+  F8L_DEPTH_NOT_ALPHABET -->|qualifies| F8L_H2_PREDICTIVE_2304
+  F8L_H2_MARKOV_SUFFICIENCY -->|qualifies| F8L_H1_NONCOMPILABILITY
+  F8L_H2_MARKOV_SUFFICIENCY -->|formalises| F8K_HISTORY_AUGMENTATION
+  F8L_PAIR_EVENT_QUOTIENT -->|explains| F8L_EVENT_ORDER2
+  F8L_H2_QUESTION_QUALIFICATION -->|qualifies| Q_H2_LAST_PAIR_COMPILER
+  F8L_H1_NONCOMPILABILITY -->|raises_question| Q_H2_STRUCTURAL_UTILITY
+  F8L_H2_STATIONARY_INVARIANCE -->|raises_question| Q_H2_STRUCTURAL_UTILITY
+  Q_H2_STRUCTURAL_UTILITY -->|refines| Q_H2_LAST_PAIR_COMPILER
+  F8L_LOCAL_RS_READING -->|derived_from| F8L_SAME_X_H1_DIVERGENT_FUTURES
+  F8L_LOCAL_RS_READING -->|derived_from| F8L_LAG2_TEMPORAL_MEMORY
+  F8L_DEPTH_NOT_ALPHABET -->|compatible_with| F8L_H2_PURE_SHAPE
+  F8L_TEMPORAL_DIAGNOSTIC_SCOPE -->|refines| F8H_TEMPORAL_TESTS_REQUIRED

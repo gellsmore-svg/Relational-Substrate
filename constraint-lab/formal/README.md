@@ -46,3 +46,10 @@ python -m rs_constraint_lab.synthesis --verify for pinned references, namespace
 and generated-diagram verification, in addition to the existing formal/coherence
 validators. The canonical continuation is the 8K predictive-state-synthesis
 branch descended from reviewed predictive 8I, not alternate role-grammar 8I/8J.
+
+Generation 8L executes that canonical line's separately frozen H_pair=2 test.
+[History depth](history-depth.md) records SECOND-RECENT, the strict H1 compiler
+boundary, multi-round refinement and lag-selective pair-clock diagnostics.
+The canonical continuation is now research/constraint-lab-v0.8l-history-depth-two,
+descending exactly from reviewed 8K. The earlier branch declaration is retained
+as historical context; alternate 8I/8J remain separate.

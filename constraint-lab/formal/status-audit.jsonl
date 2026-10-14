@@ -49,3 +49,11 @@
 {"finding_id":"F8IP-PROJECTION-RELATIVE-MEMORY","formal_reading":"INTERPRETATION","theorem_refs":["CL-T55","CL-T56","CL-T57"],"qualification":"RS reading remains separate from proof and physical claims."}
 {"finding_id":"Q-H-MINIMAL-STATE","formal_reading":"OPEN_QUESTION","theorem_refs":["CL-Q06","CL-T53","CL-T55","CL-T56"],"qualification":"Qualified scoped answer, not global hidden-model minimisation closed."}
 {"finding_id":"Q-H-COARSE-GRAINING","formal_reading":"OPEN_QUESTION","theorem_refs":["CL-T55","CL-T56","CL-T57"],"qualification":"Class/count survival and parity erasure answered for RR; broader questions remain open."}
+{"finding_id":"F8L-SAME-X-H1-DIVERGENT-FUTURES","formal_reading":"ALGEBRAIC_THEOREM","theorem_refs":["CL-T68"],"qualification":"Common-start all-positive-m proof; finite three-grade replay separate."}
+{"finding_id":"F8L-H1-NONCOMPILABILITY","formal_reading":"ALGEBRAIC_THEOREM","theorem_refs":["CL-T69"],"qualification":"Strict semantic H1 compiler; no unrestricted augmentation impossibility."}
+{"finding_id":"F8L-H2-PREDICTIVE-2304","formal_reading":"FINITE_EXHAUSTIVE_RESULT","theorem_refs":["CL-F09","CL-T72"],"qualification":"Exact N4 three-grade generic memberships; all-m separation has a separate proof."}
+{"finding_id":"F8L-H2-STATIONARY-INVARIANCE","formal_reading":"ALGEBRAIC_THEOREM","theorem_refs":["CL-T71"],"qualification":"Exact balance and reachability proof; stationary does not mean parity-start convergence."}
+{"finding_id":"F8L-ADJACENT-TEMPORAL-NULL","formal_reading":"ALGEBRAIC_THEOREM","theorem_refs":["CL-T75"],"qualification":"Rational independence certificate, not rounded numerical zero."}
+{"finding_id":"F8L-LAG2-TEMPORAL-MEMORY","formal_reading":"NUMERICAL_KERNEL_RESULT","theorem_refs":["CL-N09","CL-T75"],"qualification":"All-m identity and separately evaluated 160-digit logarithmic values."}
+{"finding_id":"F8L-TEMPORAL-DIAGNOSTIC-SCOPE","formal_reading":"METHODOLOGICAL_PRINCIPLE","theorem_refs":["CL-M06"],"qualification":"Mechanism-matched tests, no arbitrary-depth mandate."}
+{"finding_id":"F8L-LOCAL-RS-READING","formal_reading":"INTERPRETATION","theorem_refs":["CL-T68","CL-T75"],"qualification":"Model-scoped, not physical time or memory ontology."}
