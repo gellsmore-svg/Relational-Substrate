@@ -103,18 +103,18 @@ def component_expressions(kind: str, n: int, grade: str) -> list[str]:
     return out
 
 
-def template_expressions(family: str, grade: str, n: int) -> list[str]:
+def template_expressions(family: str, grade: str, n: int, families: dict | None = None) -> list[str]:
     out: list[str] = []
-    for kind, component_grade in FAMILIES[family][grade]:
+    for kind, component_grade in (families or FAMILIES)[family][grade]:
         out.extend(component_expressions(kind, n, component_grade))
     return out
 
 
-def rules_for(family: str, grade: str, n: int, mode: str):
-    template = template_expressions(family, grade, n)
+def rules_for(family: str, grade: str, n: int, mode: str, families: dict | None = None):
+    template = template_expressions(family, grade, n, families)
     rules = [parse_expression(text, n, order=2) for text in template]
     expected = []
-    for kind, component_grade in FAMILIES[family][grade]:
+    for kind, component_grade in (families or FAMILIES)[family][grade]:
         expected.extend([COMPONENT_K[kind]] * len(component_expressions(kind, n, component_grade)))
     if [rule.k() for rule in rules] != expected:
         raise E0AError(f"{family} rule has the wrong K")
@@ -122,15 +122,16 @@ def rules_for(family: str, grade: str, n: int, mode: str):
     return tuple(rules)
 
 
-def build(family: str, grade: str, n: int, mode: str) -> Kernel:
-    return build_kernel(n, Choreography(0, 0, rules_for(family, grade, n, mode)), FACTORS)
+def build(family: str, grade: str, n: int, mode: str, families: dict | None = None) -> Kernel:
+    return build_kernel(n, Choreography(0, 0, rules_for(family, grade, n, mode, families)), FACTORS)
 
 
-def is_gradient(family: str) -> bool:
-    return not any(kind in NON_GRADIENT_KINDS for grade in FAMILIES[family] for kind, _g in FAMILIES[family][grade])
+def is_gradient(family: str, families: dict | None = None) -> bool:
+    fam = families or FAMILIES
+    return not any(kind in NON_GRADIENT_KINDS for grade in fam[family] for kind, _g in fam[family][grade])
 
 
-def predicted_potential(family: str, grade: str) -> dict | None:
+def predicted_potential(family: str, grade: str, families: dict | None = None) -> dict | None:
     """Triple-local Gibbs coefficients (natural log) for a gradient family; None if non-gradient.
 
     Derivation (coverage audit section 3): a form factor f on a witness motif
@@ -138,11 +139,11 @@ def predicted_potential(family: str, grade: str) -> dict | None:
     witnesses count triangles, adjacency witnesses count wedges. A prohibit
     on a formation restricts the chain to a closed class and adds nothing.
     """
-    if not is_gradient(family):
+    if not is_gradient(family, families):
         return None
     theta = {"E": 0.0, "W": 0.0, "T": 0.0}
     restricted = False
-    for kind, component_grade in FAMILIES[family][grade]:
+    for kind, component_grade in (families or FAMILIES)[family][grade]:
         factor = float(FACTORS[component_grade])
         if factor == 0.0:
             restricted = True
@@ -569,8 +570,8 @@ def predicted_law_gap(ct: np.ndarray, arrays: dict, potential: dict) -> float:
 # --- trajectories (illustrative) ----------------------------------------
 
 
-def trajectory_seed(item_id: str, k: int) -> int:
-    return int(hashlib.sha256(f"{ROUND_ID}:{item_id}:{k}".encode()).hexdigest()[:16], 16)
+def trajectory_seed(item_id: str, k: int, round_id: str = ROUND_ID) -> int:
+    return int(hashlib.sha256(f"{round_id}:{item_id}:{k}".encode()).hexdigest()[:16], 16)
 
 
 def sample_trajectory(chain: Chain, start_index: int, seed: int, events: int) -> dict:
@@ -644,11 +645,11 @@ def shell_activity(chain: Chain, ct: np.ndarray, jump: np.ndarray, n: int) -> di
 # --- one item ----------------------------------------------------------
 
 
-def analyse_item(item: dict, *, with_trajectories: bool = True) -> tuple[dict, dict | None]:
+def analyse_item(item: dict, *, with_trajectories: bool = True, families: dict | None = None, round_id: str = ROUND_ID) -> tuple[dict, dict | None]:
     family, grade, n, mode = item["family"], item["grade"], item["n"], item["mode"]
     timings = {}
     started = time.perf_counter()
-    kernel = build(family, grade, n, mode)
+    kernel = build(family, grade, n, mode, families)
     start = gt0.start_state(n, mode)
     states_list = gt0.reachable(kernel, start)
     structure = gt0.class_structure(kernel, states_list)
@@ -656,14 +657,14 @@ def analyse_item(item: dict, *, with_trajectories: bool = True) -> tuple[dict, d
     timings["build"] = time.perf_counter() - started
     out: dict = {
         "family": family,
-        "gradient_family": is_gradient(family),
+        "gradient_family": is_gradient(family, families),
         "grade": grade,
         "mode": mode,
         "n": n,
         "reachable_states": len(chain.states),
         "recurrent_class_sizes": [len(c) for c in structure["recurrent_classes"]],
         "absorbing_state_count": len(structure["absorbing_states"]),
-        "rule_instances": len(rules_for(family, grade, n, mode)),
+        "rule_instances": len(rules_for(family, grade, n, mode, families)),
     }
     if len(structure["recurrent_classes"]) != 1 or len(structure["recurrent_classes"][0]) != len(states_list):
         out["regime"] = "absorbing" if structure["absorbing_states"] else "mixed"
@@ -709,7 +710,7 @@ def analyse_item(item: dict, *, with_trajectories: bool = True) -> tuple[dict, d
     out["class_table"] = table
     out["symmetry_max_abs_difference"] = sym
     out["gibbs_projection"] = gibbs_projection(ct, arrays)
-    potential = predicted_potential(family, grade)
+    potential = predicted_potential(family, grade, families)
     out["predicted_potential"] = potential
     out["predicted_law_l1_gap"] = predicted_law_gap(ct, arrays, potential) if potential is not None else None
     deg = arrays["degree"]
@@ -770,7 +771,7 @@ def analyse_item(item: dict, *, with_trajectories: bool = True) -> tuple[dict, d
         start_index = int(np.nonzero(chain.states == start)[0][0])
         paths = []
         for k in range(TRAJECTORIES_PER_CELL):
-            path = sample_trajectory(chain, start_index, trajectory_seed(item["item_id"], k), EVENTS_PER_TRAJECTORY)
+            path = sample_trajectory(chain, start_index, trajectory_seed(item["item_id"], k, round_id), EVENTS_PER_TRAJECTORY)
             path["summary"] = trajectory_summary(chain, path, arrays, start_index)
             paths.append(path)
         trajectories = {"item_id": item["item_id"], "label": "illustrative exact-kernel samples; no table statistic uses them", "numpy_version": np.__version__, "trajectories": paths}
