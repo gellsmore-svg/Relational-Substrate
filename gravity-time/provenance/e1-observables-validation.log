@@ -1,0 +1,92 @@
+# gtobs reproduction of published E0A/E0B cells
+# code commit 8414d7cebe7e927ba8be2a6c5e05c2f06db3eb23; command: python -m rs_constraint_lab.gtobs_validate --n 5 --n 6
+round-e0a FREE-N5-ANTI-strong_suppress OK 0.1 s
+round-e0a FREE-N5-CLOSE-strong_favour OK 0.1 s
+round-e0a FREE-N5-COMPETE-strong_favour+strong_favour OK 0.2 s
+round-e0a FREE-N5-EXCL-prohibit OK 0.0 s
+round-e0a FREE-N5-FRUST-weak_favour+strong_favour OK 0.1 s
+round-e0a FREE-N5-HOLD-strong_suppress OK 0.2 s
+round-e0a FREE-N5-NULL-none OK 0.1 s
+round-e0a FREE-N5-PATHF-weak_favour 6 differences [e0_dense_solve_error] 0.6 s
+round-e0a FREE-N5-PATHF-weak_suppress OK 0.1 s
+round-e0a FREE-N5-PATHH-weak_favour OK 0.1 s
+round-e0a FREE-N5-PATHH-weak_suppress OK 0.1 s
+round-e0a FREE-N5-SPLIT-weak_favour+weak_suppress OK 0.1 s
+round-e0a FREE-N6-ANTI-strong_suppress OK (+autocorrelation, omitted by E0 above the dense limit) 2.9 s
+round-e0a FREE-N6-CLOSE-strong_favour OK (+autocorrelation, omitted by E0 above the dense limit) 4.0 s
+round-e0a FREE-N6-COMPETE-strong_favour+strong_favour OK (+autocorrelation, omitted by E0 above the dense limit) 12.1 s
+round-e0a FREE-N6-EXCL-prohibit OK (+autocorrelation, omitted by E0 above the dense limit) 0.6 s
+round-e0a FREE-N6-FRUST-weak_favour+strong_favour OK (+autocorrelation, omitted by E0 above the dense limit) 4.4 s
+round-e0a FREE-N6-HOLD-strong_suppress OK (+autocorrelation, omitted by E0 above the dense limit) 4.3 s
+round-e0a FREE-N6-NULL-none OK (+autocorrelation, omitted by E0 above the dense limit) 3.1 s
+round-e0a FREE-N6-PATHF-weak_favour 20 differences (+autocorrelation, omitted by E0 above the dense limit) [e0_unconverged_iteration] 5.9 s
+round-e0a FREE-N6-PATHF-weak_suppress OK (+autocorrelation, omitted by E0 above the dense limit) 2.9 s
+round-e0a FREE-N6-PATHH-weak_favour OK (+autocorrelation, omitted by E0 above the dense limit) 4.1 s
+round-e0a FREE-N6-PATHH-weak_suppress 20 differences (+autocorrelation, omitted by E0 above the dense limit) [e0_unconverged_iteration] 7.1 s
+round-e0a FREE-N6-SPLIT-weak_favour+weak_suppress OK (+autocorrelation, omitted by E0 above the dense limit) 3.2 s
+round-e0a HELD-N5-ANTI-strong_suppress OK 0.0 s
+round-e0a HELD-N5-CLOSE-strong_favour OK 0.0 s
+round-e0a HELD-N5-COMPETE-strong_favour+strong_favour OK (tie-sensitive E0 value) 0.1 s
+round-e0a HELD-N5-EXCL-prohibit OK 0.0 s
+round-e0a HELD-N5-FRUST-weak_favour+strong_favour OK 0.0 s
+round-e0a HELD-N5-HOLD-strong_suppress OK 0.0 s
+round-e0a HELD-N5-NULL-none OK (tie-sensitive E0 value) 0.0 s
+round-e0a HELD-N5-PATHF-weak_favour 12 differences [e0_dense_solve_error] 0.0 s
+round-e0a HELD-N5-PATHF-weak_suppress OK 0.0 s
+round-e0a HELD-N5-PATHH-weak_favour OK 0.0 s
+round-e0a HELD-N5-PATHH-weak_suppress OK 0.0 s
+round-e0a HELD-N5-SPLIT-weak_favour+weak_suppress OK 0.0 s
+round-e0a HELD-N6-ANTI-strong_suppress 2 differences [e0_dense_solve_error] 47.9 s
+round-e0a HELD-N6-CLOSE-strong_favour 4 differences [e0_dense_solve_error] 48.3 s
+round-e0a HELD-N6-COMPETE-strong_favour+strong_favour OK 2.6 s
+round-e0a HELD-N6-EXCL-prohibit OK 0.1 s
+round-e0a HELD-N6-FRUST-weak_favour+strong_favour OK 0.8 s
+round-e0a HELD-N6-HOLD-strong_suppress OK 0.6 s
+round-e0a HELD-N6-NULL-none OK 0.6 s
+round-e0a HELD-N6-PATHF-weak_favour 36 differences [e0_dense_solve_error] 49.6 s
+round-e0a HELD-N6-PATHF-weak_suppress 11 differences [e0_dense_solve_error] 51.7 s
+round-e0a HELD-N6-PATHH-weak_favour 8 differences [e0_dense_solve_error] 53.9 s
+round-e0a HELD-N6-PATHH-weak_suppress 27 differences [e0_dense_solve_error] 54.6 s
+round-e0a HELD-N6-SPLIT-weak_favour+weak_suppress 4 differences [e0_dense_solve_error] 50.7 s
+round-e0b FREE-N5-CLOSEW-weak_favour OK 0.3 s
+round-e0b FREE-N5-CSPF-strong_favour+weak_suppress OK 0.2 s
+round-e0b FREE-N5-CSPH-strong_favour+weak_favour OK 0.3 s
+round-e0b FREE-N5-CWPF-weak_favour+weak_suppress OK 0.2 s
+round-e0b FREE-N5-CWPH-weak_favour+weak_favour OK 0.2 s
+round-e0b FREE-N5-NULL-none OK 0.2 s
+round-e0b FREE-N5-PATHF-weak_suppress OK 0.2 s
+round-e0b FREE-N5-PATHH-weak_favour OK 0.2 s
+round-e0b FREE-N5-PCOMP-weak_favour+weak_favour OK 0.3 s
+round-e0b FREE-N6-CLOSEW-weak_favour OK (+autocorrelation, omitted by E0 above the dense limit) 7.8 s
+round-e0b FREE-N6-CSPF-strong_favour+weak_suppress OK (+autocorrelation, omitted by E0 above the dense limit) 5.1 s
+round-e0b FREE-N6-CSPH-strong_favour+weak_favour OK (+autocorrelation, omitted by E0 above the dense limit) 7.5 s
+round-e0b FREE-N6-CWPF-weak_favour+weak_suppress OK (+autocorrelation, omitted by E0 above the dense limit) 3.0 s
+round-e0b FREE-N6-CWPH-weak_favour+weak_favour OK (+autocorrelation, omitted by E0 above the dense limit) 4.7 s
+round-e0b FREE-N6-NULL-none OK (+autocorrelation, omitted by E0 above the dense limit) 3.3 s
+round-e0b FREE-N6-PATHF-weak_suppress OK (+autocorrelation, omitted by E0 above the dense limit) 3.0 s
+round-e0b FREE-N6-PATHH-weak_favour OK (+autocorrelation, omitted by E0 above the dense limit) 4.4 s
+round-e0b FREE-N6-PCOMP-weak_favour+weak_favour OK (+autocorrelation, omitted by E0 above the dense limit) 4.2 s
+round-e0b HELD-N5-CLOSEW-weak_favour OK 0.0 s
+round-e0b HELD-N5-CSPF-strong_favour+weak_suppress OK 0.0 s
+round-e0b HELD-N5-CSPH-strong_favour+weak_favour OK 0.0 s
+round-e0b HELD-N5-CWPF-weak_favour+weak_suppress OK 0.0 s
+round-e0b HELD-N5-CWPH-weak_favour+weak_favour OK 0.0 s
+round-e0b HELD-N5-NULL-none OK (tie-sensitive E0 value) 0.0 s
+round-e0b HELD-N5-PATHF-weak_suppress OK 0.0 s
+round-e0b HELD-N5-PATHH-weak_favour OK 0.0 s
+round-e0b HELD-N5-PCOMP-weak_favour+weak_favour OK (tie-sensitive E0 value) 0.0 s
+round-e0b HELD-N6-CLOSEW-weak_favour OK 1.3 s
+round-e0b HELD-N6-CSPF-strong_favour+weak_suppress 9 differences [e0_dense_solve_error] 44.6 s
+round-e0b HELD-N6-CSPH-strong_favour+weak_favour 4 differences [e0_dense_solve_error] 45.3 s
+round-e0b HELD-N6-CWPF-weak_favour+weak_suppress 9 differences [e0_dense_solve_error] 44.5 s
+round-e0b HELD-N6-CWPH-weak_favour+weak_favour 9 differences [e0_dense_solve_error] 44.9 s
+round-e0b HELD-N6-NULL-none OK 0.7 s
+round-e0b HELD-N6-PATHF-weak_suppress 11 differences [e0_dense_solve_error] 44.8 s
+round-e0b HELD-N6-PATHH-weak_favour 8 differences [e0_dense_solve_error] 44.7 s
+round-e0b HELD-N6-PCOMP-weak_favour+weak_favour OK 0.7 s
+15 cells differ only where the referee shows E0 wrong (e0_dense_solve_error)
+2 cells differ only where the referee shows E0 wrong (e0_unconverged_iteration)
+84 cells; 0 with differences; 4 with tie-sensitive E0 values
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 12:02.41
+	Maximum resident set size (kbytes): 347368
+	Exit status: 0

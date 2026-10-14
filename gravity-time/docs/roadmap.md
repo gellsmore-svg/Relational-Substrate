@@ -101,3 +101,17 @@ What changed for the phases below:
 3. **Stop rule.** If the margin crosses null at N=7, record coexistence as a finite-size effect and do not tune grades.
 
 Alternatives kept open, in order: an O=3 laboratory question (does the single-witness Gibbs theorem extend to triad relations?); the mechanism of local persistence (GT-Q06); a second held structure (G3), only after E1.
+
+## Proposed clarifications to E1 (GT-P003, pending human review)
+
+These proposals leave the E1 text above unchanged. They take effect only if the author adopts them when authorising the E1 freeze. The reasoning is in `docs/e1-scale-confound-audit.md`, and the plain-English summary is in `reports/gt-e1-prefreeze-review.md`.
+
+1. **Status of step 1.** Observable scaling is done (`docs/e1-observables.md`). No E1 plan is frozen, and no E1 cell has been run.
+2. **Stop rule, restated.** A null crossing of the CSPH margin at N=7 is a valid observation for that fixed-grade (W4), finite-N model, in the stated clock and standardisation.
+   - On its own it does not distinguish intrinsic size dependence from witness amplification, a lower attachment ceiling (r0 falls from 0.75 to 0.667), or a density shift.
+   - It is not repaired by tuning a grade or alphabet after the fact.
+   - Any follow-up sensitivity test is designed and frozen as a separate round.
+   - Fragile or negative outcomes are findings. They are not failures of the wider RS ontology.
+   - The words "finite-size effect" are used only once the alternatives above have been examined, not as an automatic label.
+3. **Margin forms.** Report the margin raw and null-density standardised, in both clocks, with the normalised form (af − r0)/(1 − r0) and the full a/k profile. On published data the CSPH margin's fragility is specific to the continuous clock (jump: +0.073 → +0.065). At N=6 it is already negative after density standardisation (−0.073 continuous, −0.034 jump). See GT-F34.
+4. **Strength control.** Consider the existing W3/W16 sensitivity alphabets at N ≤ 6 as a separately labelled bracket on witness amplification, calibrated on the published N5→N6 step (`docs/e1-design-alternatives.md`, option B).

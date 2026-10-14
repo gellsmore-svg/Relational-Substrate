@@ -53,3 +53,5 @@ Several E0 observables use dense algebra or brute-force symmetry and do not scal
 - **Class tables.** HELD N7 has 144 permutations, which is feasible. FREE N7 has 5,040 permutations over 2M states, which needs the canonical labels computed in chunks.
 - **G0 held observables and shell activity.** Per-state Python breadth-first search over 262,144 states × 4 probes is slow. These need a vectorised distance-to-source.
 - **Event-order patterns.** These are already array-based, at slots² passes over the class. They are feasible for HELD N7 (18² × 262k); FREE N7 should be timed.
+
+**Status (GT-P003).** Each item above now has a scalable replacement or a declared omission. The spectrum is omitted; autocorrelation is iterative; class tables use lookup tables; distances are vectorised; event order was timed at FREE N7 (17 s). See `docs/e1-observables.md`. The E1 plan is still not frozen.

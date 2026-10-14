@@ -25,6 +25,7 @@ flowchart TD
     GT_F28_HUB_FRAME_LEGIBILITY["GT-F28-HUB-FRAME-LEGIBILITY: An emergent hub frame (slot touches a maximum-degree vertex of the edge-present state) ..."]
     GT_F29_HANDOVER_ORIENTATION_INVARIANT["GT-F29-HANDOVER-ORIENTATION-INVARIANT: The handover orientation is the same in every arrow-bearing cell, with or without a bas..."]
     GT_F30_ARROW_BELONGS_TO_RATIO["GT-F30-ARROW-BELONGS-TO-RATIO: PCOMP (path formation and path dissolution both favoured, non-gradient rules with ratio..."]
+    GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY["GT-F34-CSPH-MARGIN-CLOCK-AND-DENSITY: CSPH's attachment margin over the slot-ratio null is clock- and density-dependent: in t..."]
   end
   subgraph INFERENCE [Inferences]
     GT_F09_POTENTIAL_AS_MECHANISM["GT-F09-POTENTIAL-AS-MECHANISM: In the existing grammar a basin around a held relational structure arises from minimal ..."]
@@ -38,6 +39,7 @@ flowchart TD
     GT_F24_GIBBS_PROJECTION_NONCONVERGENCE["GT-F24-GIBBS-PROJECTION-NONCONVERGENCE: The moment-matched triple-Gibbs KL did not converge for the six saturated gradient FREE..."]
     GT_F31_E0A_REPLICATION["GT-F31-E0A-REPLICATION: NULL, PATHF weak_suppress and PATHH weak_favour recomputed in E0B reproduce their E0A c..."]
     GT_F32_E0C_NOT_RUN["GT-F32-E0C-NOT-RUN: No E0C round was run. The only consequential remaining ambiguity, whether basin-arrow c..."]
+    GT_F35_E0_NUMERICAL_QUALIFICATIONS["GT-F35-E0-NUMERICAL-QUALIFICATIONS: Three numerical fragilities qualify published E0 values; no published finding, report s..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     GT_F11_RS_POTENTIAL_AND_CLOCK["GT-F11-RS-POTENTIAL-AND-CLOCK: Inside this model, relational primacy yields basins as potentials without a primitive c..."]
@@ -99,3 +101,6 @@ flowchart TD
   GT_F33_DISSOLUTION_CHANNEL_INFERENCE -->|derived_from| GT_F27_KINETICS_SETS_BASIN_DEPTH
   GT_F33_DISSOLUTION_CHANNEL_INFERENCE -->|derived_from| GT_F29_HANDOVER_ORIENTATION_INVARIANT
   GT_F33_DISSOLUTION_CHANNEL_INFERENCE -->|derived_from| GT_F26_SELECTIVE_BASIN_WITH_ARROW
+  GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY -->|qualifies| GT_F26_SELECTIVE_BASIN_WITH_ARROW
+  GT_F35_E0_NUMERICAL_QUALIFICATIONS -->|qualifies| GT_F14_SATURATION_HIDES_ARROW
+  GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY -->|refines| GT_Q07_COEXISTENCE_SCALING
