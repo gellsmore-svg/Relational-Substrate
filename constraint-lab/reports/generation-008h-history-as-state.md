@@ -147,11 +147,12 @@ and 3/(m+5) for 4 edges. Thus I(history; next edge count)=0 exactly.
 The graph class determines edge count, so the information chain rule yields
 I(history; class)=I(history; class | edge count). For equal history priors this is
 the shape JS in section G. It is a shape effect beyond density, while some labelled
-slot information is additionally lost by class projection. Full rows, pair rows,+class laws and exact path controls are in the [witness table](tables/generation-008h-witness.json).
+slot information is additionally lost by class projection. Full rows, pair rows,
+class laws and exact path controls are in the [witness table](tables/generation-008h-witness.json).
 
 ## I. Strong lumpability failure
 
-For projection (x,h)->x, the block x'=x xor 2^12 receives m/(m+9) from z_M
+For projection (x,h)->x, the block x'=x xor 2^3 (slot 3, pair 12) receives m/(m+9) from z_M
 and 1/(m+9) from z_E. This is a whole transition-block witness, not merely a
 different summary statistic. Strong lumpability fails for m!=1. It holds for m=1,
 including the sentinel. The pair-clock block gaps are 1/7 and 1/3 at the strong

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 from decimal import Decimal
 from fractions import Fraction
 from pathlib import Path
@@ -276,3 +277,92 @@ def test_frozen_plan_published_hashes_and_zero_unopened_exposure():
     assert plan["work_counts"]["direct_raw_triad_rows"] == 1008
     for path, digest in summary["detail_sha256"].items():
         assert sha256_file(ROOT / path) == digest
+
+
+@POST_FREEZE
+@pytest.mark.parametrize("label,m", PALETTE)
+def test_full_material_projection_uses_explicit_destination_blocks(label, m):
+    model = RecentReversal(Fraction(m))
+    start = HistoryState(1, None)
+    endpoints = []
+    probabilities = []
+    for events in ((5, 3), (3, 5)):
+        state, probability = start, Fraction(1)
+        for event in events:
+            target = model.advance(state, event)
+            probability *= model.full_row(state)[target]
+            state = target
+        endpoints.append(state)
+        probabilities.append(probability)
+    assert probabilities[0] == probabilities[1] > 0
+    assert endpoints[0].material == endpoints[1].material == 41
+    blocks = []
+    for state in endpoints:
+        projected = {}
+        for target, probability in model.full_row(state).items():
+            projected[target.material] = projected.get(target.material, Fraction(0)) + probability
+        blocks.append(projected)
+    destination = 41 ^ (1 << 3)
+    assert blocks[0][destination] == Fraction(m) / (Fraction(m) + 9)
+    assert blocks[1][destination] == 1 / (Fraction(m) + 9)
+    assert (blocks[0] == blocks[1]) == (Fraction(m) == 1)
+    neutral = RecentReversal(Fraction(1))
+    reference = {target.material: p for target, p in neutral.full_row(HistoryState(41, None)).items()}
+    for history in range(6):
+        assert {target.material: p for target, p in neutral.full_row(HistoryState(41, history)).items()} == reference
+
+
+@POST_FREEZE
+@pytest.mark.parametrize("label,m", PALETTE)
+def test_shape_conditional_information_from_classified_distributions(label, m):
+    result = analyse_witness(Fraction(m))
+    left, right = result["graph_class_distributions"]
+    conditional_information = Decimal(0)
+    for count in (2, 4):
+        classes = [key for key in left if key.bit_count() == count]
+        left_mass = sum(left[key] for key in classes)
+        right_mass = sum(right[key] for key in classes)
+        assert left_mass == right_mass
+        row_js = js([left[key] / left_mass for key in classes], [right[key] / right_mass for key in classes])
+        conditional_information += Decimal(left_mass.numerator) / Decimal(left_mass.denominator) * row_js
+    assert abs(conditional_information - Decimal(result["graph_class_JS"])) <= Decimal("1e-13")
+
+
+def _git_history(*args):
+    return subprocess.run(["git", "-C", str(ROOT), *args], check=True, capture_output=True).stdout
+
+
+def test_8h_preserves_reviewed_artifacts_with_one_recorded_question_status_change():
+    parent = "22e252e560cc711d337b6ae506b0fb76728247d6"
+    old_paths = set(_git_history("ls-tree", "-r", "--name-only", parent).decode().splitlines())
+    changed = set(_git_history("diff", "--name-only", parent, "--", "books", "constraint-lab/reports", "constraint-lab/exploration", "constraint-lab/provenance", "constraint-lab/coherence/snapshots").decode().splitlines())
+    assert old_paths & changed <= {"constraint-lab/provenance/ledger.jsonl"}
+    for name in ("formal/theorem-catalog.jsonl", "provenance/ledger.jsonl", "coherence/relations.jsonl"):
+        path = "constraint-lab/" + name
+        assert (ROOT / path).read_bytes().startswith(_git_history("show", f"{parent}:{path}"))
+    path = "constraint-lab/coherence/findings.jsonl"
+    old = _git_history("show", f"{parent}:{path}").splitlines()
+    current = (ROOT / path).read_bytes().splitlines()
+    for before, after in zip(old, current):
+        if json.loads(before)["finding_id"] == "Q-H-POSITIVE":
+            assert after == before.replace(b'"status":"unresolved"', b'"status":"qualified"')
+        else:
+            assert before == after
+    findings = [json.loads(line) for line in current]
+    resolution = next(row for row in findings if row["finding_id"] == "F8H-H-QUESTION-RESOLUTION")
+    assert "unresolved to qualified" in resolution["statement"]
+    assert len([row for row in findings if row["created_generation"] == "008H"]) == 19
+
+
+def test_8h_snapshot_and_formal_links_match_canonical_ledgers():
+    from rs_constraint_lab.coherence import load_ledger, snapshot_text
+    from rs_constraint_lab.formal import load_catalog, validate_catalog
+
+    directory = ROOT / "constraint-lab/coherence"
+    assert (directory / "snapshots/through-generation-008h.md").read_text() == snapshot_text(directory, title="Through Generation 008H")
+    catalog = load_catalog()
+    assert validate_catalog(catalog) == []
+    assert len([row for row in catalog if row["status"] == "ALGEBRAIC_THEOREM" and row["source_generations"] == ["008H"]]) == 10
+    findings, relations = load_ledger(directory)
+    assert any(row["from_finding"] == "Q-H-POSITIVE" and row["relation_type"] == "partially_answered_by" for row in relations)
+    assert next(row for row in findings if row["finding_id"] == "Q-H-MINIMAL-STATE")["status"] == "unresolved"

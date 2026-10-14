@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import itertools
+import json
 import math
 import subprocess
 from fractions import Fraction
@@ -264,7 +265,7 @@ def test_catalog_schema_generated_views_and_namespaces():
     rows = load_catalog()
     assert validate_catalog(rows) == []
     assert {r["status"] for r in rows} <= STATUSES
-    assert len([r for r in rows if r["status"] == "ALGEBRAIC_THEOREM"]) == 25
+    assert len([r for r in rows if r["status"] == "ALGEBRAIC_THEOREM" and "008H" not in r["source_generations"]]) == 25
     assert all(r["theorem_id"].startswith("CL-") for r in rows)
     for path, expected in generated_views().items():
         assert path.read_text(encoding="utf-8") == expected
@@ -312,7 +313,19 @@ def test_historical_artifacts_and_ledger_prefixes_preserved():
     allowed = {"constraint-lab/provenance/ledger.jsonl"}
     assert (old_paths & changed) <= allowed
     for path in ("constraint-lab/coherence/findings.jsonl", "constraint-lab/coherence/relations.jsonl", "constraint-lab/provenance/ledger.jsonl"):
-        assert (ROOT / path).read_bytes().startswith(_git("show", f"{BASE}:{path}"))
+        before = _git("show", f"{BASE}:{path}")
+        after = (ROOT / path).read_bytes()
+        if path.endswith("/findings.jsonl"):
+            old_rows = [json.loads(line) for line in before.splitlines()]
+            prefix = [json.loads(line) for line in after.splitlines()[:len(old_rows)]]
+            for old, new in zip(old_rows, prefix):
+                if old["finding_id"] == "Q-H-POSITIVE":
+                    assert old["status"] == "unresolved" and new["status"] == "qualified"
+                    assert new == {**old, "status": "qualified"}
+                else:
+                    assert new == old
+        else:
+            assert after.startswith(before)
     findings, _relations = load_ledger()
     general = next(row for row in findings if row["finding_id"] == "F8E-GENERAL-K-INTERACTION")
     assert general["status"] == "qualified"
@@ -343,15 +356,18 @@ def test_formal_coherence_join_cites_committed_derivations():
         assert "overall_score" not in row
     assert any(row["from_finding"] == "F8G-FORMAL-COUNT-SCOPE" and row["relation_type"] == "qualifies" for row in relations)
     assert any(row["from_finding"] == "F8G-FORMAL-SHAPE-INVARIANCE" and row["to_finding"] == "Q-SCALE-N" and row["relation_type"] == "bounds" for row in relations)
-    assert all(next(f for f in findings if f["finding_id"] == question)["status"] == "unresolved" for question in ("Q-H-POSITIVE", "Q-META-CONSTRAINT", "Q-SCALE-N"))
+    assert all(next(f for f in findings if f["finding_id"] == question)["status"] == "unresolved" for question in ("Q-META-CONSTRAINT", "Q-SCALE-N"))
+    assert next(f for f in findings if f["finding_id"] == "Q-H-POSITIVE")["status"] == "qualified"
+    assert any(row["from_finding"] == "Q-H-POSITIVE" and row["relation_type"] == "partially_answered_by" and row["created_generation"] == "008H" for row in relations)
 
 
-def test_8g_snapshot_from_immutable_ledger_prefix(tmp_path):
+def test_8g_snapshot_from_historical_ledger(tmp_path):
     from rs_constraint_lab.coherence import canonical_ledger_bytes, snapshot_text
 
     directory = ROOT / "constraint-lab/coherence"
     for name, count in (("findings.jsonl", 105), ("relations.jsonl", 149)):
-        prefix = b"".join((directory / name).read_bytes().splitlines(keepends=True)[:count])
+        historical = _git("show", "22e252e560cc711d337b6ae506b0fb76728247d6:constraint-lab/coherence/" + name)
+        prefix = b"".join(historical.splitlines(keepends=True)[:count])
         (tmp_path / name).write_bytes(prefix)
     expected = snapshot_text(tmp_path, title="Through Generation 008G")
     assert snapshot_text(tmp_path, title="Through Generation 008G") == expected

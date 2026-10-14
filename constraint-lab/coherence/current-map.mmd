@@ -68,6 +68,14 @@ flowchart TD
     F8G_FORMAL_COUNT_SCOPE["F8G-FORMAL-COUNT-SCOPE: The K-1 gate-degree bound is literal-only: an O2 K2 count>=1 predicate on two non-actio..."]
     F8G_FORMAL_STATIONARY_FACTORISATION["F8G-FORMAL-STATIONARY-FACTORISATION: If an action rate depends only on its own pair bit and hidden bits, with all other pair..."]
     F8G_FORMAL_SHAPE_INVARIANCE["F8G-FORMAL-SHAPE-INVARIANCE: Under autonomous single-action factorisation, graph class conditional on edge count is ..."]
+    F8H_SAME_STATE_DIVERGENT_FUTURES["F8H-SAME-STATE-DIVERGENT-FUTURES: One common process and augmented start admit two legal equal-probability histories with..."]
+    F8H_NONLUMPABLE_MATERIAL_PROJECTION["F8H-NONLUMPABLE-MATERIAL-PROJECTION: Erasing h violates strong lumpability for non-neutral m: the same x block sends differe..."]
+    F8H_AUGMENTED_MARKOV_RESTORATION["F8H-AUGMENTED-MARKOV-RESTORATION: The finite process is first-order Markov on (x,h): its row and deterministic update dep..."]
+    F8H_PURE_SHAPE_WITNESS["F8H-PURE-SHAPE-WITNESS: At identical complete x, middle-last and end-last histories have identical next pair-ev..."]
+    F8H_PAIR_EPOCH_CLOSURE["F8H-PAIR-EPOCH-CLOSURE: Triad-only excursions preserve pair mask and history; summing them gives exact closure ..."]
+    F8H_STATIONARY_OCCUPANCY_INVARIANCE["F8H-STATIONARY-OCCUPANCY-INVARIANCE: Direct column balance proves unique uniform pi(pair_mask,h)=1/384 for all m>0, with ind..."]
+    F8H_TEMPORAL_CORRELATION["F8H-TEMPORAL-CORRELATION: Stationary material backtracking is m/(m+5): 1/21,1/6,4/9 at m=1/4,1,4. Consecutive-eve..."]
+    F8H_ORDER2_PROJECTED_PROCESS["F8H-ORDER2-PROJECTED-PROCESS: Two consecutive pair masks recover the remembered slot through one-hot XOR. Earlier mas..."]
   end
   subgraph INFERENCE [Inferences]
     F008_COMPOSITION_REPRESENTATION["F008-COMPOSITION-REPRESENTATION: The magnitude of a two-rule interaction residual depends on the representation and the ..."]
@@ -80,6 +88,9 @@ flowchart TD
     F8E_CARDINALITY_VS_K["F8E-CARDINALITY-VS-K: Within this DSL, rule cardinality and expression complexity are different operations on..."]
     F8E_ORDINARY_K_SUPPLIES_INTERACTION["F8E-ORDINARY-K-SUPPLIES-INTERACTION: Ordinary expression complexity already introduces gate-by-gate interaction and two-gate..."]
     F8F_INTERACTION_ROUTING["F8F-INTERACTION-ROUTING: Within this single-action grammar, pair topology routes a centered gate interaction int..."]
+    F8H_FIXED_STATE_NONCOMPILABILITY["F8H-FIXED-STATE-NONCOMPILABILITY: No fixed first-order H0 kernel on unchanged complete ordinary x can reproduce every his..."]
+    F8H_CURRENT_VS_INITIAL_MEMORY["F8H-CURRENT-VS-INITIAL-MEMORY: Current history remains efficacious at non-neutral m while initial-slot information in ..."]
+    F8H_PROCESS_GRAMMAR_WITHOUT_OCCUPANCY["F8H-PROCESS-GRAMMAR-WITHOUT-OCCUPANCY: History can alter process grammar without altering one-time stationary material structu..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     F011_QUOTIENT_INVALID["F011-QUOTIENT-INVALID: Graph-only hidden-context quotienting is formally invalid for labelled rules. The wrong..."]
@@ -96,6 +107,8 @@ flowchart TD
     F8G_FORMAL_INCIDENCE_SCOPE["F8G-FORMAL-INCIDENCE-SCOPE: Independent hidden-bit permutations can conjugate single-action gate laws while fixing ..."]
     F8G_FORMAL_H_L_DISTINCTION["F8G-FORMAL-H-L-DISTINCTION: H asks for different reachable histories at identical complete ordinary material state;..."]
     F8G_FORMAL_COMPILATION_TEST["F8G-FORMAL-COMPILATION-TEST: Before claiming a new ontology axis, test compilation into fixed ordinary rules while d..."]
+    F8H_TEMPORAL_TESTS_REQUIRED["F8H-TEMPORAL-TESTS-REQUIRED: Static occupancy alone is insufficient to test history. Future H studies require multi-..."]
+    F8H_H_QUESTION_RESOLUTION["F8H-H-QUESTION-RESOLUTION: Q-H-POSITIVE changes status from unresolved to qualified after H0. The scoped same-stat..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
@@ -103,6 +116,7 @@ flowchart TD
     F8E_RS_COMPOSITIONAL_HIERARCHY["F8E-RS-COMPOSITIONAL-HIERARCHY: Inside this model a small constraint grammar has an ordinary compositional hierarchy: i..."]
     F8F_RS_BRIDGE_INTERPRETATION["F8F-RS-BRIDGE-INTERPRETATION: The local expressive hierarchy needs a dynamical scope: a new coefficient may become tr..."]
     F8G_FORMAL_INTEGRATION_RS["F8G-FORMAL-INTEGRATION-RS: The laboratory has a scoped compositional current-relation language and a precise histo..."]
+    F8H_RS_HISTORY_INTERPRETATION["F8H-RS-HISTORY-INTERPRETATION: In the model, the same ordinary relational configuration can receive different futures ..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     Q_PATH_SHAPE["Q-PATH-SHAPE: Why does path topology convert early triadic context into shape information at the firs..."]
@@ -115,6 +129,11 @@ flowchart TD
     Q_GATE_COMPOSITION["Q-GATE-COMPOSITION: How do two higher-order gates compose in the local coordinates? A second gate can add a..."]
     Q_META_CONSTRAINT["Q-META-CONSTRAINT: What new local expressivity appears when one constraint can modulate another constraint..."]
     Q_K3_CONJUNCTION["Q-K3-CONJUNCTION: What new local expressivity appears when one ordinary constraint reads two higher-order..."]
+    Q_H_MINIMAL_STATE["Q-H-MINIMAL-STATE: What minimal augmented state restores first-order sufficiency for this particular proje..."]
+    Q_H_DEPTH["Q-H-DEPTH: Which controlled relational processes require more than one remembered pair event rathe..."]
+    Q_H_PERSISTENT_STRUCTURE["Q-H-PERSISTENT-STRUCTURE: Can a history controller generate persistent visible stationary structure rather than o..."]
+    Q_H_COARSE_GRAINING["Q-H-COARSE-GRAINING: Which historical effects survive graph-class or more aggressive coarse-graining, with v..."]
+    Q_H_CONSEQUENTIAL_FUNCTIONS["Q-H-CONSEQUENTIAL-FUNCTIONS: Which functions of legal relational history change future laws beyond information alrea..."]
   end
   F014_EXACT_FIRST_DESTINATION -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
   F015_TRANSIENT_CLASS_MEMORY -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
@@ -265,3 +284,35 @@ flowchart TD
   F8G_FORMAL_INTEGRATION_RS -->|bounds| F8E_RS_COMPOSITIONAL_HIERARCHY
   F8G_FORMAL_INTEGRATION_RS -->|refines| F8F_RS_BRIDGE_INTERPRETATION
   F8G_FORMAL_EQUIVALENCE_HIERARCHY -->|compatible_with| F8C_PATH_CONVERTS_SLOT
+  Q_H_POSITIVE -->|partially_answered_by| F8H_SAME_STATE_DIVERGENT_FUTURES
+  Q_H_POSITIVE -->|partially_answered_by| F8H_TEMPORAL_CORRELATION
+  F8H_H_QUESTION_RESOLUTION -->|refines| Q_H_POSITIVE
+  F8H_SAME_STATE_DIVERGENT_FUTURES -->|formalises| F8G_FORMAL_H_L_DISTINCTION
+  F8H_SAME_STATE_DIVERGENT_FUTURES -->|supports| F8H_FIXED_STATE_NONCOMPILABILITY
+  F8H_NONLUMPABLE_MATERIAL_PROJECTION -->|depends_on| F8H_SAME_STATE_DIVERGENT_FUTURES
+  F8H_NONLUMPABLE_MATERIAL_PROJECTION -->|formalises| F011_QUOTIENT_INVALID
+  F8H_NONLUMPABLE_MATERIAL_PROJECTION -->|refines| F8G_FORMAL_EQUIVALENCE_HIERARCHY
+  F8H_FIXED_STATE_NONCOMPILABILITY -->|qualifies| F8G_FORMAL_CURRENT_STATE_EXPRESSIVITY
+  F8H_FIXED_STATE_NONCOMPILABILITY -->|formalises| F8G_FORMAL_COMPILATION_TEST
+  F8H_AUGMENTED_MARKOV_RESTORATION -->|qualifies| F8H_FIXED_STATE_NONCOMPILABILITY
+  F8H_AUGMENTED_MARKOV_RESTORATION -->|refines| F8G_FORMAL_H_L_DISTINCTION
+  F8H_PAIR_EPOCH_CLOSURE -->|contrasts_with| F8H_NONLUMPABLE_MATERIAL_PROJECTION
+  F8H_PAIR_EPOCH_CLOSURE -->|supports| F011_QUOTIENT_INVALID
+  F8H_PURE_SHAPE_WITNESS -->|refines| F8H_SAME_STATE_DIVERGENT_FUTURES
+  F8H_STATIONARY_OCCUPANCY_INVARIANCE -->|compatible_with| F8H_PURE_SHAPE_WITNESS
+  F8H_TEMPORAL_CORRELATION -->|contrasts_with| F8H_STATIONARY_OCCUPANCY_INVARIANCE
+  F8H_ORDER2_PROJECTED_PROCESS -->|explains| F8H_TEMPORAL_CORRELATION
+  F8H_CURRENT_VS_INITIAL_MEMORY -->|refines| F018_LOCAL_VERSUS_INITIAL
+  F8H_CURRENT_VS_INITIAL_MEMORY -->|supports| F8C_CURRENT_SURVIVES
+  F8H_PROCESS_GRAMMAR_WITHOUT_OCCUPANCY -->|derived_from| F8H_TEMPORAL_CORRELATION
+  F8H_PROCESS_GRAMMAR_WITHOUT_OCCUPANCY -->|derived_from| F8H_STATIONARY_OCCUPANCY_INVARIANCE
+  F8H_TEMPORAL_TESTS_REQUIRED -->|derived_from| F8H_PROCESS_GRAMMAR_WITHOUT_OCCUPANCY
+  F8H_TEMPORAL_TESTS_REQUIRED -->|supports| F8G_FORMAL_EQUIVALENCE_HIERARCHY
+  F8H_RS_HISTORY_INTERPRETATION -->|derived_from| F8H_FIXED_STATE_NONCOMPILABILITY
+  F8H_RS_HISTORY_INTERPRETATION -->|depends_on| F8H_AUGMENTED_MARKOV_RESTORATION
+  F8H_ORDER2_PROJECTED_PROCESS -->|raises_question| Q_H_MINIMAL_STATE
+  F8H_ORDER2_PROJECTED_PROCESS -->|raises_question| Q_H_DEPTH
+  F8H_STATIONARY_OCCUPANCY_INVARIANCE -->|raises_question| Q_H_PERSISTENT_STRUCTURE
+  F8H_PURE_SHAPE_WITNESS -->|raises_question| Q_H_COARSE_GRAINING
+  F8H_SAME_STATE_DIVERGENT_FUTURES -->|raises_question| Q_H_CONSEQUENTIAL_FUNCTIONS
+  F8H_AUGMENTED_MARKOV_RESTORATION -->|compatible_with| Q_META_CONSTRAINT

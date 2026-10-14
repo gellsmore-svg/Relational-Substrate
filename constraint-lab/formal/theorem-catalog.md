@@ -763,7 +763,7 @@ Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0
 
 Proof: [history.md](../../constraint-lab/formal/history.md#cl-t26). Commuting toggles reach pair mask 41 and zero triads. Path probabilities are 1/[10(m+9)]. Remembered slots exchange m/D and 1/D with D=m+9 or m+5.
 Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
-Coherence: `Q-H-POSITIVE`, `F8G-FORMAL-H-L-DISTINCTION`
+Coherence: `Q-H-POSITIVE`, `F8G-FORMAL-H-L-DISTINCTION`, `F8H-SAME-STATE-DIVERGENT-FUTURES`, `F8H-CURRENT-VS-INITIAL-MEMORY`, `F8H-H-QUESTION-RESOLUTION`, `Q-H-CONSEQUENTIAL-FUNCTIONS`
 Dependencies: none
 Source generations: 008H
 Boundary: Both rows coincide at m=1; comparing distinct programs or different initial registers is not this witness.
@@ -780,7 +780,7 @@ Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0
 
 Proof: [history.md](../../constraint-lab/formal/history.md#cl-t27). At x*, the block toggling 12 receives m/D versus 1/D. At m=1 all full/pair rows are uniformly independent of h, including the sentinel.
 Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
-Coherence: `F8G-FORMAL-EQUIVALENCE-HIERARCHY`, `F011-QUOTIENT-INVALID`
+Coherence: `F8G-FORMAL-EQUIVALENCE-HIERARCHY`, `F011-QUOTIENT-INVALID`, `F8H-NONLUMPABLE-MATERIAL-PROJECTION`, `F8H-TEMPORAL-TESTS-REQUIRED`, `Q-H-COARSE-GRAINING`
 Dependencies: CL-T26, CL-T20
 Source generations: 008H
 Boundary: Non-lumpability rules out a quotient valid for arbitrary augmented initial laws; a selected prior requires a separate process test.
@@ -797,7 +797,7 @@ Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0
 
 Proof: [history.md](../../constraint-lab/formal/history.md#cl-t28). K0(x*,.) would need to equal the two unequal CL-T26 rows simultaneously, contradicting row uniqueness.
 Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
-Coherence: `F8G-FORMAL-CURRENT-STATE-EXPRESSIVITY`, `F8G-FORMAL-COMPILATION-TEST`, `Q-H-POSITIVE`
+Coherence: `F8G-FORMAL-CURRENT-STATE-EXPRESSIVITY`, `F8G-FORMAL-COMPILATION-TEST`, `Q-H-POSITIVE`, `F8H-FIXED-STATE-NONCOMPILABILITY`, `F8H-RS-HISTORY-INTERPRETATION`
 Dependencies: CL-T26, CL-T12
 Source generations: 008H
 Boundary: State augmentation, altered update support and marginal-only matching are outside this impossibility theorem.
@@ -814,7 +814,7 @@ Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0
 
 Proof: [history.md](../../constraint-lab/formal/history.md#cl-t29). The next event row and deterministic augmented update depend only on current (x,h).
 Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
-Coherence: `F8G-FORMAL-H-L-DISTINCTION`, `F8G-FORMAL-COMPILATION-TEST`
+Coherence: `F8G-FORMAL-H-L-DISTINCTION`, `F8G-FORMAL-COMPILATION-TEST`, `F8H-AUGMENTED-MARKOV-RESTORATION`, `F8H-RS-HISTORY-INTERPRETATION`
 Dependencies: none
 Source generations: 008H
 Boundary: An S encoding or binary multibit update is a representation change; no absolute non-Markovianity or irreducible time is established.
@@ -831,7 +831,7 @@ Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0
 
 Proof: [history.md](../../constraint-lab/formal/history.md#cl-t30). The geometric excursion sum [w_e/(m+9)]/[1-4/(m+9)] equals w_e/(m+5); pair absorption occurs almost surely.
 Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
-Coherence: `F011-QUOTIENT-INVALID`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`
+Coherence: `F011-QUOTIENT-INVALID`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`, `F8H-PAIR-EPOCH-CLOSURE`
 Dependencies: CL-T29
 Source generations: 008H
 Boundary: Different history updates or triad-dependent hazards need a new closure proof; no raw-triad prior is assumed.
@@ -848,7 +848,7 @@ Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0
 
 Proof: [history.md](../../constraint-lab/formal/history.md#cl-t31). Each destination has six predecessors with incoming sum one. Positive slot sequences give irreducibility; parity and a two-step return give period two. Uniform joint law implies independent uniform marginals and averaged slot probability 1/6.
 Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
-Coherence: `Q-H-POSITIVE`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`
+Coherence: `Q-H-POSITIVE`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`, `F8H-STATIONARY-OCCUPANCY-INVARIANCE`, `F8H-PROCESS-GRAMMAR-WITHOUT-OCCUPANCY`, `Q-H-PERSISTENT-STRUCTURE`
 Dependencies: CL-T30
 Source generations: 008H
 Boundary: Period two prevents pointwise convergence from fixed parity. Full-event pair-versus-triad hazard and multi-time laws need not match H0.
@@ -865,7 +865,7 @@ Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0
 
 Proof: [history.md](../../constraint-lab/formal/history.md#cl-t32). Q=Pi+lambda(I-Pi) acts diagonally on constant and zero-sum subspaces; |lambda|<1. Its powers yield the exact conditional row and TV.
 Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
-Coherence: `F018-LOCAL-VERSUS-INITIAL`, `F8C-CURRENT-SURVIVES`
+Coherence: `F018-LOCAL-VERSUS-INITIAL`, `F8C-CURRENT-SURVIVES`, `F8H-CURRENT-VS-INITIAL-MEMORY`
 Dependencies: CL-T30
 Source generations: 008H
 Boundary: Decay concerns initial-slot information in current h, not all initial-condition information in every material multi-time observable.
@@ -882,7 +882,7 @@ Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0
 
 Proof: [history.md](../../constraint-lab/formal/history.md#cl-t33). The one-hot XOR of previous/current masks identifies h. All earlier snapshots are conditionally irrelevant, while distinct incoming slots into the same current mask give unequal next rows for non-neutral m.
 Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
-Coherence: `Q-H-POSITIVE`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`
+Coherence: `Q-H-POSITIVE`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`, `F8H-ORDER2-PROJECTED-PROCESS`, `F8H-TEMPORAL-TESTS-REQUIRED`, `Q-H-DEPTH`
 Dependencies: CL-T26, CL-T30, CL-T31
 Source generations: 008H
 Boundary: No finite Markov-order claim is made for full-event snapshots containing arbitrarily long triad-only waits.
@@ -899,7 +899,7 @@ Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0
 
 Proof: [history.md](../../constraint-lab/formal/history.md#cl-t34). Two toggles restore a mask iff slots repeat. The joint slot law Q_ij/6 has uniform marginals; direct KL gives the expression and strict positivity away from neutral.
 Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
-Coherence: `Q-H-POSITIVE`, `F018-LOCAL-VERSUS-INITIAL`
+Coherence: `Q-H-POSITIVE`, `F018-LOCAL-VERSUS-INITIAL`, `F8H-TEMPORAL-CORRELATION`, `F8H-CURRENT-VS-INITIAL-MEMORY`, `F8H-PROCESS-GRAMMAR-WITHOUT-OCCUPANCY`, `F8H-TEMPORAL-TESTS-REQUIRED`
 Dependencies: CL-T31, CL-T32
 Source generations: 008H
 Boundary: A temporal process statistic is distinct from a one-time occupancy or a master memory score.
@@ -916,7 +916,7 @@ Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0
 
 Proof: [history.md](../../constraint-lab/formal/history.md#cl-t35). Classify the six actual toggles. Both count laws have masses (m+2,3)/(m+5); matching masses differ by (m-1)/(m+5). Class determines count, so the information chain rule removes the zero count term.
 Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
-Coherence: `Q-H-POSITIVE`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`
+Coherence: `Q-H-POSITIVE`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`, `F8H-PURE-SHAPE-WITNESS`, `Q-H-COARSE-GRAINING`
 Dependencies: CL-T26, CL-T16
 Source generations: 008H
 Boundary: This is conditional next-step shape discrimination, compatible with unchanged stationary history-marginalised occupancy.
@@ -933,7 +933,7 @@ Scope: Three multipliers and the enumerated H0 domains only.
 
 Enumeration: 11 H0 atomic items; 6912 epoch transition entries, 1008 raw-triad absorption rows, 6912 consistent material triples, 41472 two-step paths and 71680 deterministic updates.; exact count 11. Verifier: [gen008h_exec.py](../../constraint-lab/src/rs_constraint_lab/gen008h_exec.py)
 Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py), [generation-008h-round-h0-tables.json](../../constraint-lab/reports/generation-008h-round-h0-tables.json), [generation-008h-validation.json](../../constraint-lab/reports/tables/generation-008h-validation.json)
-Coherence: `Q-H-POSITIVE`
+Coherence: `Q-H-POSITIVE`, `F8H-SAME-STATE-DIVERGENT-FUTURES`, `F8H-NONLUMPABLE-MATERIAL-PROJECTION`, `F8H-AUGMENTED-MARKOV-RESTORATION`, `F8H-PURE-SHAPE-WITNESS`, `F8H-PAIR-EPOCH-CLOSURE`, `F8H-STATIONARY-OCCUPANCY-INVARIANCE`, `F8H-ORDER2-PROJECTED-PROCESS`, `F8H-H-QUESTION-RESOLUTION`
 Dependencies: CL-T26, CL-T27, CL-T29, CL-T30, CL-T31, CL-T32, CL-T33, CL-T34, CL-T35
 Source generations: 008H
 Boundary: The finite checks do not prove all-m statements; those use CL-T26..T35. Irrational information values and float eigenvalues are separately CL-N07.
@@ -952,7 +952,7 @@ Method: 160-digit Decimal logarithms from Fraction probabilities; enumerated JS/
 Domain: Full/pair row JS, graph-class JS, consecutive-event MI and six-slot eigenvalues for three grades.
 Tolerances: `{"eigenvalue_gap": "1e-13", "information_formula_gap": "1e-13"}`
 Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py), [generation-008h-witness.json](../../constraint-lab/reports/tables/generation-008h-witness.json), [generation-008h-history-chain.json](../../constraint-lab/reports/tables/generation-008h-history-chain.json), [generation-008h-validation.json](../../constraint-lab/reports/tables/generation-008h-validation.json)
-Coherence: `Q-H-POSITIVE`
+Coherence: `Q-H-POSITIVE`, `F8H-SAME-STATE-DIVERGENT-FUTURES`, `F8H-PURE-SHAPE-WITNESS`, `F8H-TEMPORAL-CORRELATION`
 Dependencies: CL-T32, CL-T34, CL-T35, CL-F05
 Source generations: 008H
 Boundary: Display rounding is not exact irrational equality; external reference values are review checks rather than stored scientific input.
@@ -969,7 +969,7 @@ Scope: Specific finite controller; no general hidden-state minimisation task ope
 
 Argument/next test: Declare preserved material projection and update support, then seek a scoped minimality argument; H0 executes no follow-up.
 Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
-Coherence: `Q-H-POSITIVE`
+Coherence: `Q-H-POSITIVE`, `Q-H-MINIMAL-STATE`
 Dependencies: CL-T29, CL-T33
 Source generations: 008H
 Boundary: At m=1 the register is unnecessary. General H functions, arbitrary hidden-state models and L mechanisms are separate questions.

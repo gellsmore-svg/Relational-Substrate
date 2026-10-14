@@ -198,7 +198,7 @@ tables distinguish finite exact identities from numerical information/eigenvalue
 For every m>0, M=(23,12) and E=(12,23) from (x0,None) have probability
 1/[10(m+9)]>0. The first event has probability 1/10 and the distinct second slot
 has probability 1/(m+9). Toggle commutation yields identical all-ten-bit x*,
-but h is 12 versus 23. Into x* xor 2^12 the full probabilities are m/(m+9)
+but h is 12 versus 23. Into x* xor 2^3 (slot 3, pair 12), full probabilities are m/(m+9)
 and 1/(m+9). Pair conditioning yields m/(m+5) and 1/(m+5). Thus both rows
 diverge iff m!=1. No hidden current triad or different fixed program explains it.
 
