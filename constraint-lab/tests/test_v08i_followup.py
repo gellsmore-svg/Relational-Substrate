@@ -64,3 +64,15 @@ def test_published_I1_mechanisms_and_matched_comparisons():
     for row in matched["pairs"]:
         assert row["stationary_pair_max_gap"] > 0
         assert Decimal(row["stationary_material_comparison"]["shape_given_edge"]) > 0
+
+
+@PUBLISHED
+@pytest.mark.parametrize("feature", ["SAME_FORM", "SAME_DISSOLVE"])
+@pytest.mark.parametrize("label,m", [("m025", "1/4"), ("m4", "4")])
+def test_I1_formula_against_full_kernel_and_frozen_I0(feature, label, m):
+    model = RoleController(feature, Fraction(m))
+    _, candidate = candidate_same_stationary(model)
+    original = decode(read_json(ROOT / "constraint-lab/reports/items/generation-008i" / f"I0-{feature}-{label}.json")["result"])
+    assert sum(candidate) == 1
+    assert balance_gap(candidate, model.kernel()) == 0
+    assert candidate == original["stationary_joint"]

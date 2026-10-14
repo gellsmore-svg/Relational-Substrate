@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import copy
 import json
+import subprocess
 from decimal import Decimal, localcontext
 from fractions import Fraction
 from pathlib import Path
@@ -253,3 +254,45 @@ def test_published_complement_and_reciprocity_receipts_are_distinct_levels():
     assert len(result["reciprocity_checks"]) == 22 * 11 * 2
     assert all(row["kernel_gap"] == 0 for row in result["reciprocity_matches"])
     assert "full_kernel_fingerprint" in result["groups"]
+
+
+def _git(*args, check=True):
+    return subprocess.run(["git", "-C", str(ROOT), *args], check=check, capture_output=True)
+
+
+@PUBLISHED
+def test_generation_008i_preserves_historical_artifacts_and_separate_freezes():
+    parent = "ad5b656e26fe66610b583aedccdd34593e13791a"
+    old = set(_git("ls-tree", "-r", "--name-only", parent).stdout.decode().splitlines())
+    changed = set(_git("diff", "--name-only", parent, "--", "books", "constraint-lab/reports", "constraint-lab/exploration", "constraint-lab/provenance", "constraint-lab/coherence/snapshots").stdout.decode().splitlines())
+    assert old & changed <= {"constraint-lab/provenance/ledger.jsonl"}
+    for path in ("constraint-lab/formal/theorem-catalog.jsonl", "constraint-lab/coherence/findings.jsonl", "constraint-lab/coherence/relations.jsonl", "constraint-lab/provenance/ledger.jsonl", "constraint-lab/formal/book-integration-map.md"):
+        assert (ROOT / path).read_bytes().startswith(_git("show", f"{parent}:{path}").stdout)
+    for summary_name, item_path in (
+        ("generation-008i-round-i0-tables.json", "constraint-lab/reports/items/generation-008i/I0-ADJ_FORM-m025.json"),
+        ("generation-008i-round-i1-tables.json", "constraint-lab/reports/items/generation-008i-i1/I1-COORDINATE-SYMMETRY.json"),
+    ):
+        summary = read_json(ROOT / "constraint-lab/reports" / summary_name)
+        commit = summary["frozen_analysis_plan_commit"]
+        assert _git("merge-base", "--is-ancestor", commit, "HEAD").returncode == 0
+        assert _git("cat-file", "-e", f"{commit}:{item_path}", check=False).returncode != 0
+        assert _git("cat-file", "-e", "HEAD:" + item_path).returncode == 0
+
+
+@pytest.mark.skipif(not (ROOT / "constraint-lab/coherence/snapshots/through-generation-008i.md").exists(), reason="8I coherence checked after close-out")
+def test_generation_008i_coherence_snapshot_and_reusable_catalogue():
+    from rs_constraint_lab.coherence import load_ledger, snapshot_text
+    from rs_constraint_lab.formal import load_catalog, validate_catalog
+
+    directory = ROOT / "constraint-lab/coherence"
+    assert (directory / "snapshots/through-generation-008i.md").read_text() == snapshot_text(directory, title="Through Generation 008I")
+    catalog = load_catalog()
+    assert validate_catalog(catalog) == []
+    new = [row for row in catalog if row["source_generations"] == ["008I"]]
+    assert {row["theorem_id"] for row in new} == {*(f"CL-T{n}" for n in range(36, 45)), "CL-F06"}
+    findings, relations = load_ledger(directory)
+    method = next(row for row in findings if row["finding_id"] == "F8I-OTR-METHODOLOGICAL-ADOPTION")
+    assert method["epistemic_layer"] == "METHODOLOGICAL"
+    assert "constraint-lab/methodology/open-thetical-application.md" in method["evidence_refs"]
+    assert next(row for row in findings if row["finding_id"] == "Q-H-CONSEQUENTIAL-FUNCTIONS")["status"] == "unresolved"
+    assert any(row["from_finding"] == "Q-H-CONSEQUENTIAL-FUNCTIONS" and row["relation_type"] == "partially_answered_by" and row["created_generation"] == "008I" for row in relations)

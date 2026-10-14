@@ -265,7 +265,9 @@ def test_catalog_schema_generated_views_and_namespaces():
     rows = load_catalog()
     assert validate_catalog(rows) == []
     assert {r["status"] for r in rows} <= STATUSES
-    assert len([r for r in rows if r["status"] == "ALGEBRAIC_THEOREM" and "008H" not in r["source_generations"]]) == 25
+    historical = [json.loads(line) for line in _git("show", "22e252e560cc711d337b6ae506b0fb76728247d6:constraint-lab/formal/theorem-catalog.jsonl").splitlines()]
+    assert sum(r["status"] == "ALGEBRAIC_THEOREM" for r in historical) == 25
+    assert rows[:len(historical)] == historical
     assert all(r["theorem_id"].startswith("CL-") for r in rows)
     for path, expected in generated_views().items():
         assert path.read_text(encoding="utf-8") == expected

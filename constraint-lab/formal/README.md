@@ -24,3 +24,9 @@ Generation 8H adds the first executed H example. [History as state](history.md)
 separates ordinary material x from finite register h, proves the same-state
 non-compilability boundary, and restores Markov form on augmented state.
 Its verified appendix extends the catalogue without rewriting 8G statements.
+
+Generation 8I adds [historical role grammar](history-role-grammar.md), with
+generic pair closure, S4 quotients, history-only uniformity, order/projection
+identities and the separately frozen I1 mechanism results. Its research selection
+uses [the OTR laboratory adapter](../methodology/open-thetical-application.md).
+Historical formal entries remain intact; cell-specific numbers stay in tables.

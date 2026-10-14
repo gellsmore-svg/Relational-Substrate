@@ -34,3 +34,18 @@ in 8H. The following entries refine its prospective H integration after H0:
 | Current efficacy versus initial-history forgetting, CL-T32 | READY_WITH_SCOPE | RS Chapter 6 / coherent ontology Chapter 5 | Decay of initial-slot information is distinct from efficacy of current h |
 | Reversal-memory grade-specific information values, CL-N07 | PROVISIONAL | Laboratory report | Model/palette-specific magnitudes, not a book-level ontology argument |
 | General physical historical ontology | DO_NOT_INTEGRATE_YET | None | No inference that nature uses this memory, time is irreducible, or finite history cannot be encoded as present state |
+
+## Generation 8I, review boundary
+
+No book text is changed. The canonical OTR source is resolved on main and its
+unchanged bytes are integrated in this branch; the laboratory adapter follows
+its direction, complementarity, freeze, observation-retention and recursive
+selection safeguards. OTR is a research method, not evidence for RS.
+
+| Content | Current treatment | Integration boundary |
+| --- | --- | --- |
+| OTR 1.0 and laboratory adapter | READY as methodology | Cite canonical source/version/hash; preserve its authored-byte provenance qualification |
+| Generic role covariance, quotient and projection proofs | PENDING_EXTERNAL_REVIEW | No 8I scientific maturity class assigned before review |
+| SAME-direction factorisation and matched-KU mechanism | PENDING_EXTERNAL_REVIEW | Model mathematics with explicit support, state and pair-clock scope |
+| 22-cell stationary shape/feedback observations | PENDING_EXTERNAL_REVIEW | Remain in reports/tables until external scientific review |
+| Natural historical ontology, irreducible time, biological purpose | DO_NOT_INTEGRATE_YET | No such inference follows from the finite controller atlas |

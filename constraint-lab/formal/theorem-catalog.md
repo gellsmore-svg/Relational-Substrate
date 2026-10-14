@@ -975,3 +975,173 @@ Source generations: 008H
 Boundary: At m=1 the register is unnecessary. General H functions, arbitrary hidden-state models and L mechanisms are separate questions.
 Notes: Historical CL-Q02 is retained; CL-T26 answers its scoped existence question.
 
+## CL-T36: Generic history/present pair-event closure
+
+**ALGEBRAIC_THEOREM**
+
+Positive pair weights depending only on current pair mask and remembered pair slot close exactly on (p,h) after summing unit triad-only excursions that preserve both coordinates.
+
+Assumptions: Four unit triad toggles, unread by controller; h'=e after a pair toggle, preserved after triad toggles; W(p,h)>0.
+Scope: Generation 8I declared positive pair-toggle/history grammar, with clock and representation assumptions stated.
+
+Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t36). Geometric absorption gives [w_e/(W+4)]/[1-4/(W+4)]=w_e/W, with almost sure next-pair arrival.
+Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
+Coherence: `F8H-PAIR-EPOCH-CLOSURE`, `F011-QUOTIENT-INVALID`
+Dependencies: CL-T30
+Source generations: 008I
+Boundary: Triad-dependent weights or history updates require a new closure argument; no dense full augmented kernel or triad prior is assumed.
+Notes: Reusable proof, distinct from finite grade-specific stationary/information observations. I0 and I1 were separately frozen; historical statements retained.
+
+## CL-T37: Historical role S4 covariance and valid orbit quotient
+
+**ALGEBRAIC_THEOREM**
+
+All eleven role predicates are S4 covariant under simultaneous vertex relabelling of p,h,e; their 28 state orbits give a valid dynamical quotient for all m>0.
+
+Assumptions: rho uses pair equality/intersection; Direction reads candidate presence; Positive weights m^phi and deterministic single-toggle/register update.
+Scope: Generation 8I declared positive pair-toggle/history grammar, with clock and representation assumptions stated.
+
+Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t37). Vertex maps preserve rho, direction, denominator and update. Kernel automorphism orbits have identical aggregate block rows. A marked-edge stabiliser gives 2*2*7=28 orbits.
+Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
+Coherence: `F011-QUOTIENT-INVALID`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`
+Dependencies: CL-T20, CL-T36
+Source generations: 008I
+Boundary: The diagnostic tuple has collisions and is not substituted for the actual orbit partition; no larger symmetry is presumed.
+Notes: Reusable proof, distinct from finite grade-specific stationary/information observations. I0 and I1 were separately frozen; historical statements retained.
+
+## CL-T38: Regular history-only joint uniformity
+
+**ALGEBRAIC_THEOREM**
+
+A p-independent doubly stochastic slot matrix gives uniform stationary joint law on pair mask and history. Positive symmetric regular SAME/ADJACENT/DISJOINT weighting satisfies this and has unique stationary occupancy with period two.
+
+Assumptions: Slot law independent of p; Doubly stochastic slot matrix; strictly positive for irreducibility/uniqueness; Pair toggle and h'=event.
+Scope: Generation 8I declared positive pair-toggle/history grammar, with clock and representation assumptions stated.
+
+Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t38). Each destination (p',j) has predecessors (p' xor 2^j,i), with incoming sum one. Symmetric regular class counts 1,4,1 make Q doubly stochastic. Positive slot sequences and j,j suffix prove communication; parity and a two-step return prove period two.
+Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
+Coherence: `F8H-STATIONARY-OCCUPANCY-INVARIANCE`, `Q-H-CONSEQUENTIAL-FUNCTIONS`
+Dependencies: CL-T36
+Source generations: 008I
+Boundary: Not a theorem for p-reading cross controllers or pointwise convergence from fixed parity.
+Notes: Reusable proof, distinct from finite grade-specific stationary/information observations. I0 and I1 were separately frozen; historical statements retained.
+
+## CL-T39: One-pair memory order bound and first-order criterion
+
+**ALGEBRAIC_THEOREM**
+
+For any current-pair/last-pair-slot law, the pair-mask process has order at most two after an observed pair transition. Under positive stationary augmented law it is first-order iff the row is h-independent at every p, otherwise exactly order two.
+
+Assumptions: One pair bit toggles each epoch; Register equals last pair slot; All slots positive for the stationary necessity argument.
+Scope: Generation 8I declared positive pair-toggle/history grammar, with clock and representation assumptions stated.
+
+Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t39). One-hot XOR recovers h. At stationary law all previous neighbours into a fixed p have positive mass, so unequal recovered-history rows violate order one. Equality is exactly history-erasure lumpability.
+Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
+Coherence: `F8H-ORDER2-PROJECTED-PROCESS`, `F8H-NONLUMPABLE-MATERIAL-PROJECTION`
+Dependencies: CL-T33, CL-T36
+Source generations: 008I
+Boundary: Pair-event clock and compatible observed transitions; no full-event finite-order or absolute non-Markovianity claim.
+Notes: Reusable proof, distinct from finite grade-specific stationary/information observations. I0 and I1 were separately frozen; historical statements retained.
+
+## CL-T40: Stationary S4 invariance and coarse history-label silence
+
+**ALGEBRAIC_THEOREM**
+
+Unique stationary S4-covariant laws are S4 invariant. Material masks are class-uniform; invariant material observables are independent of the labelled history slot. Two such material models have zero labelled remainder beyond graph class.
+
+Assumptions: Unique finite stationary augmented law; S4 kernel covariance; History slots form one transitive S4 orbit.
+Scope: Generation 8I declared positive pair-toggle/history grammar, with clock and representation assumptions stated.
+
+Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t40). Relabelled pi is stationary and hence equal by uniqueness. Invariant g(p) is fixed while h is transitive, yielding pi(g,h)=pi(g)/6. Uniform conditional mask laws inside each class eliminate model/mask conditional information.
+Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
+Coherence: `F8G-FORMAL-EQUIVALENCE-HIERARCHY`, `Q-H-COARSE-GRAINING`
+Dependencies: CL-T37, CL-T16
+Source generations: 008I
+Boundary: Does not force I(P;H), model/class information or shape-given-edge information to vanish; remembered-label information differs from relational role information.
+Notes: Reusable proof, distinct from finite grade-specific stationary/information observations. I0 and I1 were separately frozen; historical statements retained.
+
+## CL-T41: Uniform and stationary history projection identities
+
+**ALGEBRAIC_THEOREM**
+
+KU is stochastic. Kpi weighted by stationary h|p preserves pi_P exactly, and Kpi-KU equals the conditional-history deviation from uniform weighted against each normalised event row.
+
+Assumptions: Finite stationary augmented law; Positive material marginal; KU uses uniform h; Kpi uses actual stationary h|p.
+Scope: Generation 8I declared positive pair-toggle/history grammar, with clock and representation assumptions stated.
+
+Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t41). Sum the augmented stationary flow over projected destinations; subtract uniform versus conditional row averages for the feedback identity.
+Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
+Coherence: `F8G-FORMAL-COMPILATION-TEST`, `F8H-FIXED-STATE-NONCOMPILABILITY`
+Dependencies: CL-T36
+Source generations: 008I
+Boundary: Stationary one-step representation is weaker than matching every conditioned history row. Correlation alone need not cause a KU discrepancy; KU is only one comparator.
+Notes: Reusable proof, distinct from finite grade-specific stationary/information observations. I0 and I1 were separately frozen; historical statements retained.
+
+## CL-T42: Augmented last-event bookkeeping irreversibility
+
+**ALGEBRAIC_THEOREM**
+
+A strictly positive toggle/register process with at least two slots is non-reversible on augmented state even if the material law is H0.
+
+Assumptions: Positive stationary mass on recurrent augmented states; h'=event; Exactly one bit toggles.
+Scope: Generation 8I declared positive pair-toggle/history grammar, with clock and representation assumptions stated.
+
+Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t42). An event e!=h sends (p,h) to (p xor 2^e,e). Returning material p requires toggling e and therefore cannot restore h. The reverse augmented arrow is absent, violating detailed balance.
+Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
+Coherence: `F8H-AUGMENTED-MARKOV-RESTORATION`, `F8H-TEMPORAL-TESTS-REQUIRED`
+Dependencies: none
+Source generations: 008I
+Boundary: No assertion about every quotient, Kpi reversibility, thermodynamics or a memory-strength measure.
+Notes: Reusable proof, distinct from finite grade-specific stationary/information observations. I0 and I1 were separately frozen; historical statements retained.
+
+## CL-T43: SAME-direction stationary factorisation and coordinate symmetry
+
+**ALGEBRAIC_THEOREM**
+
+For d slots, SAME_FORM has pi(p,h)=[1/(2d)]r^(|p|-p_h)(1-r)^(d-1-|p|+p_h), r=(m+d-1)/(m+2d-1). SAME_DISSOLVE is its complement. Material occupancy depends only on edge count despite non-neutral historical efficacy.
+
+Assumptions: d>=2 and m>0; SAME x declared current direction, unit alternatives; Single toggle and h'=event.
+Scope: Generation 8I declared positive pair-toggle/history grammar, with clock and representation assumptions stated.
+
+Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t43). Full coordinate permutations preserve the law. The candidate normalises and balances directly by separating destination remembered bit R=0 or 1 and counting other-present/absent bits. Positivity gives uniqueness. Conditional on h, R is uniform and other bits iid Bernoulli(r).
+Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
+Coherence: `Q-H-PERSISTENT-STRUCTURE`, `Q-H-CONSEQUENTIAL-FUNCTIONS`
+Dependencies: CL-T36, CL-T39
+Source generations: 008I
+Boundary: A larger dynamical bit-coordinate symmetry is not graph isomorphism or geometry. The formula is scoped to SAME-direction controllers; DISJ has explicit violating generators.
+Notes: Reusable proof, distinct from finite grade-specific stationary/information observations. I0 and I1 were separately frozen; historical statements retained.
+
+## CL-T44: Singleton-selector uniform-history equivalence
+
+**ALGEBRAIC_THEOREM**
+
+Any bijective history-slot selector f in a single direction-gated feature has the same KU as SAME. In particular SAME and DISJ cross controllers at N=4 have identical KU for every positive m.
+
+Assumptions: Feature weights e=f(h) and the declared current direction; f bijective; history uniformly averaged at each fixed p; Normalised event rows, not averaged raw weights.
+Scope: Generation 8I declared positive pair-toggle/history grammar, with clock and representation assumptions stated.
+
+Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t44). q_f(p,h,e)=q_SAME(p,f(h),e), including its denominator. Reindex the uniform history sum. Relabelling history alone changes update to g'=f(e), so this does not conjugate the full program.
+Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
+Coherence: `F8G-FORMAL-COMPILATION-TEST`, `Q-H-CONSEQUENTIAL-FUNCTIONS`
+Dependencies: CL-T41, CL-T36
+Source generations: 008I
+Boundary: Not equality of conditioned rows, full processes or true stationary laws; two-grade I1 counterexamples distinguish them. No general irreducible-history claim.
+Notes: Reusable proof, distinct from finite grade-specific stationary/information observations. I0 and I1 were separately frozen; historical statements retained.
+
+## CL-F06: Marked-edge orbit and diagnostic-collision enumeration
+
+**FINITE_EXHAUSTIVE_RESULT**
+
+The 384 augmented K4 pair/history states partition into 28 S4 orbits. The diagnostic tuple (R,A_h,D_h,C_h) has 24 values and four two-orbit collisions.
+
+Assumptions: Simultaneous vertex relabelling of pair mask and marked history edge; Historical edge ordering and graph classifier preserved.
+Scope: Structural N=4 enumeration, explicitly observed before I0 as authorised.
+
+Enumeration: 384 pair-mask/history states under all 24 vertex permutations; independent stabiliser orbit count.; exact count 384. Verifier: [history_roles.py](../../constraint-lab/src/rs_constraint_lab/history_roles.py)
+Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [structural-orbits.json](../../constraint-lab/exploration/generation-008i/structural-orbits.json), [test_v08i.py](../../constraint-lab/tests/test_v08i.py)
+Coherence: `F011-QUOTIENT-INVALID`
+Dependencies: CL-T37
+Source generations: 008I
+Boundary: Diagnostic descriptors are not treated as sufficient coordinates or a valid quotient by themselves.
+Notes: No non-neutral scientific cell was executed for this structural enumeration.
+
