@@ -1,5 +1,6 @@
 {
   "generation": "008K",
+  "ledger_commit": "ffd2a3bef797cf8e2612d6f3c157ce2f1ec913eb",
   "title": "Through Generation 008K",
   "snapshot_path": "constraint-lab/coherence/snapshots/through-generation-008k.md",
   "canonical_ledger_sha256": "c55329ecb00587172c13a0b073b72328fa33614d24b179c5c1c5da836667f94f",

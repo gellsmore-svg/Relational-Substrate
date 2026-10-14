@@ -355,3 +355,19 @@ def test_canonical_historical_artifacts_immutable_and_ledgers_append_only():
                  "constraint-lab/coherence/relations.jsonl",
                  "constraint-lab/provenance/ledger.jsonl"):
         assert (ROOT / path).read_bytes().startswith(git("show", BASE + ":" + path))
+
+
+def test_8k_snapshot_reproduces_its_pinned_ledger_not_future_statuses(tmp_path):
+    from rs_constraint_lab.coherence import canonical_ledger_bytes, snapshot_text
+    receipt = json.loads((ROOT / "constraint-lab/exploration/generation-008k/coherence-receipt.json").read_text())
+    commit = receipt["ledger_commit"]
+    subprocess.run(["git", "-C", str(ROOT), "merge-base", "--is-ancestor", commit, "HEAD"], check=True)
+    for name in ("findings.jsonl", "relations.jsonl"):
+        content = subprocess.run(["git", "-C", str(ROOT), "show", commit + ":constraint-lab/coherence/" + name],
+                                 capture_output=True, check=True).stdout
+        (tmp_path / name).write_bytes(content)
+    expected = snapshot_text(tmp_path, title=receipt["title"]).encode()
+    actual = (ROOT / receipt["snapshot_path"]).read_bytes()
+    assert actual == expected
+    assert sha256(actual).hexdigest() == receipt["snapshot_sha256"]
+    assert sha256(canonical_ledger_bytes(tmp_path)).hexdigest() == receipt["canonical_ledger_sha256"]

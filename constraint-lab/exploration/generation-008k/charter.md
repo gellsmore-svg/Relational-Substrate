@@ -42,7 +42,7 @@ The separate 008I prompt artifacts remain branch/variant-qualified.
 Use finite homogeneous (Z,T) structurally and add initial law mu only when needed.
 Reserve Pi_Y / widehat-Pi_Y for observation partition / strong refinement;
 do not reuse pair mask P, class C, count K, parity R or axes S,H,L.
-Use mathcal-A for a compilation class, not the existing C constraint/class roles.
+Use mathfrak-A for a compilation class, not the existing C constraint/class roles.
 
 Re-use CL-T52 existence/uniqueness. Prove coarsening monotonicity and induced
 quotient commutation without a stationary prior. Distinguish trace equivalence,
