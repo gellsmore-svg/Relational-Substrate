@@ -151,6 +151,8 @@ def test_plan_and_published_files_have_deterministic_hashes():
         envelope = json.loads((ROOT / path).read_text())
         assert digest(envelope["result"]) == envelope["result_sha256"]
     assert len(manifest["item_sha256"]) == 15
+    for path, sha in {**plan["source_sha256"], **plan["input_sha256"]}.items():
+        assert sha256_file(ROOT / path) == sha
 
 
 @POST_FREEZE
@@ -160,6 +162,53 @@ def test_exact_commuting_quotient_ladder():
     assert all(record["exact_block_transition_gap"] == record["stationary_pushforward_gap"] == 0 for record in records)
     assert sum(map(len, geometry()[2])) == 384
     assert sum(map(len, edge_role_partition())) == 384
+
+
+@POST_FREEZE
+def test_every_published_merge_obstruction_replays():
+    count = 0
+    for result in load_primary().values():
+        quotient = [dict(row) for row in result["quotient_kernel"]]
+        for record in result["merge_obstructions"]:
+            left, right = record["block_A"], record["block_B"]
+            witness = record["merge_obstruction"]
+            target = witness["target_blocks_after_merge"]
+            a = sum(quotient[left].get(block, 0) for block in target)
+            b = sum(quotient[right].get(block, 0) for block in target)
+            assert a == witness["probability_A"] != witness["probability_B"] == b
+            assert record["next_observation_obstruction"] is not None
+            count += 1
+    assert count == 1986
+
+
+@POST_FREEZE
+def test_role_atlas_and_observable_pair_bijections():
+    orbit = decode(json.loads((ROOT / OUTPUT / "I-ORBIT-ATLAS.json").read_text())["result"])
+    assert orbit["orbit_count"] == 28
+    assert sum(row["stationary_mass"] for row in orbit["orbit_atlas"]) == 1
+    assert all(row["exact_gap"] == 0 for row in orbit["covariance"])
+    assert all(row["comparisons"] == 24 * 384 * 6 for row in orbit["covariance"])
+    assert len({(row["predecessor_class"], row["graph_class"]) for row in orbit["orbit_atlas"]}) == 28
+    results = load_primary()
+    for grade in ("m025", "m4"):
+        for projection, size in (("labelled_mask", 384), ("graph_class", 28), ("edge_count", 12), ("parity", 2)):
+            sync = results[grade, projection]["synchronization"]
+            assert sync["bijection_verified"] and sync["legal_ordered_observation_pairs"] == size
+            assert sync["markov_order"] == (1 if projection == "parity" else 2)
+        for projection in PROJECTIONS:
+            for source, row in enumerate(RecentReversal(Fraction(results[grade, projection]["m"])).epoch_kernel()):
+                assert all(((source // 6).bit_count() ^ (target // 6).bit_count()) & 1 for target in row)
+
+
+def test_predictive_snapshot_uses_immutable_ledger_prefix(tmp_path):
+    from rs_constraint_lab.coherence import snapshot_text
+    snapshot = ROOT / "constraint-lab/coherence/snapshots/through-generation-008i.md"
+    if not snapshot.exists():
+        pytest.skip("snapshot not yet published")
+    for name, count in (("findings.jsonl", 140), ("relations.jsonl", 205)):
+        lines = (ROOT / "constraint-lab/coherence" / name).read_bytes().splitlines(keepends=True)
+        (tmp_path / name).write_bytes(b"".join(lines[:count]))
+    assert snapshot.read_text() == snapshot_text(tmp_path, title="Through Generation 008I (Predictive State)")
 
 
 def test_prompt_variant_and_reviewed_artifacts_preserved():

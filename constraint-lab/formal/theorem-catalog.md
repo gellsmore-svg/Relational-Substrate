@@ -975,3 +975,175 @@ Source generations: 008H
 Boundary: At m=1 the register is unnecessary. General H functions, arbitrary hidden-state models and L mechanisms are separate questions.
 Notes: Historical CL-Q02 is retained; CL-T26 answers its scoped existence question.
 
+## CL-T52: Coarsest strongly lumpable observation refinement
+
+**ALGEBRAIC_THEOREM**
+
+Exact iterative block-signature splitting terminates at the unique coarsest strongly lumpable refinement of a finite observation partition.
+
+Assumptions: Finite rational stochastic kernel; Initial partition covers every state exactly once.
+Scope: Arbitrary augmented initial laws; generic utility, not generally all-word minimal hidden-model realisation.
+
+Proof: [predictive-state.md](../../constraint-lab/formal/predictive-state.md#cl-t52). Termination by strictly increasing block count; fixed-point signatures define a quotient; induction shows every strongly lumpable observation refinement refines every intermediate partition and hence the fixed point.
+Evidence: [predictive-state.md](../../constraint-lab/formal/predictive-state.md), [generation-008i-predictive-state.md](../../constraint-lab/reports/generation-008i-predictive-state.md), [test_v08i_predictive.py](../../constraint-lab/tests/test_v08i_predictive.py), [generation-008i-predictive-round-i0-tables.json](../../constraint-lab/reports/generation-008i-predictive-round-i0-tables.json)
+Coherence: `F8IP-PREDICTIVE-COMPRESSION-LADDER`, `F8IP-MINIMALITY-SCOPE`
+Dependencies: none
+Source generations: 008I
+Boundary: Declared observation-preserving fixed-state strong refinement; not an arbitrary hidden-state encoding, minimal ontology or physical history law.
+Notes: Alternative predictive-state 8I. IDs reserved above all accessible related-branch IDs; historical rows unchanged. Prior exposure disclosed; new verification follows pushed freeze.
+
+## CL-T53: Minimal labelled-mask history and synchronization
+
+**ALGEBRAIC_THEOREM**
+
+For RECENT-REVERSAL, non-neutral labelled-mask prediction requires all six histories per mask (384 states), synchronized by two masks; neutral collapses to 64 states and one observation.
+
+Assumptions: N4 RECENT-REVERSAL; m>0; Current labelled mask preserved; Pair-event clock.
+Scope: N4/O3 independent hypergraph, RECENT-REVERSAL, H_pair=1, pair-event clock; fixed 384-state recurrent representation. Alternative predictive-state 8I; not the role-grammar branch. All positive m, with m=1 separated.
+
+Proof: [predictive-state.md](../../constraint-lab/formal/predictive-state.md#cl-t53). Different h assign the m weight to different labelled successors, so one-step observed rows differ iff m!=1. Consecutive masks recover h by one-hot XOR. Positive stationary predecessor witnesses exclude order one.
+Evidence: [predictive-state.md](../../constraint-lab/formal/predictive-state.md), [generation-008i-predictive-state.md](../../constraint-lab/reports/generation-008i-predictive-state.md), [test_v08i_predictive.py](../../constraint-lab/tests/test_v08i_predictive.py), [generation-008i-predictive-round-i0-tables.json](../../constraint-lab/reports/generation-008i-predictive-round-i0-tables.json)
+Coherence: `F8IP-TWO-SNAPSHOT-SYNCHRONIZATION`
+Dependencies: CL-T52, CL-T33
+Source generations: 008I
+Boundary: Declared observation-preserving fixed-state strong refinement; not an arbitrary hidden-state encoding, minimal ontology or physical history law.
+Notes: Alternative predictive-state 8I. IDs reserved above all accessible related-branch IDs; historical rows unchanged. Prior exposure disclosed; new verification follows pushed freeze.
+
+## CL-T54: Simultaneous marked-graph S4 quotient
+
+**ALGEBRAIC_THEOREM**
+
+Simultaneous vertex relabelling of pair mask, history slot and candidate event commutes with RECENT-REVERSAL and defines a strong S4 orbit quotient.
+
+Assumptions: N4 RECENT-REVERSAL; m>0; S4 acts on p and h together.
+Scope: N4/O3 independent hypergraph, RECENT-REVERSAL, H_pair=1, pair-event clock; fixed 384-state recurrent representation. Alternative predictive-state 8I; not the role-grammar branch. Strong lumpability for arbitrary augmented starts.
+
+Proof: [predictive-state.md](../../constraint-lab/formal/predictive-state.md#cl-t54). Equality e=h and the xor toggle/update h'=e commute with relabelling. Orbit summation preserves aggregate rows. Stabiliser action on h identifies fixed-current-graph pair roles.
+Evidence: [predictive-state.md](../../constraint-lab/formal/predictive-state.md), [generation-008i-predictive-state.md](../../constraint-lab/reports/generation-008i-predictive-state.md), [test_v08i_predictive.py](../../constraint-lab/tests/test_v08i_predictive.py), [generation-008i-predictive-round-i0-tables.json](../../constraint-lab/reports/generation-008i-predictive-round-i0-tables.json)
+Coherence: `F8IP-GRAPH-STRUCTURAL-HISTORY`, `F8IP-QUOTIENT-CORRECTNESS`
+Dependencies: CL-T30
+Source generations: 008I
+Boundary: Declared observation-preserving fixed-state strong refinement; not an arbitrary hidden-state encoding, minimal ontology or physical history law.
+Notes: Alternative predictive-state 8I. IDs reserved above all accessible related-branch IDs; historical rows unchanged. Prior exposure disclosed; new verification follows pushed freeze.
+
+## CL-T55: Minimal structural-role history and graph-class synchronization
+
+**ALGEBRAIC_THEOREM**
+
+For every positive non-neutral m the coarsest graph-class-preserving refinement consists of 28 marked-pair roles; class pairs synchronize it and stationary class order is exactly two. Neutral collapses to 11 first-order classes.
+
+Assumptions: CL-F08 N4 role enumeration and toggle-class injectivity; RECENT-REVERSAL, m>0; Pair-event clock.
+Scope: N4/O3 independent hypergraph, RECENT-REVERSAL, H_pair=1, pair-event clock; fixed 384-state recurrent representation. Alternative predictive-state 8I; not the role-grammar branch. Count is finite N4 structure; algebra covers all positive non-neutral m.
+
+Proof: [predictive-state.md](../../constraint-lab/formal/predictive-state.md#cl-t55). S4 supplies sufficiency. At fixed graph n_G(c)+(m-1) times the indicator of remembered-toggle class determines the row; distinct roles have distinct toggle classes, giving immediate row separation for m!=1. Previous/current class pairs identify roles. One-edge positive-predecessor witness excludes order one.
+Evidence: [predictive-state.md](../../constraint-lab/formal/predictive-state.md), [generation-008i-predictive-state.md](../../constraint-lab/reports/generation-008i-predictive-state.md), [test_v08i_predictive.py](../../constraint-lab/tests/test_v08i_predictive.py), [generation-008i-predictive-round-i0-tables.json](../../constraint-lab/reports/generation-008i-predictive-round-i0-tables.json)
+Coherence: `F8IP-GRAPH-STRUCTURAL-HISTORY`, `F8IP-GRAPH-28-STATE-REFINEMENT`, `F8IP-TWO-SNAPSHOT-SYNCHRONIZATION`, `F8IP-COARSE-GRAINED-ORDER2`
+Dependencies: CL-T52, CL-T54, CL-F08
+Source generations: 008I
+Boundary: Declared observation-preserving fixed-state strong refinement; not an arbitrary hidden-state encoding, minimal ontology or physical history law.
+Notes: Alternative predictive-state 8I. IDs reserved above all accessible related-branch IDs; historical rows unchanged. Prior exposure disclosed; new verification follows pushed freeze.
+
+## CL-T56: Minimal directional edge-count memory
+
+**ALGEBRAIC_THEOREM**
+
+Count prediction closes exactly on twelve legal (k,r=p_h) states; interior r rows differ iff m!=1, two counts synchronize, and stationary count order is exactly two non-neutrally and one neutrally.
+
+Assumptions: Six pair slots; RECENT-REVERSAL, m>0; Current count preserved; Pair-event clock.
+Scope: N4/O3 independent hypergraph, RECENT-REVERSAL, H_pair=1, pair-event clock; fixed 384-state recurrent representation. Alternative predictive-state 8I; not the role-grammar branch. All m>0; neutral has seven count states.
+
+Proof: [predictive-state.md](../../constraint-lab/formal/predictive-state.md#cl-t56). Aggregate dissolution k+(m-1)r and formation 6-k+(m-1)(1-r), divide by m+5; next r is event direction. Interior row difference (m-1)/(m+5) proves minimality. Count increment recovers r; positive count-zero/two predecessor witness excludes first order.
+Evidence: [predictive-state.md](../../constraint-lab/formal/predictive-state.md), [generation-008i-predictive-state.md](../../constraint-lab/reports/generation-008i-predictive-state.md), [test_v08i_predictive.py](../../constraint-lab/tests/test_v08i_predictive.py), [generation-008i-predictive-round-i0-tables.json](../../constraint-lab/reports/generation-008i-predictive-round-i0-tables.json)
+Coherence: `F8IP-EDGE-DIRECTION-HISTORY`, `F8IP-EDGE-12-STATE-REFINEMENT`, `F8IP-TWO-SNAPSHOT-SYNCHRONIZATION`, `F8IP-COARSE-GRAINED-ORDER2`
+Dependencies: CL-T52, CL-T31
+Source generations: 008I
+Boundary: Declared observation-preserving fixed-state strong refinement; not an arbitrary hidden-state encoding, minimal ontology or physical history law.
+Notes: Alternative predictive-state 8I. IDs reserved above all accessible related-branch IDs; historical rows unchanged. Prior exposure disclosed; new verification follows pushed freeze.
+
+## CL-T57: All-order parity history erasure
+
+**ALGEBRAIC_THEOREM**
+
+Parity is a two-state deterministic alternating quotient for every multiplier; given initial parity every finite parity path law is independent of history and m.
+
+Assumptions: Exactly one pair bit toggled per pair epoch; Initial parity declared.
+Scope: All m>0; arbitrary augmented initial law with the same parity marginal.
+
+Proof: [predictive-state.md](../../constraint-lab/formal/predictive-state.md#cl-t57). Each toggle flips parity, so R_t=R_0 xor (t mod 2) pathwise. Initial two-block partition is strongly lumpable; preserving current parity prohibits a one-block refinement.
+Evidence: [predictive-state.md](../../constraint-lab/formal/predictive-state.md), [generation-008i-predictive-state.md](../../constraint-lab/reports/generation-008i-predictive-state.md), [test_v08i_predictive.py](../../constraint-lab/tests/test_v08i_predictive.py), [generation-008i-predictive-round-i0-tables.json](../../constraint-lab/reports/generation-008i-predictive-round-i0-tables.json)
+Coherence: `F8IP-PARITY-HISTORY-ERASURE`, `F8IP-COARSE-GRAINED-ORDER2`, `F8IP-ONE-STEP-INVISIBILITY-PERSISTS`
+Dependencies: CL-T30
+Source generations: 008I
+Boundary: Pair-event clock only; triad events do not necessarily flip pair parity on the full-event clock. No physical erasure claim.
+Notes: Alternative predictive-state 8I. IDs reserved above all accessible related-branch IDs; historical rows unchanged. Prior exposure disclosed; new verification follows pushed freeze.
+
+## CL-T58: Stationary quotient laws and one-step projected invisibility
+
+**ALGEBRAIC_THEOREM**
+
+Uniform augmented occupancy pushes exactly to quotient masses; edge-role masses are C(5,k-r)/64 and stationary one-step observed rows equal H0 at mask, class, count and parity.
+
+Assumptions: CL-T31 uniform joint stationary law; Certified strong quotients; Stationary pair-event epochs.
+Scope: N4/O3 independent hypergraph, RECENT-REVERSAL, H_pair=1, pair-event clock; fixed 384-state recurrent representation. Alternative predictive-state 8I; not the role-grammar branch. Stationary equality, not arbitrary-start history averaging.
+
+Proof: [predictive-state.md](../../constraint-lab/formal/predictive-state.md#cl-t58). Quotient balance follows by pushforward. Fixing h leaves five independent fair bits, giving binomial edge-role masses. Conditional r mean k/6 yields neutral Ehrenfest count row. Uniform h at each p gives 1/6 slot law, and deterministic projection preserves adjacent joint equality.
+Evidence: [predictive-state.md](../../constraint-lab/formal/predictive-state.md), [generation-008i-predictive-state.md](../../constraint-lab/reports/generation-008i-predictive-state.md), [test_v08i_predictive.py](../../constraint-lab/tests/test_v08i_predictive.py), [generation-008i-predictive-round-i0-tables.json](../../constraint-lab/reports/generation-008i-predictive-round-i0-tables.json)
+Coherence: `F8IP-ONE-STEP-INVISIBILITY-PERSISTS`
+Dependencies: CL-T31, CL-T56, CL-T57
+Source generations: 008I
+Boundary: Declared observation-preserving fixed-state strong refinement; not an arbitrary hidden-state encoding, minimal ontology or physical history law.
+Notes: Alternative predictive-state 8I. IDs reserved above all accessible related-branch IDs; historical rows unchanged. Prior exposure disclosed; new verification follows pushed freeze.
+
+## CL-T59: Commuting predictive quotient ladder
+
+**ALGEBRAIC_THEOREM**
+
+The non-neutral 384->28->12->2 and neutral 64->11->7->2 predictive ladders are nested deterministic strong lumpings whose kernels and stationary pushforwards commute.
+
+Assumptions: N4 RECENT-REVERSAL, m>0; Certified nested mask/role/count/parity partitions.
+Scope: N4/O3 independent hypergraph, RECENT-REVERSAL, H_pair=1, pair-event clock; fixed 384-state recurrent representation. Alternative predictive-state 8I; not the role-grammar branch. Strong quotient identity, not matching counts alone.
+
+Proof: [predictive-state.md](../../constraint-lab/formal/predictive-state.md#cl-t59). Each target datum is constant on source blocks. Direct strong-lumping identities imply equal source rows into unions of target blocks, giving the same direct target kernel. Stationary pushforwards compose.
+Evidence: [predictive-state.md](../../constraint-lab/formal/predictive-state.md), [generation-008i-predictive-state.md](../../constraint-lab/reports/generation-008i-predictive-state.md), [test_v08i_predictive.py](../../constraint-lab/tests/test_v08i_predictive.py), [generation-008i-predictive-round-i0-tables.json](../../constraint-lab/reports/generation-008i-predictive-round-i0-tables.json)
+Coherence: `F8IP-PREDICTIVE-COMPRESSION-LADDER`, `F8IP-QUOTIENT-CORRECTNESS`
+Dependencies: CL-T54, CL-T55, CL-T56, CL-T57, CL-T58
+Source generations: 008I
+Boundary: Declared observation-preserving fixed-state strong refinement; not an arbitrary hidden-state encoding, minimal ontology or physical history law.
+Notes: Alternative predictive-state 8I. IDs reserved above all accessible related-branch IDs; historical rows unchanged. Prior exposure disclosed; new verification follows pushed freeze.
+
+## CL-F08: Exact predictive refinement and synchronization certificates
+
+**FINITE_EXHAUSTIVE_RESULT**
+
+All twelve projection/grade refinements match independent structural partitions; the N4 marked-pair atlas has 28 roles with distinct predecessor classes per current class, 28 legal class pairs and 12 count pairs, and all nine quotient arrows commute exactly.
+
+Assumptions: Exact Fraction kernels at m=1/4,1,4; Frozen pushed I0 plan; S4/Aut(G) independent orbit routes.
+Scope: N4/O3 independent hypergraph, RECENT-REVERSAL, H_pair=1, pair-event clock; fixed 384-state recurrent representation. Alternative predictive-state 8I; not the role-grammar branch.
+
+Enumeration: 384 recurrent states, four projections, three grades; 24 S4 permutations; independent pair-orbit, (k,r) and generic-refinement routes; exact count 12. Verifier: [gen008i_predictive_exec.py](../../constraint-lab/src/rs_constraint_lab/gen008i_predictive_exec.py)
+Evidence: [predictive-state.md](../../constraint-lab/formal/predictive-state.md), [generation-008i-predictive-state.md](../../constraint-lab/reports/generation-008i-predictive-state.md), [test_v08i_predictive.py](../../constraint-lab/tests/test_v08i_predictive.py), [generation-008i-predictive-round-i0-tables.json](../../constraint-lab/reports/generation-008i-predictive-round-i0-tables.json), [generation-008i-predictive-orbits.json](../../constraint-lab/reports/tables/generation-008i-predictive-orbits.json)
+Coherence: `F8IP-PREDICTIVE-COMPRESSION-LADDER`, `F8IP-GRAPH-28-STATE-REFINEMENT`, `F8IP-EDGE-12-STATE-REFINEMENT`, `F8IP-TWO-SNAPSHOT-SYNCHRONIZATION`, `F8IP-QUOTIENT-CORRECTNESS`, `F8IP-MINIMALITY-SCOPE`
+Dependencies: CL-T52, CL-T54
+Source generations: 008I
+Boundary: Finite N4 counts; m-neutral collapse checked separately. No new controller or graph size executed.
+Notes: 1986 merge certificates; membership comparison under state reordering and across non-neutral grades; prior related exposure disclosed.
+
+## CL-N08: Projected stationary temporal conditional information
+
+**NUMERICAL_KERNEL_RESULT**
+
+At m=1/4 and 4, class/count temporal CMI is positive; neutral and parity have exact conditional-independence identities, and independent information evaluations meet the frozen tolerance.
+
+Assumptions: Exact rational stationary triple tables; Pair-event clock; Natural logarithms.
+Scope: N4 RECENT-REVERSAL m=1/4,1,4; four declared projections.
+
+Method: 160-digit Decimal logs on exact triples; inverse-event versus two-forward exact enumeration; independent quotient-row KL; labelled CL-T34 event-MI formula
+Domain: Twelve stationary projected CMI cells
+Tolerances: `{"formula_enumeration_gap": "1e-25", "rational_triple_identity": "exact"}`
+Evidence: [predictive-state.md](../../constraint-lab/formal/predictive-state.md), [generation-008i-predictive-state.md](../../constraint-lab/reports/generation-008i-predictive-state.md), [test_v08i_predictive.py](../../constraint-lab/tests/test_v08i_predictive.py), [generation-008i-predictive-round-i0-tables.json](../../constraint-lab/reports/generation-008i-predictive-round-i0-tables.json), [generation-008i-predictive-temporal-information.json](../../constraint-lab/reports/tables/generation-008i-predictive-temporal-information.json)
+Coherence: `F8IP-TEMPORAL-INFORMATION-SURVIVES`
+Dependencies: CL-T34, CL-T55, CL-T56, CL-T57, CL-T58, CL-F08
+Source generations: 008I
+Boundary: No generic monotonicity of conditional MI under coarsening conditioning; numerical decimals are not exact irrational expressions.
+Notes: Maximum quotient KL gap 1e-160; labelled formula gap 1.62e-158. External rounded values are review checks, not inputs.
+

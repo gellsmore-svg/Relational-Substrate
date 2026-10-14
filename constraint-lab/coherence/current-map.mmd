@@ -76,6 +76,15 @@ flowchart TD
     F8H_STATIONARY_OCCUPANCY_INVARIANCE["F8H-STATIONARY-OCCUPANCY-INVARIANCE: Direct column balance proves unique uniform pi(pair_mask,h)=1/384 for all m>0, with ind..."]
     F8H_TEMPORAL_CORRELATION["F8H-TEMPORAL-CORRELATION: Stationary material backtracking is m/(m+5): 1/21,1/6,4/9 at m=1/4,1,4. Consecutive-eve..."]
     F8H_ORDER2_PROJECTED_PROCESS["F8H-ORDER2-PROJECTED-PROCESS: Two consecutive pair masks recover the remembered slot through one-hot XOR. Earlier mas..."]
+    F8IP_PREDICTIVE_COMPRESSION_LADDER["F8IP-PREDICTIVE-COMPRESSION-LADDER: Exact coarsest observable-preserving strongly lumpable refinements have non-neutral cou..."]
+    F8IP_GRAPH_28_STATE_REFINEMENT["F8IP-GRAPH-28-STATE-REFINEMENT: Generic class refinement and independently constructed simultaneous S4/Aut(G) marked-pa..."]
+    F8IP_EDGE_12_STATE_REFINEMENT["F8IP-EDGE-12-STATE-REFINEMENT: Generic count refinement equals the analytic (k,r) partition, with twelve legal states ..."]
+    F8IP_PARITY_HISTORY_ERASURE["F8IP-PARITY-HISTORY-ERASURE: Parity alternates deterministically on every pair epoch. Given initial parity its entir..."]
+    F8IP_TWO_SNAPSHOT_SYNCHRONIZATION["F8IP-TWO-SNAPSHOT-SYNCHRONIZATION: Two observations exactly recover the non-neutral predictive block for labelled mask, gr..."]
+    F8IP_COARSE_GRAINED_ORDER2["F8IP-COARSE-GRAINED-ORDER2: Graph-class and edge-count processes have stationary Markov order exactly two for all p..."]
+    F8IP_TEMPORAL_INFORMATION_SURVIVES["F8IP-TEMPORAL-INFORMATION-SURVIVES: Stationary temporal conditional information remains positive in graph class and edge co..."]
+    F8IP_ONE_STEP_INVISIBILITY_PERSISTS["F8IP-ONE-STEP-INVISIBILITY-PERSISTS: At stationarity all four projected one-step laws equal H0 exactly. This does not imply ..."]
+    F8IP_QUOTIENT_CORRECTNESS["F8IP-QUOTIENT-CORRECTNESS: Transforming graph and remembered pair together gives a valid dynamical quotient. All n..."]
   end
   subgraph INFERENCE [Inferences]
     F008_COMPOSITION_REPRESENTATION["F008-COMPOSITION-REPRESENTATION: The magnitude of a two-rule interaction residual depends on the representation and the ..."]
@@ -91,6 +100,8 @@ flowchart TD
     F8H_FIXED_STATE_NONCOMPILABILITY["F8H-FIXED-STATE-NONCOMPILABILITY: No fixed first-order H0 kernel on unchanged complete ordinary x can reproduce every his..."]
     F8H_CURRENT_VS_INITIAL_MEMORY["F8H-CURRENT-VS-INITIAL-MEMORY: Current history remains efficacious at non-neutral m while initial-slot information in ..."]
     F8H_PROCESS_GRAMMAR_WITHOUT_OCCUPANCY["F8H-PROCESS-GRAMMAR-WITHOUT-OCCUPANCY: History can alter process grammar without altering one-time stationary material structu..."]
+    F8IP_GRAPH_STRUCTURAL_HISTORY["F8IP-GRAPH-STRUCTURAL-HISTORY: For graph-class prediction the sufficient and necessary remembered datum is the automor..."]
+    F8IP_EDGE_DIRECTION_HISTORY["F8IP-EDGE-DIRECTION-HISTORY: At edge-count resolution historical pair identity and graph role compress to whether th..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     F011_QUOTIENT_INVALID["F011-QUOTIENT-INVALID: Graph-only hidden-context quotienting is formally invalid for labelled rules. The wrong..."]
@@ -109,6 +120,8 @@ flowchart TD
     F8G_FORMAL_COMPILATION_TEST["F8G-FORMAL-COMPILATION-TEST: Before claiming a new ontology axis, test compilation into fixed ordinary rules while d..."]
     F8H_TEMPORAL_TESTS_REQUIRED["F8H-TEMPORAL-TESTS-REQUIRED: Static occupancy alone is insufficient to test history. Future H studies require multi-..."]
     F8H_H_QUESTION_RESOLUTION["F8H-H-QUESTION-RESOLUTION: Q-H-POSITIVE changes status from unresolved to qualified after H0. The scoped same-stat..."]
+    F8IP_MINIMALITY_SCOPE["F8IP-MINIMALITY-SCOPE: The generic utility computes coarsest strong refinement, not globally smallest hidden-s..."]
+    F8IP_PRIOR_EXPOSURE["F8IP-PRIOR-EXPOSURE: This alternative 8I is not blind: related 8I/8J quotient, synchronization and informati..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
@@ -117,6 +130,7 @@ flowchart TD
     F8F_RS_BRIDGE_INTERPRETATION["F8F-RS-BRIDGE-INTERPRETATION: The local expressive hierarchy needs a dynamical scope: a new coefficient may become tr..."]
     F8G_FORMAL_INTEGRATION_RS["F8G-FORMAL-INTEGRATION-RS: The laboratory has a scoped compositional current-relation language and a precise histo..."]
     F8H_RS_HISTORY_INTERPRETATION["F8H-RS-HISTORY-INTERPRETATION: In the model, the same ordinary relational configuration can receive different futures ..."]
+    F8IP_PROJECTION_RELATIVE_MEMORY["F8IP-PROJECTION-RELATIVE-MEMORY: Within this model, historical information can survive as structural role after relation..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     Q_PATH_SHAPE["Q-PATH-SHAPE: Why does path topology convert early triadic context into shape information at the firs..."]
@@ -134,6 +148,8 @@ flowchart TD
     Q_H_PERSISTENT_STRUCTURE["Q-H-PERSISTENT-STRUCTURE: Can a history controller generate persistent visible stationary structure rather than o..."]
     Q_H_COARSE_GRAINING["Q-H-COARSE-GRAINING: Which historical effects survive graph-class or more aggressive coarse-graining, with v..."]
     Q_H_CONSEQUENTIAL_FUNCTIONS["Q-H-CONSEQUENTIAL-FUNCTIONS: Which functions of legal relational history change future laws beyond information alrea..."]
+    Q_H_PREDICTIVE_COARSE_DEPTH["Q-H-PREDICTIVE-COARSE-DEPTH: Can coarse-graining increase necessary temporal depth even while reducing the observed ..."]
+    Q_H_PREDICTIVE_N5_SYNCHRONIZATION["Q-H-PREDICTIVE-N5-SYNCHRONIZATION: Which graph sizes or controllers break the N4 bijection between predecessor/current gra..."]
   end
   F014_EXACT_FIRST_DESTINATION -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
   F015_TRANSIENT_CLASS_MEMORY -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
@@ -316,3 +332,27 @@ flowchart TD
   F8H_PURE_SHAPE_WITNESS -->|raises_question| Q_H_COARSE_GRAINING
   F8H_SAME_STATE_DIVERGENT_FUTURES -->|raises_question| Q_H_CONSEQUENTIAL_FUNCTIONS
   F8H_AUGMENTED_MARKOV_RESTORATION -->|compatible_with| Q_META_CONSTRAINT
+  Q_H_MINIMAL_STATE -->|partially_answered_by| F8IP_PREDICTIVE_COMPRESSION_LADDER
+  Q_H_COARSE_GRAINING -->|partially_answered_by| F8IP_GRAPH_STRUCTURAL_HISTORY
+  Q_H_COARSE_GRAINING -->|partially_answered_by| F8IP_EDGE_DIRECTION_HISTORY
+  Q_H_COARSE_GRAINING -->|partially_answered_by| F8IP_PARITY_HISTORY_ERASURE
+  F8IP_GRAPH_STRUCTURAL_HISTORY -->|derived_from| F8IP_GRAPH_28_STATE_REFINEMENT
+  F8IP_EDGE_DIRECTION_HISTORY -->|derived_from| F8IP_EDGE_12_STATE_REFINEMENT
+  F8IP_PREDICTIVE_COMPRESSION_LADDER -->|derived_from| F8IP_GRAPH_28_STATE_REFINEMENT
+  F8IP_PREDICTIVE_COMPRESSION_LADDER -->|derived_from| F8IP_EDGE_12_STATE_REFINEMENT
+  F8IP_PREDICTIVE_COMPRESSION_LADDER -->|derived_from| F8IP_PARITY_HISTORY_ERASURE
+  F8IP_COARSE_GRAINED_ORDER2 -->|depends_on| F8IP_TWO_SNAPSHOT_SYNCHRONIZATION
+  F8IP_TEMPORAL_INFORMATION_SURVIVES -->|supports| F8H_TEMPORAL_TESTS_REQUIRED
+  F8IP_ONE_STEP_INVISIBILITY_PERSISTS -->|refines| F8H_PROCESS_GRAMMAR_WITHOUT_OCCUPANCY
+  F8IP_COARSE_GRAINED_ORDER2 -->|refines| F8H_ORDER2_PROJECTED_PROCESS
+  F8IP_QUOTIENT_CORRECTNESS -->|qualifies| F011_QUOTIENT_INVALID
+  F8IP_QUOTIENT_CORRECTNESS -->|supports| F8G_FORMAL_EQUIVALENCE_HIERARCHY
+  F8IP_MINIMALITY_SCOPE -->|qualifies| F8IP_PREDICTIVE_COMPRESSION_LADDER
+  F8IP_PRIOR_EXPOSURE -->|qualifies| F8IP_PREDICTIVE_COMPRESSION_LADDER
+  F8IP_PROJECTION_RELATIVE_MEMORY -->|derived_from| F8IP_PREDICTIVE_COMPRESSION_LADDER
+  F8IP_PROJECTION_RELATIVE_MEMORY -->|compatible_with| F8F_INTERACTION_ROUTING
+  F8IP_PARITY_HISTORY_ERASURE -->|qualifies| F8IP_TEMPORAL_INFORMATION_SURVIVES
+  F8IP_PREDICTIVE_COMPRESSION_LADDER -->|raises_question| Q_H_PREDICTIVE_COARSE_DEPTH
+  F8IP_TWO_SNAPSHOT_SYNCHRONIZATION -->|raises_question| Q_H_PREDICTIVE_N5_SYNCHRONIZATION
+  F8IP_EDGE_DIRECTION_HISTORY -->|is_coarse_graining_of| F8IP_GRAPH_STRUCTURAL_HISTORY
+  Q_H_CONSEQUENTIAL_FUNCTIONS -->|partially_answered_by| F8IP_EDGE_DIRECTION_HISTORY
