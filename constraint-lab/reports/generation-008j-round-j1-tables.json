@@ -1,0 +1,19 @@
+{
+  "clock": "pair-event epoch",
+  "frozen_analysis_plan_commit": "c080d7c3cd9408f349e9fa58473a85c1624466ff",
+  "item_sha256": {
+    "constraint-lab/reports/items/generation-008j-j1/J1-CLASS-PAIR-ROLE.json": "9c8c7924af1742f20ed38e58e2016c885b026997c337a97ff695579189fd7eb1",
+    "constraint-lab/reports/items/generation-008j-j1/J1-SAME-EDGE-ROLE.json": "0d5c876563d12299ba2998bd8399b42d25d7458852609a054b3a2ff768dff213"
+  },
+  "new_controllers": 0,
+  "new_stationary_solves": 0,
+  "new_word_lengths": 0,
+  "plan_file_sha256": "a0e1f9eb8aaa64d89cc771b09bca0350ef7cedbf191f652217444f21fe8093c4",
+  "plan_hash": "f8db7a83eb263395e06dd9fa8d43938ffc8ab0115e78fcbb5c2fe926e3ffa1ba",
+  "round_id": "J1",
+  "status": "COMPLETE",
+  "timings": {
+    "J1-CLASS-PAIR-ROLE": 0.394235777999711,
+    "J1-SAME-EDGE-ROLE": 0.41257946800033096
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "round_id": "J1",
+  "frozen_analysis_plan_commit": "c080d7c3cd9408f349e9fa58473a85c1624466ff",
+  "plan_hash": "f8db7a83eb263395e06dd9fa8d43938ffc8ab0115e78fcbb5c2fe926e3ffa1ba",
+  "plan_file_sha256": "a0e1f9eb8aaa64d89cc771b09bca0350ef7cedbf191f652217444f21fe8093c4",
+  "push_verified": true,
+  "new_J1_target_checks_pre_freeze": 0,
+  "J0_inputs_preobserved": true,
+  "symbolic_candidates_predeclared": true,
+  "prefreeze_tests": {
+    "passed": 3,
+    "skipped": 2
+  },
+  "operator": "cello"
+}
