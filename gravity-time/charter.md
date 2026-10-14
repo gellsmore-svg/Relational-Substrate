@@ -4,6 +4,8 @@
 
 **Instruction:** [`provenance/prompts/GT-P001-agent-input.md`](provenance/prompts/GT-P001-agent-input.md). That file is an agent transcription of the session input, not a byte capture.
 
+**Method (from GT-P002, 2026-10-14):** Open-Thetical Research, OTR 1.0, [`../research-methods/open-thetical-research.md`](../research-methods/open-thetical-research.md), sha256 `2d902395…88dd`. Adoption notes and the cross-branch sharing route are in [`../research-methods/README.md`](../research-methods/README.md). GT-P002's input is [`provenance/prompts/GT-P002-agent-input.md`](provenance/prompts/GT-P002-agent-input.md). The governance in §5 below is unchanged; OTR adds recursive round selection on top of it.
+
 ## 1. Question
 
 Can a minimal architecture of relational constraints, acting through constrained stochastic actualisation, produce both of the following?
