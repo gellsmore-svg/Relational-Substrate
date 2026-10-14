@@ -1,0 +1,17 @@
+{
+  "prompt_id": "008I",
+  "prompt_variant": "predictive-state",
+  "snapshot_path": "constraint-lab/coherence/snapshots/through-generation-008i.md",
+  "snapshot_title": "Through Generation 008I (Predictive State)",
+  "snapshot_sha256": "84faaf374d7a7695149c4ccdf771504af668735dd5fe16386a02b457d6ed1462",
+  "canonical_ledger_sha256": "15e584426f845ea169067f7c05bf8155914d49f0431c94b0e1897ad0f6d2e651",
+  "findings": 140,
+  "relations": 205,
+  "new_findings": 16,
+  "new_relations": 24,
+  "catalogue_entries": 68,
+  "new_formal_ids": ["CL-T52", "CL-T53", "CL-T54", "CL-T55", "CL-T56", "CL-T57", "CL-T58", "CL-T59", "CL-F08", "CL-N08"],
+  "question_handling": "Historical Q-H-MINIMAL-STATE and Q-H-COARSE-GRAINING rows retained unchanged; scoped partial-answer relations appended. General questions remain open.",
+  "related_branch_id_policy": "F8IP-/R8IP- prefix distinguishes the predictive-state alternative; theorem IDs reserved above all accessible branch maxima.",
+  "books_edited": false
+}
