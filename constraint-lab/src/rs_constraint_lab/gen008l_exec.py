@@ -24,11 +24,14 @@ from rs_constraint_lab.refinement import lumpability
 
 BASE = "e81e7d5f67fa00f1d629f8bd4b365352d25c9eb1"
 DIRECTORY = "constraint-lab/exploration/generation-008l"
-PLAN = DIRECTORY + "/round-h2-0-plan.json"
+ORIGINAL_PLAN = DIRECTORY + "/round-h2-0-plan.json"
+ORIGINAL_OUTPUT = "constraint-lab/reports/items/generation-008l-h2-0"
+ORIGINAL_FREEZE = "6f00fcdb07fc0e8323f8b6360fdc59960be7dcb4"
+PLAN = DIRECTORY + "/round-h2-0-amendment-a.json"
 CALIBRATION = DIRECTORY + "/calibration.json"
-OUTPUT = "constraint-lab/reports/items/generation-008l-h2-0"
-MANIFEST = "constraint-lab/reports/generation-008l-h2-0-tables.json"
-TABLE = "constraint-lab/reports/tables/generation-008l-"
+OUTPUT = "constraint-lab/reports/items/generation-008l-h2-0-amendment-a"
+MANIFEST = "constraint-lab/reports/generation-008l-h2-0-amendment-a-tables.json"
+TABLE = "constraint-lab/reports/tables/generation-008l-amendment-a-"
 GRADES = (("m025", "1/4"), ("m1", "1"), ("m4", "4"))
 ANALYSES = {"witness": analyse_witness, "kernel": analyse_kernel, "refinement": analyse_refinement, "temporal": analyse_temporal}
 SOURCES = tuple("constraint-lab/src/rs_constraint_lab/" + name for name in (
@@ -37,6 +40,7 @@ SOURCES = tuple("constraint-lab/src/rs_constraint_lab/" + name for name in (
     "durable.py", "explore08.py", "coherence.py",
 ))
 INPUTS = (DIRECTORY + "/charter.md", DIRECTORY + "/predeclared-expectations.md",
+          DIRECTORY + "/amendment-a.md",
           "constraint-lab/provenance/prompts/008L-v0.8l-agent-input.md",
           "constraint-lab/tests/test_v08l_plumbing.py")
 
@@ -117,6 +121,7 @@ def write_plan(root):
     if (root / PLAN).exists():
         raise HistoryError("refusing to replace frozen plan")
     calibration = read_json(root / CALIBRATION)
+    original = read_json(root / ORIGINAL_PLAN)
     document = {
         "experiment_id": "generation-008l-history-depth-two", "prompt_id": "008L", "round_id": "H2-0",
         "analysis_version": VERSION, "mode": "A", "parent_commit": BASE, "clock": CLOCK,
@@ -166,7 +171,18 @@ def write_plan(root):
         "tolerances":{"rational_identities":"exact","row_sums":"exact","stationary_residual":"exact",
                       "uniform_joint_gap":"exact","refinement_membership":"exact","conditional_independence":"exact",
                       "order_sufficiency":"exact","information_formula_enumeration_gap":"1e-25"},
-        "pre_freeze_exposure":calibration,
+        "pre_freeze_exposure": {
+            "original_H2_0": calibration,
+            "amendment_A": "All twelve original items are known; validation-only replay is not blind.",
+        },
+        "amendment": {
+            "id": "A", "original_frozen_plan_commit": ORIGINAL_FREEZE,
+            "original_plan_hash": original["plan_hash"],
+            "reason": "Type-sensitive cache keys preserve strict integer/None history validation after valid cached calls.",
+            "valid_state_scientific_change": False,
+            "equivalence_required": "Exact equality of all twelve original result payload hashes",
+            "original_output": ORIGINAL_OUTPUT,
+        },
         "engineering":{"workers":1,"numeric_threads":1,"per_item_watchdog_seconds":120,
                        "disk_budget_bytes":64_000_000,"neutral_total_seconds":sum(r["wall_seconds"] for r in calibration["neutral_measurements"]),
                        "estimated_total_seconds":max(180,12*sum(r["wall_seconds"] for r in calibration["neutral_measurements"])),
@@ -175,7 +191,8 @@ def write_plan(root):
         "source_sha256":{p:sha256_file(root/p) for p in SOURCES},
         "input_sha256":{p:sha256_file(root/p) for p in INPUTS},
         "calibration_sha256":sha256_file(root/CALIBRATION),
-        "planning_coherence_sha256":sha256_bytes(canonical_ledger_bytes(root/"constraint-lab/coherence")),
+        "planning_coherence_sha256":original["planning_coherence_sha256"],
+        "planning_coherence_scope":"Original frozen H2-0 planning ledger; excludes pending post-result updates",
     }
     document["plan_hash"] = plan_hash(document)
     atomic_write_json(root/PLAN,document)
@@ -226,6 +243,7 @@ def publish(root,envelopes,plan,commit):
         "table_sha256":hashes,"timings":{e["item"]["item_id"]:e["wall_seconds"] for e in envelopes},
         "atomic_items":12,"precision_decimal_digits":PRECISION,"new_non_neutral_H2_pre_freeze_executions":0,
         "stochastic_scientific_trajectories":0,
+        "amendment_A": "Validation-only replay; all original scientific result hashes must match",
     }
     atomic_write_json(root/MANIFEST,summary)
     return summary
@@ -247,6 +265,9 @@ def execute(root,commit):
                       "wall_seconds":time.monotonic()-start}
             try:
                 validate_result(item,result)
+                original = read_json(root/ORIGINAL_OUTPUT/(item["item_id"]+".json"))
+                if envelope["result_sha256"] != original["result_sha256"]:
+                    raise HistoryError("amendment changed a scientific payload; retain and diagnose")
             except Exception:
                 atomic_write_json(path.with_suffix(".failed.json"),envelope)
                 raise

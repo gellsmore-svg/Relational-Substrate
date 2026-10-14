@@ -24,7 +24,7 @@ from rs_constraint_lab.refinement import (
 from rs_constraint_lab.state import edges
 
 CLOCK = "pair-event epoch"
-VERSION = "generation-008l-history-depth/v1"
+VERSION = "generation-008l-history-depth/v2-validation"
 
 
 def digest(value):
@@ -76,12 +76,12 @@ class SecondRecent:
         h1, h2 = (event, state.h1) if event < self.pair_slots else (state.h1, state.h2)
         return DepthTwoState(state.material ^ (1 << event), h1, h2)
 
-    @lru_cache(maxsize=None)
+    @lru_cache(maxsize=None, typed=True)
     def full_probabilities(self, h1, h2):
         self.validate_history(h1, h2)
         return RecentReversal(self.multiplier, self.pair_slots, self.triad_slots).full_probabilities(h2)
 
-    @lru_cache(maxsize=None)
+    @lru_cache(maxsize=None, typed=True)
     def pair_probabilities(self, h1, h2):
         full = self.full_probabilities(h1, h2)
         pair_mass = sum(full[:self.pair_slots])
