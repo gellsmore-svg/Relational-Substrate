@@ -1,0 +1,44 @@
+{
+  "B_used_for_prefreeze_words": false,
+  "actual_A_C_target_word_analyses": 0,
+  "bound_justification": "All published systems have identical positive toggle support and positive stationary laws; neutral reachable-word counts are exact support counts for every item.",
+  "clock": "pair-event epoch",
+  "fixture": "published neutral only",
+  "forward_work": {
+    "H": 3296,
+    "Kpi": 3240
+  },
+  "independent_hidden_path_visits": {
+    "H": 9656,
+    "Kpi": 3251
+  },
+  "neutral_word_file_bytes": 582830,
+  "neutral_word_gzip_bytes": 17368,
+  "reachable_edge_words": {
+    "1": 7,
+    "2": 12,
+    "3": 22,
+    "4": 40,
+    "5": 74,
+    "6": 136
+  },
+  "reachable_graphclass_words": {
+    "H": {
+      "1": 11,
+      "2": 28,
+      "3": 84,
+      "4": 244,
+      "5": 728,
+      "6": 2156
+    },
+    "Kpi": {
+      "1": 11,
+      "2": 28,
+      "3": 84,
+      "4": 244,
+      "5": 728,
+      "6": 2156
+    }
+  },
+  "wall_seconds": 0.25262858100177255
+}

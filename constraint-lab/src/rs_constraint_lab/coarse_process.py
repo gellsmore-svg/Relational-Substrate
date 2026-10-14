@@ -260,12 +260,16 @@ def predictive_residual(words, order):
         suffix[word[1:-1]] += mass
         suffix_joint[word[1:]] += mass
     gap, witness = Fraction(0), None
-    for word, mass in sorted(full.items()):
-        a, b = mass / prefix[word[:-1]], suffix_joint[word[1:]] / suffix[word[1:-1]]
-        if abs(a - b) > gap:
-            gap = abs(a - b)
-            witness = {"word": word, "full_conditional": a, "suffix_conditional": b,
-                       "positive_prefix_probability": prefix[word[:-1]]}
+    outputs = sorted({word[-1] for word in full})
+    for past, normaliser in sorted(prefix.items()):
+        for output in outputs:
+            word = past + (output,)
+            a = full.get(word, Fraction(0)) / normaliser
+            b = suffix_joint[word[1:]] / suffix[past[1:]]
+            if abs(a - b) > gap:
+                gap = abs(a - b)
+                witness = {"word": word, "full_conditional": a, "suffix_conditional": b,
+                           "positive_prefix_probability": normaliser}
     return {"candidate_order": order, "tested_word_length": order + 2,
             "conditional_row_gap": gap, "witness": witness,
             "reading": "order refuted" if gap else "consistent at tested depth only"}
