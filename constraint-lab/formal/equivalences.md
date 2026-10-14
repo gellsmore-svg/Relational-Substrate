@@ -56,3 +56,34 @@ lumpings, not kernel conjugacies or mere statistic equalities. Their nested
 quotient maps commute (CL-T59). Matching stationary one-step rows with H0 is
 strictly weaker than projected-process equality; only parity has the separate
 all-order equality proof for all m.
+
+## Generation 8K implication map
+
+This is not a single linear hierarchy: some notions concern two models,
+others a partition of one model, and others a chosen prior or statistic.
+See [general theory](predictive-state-theory.md) and
+[exact false-converse fixtures](predictive-state-counterexamples.md).
+
+| Notion | What is preserved | Implication and caution |
+| --- | --- | --- |
+| Typed state-space isomorphism | Declared coordinate/observation meaning under a bijection | A bare bijection says nothing about T |
+| Kernel equality | Same T on identical state labels | Path equality also needs the same initial law and observation |
+| Kernel conjugacy | T'(f(z),f(u))=T(z,u) for a bijection | Transport mu and phi too for model/process isomorphism |
+| Strong lumpability | Equal block sums for arbitrary starting states | Gives an exact quotient for every mu, with transported observation |
+| Observation-preserving strong refinement | Coarsest eligible partition of fixed Z | CL-T52/T60/T61; not minimum latent-model realisation |
+| Future-word / trace equivalence | Every finite future observation law from known states, plus current output | Strong blocks imply it; converse fails in CE-TRACE |
+| Weak lumpability | Projected first-order law for a specified mu | Does not imply strong lumpability; CE-WEAK is fully positive |
+| Stationary observed-process equivalence | All observed finite-dimensional laws under declared stationary priors | Does not identify hidden kernels or require a Markov output |
+| Stationary one-step equivalence | One-time and adjacent two-time joint laws | Does not imply weak lumpability or longer-word equality; CL-T67 |
+| Statistic equality | One declared distribution/statistic/projection | Weaker than the corresponding full observed path equality |
+
+Strong block equality implies trace equivalence by induction on words.
+For two initial mixtures, equal weights on trace-equivalence classes suffice
+for equality of observed finite-dimensional laws. No converse about hidden
+state identities follows. A chosen stationary pair matching is weaker still.
+Do not confuse the existence of Q_mu with a weak-lumping theorem.
+
+The non-neutral 8H/8I mask/class/count processes are examples of stationary
+ONE-STEP equality without weak lumpability, not examples of stationary Markov
+projection. Parity has the separate all-order process proof. CE-WEAK shows
+that actual stationary weak lumpability can occur without strong lumpability.
