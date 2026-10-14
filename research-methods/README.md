@@ -21,9 +21,9 @@ The GT programme adopts OTR 1.0 from prompt GT-P002 onward. In GT terms:
 
 ## Sharing one version across branches
 
-A file on one branch does not appear on another. This file was first committed on `research/gravity-time-admissibility`. That commit touches only `research-methods/` and GT provenance, so the methodology can be carried across in one of two ways. Neither has been done; both await the author's direction.
+A file on one branch does not appear on another. This file was first committed on `research/gravity-time-admissibility` in commit `4efcd02`, which touches only `research-methods/`. It was landed on `main` by cherry-picking that commit. `main` is now the canonical home of the shared method.
 
-1. **Recommended: land on `main`.** Open a small PR that adds only `research-methods/` to `main`. Each research branch then picks it up by a merge from `main` or by a cherry-pick of that one commit. Every programme cites the version and sha256 in the table above.
-2. **Cherry-pick between research branches.** Cherry-pick the commit that adds `research-methods/` onto the Constraint Laboratory branch in use (8H or its successor). Record the resulting commit and the file sha256 in that branch's provenance. This must not happen while a laboratory generation is mid-execution without the author's explicit direction, because it would change that branch's history during a frozen round.
-
-Either way, a programme references the method as `research-methods/open-thetical-research.md`, OTR 1.0, with the sha256 above. A changed definition is a new version with a new row, never an in-place edit.
+- **Research branches pick it up** by merging `main` or by cherry-picking the `main` commit that added `research-methods/`. Each records the commit and the sha256 above in its own provenance.
+- **Branches mid-execution wait.** A laboratory branch in the middle of a frozen generation (for example 8H) is not changed while that round is open. It picks the method up at its next boundary, by the author's direction.
+- **Citation.** A programme references the method as `research-methods/open-thetical-research.md`, OTR 1.0, with the sha256 above.
+- **Changes.** A changed definition is a new version with a new row, never an in-place edit.
