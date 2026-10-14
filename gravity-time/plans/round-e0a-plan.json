@@ -1,0 +1,709 @@
+{
+  "analysis_only": true,
+  "analysis_version": "gt-e0a/v1",
+  "clocks": {
+    "continuous": "per-slot exponential rates equal to the event weights (declared scaffold); stationary law pi_jump / R normalised; spectra and autocorrelation times reported per unit time and in mean stationary events",
+    "event_order": "the stationary jump chain; event order is the same under both clocks because the continuous chain's embedded jump chain is the lab kernel",
+    "jump": "lab full-event kernel, one admissible toggle per event"
+  },
+  "comparisons": {
+    "kinetic_triad": [
+      "CLOSE-strong_favour",
+      "HOLD-strong_suppress",
+      "SPLIT-weak_favour+weak_suppress"
+    ],
+    "notes": "Class-level L1 distance of continuous-time stationary laws within each comparison, plus side-by-side kinetic observables. Pairs in path_equal_ratio_pairs have identical local rate ratios r_ab(x); in the gradient class that fixes pi_ct, here it is open.",
+    "path_equal_ratio_pairs": [
+      [
+        "PATHF-weak_favour",
+        "PATHH-weak_suppress"
+      ],
+      [
+        "PATHF-weak_suppress",
+        "PATHH-weak_favour"
+      ]
+    ]
+  },
+  "experiment_id": "gt-round-e0a-open-thetical",
+  "families": {
+    "ANTI": {
+      "strong_suppress": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "strong_suppress",
+            "kind": "close_form",
+            "template_example": "form(0-1) | present(0-2) & present(1-2) => strong_suppress"
+          }
+        ],
+        "gradient": true,
+        "predicted_potential": {
+          "restricted_support": false,
+          "theta": {
+            "E": 0.0,
+            "T": -1.3862943611198906,
+            "W": 0.0
+          }
+        }
+      }
+    },
+    "CLOSE": {
+      "strong_favour": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "strong_favour",
+            "kind": "close_form",
+            "template_example": "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          }
+        ],
+        "gradient": true,
+        "predicted_potential": {
+          "restricted_support": false,
+          "theta": {
+            "E": 0.0,
+            "T": 1.3862943611198906,
+            "W": 0.0
+          }
+        }
+      }
+    },
+    "COMPETE": {
+      "strong_favour+strong_favour": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "strong_favour",
+            "kind": "close_form",
+            "template_example": "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          },
+          {
+            "K": 3,
+            "grade": "strong_favour",
+            "kind": "close_dissolve",
+            "template_example": "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          }
+        ],
+        "gradient": true,
+        "predicted_potential": {
+          "restricted_support": false,
+          "theta": {
+            "E": 0.0,
+            "T": 0.0,
+            "W": 0.0
+          }
+        }
+      }
+    },
+    "EXCL": {
+      "prohibit": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "prohibit",
+            "kind": "close_form",
+            "template_example": "form(0-1) | present(0-2) & present(1-2) => prohibit"
+          }
+        ],
+        "gradient": true,
+        "predicted_potential": {
+          "restricted_support": true,
+          "theta": {
+            "E": 0.0,
+            "T": 0.0,
+            "W": 0.0
+          }
+        }
+      }
+    },
+    "FRUST": {
+      "weak_favour+strong_favour": {
+        "components": [
+          {
+            "K": 2,
+            "grade": "weak_favour",
+            "kind": "adj_form",
+            "template_example": "form(0-1) | present(0-2) => weak_favour"
+          },
+          {
+            "K": 3,
+            "grade": "strong_favour",
+            "kind": "close_dissolve",
+            "template_example": "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          }
+        ],
+        "gradient": true,
+        "predicted_potential": {
+          "restricted_support": false,
+          "theta": {
+            "E": 0.0,
+            "T": -1.3862943611198906,
+            "W": 0.6931471805599453
+          }
+        }
+      }
+    },
+    "HOLD": {
+      "strong_suppress": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "strong_suppress",
+            "kind": "close_dissolve",
+            "template_example": "dissolve(0-1) | present(0-2) & present(1-2) => strong_suppress"
+          }
+        ],
+        "gradient": true,
+        "predicted_potential": {
+          "restricted_support": false,
+          "theta": {
+            "E": 0.0,
+            "T": 1.3862943611198906,
+            "W": 0.0
+          }
+        }
+      }
+    },
+    "NULL": {
+      "none": {
+        "components": [],
+        "gradient": true,
+        "predicted_potential": {
+          "restricted_support": false,
+          "theta": {
+            "E": 0.0,
+            "T": 0.0,
+            "W": 0.0
+          }
+        }
+      }
+    },
+    "PATHF": {
+      "weak_favour": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "weak_favour",
+            "kind": "path_form",
+            "template_example": "form(0-1) | present(0-2) & present(2-3) => weak_favour"
+          }
+        ],
+        "gradient": false,
+        "predicted_potential": null
+      },
+      "weak_suppress": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "weak_suppress",
+            "kind": "path_form",
+            "template_example": "form(0-1) | present(0-2) & present(2-3) => weak_suppress"
+          }
+        ],
+        "gradient": false,
+        "predicted_potential": null
+      }
+    },
+    "PATHH": {
+      "weak_favour": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "weak_favour",
+            "kind": "path_dissolve",
+            "template_example": "dissolve(0-1) | present(0-2) & present(2-3) => weak_favour"
+          }
+        ],
+        "gradient": false,
+        "predicted_potential": null
+      },
+      "weak_suppress": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "weak_suppress",
+            "kind": "path_dissolve",
+            "template_example": "dissolve(0-1) | present(0-2) & present(2-3) => weak_suppress"
+          }
+        ],
+        "gradient": false,
+        "predicted_potential": null
+      }
+    },
+    "SPLIT": {
+      "weak_favour+weak_suppress": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "weak_favour",
+            "kind": "close_form",
+            "template_example": "form(0-1) | present(0-2) & present(1-2) => weak_favour"
+          },
+          {
+            "K": 3,
+            "grade": "weak_suppress",
+            "kind": "close_dissolve",
+            "template_example": "dissolve(0-1) | present(0-2) & present(1-2) => weak_suppress"
+          }
+        ],
+        "gradient": true,
+        "predicted_potential": {
+          "restricted_support": false,
+          "theta": {
+            "E": 0.0,
+            "T": 1.3862943611198906,
+            "W": 0.0
+          }
+        }
+      }
+    }
+  },
+  "frozen_expectations": {
+    "X1_gradient_cells_reversible": "every gradient-family cell has irreversible flux fraction <= 1e-09 and, where the spectrum is computed, max |Im lambda| / spectral radius <= 1e-06 (derivation: coverage audit section 3)",
+    "X2_gradient_cells_follow_the_predicted_triple_gibbs_law": "every gradient-family cell has L1(pi_ct, exp(theta . (E, W, T)) / Z on the reachable class) <= 1e-09, theta as recorded per family (derivation: coverage audit section 3)",
+    "X3_kinetic_triad_shares_one_law": "CLOSE-strong, HOLD-strong and SPLIT have pairwise class-level L1 <= 1e-09 in every mode and N (implied by X2)",
+    "X4_path_cells_are_not_reversible": "every PATHF and PATHH cell has irreversible flux fraction > 1e-06 and maximum square affinity > 1e-06 (derivation: coverage audit section 3, the elementary square on ab and ac). Magnitude is not predicted",
+    "X5_null_autocorrelation": "NULL FREE N=5 has integrated autocorrelation time 1/2 per unit time for edges and for the degree of vertex 0, so the localisation persistence index is 1 within 1e-09 (independent unit-rate bits)"
+  },
+  "history": false,
+  "initial_conditions": {
+    "FREE": "empty graph; analysed on the full state space",
+    "HELD": "the source triangle alone; analysed on its reachable class"
+  },
+  "items": [
+    {
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "HELD-N5-NULL-none",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "CLOSE",
+      "grade": "strong_favour",
+      "item_id": "HELD-N5-CLOSE-strong_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "HOLD",
+      "grade": "strong_suppress",
+      "item_id": "HELD-N5-HOLD-strong_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "SPLIT",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "HELD-N5-SPLIT-weak_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "COMPETE",
+      "grade": "strong_favour+strong_favour",
+      "item_id": "HELD-N5-COMPETE-strong_favour+strong_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "ANTI",
+      "grade": "strong_suppress",
+      "item_id": "HELD-N5-ANTI-strong_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "EXCL",
+      "grade": "prohibit",
+      "item_id": "HELD-N5-EXCL-prohibit",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "FRUST",
+      "grade": "weak_favour+strong_favour",
+      "item_id": "HELD-N5-FRUST-weak_favour+strong_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-PATHF-weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N5-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N5-PATHH-weak_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "FREE-N5-NULL-none",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "CLOSE",
+      "grade": "strong_favour",
+      "item_id": "FREE-N5-CLOSE-strong_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "HOLD",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N5-HOLD-strong_suppress",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "SPLIT",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "FREE-N5-SPLIT-weak_favour+weak_suppress",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "COMPETE",
+      "grade": "strong_favour+strong_favour",
+      "item_id": "FREE-N5-COMPETE-strong_favour+strong_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "ANTI",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N5-ANTI-strong_suppress",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "EXCL",
+      "grade": "prohibit",
+      "item_id": "FREE-N5-EXCL-prohibit",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "FRUST",
+      "grade": "weak_favour+strong_favour",
+      "item_id": "FREE-N5-FRUST-weak_favour+strong_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-PATHF-weak_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N5-PATHF-weak_suppress",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N5-PATHH-weak_suppress",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-PATHH-weak_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "HELD-N6-NULL-none",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "CLOSE",
+      "grade": "strong_favour",
+      "item_id": "HELD-N6-CLOSE-strong_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "HOLD",
+      "grade": "strong_suppress",
+      "item_id": "HELD-N6-HOLD-strong_suppress",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "SPLIT",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "HELD-N6-SPLIT-weak_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "COMPETE",
+      "grade": "strong_favour+strong_favour",
+      "item_id": "HELD-N6-COMPETE-strong_favour+strong_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "ANTI",
+      "grade": "strong_suppress",
+      "item_id": "HELD-N6-ANTI-strong_suppress",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "EXCL",
+      "grade": "prohibit",
+      "item_id": "HELD-N6-EXCL-prohibit",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "FRUST",
+      "grade": "weak_favour+strong_favour",
+      "item_id": "HELD-N6-FRUST-weak_favour+strong_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-PATHF-weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N6-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N6-PATHH-weak_suppress",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "FREE-N6-NULL-none",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "CLOSE",
+      "grade": "strong_favour",
+      "item_id": "FREE-N6-CLOSE-strong_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "HOLD",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N6-HOLD-strong_suppress",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "SPLIT",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "FREE-N6-SPLIT-weak_favour+weak_suppress",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "COMPETE",
+      "grade": "strong_favour+strong_favour",
+      "item_id": "FREE-N6-COMPETE-strong_favour+strong_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "ANTI",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N6-ANTI-strong_suppress",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "EXCL",
+      "grade": "prohibit",
+      "item_id": "FREE-N6-EXCL-prohibit",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "FRUST",
+      "grade": "weak_favour+strong_favour",
+      "item_id": "FREE-N6-FRUST-weak_favour+strong_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_favour",
+      "item_id": "FREE-N6-PATHF-weak_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N6-PATHF-weak_suppress",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N6-PATHH-weak_suppress",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "FREE-N6-PATHH-weak_favour",
+      "mode": "FREE",
+      "n": 6
+    }
+  ],
+  "meta_constraints": false,
+  "method": {
+    "name": "Open-Thetical Research",
+    "path": "research-methods/open-thetical-research.md",
+    "sha256": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd",
+    "version": "1.0"
+  },
+  "mode": "B",
+  "modes": {
+    "FREE": "no held structure",
+    "HELD": {
+      "meaning": "declared exploratory instrument, not mass; same scaffold as G0",
+      "scaffold": [
+        "dissolve(0-1) => prohibit",
+        "dissolve(0-2) => prohibit",
+        "dissolve(1-2) => prohibit"
+      ],
+      "source": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "new_primitives": false,
+  "observables": {
+    "autocorrelation": "integrated autocorrelation times (per unit time and in mean events) for classes of at most 4096 states. FREE: edges, triangles, degree of vertex 0, indicator that vertex 0 is a full centre. HELD: free edges, triangles, degree of probe 3, probe attached (distance 1), probe detached. Localisation persistence index = tau(local degree) / tau(global edge count)",
+    "event_order": "probability of each consecutive event pair pattern (type, slot class, type, slot class, relation) on the stationary jump chain; pattern asymmetry = sum over reverse pairs of |P(p) - P(p*)|; immediate reversal probability",
+    "free_reused": "G0 free observables (edge-count distribution, triangles given edge count) under both clocks",
+    "held_reused": "G0 held observables (attachment fraction, density-conditioned attachment, distance distribution, drift, escape, capture) under both clocks; G1 shell activity and near/far ratio rho under both clocks",
+    "occupancy": "class-level stationary table under both clocks (FREE: S_N orbits; HELD: S_3 x S_(N-3) orbits), edge-count distribution and its modes, expected edges, wedges, triangles, max degree, degree variance, probability of a full centre; moment-matched triple-Gibbs projection KL(pi_ct || pi_theta*)",
+    "projected_current": "net stationary flux fraction on (edge count, triangle count) in FREE and (free-edge count, attachment count) in HELD; top six net currents",
+    "reversibility": "entropy production per unit time and per mean event; irreversible flux fraction sum|F-F_rev|/sum(F+F_rev); maximum |cycle affinity| over all elementary squares (x, x^e, x^e^f, x^f) and the count of non-zero ones; one-sided transitions",
+    "spectrum": "continuous generator eigenvalues in mean-event units for classes of at most 4096 states: relaxation gap, slowest mode, complex eigenvalue count (|Im| > 1e-06 x spectral radius), slowest oscillatory mode, maximum oscillation index |Im|/|Re|",
+    "trajectories": "4 exact Gillespie paths of 400 events per cell from the declared start, seeds sha256('round-e0a:<item_id>:<k>')[:16] as PCG64; atlas selection rule: representative = lower median of time-mean edges, atypical = farthest time-mean edges from the stationary expected edges. Illustrative; no table statistic uses them"
+  },
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      5,
+      6
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL"
+  },
+  "open_questions_without_prediction": [
+    "Do non-gradient PATH cells carry visible arrows in the projected current and in event order, and how large are they relative to the full entropy production (projection loss)?",
+    "Do equal-ratio PATHF/PATHH pairs share a stationary law?",
+    "Does COMPETE (uniform pi_ct) change near/far activity, relaxation or reversal probability relative to NULL?",
+    "How do approach, retention and the symmetric split differ in relaxation, autocorrelation and event order at one shared law?",
+    "Does ANTI repel probes from the held source, and does EXCL differ from ANTI beyond its restricted support?",
+    "Does FRUST produce centre-like structure (degree heterogeneity, full-centre probability, localisation persistence index above 1) in FREE mode?",
+    "Is any non-gradient stationary law far from the moment-matched triple-Gibbs law?",
+    "Anything not anticipated above."
+  ],
+  "parameter_fit": false,
+  "plan_hash": "c98414e11fa00b4131da28316442a65b159f3edeab75921160577cad3ee59dfa",
+  "pre_freeze_exposure": {
+    "note": "Before freezing: observables were exercised on a synthetic 4-state cycle fixture (analytic sigma, spectrum, autocorrelation) and on N=4 fixtures (not an E0A size) for NULL and CLOSE in both modes; full analysis was timed on N=6 NULL in both modes (theorem-fixed values); the PATHF weak_favour N=6 FREE kernel was built for timing only, with no observable computed. No E0A observable of any non-NULL family at N=5 or N=6 was computed."
+  },
+  "programme": "GT",
+  "prompt_id": "GT-P002",
+  "question": "Across the gradient / non-gradient boundary of the O=2 pair grammar, and across cooperating, opposing and competing compositions and soft and hard repulsion, which relational conditions produce basins, centres, stationary direction of succession, oscillatory return or kinetic differences at a shared occupancy, in HELD and FREE arrangements?",
+  "round_id": "round-e0a",
+  "sampling": "exact census of the declared 48 cells; no sampling of the rule space; trajectories are illustrations only",
+  "schema": "rs-gt.e0a-plan/v1",
+  "software": {
+    "analysis_module": "rs_constraint_lab.gte0a",
+    "numpy": "2.5.3",
+    "python": "3.12.3"
+  },
+  "stochastic_trajectories": "illustrative_only",
+  "stop_conditions": {
+    "item": "an item past the 900-second watchdog stops the round; it is recorded and not retried with changed parameters",
+    "round": "the round stops when all items are written or the 10800-second wall cap is reached",
+    "unresolved": "an item whose stationary residual exceeds 1e-12 after 200000 lazy iterations is recorded as unresolved, without stationary observables; no solver or tolerance is changed after the freeze without a recorded post-freeze note"
+  },
+  "tolerances": {
+    "identity": 1e-09,
+    "imag_relative": 1e-06,
+    "non_reversible_floor": 1e-06,
+    "reversible_flux": 1e-09,
+    "stationary_residual": 1e-12,
+    "symmetry": 1e-10
+  },
+  "work_count": {
+    "disk_budget_bytes": 50000000,
+    "items": 48,
+    "largest_state_space": 32768,
+    "memory_budget_bytes": 4000000000,
+    "round_wall_cap_seconds": 10800,
+    "wall_time_estimate_seconds": 900,
+    "watchdog_seconds": 900,
+    "workers": 1
+  }
+}
