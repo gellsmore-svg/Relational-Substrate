@@ -30,3 +30,8 @@ generic pair closure, S4 quotients, history-only uniformity, order/projection
 identities and the separately frozen I1 mechanism results. Its research selection
 uses [the OTR laboratory adapter](../methodology/open-thetical-application.md).
 Historical formal entries remain intact; cell-specific numbers stay in tables.
+
+Generation 8J adds [coarse process memory](coarse-process-memory.md): stationary
+H/Kpi matching, passive-register paths, invariant-window label silence, the
+class-word information chain and separately frozen class-pair/edge-role
+mechanisms. Exact process words reuse the 8I palette without a new ontology.

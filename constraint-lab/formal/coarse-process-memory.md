@@ -70,6 +70,7 @@ give witnesses or bounded consistency, not infinite-order conclusions.
 The represented (p,h) process is first-order Markov. No irreducible history,
 physical memory, observer causation, purpose, design, theology or TCR inference.
 
+<a id="cl-t45"></a>
 ## CL-T45: stationary matched one- and two-time laws
 
 The material-matching argument above proves both pi_P Kpi=pi_P and equality of
@@ -78,6 +79,7 @@ equal measures, preserving equality for words of lengths one and two. This
 does not say the underlying conditioned material rows or longer paths agree.
 Exact checks cover all 23 existing systems and both coarse projections.
 
+<a id="cl-t46"></a>
 ## CL-T46: passive-register finite-path equivalence
 
 Iterated conditioning in the passive-register argument above proves equality
@@ -86,6 +88,7 @@ of the register. Deterministic updates of the register need not be reversible.
 Any deterministic material output inherits equality. B and neutral instantiate
 this theorem; correlation with the recorded register is not a counterexample.
 
+<a id="cl-t47"></a>
 ## CL-T47: covariant stationary Markov projection and graph-class quotient
 
 For every g, invariance of pi and covariance of T let us reindex the conditional
@@ -95,6 +98,7 @@ all initial laws. Every generated Kpi was checked under all 24 permutations,
 all 64 sources and all six supported destinations, and every class member was
 tested in block aggregation. Edge count is not covered by that orbit argument.
 
+<a id="cl-t48"></a>
 ## CL-T48: finite invariant windows hide absolute history labels
 
 The finite stationary path-invariance argument above proves
@@ -104,6 +108,7 @@ Uniqueness is sufficient for invariant stationarity; explicitly invariant
 stationarity suffices without uniqueness. A non-invariant initial law or
 label-sensitive output is outside scope. Relational role may still be known.
 
+<a id="cl-t49"></a>
 ## CL-T49: density-path and shape-sequence information chain
 
 For the rational joint Pr(M,C^L), E^L=f(C^L). The chain rule applied to
@@ -113,6 +118,7 @@ The implementation evaluates the conditional term directly with the actual
 within-edge-word model priors; equal global priors do not imply equal block
 priors. Precision/tolerance are numerical validation, not theorem assumptions.
 
+<a id="cl-f07"></a>
 ## CL-F07: K4 class-pair reconstruction certificate
 
 At a pair epoch, the previous pair mask is p xor 2^h. Enumerate the 384 marked
@@ -122,6 +128,7 @@ in reports/items/generation-008j-j1/J1-CLASS-PAIR-ROLE.json; every one of the 38
 states was checked, not just representatives. This is a finite exact result.
 It is not asserted for N=5, multibit events or larger history.
 
+<a id="cl-t50"></a>
 ## CL-T50: graph-class order at most two by role reconstruction
 
 Assume a first-order augmented pair process with h'=e after a single pair-bit
@@ -135,6 +142,7 @@ registers it applies after the first actual pair update. In the tested palette,
 positive first-order witnesses establish exactly order two for the 18 A/C
 systems; passive B and neutral remain first-order.
 
+<a id="cl-t51"></a>
 ## CL-T51: SAME edge-count/action-role closure
 
 Let d be the pair-slot count, k the present-bit count and R=p_h. For the SAME

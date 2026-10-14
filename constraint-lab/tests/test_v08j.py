@@ -199,3 +199,37 @@ def test_8i_historical_artifacts_preserved():
                  "constraint-lab/formal/theorem-catalog.jsonl", "constraint-lab/provenance/ledger.jsonl"):
         historical = subprocess.check_output(["git", "show", BASE + ":" + path], cwd=ROOT)
         assert (ROOT / path).read_bytes().startswith(historical)
+
+
+@PUBLISHED
+def test_full_384_state_invariant_triples_preserve_label_silence():
+    from collections import defaultdict
+    from rs_constraint_lab.graphs import pair_classes
+    from rs_constraint_lab.history_roles import RoleController
+    from rs_constraint_lab.role_atlas import fingerprint, serial_rows
+
+    models = published_models(ROOT)
+    table = pair_classes()
+    for key in ("I0-SAME_ANY-m025", "I0-ADJ_FORM-m4", "I0-DISJ_FORM-m025"):
+        record = models[key]
+        rows = RoleController(record["feature"], record["m"]).kernel()
+        assert fingerprint(serial_rows(rows)) == record["full_kernel_fingerprint"]
+        labelled = defaultdict(lambda: [Fraction(0)] * 6)
+        for source, row in enumerate(rows):
+            for middle, first in row.items():
+                for target, second in rows[middle].items():
+                    word = (table.name_of[source // 6], table.name_of[middle // 6], table.name_of[target // 6])
+                    labelled[word][middle % 6] += record["stationary_joint"][source] * first * second
+        envelope = read_json(ROOT / "constraint-lab/reports/items/generation-008j" / (key.replace("I0-", "J0-") + ".json"))
+        expected = {tuple(row["word"]): Fraction(row["P_H"]) for row in envelope["result"]["triples"]["graph_class"]}
+        assert {word: sum(masses) for word, masses in labelled.items()} == expected
+        assert all(masses == [sum(masses) / 6] * 6 for masses in labelled.values())
+
+
+@PUBLISHED
+def test_word_model_information_is_monotone_with_prefix_length():
+    rows = read_json(ROOT / "constraint-lab/reports/tables/generation-008j-word-atlas.json")["rows"]
+    for key in {row["controller_id"] for row in rows}:
+        for projection in ("graph_class", "edge_count"):
+            values = [Decimal(row["word_JS"]) for row in rows if row["controller_id"] == key and row["projection"] == projection]
+            assert all(right + Decimal("1e-25") >= left for left, right in zip(values, values[1:]))

@@ -1145,3 +1145,139 @@ Source generations: 008I
 Boundary: Diagnostic descriptors are not treated as sufficient coordinates or a valid quotient by themselves.
 Notes: No non-neutral scientific cell was executed for this structural enumeration.
 
+## CL-T45: Stationary material one/two-time matching and deterministic coarse pushforward
+
+**ALGEBRAIC_THEOREM**
+
+Kpi preserves the stationary material marginal and adjacent two-time joint of its source augmented process; every deterministic material projection inherits exact word equality at lengths one and two.
+
+Assumptions: Stationary finite augmented law pi(p,h); Kpi is the pi(h|p)-weighted material row on positive marginal support.
+Scope: Declared finite pair-event state/projection assumptions; not an ontology theorem.
+
+Proof: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md#cl-t45). Expand the stationary adjacent joint and sum over h; push forward equal measures along deterministic maps.
+Evidence: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md), [test_v08j.py](../../constraint-lab/tests/test_v08j.py), [test_v08j_followup.py](../../constraint-lab/tests/test_v08j_followup.py)
+Coherence: `F8J-MATCHED-ONE-TWO-TIME`, `F8J-REPRESENTATION-READING`
+Dependencies: CL-T41
+Source generations: 008J
+Boundary: No claim of conditioned-row or longer path equality.
+Notes: Reusable algebraic result, separate from finite two-grade observations; exact J0 and independently frozen J1 evidence identified in report.
+
+## CL-T46: Passive deterministic register finite-path equivalence
+
+**ALGEBRAIC_THEOREM**
+
+If the material future row is register-independent, projecting a passive deterministic register gives exactly the same finite material/coarse path measures as the corresponding Kpi chain at every word length.
+
+Assumptions: Future material row independent of register; Passive deterministic update; matching initial material marginal.
+Scope: Declared finite pair-event state/projection assumptions; not an ontology theorem.
+
+Proof: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md#cl-t46). Iterated conditioning factors the material path law into its initial marginal and register-independent transition rows.
+Evidence: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md), [test_v08j.py](../../constraint-lab/tests/test_v08j.py), [test_v08j_followup.py](../../constraint-lab/tests/test_v08j_followup.py)
+Coherence: `F8J-PASSIVE-REGISTER-PATH-EQUALITY`
+Dependencies: CL-T45
+Source generations: 008J
+Boundary: Register/material correlation and bookkeeping irreversibility need not vanish.
+Notes: Reusable algebraic result, separate from finite two-grade observations; exact J0 and independently frozen J1 evidence identified in report.
+
+## CL-T47: Covariant stationary Kpi and exact graph-class Markov quotient
+
+**ALGEBRAIC_THEOREM**
+
+Invariant stationary augmented law and S4-covariant dynamics imply S4-covariant Kpi; graph classes are a strongly lumpable eleven-state material orbit quotient.
+
+Assumptions: Simultaneous S4 covariance; Invariant stationary joint and positive material support; K4 graph classes are S4 material orbits.
+Scope: Declared finite pair-event state/projection assumptions; not an ontology theorem.
+
+Proof: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md#cl-t47). Reindex conditional history sums under g, then aggregate Kpi destinations over invariant S4 orbits.
+Evidence: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md), [test_v08j.py](../../constraint-lab/tests/test_v08j.py), [test_v08j_followup.py](../../constraint-lab/tests/test_v08j_followup.py)
+Coherence: `F8J-KPI-CLASS-MARKOV`
+Dependencies: CL-T37, CL-T40, CL-T45
+Source generations: 008J
+Boundary: Edge count merges distinct orbits and needs a separate lumpability test.
+Notes: Reusable algebraic result, separate from finite two-grade observations; exact J0 and independently frozen J1 evidence identified in report.
+
+## CL-T48: Absolute history-label silence in invariant finite stationary windows
+
+**ALGEBRAIC_THEOREM**
+
+Every absolute remembered-pair label is independent of any finite stationary S4-invariant material observation word; its conditional probability is 1/6.
+
+Assumptions: Stationary S4-invariant path measure (uniqueness plus covariance suffices); History-label action transitive on six pair slots; Observation word invariant under simultaneous relabelling.
+Scope: Declared finite pair-event state/projection assumptions; not an ontology theorem.
+
+Proof: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md#cl-t48). Stationary path invariance equates the six joint masses Pr(H_t=h,W=w); summing labels yields Pr(W=w)/6.
+Evidence: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md), [test_v08j.py](../../constraint-lab/tests/test_v08j.py), [test_v08j_followup.py](../../constraint-lab/tests/test_v08j_followup.py)
+Coherence: `F8J-INVARIANT-WINDOW-LABEL-SILENCE`
+Dependencies: CL-T40
+Source generations: 008J
+Boundary: Does not imply relational role silence; non-invariant starts or label-sensitive words lie outside scope.
+Notes: Reusable algebraic result, separate from finite two-grade observations; exact J0 and independently frozen J1 evidence identified in report.
+
+## CL-T49: Class-word density-path and shape-sequence information chain
+
+**ALGEBRAIC_THEOREM**
+
+For E^L=f(C^L), I(M;C^L)=I(M;E^L)+I(M;C^L|E^L), with nonnegative conditional term and data processing.
+
+Assumptions: Deterministic edge-word projection of class word; Joint model/word law; equal global model prior for JS interpretation.
+Scope: Declared finite pair-event state/projection assumptions; not an ontology theorem.
+
+Proof: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md#cl-t49). Apply the information chain rule to (C^L,E^L), which contains exactly the information in C^L.
+Evidence: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md), [test_v08j.py](../../constraint-lab/tests/test_v08j.py), [test_v08j_followup.py](../../constraint-lab/tests/test_v08j_followup.py)
+Coherence: `F8J-SHAPE-SEQUENCE-SIGNAL`, `F8J-SNAPSHOT-SHAPE-VS-PROCESS-SHAPE`
+Dependencies: none
+Source generations: 008J
+Boundary: Equal global priors do not imply equal within-edge-word priors.
+Notes: Reusable algebraic result, separate from finite two-grade observations; exact J0 and independently frozen J1 evidence identified in report.
+
+## CL-T50: K4 graph-class order at most two by marked-role reconstruction
+
+**ALGEBRAIC_THEOREM**
+
+A valid S4 marked-pair role chain with h'=e and one-bit pair toggles has graph-class output of order at most two once an actual pair transition has occurred.
+
+Assumptions: K4 single-pair toggles; Valid first-order simultaneous-S4 role quotient; Class-pair reconstruction certificate CL-F07.
+Scope: Declared finite pair-event state/projection assumptions; not an ontology theorem.
+
+Proof: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md#cl-t50). Two consecutive classes identify the current role orbit by CL-F07; the quotient's next-class law depends only on that orbit.
+Evidence: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md), [test_v08j.py](../../constraint-lab/tests/test_v08j.py), [test_v08j_followup.py](../../constraint-lab/tests/test_v08j_followup.py)
+Coherence: `F8J-CLASS-EXACT-ORDER-TWO`, `F8J-REPRESENTATION-READING`, `Q-H-CLASS-PAIR-GENERALISATION`
+Dependencies: CL-T37, CL-F07
+Source generations: 008J
+Boundary: Not a larger-N theorem. Exactly order two also requires a positive first-order witness; no infinite-memory conclusion for coarser edge output.
+Notes: Reusable algebraic result, separate from finite two-grade observations; exact J0 and independently frozen J1 evidence identified in report.
+
+## CL-T51: SAME count and remembered-bit quotient with exact edge order
+
+**ALGEBRAIC_THEOREM**
+
+SAME ANY/FORM/DISSOLVE admits a 2d-state (k,p_h) quotient with aggregate formation/dissolution weights; edge count is order at most two, exactly two for positive non-neutral m and d>=2 with positive stationary support.
+
+Assumptions: Single pair-bit toggle and last-slot update; SAME features only; positive m; d>=2 and positive stationary support for failure of order one.
+Scope: Declared finite pair-event state/projection assumptions; not an ontology theorem.
+
+Proof: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md#cl-t51). Count absent/present weights F,D. The next roles are (k+1,1),(k-1,0); the last count increment recovers p_h. Compare the two feasible k=1 roles to refute order one iff m!=1.
+Evidence: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md), [test_v08j.py](../../constraint-lab/tests/test_v08j.py), [test_v08j_followup.py](../../constraint-lab/tests/test_v08j_followup.py)
+Coherence: `F8J-SAME-EDGE-ORDER-TWO`, `F8J-REPRESENTATION-READING`
+Dependencies: CL-T36
+Source generations: 008J
+Boundary: No ADJ/DISJ closure; their tested (k,R) projections fail.
+Notes: Reusable algebraic result, separate from finite two-grade observations; exact J0 and independently frozen J1 evidence identified in report.
+
+## CL-F07: K4 consecutive-class marked-role reconstruction certificate
+
+**FINITE_EXHAUSTIVE_RESULT**
+
+All 384 augmented K4 states map constantly and injectively from 28 simultaneous-S4 role orbits to (class(p xor 2^h),class(p)); there are 28 distinct pairs and zero collisions.
+
+Assumptions: Six labelled K4 pair slots and one marked history slot; Historical graph classifier and simultaneous vertex action.
+Scope: Finite exact K4 structural certificate from separately frozen J1.
+
+Enumeration: All 384 (p,h) states, 28 complete orbit fibres and every pair-image collision test; exact count 384. Verifier: [gen008j_followup.py](../../constraint-lab/src/rs_constraint_lab/gen008j_followup.py)
+Evidence: [coarse-process-memory.md](../../constraint-lab/formal/coarse-process-memory.md), [J1-CLASS-PAIR-ROLE.json](../../constraint-lab/reports/items/generation-008j-j1/J1-CLASS-PAIR-ROLE.json), [test_v08j_followup.py](../../constraint-lab/tests/test_v08j_followup.py)
+Coherence: `F8J-CLASS-PAIR-ROLE-RECONSTRUCTION`, `Q-H-CLASS-PAIR-GENERALISATION`
+Dependencies: CL-T37
+Source generations: 008J
+Boundary: No N5, multibit-event or deeper-history extension is asserted.
+Notes: A finite certificate used by CL-T50, not a general graph reconstruction theorem.
+

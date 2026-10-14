@@ -49,3 +49,18 @@ selection safeguards. OTR is a research method, not evidence for RS.
 | SAME-direction factorisation and matched-KU mechanism | PENDING_EXTERNAL_REVIEW | Model mathematics with explicit support, state and pair-clock scope |
 | 22-cell stationary shape/feedback observations | PENDING_EXTERNAL_REVIEW | Remain in reports/tables until external scientific review |
 | Natural historical ontology, irreducible time, biological purpose | DO_NOT_INTEGRATE_YET | No such inference follows from the finite controller atlas |
+
+## Generation 8J, coarse-process review boundary
+
+Historical assessments above remain unchanged; neither book is edited.
+External Review 008I is recorded separately, without retroactively rewriting
+the 8I maturity table.
+
+| Content | Current treatment | Integration boundary |
+| --- | --- | --- |
+| Kpi stationary one/two-time material matching, CL-T45 | READY_WITH_SCOPE | Stationarity, conditional averaging and deterministic coarse pushforward; not all-path equality |
+| Passive-register paths, covariance and invariant-word label silence, CL-T46..T48 | READY_WITH_SCOPE | Explicit register-independence or S4 assumptions; role information is not label information |
+| Class-word/edge-word information chain, CL-T49 | READY_WITH_SCOPE | Ordinary information chain rule with actual conditional model priors |
+| New K4 class-pair certificate/order theorem and SAME edge-role closure, CL-F07/CL-T50..T51 | PENDING_EXTERNAL_REVIEW | Reusable scoped proofs linked to separately frozen finite verification; no larger-N or infinite-order extension |
+| Coarse temporal information and depth atlas | PENDING_EXTERNAL_REVIEW | Retain exact word tables, numerical information, comparator and pair-clock scope |
+| Physical coarse-history interpretation | DO_NOT_INTEGRATE_YET | No physical memory, irreducible time, observer causation, purpose, theology or TCR inference |
