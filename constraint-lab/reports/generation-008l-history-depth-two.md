@@ -87,6 +87,12 @@ Support, ten unit baseline weights and fixed ordinary constraints agree.
 
 Each path probability is 1/[100(m+9)] full-clock and 1/[36(m+5)] pair-clock:
 
+The full-clock probability belongs to the three specified consecutive full
+events, with no triad event and the complete zero-triad endpoint above.
+The pair-clock probability is the pair-event WORD probability, summing over
+triad-only excursions and their endpoint triad masks. It does not additionally
+condition those marginalized triads to finish at zero.
+
 | m | Each full path | Each pair-epoch path |
 | --- | --- | --- |
 | 1/4 | 1/925 | 1/189 |

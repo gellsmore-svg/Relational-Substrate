@@ -41,6 +41,10 @@ First and second full-event probabilities are 1/10, since h2 is unavailable
 before both. At the third event h2 is the first slot, different from c.
 Thus each full path has probability 1/[100(m+9)]>0.
 At pair epochs each has probability 1/[36(m+5)]>0.
+This pair-word probability marginalises intervening triad-only events and their
+endpoint triad masks. The asserted byte-identical zero-triad full endpoint
+belongs to the specified consecutive FULL-event histories, not to every full
+realisation of the marginalized pair word.
 The serialized complete ordinary endpoint is identical: ten bits, baseline,
 all ten candidate toggle slots and fixed empty ordinary-rule collection.
 Only the second history coordinate differs.
