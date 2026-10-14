@@ -1,0 +1,166 @@
+{
+  "checks": [
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m025",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-ADJ_ANY-m025",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m4",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-ADJ_ANY-m4",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-ADJ_FORM-m025",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-ADJ_FORM-m4",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m025",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-ADJ_DISSOLVE-m025",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m4",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-ADJ_DISSOLVE-m4",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m025",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-DISJ_ANY-m025",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m4",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-DISJ_ANY-m4",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-DISJ_FORM-m025",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-DISJ_FORM-m4",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m025",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-DISJ_DISSOLVE-m025",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m4",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-DISJ_DISSOLVE-m4",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-FORM_ANY-m025",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-FORM_ANY-m4",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m025",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-DISSOLVE_ANY-m025",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m4",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-DISSOLVE_ANY-m4",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-NEUTRAL",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-NEUTRAL",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m025",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-SAME_ANY-m025",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m4",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-SAME_ANY-m4",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-SAME_FORM-m025",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-SAME_FORM-m4",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m025",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-SAME_DISSOLVE-m025",
+      "word_rows_checked": 3542
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m4",
+      "exact_probability_gap": "0/1",
+      "partner": "I0-SAME_DISSOLVE-m4",
+      "word_rows_checked": 3542
+    }
+  ],
+  "clock": "pair-event epoch"
+}

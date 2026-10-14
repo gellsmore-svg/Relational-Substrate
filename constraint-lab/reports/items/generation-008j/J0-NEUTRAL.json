@@ -1,0 +1,1663 @@
+{
+  "analysis_version": "generation-008j-coarse-process/v1",
+  "frozen_analysis_plan_commit": "b27d102e2581c7e57e18861ce604ab1469888880",
+  "item": {
+    "controller_id": "I0-NEUTRAL",
+    "independent_hidden_path_crosscheck": true,
+    "item_id": "J0-NEUTRAL"
+  },
+  "plan_hash": "f0085cb8dd856b5e31db6f4a33a47ae87be6073baf8e872a4bfe8ba8d8fef7a4",
+  "result": {
+    "clock": "pair-event epoch",
+    "controller_id": "I0-NEUTRAL",
+    "diagnostics": {
+      "H": {
+        "direct_edge_work": {
+          "forward_updates": 1218,
+          "reachable_words": {
+            "1": 7,
+            "2": 12,
+            "3": 22,
+            "4": 40,
+            "5": 74,
+            "6": 136
+          },
+          "role_endpoint_support": {
+            "1": {
+              "maximum_endpoint_support": 8,
+              "minimum_endpoint_support": 1
+            },
+            "2": {
+              "maximum_endpoint_support": 4,
+              "minimum_endpoint_support": 1
+            },
+            "3": {
+              "maximum_endpoint_support": 4,
+              "minimum_endpoint_support": 1
+            },
+            "4": {
+              "maximum_endpoint_support": 4,
+              "minimum_endpoint_support": 1
+            },
+            "5": {
+              "maximum_endpoint_support": 4,
+              "minimum_endpoint_support": 1
+            },
+            "6": {
+              "maximum_endpoint_support": 4,
+              "minimum_endpoint_support": 1
+            }
+          }
+        },
+        "edge_count": {
+          "CMI_lag1": "0",
+          "block_row_gap": "0/1",
+          "exact_conditional_independence": true,
+          "strongly_lumpable": true,
+          "witness": null
+        },
+        "finite_depth": {
+          "edge_count": [
+            {
+              "candidate_order": 1,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 3,
+              "witness": null
+            },
+            {
+              "candidate_order": 2,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 4,
+              "witness": null
+            },
+            {
+              "candidate_order": 3,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 5,
+              "witness": null
+            },
+            {
+              "candidate_order": 4,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 6,
+              "witness": null
+            }
+          ],
+          "graph_class": [
+            {
+              "candidate_order": 1,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 3,
+              "witness": null
+            },
+            {
+              "candidate_order": 2,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 4,
+              "witness": null
+            },
+            {
+              "candidate_order": 3,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 5,
+              "witness": null
+            },
+            {
+              "candidate_order": 4,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 6,
+              "witness": null
+            }
+          ]
+        },
+        "graph_class": {
+          "CMI_lag1": "0",
+          "block_row_gap": "0/1",
+          "exact_conditional_independence": true,
+          "strongly_lumpable": true,
+          "witness": null
+        },
+        "independent_hidden_path_visits": 9656,
+        "work": {
+          "forward_updates": 3296,
+          "reachable_words": {
+            "1": 11,
+            "2": 28,
+            "3": 84,
+            "4": 244,
+            "5": 728,
+            "6": 2156
+          },
+          "role_endpoint_support": {
+            "1": {
+              "maximum_endpoint_support": 4,
+              "minimum_endpoint_support": 1
+            },
+            "2": {
+              "maximum_endpoint_support": 1,
+              "minimum_endpoint_support": 1
+            },
+            "3": {
+              "maximum_endpoint_support": 1,
+              "minimum_endpoint_support": 1
+            },
+            "4": {
+              "maximum_endpoint_support": 1,
+              "minimum_endpoint_support": 1
+            },
+            "5": {
+              "maximum_endpoint_support": 1,
+              "minimum_endpoint_support": 1
+            },
+            "6": {
+              "maximum_endpoint_support": 1,
+              "minimum_endpoint_support": 1
+            }
+          }
+        }
+      },
+      "Kpi": {
+        "direct_edge_work": {
+          "forward_updates": 726,
+          "reachable_words": {
+            "1": 7,
+            "2": 12,
+            "3": 22,
+            "4": 40,
+            "5": 74,
+            "6": 136
+          },
+          "role_endpoint_support": {
+            "1": {
+              "maximum_endpoint_support": 3,
+              "minimum_endpoint_support": 1
+            },
+            "2": {
+              "maximum_endpoint_support": 3,
+              "minimum_endpoint_support": 1
+            },
+            "3": {
+              "maximum_endpoint_support": 3,
+              "minimum_endpoint_support": 1
+            },
+            "4": {
+              "maximum_endpoint_support": 3,
+              "minimum_endpoint_support": 1
+            },
+            "5": {
+              "maximum_endpoint_support": 3,
+              "minimum_endpoint_support": 1
+            },
+            "6": {
+              "maximum_endpoint_support": 3,
+              "minimum_endpoint_support": 1
+            }
+          }
+        },
+        "edge_count": {
+          "CMI_lag1": "0",
+          "block_row_gap": "0/1",
+          "exact_conditional_independence": true,
+          "strongly_lumpable": true,
+          "witness": null
+        },
+        "finite_depth": {
+          "edge_count": [
+            {
+              "candidate_order": 1,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 3,
+              "witness": null
+            },
+            {
+              "candidate_order": 2,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 4,
+              "witness": null
+            },
+            {
+              "candidate_order": 3,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 5,
+              "witness": null
+            },
+            {
+              "candidate_order": 4,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 6,
+              "witness": null
+            }
+          ],
+          "graph_class": [
+            {
+              "candidate_order": 1,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 3,
+              "witness": null
+            },
+            {
+              "candidate_order": 2,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 4,
+              "witness": null
+            },
+            {
+              "candidate_order": 3,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 5,
+              "witness": null
+            },
+            {
+              "candidate_order": 4,
+              "conditional_row_gap": "0/1",
+              "reading": "consistent at tested depth only",
+              "tested_word_length": 6,
+              "witness": null
+            }
+          ]
+        },
+        "graph_class": {
+          "CMI_lag1": "0",
+          "block_row_gap": "0/1",
+          "exact_conditional_independence": true,
+          "strongly_lumpable": true,
+          "witness": null
+        },
+        "independent_hidden_path_visits": 3251,
+        "work": {
+          "forward_updates": 3240,
+          "reachable_words": {
+            "1": 11,
+            "2": 28,
+            "3": 84,
+            "4": 244,
+            "5": 728,
+            "6": 2156
+          },
+          "role_endpoint_support": {
+            "1": {
+              "maximum_endpoint_support": 1,
+              "minimum_endpoint_support": 1
+            },
+            "2": {
+              "maximum_endpoint_support": 1,
+              "minimum_endpoint_support": 1
+            },
+            "3": {
+              "maximum_endpoint_support": 1,
+              "minimum_endpoint_support": 1
+            },
+            "4": {
+              "maximum_endpoint_support": 1,
+              "minimum_endpoint_support": 1
+            },
+            "5": {
+              "maximum_endpoint_support": 1,
+              "minimum_endpoint_support": 1
+            },
+            "6": {
+              "maximum_endpoint_support": 1,
+              "minimum_endpoint_support": 1
+            }
+          }
+        }
+      }
+    },
+    "family": "A",
+    "feature": "SAME_ANY",
+    "first_visible_word_length": {
+      "edge_count": null,
+      "graph_class": null
+    },
+    "m": "1/1",
+    "orientation": "stationary forward Y^L=(Y_0,...,Y_{L-1})",
+    "precision_decimal_digits": 160,
+    "process_information": [
+      {
+        "I_model_class_word": "0",
+        "I_model_class_word_given_edge_word": "0",
+        "I_model_edge_word": "0",
+        "chain_gap": "0",
+        "word_length": 1
+      },
+      {
+        "I_model_class_word": "0",
+        "I_model_class_word_given_edge_word": "0",
+        "I_model_edge_word": "0",
+        "chain_gap": "0",
+        "word_length": 2
+      },
+      {
+        "I_model_class_word": "0",
+        "I_model_class_word_given_edge_word": "0",
+        "I_model_edge_word": "0",
+        "chain_gap": "0",
+        "word_length": 3
+      },
+      {
+        "I_model_class_word": "0",
+        "I_model_class_word_given_edge_word": "0",
+        "I_model_edge_word": "0",
+        "chain_gap": "0",
+        "word_length": 4
+      },
+      {
+        "I_model_class_word": "0",
+        "I_model_class_word_given_edge_word": "0",
+        "I_model_edge_word": "0",
+        "chain_gap": "0",
+        "word_length": 5
+      },
+      {
+        "I_model_class_word": "0",
+        "I_model_class_word_given_edge_word": "0",
+        "I_model_edge_word": "0",
+        "chain_gap": "0",
+        "word_length": 6
+      }
+    ],
+    "triples": {
+      "edge_count": [
+        {
+          "JS_contribution": "0",
+          "P_H": "1/384",
+          "P_Kpi": "1/384",
+          "difference": "0/1",
+          "word": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/384",
+          "P_Kpi": "5/384",
+          "difference": "0/1",
+          "word": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/64",
+          "P_Kpi": "1/64",
+          "difference": "0/1",
+          "word": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/192",
+          "P_Kpi": "5/192",
+          "difference": "0/1",
+          "word": [
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/96",
+          "P_Kpi": "5/96",
+          "difference": "0/1",
+          "word": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/384",
+          "P_Kpi": "5/384",
+          "difference": "0/1",
+          "word": [
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "25/384",
+          "P_Kpi": "25/384",
+          "difference": "0/1",
+          "word": [
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/64",
+          "P_Kpi": "5/64",
+          "difference": "0/1",
+          "word": [
+            2,
+            3,
+            2
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/64",
+          "P_Kpi": "5/64",
+          "difference": "0/1",
+          "word": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/96",
+          "P_Kpi": "5/96",
+          "difference": "0/1",
+          "word": [
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/48",
+          "P_Kpi": "5/48",
+          "difference": "0/1",
+          "word": [
+            3,
+            2,
+            3
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/48",
+          "P_Kpi": "5/48",
+          "difference": "0/1",
+          "word": [
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/96",
+          "P_Kpi": "5/96",
+          "difference": "0/1",
+          "word": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/64",
+          "P_Kpi": "5/64",
+          "difference": "0/1",
+          "word": [
+            4,
+            3,
+            2
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/64",
+          "P_Kpi": "5/64",
+          "difference": "0/1",
+          "word": [
+            4,
+            3,
+            4
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "25/384",
+          "P_Kpi": "25/384",
+          "difference": "0/1",
+          "word": [
+            4,
+            5,
+            4
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/384",
+          "P_Kpi": "5/384",
+          "difference": "0/1",
+          "word": [
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/96",
+          "P_Kpi": "5/96",
+          "difference": "0/1",
+          "word": [
+            5,
+            4,
+            3
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/192",
+          "P_Kpi": "5/192",
+          "difference": "0/1",
+          "word": [
+            5,
+            4,
+            5
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/64",
+          "P_Kpi": "1/64",
+          "difference": "0/1",
+          "word": [
+            5,
+            6,
+            5
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "5/384",
+          "P_Kpi": "5/384",
+          "difference": "0/1",
+          "word": [
+            6,
+            5,
+            4
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/384",
+          "P_Kpi": "1/384",
+          "difference": "0/1",
+          "word": [
+            6,
+            5,
+            6
+          ]
+        }
+      ],
+      "graph_class": [
+        {
+          "JS_contribution": "0",
+          "P_H": "1/384",
+          "P_Kpi": "1/384",
+          "difference": "0/1",
+          "word": [
+            "e0-deg0000-tri0-comp4",
+            "e1-deg1100-tri0-comp3",
+            "e0-deg0000-tri0-comp4"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/384",
+          "P_Kpi": "1/384",
+          "difference": "0/1",
+          "word": [
+            "e0-deg0000-tri0-comp4",
+            "e1-deg1100-tri0-comp3",
+            "e2-deg1111-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e0-deg0000-tri0-comp4",
+            "e1-deg1100-tri0-comp3",
+            "e2-deg2110-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/64",
+          "P_Kpi": "1/64",
+          "difference": "0/1",
+          "word": [
+            "e1-deg1100-tri0-comp3",
+            "e0-deg0000-tri0-comp4",
+            "e1-deg1100-tri0-comp3"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e1-deg1100-tri0-comp3",
+            "e2-deg1111-tri0-comp2",
+            "e1-deg1100-tri0-comp3"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e1-deg1100-tri0-comp3",
+            "e2-deg1111-tri0-comp2",
+            "e3-deg2211-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e1-deg1100-tri0-comp3",
+            "e2-deg2110-tri0-comp2",
+            "e1-deg1100-tri0-comp3"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e1-deg1100-tri0-comp3",
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2211-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e1-deg1100-tri0-comp3",
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2220-tri1-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e1-deg1100-tri0-comp3",
+            "e2-deg2110-tri0-comp2",
+            "e3-deg3111-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/384",
+          "P_Kpi": "1/384",
+          "difference": "0/1",
+          "word": [
+            "e2-deg1111-tri0-comp2",
+            "e1-deg1100-tri0-comp3",
+            "e0-deg0000-tri0-comp4"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/384",
+          "P_Kpi": "1/384",
+          "difference": "0/1",
+          "word": [
+            "e2-deg1111-tri0-comp2",
+            "e1-deg1100-tri0-comp3",
+            "e2-deg1111-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e2-deg1111-tri0-comp2",
+            "e1-deg1100-tri0-comp3",
+            "e2-deg2110-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e2-deg1111-tri0-comp2",
+            "e3-deg2211-tri0-comp1",
+            "e2-deg1111-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e2-deg1111-tri0-comp2",
+            "e3-deg2211-tri0-comp1",
+            "e2-deg2110-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e2-deg1111-tri0-comp2",
+            "e3-deg2211-tri0-comp1",
+            "e4-deg2222-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e2-deg1111-tri0-comp2",
+            "e3-deg2211-tri0-comp1",
+            "e4-deg3221-tri1-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e2-deg2110-tri0-comp2",
+            "e1-deg1100-tri0-comp3",
+            "e0-deg0000-tri0-comp4"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e2-deg2110-tri0-comp2",
+            "e1-deg1100-tri0-comp3",
+            "e2-deg1111-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/24",
+          "P_Kpi": "1/24",
+          "difference": "0/1",
+          "word": [
+            "e2-deg2110-tri0-comp2",
+            "e1-deg1100-tri0-comp3",
+            "e2-deg2110-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2211-tri0-comp1",
+            "e2-deg1111-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2211-tri0-comp1",
+            "e2-deg2110-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2211-tri0-comp1",
+            "e4-deg2222-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2211-tri0-comp1",
+            "e4-deg3221-tri1-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/64",
+          "P_Kpi": "1/64",
+          "difference": "0/1",
+          "word": [
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2220-tri1-comp2",
+            "e2-deg2110-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/64",
+          "P_Kpi": "1/64",
+          "difference": "0/1",
+          "word": [
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2220-tri1-comp2",
+            "e4-deg3221-tri1-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/64",
+          "P_Kpi": "1/64",
+          "difference": "0/1",
+          "word": [
+            "e2-deg2110-tri0-comp2",
+            "e3-deg3111-tri0-comp1",
+            "e2-deg2110-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/64",
+          "P_Kpi": "1/64",
+          "difference": "0/1",
+          "word": [
+            "e2-deg2110-tri0-comp2",
+            "e3-deg3111-tri0-comp1",
+            "e4-deg3221-tri1-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2211-tri0-comp1",
+            "e2-deg1111-tri0-comp2",
+            "e1-deg1100-tri0-comp3"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2211-tri0-comp1",
+            "e2-deg1111-tri0-comp2",
+            "e3-deg2211-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2211-tri0-comp1",
+            "e2-deg2110-tri0-comp2",
+            "e1-deg1100-tri0-comp3"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2211-tri0-comp1",
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2211-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2211-tri0-comp1",
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2220-tri1-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2211-tri0-comp1",
+            "e2-deg2110-tri0-comp2",
+            "e3-deg3111-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2211-tri0-comp1",
+            "e4-deg2222-tri0-comp1",
+            "e3-deg2211-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2211-tri0-comp1",
+            "e4-deg2222-tri0-comp1",
+            "e5-deg3322-tri2-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2211-tri0-comp1",
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2211-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2211-tri0-comp1",
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2220-tri1-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2211-tri0-comp1",
+            "e4-deg3221-tri1-comp1",
+            "e3-deg3111-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2211-tri0-comp1",
+            "e4-deg3221-tri1-comp1",
+            "e5-deg3322-tri2-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2220-tri1-comp2",
+            "e2-deg2110-tri0-comp2",
+            "e1-deg1100-tri0-comp3"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2220-tri1-comp2",
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2211-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2220-tri1-comp2",
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2220-tri1-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2220-tri1-comp2",
+            "e2-deg2110-tri0-comp2",
+            "e3-deg3111-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2220-tri1-comp2",
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2211-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2220-tri1-comp2",
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2220-tri1-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2220-tri1-comp2",
+            "e4-deg3221-tri1-comp1",
+            "e3-deg3111-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg2220-tri1-comp2",
+            "e4-deg3221-tri1-comp1",
+            "e5-deg3322-tri2-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg3111-tri0-comp1",
+            "e2-deg2110-tri0-comp2",
+            "e1-deg1100-tri0-comp3"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg3111-tri0-comp1",
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2211-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e3-deg3111-tri0-comp1",
+            "e2-deg2110-tri0-comp2",
+            "e3-deg2220-tri1-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e3-deg3111-tri0-comp1",
+            "e2-deg2110-tri0-comp2",
+            "e3-deg3111-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg3111-tri0-comp1",
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2211-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e3-deg3111-tri0-comp1",
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2220-tri1-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e3-deg3111-tri0-comp1",
+            "e4-deg3221-tri1-comp1",
+            "e3-deg3111-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e3-deg3111-tri0-comp1",
+            "e4-deg3221-tri1-comp1",
+            "e5-deg3322-tri2-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e4-deg2222-tri0-comp1",
+            "e3-deg2211-tri0-comp1",
+            "e2-deg1111-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e4-deg2222-tri0-comp1",
+            "e3-deg2211-tri0-comp1",
+            "e2-deg2110-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e4-deg2222-tri0-comp1",
+            "e3-deg2211-tri0-comp1",
+            "e4-deg2222-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e4-deg2222-tri0-comp1",
+            "e3-deg2211-tri0-comp1",
+            "e4-deg3221-tri1-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/384",
+          "P_Kpi": "1/384",
+          "difference": "0/1",
+          "word": [
+            "e4-deg2222-tri0-comp1",
+            "e5-deg3322-tri2-comp1",
+            "e4-deg2222-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e4-deg2222-tri0-comp1",
+            "e5-deg3322-tri2-comp1",
+            "e4-deg3221-tri1-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/384",
+          "P_Kpi": "1/384",
+          "difference": "0/1",
+          "word": [
+            "e4-deg2222-tri0-comp1",
+            "e5-deg3322-tri2-comp1",
+            "e6-deg3333-tri4-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2211-tri0-comp1",
+            "e2-deg1111-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2211-tri0-comp1",
+            "e2-deg2110-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2211-tri0-comp1",
+            "e4-deg2222-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2211-tri0-comp1",
+            "e4-deg3221-tri1-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/64",
+          "P_Kpi": "1/64",
+          "difference": "0/1",
+          "word": [
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2220-tri1-comp2",
+            "e2-deg2110-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/64",
+          "P_Kpi": "1/64",
+          "difference": "0/1",
+          "word": [
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2220-tri1-comp2",
+            "e4-deg3221-tri1-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/64",
+          "P_Kpi": "1/64",
+          "difference": "0/1",
+          "word": [
+            "e4-deg3221-tri1-comp1",
+            "e3-deg3111-tri0-comp1",
+            "e2-deg2110-tri0-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/64",
+          "P_Kpi": "1/64",
+          "difference": "0/1",
+          "word": [
+            "e4-deg3221-tri1-comp1",
+            "e3-deg3111-tri0-comp1",
+            "e4-deg3221-tri1-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e4-deg3221-tri1-comp1",
+            "e5-deg3322-tri2-comp1",
+            "e4-deg2222-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/24",
+          "P_Kpi": "1/24",
+          "difference": "0/1",
+          "word": [
+            "e4-deg3221-tri1-comp1",
+            "e5-deg3322-tri2-comp1",
+            "e4-deg3221-tri1-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e4-deg3221-tri1-comp1",
+            "e5-deg3322-tri2-comp1",
+            "e6-deg3333-tri4-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e5-deg3322-tri2-comp1",
+            "e4-deg2222-tri0-comp1",
+            "e3-deg2211-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/192",
+          "P_Kpi": "1/192",
+          "difference": "0/1",
+          "word": [
+            "e5-deg3322-tri2-comp1",
+            "e4-deg2222-tri0-comp1",
+            "e5-deg3322-tri2-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e5-deg3322-tri2-comp1",
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2211-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e5-deg3322-tri2-comp1",
+            "e4-deg3221-tri1-comp1",
+            "e3-deg2220-tri1-comp2"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e5-deg3322-tri2-comp1",
+            "e4-deg3221-tri1-comp1",
+            "e3-deg3111-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/48",
+          "P_Kpi": "1/48",
+          "difference": "0/1",
+          "word": [
+            "e5-deg3322-tri2-comp1",
+            "e4-deg3221-tri1-comp1",
+            "e5-deg3322-tri2-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/64",
+          "P_Kpi": "1/64",
+          "difference": "0/1",
+          "word": [
+            "e5-deg3322-tri2-comp1",
+            "e6-deg3333-tri4-comp1",
+            "e5-deg3322-tri2-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/384",
+          "P_Kpi": "1/384",
+          "difference": "0/1",
+          "word": [
+            "e6-deg3333-tri4-comp1",
+            "e5-deg3322-tri2-comp1",
+            "e4-deg2222-tri0-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/96",
+          "P_Kpi": "1/96",
+          "difference": "0/1",
+          "word": [
+            "e6-deg3333-tri4-comp1",
+            "e5-deg3322-tri2-comp1",
+            "e4-deg3221-tri1-comp1"
+          ]
+        },
+        {
+          "JS_contribution": "0",
+          "P_H": "1/384",
+          "P_Kpi": "1/384",
+          "difference": "0/1",
+          "word": [
+            "e6-deg3333-tri4-comp1",
+            "e5-deg3322-tri2-comp1",
+            "e6-deg3333-tri4-comp1"
+          ]
+        }
+      ]
+    },
+    "validation": {
+      "H_hidden_states": 28,
+      "Kpi_S4_covariance_gap": "0/1",
+      "Kpi_class_quotient_gap": "0/1",
+      "Kpi_covariance_transition_comparisons": 9216,
+      "Kpi_hidden_states": 11,
+      "Kpi_stationary_gap": "0/1",
+      "L1_L2_exact_equal": true,
+      "class_to_edge_probability_gap": "0/1",
+      "independent_crosscheck_gap": "0/1",
+      "independent_crosscheck_performed": true,
+      "word_normalisation_gap": "0/1"
+    },
+    "word_atlas": [
+      {
+        "exact_equal": true,
+        "projection": "graph_class",
+        "reachable_words_H": 11,
+        "reachable_words_Kpi": 11,
+        "word_JS": "0",
+        "word_length": 1
+      },
+      {
+        "exact_equal": true,
+        "projection": "graph_class",
+        "reachable_words_H": 28,
+        "reachable_words_Kpi": 28,
+        "word_JS": "0",
+        "word_length": 2
+      },
+      {
+        "exact_equal": true,
+        "projection": "graph_class",
+        "reachable_words_H": 84,
+        "reachable_words_Kpi": 84,
+        "word_JS": "0",
+        "word_length": 3
+      },
+      {
+        "exact_equal": true,
+        "projection": "graph_class",
+        "reachable_words_H": 244,
+        "reachable_words_Kpi": 244,
+        "word_JS": "0",
+        "word_length": 4
+      },
+      {
+        "exact_equal": true,
+        "projection": "graph_class",
+        "reachable_words_H": 728,
+        "reachable_words_Kpi": 728,
+        "word_JS": "0",
+        "word_length": 5
+      },
+      {
+        "exact_equal": true,
+        "projection": "graph_class",
+        "reachable_words_H": 2156,
+        "reachable_words_Kpi": 2156,
+        "word_JS": "0",
+        "word_length": 6
+      },
+      {
+        "exact_equal": true,
+        "projection": "edge_count",
+        "reachable_words_H": 7,
+        "reachable_words_Kpi": 7,
+        "word_JS": "0",
+        "word_length": 1
+      },
+      {
+        "exact_equal": true,
+        "projection": "edge_count",
+        "reachable_words_H": 12,
+        "reachable_words_Kpi": 12,
+        "word_JS": "0",
+        "word_length": 2
+      },
+      {
+        "exact_equal": true,
+        "projection": "edge_count",
+        "reachable_words_H": 22,
+        "reachable_words_Kpi": 22,
+        "word_JS": "0",
+        "word_length": 3
+      },
+      {
+        "exact_equal": true,
+        "projection": "edge_count",
+        "reachable_words_H": 40,
+        "reachable_words_Kpi": 40,
+        "word_JS": "0",
+        "word_length": 4
+      },
+      {
+        "exact_equal": true,
+        "projection": "edge_count",
+        "reachable_words_H": 74,
+        "reachable_words_Kpi": 74,
+        "word_JS": "0",
+        "word_length": 5
+      },
+      {
+        "exact_equal": true,
+        "projection": "edge_count",
+        "reachable_words_H": 136,
+        "reachable_words_Kpi": 136,
+        "word_JS": "0",
+        "word_length": 6
+      }
+    ]
+  },
+  "result_sha256": "2e4d6842833fabdad872dc339a7124c7634a1918c9cf012c38deabb0536ef2c2",
+  "uncompressed_word_sha256": "962ec8d08695aa101dde88c3e05ab2fba6c4547c91e620fd84224526e71e5e3e",
+  "wall_seconds": 0.3174150410013681,
+  "word_path": "constraint-lab/reports/items/generation-008j/J0-NEUTRAL-words.json.gz",
+  "word_sha256": "4144861408e0eff2a69cf87bdaebb15438f57ea4744a1edb7f7ef84f22ea31ed"
+}

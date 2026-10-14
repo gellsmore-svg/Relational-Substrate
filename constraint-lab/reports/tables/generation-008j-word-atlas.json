@@ -1,0 +1,2766 @@
+{
+  "clock": "pair-event epoch",
+  "orientation": "stationary forward Y^L=(Y_0,...,Y_{L-1})",
+  "rows": [
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.03123104824944427302911625442432515193308703149787492602557069702751998559882449712268919670392955032621867018625833155116784884972555096587278465704663466805687",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.06113380382818300777674602403514162293333063862129994577580883143141461309291449306485914272614649978068414425893476579956782663952773353743105418397872605233997",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.08878803051542500217110339334434924954267485145822204215237444066832042342201449328895421528240542750998915463358419423177190869724580813600203304907533769496150",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.1151207227858372377041615624516380471441395538916604796219074617021107342156443154379280995247131911870429201491034651802012913239167575282925093201243934270207",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.004619017722890911933426949570920154076974997985966952349898299246697275278920294449468766195371166320450630507155437679112266151120527577550234953146267746346846",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.009985363213580731684598452693424536966144007683235827538755219286204264978240372859604231867916337416593226187134177726883408557617358014085807110611914379669302",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.01541622688927457576198959023544419565329198757091728713381044991048017196400825175678251322442903185264387084203527741510002903985962222887627118234579269283556",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.02085644761593070959167649371296345727882456495512148654680084481114685540732222408887659241214212106939544554063588767353698335714242397753496983830092408404455",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.01789307324725330767014603158578719970928615654097501613191300998312557223371565997656904560492148142979865658386256690510922919389965745373513610030349767102545",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.03543639501888365378291082781029172764301764679874706574804097799589048382363231602634414122949177230495250536740197222905811287785922594431640841013281537179997",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.05220360795459694133123517687593217297173497752604485810025842068284027354733100088851080679958059079552145245671575076837419056170684901770192689831398759857120",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.06845909258941461291750198925449666595751380870832155764157075202000713274942999227055255916099309947188446285339905304988093738636342047181633081269692613661196",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.002362972712102286229167689844546526384595297891467442701136439187978073653696020847457740017817684484482158236214096758436300506951865759064649726729861945908439",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.004847519692049761950207398531291840452678815528721554685735780135328857087368848372252071604860226265787769072086814680433390934221459689096646712325161427162572",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.007314959654831622164807757255813830021945618189409810738640170689392702055844176967243865112283743575966162482248046108790677503488696776716479274580603174610583",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.009776070957833119510137648884822739686797760671929664331341671830739258210274007951782661257765053625025221806214672221116200337614585845959992854131226704702842",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.01114978652003538783600982559124723329014565342788500887959822146072289690427783078463316909490730949319343375319269727600089781019019003830743785613644345322024",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.02221480504509959387503840594151453791464651941974827298245586881053215706767985279944080229583745665578371695377901403248996041890207212399089080439045568584668",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.03294955873023695791909933870141688722161592769138691219737374665132485299948806534193709526893094404935711181603986897558891126053874220040586123320624400574006",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.04350447397882636471946670944823542989282244774331789901106216285520316484023483710402770615294861725533783538010760896236092825729564641720444342700089811288673",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.0006993961559488191230412895197155399693750545547547727038139907144759438195592550567616094030309691905913644516345380705914438340350602542746142129129568033191088",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.001460140854480638234287302207745549467952824986511939731633269687819258766488166074628001328848512072945192472807167646961498223229982888105018563021391738058248",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.002232553144853886777627998247947323513182557330648144200532378753044037243804576760408469708943790680487724995455354382536206589710913891924084491761726736260741",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.003006212248743596977510897191057715442030945445760786462266908103779399102246991369495363664654413753228927011105085400549832102803312439011389586427526662605176",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.009527205498697206088008257172224931512387363225068397582951651659759400554502631779712149788994351922901657860787510423934518649320102073768915792214256707277156",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.01892209925568496104456608480871604966106655363142569962049519352527542700024393354650523195471338845293075414146665905512626278741955736733089096058938285437890",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.02806125558688211678339421840947712602806899725142490963194183033898781311600361890400763730381438818746124201666074852967279011850030496974060212402694940182093",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.03709900030141506796579677348303286988969241688793176557731927735219547057206187655331797046413932762938418830582155715511961784109440844426746645201390704416803",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.002670304105466683513422946851086405136960259896339280918194472829822071027773825953168388293757436786898096167994795013975834647162291856312718412808562821524398",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.005383033859264799410746857850878171422681433561941817829021970012758676946853559703799592281283459468271115441689124245991561903937884512676892246307468599701691",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.008053331681962981637313483258953887591824762244176947870207799538817121362599372997682630744012846511747145053924414866019565522463468916577593303655777423580374",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.01071669978580100770070698689485578878011142176639207427751278602371957347171447397942008477911177082092226858681487692280419366196345841466925530673423535943661",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.01114978652003538783600982559124723329014565342788500887959822146072289690427783078463316909490730949319343375319269727600089781019019003830743785613644345322025",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.02221480504509959387503840594151453791464651941974827298245586881053215706767985279944080229583745665578371695377901403248996041890207212399089080439045568584681",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.03294955873023695791909933870141688722161592769138691219737374665132485299948806534193709526893094404935711181603986897558891126053874220040586123320624400574003",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.04350447397882636471946670944823542989282244774331789901106216285520316484023483710402770615294861725533783538010760896236092825729564641720444342700089811288678",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.0006993961559488191230412895197155399693750545547547727038139907144759438195592550567616094030309691905913644516345380705914438340350602542746142129129568033191085",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.001460140854480638234287302207745549467952824986511939731633269687819258766488166074628001328848512072945192472807167646961498223229982888105018563021391738058249",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.002232553144853886777627998247947323513182557330648144200532378753044037243804576760408469708943790680487724995455354382536206589710913891924084491761726736260739",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.003006212248743596977510897191057715442030945445760786462266908103779399102246991369495363664654413753228927011105085400549832102803312439011389586427526662605181",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.009527205498697206088008257172224931512387363225068397582951651659759400554502631779712149788994351922901657860787510423934518649320102073768915792214256707277154",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.01892209925568496104456608480871604966106655363142569962049519352527542700024393354650523195471338845293075414146665905512626278741955736733089096058938285437893",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.02806125558688211678339421840947712602806899725142490963194183033898781311600361890400763730381438818746124201666074852967279011850030496974060212402694940182086",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.03709900030141506796579677348303286988969241688793176557731927735219547057206187655331797046413932762938418830582155715511961784109440844426746645201390704416794",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.002670304105466683513422946851086405136960259896339280918194472829822071027773825953168388293757436786898096167994795013975834647162291856312718412808562821524398",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.005383033859264799410746857850878171422681433561941817829021970012758676946853559703799592281283459468271115441689124245991561903937884512676892246307468599701694",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.008053331681962981637313483258953887591824762244176947870207799538817121362599372997682630744012846511747145053924414866019565522463468916577593303655777423580375",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-ADJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.01071669978580100770070698689485578878011142176639207427751278602371957347171447397942008477911177082092226858681487692280419366196345841466925530673423535943663",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.007691657643442771151329144969034486049719510793347770911444516614752403860461047807193209096018161953241370061798891087514377797733882373026173090438773457789466",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.01532238653420157069042950076945620052465445836053155698824794373399033791269170616212456190994342945034493838050048428185768714822369600608049450785223881234060",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.02277305895464632715351854584641330559781950822209474565767065641241109769365265105060247813132183766374648747237792290553794156179819675708352978911787752419686",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.03014210309189951005618700471523170907197874931975833526366480004089807157084473562770086275555191757310522943706284817181326383726302708700555663096371984616425",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.0000977421118576043993583282399734887000210719360066867991920558526850541066139197079344691335879289265572926629751403454321967568292482759258197330336734577531550",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.0002446664891711064558558851599511678545355303912913033514360181420658880350110292815266578071076386528541238567988130954557985316062266569720180557485909218301604",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.0003968537302797929809996918806385997182145479984966627774017176391411624016675339615409861975525872236402147881998259882425305340652064962424445988638465208080838",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.0005532766816416250980751080016830082004448766427669005767131586274460064944692015755918937522524955416963637788141710924002275090908970321808891432413059531890140",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.02517643788036841660997368590844377123844554250146952525475690905398349857266845695463084262786572576973331895894442766510689388344496738644769325014211770959052",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.04938756007048700197810874393214754673052186402405991789155575718287316528289385363428535527263752088883841625913097250404189780773686055610611515173744002681820",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.07218158306373973820603379244163097339128849818441335963957354346714783859110762551756377169134260288363184291538258005593922723033086544415469384712162074147792",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.09403375794275957872950832598355400857684103711766718094120303861713268387109535477752660865462948045973352659393348067039914955775147793192524988781293620969915",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.0005577171633869954095640691924304703360052400288344814523474816903104366407994717709236632193147249161645286052535938733036606857665884224208338354046485338047930",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.002507744519101054552157190699104541379647950001591847969773058009679189814809823726044703685276020710756782871477854595306343592589172616310472698125812997580332",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.004677977679670002166827305055377324613217476405114724469848785745107356118744255588281694246457284195067217936006742059933627992712677331421974123141720603376352",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_ANY-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.006846877835471905237379143613818303190479922918418040264878537723846029690624316312678994566759394847550904657110582405382135456454738674333943413901484493931320",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.003442295985356013830343326443904854292179015055005281698605857091809497751602302752339948250966424120511550295780667228437362480229436559010192457345225000243394",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.006877401430435150549520440914655069899048636890555498657765831232351552218343785443017216249840395053811615844873305332485821847192188972297034907365677484015426",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.01027323672623848671401882559902811573972255181869938681782617582450596531029693107281354661736756734076466016693400174040723631532040430782398474784487648808948",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.01365657724618667539352707519360777273824087719597726332897477879994530180476892769050144395442598411050350365413145694029860498062513108722756135170189632036577",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.00002560438529535569820277529118580768636634441764620111561361272931728788078506110301389803329521466511322198369126153471964959090581966964543300180979211255766246",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.00005740562420222168933629036536402013370010789484563703570514052628056220531004595953385465606781504652680241194775335867630745126791623390674290651635068410653683",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.00009095969407225386487437489071889976969997848858838837804559551904004243058885169884201824487065127282081615695820437776602400192133597283841259031857802393725858",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.0001251792869373128891773970522578136304031540943652786388857043883640373909300486672710744120507115837207962537983722022563085306673461922125246449463571750245444",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.008834384777545818126815749726581004414101584886365710723358167415267789265001200510526781891203089298255025229234776548711961746266417153153943683081256635387373",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.01755291224528988415321622401529143292680212916690096022648897335270041530165160470086803094939701936826136782682498468591273948210246302237115139097456324054370",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.02609020580581202766051545466529664306024933507753403050538363136313598730239107136795644279650145958389243974540240486917260423448427382162806517819732831772779",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.03450888017448605016679576019132569374855359518446155456069561822916092259893019137163032325892696919616447787488351303602173467696913801938052721561802527286550",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.0002015327095620627453105414365377954400032793482427276484408703504295585530823119382381824634676103844644513707113369254150518738217899200693728396848854808289021",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.0005337791199376852359520823668326769473426706588613234686076619531140400808781674805236490745929292627119691615173829085555134489997581117559949223611492726374403",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.0008953882536439133701739120343493971689317828290183291054701870005005624235171920982145936582845436467266524911464510289608964894815570801803044818281038899254153",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.001258127780367973367942676063855982214448621863142099194184759021952017530370114915146557645250632613829864746388686210020706935791670276958933943210891519719534",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.003442295985356013830343326443904854292179015055005281698605857091809497751602302752339948250966424120511550295780667228437362480229436559010192457345225000243393",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.006877401430435150549520440914655069899048636890555498657765831232351552218343785443017216249840395053811615844873305332485821847192188972297034907365677484015428",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.01027323672623848671401882559902811573972255181869938681782617582450596531029693107281354661736756734076466016693400174040723631532040430782398474784487648808955",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.01365657724618667539352707519360777273824087719597726332897477879994530180476892769050144395442598411050350365413145694029860498062513108722756135170189632036565",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.00002560438529535569820277529118580768636634441764620111561361272931728788078506110301389803329521466511322198369126153471964959090581966964543300180979211255766246",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.00005740562420222168933629036536402013370010789484563703570514052628056220531004595953385465606781504652680241194775335867630745126791623390674290651635068410653682",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.00009095969407225386487437489071889976969997848858838837804559551904004243058885169884201824487065127282081615695820437776602400192133597283841259031857802393725860",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.0001251792869373128891773970522578136304031540943652786388857043883640373909300486672710744120507115837207962537983722022563085306673461922125246449463571750245442",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.008834384777545818126815749726581004414101584886365710723358167415267789265001200510526781891203089298255025229234776548711961746266417153153943683081256635387369",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.01755291224528988415321622401529143292680212916690096022648897335270041530165160470086803094939701936826136782682498468591273948210246302237115139097456324054374",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.02609020580581202766051545466529664306024933507753403050538363136313598730239107136795644279650145958389243974540240486917260423448427382162806517819732831772775",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.03450888017448605016679576019132569374855359518446155456069561822916092259893019137163032325892696919616447787488351303602173467696913801938052721561802527286564",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.0002015327095620627453105414365377954400032793482427276484408703504295585530823119382381824634676103844644513707113369254150518738217899200693728396848854808289020",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.0005337791199376852359520823668326769473426706588613234686076619531140400808781674805236490745929292627119691615173829085555134489997581117559949223611492726374402",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.0008953882536439133701739120343493971689317828290183291054701870005005624235171920982145936582845436467266524911464510289608964894815570801803044818281038899254156",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISJ_FORM-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.001258127780367973367942676063855982214448621863142099194184759021952017530370114915146557645250632613829864746388686210020706935791670276958933943210891519719535",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-FORM_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-NEUTRAL",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-NEUTRAL",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-NEUTRAL",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-NEUTRAL",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-NEUTRAL",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-NEUTRAL",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-NEUTRAL",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-NEUTRAL",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-NEUTRAL",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-NEUTRAL",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-NEUTRAL",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-NEUTRAL",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.007691657643442771151329144969034486049719510793347770911444516614752403860461047807193209096018161953241370061798891087514377797733882373026173090438773457789466",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.01532238653420157069042950076945620052465445836053155698824794373399033791269170616212456190994342945034493838050048428185768714822369600608049450785223881234061",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.02277378831475987102397880285919750215139374133651250905376696819027897086304493359008222080589486170880957189436803273203268750673144565171380272980968572220580",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.03014336987543134481771224305693855830038177929293244469743843290474027091605069564665913901105515457446624201557226629513242831971200548760876380135991165799809",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.002743957995890977494914042748235760438153689225872819090636941061435824940015203151761901703123593330567582302023190733475933758331855751457218519709889033106529",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.005482278289829611481167245885083118762834823887606066614222706773363491891425378524171007033648096797075402826093166506789618427916460464455725520734701103495889",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.008188629588858748099090652468214129759338548444236565676830953874908487343918099856234928446551402577453207382023545124273388253774349493022888405596597474317489",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.01087497006411811000214243024006836379102493506076947588185634743338458848149799291551334116088919862944783045678399738594869542201742501191133835004526476713717",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.02517643788036841660997368590844377123844554250146952525475690905398349857266845695463084262786572576973331895894442766510689388344496738644769325014211770959052",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.04938756007048700197810874393214754673052186402405991789155575718287316528289385363428535527263752088883841625913097250404189780773686055610611515173744002681820",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.07217192995588890030518175023879580587931869189872330679843289761062272089759342476117513557368731841154084606002762440995752143221029468011679117886618862300238",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.09401485410679875701902643092490876964941594910894763179818875761083271826015453543066201960850543652546212122563909349564102165126963001176712140087370318740503",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.01281329623427188917911340311901715497689642908151778185864565558215074903731699927985486600990099347472601833552701479632055715737926162808658585454650548155142",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.02543897027161265409385730127210880412702096862708602314553657266395484398708346450459404095320011074099493784527454652773571846416344122079066241522383527580874",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.03762848305537068568644999372639555256405743182890446989858135983012151700830958517499786217051263149237338800681812246241193661349393627623559170688483720297177",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_ANY-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.04950273028754665210390866758574912958963891442421390488518610567512811878719136984098102220289267090377639251067759446051472060587093314065107526441687812509106",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.003232390113007367827943764019106415123582162347661868254654798885423005301226774089132404640792723707626401284030582219592936921286198836567475828844293679725922",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.006459169863964260430410786045851646891354916056438984475748199852902162544748816579644544855076165170568733027304456271891713616326865793745125581372980908310440",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.009644608670795010946846839540035322594220925120036054377325008041181682914459403102745820513958135590349262270525122537543410152056153804905594705097910754952454",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.01281591203481556744670972755265305447964334148721799413555106532242572281968240647390878085963820516342805985401069370248300405436828238805569870437815009216901",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.0007126076621074090819634060434746491762479855237564343649080367184743514986987149139416956141589066189660687513043965394470347440541022241227126828525155071758176",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.001424740336591589418366024895970121521447062120904210270259793559847817902939898400440961984903241262030561088163864526059708789705504401055849278354515069834806",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.002131385177242376472663634138682956549426774468077861936374078829944890716905852217561530374076942302276488532424340054586337578769887634103086910510697773892739",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.002835796927731669227742806193699771514030838343591890868223683567805784028543337382899699173427653652812695454355231150042627022566631288978171038811173147139261",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.009858014605610722925933689522114355329136995637214947192928036082552998068622997701887487020338021145228757771303644890189988029519571202378431896885511417814418",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.01959138465469090498814011502607817338889110714321189804829589998593021900738791524551255967418151034984057869854836200962332426249211324727567544278457460932077",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.02904847837978368632536717295332559279797699232425581553418778875920154640904285923551123032577433143665579787430708940968146024536740049916282011622732381785059",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.03835015149065124770226754469377059156260157857179272216162947517089567417531843586265648489646743078076641944367560359198855820050585415251553582308977622354963",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.004539876853374661380374651527818704322393454443699762767496326978355676672173027373089313725856759855361802775581032923396713451882149317918556003346914144989250",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.009057040698649561454315065088755133394642356054377867132874601226768623113036345954734490037704286323178861771851038526085944933717767624982563074530812422152536",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.01349450790725559550628265912689797877074219249189193159488727986394786895813432583229593444871424337119674628941215930853863694209686205044049599385179900589644",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.01788895649809898898601044477168236000554777652831951492825669815596401483888603784607775381109154908566692654136257958600884730480903948866485762405678271855631",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m025",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.003232390113007367827943764019106415123582162347661868254654798885423005301226774089132404640792723707626401284030582219592936921286198836567475828844293679725918",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.006459169863964260430410786045851646891354916056438984475748199852902162544748816579644544855076165170568733027304456271891713616326865793745125581372980908310431",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.009644608670795010946846839540035322594220925120036054377325008041181682914459403102745820513958135590349262270525122537543410152056153804905594705097910754952456",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m025",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.01281591203481556744670972755265305447964334148721799413555106532242572281968240647390878085963820516342805985401069370248300405436828238805569870437815009216889",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m025",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.0007126076621074090819634060434746491762479855237564343649080367184743514986987149139416956141589066189660687513043965394470347440541022241227126828525155071758178",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.001424740336591589418366024895970121521447062120904210270259793559847817902939898400440961984903241262030561088163864526059708789705504401055849278354515069834806",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.002131385177242376472663634138682956549426774468077861936374078829944890716905852217561530374076942302276488532424340054586337578769887634103086910510697773892738",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m025",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.002835796927731669227742806193699771514030838343591890868223683567805784028543337382899699173427653652812695454355231150042627022566631288978171038811173147139258",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 11,
+      "reachable_words_Kpi": 11,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m4",
+      "exact_equal": true,
+      "projection": "graph_class",
+      "reachable_words_H": 28,
+      "reachable_words_Kpi": 28,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 84,
+      "reachable_words_Kpi": 84,
+      "word_JS": "0.009858014605610722925933689522114355329136995637214947192928036082552998068622997701887487020338021145228757771303644890189988029519571202378431896885511417814414",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 244,
+      "reachable_words_Kpi": 244,
+      "word_JS": "0.01959138465469090498814011502607817338889110714321189804829589998593021900738791524551255967418151034984057869854836200962332426249211324727567544278457460932074",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 728,
+      "reachable_words_Kpi": 728,
+      "word_JS": "0.02904847837978368632536717295332559279797699232425581553418778875920154640904285923551123032577433143665579787430708940968146024536740049916282011622732381785071",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m4",
+      "exact_equal": false,
+      "projection": "graph_class",
+      "reachable_words_H": 2156,
+      "reachable_words_Kpi": 2156,
+      "word_JS": "0.03835015149065124770226754469377059156260157857179272216162947517089567417531843586265648489646743078076641944367560359198855820050585415251553582308977622354956",
+      "word_length": 6
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 7,
+      "reachable_words_Kpi": 7,
+      "word_JS": "0",
+      "word_length": 1
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m4",
+      "exact_equal": true,
+      "projection": "edge_count",
+      "reachable_words_H": 12,
+      "reachable_words_Kpi": 12,
+      "word_JS": "0",
+      "word_length": 2
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 22,
+      "reachable_words_Kpi": 22,
+      "word_JS": "0.004539876853374661380374651527818704322393454443699762767496326978355676672173027373089313725856759855361802775581032923396713451882149317918556003346914144989252",
+      "word_length": 3
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 40,
+      "reachable_words_Kpi": 40,
+      "word_JS": "0.009057040698649561454315065088755133394642356054377867132874601226768623113036345954734490037704286323178861771851038526085944933717767624982563074530812422152539",
+      "word_length": 4
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 74,
+      "reachable_words_Kpi": 74,
+      "word_JS": "0.01349450790725559550628265912689797877074219249189193159488727986394786895813432583229593444871424337119674628941215930853863694209686205044049599385179900589642",
+      "word_length": 5
+    },
+    {
+      "clock": "pair-event epoch",
+      "controller_id": "I0-SAME_FORM-m4",
+      "exact_equal": false,
+      "projection": "edge_count",
+      "reachable_words_H": 136,
+      "reachable_words_Kpi": 136,
+      "word_JS": "0.01788895649809898898601044477168236000554777652831951492825669815596401483888603784607775381109154908566692654136257958600884730480903948866485762405678271855633",
+      "word_length": 6
+    }
+  ]
+}

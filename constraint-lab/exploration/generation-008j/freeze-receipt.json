@@ -1,0 +1,21 @@
+{
+  "round_id": "J0",
+  "frozen_analysis_plan_commit": "b27d102e2581c7e57e18861ce604ab1469888880",
+  "plan_hash": "f0085cb8dd856b5e31db6f4a33a47ae87be6073baf8e872a4bfe8ba8d8fef7a4",
+  "plan_file_sha256": "831efd32224be496f66bea07760943d53c77415d7e94a98e20a9283bbe510ac2",
+  "push_verified": true,
+  "actual_A_C_target_word_analyses_pre_freeze": 0,
+  "allowed_exposure": [
+    "neutral words",
+    "synthetic HMM fixtures",
+    "published 8I scientific inputs",
+    "user-predeclared symbolic framework",
+    "positive support work counts"
+  ],
+  "pre_freeze_untested_mechanism_candidate": "P9: SAME coordinate symmetry may permit low-order edge-count closure; no target word arithmetic or result observed",
+  "focused_tests": {
+    "passed": 11,
+    "skipped": 3
+  },
+  "operator": "cello"
+}
