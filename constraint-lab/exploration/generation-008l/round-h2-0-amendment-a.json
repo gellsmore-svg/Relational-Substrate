@@ -1,0 +1,292 @@
+{
+  "amendment": {
+    "equivalence_required": "Exact equality of all twelve original result payload hashes",
+    "id": "A",
+    "original_frozen_plan_commit": "6f00fcdb07fc0e8323f8b6360fdc59960be7dcb4",
+    "original_output": "constraint-lab/reports/items/generation-008l-h2-0",
+    "original_plan_hash": "b7670bbdac76fb29da687d60c6c5c7c74bf32277d8458442b0bcad947575f7de",
+    "reason": "Type-sensitive cache keys preserve strict integer/None history validation after valid cached calls.",
+    "valid_state_scientific_change": false
+  },
+  "analysis_version": "generation-008l-history-depth/v2-validation",
+  "calibration_sha256": "82693c1bb8b820c160aa1a669e3eea28cfcff06483a4395e37c9129d371d2732",
+  "clock": "pair-event epoch",
+  "compiler_class": {
+    "allowed": [
+      "arbitrary positive K",
+      "arbitrary positive rule cardinality J"
+    ],
+    "equivalence": "all reachable history-conditioned ordinary future rows, one common fixed law",
+    "forbidden": [
+      "hidden state",
+      "persistent random seed",
+      "time phase",
+      "history alphabet enlargement",
+      "recoding h1",
+      "changed clock",
+      "changed support",
+      "changed observation",
+      "per-history program"
+    ],
+    "initial_law": "common deterministic empty X and sentinel; structural claims arbitrary reachable augmented starts",
+    "state": "exactly (complete ten-bit X, most-recent pair identity h1)",
+    "unrestricted_augmentation": "36-valued encoding allowed at raw kernel level but outside semantic H1"
+  },
+  "controller": "SECOND-RECENT: only pair e=h2 receives m, unavailable h2 neutral",
+  "engineering": {
+    "disk_budget_bytes": 64000000,
+    "estimated_total_seconds": 180,
+    "neutral_total_seconds": 2.3466177939990303,
+    "numeric_threads": 1,
+    "on_unexpected_result": "retain failed envelope, stop interpretation, explicit frozen amendment if required",
+    "per_item_watchdog_seconds": 120,
+    "resume": "complete hash-valid matching envelopes only; never replace valid completed items",
+    "workers": 1
+  },
+  "estimands": [
+    "full/pair path probability, ten-bit endpoint identity, same h1, changed h2, support/baseline/constraints identity",
+    "full/pair row gaps and JS; exact strict-H1 contradiction; mechanically classified shape laws and equal count laws",
+    "2304 sparse recurrent states, six outgoing events each; row/column balance, uniform stationarity and marginals",
+    "communicating classes/period; label covariance under all 24 vertex permutations",
+    "raw full-event absorption for three pair masks, five histories including sentinel, all 16 triad masks",
+    "generic exact mask refinement, reverse enumeration, memberships, chronology, compact merge obstruction schemas",
+    "stationary event adjacent/lag-two joints; exact adjacent independence, lag repetition and 160-digit MI",
+    "stationary material triples/quadruples; independent three-forward-step construction versus backward history reconstruction",
+    "exact pair-mask order-two conditional null, order-three conditional information and sufficiency, positive failure witness",
+    "stationary one-step material equality to H0 and stationary triple equality; no full-clock order assignment",
+    "symbolic even/odd slot-chain factorisation; no new initial-history decay study"
+  ],
+  "experiment_id": "generation-008l-history-depth-two",
+  "externally_predeclared_expectations_not_algorithm_inputs": {
+    "adjacent_nulls": "exact",
+    "event_slot_order_non_neutral": 2,
+    "lag_two_repeat": "m/(m+5)",
+    "neutral_refinement": [
+      64
+    ],
+    "non_neutral_refinement": [
+      64,
+      384,
+      2304
+    ],
+    "pair_mask_order_non_neutral": 3,
+    "uniform_stationary": "1/2304"
+  },
+  "grades": [
+    [
+      "m025",
+      "1/4"
+    ],
+    [
+      "m1",
+      "1"
+    ],
+    [
+      "m4",
+      "4"
+    ]
+  ],
+  "history": {
+    "depth_not_alphabet": "two prior pair slots, not one arbitrary 36-valued H1 symbol",
+    "initial": [
+      null,
+      null
+    ],
+    "pair_update": "(h1,h2)'=(e,h1)",
+    "triad_update": "identity"
+  },
+  "information_unit": "nats",
+  "input_sha256": {
+    "constraint-lab/exploration/generation-008l/amendment-a.md": "72c0c3aeafe24ed2e3bf4b0ed41312a4ddc7eda11e6c13a220e12cf4fc12da4d",
+    "constraint-lab/exploration/generation-008l/charter.md": "fa0faa494133f50ac410b38a2a73ecd0710ab63eb4c53d9d722d43c94c81bb39",
+    "constraint-lab/exploration/generation-008l/predeclared-expectations.md": "75e8efd5da8b75db6039c4538623d8b33b9484f1f881eac07aa17efa180ed1da",
+    "constraint-lab/provenance/prompts/008L-v0.8l-agent-input.md": "5808e05877dfa8587737e10dba0c41b85ce4745e7388635c57ade8389071b340",
+    "constraint-lab/tests/test_v08l_plumbing.py": "ded268a9195d9cfba7b5ce8c2dab6925870c651897063b6bf3ef68985d1d80ed"
+  },
+  "items": [
+    {
+      "grade": "m025",
+      "item_id": "H2-WITNESS-m025",
+      "kind": "witness",
+      "m": "1/4"
+    },
+    {
+      "grade": "m1",
+      "item_id": "H2-WITNESS-m1",
+      "kind": "witness",
+      "m": "1"
+    },
+    {
+      "grade": "m4",
+      "item_id": "H2-WITNESS-m4",
+      "kind": "witness",
+      "m": "4"
+    },
+    {
+      "grade": "m025",
+      "item_id": "H2-KERNEL-m025",
+      "kind": "kernel",
+      "m": "1/4"
+    },
+    {
+      "grade": "m1",
+      "item_id": "H2-KERNEL-m1",
+      "kind": "kernel",
+      "m": "1"
+    },
+    {
+      "grade": "m4",
+      "item_id": "H2-KERNEL-m4",
+      "kind": "kernel",
+      "m": "4"
+    },
+    {
+      "grade": "m025",
+      "item_id": "H2-REFINEMENT-m025",
+      "kind": "refinement",
+      "m": "1/4"
+    },
+    {
+      "grade": "m1",
+      "item_id": "H2-REFINEMENT-m1",
+      "kind": "refinement",
+      "m": "1"
+    },
+    {
+      "grade": "m4",
+      "item_id": "H2-REFINEMENT-m4",
+      "kind": "refinement",
+      "m": "4"
+    },
+    {
+      "grade": "m025",
+      "item_id": "H2-TEMPORAL-m025",
+      "kind": "temporal",
+      "m": "1/4"
+    },
+    {
+      "grade": "m1",
+      "item_id": "H2-TEMPORAL-m1",
+      "kind": "temporal",
+      "m": "1"
+    },
+    {
+      "grade": "m4",
+      "item_id": "H2-TEMPORAL-m4",
+      "kind": "temporal",
+      "m": "4"
+    }
+  ],
+  "logarithm": "natural",
+  "mode": "A",
+  "ontology": {
+    "G": 0,
+    "H_pair": 2,
+    "L": 0,
+    "N": 4,
+    "O": 3,
+    "S": 0,
+    "hypergraph": "independent"
+  },
+  "parent_commit": "e81e7d5f67fa00f1d629f8bd4b365352d25c9eb1",
+  "plan_hash": "df27a5078059fbea70836727023b03fa10cde7ccf8e09b8791c8bf1a5193b8d2",
+  "planning_coherence_scope": "Original frozen H2-0 planning ledger; excludes pending post-result updates",
+  "planning_coherence_sha256": "c55329ecb00587172c13a0b073b72328fa33614d24b179c5c1c5da836667f94f",
+  "pre_freeze_exposure": {
+    "amendment_A": "All twelve original items are known; validation-only replay is not blind.",
+    "original_H2_0": {
+      "historical_tests_run": [
+        "constraint-lab/tests/test_v08k.py"
+      ],
+      "initial_test_issue": "neutral decimal-zero formatting assertion; corrected to numerical equality before calibration",
+      "neutral_measurements": [
+        {
+          "kind": "witness",
+          "result_bytes": 1476,
+          "wall_seconds": 0.0014767859975108877
+        },
+        {
+          "kind": "kernel",
+          "result_bytes": 179478,
+          "wall_seconds": 0.24623712000175146
+        },
+        {
+          "kind": "refinement",
+          "result_bytes": 11229,
+          "wall_seconds": 0.30709989900060464
+        },
+        {
+          "kind": "temporal",
+          "result_bytes": 740324,
+          "wall_seconds": 1.7918039889991633
+        }
+      ],
+      "new_N4_non_neutral_H2_target_executions": 0,
+      "numeric_threads": 1,
+      "plumbing_tests": "test_v08l_plumbing.py: neutral N4 and multiplier-two three-slot synthetic only",
+      "prior_knowledge": "Prompt 008L and 8K symbolic H2 design; existing H1 information magnitudes; not independent discovery",
+      "workers": 1
+    }
+  },
+  "precision_decimal_digits": 160,
+  "prompt_id": "008L",
+  "round_id": "H2-0",
+  "source_sha256": {
+    "constraint-lab/src/rs_constraint_lab/coherence.py": "a99d65438d3d332b7331d9b108f28a31e42228197f5d4d74956ec967ad8b9c2e",
+    "constraint-lab/src/rs_constraint_lab/durable.py": "3b5c705847c7b2a15b9e66a74d34fa1c2a333abf2cc5cf6fb15f0c79f9e1ae41",
+    "constraint-lab/src/rs_constraint_lab/exact.py": "ec8976dc3f10dac6842bccce0669382deb85fb2d1c16082ad30cf19a7e18efb1",
+    "constraint-lab/src/rs_constraint_lab/explore08.py": "457a993ba7cfc0b66c9805d700871dc39abda474d1d7650cd23dbe148343a5ec",
+    "constraint-lab/src/rs_constraint_lab/gen008i_predictive_exec.py": "c35240c6184e57a733cfc8427637d38962430183877bb5317eaf42b353a74347",
+    "constraint-lab/src/rs_constraint_lab/gen008l_exec.py": "883dde15192de286734e3e4800d62de8c85ad5230d16ca6f35609a4a13beda5a",
+    "constraint-lab/src/rs_constraint_lab/graphs.py": "78381488bacebc1a8b2719a3fb9b342811af724950d75a1f463784aee0f5a287",
+    "constraint-lab/src/rs_constraint_lab/history.py": "ffe2b960828b6c1143cb20d1dd5d2df18533f52de1346cc7e9936f3285444048",
+    "constraint-lab/src/rs_constraint_lab/history_depth.py": "9acf2d7c5ff4f691e34a26fdb4694d48819d04df38a51eaca5670eb2c3e95d1d",
+    "constraint-lab/src/rs_constraint_lab/memory_clocks.py": "edd18c5734c3a7b42c3801747a864f0f5e5f1cf9594ef74d0a98530426b5644a",
+    "constraint-lab/src/rs_constraint_lab/predictive_state.py": "a937126fbdc871e5f1b85da3a0c19f641a63bf1bfa61216a7778f34deebc552b",
+    "constraint-lab/src/rs_constraint_lab/refinement.py": "8a750b2fe0974bf3f8569ff748dcd117a7214a4f28c93ef2ba20eee2a3ca2a14",
+    "constraint-lab/src/rs_constraint_lab/state.py": "a5132429fa8697b5b3f98d985516356d9e997b32ca90b05c19a96e7fc726108c"
+  },
+  "tolerances": {
+    "conditional_independence": "exact",
+    "information_formula_enumeration_gap": "1e-25",
+    "order_sufficiency": "exact",
+    "rational_identities": "exact",
+    "refinement_membership": "exact",
+    "row_sums": "exact",
+    "stationary_residual": "exact",
+    "uniform_joint_gap": "exact"
+  },
+  "witness": {
+    "A": [
+      "a",
+      "b",
+      "c"
+    ],
+    "B": [
+      "b",
+      "a",
+      "c"
+    ],
+    "a": "01",
+    "b": "12",
+    "c": "23",
+    "start_history": [
+      null,
+      null
+    ],
+    "start_material": 0,
+    "triads": 0
+  },
+  "work_counts": {
+    "atomic_items": 12,
+    "backward_word_terms_per_grade": 13824,
+    "covariance_comparisons_per_grade": 14400,
+    "forward_quadruple_terms_per_grade": 497664,
+    "generic_refinement_runs_with_reverse": 6,
+    "grades": 3,
+    "raw_triad_absorption_rows_per_grade": 240,
+    "recurrent_states_per_grade": 2304,
+    "same_mask_history_pairs_per_non_neutral_grade": 40320,
+    "transitions_per_grade": 13824
+  }
+}

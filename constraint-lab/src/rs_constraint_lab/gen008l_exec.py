@@ -11,8 +11,7 @@ from pathlib import Path
 import signal
 import time
 
-from rs_constraint_lab.coherence import canonical_ledger_bytes
-from rs_constraint_lab.durable import atomic_write_json, canonical_json, read_json, sha256_file, sha256_bytes
+from rs_constraint_lab.durable import atomic_write_json, canonical_json, read_json, sha256_file
 from rs_constraint_lab.explore08 import FrozenPlanError, plan_hash, remote_contains, require_frozen_plan
 from rs_constraint_lab.gen008i_predictive_exec import decode
 from rs_constraint_lab.history import HistoryError, PRECISION
@@ -221,6 +220,9 @@ def load_envelope(root,item,plan,commit):
             or envelope["result_sha256"] != digest(envelope["result"])):
         raise HistoryError("cached H2 item mismatch")
     validate_result(item,envelope["result"])
+    original = read_json(root/ORIGINAL_OUTPUT/(item["item_id"]+".json"))
+    if envelope["result_sha256"] != original["result_sha256"]:
+        raise HistoryError("amendment replay differs from original scientific payload")
     return envelope
 
 
@@ -241,7 +243,9 @@ def publish(root,envelopes,plan,commit):
         "frozen_analysis_plan_commit":commit,"plan_hash":plan["plan_hash"],"plan_file_sha256":sha256_file(root/PLAN),
         "item_sha256":{OUTPUT+"/"+e["item"]["item_id"]+".json":sha256_file(root/OUTPUT/(e["item"]["item_id"]+".json")) for e in envelopes},
         "table_sha256":hashes,"timings":{e["item"]["item_id"]:e["wall_seconds"] for e in envelopes},
-        "atomic_items":12,"precision_decimal_digits":PRECISION,"new_non_neutral_H2_pre_freeze_executions":0,
+        "atomic_items":12,"precision_decimal_digits":PRECISION,
+        "original_H2_0_non_neutral_pre_freeze_executions":0,
+        "amendment_prior_target_exposure":"All twelve original H2-0 results known; not blind",
         "stochastic_scientific_trajectories":0,
         "amendment_A": "Validation-only replay; all original scientific result hashes must match",
     }
