@@ -57,3 +57,13 @@ information not determined by ordinary current x. K describes simultaneous
 current-state expression complexity, J the feature count, and L dynamical
 constraint structure. S=L=0 remain in H0; compiling h to a future S variable
 would be a declared representation change.
+
+## Generation 8K synthesis notation
+
+The historical tables above remain unchanged. The synthesis audits collisions
+explicitly in [state-taxonomy.md](state-taxonomy.md): T is the kernel;
+Pi_Y and widehat-Pi_Y are the observation partition and its coarsest strong
+refinement; B_t is its current block. X,H,Z,Y retain distinct declared roles.
+Candidate constraint state is eta. A compilation class is mathfrak-A, not C
+(already used for graph classes/constraints). Ent_mu(B), if needed, distinguishes
+entropy from history H. No existing axis or older notation is silently renamed.
