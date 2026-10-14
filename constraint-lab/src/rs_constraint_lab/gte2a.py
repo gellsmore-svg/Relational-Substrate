@@ -553,9 +553,10 @@ def one_way(chain) -> dict:
 # --- one cell ------------------------------------------------------------------------------
 
 
-def analyse_item(item: dict, *, with_trajectories: bool = True, checks: bool = True, on_main=None) -> tuple[dict, dict | None]:
+def analyse_item(item: dict, *, with_trajectories: bool = True, checks: bool = True, on_main=None, families: dict | None = None, round_id: str = ROUND_ID, extra=None) -> tuple[dict, dict | None]:
+    families = families or FAMILIES
     n, mode, family, grade = item["n"], item["mode"], item["family"], item["grade"]
-    components = FAMILIES[family][grade]
+    components = families[family][grade]
     started = time.perf_counter()
     full, kernel_timing = gtkernel.reachable_chain(n, mode, components)
     start = gtobs.start_index(full, n, mode)
@@ -571,7 +572,7 @@ def analyse_item(item: dict, *, with_trajectories: bool = True, checks: bool = T
             start_in = 0
             class_note += "; analysing the unique closed class"
     stat = gtobs.stationary(chain, start_in, cross_check=True) if gtobs.class_regime(chain, start_in)["regime"] == "recurrent" else None
-    result, trajectories = gtobs.analyse(chain, family=family, grade=grade, n=n, mode=mode, families=FAMILIES, item_id=item["item_id"], round_id=ROUND_ID, with_trajectories=with_trajectories and chain is full, stationary_override=stat, start=start_in)
+    result, trajectories = gtobs.analyse(chain, family=family, grade=grade, n=n, mode=mode, families=families, item_id=item["item_id"], round_id=round_id, with_trajectories=with_trajectories and chain is full, stationary_override=stat, start=start_in)
     if stat is not None and not stat.get("resolved") and stat.get("reason") == "zero total rate in the class":
         result["regime"] = "arrested"
         class_note += "; arrested: a state of the class admits no event"
@@ -589,6 +590,8 @@ def analyse_item(item: dict, *, with_trajectories: bool = True, checks: bool = T
         if mode == "HELD":
             block["handover"] = gte1.handover_statistics(gtobs.event_pattern_probabilities(chain, stat["jump"], n, mode))
         block["matched_dissolution"] = matched_dissolution(chain, n, mode, stat["jump"])
+    if extra is not None:
+        extra(block, chain, n, mode, stat if resolved else None)
     block["seconds"] = time.perf_counter() - t0
     result["e2a"] = block
     result["timings"]["main_total"] = time.perf_counter() - started
@@ -596,17 +599,18 @@ def analyse_item(item: dict, *, with_trajectories: bool = True, checks: bool = T
         on_main(result, trajectories)
     if checks:
         t0 = time.perf_counter()
-        block["checks"] = numerical_checks(item, chain, start_in, stat if resolved else None)
+        block["checks"] = numerical_checks(item, chain, start_in, stat if resolved else None, families=families, round_id=round_id)
         result["timings"]["checks"] = time.perf_counter() - t0
     return result, trajectories
 
 
-def numerical_checks(item: dict, chain, start: int, stat: dict | None) -> dict:
+def numerical_checks(item: dict, chain, start: int, stat: dict | None, *, families: dict | None = None, round_id: str = ROUND_ID) -> dict:
     from rs_constraint_lab import gtobs_validate
 
+    families = families or FAMILIES
     n, mode = item["n"], item["mode"]
-    out: dict = {"kernel_sample": gte1.kernel_sample_check(item, chain, start, families=FAMILIES, round_id=ROUND_ID)}
-    out["affinity_reference"] = affinity_reference(item, chain)
+    out: dict = {"kernel_sample": gte1.kernel_sample_check(item, chain, start, families=families, round_id=round_id)}
+    out["affinity_reference"] = affinity_reference(item, chain, families=families, round_id=round_id)
     if stat is None:
         return out
     out["long_double_residual"] = gte1.long_double_residual(chain, stat["jump"])
@@ -614,7 +618,7 @@ def numerical_checks(item: dict, chain, start: int, stat: dict | None) -> dict:
     out["gth"] = {"ct": gte1._law_difference(stat["ct"], law["ct"]), "jump": gte1._law_difference(stat["jump"], law["jump"])}
     pf = partner_frame(chain, n, stat["jump"])["index"]
     out["partner_frame_reference_difference"] = abs(pf - partner_frame_reference(chain, n, stat["jump"]))
-    rng = np.random.default_rng(int(hashlib.sha256(f"{ROUND_ID}:hit:{item['item_id']}".encode()).hexdigest()[:16], 16))
+    rng = np.random.default_rng(int(hashlib.sha256(f"{round_id}:hit:{item['item_id']}".encode()).hexdigest()[:16], 16))
     u = hit_probabilities(chain, horizons=(1, 2, 3))
     worst = 0.0
     for _ in range(12):
@@ -626,14 +630,15 @@ def numerical_checks(item: dict, chain, start: int, stat: dict | None) -> dict:
     return out
 
 
-def affinity_reference(item: dict, chain, samples: int = 120) -> dict:
+def affinity_reference(item: dict, chain, samples: int = 120, *, families: dict | None = None, round_id: str = ROUND_ID) -> dict:
     """Signed affinities of seeded intact squares recomputed from the rule strings with exact Fractions."""
     from rs_constraint_lab.constraints import Choreography
     from rs_constraint_lab.weights import alphabet_factors
 
     n, mode, family, grade = item["n"], item["mode"], item["family"], item["grade"]
     factors = alphabet_factors("W4")
-    choreography = Choreography(0, 0, gte0a.rules_for(family, grade, n, mode, FAMILIES))
+    families = families or FAMILIES
+    choreography = Choreography(0, 0, gte0a.rules_for(family, grade, n, mode, families))
 
     def rate(state: int, e: int) -> Fraction:
         w = Fraction(1)
@@ -642,10 +647,10 @@ def affinity_reference(item: dict, chain, samples: int = 120) -> dict:
                 w *= factors[c.weight]
         return w
 
-    rng = np.random.default_rng(int(hashlib.sha256(f"{ROUND_ID}:affinity:{item['item_id']}".encode()).hexdigest()[:16], 16))
+    rng = np.random.default_rng(int(hashlib.sha256(f"{round_id}:affinity:{item['item_id']}".encode()).hexdigest()[:16], 16))
     states = set(int(s) for s in chain.states)
     E = edges(n)
-    sg = sigma(FAMILIES[family][grade])
+    sg = sigma(families[family][grade])
     worst = 0.0
     checked = 0
     tries = 0
