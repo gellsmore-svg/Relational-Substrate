@@ -1,0 +1,36 @@
+{
+  "fixture": "neutral m=1 only",
+  "measurements": [
+    {
+      "initial_blocks": 64,
+      "projection": "labelled_mask",
+      "result_bytes": 185112,
+      "stable_blocks": 64,
+      "wall_seconds": 0.1424521310000273
+    },
+    {
+      "initial_blocks": 11,
+      "projection": "graph_class",
+      "result_bytes": 22886,
+      "stable_blocks": 11,
+      "wall_seconds": 0.11105265799778863
+    },
+    {
+      "initial_blocks": 7,
+      "projection": "edge_count",
+      "result_bytes": 11316,
+      "stable_blocks": 7,
+      "wall_seconds": 0.11493618699751096
+    },
+    {
+      "initial_blocks": 2,
+      "projection": "parity",
+      "result_bytes": 5592,
+      "stable_blocks": 2,
+      "wall_seconds": 0.1004526930009888
+    }
+  ],
+  "new_non_neutral_variant_target_executions": 0,
+  "notes": "Prior role-grammar 8I and coarse-process 8J quotient/CMI/order results already known; not a blind round.",
+  "prior_related_non_neutral_exposure": true
+}

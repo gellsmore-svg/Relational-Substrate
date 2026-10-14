@@ -354,12 +354,14 @@ def test_8h_preserves_reviewed_artifacts_with_one_recorded_question_status_chang
     assert len([row for row in findings if row["created_generation"] == "008H"]) == 19
 
 
-def test_8h_snapshot_and_formal_links_match_canonical_ledgers():
+def test_8h_snapshot_and_formal_links_match_canonical_ledgers(tmp_path):
     from rs_constraint_lab.coherence import load_ledger, snapshot_text
     from rs_constraint_lab.formal import load_catalog, validate_catalog
 
     directory = ROOT / "constraint-lab/coherence"
-    assert (directory / "snapshots/through-generation-008h.md").read_text() == snapshot_text(directory, title="Through Generation 008H")
+    for name in ("findings.jsonl", "relations.jsonl"):
+        (tmp_path / name).write_bytes(_git_history("show", "ad5b656e26fe66610b583aedccdd34593e13791a:constraint-lab/coherence/" + name))
+    assert (directory / "snapshots/through-generation-008h.md").read_text() == snapshot_text(tmp_path, title="Through Generation 008H")
     catalog = load_catalog()
     assert validate_catalog(catalog) == []
     assert len([row for row in catalog if row["status"] == "ALGEBRAIC_THEOREM" and row["source_generations"] == ["008H"]]) == 10
