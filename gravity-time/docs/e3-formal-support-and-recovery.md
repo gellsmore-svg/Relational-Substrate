@@ -71,6 +71,61 @@ So h(y,e) is a minimum hitting set over e's witness 2-paths: each 2-path is hit 
   - **N=4 FREE is the smallest class with path affinity.** There, the chain has 64 states and two rate parameters (m_f, m_d). A symbolic proof would need the sign of a rational function of (m_f, m_d) over the positive quadrant.
 - **E3A step.** A bounded counterexample search on a frozen 9×9 grid at N=4 and N=5 FREE. A grid without counterexamples is evidence within the grid only.
 
-## 7. Results after E3A (and E3B, if run)
+## 7. Results after E3A and E3B (written after the rounds)
 
-*(Added after the rounds.)*
+**7.1 Support theorems in every executed hard cell [M, O].** T1–T4 were checked in all 8 FREE cells with hard path-formation prohibition (E3A identity S1):
+- the class is irreducible;
+- a release is one-way exactly when the relation is witnessed;
+- one-way releases have gate distance ≥ 2 (observed ≈ 2.00–2.02 on average);
+- two-way releases have gate distance 1.
+
+Gate distances and one-way classifications were recomputed from the rule strings with exact fractions on 25 seeded releases per cell, with no mismatch.
+
+**7.2 Q11, the orientation of one-way release: a reading, not a theorem [O].**
+- Along the existing formation factors 1/2, 1/4, 1/9, 1/16 and 0, the partner index, flux and absence durations of the hard zero lie at the end of the soft ladder: FREE N=5 partner index 0.072, 0.104, 0.112, 0.111, 0.108. The hard mode differs qualitatively only in support.
+- Reading: the hard ban acts as path-formation suppression with σ → +∞ on witnessed formations. With that convention, every E2B/E3A orientation agrees with σ. Opposing dissolution down to soft σ = −log 16 lowers the index to +0.007 but does not reverse it.
+- **No sign law is proved.** The one-way part of the index can be negative while the two-way part is positive (W16).
+
+**7.3 Q12 [O].** No counterexample on the frozen grids:
+- FREE N=4: 72 judged points;
+- FREE N=5: 56 judged points (16 below the 1e-12 floor at saturation).
+
+The obstacle in section 6 stands, and **no proof is offered**.
+
+**7.4 T7, the source-witness floor (derived after E3A; verified in E3B) [M].**
+
+*Statement.* In HELD with source S = {s, s′, s″} held present, every attachment slot (p,s), with p ∉ S, has exactly two path witnesses whose three entities all lie in S: (end = s, c = s′, d = s″) and (s, s″, s′). They are present in every state. Probe–probe and source slots have none.
+
+*Proof.* A path witness of (p,s) needs end ∈ {p,s}, and c, d ∉ {p,s} with c ≠ d. For all three entities to lie in S, end = s, and {c,d} = S∖{s} in either order. Both edges, (s,c) and (c,d), are source edges, which are held present. A probe–probe slot has no endpoint in S. A source slot (s,s′) would need c, d ∈ S∖{s,s′}, a single vertex, so no witness exists. ∎
+
+E3B verified T7 on every reachable state of all 18 cells.
+
+**7.5 T8, the floor is orientation-neutral (derived after E3A; verified in E3B) [M].**
+
+*Statement.* Multiplying every formation (or every dissolution) rate of one slot class by a constant c > 0 changes no cycle affinity.
+
+*Proof.* In a closed cycle every slot is formed exactly as often as it is dissolved. The forward product of a cycle contains c once per formation of a class-slot. The reverse traversal turns every formation into a dissolution and vice versa, so it contains c once per *dissolution* in the forward direction. That is the same number. ∎
+
+*Consequence.* Each path component with factor m multiplies every attachment's formation (path_form) or dissolution (path_dissolve) rate by m² (from T7). This is an occupancy bias that leaves every affinity unchanged:
+- **against** attachment when the component's σ-contribution is positive;
+- **toward** attachment when it is negative.
+
+E3B verified T8 numerically: the largest change of any square affinity is ≤ 1e-12 in all 18 cells.
+
+**7.6 E3B outcome [O].** The neutralised instrument kernel is the original with the floor divided out of attachment rates. **It is not a grammar rule**: it reads scaffold membership and is not label-covariant. With it, every σ > 0 path family gathers above the null at HELD N=5 and 6 in the raw margin, both clocks:
+
+| Cell | N=5, continuous margin | N=6, continuous margin |
+| --- | --- | --- |
+| PATHF weak_suppress | −0.107 → +0.071 | −0.206 → +0.073 |
+| PATHH weak_favour | −0.044 → +0.091 | −0.112 → +0.128 |
+| CWPH | −0.007 → +0.107 | −0.067 → +0.153 |
+| CSPH | +0.046 → +0.123 | +0.009 → +0.177 |
+
+- The handover index stays positive (smaller), and flux changes little.
+- σ < 0 families stay saturated.
+
+**8G compilation note.** Removing the floor *within* label-covariant rules is not possible: a covariant path term acts on all witnesses alike. Removing it with a scaffold-indexed rule is possible, but that rule is not covariant. The covariant alternative is a **different scaffold**: a held structure without internal two-paths, such as a held single edge. That is a scaffold change, not a new primitive.
+
+**7.7 Frozen checks that failed as specified (recorded, not re-run) [methodological].**
+- **K** (kernel unchanged off attachment slots) failed in all 18 cells, because the check divided by zero-weight source-slot entries. A post hoc direct comparison shows the kernels identical off attachment slots (largest difference 0).
+- **C2** (PCOMP unchanged) failed, because the expectation was wrong. For PCOMP the floor scales attachment formation and dissolution equally, so the continuous-time law is unchanged (uniform). But attachments' total rates change, so jump-clock channels move: raw jump margin +0.009 → +0.022 (N=5).

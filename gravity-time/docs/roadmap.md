@@ -132,3 +132,16 @@ The sections above are unchanged.
 - **Results.** The handover's local orientation is an identity, A = σ·Δdeg. The aggregate follows σ in 36/36 cells without one-way transitions. σ < 0 reverses the handover. Soft "enabling" is an opportunity effect. Strict enabling needs hard admissibility and is neither necessary nor sufficient for direction. Hard path-form exclusion gives a one-way release mode that overrides σ.
 - **Recommended next (not run).** The one-way release mechanism (GT-Q11), with an aggregate-orientation theorem attempt (GT-Q12). Source-structure control gained value; FREE N=7 lost value.
 - **Not authorised by GT-P005:** E2C, FREE N=7.
+
+## E3 status (GT-P006)
+
+The sections above are unchanged.
+- **Bridge map.** Written before E3A, revised after it (`docs/foundational-bridge-map.md`).
+- **E3A** (frozen `ab5f341`, results `595f4a7`): release and recovery.
+  - Under hard formation bans nothing is lost, and shortest recovery = 1 + witness hitting set (theorems).
+  - The hard ban sits at the end of the soft suppression ladder.
+  - Persistence of absence comes in two kinds: gate-limited and rate-limited.
+  - No GT-Q12 counterexample on 128 grid points.
+- **E3B** (frozen `1bc7c18`, results `1fbaf5a`; chosen after the E3A reflection `1e5ebc3`): the held triangle's internal witnesses impose an exact, orientation-neutral bias against attachment (T7, T8). With it divided out (an instrument), every σ > 0 path family gathers while keeping its arrow.
+- **Recommended next (not run).** A covariant source-structure control: a held structure without internal two-paths (GT-Q14). Displacement is still undefined (GT-Q15).
+- **Not authorised by GT-P006:** E3C and N=7. Making the scaffold configurable is an architectural change, so it has been requested for authorisation rather than started.

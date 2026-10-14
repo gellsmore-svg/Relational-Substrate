@@ -160,6 +160,72 @@ graph LR
 
 ---
 
+## 8. Revision after E3A and E3B (GT-P006; the baseline above is unchanged)
+
+### 8.1 What changed
+
+| Baseline entry | Revision | Evidence |
+| --- | --- | --- |
+| B8 One-way release: "observed; orientation unexplained" | Its orientation, flux and absence durations lie at the end of the soft formation-suppression ladder. Only the support topology is qualitatively new: one-way edges, recovery path of length 2, zero direct recovery | E3A R1; GT-F54 |
+| B9 Recovery: "kinetics unmeasured" | Measured. Witnessed releases stay absent longer. Two mechanisms: **gate-limited** (hard: a witness must be broken first) and **rate-limited** (soft: direct but slow). Metastable holes in saturated cells | E3A R1–R4; GT-F55 |
+| B10 Source as witness: "hard" | Also **soft**, with an exact constant floor of m² on every attachment's rate. The floor is orientation-neutral (T7, T8) | Formal note 7.4–7.5; GT-F56 |
+| **B12 → P8 "contradicted"** | **Revised to "scaffold-confounded".** With the floor divided out (a counterfactual instrument), every σ > 0 path family gathers above the null at HELD N=5 and 6 while keeping its arrow. The non-gathering of the direction-carrying rules was largely produced by the held triangle's internal paths | E3B; GT-F57 |
+| B3 → B4 (aggregate follows σ) | Unchanged: no proof. 128 further grid points without a counterexample. The hard ban fits as σ → +∞ | E3A R6; GT-F58 |
+| P1 Reference structure | A source's *internal structure* participates in the dynamics. A held triangle supplies witnesses; a held structure without internal two-paths would not | Formal note 7.6 (8G note) |
+| P4 Persistent structure | New capability: **persistent absence**, gate-limited or rate-limited. Still no persistence of an identified moving object | E3A |
+| P6, P7 (displacement, acceleration) | **Unchanged: not defined.** E3 offered no non-circular displacement observable | — |
+
+### 8.2 Links added or revised
+
+| From → to | Type | Domain | Evidence | Missing step | Discriminator | Confidence / fragility |
+| --- | --- | --- | --- | --- | --- | --- |
+| B12 → P8 | **Revised: scaffold-confounded** (was contradicted) | HELD N=5–6, triangle source, W4 path families | E3B (instrument kernel) | A label-covariant test: a held source without internal two-paths | Gathering under a held single edge (configurable scaffold) | Strong within the instrument; the instrument is not a grammar rule |
+| Hard ban → σ = +∞ (reading) | Interpretive conjecture | FREE N=4/5 | E3A ladder and opposing-dissolution cells | A proof or a counterexample | Larger N; other hard incidences | 2 sizes, 3 opposing strengths |
+| B9 → P4 (persistence of absence) | Observation (was conjecture) | FREE N=4/5, HELD N=5 | E3A | Whether absences anchor anything (identity) | — | Robust within cells |
+| B10 → P1 | Qualifies, now quantified (exact floor) | HELD, any N ≥ 4 | T7, T8 | — | — | Proved |
+| Basin + arrow coexistence (H-AB) | Observed again, under the instrument (N=5, 6) | HELD | E3B | A covariant scaffold; N=7 | — | Instrument-conditional |
+
+### 8.3 Gap register: changed rows only
+
+| Prerequisite | Capability now | Next information-bearing question |
+| --- | --- | --- |
+| Reference structure | Imposed. Its internal structure biases source–probe measurements (exact floor) | **A source-structure control** (held edge or other structures without internal two-paths), the first covariant test of the confound |
+| Attraction / gathering | Fragile with the triangle scaffold. Present for σ > 0 path families once the floor is removed (instrument) | The same control; then whether gathering and handover stay coupled with size |
+| Recoverability / persistence of absence | Measured; two mechanisms | *Do nothing yet:* its bearing on identity or reference is undefined |
+| Directed succession | Unchanged: constructed, local orientation proved, aggregate empirical | GT-Q12 proof attempt at N=4 (two parameters) |
+| Displacement / acceleration | Not defined | *Do nothing yet:* a definition proposal first |
+
+### 8.4 Diagram (revised)
+
+```mermaid
+graph LR
+  B3[Cycle affinity σ·Δdeg]:::proved --> B4[Aggregate ~ σ]:::observed
+  B8[One-way release ≈ σ→∞ end of soft ladder]:::observed --> P5[Ordering]
+  B4 --> P5
+  B9[Recovery: gate- vs rate-limited]:::observed --> P4[Persistence of absence]
+  B10[Source witness floor m², orientation-neutral]:::proved --> P1[Reference structure is active]
+  B10 -->|explains much of| B12[Non-gathering of σ>0 rules]:::revised
+  B12 -.->|scaffold-confounded| P8[Source-probe dependence]
+  P5 -.->|definition gap| P6[Displacement]:::undefined
+  P6 -.->|definition gap| P7[Acceleration analogue]:::undefined
+  classDef proved fill:#d8f0d8,stroke:#2a7a2a
+  classDef observed fill:#e6eefc,stroke:#2a4a8a
+  classDef revised fill:#fff3cd,stroke:#8a6d1a
+  classDef undefined fill:#eeeeee,stroke:#777,stroke-dasharray: 4 3
+```
+
+### 8.5 Narrative (revision)
+
+- **E3 started as a foundational detour** into admissibility and recovery.
+- **The detour produced two results.**
+  - It found that one-way release is not a separate kind of direction: it sits at the extreme of an ordinary suppression ladder, with its own way of persisting.
+  - It traced a long-standing negative result back to the scaffold. In the held triangle, the source's own relations witness every attachment, giving a constant bias against gathering for exactly the rules that carry direction. Divided out (as a counterfactual instrument), those rules gather while keeping their arrow.
+- **This does not show gravity.** It reopens the source–probe question with a better-defined test: a held structure with no internal two-paths, which is label-covariant.
+- **Displacement and acceleration remain undefined.** The map's largest gaps are still definitional.
+
+---
+
 ## Revision history
 
-- **Baseline:** this file at the GT-P006 pre-freeze commit (sections 1–7).
+- **Baseline:** sections 1–7 at the GT-P006 pre-freeze commit (`c4ab745`, E3A code commit).
+- **Revision 1 (after E3A, E3B):** section 8.

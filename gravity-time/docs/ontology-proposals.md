@@ -103,3 +103,26 @@ This bears on CL-Q05. It adds no purpose to fragility.
 **Proposal.** Record that a held reference structure can act as a *witness*, not only as a frame. Under hard path-form or adjacency exclusion, the held triangle forbids every attachment (GT-F53). Statements about "a source" in RS-motivated models should declare whether the source's own relations participate in the constraints applied to others.
 
 **Status if adopted:** methodological caution, model-scoped.
+
+## OP-13. A reference takes part (from E3B)
+
+**Proposal.** Record, as a model-scoped caution with general reach, that a reference structure made of relations acts on other relations through the same rules. In GT, the held triangle's internal paths witness every attachment, which gives an exact, orientation-neutral bias against gathering for every rule that carries the handover direction (GT-F56). With that bias divided out (a counterfactual instrument), those rules gather while keeping their arrow (GT-F57). RS statements about "a source" or "a centre" should declare whether the reference's own relations participate. Strengthens OP-12.
+
+**Status if adopted:** methodological principle, model-scoped. No primitive is added.
+**Would count against:** a label-covariant test (a held structure without internal two-paths) in which the direction-carrying families still fail to gather (GT-Q14).
+
+## OP-14. Two kinds of persistence of absence (from E3A)
+
+**Proposal.** Distinguish:
+- **rate-limited absence:** re-formation is admissible but slow;
+- **gate-limited absence:** re-formation is inadmissible until a supporting relation is undone.
+
+Both occur in the model and separate by whether recovery can happen directly (GT-F55). Under hard formation bans nothing is permanently lost (T3). An absence can persist without becoming arrest. This is offered as a candidate ingredient for later notions of boundary or identity. No identity construction has been made.
+
+**Status if adopted:** distinction, model-scoped.
+
+## OP-15. A hard ban as the end of a soft ladder (from E3A)
+
+**Proposal.** In aggregate observables (orientation, flux, absence duration), a hard formation ban behaves like the extreme of soft suppression (GT-F54). What is qualitatively new is the support: one-way edges, recovery only through gate-clearing, and no direct recovery. RS readings of "admissibility" and "tendency" should therefore treat them as continuous in their statistical effects but distinct in the structure of possible histories. This refines OP-10. The distinction between the two generators of direction becomes a difference of *support*, not of orientation.
+
+**Status if adopted:** refinement of OP-10.

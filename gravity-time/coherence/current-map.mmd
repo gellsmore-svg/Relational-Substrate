@@ -39,6 +39,11 @@ flowchart TD
     GT_F49_SOFT_RELEASE_IS_OPPORTUNITY["GT-F49-SOFT-RELEASE-IS-OPPORTUNITY: In soft rules the handover's release step is an opportunity (denominator) effect, not e..."]
     GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT["GT-F50-STRICT-ENABLING-NEITHER-NECESSARY-NOR-SUFFICIENT: Strict enabling by dissolution occurs only with a hard component and is neither necessa..."]
     GT_F51_ONE_WAY_RELEASE_MODE["GT-F51-ONE-WAY-RELEASE-MODE: Hard path-form exclusion produces a directed mode of succession without cycle affinity:..."]
+    GT_F54_HARD_BAN_END_OF_SOFT_LADDER["GT-F54-HARD-BAN-END-OF-SOFT-LADDER: Along path-formation factors 1/2, 1/4, 1/9, 1/16 and 0 (existing W4/W3/W16 grades and p..."]
+    GT_F55_PERSISTENT_ABSENCE_TWO_MECHANISMS["GT-F55-PERSISTENT-ABSENCE-TWO-MECHANISMS: A relation released while path-witnessed stays absent longer than one released unwitnes..."]
+    GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING["GT-F57-SCAFFOLD-CONFOUNDED-NON-GATHERING: With the source-witness floor divided out of attachment rates (a counterfactual instrum..."]
+    GT_F58_Q12_SCAN_NO_COUNTEREXAMPLE["GT-F58-Q12-SCAN-NO-COUNTEREXAMPLE: On frozen 9x9 grids of synthetic path-formation and path-dissolution factors (2^k, k in..."]
+    GT_F59_ONE_WAY_PART_CAN_OPPOSE["GT-F59-ONE-WAY-PART-CAN-OPPOSE: Under hard path-formation exclusion with the strongest available opposing dissolution (..."]
   end
   subgraph INFERENCE [Inferences]
     GT_F09_POTENTIAL_AS_MECHANISM["GT-F09-POTENTIAL-AS-MECHANISM: In the existing grammar a basin around a held relational structure arises from minimal ..."]
@@ -50,6 +55,7 @@ flowchart TD
     GT_F45_SQUARE_AFFINITY_IDENTITY["GT-F45-SQUARE-AFFINITY-IDENTITY: Theorem (formal note section 2): in the ordinary pair-DSL template grammar with positiv..."]
     GT_F52_HARD_ADJACENCY_SILENCES_PATHS["GT-F52-HARD-ADJACENCY-SILENCES-PATHS: Theorem (formal note 5.3): under hard adjacency exclusion every reachable state is a ma..."]
     GT_F53_HELD_SOURCE_AS_WITNESS["GT-F53-HELD-SOURCE-AS-WITNESS: Theorem (formal note 5.4): in HELD the source triangle supplies a two-path to every att..."]
+    GT_F56_SOURCE_WITNESS_FLOOR["GT-F56-SOURCE-WITNESS-FLOOR: Theorem (formal note 7.4-7.5, derived after E3A, verified in all 18 E3B cells): in HELD..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     GT_F03_DRIFT_CRITERION_CONFOUNDED["GT-F03-DRIFT-CRITERION-CONFOUNDED: The frozen G0 inward-drift criterion does not separate attraction from density: DENS pa..."]
@@ -76,6 +82,8 @@ flowchart TD
     GT_Q11_ONE_WAY_ORIENTATION["GT-Q11-ONE-WAY-ORIENTATION: Why does one-way release under hard path-form exclusion orient toward keeping relations..."]
     GT_Q12_AGGREGATE_ORIENTATION_THEOREM["GT-Q12-AGGREGATE-ORIENTATION-THEOREM: Must the stationary aggregate orientation take the sign of sigma for every positive-fac..."]
     GT_Q13_PRECEDENCE_VERSUS_ENABLING["GT-Q13-PRECEDENCE-VERSUS-ENABLING: Why are strictly enabled events under-represented immediately after the enabling dissol..."]
+    GT_Q14_COVARIANT_SOURCE_STRUCTURE_TEST["GT-Q14-COVARIANT-SOURCE-STRUCTURE-TEST: Do the sigma>0 path families gather toward a held structure without internal two-paths ..."]
+    GT_Q15_DISPLACEMENT_DEFINITION_GAP["GT-Q15-DISPLACEMENT-DEFINITION-GAP: What non-circular identity for a moving thing and what separation observable would make..."]
   end
   GT_F02_INCIDENCE_SELECTIVITY -->|contrasts_with| GT_F01_DENS_NULL
   GT_F03_DRIFT_CRITERION_CONFOUNDED -->|qualifies| GT_F02_INCIDENCE_SELECTIVITY
@@ -162,3 +170,17 @@ flowchart TD
   GT_Q12_AGGREGATE_ORIENTATION_THEOREM -->|raised_by| GT_F48_COUNTER_CIRCULATION
   GT_Q13_PRECEDENCE_VERSUS_ENABLING -->|raised_by| GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT
   GT_F44_RS_SUCCESSION_VS_GATHERING -->|compatible_with| GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT
+  GT_F54_HARD_BAN_END_OF_SOFT_LADDER -->|supersedes_interpretation| GT_F51_ONE_WAY_RELEASE_MODE
+  GT_Q11_ONE_WAY_ORIENTATION -->|partially_answered_by| GT_F54_HARD_BAN_END_OF_SOFT_LADDER
+  GT_F54_HARD_BAN_END_OF_SOFT_LADDER -->|supports| GT_F46_ORIENTATION_FOLLOWS_SIGMA
+  GT_F55_PERSISTENT_ABSENCE_TWO_MECHANISMS -->|refines| GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT
+  GT_F56_SOURCE_WITNESS_FLOOR -->|explains| GT_F18_ARROW_WITH_REPULSION
+  GT_F56_SOURCE_WITNESS_FLOOR -->|refines| GT_F53_HELD_SOURCE_AS_WITNESS
+  GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING -->|qualifies| GT_F36_CSPH_COEXISTENCE_LOST_N7
+  GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING -->|undermines| GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED
+  GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING -->|derived_from| GT_F56_SOURCE_WITNESS_FLOOR
+  GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING -->|raises_question| GT_Q14_COVARIANT_SOURCE_STRUCTURE_TEST
+  GT_F58_Q12_SCAN_NO_COUNTEREXAMPLE -->|supports| GT_F46_ORIENTATION_FOLLOWS_SIGMA
+  GT_Q12_AGGREGATE_ORIENTATION_THEOREM -->|partially_answered_by| GT_F58_Q12_SCAN_NO_COUNTEREXAMPLE
+  GT_F59_ONE_WAY_PART_CAN_OPPOSE -->|qualifies| GT_F54_HARD_BAN_END_OF_SOFT_LADDER
+  GT_Q15_DISPLACEMENT_DEFINITION_GAP -->|raised_by| GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING

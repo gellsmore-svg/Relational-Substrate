@@ -36,6 +36,14 @@ An independently governed research programme built on the Constraint Laboratory 
 | E2B frozen plan, tables, atlas | [`plans/round-e2b-plan.json`](plans/round-e2b-plan.json), [`reports/round-e2b-tables.json`](reports/round-e2b-tables.json), [`reports/gt-e2b-atlas.md`](reports/gt-e2b-atlas.md) |
 | E2 mechanism atlas, dissolution analysis, synthesis | [`reports/gt-e2-mechanism-atlas.md`](reports/gt-e2-mechanism-atlas.md), [`reports/gt-e2-dissolution-analysis.md`](reports/gt-e2-dissolution-analysis.md), [`reports/gt-e2-synthesis.md`](reports/gt-e2-synthesis.md) |
 | GT-P005 execution record | [`provenance/execution-GT-P005.md`](provenance/execution-GT-P005.md) |
+| **GT-P006 (E3A, E3B): plain-English report** | [`reports/gt-e3-report.md`](reports/gt-e3-report.md) |
+| Foundational bridge map (dual lens; baseline plus revision) | [`docs/foundational-bridge-map.md`](docs/foundational-bridge-map.md) |
+| E3 coverage audit and question selection | [`docs/e3-coverage-and-question-selection.md`](docs/e3-coverage-and-question-selection.md) |
+| E3 formal note (support, recovery, source-witness floor) | [`docs/e3-formal-support-and-recovery.md`](docs/e3-formal-support-and-recovery.md) |
+| E3A frozen plan, tables, atlas, reflection | [`plans/round-e3a-plan.json`](plans/round-e3a-plan.json), [`reports/round-e3a-tables.json`](reports/round-e3a-tables.json), [`reports/gt-e3a-atlas.md`](reports/gt-e3a-atlas.md), [`reports/gt-e3a-reflection.md`](reports/gt-e3a-reflection.md) |
+| E3B frozen plan, tables, atlas | [`plans/round-e3b-plan.json`](plans/round-e3b-plan.json), [`reports/round-e3b-tables.json`](reports/round-e3b-tables.json), [`reports/gt-e3b-atlas.md`](reports/gt-e3b-atlas.md) |
+| E3 synthesis; cross-programme transfer note | [`reports/gt-e3-synthesis.md`](reports/gt-e3-synthesis.md), [`docs/e3-cross-programme-transfer.md`](docs/e3-cross-programme-transfer.md) |
+| GT-P006 execution record | [`provenance/execution-GT-P006.md`](provenance/execution-GT-P006.md) |
 | Coherence ledger and snapshot | [`coherence/`](coherence/) |
 | Ontology proposals for later review | [`docs/ontology-proposals.md`](docs/ontology-proposals.md) |
 | Provenance | [`provenance/`](provenance/) |
