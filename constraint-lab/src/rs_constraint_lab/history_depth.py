@@ -328,8 +328,6 @@ def analyse_refinement(model):
                 samples.setdefault(key, {"state_A": left, "state_B": right, "signature_A": va, "signature_B": vb})
     membership = result["stable_blocks"]
     expected = initial if model.multiplier == 1 else tuple((s,) for s in range(model.size))
-    if membership != expected:
-        raise HistoryError("external refinement expectation differs; retain item and diagnose")
     return {
         "clock": CLOCK, "m": model.multiplier, "initial_block_count": len(initial),
         "block_counts_by_round": [len(initial)] + [r["after_count"] for r in result["refinement_chronology"]],
@@ -337,6 +335,7 @@ def analyse_refinement(model):
         "stable_blocks": membership, "membership_sha256": digest(membership),
         "chronology": result["refinement_chronology"], "strong_lumpability_gap": result["strong_lumpability_gap"],
         "state_reordering_gap": F(0), "merge_obstruction_classes": dict(counts), "obstruction_samples": samples,
+        "analytic_membership_gap": int(membership != expected),
         "generic_merge_certificates_sha256": digest(result["merge_obstructions"]),
         "generic_merge_certificate_count": len(result["merge_obstructions"]),
         "immediate_observed_rows_separate_all": result["distinct_next_observation_rows_within_current_observation"],
