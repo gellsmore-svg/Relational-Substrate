@@ -1,0 +1,534 @@
+{
+  "adaptive_choice_note": "E4B was chosen because of E4A (within-P3 orbit contrast; floor formula; K2 the only zero-floor connected reference) in gt-e4a-reflection.md section 6 (commit 8127d24); it is not independent confirmation of the P3 finding and E4A is unchanged",
+  "analysis_only": true,
+  "analysis_version": "gt-e4b/v1",
+  "analytic_floor": {
+    "P4-N6": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1
+    },
+    "S4-N6": {
+      "0": 0,
+      "1": 2,
+      "2": 2,
+      "3": 2
+    }
+  },
+  "chosen_because": "gravity-time/reports/gt-e4a-reflection.md section 6",
+  "clocks": "as E4A",
+  "comparisons": {
+    "B1_star_orbits": "for sigma>0 families (PATHF ws, PATHH wf, CSPH): attachment occupancy per slot at the star centre (floor 0) against the leaves (floor 2), both clocks; conditional on leaf-leaf chords",
+    "B2_p4_orbits": "P4 ends against inner vertices (floor 1 everywhere): orbit selectivity without floor heterogeneity, both clocks",
+    "B3_star_vs_p4": "raw, normalised and standardised margins against each scaffold's own NULL (r0 = 8/12 for both) at equal k=4, K=3, N=6",
+    "B4_direction": "handover index, partner index, flux across the two scaffolds",
+    "no_aggregate_score": "no ranking"
+  },
+  "controls_and_identities": {
+    "G_closew": "CLOSEW Gibbs gap <= 1e-9",
+    "N_null": "NULL: margins |.| <= 1e-9, flux <= 1e-9, r0 = 8/12",
+    "R_reversible": "PCOMP, CLOSEW: flux and |handover|, |partner| <= 1e-9",
+    "U_pcomp": "PCOMP continuous raw margin |.| <= 1e-9",
+    "W_floor": "held-only witness count on every attachment slot equals the analytic floor at every state (S4: centre 0, leaves 2; P4: 1 everywhere)",
+    "Z5_numerical": "as E4A (GTH referee: every class has 4,096 states)",
+    "separation_note": "no expectation on any target channel"
+  },
+  "deliberate_omissions": {
+    "n5": "N=5 with k=4 leaves one probe and no probe-probe slot (no handover)",
+    "n7": "not authorised",
+    "other_scaffolds": "none"
+  },
+  "estimands": "as E4A, per cell",
+  "experiment_id": "gt-round-e4b-floor-heterogeneity",
+  "families": {
+    "CLOSEW": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "close_form"
+          }
+        ]
+      }
+    },
+    "CSPH": {
+      "strong_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "strong_favour",
+            "kind": "close_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    },
+    "NULL": {
+      "none": {
+        "components": []
+      }
+    },
+    "PATHF": {
+      "weak_suppress": {
+        "components": [
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          }
+        ]
+      }
+    },
+    "PATHH": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    },
+    "PCOMP": {
+      "weak_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    }
+  },
+  "geometry": {
+    "P4-N6": {
+      "attachment_slots": 8,
+      "free_slots": 12,
+      "held_edges": 3,
+      "nonheld_source_internal_slots": 3,
+      "pair_slots": 15,
+      "probe_probe_slots": 1,
+      "probes": 2,
+      "r0": 0.6666666666666666,
+      "source_vertices": 4
+    },
+    "S4-N6": {
+      "attachment_slots": 8,
+      "free_slots": 12,
+      "held_edges": 3,
+      "nonheld_source_internal_slots": 3,
+      "pair_slots": 15,
+      "probe_probe_slots": 1,
+      "probes": 2,
+      "r0": 0.6666666666666666,
+      "source_vertices": 4
+    }
+  },
+  "history": false,
+  "initial_conditions": "held relations present, all others absent; reachable class",
+  "items": [
+    {
+      "alphabet": "W4",
+      "family": "NULL",
+      "grade": "none",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "item_id": "HELD-S4-N6-NULL-none",
+      "mode": "HELD",
+      "n": 6,
+      "role": "geometry_null",
+      "scaffold": "S4"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "item_id": "HELD-S4-N6-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific",
+      "scaffold": "S4"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "item_id": "HELD-S4-N6-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific",
+      "scaffold": "S4"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "item_id": "HELD-S4-N6-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific",
+      "scaffold": "S4"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "item_id": "HELD-S4-N6-PCOMP-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "control",
+      "scaffold": "S4"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "item_id": "HELD-S4-N6-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "control",
+      "scaffold": "S4"
+    },
+    {
+      "alphabet": "W4",
+      "family": "NULL",
+      "grade": "none",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "item_id": "HELD-P4-N6-NULL-none",
+      "mode": "HELD",
+      "n": 6,
+      "role": "geometry_null",
+      "scaffold": "P4"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "item_id": "HELD-P4-N6-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific",
+      "scaffold": "P4"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "item_id": "HELD-P4-N6-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific",
+      "scaffold": "P4"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "item_id": "HELD-P4-N6-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific",
+      "scaffold": "P4"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "item_id": "HELD-P4-N6-PCOMP-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "control",
+      "scaffold": "P4"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "item_id": "HELD-P4-N6-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "control",
+      "scaffold": "P4"
+    }
+  ],
+  "meta_constraints": false,
+  "method": {
+    "name": "Open-Thetical Research",
+    "path": "research-methods/open-thetical-research.md",
+    "version": "1.0"
+  },
+  "mode": "B",
+  "new_primitives": false,
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      6
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL"
+  },
+  "open_questions_without_prediction": [
+    "B1-B4",
+    "Anything not anticipated"
+  ],
+  "parameter_fit": false,
+  "plan_hash": "82fce6f3ac5d3df5319b540f271d3931e47d42814180005c4c006c568643dd3e",
+  "pre_freeze_exposure": {
+    "e4a": "all E4A results read",
+    "engineering": "S4/P4 scaffold tests (rule-string kernel equality, floor census, NULL geometry, symmetry) at N=4/5/6; no S4/P4 law under a non-NULL family computed before freezing",
+    "reference_hashes": {
+      "gravity-time/docs/e4-configurable-scaffold.md": "38e3fa2a23b8e78990249de0f9a247f8c434d6364794be88d035347e78c2feab",
+      "gravity-time/plans/round-e4a-plan.json": "a5954b77028a48183bddbeec3665a3acfffdf512eb8defaf2cab3d5e38ff9e82",
+      "gravity-time/provenance/prompts/GT-P007-agent-input.md": "f58b607118279e1716bf61fd514ebc4a00a500123f266e49d3b3f12890027d0e",
+      "gravity-time/reports/gt-e4a-reflection.md": "f8a3b9832a32efddc4c4d974d96aa36a293e55db2b980b1123df8f7959e9b7f9",
+      "gravity-time/reports/round-e4a-tables.json": "fd89e8db46e50e27bca6ce3d1dd6901b296c01870ecb57c29fc110a4ef9397d5"
+    }
+  },
+  "programme": "GT",
+  "prompt_id": "GT-P007",
+  "question": "At equal source size and held-edge count, does redistributing the permanent witness floor (star: 0 at the centre, 2 at the leaves; path P4: 1 everywhere) change where and how much relations attach?",
+  "round_id": "round-e4b",
+  "sampling": "exact census of 12 cells",
+  "scaffolds": {
+    "P4": {
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "source": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "S4": {
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "source": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "schema": "rs-gt.e4b-plan/v1",
+  "software": {
+    "analysis_module": "rs_constraint_lab.gte4b",
+    "kernel": "gt-vectorised-kernel/v1",
+    "numpy": "2.5.3",
+    "observables": "gt-e1-observables/v1",
+    "python": "3.12.3"
+  },
+  "stochastic_trajectories": "none",
+  "stop_conditions": {
+    "amendment": "cell or estimand changes stop the round",
+    "item": "watchdog {6: 1800} seconds",
+    "round": "all items or 5400 s; then stop",
+    "unresolved": "recorded; no retuning"
+  },
+  "tolerances": "as E4A",
+  "work_count": {
+    "items": 12,
+    "largest_state_space": 4096,
+    "round_wall_cap_seconds": 5400,
+    "workers": 4
+  }
+}
