@@ -163,3 +163,14 @@ def test_plan_hash_deterministic_and_exposure_declared():
     exposed = a["pre_freeze_exposure"]["published_cells_standard_channels"]
     assert "HELD-N5-PATHF-weak_suppress" in exposed and "FREE-N5-PFD-weak_favour+weak_favour" in exposed
     assert "HELD-N5-PATHF-strong_suppress" not in exposed
+
+
+def test_atlas_lists_every_item(tmp_path):
+    from rs_constraint_lab import gte2a_atlas
+
+    plan = synthetic_plan()
+    gte2a.run(tmp_path, plan, workers=2, python=sys.executable, poll=0.1, watchdogs={4: 300})
+    gte2a.publish(tmp_path, plan, tmp_path / "t.json", frozen_plan_commit="synthetic" * 5)
+    (tmp_path / "p.json").write_text(json.dumps(plan))
+    text = gte2a_atlas.build(tmp_path, tmp_path / "t.json", tmp_path / "p.json")
+    assert all(it["item_id"] in text for it in plan["items"])
