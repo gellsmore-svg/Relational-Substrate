@@ -1,0 +1,16 @@
+{
+  "round_id": "I1",
+  "frozen_analysis_plan_commit": "2315728e5acd1facb093d7daf09dc0d4cf2a9b47",
+  "plan_hash": "85e21eab63e620fe3d173188bda2ac5e27d45f66e74c6d24674a640b4f846785",
+  "plan_file_sha256": "5bb4dcccc3de11dd5c268b40c75ff2c098abfe3b586288a67f317272059ec208",
+  "push_confirmed_before_execution": true,
+  "selection_evidence_commit": "2b001561abba3e21bc6489bcfdca1249b31519aa",
+  "selection_decision_commit": "8688e86af6c0412381a0e3130547b3e181f496ea",
+  "already_observed_I0_inputs": true,
+  "new_I1_target_checks_or_contrasts_observed_before_freeze": 0,
+  "symbolic_candidate_status": "post-I0 analytic expectation, separately frozen before target verification",
+  "atomic_items": 2,
+  "new_stationary_solves": 0,
+  "new_controller_grade_systems": 0,
+  "repository_user": "cello"
+}

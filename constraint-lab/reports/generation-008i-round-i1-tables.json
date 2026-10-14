@@ -1,0 +1,22 @@
+{
+  "frozen_analysis_plan_commit": "2315728e5acd1facb093d7daf09dc0d4cf2a9b47",
+  "item_sha256": {
+    "constraint-lab/reports/items/generation-008i-i1/I1-COORDINATE-SYMMETRY.json": "a674fff0b953d0aec006c693267bca72b8430d06f96b8d7a04fc638069631de9",
+    "constraint-lab/reports/items/generation-008i-i1/I1-SINGLETON-MATCHED-KU.json": "f86795174490e5614c68ff34cb5484479d8d86ffe0264a2c56a90e96134ace42"
+  },
+  "new_stationary_solves": 0,
+  "plan_file_sha256": "5bb4dcccc3de11dd5c268b40c75ff2c098abfe3b586288a67f317272059ec208",
+  "plan_hash": "85e21eab63e620fe3d173188bda2ac5e27d45f66e74c6d24674a640b4f846785",
+  "round_id": "I1",
+  "status": "COMPLETE",
+  "work_counts": {
+    "atomic_items": 2,
+    "candidate_stationary_laws": 4,
+    "history_bijection_slot_comparisons": 9216,
+    "matched_pairs": 4,
+    "new_stationary_solves": 0,
+    "reused_I0_cells": 8,
+    "symmetry_generator_joint_comparisons": 15360,
+    "symmetry_generator_kernel_comparisons": 92160
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "analysis_version": "generation-008i-I1-mechanisms/v1",
+  "frozen_analysis_plan_commit": "2315728e5acd1facb093d7daf09dc0d4cf2a9b47",
+  "item_id": "I1-COORDINATE-SYMMETRY",
+  "plan_hash": "85e21eab63e620fe3d173188bda2ac5e27d45f66e74c6d24674a640b4f846785",
+  "result": {
+    "cases": [
+      {
+        "candidate_normalisation_gap": "0/1",
+        "candidate_stationary_balance_gap": "0/1",
+        "candidate_vs_I0_gap": "0/1",
+        "feature": "SAME_FORM",
+        "generator_kernel_gap": "0/1",
+        "generator_stationary_gap": "0/1",
+        "generator_witness": null,
+        "kernel_comparisons": 11520,
+        "m": "1/4",
+        "other_bit_probability": "7/15",
+        "within_edge_layer_material_gap": "0/1"
+      },
+      {
+        "candidate_normalisation_gap": "0/1",
+        "candidate_stationary_balance_gap": "0/1",
+        "candidate_vs_I0_gap": "0/1",
+        "feature": "SAME_FORM",
+        "generator_kernel_gap": "0/1",
+        "generator_stationary_gap": "0/1",
+        "generator_witness": null,
+        "kernel_comparisons": 11520,
+        "m": "4/1",
+        "other_bit_probability": "3/5",
+        "within_edge_layer_material_gap": "0/1"
+      },
+      {
+        "candidate_normalisation_gap": "0/1",
+        "candidate_stationary_balance_gap": "0/1",
+        "candidate_vs_I0_gap": "0/1",
+        "feature": "SAME_DISSOLVE",
+        "generator_kernel_gap": "0/1",
+        "generator_stationary_gap": "0/1",
+        "generator_witness": null,
+        "kernel_comparisons": 11520,
+        "m": "1/4",
+        "other_bit_probability": "8/15",
+        "within_edge_layer_material_gap": "0/1"
+      },
+      {
+        "candidate_normalisation_gap": "0/1",
+        "candidate_stationary_balance_gap": "0/1",
+        "candidate_vs_I0_gap": "0/1",
+        "feature": "SAME_DISSOLVE",
+        "generator_kernel_gap": "0/1",
+        "generator_stationary_gap": "0/1",
+        "generator_witness": null,
+        "kernel_comparisons": 11520,
+        "m": "4/1",
+        "other_bit_probability": "2/5",
+        "within_edge_layer_material_gap": "0/1"
+      },
+      {
+        "feature": "DISJ_FORM",
+        "generator_kernel_gap": "1/7",
+        "generator_stationary_gap": "1/15288",
+        "generator_witness": {
+          "generator": [
+            1,
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "mapped_probability": "1/21",
+          "probability": "4/21",
+          "source": 0,
+          "target": 100
+        },
+        "kernel_comparisons": 11520,
+        "m": "1/4",
+        "within_edge_layer_material_gap": "5/20384"
+      },
+      {
+        "feature": "DISJ_FORM",
+        "generator_kernel_gap": "1/3",
+        "generator_stationary_gap": "1/3024",
+        "generator_witness": {
+          "generator": [
+            1,
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "mapped_probability": "4/9",
+          "probability": "1/9",
+          "source": 0,
+          "target": 100
+        },
+        "kernel_comparisons": 11520,
+        "m": "4/1",
+        "within_edge_layer_material_gap": "1/756"
+      },
+      {
+        "feature": "DISJ_DISSOLVE",
+        "generator_kernel_gap": "1/7",
+        "generator_stationary_gap": "1/15288",
+        "generator_witness": {
+          "generator": [
+            1,
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "mapped_probability": "1/21",
+          "probability": "1/6",
+          "source": 10,
+          "target": 0
+        },
+        "kernel_comparisons": 11520,
+        "m": "1/4",
+        "within_edge_layer_material_gap": "5/20384"
+      },
+      {
+        "feature": "DISJ_DISSOLVE",
+        "generator_kernel_gap": "1/3",
+        "generator_stationary_gap": "1/3024",
+        "generator_witness": {
+          "generator": [
+            1,
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "mapped_probability": "4/9",
+          "probability": "1/6",
+          "source": 10,
+          "target": 0
+        },
+        "kernel_comparisons": 11520,
+        "m": "4/1",
+        "within_edge_layer_material_gap": "1/756"
+      }
+    ],
+    "generated_group_size": 720,
+    "slot_generators": [
+      [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        2,
+        1,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        1,
+        3,
+        2,
+        4,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        5,
+        4
+      ]
+    ]
+  },
+  "result_sha256": "fa2fee842ad3b625ccafc322f8b37a60e99b5d513fa77e517e0ed71046d0ae19",
+  "wall_seconds": 0.32144709800013516
+}
