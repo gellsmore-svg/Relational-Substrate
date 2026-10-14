@@ -233,3 +233,18 @@ def test_word_model_information_is_monotone_with_prefix_length():
         for projection in ("graph_class", "edge_count"):
             values = [Decimal(row["word_JS"]) for row in rows if row["controller_id"] == key and row["projection"] == projection]
             assert all(right + Decimal("1e-25") >= left for left, right in zip(values, values[1:]))
+
+
+@pytest.mark.skipif(not (ROOT / "constraint-lab/coherence/snapshots/through-generation-008j.md").exists(), reason="8J snapshot checked after close-out")
+def test_generation_008j_snapshot_and_ledger_prefixes(tmp_path):
+    import hashlib
+    from rs_constraint_lab.coherence import canonical_ledger_bytes, snapshot_text
+
+    directory = ROOT / "constraint-lab/coherence"
+    for name, count in (("findings.jsonl", 168), ("relations.jsonl", 260)):
+        lines = (directory / name).read_bytes().splitlines(keepends=True)
+        (tmp_path / name).write_bytes(b"".join(lines[:count]))
+    assert hashlib.sha256(canonical_ledger_bytes(tmp_path)).hexdigest() == "c30ebe30b20199c1cbfa3bcc2fc291db976d19cbd25936e6beb1d7a081a8cde3"
+    snapshot = directory / "snapshots/through-generation-008j.md"
+    assert snapshot.read_text() == snapshot_text(tmp_path, title="Coherence map through Generation 8J")
+    assert sha256_file(snapshot) == "79256157053a6410270907e49d25ba941ffd0c56efbc8a16202623c746729a4b"

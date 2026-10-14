@@ -280,12 +280,15 @@ def test_generation_008i_preserves_historical_artifacts_and_separate_freezes():
 
 
 @pytest.mark.skipif(not (ROOT / "constraint-lab/coherence/snapshots/through-generation-008i.md").exists(), reason="8I coherence checked after close-out")
-def test_generation_008i_coherence_snapshot_and_reusable_catalogue():
+def test_generation_008i_coherence_snapshot_and_reusable_catalogue(tmp_path):
     from rs_constraint_lab.coherence import load_ledger, snapshot_text
     from rs_constraint_lab.formal import load_catalog, validate_catalog
 
     directory = ROOT / "constraint-lab/coherence"
-    assert (directory / "snapshots/through-generation-008i.md").read_text() == snapshot_text(directory, title="Through Generation 008I")
+    for name in ("findings.jsonl", "relations.jsonl"):
+        historical = _git("show", "6615c9f03a1fa30558f8cf519a125e610d393f31:constraint-lab/coherence/" + name).stdout
+        (tmp_path / name).write_bytes(historical)
+    assert (directory / "snapshots/through-generation-008i.md").read_text() == snapshot_text(tmp_path, title="Through Generation 008I")
     catalog = load_catalog()
     assert validate_catalog(catalog) == []
     new = [row for row in catalog if row["source_generations"] == ["008I"]]
