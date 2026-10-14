@@ -93,15 +93,20 @@ def witness_counts(states: np.ndarray, n: int, kind: str) -> np.ndarray:
     return out
 
 
-def weights(states: np.ndarray, n: int, mode: str, components: list[tuple[str, str]]) -> np.ndarray:
-    """Event weight of every (state, slot) under the listed components and the mode's scaffold."""
+def weights(states: np.ndarray, n: int, mode: str, components: list[tuple[str, str]], factors: dict | None = None) -> np.ndarray:
+    """Event weight of every (state, slot) under the listed components and the mode's scaffold.
+
+    ``factors`` is a grade-to-factor table from ``weights.alphabet_factors``;
+    the default is W4, the alphabet of every GT round so far.
+    """
+    table = FACTORS if factors is None else factors
     slots = len(edges(n))
     present = ((states[:, None] >> np.arange(slots)) & 1).astype(bool)
     W = np.ones((len(states), slots))
     for kind, grade in components:
         if kind not in COMPONENT_K:
             raise ValueError(f"unknown component {kind}")
-        factor = float(FACTORS[grade])
+        factor = float(table[grade])
         count = witness_counts(states, n, kind)
         if factor == 0.0:
             term = np.where(count > 0, 0.0, 1.0)
@@ -116,11 +121,11 @@ def weights(states: np.ndarray, n: int, mode: str, components: list[tuple[str, s
     return W
 
 
-def reachable_chain(n: int, mode: str, components: list[tuple[str, str]]) -> tuple[Chain, dict]:
+def reachable_chain(n: int, mode: str, components: list[tuple[str, str]], factors: dict | None = None) -> tuple[Chain, dict]:
     """The reachable class from the declared start as a Chain, plus timings."""
     started = time.perf_counter()
     space = candidate_states(n, mode)
-    W_all = weights(space, n, mode, components)
+    W_all = weights(space, n, mode, components, factors)
     slots = W_all.shape[1]
     index = np.full(1 << slots, -1, dtype=np.int64)
     index[space] = np.arange(len(space))
