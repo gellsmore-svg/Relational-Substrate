@@ -354,8 +354,8 @@ def structure_arrays(chain: Chain, n: int) -> dict:
 # --- event order ---------------------------------------------------------------
 
 
-def event_order(chain: Chain, jump: np.ndarray, n: int, mode: str) -> dict:
-    """``gte0a.event_order`` with integer type codes and one bincount per slot pair."""
+def event_pattern_probabilities(chain: Chain, jump: np.ndarray, n: int, mode: str) -> dict[tuple, float]:
+    """Stationary probability of every consecutive event pair (type, slot class, type, slot class, relation)."""
     edge_list = edges(n)
     P = chain.W / chain.rates[:, None]
     if mode == "HELD":
@@ -384,6 +384,12 @@ def event_order(chain: Chain, jump: np.ndarray, n: int, mode: str) -> dict:
                 a, b = divmod(int(code), 2)
                 key = (names[a], klass[e], names[b], klass[f], rel)
                 probs[key] = probs.get(key, 0.0) + float(sums[code])
+    return probs
+
+
+def event_order(chain: Chain, jump: np.ndarray, n: int, mode: str) -> dict:
+    """``gte0a.event_order`` with integer type codes and one bincount per slot pair."""
+    probs = event_pattern_probabilities(chain, jump, n, mode)
     flip = {"F": "D", "D": "F"}
     seen = set()
     asym = 0.0
