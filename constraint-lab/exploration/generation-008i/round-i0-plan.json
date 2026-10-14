@@ -1,0 +1,243 @@
+{
+  "analysis_version": "generation-008i-predictive-state/v1",
+  "calibration_sha256": "1b6e990829be1678321db3779f0b4064e151ff7e10ae05b54a3349f1591c883f",
+  "clock": "pair-event epoch",
+  "controller": "unchanged RECENT-REVERSAL",
+  "engineering": {
+    "disk_budget_bytes": 64000000,
+    "estimated_total_seconds": 60,
+    "neutral_total_seconds": 0.4688936689963157,
+    "on_unexpected_count_or_budget": "stop and diagnose; no hidden changes to counts/tolerances/scope",
+    "per_item_watchdog_seconds": 120,
+    "resume": "retain only complete hash-valid matching frozen envelopes",
+    "workers": 1
+  },
+  "estimands": [
+    "generic exact fixed point, all block memberships, chronology, sparse signatures, merge obstructions",
+    "independent S4 and fixed-graph automorphism pair orbits, membership equivalence with non-neutral class refinement",
+    "analytic (k,r) count quotient/formula/binomial stationary law versus generic refinement",
+    "parity all-order deterministic alternation, checked through finite length six as plumbing",
+    "stationary quotient pushforwards, exact one-step H0 equality at all four resolutions",
+    "past/current/next triples from current state and independent two-forward-event enumeration",
+    "160-digit temporal CMI versus independently aggregated quotient KL, and labelled event-MI formula",
+    "positive-past first-order failures, exact two-observation synchronization and all-past order-two sufficiency",
+    "deterministic and strong-lumpable arrows between consecutive stable partitions; stationary commutation",
+    "block membership stability across non-neutral grades and reverse state enumeration"
+  ],
+  "experiment_id": "generation-008i-predictive-state",
+  "externally_predeclared_counts_not_algorithm_inputs": {
+    "neutral": {
+      "edge_count": 7,
+      "graph_class": 11,
+      "labelled_mask": 64,
+      "parity": 2
+    },
+    "non_neutral": {
+      "edge_count": 12,
+      "graph_class": 28,
+      "labelled_mask": 384,
+      "parity": 2
+    }
+  },
+  "grades": [
+    [
+      "m025",
+      "1/4"
+    ],
+    [
+      "m1",
+      "1"
+    ],
+    [
+      "m4",
+      "4"
+    ]
+  ],
+  "input_sha256": {
+    "constraint-lab/exploration/generation-008i/charter.md": "3bb171be929e413b8d976da34d3b93118a507b8a42996fa8d9c8d1ce9fb338c0",
+    "constraint-lab/provenance/prompts/008I-v0.8i-predictive-state-agent-input.md": "99cce12712ab204a60c6c67a8bbe7c75492a2a43562289e0cdf3d1029a2e70fc",
+    "constraint-lab/reports/generation-008h-round-h0-tables.json": "690794a3e3a6b421c38714be4df31731390c7e1040f1c829a8769792a3ab26fe"
+  },
+  "items": [
+    {
+      "grade": "m025",
+      "item_id": "I-REFINE-MASK-m025",
+      "kind": "refine",
+      "m": "1/4",
+      "projection": "labelled_mask"
+    },
+    {
+      "grade": "m1",
+      "item_id": "I-REFINE-MASK-m1",
+      "kind": "refine",
+      "m": "1",
+      "projection": "labelled_mask"
+    },
+    {
+      "grade": "m4",
+      "item_id": "I-REFINE-MASK-m4",
+      "kind": "refine",
+      "m": "4",
+      "projection": "labelled_mask"
+    },
+    {
+      "grade": "m025",
+      "item_id": "I-REFINE-CLASS-m025",
+      "kind": "refine",
+      "m": "1/4",
+      "projection": "graph_class"
+    },
+    {
+      "grade": "m1",
+      "item_id": "I-REFINE-CLASS-m1",
+      "kind": "refine",
+      "m": "1",
+      "projection": "graph_class"
+    },
+    {
+      "grade": "m4",
+      "item_id": "I-REFINE-CLASS-m4",
+      "kind": "refine",
+      "m": "4",
+      "projection": "graph_class"
+    },
+    {
+      "grade": "m025",
+      "item_id": "I-REFINE-COUNT-m025",
+      "kind": "refine",
+      "m": "1/4",
+      "projection": "edge_count"
+    },
+    {
+      "grade": "m1",
+      "item_id": "I-REFINE-COUNT-m1",
+      "kind": "refine",
+      "m": "1",
+      "projection": "edge_count"
+    },
+    {
+      "grade": "m4",
+      "item_id": "I-REFINE-COUNT-m4",
+      "kind": "refine",
+      "m": "4",
+      "projection": "edge_count"
+    },
+    {
+      "grade": "m025",
+      "item_id": "I-REFINE-PARITY-m025",
+      "kind": "refine",
+      "m": "1/4",
+      "projection": "parity"
+    },
+    {
+      "grade": "m1",
+      "item_id": "I-REFINE-PARITY-m1",
+      "kind": "refine",
+      "m": "1",
+      "projection": "parity"
+    },
+    {
+      "grade": "m4",
+      "item_id": "I-REFINE-PARITY-m4",
+      "kind": "refine",
+      "m": "4",
+      "projection": "parity"
+    },
+    {
+      "item_id": "I-ORBIT-ATLAS",
+      "kind": "orbits"
+    },
+    {
+      "item_id": "I-SYNCHRONIZATION",
+      "kind": "synchronization"
+    },
+    {
+      "item_id": "I-QUOTIENT-COMMUTATION",
+      "kind": "commutation"
+    }
+  ],
+  "mode": "A",
+  "observation_chain": [
+    "labelled_mask",
+    "graph_class",
+    "edge_count",
+    "parity"
+  ],
+  "ontology": {
+    "G": 0,
+    "H_pair": 1,
+    "L": 0,
+    "N": 4,
+    "O": 3,
+    "S": 0,
+    "hypergraph": "independent"
+  },
+  "parent_commit": "ad5b656e26fe66610b583aedccdd34593e13791a",
+  "plan_hash": "328be1bf7dbac354d5bc4d0510c76555bbe638e8485d8089f63bea0898d9825c",
+  "planning_coherence_sha256": "9cc9ae02baaaaba64adc9350ca5f677e4c9699521cd0112f588185fb032a28dd",
+  "pre_freeze_exposure": {
+    "allowed": [
+      "neutral production plumbing",
+      "small synthetic refinement",
+      "structural graph audit",
+      "user-predeclared analytic expectations"
+    ],
+    "blind_round": false,
+    "new_non_neutral_variant_target_executions": 0,
+    "new_targets": "generic minimal-refinement fixed points, merge certificates, partition memberships and commutation",
+    "prior_related_exposure": {
+      "coarse_process_head": "64a4fe67e585e5be03f6afb2a0613e147c509b63",
+      "known": "28 roles, SAME 12-state quotient, class-pair synchronization, SAME class/count CMI and order results",
+      "role_grammar_head": "6615c9f03a1fa30558f8cf519a125e610d393f31"
+    }
+  },
+  "precision_decimal_digits": 160,
+  "prompt_id": "008I",
+  "prompt_variant": "predictive-state",
+  "refinement_semantics": "coarsest strongly lumpable refinement on fixed recurrent states, preserving current observation; arbitrary augmented initial laws",
+  "round_id": "I0",
+  "source_sha256": {
+    "constraint-lab/src/rs_constraint_lab/coherence.py": "a99d65438d3d332b7331d9b108f28a31e42228197f5d4d74956ec967ad8b9c2e",
+    "constraint-lab/src/rs_constraint_lab/durable.py": "3b5c705847c7b2a15b9e66a74d34fa1c2a333abf2cc5cf6fb15f0c79f9e1ae41",
+    "constraint-lab/src/rs_constraint_lab/exact.py": "ec8976dc3f10dac6842bccce0669382deb85fb2d1c16082ad30cf19a7e18efb1",
+    "constraint-lab/src/rs_constraint_lab/explore08.py": "457a993ba7cfc0b66c9805d700871dc39abda474d1d7650cd23dbe148343a5ec",
+    "constraint-lab/src/rs_constraint_lab/gen008i_predictive_exec.py": "c35240c6184e57a733cfc8427637d38962430183877bb5317eaf42b353a74347",
+    "constraint-lab/src/rs_constraint_lab/graphs.py": "78381488bacebc1a8b2719a3fb9b342811af724950d75a1f463784aee0f5a287",
+    "constraint-lab/src/rs_constraint_lab/history.py": "ffe2b960828b6c1143cb20d1dd5d2df18533f52de1346cc7e9936f3285444048",
+    "constraint-lab/src/rs_constraint_lab/memory_clocks.py": "edd18c5734c3a7b42c3801747a864f0f5e5f1cf9594ef74d0a98530426b5644a",
+    "constraint-lab/src/rs_constraint_lab/predictive_state.py": "a937126fbdc871e5f1b85da3a0c19f641a63bf1bfa61216a7778f34deebc552b",
+    "constraint-lab/src/rs_constraint_lab/refinement.py": "8a750b2fe0974bf3f8569ff748dcd117a7214a4f28c93ef2ba20eee2a3ca2a14",
+    "constraint-lab/src/rs_constraint_lab/state.py": "a5132429fa8697b5b3f98d985516356d9e997b32ca90b05c19a96e7fc726108c"
+  },
+  "synchronization": "shortest consecutive observation count determining the current stable block; neutral may need only one",
+  "tolerances": {
+    "information_formula_enumeration_gap": "1e-25",
+    "one_step_H0_gap": "exact",
+    "partitions": "exact",
+    "rational_identities": "exact",
+    "stationary_residual": "exact",
+    "synchronization_and_sufficiency": "exact"
+  },
+  "word_equivalence_scope": "not generally equated with strong lumpability; direct next-observation-row separation checked in this process",
+  "work_counts": {
+    "S4_transition_comparisons": 165888,
+    "atomic_items": 15,
+    "commuting_adjacent_arrows": 9,
+    "cross_items": 3,
+    "current_state_triple_terms": 27648,
+    "distinct_existing_kernels": 3,
+    "expected_same_observation_merge_certificates_non_neutral": 1986,
+    "independent_forward_triple_terms": 165888,
+    "initial_observation_counts": {
+      "edge_count": 7,
+      "graph_class": 11,
+      "labelled_mask": 64,
+      "parity": 2
+    },
+    "primary_projection_grade_items": 12,
+    "primary_refinement_runs_with_reverse_enumeration": 24,
+    "recurrent_states": 384,
+    "supported_transitions_per_kernel": 2304,
+    "worst_case_strict_split_rounds_per_item": "384 minus initial block count"
+  }
+}
