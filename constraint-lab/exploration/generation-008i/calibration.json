@@ -1,0 +1,36 @@
+{
+  "actual_non_neutral_I0_cells": 0,
+  "execution": "direct durable items, 120-second per-item signal watchdog",
+  "measurements": [
+    {
+      "N": 4,
+      "fixture": "neutral-production",
+      "full_crosscheck": {
+        "joint_gap": 3.686287386450715e-17,
+        "method": "independent full-state overdetermined linear balance least-squares solve",
+        "orbit_mass_gap": 3.469446951953614e-17,
+        "pair_marginal_gap": 3.469446951953614e-17,
+        "performed": true,
+        "role_distribution_gap": 1.5543122344752192e-15,
+        "stationary_residual": 3.426078865054194e-17
+      },
+      "m": "1/1",
+      "wall_seconds": 0.38503061099982006
+    },
+    {
+      "N": 3,
+      "fixture": "synthetic-three-slot",
+      "full_crosscheck": {
+        "joint_gap": 1.6653345369377348e-16,
+        "method": "independent full-state overdetermined linear balance least-squares solve",
+        "orbit_mass_gap": 1.3877787807814457e-16,
+        "pair_marginal_gap": 1.1102230246251565e-16,
+        "performed": true,
+        "role_distribution_gap": 3.3306690738754696e-16,
+        "stationary_residual": 1.734723475976807e-16
+      },
+      "m": "2/1",
+      "wall_seconds": 0.020307721999415662
+    }
+  ]
+}
