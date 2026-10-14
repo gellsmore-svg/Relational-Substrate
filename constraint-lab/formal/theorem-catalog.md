@@ -986,7 +986,7 @@ Scope: Generation 8I declared positive pair-toggle/history grammar, with clock a
 
 Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t36). Geometric absorption gives [w_e/(W+4)]/[1-4/(W+4)]=w_e/W, with almost sure next-pair arrival.
 Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
-Coherence: `F8H-PAIR-EPOCH-CLOSURE`, `F011-QUOTIENT-INVALID`
+Coherence: `F8H-PAIR-EPOCH-CLOSURE`, `F011-QUOTIENT-INVALID`, `F8I-VALID-ROLE-QUOTIENT`
 Dependencies: CL-T30
 Source generations: 008I
 Boundary: Triad-dependent weights or history updates require a new closure argument; no dense full augmented kernel or triad prior is assumed.
@@ -1003,7 +1003,7 @@ Scope: Generation 8I declared positive pair-toggle/history grammar, with clock a
 
 Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t37). Vertex maps preserve rho, direction, denominator and update. Kernel automorphism orbits have identical aggregate block rows. A marked-edge stabiliser gives 2*2*7=28 orbits.
 Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
-Coherence: `F011-QUOTIENT-INVALID`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`
+Coherence: `F011-QUOTIENT-INVALID`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`, `F8I-VALID-ROLE-QUOTIENT`
 Dependencies: CL-T20, CL-T36
 Source generations: 008I
 Boundary: The diagnostic tuple has collisions and is not substituted for the actual orbit partition; no larger symmetry is presumed.
@@ -1020,7 +1020,7 @@ Scope: Generation 8I declared positive pair-toggle/history grammar, with clock a
 
 Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t38). Each destination (p',j) has predecessors (p' xor 2^j,i), with incoming sum one. Symmetric regular class counts 1,4,1 make Q doubly stochastic. Positive slot sequences and j,j suffix prove communication; parity and a two-step return prove period two.
 Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
-Coherence: `F8H-STATIONARY-OCCUPANCY-INVARIANCE`, `Q-H-CONSEQUENTIAL-FUNCTIONS`
+Coherence: `F8H-STATIONARY-OCCUPANCY-INVARIANCE`, `Q-H-CONSEQUENTIAL-FUNCTIONS`, `F8I-HISTORY-ONLY-STATIONARY-SILENCE`
 Dependencies: CL-T36
 Source generations: 008I
 Boundary: Not a theorem for p-reading cross controllers or pointwise convergence from fixed parity.
@@ -1037,7 +1037,7 @@ Scope: Generation 8I declared positive pair-toggle/history grammar, with clock a
 
 Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t39). One-hot XOR recovers h. At stationary law all previous neighbours into a fixed p have positive mass, so unequal recovered-history rows violate order one. Equality is exactly history-erasure lumpability.
 Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
-Coherence: `F8H-ORDER2-PROJECTED-PROCESS`, `F8H-NONLUMPABLE-MATERIAL-PROJECTION`
+Coherence: `F8H-ORDER2-PROJECTED-PROCESS`, `F8H-NONLUMPABLE-MATERIAL-PROJECTION`, `F8I-CURRENT-ONLY-HISTORY-CORRELATION`, `F8I-ORDER-ATLAS`, `F8I-REPRESENTATION-READING`
 Dependencies: CL-T33, CL-T36
 Source generations: 008I
 Boundary: Pair-event clock and compatible observed transitions; no full-event finite-order or absolute non-Markovianity claim.
@@ -1054,7 +1054,7 @@ Scope: Generation 8I declared positive pair-toggle/history grammar, with clock a
 
 Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t40). Relabelled pi is stationary and hence equal by uniqueness. Invariant g(p) is fixed while h is transitive, yielding pi(g,h)=pi(g)/6. Uniform conditional mask laws inside each class eliminate model/mask conditional information.
 Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
-Coherence: `F8G-FORMAL-EQUIVALENCE-HIERARCHY`, `Q-H-COARSE-GRAINING`
+Coherence: `F8G-FORMAL-EQUIVALENCE-HIERARCHY`, `Q-H-COARSE-GRAINING`, `F8I-COARSE-HISTORY-INFORMATION-ZERO`
 Dependencies: CL-T37, CL-T16
 Source generations: 008I
 Boundary: Does not force I(P;H), model/class information or shape-given-edge information to vanish; remembered-label information differs from relational role information.
@@ -1071,7 +1071,7 @@ Scope: Generation 8I declared positive pair-toggle/history grammar, with clock a
 
 Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t41). Sum the augmented stationary flow over projected destinations; subtract uniform versus conditional row averages for the feedback identity.
 Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
-Coherence: `F8G-FORMAL-COMPILATION-TEST`, `F8H-FIXED-STATE-NONCOMPILABILITY`
+Coherence: `F8G-FORMAL-COMPILATION-TEST`, `F8H-FIXED-STATE-NONCOMPILABILITY`, `F8I-CURRENT-ONLY-HISTORY-CORRELATION`, `F8I-HISTORY-PRESENT-FEEDBACK`, `F8I-MATCHED-KU-DIFFERENT-STRUCTURE`, `F8I-REPRESENTATION-READING`
 Dependencies: CL-T36
 Source generations: 008I
 Boundary: Stationary one-step representation is weaker than matching every conditioned history row. Correlation alone need not cause a KU discrepancy; KU is only one comparator.
@@ -1088,7 +1088,7 @@ Scope: Generation 8I declared positive pair-toggle/history grammar, with clock a
 
 Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t42). An event e!=h sends (p,h) to (p xor 2^e,e). Returning material p requires toggling e and therefore cannot restore h. The reverse augmented arrow is absent, violating detailed balance.
 Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
-Coherence: `F8H-AUGMENTED-MARKOV-RESTORATION`, `F8H-TEMPORAL-TESTS-REQUIRED`
+Coherence: `F8H-AUGMENTED-MARKOV-RESTORATION`, `F8H-TEMPORAL-TESTS-REQUIRED`, `F8I-REGISTER-IRREVERSIBILITY-BOUNDARY`
 Dependencies: none
 Source generations: 008I
 Boundary: No assertion about every quotient, Kpi reversibility, thermodynamics or a memory-strength measure.
@@ -1105,7 +1105,7 @@ Scope: Generation 8I declared positive pair-toggle/history grammar, with clock a
 
 Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t43). Full coordinate permutations preserve the law. The candidate normalises and balances directly by separating destination remembered bit R=0 or 1 and counting other-present/absent bits. Positivity gives uniqueness. Conditional on h, R is uniform and other bits iid Bernoulli(r).
 Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
-Coherence: `Q-H-PERSISTENT-STRUCTURE`, `Q-H-CONSEQUENTIAL-FUNCTIONS`
+Coherence: `Q-H-PERSISTENT-STRUCTURE`, `Q-H-CONSEQUENTIAL-FUNCTIONS`, `F8I-SAME-SYMMETRY-FACTORIZATION`
 Dependencies: CL-T36, CL-T39
 Source generations: 008I
 Boundary: A larger dynamical bit-coordinate symmetry is not graph isomorphism or geometry. The formula is scoped to SAME-direction controllers; DISJ has explicit violating generators.
@@ -1122,7 +1122,7 @@ Scope: Generation 8I declared positive pair-toggle/history grammar, with clock a
 
 Proof: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md#cl-t44). q_f(p,h,e)=q_SAME(p,f(h),e), including its denominator. Reindex the uniform history sum. Relabelling history alone changes update to g'=f(e), so this does not conjugate the full program.
 Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [test_v08i.py](../../constraint-lab/tests/test_v08i.py), [test_v08i_followup.py](../../constraint-lab/tests/test_v08i_followup.py)
-Coherence: `F8G-FORMAL-COMPILATION-TEST`, `Q-H-CONSEQUENTIAL-FUNCTIONS`
+Coherence: `F8G-FORMAL-COMPILATION-TEST`, `Q-H-CONSEQUENTIAL-FUNCTIONS`, `F8I-EXACT-EQUIVALENCE-LEVELS`, `F8I-SINGLETON-KU-EQUIVALENCE`, `Q-H-SELECTOR-CLASSIFICATION`
 Dependencies: CL-T41, CL-T36
 Source generations: 008I
 Boundary: Not equality of conditioned rows, full processes or true stationary laws; two-grade I1 counterexamples distinguish them. No general irreducible-history claim.
@@ -1139,7 +1139,7 @@ Scope: Structural N=4 enumeration, explicitly observed before I0 as authorised.
 
 Enumeration: 384 pair-mask/history states under all 24 vertex permutations; independent stabiliser orbit count.; exact count 384. Verifier: [history_roles.py](../../constraint-lab/src/rs_constraint_lab/history_roles.py)
 Evidence: [history-role-grammar.md](../../constraint-lab/formal/history-role-grammar.md), [structural-orbits.json](../../constraint-lab/exploration/generation-008i/structural-orbits.json), [test_v08i.py](../../constraint-lab/tests/test_v08i.py)
-Coherence: `F011-QUOTIENT-INVALID`
+Coherence: `F011-QUOTIENT-INVALID`, `F8I-VALID-ROLE-QUOTIENT`
 Dependencies: CL-T37
 Source generations: 008I
 Boundary: Diagnostic descriptors are not treated as sufficient coordinates or a valid quotient by themselves.
