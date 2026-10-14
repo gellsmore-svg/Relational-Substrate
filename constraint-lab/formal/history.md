@@ -346,3 +346,19 @@ Class/count order-two synchronization and parity all-order erasure are proved
 in [predictive-state formalism](predictive-state.md), CL-T52..T59 and CL-F08.
 CL-Q06 remains the historical open entry; its specific preserved-observation
 question receives a bounded answer, not a general hidden-model minimisation.
+
+## Generation 8K synthesis addition
+
+The [state taxonomy](state-taxonomy.md) distinguishes historical origin from
+predictive sufficiency and hidden CURRENT coordinates. The
+[general predictive theory](predictive-state-theory.md) places strong refinement,
+trace equivalence, stationary matching, synchronization and observed order in
+separate scopes. Stationary adjacent-law matching in 8H is not weak lumpability.
+
+[Axis compilation](axis-compilation.md) generalises the augmentation argument
+under explicit closed-joint-law assumptions (CL-T64/T65). Finite constraint
+state can also flatten; neither H nor L is absolutely beyond Markov state.
+Support/clock/category-preserving compilers ask different questions.
+H2 and L sketches are written but unexecuted. The proposed H2 witness holds
+complete X and last pair fixed while varying the second-last pair. Any necessity
+claim excludes enlarged history alphabets and hidden-state recoding explicitly.

@@ -287,3 +287,19 @@ Labelled CMI agrees with CL-T34 event-slot MI to 1.62e-158.
 Neutral and parity zeros also have exact conditional-independence certificates.
 No universal monotonicity law under coarsening the conditioning variable is
 asserted. See the report and full-decimal temporal-information table.
+
+## Generation 8K synthesis addition
+
+The entire 8I derivation/results above remain unchanged.
+[General predictive-state theory](predictive-state-theory.md) reuses CL-T52,
+proves observation-coarsening monotonicity (CL-T60), and generalises quotient
+commutation (CL-T61) and synchronization/order bounds (CL-T63).
+Use Pi_Y / widehat-Pi_Y for observation partition / strong refinement, rather
+than overloading pair mask P.
+
+The 28/12 role counts are model-specific finite results. Strong refinement is
+not generally trace equivalence, a causal-state construction or minimum HMM
+encoding; [tiny exact counterexamples](predictive-state-counterexamples.md)
+show the false converses. 8I's immediate observed-row separation is what proves
+the stronger particular-process minimality. One-step stationary invisibility
+does not imply weak lumpability or full observed path equality.
