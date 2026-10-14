@@ -75,12 +75,11 @@
    - the domain of the aggregate claim (36 cells without one-way transitions);
    - the saturated reversal scale.
 6. **Square circulation is a projection.** It sums oriented edge currents, which belong to several cycles. It is reported as such, not as a cycle decomposition.
+7. **One HELD cell below the reporting floor.** HELD PATHF strong_favour has partner index −7e-13, below the declared 1e-12 floor, and is recorded as zero.
 8. **Runner fix after both rounds (engineering only).**
    - **Failure.** The pull_request CI run on `cc4bfd2` (run 38592301540) failed with `ChildProcessError: No child processes` in `gte1.run`, in a synthetic atlas test. The runner kept only each child's process ID. Python's `subprocess` module could then reap a child through its own cleanup when the unreferenced `Popen` object was garbage-collected, so the runner's `os.wait4` found no child. The failure is timing-dependent, and the push run on the same commit passed.
    - **Fix.** The runner now keeps each `Popen` object until its child is reaped, and tolerates a child reaped elsewhere (peak memory is then recorded as unknown). A regression test forces the failing path: it fails without the fix and passes with it.
    - **Effect on results: none.** The failure is a crash, never silently wrong data, and every E1, E2A and E2B item completed with status `complete`. No plan, cell or estimand changed.
-
-7. **One HELD cell below the reporting floor.** HELD PATHF strong_favour has partner index −7e-13, below the declared 1e-12 floor, and is recorded as zero.
 
 ## Results (summary)
 
