@@ -1,0 +1,4262 @@
+{
+  "analysis_version": "generation-008i-historical-roles/v1",
+  "frozen_analysis_plan_commit": "035601e215bf6f0c4621d818ffa22b713d0b5d67",
+  "item": {
+    "item_id": "I0-EQUIVALENCE-SYMMETRY",
+    "kind": "equivalence"
+  },
+  "plan_hash": "42afdec5605b170bc2499ace6d20d6e2b3312a2f0ab1c784503674598cc60a65",
+  "result": {
+    "complement_checks": [
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-SAME_ANY-m025",
+        "stationary_gap": "0/1",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-SAME_ANY-m4",
+        "stationary_gap": "0/1",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-ADJ_ANY-m025",
+        "stationary_gap": "0/1",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-ADJ_ANY-m4",
+        "stationary_gap": "0/1",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-DISJ_ANY-m025",
+        "stationary_gap": "0/1",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-DISJ_ANY-m4",
+        "stationary_gap": "0/1",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-FORM_ANY-m025",
+        "stationary_gap": "0/1",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-FORM_ANY-m4",
+        "stationary_gap": "0/1",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "stationary_gap": "0/1",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "stationary_gap": "0/1",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-SAME_FORM-m025",
+        "stationary_gap": "0/1",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-SAME_FORM-m4",
+        "stationary_gap": "0/1",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "stationary_gap": "0/1",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "stationary_gap": "0/1",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-ADJ_FORM-m025",
+        "stationary_gap": "0/1",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-ADJ_FORM-m4",
+        "stationary_gap": "0/1",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "stationary_gap": "0/1",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "stationary_gap": "0/1",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-DISJ_FORM-m025",
+        "stationary_gap": "0/1",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-DISJ_FORM-m4",
+        "stationary_gap": "0/1",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "stationary_gap": "0/1",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "kernel_gap": "0/1",
+        "map": "p xor 63; history unchanged",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "stationary_gap": "0/1",
+        "target": "I0-DISJ_FORM-m4"
+      }
+    ],
+    "groups": {
+      "KU_kernel_fingerprint": [
+        {
+          "controller_ids": [
+            "I0-FORM_ANY-m025",
+            "I0-DISSOLVE_ANY-m4"
+          ],
+          "fingerprint": "06d85965b202ab89bfcd254e496b810be2d517c585af3c538d2981ffe07bd044"
+        },
+        {
+          "controller_ids": [
+            "I0-NEUTRAL",
+            "I0-SAME_ANY-m025",
+            "I0-SAME_ANY-m4",
+            "I0-ADJ_ANY-m025",
+            "I0-ADJ_ANY-m4",
+            "I0-DISJ_ANY-m025",
+            "I0-DISJ_ANY-m4"
+          ],
+          "fingerprint": "23dfb0d8825ef7bbdd2d0aad85f5a1992c372f23cd3d8dd66d0e3f8e96a33419"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_DISSOLVE-m4"
+          ],
+          "fingerprint": "5038e334073aa95547fdac411de3d44ead068086ed145e41d97247d40059414b"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_FORM-m4",
+            "I0-DISJ_FORM-m4"
+          ],
+          "fingerprint": "5abf538e7c1b6234663127c459c076e776fc45cd8da2ad4eb7bf183e93043e04"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_FORM-m025"
+          ],
+          "fingerprint": "6f2bc75464ffc5f7b6abc453a0356e34622dbe7831db338c411e5f57e5fd91e2"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_DISSOLVE-m025",
+            "I0-DISJ_DISSOLVE-m025"
+          ],
+          "fingerprint": "7cf803b85158fd204bbe21e2ed5748e20329cec51de56562900a3b1925e82ab3"
+        },
+        {
+          "controller_ids": [
+            "I0-FORM_ANY-m4",
+            "I0-DISSOLVE_ANY-m025"
+          ],
+          "fingerprint": "9e7b00bda036c5369ce0647813808b84d54ca274277f028aa73e3725106f7c95"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_DISSOLVE-m4",
+            "I0-DISJ_DISSOLVE-m4"
+          ],
+          "fingerprint": "c0689674d42adac4928d6d4d144fd454643c5b355426055cdb5f07b38fec32f6"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_DISSOLVE-m025"
+          ],
+          "fingerprint": "c3464f7b19afaaaf441c3f764f15ceaa51d995af16251dc5c05482dba4ab1307"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_FORM-m4"
+          ],
+          "fingerprint": "c42dfa883f3de47c20a62763412635d51168e96b1570d73d0abf2eaebbf00aad"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_FORM-m025",
+            "I0-DISJ_FORM-m025"
+          ],
+          "fingerprint": "ca38fb0e454beb9dbaa7ec8d15706c2d09239bacae8578e4afe20846185062e4"
+        }
+      ],
+      "full_kernel_fingerprint": [
+        {
+          "controller_ids": [
+            "I0-SAME_FORM-m025"
+          ],
+          "fingerprint": "0a54611f66f0caf611a6f0df000198525e5cbbf1e950f2b89fe67180c4b7455b"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_ANY-m4"
+          ],
+          "fingerprint": "13c689d21e1f5d6fa24bd6155c0bec44a1b7cf2a72b5fb689dd9831cecf4bb62"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_DISSOLVE-m025"
+          ],
+          "fingerprint": "27e25c43774525338e4ccac25e2ae9706e1229f1302b5a3be231e480606f8edc"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_DISSOLVE-m025"
+          ],
+          "fingerprint": "3dbb2da04e8ba56a30eb0a1bf71135a862b653d669a1e39ded84973c65e6947d"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_DISSOLVE-m4"
+          ],
+          "fingerprint": "3eb36f4a227ad36bbb87fee74fc2a77efdfcd39a348c091ff9e0bbf497ee9b1e"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_FORM-m025"
+          ],
+          "fingerprint": "6080c779aea0ad29a6aa5c932e25524789423e38611a2723778c7ec352a93792"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_FORM-m4"
+          ],
+          "fingerprint": "8143ac422602bb99362b18d9eb1277cd570b8e63a8520245d1af709659ee14c9"
+        },
+        {
+          "controller_ids": [
+            "I0-FORM_ANY-m4",
+            "I0-DISSOLVE_ANY-m025"
+          ],
+          "fingerprint": "830bba98054dd42988601540ee5acf373c647ce8d9f0a9b6755fc4368a33170a"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_DISSOLVE-m4"
+          ],
+          "fingerprint": "987fbf7a7d64e18dbff90784d539694b7dce83f8c8c1f5fd68158c2b666baa79"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_ANY-m025"
+          ],
+          "fingerprint": "9e504f57c27918be685e1f498f2b97fdf5135875d1abf3c8fe012697c22c89eb"
+        },
+        {
+          "controller_ids": [
+            "I0-NEUTRAL"
+          ],
+          "fingerprint": "a24387bb4cbf001b51f534b5245855a427a8b849012e509362163e8670fbe2bd"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_ANY-m4"
+          ],
+          "fingerprint": "a9d353e30ec250eba67ab348cea1cd36d0981c7648955d33e82aeb7ba64fc9e3"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_FORM-m4"
+          ],
+          "fingerprint": "ae70372aab6df4768d842db12d21174509b6afe2960c93873f9439bf9b5b9ca6"
+        },
+        {
+          "controller_ids": [
+            "I0-FORM_ANY-m025",
+            "I0-DISSOLVE_ANY-m4"
+          ],
+          "fingerprint": "aeef54c586ffcc8015cae927e9d4e483f9957722844c7efda89a48250675e9da"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_DISSOLVE-m4"
+          ],
+          "fingerprint": "bbd1cc2dcb0d17ad97b38365748ebc8ef8cf76fe4676d36a97f76fcf13ac38fc"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_FORM-m4"
+          ],
+          "fingerprint": "d17f15732f9826269d8c590bef2960a9794569893cc6abb6893ae3fcd2f09fb0"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_FORM-m025"
+          ],
+          "fingerprint": "d2c3611d0dd4a99c4fcd3b19bf8322e5d31681f685274ee3da4e9ba323a4520b"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_ANY-m4"
+          ],
+          "fingerprint": "d4db0d456ef90bf39e7cae91533a6969ff43497f73d35952ff8e5c06cdf78bc4"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_DISSOLVE-m025"
+          ],
+          "fingerprint": "e43bb3785ee160a2c1a1eb01bc46d586654442df35b89fe46baaec031867a348"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_ANY-m025"
+          ],
+          "fingerprint": "e7c5149e58d3e197c13e6bd4b39a305200d2a137a37700238f7acdcc7f47ff55"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_ANY-m025"
+          ],
+          "fingerprint": "edd2c1f88a5a31c6dd820dbe1c0fdf55874852f4771a1eb0fb0373c80c902ce7"
+        }
+      ],
+      "kernel_fingerprint": [
+        {
+          "controller_ids": [
+            "I0-SAME_FORM-m4"
+          ],
+          "fingerprint": "172e37a05b192350c75c677952c0e8d08e056bc2d6527ac137c942a56fed87d1"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_DISSOLVE-m4"
+          ],
+          "fingerprint": "1806a96f047663bea0600db82a70257f12a2e1daeb9a06a451b90d4c25f7e349"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_ANY-m4"
+          ],
+          "fingerprint": "29aa49d53b5230d52560c90726979751ce0e8b8bcbcd01f3898802d5b89ccb40"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_FORM-m025"
+          ],
+          "fingerprint": "3117dff022c6bd4fd26fefb4592980a1d9c8524175fd597e6a25f1f457dfd645"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_DISSOLVE-m4"
+          ],
+          "fingerprint": "3f472614c8b85af3e9fe743d4683d7e6abc759ef4a0aee9fbcfb37983e866654"
+        },
+        {
+          "controller_ids": [
+            "I0-FORM_ANY-m4",
+            "I0-DISSOLVE_ANY-m025"
+          ],
+          "fingerprint": "6085144c78482827854365f1eaa56d0d484937a1f1c7b8ebbeb1c4946adddc0d"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_ANY-m4"
+          ],
+          "fingerprint": "7030d8e4914eb216ea6bfa14b197974f95c1e0370bcce44c5a66ab4b6978210b"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_DISSOLVE-m4"
+          ],
+          "fingerprint": "7c1a7e61db107a7eaf8f70dfa5a593200875bcf1149c4c5643949b17b664a594"
+        },
+        {
+          "controller_ids": [
+            "I0-FORM_ANY-m025",
+            "I0-DISSOLVE_ANY-m4"
+          ],
+          "fingerprint": "8114bd8166395c9fa4a6b1d995a6e386faa1ce9eab338bbf8a79880043cdcb5e"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_FORM-m4"
+          ],
+          "fingerprint": "83974b09cc49ee3d69019c33e7b2ab48a3916a24b42a3ccb7e63f80dc6b70cd5"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_FORM-m025"
+          ],
+          "fingerprint": "9594e7bdcde08f11ca23370e51715dc632269ba8ab38aca8e51de772a391225c"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_ANY-m4"
+          ],
+          "fingerprint": "9f9f74e5744b5943d7e95582e5f07ccf5570001cc1e8367ac833a05e21733af2"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_DISSOLVE-m025"
+          ],
+          "fingerprint": "a4e11da131573866827ba7ce9875a1792bfd8a17192c3dcc113151de03c9d8d9"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_FORM-m4"
+          ],
+          "fingerprint": "afcdfe88be98f5fef0fd8a60947a5013d601cd42b07817e7d1e50837eb8e99e9"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_ANY-m025"
+          ],
+          "fingerprint": "be1c5adee73a9094a1313d09e387e97868da379ace6ba2bf9e89ead5a9a625c6"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_FORM-m025"
+          ],
+          "fingerprint": "d4ee091024daef4e5ce43c30dfa02898f0fc4914235fc5f12ad17394536b8bed"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_DISSOLVE-m025"
+          ],
+          "fingerprint": "d986dd94fd4d077d0548fb4937a89e8121423b8b5b150552c53413425202b68b"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_ANY-m025"
+          ],
+          "fingerprint": "e066919f9485a73913f471f286354b6adb1490161ffb9b32d034dbc3678541b9"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_DISSOLVE-m025"
+          ],
+          "fingerprint": "ebb62b38ab21d20b0178015025983842f86eabf1c02bcd47dd6b6cbee855b705"
+        },
+        {
+          "controller_ids": [
+            "I0-NEUTRAL"
+          ],
+          "fingerprint": "facb4386c589a79f7d030d89d93f4cbed3ae2c6600086dd7fbd0fa964a2d1f98"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_ANY-m025"
+          ],
+          "fingerprint": "fce778a74cd2287c1365cbb20181fe9f99651d0d4854b839968b58078d77e096"
+        }
+      ],
+      "material_fingerprint": [
+        {
+          "controller_ids": [
+            "I0-ADJ_FORM-m025"
+          ],
+          "fingerprint": "0a37226b679c77955eacc529be2c9f45a2a611b2f59732e38d0219b3816d1340"
+        },
+        {
+          "controller_ids": [
+            "I0-FORM_ANY-m4",
+            "I0-DISSOLVE_ANY-m025"
+          ],
+          "fingerprint": "52ce55684316236aecad774fb92c99929f12e267ad718a89a06beab69dfa8eea"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_DISSOLVE-m4"
+          ],
+          "fingerprint": "5e063067e475627eab2b9054b97f804e21c5abd2dd71388495af132620ab63c2"
+        },
+        {
+          "controller_ids": [
+            "I0-NEUTRAL",
+            "I0-SAME_ANY-m025",
+            "I0-SAME_ANY-m4",
+            "I0-ADJ_ANY-m025",
+            "I0-ADJ_ANY-m4",
+            "I0-DISJ_ANY-m025",
+            "I0-DISJ_ANY-m4"
+          ],
+          "fingerprint": "6291072b0eb24215edfadd1c0e6d65d23dd334f2f749db7d7408f2adf6edc29a"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_DISSOLVE-m025"
+          ],
+          "fingerprint": "76dd7a91aae8ad1a08b8c0a9a7a76e2a97f18b57b5aa0c361be702436fef152d"
+        },
+        {
+          "controller_ids": [
+            "I0-FORM_ANY-m025",
+            "I0-DISSOLVE_ANY-m4"
+          ],
+          "fingerprint": "80716e1bc9b002acf40df392cec9e894ebe339099d5c319bfcbfc6e741dd84bf"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_FORM-m4"
+          ],
+          "fingerprint": "88fb18213987c558c9c3cd6738df5618001eebf5c294c283ead4904c00cb41e9"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_DISSOLVE-m4"
+          ],
+          "fingerprint": "89067406fbe0dc1b5095173c0d2c3ba5082b444475c20c45695bc1b108276dd9"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_FORM-m4"
+          ],
+          "fingerprint": "8b02adc8dd56e7b448be5c46fd0bface78a074c314d286e6d043b1d2d0d76012"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_DISSOLVE-m4"
+          ],
+          "fingerprint": "b12a894f5c706b02b14bb7bbc2c0ffe9a7fd870f2bc1f3c29671473e9e3aad51"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_DISSOLVE-m025"
+          ],
+          "fingerprint": "bcc73abf527d2ec6830c831dd9512feb0b1fe15ec7cb68ccaf82a72cfad1a678"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_FORM-m4"
+          ],
+          "fingerprint": "ccd5a81050310904df8b064c0a433dcef06714c91a0aea4f20273652aeb5e368"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_FORM-m025"
+          ],
+          "fingerprint": "d86d704eacb33ef5794469373081681257672175b64fd5b8a0425a69eb742a57"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_FORM-m025"
+          ],
+          "fingerprint": "de8541a6a7b07bac31e4ee6fc231892c21a2068726ec664752ebb1bda7c63c88"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_DISSOLVE-m025"
+          ],
+          "fingerprint": "f1ef53092f121775b19437cd0d53623fe7b2463b491379c9d3f2aabad62bd0d5"
+        }
+      ],
+      "projected_kernel_fingerprint": [
+        {
+          "controller_ids": [
+            "I0-FORM_ANY-m025",
+            "I0-DISSOLVE_ANY-m4"
+          ],
+          "fingerprint": "06d85965b202ab89bfcd254e496b810be2d517c585af3c538d2981ffe07bd044"
+        },
+        {
+          "controller_ids": [
+            "I0-NEUTRAL",
+            "I0-SAME_ANY-m025",
+            "I0-SAME_ANY-m4",
+            "I0-ADJ_ANY-m025",
+            "I0-ADJ_ANY-m4",
+            "I0-DISJ_ANY-m025",
+            "I0-DISJ_ANY-m4"
+          ],
+          "fingerprint": "23dfb0d8825ef7bbdd2d0aad85f5a1992c372f23cd3d8dd66d0e3f8e96a33419"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_FORM-m025"
+          ],
+          "fingerprint": "26843c85438b34673015a5a935e3cbd1dd67fa06404400da8aef0ab234869824"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_FORM-m4"
+          ],
+          "fingerprint": "3438602f8b2204d914f568e9027a95e37241a1fc73fc9694fd942551b8c9e730"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_DISSOLVE-m4"
+          ],
+          "fingerprint": "3d6673beefada36a1fdc699e5804bf87c855e9c37f4a467f6783232f8259c3ca"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_DISSOLVE-m4"
+          ],
+          "fingerprint": "545b2307f80f99ee6d19a03c6135e4aac7c8407e3fd9a9e1f2bba5666f9c1547"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_FORM-m4"
+          ],
+          "fingerprint": "6caa20457a81a67086b180b5a1fa208680d9eb1e34d993779bdf19458e85fc1e"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_DISSOLVE-m025"
+          ],
+          "fingerprint": "73368eb074c3992228276bdec064a853f2d7b00a32cc52ac0b717d3ca48b014d"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_DISSOLVE-m025"
+          ],
+          "fingerprint": "74ad2201d5dc2f47790ba2a5b97bd2639daec632c8e276226f1404be96060929"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_DISSOLVE-m4"
+          ],
+          "fingerprint": "7fe367e3808df379410f6f180eff20d7ca674b835397eeb8d5ee1e7b8640c522"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_FORM-m4"
+          ],
+          "fingerprint": "9a020d65ffa33013b5f394f10fa1664e822282de9a7cbc1335e0d1308d778801"
+        },
+        {
+          "controller_ids": [
+            "I0-FORM_ANY-m4",
+            "I0-DISSOLVE_ANY-m025"
+          ],
+          "fingerprint": "9e7b00bda036c5369ce0647813808b84d54ca274277f028aa73e3725106f7c95"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_FORM-m025"
+          ],
+          "fingerprint": "b4cdd4e37b10d5d82f3540a2eea584539bf0e57311bdd91e9b4754146c4f2363"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_FORM-m025"
+          ],
+          "fingerprint": "b9852142c2cffefa889271825dd6b550a8653d11a926e907aa03c1035c9dbded"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_DISSOLVE-m025"
+          ],
+          "fingerprint": "ec3ce7a18ca81480770cc50edcd513519acfa9d8234b4d074f1b307fdfe0d473"
+        }
+      ],
+      "stationary_fingerprint": [
+        {
+          "controller_ids": [
+            "I0-ADJ_DISSOLVE-m4"
+          ],
+          "fingerprint": "02b150a2b409467f7916784856f9478e37c2e845ca28d53f3c1e00d477bcac5d"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_FORM-m4"
+          ],
+          "fingerprint": "03e18633ee460835d8cbab70b4164aa81222a2b9cee42ec02e70aae8d9943424"
+        },
+        {
+          "controller_ids": [
+            "I0-FORM_ANY-m4",
+            "I0-DISSOLVE_ANY-m025"
+          ],
+          "fingerprint": "070e5a1151ccb2655fe52ec61b421806415ef58d1d2785531d97a7e344222fcf"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_DISSOLVE-m4"
+          ],
+          "fingerprint": "1126cfad3ce527c16d68cb177c61015a7aff0f6059f1dd91c3c50feba1ab8b39"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_FORM-m025"
+          ],
+          "fingerprint": "2b5085bf1365e2e1483d55392201edb9893d53dd9d02725de2fda59ef1d965eb"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_FORM-m025"
+          ],
+          "fingerprint": "328b5c5b218b52ea5fc8317d7de9db22c0dcc1650497956ce57d6b486f2c4eb4"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_DISSOLVE-m025"
+          ],
+          "fingerprint": "3ad40873cbc158da41bc8de238157ce796b54451a83494e5d051a97da7987ea7"
+        },
+        {
+          "controller_ids": [
+            "I0-FORM_ANY-m025",
+            "I0-DISSOLVE_ANY-m4"
+          ],
+          "fingerprint": "540461f08be432bcb80ae0ce64fb5ddf146ca1038b12e2702f193ae63655a20c"
+        },
+        {
+          "controller_ids": [
+            "I0-SAME_DISSOLVE-m025"
+          ],
+          "fingerprint": "6cb7dfbbb950d09c47fe2754e2e090454425808a744096f0c0369fb7ee403603"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_FORM-m4"
+          ],
+          "fingerprint": "6cc2c66b4b198df92f358321d8f52fb54435cc496cefa7be2aa5148bab08fb51"
+        },
+        {
+          "controller_ids": [
+            "I0-NEUTRAL",
+            "I0-SAME_ANY-m025",
+            "I0-SAME_ANY-m4",
+            "I0-ADJ_ANY-m025",
+            "I0-ADJ_ANY-m4",
+            "I0-DISJ_ANY-m025",
+            "I0-DISJ_ANY-m4"
+          ],
+          "fingerprint": "6dfb7a2efe8109779d096af014000ec3d1d7300bcd02e672dcd674cb7f5454f6"
+        },
+        {
+          "controller_ids": [
+            "I0-ADJ_DISSOLVE-m025"
+          ],
+          "fingerprint": "9a8e733aefb7011560fdf588e99b5c68d982da7f860e784a20fce42abb098859"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_DISSOLVE-m4"
+          ],
+          "fingerprint": "9b8fb8eabdbe4fd634ebd6073faa131a7df5a3a73cb1f6cb0e8f43c0bacbc9b3"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_FORM-m4"
+          ],
+          "fingerprint": "cc43fb2d0f5d211b782c80d78097ff5070e6eee1704ac72c2cb6f95877cad4b6"
+        },
+        {
+          "controller_ids": [
+            "I0-DISJ_FORM-m025"
+          ],
+          "fingerprint": "dd0fed29435479d209353b116285085b9d35b299e0ea70ba609a5a02739eb74d"
+        }
+      ]
+    },
+    "kind": "equivalence",
+    "reciprocity_checks": [
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_ANY-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "7/18",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "7/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "7/18",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "7/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "identity",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "graph complement",
+        "source": "I0-ADJ_ANY-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_ANY-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "7/18",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "7/18",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "7/18",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "7/18",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_FORM-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-SAME_DISSOLVE-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "8/45",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "8/45",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "8/45",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "8/45",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_FORM-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "8/45",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "8/45",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "13/36",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "8/45",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "8/45",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-ADJ_DISSOLVE-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_FORM-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-SAME_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "17/126",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-ADJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-DISJ_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-SAME_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-SAME_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-ADJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-ADJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-DISJ_FORM-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m025",
+        "target": "I0-DISJ_DISSOLVE-m4"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "16/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-SAME_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "2/9",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-ADJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-DISJ_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-SAME_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-SAME_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-ADJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-ADJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-DISJ_FORM-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "25/63",
+        "map": "identity",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      },
+      {
+        "equivalent": false,
+        "kernel_gap": "5/18",
+        "map": "graph complement",
+        "source": "I0-DISJ_DISSOLVE-m4",
+        "target": "I0-DISJ_DISSOLVE-m025"
+      }
+    ],
+    "reciprocity_matches": [
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "graph complement",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "identity",
+        "source": "I0-FORM_ANY-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-FORM_ANY-m4"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m025",
+        "target": "I0-DISSOLVE_ANY-m4"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "identity",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-FORM_ANY-m025"
+      },
+      {
+        "equivalent": true,
+        "kernel_gap": "0/1",
+        "map": "graph complement",
+        "source": "I0-DISSOLVE_ANY-m4",
+        "target": "I0-DISSOLVE_ANY-m025"
+      }
+    ],
+    "scope": "fingerprints keep law/statistic levels separate; reciprocity tests identity/complement only"
+  },
+  "result_sha256": "74a63ebf3950153f6ddced3ee803355d31cca3813902e69650a89660ff676f63",
+  "schema": "rs-constraint-lab.role-atlas/v1",
+  "wall_seconds": 1.912208206998912
+}

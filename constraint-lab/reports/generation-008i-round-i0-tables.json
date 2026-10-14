@@ -1,0 +1,183 @@
+{
+  "analysis_version": "generation-008i-historical-roles/v1",
+  "detail_sha256": {
+    "constraint-lab/reports/tables/generation-008i-controller-catalog.json": "90601dbb3a122018760259e4246706ce6a8fd931cb5a0b9684b092074d30f673",
+    "constraint-lab/reports/tables/generation-008i-currents.json": "49d7fdc40bcafa2e137b4bdcb04094f9a03bc4d86b17fee6605fbfca797cfc89",
+    "constraint-lab/reports/tables/generation-008i-equivalence.json": "e35833980f9a3bcae44acd53cbb90e6270d28ff60fc276146e8f4f81ce04d55d",
+    "constraint-lab/reports/tables/generation-008i-kernels.json": "ea539e13fe17e6507332145e37dd4dafa99ec11a88f2b7e440cdc1fcf3e3459a",
+    "constraint-lab/reports/tables/generation-008i-neutral.json": "93d89e8332eaf60cc88f2bf165309ba8229110f34e3d34f25d740e928921b67e",
+    "constraint-lab/reports/tables/generation-008i-role-atlas.json": "2490120e1bfe2905aa3fb68d150d68b27efbcca19e7b9bb3f8ed5dd00822f773",
+    "constraint-lab/reports/tables/generation-008i-stationary-atlas.json": "c956275343fc4f3df346b5885779e774edfa62dbdaf7927bdcb0982a777f9004",
+    "constraint-lab/reports/tables/generation-008i-stationary-distributions.json": "4948667e1d408289089bc812fbb680cd6338f515609564936b9758d8ce1475c9",
+    "constraint-lab/reports/tables/generation-008i-temporal-atlas.json": "bf4aa68c90499ed6dc7af936edb5fc0df944134b6fb0ca138e7c46f80507a4c8",
+    "constraint-lab/reports/tables/generation-008i-validation.json": "504301dbf89e37a49feb771fc60bb5a9bbc37fab339bad4e4820c6a77609290c"
+  },
+  "experiment_id": "generation-008i-history-role-grammar",
+  "frozen_analysis_plan_commit": "035601e215bf6f0c4621d818ffa22b713d0b5d67",
+  "item_sha256": {
+    "constraint-lab/reports/items/generation-008i/I0-ADJ_ANY-m025.json": "6a5d242ff10e794e9d383d6480c4b0b295391c444ad770abfa1d6fc81f906c82",
+    "constraint-lab/reports/items/generation-008i/I0-ADJ_ANY-m4.json": "a7811f0bca42774f9b4f3867be76eca52a756178838be5ed4488c1c542eccde3",
+    "constraint-lab/reports/items/generation-008i/I0-ADJ_DISSOLVE-m025.json": "7fee19c6498dfda1d1403704232fb35d114973a4542df41f5905a553a4604fe8",
+    "constraint-lab/reports/items/generation-008i/I0-ADJ_DISSOLVE-m4.json": "91ba17e17c4c0c5f23a2cf16d7d8b4ff283a35590c3283f322621158c1d38ea3",
+    "constraint-lab/reports/items/generation-008i/I0-ADJ_FORM-m025.json": "0dc1c7895c61779d467028439cea7e01fa6949a776028451a6215ca3c750e4d2",
+    "constraint-lab/reports/items/generation-008i/I0-ADJ_FORM-m4.json": "0509c6548e23c337228053044e2838ca45ad73b7e989c08924d6b6e5e7ba9e38",
+    "constraint-lab/reports/items/generation-008i/I0-DISJ_ANY-m025.json": "49e44f22a5e53c03215fe9921514dbeae6f18e60ac87fa46bdd67257e89f6666",
+    "constraint-lab/reports/items/generation-008i/I0-DISJ_ANY-m4.json": "b8430102168a00b86172bf4603d721b510152fcd264eba105ee169193920d2de",
+    "constraint-lab/reports/items/generation-008i/I0-DISJ_DISSOLVE-m025.json": "4e19fc2d7f7d27d0d9935c86396e831ef259aeda2e81d276b4df660ee818f72a",
+    "constraint-lab/reports/items/generation-008i/I0-DISJ_DISSOLVE-m4.json": "7bf35093f0a7fddf5bdf0c5fe01a5af83c4a585eb989f84a4e1c589ad0959b17",
+    "constraint-lab/reports/items/generation-008i/I0-DISJ_FORM-m025.json": "44f8086fb70f6e673275a0b14e226903bfbffcc28fd82365a274aaa491364269",
+    "constraint-lab/reports/items/generation-008i/I0-DISJ_FORM-m4.json": "01f8634ce802ff3387f6c2b8d06fc423a3713ad6e2f2e59260f25e6fd965da03",
+    "constraint-lab/reports/items/generation-008i/I0-DISSOLVE_ANY-m025.json": "77aaa728faa0e8d5d35b5658cee96646728db456d895631e4a6024e95cfabe1c",
+    "constraint-lab/reports/items/generation-008i/I0-DISSOLVE_ANY-m4.json": "4e51783a42d6b9841f0107b011d6beb97497a2f9e7ef9e804a3fdb66c8edd4af",
+    "constraint-lab/reports/items/generation-008i/I0-EQUIVALENCE-SYMMETRY.json": "edacbe915b2ce1dcfdbac0c2f260d6238890eeb4fdb8e4b7171b72f227190ad4",
+    "constraint-lab/reports/items/generation-008i/I0-FORM_ANY-m025.json": "c1de9cd779f1eabc70e86a21e1216b20c2823e0da77a4a2c3ea964d0064ac07c",
+    "constraint-lab/reports/items/generation-008i/I0-FORM_ANY-m4.json": "29f2905c61a8f0483203ab643590905e92113fce5a970b9a84cc261208847e1f",
+    "constraint-lab/reports/items/generation-008i/I0-NEUTRAL.json": "da25a1241e6e05ab71b696227c9666a17d4051442e2eddaf88237a4eebaa85ba",
+    "constraint-lab/reports/items/generation-008i/I0-SAME_ANY-m025.json": "ea48254b7917327633f3527e07377c1661dc238b720965bb159b3546993d668a",
+    "constraint-lab/reports/items/generation-008i/I0-SAME_ANY-m4.json": "cb2408507ac4fa81cbef03b2b31489b321bb9fa3870d2063ce6f6504919e45ac",
+    "constraint-lab/reports/items/generation-008i/I0-SAME_DISSOLVE-m025.json": "c543d449c278e42c9adfa994e08c7e11099763edaea2d37b6254676cbe19d2a1",
+    "constraint-lab/reports/items/generation-008i/I0-SAME_DISSOLVE-m4.json": "f973b8849da5c9c08e6d41b4575459a06990c54f3e98a1b2b96c809ee43c8d45",
+    "constraint-lab/reports/items/generation-008i/I0-SAME_FORM-m025.json": "ad1f0f712ebfd4a65f69db2fb31c86d15e68c8ef06be47cf48d1688fc9a01cfa",
+    "constraint-lab/reports/items/generation-008i/I0-SAME_FORM-m4.json": "2b3a0bfbf0ba0f8e0e4895f710bb0f12bcc037f984a1f121a5a879a98a70291e"
+  },
+  "numpy": "2.5.3",
+  "plan_file_sha256": "504a4456c06376dc25ad28c4817da543e63129692b9e3216e45ef8ed23cb5593",
+  "plan_hash": "42afdec5605b170bc2499ace6d20d6e2b3312a2f0ab1c784503674598cc60a65",
+  "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "precision_decimal_digits": 160,
+  "primary_cells": 22,
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "round_id": "I0",
+  "status": "COMPLETE",
+  "stochastic_scientific_trajectories": 0,
+  "timings": [
+    {
+      "item_id": "I0-NEUTRAL",
+      "wall_seconds": 0.4011190439996426
+    },
+    {
+      "item_id": "I0-SAME_ANY-m025",
+      "wall_seconds": 0.3997780360004981
+    },
+    {
+      "item_id": "I0-SAME_ANY-m4",
+      "wall_seconds": 0.3864073369986727
+    },
+    {
+      "item_id": "I0-ADJ_ANY-m025",
+      "wall_seconds": 0.4096586630003003
+    },
+    {
+      "item_id": "I0-ADJ_ANY-m4",
+      "wall_seconds": 0.4137037029995554
+    },
+    {
+      "item_id": "I0-DISJ_ANY-m025",
+      "wall_seconds": 0.39320745399891166
+    },
+    {
+      "item_id": "I0-DISJ_ANY-m4",
+      "wall_seconds": 0.36956485900009284
+    },
+    {
+      "item_id": "I0-FORM_ANY-m025",
+      "wall_seconds": 0.4922962529999495
+    },
+    {
+      "item_id": "I0-FORM_ANY-m4",
+      "wall_seconds": 0.485668725999858
+    },
+    {
+      "item_id": "I0-DISSOLVE_ANY-m025",
+      "wall_seconds": 0.4593014210004185
+    },
+    {
+      "item_id": "I0-DISSOLVE_ANY-m4",
+      "wall_seconds": 0.463900824999655
+    },
+    {
+      "item_id": "I0-SAME_FORM-m025",
+      "wall_seconds": 0.44699210900034814
+    },
+    {
+      "item_id": "I0-SAME_FORM-m4",
+      "wall_seconds": 0.48404923700036306
+    },
+    {
+      "item_id": "I0-SAME_DISSOLVE-m025",
+      "wall_seconds": 0.44879182900149317
+    },
+    {
+      "item_id": "I0-SAME_DISSOLVE-m4",
+      "wall_seconds": 0.4825789380010974
+    },
+    {
+      "item_id": "I0-ADJ_FORM-m025",
+      "wall_seconds": 0.5451095210009953
+    },
+    {
+      "item_id": "I0-ADJ_FORM-m4",
+      "wall_seconds": 0.5283832019995316
+    },
+    {
+      "item_id": "I0-ADJ_DISSOLVE-m025",
+      "wall_seconds": 0.5155248020000727
+    },
+    {
+      "item_id": "I0-ADJ_DISSOLVE-m4",
+      "wall_seconds": 0.5221720519984956
+    },
+    {
+      "item_id": "I0-DISJ_FORM-m025",
+      "wall_seconds": 0.4631156670002383
+    },
+    {
+      "item_id": "I0-DISJ_FORM-m4",
+      "wall_seconds": 0.4880176570004551
+    },
+    {
+      "item_id": "I0-DISJ_DISSOLVE-m025",
+      "wall_seconds": 0.4801230659995781
+    },
+    {
+      "item_id": "I0-DISJ_DISSOLVE-m4",
+      "wall_seconds": 0.49491049900098005
+    },
+    {
+      "item_id": "I0-EQUIVALENCE-SYMMETRY",
+      "wall_seconds": 1.912208206998912
+    }
+  ],
+  "tolerances": {
+    "KU_stationary_residual": "exact",
+    "Markov_order_conditional_gap": "exact",
+    "S4_covariance": "exact",
+    "full_quotient_crosscheck": 1e-14,
+    "information_chain_gap": "1e-25",
+    "labelled_remainder": "1e-25",
+    "quotient_aggregation": "exact",
+    "rational_identities": "exact",
+    "stationary_normalisation": "exact",
+    "stationary_residual": "exact"
+  },
+  "work_counts": {
+    "atomic_items": 24,
+    "directed_complement_checks": 22,
+    "equivalence_symmetry_items": 1,
+    "full_states_per_cell": 384,
+    "neutral_items": 1,
+    "primary_cells": 22,
+    "primary_consistent_material_triples": 50688,
+    "primary_exact_stationary_solves": 44,
+    "primary_full_transition_entries": 50688,
+    "primary_independent_full_solves": 6,
+    "primary_quotient_supported_entries": 1848,
+    "primary_raw_slot_checks": 44352,
+    "primary_raw_triad_block_solves": 462,
+    "primary_raw_triad_rows": 7392,
+    "primary_transition_covariance_comparisons": 1216512,
+    "primary_two_step_augmented_paths": 304128,
+    "quotient_supported_entries_per_cell": 84,
+    "role_orbits": 28
+  }
+}

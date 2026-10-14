@@ -1,0 +1,14 @@
+{
+  "frozen_analysis_plan_commit": "035601e215bf6f0c4621d818ffa22b713d0b5d67",
+  "plan_hash": "42afdec5605b170bc2499ace6d20d6e2b3312a2f0ab1c784503674598cc60a65",
+  "plan_file_sha256": "504a4456c06376dc25ad28c4817da543e63129692b9e3216e45ef8ed23cb5593",
+  "remote_branch": "origin/research/constraint-lab-v0.8i-history-role-grammar",
+  "push_confirmed_before_scientific_execution": true,
+  "pre_freeze_actual_non_neutral_I0_cells": 0,
+  "neutral_production_preobserved": true,
+  "smaller_synthetic_fixture": "N=3 ADJ_FORM m=2",
+  "structural_orbits_and_Boolean_covariance_preobserved": true,
+  "repository_user": "cello",
+  "workers": 1,
+  "stochastic_scientific_trajectories": 0
+}
