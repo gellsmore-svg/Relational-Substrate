@@ -323,6 +323,7 @@ def _analyse_controller(model, independent_full, raw_triad_checks):
         "current_state_dependent": model.feature.direction is not None,
         "S4_covariant": covariance_gap(model) == 0, "quotient_valid": quotient_gap == 0,
         "kernel_fingerprint": fingerprint(serial_rows(quotient)),
+        "full_kernel_fingerprint": fingerprint(serial_rows(rows)),
         "stationary_fingerprint": fingerprint(pi),
         "material_fingerprint": fingerprint(marginal),
         "projected_kernel_fingerprint": fingerprint(serial_rows(kpi)),
@@ -374,4 +375,5 @@ def _analyse_controller(model, independent_full, raw_triad_checks):
         "raw_triad_checks": quotient_checks,
         "full_crosscheck": full_crosscheck(rows, pi, orbit_pi, model) if independent_full else {"performed": False},
         "precision_decimal_digits": PRECISION,
+        "uniform_joint_gap": max(abs(value - Fraction(1, size)) for value in pi),
     }
