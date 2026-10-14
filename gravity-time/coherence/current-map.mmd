@@ -33,6 +33,12 @@ flowchart TD
     GT_F40_STRENGTH_SPLITS_CLOCKS["GT-F40-STRENGTH-SPLITS-CLOCKS: In CSPH, strengthening at fixed N moves the two clocks' attachment margins in opposite ..."]
     GT_F41_GRADIENT_CONTROL_GATHERING_GROWS["GT-F41-GRADIENT-CONTROL-GATHERING-GROWS: The reversible gradient control CLOSEW weak_favour is the only rule in E1 whose null-de..."]
     GT_F42_REPULSION_AND_PERSISTENCE_WITH_SIZE["GT-F42-REPULSION-AND-PERSISTENCE-WITH-SIZE: In every non-gradient family, probe detachment is size-stable (0.52-0.55 at N=6, 0.55-0..."]
+    GT_F46_ORIENTATION_FOLLOWS_SIGMA["GT-F46-ORIENTATION-FOLLOWS-SIGMA: The aggregated orientation (partner-frame index; HELD handover index) has the sign of s..."]
+    GT_F47_REVERSED_HANDOVER["GT-F47-REVERSED-HANDOVER: When sigma < 0 the handover reverses. Unsaturated, the reversal is plainly visible and,..."]
+    GT_F48_COUNTER_CIRCULATION["GT-F48-COUNTER-CIRCULATION: Local affinity does not fix local current: 6-36% of adjacent-square circulation runs co..."]
+    GT_F49_SOFT_RELEASE_IS_OPPORTUNITY["GT-F49-SOFT-RELEASE-IS-OPPORTUNITY: In soft rules the handover's release step is an opportunity (denominator) effect, not e..."]
+    GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT["GT-F50-STRICT-ENABLING-NEITHER-NECESSARY-NOR-SUFFICIENT: Strict enabling by dissolution occurs only with a hard component and is neither necessa..."]
+    GT_F51_ONE_WAY_RELEASE_MODE["GT-F51-ONE-WAY-RELEASE-MODE: Hard path-form exclusion produces a directed mode of succession without cycle affinity:..."]
   end
   subgraph INFERENCE [Inferences]
     GT_F09_POTENTIAL_AS_MECHANISM["GT-F09-POTENTIAL-AS-MECHANISM: In the existing grammar a basin around a held relational structure arises from minimal ..."]
@@ -41,6 +47,9 @@ flowchart TD
     GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY["GT-F25-KINETICS-SETS-OCCUPANCY-UNDER-IRREVERSIBILITY: G1's decomposition (local ratio fixes the basin; the formation/dissolution split fixes ..."]
     GT_F33_DISSOLUTION_CHANNEL_INFERENCE["GT-F33-DISSOLUTION-CHANNEL-INFERENCE: In this grammar, a source-relative stationary arrow arises only from non-gradient suppo..."]
     GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED["GT-F43-SUCCESSION-AND-GATHERING-DECOUPLED: In this grammar a stationary order of succession (the handover) and a time-weighted pre..."]
+    GT_F45_SQUARE_AFFINITY_IDENTITY["GT-F45-SQUARE-AFFINITY-IDENTITY: Theorem (formal note section 2): in the ordinary pair-DSL template grammar with positiv..."]
+    GT_F52_HARD_ADJACENCY_SILENCES_PATHS["GT-F52-HARD-ADJACENCY-SILENCES-PATHS: Theorem (formal note 5.3): under hard adjacency exclusion every reachable state is a ma..."]
+    GT_F53_HELD_SOURCE_AS_WITNESS["GT-F53-HELD-SOURCE-AS-WITNESS: Theorem (formal note 5.4): in HELD the source triangle supplies a two-path to every att..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     GT_F03_DRIFT_CRITERION_CONFOUNDED["GT-F03-DRIFT-CRITERION-CONFOUNDED: The frozen G0 inward-drift criterion does not separate attraction from density: DENS pa..."]
@@ -64,6 +73,9 @@ flowchart TD
     GT_Q08_HANDOVER_THEOREM["GT-Q08-HANDOVER-THEOREM: Is the handover orientation fixed by the path templates for every grade sign and streng..."]
     GT_Q09_CLOCK_SPLIT_MECHANISM["GT-Q09-CLOCK-SPLIT-MECHANISM: Why does strengthening raise CSPH's per-event attachment preference while lowering its ..."]
     GT_Q10_GRADIENT_GATHERING_SCALING["GT-Q10-GRADIENT-GATHERING-SCALING: Does the gradient control's growing standardised attachment preference continue beyond ..."]
+    GT_Q11_ONE_WAY_ORIENTATION["GT-Q11-ONE-WAY-ORIENTATION: Why does one-way release under hard path-form exclusion orient toward keeping relations..."]
+    GT_Q12_AGGREGATE_ORIENTATION_THEOREM["GT-Q12-AGGREGATE-ORIENTATION-THEOREM: Must the stationary aggregate orientation take the sign of sigma for every positive-fac..."]
+    GT_Q13_PRECEDENCE_VERSUS_ENABLING["GT-Q13-PRECEDENCE-VERSUS-ENABLING: Why are strictly enabled events under-represented immediately after the enabling dissol..."]
   end
   GT_F02_INCIDENCE_SELECTIVITY -->|contrasts_with| GT_F01_DENS_NULL
   GT_F03_DRIFT_CRITERION_CONFOUNDED -->|qualifies| GT_F02_INCIDENCE_SELECTIVITY
@@ -133,3 +145,20 @@ flowchart TD
   GT_Q08_HANDOVER_THEOREM -->|raised_by| GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH
   GT_Q09_CLOCK_SPLIT_MECHANISM -->|raised_by| GT_F40_STRENGTH_SPLITS_CLOCKS
   GT_Q10_GRADIENT_GATHERING_SCALING -->|raised_by| GT_F41_GRADIENT_CONTROL_GATHERING_GROWS
+  GT_Q08_HANDOVER_THEOREM -->|partially_answered_by| GT_F45_SQUARE_AFFINITY_IDENTITY
+  GT_F45_SQUARE_AFFINITY_IDENTITY -->|explains| GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH
+  GT_F46_ORIENTATION_FOLLOWS_SIGMA -->|qualifies| GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH
+  GT_F46_ORIENTATION_FOLLOWS_SIGMA -->|derived_from| GT_F45_SQUARE_AFFINITY_IDENTITY
+  GT_F47_REVERSED_HANDOVER -->|contrasts_with| GT_F29_HANDOVER_ORIENTATION_INVARIANT
+  GT_F47_REVERSED_HANDOVER -->|qualifies| GT_F14_SATURATION_HIDES_ARROW
+  GT_F48_COUNTER_CIRCULATION -->|bounds| GT_F46_ORIENTATION_FOLLOWS_SIGMA
+  GT_F49_SOFT_RELEASE_IS_OPPORTUNITY -->|qualifies| GT_F33_DISSOLUTION_CHANNEL_INFERENCE
+  GT_F49_SOFT_RELEASE_IS_OPPORTUNITY -->|contrasts_with| GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT
+  GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT -->|refines| GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED
+  GT_F51_ONE_WAY_RELEASE_MODE -->|undermines| GT_F46_ORIENTATION_FOLLOWS_SIGMA
+  GT_F51_ONE_WAY_RELEASE_MODE -->|raises_question| GT_Q11_ONE_WAY_ORIENTATION
+  GT_F52_HARD_ADJACENCY_SILENCES_PATHS -->|bounds| GT_F45_SQUARE_AFFINITY_IDENTITY
+  GT_F53_HELD_SOURCE_AS_WITNESS -->|qualifies| GT_F15_SOURCE_CIRCULATION
+  GT_Q12_AGGREGATE_ORIENTATION_THEOREM -->|raised_by| GT_F48_COUNTER_CIRCULATION
+  GT_Q13_PRECEDENCE_VERSUS_ENABLING -->|raised_by| GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT
+  GT_F44_RS_SUCCESSION_VS_GATHERING -->|compatible_with| GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT

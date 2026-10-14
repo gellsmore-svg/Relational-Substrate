@@ -123,3 +123,12 @@ The sections above are unchanged.
 - **Frozen and executed.** The plan was frozen at `4ba2839`. All 32 authorised cells and 16 baseline re-derivations completed, with result commit `730ef32`.
 - **Results.** CSPH's coexistence does not survive to N=7, and the handover is invariant. Strengthening is not a good proxy for size. See `reports/gt-e1-report.md`.
 - **Recommended next (not executed).** A handover-mechanism investigation (`reports/gt-e1-reflection.md`, section 6). FREE N=7 remains a separate future decision. No further round is opened by GT-P004.
+
+## E2 status (GT-P005)
+
+The sections above are unchanged.
+- **E2A** (frozen `1974678`, results `32ac7f6`): a mechanism-diversity atlas of 46 cells.
+- **E2B** (frozen `9448f95`, results `ecb3e73`): the hard/soft interface, 18 cells. It was chosen after the E2A reflection (`b90c3ac`).
+- **Results.** The handover's local orientation is an identity, A = σ·Δdeg. The aggregate follows σ in 36/36 cells without one-way transitions. σ < 0 reverses the handover. Soft "enabling" is an opportunity effect. Strict enabling needs hard admissibility and is neither necessary nor sufficient for direction. Hard path-form exclusion gives a one-way release mode that overrides σ.
+- **Recommended next (not run).** The one-way release mechanism (GT-Q11), with an aggregate-orientation theorem attempt (GT-Q12). Source-structure control gained value; FREE N=7 lost value.
+- **Not authorised by GT-P005:** E2C, FREE N=7.

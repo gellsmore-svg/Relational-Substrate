@@ -69,3 +69,37 @@ E1 found the handover (succession) undiminished from N=6 to N=7 in every non-gra
 ## Not proposed (from E1)
 
 A size-normalised family, in which per-witness factors are divided by the number of possible witnesses, would be a grammar change. E1 shows it is not needed to explain the N=6 → N=7 changes of the arrow-carrying rules, because their engaged load barely changes (GT-F38). It is therefore not proposed.
+
+## OP-10. Tendency and admissibility order succession differently (from E2A, E2B)
+
+**Proposal.** Record, as a model-scoped distinction, that this grammar has two generators of directed succession:
+- **Soft tendency** orders succession only through cycle affinity. The affinity is exactly σ times the degree difference of the far endpoints (GT-F45), so the orientation is a degree comparison: when σ > 0, relations to better-connected partners persist (GT-F46, GT-F47).
+- **Hard admissibility** can order succession with *no* cycle affinity, by making some releases unrecoverable (one-way release, GT-F51). Its orientation overrides σ.
+
+Any RS account of temporal direction built on constraint structure should say which of the two it means. This refines OP-5 ("directed succession requires non-gradient constraint"): within this grammar a hard formation exclusion with σ = 0 also suffices.
+
+**Status if adopted:** refinement of OP-5; distinction, model-scoped. No primitive is added.
+**Would count against:** a grammar in which one-way release is shown to be a limit of soft cycle affinity, which would collapse the two.
+
+## OP-11. "Dissolution enables" must name its sense (from E2A, E2B)
+
+**Proposal.** In RS language about release and fragility, distinguish:
+- **precedence**: A dissolved, then B happened;
+- **opportunity**: B became the likelier next event because competitors were removed;
+- **rate**: B's own tendency changed;
+- **support**: B became admissible.
+
+They separate cleanly in the model:
+- soft-rule "enabling" is mostly opportunity (GT-F49);
+- support enabling needs hard admissibility, and is neither necessary nor sufficient for direction (GT-F50);
+- an enabled change beats restoration of its support only about half the time.
+
+This bears on CL-Q05. It adds no purpose to fragility.
+
+**Status if adopted:** methodological distinction.
+
+## OP-12. An imposed reference is not neutral to hard rules (from E2B)
+
+**Proposal.** Record that a held reference structure can act as a *witness*, not only as a frame. Under hard path-form or adjacency exclusion, the held triangle forbids every attachment (GT-F53). Statements about "a source" in RS-motivated models should declare whether the source's own relations participate in the constraints applied to others.
+
+**Status if adopted:** methodological caution, model-scoped.

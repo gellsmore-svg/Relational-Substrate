@@ -76,6 +76,33 @@ A component with m_c = 0 sets the rate to 0 wherever it reads a witness. A squar
 - **No physical statement.** This is ordinary Markov-chain cycle structure (Kolmogorov's criterion, Schnakenberg's cycle decomposition) applied to a declared grammar. It is not a physical arrow, and it is not entropy production in any physical substrate.
 - **Not a theorem outside its assumptions.** For example, it does not cover rules reading three-relation conditions beyond the listed templates, history, or directed relations.
 
-## 5. Results after E2A and E2B
+## 5. Results after E2A and E2B (written after the rounds)
 
-*(Filled after the rounds; see below.)*
+**5.1 The identity on every executed cell [M, O].** I1 and I2 hold in all 64 executed cells: 46 in E2A and 18 in E2B. Across all four strata the largest residual is about 1e-15. The affinity was recomputed independently from the rule strings with exact fractions, on 120 seeded squares per cell, and agreed to 1e-12 or better. The census is evidence within its coverage; the identity itself is proved in section 2.
+
+**5.2 Aggregated orientation versus σ (empirical, not proved) [O].**
+- In every cell with only positive factors and σ ≠ 0, the signs agree: 32 E2A cells and 4 E2B cells (hard closure exclusion with σ < 0). The quantities compared are σ, the partner-frame index and (HELD) the handover index. One E2A cell lies below the 1e-12 reporting floor.
+- No proof is offered that the stationary aggregate must take σ's sign. Square-level circulation runs against local affinity on 6–36% of the circulation mass, so a proof would have to work at the level of the whole cycle decomposition.
+- **Counterexample when one-way transitions are present.** Take hard path-form prohibition plus path_dissolve weak_suppress (σ = −log 2, FREE N=5). Its partner index is **+0.070**, opposite to σ. The cell's irreversibility comes mostly from 510 one-way transitions, not from intact squares. The σ rule's domain is therefore chains without one-way transitions.
+
+**5.3 Hard adjacency exclusion makes path terms inert (theorem) [M].**
+- Under adj_form prohibit from a start with no adjacent pair, forming (a,b) is admissible only when a and b both have no neighbours. Every reachable state is therefore a matching.
+- A path witness needs two present edges sharing a vertex, so every path witness count is 0 and every path component's factor is 1.
+- So adj_form prohibit combined with any path term gives exactly the same chain as adj_form prohibit alone. That chain is a gradient restriction and reversible.
+- Observed: all five such E2B cells per mode have identical laws (flux 8e-16, expected relations 1.54), and strict enabling (60%) without any direction.
+
+**5.4 The held source is a witness (theorem) [M].**
+- In HELD, every attachment slot (p,s) has the two-path s–s'–s'' inside the source triangle. Under path_form prohibit no attachment can ever form.
+- Every source vertex has neighbours, so under adj_form prohibit no relation touching the source can form.
+- In both cases HELD reduces to the probe-only subgraph: two states at N=5, with one probe–probe slot.
+- The imposed reference is not neutral to hard rules.
+
+**5.5 One-way transitions under hard path-form prohibition [M, O].**
+- Formation of (a,b) is forbidden while a or b is the end of a two-path; dissolution is unrestricted. So the one-way transitions are exactly the **releases** of relations whose re-formation is currently forbidden.
+- Observed: 100% of one-way flux is dissolution (FREE N=5), and it is 5.6–7.3% of total flux.
+- Orientation: the partner index is +0.108, +0.126 and +0.070 with no soft term, σ > 0 and σ < 0 respectively. Positive means relations to the poorer-connected partner are released and those to the richer partner are kept.
+- *Open (GT-Q11):* a derivation of why one-way release takes this orientation. A sketch: a relation whose endpoint becomes the end of a two-path can still be released, but cannot be re-formed while that path persists, and two-paths end more often at well-connected vertices. The sketch has not been turned into a proof.
+
+**5.6 Enabling and passage [O].** The definitions are in the plans; the classification is in `reports/gt-e2-dissolution-analysis.md`.
+- Strict enabling exists only where a hard component is present. That is a definitional consequence of the matched-state comparison: soft factors never make a positive rate zero.
+- It occurs with no irreversibility (EXCL; hard adjacency exclusion), with σ-following circulation (hard closure exclusion plus a path term), and with one-way release (hard path-form exclusion).

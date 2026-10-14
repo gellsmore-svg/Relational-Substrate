@@ -29,6 +29,13 @@ An independently governed research programme built on the Constraint Laboratory 
 | E1 coherence reflection and next-step recommendation | [`reports/gt-e1-reflection.md`](reports/gt-e1-reflection.md) |
 | E1 post hoc margin decomposition (labelled post hoc) | [`reports/e1-margin-composition-posthoc.json`](reports/e1-margin-composition-posthoc.json) |
 | E1 execution record | [`provenance/execution-GT-P004.md`](provenance/execution-GT-P004.md) |
+| **GT-P005 (E2A, E2B): plain-English report** | [`reports/gt-e2-report.md`](reports/gt-e2-report.md) |
+| E2 coverage-and-selection audit | [`docs/e2-coverage-audit.md`](docs/e2-coverage-audit.md) |
+| E2 formal mechanism note (square-affinity identity) | [`docs/e2-formal-mechanism.md`](docs/e2-formal-mechanism.md) |
+| E2A frozen plan, tables, atlas, reflection | [`plans/round-e2a-plan.json`](plans/round-e2a-plan.json), [`reports/round-e2a-tables.json`](reports/round-e2a-tables.json), [`reports/gt-e2a-atlas.md`](reports/gt-e2a-atlas.md), [`reports/gt-e2a-reflection.md`](reports/gt-e2a-reflection.md) |
+| E2B frozen plan, tables, atlas | [`plans/round-e2b-plan.json`](plans/round-e2b-plan.json), [`reports/round-e2b-tables.json`](reports/round-e2b-tables.json), [`reports/gt-e2b-atlas.md`](reports/gt-e2b-atlas.md) |
+| E2 mechanism atlas, dissolution analysis, synthesis | [`reports/gt-e2-mechanism-atlas.md`](reports/gt-e2-mechanism-atlas.md), [`reports/gt-e2-dissolution-analysis.md`](reports/gt-e2-dissolution-analysis.md), [`reports/gt-e2-synthesis.md`](reports/gt-e2-synthesis.md) |
+| GT-P005 execution record | [`provenance/execution-GT-P005.md`](provenance/execution-GT-P005.md) |
 | Coherence ledger and snapshot | [`coherence/`](coherence/) |
 | Ontology proposals for later review | [`docs/ontology-proposals.md`](docs/ontology-proposals.md) |
 | Provenance | [`provenance/`](provenance/) |
