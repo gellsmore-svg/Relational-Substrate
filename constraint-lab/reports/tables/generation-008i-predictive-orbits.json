@@ -1,0 +1,2576 @@
+{
+  "clock": "pair-event epoch",
+  "data": {
+    "blocks": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        6,
+        13,
+        26,
+        51,
+        100,
+        197
+      ],
+      [
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        15,
+        17,
+        24,
+        25,
+        28,
+        29,
+        48,
+        49,
+        52,
+        53,
+        96,
+        98,
+        99,
+        101,
+        193,
+        194,
+        195,
+        196
+      ],
+      [
+        11,
+        16,
+        27,
+        50,
+        97,
+        192
+      ],
+      [
+        18,
+        19,
+        30,
+        32,
+        37,
+        38,
+        54,
+        57,
+        61,
+        63,
+        102,
+        106,
+        122,
+        124,
+        147,
+        148,
+        205,
+        209,
+        218,
+        221,
+        243,
+        245,
+        292,
+        293
+      ],
+      [
+        20,
+        31,
+        36,
+        58,
+        65,
+        105,
+        125,
+        144,
+        207,
+        220,
+        241,
+        290
+      ],
+      [
+        21,
+        34,
+        41,
+        55,
+        60,
+        104,
+        120,
+        149,
+        206,
+        217,
+        244,
+        291
+      ],
+      [
+        22,
+        23,
+        33,
+        35,
+        39,
+        40,
+        56,
+        59,
+        62,
+        64,
+        103,
+        107,
+        121,
+        123,
+        145,
+        146,
+        204,
+        208,
+        216,
+        219,
+        240,
+        242,
+        288,
+        289
+      ],
+      [
+        42,
+        43,
+        44,
+        150,
+        153,
+        154,
+        253,
+        255,
+        257,
+        314,
+        316,
+        317
+      ],
+      [
+        45,
+        46,
+        47,
+        151,
+        152,
+        155,
+        252,
+        254,
+        256,
+        312,
+        313,
+        315
+      ],
+      [
+        66,
+        67,
+        69,
+        126,
+        128,
+        130,
+        229,
+        230,
+        233,
+        339,
+        340,
+        341
+      ],
+      [
+        68,
+        70,
+        71,
+        127,
+        129,
+        131,
+        228,
+        231,
+        232,
+        336,
+        337,
+        338
+      ],
+      [
+        72,
+        73,
+        76,
+        77,
+        108,
+        110,
+        111,
+        113,
+        199,
+        200,
+        201,
+        202
+      ],
+      [
+        74,
+        75,
+        109,
+        112,
+        198,
+        203
+      ],
+      [
+        78,
+        85,
+        114,
+        134,
+        159,
+        172,
+        211,
+        224,
+        249,
+        269,
+        298,
+        305
+      ],
+      [
+        79,
+        82,
+        84,
+        89,
+        116,
+        117,
+        132,
+        137,
+        156,
+        161,
+        168,
+        173,
+        212,
+        213,
+        223,
+        226,
+        247,
+        250,
+        265,
+        268,
+        296,
+        297,
+        302,
+        303
+      ],
+      [
+        80,
+        81,
+        86,
+        87,
+        115,
+        118,
+        133,
+        136,
+        157,
+        160,
+        170,
+        171,
+        210,
+        215,
+        222,
+        227,
+        246,
+        251,
+        266,
+        267,
+        294,
+        299,
+        301,
+        304
+      ],
+      [
+        83,
+        88,
+        119,
+        135,
+        158,
+        169,
+        214,
+        225,
+        248,
+        264,
+        295,
+        300
+      ],
+      [
+        90,
+        91,
+        138,
+        140,
+        162,
+        165,
+        174,
+        178,
+        235,
+        236,
+        259,
+        261,
+        277,
+        281,
+        320,
+        322,
+        326,
+        329,
+        345,
+        346,
+        351,
+        353,
+        364,
+        365
+      ],
+      [
+        92,
+        139,
+        166,
+        177,
+        234,
+        263,
+        279,
+        323,
+        328,
+        342,
+        349,
+        362
+      ],
+      [
+        93,
+        142,
+        163,
+        176,
+        239,
+        258,
+        278,
+        318,
+        325,
+        347,
+        352,
+        363
+      ],
+      [
+        94,
+        95,
+        141,
+        143,
+        164,
+        167,
+        175,
+        179,
+        237,
+        238,
+        260,
+        262,
+        276,
+        280,
+        319,
+        321,
+        324,
+        327,
+        343,
+        344,
+        348,
+        350,
+        360,
+        361
+      ],
+      [
+        180,
+        185,
+        271,
+        274,
+        308,
+        309
+      ],
+      [
+        181,
+        182,
+        183,
+        184,
+        270,
+        272,
+        273,
+        275,
+        306,
+        307,
+        310,
+        311
+      ],
+      [
+        186,
+        283,
+        332,
+        357,
+        370,
+        377
+      ],
+      [
+        187,
+        188,
+        189,
+        190,
+        282,
+        284,
+        285,
+        287,
+        330,
+        331,
+        334,
+        335,
+        354,
+        355,
+        358,
+        359,
+        366,
+        368,
+        369,
+        371,
+        373,
+        374,
+        375,
+        376
+      ],
+      [
+        191,
+        286,
+        333,
+        356,
+        367,
+        372
+      ],
+      [
+        378,
+        379,
+        380,
+        381,
+        382,
+        383
+      ]
+    ],
+    "class_orbit_counts": [
+      {
+        "canonical_mask": 0,
+        "roles": 1
+      },
+      {
+        "canonical_mask": 1,
+        "roles": 3
+      },
+      {
+        "canonical_mask": 3,
+        "roles": 4
+      },
+      {
+        "canonical_mask": 7,
+        "roles": 2
+      },
+      {
+        "canonical_mask": 11,
+        "roles": 2
+      },
+      {
+        "canonical_mask": 12,
+        "roles": 2
+      },
+      {
+        "canonical_mask": 13,
+        "roles": 4
+      },
+      {
+        "canonical_mask": 15,
+        "roles": 4
+      },
+      {
+        "canonical_mask": 30,
+        "roles": 2
+      },
+      {
+        "canonical_mask": 31,
+        "roles": 3
+      },
+      {
+        "canonical_mask": 63,
+        "roles": 1
+      }
+    ],
+    "clock": "pair-event epoch",
+    "covariance": [
+      {
+        "clock": "pair-event epoch",
+        "comparisons": 55296,
+        "exact_gap": "0/1",
+        "m": "1/4"
+      },
+      {
+        "clock": "pair-event epoch",
+        "comparisons": 55296,
+        "exact_gap": "0/1",
+        "m": "1/1"
+      },
+      {
+        "clock": "pair-event epoch",
+        "comparisons": 55296,
+        "exact_gap": "0/1",
+        "m": "4/1"
+      }
+    ],
+    "orbit_atlas": [
+      {
+        "augmented_orbit_size": 6,
+        "automorphism_group_size": 24,
+        "canonical_mask": 0,
+        "edge_count": 0,
+        "graph_class": "e0-deg0000-tri0-comp4",
+        "history_orbit_id": 0,
+        "pair_slot_orbit_members": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pair_slot_orbit_size": 6,
+        "predecessor_class": "e1-deg1100-tri0-comp3",
+        "present": false,
+        "remembered_toggle_next_class": "e1-deg1100-tri0-comp3",
+        "representative_history_slot": 0,
+        "representative_pair": [
+          0,
+          1
+        ],
+        "six_next_class_counts": {
+          "e1-deg1100-tri0-comp3": 6
+        },
+        "stationary_mass": "1/64"
+      },
+      {
+        "augmented_orbit_size": 6,
+        "automorphism_group_size": 4,
+        "canonical_mask": 1,
+        "edge_count": 1,
+        "graph_class": "e1-deg1100-tri0-comp3",
+        "history_orbit_id": 1,
+        "pair_slot_orbit_members": [
+          0
+        ],
+        "pair_slot_orbit_size": 1,
+        "predecessor_class": "e0-deg0000-tri0-comp4",
+        "present": true,
+        "remembered_toggle_next_class": "e0-deg0000-tri0-comp4",
+        "representative_history_slot": 0,
+        "representative_pair": [
+          0,
+          1
+        ],
+        "six_next_class_counts": {
+          "e0-deg0000-tri0-comp4": 1,
+          "e2-deg1111-tri0-comp2": 1,
+          "e2-deg2110-tri0-comp2": 4
+        },
+        "stationary_mass": "1/64"
+      },
+      {
+        "augmented_orbit_size": 24,
+        "automorphism_group_size": 4,
+        "canonical_mask": 1,
+        "edge_count": 1,
+        "graph_class": "e1-deg1100-tri0-comp3",
+        "history_orbit_id": 2,
+        "pair_slot_orbit_members": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "pair_slot_orbit_size": 4,
+        "predecessor_class": "e2-deg2110-tri0-comp2",
+        "present": false,
+        "remembered_toggle_next_class": "e2-deg2110-tri0-comp2",
+        "representative_history_slot": 1,
+        "representative_pair": [
+          0,
+          2
+        ],
+        "six_next_class_counts": {
+          "e0-deg0000-tri0-comp4": 1,
+          "e2-deg1111-tri0-comp2": 1,
+          "e2-deg2110-tri0-comp2": 4
+        },
+        "stationary_mass": "1/16"
+      },
+      {
+        "augmented_orbit_size": 6,
+        "automorphism_group_size": 4,
+        "canonical_mask": 1,
+        "edge_count": 1,
+        "graph_class": "e1-deg1100-tri0-comp3",
+        "history_orbit_id": 3,
+        "pair_slot_orbit_members": [
+          5
+        ],
+        "pair_slot_orbit_size": 1,
+        "predecessor_class": "e2-deg1111-tri0-comp2",
+        "present": false,
+        "remembered_toggle_next_class": "e2-deg1111-tri0-comp2",
+        "representative_history_slot": 5,
+        "representative_pair": [
+          2,
+          3
+        ],
+        "six_next_class_counts": {
+          "e0-deg0000-tri0-comp4": 1,
+          "e2-deg1111-tri0-comp2": 1,
+          "e2-deg2110-tri0-comp2": 4
+        },
+        "stationary_mass": "1/64"
+      },
+      {
+        "augmented_orbit_size": 24,
+        "automorphism_group_size": 2,
+        "canonical_mask": 3,
+        "edge_count": 2,
+        "graph_class": "e2-deg2110-tri0-comp2",
+        "history_orbit_id": 4,
+        "pair_slot_orbit_members": [
+          0,
+          1
+        ],
+        "pair_slot_orbit_size": 2,
+        "predecessor_class": "e1-deg1100-tri0-comp3",
+        "present": true,
+        "remembered_toggle_next_class": "e1-deg1100-tri0-comp3",
+        "representative_history_slot": 0,
+        "representative_pair": [
+          0,
+          1
+        ],
+        "six_next_class_counts": {
+          "e1-deg1100-tri0-comp3": 2,
+          "e3-deg2211-tri0-comp1": 2,
+          "e3-deg2220-tri1-comp2": 1,
+          "e3-deg3111-tri0-comp1": 1
+        },
+        "stationary_mass": "1/16"
+      },
+      {
+        "augmented_orbit_size": 12,
+        "automorphism_group_size": 2,
+        "canonical_mask": 3,
+        "edge_count": 2,
+        "graph_class": "e2-deg2110-tri0-comp2",
+        "history_orbit_id": 5,
+        "pair_slot_orbit_members": [
+          2
+        ],
+        "pair_slot_orbit_size": 1,
+        "predecessor_class": "e3-deg3111-tri0-comp1",
+        "present": false,
+        "remembered_toggle_next_class": "e3-deg3111-tri0-comp1",
+        "representative_history_slot": 2,
+        "representative_pair": [
+          0,
+          3
+        ],
+        "six_next_class_counts": {
+          "e1-deg1100-tri0-comp3": 2,
+          "e3-deg2211-tri0-comp1": 2,
+          "e3-deg2220-tri1-comp2": 1,
+          "e3-deg3111-tri0-comp1": 1
+        },
+        "stationary_mass": "1/32"
+      },
+      {
+        "augmented_orbit_size": 12,
+        "automorphism_group_size": 2,
+        "canonical_mask": 3,
+        "edge_count": 2,
+        "graph_class": "e2-deg2110-tri0-comp2",
+        "history_orbit_id": 6,
+        "pair_slot_orbit_members": [
+          3
+        ],
+        "pair_slot_orbit_size": 1,
+        "predecessor_class": "e3-deg2220-tri1-comp2",
+        "present": false,
+        "remembered_toggle_next_class": "e3-deg2220-tri1-comp2",
+        "representative_history_slot": 3,
+        "representative_pair": [
+          1,
+          2
+        ],
+        "six_next_class_counts": {
+          "e1-deg1100-tri0-comp3": 2,
+          "e3-deg2211-tri0-comp1": 2,
+          "e3-deg2220-tri1-comp2": 1,
+          "e3-deg3111-tri0-comp1": 1
+        },
+        "stationary_mass": "1/32"
+      },
+      {
+        "augmented_orbit_size": 24,
+        "automorphism_group_size": 2,
+        "canonical_mask": 3,
+        "edge_count": 2,
+        "graph_class": "e2-deg2110-tri0-comp2",
+        "history_orbit_id": 7,
+        "pair_slot_orbit_members": [
+          4,
+          5
+        ],
+        "pair_slot_orbit_size": 2,
+        "predecessor_class": "e3-deg2211-tri0-comp1",
+        "present": false,
+        "remembered_toggle_next_class": "e3-deg2211-tri0-comp1",
+        "representative_history_slot": 4,
+        "representative_pair": [
+          1,
+          3
+        ],
+        "six_next_class_counts": {
+          "e1-deg1100-tri0-comp3": 2,
+          "e3-deg2211-tri0-comp1": 2,
+          "e3-deg2220-tri1-comp2": 1,
+          "e3-deg3111-tri0-comp1": 1
+        },
+        "stationary_mass": "1/16"
+      },
+      {
+        "augmented_orbit_size": 12,
+        "automorphism_group_size": 6,
+        "canonical_mask": 7,
+        "edge_count": 3,
+        "graph_class": "e3-deg3111-tri0-comp1",
+        "history_orbit_id": 8,
+        "pair_slot_orbit_members": [
+          0,
+          1,
+          2
+        ],
+        "pair_slot_orbit_size": 3,
+        "predecessor_class": "e2-deg2110-tri0-comp2",
+        "present": true,
+        "remembered_toggle_next_class": "e2-deg2110-tri0-comp2",
+        "representative_history_slot": 0,
+        "representative_pair": [
+          0,
+          1
+        ],
+        "six_next_class_counts": {
+          "e2-deg2110-tri0-comp2": 3,
+          "e4-deg3221-tri1-comp1": 3
+        },
+        "stationary_mass": "1/32"
+      },
+      {
+        "augmented_orbit_size": 12,
+        "automorphism_group_size": 6,
+        "canonical_mask": 7,
+        "edge_count": 3,
+        "graph_class": "e3-deg3111-tri0-comp1",
+        "history_orbit_id": 9,
+        "pair_slot_orbit_members": [
+          3,
+          4,
+          5
+        ],
+        "pair_slot_orbit_size": 3,
+        "predecessor_class": "e4-deg3221-tri1-comp1",
+        "present": false,
+        "remembered_toggle_next_class": "e4-deg3221-tri1-comp1",
+        "representative_history_slot": 3,
+        "representative_pair": [
+          1,
+          2
+        ],
+        "six_next_class_counts": {
+          "e2-deg2110-tri0-comp2": 3,
+          "e4-deg3221-tri1-comp1": 3
+        },
+        "stationary_mass": "1/32"
+      },
+      {
+        "augmented_orbit_size": 12,
+        "automorphism_group_size": 6,
+        "canonical_mask": 11,
+        "edge_count": 3,
+        "graph_class": "e3-deg2220-tri1-comp2",
+        "history_orbit_id": 10,
+        "pair_slot_orbit_members": [
+          0,
+          1,
+          3
+        ],
+        "pair_slot_orbit_size": 3,
+        "predecessor_class": "e2-deg2110-tri0-comp2",
+        "present": true,
+        "remembered_toggle_next_class": "e2-deg2110-tri0-comp2",
+        "representative_history_slot": 0,
+        "representative_pair": [
+          0,
+          1
+        ],
+        "six_next_class_counts": {
+          "e2-deg2110-tri0-comp2": 3,
+          "e4-deg3221-tri1-comp1": 3
+        },
+        "stationary_mass": "1/32"
+      },
+      {
+        "augmented_orbit_size": 12,
+        "automorphism_group_size": 6,
+        "canonical_mask": 11,
+        "edge_count": 3,
+        "graph_class": "e3-deg2220-tri1-comp2",
+        "history_orbit_id": 11,
+        "pair_slot_orbit_members": [
+          2,
+          4,
+          5
+        ],
+        "pair_slot_orbit_size": 3,
+        "predecessor_class": "e4-deg3221-tri1-comp1",
+        "present": false,
+        "remembered_toggle_next_class": "e4-deg3221-tri1-comp1",
+        "representative_history_slot": 2,
+        "representative_pair": [
+          0,
+          3
+        ],
+        "six_next_class_counts": {
+          "e2-deg2110-tri0-comp2": 3,
+          "e4-deg3221-tri1-comp1": 3
+        },
+        "stationary_mass": "1/32"
+      },
+      {
+        "augmented_orbit_size": 12,
+        "automorphism_group_size": 8,
+        "canonical_mask": 12,
+        "edge_count": 2,
+        "graph_class": "e2-deg1111-tri0-comp2",
+        "history_orbit_id": 12,
+        "pair_slot_orbit_members": [
+          0,
+          1,
+          4,
+          5
+        ],
+        "pair_slot_orbit_size": 4,
+        "predecessor_class": "e3-deg2211-tri0-comp1",
+        "present": false,
+        "remembered_toggle_next_class": "e3-deg2211-tri0-comp1",
+        "representative_history_slot": 0,
+        "representative_pair": [
+          0,
+          1
+        ],
+        "six_next_class_counts": {
+          "e1-deg1100-tri0-comp3": 2,
+          "e3-deg2211-tri0-comp1": 4
+        },
+        "stationary_mass": "1/32"
+      },
+      {
+        "augmented_orbit_size": 6,
+        "automorphism_group_size": 8,
+        "canonical_mask": 12,
+        "edge_count": 2,
+        "graph_class": "e2-deg1111-tri0-comp2",
+        "history_orbit_id": 13,
+        "pair_slot_orbit_members": [
+          2,
+          3
+        ],
+        "pair_slot_orbit_size": 2,
+        "predecessor_class": "e1-deg1100-tri0-comp3",
+        "present": true,
+        "remembered_toggle_next_class": "e1-deg1100-tri0-comp3",
+        "representative_history_slot": 2,
+        "representative_pair": [
+          0,
+          3
+        ],
+        "six_next_class_counts": {
+          "e1-deg1100-tri0-comp3": 2,
+          "e3-deg2211-tri0-comp1": 4
+        },
+        "stationary_mass": "1/64"
+      },
+      {
+        "augmented_orbit_size": 12,
+        "automorphism_group_size": 2,
+        "canonical_mask": 13,
+        "edge_count": 3,
+        "graph_class": "e3-deg2211-tri0-comp1",
+        "history_orbit_id": 14,
+        "pair_slot_orbit_members": [
+          0
+        ],
+        "pair_slot_orbit_size": 1,
+        "predecessor_class": "e2-deg1111-tri0-comp2",
+        "present": true,
+        "remembered_toggle_next_class": "e2-deg1111-tri0-comp2",
+        "representative_history_slot": 0,
+        "representative_pair": [
+          0,
+          1
+        ],
+        "six_next_class_counts": {
+          "e2-deg1111-tri0-comp2": 1,
+          "e2-deg2110-tri0-comp2": 2,
+          "e4-deg2222-tri0-comp1": 1,
+          "e4-deg3221-tri1-comp1": 2
+        },
+        "stationary_mass": "1/32"
+      },
+      {
+        "augmented_orbit_size": 24,
+        "automorphism_group_size": 2,
+        "canonical_mask": 13,
+        "edge_count": 3,
+        "graph_class": "e3-deg2211-tri0-comp1",
+        "history_orbit_id": 15,
+        "pair_slot_orbit_members": [
+          1,
+          4
+        ],
+        "pair_slot_orbit_size": 2,
+        "predecessor_class": "e4-deg3221-tri1-comp1",
+        "present": false,
+        "remembered_toggle_next_class": "e4-deg3221-tri1-comp1",
+        "representative_history_slot": 1,
+        "representative_pair": [
+          0,
+          2
+        ],
+        "six_next_class_counts": {
+          "e2-deg1111-tri0-comp2": 1,
+          "e2-deg2110-tri0-comp2": 2,
+          "e4-deg2222-tri0-comp1": 1,
+          "e4-deg3221-tri1-comp1": 2
+        },
+        "stationary_mass": "1/16"
+      },
+      {
+        "augmented_orbit_size": 24,
+        "automorphism_group_size": 2,
+        "canonical_mask": 13,
+        "edge_count": 3,
+        "graph_class": "e3-deg2211-tri0-comp1",
+        "history_orbit_id": 16,
+        "pair_slot_orbit_members": [
+          2,
+          3
+        ],
+        "pair_slot_orbit_size": 2,
+        "predecessor_class": "e2-deg2110-tri0-comp2",
+        "present": true,
+        "remembered_toggle_next_class": "e2-deg2110-tri0-comp2",
+        "representative_history_slot": 2,
+        "representative_pair": [
+          0,
+          3
+        ],
+        "six_next_class_counts": {
+          "e2-deg1111-tri0-comp2": 1,
+          "e2-deg2110-tri0-comp2": 2,
+          "e4-deg2222-tri0-comp1": 1,
+          "e4-deg3221-tri1-comp1": 2
+        },
+        "stationary_mass": "1/16"
+      },
+      {
+        "augmented_orbit_size": 12,
+        "automorphism_group_size": 2,
+        "canonical_mask": 13,
+        "edge_count": 3,
+        "graph_class": "e3-deg2211-tri0-comp1",
+        "history_orbit_id": 17,
+        "pair_slot_orbit_members": [
+          5
+        ],
+        "pair_slot_orbit_size": 1,
+        "predecessor_class": "e4-deg2222-tri0-comp1",
+        "present": false,
+        "remembered_toggle_next_class": "e4-deg2222-tri0-comp1",
+        "representative_history_slot": 5,
+        "representative_pair": [
+          2,
+          3
+        ],
+        "six_next_class_counts": {
+          "e2-deg1111-tri0-comp2": 1,
+          "e2-deg2110-tri0-comp2": 2,
+          "e4-deg2222-tri0-comp1": 1,
+          "e4-deg3221-tri1-comp1": 2
+        },
+        "stationary_mass": "1/32"
+      },
+      {
+        "augmented_orbit_size": 24,
+        "automorphism_group_size": 2,
+        "canonical_mask": 15,
+        "edge_count": 4,
+        "graph_class": "e4-deg3221-tri1-comp1",
+        "history_orbit_id": 18,
+        "pair_slot_orbit_members": [
+          0,
+          1
+        ],
+        "pair_slot_orbit_size": 2,
+        "predecessor_class": "e3-deg2211-tri0-comp1",
+        "present": true,
+        "remembered_toggle_next_class": "e3-deg2211-tri0-comp1",
+        "representative_history_slot": 0,
+        "representative_pair": [
+          0,
+          1
+        ],
+        "six_next_class_counts": {
+          "e3-deg2211-tri0-comp1": 2,
+          "e3-deg2220-tri1-comp2": 1,
+          "e3-deg3111-tri0-comp1": 1,
+          "e5-deg3322-tri2-comp1": 2
+        },
+        "stationary_mass": "1/16"
+      },
+      {
+        "augmented_orbit_size": 12,
+        "automorphism_group_size": 2,
+        "canonical_mask": 15,
+        "edge_count": 4,
+        "graph_class": "e4-deg3221-tri1-comp1",
+        "history_orbit_id": 19,
+        "pair_slot_orbit_members": [
+          2
+        ],
+        "pair_slot_orbit_size": 1,
+        "predecessor_class": "e3-deg2220-tri1-comp2",
+        "present": true,
+        "remembered_toggle_next_class": "e3-deg2220-tri1-comp2",
+        "representative_history_slot": 2,
+        "representative_pair": [
+          0,
+          3
+        ],
+        "six_next_class_counts": {
+          "e3-deg2211-tri0-comp1": 2,
+          "e3-deg2220-tri1-comp2": 1,
+          "e3-deg3111-tri0-comp1": 1,
+          "e5-deg3322-tri2-comp1": 2
+        },
+        "stationary_mass": "1/32"
+      },
+      {
+        "augmented_orbit_size": 12,
+        "automorphism_group_size": 2,
+        "canonical_mask": 15,
+        "edge_count": 4,
+        "graph_class": "e4-deg3221-tri1-comp1",
+        "history_orbit_id": 20,
+        "pair_slot_orbit_members": [
+          3
+        ],
+        "pair_slot_orbit_size": 1,
+        "predecessor_class": "e3-deg3111-tri0-comp1",
+        "present": true,
+        "remembered_toggle_next_class": "e3-deg3111-tri0-comp1",
+        "representative_history_slot": 3,
+        "representative_pair": [
+          1,
+          2
+        ],
+        "six_next_class_counts": {
+          "e3-deg2211-tri0-comp1": 2,
+          "e3-deg2220-tri1-comp2": 1,
+          "e3-deg3111-tri0-comp1": 1,
+          "e5-deg3322-tri2-comp1": 2
+        },
+        "stationary_mass": "1/32"
+      },
+      {
+        "augmented_orbit_size": 24,
+        "automorphism_group_size": 2,
+        "canonical_mask": 15,
+        "edge_count": 4,
+        "graph_class": "e4-deg3221-tri1-comp1",
+        "history_orbit_id": 21,
+        "pair_slot_orbit_members": [
+          4,
+          5
+        ],
+        "pair_slot_orbit_size": 2,
+        "predecessor_class": "e5-deg3322-tri2-comp1",
+        "present": false,
+        "remembered_toggle_next_class": "e5-deg3322-tri2-comp1",
+        "representative_history_slot": 4,
+        "representative_pair": [
+          1,
+          3
+        ],
+        "six_next_class_counts": {
+          "e3-deg2211-tri0-comp1": 2,
+          "e3-deg2220-tri1-comp2": 1,
+          "e3-deg3111-tri0-comp1": 1,
+          "e5-deg3322-tri2-comp1": 2
+        },
+        "stationary_mass": "1/16"
+      },
+      {
+        "augmented_orbit_size": 6,
+        "automorphism_group_size": 8,
+        "canonical_mask": 30,
+        "edge_count": 4,
+        "graph_class": "e4-deg2222-tri0-comp1",
+        "history_orbit_id": 22,
+        "pair_slot_orbit_members": [
+          0,
+          5
+        ],
+        "pair_slot_orbit_size": 2,
+        "predecessor_class": "e5-deg3322-tri2-comp1",
+        "present": false,
+        "remembered_toggle_next_class": "e5-deg3322-tri2-comp1",
+        "representative_history_slot": 0,
+        "representative_pair": [
+          0,
+          1
+        ],
+        "six_next_class_counts": {
+          "e3-deg2211-tri0-comp1": 4,
+          "e5-deg3322-tri2-comp1": 2
+        },
+        "stationary_mass": "1/64"
+      },
+      {
+        "augmented_orbit_size": 12,
+        "automorphism_group_size": 8,
+        "canonical_mask": 30,
+        "edge_count": 4,
+        "graph_class": "e4-deg2222-tri0-comp1",
+        "history_orbit_id": 23,
+        "pair_slot_orbit_members": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "pair_slot_orbit_size": 4,
+        "predecessor_class": "e3-deg2211-tri0-comp1",
+        "present": true,
+        "remembered_toggle_next_class": "e3-deg2211-tri0-comp1",
+        "representative_history_slot": 1,
+        "representative_pair": [
+          0,
+          2
+        ],
+        "six_next_class_counts": {
+          "e3-deg2211-tri0-comp1": 4,
+          "e5-deg3322-tri2-comp1": 2
+        },
+        "stationary_mass": "1/32"
+      },
+      {
+        "augmented_orbit_size": 6,
+        "automorphism_group_size": 4,
+        "canonical_mask": 31,
+        "edge_count": 5,
+        "graph_class": "e5-deg3322-tri2-comp1",
+        "history_orbit_id": 24,
+        "pair_slot_orbit_members": [
+          0
+        ],
+        "pair_slot_orbit_size": 1,
+        "predecessor_class": "e4-deg2222-tri0-comp1",
+        "present": true,
+        "remembered_toggle_next_class": "e4-deg2222-tri0-comp1",
+        "representative_history_slot": 0,
+        "representative_pair": [
+          0,
+          1
+        ],
+        "six_next_class_counts": {
+          "e4-deg2222-tri0-comp1": 1,
+          "e4-deg3221-tri1-comp1": 4,
+          "e6-deg3333-tri4-comp1": 1
+        },
+        "stationary_mass": "1/64"
+      },
+      {
+        "augmented_orbit_size": 24,
+        "automorphism_group_size": 4,
+        "canonical_mask": 31,
+        "edge_count": 5,
+        "graph_class": "e5-deg3322-tri2-comp1",
+        "history_orbit_id": 25,
+        "pair_slot_orbit_members": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "pair_slot_orbit_size": 4,
+        "predecessor_class": "e4-deg3221-tri1-comp1",
+        "present": true,
+        "remembered_toggle_next_class": "e4-deg3221-tri1-comp1",
+        "representative_history_slot": 1,
+        "representative_pair": [
+          0,
+          2
+        ],
+        "six_next_class_counts": {
+          "e4-deg2222-tri0-comp1": 1,
+          "e4-deg3221-tri1-comp1": 4,
+          "e6-deg3333-tri4-comp1": 1
+        },
+        "stationary_mass": "1/16"
+      },
+      {
+        "augmented_orbit_size": 6,
+        "automorphism_group_size": 4,
+        "canonical_mask": 31,
+        "edge_count": 5,
+        "graph_class": "e5-deg3322-tri2-comp1",
+        "history_orbit_id": 26,
+        "pair_slot_orbit_members": [
+          5
+        ],
+        "pair_slot_orbit_size": 1,
+        "predecessor_class": "e6-deg3333-tri4-comp1",
+        "present": false,
+        "remembered_toggle_next_class": "e6-deg3333-tri4-comp1",
+        "representative_history_slot": 5,
+        "representative_pair": [
+          2,
+          3
+        ],
+        "six_next_class_counts": {
+          "e4-deg2222-tri0-comp1": 1,
+          "e4-deg3221-tri1-comp1": 4,
+          "e6-deg3333-tri4-comp1": 1
+        },
+        "stationary_mass": "1/64"
+      },
+      {
+        "augmented_orbit_size": 6,
+        "automorphism_group_size": 24,
+        "canonical_mask": 63,
+        "edge_count": 6,
+        "graph_class": "e6-deg3333-tri4-comp1",
+        "history_orbit_id": 27,
+        "pair_slot_orbit_members": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pair_slot_orbit_size": 6,
+        "predecessor_class": "e5-deg3322-tri2-comp1",
+        "present": true,
+        "remembered_toggle_next_class": "e5-deg3322-tri2-comp1",
+        "representative_history_slot": 0,
+        "representative_pair": [
+          0,
+          1
+        ],
+        "six_next_class_counts": {
+          "e5-deg3322-tri2-comp1": 6
+        },
+        "stationary_mass": "1/64"
+      }
+    ],
+    "orbit_count": 28,
+    "role_kernels": [
+      {
+        "grade": "m025",
+        "m": "1/4",
+        "rows": [
+          [
+            [
+              1,
+              "1/1"
+            ]
+          ],
+          [
+            [
+              0,
+              "1/21"
+            ],
+            [
+              4,
+              "16/21"
+            ],
+            [
+              13,
+              "4/21"
+            ]
+          ],
+          [
+            [
+              0,
+              "4/21"
+            ],
+            [
+              4,
+              "13/21"
+            ],
+            [
+              13,
+              "4/21"
+            ]
+          ],
+          [
+            [
+              0,
+              "4/21"
+            ],
+            [
+              4,
+              "16/21"
+            ],
+            [
+              13,
+              "1/21"
+            ]
+          ],
+          [
+            [
+              2,
+              "5/21"
+            ],
+            [
+              8,
+              "4/21"
+            ],
+            [
+              10,
+              "4/21"
+            ],
+            [
+              16,
+              "8/21"
+            ]
+          ],
+          [
+            [
+              2,
+              "8/21"
+            ],
+            [
+              8,
+              "1/21"
+            ],
+            [
+              10,
+              "4/21"
+            ],
+            [
+              16,
+              "8/21"
+            ]
+          ],
+          [
+            [
+              2,
+              "8/21"
+            ],
+            [
+              8,
+              "4/21"
+            ],
+            [
+              10,
+              "1/21"
+            ],
+            [
+              16,
+              "8/21"
+            ]
+          ],
+          [
+            [
+              2,
+              "8/21"
+            ],
+            [
+              8,
+              "4/21"
+            ],
+            [
+              10,
+              "4/21"
+            ],
+            [
+              16,
+              "5/21"
+            ]
+          ],
+          [
+            [
+              5,
+              "3/7"
+            ],
+            [
+              20,
+              "4/7"
+            ]
+          ],
+          [
+            [
+              5,
+              "4/7"
+            ],
+            [
+              20,
+              "3/7"
+            ]
+          ],
+          [
+            [
+              6,
+              "3/7"
+            ],
+            [
+              19,
+              "4/7"
+            ]
+          ],
+          [
+            [
+              6,
+              "4/7"
+            ],
+            [
+              19,
+              "3/7"
+            ]
+          ],
+          [
+            [
+              3,
+              "8/21"
+            ],
+            [
+              14,
+              "13/21"
+            ]
+          ],
+          [
+            [
+              3,
+              "5/21"
+            ],
+            [
+              14,
+              "16/21"
+            ]
+          ],
+          [
+            [
+              7,
+              "8/21"
+            ],
+            [
+              12,
+              "1/21"
+            ],
+            [
+              18,
+              "8/21"
+            ],
+            [
+              23,
+              "4/21"
+            ]
+          ],
+          [
+            [
+              7,
+              "8/21"
+            ],
+            [
+              12,
+              "4/21"
+            ],
+            [
+              18,
+              "5/21"
+            ],
+            [
+              23,
+              "4/21"
+            ]
+          ],
+          [
+            [
+              7,
+              "5/21"
+            ],
+            [
+              12,
+              "4/21"
+            ],
+            [
+              18,
+              "8/21"
+            ],
+            [
+              23,
+              "4/21"
+            ]
+          ],
+          [
+            [
+              7,
+              "8/21"
+            ],
+            [
+              12,
+              "4/21"
+            ],
+            [
+              18,
+              "8/21"
+            ],
+            [
+              23,
+              "1/21"
+            ]
+          ],
+          [
+            [
+              9,
+              "4/21"
+            ],
+            [
+              11,
+              "4/21"
+            ],
+            [
+              15,
+              "5/21"
+            ],
+            [
+              25,
+              "8/21"
+            ]
+          ],
+          [
+            [
+              9,
+              "4/21"
+            ],
+            [
+              11,
+              "1/21"
+            ],
+            [
+              15,
+              "8/21"
+            ],
+            [
+              25,
+              "8/21"
+            ]
+          ],
+          [
+            [
+              9,
+              "1/21"
+            ],
+            [
+              11,
+              "4/21"
+            ],
+            [
+              15,
+              "8/21"
+            ],
+            [
+              25,
+              "8/21"
+            ]
+          ],
+          [
+            [
+              9,
+              "4/21"
+            ],
+            [
+              11,
+              "4/21"
+            ],
+            [
+              15,
+              "8/21"
+            ],
+            [
+              25,
+              "5/21"
+            ]
+          ],
+          [
+            [
+              17,
+              "16/21"
+            ],
+            [
+              24,
+              "5/21"
+            ]
+          ],
+          [
+            [
+              17,
+              "13/21"
+            ],
+            [
+              24,
+              "8/21"
+            ]
+          ],
+          [
+            [
+              21,
+              "16/21"
+            ],
+            [
+              22,
+              "1/21"
+            ],
+            [
+              27,
+              "4/21"
+            ]
+          ],
+          [
+            [
+              21,
+              "13/21"
+            ],
+            [
+              22,
+              "4/21"
+            ],
+            [
+              27,
+              "4/21"
+            ]
+          ],
+          [
+            [
+              21,
+              "16/21"
+            ],
+            [
+              22,
+              "4/21"
+            ],
+            [
+              27,
+              "1/21"
+            ]
+          ],
+          [
+            [
+              26,
+              "1/1"
+            ]
+          ]
+        ],
+        "stationary_gap": "0/1",
+        "stationary_mass": [
+          "1/64",
+          "1/64",
+          "1/16",
+          "1/64",
+          "1/16",
+          "1/32",
+          "1/32",
+          "1/16",
+          "1/32",
+          "1/32",
+          "1/32",
+          "1/32",
+          "1/32",
+          "1/64",
+          "1/32",
+          "1/16",
+          "1/16",
+          "1/32",
+          "1/16",
+          "1/32",
+          "1/32",
+          "1/16",
+          "1/64",
+          "1/32",
+          "1/64",
+          "1/16",
+          "1/64",
+          "1/64"
+        ],
+        "strong_lumpability_gap": "0/1"
+      },
+      {
+        "grade": "m1",
+        "m": "1/1",
+        "rows": [
+          [
+            [
+              1,
+              "1/1"
+            ]
+          ],
+          [
+            [
+              0,
+              "1/6"
+            ],
+            [
+              4,
+              "2/3"
+            ],
+            [
+              13,
+              "1/6"
+            ]
+          ],
+          [
+            [
+              0,
+              "1/6"
+            ],
+            [
+              4,
+              "2/3"
+            ],
+            [
+              13,
+              "1/6"
+            ]
+          ],
+          [
+            [
+              0,
+              "1/6"
+            ],
+            [
+              4,
+              "2/3"
+            ],
+            [
+              13,
+              "1/6"
+            ]
+          ],
+          [
+            [
+              2,
+              "1/3"
+            ],
+            [
+              8,
+              "1/6"
+            ],
+            [
+              10,
+              "1/6"
+            ],
+            [
+              16,
+              "1/3"
+            ]
+          ],
+          [
+            [
+              2,
+              "1/3"
+            ],
+            [
+              8,
+              "1/6"
+            ],
+            [
+              10,
+              "1/6"
+            ],
+            [
+              16,
+              "1/3"
+            ]
+          ],
+          [
+            [
+              2,
+              "1/3"
+            ],
+            [
+              8,
+              "1/6"
+            ],
+            [
+              10,
+              "1/6"
+            ],
+            [
+              16,
+              "1/3"
+            ]
+          ],
+          [
+            [
+              2,
+              "1/3"
+            ],
+            [
+              8,
+              "1/6"
+            ],
+            [
+              10,
+              "1/6"
+            ],
+            [
+              16,
+              "1/3"
+            ]
+          ],
+          [
+            [
+              5,
+              "1/2"
+            ],
+            [
+              20,
+              "1/2"
+            ]
+          ],
+          [
+            [
+              5,
+              "1/2"
+            ],
+            [
+              20,
+              "1/2"
+            ]
+          ],
+          [
+            [
+              6,
+              "1/2"
+            ],
+            [
+              19,
+              "1/2"
+            ]
+          ],
+          [
+            [
+              6,
+              "1/2"
+            ],
+            [
+              19,
+              "1/2"
+            ]
+          ],
+          [
+            [
+              3,
+              "1/3"
+            ],
+            [
+              14,
+              "2/3"
+            ]
+          ],
+          [
+            [
+              3,
+              "1/3"
+            ],
+            [
+              14,
+              "2/3"
+            ]
+          ],
+          [
+            [
+              7,
+              "1/3"
+            ],
+            [
+              12,
+              "1/6"
+            ],
+            [
+              18,
+              "1/3"
+            ],
+            [
+              23,
+              "1/6"
+            ]
+          ],
+          [
+            [
+              7,
+              "1/3"
+            ],
+            [
+              12,
+              "1/6"
+            ],
+            [
+              18,
+              "1/3"
+            ],
+            [
+              23,
+              "1/6"
+            ]
+          ],
+          [
+            [
+              7,
+              "1/3"
+            ],
+            [
+              12,
+              "1/6"
+            ],
+            [
+              18,
+              "1/3"
+            ],
+            [
+              23,
+              "1/6"
+            ]
+          ],
+          [
+            [
+              7,
+              "1/3"
+            ],
+            [
+              12,
+              "1/6"
+            ],
+            [
+              18,
+              "1/3"
+            ],
+            [
+              23,
+              "1/6"
+            ]
+          ],
+          [
+            [
+              9,
+              "1/6"
+            ],
+            [
+              11,
+              "1/6"
+            ],
+            [
+              15,
+              "1/3"
+            ],
+            [
+              25,
+              "1/3"
+            ]
+          ],
+          [
+            [
+              9,
+              "1/6"
+            ],
+            [
+              11,
+              "1/6"
+            ],
+            [
+              15,
+              "1/3"
+            ],
+            [
+              25,
+              "1/3"
+            ]
+          ],
+          [
+            [
+              9,
+              "1/6"
+            ],
+            [
+              11,
+              "1/6"
+            ],
+            [
+              15,
+              "1/3"
+            ],
+            [
+              25,
+              "1/3"
+            ]
+          ],
+          [
+            [
+              9,
+              "1/6"
+            ],
+            [
+              11,
+              "1/6"
+            ],
+            [
+              15,
+              "1/3"
+            ],
+            [
+              25,
+              "1/3"
+            ]
+          ],
+          [
+            [
+              17,
+              "2/3"
+            ],
+            [
+              24,
+              "1/3"
+            ]
+          ],
+          [
+            [
+              17,
+              "2/3"
+            ],
+            [
+              24,
+              "1/3"
+            ]
+          ],
+          [
+            [
+              21,
+              "2/3"
+            ],
+            [
+              22,
+              "1/6"
+            ],
+            [
+              27,
+              "1/6"
+            ]
+          ],
+          [
+            [
+              21,
+              "2/3"
+            ],
+            [
+              22,
+              "1/6"
+            ],
+            [
+              27,
+              "1/6"
+            ]
+          ],
+          [
+            [
+              21,
+              "2/3"
+            ],
+            [
+              22,
+              "1/6"
+            ],
+            [
+              27,
+              "1/6"
+            ]
+          ],
+          [
+            [
+              26,
+              "1/1"
+            ]
+          ]
+        ],
+        "stationary_gap": "0/1",
+        "stationary_mass": [
+          "1/64",
+          "1/64",
+          "1/16",
+          "1/64",
+          "1/16",
+          "1/32",
+          "1/32",
+          "1/16",
+          "1/32",
+          "1/32",
+          "1/32",
+          "1/32",
+          "1/32",
+          "1/64",
+          "1/32",
+          "1/16",
+          "1/16",
+          "1/32",
+          "1/16",
+          "1/32",
+          "1/32",
+          "1/16",
+          "1/64",
+          "1/32",
+          "1/64",
+          "1/16",
+          "1/64",
+          "1/64"
+        ],
+        "strong_lumpability_gap": "0/1"
+      },
+      {
+        "grade": "m4",
+        "m": "4/1",
+        "rows": [
+          [
+            [
+              1,
+              "1/1"
+            ]
+          ],
+          [
+            [
+              0,
+              "4/9"
+            ],
+            [
+              4,
+              "4/9"
+            ],
+            [
+              13,
+              "1/9"
+            ]
+          ],
+          [
+            [
+              0,
+              "1/9"
+            ],
+            [
+              4,
+              "7/9"
+            ],
+            [
+              13,
+              "1/9"
+            ]
+          ],
+          [
+            [
+              0,
+              "1/9"
+            ],
+            [
+              4,
+              "4/9"
+            ],
+            [
+              13,
+              "4/9"
+            ]
+          ],
+          [
+            [
+              2,
+              "5/9"
+            ],
+            [
+              8,
+              "1/9"
+            ],
+            [
+              10,
+              "1/9"
+            ],
+            [
+              16,
+              "2/9"
+            ]
+          ],
+          [
+            [
+              2,
+              "2/9"
+            ],
+            [
+              8,
+              "4/9"
+            ],
+            [
+              10,
+              "1/9"
+            ],
+            [
+              16,
+              "2/9"
+            ]
+          ],
+          [
+            [
+              2,
+              "2/9"
+            ],
+            [
+              8,
+              "1/9"
+            ],
+            [
+              10,
+              "4/9"
+            ],
+            [
+              16,
+              "2/9"
+            ]
+          ],
+          [
+            [
+              2,
+              "2/9"
+            ],
+            [
+              8,
+              "1/9"
+            ],
+            [
+              10,
+              "1/9"
+            ],
+            [
+              16,
+              "5/9"
+            ]
+          ],
+          [
+            [
+              5,
+              "2/3"
+            ],
+            [
+              20,
+              "1/3"
+            ]
+          ],
+          [
+            [
+              5,
+              "1/3"
+            ],
+            [
+              20,
+              "2/3"
+            ]
+          ],
+          [
+            [
+              6,
+              "2/3"
+            ],
+            [
+              19,
+              "1/3"
+            ]
+          ],
+          [
+            [
+              6,
+              "1/3"
+            ],
+            [
+              19,
+              "2/3"
+            ]
+          ],
+          [
+            [
+              3,
+              "2/9"
+            ],
+            [
+              14,
+              "7/9"
+            ]
+          ],
+          [
+            [
+              3,
+              "5/9"
+            ],
+            [
+              14,
+              "4/9"
+            ]
+          ],
+          [
+            [
+              7,
+              "2/9"
+            ],
+            [
+              12,
+              "4/9"
+            ],
+            [
+              18,
+              "2/9"
+            ],
+            [
+              23,
+              "1/9"
+            ]
+          ],
+          [
+            [
+              7,
+              "2/9"
+            ],
+            [
+              12,
+              "1/9"
+            ],
+            [
+              18,
+              "5/9"
+            ],
+            [
+              23,
+              "1/9"
+            ]
+          ],
+          [
+            [
+              7,
+              "5/9"
+            ],
+            [
+              12,
+              "1/9"
+            ],
+            [
+              18,
+              "2/9"
+            ],
+            [
+              23,
+              "1/9"
+            ]
+          ],
+          [
+            [
+              7,
+              "2/9"
+            ],
+            [
+              12,
+              "1/9"
+            ],
+            [
+              18,
+              "2/9"
+            ],
+            [
+              23,
+              "4/9"
+            ]
+          ],
+          [
+            [
+              9,
+              "1/9"
+            ],
+            [
+              11,
+              "1/9"
+            ],
+            [
+              15,
+              "5/9"
+            ],
+            [
+              25,
+              "2/9"
+            ]
+          ],
+          [
+            [
+              9,
+              "1/9"
+            ],
+            [
+              11,
+              "4/9"
+            ],
+            [
+              15,
+              "2/9"
+            ],
+            [
+              25,
+              "2/9"
+            ]
+          ],
+          [
+            [
+              9,
+              "4/9"
+            ],
+            [
+              11,
+              "1/9"
+            ],
+            [
+              15,
+              "2/9"
+            ],
+            [
+              25,
+              "2/9"
+            ]
+          ],
+          [
+            [
+              9,
+              "1/9"
+            ],
+            [
+              11,
+              "1/9"
+            ],
+            [
+              15,
+              "2/9"
+            ],
+            [
+              25,
+              "5/9"
+            ]
+          ],
+          [
+            [
+              17,
+              "4/9"
+            ],
+            [
+              24,
+              "5/9"
+            ]
+          ],
+          [
+            [
+              17,
+              "7/9"
+            ],
+            [
+              24,
+              "2/9"
+            ]
+          ],
+          [
+            [
+              21,
+              "4/9"
+            ],
+            [
+              22,
+              "4/9"
+            ],
+            [
+              27,
+              "1/9"
+            ]
+          ],
+          [
+            [
+              21,
+              "7/9"
+            ],
+            [
+              22,
+              "1/9"
+            ],
+            [
+              27,
+              "1/9"
+            ]
+          ],
+          [
+            [
+              21,
+              "4/9"
+            ],
+            [
+              22,
+              "1/9"
+            ],
+            [
+              27,
+              "4/9"
+            ]
+          ],
+          [
+            [
+              26,
+              "1/1"
+            ]
+          ]
+        ],
+        "stationary_gap": "0/1",
+        "stationary_mass": [
+          "1/64",
+          "1/64",
+          "1/16",
+          "1/64",
+          "1/16",
+          "1/32",
+          "1/32",
+          "1/16",
+          "1/32",
+          "1/32",
+          "1/32",
+          "1/32",
+          "1/32",
+          "1/64",
+          "1/32",
+          "1/16",
+          "1/16",
+          "1/32",
+          "1/16",
+          "1/32",
+          "1/32",
+          "1/16",
+          "1/64",
+          "1/32",
+          "1/64",
+          "1/16",
+          "1/64",
+          "1/64"
+        ],
+        "strong_lumpability_gap": "0/1"
+      }
+    ],
+    "state_count": 384
+  }
+}

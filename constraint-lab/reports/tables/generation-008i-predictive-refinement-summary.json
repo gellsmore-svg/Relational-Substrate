@@ -1,0 +1,149 @@
+{
+  "clock": "pair-event epoch",
+  "data": [
+    {
+      "clock": "pair-event epoch",
+      "distinct_next_observation_rows_within_current_observation": true,
+      "initial_block_count": 64,
+      "initial_strong_lumpability": false,
+      "m": "1/4",
+      "one_step_H0_gap": "0/1",
+      "projection": "labelled_mask",
+      "refinement_rounds": 1,
+      "stable_block_count": 384,
+      "strong_lumpability_verified": true
+    },
+    {
+      "clock": "pair-event epoch",
+      "distinct_next_observation_rows_within_current_observation": true,
+      "initial_block_count": 64,
+      "initial_strong_lumpability": true,
+      "m": "1/1",
+      "one_step_H0_gap": "0/1",
+      "projection": "labelled_mask",
+      "refinement_rounds": 0,
+      "stable_block_count": 64,
+      "strong_lumpability_verified": true
+    },
+    {
+      "clock": "pair-event epoch",
+      "distinct_next_observation_rows_within_current_observation": true,
+      "initial_block_count": 64,
+      "initial_strong_lumpability": false,
+      "m": "4/1",
+      "one_step_H0_gap": "0/1",
+      "projection": "labelled_mask",
+      "refinement_rounds": 1,
+      "stable_block_count": 384,
+      "strong_lumpability_verified": true
+    },
+    {
+      "clock": "pair-event epoch",
+      "distinct_next_observation_rows_within_current_observation": true,
+      "initial_block_count": 11,
+      "initial_strong_lumpability": false,
+      "m": "1/4",
+      "one_step_H0_gap": "0/1",
+      "projection": "graph_class",
+      "refinement_rounds": 1,
+      "stable_block_count": 28,
+      "strong_lumpability_verified": true
+    },
+    {
+      "clock": "pair-event epoch",
+      "distinct_next_observation_rows_within_current_observation": true,
+      "initial_block_count": 11,
+      "initial_strong_lumpability": true,
+      "m": "1/1",
+      "one_step_H0_gap": "0/1",
+      "projection": "graph_class",
+      "refinement_rounds": 0,
+      "stable_block_count": 11,
+      "strong_lumpability_verified": true
+    },
+    {
+      "clock": "pair-event epoch",
+      "distinct_next_observation_rows_within_current_observation": true,
+      "initial_block_count": 11,
+      "initial_strong_lumpability": false,
+      "m": "4/1",
+      "one_step_H0_gap": "0/1",
+      "projection": "graph_class",
+      "refinement_rounds": 1,
+      "stable_block_count": 28,
+      "strong_lumpability_verified": true
+    },
+    {
+      "clock": "pair-event epoch",
+      "distinct_next_observation_rows_within_current_observation": true,
+      "initial_block_count": 7,
+      "initial_strong_lumpability": false,
+      "m": "1/4",
+      "one_step_H0_gap": "0/1",
+      "projection": "edge_count",
+      "refinement_rounds": 1,
+      "stable_block_count": 12,
+      "strong_lumpability_verified": true
+    },
+    {
+      "clock": "pair-event epoch",
+      "distinct_next_observation_rows_within_current_observation": true,
+      "initial_block_count": 7,
+      "initial_strong_lumpability": true,
+      "m": "1/1",
+      "one_step_H0_gap": "0/1",
+      "projection": "edge_count",
+      "refinement_rounds": 0,
+      "stable_block_count": 7,
+      "strong_lumpability_verified": true
+    },
+    {
+      "clock": "pair-event epoch",
+      "distinct_next_observation_rows_within_current_observation": true,
+      "initial_block_count": 7,
+      "initial_strong_lumpability": false,
+      "m": "4/1",
+      "one_step_H0_gap": "0/1",
+      "projection": "edge_count",
+      "refinement_rounds": 1,
+      "stable_block_count": 12,
+      "strong_lumpability_verified": true
+    },
+    {
+      "clock": "pair-event epoch",
+      "distinct_next_observation_rows_within_current_observation": true,
+      "initial_block_count": 2,
+      "initial_strong_lumpability": true,
+      "m": "1/4",
+      "one_step_H0_gap": "0/1",
+      "projection": "parity",
+      "refinement_rounds": 0,
+      "stable_block_count": 2,
+      "strong_lumpability_verified": true
+    },
+    {
+      "clock": "pair-event epoch",
+      "distinct_next_observation_rows_within_current_observation": true,
+      "initial_block_count": 2,
+      "initial_strong_lumpability": true,
+      "m": "1/1",
+      "one_step_H0_gap": "0/1",
+      "projection": "parity",
+      "refinement_rounds": 0,
+      "stable_block_count": 2,
+      "strong_lumpability_verified": true
+    },
+    {
+      "clock": "pair-event epoch",
+      "distinct_next_observation_rows_within_current_observation": true,
+      "initial_block_count": 2,
+      "initial_strong_lumpability": true,
+      "m": "4/1",
+      "one_step_H0_gap": "0/1",
+      "projection": "parity",
+      "refinement_rounds": 0,
+      "stable_block_count": 2,
+      "strong_lumpability_verified": true
+    }
+  ]
+}
