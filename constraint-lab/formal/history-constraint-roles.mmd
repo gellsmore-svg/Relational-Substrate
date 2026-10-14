@@ -1,0 +1,12 @@
+flowchart TB
+  PAST["Past ordinary trajectory"]
+  H["H_t path summary"]
+  X["Current X_t"]
+  ETA["Candidate eta_t"]
+  META["Fixed common meta-programme"]
+  LAW["Event law"]
+  PAST -->|"summary"| H
+  H -->|"input"| LAW
+  X -->|"input"| LAW
+  ETA -->|"constraint configuration"| LAW
+  META -->|"update semantics"| ETA

@@ -1,0 +1,9 @@
+flowchart LR
+  ZT["Z_t"]
+  ZN["Z_(t+1)"]
+  BT["B_t"]
+  BN["B_(t+1)"]
+  ZT -->|"T"| ZN
+  ZT -->|"rho_Y"| BT
+  ZN -->|"rho_Y"| BN
+  BT -->|"bar-T_Y"| BN

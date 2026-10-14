@@ -5,12 +5,18 @@ from __future__ import annotations
 from collections import defaultdict
 from fractions import Fraction as F
 from itertools import product
+import json
+from pathlib import Path
+import subprocess
 
 import pytest
 
 from rs_constraint_lab.refinement import (
     block_index, canonical_partition, lumpability, partition_from_labels, refine,
 )
+from rs_constraint_lab.synthesis import AUDIT, BASE, HEADS, branch_audit, diagram_views, verify
+
+ROOT = Path(__file__).resolve().parents[2]
 
 
 def partitions(size):
@@ -249,3 +255,57 @@ def test_stationary_markovisation_matches_pairs_but_not_triples():
     assert word_masses(rows, labels, pi, 2) == word_masses(q, (0, 1), marginal, 2)
     assert word_masses(rows, labels, pi, 3).get((0, 1, 0), F(0)) == 0
     assert word_masses(q, (0, 1), marginal, 3)[0, 1, 0] == F(1, 24)
+
+
+def test_pinned_branch_reconciliation_and_namespaces():
+    audit = branch_audit(ROOT)
+    assert audit == json.loads((ROOT / AUDIT).read_text())
+    assert audit["identifier_conflicts"] == [] and not audit["alias_records_needed"]
+    assert audit["catalogue_maxima"] == {"T": 59, "F": 8, "N": 8, "I": 2, "M": 3, "Q": 6}
+    assert [record["artifacts"]["catalogue"]["rows"] for record in audit["heads"].values()] == [68, 68, 76]
+    assert verify(ROOT)["scientific_computation"] is False
+    for branch in ("alternate_role_8i", "coarse_process_8j"):
+        result = subprocess.run(["git", "-C", str(ROOT), "merge-base", "--is-ancestor", HEADS[branch], "HEAD"])
+        assert result.returncode == 1
+    assert subprocess.run(["git", "-C", str(ROOT), "merge-base", "--is-ancestor", BASE, "HEAD"]).returncode == 0
+
+
+def test_branch_source_references_exist_without_copying_results():
+    references = {
+        "alternate_role_8i": [
+            "constraint-lab/reports/generation-008i-historical-role-grammar.md",
+            "constraint-lab/formal/history-role-grammar.md",
+        ],
+        "coarse_process_8j": [
+            "constraint-lab/reports/generation-008j-coarse-process-memory.md",
+            "constraint-lab/formal/coarse-process-memory.md",
+            "constraint-lab/provenance/reviews/008I-chatgpt-review-v0.8i.md",
+        ],
+    }
+    for branch, paths in references.items():
+        for path in paths:
+            subprocess.run(["git", "-C", str(ROOT), "cat-file", "-e", HEADS[branch] + ":" + path], check=True)
+    assert not (ROOT / "constraint-lab/reports/tables/generation-008j-word-atlas.json").exists()
+    assert not (ROOT / "constraint-lab/exploration/generation-008k/round-k0-plan.json").exists()
+
+
+def test_generated_conceptual_diagrams_match_structure():
+    diagrams = diagram_views(ROOT)
+    assert len(diagrams) == 4
+    assert all(path.read_text() == expected for path, expected in diagrams.items())
+    assert "no guaranteed first-order kernel" in next(text for path, text in diagrams.items() if path.stem == "raw-observation-square")
+
+
+def test_prompt_and_review_representations_remain_distinct():
+    from rs_constraint_lab.durable import sha256_file
+    prompt = ROOT / "constraint-lab/provenance/prompts/008K-v0.8k-agent-input.md"
+    assert prompt.stat().st_size == 54279
+    assert sha256_file(prompt) == "ecc61164c45b2c6b2f2282e7251418d7f4f8f1c4179c86674cd2e2955576806f"
+    assert "ecc61164c45b2c6b2f2282e7251418d7f4f8f1c4179c86674cd2e2955576806f" not in prompt.read_text()
+    ledger = [json.loads(line) for line in (ROOT / "constraint-lab/provenance/ledger.jsonl").read_text().splitlines()]
+    authored = next(row for row in ledger if row["record_type"] == "prompt_representation"
+                    and row["prompt_id"] == "008I" and row.get("authored_prompt_bytes") == 54103)
+    assert authored["authored_prompt_sha256"] == "78728586acc1c47a0b0f3af9b418c0b6e66b06a081e39cc5ce17bde1dc4af43a"
+    assert authored["agent_input_prompt_sha256"] != authored["authored_prompt_sha256"]
+    review = (ROOT / "constraint-lab/provenance/reviews/008I-predictive-state-chatgpt-review-v0.8i.md").read_text()
+    assert "No rerun required" in review and "not blind" in review

@@ -252,5 +252,6 @@ Minimal means coarsest strong refinement of a fixed observation partition on
 fixed Z. Arbitrary hidden-state encodings, PSR dimensions and causal-state
 history partitions are different objects. See the
 [literature map](predictive-state-literature-map.md).
-No laboratory process beyond reviewed RECENT-REVERSAL is re-executed here.
+No new laboratory process is introduced or scientifically analysed in 8K.
+Historical regression-suite replays are verification, not new scientific cells.
 No physical ontology, observer or irreversible-time conclusion follows.

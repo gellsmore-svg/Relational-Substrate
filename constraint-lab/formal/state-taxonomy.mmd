@@ -1,0 +1,21 @@
+flowchart TB
+  X["Ordinary X"]
+  H["Historical H"]
+  ETA["Candidate constraint eta (not executed)"]
+  Z["Augmented represented Z"]
+  Y["Raw observation Y"]
+  B["Strong refinement block B"]
+  BN["Next Markov predictive block"]
+  YF["Finer observation"]
+  YC["Coarser observation"]
+  BF["Fine strong refinement"]
+  BC["Coarse strong refinement"]
+  X -->|"coordinate"| Z
+  H -->|"coordinate"| Z
+  ETA -.->|"candidate coordinate"| Z
+  Z -->|"phi"| Y
+  Z -->|"rho_Y"| B
+  B -->|"observation"| Y
+  B -->|"quotient kernel"| BN
+  YF -->|"coarsening f"| YC
+  BF -->|"induced strong quotient"| BC

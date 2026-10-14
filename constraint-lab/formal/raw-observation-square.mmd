@@ -1,0 +1,9 @@
+flowchart LR
+  ZT["Z_t"]
+  ZN["Z_(t+1)"]
+  YT["Y_t"]
+  YN["Y_(t+1)"]
+  ZT -->|"T"| ZN
+  ZT -->|"phi"| YT
+  ZN -->|"phi"| YN
+  YT -.->|"no guaranteed first-order kernel"| YN
