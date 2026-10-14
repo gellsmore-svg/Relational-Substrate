@@ -151,3 +151,44 @@ historical-effect diagnostics.
 
 These additions retain P1..P10. The separately frozen I1 probes, if opened,
 address P11/P12 and do not convert the atlas into confirmation of a target topology.
+
+## O11. Separately frozen I1 resolves the selected mechanism contrast
+
+I1 freeze: 2315728e5acd1facb093d7daf09dc0d4cf2a9b47. Two probes reuse eight
+observed I0 inputs with zero new stationary solves or controller/grade cells.
+Neutral/synthetic fixture exposure and the post-I0 symbolic candidate were
+declared separately from new target checks.
+
+Literal: SAME x direction is covariant under generators of all 720 pair-bit
+coordinate permutations. The stationary formula has remembered bit uniform and
+other bits iid with r=(m+5)/(m+11) for FORM, 1-r for DISSOLVE. Candidate
+normalisation, full balance and agreement with I0 all have exact zero gaps.
+DISJ violates these generators (gaps 1/7 and 1/3) and has nonzero within-edge
+material gaps 5/20384 and 1/756. P11 is explained with a scoped exact mechanism.
+
+Literal: q_DISJ(p,h,e)=q_SAME(p,opposite(h),e), giving identical KU for every
+positive m. The actual register update prevents this history-only row bijection
+from being a full-program conjugacy. Paired stationary SAME-versus-DISJ
+shape information is 0.00000376939007371092 at 1/4 and
+0.0000906049677239660 at 4, for either direction. Pair-mask JS is
+0.0000227028199400214 and 0.000896393316938127. P12 is observed, with the
+exact conditional-history identity for Kpi-KU verified.
+
+Magnitude: the smaller shape contrast remains literal, not discarded.
+Robustness: rational identities plus all declared direction/grade comparisons,
+160-digit information, independent I0 balance evidence. Temporal: stationary,
+with different underlying order-two processes. Projection: complete material,
+edge/class and declared KU/Kpi averages. Unexpectedness: the I0 matched-average
+equivalence selected the probes; the candidate formula was post-I0, not a
+prediction made before I0. Mechanism: full coordinate exchangeability versus
+relationally restricted reads, coupled with the experienced history distribution.
+Alternative: no claim that all current-state comparators fail, or that these
+two numerical contrasts classify every positive m or every history function.
+
+## Stop after I1
+
+The two selected ambiguities now have exact mechanisms and retained boundaries.
+No I2 is opened. Remaining informative candidates include ADJ projected currents,
+coarse-grained multi-time history, controlled passage, general selector classes,
+minimal representations and independently scoped deeper-memory witnesses.
+These require new questions/plans. H2, L, N5 and weak grades remain unopened.
