@@ -268,3 +268,15 @@ def test_publish_on_synthetic_round(tmp_path):
     assert body["payload_sha256"] == digest
     assert body["status_counts"] == {"complete": 2}
     assert all(r["numerical_problems"] == [] for r in body["item_records"].values())
+
+
+def test_atlas_renders_every_item_of_a_synthetic_round(tmp_path):
+    from rs_constraint_lab import gte1_atlas
+
+    plan = synthetic_plan(("CSPH", "NULL"))
+    gte1.run(tmp_path, plan, workers=2, python=sys.executable, poll=0.1)
+    gte1.publish(tmp_path, plan, tmp_path / "tables.json", frozen_plan_commit="synthetic" * 5, e0b_tables=gte1_repo() / gte1.E0B_TABLES_RELPATH)
+    (tmp_path / "plan.json").write_text(json.dumps(plan))
+    text = gte1_atlas.build(gte1_repo(), tmp_path / "tables.json", tmp_path / "plan.json")
+    assert all(it["item_id"] in text for it in plan["items"])
+    assert "unavailable" in text and "Z5" in text
