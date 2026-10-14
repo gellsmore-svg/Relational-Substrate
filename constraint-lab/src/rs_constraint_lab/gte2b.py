@@ -350,15 +350,51 @@ def publish(root: Path, plan: dict, out: Path, *, frozen_plan_commit: str) -> st
     return body["payload_sha256"]
 
 
+ATLAS_RELPATH = "gravity-time/reports/gt-e2b-atlas.md"
+
+
+def render_atlas(repo: Path, tables: Path | None = None, plan_path: Path | None = None) -> str:
+    """The E2A atlas sections for E2B cells, plus one-way flux and race committor tables."""
+    import json
+
+    from rs_constraint_lab import gte2a_atlas
+
+    text = gte2a_atlas.build(repo, tables or repo / TABLES_RELPATH, plan_path or repo / PLAN_RELPATH, title="GT-E2B hard/soft interface atlas", tables_rel=TABLES_RELPATH, generator="rs_constraint_lab.gte2b render_atlas")
+    t = json.loads((tables or repo / TABLES_RELPATH).read_text())
+    L = ["## 7. One-way flux (D2)", "", "Share of stationary flux on transitions whose reverse has rate 0, by action and slot class.", ""]
+    L += ["| Cell | share | formation | dissolution | by class |", "| --- | --- | --- | --- | --- |"]
+    for k, r in t["results"].items():
+        ow = (r.get("e2a") or {}).get("one_way_flux")
+        if ow:
+            L.append(f"| {k} | {ow['share_of_total_flux']:.4f} | {ow['formation_share']:.4f} | {ow['dissolution_share']:.4f} | {ow['by_class_share']} |")
+    L += ["", "## 8. Race committor (D4)", "", "From the matched state x- (support g removed), probability that f toggles before g is restored: over strictly enabled instances, over all instances, and from x with g present.", ""]
+    L += ["| Cell | Group | enabled weight | race x- enabled | race x- all | race x (g present) |", "| --- | --- | --- | --- | --- | --- |"]
+    fmt = lambda v: "—" if v is None else f"{v:.3f}"
+    for k, r in t["results"].items():
+        race = (r.get("e2a") or {}).get("race")
+        if not race:
+            continue
+        for gk, g in race["groups"].items():
+            L.append(f"| {k} | {gk} | {g['enabled_weight_share']:.3f} | {fmt(g['race_from_x_minus_enabled'])} | {fmt(g['race_from_x_minus_all'])} | {fmt(g['race_from_x_with_g'])} |")
+    return text + "\n".join(L) + "\n"
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="python -m rs_constraint_lab.gte2b")
     sub = parser.add_subparsers(dest="command", required=True)
     one = sub.add_parser("item")
     one.add_argument("--root", required=True)
     one.add_argument("--item-id", required=True)
+    sub.add_parser("atlas")
     args = parser.parse_args(argv)
     from rs_constraint_lab.durable import read_json
 
+    if args.command == "atlas":
+        repo = Path(__file__).resolve().parents[3]
+        text = render_atlas(repo)
+        (repo / ATLAS_RELPATH).write_text(text)
+        print(f"wrote {ATLAS_RELPATH} ({len(text)} bytes)")
+        return 0
     root = Path(args.root)
     plan = read_json(root / "plan.json")
     (item,) = [it for it in plan["items"] if it["item_id"] == args.item_id]

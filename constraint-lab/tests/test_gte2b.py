@@ -88,3 +88,12 @@ def test_plan_hash_deterministic():
     repo = Path(__file__).resolve().parents[2]
     a, b = gte2b.prepare_plan(repo), gte2b.prepare_plan(repo)
     assert a["plan_hash"] == b["plan_hash"] == plan_hash(a) and a["items"] == gte2b.items()
+
+
+def test_atlas_on_synthetic_round(tmp_path):
+    plan = {"items": [syn("HAF", "none"), syn("HPF", "PDwf")], "plan_hash": "synthetic", "synthetic_fixture": True}
+    gte2b.run(tmp_path, plan, workers=2, python=sys.executable, poll=0.1, watchdogs={4: 300})
+    gte2b.publish(tmp_path, plan, tmp_path / "t.json", frozen_plan_commit="synthetic" * 5)
+    (tmp_path / "p.json").write_text(json.dumps(plan))
+    text = gte2b.render_atlas(tmp_path, tmp_path / "t.json", tmp_path / "p.json")
+    assert all(it["item_id"] in text for it in plan["items"]) and "Race committor" in text
