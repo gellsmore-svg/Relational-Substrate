@@ -280,3 +280,22 @@ def test_atlas_renders_every_item_of_a_synthetic_round(tmp_path):
     text = gte1_atlas.build(gte1_repo(), tmp_path / "tables.json", tmp_path / "plan.json")
     assert all(it["item_id"] in text for it in plan["items"])
     assert "unavailable" in text and "Z5" in text
+
+
+def test_runner_survives_a_child_reaped_elsewhere(tmp_path, monkeypatch):
+    """Regression (CI run 38592301540): a child reaped by subprocess's own cleanup made os.wait4 raise ECHILD."""
+    import os
+
+    real = os.wait4
+    seen: set[int] = set()
+
+    def flaky(pid, flags):
+        if pid not in seen:
+            seen.add(pid)
+            real(pid, 0)
+            raise ChildProcessError(10, "No child processes")
+        return real(pid, flags)
+
+    monkeypatch.setattr(os, "wait4", flaky)
+    rows = gte1.run(tmp_path, synthetic_plan(("NULL", "CSPH")), workers=2, python=sys.executable, poll=0.05)
+    assert [r["status"] for r in rows] == ["complete", "complete"]

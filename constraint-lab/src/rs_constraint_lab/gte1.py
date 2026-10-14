@@ -889,6 +889,23 @@ def run(root: Path, plan: dict, *, workers: int = WORKERS, python: str = sys.exe
     def status_file():
         atomic_write_json(root / "status.json", {"completed_items": len(finished), "item_count": len(plan["items"]), "running": sorted(it["item_id"] for it, _, _ in running.values()), "updated_unix": time.time(), "elapsed_seconds": time.time() - meta["round_started_unix"]})
 
+    procs: dict[int, subprocess.Popen] = {}
+
+    def reap(pid: int, flags: int):
+        """os.wait4 that keeps the Popen object consistent and tolerates a child reaped elsewhere."""
+        try:
+            waited, code, usage = os.wait4(pid, flags)
+        except ChildProcessError:
+            rc = procs[pid].poll()
+            rc = 1 if rc is None else rc
+            return pid, (rc & 0xFF) << 8 if rc >= 0 else -rc, None
+        if waited:
+            procs[pid].returncode = os.waitstatus_to_exitcode(code)
+        return waited, code, usage
+
+    def rss(usage) -> float | None:
+        return usage.ru_maxrss / 1024 if usage is not None else None
+
     capped = False
     while pending or running:
         elapsed = time.time() - meta["round_started_unix"]
@@ -896,10 +913,11 @@ def run(root: Path, plan: dict, *, workers: int = WORKERS, python: str = sys.exe
             capped = True
             for pid, (item, t0, log) in list(running.items()):
                 os.kill(pid, signal.SIGKILL)
-                os.waitpid(pid, 0)
+                reap(pid, 0)
                 log.close()
                 record(item, "interrupted_wall_cap", {"wall_seconds": time.time() - t0})
                 running.pop(pid)
+                procs.pop(pid)
             for item in pending:
                 record(item, "not_started_wall_cap", {})
             pending = []
@@ -909,27 +927,30 @@ def run(root: Path, plan: dict, *, workers: int = WORKERS, python: str = sys.exe
             log = open(root / "logs" / f"{item['item_id']}.log", "w")
             proc = subprocess.Popen([python, "-m", module, "item", "--root", str(root), "--item-id", item["item_id"]], stdout=log, stderr=subprocess.STDOUT, env=env)
             running[proc.pid] = (item, time.time(), log)
+            procs[proc.pid] = proc
         status_file()
         time.sleep(poll)
         for pid, (item, t0, log) in list(running.items()):
-            waited, code, usage = os.wait4(pid, os.WNOHANG)
+            waited, code, usage = reap(pid, os.WNOHANG)
             age = time.time() - t0
             if waited == 0:
                 if age > watchdogs.get(item["n"], max(watchdogs.values())):
                     os.kill(pid, signal.SIGKILL)
-                    _, code, usage = os.wait4(pid, 0)
+                    _, code, usage = reap(pid, 0)
                     log.close()
-                    record(item, "unresolved_watchdog", {"peak_rss_mb": usage.ru_maxrss / 1024, "wall_seconds": age, "watchdog_seconds": watchdogs.get(item["n"], max(watchdogs.values()))})
+                    record(item, "unresolved_watchdog", {"peak_rss_mb": rss(usage), "wall_seconds": age, "watchdog_seconds": watchdogs.get(item["n"], max(watchdogs.values()))})
                     running.pop(pid)
+                    procs.pop(pid)
                 continue
             log.close()
             running.pop(pid)
+            procs.pop(pid)
             final = _final(root, item)
             if final is None or os.waitstatus_to_exitcode(code) != 0:
                 tail = (root / "logs" / f"{item['item_id']}.log").read_text()[-2000:]
-                record(item, "failed", {"exit_code": os.waitstatus_to_exitcode(code), "log_tail": tail, "peak_rss_mb": usage.ru_maxrss / 1024, "wall_seconds": age})
+                record(item, "failed", {"exit_code": os.waitstatus_to_exitcode(code), "log_tail": tail, "peak_rss_mb": rss(usage), "wall_seconds": age})
             else:
-                final["peak_rss_mb_parent_view"] = usage.ru_maxrss / 1024
+                final["peak_rss_mb_parent_view"] = rss(usage)
                 atomic_write_json(_item_path(root, item), final)
                 finished.add(item["item_id"])
     status_file()
