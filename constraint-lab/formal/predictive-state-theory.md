@@ -165,3 +165,92 @@ neutral one-step representation have identical adjacent mask/class/count laws
 but different triples (CL-T31, CL-T55/T56, CL-N08). Thus the implication to
 full process equality is false. This re-establishes the general algebra underlying
 the divergent 8J Kpi matching result without importing its scientific tables.
+
+## 9. Markov order
+
+For a declared stationary observed process, order r is the least POSITIVE r
+such that the conditional next law given the entire observed past depends only
+on its last r observations, on positive-probability compatible histories.
+If no finite r works, order is infinite. Iid output is reported as order one
+under this convention; an optional order-zero convention must be announced.
+
+Strong lumpability gives order at most one for all initial laws. Failure of
+strong lumpability does not by itself prove higher stationary order:
+CE-WEAK has first-order stationary output. In the 8I example, explicit supported
+predecessor-row witnesses establish the lower bound.
+
+## 10. Worst-case synchronization
+
+For a fixed strong refinement rho_Y and declared compatible-history law, define
+s as the least POSITIVE integer such that one deterministic function g gives
+
+    rho_Y(Z_t)=g(Y_(t-s+1),...,Y_t)
+
+for every positive-probability compatible state path in scope. For arbitrary
+initial laws this applies after s observations; for stationary laws it applies
+at every time in a two-sided stationary extension. A prior-specific support
+restriction must not be advertised as a prior-free statement.
+
+This is worst-case finite suffix synchronization. A single synchronizing word,
+almost-sure eventual synchronization, or approximate filtering concentration is
+not this property. If none of these uniform finite suffix bounds works, s is
+infinite. The block can also be inferentially unknowable from observations even
+though it is a valid state-level strong quotient (CE-WEAK).
+
+<a id="cl-t63"></a>
+## 11. CL-T63: Synchronization bounds observed Markov order
+
+Suppose B_t=rho_Y(Z_t) is a strong quotient with kernel bar-T, observation
+Y_t=g_0(B_t), and B_t=g(Y_(t-s+1:t)) on the declared supported histories.
+For any observed past, conditioning first on B_t gives
+
+    Pr(Y_(t+1)=y | observed past)
+      = sum_(b':g_0(b')=y) bar-T(g(last s observations),b').
+
+The result depends only on that suffix, proving order <=s under stationarity,
+or the corresponding conditional finite-past statement after the initial
+observation window for nonstationary starts.
+
+For s>=2, if two positive-probability observed histories under the SAME law/time
+have identical last s-1 outputs but different next-output rows, order <=s-1 is
+impossible. Together the upper and lower bounds give order exactly s.
+The extra witness is essential: synchronization length alone need not be minimal
+for observed prediction when strong refinement retains trace-redundant states.
+
+The converse to finite synchronization implies finite order is false:
+CE-WEAK is stationary order one with no finite synchronization to its four-block
+strong refinement. CE-EVEN has just three strong blocks but infinite stationary
+observed order and no uniform finite synchronization length.
+
+## 12. Five separate complexity coordinates
+
+| Coordinate | Meaning | 8H/8I or formal example |
+| --- | --- | --- |
+| Strong predictive-state count | Number of blocks in Ref_T(Pi_Y) on fixed Z | 384,28,12,2 non-neutrally |
+| History alphabet | Number of possible represented historical symbols | Six pair labels after sentinel; structural roles vary by current class |
+| Historical temporal depth | Prior events required by the declared summary, when a bounded-window depth exists | H_pair=1 throughout reviewed 8H/8I |
+| Synchronization length | Worst-case consecutive outputs determining the current strong block | 2 for non-neutral mask/class/count, 1 for parity |
+| Observed Markov order | Least positive predictive suffix length under declared process law | 2/2/2/1 in that worked example |
+
+They are not independent in every possible model: CL-T63 supplies one conditional
+bound. They must nevertheless not be IDENTIFIED or summed. CE-WEAK separates
+order from synchronization, and CE-EVEN separates state count from both.
+A passive deeper history register can leave the observed refinement unchanged.
+Finite alphabet need not imply bounded raw-past dependence (cumulative parity).
+
+## 13. Distribution-dependent information
+
+Block count is structural; Ent_mu(B), mutual information and temporal conditional
+information require a law. Positive I(Y_prev;Y_next|Y_current) excludes stationary
+first order, but zero triple CMI alone does not prove all-past order one.
+CMI does not construct a sufficient state or measure necessary memory depth.
+No entropy, entropy rate or aggregate complexity score is computed in 8K.
+
+## 14. Scope and literature
+
+Minimal means coarsest strong refinement of a fixed observation partition on
+fixed Z. Arbitrary hidden-state encodings, PSR dimensions and causal-state
+history partitions are different objects. See the
+[literature map](predictive-state-literature-map.md).
+No laboratory process beyond reviewed RECENT-REVERSAL is re-executed here.
+No physical ontology, observer or irreversible-time conclusion follows.
