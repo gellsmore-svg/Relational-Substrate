@@ -1,0 +1,598 @@
+{
+  "alphabets": {
+    "W16": {
+      "neutral": "1",
+      "prohibit": "0",
+      "strong_favour": "16",
+      "strong_suppress": "1/16",
+      "weak_favour": "4",
+      "weak_suppress": "1/4"
+    },
+    "W3": {
+      "neutral": "1",
+      "prohibit": "0",
+      "strong_favour": "9",
+      "strong_suppress": "1/9",
+      "weak_favour": "3",
+      "weak_suppress": "1/3"
+    },
+    "W4": {
+      "neutral": "1",
+      "prohibit": "0",
+      "strong_favour": "4",
+      "strong_suppress": "1/4",
+      "weak_favour": "2",
+      "weak_suppress": "1/2"
+    }
+  },
+  "analysis_only": true,
+  "analysis_version": "gt-e3a/v1",
+  "chosen_because": "GT-E2 synthesis section 7 (one-way release recommended) and GT-P006; coverage audit gravity-time/docs/e3-coverage-and-question-selection.md",
+  "clocks": {
+    "continuous": "pi_ct = pi_jump / R; release flux, one-way flux, expected recovery time (sum of mean holding times 1/R)",
+    "jump": "events of the stationary jump chain: event order, partner frame, recovery events, recovery within H, gate distance (admissible steps)"
+  },
+  "comparisons": {
+    "R1_ladder": "path_form factor 1/2 (W4 weak), 1/4 (W4 strong), 1/9 (W3 strong), 1/16 (W16 strong), 0 (prohibit), FREE N=4 and 5: partner index and its split, one-way flux, recovery of witnessed releases (gate distance, expected recovery events and time, recovery within H, direct-recovery share) against unwitnessed releases. The soft rungs and the hard zero are qualitatively different (positive versus zero support); no limit is claimed",
+    "R2_hard_against_dissolution": "path_form prohibit with path_dissolve weak_suppress (W4), strong_suppress (W4) and strong_suppress (W16): soft sigma -log 2, -log 4, -log 16; sign and split of the partner index",
+    "R3_soft_controls": "path_form and path_dissolve strong_suppress (W16): rate-symmetric, sigma 0; path_form weak_suppress + path_dissolve strong_suppress (W4): soft sigma = -log 2 with no hard component",
+    "R4_reversible_hard_and_null": "EXCL (strict enabling, reversible) and NULL: recovery of path-witnessed versus unwitnessed releases with no rule acting on path witnesses (structural baseline)",
+    "R5_scaffold": "HELD N=5 path_form strong_suppress (W4, W16) and prohibit: the held triangle as a soft and as a hard witness",
+    "R6_q12_scan": "partner index of path_form(m_f) + path_dissolve(m_d) at FREE N=4 and N=5 on the 9x9 grid m = 2^k, k in {-3,-2,-1,-0.5,0,0.5,1,2,3} (synthetic factors; a bounded counterexample search for GT-Q12, not a model of hard limits)",
+    "no_aggregate_score": "no ranking"
+  },
+  "controls_and_identities": {
+    "I1_I2": "square identity on intact squares, zero on disjoint squares, with each cell's alphabet",
+    "S1_hard_path_form_support": "every FREE cell with path_form prohibit: the reachable class is irreducible; a release is one-way exactly when the released relation is path-witnessed; every one-way release has gate distance >= 2 and every two-way release gate distance 1 (theorem T1-T4)",
+    "S2_soft_support": "every cell without a hard component: no one-way transition and gate distance 1 for every release",
+    "S3_rate_symmetric": "PFD strong_suppress+strong_suppress (W16) and NULL: uniform law (class L1 <= 1e-9) and flux <= 1e-9",
+    "S4_reversible_hard": "EXCL: flux <= 1e-9 and no one-way transition",
+    "S5_scan_diagonal": "scan points with m_f = m_d: flux <= 1e-9 and |partner index| <= 1e-12",
+    "Z5_numerical": "gte2a checks (GTH, residual, symmetry, kernel and affinity references from rule strings, partner-frame loop, passage enumeration) plus: gate distance and one-way classification from the rule strings by forward BFS on 25 seeded releases per cell; expected recovery events by fixed-point iteration against the linear solve (|difference| <= 1e-8) on up to four slots",
+    "separation_note": "S1-S5 are theorems or identities; none predicts the sign or size of any partner index, recovery time, direct-recovery share or scan outcome"
+  },
+  "deliberate_omissions": {
+    "e3b": "not preselected",
+    "entropy_production": "with one-way transitions the logarithmic entropy production diverges; gte0a excludes one-sided pairs from its sum, so reported values are of the two-sided part only and are flagged",
+    "n6_n7": "not needed: T1-T4 hold at every N, and N=4/5 show nontrivial one-way release; no FREE N=7",
+    "new_alphabets": "only W4, W3, W16 (existing); scan factors are a declared mathematical search"
+  },
+  "estimands": "every gte2a channel plus release census, recovery (gate distance, expected recovery events/time, recovery within H, direct-recovery share), partner split and one-way flux; scans: sign agreement of partner index with sigma",
+  "experiment_id": "gt-round-e3a-release-and-recovery",
+  "families": {
+    "EXCL": {
+      "prohibit": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "close_form"
+          }
+        ]
+      }
+    },
+    "HPD": {
+      "prohibit+strong_suppress": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "path_form"
+          },
+          {
+            "grade": "strong_suppress",
+            "kind": "path_dissolve"
+          }
+        ]
+      },
+      "prohibit+weak_suppress": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "path_form"
+          },
+          {
+            "grade": "weak_suppress",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    },
+    "NULL": {
+      "none": {
+        "components": []
+      }
+    },
+    "PF": {
+      "prohibit": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "path_form"
+          }
+        ]
+      },
+      "strong_suppress": {
+        "components": [
+          {
+            "grade": "strong_suppress",
+            "kind": "path_form"
+          }
+        ]
+      },
+      "weak_suppress": {
+        "components": [
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          }
+        ]
+      }
+    },
+    "PFD": {
+      "strong_suppress+strong_suppress": {
+        "components": [
+          {
+            "grade": "strong_suppress",
+            "kind": "path_form"
+          },
+          {
+            "grade": "strong_suppress",
+            "kind": "path_dissolve"
+          }
+        ]
+      },
+      "weak_suppress+strong_suppress": {
+        "components": [
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          },
+          {
+            "grade": "strong_suppress",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    }
+  },
+  "history": false,
+  "horizons_jump_events": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "initial_conditions": "FREE starts at the empty graph and HELD at the source triangle; the reachable class from the start is analysed (gte2a policy: restriction to a unique closed class, otherwise structure only)",
+  "items": [
+    {
+      "alphabet": "W4",
+      "family": "PF",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N4-W4-PF-weak_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 4,
+      "reuse": null,
+      "stratum": "L_formation_ladder"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PF",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N4-W4-PF-strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 4,
+      "reuse": null,
+      "stratum": "L_formation_ladder"
+    },
+    {
+      "alphabet": "W3",
+      "family": "PF",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N4-W3-PF-strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 4,
+      "reuse": null,
+      "stratum": "L_formation_ladder"
+    },
+    {
+      "alphabet": "W16",
+      "family": "PF",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N4-W16-PF-strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 4,
+      "reuse": null,
+      "stratum": "L_formation_ladder"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PF",
+      "grade": "prohibit",
+      "item_id": "FREE-N4-W4-PF-prohibit",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 4,
+      "reuse": null,
+      "stratum": "L_formation_ladder"
+    },
+    {
+      "alphabet": "W4",
+      "family": "HPD",
+      "grade": "prohibit+weak_suppress",
+      "item_id": "FREE-N4-W4-HPD-prohibit+weak_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 4,
+      "reuse": null,
+      "stratum": "H_hard_against_dissolution"
+    },
+    {
+      "alphabet": "W4",
+      "family": "HPD",
+      "grade": "prohibit+strong_suppress",
+      "item_id": "FREE-N4-W4-HPD-prohibit+strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 4,
+      "reuse": null,
+      "stratum": "H_hard_against_dissolution"
+    },
+    {
+      "alphabet": "W16",
+      "family": "HPD",
+      "grade": "prohibit+strong_suppress",
+      "item_id": "FREE-N4-W16-HPD-prohibit+strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 4,
+      "reuse": null,
+      "stratum": "H_hard_against_dissolution"
+    },
+    {
+      "alphabet": "W16",
+      "family": "PFD",
+      "grade": "strong_suppress+strong_suppress",
+      "item_id": "FREE-N4-W16-PFD-strong_suppress+strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 4,
+      "reuse": null,
+      "stratum": "C_soft_controls"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PFD",
+      "grade": "weak_suppress+strong_suppress",
+      "item_id": "FREE-N4-W4-PFD-weak_suppress+strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 4,
+      "reuse": null,
+      "stratum": "C_soft_controls"
+    },
+    {
+      "alphabet": "W4",
+      "family": "EXCL",
+      "grade": "prohibit",
+      "item_id": "FREE-N4-W4-EXCL-prohibit",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 4,
+      "reuse": null,
+      "stratum": "C_reversible_hard"
+    },
+    {
+      "alphabet": "W4",
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "FREE-N4-W4-NULL-none",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 4,
+      "reuse": null,
+      "stratum": "C_null"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PF",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N5-W4-PF-weak_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 5,
+      "reuse": "E2A FREE-N5-PATHF-weak_suppress",
+      "stratum": "L_formation_ladder"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PF",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N5-W4-PF-strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 5,
+      "reuse": "E2A FREE-N5-PATHF-strong_suppress",
+      "stratum": "L_formation_ladder"
+    },
+    {
+      "alphabet": "W3",
+      "family": "PF",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N5-W3-PF-strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 5,
+      "reuse": null,
+      "stratum": "L_formation_ladder"
+    },
+    {
+      "alphabet": "W16",
+      "family": "PF",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N5-W16-PF-strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 5,
+      "reuse": null,
+      "stratum": "L_formation_ladder"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PF",
+      "grade": "prohibit",
+      "item_id": "FREE-N5-W4-PF-prohibit",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 5,
+      "reuse": "E2A FREE-N5-PATHF-prohibit",
+      "stratum": "L_formation_ladder"
+    },
+    {
+      "alphabet": "W4",
+      "family": "HPD",
+      "grade": "prohibit+weak_suppress",
+      "item_id": "FREE-N5-W4-HPD-prohibit+weak_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 5,
+      "reuse": "E2B FREE-N5-HPF-PDws-prohibit+weak_suppress",
+      "stratum": "H_hard_against_dissolution"
+    },
+    {
+      "alphabet": "W4",
+      "family": "HPD",
+      "grade": "prohibit+strong_suppress",
+      "item_id": "FREE-N5-W4-HPD-prohibit+strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 5,
+      "reuse": null,
+      "stratum": "H_hard_against_dissolution"
+    },
+    {
+      "alphabet": "W16",
+      "family": "HPD",
+      "grade": "prohibit+strong_suppress",
+      "item_id": "FREE-N5-W16-HPD-prohibit+strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 5,
+      "reuse": null,
+      "stratum": "H_hard_against_dissolution"
+    },
+    {
+      "alphabet": "W16",
+      "family": "PFD",
+      "grade": "strong_suppress+strong_suppress",
+      "item_id": "FREE-N5-W16-PFD-strong_suppress+strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 5,
+      "reuse": null,
+      "stratum": "C_soft_controls"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PFD",
+      "grade": "weak_suppress+strong_suppress",
+      "item_id": "FREE-N5-W4-PFD-weak_suppress+strong_suppress",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 5,
+      "reuse": null,
+      "stratum": "C_soft_controls"
+    },
+    {
+      "alphabet": "W4",
+      "family": "EXCL",
+      "grade": "prohibit",
+      "item_id": "FREE-N5-W4-EXCL-prohibit",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 5,
+      "reuse": "E2A FREE-N5-EXCL-prohibit",
+      "stratum": "C_reversible_hard"
+    },
+    {
+      "alphabet": "W4",
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "FREE-N5-W4-NULL-none",
+      "kind": "cell",
+      "mode": "FREE",
+      "n": 5,
+      "reuse": "E2A FREE-N5-NULL-none",
+      "stratum": "C_null"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PF",
+      "grade": "strong_suppress",
+      "item_id": "HELD-N5-W4-PF-strong_suppress",
+      "kind": "cell",
+      "mode": "HELD",
+      "n": 5,
+      "reuse": "E2A HELD-N5-PATHF-strong_suppress",
+      "stratum": "S_held_scaffold"
+    },
+    {
+      "alphabet": "W16",
+      "family": "PF",
+      "grade": "strong_suppress",
+      "item_id": "HELD-N5-W16-PF-strong_suppress",
+      "kind": "cell",
+      "mode": "HELD",
+      "n": 5,
+      "reuse": null,
+      "stratum": "S_held_scaffold"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PF",
+      "grade": "prohibit",
+      "item_id": "HELD-N5-W4-PF-prohibit",
+      "kind": "cell",
+      "mode": "HELD",
+      "n": 5,
+      "reuse": "E2A HELD-N5-PATHF-prohibit",
+      "stratum": "S_held_scaffold"
+    },
+    {
+      "exponents": [
+        -3.0,
+        -2.0,
+        -1.0,
+        -0.5,
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "item_id": "SCAN-FREE-N4-sigma-sign",
+      "kind": "scan",
+      "mode": "FREE",
+      "n": 4,
+      "stratum": "Q12_counterexample_scan"
+    },
+    {
+      "exponents": [
+        -3.0,
+        -2.0,
+        -1.0,
+        -0.5,
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "item_id": "SCAN-FREE-N5-sigma-sign",
+      "kind": "scan",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "Q12_counterexample_scan"
+    }
+  ],
+  "meta_constraints": false,
+  "method": {
+    "name": "Open-Thetical Research",
+    "path": "research-methods/open-thetical-research.md",
+    "version": "1.0"
+  },
+  "mode": "B",
+  "new_primitives": false,
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      4,
+      5
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL"
+  },
+  "open_questions_without_prediction": [
+    "Along the formation ladder 1/2, 1/4, 1/9, 1/16, 0, how do the partner index, its one-way part, and the recovery of witnessed releases change, and is the hard zero continuous with the soft rungs or qualitatively separate?",
+    "Can any available opposing dissolution term (soft sigma down to -log 16) reverse the orientation of hard path-form exclusion?",
+    "How long does a released, witnessed relation stay absent, by which route is it recovered, and how does that compare with unwitnessed releases and with the same structural event under soft rules?",
+    "How much of the partner index comes from event pairs that include a one-way transition?",
+    "What does the held triangle do as a soft witness (strong suppression) compared with a hard one?",
+    "Does any grid point of the scan have a partner index whose sign disagrees with sigma (GT-Q12)?",
+    "Anything not anticipated above."
+  ],
+  "parameter_fit": false,
+  "plan_hash": "65c94fb2e1aee944972f899e2212470c77c904d3f00aaf1c3f51b8a92e1a531a",
+  "pre_freeze_exposure": {
+    "derivations": "T1-T4 derived before freezing; the support theorem was checked on synthetic fixtures (see execution record); no round cell's law, recovery or scan value was computed before freezing",
+    "gt_p005_smoke": "the GT-P005 pre-freeze smoke run printed flux, partner index and one-way counts for FREE N=4 W4 PATHF weak_suppress, strong_suppress, prohibit, EXCL and NULL (now E3A cells FREE-N4-W4-PF-*, EXCL, NULL); recovery, gate, split and scan channels were never computed",
+    "published_kernels": {
+      "FREE-N5-W4-EXCL-prohibit": "E2A FREE-N5-EXCL-prohibit",
+      "FREE-N5-W4-HPD-prohibit+weak_suppress": "E2B FREE-N5-HPF-PDws-prohibit+weak_suppress",
+      "FREE-N5-W4-NULL-none": "E2A FREE-N5-NULL-none",
+      "FREE-N5-W4-PF-prohibit": "E2A FREE-N5-PATHF-prohibit",
+      "FREE-N5-W4-PF-strong_suppress": "E2A FREE-N5-PATHF-strong_suppress",
+      "FREE-N5-W4-PF-weak_suppress": "E2A FREE-N5-PATHF-weak_suppress",
+      "HELD-N5-W4-PF-prohibit": "E2A HELD-N5-PATHF-prohibit",
+      "HELD-N5-W4-PF-strong_suppress": "E2A HELD-N5-PATHF-strong_suppress"
+    },
+    "reference_hashes": {
+      "constraint-lab/docs/scientific-plan-discipline.md": "4101d64f8b4d228dd1cb6ca46d77848e14e79f768041aff839f962da6fecd974",
+      "constraint-lab/formal/open-problems.md": "468dfd1f63984de17150450361a97595e6b5b9633f1273afed9ed739fec9fa1d",
+      "gravity-time/docs/e2-formal-mechanism.md": "0e7749f8510eedb8abb0b1e3c7916333511f7e455fc55ae78fca38111d230ef5",
+      "gravity-time/docs/e3-coverage-and-question-selection.md": "91c9a8136b46d614cc732f701320589e2be93e737c0fba4e290c0776e5294258",
+      "gravity-time/docs/e3-formal-support-and-recovery.md": "300a6090039a76038c4a63f1def10327c8af6e0bd8207d5a8178befb8dbe9ead",
+      "gravity-time/docs/foundational-bridge-map.md": "4be3bbc069479cdaf3dc15ac2607e1686a58d2b60e11bc8b334ddf0705a98b3b",
+      "gravity-time/plans/round-e2a-plan.json": "6f636ecbbfcb16765fced02fe09a3915d663e72fce4248728b101a0e099a6e86",
+      "gravity-time/plans/round-e2b-plan.json": "061474c5bd0aed347cf0f5e6e7157abe09cd225f954a8eb083cf22c68f905117",
+      "gravity-time/provenance/prompts/GT-P006-agent-input.md": "59dd5c5b668b8c04674ae59b1a099b681b75c971d5b0b5834c5633281042aa23",
+      "gravity-time/reports/gt-e2-synthesis.md": "2b0e3cfd90f155ec3bf962a63617af89da331de5731e718eac92f4e207d3bb8e",
+      "gravity-time/reports/round-e2a-tables.json": "2538405278a1d33ce2615ad60b372cccb64a9d2629a4c123397e345166fdb52b",
+      "gravity-time/reports/round-e2b-tables.json": "7f5cd60a760da151380072103ecf836875bcb5df56ecddb343cbde027b35bdd1",
+      "research-methods/open-thetical-research.md": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd"
+    }
+  },
+  "programme": "GT",
+  "prompt_id": "GT-P006",
+  "question": "How do local prohibitions and conditional rates reshape the space of possible histories: what generates and orients one-way release, how is a released relation recovered, and when is absence persistent?",
+  "round_id": "round-e3a",
+  "sampling": "27 cells (8 on published kernels with new channels) and 2 companion scans of 81 grid points each",
+  "schema": "rs-gt.e3a-plan/v1",
+  "seeds": "sha256('round-e3a:<channel>:<item_id>')[:16] for kernel, affinity, passage and recovery reference samples; trajectories as E0",
+  "software": {
+    "analysis_module": "rs_constraint_lab.gte3a",
+    "numpy": "2.5.3",
+    "observables": "gt-e1-observables/v1",
+    "python": "3.12.3"
+  },
+  "stochastic_trajectories": "illustrative_only",
+  "stop_conditions": {
+    "amendment": "cell or estimand changes stop the round",
+    "item": "watchdog {4: 600, 5: 900} seconds by N",
+    "round": "all items or 7200 s, then stop",
+    "unresolved": "recorded; no retuning"
+  },
+  "tolerances": {
+    "e2a_numerical": "as E2A",
+    "formula": 1e-12,
+    "identity": 1e-09,
+    "partner_floor": 1e-12,
+    "recovery_iterative": 1e-08
+  },
+  "work_count": {
+    "estimate_note": "measured before freezing on synthetic cells (execution record)",
+    "items": 29,
+    "largest_state_space": 1024,
+    "round_wall_cap_seconds": 7200,
+    "watchdog_seconds": {
+      "4": 600,
+      "5": 900
+    },
+    "workers": 4
+  }
+}
