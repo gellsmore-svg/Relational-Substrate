@@ -1,0 +1,48 @@
+{
+  "analysis_version": "generation-008l-history-depth/v1",
+  "atomic_items": 12,
+  "clock": "pair-event epoch",
+  "frozen_analysis_plan_commit": "6f00fcdb07fc0e8323f8b6360fdc59960be7dcb4",
+  "item_sha256": {
+    "constraint-lab/reports/items/generation-008l-h2-0/H2-KERNEL-m025.json": "d403b4f38a1896fce51f9b62a847419911bbf8b1d9f9233cf6133622d20097b3",
+    "constraint-lab/reports/items/generation-008l-h2-0/H2-KERNEL-m1.json": "696f909f60ff3d699e5351824b60d72de82d1b8ffb712ed96b4280753c47bbfc",
+    "constraint-lab/reports/items/generation-008l-h2-0/H2-KERNEL-m4.json": "31e7040ed225f6cdde0591a247e59f10367b83cd35acc40fdf22bcbe5b6b268e",
+    "constraint-lab/reports/items/generation-008l-h2-0/H2-REFINEMENT-m025.json": "fbb4a5478b0a2dc3d5865166a8b7e31399319a63151ef377c44547b72996dfa7",
+    "constraint-lab/reports/items/generation-008l-h2-0/H2-REFINEMENT-m1.json": "9110e5a7c66842709d6136a7a5a8806920f0066d1a3c638d6ece3afad7325898",
+    "constraint-lab/reports/items/generation-008l-h2-0/H2-REFINEMENT-m4.json": "0feab42ed841511904c5229e2160e22b39b70e015979f15969f19954125eb6bb",
+    "constraint-lab/reports/items/generation-008l-h2-0/H2-TEMPORAL-m025.json": "0c564c4b7745e8a35c283fa4e3b68093660d8e9eb1da3d1d4f359a7a175654b8",
+    "constraint-lab/reports/items/generation-008l-h2-0/H2-TEMPORAL-m1.json": "dbeb4c92be124d5bb5132168b230c656e92b6f2308519ebc7fefc0751bb4d03c",
+    "constraint-lab/reports/items/generation-008l-h2-0/H2-TEMPORAL-m4.json": "a54ecc23990808cd75cae7066ee9923a9ea41693956d9bf5f2f83fe37a4bf4ef",
+    "constraint-lab/reports/items/generation-008l-h2-0/H2-WITNESS-m025.json": "ab9a9e7db58e9b6b13575fd94f8862d69fc4b1b37a5c58b4638f1881de5f08a8",
+    "constraint-lab/reports/items/generation-008l-h2-0/H2-WITNESS-m1.json": "653fb9fcc5ad642d6f8185aa19b3ed9b15f07012d666dcf95fe35c39810e9b02",
+    "constraint-lab/reports/items/generation-008l-h2-0/H2-WITNESS-m4.json": "d8bd109edd7d742bf78aa8927ee2b26e8552b5aa198f07498051dc4ddba059fa"
+  },
+  "new_non_neutral_H2_pre_freeze_executions": 0,
+  "plan_file_sha256": "4c97e0f0bc87723aa754eae78c57b49972f39559bf24b0f692ce3eefca7dd015",
+  "plan_hash": "b7670bbdac76fb29da687d60c6c5c7c74bf32277d8458442b0bcad947575f7de",
+  "precision_decimal_digits": 160,
+  "prompt_id": "008L",
+  "round_id": "H2-0",
+  "status": "COMPLETE",
+  "stochastic_scientific_trajectories": 0,
+  "table_sha256": {
+    "constraint-lab/reports/tables/generation-008l-kernel.json": "04dbddb498d28661f45502087fa082510240bc32161f8c82f8dca8848db08e9d",
+    "constraint-lab/reports/tables/generation-008l-refinement.json": "8256666f3770b523cb0520e506c92b0e69f22a544c07e659d11372d4c9c5a5d9",
+    "constraint-lab/reports/tables/generation-008l-temporal.json": "43c3d37c98fbd6c6785801f307e7b466cde4fe9e5fbe21260ec66018d03640f5",
+    "constraint-lab/reports/tables/generation-008l-witness.json": "5aecad2d5a427cea3ed05f846c65da04216c4911b0aa8085d0d3b894a30adf3c"
+  },
+  "timings": {
+    "H2-KERNEL-m025": 0.26248806500370847,
+    "H2-KERNEL-m1": 0.28315655599726597,
+    "H2-KERNEL-m4": 0.41595027899893466,
+    "H2-REFINEMENT-m025": 3.429993616999127,
+    "H2-REFINEMENT-m1": 0.5047450630008825,
+    "H2-REFINEMENT-m4": 3.5860813699982828,
+    "H2-TEMPORAL-m025": 3.1791657689973363,
+    "H2-TEMPORAL-m1": 3.032458900997881,
+    "H2-TEMPORAL-m4": 3.0500786830016295,
+    "H2-WITNESS-m025": 0.006463174999225885,
+    "H2-WITNESS-m1": 0.0014081169938435778,
+    "H2-WITNESS-m4": 0.006305452996457461
+  }
+}

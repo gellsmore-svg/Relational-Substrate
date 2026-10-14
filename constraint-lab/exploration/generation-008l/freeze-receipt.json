@@ -1,0 +1,38 @@
+{
+  "prompt_id": "008L",
+  "round_id": "H2-0",
+  "frozen_analysis_plan_commit": "6f00fcdb07fc0e8323f8b6360fdc59960be7dcb4",
+  "plan_hash": "b7670bbdac76fb29da687d60c6c5c7c74bf32277d8458442b0bcad947575f7de",
+  "plan_file_sha256": "4c97e0f0bc87723aa754eae78c57b49972f39559bf24b0f692ce3eefca7dd015",
+  "work_counts": {
+    "atomic_items": 12,
+    "grades": 3,
+    "recurrent_states_per_grade": 2304,
+    "transitions_per_grade": 13824,
+    "generic_refinement_runs_with_reverse": 6,
+    "forward_quadruple_terms_per_grade": 497664,
+    "backward_word_terms_per_grade": 13824,
+    "raw_triad_absorption_rows_per_grade": 240,
+    "covariance_comparisons_per_grade": 14400,
+    "same_mask_history_pairs_per_non_neutral_grade": 40320
+  },
+  "engineering": {
+    "workers": 1,
+    "numeric_threads": 1,
+    "per_item_watchdog_seconds": 120,
+    "disk_budget_bytes": 64000000,
+    "neutral_total_seconds": 2.3466177939990303,
+    "estimated_total_seconds": 180,
+    "resume": "complete hash-valid matching envelopes only; never replace valid completed items",
+    "on_unexpected_result": "retain failed envelope, stop interpretation, explicit frozen amendment if required"
+  },
+  "pushed_before_target_execution": true,
+  "actual_new_N4_non_neutral_H2_target_executions_before_freeze": 0,
+  "historical_regression_tests_run_before_freeze": [
+    "test_v08k.py"
+  ],
+  "new_plumbing_tests_before_freeze": "test_v08l_plumbing.py: neutral N4; three-slot synthetic multiplier two",
+  "known_prior_exposure": "Prompt 008L externally predeclared expectations and 8K symbolic design; prior H1 results; not blind discovery",
+  "allowed_historical_regressions": "explicitly permitted by Prompt 008L section 55",
+  "notes": "No non-neutral SECOND-RECENT row, witness, refinement, kernel, MI, shape or order target opened before this committed and pushed plan."
+}

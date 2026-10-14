@@ -1,0 +1,174 @@
+{
+  "analysis_version": "generation-008l-history-depth/v1",
+  "frozen_analysis_plan_commit": "6f00fcdb07fc0e8323f8b6360fdc59960be7dcb4",
+  "item": {
+    "grade": "m4",
+    "item_id": "H2-WITNESS-m4",
+    "kind": "witness",
+    "m": "4"
+  },
+  "plan_hash": "b7670bbdac76fb29da687d60c6c5c7c74bf32277d8458442b0bcad947575f7de",
+  "result": {
+    "all_ten_bits": "0000101001",
+    "baseline_weights": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "changed_pair_slots": [
+      0,
+      3
+    ],
+    "clock": "pair-event epoch",
+    "controller": "SECOND-RECENT",
+    "edge_count_JS": "0",
+    "edge_count_laws": [
+      {
+        "2": "2/3",
+        "4": "1/3"
+      },
+      {
+        "2": "2/3",
+        "4": "1/3"
+      }
+    ],
+    "endpoint_bytes_little_endian": [
+      41,
+      0
+    ],
+    "endpoint_history_A": [
+      5,
+      3
+    ],
+    "endpoint_history_B": [
+      5,
+      0
+    ],
+    "endpoint_pair_mask": 41,
+    "endpoint_state": 41,
+    "full_row_JS": "0.07413259885452208841694007021733516825796115194928689953889235892640170362059557536350414311442652954201444139683393077225321053217171663409666436030288145133370",
+    "full_row_gap": "3/13",
+    "full_rows": [
+      [
+        "1/13",
+        "1/13",
+        "1/13",
+        "4/13",
+        "1/13",
+        "1/13",
+        "1/13",
+        "1/13",
+        "1/13",
+        "1/13"
+      ],
+      [
+        "4/13",
+        "1/13",
+        "1/13",
+        "1/13",
+        "1/13",
+        "1/13",
+        "1/13",
+        "1/13",
+        "1/13",
+        "1/13"
+      ]
+    ],
+    "graph_class_JS": "0.09043705160731131508009097044320146612230054715847707063551273107175559133715549271196576132256169094292226238953317220883417663238524246403755832610135365172905",
+    "graph_class_laws": [
+      {
+        "e2-deg1111-tri0-comp2": "4/9",
+        "e2-deg2110-tri0-comp2": "2/9",
+        "e4-deg2222-tri0-comp1": "1/9",
+        "e4-deg3221-tri1-comp1": "2/9"
+      },
+      {
+        "e2-deg1111-tri0-comp2": "1/9",
+        "e2-deg2110-tri0-comp2": "5/9",
+        "e4-deg2222-tri0-comp1": "1/9",
+        "e4-deg3221-tri1-comp1": "2/9"
+      }
+    ],
+    "history_A_events": [
+      0,
+      3,
+      5
+    ],
+    "history_B_events": [
+      3,
+      0,
+      5
+    ],
+    "information_formula_gap": "5E-161",
+    "m": "4/1",
+    "material_paths": [
+      [
+        0,
+        1,
+        9,
+        41
+      ],
+      [
+        0,
+        8,
+        9,
+        41
+      ]
+    ],
+    "ordinary_constraints": [],
+    "ordinary_support": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "pair_row_JS": "0.1070804205676430166022467680917063541503883305934144104450667406714691274519713866361726511652827648940208597954267888932546374353591462492507374093263843185932",
+    "pair_row_gap": "1/3",
+    "pair_rows": [
+      [
+        "1/9",
+        "1/9",
+        "1/9",
+        "4/9",
+        "1/9",
+        "1/9"
+      ],
+      [
+        "4/9",
+        "1/9",
+        "1/9",
+        "1/9",
+        "1/9",
+        "1/9"
+      ]
+    ],
+    "path_full_probability_A": "1/1300",
+    "path_full_probability_B": "1/1300",
+    "path_pair_probability_A": "1/324",
+    "path_pair_probability_B": "1/324",
+    "same_X": true,
+    "same_h1": true,
+    "start_history": [
+      null,
+      null
+    ],
+    "start_state": 0,
+    "strict_H1_lumpability": false,
+    "strict_H1_noncompilability": true
+  },
+  "result_sha256": "99f8600cc754072c88530d205c3faa0a7adea6a1618fad788ec70cc2496f88ec",
+  "wall_seconds": 0.006305452996457461
+}
