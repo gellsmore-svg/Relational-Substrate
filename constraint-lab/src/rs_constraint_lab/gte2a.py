@@ -92,6 +92,12 @@ def sigma(components: list[tuple[str, str]], factors: dict | None = None) -> flo
     return total
 
 
+def _alphabet(name: str) -> dict:
+    from rs_constraint_lab.weights import alphabet_factors
+
+    return alphabet_factors(name)
+
+
 def has_hard(components) -> bool:
     return any(float(gte0a.FACTORS[g]) == 0.0 for _k, g in components)
 
@@ -558,7 +564,9 @@ def analyse_item(item: dict, *, with_trajectories: bool = True, checks: bool = T
     n, mode, family, grade = item["n"], item["mode"], item["family"], item["grade"]
     components = families[family][grade]
     started = time.perf_counter()
-    full, kernel_timing = gtkernel.reachable_chain(n, mode, components)
+    alphabet = item.get("alphabet", "W4")
+    factors = None if alphabet == "W4" else _alphabet(alphabet)
+    full, kernel_timing = gtkernel.reachable_chain(n, mode, components, factors)
     start = gtobs.start_index(full, n, mode)
     regime = gtobs.class_regime(full, start)
     chain, class_note, start_in = full, "reachable class from the declared start is recurrent", start
@@ -572,7 +580,7 @@ def analyse_item(item: dict, *, with_trajectories: bool = True, checks: bool = T
             start_in = 0
             class_note += "; analysing the unique closed class"
     stat = gtobs.stationary(chain, start_in, cross_check=True) if gtobs.class_regime(chain, start_in)["regime"] == "recurrent" else None
-    result, trajectories = gtobs.analyse(chain, family=family, grade=grade, n=n, mode=mode, families=families, item_id=item["item_id"], round_id=round_id, with_trajectories=with_trajectories and chain is full, stationary_override=stat, start=start_in)
+    result, trajectories = gtobs.analyse(chain, family=family, grade=grade, n=n, mode=mode, families=families, factors=factors, item_id=item["item_id"], round_id=round_id, with_trajectories=with_trajectories and chain is full, stationary_override=stat, start=start_in)
     if stat is not None and not stat.get("resolved") and stat.get("reason") == "zero total rate in the class":
         result["regime"] = "arrested"
         class_note += "; arrested: a state of the class admits no event"
@@ -581,10 +589,10 @@ def analyse_item(item: dict, *, with_trajectories: bool = True, checks: bool = T
     result["closed_class_sizes"] = [len(c) for c in closed] if closed is not None else None
     result["kernel_timing"] = kernel_timing
     result["spectrum_status"] = "unavailable: not computed by gtobs; not zero"
-    block: dict = {"analysis_version": ANALYSIS_VERSION, "sigma": sigma(components), "hard_component": has_hard(components), "one_way": one_way(chain)}
+    block: dict = {"alphabet": alphabet, "analysis_version": ANALYSIS_VERSION, "sigma": sigma(components, factors), "hard_component": has_hard(components), "one_way": one_way(chain)}
     resolved = stat is not None and stat.get("resolved")
     t0 = time.perf_counter()
-    block["squares"] = square_census(chain, n, mode, components, stat["ct"] if resolved else None)
+    block["squares"] = square_census(chain, n, mode, components, stat["ct"] if resolved else None, factors)
     if resolved:
         block["partner_frame"] = partner_frame(chain, n, stat["jump"])
         if mode == "HELD":
@@ -636,7 +644,7 @@ def affinity_reference(item: dict, chain, samples: int = 120, *, families: dict 
     from rs_constraint_lab.weights import alphabet_factors
 
     n, mode, family, grade = item["n"], item["mode"], item["family"], item["grade"]
-    factors = alphabet_factors("W4")
+    factors = alphabet_factors(item.get("alphabet", "W4"))
     families = families or FAMILIES
     choreography = Choreography(0, 0, gte0a.rules_for(family, grade, n, mode, families))
 
@@ -650,7 +658,7 @@ def affinity_reference(item: dict, chain, samples: int = 120, *, families: dict 
     rng = np.random.default_rng(int(hashlib.sha256(f"{round_id}:affinity:{item['item_id']}".encode()).hexdigest()[:16], 16))
     states = set(int(s) for s in chain.states)
     E = edges(n)
-    sg = sigma(families[family][grade])
+    sg = sigma(families[family][grade], None if item.get("alphabet", "W4") == "W4" else _alphabet(item["alphabet"]))
     worst = 0.0
     checked = 0
     tries = 0

@@ -31,7 +31,7 @@ from rs_constraint_lab.weights import ENUMERATED_WEIGHTS, alphabet_factors
 
 def main(argv: list[str] | None = None) -> int:
     incoming = list(sys.argv[1:] if argv is None else argv)
-    if incoming and incoming[0] in {"generation007", "generation007b", "generation008", "generation008a", "generation008b", "generation008c", "generation008d", "generation008e", "generation008f", "gt0", "gt1", "gte0a", "gte0b", "gte1", "gte2a", "gte2b", "worker", "batch"}:
+    if incoming and incoming[0] in {"generation007", "generation007b", "generation008", "generation008a", "generation008b", "generation008c", "generation008d", "generation008e", "generation008f", "gt0", "gt1", "gte0a", "gte0b", "gte1", "gte2a", "gte2b", "gte3a", "worker", "batch"}:
         from rs_constraint_lab.batch_cli import main as batch_main
 
         return batch_main(incoming)
