@@ -157,3 +157,12 @@ def test_plan_hash_deterministic():
     a, b = gte3a.prepare_plan(repo), gte3a.prepare_plan(repo)
     assert a["plan_hash"] == b["plan_hash"] == plan_hash(a) and a["items"] == gte3a.items()
     assert len(a["pre_freeze_exposure"]["published_kernels"]) == 8
+
+
+def test_atlas_on_synthetic_round(tmp_path):
+    plan = {"items": [held4("PF", "strong_suppress", "W16"), {"item_id": "SYN-SCAN", "kind": "scan", "mode": "FREE", "n": 4, "stratum": "syn", "exponents": [-1.0, 1.0]}], "plan_hash": "synthetic", "synthetic_fixture": True}
+    gte3a.run(tmp_path, plan, workers=2, python=sys.executable, poll=0.1, watchdogs={4: 300})
+    gte3a.publish(tmp_path, plan, tmp_path / "t.json", frozen_plan_commit="synthetic" * 5)
+    (tmp_path / "p.json").write_text(json.dumps(plan))
+    text = gte3a.render_atlas(tmp_path, tmp_path / "t.json", tmp_path / "p.json")
+    assert all(it["item_id"] in text for it in plan["items"]) and "counterexample scans" in text

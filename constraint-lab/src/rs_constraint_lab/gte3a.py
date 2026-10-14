@@ -634,15 +634,67 @@ def publish(root: Path, plan: dict, out: Path, *, frozen_plan_commit: str) -> st
     return body["payload_sha256"]
 
 
+def render_atlas(repo: Path, tables: Path | None = None, plan_path: Path | None = None) -> str:
+    """E2-style sections for the cells, plus recovery, partner split and scan tables."""
+    import json
+    import tempfile
+
+    from rs_constraint_lab import gte2a_atlas
+
+    t = json.loads((tables or repo / TABLES_RELPATH).read_text())
+    plan = json.loads((plan_path or repo / PLAN_RELPATH).read_text())
+    cell_plan = dict(plan, items=[it for it in plan["items"] if it["kind"] == "cell"])
+    with tempfile.TemporaryDirectory() as tmp:
+        tp, pp = Path(tmp) / "t.json", Path(tmp) / "p.json"
+        cell_t = dict(t, results={k: v for k, v in t["results"].items() if v.get("kind") == "cell"}, item_records={k: v for k, v in t["item_records"].items() if v["kind"] == "cell"})
+        tp.write_text(json.dumps(cell_t))
+        pp.write_text(json.dumps(cell_plan))
+        text = gte2a_atlas.build(repo, tp, pp, title="GT-E3A release and recovery atlas", tables_rel=TABLES_RELPATH, generator="rs_constraint_lab.gte3a atlas")
+    fmt = lambda v, d=3: "—" if v is None else (f"{v:.1e}" if isinstance(v, float) and v != 0 and abs(v) < 1e-3 else (f"{v:.{d}f}" if isinstance(v, float) else str(v)))
+    L = ["## 7. Release census and recovery (R1-R5)", "", "Per cell and release class (slot class : one_way / witnessed_two_way / unwitnessed): share of release flux, mean gate distance (admissible steps back to the relation), expected recovery in jump events and in continuous time, recovery within 1/2/4/8 events, direct-recovery share (re-formed while still path-witnessed), unrecoverable weight.", ""]
+    L += ["| Cell | Class | flux share | gate | E[events] | E[time] | within 1/2/4/8 | direct | unrecoverable |", "| --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
+    for it in cell_plan["items"]:
+        rr = (t["results"][it["item_id"]].get("e2a") or {}).get("release_recovery")
+        if not rr:
+            L.append(f"| {it['item_id']} | — | — | — | — | — | — | — | — |")
+            continue
+        for g, v in rr["groups"].items():
+            w = "/".join(fmt(v["recovery_within"][h]) for h in ("1", "2", "4", "8"))
+            L.append(f"| {it['item_id']} | {g} | {fmt(v['release_flux_share'])} | {fmt(v['mean_gate_distance'], 2)} | {fmt(v['expected_recovery_events'], 2)} | {fmt(v['expected_recovery_time'], 2)} | {w} | {fmt(v['direct_recovery_share'])} | {fmt(v['unrecoverable_weight_share'])} |")
+    L += ["", "## 8. Partner-index split (Q5)", "", "| Cell | partner index | pairs with a one-way step | two-way pairs only | one-way flux share |", "| --- | --- | --- | --- | --- |"]
+    for it in cell_plan["items"]:
+        row = t["cell_rows"].get(it["item_id"], {})
+        sp = row.get("partner_split")
+        if sp:
+            L.append(f"| {it['item_id']} | {fmt(row.get('partner_index'), 4)} | {fmt(sp['with_one_way'], 4)} | {fmt(sp['two_way_only'], 4)} | {fmt(row.get('one_way_flux_share'))} |")
+    L += ["", "## 9. GT-Q12 counterexample scans (R6)", ""]
+    for k, r in t["results"].items():
+        if r.get("kind") != "scan":
+            continue
+        sc = r["scan"]
+        L += [f"**{k}**: {sc['grid_points']} points, {sc['judged']} judged (sigma != 0 and |index| > 1e-12), {len(sc['disagreements'])} disagreements, {sc['below_floor']} below the floor, {sc['unresolved']} unresolved.", "", "| log2 m_form | log2 m_dissolve | sigma | partner index | flux | E | agrees |", "| --- | --- | --- | --- | --- | --- | --- |"]
+        for row in sc["rows"]:
+            L.append(f"| {row['log2_m_form']} | {row['log2_m_dissolve']} | {fmt(row['sigma'], 2)} | {fmt(row.get('partner_index'), 5)} | {fmt(row.get('irreversible_flux_fraction'))} | {fmt(row.get('expected_edges'), 2)} | {row.get('sign_agrees')} |")
+        L.append("")
+    return text + "\n".join(L) + "\n"
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="python -m rs_constraint_lab.gte3a")
     sub = parser.add_subparsers(dest="command", required=True)
     one = sub.add_parser("item")
     one.add_argument("--root", required=True)
     one.add_argument("--item-id", required=True)
+    sub.add_parser("atlas")
     args = parser.parse_args(argv)
     from rs_constraint_lab.durable import read_json
 
+    if args.command == "atlas":
+        repo = Path(__file__).resolve().parents[3]
+        text = render_atlas(repo)
+        (repo / ATLAS_RELPATH).write_text(text)
+        print(f"wrote {ATLAS_RELPATH} ({len(text)} bytes)")
+        return 0
     root = Path(args.root)
     plan = read_json(root / "plan.json")
     (item,) = [it for it in plan["items"] if it["item_id"] == args.item_id]
