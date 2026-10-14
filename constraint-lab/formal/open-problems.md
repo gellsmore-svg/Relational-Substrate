@@ -64,3 +64,35 @@ H0. Other open targets are necessary history depth, history-induced stationary
 structure, which historical functions affect dynamics, and survival of temporal
 effects after class coarse-graining. No H1, L>0, N5 or new trajectory round opens
 automatically. See the non-summed candidate vectors in the 8H report.
+
+## Generation 8K scoped resolutions and open directions
+
+Historical recommendations above describe their own generations and remain
+unchanged. Reviewed predictive 8I answers minimal strong refinement for RR's
+mask/class/count/parity observations, not arbitrary hidden-model minimisation.
+8K supplies general coarsening, quotient, synchronization and compiler language.
+Questions below are explicitly separated by kind.
+
+| Area | Kind | Remaining question / next criterion |
+| --- | --- | --- |
+| Predictive-state theory | General mathematics | When do trace equivalence, strong refinement and history-based sufficient states coincide beyond the immediate-row separation used in 8I? |
+| Synchronization | General mathematics | Which finite labelled kernels have bounded worst-case synchronization, rather than merely eventual synchronization? |
+| History depth | Laboratory capability | Can the separately frozen same-(X,h_1), different-h_2 design establish necessity relative to the canonical H1 compiler? No H2 execution in 8K |
+| Constraint-state semantics | Formal architecture | Which role/decoder/update requirements make eta meaningfully L-style rather than a renamed historical statistic? |
+| Compiler boundaries | General mathematics / formal architecture | Which support-, clock-, category- or budget-preserving compilers exist, and what lower bounds separate them? |
+| Coarse-graining | General mathematics / laboratory | When does coarsening increase observed temporal order even as strong-refinement block count falls? CE-EVEN is a generic possibility, not a new N4 result |
+| Scale | Laboratory-specific | Which N or controller breaks the N4 predecessor-class/marked-role bijection? Increase N only to challenge that precise claim |
+| Persistent visible structure | Laboratory-specific | Which H semantics changes stationary structure under declared matched support? Alternate role-grammar results are external, not new canonical data |
+| Controlled dissolution | Laboratory-specific | When does dissolution enable controlled reachability/passage under matched occupancy/support? Purpose is not inferred |
+| Physical historical/constraint state | Ontology/coherence | What independent evidence would justify any physical interpretation of H or eta? Formal possibility alone does not |
+
+Q-H-MINIMAL-STATE and Q-H-COARSE-GRAINING receive recorded status corrections
+unresolved->qualified, retaining their statements, creation metadata and
+historical snapshots. Their scoped 8I partial-answer relations remain.
+CL-Q06 and other historical catalogue open entries are not silently rewritten.
+
+The next-capability recommendation is H2 under the declared unchanged-(X,h_1)
+compiler, not a new branch or experiment opened here. L remains attractive as
+semantic architecture but is underdetermined until its compiler/decoder scope
+and falsification criterion are independently fixed. See
+[axis compilation](axis-compilation.md) and the 8K report.

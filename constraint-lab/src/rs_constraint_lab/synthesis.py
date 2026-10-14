@@ -138,6 +138,8 @@ def verify(root=None):
     for path, expected in diagram_views(root).items():
         if path.read_text() != expected:
             raise ValueError(f"stale diagram: {path}")
+    if (root / "constraint-lab/formal/state-diagrams.md").read_text() != diagram_document(root):
+        raise ValueError("stale rendered diagram document")
     pinned = {identifier for record in audit["heads"].values()
               for identifier in record["artifacts"]["catalogue"]["ids"]}
     current = [json.loads(line) for line in (root / ARTIFACTS["catalogue"][0]).read_text().splitlines()]
@@ -145,6 +147,21 @@ def verify(root=None):
         raise ValueError("new catalogue ID reuses a pinned branch ID")
     return {"status": "VERIFIED", "pinned_heads": 3, "diagrams": len(DIAGRAMS), "identifier_conflicts": 0,
             "scientific_computation": False}
+
+
+def diagram_document(root=None):
+    lines = ["# State and quotient diagrams", "",
+             "Generated from synthesis.py. Coordinate/projection/input arrows describe",
+             "representation roles, not causal interventions. T arrows denote stochastic",
+             "kernels. H and eta are not presumed independent; eta is not executed.", ""]
+    fence = "\x60" * 3
+    for path, diagram in diagram_views(root).items():
+        lines.extend(["## " + path.stem.replace("-", " ").title(), "",
+                      fence + "mermaid", diagram.rstrip(), fence, ""])
+    lines.extend(["The quotient square asserts T D_rho = D_rho bar-T. The dotted raw",
+                  "observation arrow does NOT assert the existence of a first-order kernel.",
+                  "Coarsening of observations induces strong quotient maps by CL-T60/T61.", ""])
+    return "\n".join(lines)
 
 
 def main():
@@ -158,6 +175,7 @@ def main():
         atomic_write_json(root / AUDIT, branch_audit(root))
         for path, content in diagram_views(root).items():
             atomic_write_text(path, content)
+        atomic_write_text(root / "constraint-lab/formal/state-diagrams.md", diagram_document(root))
     print(json.dumps(verify(root), sort_keys=True))
 
 

@@ -29,3 +29,20 @@ The alternative Generation 8I [predictive-state document](predictive-state.md)
 adds observation-preserving exact refinement, marked-graph structural memory,
 count-direction memory and parity all-order erasure. It does not import or
 replace the separate role-grammar 8I or coarse-process 8J branches.
+
+Generation 8K synthesises the canonical predictive line without merging its
+parallel branches:
+
+- [State taxonomy and notation](state-taxonomy.md)
+- [General predictive-refinement theory](predictive-state-theory.md)
+- [Compilation classes and H/L boundary](axis-compilation.md)
+- [Exact counterexamples](predictive-state-counterexamples.md)
+- [Primary literature placement](predictive-state-literature-map.md)
+- [Pinned branch reconciliation](branch-reconciliation-008i-008j.md)
+- [Generated conceptual diagrams](state-diagrams.md)
+
+The synthesis opens no scientific experiment. Run
+python -m rs_constraint_lab.synthesis --verify for pinned references, namespace
+and generated-diagram verification, in addition to the existing formal/coherence
+validators. The canonical continuation is the 8K predictive-state-synthesis
+branch descended from reviewed predictive 8I, not alternate role-grammar 8I/8J.

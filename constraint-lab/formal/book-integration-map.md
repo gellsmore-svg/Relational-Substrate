@@ -48,3 +48,19 @@ Historical assessments above remain unchanged. No book text is edited.
 | Parity all-order history erasure, CL-T57 | READY_WITH_SCOPE | Projection and modelling limits | Deterministic pair-clock parity; no physical information-destruction inference |
 | Specific temporal CMI values, CL-N08 | PROVISIONAL | Laboratory report | Grade/projection-specific information, not a scalar memory score |
 | Physical memory, observer or temporal ontology | DO_NOT_INTEGRATE_YET | None | Requires independent evidence; no inference from finite predictive compression |
+
+## Generation 8K synthesis additions
+
+The prior maturity assessments remain historical. Neither book is edited.
+
+| Content | Maturity | Proposed location | Scope |
+| --- | --- | --- | --- |
+| State taxonomy and representation-relative H | READY_WITH_SCOPE | Modelling appendix / relational process discussion | X,H,Z,Y,eta are declared representational roles, not metaphysical substances |
+| Coarsest strong refinement and coarsening | READY_WITH_SCOPE | Technical appendix | Fixed finite (Z,T), observation-preserving strong partitions; not global HMM minimisation |
+| Nested quotient theorem | READY_WITH_SCOPE | Technical modelling appendix | Prior-free block sums; stationary consequences separate |
+| Observation-relative structural-history compression | READY_WITH_SCOPE | Relational process discussion with N4 example | 384/28/12/2 is model-specific, not a universal ontology ladder |
+| Synchronization versus order/state count | READY_WITH_SCOPE | Technical appendix | Worst-case suffix bound and counterexamples, not one memory score |
+| Finite H/eta kernel flattening versus grammar compilation | READY_WITH_SCOPE | Modelling/expressivity appendix | Closed homogeneous joint law; explicit support, clock and semantic compiler contract |
+| Unique operational definition of L / semantic advantage | PROVISIONAL | Research questions only | H origin and constraint-configuring role can overlap; no L execution or compiler-resource separation |
+| H2 next-witness design | PROVISIONAL | Laboratory research plan sketch | Not executed; excludes enlarged/reinterpreted H1 alphabets explicitly |
+| Dynamic constraint-state physical ontology | DO_NOT_INTEGRATE_YET | None | Raw kernel flattening is not evidence of physical meta-laws |

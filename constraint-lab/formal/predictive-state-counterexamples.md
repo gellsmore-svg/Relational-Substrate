@@ -73,6 +73,9 @@ that is not worst-case bounded suffix synchronization.
 Small strong-state count alone therefore bounds neither synchronization length
 nor observed Markov order. This is not a claim that the N4 laboratory has
 infinite order; its reviewed 8I processes have the proved finite orders.
+If the three represented states are ordinary X with H=0, this is purely
+projection-induced infinite order. Observed order alone does not establish a
+history-axis capability or necessary generative H depth.
 
 ## CE-SUPPORT: Kernel flattening does not create missing event support
 
