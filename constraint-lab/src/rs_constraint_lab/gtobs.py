@@ -777,15 +777,16 @@ def analyse(
             extra = {"hub_indicator_v0": hubs[:, 0].astype(float)}
             ratio_keys = ("degree_v0", "edges")
         else:
-            dist_probe = D[:, PROBE]
+            probe = gt0.reference_probe(n)
+            dist_probe = D[:, probe]
             functions = {
                 "attached_probe": (dist_probe == 1).astype(float),
-                "degree_probe": deg[:, PROBE].astype(float),
+                "degree_probe": deg[:, probe].astype(float),
                 "detached_probe": (dist_probe < 0).astype(float),
                 "free_edges": free_edges.astype(float),
                 "triangles": arrays["triangles"].astype(float),
             }
-            extra = {"hub_indicator_probe": hubs[:, PROBE].astype(float)}
+            extra = {"hub_indicator_probe": hubs[:, probe].astype(float)}
             ratio_keys = ("degree_probe", "free_edges")
         solved = autocorrelation_times(chain, ct, jump, mean_rate, {**functions, **extra})
         taus = solved["taus"]

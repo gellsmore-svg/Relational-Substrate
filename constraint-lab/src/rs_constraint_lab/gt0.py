@@ -142,6 +142,20 @@ def attach_slot_indices(n: int) -> list[int]:
     return [i for i, c in enumerate(slot_classes(n)) if c == "A"]
 
 
+def reference_probe(n: int, default: int = 3) -> int:
+    """The probe used for single-probe channels: vertex 3 when it is a probe (every legacy case), else the lowest probe."""
+    src = set(source())
+    if default < n and default not in src:
+        return default
+    return min(v for v in range(n) if v not in src)
+
+
+SCAFFOLDS.update({
+    "S4": Scaffold("S4", ((0, 1), (0, 2), (0, 3))),
+    "P4": Scaffold("P4", ((0, 1), (1, 2), (2, 3))),
+})
+
+
 class use_scaffold:
     """Context manager: make ``scaffold`` the active held reference within the block."""
 
