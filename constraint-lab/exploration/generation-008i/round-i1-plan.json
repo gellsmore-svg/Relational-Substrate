@@ -1,0 +1,132 @@
+{
+  "I0_frozen_commit": "035601e215bf6f0c4621d818ffa22b713d0b5d67",
+  "I0_result_commit": "2b001561abba3e21bc6489bcfdca1249b31519aa",
+  "analysis_version": "generation-008i-I1-mechanisms/v1",
+  "arithmetic": "exact Fraction identities, 160-digit information, no Monte Carlo",
+  "decision_commit": "8688e86af6c0412381a0e3130547b3e181f496ea",
+  "decision_path": "constraint-lab/exploration/generation-008i/open-thetical-decision.md",
+  "execution": {
+    "disk_budget_bytes": 5000000,
+    "expected_wall_seconds": 30,
+    "item_watchdog_seconds": 120,
+    "workers": 1
+  },
+  "exposure": {
+    "I0_inputs": "fully observed and declared; probes selected post-I0",
+    "allowed_fixtures": "neutral or smaller synthetic SAME x direction only",
+    "analytic_expectations": "post-I0 symbolic expectations in the decision; exact target verification unopened",
+    "new_I1_non_neutral_checks_or_contrasts_before_freeze": 0
+  },
+  "input_sha256": {
+    "constraint-lab/exploration/generation-008i/open-thetical-decision.md": "06af12034f152e224923b3c2c61d958c04015afc588b86f39216da13fc51bec0",
+    "constraint-lab/reports/generation-008i-round-i0-tables.json": "62e811517b116b2c1962d41ea1c49861aa978ead6dc73eb0157246e9a853e0b0",
+    "constraint-lab/reports/items/generation-008i/I0-DISJ_DISSOLVE-m025.json": "4e19fc2d7f7d27d0d9935c86396e831ef259aeda2e81d276b4df660ee818f72a",
+    "constraint-lab/reports/items/generation-008i/I0-DISJ_DISSOLVE-m4.json": "7bf35093f0a7fddf5bdf0c5fe01a5af83c4a585eb989f84a4e1c589ad0959b17",
+    "constraint-lab/reports/items/generation-008i/I0-DISJ_FORM-m025.json": "44f8086fb70f6e673275a0b14e226903bfbffcc28fd82365a274aaa491364269",
+    "constraint-lab/reports/items/generation-008i/I0-DISJ_FORM-m4.json": "01f8634ce802ff3387f6c2b8d06fc423a3713ad6e2f2e59260f25e6fd965da03",
+    "constraint-lab/reports/items/generation-008i/I0-SAME_DISSOLVE-m025.json": "c543d449c278e42c9adfa994e08c7e11099763edaea2d37b6254676cbe19d2a1",
+    "constraint-lab/reports/items/generation-008i/I0-SAME_DISSOLVE-m4.json": "f973b8849da5c9c08e6d41b4575459a06990c54f3e98a1b2b96c809ee43c8d45",
+    "constraint-lab/reports/items/generation-008i/I0-SAME_FORM-m025.json": "ad1f0f712ebfd4a65f69db2fb31c86d15e68c8ef06be47cf48d1688fc9a01cfa",
+    "constraint-lab/reports/items/generation-008i/I0-SAME_FORM-m4.json": "2b3a0bfbf0ba0f8e0e4895f710bb0f12bcc037f984a1f121a5a879a98a70291e"
+  },
+  "inputs": "eight already observed SAME/DISJ direction x grade I0 cells; no new stationary solve",
+  "items": [
+    "I1-COORDINATE-SYMMETRY",
+    "I1-SINGLETON-MATCHED-KU"
+  ],
+  "method": "OTR recursive mechanism probes after complete I0",
+  "non_claims": "No new controller family/grade, H2, L, N5, causality score, irreducible history or physical ontology claim.",
+  "plan_hash": "85e21eab63e620fe3d173188bda2ac5e27d45f66e74c6d24674a640b4f846785",
+  "probe1": {
+    "candidate": "SAME_FORM: h uniform; p_h uniform bit; other bits iid r=(m+5)/(m+11); DISSOLVE complement",
+    "estimands": "exact generator kernel/joint invariance, within-edge material uniformity, formula normalisation/balance/I0 agreement; retain DISJ counterexamples",
+    "features": [
+      "SAME_FORM",
+      "SAME_DISSOLVE",
+      "DISJ_FORM",
+      "DISJ_DISSOLVE"
+    ],
+    "generators": [
+      [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        2,
+        1,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        1,
+        3,
+        2,
+        4,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        5,
+        4
+      ]
+    ],
+    "grades": [
+      [
+        "m025",
+        "1/4"
+      ],
+      [
+        "m4",
+        "4"
+      ]
+    ],
+    "group_closure_expected": 720,
+    "target": "SAME coordinate symmetry and stationary factorisation, DISJ boundary"
+  },
+  "probe2": {
+    "estimands": "row bijection h->opposite(h), identical KU, paired material JS edge/shape/label decomposition, Kpi-KU conditional-history identity",
+    "target": "SAME/DISJ matched-KU feedback for both directions and grades"
+  },
+  "round_id": "I1",
+  "source_sha256": {
+    "constraint-lab/src/rs_constraint_lab/durable.py": "3b5c705847c7b2a15b9e66a74d34fa1c2a333abf2cc5cf6fb15f0c79f9e1ae41",
+    "constraint-lab/src/rs_constraint_lab/exact.py": "ec8976dc3f10dac6842bccce0669382deb85fb2d1c16082ad30cf19a7e18efb1",
+    "constraint-lab/src/rs_constraint_lab/gen008i_exec.py": "82e62d24034dcc926b9b42de77f2c4101e69d26713791d3cb8a98469740cc249",
+    "constraint-lab/src/rs_constraint_lab/gen008i_followup.py": "2e43c910e3be1826e3e1b131fd388e854819adc83d4755f402debc2b812975c6",
+    "constraint-lab/src/rs_constraint_lab/history.py": "ffe2b960828b6c1143cb20d1dd5d2df18533f52de1346cc7e9936f3285444048",
+    "constraint-lab/src/rs_constraint_lab/history_roles.py": "2c6a4f128e16d17cc3b0ff3ecf09b469abcc42186f838daa8aa8a385b274561b",
+    "constraint-lab/src/rs_constraint_lab/role_atlas.py": "ede26da073cef793b3ee926bdc8ff585ef4a99354e4ba50fb3d8057482211700"
+  },
+  "tolerances": {
+    "information_chain_gap": "1e-25",
+    "rational_gaps": "exact"
+  },
+  "work_counts": {
+    "atomic_items": 2,
+    "candidate_stationary_laws": 4,
+    "history_bijection_slot_comparisons": 9216,
+    "matched_pairs": 4,
+    "new_stationary_solves": 0,
+    "reused_I0_cells": 8,
+    "symmetry_generator_joint_comparisons": 15360,
+    "symmetry_generator_kernel_comparisons": 92160
+  }
+}
