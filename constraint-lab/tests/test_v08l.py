@@ -254,3 +254,19 @@ def test_original_freeze_and_results_remain_immutable_after_validation_amendment
     replay=json.loads((ROOT/"constraint-lab/exploration/generation-008l/amendment-a-replay.json").read_text())
     assert replay["all_four_summary_table_hashes_equal"]
     assert all(r["exact_equal"] for r in replay["result_comparisons"])
+
+
+def test_8l_snapshot_reproduces_pinned_ledger_not_future_status_changes(tmp_path):
+    from hashlib import sha256
+    from rs_constraint_lab.coherence import canonical_ledger_bytes, snapshot_text
+    receipt=json.loads((ROOT/"constraint-lab/exploration/generation-008l/coherence-receipt.json").read_text())
+    commit=receipt["ledger_commit"]
+    subprocess.run(["git","-C",str(ROOT),"merge-base","--is-ancestor",commit,"HEAD"],check=True)
+    for name in ("findings.jsonl","relations.jsonl"):
+        data=subprocess.run(["git","-C",str(ROOT),"show",commit+":constraint-lab/coherence/"+name],
+                            capture_output=True,check=True).stdout
+        (tmp_path/name).write_bytes(data)
+    actual=(ROOT/receipt["snapshot_path"]).read_bytes()
+    assert snapshot_text(tmp_path,title=receipt["title"]).encode()==actual
+    assert sha256(actual).hexdigest()==receipt["snapshot_sha256"]
+    assert sha256(canonical_ledger_bytes(tmp_path)).hexdigest()==receipt["canonical_ledger_sha256"]

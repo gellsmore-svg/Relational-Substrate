@@ -1,0 +1,21 @@
+{
+  "generation": "008L",
+  "title": "Through Generation 008L",
+  "ledger_commit": "66689b5f76576229a18ce3019c5a222589972cfe",
+  "snapshot_path": "constraint-lab/coherence/snapshots/through-generation-008l.md",
+  "views": {
+    "findings": 177,
+    "mermaid_sha256": "a57bbf8f1cc5be166dacd54a126c46aa1f3123ced298d3ef64bb35aa7c4a5f77",
+    "markdown_sha256": "99914257ea622de529134741d50a5cd03d05c2ad42da92d03b2fa7fe99580fd6",
+    "relations": 265
+  },
+  "snapshot_sha256": "9d26cdc87112f2a84768d67e327416867c3745fff382355095b39114b5b483a5",
+  "canonical_ledger_sha256": "6352743e74c276692c07eab7f6860125f6bd630cc4e6930dff107f9e52712955",
+  "new_findings": 17,
+  "new_relations": 30,
+  "formal_catalogue_entries": 90,
+  "status_change": "constraint-lab/provenance/status-changes/008L-h2-question.json",
+  "original_frozen_plan_commit": "6f00fcdb07fc0e8323f8b6360fdc59960be7dcb4",
+  "amended_frozen_plan_commit": "a889f6a62db7cba51a82d216c4991d118b42bf69",
+  "original_and_amended_scientific_payloads_equal": 12
+}
