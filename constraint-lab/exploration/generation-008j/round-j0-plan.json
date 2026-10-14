@@ -1,0 +1,282 @@
+{
+  "analysis_version": "generation-008j-coarse-process/v1",
+  "arithmetic": {
+    "information_decimal_digits": 160,
+    "log": "natural",
+    "probabilities": "exact fractions",
+    "unit": "nats"
+  },
+  "calibration_sha256": "6fa88287c942d0fd67f0a9d2e8c1bdee4bb8bada50ba1415b1a604545c8d3fda",
+  "clock": "pair-event epoch",
+  "controls": [
+    "exact word normalisation and stationary initialisation",
+    "L1/L2 H=Kpi all systems; B/neutral all frozen lengths with passive-register all-length proof",
+    "Kpi exact S4 covariance and all-member 11-class quotient check in every item",
+    "class-to-edge words equal separately computed direct edge DP",
+    "independent recursive hidden-path summation for neutral and ten feature/grade items, all L1..6",
+    "complement word probability equality H and Kpi across all retained partners and lengths",
+    "content hashes, deterministic word sorting, gzip mtime=0, independent reassembly"
+  ],
+  "cross_model_items": [
+    "J0-COMPLEMENT-VALIDATION"
+  ],
+  "estimands": [
+    "sparse exact H/Kpi class and edge words L1..6, support counts, equal-prior word JS",
+    "direct conditional shape-sequence model information and independent chain gap",
+    "H role->class and role->edge strong lumpability; Kpi S4/material->class/class->edge",
+    "stationary triple CMI for each model/projection, exact conditional-independence flag",
+    "finite-depth conditional-row residuals for candidate orders 1..4 using L3..6; no all-past claim from zero",
+    "first positive word-information length at frozen 1e-25 floor, exact equality separately",
+    "complete rational triples with differences and individual JS contributions",
+    "posterior role endpoint-support min/max only; role MI/entropy not opened"
+  ],
+  "input_sha256": {
+    "constraint-lab/exploration/generation-008i/structural-orbits.json": "75a2abe94d41619588b4e275c903fe1f75129291f89bced646201560492d2f2d",
+    "constraint-lab/exploration/generation-008j/charter.md": "39d08d9bb5bc726edbd15cc137e12b596312d8cb2b0058a80bc13f0339d989b1",
+    "constraint-lab/exploration/generation-008j/open-thetical-possibilities.md": "0ac376290e6642158d891b84b80a451d6a079fdf72fa5b06e5d7b236051f009d",
+    "constraint-lab/methodology/open-thetical-application.md": "26e06ffe88f87c968abf2f68b02b1da8358db161051ff0358514fb5e0d0e0e80",
+    "constraint-lab/reports/generation-008i-round-i0-tables.json": "62e811517b116b2c1962d41ea1c49861aa978ead6dc73eb0157246e9a853e0b0",
+    "constraint-lab/reports/tables/generation-008i-controller-catalog.json": "90601dbb3a122018760259e4246706ce6a8fd931cb5a0b9684b092074d30f673",
+    "constraint-lab/reports/tables/generation-008i-kernels.json": "ea539e13fe17e6507332145e37dd4dafa99ec11a88f2b7e440cdc1fcf3e3459a",
+    "constraint-lab/reports/tables/generation-008i-neutral.json": "93d89e8332eaf60cc88f2bf165309ba8229110f34e3d34f25d740e928921b67e",
+    "constraint-lab/reports/tables/generation-008i-stationary-distributions.json": "4948667e1d408289089bc812fbb680cd6338f515609564936b9758d8ce1475c9",
+    "research-methods/open-thetical-research.md": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd"
+  },
+  "items": [
+    {
+      "controller_id": "I0-ADJ_ANY-m025",
+      "independent_hidden_path_crosscheck": false,
+      "item_id": "J0-ADJ_ANY-m025"
+    },
+    {
+      "controller_id": "I0-ADJ_ANY-m4",
+      "independent_hidden_path_crosscheck": false,
+      "item_id": "J0-ADJ_ANY-m4"
+    },
+    {
+      "controller_id": "I0-ADJ_DISSOLVE-m025",
+      "independent_hidden_path_crosscheck": false,
+      "item_id": "J0-ADJ_DISSOLVE-m025"
+    },
+    {
+      "controller_id": "I0-ADJ_DISSOLVE-m4",
+      "independent_hidden_path_crosscheck": false,
+      "item_id": "J0-ADJ_DISSOLVE-m4"
+    },
+    {
+      "controller_id": "I0-ADJ_FORM-m025",
+      "independent_hidden_path_crosscheck": true,
+      "item_id": "J0-ADJ_FORM-m025"
+    },
+    {
+      "controller_id": "I0-ADJ_FORM-m4",
+      "independent_hidden_path_crosscheck": true,
+      "item_id": "J0-ADJ_FORM-m4"
+    },
+    {
+      "controller_id": "I0-DISJ_ANY-m025",
+      "independent_hidden_path_crosscheck": false,
+      "item_id": "J0-DISJ_ANY-m025"
+    },
+    {
+      "controller_id": "I0-DISJ_ANY-m4",
+      "independent_hidden_path_crosscheck": false,
+      "item_id": "J0-DISJ_ANY-m4"
+    },
+    {
+      "controller_id": "I0-DISJ_DISSOLVE-m025",
+      "independent_hidden_path_crosscheck": false,
+      "item_id": "J0-DISJ_DISSOLVE-m025"
+    },
+    {
+      "controller_id": "I0-DISJ_DISSOLVE-m4",
+      "independent_hidden_path_crosscheck": false,
+      "item_id": "J0-DISJ_DISSOLVE-m4"
+    },
+    {
+      "controller_id": "I0-DISJ_FORM-m025",
+      "independent_hidden_path_crosscheck": true,
+      "item_id": "J0-DISJ_FORM-m025"
+    },
+    {
+      "controller_id": "I0-DISJ_FORM-m4",
+      "independent_hidden_path_crosscheck": true,
+      "item_id": "J0-DISJ_FORM-m4"
+    },
+    {
+      "controller_id": "I0-DISSOLVE_ANY-m025",
+      "independent_hidden_path_crosscheck": false,
+      "item_id": "J0-DISSOLVE_ANY-m025"
+    },
+    {
+      "controller_id": "I0-DISSOLVE_ANY-m4",
+      "independent_hidden_path_crosscheck": false,
+      "item_id": "J0-DISSOLVE_ANY-m4"
+    },
+    {
+      "controller_id": "I0-FORM_ANY-m025",
+      "independent_hidden_path_crosscheck": true,
+      "item_id": "J0-FORM_ANY-m025"
+    },
+    {
+      "controller_id": "I0-FORM_ANY-m4",
+      "independent_hidden_path_crosscheck": true,
+      "item_id": "J0-FORM_ANY-m4"
+    },
+    {
+      "controller_id": "I0-NEUTRAL",
+      "independent_hidden_path_crosscheck": true,
+      "item_id": "J0-NEUTRAL"
+    },
+    {
+      "controller_id": "I0-SAME_ANY-m025",
+      "independent_hidden_path_crosscheck": true,
+      "item_id": "J0-SAME_ANY-m025"
+    },
+    {
+      "controller_id": "I0-SAME_ANY-m4",
+      "independent_hidden_path_crosscheck": true,
+      "item_id": "J0-SAME_ANY-m4"
+    },
+    {
+      "controller_id": "I0-SAME_DISSOLVE-m025",
+      "independent_hidden_path_crosscheck": false,
+      "item_id": "J0-SAME_DISSOLVE-m025"
+    },
+    {
+      "controller_id": "I0-SAME_DISSOLVE-m4",
+      "independent_hidden_path_crosscheck": false,
+      "item_id": "J0-SAME_DISSOLVE-m4"
+    },
+    {
+      "controller_id": "I0-SAME_FORM-m025",
+      "independent_hidden_path_crosscheck": true,
+      "item_id": "J0-SAME_FORM-m025"
+    },
+    {
+      "controller_id": "I0-SAME_FORM-m4",
+      "independent_hidden_path_crosscheck": true,
+      "item_id": "J0-SAME_FORM-m4"
+    }
+  ],
+  "method_source": {
+    "path": "research-methods/open-thetical-research.md",
+    "resolved_ref": "05b15b0d903d46070b99ac84f9cab1bd898046ba",
+    "sha256": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd"
+  },
+  "mode": "B / OpenThetical analysis-only",
+  "models": [
+    "true stationary H role quotient",
+    "published stationary Kpi graph-class quotient"
+  ],
+  "new_controllers": 0,
+  "new_grades": 0,
+  "new_stationary_solves": 0,
+  "ontology": {
+    "G": 0,
+    "H_pair": 1,
+    "L": 0,
+    "N": 4,
+    "O": 3,
+    "S": 0,
+    "hypergraph": "independent"
+  },
+  "orientation": "stationary forward Y^L=(Y_0,...,Y_{L-1})",
+  "parent_commit": "6615c9f03a1fa30558f8cf519a125e610d393f31",
+  "plan_hash": "f0085cb8dd856b5e31db6f4a33a47ae87be6073baf8e872a4bfe8ba8d8fef7a4",
+  "pre_freeze_exposure": {
+    "B_word_calibration": false,
+    "actual_A_C_target_word_analyses": 0,
+    "known_8I_inputs": "all published stationary/kernel observations",
+    "neutral_calibration": true,
+    "symbolic_proofs": "user-predeclared matching, covariance, passive-register paths, chain rule, invariant-window label silence",
+    "synthetic_fixtures": true
+  },
+  "projections": [
+    "graph_class",
+    "edge_count"
+  ],
+  "round_id": "J0",
+  "runtime_disk": {
+    "disk_budget_bytes": 512000000,
+    "estimated_total_seconds": 174.31372089122306,
+    "hard_per_item_seconds": 120,
+    "neutral_calibration_seconds": 0.25262858100177255,
+    "on_overrun": "stop, preserve completed items, freeze amendment before changing scope/budget",
+    "safe_resume": "reuse only hash-valid complete item and word envelopes",
+    "workers": 1
+  },
+  "source_sha256": {
+    "constraint-lab/src/rs_constraint_lab/coarse_process.py": "816691d0a3fabac0fec1b46fc6c7b1032c57fc17daecc425a7a533f814d4ac13",
+    "constraint-lab/src/rs_constraint_lab/coherence.py": "a99d65438d3d332b7331d9b108f28a31e42228197f5d4d74956ec967ad8b9c2e",
+    "constraint-lab/src/rs_constraint_lab/durable.py": "3b5c705847c7b2a15b9e66a74d34fa1c2a333abf2cc5cf6fb15f0c79f9e1ae41",
+    "constraint-lab/src/rs_constraint_lab/exact.py": "ec8976dc3f10dac6842bccce0669382deb85fb2d1c16082ad30cf19a7e18efb1",
+    "constraint-lab/src/rs_constraint_lab/explore08.py": "457a993ba7cfc0b66c9805d700871dc39abda474d1d7650cd23dbe148343a5ec",
+    "constraint-lab/src/rs_constraint_lab/gen008i_exec.py": "82e62d24034dcc926b9b42de77f2c4101e69d26713791d3cb8a98469740cc249",
+    "constraint-lab/src/rs_constraint_lab/gen008j_exec.py": "8eb37659dac93728a1a0b898513baf539cf6fb04bd10247715ef9ed0a5268c05",
+    "constraint-lab/src/rs_constraint_lab/graphs.py": "78381488bacebc1a8b2719a3fb9b342811af724950d75a1f463784aee0f5a287",
+    "constraint-lab/src/rs_constraint_lab/history.py": "ffe2b960828b6c1143cb20d1dd5d2df18533f52de1346cc7e9936f3285444048",
+    "constraint-lab/src/rs_constraint_lab/history_roles.py": "2c6a4f128e16d17cc3b0ff3ecf09b469abcc42186f838daa8aa8a385b274561b",
+    "constraint-lab/src/rs_constraint_lab/memory_clocks.py": "edd18c5734c3a7b42c3801747a864f0f5e5f1cf9594ef74d0a98530426b5644a",
+    "constraint-lab/src/rs_constraint_lab/role_atlas.py": "ede26da073cef793b3ee926bdc8ff585ef4a99354e4ba50fb3d8057482211700",
+    "constraint-lab/src/rs_constraint_lab/state.py": "a5132429fa8697b5b3f98d985516356d9e997b32ca90b05c19a96e7fc726108c"
+  },
+  "stochastic_scientific_trajectories": 0,
+  "tolerances": {
+    "complement_probabilities": "exact",
+    "independent_words": "exact",
+    "information_chain": "1e-25",
+    "process_information_floor_nats": "1e-25",
+    "quotient_and_covariance": "exact",
+    "rational_identities": "exact"
+  },
+  "word_lengths": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "work_counts": {
+    "Kpi_covariance_transition_comparisons": 211968,
+    "cross_model_items": 1,
+    "finite_depth_checks": 368,
+    "independent_items": 11,
+    "model_items": 23,
+    "model_projection_length_rows": 276,
+    "per_item_forward_updates": {
+      "H": 3296,
+      "Kpi": 3240
+    },
+    "per_item_reachable_class_words": {
+      "H": {
+        "1": 11,
+        "2": 28,
+        "3": 84,
+        "4": 244,
+        "5": 728,
+        "6": 2156
+      },
+      "Kpi": {
+        "1": 11,
+        "2": 28,
+        "3": 84,
+        "4": 244,
+        "5": 728,
+        "6": 2156
+      }
+    },
+    "per_item_reachable_edge_words": {
+      "1": 7,
+      "2": 12,
+      "3": 22,
+      "4": 40,
+      "5": 74,
+      "6": 136
+    },
+    "process_decomposition_rows": 138,
+    "support_counts_are_exact_bounds": true,
+    "total_items": 24
+  }
+}
