@@ -69,3 +69,91 @@ give witnesses or bounded consistency, not infinite-order conclusions.
 
 The represented (p,h) process is first-order Markov. No irreducible history,
 physical memory, observer causation, purpose, design, theology or TCR inference.
+
+## CL-T45: stationary matched one- and two-time laws
+
+The material-matching argument above proves both pi_P Kpi=pi_P and equality of
+the adjacent material joint. Deterministic projection is pushforward of these
+equal measures, preserving equality for words of lengths one and two. This
+does not say the underlying conditioned material rows or longer paths agree.
+Exact checks cover all 23 existing systems and both coarse projections.
+
+## CL-T46: passive-register finite-path equivalence
+
+Iterated conditioning in the passive-register argument above proves equality
+of every finite material path measure when the material next row is independent
+of the register. Deterministic updates of the register need not be reversible.
+Any deterministic material output inherits equality. B and neutral instantiate
+this theorem; correlation with the recorded register is not a counterexample.
+
+## CL-T47: covariant stationary Markov projection and graph-class quotient
+
+For every g, invariance of pi and covariance of T let us reindex the conditional
+history sum, yielding Kpi(gp,gp')=Kpi(p,p'). Summation over an S4 orbit gives a
+representative-independent row. Graph-class Kpi is thus exactly first-order for
+all initial laws. Every generated Kpi was checked under all 24 permutations,
+all 64 sources and all six supported destinations, and every class member was
+tested in block aggregation. Edge count is not covered by that orbit argument.
+
+## CL-T48: finite invariant windows hide absolute history labels
+
+The finite stationary path-invariance argument above proves
+Pr(H_t=h,W=w)=Pr(W=w)/6 for any finite S4-invariant material word W, with t at
+any declared finite relative position. For positive W, Pr(H_t=h|W)=1/6.
+Uniqueness is sufficient for invariant stationarity; explicitly invariant
+stationarity suffices without uniqueness. A non-invariant initial law or
+label-sensitive output is outside scope. Relational role may still be known.
+
+## CL-T49: density-path and shape-sequence information chain
+
+For the rational joint Pr(M,C^L), E^L=f(C^L). The chain rule applied to
+(C^L,E^L), whose joint contains no information beyond C^L, gives
+I(M;C^L)=I(M;E^L)+I(M;C^L|E^L). Conditional nonnegativity gives data processing.
+The implementation evaluates the conditional term directly with the actual
+within-edge-word model priors; equal global priors do not imply equal block
+priors. Precision/tolerance are numerical validation, not theorem assumptions.
+
+## CL-F07: K4 class-pair reconstruction certificate
+
+At a pair epoch, the previous pair mask is p xor 2^h. Enumerate the 384 marked
+states (p,h). The map to (class(p xor 2^h),class(p)) is constant on each S4
+role orbit, and its 28 images are distinct. The complete 28-pair certificate is
+in reports/items/generation-008j-j1/J1-CLASS-PAIR-ROLE.json; every one of the 384
+states was checked, not just representatives. This is a finite exact result.
+It is not asserted for N=5, multibit events or larger history.
+
+## CL-T50: graph-class order at most two by role reconstruction
+
+Assume a first-order augmented pair process with h'=e after a single pair-bit
+toggle and a valid simultaneous-S4 role quotient. At epoch t after a pair
+transition, (C_{t-1},C_t) determines the role orbit by CL-F07. The next-class
+law depends only on that orbit, since the role quotient is Markov. Therefore
+Pr(C_{t+1}|C_0,...,C_t)=Pr(C_{t+1}|C_{t-1},C_t).
+This is an all-past result, not an extrapolation from zero finite-depth CMI.
+At stationary pair epochs it applies throughout. Under arbitrary starting
+registers it applies after the first actual pair update. In the tested palette,
+positive first-order witnesses establish exactly order two for the 18 A/C
+systems; passive B and neutral remain first-order.
+
+## CL-T51: SAME edge-count/action-role closure
+
+Let d be the pair-slot count, k the present-bit count and R=p_h. For the SAME
+ANY, FORM or DISSOLVE controller, aggregate formation weight is d-k, plus
+(m-1)(1-R) if SAME is weighted on formation. Dissolution weight is k, plus
+(m-1)R if SAME is weighted on dissolution. Call these F,D. Toggling an absent
+bit yields (k+1,1); toggling a present bit yields (k-1,0). Hence (k,R) is a
+strongly lumpable 2d-state quotient with rows F/(F+D),D/(F+D).
+Because R=1 exactly when the previous count increment was +1, two consecutive
+counts determine the role. The count process is order at most two.
+
+For d>=2, strictly positive m and positive stationary support, compare k=1,
+R=0 versus R=1. SAME_ANY dissolution probabilities are 1/(m+d-1) versus
+m/(m+d-1); SAME_FORM gives 1/(m+d-1) versus 1/d; SAME_DISSOLVE gives 1/d
+versus m/(m+d-1). They differ iff m!=1. Both histories have positive mass,
+so order one fails for non-neutral m. At m=1 the baseline count chain is
+first-order. N=4 checks use d=6, 12 roles and all six SAME cells plus neutral;
+N=3 m=2 plumbing was synthetic and pre-freeze.
+
+No ADJ/DISJ closure is inferred: all twelve tested ADJ/DISJ (k,R) block tests
+fail. Their edge-count order lower bounds of at least five remain bounded
+observations, not a general infinite-order theorem.

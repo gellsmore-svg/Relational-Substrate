@@ -117,3 +117,48 @@ was not opened; endpoint-support diagnostics only were frozen.
 These possibilities are post-J0 candidates, not verified findings at this
 initial reading. P9's untested SAME edge simplification was already considered
 pre-freeze and disclosed in the receipt. No J1 target enumeration has yet run.
+
+## Separately frozen J1 reading
+
+The initial ledger above is retained verbatim. Following independent freeze
+c080d7c3cd9408f349e9fa58473a85c1624466ff, the two items were published at
+9fd03f7. New target checks before that freeze: zero. Known J0 inputs and symbolic
+candidates were explicitly pre-observed. No new controller, grade, solve,
+trajectory or word length was introduced.
+
+### O10: class pairs recover relational role exactly
+
+Literal: (class(p xor 2^h),class(p)) is constant and injective on all 28 role
+orbits, checked over all 384 states; exactly 28 pairs, zero collisions. All 23
+compiled next-class rows match the independently conditioned J0 triples exactly.
+This proves the stationary class output has order at most two, not just
+finite-depth consistency. Positive J0 first-order witnesses make all 18 A/C
+class processes exactly order two; five passive controls are order one.
+P14 is verified, P11 receives a scoped all-past answer. Role endpoint support
+after a positive class pair is one. This is role identification, not absolute
+edge-label identification; O9 still holds at every finite window.
+Scope: N=4, one remembered single-pair toggle, valid S4 role quotient. No larger-N
+edge-reconstruction claim. Next: how does this generalise to other projections?
+
+### O11: SAME edge-role closure and ADJ/DISJ boundary
+
+Literal: (k,R=p_h) gives 12 feasible roles. Strong lumpability holds for six
+SAME cells, four B controls and neutral; fails for twelve ADJ/DISJ cells.
+For SAME ANY/FORM/DISSOLVE, sum absent and present candidate weights:
+F=6-k+(m-1)(1-R) when SAME is formation-weighted, otherwise 6-k;
+D=k+(m-1)R when SAME is dissolution-weighted, otherwise k.
+The next roles are (k+1,1) and (k-1,0), normalised by F+D. Formula, exact
+stationary aggregation and already-frozen J0 edge words agree with zero gap.
+R is recovered from the sign of the preceding edge-count increment, proving
+order at most two; non-neutral SAME order one fails. Boundary block gaps include
+ADJ_ANY 1/4,1/6 and DISJ_ANY 1/7,1/3 at the two grades.
+P9/P15 are explained within scope. P17 is realised: class order two can coexist
+with edge order lower bound at least five. No infinite edge-order theorem.
+
+## Recursive stop
+
+The selected probes explain the central J0 depth pattern and qualify P12 for
+class/SAME edge without closing the ADJ/DISJ edge problem. The eight-option
+decision retains deferred alternatives. Stop after J1; no J2 or ontology change.
+The next informative task is an independently bounded predictive-state analysis
+of a selected unresolved edge process, not automatic depth expansion.
