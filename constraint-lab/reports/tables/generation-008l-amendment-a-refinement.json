@@ -1,0 +1,301 @@
+{
+  "clock": "pair-event epoch",
+  "data": [
+    {
+      "analytic_membership_gap": 0,
+      "block_counts_by_round": [
+        64,
+        384,
+        2304
+      ],
+      "clock": "pair-event epoch",
+      "coarseness_basis": "CL-T52 universal-property induction; exhaustive same-observation separation schemas",
+      "generic_merge_certificate_count": 40320,
+      "generic_merge_certificates_sha256": "dfcafbd93457e2939a3c085bc948efd1fe7df19b757a40bd54eeed80724d669a",
+      "immediate_observed_rows_separate_all": false,
+      "initial_block_count": 64,
+      "m": "1/4",
+      "membership_sha256": "fb74830e486e25d5caa7ec95f9eb74c3c60553034927350629194f37bd92da3c",
+      "merge_obstruction_classes": {
+        "different_h2_immediate": 34560,
+        "same_h2_different_h1_later": 5760
+      },
+      "obstruction_samples": {
+        "different_h2_immediate": {
+          "signature_A": [
+            [
+              1,
+              "1/21"
+            ],
+            [
+              2,
+              "4/21"
+            ],
+            [
+              4,
+              "4/21"
+            ],
+            [
+              8,
+              "4/21"
+            ],
+            [
+              16,
+              "4/21"
+            ],
+            [
+              32,
+              "4/21"
+            ]
+          ],
+          "signature_B": [
+            [
+              1,
+              "4/21"
+            ],
+            [
+              2,
+              "1/21"
+            ],
+            [
+              4,
+              "4/21"
+            ],
+            [
+              8,
+              "4/21"
+            ],
+            [
+              16,
+              "4/21"
+            ],
+            [
+              32,
+              "4/21"
+            ]
+          ],
+          "state_A": 0,
+          "state_B": 1
+        },
+        "same_h2_different_h1_later": {
+          "signature_A": [
+            [
+              6,
+              "1/21"
+            ],
+            [
+              12,
+              "4/21"
+            ],
+            [
+              24,
+              "4/21"
+            ],
+            [
+              48,
+              "4/21"
+            ],
+            [
+              96,
+              "4/21"
+            ],
+            [
+              192,
+              "4/21"
+            ]
+          ],
+          "signature_B": [
+            [
+              7,
+              "1/21"
+            ],
+            [
+              13,
+              "4/21"
+            ],
+            [
+              25,
+              "4/21"
+            ],
+            [
+              49,
+              "4/21"
+            ],
+            [
+              97,
+              "4/21"
+            ],
+            [
+              193,
+              "4/21"
+            ]
+          ],
+          "state_A": 0,
+          "state_B": 6
+        }
+      },
+      "refinement_rounds": 2,
+      "stable_block_count": 2304,
+      "state_reordering_gap": "0/1",
+      "strong_lumpability_gap": "0/1"
+    },
+    {
+      "analytic_membership_gap": 0,
+      "block_counts_by_round": [
+        64
+      ],
+      "clock": "pair-event epoch",
+      "coarseness_basis": "CL-T52 universal-property induction; exhaustive same-observation separation schemas",
+      "generic_merge_certificate_count": 0,
+      "generic_merge_certificates_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "immediate_observed_rows_separate_all": true,
+      "initial_block_count": 64,
+      "m": "1/1",
+      "membership_sha256": "aecde37ef681a7d16b5958cc1388fae8fa4c358b15c76f5c415a5219e6d9d4a3",
+      "merge_obstruction_classes": {},
+      "obstruction_samples": {},
+      "refinement_rounds": 0,
+      "stable_block_count": 64,
+      "state_reordering_gap": "0/1",
+      "strong_lumpability_gap": "0/1"
+    },
+    {
+      "analytic_membership_gap": 0,
+      "block_counts_by_round": [
+        64,
+        384,
+        2304
+      ],
+      "clock": "pair-event epoch",
+      "coarseness_basis": "CL-T52 universal-property induction; exhaustive same-observation separation schemas",
+      "generic_merge_certificate_count": 40320,
+      "generic_merge_certificates_sha256": "e194b33f949df49c9b1abab99d7de70d04f77cd842472209940dcca263d0e4a0",
+      "immediate_observed_rows_separate_all": false,
+      "initial_block_count": 64,
+      "m": "4/1",
+      "membership_sha256": "fb74830e486e25d5caa7ec95f9eb74c3c60553034927350629194f37bd92da3c",
+      "merge_obstruction_classes": {
+        "different_h2_immediate": 34560,
+        "same_h2_different_h1_later": 5760
+      },
+      "obstruction_samples": {
+        "different_h2_immediate": {
+          "signature_A": [
+            [
+              1,
+              "4/9"
+            ],
+            [
+              2,
+              "1/9"
+            ],
+            [
+              4,
+              "1/9"
+            ],
+            [
+              8,
+              "1/9"
+            ],
+            [
+              16,
+              "1/9"
+            ],
+            [
+              32,
+              "1/9"
+            ]
+          ],
+          "signature_B": [
+            [
+              1,
+              "1/9"
+            ],
+            [
+              2,
+              "4/9"
+            ],
+            [
+              4,
+              "1/9"
+            ],
+            [
+              8,
+              "1/9"
+            ],
+            [
+              16,
+              "1/9"
+            ],
+            [
+              32,
+              "1/9"
+            ]
+          ],
+          "state_A": 0,
+          "state_B": 1
+        },
+        "same_h2_different_h1_later": {
+          "signature_A": [
+            [
+              6,
+              "4/9"
+            ],
+            [
+              12,
+              "1/9"
+            ],
+            [
+              24,
+              "1/9"
+            ],
+            [
+              48,
+              "1/9"
+            ],
+            [
+              96,
+              "1/9"
+            ],
+            [
+              192,
+              "1/9"
+            ]
+          ],
+          "signature_B": [
+            [
+              7,
+              "4/9"
+            ],
+            [
+              13,
+              "1/9"
+            ],
+            [
+              25,
+              "1/9"
+            ],
+            [
+              49,
+              "1/9"
+            ],
+            [
+              97,
+              "1/9"
+            ],
+            [
+              193,
+              "1/9"
+            ]
+          ],
+          "state_A": 0,
+          "state_B": 6
+        }
+      },
+      "refinement_rounds": 2,
+      "stable_block_count": 2304,
+      "state_reordering_gap": "0/1",
+      "strong_lumpability_gap": "0/1"
+    }
+  ]
+}

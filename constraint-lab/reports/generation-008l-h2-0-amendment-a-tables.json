@@ -1,0 +1,50 @@
+{
+  "amendment_A": "Validation-only replay; all original scientific result hashes must match",
+  "amendment_prior_target_exposure": "All twelve original H2-0 results known; not blind",
+  "analysis_version": "generation-008l-history-depth/v2-validation",
+  "atomic_items": 12,
+  "clock": "pair-event epoch",
+  "frozen_analysis_plan_commit": "a889f6a62db7cba51a82d216c4991d118b42bf69",
+  "item_sha256": {
+    "constraint-lab/reports/items/generation-008l-h2-0-amendment-a/H2-KERNEL-m025.json": "ef1b034e20b1cc973a9b25f9781a5a6f18a6851be703b57d262dba0152ab9bc3",
+    "constraint-lab/reports/items/generation-008l-h2-0-amendment-a/H2-KERNEL-m1.json": "e7101f3256801be5540cc783e923398e8ebcb12d9155ec3f5bdd205280bebf0f",
+    "constraint-lab/reports/items/generation-008l-h2-0-amendment-a/H2-KERNEL-m4.json": "d33bc4620b6ccdddfb5b128418c997c3abc17c3f350df0a178424573d46328a3",
+    "constraint-lab/reports/items/generation-008l-h2-0-amendment-a/H2-REFINEMENT-m025.json": "f5eaa401696137d19ed95a20b9fa4956ae37a6b0edba901387be6a9212f146e5",
+    "constraint-lab/reports/items/generation-008l-h2-0-amendment-a/H2-REFINEMENT-m1.json": "af6b8341f72023ddfe291d032177ba5bf343e2e5b93633c7a04422c2e874f0bd",
+    "constraint-lab/reports/items/generation-008l-h2-0-amendment-a/H2-REFINEMENT-m4.json": "d3a8d01e877bf83ece6f7af25d27d4c819d3a7272ee23041ba42ff916631583f",
+    "constraint-lab/reports/items/generation-008l-h2-0-amendment-a/H2-TEMPORAL-m025.json": "5986d3e69a5bd3d12d6dc84a33aec872c105e86a6bfff3ec027993c79e6e5f94",
+    "constraint-lab/reports/items/generation-008l-h2-0-amendment-a/H2-TEMPORAL-m1.json": "925c1c4a203be020bf88609974cc787db8c9849b583d433669818cb22ceb879c",
+    "constraint-lab/reports/items/generation-008l-h2-0-amendment-a/H2-TEMPORAL-m4.json": "81e19e8bc42fcecccb5329161d0aa2e781311a4ecb490920488f449a0f1214ed",
+    "constraint-lab/reports/items/generation-008l-h2-0-amendment-a/H2-WITNESS-m025.json": "f2750265ecb21254499ead5eb9bbfa84c467836b7299972e48cfe30b4b157eeb",
+    "constraint-lab/reports/items/generation-008l-h2-0-amendment-a/H2-WITNESS-m1.json": "122f2342bbf347b5a6d2741b567d55c4353bb31154d1c97383b5b79b0dba9f93",
+    "constraint-lab/reports/items/generation-008l-h2-0-amendment-a/H2-WITNESS-m4.json": "c7459270733f2a881977ef3d046c061541d229e0d531285dfa9b466c040c9a65"
+  },
+  "original_H2_0_non_neutral_pre_freeze_executions": 0,
+  "plan_file_sha256": "417f1adfb126b178ac0a7e736a799637690c67d28488fcbbf0c4bfbf7d9c6311",
+  "plan_hash": "df27a5078059fbea70836727023b03fa10cde7ccf8e09b8791c8bf1a5193b8d2",
+  "precision_decimal_digits": 160,
+  "prompt_id": "008L",
+  "round_id": "H2-0",
+  "status": "COMPLETE",
+  "stochastic_scientific_trajectories": 0,
+  "table_sha256": {
+    "constraint-lab/reports/tables/generation-008l-amendment-a-kernel.json": "04dbddb498d28661f45502087fa082510240bc32161f8c82f8dca8848db08e9d",
+    "constraint-lab/reports/tables/generation-008l-amendment-a-refinement.json": "8256666f3770b523cb0520e506c92b0e69f22a544c07e659d11372d4c9c5a5d9",
+    "constraint-lab/reports/tables/generation-008l-amendment-a-temporal.json": "43c3d37c98fbd6c6785801f307e7b466cde4fe9e5fbe21260ec66018d03640f5",
+    "constraint-lab/reports/tables/generation-008l-amendment-a-witness.json": "5aecad2d5a427cea3ed05f846c65da04216c4911b0aa8085d0d3b894a30adf3c"
+  },
+  "timings": {
+    "H2-KERNEL-m025": 0.47407197300344706,
+    "H2-KERNEL-m1": 0.5256202960008522,
+    "H2-KERNEL-m4": 0.5409743719937978,
+    "H2-REFINEMENT-m025": 6.035880094997992,
+    "H2-REFINEMENT-m1": 0.673412215001008,
+    "H2-REFINEMENT-m4": 5.720521446004568,
+    "H2-TEMPORAL-m025": 2.839482401002897,
+    "H2-TEMPORAL-m1": 2.9128810909969616,
+    "H2-TEMPORAL-m4": 2.996093755995389,
+    "H2-WITNESS-m025": 0.01112416099931579,
+    "H2-WITNESS-m1": 0.0027805600038846023,
+    "H2-WITNESS-m4": 0.009149057004833594
+  }
+}

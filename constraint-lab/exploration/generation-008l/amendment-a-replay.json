@@ -1,0 +1,94 @@
+{
+  "round_id": "H2-0",
+  "amendment": "A",
+  "original_freeze_commit": "6f00fcdb07fc0e8323f8b6360fdc59960be7dcb4",
+  "amended_freeze_commit": "a889f6a62db7cba51a82d216c4991d118b42bf69",
+  "original_plan_hash": "b7670bbdac76fb29da687d60c6c5c7c74bf32277d8458442b0bcad947575f7de",
+  "amended_plan_hash": "df27a5078059fbea70836727023b03fa10cde7ccf8e09b8791c8bf1a5193b8d2",
+  "amended_plan_file_sha256": "417f1adfb126b178ac0a7e736a799637690c67d28488fcbbf0c4bfbf7d9c6311",
+  "pushed_before_corrected_source_targets": true,
+  "original_prefreeze_new_non_neutral_H2_executions": 0,
+  "amendment_prior_exposure": "All twelve original target results known, plus post-freeze tests; not blind",
+  "valid_state_scientific_change": false,
+  "result_comparisons": [
+    {
+      "item_id": "H2-WITNESS-m025",
+      "original_result_sha256": "57cac5cfe0dca3fd9af03eb76a32606c537281ba5350ba713ace583ac388c4a7",
+      "amended_result_sha256": "57cac5cfe0dca3fd9af03eb76a32606c537281ba5350ba713ace583ac388c4a7",
+      "exact_equal": true
+    },
+    {
+      "item_id": "H2-WITNESS-m1",
+      "original_result_sha256": "10cc041dfc14b5f39440b39ed714b6603cccdcccf819bc70b3ab5577aea2c4de",
+      "amended_result_sha256": "10cc041dfc14b5f39440b39ed714b6603cccdcccf819bc70b3ab5577aea2c4de",
+      "exact_equal": true
+    },
+    {
+      "item_id": "H2-WITNESS-m4",
+      "original_result_sha256": "99f8600cc754072c88530d205c3faa0a7adea6a1618fad788ec70cc2496f88ec",
+      "amended_result_sha256": "99f8600cc754072c88530d205c3faa0a7adea6a1618fad788ec70cc2496f88ec",
+      "exact_equal": true
+    },
+    {
+      "item_id": "H2-KERNEL-m025",
+      "original_result_sha256": "f163b658e8acae04425126f062e4cb634fb7259023cef0b117790945d96e1bd3",
+      "amended_result_sha256": "f163b658e8acae04425126f062e4cb634fb7259023cef0b117790945d96e1bd3",
+      "exact_equal": true
+    },
+    {
+      "item_id": "H2-KERNEL-m1",
+      "original_result_sha256": "a62485c8623cc116e604afd95eb5f10ae63ae2ea7648188bd41b6e8bc7dc2d38",
+      "amended_result_sha256": "a62485c8623cc116e604afd95eb5f10ae63ae2ea7648188bd41b6e8bc7dc2d38",
+      "exact_equal": true
+    },
+    {
+      "item_id": "H2-KERNEL-m4",
+      "original_result_sha256": "e86db9d510a21dcacca6131f79b0a431771196d0acf68e7305b4d75b221bb84c",
+      "amended_result_sha256": "e86db9d510a21dcacca6131f79b0a431771196d0acf68e7305b4d75b221bb84c",
+      "exact_equal": true
+    },
+    {
+      "item_id": "H2-REFINEMENT-m025",
+      "original_result_sha256": "7f2ec87930d404786449fdfe379ee42b0130c1dc0a262b8f1c939b76e4922395",
+      "amended_result_sha256": "7f2ec87930d404786449fdfe379ee42b0130c1dc0a262b8f1c939b76e4922395",
+      "exact_equal": true
+    },
+    {
+      "item_id": "H2-REFINEMENT-m1",
+      "original_result_sha256": "51a1a66c9fb3972edc51470ebded322ed9fb86d368f0e615e6ab578e0fa7d2e1",
+      "amended_result_sha256": "51a1a66c9fb3972edc51470ebded322ed9fb86d368f0e615e6ab578e0fa7d2e1",
+      "exact_equal": true
+    },
+    {
+      "item_id": "H2-REFINEMENT-m4",
+      "original_result_sha256": "f35bd097dcf255ae861f0cbc6c84e3f85c15100ca629b6eb5f9e3143cf27ad34",
+      "amended_result_sha256": "f35bd097dcf255ae861f0cbc6c84e3f85c15100ca629b6eb5f9e3143cf27ad34",
+      "exact_equal": true
+    },
+    {
+      "item_id": "H2-TEMPORAL-m025",
+      "original_result_sha256": "246363fb87ada1cd3b2553e23df0b7e98e774ea1a7f391bd5de7a90e5b7bbbb3",
+      "amended_result_sha256": "246363fb87ada1cd3b2553e23df0b7e98e774ea1a7f391bd5de7a90e5b7bbbb3",
+      "exact_equal": true
+    },
+    {
+      "item_id": "H2-TEMPORAL-m1",
+      "original_result_sha256": "7425be00fc14bb52471f0a89080800f8d3cd41606b74d53d9b173e4cf6a3684e",
+      "amended_result_sha256": "7425be00fc14bb52471f0a89080800f8d3cd41606b74d53d9b173e4cf6a3684e",
+      "exact_equal": true
+    },
+    {
+      "item_id": "H2-TEMPORAL-m4",
+      "original_result_sha256": "a134dc629cf028c54ab13458dda3ff360aa4ee336a0ac995c6c7ecb5a64da952",
+      "amended_result_sha256": "a134dc629cf028c54ab13458dda3ff360aa4ee336a0ac995c6c7ecb5a64da952",
+      "exact_equal": true
+    }
+  ],
+  "all_four_summary_table_hashes_equal": true,
+  "original_verifier_replay_commit": "3e71f0687e6097de87efdcab455e1b28c8b2a765",
+  "original_verifier_status": "VERIFIED",
+  "original_items_preserved": true,
+  "amended_manifest": "constraint-lab/reports/generation-008l-h2-0-amendment-a-tables.json",
+  "original_item_seconds": 17.758295047984575,
+  "amended_item_seconds": 22.741991423004947
+}
