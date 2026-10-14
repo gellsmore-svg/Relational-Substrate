@@ -34,3 +34,17 @@ in 8H. The following entries refine its prospective H integration after H0:
 | Current efficacy versus initial-history forgetting, CL-T32 | READY_WITH_SCOPE | RS Chapter 6 / coherent ontology Chapter 5 | Decay of initial-slot information is distinct from efficacy of current h |
 | Reversal-memory grade-specific information values, CL-N07 | PROVISIONAL | Laboratory report | Model/palette-specific magnitudes, not a book-level ontology argument |
 | General physical historical ontology | DO_NOT_INTEGRATE_YET | None | No inference that nature uses this memory, time is irreducible, or finite history cannot be encoded as present state |
+
+## Generation 8I predictive-state additions
+
+Historical assessments above remain unchanged. No book text is edited.
+
+| Content | Maturity | Proposed location | Scope |
+| --- | --- | --- | --- |
+| Observation-relative predictive-state sufficiency, CL-T52/T53 | READY_WITH_SCOPE | Technical modelling appendix | Coarsest strong refinement on a fixed finite chain, not minimal ontology or arbitrary HMM encoding |
+| Structural-role historical memory, CL-T54/T55 | READY_WITH_SCOPE | Relational process discussion / technical appendix | N4 RECENT-REVERSAL, pair clock; exact labels forgotten but marked-pair role remains predictive |
+| Directional count memory, CL-T56 | READY_WITH_SCOPE | Technical modelling appendix | Last formation/dissolution suffices for this controller; not all history laws |
+| Exact 28/12 finite counts, CL-F08 | PROVISIONAL | Laboratory appendix | Verified finite combinatorics, pending external review of this branch; not a general natural hierarchy |
+| Parity all-order history erasure, CL-T57 | READY_WITH_SCOPE | Projection and modelling limits | Deterministic pair-clock parity; no physical information-destruction inference |
+| Specific temporal CMI values, CL-N08 | PROVISIONAL | Laboratory report | Grade/projection-specific information, not a scalar memory score |
+| Physical memory, observer or temporal ontology | DO_NOT_INTEGRATE_YET | None | Requires independent evidence; no inference from finite predictive compression |

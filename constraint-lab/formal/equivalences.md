@@ -33,3 +33,26 @@ The BOTH/ONE/NEITHER placements are structurally distinct under S4 but dynamical
 Independent hypergraph state coordinates do not automatically impose face coupling. 'Pair is a face of triad' is metadata until used by the law. Independence of coordinates does not imply statistical independence of paths: normalisation couples slot probabilities.
 
 Incidence can become dynamically consequential within an existing ordinary grammar by choosing correlated face-action templates, several coupled pair actions, or pair-dependent gate behaviour. Alternatives include simplicial closure, geometry or shared-state coupling, but no such extension is selected in 8G. L or H is not required merely to consult incidence when constructing fixed rules.
+
+## Observable-preserving Markov refinement (predictive-state 8I)
+
+A raw projection merely groups equal current observations and may fail strong
+lumpability. A strong-lumping refinement splits those groups until every member
+has the same aggregate transition row into every refined block. The coarsest
+such refinement is obtained by exact partition iteration (CL-T52), and works
+for arbitrary augmented initial distributions. This is stronger than stationary
+weak lumpability under one prior.
+
+Full future-word equivalence requires equal laws for every finite observed
+future, preserving the current observation. Strong lumping is sufficient for
+that equality but need not be necessary in arbitrary hidden models. In this
+RECENT-REVERSAL N4 instance, distinct stable blocks sharing a current observation
+already have different next-observation rows, so the two notions coincide on
+the fixed declared state set. Neither notion claims globally smallest hidden
+Markov realisation under arbitrary re-encoding.
+
+The 28 marked-graph, 12 count/direction and 2 parity reductions are exact strong
+lumpings, not kernel conjugacies or mere statistic equalities. Their nested
+quotient maps commute (CL-T59). Matching stationary one-step rows with H0 is
+strictly weaker than projected-process equality; only parity has the separate
+all-order equality proof for all m.

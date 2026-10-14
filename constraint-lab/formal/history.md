@@ -333,3 +333,16 @@ for this controller. The six-valued last-pair register is sufficient; a general
 hidden-state minimisation problem is not opened. Relevant history functions,
 greater necessary depth, occupancy-changing memory and coarse-graining survival
 remain separate future questions.
+
+## Generation 8I predictive-state addition
+
+The historical 8H derivation and its then-open questions above are retained.
+The alternative predictive-state 8I determines the coarsest strongly lumpable
+refinement of four declared observations on the same 384-state process.
+History representation depends on observation scale: labelled pair identity,
+current graph automorphism role, last formation/dissolution, then none under
+parity. Non-neutral minimal counts are 384/28/12/2; neutral 64/11/7/2.
+Class/count order-two synchronization and parity all-order erasure are proved
+in [predictive-state formalism](predictive-state.md), CL-T52..T59 and CL-F08.
+CL-Q06 remains the historical open entry; its specific preserved-observation
+question receives a bounded answer, not a general hidden-model minimisation.

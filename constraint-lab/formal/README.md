@@ -24,3 +24,8 @@ Generation 8H adds the first executed H example. [History as state](history.md)
 separates ordinary material x from finite register h, proves the same-state
 non-compilability boundary, and restores Markov form on augmented state.
 Its verified appendix extends the catalogue without rewriting 8G statements.
+
+The alternative Generation 8I [predictive-state document](predictive-state.md)
+adds observation-preserving exact refinement, marked-graph structural memory,
+count-direction memory and parity all-order erasure. It does not import or
+replace the separate role-grammar 8I or coarse-process 8J branches.
