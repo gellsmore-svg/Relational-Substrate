@@ -45,3 +45,27 @@ This file records proposals that GT findings might make to the RS ontology. Each
 **Proposal.** Note, as a candidate under persistence and identity, the handover motif. An attachment to a reference structure is followed by dissolution of the peripheral relation that supported it, in a stationary, oriented cycle. The motif is legible relative to an imposed source and relative to an emergent hub. Bears on the laboratory's CL-Q05.
 
 **Status if adopted:** candidate motif, model-scoped, mechanism sketched not derived.
+
+## OP-8. Succession and gathering are distinct (from E1)
+
+**Proposal.** Keep two notions apart in any RS account built on this grammar:
+- **succession** is a stationary, oriented order of actualisation;
+- **gathering** is a time-weighted preference for relation to a reference structure.
+
+E1 found the handover (succession) undiminished from N=6 to N=7 in every non-gradient family and under every strength scale, in 30 of 30 cells (GT-F37). It found the only gathering effect seen alongside it (CSPH's attachment margin) at or below the null at N=7 in every form and clock (GT-F36). Evidence for one is therefore not evidence for the other (GT-F43, GT-F44). This strengthens OP-7's standing as a motif and qualifies any reading of OP-5 that would link direction of succession to attraction.
+
+**Status if adopted:** distinction, model-scoped. No primitive is added.
+**Would count against:** a rule family in which the two are shown to be coupled, so that one cannot change without the other, across sizes.
+
+## OP-9. "Attraction" must name its clock and its density reference (from E1)
+
+**Proposal.** Amend OP-3. An attachment preference in this grammar is an average of a per-density preference over the occupied density profile. Its sign can differ between the per-event and per-time clocks: strengthening CSPH raises one and lowers the other (GT-F40). Size and strength act on the two factors differently (GT-F39, post hoc decomposition). Any statement that a configuration "attracts" should name:
+- the clock;
+- whether it is raw or density-standardised;
+- the density regime.
+
+**Status if adopted:** methodological refinement of OP-3.
+
+## Not proposed (from E1)
+
+A size-normalised family, in which per-witness factors are divided by the number of possible witnesses, would be a grammar change. E1 shows it is not needed to explain the N=6 → N=7 changes of the arrow-carrying rules, because their engaged load barely changes (GT-F38). It is therefore not proposed.

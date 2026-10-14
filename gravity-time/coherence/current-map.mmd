@@ -26,6 +26,13 @@ flowchart TD
     GT_F29_HANDOVER_ORIENTATION_INVARIANT["GT-F29-HANDOVER-ORIENTATION-INVARIANT: The handover orientation is the same in every arrow-bearing cell, with or without a bas..."]
     GT_F30_ARROW_BELONGS_TO_RATIO["GT-F30-ARROW-BELONGS-TO-RATIO: PCOMP (path formation and path dissolution both favoured, non-gradient rules with ratio..."]
     GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY["GT-F34-CSPH-MARGIN-CLOCK-AND-DENSITY: CSPH's attachment margin over the slot-ratio null is clock- and density-dependent: in t..."]
+    GT_F36_CSPH_COEXISTENCE_LOST_N7["GT-F36-CSPH-COEXISTENCE-LOST-N7: At HELD N=7 with the E0B W4 grades, CSPH's attachment margin over the size-specific nul..."]
+    GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH["GT-F37-HANDOVER-INVARIANT-ACROSS-SIZE-AND-STRENGTH: The handover orientation (probe-probe forms -> attachment forms -> probe-probe dissolve..."]
+    GT_F38_ENGAGED_LOAD_SIZE_STABLE["GT-F38-ENGAGED-LOAD-SIZE-STABLE: From N=6 to N=7 the mean engaged log-weight of every non-gradient rule component on exe..."]
+    GT_F39_SIZE_IS_NOT_STRENGTH["GT-F39-SIZE-IS-NOT-STRENGTH: Uniform strengthening at fixed N is a poor quantitative proxy for growing N in this gra..."]
+    GT_F40_STRENGTH_SPLITS_CLOCKS["GT-F40-STRENGTH-SPLITS-CLOCKS: In CSPH, strengthening at fixed N moves the two clocks' attachment margins in opposite ..."]
+    GT_F41_GRADIENT_CONTROL_GATHERING_GROWS["GT-F41-GRADIENT-CONTROL-GATHERING-GROWS: The reversible gradient control CLOSEW weak_favour is the only rule in E1 whose null-de..."]
+    GT_F42_REPULSION_AND_PERSISTENCE_WITH_SIZE["GT-F42-REPULSION-AND-PERSISTENCE-WITH-SIZE: In every non-gradient family, probe detachment is size-stable (0.52-0.55 at N=6, 0.55-0..."]
   end
   subgraph INFERENCE [Inferences]
     GT_F09_POTENTIAL_AS_MECHANISM["GT-F09-POTENTIAL-AS-MECHANISM: In the existing grammar a basin around a held relational structure arises from minimal ..."]
@@ -33,6 +40,7 @@ flowchart TD
     GT_F12_SINGLE_WITNESS_REVERSIBLE["GT-F12-SINGLE-WITNESS-REVERSIBLE: Every label-covariant single-witness template composition on the O=2 pair grammar (form..."]
     GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY["GT-F25-KINETICS-SETS-OCCUPANCY-UNDER-IRREVERSIBILITY: G1's decomposition (local ratio fixes the basin; the formation/dissolution split fixes ..."]
     GT_F33_DISSOLUTION_CHANNEL_INFERENCE["GT-F33-DISSOLUTION-CHANNEL-INFERENCE: In this grammar, a source-relative stationary arrow arises only from non-gradient suppo..."]
+    GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED["GT-F43-SUCCESSION-AND-GATHERING-DECOUPLED: In this grammar a stationary order of succession (the handover) and a time-weighted pre..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     GT_F03_DRIFT_CRITERION_CONFOUNDED["GT-F03-DRIFT-CRITERION-CONFOUNDED: The frozen G0 inward-drift criterion does not separate attraction from density: DENS pa..."]
@@ -43,6 +51,7 @@ flowchart TD
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     GT_F11_RS_POTENTIAL_AND_CLOCK["GT-F11-RS-POTENTIAL-AND-CLOCK: Inside this model, relational primacy yields basins as potentials without a primitive c..."]
+    GT_F44_RS_SUCCESSION_VS_GATHERING["GT-F44-RS-SUCCESSION-VS-GATHERING: RS reading (not a physical claim): the relational picture should keep succession (order..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     GT_Q01_KINETIC_CONVENTION["GT-Q01-KINETIC-CONVENTION: Is there a principled kinetic convention under which local recurrence rate is a functio..."]
@@ -52,6 +61,9 @@ flowchart TD
     GT_Q05_ARROW_AND_BASIN["GT-Q05-ARROW-AND-BASIN: Can a basin (attachment above null) and a stationary arrow coexist in the existing gram..."]
     GT_Q06_LOCAL_PERSISTENCE_MECHANISM["GT-Q06-LOCAL-PERSISTENCE-MECHANISM: Why does local degree memory outlast global edge-count memory in sparse, triangle-poor ..."]
     GT_Q07_COEXISTENCE_SCALING["GT-Q07-COEXISTENCE-SCALING: Does selective basin-with-arrow coexistence (GT-F26) survive at N>=7, vanish, or invert?"]
+    GT_Q08_HANDOVER_THEOREM["GT-Q08-HANDOVER-THEOREM: Is the handover orientation fixed by the path templates for every grade sign and streng..."]
+    GT_Q09_CLOCK_SPLIT_MECHANISM["GT-Q09-CLOCK-SPLIT-MECHANISM: Why does strengthening raise CSPH's per-event attachment preference while lowering its ..."]
+    GT_Q10_GRADIENT_GATHERING_SCALING["GT-Q10-GRADIENT-GATHERING-SCALING: Does the gradient control's growing standardised attachment preference continue beyond ..."]
   end
   GT_F02_INCIDENCE_SELECTIVITY -->|contrasts_with| GT_F01_DENS_NULL
   GT_F03_DRIFT_CRITERION_CONFOUNDED -->|qualifies| GT_F02_INCIDENCE_SELECTIVITY
@@ -104,3 +116,20 @@ flowchart TD
   GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY -->|qualifies| GT_F26_SELECTIVE_BASIN_WITH_ARROW
   GT_F35_E0_NUMERICAL_QUALIFICATIONS -->|qualifies| GT_F14_SATURATION_HIDES_ARROW
   GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY -->|refines| GT_Q07_COEXISTENCE_SCALING
+  GT_Q07_COEXISTENCE_SCALING -->|partially_answered_by| GT_F36_CSPH_COEXISTENCE_LOST_N7
+  GT_F36_CSPH_COEXISTENCE_LOST_N7 -->|qualifies| GT_F26_SELECTIVE_BASIN_WITH_ARROW
+  GT_F36_CSPH_COEXISTENCE_LOST_N7 -->|refines| GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY
+  GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH -->|supports| GT_F29_HANDOVER_ORIENTATION_INVARIANT
+  GT_F38_ENGAGED_LOAD_SIZE_STABLE -->|bounds| GT_F36_CSPH_COEXISTENCE_LOST_N7
+  GT_F39_SIZE_IS_NOT_STRENGTH -->|derived_from| GT_F38_ENGAGED_LOAD_SIZE_STABLE
+  GT_F40_STRENGTH_SPLITS_CLOCKS -->|refines| GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY
+  GT_F41_GRADIENT_CONTROL_GATHERING_GROWS -->|contrasts_with| GT_F36_CSPH_COEXISTENCE_LOST_N7
+  GT_F42_REPULSION_AND_PERSISTENCE_WITH_SIZE -->|supports| GT_F18_ARROW_WITH_REPULSION
+  GT_F42_REPULSION_AND_PERSISTENCE_WITH_SIZE -->|supports| GT_F27_KINETICS_SETS_BASIN_DEPTH
+  GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED -->|derived_from| GT_F36_CSPH_COEXISTENCE_LOST_N7
+  GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED -->|derived_from| GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH
+  GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED -->|refines| GT_F33_DISSOLUTION_CHANNEL_INFERENCE
+  GT_F44_RS_SUCCESSION_VS_GATHERING -->|derived_from| GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED
+  GT_Q08_HANDOVER_THEOREM -->|raised_by| GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH
+  GT_Q09_CLOCK_SPLIT_MECHANISM -->|raised_by| GT_F40_STRENGTH_SPLITS_CLOCKS
+  GT_Q10_GRADIENT_GATHERING_SCALING -->|raised_by| GT_F41_GRADIENT_CONTROL_GATHERING_GROWS

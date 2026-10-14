@@ -115,3 +115,11 @@ These proposals leave the E1 text above unchanged. They take effect only if the 
    - The words "finite-size effect" are used only once the alternatives above have been examined, not as an automatic label.
 3. **Margin forms.** Report the margin raw and null-density standardised, in both clocks, with the normalised form (af − r0)/(1 − r0) and the full a/k profile. On published data the CSPH margin's fragility is specific to the continuous clock (jump: +0.073 → +0.065). At N=6 it is already negative after density standardisation (−0.073 continuous, −0.034 jump). See GT-F34.
 4. **Strength control.** Consider the existing W3/W16 sensitivity alphabets at N ≤ 6 as a separately labelled bracket on witness amplification, calibrated on the published N5→N6 step (`docs/e1-design-alternatives.md`, option B).
+
+## E1 status (GT-P004)
+
+The sections above are unchanged.
+- **Option B adopted.** The human researcher authorised option B. GT-P004 section 5 states the stop-rule reading, which matches clarification 2 above. All four margin forms were reported side by side, with none primary.
+- **Frozen and executed.** The plan was frozen at `4ba2839`. All 32 authorised cells and 16 baseline re-derivations completed, with result commit `730ef32`.
+- **Results.** CSPH's coexistence does not survive to N=7, and the handover is invariant. Strengthening is not a good proxy for size. See `reports/gt-e1-report.md`.
+- **Recommended next (not executed).** A handover-mechanism investigation (`reports/gt-e1-reflection.md`, section 6). FREE N=7 remains a separate future decision. No further round is opened by GT-P004.

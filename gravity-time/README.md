@@ -23,6 +23,12 @@ An independently governed research programme built on the Constraint Laboratory 
 | E1 feasibility, HELD versus FREE | [`docs/e1-held-free-feasibility.md`](docs/e1-held-free-feasibility.md) |
 | E1 design alternatives (review draft, not frozen) | [`docs/e1-design-alternatives.md`](docs/e1-design-alternatives.md) |
 | E1 pre-freeze review (plain English) | [`reports/gt-e1-prefreeze-review.md`](reports/gt-e1-prefreeze-review.md) |
+| **E1 round (GT-P004): frozen plan** | [`plans/round-e1-plan.json`](plans/round-e1-plan.json) (commit `4ba2839`) |
+| E1 results report (plain English) | [`reports/gt-e1-report.md`](reports/gt-e1-report.md) |
+| E1 behaviour atlas (every cell and channel) | [`reports/gt-e1-atlas.md`](reports/gt-e1-atlas.md), tables [`reports/round-e1-tables.json`](reports/round-e1-tables.json) |
+| E1 coherence reflection and next-step recommendation | [`reports/gt-e1-reflection.md`](reports/gt-e1-reflection.md) |
+| E1 post hoc margin decomposition (labelled post hoc) | [`reports/e1-margin-composition-posthoc.json`](reports/e1-margin-composition-posthoc.json) |
+| E1 execution record | [`provenance/execution-GT-P004.md`](provenance/execution-GT-P004.md) |
 | Coherence ledger and snapshot | [`coherence/`](coherence/) |
 | Ontology proposals for later review | [`docs/ontology-proposals.md`](docs/ontology-proposals.md) |
 | Provenance | [`provenance/`](provenance/) |
