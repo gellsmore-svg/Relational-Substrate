@@ -666,6 +666,7 @@ def analyse(
     stationary_method: str = "iterative",
     cross_check: bool = True,
     stationary_override: dict | None = None,
+    start: int | None = None,
 ) -> tuple[dict, dict | None]:
     """All E0A/E0B channels of one cell, plus ``e1_additions`` and solver diagnostics.
 
@@ -675,7 +676,7 @@ def analyse(
     """
     timings: dict[str, float] = {}
     components = families[family][grade]
-    start = start_index(chain, n, mode)
+    start = start_index(chain, n, mode) if start is None else start
     regime = class_regime(chain, start)
     out: dict = {
         "family": family,

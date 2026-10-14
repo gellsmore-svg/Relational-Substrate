@@ -194,14 +194,14 @@ def long_double_residual(chain, jump: np.ndarray) -> dict:
     return {"max_relative": float(rel.max()) if positive.any() else None, "min_mass": float(pi.min()), "zero_mass_states": int((~positive).sum())}
 
 
-def kernel_sample_check(item: dict, chain, start: int) -> dict:
+def kernel_sample_check(item: dict, chain, start: int, *, families: dict | None = None, round_id: str = ROUND_ID) -> dict:
     """The rule strings, evaluated with exact Fractions on a seeded sample of states, against gtkernel."""
     from rs_constraint_lab.constraints import Choreography
 
     n, family, grade = item["n"], item["family"], item["grade"]
-    factors = alphabet_factors(item["alphabet"])
-    choreography = Choreography(0, 0, gte0a.rules_for(family, grade, n, MODE, FAMILIES))
-    seed = int(hashlib.sha256(f"{ROUND_ID}:kernel:{item['item_id']}".encode()).hexdigest()[:16], 16)
+    factors = alphabet_factors(item.get("alphabet", "W4"))
+    choreography = Choreography(0, 0, gte0a.rules_for(family, grade, n, item.get("mode", MODE), families or FAMILIES))
+    seed = int(hashlib.sha256(f"{round_id}:kernel:{item['item_id']}".encode()).hexdigest()[:16], 16)
     rng = np.random.default_rng(seed)
     size = len(chain.states)
     edge_totals = ((chain.states[:, None] >> np.arange(chain.n_slots)) & 1).sum(axis=1)
@@ -854,7 +854,7 @@ def _final(root: Path, item: dict) -> dict | None:
     return None
 
 
-def run(root: Path, plan: dict, *, workers: int = WORKERS, python: str = sys.executable, wall_cap: float = ROUND_WALL_CAP_SECONDS, watchdogs: dict | None = None, poll: float = 1.0) -> list[dict]:
+def run(root: Path, plan: dict, *, workers: int = WORKERS, python: str = sys.executable, wall_cap: float = ROUND_WALL_CAP_SECONDS, watchdogs: dict | None = None, poll: float = 1.0, module: str = "rs_constraint_lab.gte1") -> list[dict]:
     """Resumable runner: one process per cell, at most ``workers`` at once, watchdog per cell, round wall cap."""
     from rs_constraint_lab.durable import atomic_write_json, read_json
 
@@ -907,7 +907,7 @@ def run(root: Path, plan: dict, *, workers: int = WORKERS, python: str = sys.exe
         while pending and len(running) < workers:
             item = pending.pop(0)
             log = open(root / "logs" / f"{item['item_id']}.log", "w")
-            proc = subprocess.Popen([python, "-m", "rs_constraint_lab.gte1", "item", "--root", str(root), "--item-id", item["item_id"]], stdout=log, stderr=subprocess.STDOUT, env=env)
+            proc = subprocess.Popen([python, "-m", module, "item", "--root", str(root), "--item-id", item["item_id"]], stdout=log, stderr=subprocess.STDOUT, env=env)
             running[proc.pid] = (item, time.time(), log)
         status_file()
         time.sleep(poll)

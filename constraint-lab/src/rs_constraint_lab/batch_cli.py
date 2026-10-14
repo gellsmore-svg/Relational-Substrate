@@ -84,6 +84,8 @@ def main(argv: list[str]) -> int:
         return _gte0b(argv[1:])
     if argv[0] == "gte1":
         return _gte1(argv[1:])
+    if argv[0] == "gte2a":
+        return _gte2a(argv[1:])
     if argv[0] == "batch":
         return _batch(argv[1:])
     print(f"unknown command {argv[0]}", file=sys.stderr)
@@ -1309,5 +1311,39 @@ def _gte1(argv: list[str]) -> int:
         print(json.dumps({"items": len(rows), "status_counts": counts}, indent=2))
         return 0
     digest = gte1.publish(root, plan, repo / gte1.TABLES_RELPATH, frozen_plan_commit=args.frozen_plan_commit, e0b_tables=repo / gte1.E0B_TABLES_RELPATH)
+    print(json.dumps({"payload_sha256": digest}, indent=2))
+    return 0
+
+
+def _gte2a(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(prog="rs_constraint_lab gte2a")
+    parser.add_argument("command", choices=["write-plan", "run", "publish"])
+    parser.add_argument("--frozen-plan-commit", default=None)
+    parser.add_argument("--allow-unpushed", action="store_true")
+    args = parser.parse_args(argv)
+    from rs_constraint_lab import gte2a
+    from rs_constraint_lab.durable import atomic_write_json
+    from rs_constraint_lab.explore08 import FrozenPlanError
+
+    repo = _repo_root()
+    root = repo / gte2a.GENERATED_RELPATH
+    if args.command == "write-plan":
+        plan = gte2a.prepare_plan(repo)
+        atomic_write_json(repo / gte2a.PLAN_RELPATH, plan)
+        print(json.dumps({"items": len(plan["items"]), "plan_hash": plan["plan_hash"]}, indent=2))
+        return 0
+    try:
+        plan = gte2a.require_execution(repo, args.frozen_plan_commit, require_remote=not args.allow_unpushed)
+    except FrozenPlanError as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
+    if args.command == "run":
+        rows = gte2a.run(root, plan)
+        counts: dict[str, int] = {}
+        for row in rows:
+            counts[row["status"]] = counts.get(row["status"], 0) + 1
+        print(json.dumps({"items": len(rows), "status_counts": counts}, indent=2))
+        return 0
+    digest = gte2a.publish(root, plan, repo / gte2a.TABLES_RELPATH, frozen_plan_commit=args.frozen_plan_commit)
     print(json.dumps({"payload_sha256": digest}, indent=2))
     return 0
