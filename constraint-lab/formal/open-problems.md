@@ -49,3 +49,18 @@ Dissolution can be tested as transition-enabling rather than merely loss. Use co
 | XOR global bridge | Finite-horizon routing beyond AND | Single-action stationary shape consequence already bounded |
 | Controlled fragility | Dissolution enables another configuration under matched controls | Valid ordinary-grammar question, not an ontology expansion |
 | Book integration | Scoped model grammar and distinctions | Map provided; books await explicit editing task |
+
+## Generation 8H resolution and sharper questions
+
+The preceding sections retain the 8G research state. H0 now answers CL-Q02's
+same-state existence question with RECENT-REVERSAL (CL-T26): same start,
+event count/multiset and complete endpoint x, distinct reachable h and future
+rows. Q-H-POSITIVE is partially answered, not deleted. Augmentation restores
+first-order Markovity, so this is a representation-relative result.
+
+CL-Q06 asks the minimal augmented state for this specific controller: last pair
+slot, with six values, is sufficient. General hidden-state minimisation is outside
+H0. Other open targets are necessary history depth, history-induced stationary
+structure, which historical functions affect dynamics, and survival of temporal
+effects after class coarse-graining. No H1, L>0, N5 or new trajectory round opens
+automatically. See the non-summed candidate vectors in the 8H report.

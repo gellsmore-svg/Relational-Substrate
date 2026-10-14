@@ -41,3 +41,19 @@ A historical 'action logit' is a log multiplier relative to unit alternatives, n
 These are properties of a law, not primitive ontology axes. Coordinate encodings and observable projection must be declared; a hidden composite encoding does not erase essential raw-bit dependence.
 
 K, J, O, effective gate dimension and interaction order cannot be substituted for one another. Even K-1 bounds interaction order only in the pure literal-conjunction fragment, not for arbitrary count predicates.
+
+## Generation 8H notation extension
+
+The primitive table above records 8G's implemented scope. Generation 8H executes
+one H example: H_pair=1 remembers one prior pair event, with alphabet
+{None,0,1,2,3,4,5}. None is the initial sentinel, not a seventh pair slot.
+Temporal depth one and alphabet size six are different descriptors.
+
+Use h for the register and z_H=(x,h) for augmented state, preserving the earlier
+meaning of z for other pair coordinates. In the history document, p denotes a
+pair mask; the number of pair slots is explicitly six. Pair event e sets h'=e;
+triad events preserve h. H's general meaning remains dependence on prior process
+information not determined by ordinary current x. K describes simultaneous
+current-state expression complexity, J the feature count, and L dynamical
+constraint structure. S=L=0 remain in H0; compiling h to a future S variable
+would be a declared representation change.

@@ -19,3 +19,8 @@ The JSONL catalogue is canonical; its Markdown and dependency diagram are genera
 Each statement has one epistemic status, not an overall score. Catalogue entries link to historical coherence findings without changing their original statements or epistemic layers. Algebraic results concern the declared finite model, not physical reality.
 
 Theorem IDs are namespaced `CL-Txx`: the RS book already uses T1-T4 for ontology axioms. The separate coherence ledger records research history; the catalogue records statements and proof dependencies.
+
+Generation 8H adds the first executed H example. [History as state](history.md)
+separates ordinary material x from finite register h, proves the same-state
+non-compilability boundary, and restores Markov form on augmented state.
+Its verified appendix extends the catalogue without rewriting 8G statements.

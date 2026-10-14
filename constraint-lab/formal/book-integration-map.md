@@ -20,3 +20,17 @@ No book text is edited in 8G. This is a proposed future integration map, not a p
 | Biological DNA implementation claims from gate basis | DO_NOT_INTEGRATE_YET | RS Chapter 38 only after separate evidence | Formal analogy is not a biological mechanism proof |
 
 The mature contribution is a scoped model language and a sharper architecture of questions. Global-coherence comparison remains separate from local formal proof. Existing book T1-T4 axiom IDs must not be repurposed as laboratory theorem IDs.
+
+## Generation 8H additions
+
+The 8G table above is retained as its historical assessment. No book is edited
+in 8H. The following entries refine its prospective H integration after H0:
+
+| Content | Maturity | Proposed location | Scope |
+| --- | --- | --- | --- |
+| Same-state history and non-lumpability, CL-T26..T28 | READY_WITH_SCOPE | RS technical appendix / relational process discussion | One common process, unchanged complete ordinary x, reachable histories; not physical non-Markovianity |
+| Markov restoration by augmentation, CL-T29 | READY_WITH_SCOPE | RS representation and modelling appendix | Finite register is current augmented state; support/update obligations stay explicit |
+| Temporal structure without occupancy change, CL-T31..T34 | READY_WITH_SCOPE | Technical model appendix | Pair-event clock, stationary law and correlations; period-two qualification |
+| Current efficacy versus initial-history forgetting, CL-T32 | READY_WITH_SCOPE | RS Chapter 6 / coherent ontology Chapter 5 | Decay of initial-slot information is distinct from efficacy of current h |
+| Reversal-memory grade-specific information values, CL-N07 | PROVISIONAL | Laboratory report | Model/palette-specific magnitudes, not a book-level ontology argument |
+| General physical historical ontology | DO_NOT_INTEGRATE_YET | None | No inference that nature uses this memory, time is irreducible, or finite history cannot be encoded as present state |

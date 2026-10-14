@@ -181,3 +181,155 @@ features; H admits prior process information not determined by ordinary x;
 L would make constraint configuration itself dynamical. This fixed historical
 controller is L=0. Future S encoding, longer H, scale or meta depth requires a
 separate representation/compilation question and frozen scope.
+
+## 13. Verified H0 appendix
+
+H0 was frozen and pushed at e9f8f3b5b6fae99932ce6a289b6d15c39336a4c4.
+The subsequent exact calculations, published at 10292af, verify the predeclared
+expectations for m=1/4,1,4. The following proofs are algebraic statements under the
+declared model, independently of the finite palette verification. The earlier
+draft-phase text is retained as drafting provenance, not a claim that H0 remains
+unopened. The [report](../reports/generation-008h-history-as-state.md) and hashed
+tables distinguish finite exact identities from numerical information/eigenvalues.
+
+<a id="cl-t26"></a>
+### CL-T26: same-state divergent futures
+
+For every m>0, M=(23,12) and E=(12,23) from (x0,None) have probability
+1/[10(m+9)]>0. The first event has probability 1/10 and the distinct second slot
+has probability 1/(m+9). Toggle commutation yields identical all-ten-bit x*,
+but h is 12 versus 23. Into x* xor 2^12 the full probabilities are m/(m+9)
+and 1/(m+9). Pair conditioning yields m/(m+5) and 1/(m+5). Thus both rows
+diverge iff m!=1. No hidden current triad or different fixed program explains it.
+
+<a id="cl-t27"></a>
+### CL-T27: history erasure and strong lumpability
+
+Strong lumpability requires equal aggregate probability into each x' block for
+every augmented state in the same x block. CL-T26 supplies a violated block for
+non-neutral m, on both clocks. At m=1, full and pair rows are uniformly 1/10
+and 1/6 for every h, including None; all projected block rows agree. Hence
+history erasure is strongly lumpable iff m=1. By CL-T20 and the 8A quotient
+principle, a graph/statistic match cannot substitute for whole-block equality.
+Failure excludes a first-order quotient valid for arbitrary augmented initial
+laws, while a stationary-prior Markov-order claim needs the additional CL-T33.
+
+<a id="cl-t28"></a>
+### CL-T28: fixed-state H0 non-compilability
+
+Suppose a fixed first-order K0 on unchanged x reproduces every projected
+history-conditioned row. At x*, K0(x*,.) must equal both rows in CL-T26.
+For m!=1 they differ, a contradiction. This is independent of K/J budgets.
+CL-T12 allows any single positive row on existing support; it cannot give one
+fixed program two rows at the identical x. The theorem does not exclude
+state augmentation, altered support or marginal-only agreement.
+
+<a id="cl-t29"></a>
+### CL-T29: Markov restoration by augmentation
+
+The event row is a function of current h, and the deterministic update maps
+(x,h,e) to (x xor 2^e, e if pair else h). Thus (x,h) is first-order Markov.
+History relative to x becomes current represented state after augmentation.
+A binary encoding might require simultaneous material/register bit updates;
+this proof neither invokes unchanged-support CL-T12 nor adds an S channel to H0.
+
+<a id="cl-t30"></a>
+### CL-T30: exact pair-event closure
+
+Fix pair mask p and h. Triad-only events preserve both. For h!=None their total
+probability is r=4/(m+9)<1, with event-e mass w_e/(m+9) on every raw triad mask.
+Summing r^k w_e/(m+9) for k>=0 yields w_e/(m+5). The sentinel likewise gives
+(1/10)/(1-4/10)=1/6. The next pair event occurs almost surely. Its update depends
+only on (p,h), establishing the exact epoch kernel on 384 recurrent states.
+This closure uses event semantics and constant row sums, not a chosen triad prior.
+
+<a id="cl-t31"></a>
+### CL-T31: stationary uniformity and one-step invisibility
+
+For a destination (p',j), only predecessors (p' xor 2^j,i) contribute. Their
+transition probabilities sum over i to (m+5)/(m+5)=1, so every column as well as
+every row sums to one. Uniform pi=1/384 satisfies direct balance. Positive slot
+probabilities allow any toggle sequence to reach a target mask, followed by j,j
+to end at history j without changing it. This proves irreducibility and unique
+stationarity. Pair parity flips each step, and repeating the current slot gives
+a two-step return; the period is two.
+
+The joint distribution is explicitly pi(p,h)=(1/64)(1/6), so history and mask
+are independent, not merely marginally uniform. Pair-mask, edge-count and class
+occupancy match H0. The stationary one-step projected slot probability is
+sum_h q_h(e)/6=1/6. This is a pair-clock equality; full-event pair hazard changes.
+Stationary occupancy equality does not assert pointwise convergence from fixed
+parity or equality of higher-order process laws.
+
+<a id="cl-t32"></a>
+### CL-T32: slot eigenstructure and initial-history forgetting
+
+Let Pi be the uniform rank-one matrix. Direct substitution gives
+Q=Pi+lambda(I-Pi), lambda=(m-1)/(m+5). Pi is the identity on the constant mode;
+I-Pi is the identity on the five-dimensional zero-sum space. Hence eigenvalues
+are 1 and lambda (multiplicity five), and Q^k=Pi+lambda^k(I-Pi).
+For finite m>0, -1/5<lambda<1, hence |lambda|<1. Starting at i yields the
+diagonal/off-diagonal probabilities in section 10 and TV=(5/6)|lambda|^k.
+Initial-slot information in h_k tends to zero; current non-neutral h still
+changes the next event. No identical decay rate for all material observables
+is implied.
+
+<a id="cl-t33"></a>
+### CL-T33: exact projected pair-mask order
+
+After an observed pair transition, P_k xor P_{k-1}=2^h_k, so any legal last two
+pair snapshots determine the next row q_h_k. Earlier snapshots add no conditional
+information: order is at most two under every compatible law. Under stationary
+pi, for a fixed current mask each previous neighbour occurs with positive mass.
+Different incoming slots give different next rows for m!=1 by CL-T26's row
+argument. Order one therefore fails at stationarity, proving exact order two.
+For m=1 the pair-mask toggle chain is first-order (event slots are iid). This
+does not assign a finite Markov order on the full-event snapshot clock.
+
+<a id="cl-t34"></a>
+### CL-T34: temporal backtracking and event information
+
+Two consecutive toggles restore a pair mask iff their slots coincide. With
+a=m/(m+5), b=1/(m+5), this event has probability a. At stationary uniform history
+the joint slot law is Q_ij/6 and both marginals are uniform. Direct KL evaluation
+gives I(E_k;E_{k+1})=ln 6+a ln a+5b ln b. It is zero iff m=1 and positive
+otherwise, since KL vanishes only when the conditional row is uniform.
+Backtracking differs from the H0 value 1/6 iff m!=1. These two-time signatures
+coexist with CL-T31's one-time and stationary one-step projected equalities.
+
+<a id="cl-t35"></a>
+### CL-T35: pure shape discrimination at equal edge-count law
+
+At x*, the historical graph classifier maps the three dissolutions to
+(two-edge path, matching, two-edge path), and the three formations to
+(triangle+pendant, four-cycle, triangle+pendant). Summing exact event weights
+gives the two class laws in report section H. Both assign dissolution weight
+m+2 and formation weight 3, proving identical next edge-count laws.
+The matching masses m/(m+5) and 1/(m+5) differ iff m!=1, proving shape
+discrimination. Since class determines edge count, the information chain rule
+gives I(history;class)=I(history;class|edge count) under the equal history prior.
+
+Independently summing the two differing slot contributions gives row JS
+[m ln(2m/(m+1))+ln(2/(m+1))]/D, with D=m+5 or m+9 on the respective clocks.
+For the differing path/matching class masses, let D=m+5. Their JS is
+
+```text
+[2 ln(4/(m+3)) + (m+1) ln(2(m+1)/(m+3))
+ + m ln(2m/(m+1)) + ln(2/(m+1))] / (2D).
+```
+
+The other two classes are shared and contribute zero. This derives the numerical
+shape references from classified laws rather than treating the references as input.
+
+### Finite and numerical verification, and remaining question
+
+CL-F05 records the bounded rational H0 checks; CL-N07 separately records the
+160-digit information values and floating eigenvalue cross-checks. CL-Q02
+remains the historical 8G open entry. Its scoped existence question is answered
+by CL-T26, while the broad Q-H-POSITIVE is only partially answered.
+
+CL-Q06 asks which minimal state augmentation restores first-order sufficiency
+for this controller. The six-valued last-pair register is sufficient; a general
+hidden-state minimisation problem is not opened. Relevant history functions,
+greater necessary depth, occupancy-changing memory and coarse-graining survival
+remain separate future questions.

@@ -51,3 +51,21 @@ Before introducing an axis, specify:
 - whether compilation may augment state.
 
 Then either provide a construction and representation tradeoff, or an exact non-compilability witness. Aggregate fit, larger CMI or a novel syntax name is insufficient. Hard zero support requires a separate extension of the positive theorem.
+
+## Generation 8H: executed history boundary
+
+CL-T26/CL-T28 now give the common-start witness anticipated above. The same
+complete x, fixed ordinary program, event support and baseline receive two
+different next rows solely through reachable history. CL-T12 can assign any
+positive row to x, but only one row to that x under one fixed ordinary program.
+H>0 admits prior process information absent from the declared ordinary x.
+
+The material projection is non-lumpable for non-neutral RECENT-REVERSAL
+(CL-T27); augmented (x,h) is Markov (CL-T29). Pair-epoch masks are exactly order
+two at stationarity (CL-T33), despite invariant occupancy and an H0 stationary
+one-step row (CL-T31). Thus marginal/statistic agreement is strictly weaker
+than conditioned process equivalence. See [history proofs](history.md).
+Compilation after state augmentation remains possible and changes representation.
+K is simultaneous current-state expression complexity, J counts features,
+H reads prior process information not determined by x, and L concerns dynamical
+constraint state. This H example opens neither S nor L.

@@ -752,3 +752,226 @@ Dependencies: none
 Source generations: 008G
 Boundary: No claim beyond the declared support, parameter palette, clock and observable.
 
+## CL-T26: History-conditioned same-state divergent futures
+
+**ALGEBRAIC_THEOREM**
+
+Two legal equal-probability event-order histories from one augmented start end at identical complete material x but have different full and pair future rows iff m!=1.
+
+Assumptions: Common controller, m, baseline, support and clock; x0 has only 01, no triads; h0=None; Histories form(23),form(12) and the reverse order.
+Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0.
+
+Proof: [history.md](../../constraint-lab/formal/history.md#cl-t26). Commuting toggles reach pair mask 41 and zero triads. Path probabilities are 1/[10(m+9)]. Remembered slots exchange m/D and 1/D with D=m+9 or m+5.
+Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
+Coherence: `Q-H-POSITIVE`, `F8G-FORMAL-H-L-DISTINCTION`
+Dependencies: none
+Source generations: 008H
+Boundary: Both rows coincide at m=1; comparing distinct programs or different initial registers is not this witness.
+Notes: Symbolic predeclared expectation before freeze; post-freeze finite rational and numerical checks are separate CL-F05/CL-N07. Representation-relative model statement.
+
+## CL-T27: Non-lumpability of history erasure
+
+**ALGEBRAIC_THEOREM**
+
+The full-event and pair-epoch projections forgetting h are strongly lumpable iff m=1.
+
+Assumptions: Projection (x,h)->x or (pair_mask,h)->pair_mask; Strong lumpability means equality into every projected transition block.
+Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0.
+
+Proof: [history.md](../../constraint-lab/formal/history.md#cl-t27). At x*, the block toggling 12 receives m/D versus 1/D. At m=1 all full/pair rows are uniformly independent of h, including the sentinel.
+Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
+Coherence: `F8G-FORMAL-EQUIVALENCE-HIERARCHY`, `F011-QUOTIENT-INVALID`
+Dependencies: CL-T26, CL-T20
+Source generations: 008H
+Boundary: Non-lumpability rules out a quotient valid for arbitrary augmented initial laws; a selected prior requires a separate process test.
+Notes: Symbolic predeclared expectation before freeze; post-freeze finite rational and numerical checks are separate CL-F05/CL-N07. Representation-relative model statement.
+
+## CL-T28: Unchanged-state H0 non-compilability
+
+**ALGEBRAIC_THEOREM**
+
+For m!=1 no fixed first-order kernel on unchanged complete ordinary x reproduces every history-conditioned projected future row.
+
+Assumptions: One fixed kernel on the unchanged ordinary state space; All reachable history-conditioned rows must be reproduced.
+Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0.
+
+Proof: [history.md](../../constraint-lab/formal/history.md#cl-t28). K0(x*,.) would need to equal the two unequal CL-T26 rows simultaneously, contradicting row uniqueness.
+Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
+Coherence: `F8G-FORMAL-CURRENT-STATE-EXPRESSIVITY`, `F8G-FORMAL-COMPILATION-TEST`, `Q-H-POSITIVE`
+Dependencies: CL-T26, CL-T12
+Source generations: 008H
+Boundary: State augmentation, altered update support and marginal-only matching are outside this impossibility theorem.
+Notes: Symbolic predeclared expectation before freeze; post-freeze finite rational and numerical checks are separate CL-F05/CL-N07. Representation-relative model statement.
+
+## CL-T29: State augmentation restores Markov form
+
+**ALGEBRAIC_THEOREM**
+
+RECENT-REVERSAL is first-order Markov on the finite augmented state (x,h).
+
+Assumptions: The register is explicit augmented state; Pair updates set h to the slot; triad updates preserve h.
+Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0.
+
+Proof: [history.md](../../constraint-lab/formal/history.md#cl-t29). The next event row and deterministic augmented update depend only on current (x,h).
+Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
+Coherence: `F8G-FORMAL-H-L-DISTINCTION`, `F8G-FORMAL-COMPILATION-TEST`
+Dependencies: none
+Source generations: 008H
+Boundary: An S encoding or binary multibit update is a representation change; no absolute non-Markovianity or irreducible time is established.
+Notes: Symbolic predeclared expectation before freeze; post-freeze finite rational and numerical checks are separate CL-F05/CL-N07. Representation-relative model statement.
+
+## CL-T30: Exact pair-event quotient closure
+
+**ALGEBRAIC_THEOREM**
+
+Summing triad-only excursions gives the exact next-pair kernel on (pair_mask,h), with 384 recurrent states and q_h(e)=m/(m+5) for e=h, otherwise 1/(m+5).
+
+Assumptions: Triad toggles preserve pair mask and h; Unit triad weights; pair weights do not read triad state; The initial sentinel gives uniform pair slots.
+Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0.
+
+Proof: [history.md](../../constraint-lab/formal/history.md#cl-t30). The geometric excursion sum [w_e/(m+9)]/[1-4/(m+9)] equals w_e/(m+5); pair absorption occurs almost surely.
+Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
+Coherence: `F011-QUOTIENT-INVALID`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`
+Dependencies: CL-T29
+Source generations: 008H
+Boundary: Different history updates or triad-dependent hazards need a new closure proof; no raw-triad prior is assumed.
+Notes: Symbolic predeclared expectation before freeze; post-freeze finite rational and numerical checks are separate CL-F05/CL-N07. Representation-relative model statement.
+
+## CL-T31: Uniform stationary pair/history law and one-step material equality
+
+**ALGEBRAIC_THEOREM**
+
+The recurrent pair-epoch chain has unique uniform stationary joint law pi(p,h)=1/384, independent mask/history, H0 material occupancy and H0 stationary one-step projected pair rows.
+
+Assumptions: m>0; pair-epoch clock after the sentinel; Stationary initial law for the projected one-step comparison.
+Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0.
+
+Proof: [history.md](../../constraint-lab/formal/history.md#cl-t31). Each destination has six predecessors with incoming sum one. Positive slot sequences give irreducibility; parity and a two-step return give period two. Uniform joint law implies independent uniform marginals and averaged slot probability 1/6.
+Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
+Coherence: `Q-H-POSITIVE`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`
+Dependencies: CL-T30
+Source generations: 008H
+Boundary: Period two prevents pointwise convergence from fixed parity. Full-event pair-versus-triad hazard and multi-time laws need not match H0.
+Notes: Symbolic predeclared expectation before freeze; post-freeze finite rational and numerical checks are separate CL-F05/CL-N07. Representation-relative model statement.
+
+## CL-T32: History-slot eigenstructure and initial-history decay
+
+**ALGEBRAIC_THEOREM**
+
+The six-slot matrix has eigenvalues 1 and lambda=(m-1)/(m+5) of multiplicity five; Q^k=Pi+lambda^k(I-Pi), and TV from a fixed initial slot is (5/6)|lambda|^k.
+
+Assumptions: Pi is the uniform six-slot rank-one matrix; Pair-event clock; finite m>0.
+Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0.
+
+Proof: [history.md](../../constraint-lab/formal/history.md#cl-t32). Q=Pi+lambda(I-Pi) acts diagonally on constant and zero-sum subspaces; |lambda|<1. Its powers yield the exact conditional row and TV.
+Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
+Coherence: `F018-LOCAL-VERSUS-INITIAL`, `F8C-CURRENT-SURVIVES`
+Dependencies: CL-T30
+Source generations: 008H
+Boundary: Decay concerns initial-slot information in current h, not all initial-condition information in every material multi-time observable.
+Notes: Symbolic predeclared expectation before freeze; post-freeze finite rational and numerical checks are separate CL-F05/CL-N07. Representation-relative model statement.
+
+## CL-T33: Exactly order-two projected pair-mask process
+
+**ALGEBRAIC_THEOREM**
+
+After an observed pair transition the material pair process has order at most two; at stationary law it has exactly order two for m!=1 and is first-order for m=1.
+
+Assumptions: Pair snapshots observe every pair toggle; Positive stationary law for the order-one failure witness.
+Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0.
+
+Proof: [history.md](../../constraint-lab/formal/history.md#cl-t33). The one-hot XOR of previous/current masks identifies h. All earlier snapshots are conditionally irrelevant, while distinct incoming slots into the same current mask give unequal next rows for non-neutral m.
+Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
+Coherence: `Q-H-POSITIVE`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`
+Dependencies: CL-T26, CL-T30, CL-T31
+Source generations: 008H
+Boundary: No finite Markov-order claim is made for full-event snapshots containing arbitrarily long triad-only waits.
+Notes: Symbolic predeclared expectation before freeze; post-freeze finite rational and numerical checks are separate CL-F05/CL-N07. Representation-relative model statement.
+
+## CL-T34: Temporal backtracking and consecutive-slot information
+
+**ALGEBRAIC_THEOREM**
+
+Stationary pair-mask backtracking is m/(m+5), and consecutive-event MI is ln 6+a ln a+5b ln b, with a=m/(m+5), b=1/(m+5); MI vanishes iff m=1.
+
+Assumptions: Stationary uniform history on the pair clock; Exactly one pair bit toggles at each pair epoch.
+Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0.
+
+Proof: [history.md](../../constraint-lab/formal/history.md#cl-t34). Two toggles restore a mask iff slots repeat. The joint slot law Q_ij/6 has uniform marginals; direct KL gives the expression and strict positivity away from neutral.
+Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
+Coherence: `Q-H-POSITIVE`, `F018-LOCAL-VERSUS-INITIAL`
+Dependencies: CL-T31, CL-T32
+Source generations: 008H
+Boundary: A temporal process statistic is distinct from a one-time occupancy or a master memory score.
+Notes: Symbolic predeclared expectation before freeze; post-freeze finite rational and numerical checks are separate CL-F05/CL-N07. Representation-relative model statement.
+
+## CL-T35: Same-state pure shape witness at equal edge-count law
+
+**ALGEBRAIC_THEOREM**
+
+At the path endpoint, middle-last and end-last histories have identical next pair-event edge-count law but unequal graph-class law iff m!=1; equal-prior class information equals shape-given-edge information.
+
+Assumptions: Path 01-12-23, no triads; Historical exact N=4 graph classifier; Equal history prior from equal-probability common-start paths.
+Scope: RECENT-REVERSAL(m), m>0, N=4 O=3 independent relations; H_pair=1, G=S=L=0.
+
+Proof: [history.md](../../constraint-lab/formal/history.md#cl-t35). Classify the six actual toggles. Both count laws have masses (m+2,3)/(m+5); matching masses differ by (m-1)/(m+5). Class determines count, so the information chain rule removes the zero count term.
+Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
+Coherence: `Q-H-POSITIVE`, `F8G-FORMAL-EQUIVALENCE-HIERARCHY`
+Dependencies: CL-T26, CL-T16
+Source generations: 008H
+Boundary: This is conditional next-step shape discrimination, compatible with unchanged stationary history-marginalised occupancy.
+Notes: Symbolic predeclared expectation before freeze; post-freeze finite rational and numerical checks are separate CL-F05/CL-N07. Representation-relative model statement.
+
+## CL-F05: Frozen H0 exact finite verification
+
+**FINITE_EXHAUSTIVE_RESULT**
+
+All rational controls and identities in the 11 frozen H0 items pass for m=1/4,1,4, including the common-start witness, 384-state balance, raw-triad quotient and order-two checks.
+
+Assumptions: Frozen H0 plan and exact rational controller; No non-neutral target execution before committed/pushed freeze.
+Scope: Three multipliers and the enumerated H0 domains only.
+
+Enumeration: 11 H0 atomic items; 6912 epoch transition entries, 1008 raw-triad absorption rows, 6912 consistent material triples, 41472 two-step paths and 71680 deterministic updates.; exact count 11. Verifier: [gen008h_exec.py](../../constraint-lab/src/rs_constraint_lab/gen008h_exec.py)
+Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py), [generation-008h-round-h0-tables.json](../../constraint-lab/reports/generation-008h-round-h0-tables.json), [generation-008h-validation.json](../../constraint-lab/reports/tables/generation-008h-validation.json)
+Coherence: `Q-H-POSITIVE`
+Dependencies: CL-T26, CL-T27, CL-T29, CL-T30, CL-T31, CL-T32, CL-T33, CL-T34, CL-T35
+Source generations: 008H
+Boundary: The finite checks do not prove all-m statements; those use CL-T26..T35. Irrational information values and float eigenvalues are separately CL-N07.
+Notes: All rational validation gaps zero; zero stochastic trajectories.
+
+## CL-N07: H0 numerical information and eigenvalue checks
+
+**NUMERICAL_KERNEL_RESULT**
+
+From exact rational H0 rows, 160-digit information evaluations and floating eigenvalues agree with independently derived formulas within frozen 1e-13 tolerances.
+
+Assumptions: Exact probability tables; Natural logarithms, equal history prior for row/shape JS; NumPy eigvalsh for the numerical cross-check.
+Scope: m=1/4,1,4 in H0; numerical values, not a parameter census.
+
+Method: 160-digit Decimal logarithms from Fraction probabilities; enumerated JS/MI compared with formulas; exact eigenbasis identity plus floating eigvalsh cross-check.
+Domain: Full/pair row JS, graph-class JS, consecutive-event MI and six-slot eigenvalues for three grades.
+Tolerances: `{"eigenvalue_gap": "1e-13", "information_formula_gap": "1e-13"}`
+Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py), [generation-008h-witness.json](../../constraint-lab/reports/tables/generation-008h-witness.json), [generation-008h-history-chain.json](../../constraint-lab/reports/tables/generation-008h-history-chain.json), [generation-008h-validation.json](../../constraint-lab/reports/tables/generation-008h-validation.json)
+Coherence: `Q-H-POSITIVE`
+Dependencies: CL-T32, CL-T34, CL-T35, CL-F05
+Source generations: 008H
+Boundary: Display rounding is not exact irrational equality; external reference values are review checks rather than stored scientific input.
+Notes: Maximum information formula gap 2e-160; floating eigenvalue gap 4.441e-16.
+
+## CL-Q06: Minimal state augmentation for recent-reversal memory
+
+**OPEN_QUESTION**
+
+What is the minimal augmented state that restores first-order Markov sufficiency for this specific projected pair process, under an explicitly declared encoding and clock?
+
+Assumptions: RECENT-REVERSAL, non-neutral m; The six-valued last-pair slot is already known sufficient.
+Scope: Specific finite controller; no general hidden-state minimisation task opened.
+
+Argument/next test: Declare preserved material projection and update support, then seek a scoped minimality argument; H0 executes no follow-up.
+Evidence: [history.md](../../constraint-lab/formal/history.md), [generation-008h-history-as-state.md](../../constraint-lab/reports/generation-008h-history-as-state.md), [test_v08h.py](../../constraint-lab/tests/test_v08h.py)
+Coherence: `Q-H-POSITIVE`
+Dependencies: CL-T29, CL-T33
+Source generations: 008H
+Boundary: At m=1 the register is unnecessary. General H functions, arbitrary hidden-state models and L mechanisms are separate questions.
+Notes: Historical CL-Q02 is retained; CL-T26 answers its scoped existence question.
+
