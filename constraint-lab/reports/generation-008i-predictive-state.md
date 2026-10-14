@@ -47,6 +47,15 @@ confirmation round. New generic refinement/minimality certificates and
 membership/commutation checks were frozen before execution; known expectations
 and prior exposure remain explicit in the charter and plan.
 
+Post-execution chronology audit additionally found that the pre-freeze focused
+suite re-ran historical test_v08h.py, including published non-neutral labelled
+Markov-order checks. No new refinement or coarse CMI target ran before freeze,
+but that repeat does not satisfy the literal section 55 prohibition on
+non-neutral Markov-order verification. This is a procedural deviation, not
+erased by the new-target zero count. The receipt addendum and closing provenance
+retain it; the frozen plan itself is unchanged. Mathematical identities and
+certificate verification are reported separately from freeze compliance.
+
 ## D. Observation hierarchy
 
 P is the labelled six-bit pair mask; C its unlabelled graph class; K its edge

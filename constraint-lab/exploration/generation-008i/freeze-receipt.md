@@ -18,3 +18,19 @@ Fractions are used for refinement, quotient rows, stationary masses and
 certificates. Information uses 160-digit decimal natural logarithms (nats),
 with independent-route tolerance 1e-25. Counts have no adjustable tolerance.
 No stochastic scientific trajectories are permitted.
+
+## Post-execution chronology audit
+
+The pre-freeze focused suite included the historical test_v08h.py regression
+tests. Those re-executed already-published non-neutral labelled-mask
+temporal/Markov-order checks. New predictive-state refinement functions,
+non-neutral graph/count quotient verification and coarse CMI cells remained
+unopened. The frozen zero count refers to new variant target executions,
+NOT every scientific operation in historical regressions.
+
+This repeated historical Markov-order verification does not satisfy a literal
+reading of Prompt 008I section 55's non-neutral Markov-order prohibition.
+It is recorded as a procedural deviation, in addition to the already disclosed
+prior branch exposure. The frozen plan and all original receipts/results are
+not rewritten. Results are exact re-verification and new certificates, not a
+fully unexposed round. No later freeze can undo this exposure.
