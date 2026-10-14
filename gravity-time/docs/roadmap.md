@@ -145,3 +145,16 @@ The sections above are unchanged.
 - **E3B** (frozen `1bc7c18`, results `1fbaf5a`; chosen after the E3A reflection `1e5ebc3`): the held triangle's internal witnesses impose an exact, orientation-neutral bias against attachment (T7, T8). With it divided out (an instrument), every σ > 0 path family gathers while keeping its arrow.
 - **Recommended next (not run).** A covariant source-structure control: a held structure without internal two-paths (GT-Q14). Displacement is still undefined (GT-Q15).
 - **Not authorised by GT-P006:** E3C and N=7. Making the scaffold configurable is an architectural change, so it has been requested for authorisation rather than started.
+
+## E4 status (GT-P007)
+
+The sections above are unchanged.
+- **Configurable held scaffold.** Implemented: a set of held relations, with the triangle as default and the grammar untouched.
+- **E4A** (frozen `f5b3b50`, results `06e5f36`): K2, P3 and K3.
+- **E4B** (frozen `9a1c539`, results `64e183f`; chosen after the E4A reflection `8127d24`): the star K1,3 and the path P4.
+- **Results.**
+  - Floor-guided sorting of attachment within references (robust).
+  - Native raw gathering under floor-free references, mostly density composition.
+  - The handover orientation is invariant across all five references.
+- **Recommended next (not run).** A derivation of floor-guided sorting (GT-Q16), and an architecture review of references (GT-Q17).
+- **Not authorised:** E4C and N=7.

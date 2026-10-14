@@ -44,6 +44,13 @@ An independently governed research programme built on the Constraint Laboratory 
 | E3B frozen plan, tables, atlas | [`plans/round-e3b-plan.json`](plans/round-e3b-plan.json), [`reports/round-e3b-tables.json`](reports/round-e3b-tables.json), [`reports/gt-e3b-atlas.md`](reports/gt-e3b-atlas.md) |
 | E3 synthesis; cross-programme transfer note | [`reports/gt-e3-synthesis.md`](reports/gt-e3-synthesis.md), [`docs/e3-cross-programme-transfer.md`](docs/e3-cross-programme-transfer.md) |
 | GT-P006 execution record | [`provenance/execution-GT-P006.md`](provenance/execution-GT-P006.md) |
+| **GT-P007 (E4A, E4B): plain-English report** | [`reports/gt-e4-report.md`](reports/gt-e4-report.md) |
+| E4 coverage and selection; configurable scaffold | [`docs/e4-coverage-and-selection.md`](docs/e4-coverage-and-selection.md), [`docs/e4-configurable-scaffold.md`](docs/e4-configurable-scaffold.md) |
+| E4 formal note (witness floors of held references) | [`docs/e4-formal-witness-floors.md`](docs/e4-formal-witness-floors.md) |
+| E4A frozen plan, tables, atlas, reflection | [`plans/round-e4a-plan.json`](plans/round-e4a-plan.json), [`reports/round-e4a-tables.json`](reports/round-e4a-tables.json), [`reports/gt-e4a-atlas.md`](reports/gt-e4a-atlas.md), [`reports/gt-e4a-reflection.md`](reports/gt-e4a-reflection.md) |
+| E4B frozen plan, tables, atlas | [`plans/round-e4b-plan.json`](plans/round-e4b-plan.json), [`reports/round-e4b-tables.json`](reports/round-e4b-tables.json), [`reports/gt-e4b-atlas.md`](reports/gt-e4b-atlas.md) |
+| E4 synthesis; cross-programme transfer note | [`reports/gt-e4-synthesis.md`](reports/gt-e4-synthesis.md), [`docs/e4-cross-programme-transfer.md`](docs/e4-cross-programme-transfer.md) |
+| GT-P007 execution record | [`provenance/execution-GT-P007.md`](provenance/execution-GT-P007.md) |
 | Coherence ledger and snapshot | [`coherence/`](coherence/) |
 | Ontology proposals for later review | [`docs/ontology-proposals.md`](docs/ontology-proposals.md) |
 | Provenance | [`provenance/`](provenance/) |

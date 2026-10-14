@@ -44,6 +44,12 @@ flowchart TD
     GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING["GT-F57-SCAFFOLD-CONFOUNDED-NON-GATHERING: With the source-witness floor divided out of attachment rates (a counterfactual instrum..."]
     GT_F58_Q12_SCAN_NO_COUNTEREXAMPLE["GT-F58-Q12-SCAN-NO-COUNTEREXAMPLE: On frozen 9x9 grids of synthetic path-formation and path-dissolution factors (2^k, k in..."]
     GT_F59_ONE_WAY_PART_CAN_OPPOSE["GT-F59-ONE-WAY-PART-CAN-OPPOSE: Under hard path-formation exclusion with the strongest available opposing dissolution (..."]
+    GT_F60_FLOOR_GUIDED_SORTING["GT-F60-FLOOR-GUIDED-SORTING: Within a held reference, new relations concentrate on its lowest-permanent-floor sites ..."]
+    GT_F61_NATIVE_K2_RAW_GATHERING["GT-F61-NATIVE-K2-RAW-GATHERING: Under a held single edge (K2, the only floor-free connected reference), every sigma>0 p..."]
+    GT_F62_NATIVE_GATHERING_IS_DENSITY_COMPOSITION["GT-F62-NATIVE-GATHERING-IS-DENSITY-COMPOSITION: Null-density-standardised against each reference's own NULL profile, native raw gatheri..."]
+    GT_F63_TOTAL_FLOOR_NOT_PREDICTIVE["GT-F63-TOTAL-FLOOR-NOT-PREDICTIVE: At equal source size, held-edge count and null (k=4, K=3, N=6, r0=8/12), the star (tota..."]
+    GT_F64_CHORD_SWITCHES_SITE_OFF["GT-F64-CHORD-SWITCHES-SITE-OFF: The free P3 closing chord raises the middle's internal witnesses from 0 to 2; when it i..."]
+    GT_F65_HANDOVER_ACROSS_REFERENCES["GT-F65-HANDOVER-ACROSS-REFERENCES: The handover keeps the E0 orientation in every sigma>0 cell under all five held referen..."]
   end
   subgraph INFERENCE [Inferences]
     GT_F09_POTENTIAL_AS_MECHANISM["GT-F09-POTENTIAL-AS-MECHANISM: In the existing grammar a basin around a held relational structure arises from minimal ..."]
@@ -56,6 +62,7 @@ flowchart TD
     GT_F52_HARD_ADJACENCY_SILENCES_PATHS["GT-F52-HARD-ADJACENCY-SILENCES-PATHS: Theorem (formal note 5.3): under hard adjacency exclusion every reachable state is a ma..."]
     GT_F53_HELD_SOURCE_AS_WITNESS["GT-F53-HELD-SOURCE-AS-WITNESS: Theorem (formal note 5.4): in HELD the source triangle supplies a two-path to every att..."]
     GT_F56_SOURCE_WITNESS_FLOOR["GT-F56-SOURCE-WITNESS-FLOOR: Theorem (formal note 7.4-7.5, derived after E3A, verified in all 18 E3B cells): in HELD..."]
+    GT_F66_WITNESS_FLOOR_THEOREMS["GT-F66-WITNESS-FLOOR-THEOREMS: Theorems (docs/e4-formal-witness-floors.md): the permanent path-witness floor at source..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     GT_F03_DRIFT_CRITERION_CONFOUNDED["GT-F03-DRIFT-CRITERION-CONFOUNDED: The frozen G0 inward-drift criterion does not separate attraction from density: DENS pa..."]
@@ -84,6 +91,8 @@ flowchart TD
     GT_Q13_PRECEDENCE_VERSUS_ENABLING["GT-Q13-PRECEDENCE-VERSUS-ENABLING: Why are strictly enabled events under-represented immediately after the enabling dissol..."]
     GT_Q14_COVARIANT_SOURCE_STRUCTURE_TEST["GT-Q14-COVARIANT-SOURCE-STRUCTURE-TEST: Do the sigma>0 path families gather toward a held structure without internal two-paths ..."]
     GT_Q15_DISPLACEMENT_DEFINITION_GAP["GT-Q15-DISPLACEMENT-DEFINITION-GAP: What non-circular identity for a moving thing and what separation observable would make..."]
+    GT_Q16_SORTING_DERIVATION["GT-Q16-SORTING-DERIVATION: Can floor-guided sorting (GT-F60) be derived: a closed form or bounds for per-orbit att..."]
+    GT_Q17_REFERENCE_ARCHITECTURE["GT-Q17-REFERENCE-ARCHITECTURE: Given that every imposed held reference biases results through its own structure, shoul..."]
   end
   GT_F02_INCIDENCE_SELECTIVITY -->|contrasts_with| GT_F01_DENS_NULL
   GT_F03_DRIFT_CRITERION_CONFOUNDED -->|qualifies| GT_F02_INCIDENCE_SELECTIVITY
@@ -184,3 +193,14 @@ flowchart TD
   GT_Q12_AGGREGATE_ORIENTATION_THEOREM -->|partially_answered_by| GT_F58_Q12_SCAN_NO_COUNTEREXAMPLE
   GT_F59_ONE_WAY_PART_CAN_OPPOSE -->|qualifies| GT_F54_HARD_BAN_END_OF_SOFT_LADDER
   GT_Q15_DISPLACEMENT_DEFINITION_GAP -->|raised_by| GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING
+  GT_F60_FLOOR_GUIDED_SORTING -->|supports| GT_F56_SOURCE_WITNESS_FLOOR
+  GT_F61_NATIVE_K2_RAW_GATHERING -->|supports| GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING
+  GT_F62_NATIVE_GATHERING_IS_DENSITY_COMPOSITION -->|qualifies| GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING
+  GT_F62_NATIVE_GATHERING_IS_DENSITY_COMPOSITION -->|refines| GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY
+  GT_F63_TOTAL_FLOOR_NOT_PREDICTIVE -->|qualifies| GT_F60_FLOOR_GUIDED_SORTING
+  GT_F64_CHORD_SWITCHES_SITE_OFF -->|refines| GT_F60_FLOOR_GUIDED_SORTING
+  GT_F65_HANDOVER_ACROSS_REFERENCES -->|supports| GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH
+  GT_F66_WITNESS_FLOOR_THEOREMS -->|refines| GT_F56_SOURCE_WITNESS_FLOOR
+  GT_Q14_COVARIANT_SOURCE_STRUCTURE_TEST -->|partially_answered_by| GT_F61_NATIVE_K2_RAW_GATHERING
+  GT_Q16_SORTING_DERIVATION -->|raised_by| GT_F60_FLOOR_GUIDED_SORTING
+  GT_Q17_REFERENCE_ARCHITECTURE -->|raised_by| GT_F63_TOTAL_FLOOR_NOT_PREDICTIVE

@@ -223,9 +223,53 @@ graph LR
 - **This does not show gravity.** It reopens the source–probe question with a better-defined test: a held structure with no internal two-paths, which is label-covariant.
 - **Displacement and acceleration remain undefined.** The map's largest gaps are still definitional.
 
+
+## 9. Revision after E4A and E4B (GT-P007; sections 1–8 unchanged)
+
+**Evidence states used:** proved; observed; instrument-conditional; conjectured; blocked; unknown; undefined; rejected/qualified.
+
+| Entry | Before (section 8) | After E4 | State | Evidence |
+| --- | --- | --- | --- | --- |
+| B10 Source as witness | Exact floor for the triangle (T7) | Floor formula for **any** held graph (F1); only K2 is floor-free (F2); per-slot factors are orientation-neutral (F4) | proved | `e4-formal-witness-floors.md` |
+| B12 → P8 (non-gathering) | Scaffold-confounded (E3B instrument) | **Qualified.** Natively, floor-free references (K2, the star centre) give raw above-null attachment, but standardised margins are mostly near zero or negative (density composition). CSPH under K2 is the small exception | observed; E3B's stronger reading was instrument-conditional | GT-F61, GT-F62 |
+| New B14: floor-guided sorting | — | Within a held reference, new relations concentrate on its lowest-floor sites (P3 2×, star 4×; uniform P4 roughly flat). A free chord can switch a site off | observed (robust, within-cell) | GT-F60 |
+| P1 Reference structure | The source's internal structure participates | It also *sorts* where relations attach; references are not interchangeable even at equal size and edge count (star against P4) | observed | GT-F60, GT-F63 |
+| P8 Source–probe dependence | Reopened | Structure-dependent; mostly occupancy composition, not density-independent preference | observed / qualified | GT-F62 |
+| P5 Ordering | Robust | The handover orientation is invariant across five references; its magnitude depends on the reference (F5) | observed | E4A/E4B |
+| P6, P7 | Undefined | **Undefined** | undefined | — |
+
+**Gap register: changed rows**
+
+| Prerequisite | Capability now | Next information-bearing question |
+| --- | --- | --- |
+| Reference structure | Imposed; sorts attachment by floor; any imposed reference biases results through its own structure | **Architecture review:** imposed against emergent references (do nothing experimental until decided) |
+| Attraction / gathering | Raw native gathering under floor-free references, mostly density composition | Separate sparseness from preference (analysis of existing data) |
+| Floor-guided sorting (new) | Robust observation | **A derivation** (closed form or bounds at small N) |
+| Displacement / identity / acceleration | Undefined | Do nothing yet |
+
+```mermaid
+graph LR
+  F1[Floor formula, any held graph]:::proved --> B14[Floor-guided sorting of attachment]:::observed
+  F2[Only K2 floor-free]:::proved --> P8[Source-probe dependence]
+  B14 --> P1[Reference structure is active]
+  K2[Native K2 raw gathering]:::observed -.->|mostly density composition| P8
+  F4[Per-slot factors orientation-neutral]:::proved --> P5[Ordering kept across references]
+  P5 -.->|definition gap| P6[Displacement]:::undefined
+  classDef proved fill:#d8f0d8,stroke:#2a7a2a
+  classDef observed fill:#e6eefc,stroke:#2a4a8a
+  classDef undefined fill:#eeeeee,stroke:#777,stroke-dasharray: 4 3
+```
+
+**Narrative.**
+- **The native test confirmed the mechanism E3B pointed to.** A held reference's own supporting paths suppress attachment, and they do so in proportion to each site's support.
+- **It did not confirm the stronger reading.** Remove the support and these rules gather, but mostly in the trivial sense of keeping the graph sparse.
+- **The robust new capability is sorting.** A structure decides *where* relations form.
+- **What lies between this and anything gravitational is still definitional:** identity, displacement and separation.
+
 ---
 
 ## Revision history
 
 - **Baseline:** sections 1–7 at the GT-P006 pre-freeze commit (`c4ab745`, E3A code commit).
 - **Revision 1 (after E3A, E3B):** section 8.
+- **Revision 2 (after E4A, E4B; GT-P007):** section 9.

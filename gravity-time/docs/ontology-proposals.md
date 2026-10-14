@@ -126,3 +126,16 @@ Both occur in the model and separate by whether recovery can happen directly (GT
 **Proposal.** In aggregate observables (orientation, flux, absence duration), a hard formation ban behaves like the extreme of soft suppression (GT-F54). What is qualitatively new is the support: one-way edges, recovery only through gate-clearing, and no direct recovery. RS readings of "admissibility" and "tendency" should therefore treat them as continuous in their statistical effects but distinct in the structure of possible histories. This refines OP-10. The distinction between the two generators of direction becomes a difference of *support*, not of orientation.
 
 **Status if adopted:** refinement of OP-10.
+
+## OP-16. Support can make a site less available (from E4A, E4B)
+
+**Proposal.** Record, model-scoped, that within a structured reference, new relations form preferentially at the sites that are themselves least supported, whenever the rules suppress formation along supported paths or favour release of supported relations (GT-F60). A free internal relation can switch a site off by adding support (GT-F64). Relational accounts of "where things attach" should therefore distinguish a structure's **presence** from its **internal support distribution**. This qualifies OP-13 ("a reference takes part") by saying *how* it takes part.
+
+**Status if adopted:** model-scoped mechanism candidate. No primitive is added.
+**Would count against:** a derivation (GT-Q16) showing the sorting to be a kinetic artefact independent of support, or its absence under other formation-suppressing families.
+
+## OP-17. Gathering must survive density adjustment (from E4A)
+
+**Proposal.** Treat a source-relative occupancy preference as gathering only if it survives standardisation to a declared density reference. Natively, the above-null attachment under floor-free references is mostly density composition (GT-F62). This is a methodological rule for any gravity-motivated use of occupancy statistics.
+
+**Status if adopted:** methodological principle.
