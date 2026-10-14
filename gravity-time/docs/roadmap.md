@@ -93,7 +93,7 @@ What changed for the phases below:
 
 ## Recommended next experiment: E1 — scale test of the handover and of basin–arrow coexistence
 
-1. **Machinery, as a separate commit with its own tests.** A vectorised label-covariant template kernel that computes rates by motif counting instead of per-rule matching. Validate it against `build_kernel` on every E0 cell at N=5 and 6 to 1e-12. Use sparse stationary solves to reach N=7 (HELD 262,144 states; FREE 2,097,152 states, sparse iteration only).
+1. **Machinery, as a separate commit with its own tests.** *(Done 2026-10-14: `docs/e1-kernel.md`. Bit-exact against `build_kernel` on all E0 cells at N=4–6; HELD N7 solves in about 11 s and FREE N7 in about 150 s. Observable scaling remains.)* A vectorised label-covariant template kernel that computes rates by motif counting instead of per-rule matching. Validate it against `build_kernel` on every E0 cell at N=5 and 6 to 1e-12. Use sparse stationary solves to reach N=7 (HELD 262,144 states; FREE 2,097,152 states, sparse iteration only).
 2. **A frozen round at N=7, with the same grades as E0B.**
    - Cells: CSPH and CSPF, CWPH and CWPF, PATHF weak_suppress and PATHH weak_favour, with NULL and CLOSEW controls; HELD first.
    - Questions: Does the CSPH selectivity margin survive (GT-Q07)? Does the handover orientation persist? Does the equal-ratio occupancy gap keep growing? Is the hub-frame arrow still legible?

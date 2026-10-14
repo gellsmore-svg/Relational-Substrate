@@ -17,8 +17,9 @@ An independently governed research programme built on the Constraint Laboratory 
 | E0A reflection and E0A→E0B decision | [`reports/gt-e0a-reflection.md`](reports/gt-e0a-reflection.md) |
 | Report, E0A and E0B (with completion answers) | [`reports/gt-e0-report.md`](reports/gt-e0-report.md) |
 | Behavioural atlas, E0 | [`reports/gt-e0-atlas.md`](reports/gt-e0-atlas.md), trajectories [`reports/gt-e0-atlas-trajectories.json`](reports/gt-e0-atlas-trajectories.json) |
+| E1 machinery: vectorised kernel | [`docs/e1-kernel.md`](docs/e1-kernel.md) |
 | Coherence ledger and snapshot | [`coherence/`](coherence/) |
 | Ontology proposals for later review | [`docs/ontology-proposals.md`](docs/ontology-proposals.md) |
 | Provenance | [`provenance/`](provenance/) |
 
-Code: `constraint-lab/src/rs_constraint_lab/gt0.py`, `gt0_exec.py`, `gt1.py`, `gte0a.py`, `gte0b.py`, `gte0_atlas.py`. Commands: `python -m rs_constraint_lab gt0|gt1|gte0a|gte0b ...`. Tests: `constraint-lab/tests/test_gt0.py`, `test_gte0a.py`, `test_gte0b.py`. Generated items go to `gravity-time/generated/`, which is gitignored.
+Code: `constraint-lab/src/rs_constraint_lab/gt0.py`, `gt0_exec.py`, `gt1.py`, `gte0a.py`, `gte0b.py`, `gte0_atlas.py`, `gtkernel.py`. Commands: `python -m rs_constraint_lab gt0|gt1|gte0a|gte0b ...`. Tests: `constraint-lab/tests/test_gt0.py`, `test_gte0a.py`, `test_gte0b.py`, `test_gtkernel.py`. Generated items go to `gravity-time/generated/`, which is gitignored.
