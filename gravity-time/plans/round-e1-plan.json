@@ -1,0 +1,870 @@
+{
+  "alphabets": {
+    "W16": {
+      "factors": {
+        "neutral": "1",
+        "prohibit": "0",
+        "strong_favour": "16",
+        "strong_suppress": "1/16",
+        "weak_favour": "4",
+        "weak_suppress": "1/4"
+      },
+      "log_strength_vs_W4": 2.0
+    },
+    "W3": {
+      "factors": {
+        "neutral": "1",
+        "prohibit": "0",
+        "strong_favour": "9",
+        "strong_suppress": "1/9",
+        "weak_favour": "3",
+        "weak_suppress": "1/3"
+      },
+      "log_strength_vs_W4": 1.5849625007211563
+    },
+    "W4": {
+      "factors": {
+        "neutral": "1",
+        "prohibit": "0",
+        "strong_favour": "4",
+        "strong_suppress": "1/4",
+        "weak_favour": "2",
+        "weak_suppress": "1/2"
+      },
+      "log_strength_vs_W4": 1.0
+    }
+  },
+  "analysis_only": true,
+  "analysis_version": "gt-e1/v1",
+  "baseline_sources": {
+    "published_plan_commit": "50c4b2cb01813fb71d0e4702657fccfbf1535e94",
+    "published_result_commit": "d99f97280d42be92f690f53c9152096688076313",
+    "published_tables": "gravity-time/reports/round-e0b-tables.json",
+    "qualifications": "GT-F34 (CSPH margin clock- and density-dependent, post hoc) and GT-F35 (E0 rare-mass numerical artefacts) qualify the published N<=6 values; comparisons use the in-round gtobs re-derivations, and the published values are checked against them on robust channels only (Z4)"
+  },
+  "chosen_because": "GT-P003 pre-freeze review (gravity-time/reports/gt-e1-prefreeze-review.md; gravity-time/docs/e1-design-alternatives.md option B, head 31620b6f6d0ccb1d381a95803c7552d506ae96e3), authorised by the human researcher in GT-P004",
+  "clocks": {
+    "continuous": "pi_ct = pi_jump / R (event weights as rates); per-unit-time observables",
+    "event_order": "consecutive event pairs on the stationary jump chain",
+    "jump": "pi_jump, the stationary law of the embedded jump chain; per-event observables"
+  },
+  "comparisons": {
+    "C1_native_size_sequence": "every declared channel at HELD W4 for N=5, 6 (in-round gtobs re-derivations of published cells) and N=7, per family",
+    "C2_strength_response": "W4 -> W3 -> W16 at N=5 and N=6 for each non-gradient family; per channel, the three values and whether they are monotone in log-strength (a step below the negligible floor counts as consistent); monotonicity is not presumed",
+    "C3_calibration": {
+      "classes": "both_negligible | size_step_negligible | strength_step_negligible | opposite | same_sign_comparable_size (strength/size step ratio in [0.5, 2]) | same_sign_different_size | unavailable",
+      "clean_cases": [
+        "PATHF",
+        "PATHH"
+      ],
+      "contrast": "N=5 W16 (every log-factor x2, matching the path-witness maximum 12 -> 24) against N=6 W4, both relative to N=5 W4, per declared channel",
+      "family_verdict": "among channels whose size step is non-negligible and strength step available: usable_proxy if >= 0.667 are same_sign_comparable_size; direction_only_proxy if >= 0.667 share the sign; otherwise poor_proxy",
+      "reading_rule": "a poor_proxy family's N=7 strength readings are reported but not used as evidence for or against witness amplification; matching the witness maximum does not match engaged loads, state-space combinatorics or transition laws"
+    },
+    "C4_n7_against_strength_response": {
+      "classes": "size_step_negligible | no_strength_response | strength_response_non_monotone | opposite_to_strength_response | same_sign_within_bracket_range ([0.5 x smallest, 2 x largest] non-negligible response) | same_sign_outside_bracket_range | unavailable",
+      "contrast": "N=6 -> N=7 step at W4 against the W3 and W16 responses at N=6 (the path-witness maximum ratio 40/24 = 1.667 lies between log-strength 1.585 and 2)"
+    },
+    "C5_component_engagement": "per component, event share, mean engaged witnesses and mean engaged log-weight on the jump chain (gtobs witness census) at every cell; N7/N6 mean log-weight ratio placed below W3 (1.585), within W3-W16, or above W16 (2)",
+    "C6_geometric_reference": "null attachment fraction r0, source share 3/N and NULL hub rates at N=5, 6, 7, reported beside every margin; neither is separately identified by the N sequence",
+    "C7_clock_and_density": "every margin in four forms (raw, ceiling-normalised (af-r0)/(1-r0), null-density-standardised, full a/k profile) in both clocks, side by side; none is primary. The standardised margin is a counterfactual reweighting to the NULL law's free-edge-count distribution and may weight free-edge counts that are rare under the cell's own law; rare-mass flags mark such conditionals",
+    "C8_equal_ratio": [
+      [
+        "CWPF",
+        "CWPH"
+      ],
+      [
+        "CSPF",
+        "CSPH"
+      ],
+      [
+        "PATHF",
+        "PATHH"
+      ]
+    ],
+    "comparable_ratio": [
+      0.5,
+      2.0
+    ],
+    "declared_channels": [
+      "margin_raw_ct",
+      "margin_raw_jump",
+      "margin_standardised_ct",
+      "margin_standardised_jump",
+      "margin_normalised_ct",
+      "margin_normalised_jump",
+      "detached_fraction_ct",
+      "detached_fraction_jump",
+      "free_edge_density_ct",
+      "free_edge_density_jump",
+      "irreversible_flux_fraction",
+      "entropy_production_per_event",
+      "event_order_asymmetry",
+      "handover_index_adjacent",
+      "near_far_ratio_jump",
+      "near_far_ratio_ct",
+      "hub_probe_only"
+    ],
+    "negligible_change": 0.001,
+    "no_aggregate_score": "profiles are reported per channel; no weighted score is formed"
+  },
+  "controls_and_structural_expectations": {
+    "Z1_null_identity": "NULL at N=5, 6, 7: pi uniform (class-level L1 <= 1e-09), irreversible flux <= 1e-09, raw and standardised margins |.| <= 1e-09 in both clocks (theorem; N=7 previously evaluated as a fixture)",
+    "Z2_gradient_control": "CLOSEW at N=5, 6, 7 (W4): predicted triple-Gibbs law (L1 <= 1e-09) and irreversible flux <= 1e-09",
+    "Z3_non_gradient_rates": "every non-gradient cell (all sizes and alphabets): maximum square affinity > 1e-06. A rate property of the rules; stationary flux is not predicted (E0A X4 saturation)",
+    "Z4_baseline_replication": "each N=5, 6 W4 re-derivation agrees with its published E0B cell on ['held_continuous/attachment_fraction', 'held_jump/attachment_fraction', 'reversibility/irreversible_flux_fraction', 'reversibility/entropy_production_per_event', 'event_order/pattern_asymmetry', 'occupancy_ct/expected_edges', 'hub_frame/event_order/pattern_asymmetry'] within max(1e-10, 1e-08 x |published|). Rare-mass channels qualified by GT-F35 are excluded by declaration",
+    "Z5_numerical_acceptance": "per cell: stationary resolved (residual <= 1e-12; two starts within 1e-10 L1; iteration cap not reached), symmetry <= 1e-10, autocorrelation cap not reached, kernel sample check, no zero-mass reachable state, per-entry long-double residual, referee agreement (tolerances below). A tally, not a prediction: a failed cell is reported as unresolved or numerically qualified, never as a scientific counterexample, and never re-run with weaker tolerances",
+    "Z6_hub_frame_reversible_controls": "NULL and CLOSEW cells: hub-frame pattern asymmetry and hub-frame net current <= 1e-09",
+    "separation_note": "Z1-Z6 are identities, rule properties and numerical acceptance. None predicts the sign or size of any margin, flux, handover index or strength response"
+  },
+  "deliberate_omissions": {
+    "free_n7": "FREE N=7 (option D) is not authorised in GT-P004; preserved as a separate future decision",
+    "grade_or_alphabet_sweeps": "no further grades, alphabets, interpolations or sizes",
+    "pcomp": "PCOMP (E0B rules-vs-ratio control) is not part of option B",
+    "recurrent_class_list": "reducible classes are not decomposed beyond [size] (gtobs)",
+    "spectrum": "the generator spectrum is unavailable at every N in this round: gtobs never forms the dense generator (GT-P003). Reported as unavailable, not zero; published N<=6 spectra are not compared"
+  },
+  "estimands": "the declared channels and every gtobs channel of each cell, the comparisons C1-C8, and the controls Z1-Z6",
+  "experiment_id": "gt-round-e1-scale-and-strength",
+  "families": {
+    "CLOSEW": {
+      "components": [
+        {
+          "K": 3,
+          "grade": "weak_favour",
+          "kind": "close_form",
+          "template_example": "form(0-1) | present(0-2) & present(1-2) => weak_favour"
+        }
+      ],
+      "grade": "weak_favour",
+      "gradient": true
+    },
+    "CSPF": {
+      "components": [
+        {
+          "K": 3,
+          "grade": "strong_favour",
+          "kind": "close_form",
+          "template_example": "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+        },
+        {
+          "K": 3,
+          "grade": "weak_suppress",
+          "kind": "path_form",
+          "template_example": "form(0-1) | present(0-2) & present(2-3) => weak_suppress"
+        }
+      ],
+      "grade": "strong_favour+weak_suppress",
+      "gradient": false
+    },
+    "CSPH": {
+      "components": [
+        {
+          "K": 3,
+          "grade": "strong_favour",
+          "kind": "close_form",
+          "template_example": "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+        },
+        {
+          "K": 3,
+          "grade": "weak_favour",
+          "kind": "path_dissolve",
+          "template_example": "dissolve(0-1) | present(0-2) & present(2-3) => weak_favour"
+        }
+      ],
+      "grade": "strong_favour+weak_favour",
+      "gradient": false
+    },
+    "CWPF": {
+      "components": [
+        {
+          "K": 3,
+          "grade": "weak_favour",
+          "kind": "close_form",
+          "template_example": "form(0-1) | present(0-2) & present(1-2) => weak_favour"
+        },
+        {
+          "K": 3,
+          "grade": "weak_suppress",
+          "kind": "path_form",
+          "template_example": "form(0-1) | present(0-2) & present(2-3) => weak_suppress"
+        }
+      ],
+      "grade": "weak_favour+weak_suppress",
+      "gradient": false
+    },
+    "CWPH": {
+      "components": [
+        {
+          "K": 3,
+          "grade": "weak_favour",
+          "kind": "close_form",
+          "template_example": "form(0-1) | present(0-2) & present(1-2) => weak_favour"
+        },
+        {
+          "K": 3,
+          "grade": "weak_favour",
+          "kind": "path_dissolve",
+          "template_example": "dissolve(0-1) | present(0-2) & present(2-3) => weak_favour"
+        }
+      ],
+      "grade": "weak_favour+weak_favour",
+      "gradient": false
+    },
+    "NULL": {
+      "components": [],
+      "grade": "none",
+      "gradient": true
+    },
+    "PATHF": {
+      "components": [
+        {
+          "K": 3,
+          "grade": "weak_suppress",
+          "kind": "path_form",
+          "template_example": "form(0-1) | present(0-2) & present(2-3) => weak_suppress"
+        }
+      ],
+      "grade": "weak_suppress",
+      "gradient": false
+    },
+    "PATHH": {
+      "components": [
+        {
+          "K": 3,
+          "grade": "weak_favour",
+          "kind": "path_dissolve",
+          "template_example": "dissolve(0-1) | present(0-2) & present(2-3) => weak_favour"
+        }
+      ],
+      "grade": "weak_favour",
+      "gradient": false
+    }
+  },
+  "history": false,
+  "initial_conditions": "as E0: the HELD start state gt0.start_state(n, 'HELD'), the source triangle {0,1,2} present and no other relation; source slots are present and cannot dissolve; the reachable class from that start is analysed",
+  "items": [
+    {
+      "alphabet": "W4",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "HELD-N7-W4-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 7,
+      "role": "open_scientific",
+      "tranche": "I"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CSPF",
+      "grade": "strong_favour+weak_suppress",
+      "item_id": "HELD-N7-W4-CSPF-strong_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 7,
+      "role": "open_scientific",
+      "tranche": "I"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CWPH",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N7-W4-CWPH-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 7,
+      "role": "open_scientific",
+      "tranche": "I"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CWPF",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "HELD-N7-W4-CWPF-weak_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 7,
+      "role": "open_scientific",
+      "tranche": "I"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N7-W4-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 7,
+      "role": "open_scientific",
+      "tranche": "I"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N7-W4-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 7,
+      "role": "open_scientific",
+      "tranche": "I"
+    },
+    {
+      "alphabet": "W4",
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "HELD-N7-W4-NULL-none",
+      "mode": "HELD",
+      "n": 7,
+      "role": "identity_control_exposed",
+      "tranche": "I"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "HELD-N7-W4-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 7,
+      "role": "gradient_control",
+      "tranche": "I"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "HELD-N5-W4-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CSPF",
+      "grade": "strong_favour+weak_suppress",
+      "item_id": "HELD-N5-W4-CSPF-strong_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CWPH",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N5-W4-CWPH-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CWPF",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "HELD-N5-W4-CWPF-weak_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N5-W4-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-W4-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "HELD-N5-W4-NULL-none",
+      "mode": "HELD",
+      "n": 5,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-W4-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "HELD-N6-W4-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CSPF",
+      "grade": "strong_favour+weak_suppress",
+      "item_id": "HELD-N6-W4-CSPF-strong_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CWPH",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N6-W4-CWPH-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CWPF",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "HELD-N6-W4-CWPF-weak_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N6-W4-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-W4-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "HELD-N6-W4-NULL-none",
+      "mode": "HELD",
+      "n": 6,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-W4-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "baseline_rederivation_published",
+      "tranche": "baseline"
+    },
+    {
+      "alphabet": "W3",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "HELD-N5-W3-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W3",
+      "family": "CSPF",
+      "grade": "strong_favour+weak_suppress",
+      "item_id": "HELD-N5-W3-CSPF-strong_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W3",
+      "family": "CWPH",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N5-W3-CWPH-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W3",
+      "family": "CWPF",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "HELD-N5-W3-CWPF-weak_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W3",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N5-W3-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W3",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-W3-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W16",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "HELD-N5-W16-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W16",
+      "family": "CSPF",
+      "grade": "strong_favour+weak_suppress",
+      "item_id": "HELD-N5-W16-CSPF-strong_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W16",
+      "family": "CWPH",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N5-W16-CWPH-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W16",
+      "family": "CWPF",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "HELD-N5-W16-CWPF-weak_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W16",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N5-W16-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W16",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-W16-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W3",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "HELD-N6-W3-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W3",
+      "family": "CSPF",
+      "grade": "strong_favour+weak_suppress",
+      "item_id": "HELD-N6-W3-CSPF-strong_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W3",
+      "family": "CWPH",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N6-W3-CWPH-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W3",
+      "family": "CWPF",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "HELD-N6-W3-CWPF-weak_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W3",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N6-W3-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W3",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-W3-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W16",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "HELD-N6-W16-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W16",
+      "family": "CSPF",
+      "grade": "strong_favour+weak_suppress",
+      "item_id": "HELD-N6-W16-CSPF-strong_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W16",
+      "family": "CWPH",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N6-W16-CWPH-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W16",
+      "family": "CWPF",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "HELD-N6-W16-CWPF-weak_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W16",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N6-W16-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    },
+    {
+      "alphabet": "W16",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-W16-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific_bracket",
+      "tranche": "II"
+    }
+  ],
+  "meta_constraints": false,
+  "method": {
+    "name": "Open-Thetical Research",
+    "path": "research-methods/open-thetical-research.md",
+    "version": "1.0"
+  },
+  "mode": "B",
+  "new_primitives": false,
+  "numerical_policy": {
+    "autocorrelation": "gtobs lazy Poisson series to relative term 1e-13, cap 2000000",
+    "gth_referee": "where the class has at most 4096 states (N=5, 6): the Grassmann-Taksar-Heyman dense solve (subtraction-free) with the same tolerances",
+    "kernel_sample_check": "the family's rule strings and scaffold, parsed by the laboratory DSL and evaluated with exact Fraction factors on 400 seeded states plus the start and the fullest state (seed sha256('round-e1:kernel:<item_id>')[:16]); gtkernel weights within relative 1e-12, identical zero pattern, correct targets. W3/W16 are float in gtkernel and exact in the DSL, so the comparison is by tolerance",
+    "long_double_residual": "per-entry relative residual |(pi P)_i - pi_i| / pi_i in numpy longdouble <= 1e-09; zero-mass reachable states must be 0 (guards against the GT-F35 clipping)",
+    "rare_conditionals": "any conditional channel whose conditioning mass is < 1e-12 is flagged rare and not interpreted; < 1e-06 is flagged low. Values are kept, never clipped",
+    "stationary": "gtobs.stationary: lazy power iteration by gathers from the uniform law until L1 change < 1e-15 and per-entry relative change < 1e-13; second run from the point mass on the start must agree within 1e-10 L1; residual <= 1e-12; cap 2000000 iterations; no dense solve, no clipping of positive mass",
+    "symmetry": "class tables over the HELD symmetry group (S3 on the source x S(N-3) on the probes); max orbit disagreement <= 1e-10",
+    "third_start": "a third run from the point mass on the reachable state with the most relations; law L1 <= 1e-10, per-entry relative <= 1e-08, headline channels within 1e-10",
+    "threads": "children run with single-threaded BLAS/OpenMP; results reproducible to about 1e-15, not bitwise"
+  },
+  "observables": {
+    "gtobs": "every channel of rs_constraint_lab.gtobs.analyse (gt-e1-observables/v1): occupancy, held observables in both clocks (attachment, a/k profile, distance distribution, radial drift, escape and capture), shell activity in both clocks, reversibility (flux, entropy production, square affinities), projected currents, class-free and hub-frame event order, class tables, Gibbs projection, autocorrelation times, e1 additions (standardised margin, detached-probe counts, hub structure, engaged witness census, hub persistence)",
+    "round": "handover index: the four steps of the E0 handover cycle (FPFA, FADP, DPDA, DAFP), forward minus reverse probability, adjacent and disjoint, and the count of forward-oriented adjacent steps",
+    "trajectories": "illustrative only, 4 x 400 events per cell, seeds sha256('round-e1:<item_id>:<k>')[:16]; no table statistic uses them"
+  },
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      5,
+      6,
+      7
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL"
+  },
+  "open_questions_without_prediction": [
+    "GT-Q07: at N=7, is CSPH's attachment margin above or below the size-specific null, in each clock and each form, and does it coexist with irreversible flux?",
+    "Does the handover keep the E0 orientation at N=7 in every non-gradient family, reverse, or vanish?",
+    "Does the equal-ratio occupancy gap keep growing at N=7, and under strengthening?",
+    "How does shell structure (shells 1-4, activity in both clocks) change at N=7?",
+    "How much does the engaged witness load grow from N=6 to N=7, per component, and where does it sit against the W3/W16 bracket?",
+    "Does the W3/W16 bracket reproduce the published N=5 -> N=6 step (calibration), especially for PATHF and PATHH?",
+    "Is any N=6 -> N=7 change in the direction of strengthening at N=6, opposite to it, or outside its range?",
+    "Do hub structure and the hub-frame arrow change with N beyond the changing null hub rates?",
+    "Anything not anticipated above."
+  ],
+  "parameter_fit": false,
+  "plan_hash": "c6328d51b3062732cc451f2fefb84557972252ec06b7fb35a588eafd9cc4f144",
+  "pre_freeze_exposure": {
+    "bracket_kernel_builds": "tests/test_gtobs.py builds HELD N=5 W3 and W16 kernels of CSPH, PATHF and CLOSEW and compares weights and targets with build_kernel; no stationary law or observable was computed. No other W3/W16 cell of these families was computed",
+    "engineering_after_gt_p003": "before freezing, gte1 was exercised only on synthetic N=4 cells (W4, W3, W16), on published N=5 and N=6 W4 cells (baseline items: CSPH, PATHH, NULL, CLOSEW at N=5; CSPH at N=6, for timing), and on the theorem-fixed HELD N=7 CLOSE strong_favour fixture (not a round cell; costs and solver checks only). The HELD N=5 W16 PATHF kernel was rebuilt by a test (weights only). No N=7 round cell and no W3/W16 stationary law at N=5 or 6 was computed",
+    "gt_p003_reproduction": "all 84 published E0 cells were recomputed by gtobs in GT-P003 (validation log); this includes every N=5, 6 W4 baseline of this round",
+    "n7_fixtures": "three N=7 cost fixtures were run in GT-P003: HELD NULL (identity; this round's N=7 NULL cell is therefore exposed), HELD CLOSE strong_favour (not a round cell), FREE NULL (not a round cell). The GT-P003 design draft listed FREE CLOSE as exposed; it was never run",
+    "n7_kernel_build": "the HELD N=7 PATHF weak_suppress chain was built for timing in the E1 kernel step (4dacd11); no stationary law or observable was computed",
+    "post_hoc_channels": "engaged witness census, margin decomposition (raw, standardised, jump/continuous) and hub structure on published N=5, 6 cells (reports/e1-engaged-witness-n5-n6.json, reports/e1-margin-decomposition-n5-n6.json); GT-F34 is post hoc",
+    "published_n_le_6": "all E0A and E0B tables (N=5, 6, W4) were read in full; the 16 baseline items re-derive published cells and are not new observations",
+    "reference_hashes": {
+      "gravity-time/docs/e1-design-alternatives.md": "c26345869c38af1730db3a8d224f423d27abb6b7df0a920c68e4e0341e57f5a6",
+      "gravity-time/docs/e1-held-free-feasibility.md": "3b2403b5de446b0643228a49f2e6edbb80075ba3362e6904f4bde5af627db8ab",
+      "gravity-time/docs/e1-kernel.md": "ec7dfe520474eb916a14ff878fb187c5f63d2b0e9f7cddf196bb01c721fa0163",
+      "gravity-time/docs/e1-observables.md": "e8b62d80d6aea097d57fe7c33c930f98c9778d8715ec810a3ccdd068e39c66a8",
+      "gravity-time/docs/e1-scale-confound-audit.md": "a1882e9074e04abcfed44fe2324112e67166010f3914d75b571252eda91c942b",
+      "gravity-time/docs/roadmap.md": "8741c8e5b2556255020569377e2a599cc446ffa68b347fae2ae491b6c7cabc0d",
+      "gravity-time/plans/round-e0b-plan.json": "b5d46f94fddf5af22472b294975ce7f07fc112cdfa8bf0ab69103ab0ca93d65d",
+      "gravity-time/provenance/e1-fixtures/fx-free-null.json": "a9bcb01d5564591f88ff5f9ff687b56e3f3c9fc7425c14611aed43a358906890",
+      "gravity-time/provenance/e1-fixtures/fx-held-close.json": "d5742637f0e6469f9bdb4247781d54aa64a45d9115e3c9718902734d870ecb46",
+      "gravity-time/provenance/e1-fixtures/fx-held-null.json": "f458d15ae87920cd05d928807a649a9c5fccd1fe90aded5e23a3ae5eca8be6fb",
+      "gravity-time/provenance/e1-observables-validation.log": "75c1f8470f9b22bec24a78c822d6d46813ce0a9252058a8ed8fcb4e089ffa629",
+      "gravity-time/provenance/execution-GT-P003.md": "8848fec458ecf504bdeeba7d165ef00855e6ffa830a3d2df7ddf278bf270f0f1",
+      "gravity-time/provenance/prompts/GT-P004-agent-input.md": "696094b88b3f46153efc7b1bca40badf9d04967004a842e608355144c9cd2e60",
+      "gravity-time/reports/e1-engaged-witness-n5-n6.json": "176c7a07fece8e741046989c3a071aec5ad30fb75c8ab9d4f84420546417f56e",
+      "gravity-time/reports/e1-margin-decomposition-n5-n6.json": "af39a09057f9432cb1f3bf5e772a92c2514b534aea811a22283a16527b421f0d",
+      "gravity-time/reports/e1-scale-census.json": "97164db8c3633f2281899ee9cc9a1f07f879c11df786bec1f0a1f95112a7a896",
+      "gravity-time/reports/gt-e1-prefreeze-review.md": "094b6c683472f29e144273750a3f89459ef816f25b1a6401c6d2b36cc47bae51",
+      "gravity-time/reports/round-e0a-tables.json": "db927a0f5ffb344b0b69b9b01a9da0add55e61385a92158766979560f8615f8b",
+      "gravity-time/reports/round-e0b-tables.json": "e02aa5a50cf8f095e7e46bf9bbd44cd9fa41f5d2f5ba629374db14ec4436c518",
+      "research-methods/open-thetical-research.md": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd"
+    },
+    "theorem_fixed": "NULL baselines at N=5, 6, 7 (uniform law) and the scale census (reports/e1-scale-census.json)"
+  },
+  "programme": "GT",
+  "prompt_id": "GT-P004",
+  "question": "How do occupancy, kinetics, stationary circulation (the handover) and source-relative attachment reorganise from N=5, 6 to N=7 at fixed grades, and how much of that change resembles what uniform strengthening of the same rules does at fixed N?",
+  "round_id": "round-e1",
+  "sampling": "exact census of 32 authorised cells (tranche I: 8; tranche II: 24) plus 16 baseline re-derivations",
+  "schema": "rs-gt.e1-plan/v1",
+  "software": {
+    "analysis_module": "rs_constraint_lab.gte1",
+    "kernel": "gt-vectorised-kernel/v1",
+    "numpy": "2.5.3",
+    "observables": "gt-e1-observables/v1",
+    "python": "3.12.3"
+  },
+  "stochastic_trajectories": "illustrative_only",
+  "stop_conditions": {
+    "amendment": "a solver-only correction after freeze keeps this plan, is documented with its effect and validated independently, and marks affected results; any change to cells or estimands stops the round for explicit amendment",
+    "item": "each cell runs in its own process; past its watchdog ({5: 900, 6: 900, 7: 3600} seconds by N) it is killed and recorded unresolved_watchdog, or complete_checks_interrupted if its main result was already written; the round continues",
+    "round": "all items have final records, or the 14400-second wall cap from the first launch: running cells are recorded interrupted_wall_cap, unstarted cells not_started_wall_cap, and the round stops",
+    "stop_rule_reading": "per GT-P004 section 5 (matching the GT-P003 roadmap proposal): a margin crossing below null is an observation for that family, N, clock and definition; it does not by itself establish a finite-size effect, amplification or a failure of the ontology; grades are not retuned",
+    "unresolved": "an unresolved stationary law is recorded without stationary observables; no post-freeze retuning of tolerances, grades, alphabets, cells or channels"
+  },
+  "tolerances": {
+    "comparable_ratio": [
+      0.5,
+      2.0
+    ],
+    "frame_reversible": 1e-09,
+    "identity": 1e-09,
+    "kernel_relative": 1e-12,
+    "low_mass_floor": 1e-06,
+    "negligible_change": 0.001,
+    "non_reversible_floor": 1e-06,
+    "proxy_share": 0.6666666666666666,
+    "rare_mass_floor": 1e-12,
+    "referee_channel_abs": 1e-10,
+    "referee_l1": 1e-10,
+    "referee_max_relative": 1e-08,
+    "replication_abs": 1e-10,
+    "replication_rel": 1e-08,
+    "residual_max_relative": 1e-09,
+    "reversible_flux": 1e-09,
+    "symmetry": 1e-10
+  },
+  "work_count": {
+    "authorised_cells": 32,
+    "baseline_items": 16,
+    "disk_budget_bytes": 300000000,
+    "estimate_note": "measured on this host before freezing (16 cores, about 8 GB available): the full gte1 cell pipeline on the theorem-fixed HELD N=7 CLOSE strong_favour fixture took 156 s (main 126 s, checks 31 s) at 590 MB peak; on the published HELD N=6 W4 CSPH baseline 43 s (GTH referee 42 s) at 300 MB; N=5 under 1 s. Scientific N=7 cells are extrapolated at 3-6 min (stationary iterations 300-1,100 against the fixture's 537). Round: about 40-65 cell-minutes, 15-30 min wall with 4 workers. Estimates, not guarantees",
+    "items": 48,
+    "largest_state_space": 262144,
+    "memory_budget_bytes_per_worker": 1500000000,
+    "round_wall_cap_seconds": 14400,
+    "wall_time_estimate_seconds": 1800,
+    "watchdog_seconds": {
+      "5": 900,
+      "6": 900,
+      "7": 3600
+    },
+    "workers": 4
+  }
+}
