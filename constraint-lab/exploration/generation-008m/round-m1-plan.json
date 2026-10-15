@@ -1,0 +1,103 @@
+{
+  "M0_result_commit": "146be0ba3eca0250fa333bb89147b071af4df969",
+  "completion": "publish result, prove or reject conjugacy; stop M1, no M2",
+  "domain": {
+    "H1_states": 384,
+    "families": [
+      "ANY",
+      "FORM",
+      "DISSOLVE"
+    ],
+    "full_states": 2304,
+    "grades": [
+      "1/4",
+      "4"
+    ],
+    "roles": [
+      5,
+      6
+    ],
+    "word_lengths": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "experiment_id": "generation-008m-h2-structural-consequence",
+  "input_hashes": {
+    "constraint-lab/exploration/generation-008m/open-thetical-decision.md": "912956e2425ab24996e5a845060edf0d5db78b505c3ad43beded364f4f50e05a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R05-m025.json": "ba52a4898827ca2262704cca7f3931d5113dffaec40b29d5f46419668d18b992",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R05-m4.json": "accfdaf735750c7c503fd00fd526a60cd8acaf4cb14c9dc2e5c6dd7b4ab2aed5",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R06-m025.json": "d81c119659a7dc4ff818d8bd0075b8eece6c76bd30c4591c0a65ca7c4fa13121",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R06-m4.json": "3a8b56fa27859889d19d5ba2b645ca33a16084b0e6020d29a612db73a9c5cc18",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R05-m025.json": "113104290a1308e13dd03ab81d72b3e61b0adde7c166374c9dca1c9d9fc6f973",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R05-m4.json": "b6ec145cf439c9d75c36fa906f85f17ccbafb320a58109f7ab4a63a237c0a11d",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R06-m025.json": "bccbb0ff0ccacaf6b3e0baafec378720092577444aa621558a24227e9adfc9b4",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R06-m4.json": "49f8565423cfb887acfe01a953797e74279a42baa79eff326354783d78d2c109",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R05-m025.json": "196fd69c045ff80f109c5ac77c7c8b2f70bff09b40c063c6920a18fab49eb90e",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R05-m4.json": "a50414ef13693c353e33ea7e1f1ada5e618fb35b5a44072621b8b5825f2808d3",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R06-m025.json": "229c051a7c5ee5e8eb9f10cf1e697495780e7c016448e240172b9fb19c4aa898",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R06-m4.json": "ff2e95a87b4686879eedaeda32e8e43c32dc24d89143b5ae87d337856c113583",
+    "constraint-lab/reports/tables/generation-008m-equivalences.json": "be142abe11ab4a7473b8aea21a1f0f664b39a1c4cef47a69a72389328bd9e93f",
+    "constraint-lab/reports/tables/generation-008m-summary.json": "e1907ee61e581cc5bd661dfdcc56691b8bcf85a7f5e071b6e49722f89019f9d7",
+    "constraint-lab/reports/tables/generation-008m-validation.json": "743b22983d259a7d4d68601cb74f160862d55341047d0b3dcfc3e5e04c754efb"
+  },
+  "items": [
+    "M1-OPPOSITE-PAIR"
+  ],
+  "method": "exact rational permutation and path identities from committed M0 inputs; independent direct initial-history sum plus deterministic path extension; no new scientific cell",
+  "new_controllers": 0,
+  "new_parameter_grades": 0,
+  "new_stationary_solves": 0,
+  "outputs": [
+    "explicit slot/material/role/class maps",
+    "full exact kernel/stationary transport",
+    "KU/Kpi exact event-row transport",
+    "all labelled word-orbit probability maps through L6",
+    "independent reconstruction of all selected M0 P-word hashes",
+    "STAR/TRIANGLE stationary equality/shape-only classification and divergence"
+  ],
+  "parent_M0_freeze": "c5042fbb0103436d15591e009d0c58b173283e8f",
+  "plan_hash": "4220d68913b4d10a402d18abcf0fce650074313a44c33c58c2161b1da3768bea",
+  "precision_decimal_digits": 160,
+  "prior_exposure": "All 73 M0 outcomes and initial explanatory conjecture known; not blind; no M1 probe execution before pushed freeze",
+  "prompt_id": "008M",
+  "question": "Does the unique disjoint-pair involution conjugate R05/R06, transporting actual/KU/Kpi laws and process words?",
+  "reserved_formal_id_after_verification": "CL-T84 (audited unused on all accessible refs)",
+  "resources": {
+    "H1_event_comparisons": 13824,
+    "disk_budget_bytes": 1000000,
+    "failure": "stop and preserve inputs/any receipt; no automatic scientific retry or expansion",
+    "kernel_event_comparisons": 82944,
+    "numeric_threads": 1,
+    "runtime_estimate_seconds": 30,
+    "watchdog_seconds": 120,
+    "word_orbits_per_pair": 25263,
+    "workers": 1
+  },
+  "round_id": "M1-OPPOSITE-PAIR",
+  "selection": "post-complete-M0 explanatory ambiguity, not largest effect; one complementary mechanism probe only",
+  "source_hashes": {
+    "constraint-lab/pyproject.toml": "86bafc851177a88c5b49c0098277e3d757d8d193b54c0ba4f02524437dc307ad",
+    "constraint-lab/src/rs_constraint_lab/durable.py": "3b5c705847c7b2a15b9e66a74d34fa1c2a333abf2cc5cf6fb15f0c79f9e1ae41",
+    "constraint-lab/src/rs_constraint_lab/exact.py": "ec8976dc3f10dac6842bccce0669382deb85fb2d1c16082ad30cf19a7e18efb1",
+    "constraint-lab/src/rs_constraint_lab/explore08.py": "457a993ba7cfc0b66c9805d700871dc39abda474d1d7650cd23dbe148343a5ec",
+    "constraint-lab/src/rs_constraint_lab/gen008l_exec.py": "883dde15192de286734e3e4800d62de8c85ad5230d16ca6f35609a4a13beda5a",
+    "constraint-lab/src/rs_constraint_lab/gen008m_exec.py": "831b0e862a87dbc5306053db1ce1a966b453ba5cde94d94514fc4bce67939717",
+    "constraint-lab/src/rs_constraint_lab/gen008m_symmetry.py": "3281b40bc6b4d7a2e386c76fc4da174ecacb2ef861c2bce9cf6919c7b95b2f5a",
+    "constraint-lab/src/rs_constraint_lab/graphs.py": "78381488bacebc1a8b2719a3fb9b342811af724950d75a1f463784aee0f5a287",
+    "constraint-lab/src/rs_constraint_lab/h2_role_words.py": "2476ac57e8a0a57d008ad02d0d867f9da3d75045e17d75db07e14ba3042c51df",
+    "constraint-lab/src/rs_constraint_lab/h2_roles.py": "f737a7d664ff5264c87899841007ac424ca6067eb68e1da7d93c146770de27ef",
+    "constraint-lab/src/rs_constraint_lab/history.py": "ffe2b960828b6c1143cb20d1dd5d2df18533f52de1346cc7e9936f3285444048",
+    "constraint-lab/src/rs_constraint_lab/state.py": "a5132429fa8697b5b3f98d985516356d9e997b32ca90b05c19a96e7fc726108c"
+  },
+  "stochastic_trajectories": 0,
+  "tolerances": {
+    "information": "1e-25",
+    "rational": "exact",
+    "word_hashes": "exact"
+  }
+}
