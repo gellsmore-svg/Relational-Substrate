@@ -1,0 +1,113 @@
+{
+  "plan_id": "HIST-INTAKE-2026-10-15",
+  "status": "awaiting_archives",
+  "note": "Intake plan combining the pack's controlled-intake procedure (05_HISTORICAL_INTAKE.md) with the author's 2026-10-15 instruction (Historical Corpus Intake and Cross-Programme Reconciliation). The archives were not present on the machine running this session (searched by name across the Linux home and the Windows user profile, 2026-10-15). Nothing below has been read, verified or extracted.",
+  "archives": [
+    {
+      "name": "RS_Work_Research.zip",
+      "sha256": "3ecfd22f9d4b64c17c2a2c9c198615ee1e1c6e3d08512e6971ae7b4090261e46",
+      "entries": 403,
+      "state": "inaccessible"
+    },
+    {
+      "name": "RS_Work_Round46_Supplement.zip",
+      "sha256": "630da2d942b15247a164d5e1fd262f759483941210f38a9ab29b12c1a6ce4b5e",
+      "entries": 9,
+      "state": "inaccessible"
+    }
+  ],
+  "cautions": [
+    "403 ZIP entries are not 403 experiments; completeness of the 600+ experiment corpus is not established.",
+    "The Round 46 supplement is not later authority because of its filename; compare versions.",
+    "ZIP timestamps are metadata, not research dates.",
+    "Separate the v1.7 baseline (through Experiment 464), the 505-507 line and the Work 1-48 sequence; link numbering systems only where a source proves it.",
+    "Never execute .py, .pyc or serialised data from the archives."
+  ],
+  "landmarks": [
+    {
+      "path": "rs_work_round11/findings.md",
+      "question": "A",
+      "role_expected": "primary_report",
+      "state": "not_inventoried"
+    },
+    {
+      "path": "rs_work_round46_moments/REPORT.md",
+      "question": "A",
+      "role_expected": "primary_report",
+      "state": "not_inventoried"
+    },
+    {
+      "path": "rs_work_round47/REPORT.md",
+      "question": "A",
+      "role_expected": "primary_report",
+      "state": "not_inventoried"
+    },
+    {
+      "path": "rs_work_round48/REPORT.md",
+      "question": "A",
+      "role_expected": "primary_report",
+      "state": "not_inventoried"
+    },
+    {
+      "path": "rs_sources/RS_Baseline_Post_506Z/RS_Baseline_Post_506Z/02_EXPERIMENT_LEDGER_505_506.md",
+      "question": "B, C",
+      "role_expected": "run_ledger",
+      "state": "not_inventoried"
+    },
+    {
+      "path": "rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md",
+      "question": "B, C",
+      "role_expected": "run_ledger",
+      "state": "not_inventoried"
+    },
+    {
+      "path": "rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_Post_507_Canonical_Baseline.md",
+      "question": "E",
+      "role_expected": "retrospective_baseline",
+      "state": "not_inventoried"
+    },
+    {
+      "path": "rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_508_Starting_Questions.md",
+      "question": "plan",
+      "role_expected": "future_question",
+      "state": "not_inventoried",
+      "caution": "A question or plan unless a separate executed result is shown; 508 is not counted as run."
+    },
+    {
+      "path": "rs_work_round32_to35/RECOVERED_CONVERSATION_RECORD.md",
+      "question": "provenance",
+      "role_expected": "recovered_record",
+      "state": "not_inventoried",
+      "caution": "Retrospective recovered content, not a contemporaneous execution report; may contain private conversation and must not be published."
+    },
+    {
+      "path": "rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Negatives_And_Corrections.md",
+      "question": "B, C",
+      "role_expected": "correction",
+      "state": "not_inventoried",
+      "caution": "Named by the external synthesis (EXT-C13); not in the pack's list of verified entry paths."
+    }
+  ],
+  "questions": {
+    "A": "Predictive sufficiency and representation (Work 11, 46-48 against CL 8H/8K/8M/8N).",
+    "B": "Retention, resilience, reconstruction and lineage (505-507 against GT E5A).",
+    "C": "Higher-order effects and route organisation (505-507 against CL roles/gates and GT witness floors).",
+    "D": "Stochastic actualisation and stable outputs (against SC, catalogued only).",
+    "E": "Foundational ontology versus model findings.",
+    "F": "Historical baseline v1.7 through Experiment 464: future-equivalence and representation-cost discipline (suggested in 05)."
+  },
+  "procedure": {
+    "document": "05_HISTORICAL_INTAKE.md",
+    "in_archive": "RS_Shared_Coherence_Implementation_Pack_2026-10-15.zip",
+    "archive_sha256": "e1f7d94d1666d834393d49dda3ebde96f4578ea8bd6e180a891f5f5edfcccdbd",
+    "member": "RS_Shared_Coherence_Implementation_Pack_2026-10-15/05_HISTORICAL_INTAKE.md",
+    "stages": [
+      "byte-check and inventory every file",
+      "map experiment id to primary report(s) and correction lineage; no lexical ordering as chronology",
+      "extract a small source-attested statement set, keeping negative and fragile outcomes",
+      "separate author-approved publishable excerpts from the private index",
+      "only then create HIST:: nodes and propose cross-programme edges",
+      "leave unmapped runs unverified, not absent; keep 508 as an unverified boundary"
+    ]
+  }
+}

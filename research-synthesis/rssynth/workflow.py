@@ -4,10 +4,11 @@ from __future__ import annotations
 
 import datetime
 import json
+import os
 import subprocess
 from pathlib import Path
 
-from . import core, generate, ledger, roundtrip, sources
+from . import core, generate, historical, ledger, roundtrip, sources
 
 def snapshots_dir():
     return core.ROOT / "snapshots"
@@ -316,6 +317,11 @@ def check(*, use_git: bool = True, scope_base: str | None = "origin/main") -> di
     report["errors"] += [f"shared: {p}" for p in ledger.validate_all(manifest, loaded, shared)]
     report["errors"] += [f"round trip: {p}" for p in roundtrip.validate(core.ROOT, shared)]
     report["info"]["open_round_trips"] = roundtrip.open_round_trips(core.ROOT)
+    report["errors"] += [f"historical: {p}" for p in historical.validate_findings(manifest, shared["hist_findings"], roundtrip.load_decisions(core.ROOT))]
+    adir = os.environ.get("RS_HIST_ARCHIVE_DIR")
+    hv = historical.verify_local(manifest, shared["hist_findings"], Path(adir) if adir else None)
+    report["errors"] += [f"historical private check: {p}" for p in hv["problems"]]
+    report["info"]["historical_private_checks"] = {"archives": hv["archives"], "requires_private_input": len(hv["requires_private_input"]), "note": "checks needing the private archives are not run without them and are never reported as passed"}
     report["warnings"] += ledger.stale_reviews(manifest, shared["connections"])
     if use_git:
         for rel, key in (("ledger/connections.jsonl", "connection_id"), ("proposals/candidate-relations.jsonl", "proposal_id")):

@@ -1,6 +1,6 @@
 # Acceptance list and test coverage
 
-`04_ACCEPTANCE_AND_REVIEW.md` arrived with the author pack after the build. **The item-by-item conformance pass against 02, 03 and 04 is in [conformance-02-04.md](conformance-02-04.md).** This list is the Stage H list of the 01 prompt, plus the requirements stated in its Stages B–G. Tests are in `tests/test_rssynth.py`: 65 tests, standard library only.
+`04_ACCEPTANCE_AND_REVIEW.md` arrived with the author pack after the build. **The item-by-item conformance pass against 02, 03 and 04 is in [conformance-02-04.md](conformance-02-04.md).** This list is the Stage H list of the 01 prompt, plus the requirements stated in its Stages B–G. Tests are in `tests/test_rssynth.py`, standard library only (93 tests at 2026-10-15, historical-adapter round).
 
 | Requirement (01 prompt) | Tests | Status |
 | --- | --- | --- |
@@ -14,7 +14,8 @@
 | Graph view coverage, scale and readability | `ViewsCoverageAndReadability`: a theme page per concept; the front page links every view; statuses in text; Mermaid edge counts bounded; absent sources marked absent from the local tree; separate edge families in `graph.json` | Implemented |
 | Frozen experiment, book and ledger non-mutation | `NonMutationOfResearchRecords`: the branch diff against `origin/main` touches only `research-synthesis/` and its workflow; generation writes only under `generated/` | Implemented |
 | Review workflow; no unreviewed promotion | `ReviewAndHistoricalIntake`: promotion refused for an incomplete evidential comparison; human acceptance needs a named human | Implemented |
-| Historical intake | Historical claims cannot be accepted before intake; pending pointers are allowed only in unresolved records | Implemented as a guard; **intake itself pending** (archives and procedure not supplied) |
+| Historical intake | Historical claims cannot be accepted before intake; pending pointers are allowed only in unresolved records. `HistoricalAdapter`: malicious ZIP paths, duplicates, symlinks and nested archives flagged; decompression limits; whole-file hash mismatch; inaccessible archive reported as requiring private input, not passed; tampered member digest; missing or agent privacy approval; long quotations; duplicate finding ids and undeclared source conflicts; findings refused while `pending_intake`; verification levels kept apart; a blocked historical claim cannot be marked resolved; private inventories refused inside the repository | Adapter and gate implemented (`docs/historical-intake.md`); **intake itself pending: the archives were not available** |
+| Implicit round-trip acceptance | `ImplicitRoundTripAcceptance`: RT-0001 ratified by AD-0002 at the reported categories; seeds and external claims never listed; no category upgrade; a round trip is ratified once and is immutable; objections reopen; an unlogged ratification is rejected | Implemented (`docs/cadence.md`) |
 | Seed intake | Author seeds are staged as unapproved proposals only; the pack schema is kept verbatim and mapped conservatively; a seed claim cannot be promoted directly; intake is idempotent (`AuthorPackSeedIntake`) | Implemented; **author seeds staged 2026-10-15** (`proposals/seeds/2026-10-15-author-pack/intake-report.md`) |
 | Discovery: reproducible, dominance-controlled, false positives in tests | `DiscoveryBehaviour`: a boilerplate false positive ranks first and is not promoted; per-node and near-duplicate caps hold; reviewed links can have zero similarity | Implemented (TF-IDF baseline; no embedding model) |
 

@@ -13,13 +13,15 @@ import shutil
 import sys
 import tempfile
 import unittest
+import warnings
+import zipfile
 from contextlib import contextmanager
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(HERE))
 
-from rssynth import core, discover, generate, ledger, pins, roundtrip, sources, workflow  # noqa: E402
+from rssynth import core, discover, generate, historical, ledger, pins, roundtrip, sources, workflow  # noqa: E402
 
 REAL_ROOT = core.ROOT
 
@@ -367,7 +369,7 @@ class ViewsCoverageAndReadability(unittest.TestCase):
 
     def test_graph_export_keeps_edge_families_separate(self):
         g = json.loads(generate.build(*generate.load_inputs())["graph.json"])
-        self.assertEqual({"schema", "nodes", "scientific_edges", "metaphor_edges", "provenance_edges", "note", "shared_records", "sources"}, set(g))
+        self.assertEqual({"schema", "nodes", "scientific_edges", "metaphor_edges", "provenance_edges", "note", "shared_records", "sources", "historical"}, set(g))
         self.assertTrue(all(e["kind"] == "metaphor_link" for e in g["metaphor_edges"]))
         self.assertFalse(any(e["kind"] == "metaphor_link" for e in g["scientific_edges"]))
 
@@ -809,6 +811,136 @@ class ImplicitRoundTripAcceptance(unittest.TestCase):
             rows[0]["decision_history"][-1]["decision_id"] = "AD-0777"
             core.write_jsonl(root / "ledger/connections.jsonl", rows)
             self.assertTrue(any("not a logged round-trip ratification" in p for p in self._problems(root)))
+
+
+def make_zip(path: Path, entries) -> Path:
+    """entries: (name, bytes) or (name, bytes, unix_mode); names may be malicious on purpose."""
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")  # duplicate names are part of the test
+        with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as zf:
+            for e in entries:
+                zi = zipfile.ZipInfo(e[0], date_time=(2026, 1, 1, 0, 0, 0))
+                zi.compress_type = zipfile.ZIP_DEFLATED
+                if len(e) > 2:
+                    zi.external_attr = e[2] << 16
+                zf.writestr(zi, e[1])
+    return path
+
+
+class HistoricalAdapter(unittest.TestCase):
+    """Private archives stay outside Git; public derived records are checked; gaps stay pending."""
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp(prefix="rssynth-hist-"))
+        self.findings_md = b"# Findings\n\nA synthetic primary report used only by this test.\n"
+        self.zip = make_zip(self.tmp / "RS_Work_Research.zip", [("rs_work_round11/findings.md", self.findings_md), ("rs_work_round11/other.md", b"other")])
+        self.sha = core.sha256_file(self.zip)
+        self.m, self.loaded, self.shared = inputs()
+
+    def tearDown(self):
+        shutil.rmtree(self.tmp)
+
+    def _manifest(self, status="included_partial"):
+        m = copy.deepcopy(self.m)
+        h = historical.hist_source(m)
+        h["status"] = status
+        h["expected_archives"] = [{"name": "RS_Work_Research.zip", "sha256": self.sha, "entries": 2}]
+        h["verified_archives"] = [{"name": "RS_Work_Research.zip", "sha256": self.sha}]
+        return m
+
+    def _finding(self, **kw):
+        rep = historical.inventory_archive(self.zip, self.sha, 2)
+        f = {"finding_id": "HIST::W11-F01", "archive_id": "RS_Work_Research.zip", "archive_sha256": self.sha,
+             "member_path": "rs_work_round11/findings.md", "member_sha256": core.sha256_bytes(self.findings_md), "anchor": "section 1",
+             "experiment_id": "W11", "round_id": "W11", "evidence_layer": "simulation_result", "source_role": "primary_report",
+             "claim": "synthetic claim", "summary": "synthetic summary", "outcome": "o", "limitations": "l", "provenance": "test",
+             "verification": {"level": "local_source_verified", "date": "2026-10-16", "inventory_digest": historical.inventory_digest(rep)},
+             "privacy": {"disposition": "public_summary_approved", "approved_by": "author", "decision_id": "AD-T1"},
+             "review_status": "under_review", "decision_history": [{"date": "2026-10-16", "actor": "agent: test", "human": False, "status": "under_review", "decision_category": "candidate", "rationale": "t"}]}
+        f.update(kw)
+        return f
+
+    DEC = [{"decision_id": "AD-T1", "human": True}]
+
+    def test_good_finding_validates_and_resolves_gaps_stay_pending(self):
+        m, f = self._manifest(), self._finding()
+        self.assertEqual(historical.validate_findings(m, [f], self.DEC), [])
+        shared = dict(self.shared, hist_findings=[f])
+        R = ledger.Resolver(m, self.loaded["nodes"], shared)
+        self.assertTrue(R.resolve("HIST::W11-F01")["ok"])
+        gap = R.resolve("HIST::505-507")
+        self.assertEqual((gap["ok"], gap.get("pending")), (False, True))
+
+    def test_unsafe_zip_paths_duplicates_symlinks_and_nested_archives(self):
+        z = make_zip(self.tmp / "bad.zip", [("../evil.md", b"x"), ("/abs.md", b"x"), ("C:/win.md", b"x"), ("ok.md", b"a"), ("ok.md", b"b"),
+                                            ("link", b"target", 0o120777), ("inner.zip", b"PK"), ("run.py", b"print(1)")])
+        rep = historical.inventory_archive(z)
+        text = " ".join(rep["problems"] + rep["warnings"])
+        for needle in ("parent-directory traversal", "absolute path", "duplicate member path", "symbolic link", "nested archive"):
+            self.assertIn(needle, text)
+        self.assertFalse(rep["ok"])
+        self.assertIn("never_execute", [fl for mm in rep["members"] if mm["path"] == "run.py" for fl in mm["flags"]])
+        self.assertFalse(any("sha256" in mm for mm in rep["members"] if mm["path"] in ("../evil.md", "link")))  # unsafe members are not read
+
+    def test_decompression_limit(self):
+        z = make_zip(self.tmp / "bomb.zip", [("zeros.bin", b"\0" * (4 * 1024 * 1024))])
+        self.assertTrue(any("decompression limits" in p for p in historical.inventory_archive(z)["problems"]))
+
+    def test_whole_file_hash_mismatch_and_inaccessible_archive(self):
+        self.assertTrue(any("stop" in p for p in historical.inventory_archive(self.zip, "0" * 64)["problems"]))
+        with self.assertRaises(historical.ArchiveError):
+            historical.inventory_archive(self.tmp / "absent.zip")
+        rep = historical.verify_local(self._manifest(), [self._finding()], self.tmp / "nowhere")
+        self.assertEqual(rep["archives"]["RS_Work_Research.zip"], "inaccessible")
+        self.assertEqual((rep["members"][0]["state"], rep["problems"]), ("requires_private_input", []))  # not a pass
+
+    def test_tampered_source_digest(self):
+        m = self._manifest()
+        self.assertEqual(historical.verify_local(m, [self._finding()], self.tmp)["problems"], [])
+        bad = self._finding(member_sha256="ab" * 32)
+        self.assertTrue(any("DIGEST_MISMATCH" in p for p in historical.verify_local(m, [bad], self.tmp)["problems"]))
+        self.assertTrue(any("archive_sha256" in p for p in historical.validate_findings(m, [self._finding(archive_sha256="cd" * 32)], self.DEC)))
+
+    def test_missing_or_agent_privacy_approval(self):
+        m = self._manifest()
+        self.assertTrue(any("needs privacy approval" in p for p in historical.validate_findings(m, [self._finding(privacy={"disposition": "unreviewed"})], self.DEC)))
+        agent = self._finding(privacy={"disposition": "public_summary_approved", "approved_by": "agent: x", "decision_id": "AD-T1"})
+        self.assertTrue(any("logged human decision" in p for p in historical.validate_findings(m, [agent], self.DEC)))
+        quote = self._finding(summary='"' + "y" * 300 + '"')
+        self.assertTrue(any("quotes more than" in p for p in historical.validate_findings(m, [quote], self.DEC)))
+
+    def test_duplicate_ids_and_source_conflicts(self):
+        m = self._manifest()
+        a = self._finding()
+        self.assertTrue(any("duplicate finding_id" in p for p in historical.validate_findings(m, [a, copy.deepcopy(a)], self.DEC)))
+        b = self._finding(finding_id="HIST::W11-F02", member_path="rs_work_round11/other.md", member_sha256=core.sha256_bytes(b"other"))
+        self.assertTrue(any("no declared supersession or conflict" in p for p in historical.validate_findings(m, [a, b], self.DEC)))
+        b["conflicts_with"] = ["HIST::W11-F01"]
+        self.assertEqual(historical.validate_findings(m, [a, b], self.DEC), [])
+
+    def test_scope_and_verification_levels(self):
+        f = self._finding()
+        self.assertTrue(any("pending_intake" in p for p in historical.validate_findings(self._manifest("pending_intake"), [f], self.DEC)))
+        self.assertTrue(any("no source-verified" in p for p in historical.validate_findings(self._manifest(), [], self.DEC)))
+        acc = self._finding(verification={"level": "author_accepted"})
+        self.assertTrue(any("not a verification level" in p for p in historical.validate_findings(self._manifest(), [acc], self.DEC)))
+        rep = self._finding(verification={"level": "numerically_reproduced", "date": "d", "inventory_digest": "e" * 64})
+        self.assertTrue(any("reproduction record" in p for p in historical.validate_findings(self._manifest(), [rep], self.DEC)))
+
+    def test_live_hist_stays_pending_and_blocked_claims_cannot_be_marked_resolved(self):
+        self.assertEqual(historical.hist_source(self.m)["status"], "pending_intake")
+        self.assertEqual(self.shared["hist_findings"], [])
+        bad = copy.deepcopy(self.shared)
+        p = [x for x in bad["proposals"] if x["proposal_id"] == "P::SYN-C001"][0]
+        self.assertEqual(p["decision_category"], "blocked_missing_source")
+        p["decision_category"] = p["decision_history"][-1]["decision_category"] = "candidate"
+        self.assertTrue(any("blocked_missing_source" in e for e in ledger.validate_all(self.m, self.loaded, bad)))
+
+    def test_private_inventory_is_never_written_inside_the_repo(self):
+        rep = historical.inventory_archive(self.zip)
+        with self.assertRaises(historical.ArchiveError):
+            historical.write_private_inventory(rep, REAL_ROOT / "sources")
+        self.assertTrue(historical.write_private_inventory(rep, self.tmp / "out").exists())
 
 
 class NonMutationOfResearchRecords(unittest.TestCase):

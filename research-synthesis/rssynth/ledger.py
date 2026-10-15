@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from . import core, sources
+from . import core, historical, sources
 
 FORBIDDEN_SCORE_FIELDS = {"score", "confidence", "probability", "similarity", "cosine", "overall_confidence", "overall_score", "finding_strength", "coherence_score", "strength_score", "master_score"}
 
@@ -24,6 +24,8 @@ def load_shared(root: Path | None = None) -> dict:
         "metaphor_links": core.read_jsonl(root / "ledger" / "metaphor-links.jsonl"),
         "proposals": core.read_jsonl(root / "proposals" / "candidate-relations.jsonl"),
         "metaphor_drafts": core.read_jsonl(root / "proposals" / "metaphor-drafts.jsonl"),
+        "hist_findings": historical.load_findings(root),
+        "hist_intake_plan": historical.load_intake_plan(root),
     }
 
 
@@ -35,6 +37,7 @@ class Resolver:
         self.manifest = manifest
         self.source_nodes = source_nodes
         self.shared_ids = {}
+        self.hist = {f.get("finding_id"): f for f in shared.get("hist_findings", [])}
         for c in shared["concepts"]:
             self.shared_ids[c["concept_id"]] = "concept"
         for q in shared["questions"]:
@@ -62,6 +65,12 @@ class Resolver:
         if src["status"] in core.UNRESOLVABLE_SOURCE_STATUSES:
             return {"ok": False, "pending": True, "source": src["source_key"], "source_status": src["status"], "reason": f"source {src['source_key']} is {src['status']}"}
         key = f"{ns}::{parts['local']}"
+        if src["status"] == "included_partial":
+            # partial historical intake: only source-verified, publication-approved findings resolve; gaps stay pending
+            f = self.hist.get(key)
+            if f is None or not historical.finding_is_usable(f):
+                return {"ok": False, "pending": True, "source": src["source_key"], "source_status": src["status"], "reason": f"{key} is not an intaken, source-verified and approved historical finding"}
+            return {"ok": True, "kind": "historical_finding", "source": src["source_key"], "source_status": src["status"], "node": {"source": src["source_key"], "kind": "historical_finding", "created_generation": f.get("round_id") or f.get("experiment_id")}}
         if parts["revision"] and not src.get("default_revision"):
             return {"ok": src["status"] != "lineage_only", "kind": "source_revision_ref", "source": src["source_key"], "source_status": src["status"], "reason": "lineage-only revision is not ingested" if src["status"] == "lineage_only" else None}
         node = self.source_nodes.get(key)
@@ -275,7 +284,7 @@ def validate_connection(x: dict, R: Resolver, *, in_ledger: bool, root: Path) ->
             p.append(f"{cid}: human_accepted requires a named human reviewer")
     if in_ledger and st == "human_accepted":
         for end in ("from", "to"):
-            if ends[end].get("source") == "HIST":
+            if ends[end].get("source") == "HIST" and (ends[end].get("source_status") != "included_partial" or ends[end].get("pending")):
                 p.append(f"{cid}: historical claims cannot be accepted before intake")
     for key in ("rationale", "scope"):
         if not x.get(key):

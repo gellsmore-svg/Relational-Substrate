@@ -7,7 +7,7 @@ import json
 import sys
 from pathlib import Path
 
-from . import core, discover, generate, ledger, pins, roundtrip, sources, workflow
+from . import core, discover, generate, historical, ledger, pins, roundtrip, sources, workflow
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -55,6 +55,11 @@ def main(argv: list[str] | None = None) -> int:
     ra.add_argument("--date", required=True)
     ra.add_argument("--instruction", required=True, help="the author's instruction that closed the round trip, verbatim")
     ra.add_argument("--object", action="append", default=[], help="an item the author objected to (repeatable)")
+    hi = sub.add_parser("hist-inventory", help="inventory private historical ZIPs without extracting them (output outside the repo)")
+    hi.add_argument("--archive", action="append", required=True, help="path to an archive (repeatable)")
+    hi.add_argument("--out", required=True, help="directory outside the repository for the private inventory")
+    hv = sub.add_parser("hist-verify", help="re-hash the archive members that historical findings cite")
+    hv.add_argument("--archive-dir", required=True)
     a = ap.parse_args(argv)
 
     if a.cmd == "audit":
@@ -111,6 +116,28 @@ def main(argv: list[str] | None = None) -> int:
     if a.cmd == "ratify":
         print(json.dumps(roundtrip.ratify(a.round_trip, a.decision_id, a.date, a.instruction, a.object), indent=2))
         return 0
+    if a.cmd == "hist-inventory":
+        m = sources.load_manifest()
+        expected = {x["name"]: x for x in historical.hist_source(m).get("expected_archives", [])}
+        ok = True
+        for path in a.archive:
+            name = Path(path).name
+            exp = expected.get(name, {})
+            try:
+                rep = historical.inventory_archive(Path(path), exp.get("sha256"), exp.get("entries"), archive_id=name)
+            except historical.ArchiveError as exc:
+                print(json.dumps({"archive": name, "error": str(exc)}))
+                ok = False
+                continue
+            out = historical.write_private_inventory(rep, Path(a.out))
+            ok &= rep["ok"] and bool(exp)
+            print(json.dumps({"archive": name, "expected": bool(exp), "sha256": rep["sha256"], "members": rep["member_count"], "ok": rep["ok"], "problems": rep["problems"][:20], "warnings": len(rep["warnings"]), "inventory_digest": historical.inventory_digest(rep), "written": str(out)}, indent=2))
+        return 0 if ok else 1
+    if a.cmd == "hist-verify":
+        m = sources.load_manifest()
+        rep = historical.verify_local(m, historical.load_findings(core.ROOT), Path(a.archive_dir))
+        print(json.dumps(rep, indent=2))
+        return 1 if rep["problems"] else 0
     if a.cmd == "intake-seeds":
         print(json.dumps(workflow.intake_seeds(Path(a.dir)), indent=2))
         return 0

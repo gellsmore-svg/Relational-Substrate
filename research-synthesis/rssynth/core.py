@@ -81,7 +81,7 @@ METAPHOR_REQUIRED = ("metaphor_id", "title", "audience", "concepts", "mapping", 
 # when used without qualification in a metaphor's mapping.
 SMUGGLING_TERMS = ("distance", "space", "force", "push", "pull", "wants", "tries", "decides", "intends", "moves through", "travels", "attracts", "gravity")
 
-SOURCE_STATUSES = {"included", "catalogued_only", "lineage_only", "missing", "pending_intake", "external_stored"}
+SOURCE_STATUSES = {"included", "included_partial", "catalogued_only", "lineage_only", "missing", "pending_intake", "external_stored"}
 UNRESOLVABLE_SOURCE_STATUSES = {"missing", "pending_intake", "external_stored"}
 
 assert not (METAPHOR_LINK_TYPES & CONNECTION_TYPES)

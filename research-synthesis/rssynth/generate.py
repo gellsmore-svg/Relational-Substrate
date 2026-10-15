@@ -55,6 +55,7 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     graph = ledger.project_graph(manifest, loaded, shared)
     graph["shared_records"] = {k: sorted(shared[k], key=lambda r: core.canonical(r)) for k in ("concepts", "connections", "questions", "metaphors", "metaphor_links", "proposals", "metaphor_drafts")}
     graph["sources"] = manifest["sources"]
+    graph["historical"] = {"findings": sorted(shared.get("hist_findings", []), key=lambda r: r.get("finding_id", "")), "intake_plan": shared.get("hist_intake_plan", {})}
     files["graph.json"] = core.canonical(graph) + "\n"
 
     # ---- provenance ---------------------------------------------------------------
@@ -322,6 +323,31 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
         files[f"themes/{cid.split('::')[1]}.md"] = "\n".join(T) + "\n"
         files[f"themes/{cid.split('::')[1]}.mmd"] = "\n".join(TM) + "\n"
 
+    # ---- historical coverage and source attestation ---------------------------------------------
+    hsrc = next((s for s in manifest["sources"] if s.get("source_key") == "HIST"), {})
+    plan = shared.get("hist_intake_plan", {})
+    hf = shared.get("hist_findings", [])
+    HC = ["# Historical coverage and source attestation", "",
+          f"**HIST status:** `{hsrc.get('status', 'absent')}`. Intake plan `{plan.get('plan_id', '—')}`: **{plan.get('status', '—')}**.", "",
+          "Historical archives are private and stay outside the repository. A `HIST::` reference resolves only to a registered finding that was source-verified at intake and approved for publication by a logged human decision. Everything else stays pending, and records citing it stay `blocked_missing_source`.", "",
+          "Verification levels are separate: **local source verified** (bytes hashed at intake), **public pointer attested** (record consistent, but CI cannot rebuild it), **numerically reproduced** (independently recomputed). Author acceptance is a review status, not a verification level.", "",
+          "## Archives", "", "| Archive | Expected sha256 | Expected members | State |", "| --- | --- | ---: | --- |"]
+    HC += [f"| `{a['name']}` | `{a['sha256'][:16]}…` | {a['entries']} | {a['state']} |" for a in plan.get("archives", [])]
+    HC += ["", "## Coverage matrix", "", "Unknown means unknown, not false.", "", "| Source (landmark) | Question | Expected role | Inventoried | Read | Source-attested | Structured findings | Cross-compared |", "| --- | --- | --- | --- | --- | --- | ---: | --- |"]
+    for lm in plan.get("landmarks", []):
+        n = sum(1 for f in hf if f.get("member_path") == lm["path"])
+        done = lm["state"] != "not_inventoried"
+        HC.append(f"| `{lm['path']}`" + (f" ({esc(lm['caution'])})" if lm.get("caution") else "") + f" | {lm['question']} | {lm['role_expected']} | {'yes' if done else 'no'} | no | no | {n} | no |")
+    HC += ["", f"Registered historical findings: **{len(hf)}**.", "", "## Records blocked on historical sources", "", "| Record | Kind | Decision | Missing anchors |", "| --- | --- | --- | --- |"]
+    for p in sorted((p for p in shared["proposals"] if p.get("missing_anchors")), key=lambda p: p["proposal_id"]):
+        HC.append(f"| `{p['proposal_id']}` | {p.get('kind') or 'proposal'} | {p['decision_category']} | " + "<br>".join(f"`{a['ref']}` ({a['state'].split(' ')[0]})" for a in p["missing_anchors"]) + " |")
+    for q in shared["questions"]:
+        hr = [r for r in q.get("refs", []) if r.startswith("HIST::")]
+        if hr:
+            HC.append(f"| `{q['question_id']}` | shared question | {q['status']} | " + "<br>".join(f"`{r}`" for r in hr) + " |")
+    HC += ["", "## Cautions", ""] + [f"- {esc(c)}" for c in plan.get("cautions", [])]
+    files["historical-coverage.md"] = "\n".join(HC) + "\n"
+
     # ---- front page -------------------------------------------------------------------------------
     st = Counter(x["review_status"] for x in conns)
     ps = Counter(p["status"] for p in shared["proposals"])
@@ -332,11 +358,11 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
         I.append(f"| {esc(s['programme'])} (`{s['namespace']}::`) | **{s['status'].upper()}** | `{(s.get('commit') or '—')[:12]}` | {n} |")
     I += ["", "## Shared layer", "", f"- Concepts: {len(concepts)}", f"- Cross-programme connections: {len(conns)} ({', '.join(f'{k}: {v}' for k, v in sorted(st.items()))})", f"- Proposals: {len(shared['proposals'])} ({', '.join(f'{k}: {v}' for k, v in sorted(ps.items()))})", f"- Shared questions: {len(shared['questions'])} ({sum(q['status'] == 'pending_source' for q in shared['questions'])} pending a missing source)", f"- Metaphors: {len(shared['metaphors'])} reviewed ({', '.join(f'{k}: {v}' for k, v in sorted(Counter(m['status'] for m in shared['metaphors']).items()))}), {len(shared['metaphor_drafts'])} draft (all non-evidentiary)", ""]
     dc = Counter(x["decision_category"] for x in conns)
-    I += [f"- Connection decision categories (agent recommendations): {', '.join(f'{k}: {v}' for k, v in sorted(dc.items()))}", "", "## Headlines", "", "- **Open cross-programme question:** XQ::01. Which declared comparator separates organisation (or history) from kinetics in both programmes? See [questions.md](questions.md).", "- **Contradiction resolved by scope:** X::0004. 'Reweighting can break reversibility' (CL) against 'single-witness templates are always reversible' (GT) differ in rule class (label covariance), not in fact. See [contradictions.md](contradictions.md).", ]
+    I += [f"- Connection decision categories (recommended by the agent; human acceptance keeps them): {', '.join(f'{k}: {v}' for k, v in sorted(dc.items()))}", "", "## Headlines", "", "- **Open cross-programme question:** XQ::01. Which declared comparator separates organisation (or history) from kinetics in both programmes? See [questions.md](questions.md).", "- **Contradiction resolved by scope:** X::0004. 'Reweighting can break reversibility' (CL) against 'single-witness templates are always reversible' (GT) differ in rule class (label covariance), not in fact. See [contradictions.md](contradictions.md).", ]
     resolved = [p for p in shared["proposals"] if p.get("relation_override")]
     I += [f"- **Author decision:** {p['proposal_id']} classified as `{p['relation_override']['to']}`" + (f" (matching {p['relation_override']['matches']})" if p['relation_override'].get('matches') else "") + ". See [contradictions.md](contradictions.md)." for p in sorted(resolved, key=lambda p: p["proposal_id"])]
-    I += ["- **Limitation:** results from CL 008N and GT-P009 are closed but unreviewed; links resting on them are capped at `qualified`.", "- **Not claimed:** no record derives physical gravity, quantum behaviour or physical time.", ""]
-    I += ["## Views", "", "| View | What it shows |", "| --- | --- |", "| [provenance.md](provenance.md) · [provenance.mmd](provenance.mmd) | Sources, pins, artifacts, lineage, local-tree presence |", "| [links.md](links.md) · [links.mmd](links.mmd) | Reviewed cross-programme connections with rationale |", "| [contradictions.md](contradictions.md) · [nulls.md](nulls.md) | Contrasts, qualifications, rejected proposals; programme negative and qualified findings; false-attractor controls |", "| [questions.md](questions.md) | Shared questions and discriminating tests; programme open questions |", "| [candidate-bridges.md](candidate-bridges.md) | Proposals and retrieval diagnostics (not evidence) |", "| [metaphor-coverage.md](metaphor-coverage.md) · [metaphor-overlap.md](metaphor-overlap.md) · [metaphor-gaps.md](metaphor-gaps.md) · [metaphor-links.mmd](metaphor-links.mmd) | Explanations, overlaps, conflicts, gaps, overreach |", "| [chronology.md](chronology.md) | Change over time |", "| [graph.json](graph.json) | Lossless machine-readable export: all nodes, edges (scientific, metaphor, provenance kept separate), shared records, statuses and source pins |", ""]
+    I += ["- **Limitation:** results from CL 008N and GT-P009 are closed but unreviewed; links resting on them are capped at `qualified`.", "- **Historical intake:** `HIST` is `" + hsrc.get("status", "absent") + "`; " + str(len(hf)) + " historical findings registered. See [historical-coverage.md](historical-coverage.md).", "- **Not claimed:** no record derives physical gravity, quantum behaviour or physical time.", ""]
+    I += ["## Views", "", "| View | What it shows |", "| --- | --- |", "| [provenance.md](provenance.md) · [provenance.mmd](provenance.mmd) | Sources, pins, artifacts, lineage, local-tree presence |", "| [links.md](links.md) · [links.mmd](links.mmd) | Reviewed cross-programme connections with rationale |", "| [contradictions.md](contradictions.md) · [nulls.md](nulls.md) | Contrasts, qualifications, rejected proposals; programme negative and qualified findings; false-attractor controls |", "| [questions.md](questions.md) | Shared questions and discriminating tests; programme open questions |", "| [candidate-bridges.md](candidate-bridges.md) | Proposals and retrieval diagnostics (not evidence) |", "| [metaphor-coverage.md](metaphor-coverage.md) · [metaphor-overlap.md](metaphor-overlap.md) · [metaphor-gaps.md](metaphor-gaps.md) · [metaphor-links.mmd](metaphor-links.mmd) | Explanations, overlaps, conflicts, gaps, overreach |", "| [chronology.md](chronology.md) | Change over time |", "| [historical-coverage.md](historical-coverage.md) | Historical archives, coverage matrix, source attestation and records blocked on historical sources |", "| [graph.json](graph.json) | Lossless machine-readable export: all nodes, edges (scientific, metaphor, provenance kept separate), shared records, statuses and source pins |", ""]
     I += ["## Themes", ""] + [f"- [{c['label']}](themes/{c['concept_id'].split('::')[1]}.md)" for c in concepts]
     files["index.md"] = "\n".join(I) + "\n"
     return files

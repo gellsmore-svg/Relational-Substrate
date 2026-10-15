@@ -22,7 +22,7 @@ A navigable, generated view across research programmes. **It does not merge or r
 - Shared questions: 7 (1 pending a missing source)
 - Metaphors: 6 reviewed (human_accepted: 6), 8 draft (all non-evidentiary)
 
-- Connection decision categories (agent recommendations): accepted_bounded: 3, qualified: 6
+- Connection decision categories (recommended by the agent; human acceptance keeps them): accepted_bounded: 3, qualified: 6
 
 ## Headlines
 
@@ -30,6 +30,7 @@ A navigable, generated view across research programmes. **It does not merge or r
 - **Contradiction resolved by scope:** X::0004. 'Reweighting can break reversibility' (CL) against 'single-witness templates are always reversible' (GT) differ in rule class (label covariance), not in fact. See [contradictions.md](contradictions.md).
 - **Author decision:** P::SYN-C003 classified as `explicit_contrast` (matching X::0003). See [contradictions.md](contradictions.md).
 - **Limitation:** results from CL 008N and GT-P009 are closed but unreviewed; links resting on them are capped at `qualified`.
+- **Historical intake:** `HIST` is `pending_intake`; 0 historical findings registered. See [historical-coverage.md](historical-coverage.md).
 - **Not claimed:** no record derives physical gravity, quantum behaviour or physical time.
 
 ## Views
@@ -43,6 +44,7 @@ A navigable, generated view across research programmes. **It does not merge or r
 | [candidate-bridges.md](candidate-bridges.md) | Proposals and retrieval diagnostics (not evidence) |
 | [metaphor-coverage.md](metaphor-coverage.md) · [metaphor-overlap.md](metaphor-overlap.md) · [metaphor-gaps.md](metaphor-gaps.md) · [metaphor-links.mmd](metaphor-links.mmd) | Explanations, overlaps, conflicts, gaps, overreach |
 | [chronology.md](chronology.md) | Change over time |
+| [historical-coverage.md](historical-coverage.md) | Historical archives, coverage matrix, source attestation and records blocked on historical sources |
 | [graph.json](graph.json) | Lossless machine-readable export: all nodes, edges (scientific, metaphor, provenance kept separate), shared records, statuses and source pins |
 
 ## Themes
