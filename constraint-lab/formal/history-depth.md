@@ -295,3 +295,10 @@ The depth boundary is not retested. [Passage](history-controlled-passage.md)
 uses the frozen 8M roles and occupancy-matched stationary H1 Markovisation.
 It tests whether a known higher-order residual is consumed by a specified
 access functional, not whether a longer register is intrinsically useful.
+
+## Generation 8O: A Task Need Not See Every Depth Difference
+
+[Route factorization](markovization-stopping-factorization.md) does not change
+H_pair=2. It describes which component of an existing H2/H1 difference survives
+a fixed stopping readout. A silent route is not evidence that h2 is unnecessary
+for the full process or that all passage tasks are silent.

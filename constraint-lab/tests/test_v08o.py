@@ -65,6 +65,38 @@ def test_reassembled_counts_transports_and_exact_timing_aggregation():
         assert sha256((ROOT / (TABLE + name + ".json")).read_bytes()).hexdigest() == digest
 
 
+def test_post_census_mechanism_regression_and_constant_outer_target_column():
+    # Outcome-derived regression assertions, not inputs to the refinement/census.
+    from flint import fmpq as Q
+    rows = read(ROOT / (TABLE + "route-null-factorization.json"))
+    primary = [r for r in rows if r["m"] != "1"]
+    assert Counter(r["mechanism"] for r in primary) == {
+        "ACTIVE": 808, "N1_TARGET_INSENSITIVITY": 96, "N2_BILINEAR_ORTHOGONALITY": 104}
+    assert Counter(r["cancellation_subtype"] for r in primary if r["mechanism"] == "N2_BILINEAR_ORTHOGONALITY") == {
+        "ORBITWISE_ZERO": 80, "FIBREWISE_CANCELLATION": 24}
+    assert not any(r["symmetry_explanation_id"] for r in primary)
+    for item in items():
+        if item["family"] not in ("FORM", "DISSOLVE"):
+            continue
+        result = read(ROOT / OUTPUT / (item["item_id"] + ".json"))["result"]
+        side = result["sides"]["4-UP" if item["family"] == "FORM" else "2-DOWN"]
+        assert all([Q(x) for x in row] == [Q(4, 5), Q(1, 5)] for row in side["V"])
+
+
+def test_immutable_8o_snapshot_and_proposal_only_handoff():
+    from rs_constraint_lab.coherence import canonical_ledger_bytes, snapshot_text
+    directory = ROOT / "constraint-lab/coherence"
+    text = snapshot_text(directory, title="Through Generation 008O: Route-Null Factorization")
+    assert (directory / "snapshots/through-generation-008o.md").read_text() == text
+    assert sha256(text.encode()).hexdigest() == "638b5a73afbd85ceb41a4e20b695f914c1f155485aa54a76422aba91e39e5aee"
+    assert sha256(canonical_ledger_bytes(directory)).hexdigest() == "cbe0e48921757005847ab30f66e0ecf11e32b98c6956821fa05825aa210b8e56"
+    handoff = (ROOT / "constraint-lab/provenance/synthesis-handoffs/008O/README.md").read_text()
+    assert "proposal, not accepted hub record" in handoff
+    assert "shared_lineage" in handoff
+    for dimension in ("state", "transition law", "support", "clock", "projection", "intervention", "horizon", "conditioning"):
+        assert "| " + dimension + " |" in handoff
+
+
 def test_no_hub_import_no_upstream_overwrite_no_hub_evidence_and_status_history():
     def git(*args):
         return subprocess.check_output(["git", *args], cwd=ROOT)

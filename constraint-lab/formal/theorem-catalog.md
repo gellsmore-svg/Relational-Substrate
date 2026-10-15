@@ -1834,3 +1834,122 @@ Source generations: 008N
 Boundary: Magnitude is not functional value, statistical significance or a scalar memory score.
 Notes: No sampling or Monte Carlo.
 
+## CL-T91: Conditional lifting and stationary reset
+
+**ALGEBRAIC_THEOREM**
+
+LC=I, Pi=CL is idempotent, pi2 Pi=pi2, Kpi=LTC matches the stationary coarse adjacent law and Kpi L=LT Pi.
+
+Assumptions: Finite irreducible chain with positive stationary law and surjective coarse map; Fibre-compatible stopping set and coarse readout; both killed kernels transient; Pair-update and direction-specific support hypotheses only for CL-T94/CL-T95 as stated.
+Scope: Finite positive stationary support, surjective coarse representation, fibre-compatible stopping/route/target maps, and transient original and reset killed chains. All-m statements require their stated update/direction hypotheses; finite counts refer only to frozen N4 H2 one-role grades 1/4 and 4, pair-event clock.
+
+Proof: [markovization-stopping-factorization.md](../../constraint-lab/formal/markovization-stopping-factorization.md). Sum conditional mass within each fibre; substitute LC=I into Pi squared and KL. Stationary adjacent flow gives the coarse transition and invariant pi1.
+Evidence: [markovization-stopping-factorization.md](../../constraint-lab/formal/markovization-stopping-factorization.md), [generation-008o-route-null-factorization.md](../../constraint-lab/reports/generation-008o-route-null-factorization.md), [generation-008o-factor-validation.json](../../constraint-lab/reports/tables/generation-008o-factor-validation.json), [test_v08o.py](../../constraint-lab/tests/test_v08o.py), [test_v08o_plumbing.py](../../constraint-lab/tests/test_v08o_plumbing.py)
+Coherence: `F8O-STATIONARY-RESET-PROJECTION`
+Dependencies: none
+Source generations: 008O
+Boundary: A task-specific zero is not full path equality, global HMM minimality, physical memory or cross-programme operator identity.
+Notes: Symbolic proof plus synthetic/neutral rational fixtures and separately frozen finite application; model agreement is not proof.
+
+## CL-T92: Stopping-Markovization resolvent defect
+
+**ALGEBRAIC_THEOREM**
+
+Ar-Pi Mr=Ar(I-Pi)Mr and Delta R_d=a Ar(I-Pi)Mr Rexit, with Ar=(I-Q)^-1 and Mr=(I-QPi)^-1.
+
+Assumptions: Finite irreducible chain with positive stationary law and surjective coarse map; Fibre-compatible stopping set and coarse readout; both killed kernels transient; Pair-update and direction-specific support hypotheses only for CL-T94/CL-T95 as stated.
+Scope: Finite positive stationary support, surjective coarse representation, fibre-compatible stopping/route/target maps, and transient original and reset killed chains. All-m statements require their stated update/direction hypotheses; finite counts refer only to frozen N4 H2 one-role grades 1/4 and 4, pair-event clock.
+
+Proof: [markovization-stopping-factorization.md](../../constraint-lab/formal/markovization-stopping-factorization.md). Multiply the first difference on the left by I-Q, use QPi Mr=Mr-I, and invert. The lifted coarse killed series is Pi Mr=C_B(I-L_B Q C_B)^-1 L_B.
+Evidence: [markovization-stopping-factorization.md](../../constraint-lab/formal/markovization-stopping-factorization.md), [generation-008o-route-null-factorization.md](../../constraint-lab/reports/generation-008o-route-null-factorization.md), [generation-008o-factor-validation.json](../../constraint-lab/reports/tables/generation-008o-factor-validation.json), [test_v08o.py](../../constraint-lab/tests/test_v08o.py), [test_v08o_plumbing.py](../../constraint-lab/tests/test_v08o_plumbing.py)
+Coherence: `F8O-STOPPING-MARKOVIZATION-DEFECT`
+Dependencies: CL-T91
+Source generations: 008O
+Boundary: A task-specific zero is not full path equality, global HMM minimality, physical memory or cross-programme operator identity.
+Notes: Symbolic proof plus synthetic/neutral rational fixtures and separately frozen finite application; model agreement is not proof.
+
+## CL-T93: Task-specific passage annihilation
+
+**ALGEBRAIC_THEOREM**
+
+For a fixed matched source, route and coarse target readout, passage equality holds iff U W=0, where U=a Ar(I-Pi) and W=(I-Pi)Mr Rexit. Strong lumpability suffices for all coarse stopping equalities, but one task equality need not imply it.
+
+Assumptions: Finite irreducible chain with positive stationary law and surjective coarse map; Fibre-compatible stopping set and coarse readout; both killed kernels transient; Pair-update and direction-specific support hypotheses only for CL-T94/CL-T95 as stated.
+Scope: Finite positive stationary support, surjective coarse representation, fibre-compatible stopping/route/target maps, and transient original and reset killed chains. All-m statements require their stated update/direction hypotheses; finite counts refer only to frozen N4 H2 one-role grades 1/4 and 4, pair-event clock.
+
+Proof: [markovization-stopping-factorization.md](../../constraint-lab/formal/markovization-stopping-factorization.md). Apply the exact defect factorization and U Pi=0. For lumpability, finite observed word laws agree from all matched starts; sum the disjoint almost-sure stopped path events.
+Evidence: [markovization-stopping-factorization.md](../../constraint-lab/formal/markovization-stopping-factorization.md), [generation-008o-route-null-factorization.md](../../constraint-lab/reports/generation-008o-route-null-factorization.md), [generation-008o-factor-validation.json](../../constraint-lab/reports/tables/generation-008o-factor-validation.json), [test_v08o.py](../../constraint-lab/tests/test_v08o.py), [test_v08o_plumbing.py](../../constraint-lab/tests/test_v08o_plumbing.py)
+Coherence: `F8O-TASK-SPECIFIC-PREDICTIVE-EQUALITY`
+Dependencies: CL-T92
+Source generations: 008O
+Boundary: A task-specific zero is not full path equality, global HMM minimality, physical memory or cross-programme operator identity.
+Notes: Symbolic proof plus synthetic/neutral rational fixtures and separately frozen finite application; model agreement is not proof.
+
+## CL-T94: Stationary entrance balance and finite insertion defect
+
+**ALGEBRAIC_THEOREM**
+
+For the pair-history shift and stationary material-class source, a Pi=a. The exact n-event defect is a sum_l Q^l(I-Pi)(QPi)^(n-2-l)Rexit. Two-event defects vanish; odd layer returns are impossible; at four events only the two noninitial insertions remain.
+
+Assumptions: Finite irreducible chain with positive stationary law and surjective coarse map; Fibre-compatible stopping set and coarse readout; both killed kernels transient; Pair-update and direction-specific support hypotheses only for CL-T94/CL-T95 as stated.
+Scope: Finite positive stationary support, surjective coarse representation, fibre-compatible stopping/route/target maps, and transient original and reset killed chains. All-m statements require their stated update/direction hypotheses; finite counts refer only to frozen N4 H2 one-role grades 1/4 and 4, pair-event clock.
+
+Proof: [markovization-stopping-factorization.md](../../constraint-lab/formal/markovization-stopping-factorization.md). A successor (P',e,i) determines predecessor material P' xor 2^e, making source/route indicators coarse-measurable on incoming stationary flow. Telescoping the noncommuting finite sum proves the coefficient identity; parity excludes odd returns.
+Evidence: [markovization-stopping-factorization.md](../../constraint-lab/formal/markovization-stopping-factorization.md), [generation-008o-route-null-factorization.md](../../constraint-lab/reports/generation-008o-route-null-factorization.md), [generation-008o-factor-validation.json](../../constraint-lab/reports/tables/generation-008o-factor-validation.json), [test_v08o.py](../../constraint-lab/tests/test_v08o.py), [test_v08o_plumbing.py](../../constraint-lab/tests/test_v08o_plumbing.py)
+Coherence: `F8O-ENTRANCE-BALANCE`, `F8O-FOUR-EVENT-DEFECT`
+Dependencies: CL-T91, CL-T92, CL-T87
+Source generations: 008O
+Boundary: A task-specific zero is not full path equality, global HMM minimality, physical memory or cross-programme operator identity.
+Notes: Symbolic proof plus synthetic/neutral rational fixtures and separately frozen finite application; model agreement is not proof.
+
+## CL-T95: Extremal direction-side class-readout blindness
+
+**ALGEBRAIC_THEOREM**
+
+With unit dissolution weights and arbitrary positive formation weights, k4/UP first-return class proportions are (triangle+pendant,C4)=(4/5,1/5), independently of history. Complement gives k2/DOWN with unit formation weights, proportions (path,matching)=(4/5,1/5). Both the fine and stationary-Markovized continuations have W=0.
+
+Assumptions: Finite irreducible chain with positive stationary law and surjective coarse map; Fibre-compatible stopping set and coarse readout; both killed kernels transient; Pair-update and direction-specific support hypotheses only for CL-T94/CL-T95 as stated.
+Scope: Finite positive stationary support, surjective coarse representation, fibre-compatible stopping/route/target maps, and transient original and reset killed chains. All-m statements require their stated update/direction hypotheses; finite counts refer only to frozen N4 H2 one-role grades 1/4 and 4, pair-event clock.
+
+Proof: [markovization-stopping-factorization.md](../../constraint-lab/formal/markovization-stopping-factorization.md). Killed UP states have five or six edges. Exiting five edges deletes one of five equiprobable present edges, with four pendant outcomes and one C4. A constant column solves both killed equations; uniqueness follows from almost-sure return. Complement proves the other direction.
+Evidence: [markovization-stopping-factorization.md](../../constraint-lab/formal/markovization-stopping-factorization.md), [generation-008o-route-null-factorization.md](../../constraint-lab/reports/generation-008o-route-null-factorization.md), [generation-008o-factor-validation.json](../../constraint-lab/reports/tables/generation-008o-factor-validation.json), [test_v08o.py](../../constraint-lab/tests/test_v08o.py), [test_v08o_plumbing.py](../../constraint-lab/tests/test_v08o_plumbing.py)
+Coherence: `F8O-TARGET-INSENSITIVITY`
+Dependencies: CL-T91, CL-T92, CL-T80
+Source generations: 008O
+Boundary: A task-specific zero is not full path equality, global HMM minimality, physical memory or cross-programme operator identity.
+Notes: Symbolic proof plus synthetic/neutral rational fixtures and separately frozen finite application; model agreement is not proof.
+
+## CL-F12: Complete exact route-null factor census
+
+**FINITE_EXHAUSTIVE_RESULT**
+
+All 1008 non-neutral source-route rows reproduce immutable 8N residuals: 808 active, 96 target-insensitive nulls, 80 disjoint-factor-support nulls and 24 within-H1-fibre cancellations. No U-zero case or exact opposite-pair anti-pairing certificate occurs. All 20 four-event timing nulls vanish insertionwise under destination aggregation.
+
+Assumptions: Hash-pinned 8N/8M objects and frozen F0 derived diagnostics; Exact rational equations; all active controls and common neutral retained.
+Scope: Finite positive stationary support, surjective coarse representation, fibre-compatible stopping/route/target maps, and transient original and reset killed chains. All-m statements require their stated update/direction hypotheses; finite counts refer only to frozen N4 H2 one-role grades 1/4 and 4, pair-event clock.
+
+Enumeration: 72 non-neutral systems x seven sources x two sides, plus fourteen neutral route rows; six killed sides per each of 73 items; 114 conjugacy checks; exact count 1008. Verifier: [gen008o_exec.py](../../constraint-lab/src/rs_constraint_lab/gen008o_exec.py)
+Evidence: [markovization-stopping-factorization.md](../../constraint-lab/formal/markovization-stopping-factorization.md), [generation-008o-route-null-factorization.md](../../constraint-lab/reports/generation-008o-route-null-factorization.md), [generation-008o-factor-validation.json](../../constraint-lab/reports/tables/generation-008o-factor-validation.json), [test_v08o.py](../../constraint-lab/tests/test_v08o.py), [test_v08o_plumbing.py](../../constraint-lab/tests/test_v08o_plumbing.py)
+Coherence: `F8O-ROUTE-NULL-FACTORIZATION`, `F8O-TARGET-INSENSITIVITY`, `F8O-DISJOINT-FACTOR-SUPPORT`, `F8O-FIBREWISE-CANCELLATION`, `F8O-FOUR-EVENT-DEFECT`, `F8O-TIMING-AGGREGATION-CANCELLATION`, `F8O-FACTOR-TRANSPORT`
+Dependencies: CL-T91, CL-T92, CL-T93, CL-T94, CL-T95
+Source generations: 008O
+Boundary: Finite role/grade census is not an all-m theorem for support orthogonality or fibre cancellation, and not exclusion of other symmetries.
+Notes: Dixon and independent fraction-free occupation solve; every new equation lifted to the full sparse chains; no new stationary/passage solve or controller.
+
+## CL-M07: Comparator adequacy is task and projection scoped
+
+**METHODOLOGICAL_PRINCIPLE**
+
+Comparator adequacy is task- and projection-dependent: matching occupancy and stationary adjacency need not match stopping, while a task-specific null need not imply process equality.
+
+Assumptions: Declared representation, source, clock, support, reset and readout.
+Scope: Finite-process method; transfer to another programme requires its own eight-dimensional comparison.
+
+Argument/next test: Exact defect criterion and finite examples distinguish process inequality from task inequality.
+Evidence: [markovization-stopping-factorization.md](../../constraint-lab/formal/markovization-stopping-factorization.md), [generation-008o-route-null-factorization.md](../../constraint-lab/reports/generation-008o-route-null-factorization.md), [generation-008o-factor-validation.json](../../constraint-lab/reports/tables/generation-008o-factor-validation.json), [test_v08o.py](../../constraint-lab/tests/test_v08o.py), [test_v08o_plumbing.py](../../constraint-lab/tests/test_v08o_plumbing.py)
+Coherence: `F8O-TASK-PROJECTION-SCOPE`
+Dependencies: CL-T93, CL-F12
+Source generations: 008O
+Boundary: No universal shared CL/GT mechanism or implicit change of compiler class.
+Notes: Principle is not a new algebraic theorem or evidence drawn from the hub.
+

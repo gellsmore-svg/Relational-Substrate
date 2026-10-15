@@ -265,3 +265,11 @@ residual therefore excludes matching both observables throughout that narrow
 class. It does not exclude occupancy-only H1 fits, hidden recodings, larger
 alphabets, altered clocks or unrestricted augmentation. See
 [the precise argument](history-controlled-passage.md#matched-h1-exclusion).
+
+## Generation 8O: Matching Does Not Authorise A Different Compiler
+
+[Stopping-Markovization factorization](markovization-stopping-factorization.md)
+explains what the unique adjacent-matched strict H1 comparator resets. A
+route-specific null does not broaden that compiler to arbitrary hidden-state
+recodings or establish whole-process compilation. No local clock change,
+new semantic axis, or GT comparator is tested.

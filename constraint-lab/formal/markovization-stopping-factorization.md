@@ -150,6 +150,52 @@ conservation attribution follows merely from v 1=0.
 
 ## Verification And Scope
 
+### Complete F0 Mechanism Census
+
+All 1008 non-neutral source-route rows are retained: 808 active, 200 null.
+There are no N0 propagated-upstream-zero rows. The exact null split is:
+
+| Mechanism | Rows | Exact certificate |
+| --- | --- | --- |
+| Complete-side target insensitivity N1 | 96 | U!=0, W=0 |
+| N2 with disjoint factor support | 80 | U,W!=0; every individual orbit/target product is zero |
+| N2 with within-H1-fibre cancellation | 24 | Nonzero individual products; each H1-fibre sum is zero |
+
+UP and DOWN each contain 48/40/12 rows of these three types. No null is left
+as an unexplained aggregate signed sum across H1 fibres. The last type is an
+exact finite orthogonality certificate, not an all-m role-factorization theorem.
+The frozen opposite-pair sign-reversal test explains none of these nulls;
+vertex covariance and inter-model conjugacy do not by themselves explain cancellation.
+
+The 80 disjoint-support cases are roles R00,R01,R02,R03,R09: ANY at k2/DOWN
+and k4/UP, FORM at k2/DOWN, DISSOLVE at k4/UP, for both grades and both sources.
+The 24 fibre cancellations are R04/R11 FORM k3/UP and DISSOLVE k3/DOWN, for
+both grades and all three sources. For example the FORM R04 suppressive star
+source has five nonzero orbit contributions within one H1 fibre: in a common
+vector direction their exact coefficients are proportional to 4,-1,-1,-1,-1.
+This is not a two-orbit sign-reversing involution. The complete rational records,
+not this descriptive example, are the certificate.
+
+### Extremal Direction-Side Target Insensitivity
+
+The 96 N1 rows have a simple stronger explanation, valid for all positive
+formation-only or dissolution-only weights with unit opposite-direction weights.
+For FORM k4/UP, B has edge counts five and six. From a five-edge graph any
+return to four edges deletes one of its five present edges. All these deletion
+weights are equal; four choices give triangle+pendant and one gives C4.
+Internal excursions to six edges cannot change this class proportion. Thus the
+constant harmonic target column pair (4/5,1/5) satisfies every fine and coarse
+killed equation. V is constant and W=0, for arbitrary history-dependent
+positive formation weights. Almost-sure return makes that solution unique.
+Complement gives DISSOLVE k2/DOWN, target proportions (two-edge path,matching)
+=(4/5,1/5). These account for all 96 rows: 24 models times two sources per side.
+This post-census analytic corollary requires no new model or diagnostic execution.
+
+All 20 non-neutral four-event timing cancellations are insertionwise target
+aggregation zeros, not cancellation between the two potentially surviving
+insertion scalars. Their destination vectors are nonzero. A general all-m
+identity determining precisely those role/source combinations remains open.
+
 Three independent forms of justification are retained: the matrix proof above,
 noncommuting synthetic rational fixtures (plus common neutral), and the full frozen
 derived census against hash-pinned 8N route laws. Language-model agreement is not proof.

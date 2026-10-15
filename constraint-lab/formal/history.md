@@ -390,3 +390,11 @@ first-order kernel on exactly (P,h1) matching its full stationary adjacent law.
 Stationary source-class conditionals match on (P,h1). Return routing, excursion
 length, cross-class access time and competing-target probability are distinct
 functionals; none assigns purpose or value to a topology.
+
+## Generation 8O: Conditional Reset And Stopping
+
+The [typed operator construction](markovization-stopping-factorization.md)
+represents Kpi as L T C, not a strong quotient. Its lifted dynamics repeatedly
+reset older-history conditionals. Comparing stopping before and after that
+operation yields an exact resolvent defect, without adding a controller or
+asserting physical memory.

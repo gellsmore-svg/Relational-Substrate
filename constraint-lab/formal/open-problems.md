@@ -146,3 +146,14 @@ No H3 depth question is newly motivated. Books remain untouched.
 
 No M1 or H3 continuation is opened. Consolidation and route-null explanation
 take precedence over expanding a successful palette.
+
+## Generation 8O: After Exact Route Factorization
+
+- General mathematics: determine all-m role identities behind the 80 disjoint-support and 24 within-fibre finite certificates. The generic resolvent factorization is proved, but finite rational cancellations are not automatically universal identities.
+- Laboratory-specific: the twenty timing zeros vanish insertionwise under target aggregation. Which role/source identities determine that set beyond the frozen two grades?
+- General mathematics: characterize source/target-restricted stopping sufficiency without requiring global strong lumpability; do not infer full path equality from one task.
+- Ontology/coherence: Q-H2-ROUTE-NULL-FACTORIZATION is qualified for the complete bounded census. Q-H2-ROLE-FACTORIZATION remains unresolved in its broader stationary/all-m wording; Q-L-COMPILER-SEMANTICS is unopened.
+- Synthesis: compare the explicit CL operator to GT under state, law, support, clock, projection, intervention, horizon and conditioning. No common mechanism is yet established; shared lineage is not independent evidence.
+- Laboratory-specific future clock/task/scale proposals require a new local question and freeze. No hub suggestion authorizes a local experiment.
+
+Immediate default: review and consolidation, not a larger controller grammar.

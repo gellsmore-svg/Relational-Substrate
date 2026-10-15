@@ -289,3 +289,11 @@ class-defined absorbing equations exactly. A stationary-source one-return
 class matrix may have invariant class weights without being an autonomous
 quotient of the successive-return process. Process distinction and distinction
 by a selected stopping-time functional are separate equivalence requirements.
+
+## Generation 8O: Task-Specific Annihilation
+
+The [finite stopping operator](markovization-stopping-factorization.md)
+makes the distinction explicit: strong lumpability suffices for every coarse
+stopping functional to agree, while a single zero U W proves only a scoped
+source/route/target equality. Conditional stationary reset is not a predictive
+strong refinement. Invariant-sector ranks are not unrestricted state-space ranks.

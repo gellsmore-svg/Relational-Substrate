@@ -108,3 +108,11 @@ Kernel conjugacy transports stopping sets, starts and passage alphabets, not
 necessarily identical raw labelled outputs. A one-return class kernel under
 stationary conditional starts is not automatically a strong Markov quotient.
 See [history-controlled passage](history-controlled-passage.md).
+
+## Generation 8O: Equality After A Stopping Readout
+
+For matched stationary sources, [route equality](markovization-stopping-factorization.md)
+is exactly U W=0 for the declared killed/reset/readout operators. Nonzero
+factors can annihilate in a product. This criterion is neither strong lumpability
+nor equality of every future word; changing source, route or target changes the
+criterion. Kernel conjugacy transports the criterion to a renamed task.

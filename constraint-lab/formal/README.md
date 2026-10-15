@@ -69,3 +69,11 @@ Generation 8N continues exactly from reviewed 8M at
 stationary sources and distinguishes routing, length, MFPT and committor.
 The canonical continuation is research/constraint-lab-v0.8n-h2-controlled-passage.
 The generation suffix does not change N=4. No alternate branch is merged.
+
+Generation 8O continues exactly from reviewed 8N at
+e650d71bda7203c8018d8bd134c5496a03d74a11. The
+[Markovization/stopping formalism](markovization-stopping-factorization.md)
+provides a typed conditional-reset factorization and a frozen derived census.
+The canonical continuation is research/constraint-lab-v0.8o-route-null-factorization.
+The federated hub is read-only planning context, never CL evidence. Its
+programme-side handoff is separate from the scientific/coherence ledger.

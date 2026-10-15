@@ -108,3 +108,16 @@ Earlier rows are historical. Neither book is edited.
 | Complete 8N controlled-access atlas | PROVISIONAL | Laboratory supporting report | Exact finite results, external review pending; not all-m or functional utility |
 | Purpose, repair or adaptation | DO_NOT_INTEGRATE | None | No independent task value was defined |
 | L-positive dynamic constraints | DO_NOT_INTEGRATE_YET | None | No eta or rule-state dynamics implemented |
+
+## Generation 8O: Finite Reset And Stopping Operators
+
+Earlier maturity rows remain historical. Neither book is edited.
+
+| Content | Maturity | Proposed location | Scope |
+| --- | --- | --- | --- |
+| Reviewed H2 controlled passage | READY_WITH_SCOPE | Process examples | 8N reviewed; fixed pair clock, grammar and stationary sources |
+| Conditional lifting and stopping factorization | READY_WITH_SCOPE | Finite-process appendix | Positive finite stationary law, compatible stopping fibres, transient killed chains |
+| Task-specific annihilation criterion | READY_WITH_SCOPE | Equivalence appendix | Fixed source, route and target; not all-path equality |
+| Route-null mechanism census | READY_WITH_SCOPE | Scoped laboratory example | Exact frozen 8N palette and F0 diagnostics; 8O external review pending |
+| Common cross-programme operator | DO_NOT_INTEGRATE | None as established fact | CL operator is explicit; GT comparison has not been performed |
+| Physical memory, purpose, gravity or L-positive ontology | DO_NOT_INTEGRATE_YET | None | No such consequence follows |

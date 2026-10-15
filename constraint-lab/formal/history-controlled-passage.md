@@ -156,3 +156,12 @@ Finite palette outcomes are separately CL-F11, log magnitudes CL-N11.
 No graph-class return process minimality, new history necessity, arbitrary
 compiler exclusion, task value, function, repair, agency, physical memory,
 emergent boundary or L-positive constraint dynamics follows.
+
+## Generation 8O: Route-Specific Equality
+
+The [reset/stopping factorization](markovization-stopping-factorization.md)
+expresses a declared route defect as a Ar(I-Pi)Mr Rexit. It distinguishes
+initial stationary entrance balance from propagated occupation annihilation,
+target insensitivity and bilinear cancellation. Exact equality of one route
+functional is not path equality; complement transport is not automatically
+an internal cancellation mechanism.
