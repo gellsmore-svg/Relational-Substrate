@@ -11,6 +11,6 @@ Order of first appearance of each programme generation in the pinned ledgers, th
 - 2026-10-15: 9 connection decisions agent-reviewed (agent)
 - 2026-10-15: 9 connection decisions human-accepted (human)
 
-Snapshots: `2026-10-15-conformance-02-04`, `2026-10-15-initial-federation`, `2026-10-15-operational-closeout`, `2026-10-15-round-trip-and-historical-gate`
+Snapshots: `2026-10-15-conformance-02-04`, `2026-10-15-initial-federation`, `2026-10-15-operational-closeout`, `2026-10-15-round-trip-and-historical-gate`, `2026-10-16-gt-p012-milestone`
 
 Pin-update proposals: `GT-a81c505a08ac.json`, `GT-e2b5dc4cb65b-pin-spec-entry.json`, `GT-e2b5dc4cb65b.json`
