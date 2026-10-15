@@ -158,7 +158,7 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     # ---- candidate bridges --------------------------------------------------------------
     B = ["# Candidate bridges (proposals)", "", "Staged in `proposals/`; none is in the ledger. Status is shown in text.", "", "## Pairwise proposals", "", "| Id | Type | From | To | Status | Origin |", "| --- | --- | --- | --- | --- | --- |"]
     for p in sorted(shared["proposals"], key=lambda p: p["proposal_id"]):
-        if p.get("kind") != "seed_claim":
+        if p.get("kind") not in ("seed_claim", "external_claim"):
             B.append(f"| {p['proposal_id']} | {p['connection_type']} | `{p['from']}` | `{p['to']}` | {STATUS_TEXT[p['status']]} | {p['origin']} |")
     seeds = sorted((p for p in shared["proposals"] if p.get("kind") == "seed_claim"), key=lambda p: p["proposal_id"])
     if seeds:
@@ -173,6 +173,21 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
         B += ["", "Top 10 unreviewed retrieval candidates:", ""]
         for c in discovery["candidates"][:10]:
             B.append(f"- {c['similarity']:.3f} `{c['from']}` ↔ `{c['to']}` (shared terms: {', '.join(c['shared_terms'][:5])}){' [' + ', '.join(c['flags']) + ']' if c['flags'] else ''}")
+    ext = sorted((p for p in shared["proposals"] if p.get("kind") == "external_claim"), key=lambda p: p["proposal_id"])
+    if ext:
+        B += ["", "## Claims registered from the external 2026-10-15 synthesis (unapproved)", "", "Quoted verbatim from `reports/external-2026-10-15-cross-research-synthesis.md` (an exploratory synthesis; its cosines are retrieval measures). The mapping of cited items to pinned ids is the agent's (`source_mapping: agent`). Claims resting on private historical archives are `blocked_missing_source`. None is reviewed.", ""]
+        for p in ext:
+            B += [f"### {p['proposal_id']} ({p['section']}; {p['decision_category'].upper()})", "", f"> {p['quote']}", "", f"- **Cited (as written):** {'; '.join(p['cited_as'])}"]
+            if p.get("synthesis_assessment"):
+                B.append(f"- **Synthesis's own assessment:** {p['synthesis_assessment']}")
+            B.append(f"- **Mapped sources (agent):** {', '.join(f'`{r}`' for r in p['sources'])}")
+            if p.get("unresolved_citations"):
+                B.append(f"- **Unresolved citations:** {'; '.join(p['unresolved_citations'])}")
+            if p.get("overlaps"):
+                B.append(f"- **Overlaps:** {', '.join(f'`{o}`' for o in p['overlaps'])}")
+            B += [f"- **Note:** {n}" for n in p.get("context_notes", [])[:-1]]
+            B.append("")
+        B += [f"*{ext[0]['context_notes'][-1]}*", ""]
     R = ledger.Resolver(manifest, loaded["nodes"], shared)
     unresolved = []
     for rec in shared["proposals"] + shared["questions"]:

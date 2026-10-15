@@ -1,16 +1,16 @@
 # Change record (2026-10-15)
 
-Every path added on `infra/shared-research-coherence-v1` relative to `origin/main` (`05b15b0`), with its size and sha256. **Updated after the conformance pass against the author pack (02–04).** This record does not list itself.
+Every path added on `infra/shared-research-coherence-v1` relative to `origin/main` (`05b15b0`), with its size and sha256. **Updated after registering the external synthesis's claims.** This record does not list itself.
 
 - **Paths outside `research-synthesis/` and its workflow:** 0.
 - **Not modified:** programme ledgers, plans, results, snapshots, books and other branches.
 
-**Paths: 176**
+**Paths: 177**
 
 | Path | Bytes | sha256 |
 | --- | --- | --- |
 | `.github/workflows/research-synthesis.yml` | 915 | `2fd5445c037b640b80c2323607b648f985161687411d185af41329fc87f80e08` |
-| `research-synthesis/README.md` | 5663 | `f006106d06950dfae0e75199b0a0700324731c610d86354fb0a53ebcde08b396` |
+| `research-synthesis/README.md` | 5785 | `8ba848c69fc7f004684f41c7186276caed123b55cf6e735ad42511dcdd4b5455` |
 | `research-synthesis/audits/2026-10-15-starting-audit.md` | 5609 | `194de6c5ee6b87217c8fd77d4f7c67aedb0c95add03be78a935586f1db1619a9` |
 | `research-synthesis/docs/acceptance.md` | 4376 | `a7305c971d9a878c645dd4ce551b169f4c795f14737d7ec2127585f950ce53b5` |
 | `research-synthesis/docs/architecture.md` | 5697 | `6d8f2b1f6b5a01c84fc8b649c9f942bfe4a0f253891aa6788e900719c0788deb` |
@@ -18,11 +18,11 @@ Every path added on `infra/shared-research-coherence-v1` relative to `origin/mai
 | `research-synthesis/docs/conformance-02-04.md` | 14042 | `20f496094d60861fe8c286657e207088cb4ddd7f095c5142c4d29b6db04965e6` |
 | `research-synthesis/docs/crosswalk.md` | 2882 | `59467fcc0a11751b2f1209c74ad90e97fa7386b984e57a49e3871d5a1162b94b` |
 | `research-synthesis/docs/epistemic-policy.md` | 4626 | `bc57fed75a316c0c239c8f829dae7414d929ecdabcb73caa149b5ad4662e1198` |
-| `research-synthesis/generated/candidate-bridges.md` | 11052 | `28ea9028b78b6c223533262a2f0799cea33a5b611a797b9b683ae0e72bf0be7b` |
+| `research-synthesis/generated/candidate-bridges.md` | 25112 | `9a3d50b3ce9326e06d9dc9c9d23b7641027b012106d5a235b0bda9f6c25c5645` |
 | `research-synthesis/generated/chronology.md` | 876 | `eb3ae3bb37e585be8bfb6f731a003edac2d6f54adaed83197c6be23239fcceb2` |
 | `research-synthesis/generated/contradictions.md` | 5990 | `70154bd4731a4b6e7283bf833fd9fe50ec30d3f6080761c48adb43f274e55b79` |
-| `research-synthesis/generated/graph.json` | 771962 | `83babe1e7b27804a9b9f35d33134715c7572b4b3d1dac3f25a8b0c23e4753f64` |
-| `research-synthesis/generated/index.md` | 4322 | `f02f1c1b8e0790c2e52a89e108a09dac513d2c2fc60b895515d65d94fa273c7c` |
+| `research-synthesis/generated/graph.json` | 801677 | `af53d829126c57b4a353288c69bdbdd47f3738422d74f1480ccd1906086ab6e9` |
+| `research-synthesis/generated/index.md` | 4322 | `06945ec568eb38d9c06e4f4e65f37bf75a7f492bad67d9043832b131cf7ce19b` |
 | `research-synthesis/generated/links.md` | 7648 | `090137654071cff42ecc5de15004d5680b486428a576e5ba9d7c6a141830f01d` |
 | `research-synthesis/generated/links.mmd` | 2209 | `d9c02c7751230510755635f3b25774b82fd57c4f3f4fe0adea8bdb47e31d75ff` |
 | `research-synthesis/generated/metaphor-coverage.md` | 11203 | `5ff1cb1529ba58cb653e3b752edf0975cdc8454449d44304519d2b393829272c` |
@@ -32,7 +32,7 @@ Every path added on `infra/shared-research-coherence-v1` relative to `origin/mai
 | `research-synthesis/generated/nulls.md` | 11912 | `1a1564302034b0cce384ef7ca896bef3d401d3e1c3ddaf194503e514712b42cf` |
 | `research-synthesis/generated/provenance.md` | 8548 | `2d7d74e29d82f48e994f5cb881ddc6433552bf2181bdc48d7d846b7a2e5ebb8a` |
 | `research-synthesis/generated/provenance.mmd` | 846 | `f26386f5ab8970ec1fde4eb14481cf435af6e6bc916eba673e6ce9a8664f4c66` |
-| `research-synthesis/generated/questions.md` | 5053 | `01d1c319b3c543dad97cfb9c5ad8de212af99f3e8e9f42801b87b24b82af15d7` |
+| `research-synthesis/generated/questions.md` | 5280 | `64571b1d9ed38cef89e6a05a28be348e8cd6b269f265cd602916b15a451996c5` |
 | `research-synthesis/generated/themes/admissibility-vs-weighting.md` | 2933 | `ca76de1ebb00afc3533103670642b81d9965105d77887278e21c565246b20801` |
 | `research-synthesis/generated/themes/admissibility-vs-weighting.mmd` | 818 | `b2bd5c1c757a95e3d214847a584b15ad68f3e5d1afb77bacf2f2ef0f5177ecce` |
 | `research-synthesis/generated/themes/clock-readout-dependence.md` | 3192 | `e1e5056e0efe0925e8757d5b22c422da06773d92806fb7d3684d181925fba29c` |
@@ -63,10 +63,11 @@ Every path added on `infra/shared-research-coherence-v1` relative to `origin/mai
 | `research-synthesis/ledger/connections.jsonl` | 35591 | `b557d5b3e4194cb9ac47c515c50efe09ae2e5be7eebe33a565b510645870387b` |
 | `research-synthesis/ledger/metaphor-links.jsonl` | 3642 | `423b89e8737d27ad44a93f514f8b5ac8014aa5f45587351739e644cececaadd9` |
 | `research-synthesis/ledger/metaphors.jsonl` | 11111 | `165327464a9c43b01151b6aec5d4c653967abad991b15ac1e51e107e99c20f46` |
-| `research-synthesis/ledger/questions.jsonl` | 4274 | `1178e5eacf42f01d176220209fd225504034d5f6277a9d0c4f1070d4612a22e0` |
-| `research-synthesis/proposals/candidate-relations.jsonl` | 43900 | `c84020e8bb46f17e3e4e587479f577af53e2e9eff255beae53207c6f1c0dc926` |
-| `research-synthesis/proposals/discovery-diagnostics.json` | 60332 | `b8f8efe04eb9d22c86ad2c59ce65301fa0beeaba66b04f703ca0f2ceb085b60e` |
+| `research-synthesis/ledger/questions.jsonl` | 4505 | `1a9a060fcfe24e488e8baba9f2b2c041286b35ad8de9865f769647f0ed9fbcbc` |
+| `research-synthesis/proposals/candidate-relations.jsonl` | 74530 | `ad76c640a8614cfd602eb1fa5e7336f8245f8d86bdb9f5a0b724583a4e63a6e7` |
+| `research-synthesis/proposals/discovery-diagnostics.json` | 60332 | `5e3eb1eb51a19cf966244abb961d7ccf11f4d7003791c99867350821f80045b8` |
 | `research-synthesis/proposals/metaphor-drafts.jsonl` | 16803 | `34e5efba2a2b3e48d97b3b776c162d7fad8964ae908418b5ec44cb25f9f89de5` |
+| `research-synthesis/proposals/register_external_claims.py` | 14480 | `266f34e7a2c52fea57016dc2a02437540fdda3fbc8df3f94bad87c7940905db9` |
 | `research-synthesis/proposals/reviews/P-0001.md` | 447 | `891e8542e71decd02d2e2ae786cae6b69337043cc8b0a593fecf2a49b22501dd` |
 | `research-synthesis/proposals/reviews/P-0002.md` | 390 | `a6024c7fb58d24154a45e3e340604578f74fe98bfb495441eaf60a0be7475ab1` |
 | `research-synthesis/proposals/reviews/P-0004.md` | 586 | `a77aa44e8c0bd6eaab405e672aa41c4d27ddc953733c17e0f697118b87e3dfa4` |
@@ -87,24 +88,24 @@ Every path added on `infra/shared-research-coherence-v1` relative to `origin/mai
 | `research-synthesis/proposals/reviews/X-0008.md` | 1456 | `4c797a67eb96ab1f8aa59468abc4301850a8347ebed7b602a9e4f04920ca2e01` |
 | `research-synthesis/proposals/reviews/X-0009.md` | 1837 | `a43de673df1124493739bc28176470c8ed6ba11759e3143105c3eafe02b2435f` |
 | `research-synthesis/proposals/seed_metaphors.py` | 15649 | `c6d9bd295203f5c08ca8eb831cfdca19a82355b73b5e48c04c7069ab06141d06` |
-| `research-synthesis/proposals/seed_records.py` | 41307 | `163c3a68e3e6293ac195802e6e51f392efa1f670c7cd2464965879b9c55de51c` |
+| `research-synthesis/proposals/seed_records.py` | 41567 | `6eecf972f1d5fa95eca2e4c03eb47807555252400e994f45de564a7311fee84b` |
 | `research-synthesis/proposals/seeds/2026-10-15-author-pack/candidate-relations.jsonl` | 5096 | `2a8784fe92a8970205852286c496dece45a4eca8b1d5936fbce093e8aaa45b4b` |
 | `research-synthesis/proposals/seeds/2026-10-15-author-pack/intake-report.md` | 8247 | `2220cbd4617cf24c600508222fbd1f0e5705751d03f6e80241e7313da20507ae` |
 | `research-synthesis/proposals/seeds/2026-10-15-author-pack/metaphors.jsonl` | 5833 | `4a5bd422a3bde6e846398a67a758b7a3657afb917a86c6f5fa698f85c2eda6c7` |
 | `research-synthesis/proposals/seeds/2026-10-15-author-pack/receipt.json` | 683 | `fceb5241ce669796a91a5dbdc50d2f8002519fcb6dfece376e8e5b70eb74fe68` |
 | `research-synthesis/proposals/seeds/2026-10-15-author-pack/source-manifest.json` | 4138 | `1d0fa94b1d622aea1712bf134ef9012b65d91a60fd395e0744bd2cfd135d4f42` |
 | `research-synthesis/reports/2026-10-15-initial-federation.md` | 4579 | `f96cbcfbcd9949a9ab5f4c443c48b00c87eb1ac28c481e28ce488abb710f10be` |
-| `research-synthesis/reports/README.md` | 958 | `ef1c73fabe3206caef626042822709e0d1dbe632f96b5cf16e1667d6a2fb6468` |
+| `research-synthesis/reports/README.md` | 1895 | `9e4c9d8ba2d0515cb8826b5dbe135cc4852f15e7a7d9cea1c77a76258be22c34` |
 | `research-synthesis/reports/external-2026-10-15-cross-research-synthesis.md` | 26669 | `1c817747b15ef3301d808180f9f13924f396396daef580e66bafc2a048bc9b09` |
 | `research-synthesis/rssynth/__init__.py` | 94 | `3a7abd92100e019286bbf5a9b8ecf1f2847600eaebe8354472c9fa33342b82e2` |
 | `research-synthesis/rssynth/__main__.py` | 5353 | `091bd0216a08847f922134b9342fbc30a99eb58f68410ea51f254a338b26b7ea` |
 | `research-synthesis/rssynth/core.py` | 8372 | `83e027bee1d480c4104dc949577e884f902ea59011da183702e850225fa3342a` |
 | `research-synthesis/rssynth/discover.py` | 8914 | `6e02f83694a50d825b897b0851e83287c9ec4725a777f3184b6950962b5b323e` |
-| `research-synthesis/rssynth/generate.py` | 28735 | `ebbb40f02bfad94af806a4bf5df3250635dd64ab64209cc7c397ae8be2d83d46` |
-| `research-synthesis/rssynth/ledger.py` | 26710 | `1ed0592ebfcc68ea78f6db0004c21b6edc3e3b6b86654dc6cc8404d061494b31` |
+| `research-synthesis/rssynth/generate.py` | 30178 | `58fa410b480a7d61a343c5514b6493e77a86af6845f7087a78d200bb8f41b89c` |
+| `research-synthesis/rssynth/ledger.py` | 28621 | `1851f6ac7a376764fab19d50805f9cdb6eccd970b2eedb389f4c9a56ce632f66` |
 | `research-synthesis/rssynth/pins.py` | 7069 | `08ceaafa31bcf66646113a39ca0983186bab176cf0819e6500ab8a0be6d8925b` |
 | `research-synthesis/rssynth/sources.py` | 16633 | `d6093c32b2b65d6a0760a2db703a8053e1fec72c859a7a4a4450100eb98b6acd` |
-| `research-synthesis/rssynth/workflow.py` | 18730 | `f5b224842b8be25d4fd580659367330cdd56fdd1792510818ead41b6d98bc89a` |
+| `research-synthesis/rssynth/workflow.py` | 18909 | `5eab2aa2e4fed48bc41d21bbd480e4394f1750064259449295ea900f1392ee96` |
 | `research-synthesis/snapshots/2026-10-15-conformance-02-04/lock.json` | 8591 | `6ad0b7418d58cdbda609893b9fc0c5ef0461c6951746aa9c068b6967ace02b63` |
 | `research-synthesis/snapshots/2026-10-15-conformance-02-04/views/candidate-bridges.md` | 11052 | `28ea9028b78b6c223533262a2f0799cea33a5b611a797b9b683ae0e72bf0be7b` |
 | `research-synthesis/snapshots/2026-10-15-conformance-02-04/views/chronology.md` | 844 | `b2842d843159daedc1859ec1816f79f89fdd75c5b2368115be167d972f4f1718` |
@@ -184,4 +185,4 @@ Every path added on `infra/shared-research-coherence-v1` relative to `origin/mai
 | `research-synthesis/sources/materialised/GT/gravity-time/coherence/relations.jsonl` | 57972 | `386e38b863751053853da9698ac0aa795660da6658b0426aa6c5cd80c2265ac4` |
 | `research-synthesis/sources/pin-spec.json` | 12524 | `1ee4547fffe563510534f3c0aaec9346b0ce9a85d53ee5eed1534cea8f8077ce` |
 | `research-synthesis/synth` | 246 | `468c8133084bed3ca2fbf208bb9d9f1433184a764f9e3a324949f752c5d84bf1` |
-| `research-synthesis/tests/test_rssynth.py` | 34378 | `429e449a0e0c84cf17bdd6938540ab165639ec7ab66505dbbbffab4fd6e2b6ea` |
+| `research-synthesis/tests/test_rssynth.py` | 36630 | `f2fbda00f7a9972a39288c366e34e6180754f5065f80ad87dafd52dd98512713` |

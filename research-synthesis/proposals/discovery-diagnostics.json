@@ -726,8 +726,8 @@
         }
       },
       "shared_terms": [
-        "minus",
         "fractions",
+        "minus",
         "log",
         "sum",
         "state",
@@ -1870,8 +1870,8 @@
       },
       "shared_terms": [
         "claim",
-        "physical",
-        "relation"
+        "relation",
+        "physical"
       ],
       "similarity": 0.123389,
       "status": "unreviewed_retrieval_candidate",

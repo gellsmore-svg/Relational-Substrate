@@ -112,8 +112,8 @@ def review_proposal(proposal_id: str, decision: str, reviewer: str, rationale: s
     R = ledger.Resolver(manifest, loaded["nodes"], shared)
     new_conn = None
     if decision in ("agent_reviewed", "human_accepted"):
-        if p.get("kind") == "seed_claim":
-            raise ValueError("a seed claim cannot be promoted directly; restate it as pairwise proposals and review those")
+        if p.get("kind") in ("seed_claim", "external_claim"):
+            raise ValueError(f"a {p['kind'].replace('_', ' ')} cannot be promoted directly; restate it as pairwise proposals and review those")
         conns = core.read_jsonl(root / "ledger" / "connections.jsonl")
         n = 1 + max([int(x["connection_id"].split("::")[1]) for x in conns] or [0])
         new_conn = {k: v for k, v in p.items() if k not in ("proposal_id", "status", "decision_rationale")}
@@ -122,7 +122,12 @@ def review_proposal(proposal_id: str, decision: str, reviewer: str, rationale: s
         new_conn.update({"connection_id": f"X::{n:04d}", "review_status": decision, "promoted_from": proposal_id, "reviewed_source_commits": {k: pins[k] for k in srcs}})
     # write the review record first so record-existence checks see it, then validate; roll back on failure
     core.write_text(root / rec, f"# Review record {proposal_id}\n\n- **Reviewer:** {reviewer}\n- **Human:** {human}\n- **Decision:** {decision}\n- **Decision category:** {dc}\n- **Date:** {today}\n\n## Rationale\n\n{rationale}\n")
-    problems = ledger.validate_seed_claim(p, R) if p.get("kind") == "seed_claim" else ledger.validate_connection(p, R, in_ledger=False, root=root)
+    if p.get("kind") == "seed_claim":
+        problems = ledger.validate_seed_claim(p, R)
+    elif p.get("kind") == "external_claim":
+        problems = ledger.validate_external_claim(p, R, root)
+    else:
+        problems = ledger.validate_connection(p, R, in_ledger=False, root=root)
     if new_conn is not None:
         problems += ledger.validate_connection(new_conn, R, in_ledger=True, root=root)
     if problems:

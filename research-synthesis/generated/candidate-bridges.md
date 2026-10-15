@@ -126,14 +126,223 @@ Top 10 unreviewed retrieval candidates:
 - 0.156 `CL::F8C-PATH-CONVERTS-SLOT` ↔ `GT::GT-F05-RELATIONAL-POTENTIAL` (shared terms: count, edge, share, triangle)
 - 0.152 `CL::F008-COMPOSITION-REPRESENTATION` ↔ `GT::GT-Q18-REVERSAL-AT-W4` (shared terms: discriminator, depends, graph)
 
+## Claims registered from the external 2026-10-15 synthesis (unapproved)
+
+Quoted verbatim from `reports/external-2026-10-15-cross-research-synthesis.md` (an exploratory synthesis; its cosines are retrieval measures). The mapping of cited items to pinned ids is the agent's (`source_mapping: agent`). Claims resting on private historical archives are `blocked_missing_source`. None is reviewed.
+
+### P::EXT-C01 (§0, §4; BLOCKED_MISSING_SOURCE)
+
+> The most defensible common finding is **future-relevant relational information**.
+
+- **Cited (as written):** Historical Work 11, 46, 47, 48; CL 8H–8M conditioned-row and temporal-word tests
+- **Synthesis's own assessment:** Strong mathematical family resemblance; different kernels
+- **Mapped sources (agent):** `HIST::rs_work_round11/findings.md`, `HIST::rs_work_round46_moments/REPORT.md`, `HIST::rs_work_round47/REPORT.md`, `HIST::rs_work_round48/REPORT.md`, `CL::F8H-FIXED-STATE-NONCOMPILABILITY`, `CL::CL-T29`, `CL::F8M-H2-STATIONARY-H1-RESIDUAL`
+- **Overlaps:** `C::predictive-sufficiency`, `P::SYN-C001`, `XQ::07`
+
+### P::EXT-C02 (§4; CANDIDATE)
+
+> Thus **stationary occupancy match does not entail matching longer temporal organisation**.
+
+- **Cited (as written):** CL 8M: all 72 non-neutral tested cells strict H2; Kπ matches one-/two-time (P,h1) laws; process words first differ at length four
+- **Mapped sources (agent):** `CL::F8M-STRICT-H2-ROLE-ATLAS`, `CL::F8M-STATIONARY-H1-MATCHING`, `CL::F8M-H2-STATIONARY-H1-RESIDUAL`
+- **Overlaps:** `C::occupancy-vs-process`, `X::0001`, `P::FA-03`
+
+### P::EXT-C03 (§0, §5; BLOCKED_MISSING_SOURCE)
+
+> A second strong common thread is **contextual relational topology**.
+
+- **Cited (as written):** Historical 505G–J, 507O/Q/U/W; CL 8C gate/slot, 8F shape at fixed count, 8M role classes; GT E2 cycle affinity, E4/P008 witness floor and degree
+- **Synthesis's own assessment:** Strong mechanism-level analogy, not unified law
+- **Mapped sources (agent):** `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`, `CL::F8C-PROJECTION-GEOMETRY`, `CL::F8F-FIRST-PATH-SHAPE`, `GT::GT-F64-CHORD-SWITCHES-SITE-OFF`, `GT::GT-F67-FLOOR-IS-AN-EXACT-ODDS-LEVER`, `GT::GT-F68-FIRST-ORDER-SORTING-INDEX`
+- **Overlaps:** `C::higher-order-context`, `P::SYN-C004`, `P::0004`
+
+### P::EXT-C04 (§0, §5; BLOCKED_MISSING_SOURCE)
+
+> There is, however, **no demonstrated common universal operator** tying historical reconstruction, Constraint Laboratory gates and Gravity/Time witness floors into one dynamical law.
+
+- **Cited (as written):** Historical reconstruction; CL gates; GT witness floors
+- **Mapped sources (agent):** `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`, `CL::F8C-PROJECTION-GEOMETRY`, `GT::GT-F67-FLOOR-IS-AN-EXACT-ODDS-LEVER`
+- **Overlaps:** `XQ::07`
+
+### P::EXT-C05 (§5; CANDIDATE)
+
+> PATHF and PATHH can have equivalent local balance but sort through different kinetics, respectively faster formation and longer survival.
+
+- **Cited (as written):** GT-P008
+- **Mapped sources (agent):** `GT::GT-F69-CLOCK-SEPARATED-SORTING`, `GT::GT-F68-FIRST-ORDER-SORTING-INDEX`
+- **Note:** Within-GT restatement; checkable against GT-P008's derivation (S5).
+
+### P::EXT-C06 (§5; CANDIDATE)
+
+> A first-order formula correctly accounted for all **16 published within-reference ordering comparisons**, but this comparison was **post hoc** and seven algebraic reversal shapes have not been checked at full strength.
+
+- **Cited (as written):** GT-P008
+- **Mapped sources (agent):** `GT::GT-F71-SORTING-DECOMPOSITION-POSTHOC`, `GT::GT-F68-FIRST-ORDER-SORTING-INDEX`, `GT::GT-Q18-REVERSAL-AT-W4`
+- **Note:** Within-GT restatement.
+
+### P::EXT-C07 (§0, §7; BLOCKED_MISSING_SOURCE)
+
+> A third thread is that **persistence is not a single quantity**.
+
+- **Cited (as written):** Historical 505–507 retention/resilience/reconstruction; SC-026 readout; GT-P008/P009 metastability
+- **Synthesis's own assessment:** Moderate conceptual connection; direct benchmark absent
+- **Mapped sources (agent):** `HIST::rs_sources/RS_Baseline_Post_506Z/RS_Baseline_Post_506Z/02_EXPERIMENT_LEDGER_505_506.md`, `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`, `SC::stochastic-calculator/RS_FINDINGS.md`, `GT::GT-Q19-METASTABLE-FREE-REFERENCE`
+- **Overlaps:** `C::passage-and-persistence`, `P::FA-02`, `P::SYN-C008`
+- **Note:** GT-P009 (E5A) has since run: GT-F74 to GT-F82 bear on GT-Q19.
+
+### P::EXT-C08 (§7; CANDIDATE)
+
+> SC-026 offers a particularly sharp measurement distinction
+
+- **Cited (as written):** SC-026 (pure versus ready readout, 50/50 against 0–1/50)
+- **Mapped sources (agent):** `SC::stochastic-calculator/RS_FINDINGS.md`
+- **Overlaps:** `C::clock-readout-dependence`
+- **Note:** SC is catalogued only; the numbers are checkable in the SC document but were not checked here.
+
+### P::EXT-C09 (§6; CANDIDATE)
+
+> The concrete result is **qualitative support versus quantitative measure**.
+
+- **Cited (as written):** CL Generation 2 census (hard count gates open new supports; soft weights do not); GT E2–E3 one-way release under hard path-formation exclusion; witness-hitting-set recovery bound
+- **Synthesis's own assessment:** Strong finite-grammar distinction
+- **Mapped sources (agent):** `GT::GT-F51-ONE-WAY-RELEASE-MODE`, `GT::GT-F54-HARD-BAN-END-OF-SOFT-LADDER`, `GT::GT-F55-PERSISTENT-ABSENCE-TWO-MECHANISMS`
+- **Unresolved citations:** CL Generation 2 census: no Generation 2 finding exists in the pinned CL ledger (generations 001, 003C, … 008N); cited at report level only; GT witness-hitting-set recovery bound: a GT formal-note theorem, not a ledger finding
+- **Overlaps:** `C::admissibility-vs-weighting`, `X::0006`
+
+### P::EXT-C10 (§8; CANDIDATE)
+
+> **Event order versus time spent:** the Gravity/Time branch distinguishes jump/event and continuous-time occupancy.
+
+- **Cited (as written):** GT clocks; PCOMP uniform in continuous time, sorted per event
+- **Mapped sources (agent):** `GT::GT-F69-CLOCK-SEPARATED-SORTING`, `GT::GT-F30-ARROW-BELONGS-TO-RATIO`
+- **Overlaps:** `C::clock-readout-dependence`, `X::0003`, `P::SYN-C003`
+
+### P::EXT-C11 (§8; BLOCKED_MISSING_SOURCE)
+
+> **Mean versus distribution:** historical Work 45 provided a valid closed mean recurrence; Work 46 showed that this was not a closed law for precision; Work 47 repaired a particular total-variance criterion under fixed schedule assumptions.
+
+- **Cited (as written):** Historical Work 45, 46, 47
+- **Mapped sources (agent):** `HIST::rs_work_round46_moments/REPORT.md`, `HIST::rs_work_round47/REPORT.md`
+- **Unresolved citations:** Historical Work 45: no primary path listed in the synthesis
+
+### P::EXT-C12 (§8; CANDIDATE)
+
+> **Actual structure versus readout:** the Stochastic Calculator shows how “ready” and “pure” observers can disagree without a corresponding loss of identity.
+
+- **Cited (as written):** Stochastic Calculator observers
+- **Mapped sources (agent):** `SC::stochastic-calculator/RS_FINDINGS.md`
+- **Overlaps:** `C::clock-readout-dependence`
+- **Note:** SC is catalogued only; not checked here.
+
+### P::EXT-C13 (§9; BLOCKED_MISSING_SOURCE)
+
+> 507: no simple universal order-scaling law, slow-formation-implies-long-persistence law, staged directional-backbone-then-diffuse-repair cascade, single scalar persistence parameter or universal viability corridor.
+
+- **Cited (as written):** 507 negatives
+- **Mapped sources (agent):** `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`, `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Negatives_And_Corrections.md`
+- **Note:** A negative result; preserved as such.
+
+### P::EXT-C14 (§9; CANDIDATE)
+
+> CL 8H: a history register may affect present transitions even after **initial** history has been forgotten; current-history efficacy is not retention of the starting register.
+
+- **Cited (as written):** CL 8H
+- **Mapped sources (agent):** `CL::F8H-CURRENT-VS-INITIAL-MEMORY`, `CL::F018-LOCAL-VERSUS-INITIAL`
+- **Overlaps:** `P::FA-05`, `X::0007`, `C::retention-vs-current-dependence`
+
+### P::EXT-C15 (§9; CANDIDATE)
+
+> CL 8M: **all 24 history-only ANY cells** show zero stationary material–older-history conditional information under the reported conditioning, yet temporal word differences persist
+
+- **Cited (as written):** CL 8M
+- **Mapped sources (agent):** `CL::F8M-H2-STATIONARY-DEPENDENCE`, `CL::F8M-HISTORY-ONLY-STRUCTURAL-SILENCE`, `CL::F8M-H2-STATIONARY-H1-RESIDUAL`
+- **Overlaps:** `C::occupancy-vs-process`
+
+### P::EXT-C16 (§9; CANDIDATE)
+
+> GT E4/P008: raw gathering largely disappears after density standardisation; held source topology is not an emergent object; local witness floors do not by themselves determine the sign of total attachment bias.
+
+- **Cited (as written):** GT E4, GT-P008
+- **Mapped sources (agent):** `GT::GT-F62-NATIVE-GATHERING-IS-DENSITY-COMPOSITION`, `GT::GT-F70-MARGIN-NOT-FIRST-ORDER`, `GT::GT-F72-NO-LABELLED-CENTRE-AT-FINITE-N`
+- **Overlaps:** `P::SYN-C007`, `P::FA-01`
+
+### P::EXT-C17 (§9; CANDIDATE)
+
+> Stochastic Calculator: successful numerical invariants are **programmed constraints**; the apparatus has not generated an RS-specific explanatory advantage beyond ordinary probability and computer science.
+
+- **Cited (as written):** Stochastic Calculator
+- **Mapped sources (agent):** `SC::stochastic-calculator/RS_FINDINGS.md`
+- **Note:** SC is catalogued only; not checked here. A negative assessment; preserved as such.
+
+### P::EXT-C18 (§9; BLOCKED_MISSING_SOURCE)
+
+> Proposed 508A/B results, visible only through prior-conversation summaries rather than this archive's primary execution records, did **not** produce a credible quantum-interference mechanism
+
+- **Cited (as written):** 508A/B (prior-conversation summaries; secondary-unverified by the synthesis's own account)
+- **Mapped sources (agent):** `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`
+- **Unresolved citations:** 508A/B primary execution records: not in the archive by the synthesis's own account
+- **Overlaps:** `C::physical-attraction`
+- **Note:** The synthesis itself labels this secondary and unverified.
+
+### P::EXT-C19 (§10; CANDIDATE)
+
+> The above results support a provisional **three-axis research map**, not a new ontology
+
+- **Cited (as written):** Axis A admissibility and support; Axis B predictive sufficiency and history; Axis C persistence and operational consequence
+- **Mapped sources (agent):** `C::admissibility-vs-weighting`, `C::predictive-sufficiency`, `C::passage-and-persistence`
+- **Overlaps:** `XQ::07`
+- **Note:** An interpretive map; the synthesis states the axes do not provably collapse to one primitive.
+
+### P::EXT-C20 (§10; CANDIDATE)
+
+> A useful formal target is the following **research proposal**, not an experimentally established RS law.
+
+- **Cited (as written):** Prospective equivalence x ~_(U,H,O,ε) y over a declared future-intervention family, horizon, readout class and fidelity
+- **Mapped sources (agent):** `C::predictive-sufficiency`, `CL::CL-T59`
+- **Overlaps:** `XQ::07`
+- **Note:** A definition proposal, not a result. The synthesis notes it is an equivalence only in some regimes (e.g. ε=0).
+
+### P::EXT-C21 (§0; CANDIDATE)
+
+> No branch establishes a fundamental physical substrate; no emergent metric, displacement, acceleration, gravitational clock law, Born rule or Bell-compatible correlation model has been demonstrated.
+
+- **Cited (as written):** All branches
+- **Mapped sources (agent):** `GT::GT-Q15-DISPLACEMENT-DEFINITION-GAP`, `GT::GT-F72-NO-LABELLED-CENTRE-AT-FINITE-N`, `C::physical-attraction`
+- **Overlaps:** `P::FA-01`
+- **Note:** A negative claim; consistent with the shared layer's physical-overreach guard.
+
+### P::EXT-C22 (§7; CANDIDATE)
+
+> That is an exceptionally useful direct test of the historical identity language, but it has not yet produced the requisite evidence.
+
+- **Cited (as written):** GT-P009 FREE persistence (planned at the time)
+- **Mapped sources (agent):** `GT::GT-Q19-METASTABLE-FREE-REFERENCE`, `GT::GT-F74-INTACT-MOTIFS-NO-CT-PERSISTENCE`, `GT::GT-F76-FLEXIBLE-ORGANISATION-OUTLIVES-ND-QUALIFIED`, `GT::GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW`
+- **Overlaps:** `XQ::04`, `P::SYN-C008`
+- **Note:** Superseded in context: GT-P009 (E5A) has since run at 79fa6b0, after the synthesis. Its results are closed but unreviewed (GT-P009 is in unreviewed_generations).
+
+*The synthesis reviewed CL at 9b2f857 (8M) and observed GT at 2bd18c6 (GT-P009 prompt stored, before E5A ran); the shared layer pins CL e650d71 (8N) and GT 79fa6b0 (GT-P009 closed).*
+
+
 ## Review diagnostics: unresolved references (staged, never shown as agreement)
 
 - `P::0005` → `HIST::505-507`: source HIST is pending_intake
 - `P::0006` → `EXT::2026-10-15-cross-research-synthesis`: source EXT-SYNTH-20261015 is external_stored
+- `P::EXT-C01` → `HIST::rs_work_round11/findings.md`: source HIST is pending_intake
+- `P::EXT-C01` → `HIST::rs_work_round46_moments/REPORT.md`: source HIST is pending_intake
+- `P::EXT-C01` → `HIST::rs_work_round47/REPORT.md`: source HIST is pending_intake
+- `P::EXT-C01` → `HIST::rs_work_round48/REPORT.md`: source HIST is pending_intake
+- `P::EXT-C03` → `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`: source HIST is pending_intake
+- `P::EXT-C04` → `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`: source HIST is pending_intake
+- `P::EXT-C07` → `HIST::rs_sources/RS_Baseline_Post_506Z/RS_Baseline_Post_506Z/02_EXPERIMENT_LEDGER_505_506.md`: source HIST is pending_intake
+- `P::EXT-C07` → `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`: source HIST is pending_intake
+- `P::EXT-C11` → `HIST::rs_work_round46_moments/REPORT.md`: source HIST is pending_intake
+- `P::EXT-C11` → `HIST::rs_work_round47/REPORT.md`: source HIST is pending_intake
+- `P::EXT-C13` → `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`: source HIST is pending_intake
+- `P::EXT-C13` → `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Negatives_And_Corrections.md`: source HIST is pending_intake
+- `P::EXT-C18` → `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`: source HIST is pending_intake
 - `P::SYN-C001` → `HIST::rs_work_round11/findings.md`: source HIST is pending_intake
 - `P::SYN-C005` → `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`: source HIST is pending_intake
 - `P::SYN-C008` → `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`: source HIST is pending_intake
 - `XQ::05` → `HIST::46-48`: source HIST is pending_intake
 - `XQ::05` → `HIST::505-507`: source HIST is pending_intake
 - `XQ::05` → `HIST::work-11`: source HIST is pending_intake
-- `XQ::06` → `EXT::2026-10-15-cross-research-synthesis`: source EXT-SYNTH-20261015 is external_stored

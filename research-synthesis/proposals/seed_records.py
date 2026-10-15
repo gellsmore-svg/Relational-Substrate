@@ -269,9 +269,10 @@ QUESTIONS = [
     {"question_id": "XQ::05", "status": "pending_source", "statement": "What do the historical 505-507 / Work 11 / 46-48 materials contribute to the occupancy-versus-process and predictive-sufficiency themes?",
      "refs": ["HIST::505-507", "HIST::work-11", "HIST::46-48"],
      "discriminating_tests": [{"test": "Take the archives in under a declared intake procedure (05_HISTORICAL_INTAKE.md, not supplied), then register each claim as a proposal", "would_show": "which historical claims are primary evidence and which are interpretation", "status": "blocked_on_source"}]},
-    {"question_id": "XQ::06", "status": "pending_source", "statement": "Which claims of the 2026-10-15 cross-research synthesis survive source checking against the pinned ledgers?",
-     "refs": ["EXT::2026-10-15-cross-research-synthesis"],
-     "discriminating_tests": [{"test": "Register each claim of the synthesis as a proposal with source refs; review each against the pinned ledgers", "would_show": "agreement, qualification or rejection per claim", "status": "blocked_on_source"}]},
+    {"question_id": "XQ::06", "status": "open", "statement": "Which claims of the 2026-10-15 cross-research synthesis survive source checking against the pinned ledgers?",
+     "refs": ["P::EXT-C01", "P::EXT-C02", "P::EXT-C09", "P::EXT-C22"],
+     "discriminating_tests": [{"test": "Review each registered claim (P::EXT-C01 to P::EXT-C22) against the pinned ledgers; restate checkable ones as pairwise proposals", "would_show": "agreement, qualification or rejection per claim", "status": "claims_registered_review_pending"}],
+     "notes": "The synthesis is stored verbatim (reports/external-2026-10-15-cross-research-synthesis.md); 22 claims are registered as proposals, 7 of them blocked on private historical archives."},
     {"question_id": "XQ::07", "status": "open", "statement": "Is there a common mathematical operator behind CL's predictive sufficiency and GT's persistence, or only a common question?",
      "refs": ["C::predictive-sufficiency", "C::passage-and-persistence", "C::occupancy-vs-process"],
      "discriminating_tests": [{"test": "Write both as functionals of the same generator and stopping sets, and check whether one determines the other on a shared small chain", "would_show": "a shared operator, a one-way relation, or none", "status": "proposed_not_authorised"}],
@@ -422,7 +423,7 @@ def write_all(root: Path = ROOT) -> None:
 
     dump("ledger/connections.jsonl", CONNECTIONS)
     existing = [json.loads(line) for line in (root / "proposals/candidate-relations.jsonl").read_text().splitlines() if line.strip()] if (root / "proposals/candidate-relations.jsonl").exists() else []
-    dump("proposals/candidate-relations.jsonl", PROPOSALS + [r for r in existing if r.get("origin") == "author_seed"])
+    dump("proposals/candidate-relations.jsonl", PROPOSALS + [r for r in existing if r.get("origin") in ("author_seed", "external_synthesis")])
     dump("ledger/questions.jsonl", QUESTIONS)
 
 

@@ -62,6 +62,7 @@ python3 research-synthesis/synth propose-pin --source GT --commit <sha>   # mile
 python3 research-synthesis/synth apply-pin --source GT --commit <sha> --reviewed-by "<human name>"
 python3 research-synthesis/synth snapshot --name <milestone> --title "<title>"
 python3 research-synthesis/synth intake-seeds <dir>  # stage author seed files as unapproved proposals
+python3 research-synthesis/proposals/register_external_claims.py  # register the external synthesis's claims (idempotent)
 python3 -m unittest discover -s research-synthesis/tests
 ```
 

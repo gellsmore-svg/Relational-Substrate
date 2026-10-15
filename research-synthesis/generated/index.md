@@ -18,8 +18,8 @@ A navigable, generated view across research programmes. **It does not merge or r
 
 - Concepts: 13
 - Cross-programme connections: 9 (agent_reviewed: 9); none human-accepted
-- Proposals: 21 (proposed: 11, rejected: 8, undetermined: 2)
-- Shared questions: 7 (2 pending a missing source)
+- Proposals: 43 (proposed: 33, rejected: 8, undetermined: 2)
+- Shared questions: 7 (1 pending a missing source)
 - Metaphors: 6 reviewed by agent, 8 draft (all non-evidentiary)
 
 - Connection decision categories (agent recommendations): accepted_bounded: 3, qualified: 6

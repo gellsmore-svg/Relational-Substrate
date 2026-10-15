@@ -35,9 +35,10 @@ Status: **PENDING_SOURCE**. Refs: `HIST::505-507`, `HIST::work-11`, `HIST::46-48
 
 ## XQ::06: Which claims of the 2026-10-15 cross-research synthesis survive source checking against the pinned ledgers?
 
-Status: **PENDING_SOURCE**. Refs: `EXT::2026-10-15-cross-research-synthesis`
+Status: **OPEN**. Refs: `P::EXT-C01`, `P::EXT-C02`, `P::EXT-C09`, `P::EXT-C22`
 
-- Test (blocked_on_source): Register each claim of the synthesis as a proposal with source refs; review each against the pinned ledgers. Would show: agreement, qualification or rejection per claim.
+- Test (claims_registered_review_pending): Review each registered claim (P::EXT-C01 to P::EXT-C22) against the pinned ledgers; restate checkable ones as pairwise proposals. Would show: agreement, qualification or rejection per claim.
+- Note: The synthesis is stored verbatim (reports/external-2026-10-15-cross-research-synthesis.md); 22 claims are registered as proposals, 7 of them blocked on private historical archives.
 
 ## XQ::07: Is there a common mathematical operator behind CL's predictive sufficiency and GT's persistence, or only a common question?
 

@@ -598,6 +598,46 @@ class Conformance0204(unittest.TestCase):
             self.assertEqual(ledger.validate_all(*inputs()), [])
 
 
+class ExternalSynthesisClaims(unittest.TestCase):
+    def setUp(self):
+        self.m, self.loaded, self.shared = inputs()
+        self.ext = {p["proposal_id"]: p for p in self.shared["proposals"] if p.get("kind") == "external_claim"}
+
+    def test_claims_are_registered_with_verbatim_quotes_and_agent_mapping(self):
+        self.assertEqual(len(self.ext), 22)
+        doc = (REAL_ROOT / "reports/external-2026-10-15-cross-research-synthesis.md").read_text(encoding="utf-8")
+        for p in self.ext.values():
+            self.assertIn(p["quote"], doc)
+            self.assertEqual((p["source_mapping"], p["status"], p["origin"]), ("agent", "proposed", "external_synthesis"))
+            self.assertTrue(p["provenance_ref"].startswith("EXT::"))
+
+    def test_historical_claims_are_blocked_and_others_candidate(self):
+        for p in self.ext.values():
+            hist = any(r.startswith("HIST::") for r in p["sources"])
+            self.assertEqual(p["decision_category"], "blocked_missing_source" if hist else "candidate", p["proposal_id"])
+
+    def test_altered_quote_or_promotion_is_refused(self):
+        bad = copy.deepcopy(self.shared)
+        x = [p for p in bad["proposals"] if p["proposal_id"] == "P::EXT-C02"][0]
+        x["quote"] = x["quote"].replace("does not entail", "entails")
+        self.assertTrue(any("verbatim" in e for e in ledger.validate_all(self.m, self.loaded, bad)))
+        with sandbox():
+            with self.assertRaises(ValueError):
+                workflow.review_proposal("P::EXT-C02", "agent_reviewed", "agent: test", "promote", human=False)
+
+    def test_registration_is_idempotent_and_keeps_other_records(self):
+        import importlib.util
+
+        spec = importlib.util.spec_from_file_location("reg", REAL_ROOT / "proposals/register_external_claims.py")
+        reg = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(reg)
+        with sandbox() as root:
+            before = core.read_jsonl(root / "proposals/candidate-relations.jsonl")
+            reg.write(root)
+            after = core.read_jsonl(root / "proposals/candidate-relations.jsonl")
+            self.assertEqual(sorted(json.dumps(r, sort_keys=True) for r in before), sorted(json.dumps(r, sort_keys=True) for r in after))
+
+
 class NonMutationOfResearchRecords(unittest.TestCase):
     def test_branch_changes_only_the_shared_layer(self):
         v = workflow.scope_violations("origin/main")

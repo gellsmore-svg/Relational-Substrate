@@ -353,6 +353,39 @@ def validate_seed_claim(x: dict, R: "Resolver") -> list[str]:
     return p
 
 
+def validate_external_claim(x: dict, R: "Resolver", root: Path) -> list[str]:
+    """A claim registered from an external synthesis: verbatim quote, agent-labelled mapping, never promoted directly."""
+    pid = x.get("proposal_id", "?")
+    p = []
+    if x.get("origin") != "external_synthesis" or not str(x.get("provenance_ref", "")).startswith("EXT::"):
+        p.append(f"{pid}: an external claim keeps origin external_synthesis and an EXT:: provenance_ref")
+    if x.get("source_mapping") != "agent":
+        p.append(f"{pid}: the mapping of cited items to ids must be labelled source_mapping: agent")
+    if x.get("connection_type") is not None:
+        p.append(f"{pid}: an external claim is not a connection (connection_type must be null)")
+    if x.get("status") not in ("proposed", "under_review", "rejected", "undetermined"):
+        p.append(f"{pid}: an external claim cannot be promoted directly; restate it as pairwise proposals and review those")
+    doc = None
+    for src in R.manifest["sources"]:
+        if src["namespace"] == "EXT":
+            for a in src.get("artifacts", []):
+                f = core.REPO / a["path"]
+                if f.exists():
+                    doc = f.read_text(encoding="utf-8")
+    if not x.get("quote") or doc is None or x["quote"] not in doc:
+        p.append(f"{pid}: quote must appear verbatim in the stored external document")
+    nodes, pending = [], False
+    for ref in x.get("sources", []):
+        res = R.resolve(ref)
+        pending |= bool(res.get("pending"))
+        nodes.append(res.get("node"))
+        if not res["ok"] and not res.get("pending"):
+            p.append(f"{pid}: source {ref}: {res['reason']}")
+    p += _no_scores(x, pid)
+    p += validate_decision(x, pid, "status", nodes, pending, R.manifest)
+    return p
+
+
 def validate_metaphor_link(link: dict, ids: dict) -> list[str]:
     lid = link.get("link_id", "?")
     t = link.get("link_type")
@@ -401,6 +434,9 @@ def validate_all(manifest: dict, loaded: dict, shared: dict, root: Path | None =
     for x in shared["proposals"]:
         if x.get("kind") == "seed_claim":
             p += validate_seed_claim(x, R)
+            continue
+        if x.get("kind") == "external_claim":
+            p += validate_external_claim(x, R, root)
             continue
         p += validate_connection(x, R, in_ledger=False, root=root)
         if not x.get("decision_rationale") and x.get("status") in ("rejected", "undetermined"):
