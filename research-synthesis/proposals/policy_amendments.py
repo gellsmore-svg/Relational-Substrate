@@ -30,6 +30,22 @@ AMENDMENTS = [
         "grandfathered": ["RT-0001", "RT-0002"],
         "audit_note": "RT-0001 was opened retrospectively at the moment the implicit-acceptance rule was introduced and ratified in the same session (AD-0002). Its 15 items had been shown to the author only in prose (reports/2026-10-15-initial-federation.md, the PR #8 description and the generated links and metaphor views), not as a structured list before the instruction that ratified them. AD-0002 stands and is not rewritten; it accepted synthesis interpretations at their reported categories only. It is not scientific review of CL 008N or GT-P009 and not publication consent. RT-0002 listed no items.",
     },
+    {
+        "decision_id": "AD-0006",
+        "date": "2026-10-16",
+        "kind": "standing_pin_adoption",
+        "human": True,
+        "decided_by": "author (repository owner): instruction of 2026-10-16 after the GT-P012 report; applied by the agent",
+        "instruction": "skip the central approval steps and integrate automatically",
+        "rules": [
+            "a milestone pin proposal is adopted without a per-pin named review (synth apply-pin --standing-decision AD-0006) when it descends from the current pin and carries no warnings (no rows removed or rewritten in place)",
+            "a proposal with any warning (non-descent, removed or rewritten rows) still needs a named human reviewer",
+            "adoption still runs the full sequence: pin, generate, check twice for byte identity, tests; staged candidates are appended and re-validated; snapshot and round-close follow, and the hub milestone branch is merged once CI is green",
+            "the adoption record says that no line-by-line review took place; nobody's name is entered as reviewer",
+            "this is not scientific review of any pinned generation (they stay listed in unreviewed_generations), not acceptance of any candidate connection, and not consent to publish private historical material",
+        ],
+        "note": "Forward-looking. Earlier pins and decisions are unchanged.",
+    },
 ]
 
 

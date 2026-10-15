@@ -121,3 +121,33 @@ def apply_pin(source_key: str, new_commit: str, *, reviewed_by: str, spec_path=N
     prop.update({"status": "adopted", "reviewed_by": reviewed_by, "adopted_on": datetime.date.today().isoformat()})
     core.write_json(prop_path, prop)
     return manifest
+
+
+AUTO_ADOPT_DECISION = "AD-0006"
+
+
+def auto_apply_pin(source_key: str, new_commit: str, *, decision_id: str = AUTO_ADOPT_DECISION, spec_path=None) -> dict:
+    """Adopt a pin under the author's logged standing instruction instead of a per-pin named review.
+
+    Refused unless the decision is logged as a ``standing_pin_adoption`` amendment and the proposal
+    descends from the current pin with no warnings (nothing removed or rewritten in place). The
+    record says plainly that no line-by-line review took place; it is not scientific review of the
+    pinned generations and not publication consent.
+    """
+    log = core.ROOT / "proposals" / "author-decisions.jsonl"
+    decisions = [json.loads(line) for line in log.read_text(encoding="utf-8").splitlines() if line.strip()] if log.exists() else []
+    d = next((x for x in decisions if x.get("decision_id") == decision_id), None)
+    if not d or d.get("kind") != "standing_pin_adoption" or not d.get("human"):
+        raise sources.SourceError(f"{decision_id} is not a logged standing pin-adoption decision by the author")
+    prop_path = pin_proposals_dir() / f"{source_key}-{new_commit[:12]}.json"
+    if not prop_path.exists():
+        raise sources.SourceError("no pin proposal for this commit; run propose-pin first")
+    prop = core.read_json(prop_path)
+    if not prop.get("descends_from_current") or prop.get("warnings"):
+        raise sources.SourceError("automatic adoption needs a descending proposal with no warnings; use a named review")
+    basis = f"author standing instruction {decision_id} ({d['date']}): \"{d['instruction']}\"; no line-by-line pin review"
+    manifest = apply_pin(source_key, new_commit, reviewed_by=basis, spec_path=spec_path)
+    prop = core.read_json(prop_path)
+    prop.update({"adoption_basis": decision_id, "human_reviewed": False})
+    core.write_json(prop_path, prop)
+    return manifest

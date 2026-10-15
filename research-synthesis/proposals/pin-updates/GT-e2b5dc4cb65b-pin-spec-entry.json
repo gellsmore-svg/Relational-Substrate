@@ -1,0 +1,320 @@
+{
+  "apply_procedure": "after review: replace the GT entry in sources/pin-spec.json with proposed_entry (or run synth apply-pin, then add the artifacts and unreviewed_generations), then synth pin/generate/check",
+  "artifact_additions": [
+    {
+      "description": "Immutable GT coherence snapshot through E5B",
+      "kind": "snapshot",
+      "materialise": false,
+      "path": "gravity-time/coherence/snapshots/through-gt-e5b.md"
+    },
+    {
+      "description": "Immutable GT coherence snapshot through E5C",
+      "kind": "snapshot",
+      "materialise": false,
+      "path": "gravity-time/coherence/snapshots/through-gt-e5c.md"
+    },
+    {
+      "description": "Immutable GT coherence snapshot through E5D",
+      "kind": "snapshot",
+      "materialise": false,
+      "path": "gravity-time/coherence/snapshots/through-gt-e5d.md"
+    },
+    {
+      "description": "GT transfer note T-17 to T-20 (suggestions only)",
+      "kind": "document",
+      "materialise": false,
+      "path": "gravity-time/docs/gt-e5b-cross-programme-transfer.md"
+    },
+    {
+      "description": "GT transfer note T-21 to T-24 (suggestions only)",
+      "kind": "document",
+      "materialise": false,
+      "path": "gravity-time/docs/gt-e5c-cross-programme-transfer.md"
+    },
+    {
+      "description": "GT transfer note T-25 to T-26 (suggestions only)",
+      "kind": "document",
+      "materialise": false,
+      "path": "gravity-time/docs/gt-e5d-cross-programme-transfer.md"
+    },
+    {
+      "description": "GT E5B plain-English report",
+      "kind": "document",
+      "materialise": false,
+      "path": "gravity-time/reports/gt-e5b-report.md"
+    },
+    {
+      "description": "GT E5C plain-English report",
+      "kind": "document",
+      "materialise": false,
+      "path": "gravity-time/reports/gt-e5c-report.md"
+    },
+    {
+      "description": "GT E5D plain-English report",
+      "kind": "document",
+      "materialise": false,
+      "path": "gravity-time/reports/gt-e5d-report.md"
+    }
+  ],
+  "artifacts_retained_unchanged": [
+    "gravity-time/coherence/findings.jsonl",
+    "gravity-time/coherence/relations.jsonl",
+    "constraint-lab/src/rs_constraint_lab/coherence.py",
+    "gravity-time/coherence/snapshots/through-gt-e5a.md",
+    "gravity-time/docs/reference-architecture-review.md",
+    "gravity-time/docs/e3-cross-programme-transfer.md",
+    "gravity-time/docs/e4-cross-programme-transfer.md",
+    "gravity-time/docs/gt-p008-cross-programme-transfer.md",
+    "gravity-time/docs/gt-e5a-cross-programme-transfer.md",
+    "gravity-time/reports/gt-e5a-report.md"
+  ],
+  "current_entry": {
+    "adapters": [
+      "coherence_ledger_v1"
+    ],
+    "artifacts": [
+      {
+        "kind": "findings",
+        "materialise": true,
+        "path": "gravity-time/coherence/findings.jsonl"
+      },
+      {
+        "kind": "relations",
+        "materialise": true,
+        "path": "gravity-time/coherence/relations.jsonl"
+      },
+      {
+        "kind": "validator",
+        "materialise": true,
+        "path": "constraint-lab/src/rs_constraint_lab/coherence.py"
+      },
+      {
+        "description": "Immutable GT coherence snapshot through E5A",
+        "kind": "snapshot",
+        "materialise": false,
+        "path": "gravity-time/coherence/snapshots/through-gt-e5a.md"
+      },
+      {
+        "description": "GT-P008 reference architecture review (R1-R3)",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/docs/reference-architecture-review.md"
+      },
+      {
+        "description": "GT transfer note T-1 to T-4 (suggestions only)",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/docs/e3-cross-programme-transfer.md"
+      },
+      {
+        "description": "GT transfer note T-5 to T-7 (suggestions only)",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/docs/e4-cross-programme-transfer.md"
+      },
+      {
+        "description": "GT transfer note T-8 to T-12 (suggestions only)",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/docs/gt-p008-cross-programme-transfer.md"
+      },
+      {
+        "description": "GT transfer note T-13 to T-16 (suggestions only)",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/docs/gt-e5a-cross-programme-transfer.md"
+      },
+      {
+        "description": "GT E5A plain-English report",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/reports/gt-e5a-report.md"
+      }
+    ],
+    "branch": "research/gravity-time-admissibility",
+    "commit": "79fa6b0119449bd56359acf4436015df27855f43",
+    "default_revision": true,
+    "extra_finding_fields": [
+      "dependence"
+    ],
+    "lineage": [
+      {
+        "relation": "descends_from",
+        "target": "CL-8G",
+        "what": "GT branch was created from CL 8G (22e252e); shares the constraint-lab DSL, kernel builder and coherence validator"
+      },
+      {
+        "relation": "carries_inherited_copy_of",
+        "target": "CL-8G",
+        "what": "constraint-lab/coherence/{findings,relations}.jsonl on the GT branch are byte-identical to 8G and are NOT read as CL evidence"
+      }
+    ],
+    "namespace": "GT",
+    "programme": "Gravity, Temporality and Emergent Spatiality",
+    "repo": "gellsmore-svg/Relational-Substrate",
+    "review_note": "GT-P009 (E5A) closed at the pin; awaiting the author's review in draft PR #6. Findings created in GT-P009 are closed-but-unreviewed.",
+    "revision_label": "p009",
+    "role": "research_programme",
+    "round_boundary": "GT-P009 (E5A) closed at 79fa6b0 ('GT-P009: provenance close ...'); snapshot through-gt-e5a.md",
+    "source_key": "GT",
+    "status": "included",
+    "unreviewed_generations": [
+      "GT-P009"
+    ]
+  },
+  "pin_proposal": "proposals/pin-updates/GT-e2b5dc4cb65b.json",
+  "proposed_entry": {
+    "adapters": [
+      "coherence_ledger_v1"
+    ],
+    "artifacts": [
+      {
+        "kind": "findings",
+        "materialise": true,
+        "path": "gravity-time/coherence/findings.jsonl"
+      },
+      {
+        "kind": "relations",
+        "materialise": true,
+        "path": "gravity-time/coherence/relations.jsonl"
+      },
+      {
+        "kind": "validator",
+        "materialise": true,
+        "path": "constraint-lab/src/rs_constraint_lab/coherence.py"
+      },
+      {
+        "description": "Immutable GT coherence snapshot through E5A",
+        "kind": "snapshot",
+        "materialise": false,
+        "path": "gravity-time/coherence/snapshots/through-gt-e5a.md"
+      },
+      {
+        "description": "GT-P008 reference architecture review (R1-R3)",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/docs/reference-architecture-review.md"
+      },
+      {
+        "description": "GT transfer note T-1 to T-4 (suggestions only)",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/docs/e3-cross-programme-transfer.md"
+      },
+      {
+        "description": "GT transfer note T-5 to T-7 (suggestions only)",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/docs/e4-cross-programme-transfer.md"
+      },
+      {
+        "description": "GT transfer note T-8 to T-12 (suggestions only)",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/docs/gt-p008-cross-programme-transfer.md"
+      },
+      {
+        "description": "GT transfer note T-13 to T-16 (suggestions only)",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/docs/gt-e5a-cross-programme-transfer.md"
+      },
+      {
+        "description": "GT E5A plain-English report",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/reports/gt-e5a-report.md"
+      },
+      {
+        "description": "Immutable GT coherence snapshot through E5B",
+        "kind": "snapshot",
+        "materialise": false,
+        "path": "gravity-time/coherence/snapshots/through-gt-e5b.md"
+      },
+      {
+        "description": "Immutable GT coherence snapshot through E5C",
+        "kind": "snapshot",
+        "materialise": false,
+        "path": "gravity-time/coherence/snapshots/through-gt-e5c.md"
+      },
+      {
+        "description": "Immutable GT coherence snapshot through E5D",
+        "kind": "snapshot",
+        "materialise": false,
+        "path": "gravity-time/coherence/snapshots/through-gt-e5d.md"
+      },
+      {
+        "description": "GT transfer note T-17 to T-20 (suggestions only)",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/docs/gt-e5b-cross-programme-transfer.md"
+      },
+      {
+        "description": "GT transfer note T-21 to T-24 (suggestions only)",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/docs/gt-e5c-cross-programme-transfer.md"
+      },
+      {
+        "description": "GT transfer note T-25 to T-26 (suggestions only)",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/docs/gt-e5d-cross-programme-transfer.md"
+      },
+      {
+        "description": "GT E5B plain-English report",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/reports/gt-e5b-report.md"
+      },
+      {
+        "description": "GT E5C plain-English report",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/reports/gt-e5c-report.md"
+      },
+      {
+        "description": "GT E5D plain-English report",
+        "kind": "document",
+        "materialise": false,
+        "path": "gravity-time/reports/gt-e5d-report.md"
+      }
+    ],
+    "branch": "research/gravity-time-admissibility",
+    "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+    "default_revision": true,
+    "extra_finding_fields": [
+      "dependence"
+    ],
+    "lineage": [
+      {
+        "relation": "descends_from",
+        "target": "CL-8G",
+        "what": "GT branch was created from CL 8G (22e252e); shares the constraint-lab DSL, kernel builder and coherence validator"
+      },
+      {
+        "relation": "carries_inherited_copy_of",
+        "target": "CL-8G",
+        "what": "constraint-lab/coherence/{findings,relations}.jsonl on the GT branch are byte-identical to 8G and are NOT read as CL evidence"
+      }
+    ],
+    "namespace": "GT",
+    "programme": "Gravity, Temporality and Emergent Spatiality",
+    "repo": "gellsmore-svg/Relational-Substrate",
+    "review_note": "GT-P009 to GT-P012 closed at the pin; awaiting the author's scientific review in draft PR #6. Findings created in GT-P009 to GT-P012 are closed-but-unreviewed.",
+    "revision_label": "p012",
+    "role": "research_programme",
+    "round_boundary": "GT-P012 (E5D) closed at e2b5dc4 ('GT-P012: provenance close ...'); snapshot through-gt-e5d.md",
+    "source_key": "GT",
+    "status": "included",
+    "unreviewed_generations": [
+      "GT-P009",
+      "GT-P010",
+      "GT-P011",
+      "GT-P012"
+    ]
+  },
+  "schema": "rssynth.pin-spec-entry-proposal/v1",
+  "source": "GT",
+  "status": "proposed (pending named-human review; pin-spec.json NOT edited)"
+}

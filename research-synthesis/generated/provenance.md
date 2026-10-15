@@ -5,7 +5,7 @@ Generated view. Programme ledgers are authoritative in their own branches; the s
 | Source | Programme | Role | Status | Branch | Pinned commit | Round boundary |
 | --- | --- | --- | --- | --- | --- | --- |
 | `CL` (CL::) | Constraint Laboratory | research_programme | **INCLUDED** | `research/constraint-lab-v0.8n-h2-controlled-passage` | `e650d71bda72` | Prompt 008N closed at e650d71 ('provenance: close Prompt 008N ...'); immutable snapshot through-generation-008n.md published in cc9678b |
-| `GT` (GT::) | Gravity, Temporality and Emergent Spatiality | research_programme | **INCLUDED** | `research/gravity-time-admissibility` | `79fa6b011944` | GT-P009 (E5A) closed at 79fa6b0 ('GT-P009: provenance close ...'); snapshot through-gt-e5a.md |
+| `GT` (GT::) | Gravity, Temporality and Emergent Spatiality | research_programme | **INCLUDED** | `research/gravity-time-admissibility` | `e2b5dc4cb65b` | GT-P012 (E5D) closed at e2b5dc4 ('GT-P012: provenance close ...'); snapshot through-gt-e5d.md |
 | `CL-8G` (CL::) | Constraint Laboratory (8G, common ancestor) | lineage_anchor | **LINEAGE_ONLY** | `research/constraint-lab-v0.8g-formal-integration` | `22e252e560cc` | 8G closed; common ancestor of CL 8N and GT |
 | `SC` (SC::) | Stochastic Relational Calculator | test_apparatus | **CATALOGUED_ONLY** | `research/stochastic-calculator` | `aa06213ce42e` | draft PR #2; last commit 2026-09-10; no structured ledger |
 | `OTR` (OTR::) | Open-Thetical Research method (shared) | shared_method | **CATALOGUED_ONLY** | `main` | `05b15b0d903d` | OTR 1.0 on main (PR #7) |
@@ -19,7 +19,7 @@ Generated view. Programme ledgers are authoritative in their own branches; the s
 | Source | Reviewed source commit | Source schema (validator blob) | Closed but unreviewed rounds | Note |
 | --- | --- | --- | --- | --- |
 | `CL` | `e650d71bda72` | `1fc80911d99f` | 008N | 008N closed at the pin; the branch records External Review 008M (8075827) but no review of 008N. Findings created in 008N are shown as closed-but-unreviewed; links resting on them cannot be accepted. |
-| `GT` | `79fa6b011944` | `1fc80911d99f` | GT-P009 | GT-P009 (E5A) closed at the pin; awaiting the author's review in draft PR #6. Findings created in GT-P009 are closed-but-unreviewed. |
+| `GT` | `e2b5dc4cb65b` | `1fc80911d99f` | GT-P009, GT-P010, GT-P011, GT-P012 | GT-P009 to GT-P012 closed at the pin; awaiting the author's scientific review in draft PR #6. Findings created in GT-P009 to GT-P012 are closed-but-unreviewed. |
 | `CL-8G` | `22e252e560cc` | `1fc80911d99f` | — |  |
 | `SC` | `aa06213ce42e` | `—` | — |  |
 | `OTR` | `05b15b0d903d` | `—` | — |  |
@@ -39,8 +39,8 @@ Generated view. Programme ledgers are authoritative in their own branches; the s
 | `CL` | `constraint-lab/reports/generation-008n-h2-controlled-passage.md` | document | `5100facd35f7…` | no (pointer only) | ABSENT (not tracked on this branch) |
 | `CL` | `constraint-lab/reports/generation-008k-predictive-state-synthesis.md` | document | `d0e469a80d33…` | no (pointer only) | ABSENT (not tracked on this branch) |
 | `CL` | `constraint-lab/docs/scientific-plan-discipline.md` | document | `4101d64f8b4d…` | no (pointer only) | ABSENT (not tracked on this branch) |
-| `GT` | `gravity-time/coherence/findings.jsonl` | findings | `cd79b3a9792c…` | yes | ABSENT (not tracked on this branch) |
-| `GT` | `gravity-time/coherence/relations.jsonl` | relations | `386e38b86375…` | yes | ABSENT (not tracked on this branch) |
+| `GT` | `gravity-time/coherence/findings.jsonl` | findings | `7061af382cdd…` | yes | ABSENT (not tracked on this branch) |
+| `GT` | `gravity-time/coherence/relations.jsonl` | relations | `2559cbd1721b…` | yes | ABSENT (not tracked on this branch) |
 | `GT` | `constraint-lab/src/rs_constraint_lab/coherence.py` | validator | `a99d65438d3d…` | yes | ABSENT (not tracked on this branch) |
 | `GT` | `gravity-time/coherence/snapshots/through-gt-e5a.md` | snapshot | `977127fa272d…` | no (pointer only) | ABSENT (not tracked on this branch) |
 | `GT` | `gravity-time/docs/reference-architecture-review.md` | document | `bc7b74aa53ff…` | no (pointer only) | ABSENT (not tracked on this branch) |
@@ -49,6 +49,15 @@ Generated view. Programme ledgers are authoritative in their own branches; the s
 | `GT` | `gravity-time/docs/gt-p008-cross-programme-transfer.md` | document | `0564d68b2360…` | no (pointer only) | ABSENT (not tracked on this branch) |
 | `GT` | `gravity-time/docs/gt-e5a-cross-programme-transfer.md` | document | `c755646adbae…` | no (pointer only) | ABSENT (not tracked on this branch) |
 | `GT` | `gravity-time/reports/gt-e5a-report.md` | document | `fcb002551216…` | no (pointer only) | ABSENT (not tracked on this branch) |
+| `GT` | `gravity-time/coherence/snapshots/through-gt-e5b.md` | snapshot | `5e96d6ee1395…` | no (pointer only) | ABSENT (not tracked on this branch) |
+| `GT` | `gravity-time/coherence/snapshots/through-gt-e5c.md` | snapshot | `fc84a95ddb7b…` | no (pointer only) | ABSENT (not tracked on this branch) |
+| `GT` | `gravity-time/coherence/snapshots/through-gt-e5d.md` | snapshot | `68b7a0b02b76…` | no (pointer only) | ABSENT (not tracked on this branch) |
+| `GT` | `gravity-time/docs/gt-e5b-cross-programme-transfer.md` | document | `96a6325c8b95…` | no (pointer only) | ABSENT (not tracked on this branch) |
+| `GT` | `gravity-time/docs/gt-e5c-cross-programme-transfer.md` | document | `8059cffd43ae…` | no (pointer only) | ABSENT (not tracked on this branch) |
+| `GT` | `gravity-time/docs/gt-e5d-cross-programme-transfer.md` | document | `f0731e3b3274…` | no (pointer only) | ABSENT (not tracked on this branch) |
+| `GT` | `gravity-time/reports/gt-e5b-report.md` | document | `af51fcf6ab31…` | no (pointer only) | ABSENT (not tracked on this branch) |
+| `GT` | `gravity-time/reports/gt-e5c-report.md` | document | `1680b104bf8f…` | no (pointer only) | ABSENT (not tracked on this branch) |
+| `GT` | `gravity-time/reports/gt-e5d-report.md` | document | `3bb7a9a94aec…` | no (pointer only) | ABSENT (not tracked on this branch) |
 | `CL-8G` | `constraint-lab/src/rs_constraint_lab/coherence.py` | validator | `a99d65438d3d…` | no (pointer only) | ABSENT (not tracked on this branch) |
 | `CL-8G` | `constraint-lab/coherence/findings.jsonl` | findings | `ac9fef6f3a7f…` | no (pointer only) | ABSENT (not tracked on this branch) |
 | `SC` | `stochastic-calculator/RS_FINDINGS.md` | document | `a603f8895767…` | no (pointer only) | ABSENT (not tracked on this branch) |
@@ -73,7 +82,7 @@ Shared lineage means agreement on inherited code, kernels or validators is not i
 | `CL` | coherence_ledger_v1: 216, theorem_catalog_v1: 108 | 0 |
 | `CL-8G` | — | 0 |
 | `EXT-SYNTH-20261015` | — | 0 |
-| `GT` | coherence_ledger_v1: 104 | 0 |
+| `GT` | coherence_ledger_v1: 129 | 0 |
 | `HIST` | — | 0 |
 | `OTR` | document_v1: 1 | 0 |
 | `SC` | document_v1: 4 | 0 |

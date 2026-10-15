@@ -26,6 +26,10 @@ Staged in `proposals/`; none is in the ledger. Status is shown in text.
 | P::FA-03 | exact_theorem_correspondence | `CL::CL-T31` | `GT::GT-F19-ACTIVITY-WITHOUT-BASIN` | REJECTED | agent_drafted |
 | P::FA-04 | common_definition | `CL::F8C-PROJECTION-GEOMETRY` | `CL::CL-T55` | REJECTED | agent_drafted · WITHIN-PROGRAMME (upstream suggestion; not promotable here) |
 | P::FA-05 | common_definition | `CL::F8H-CURRENT-VS-INITIAL-MEMORY` | `GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY` | REJECTED | agent_drafted |
+| P::GT-C1 | untested_hypothesis | `GT::GT-F88-NK-LAYER-TRAFFIC-COMPARATOR` | `CL::F8N-H1-MATCHED-PASSAGE-BOUNDARY` | PROPOSED (unreviewed) | agent_drafted |
+| P::GT-C2 | explicit_contrast | `GT::GT-F83-PCOMP-PERSISTENCE-IS-BETWEEN-LAYER-TRAFFIC` | `CL::F8N-MFPT-RESIDUAL` | PROPOSED (unreviewed) | agent_drafted |
+| P::GT-C3 | epistemic_compatibility | `GT::GT-F97-FIRST-HIT-SAMPLING-MATTERS` | `CL::F8N-MATCHED-SOURCE-PASSAGE` | PROPOSED (unreviewed) | agent_drafted |
+| P::GT-C4 | requires_scope_alignment | `GT::GT-F98-NL-LOCAL-REMOTE-TRAFFIC-COMPARATOR` | `CL::F8N-H1-MATCHED-PASSAGE-BOUNDARY` | PROPOSED (unreviewed) | agent_drafted |
 
 ## Author seed claims (multi-source; unapproved)
 

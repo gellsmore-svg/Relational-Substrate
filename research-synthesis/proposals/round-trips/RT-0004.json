@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-16",
+  "note": "GT pin adopted through GT-P012 under AD-0006; candidates P::GT-C1..C4 proposed only",
+  "recommendations": [],
+  "report": "research-synthesis/reports/2026-10-16-gt-p012-milestone-adopted.md",
+  "reported_at_commit": "0ff1d73280f338bd66733c3bdec231cc7efcbbb3",
+  "round_trip_id": "RT-0004"
+}

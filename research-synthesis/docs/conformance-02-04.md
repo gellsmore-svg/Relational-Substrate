@@ -32,7 +32,7 @@ Tests are in `tests/test_rssynth.py`: 65 in total, of which `Conformance0204` co
 | Adapter validates each programme's schema; indexes are transient or derived | met | `coherence_ledger_v1` reads each pin's own vocabulary from its validator (via `ast`, never executed) |
 | No frozen round changed; isolated branch; no cherry-picks; validator code is not run from active branches | met | `test_branch_changes_only_the_shared_layer`. The validator is parsed, not executed |
 | Views: `index.md`, `provenance.md`, `themes/*.md` + `themes/*.mmd`, `contradictions.md`, `nulls.md`, `questions.md`, `metaphor-coverage.md`, `metaphor-links.mmd`, `metaphor-gaps.md`, and a lossless `graph.json` | met (changed) | All are generated. `graph.json` now carries every shared record (with review vectors and histories), the source manifest, and node-level pins and round-review state. Tests: `test_required_view_names`, `test_graph_json_is_lossless` |
-| Updating policy: milestone-triggered; auto-detection never approves; maintenance detects staleness only | met | `docs/cadence.md`; `propose-pin`, `apply-pin` (named human); `update-candidates` writes diagnostics only |
+| Updating policy: milestone-triggered; auto-detection never approves; maintenance detects staleness only | met | `docs/cadence.md`; `propose-pin`, `apply-pin` (named human, or the author's standing decision AD-0006 for a clean descending milestone proposal: a human policy choice, not auto-detection approving); `update-candidates` writes diagnostics only |
 | v1 without a graph database, hosted vector store or custom front end | met | Standard-library Python, JSONL, Markdown and Mermaid |
 
 ## 03: discovery rubric
