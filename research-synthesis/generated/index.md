@@ -7,7 +7,7 @@ A navigable, generated view across research programmes. **It does not merge or r
 | Source | Status | Pinned commit | Nodes read |
 | --- | --- | --- | --- |
 | Constraint Laboratory (`CL::`) | **INCLUDED** | `e650d71bda72` | 324 |
-| Gravity, Temporality and Emergent Spatiality (`GT::`) | **INCLUDED** | `79fa6b011944` | 104 |
+| Gravity, Temporality and Emergent Spatiality (`GT::`) | **INCLUDED** | `e2b5dc4cb65b` | 129 |
 | Constraint Laboratory (8G, common ancestor) (`CL::`) | **LINEAGE_ONLY** | `22e252e560cc` | 0 |
 | Stochastic Relational Calculator (`SC::`) | **CATALOGUED_ONLY** | `aa06213ce42e` | 4 |
 | Open-Thetical Research method (shared) (`OTR::`) | **CATALOGUED_ONLY** | `05b15b0d903d` | 1 |
@@ -18,7 +18,7 @@ A navigable, generated view across research programmes. **It does not merge or r
 
 - Concepts: 13
 - Cross-programme connections: 9 (human_accepted: 9)
-- Proposals: 50 (proposed: 24, rejected: 8, under_review: 16, undetermined: 2)
+- Proposals: 54 (proposed: 28, rejected: 8, under_review: 16, undetermined: 2)
 - Shared questions: 7 (1 pending a missing source)
 - Metaphors: 6 reviewed (human_accepted: 6), 8 draft (all non-evidentiary)
 

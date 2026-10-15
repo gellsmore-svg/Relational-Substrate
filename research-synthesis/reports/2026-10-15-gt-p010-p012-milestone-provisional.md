@@ -113,3 +113,7 @@ See the retained report §2 (first-hit law T12, transient renewal, CSPH flicker,
 5. `synth snapshot --name 2026-10-15-gt-p012-milestone --title "..."`, then `synth round-close` (AD-0004).
 
 The pin's presence is not acceptance of GT claims; the GT rounds remain closed and scientifically unreviewed.
+
+---
+
+*Addendum (2026-10-16): the pin was adopted under the author's standing decision AD-0006 ("skip the central approval steps and integrate automatically"), not by a named-human review. See `2026-10-16-gt-p012-milestone-adopted.md`. This report is unchanged above and kept as the audit trail; its "staged" status describes 2026-10-15.*

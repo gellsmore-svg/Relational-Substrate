@@ -174,20 +174,20 @@
       ],
       "artifacts": [
         {
-          "bytes": 127717,
-          "git_blob": "f7ac37dee53ea9dba00ffaf2ba22d6aa3c9117c6",
+          "bytes": 157793,
+          "git_blob": "34e029911637253d0141d9cffd4e54037af0f98c",
           "kind": "findings",
           "materialised": true,
           "path": "gravity-time/coherence/findings.jsonl",
-          "sha256": "cd79b3a9792c6eda21f6eb7d9ad547e3acfed5e0356a5ce4cf6d562c0c8a21bb"
+          "sha256": "7061af382cdd55bb5a3ceb407441590ee678097286413a02c9c31438072cc31c"
         },
         {
-          "bytes": 57972,
-          "git_blob": "edd1828630f13cbc127ec1bd3f81c52a3e0a556e",
+          "bytes": 76901,
+          "git_blob": "c0409bc770b88fdebc3ec2f3b99d6cd3975de388",
           "kind": "relations",
           "materialised": true,
           "path": "gravity-time/coherence/relations.jsonl",
-          "sha256": "386e38b863751053853da9698ac0aa795660da6658b0426aa6c5cd80c2265ac4"
+          "sha256": "2559cbd1721bddc6f28f40eb0f51942bec1a6a170735e8d86671e236a39d936b"
         },
         {
           "bytes": 11807,
@@ -259,20 +259,101 @@
           "materialised": false,
           "path": "gravity-time/reports/gt-e5a-report.md",
           "sha256": "fcb0025512166bca8e07edf54588f897f455cd0e76403ef789a0e4cc616008ce"
+        },
+        {
+          "bytes": 77661,
+          "description": "Immutable GT coherence snapshot through E5B",
+          "git_blob": "d8e869718dc53b30c1a4434b26813c75f65a7a2d",
+          "kind": "snapshot",
+          "materialised": false,
+          "path": "gravity-time/coherence/snapshots/through-gt-e5b.md",
+          "sha256": "5e96d6ee139584c333dbf5c83cfab8ab16e1298e8cf10eda44ce4b0c47402450"
+        },
+        {
+          "bytes": 82490,
+          "description": "Immutable GT coherence snapshot through E5C",
+          "git_blob": "daadcd952b732f07d809c4ce86086731ea7f0181",
+          "kind": "snapshot",
+          "materialised": false,
+          "path": "gravity-time/coherence/snapshots/through-gt-e5c.md",
+          "sha256": "fc84a95ddb7bf669b28e15e33d7c6fc854ffedff35057975e89a0da72263fada"
+        },
+        {
+          "bytes": 87347,
+          "description": "Immutable GT coherence snapshot through E5D",
+          "git_blob": "46cb6d55ff311b8fafa90b4c15b5ce4255467e65",
+          "kind": "snapshot",
+          "materialised": false,
+          "path": "gravity-time/coherence/snapshots/through-gt-e5d.md",
+          "sha256": "68b7a0b02b76292e06f176c91184fce142f6e72f21f0b22a2d96faaa73ca7235"
+        },
+        {
+          "bytes": 3157,
+          "description": "GT transfer note T-17 to T-20 (suggestions only)",
+          "git_blob": "04ff37515a3989434e83453482206c92b2cefbf1",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/docs/gt-e5b-cross-programme-transfer.md",
+          "sha256": "96a6325c8b952bd45ebd898e86a699a56d97b78e8c90c699db3f41e9cc1db19b"
+        },
+        {
+          "bytes": 2125,
+          "description": "GT transfer note T-21 to T-24 (suggestions only)",
+          "git_blob": "0edd9dce485039f9acfccea43a68cc5a9132138f",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/docs/gt-e5c-cross-programme-transfer.md",
+          "sha256": "8059cffd43ae3f403ef34613d659356280af4e3aef8c3d0a3fc430eb4ac936fd"
+        },
+        {
+          "bytes": 1540,
+          "description": "GT transfer note T-25 to T-26 (suggestions only)",
+          "git_blob": "70b3fe1b4612bd15f2eda556a0636ca9dfca9a7f",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/docs/gt-e5d-cross-programme-transfer.md",
+          "sha256": "f0731e3b327414638b781e7b0c3a5502e5363bef56fce937584522c285649c4c"
+        },
+        {
+          "bytes": 11135,
+          "description": "GT E5B plain-English report",
+          "git_blob": "6b936bf6d63d0268d9941fb71be511d01d6a5470",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/reports/gt-e5b-report.md",
+          "sha256": "af51fcf6ab31f5154f7287fc44343f168c6c50332c8ed4559ea0005d430f4a8e"
+        },
+        {
+          "bytes": 6803,
+          "description": "GT E5C plain-English report",
+          "git_blob": "0b62771461d9f40f4b91f0a3df4ec62bf88fb052",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/reports/gt-e5c-report.md",
+          "sha256": "1680b104bf8f6b2261b2ef2c95d58da7a5d4ff219c154ff035ecbdb01550d84b"
+        },
+        {
+          "bytes": 6292,
+          "description": "GT E5D plain-English report",
+          "git_blob": "439b8fb0939f7e7db401b4963b3f8f7f083a0079",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/reports/gt-e5d-report.md",
+          "sha256": "3bb7a9a94aec2fe6a32a774f398e70acfa31ec566a0ee7552e1bf531d3154fd7"
         }
       ],
       "branch": "research/gravity-time-admissibility",
-      "commit": "79fa6b0119449bd56359acf4436015df27855f43",
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
       "default_revision": true,
       "ingestion_receipt": {
-        "by": "agent: Claude Opus 5.5",
+        "by": "agent: Claude Opus 5.5, adopting under the author's standing decision AD-0006 (no line-by-line review)",
         "checks": [
           "commit reachable",
           "every artifact path present at the pinned commit",
           "sha256 and git blob recorded",
           "materialised copies written byte-identically"
         ],
-        "date": "2026-10-15"
+        "date": "2026-10-16"
       },
       "lineage": [
         {
@@ -289,11 +370,11 @@
       "namespace": "GT",
       "programme": "Gravity, Temporality and Emergent Spatiality",
       "repo": "gellsmore-svg/Relational-Substrate",
-      "review_note": "GT-P009 (E5A) closed at the pin; awaiting the author's review in draft PR #6. Findings created in GT-P009 are closed-but-unreviewed.",
-      "reviewed_source_commit": "79fa6b0119449bd56359acf4436015df27855f43",
-      "revision_label": "p009",
+      "review_note": "GT-P009 to GT-P012 closed at the pin; awaiting the author's scientific review in draft PR #6. Findings created in GT-P009 to GT-P012 are closed-but-unreviewed.",
+      "reviewed_source_commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "revision_label": "p012",
       "role": "research_programme",
-      "round_boundary": "GT-P009 (E5A) closed at 79fa6b0 ('GT-P009: provenance close ...'); snapshot through-gt-e5a.md",
+      "round_boundary": "GT-P012 (E5D) closed at e2b5dc4 ('GT-P012: provenance close ...'); snapshot through-gt-e5d.md",
       "source_key": "GT",
       "source_schema": {
         "validator_git_blob": "1fc80911d99fc548d0ac33b7367999188d16ad88",
@@ -301,7 +382,10 @@
       },
       "status": "included",
       "unreviewed_generations": [
-        "GT-P009"
+        "GT-P009",
+        "GT-P010",
+        "GT-P011",
+        "GT-P012"
       ]
     },
     {

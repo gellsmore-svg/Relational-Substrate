@@ -4,7 +4,7 @@ Order of first appearance of each programme generation in the pinned ledgers, th
 
 **CL** findings by generation, in order of first appearance: 001 (1), 003C (1), 004A (1), 005 (2), 007 (1), 007B (2), 008 (3), 008A (3), 008B (13), 008C (17), 008D (19), 008E (17), 008F (12), 008G (13), 008H (19), 008I (16), 008K (20), 008L (17), 008M (21), 008N (18)
 
-**GT** findings by generation, in order of first appearance: GT-G0 (7), GT-G1 (8), GT-E0A (16), GT-E0B (9), GT-P003 (pre-E1 review; post hoc) (1), GT-P003 (engineering validation) (1), GT-E1 (12), GT-E2A (5), GT-E2B (7), GT-E3A (4), GT-E3B (4), GT-E4B (6), GT-E4A (3), GT-P008 (10), GT-P009 (11)
+**GT** findings by generation, in order of first appearance: GT-G0 (7), GT-G1 (8), GT-E0A (16), GT-E0B (9), GT-P003 (pre-E1 review; post hoc) (1), GT-P003 (engineering validation) (1), GT-E1 (12), GT-E2A (5), GT-E2B (7), GT-E3A (4), GT-E3B (4), GT-E4B (6), GT-E4A (3), GT-P008 (10), GT-P009 (11), GT-P010 (10), GT-P011 (8), GT-P012 (7)
 
 **Shared layer**:
 

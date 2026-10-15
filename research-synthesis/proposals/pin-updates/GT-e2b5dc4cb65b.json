@@ -1,4 +1,6 @@
 {
+  "adopted_on": "2026-10-16",
+  "adoption_basis": "AD-0006",
   "artifacts": [
     {
       "added": [
@@ -132,10 +134,12 @@
   ],
   "current_commit": "79fa6b0119449bd56359acf4436015df27855f43",
   "descends_from_current": true,
+  "human_reviewed": false,
   "note": "GT-P010 (4aaf04c) + GT-P011 (a81c505) + GT-P012 (e2b5dc4); supersedes GT-a81c505a08ac.json as target; staged, awaiting a named human reviewer",
   "proposed_commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+  "reviewed_by": "author standing instruction AD-0006 (2026-10-16): \"skip the central approval steps and integrate automatically\"; no line-by-line pin review",
   "schema": "rssynth.pin-proposal/v1",
   "source": "GT",
-  "status": "proposed",
+  "status": "adopted",
   "warnings": []
 }
