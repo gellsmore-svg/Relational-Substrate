@@ -26,6 +26,8 @@
 
 - `M::photo-and-diary`
 
+Diagram: [history-as-predictive-variable.mmd](history-as-predictive-variable.mmd)
+
 ```mermaid
 graph LR
   n_C__history_as_predictive_variable["History as a predictive variable"]:::concept

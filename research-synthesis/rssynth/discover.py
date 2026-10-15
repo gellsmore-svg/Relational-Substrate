@@ -29,6 +29,17 @@ DIMENSION_TERMS = {
     "horizon": ("stationary", "horizon", "transient", "lag", "finite-horizon"),
     "conditioning": ("conditional", "conditioned", "source", "given", "entrance"),
 }
+# Terminology normalisation (rubric 03: synonym mapping for retrieval only). It maps surface variants onto one
+# token so that retrieval is not defeated by wording. It asserts no shared ontology between programmes.
+SYNONYMS = {
+    "per-event": "jump", "event-clock": "jump", "jump-clock": "jump", "embedded": "jump",
+    "prevalence": "occupancy", "occupation": "occupancy",
+    "hitting": "passage", "first-passage": "passage", "mfpt": "passage", "committor": "passage",
+    "register": "history", "memory": "history",
+    "prohibit": "admissibility", "prohibition": "admissibility", "hard": "admissibility",
+    "quotient": "projection", "coarse-graining": "projection", "lumpability": "projection", "lumping": "projection",
+    "reversible": "reversibility", "irreversible": "reversibility", "detailed": "reversibility",
+}
 TOP_PER_NODE = 3
 MAX_PER_CLUSTER = 2
 NEAR_DUPLICATE = 0.9
@@ -36,7 +47,7 @@ INHERITED_WORDING = 0.8
 
 
 def tokens(text: str) -> list[str]:
-    return [t for t in re.findall(r"[a-z][a-z0-9\-]+", text.lower()) if t not in STOP and len(t) > 2]
+    return [SYNONYMS.get(t, t) for t in re.findall(r"[a-z][a-z0-9\-]+", text.lower()) if t not in STOP and len(t) > 2]
 
 
 def tfidf(docs: dict[str, str]) -> dict[str, dict[str, float]]:
@@ -116,7 +127,9 @@ def discover(nodes: dict, shared: dict, manifest: dict, *, programmes=("CL", "GT
             flags.append("possible_inherited_wording_shared_lineage")
         if (a, b) in reviewed:
             flags.append("already_reviewed")
-        out.append({"from": a, "to": b, "similarity": s, "shared_terms": shared_terms, "dimension_tags": dimension_tags(docs[a], docs[b]), "flags": flags, "status": "unreviewed_retrieval_candidate"})
+        vector = {axis: {"assessment": "unknown"} for axis in ("formal_comparability", "observable_comparability", "scope_compatibility", "evidence_status", "independence", "counterexamples_or_nulls", "falsifiability", "research_relevance")}
+        vector["semantic_resemblance"] = {"assessment": "lexical retrieval only", "retrieval_score": s}
+        out.append({"from": a, "to": b, "similarity": s, "shared_terms": shared_terms, "dimension_tags": dimension_tags(docs[a], docs[b]), "review_vector": vector, "flags": flags, "status": "unreviewed_retrieval_candidate"})
         if len(out) >= limit:
             break
     rank = {(a, b): i for i, (_, a, b) in enumerate(pairs, 1)}
@@ -132,7 +145,7 @@ def discover(nodes: dict, shared: dict, manifest: dict, *, programmes=("CL", "GT
         "calibration_note": "Ranks of connections that passed formal review. Reviewed structural links typically rank far below the top candidates: low similarity is not evidence of no convergence.",
         "score_kind": "retrieval_similarity",
         "score_meaning": "TF-IDF cosine between statement texts. A ranking aid for human review: not a probability, not a confidence in correctness, not evidence of structural convergence; a low value is not evidence against it.",
-        "method": {"tokeniser": "lowercase [a-z][a-z0-9-]+, stop-words removed, length > 2", "weighting": "sublinear tf times smoothed idf over the CL+GT statement corpus", "pairs": "cross-programme only", "controls": {"top_per_node": TOP_PER_NODE, "max_per_near_duplicate_cluster": MAX_PER_CLUSTER, "near_duplicate_cosine": NEAR_DUPLICATE, "inherited_wording_flag_cosine": INHERITED_WORDING}, "embedding_model": None},
+        "method": {"tokeniser": "lowercase [a-z][a-z0-9-]+, stop-words removed, length > 2, then the declared synonym table", "synonyms": SYNONYMS, "documents_selected": "every source_finding, formal_claim and source_question statement of the pinned CL and GT sources (SC documents excluded: catalogued only)", "duplicate_handling": "greedy near-duplicate clustering within each source (cosine >= 0.9); at most 2 candidates per cluster pair", "seed": None, "deterministic": True, "weighting": "sublinear tf times smoothed idf over the CL+GT statement corpus", "pairs": "cross-programme only", "controls": {"top_per_node": TOP_PER_NODE, "max_per_near_duplicate_cluster": MAX_PER_CLUSTER, "near_duplicate_cosine": NEAR_DUPLICATE, "inherited_wording_flag_cosine": INHERITED_WORDING}, "embedding_model": None},
         "corpus": {p: len(by_source[p]) for p in programmes},
         "candidates": out,
         "known_false_positive_patterns": [

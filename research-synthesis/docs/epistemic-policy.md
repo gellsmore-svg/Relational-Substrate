@@ -29,6 +29,16 @@
 7. **Rejections keep their rationale.** Rejected and undetermined proposals keep a `decision_rationale`; silence is not evidence.
 8. **Status is not upgraded by association.** The graph projection derives every node's status from its source or review record only. Adding metaphors or similarity scores never changes a status (tested).
 
+## Decisions, history and review vectors (author pack 02, 03)
+
+- **Two separate fields.** Every connection and proposal carries a `decision_category` (accepted_formal, accepted_bounded, qualified, candidate, rejected or blocked_missing_source) and a `review_status` (who has reviewed it).
+- **Agent recommendations.** All current categories are the agent's recommendations.
+- **Append-only history.** `decision_history` is append-only, and transitions must follow `core.STATUS_TRANSITIONS`. `check` fails if a committed history is rewritten or deleted.
+- **Review vector.** Its nine axes (semantic resemblance, formal comparability, observable comparability, scope compatibility, evidence status, independence, counterexamples or nulls, falsifiability, research relevance) are recorded separately and never summed. Only semantic resemblance may carry a retrieval score.
+- **Unreviewed rounds.** Records resting on a closed but unreviewed round (`unreviewed_generations` in the manifest) cannot be accepted.
+- **Unavailable sources.** Records citing an unavailable source stay `blocked_missing_source` (or `rejected`).
+- **Physical overreach.** Accepted records cannot assert physical gravity, quantum behaviour or physical time.
+
 ## What a connection does and does not say
 
 - **A `tested_structural_analogy`** says:

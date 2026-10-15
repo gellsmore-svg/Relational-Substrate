@@ -10,6 +10,6 @@ Order of first appearance of each programme generation in the pinned ledgers, th
 
 - 2026-10-15: 9 connections agent-reviewed
 
-Snapshots: `2026-10-15-initial-federation`
+Snapshots: `2026-10-15-conformance-02-04`, `2026-10-15-initial-federation`
 
 Pin-update proposals: none yet

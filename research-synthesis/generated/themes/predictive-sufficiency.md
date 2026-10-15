@@ -25,6 +25,8 @@
 
 - `M::photo-and-diary`
 
+Diagram: [predictive-sufficiency.mmd](predictive-sufficiency.mmd)
+
 ```mermaid
 graph LR
   n_C__predictive_sufficiency["Future-relative predictive sufficiency"]:::concept

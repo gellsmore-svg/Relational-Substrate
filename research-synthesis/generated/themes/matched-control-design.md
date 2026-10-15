@@ -27,6 +27,8 @@
 
 - `M::two-towns`
 
+Diagram: [matched-control-design.mmd](matched-control-design.mmd)
+
 ```mermaid
 graph LR
   n_C__matched_control_design["Matched-control design"]:::concept

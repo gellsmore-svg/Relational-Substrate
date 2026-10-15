@@ -14,6 +14,11 @@ Staged in `proposals/`; none is in the ledger. Status is shown in text.
 | P::0006 | untested_hypothesis | `EXT::2026-10-15-cross-research-synthesis` | `C::predictive-sufficiency` | PROPOSED (unreviewed) | agent_drafted |
 | P::0007 | untested_hypothesis | `GT::GT-F80-CLOSEW-CLOSURE-RECOVERY` | `CL::Q-H2-CONTROLLED-PASSAGE` | UNDETERMINED | agent_drafted |
 | P::0008 | common_definition | `CL::CL-F05` | `GT::GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS` | REJECTED | discovery_candidate |
+| P::FA-01 | tested_structural_analogy | `GT::GT-F09-POTENTIAL-AS-MECHANISM` | `C::physical-attraction` | REJECTED | agent_drafted |
+| P::FA-02 | common_definition | `GT::GT-F74-INTACT-MOTIFS-NO-CT-PERSISTENCE` | `GT::GT-F80-CLOSEW-CLOSURE-RECOVERY` | REJECTED | agent_drafted |
+| P::FA-03 | exact_theorem_correspondence | `CL::CL-T31` | `GT::GT-F19-ACTIVITY-WITHOUT-BASIN` | REJECTED | agent_drafted |
+| P::FA-04 | common_definition | `CL::F8C-PROJECTION-GEOMETRY` | `CL::CL-T55` | REJECTED | agent_drafted |
+| P::FA-05 | common_definition | `CL::F8H-CURRENT-VS-INITIAL-MEMORY` | `GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY` | REJECTED | agent_drafted |
 
 ## Author seed claims (multi-source; unapproved)
 
@@ -98,25 +103,37 @@ TF-IDF cosine between statement texts. A ranking aid for human review: not a pro
 
 Calibration: similarity and rank of reviewed connections among all cross-programme pairs:
 
-- X::0001 (tested_structural_analogy): similarity 0.000, rank unranked (no shared terms) of 11725
-- X::0002 (epistemic_compatibility): similarity 0.060, rank 876 of 11725
-- X::0003 (explicit_contrast): similarity 0.023, rank 5516 of 11725
-- X::0004 (explicit_contrast): similarity 0.015, rank 8061 of 11725
-- X::0005 (shared_implementation_assumption): similarity 0.000, rank unranked (no shared terms) of 11725
-- X::0006 (qualifies): similarity 0.000, rank unranked (no shared terms) of 11725
-- X::0007 (epistemic_compatibility): similarity 0.029, rank 4014 of 11725
-- X::0008 (qualifies): similarity 0.050, rank 1489 of 11725
-- X::0009 (tested_structural_analogy): similarity 0.102, rank 111 of 11725
+- X::0001 (tested_structural_analogy): similarity 0.000, rank unranked (no shared terms) of 11816
+- X::0002 (epistemic_compatibility): similarity 0.061, rank 837 of 11816
+- X::0003 (explicit_contrast): similarity 0.024, rank 5577 of 11816
+- X::0004 (explicit_contrast): similarity 0.039, rank 2557 of 11816
+- X::0005 (shared_implementation_assumption): similarity 0.000, rank unranked (no shared terms) of 11816
+- X::0006 (qualifies): similarity 0.000, rank unranked (no shared terms) of 11816
+- X::0007 (epistemic_compatibility): similarity 0.030, rank 3981 of 11816
+- X::0008 (qualifies): similarity 0.050, rank 1513 of 11816
+- X::0009 (tested_structural_analogy): similarity 0.103, rank 108 of 11816
 
 Top 10 unreviewed retrieval candidates:
 
-- 0.190 `CL::CL-F05` ↔ `GT::GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS` (shared terms: checks, items, controls, frozen) [already_reviewed]
-- 0.170 `CL::F8E-K3-DRIFT-SURFACE` ↔ `GT::GT-F25-KINETICS-SETS-OCCUPANCY-UNDER-IRREVERSIBILITY` (shared terms: formation, dissolution, ratio, exactly)
+- 0.192 `CL::CL-F05` ↔ `GT::GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS` (shared terms: checks, items, controls, frozen) [already_reviewed]
+- 0.172 `CL::F8E-K3-DRIFT-SURFACE` ↔ `GT::GT-F04-RETENTION-NOT-APPROACH` (shared terms: drift, exactly)
+- 0.171 `CL::F8E-K3-DRIFT-SURFACE` ↔ `GT::GT-F25-KINETICS-SETS-OCCUPANCY-UNDER-IRREVERSIBILITY` (shared terms: formation, dissolution, ratio, exactly)
+- 0.170 `CL::F8D-WEAK-GRADE-SURFACE` ↔ `GT::GT-F04-RETENTION-NOT-APPROACH` (shared terms: drift, exactly)
 - 0.170 `CL::CL-T20` ↔ `GT::GT-Q01-KINETIC-CONVENTION` (shared terms: justify, alone)
-- 0.167 `CL::F8E-K3-DRIFT-SURFACE` ↔ `GT::GT-F04-RETENTION-NOT-APPROACH` (shared terms: drift, exactly)
-- 0.165 `CL::F8D-WEAK-GRADE-SURFACE` ↔ `GT::GT-F04-RETENTION-NOT-APPROACH` (shared terms: drift, exactly)
+- 0.165 `CL::F8M-HISTORY-ONLY-STRUCTURAL-SILENCE` ↔ `GT::GT-F69-CLOCK-SEPARATED-SORTING` (shared terms: first, law, differ, any, uniform)
 - 0.162 `CL::F8C-TOPOLOGY-ATLAS` ↔ `GT::GT-F64-CHORD-SWITCHES-SITE-OFF` (shared terms: chord, middle, path)
-- 0.159 `CL::F8M-HISTORY-ONLY-STRUCTURAL-SILENCE` ↔ `GT::GT-F69-CLOCK-SEPARATED-SORTING` (shared terms: first, law, differ, any, uniform)
+- 0.159 `CL::CL-T58` ↔ `GT::GT-F07-SHARED-BASIN-DIFFERENT-CLOCKS` (shared terms: masses)
 - 0.156 `CL::F8C-PATH-CONVERTS-SLOT` ↔ `GT::GT-F05-RELATIONAL-POTENTIAL` (shared terms: count, edge, share, triangle)
-- 0.155 `CL::CL-T58` ↔ `GT::GT-F07-SHARED-BASIN-DIFFERENT-CLOCKS` (shared terms: masses)
 - 0.152 `CL::F008-COMPOSITION-REPRESENTATION` ↔ `GT::GT-Q18-REVERSAL-AT-W4` (shared terms: discriminator, depends, graph)
+
+## Review diagnostics: unresolved references (staged, never shown as agreement)
+
+- `P::0005` → `HIST::505-507`: source HIST is pending_intake
+- `P::0006` → `EXT::2026-10-15-cross-research-synthesis`: source EXT-SYNTH-20261015 is external_stored
+- `P::SYN-C001` → `HIST::rs_work_round11/findings.md`: source HIST is pending_intake
+- `P::SYN-C005` → `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`: source HIST is pending_intake
+- `P::SYN-C008` → `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`: source HIST is pending_intake
+- `XQ::05` → `HIST::46-48`: source HIST is pending_intake
+- `XQ::05` → `HIST::505-507`: source HIST is pending_intake
+- `XQ::05` → `HIST::work-11`: source HIST is pending_intake
+- `XQ::06` → `EXT::2026-10-15-cross-research-synthesis`: source EXT-SYNTH-20261015 is external_stored

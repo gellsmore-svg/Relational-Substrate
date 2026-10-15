@@ -53,6 +53,8 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
         nodes[x["connection_id"]] = {"kind": "connection", "label": f"{x['connection_type']} {x['from']} → {x['to']}"}
     files: dict[str, str] = {}
     graph = ledger.project_graph(manifest, loaded, shared)
+    graph["shared_records"] = {k: sorted(shared[k], key=lambda r: core.canonical(r)) for k in ("concepts", "connections", "questions", "metaphors", "metaphor_links", "proposals", "metaphor_drafts")}
+    graph["sources"] = manifest["sources"]
     files["graph.json"] = core.canonical(graph) + "\n"
 
     # ---- provenance ---------------------------------------------------------------
@@ -60,6 +62,10 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     P += ["| Source | Programme | Role | Status | Branch | Pinned commit | Round boundary |", "| --- | --- | --- | --- | --- | --- | --- |"]
     for s in manifest["sources"]:
         P.append(f"| `{s['source_key']}` ({s['namespace']}::) | {esc(s['programme'])} | {s['role']} | **{s['status'].upper()}** | `{s.get('branch') or '—'}` | `{(s.get('commit') or '—')[:12]}` | {esc(s.get('round_boundary') or s.get('note') or '—')} |")
+    P += ["", "## Reviewed pins, schemas and round review state", "", "`commit` is the **reviewed source commit**. Moving branch heads are reported by `synth audit` and `synth check` (staleness) and are never substituted for a pin.", "", "| Source | Reviewed source commit | Source schema (validator blob) | Closed but unreviewed rounds | Note |", "| --- | --- | --- | --- | --- |"]
+    for s in manifest["sources"]:
+        sch = s.get("source_schema", {}).get("validator_git_blob")
+        P.append(f"| `{s['source_key']}` | `{(s.get('reviewed_source_commit') or '—')[:12]}` | `{(sch or '—')[:12]}` | {', '.join(s.get('unreviewed_generations', [])) or '—'} | {esc(s.get('review_note', ''))} |")
     P += ["", "## Artifacts at the pins", "", "| Source | Path | Kind | sha256 | Materialised copy | Local tree |", "| --- | --- | --- | --- | --- | --- |"]
     for s in manifest["sources"]:
         for a in s.get("artifacts", []):
@@ -86,9 +92,13 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     # ---- links ----------------------------------------------------------------------
     conns = sorted(shared["connections"], key=lambda x: x["connection_id"])
     L = ["# Cross-programme connections", "", "Only records in `ledger/connections.jsonl`. Every one carries an explicit review status; none is human-accepted yet. Evidential types compare formal objects on eight dimensions (see each review record). Independence is stated because GT and CL share 8G lineage.", ""]
-    L += ["| Id | Type | From | To | Review status | Independence | Review record |", "| --- | --- | --- | --- | --- | --- | --- |"]
+    def unrev(x):
+        return any(ledger.unreviewed_round(manifest, loaded["nodes"].get(x[e])) for e in ("from", "to"))
+
+    L += ["**Decision category** is the agent's recommended category (rubric 03); **review status** says who has reviewed it. A connection resting on a closed but **unreviewed** round (CL 008N, GT-P009) is marked and cannot be accepted.", ""]
+    L += ["| Id | Type | From | To | Decision | Review status | Rests on unreviewed round | Independence | Review record |", "| --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
     for x in conns:
-        L.append(f"| {x['connection_id']} | {x['connection_type']} | `{x['from']}` | `{x['to']}` | {STATUS_TEXT.get(x['review_status'], x['review_status'])} | {x['independence']} | [{x['review']['record'].split('/')[-1]}](../{x['review']['record']}) |")
+        L.append(f"| {x['connection_id']} | {x['connection_type']} | `{x['from']}` | `{x['to']}` | {x['decision_category'].upper()} | {STATUS_TEXT.get(x['review_status'], x['review_status'])} | {'YES' if unrev(x) else 'no'} | {x['independence']} | [{x['review']['record'].split('/')[-1]}](../{x['review']['record']}) |")
     L += ["", "## Rationale", ""]
     for x in conns:
         L += [f"**{x['connection_id']}** ({x['connection_type']}; {STATUS_TEXT.get(x['review_status'])}). {x['rationale']}", ""]
@@ -104,7 +114,7 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     files["links.mmd"] = "\n".join(M) + "\n"
 
     # ---- contradictions and nulls ---------------------------------------------------
-    C = ["# Contradictions, contrasts, qualifications and nulls", "", "Disagreement and negative results are kept as visible as agreement.", "", "## Cross-programme contrasts and qualifications", ""]
+    C = ["# Contradictions, contrasts and qualifications", "", "Disagreement is kept as visible as agreement. Programme negative and null findings are in [nulls.md](nulls.md).", "", "## Cross-programme contrasts and qualifications", ""]
     for x in conns:
         if x["connection_type"] in ("explicit_contrast", "qualifies", "supersedes_interpretation"):
             C.append(f"- **{x['connection_id']}** {x['connection_type']}: `{x['from']}` / `{x['to']}`: {short(x['rationale'], 400)}")
@@ -112,17 +122,23 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     for p in sorted(shared["proposals"], key=lambda p: p["proposal_id"]):
         if p["status"] in ("rejected", "undetermined") and "from" in p:
             C.append(f"- **{p['proposal_id']}** {STATUS_TEXT[p['status']]}: `{p['from']}` → `{p['to']}` ({p['connection_type']}). {short(p.get('decision_rationale', ''), 400)}")
-    C += ["", "## Negative findings recorded by the programmes", "", "Findings whose structural roles include `negative_finding`, by source (statements abbreviated; the pinned ledger is authoritative).", ""]
+    C += ["", "## Open disagreement between an author seed and an agent review", "", "- `P::SYN-C003` (seed: clock dependence is `compatible_with`) against `X::0003` (agent review: explicit contrast of clock operations). Both readings can coexist; the ledger needs one relation type. **Author decision required.**", ""]
+    N = ["# Nulls, negative findings and qualified findings", "", "Negative results are evidence too. Statements are abbreviated; the pinned ledgers are authoritative.", "", "## Negative findings recorded by the programmes", "", "Findings whose structural roles include `negative_finding`, by source.", ""]
     for src in ("CL", "GT"):
         neg = sorted(k for k, v in loaded["nodes"].items() if v.get("source") == src and "negative_finding" in (v.get("structural_roles") or []))
-        C.append(f"**{src}** ({len(neg)}):")
-        C += [f"- `{k}` [{loaded['nodes'][k]['status']}]: {short(loaded['nodes'][k]['statement'])}" for k in neg]
-        C.append("")
-    C += ["## Qualified or superseded programme findings", ""]
+        N.append(f"**{src}** ({len(neg)}):")
+        N += [f"- `{k}` [{loaded['nodes'][k]['status']}]: {short(loaded['nodes'][k]['statement'])}" for k in neg]
+        N.append("")
+    N += ["## Qualified or superseded programme findings", ""]
     for src in ("CL", "GT"):
         q = sorted(k for k, v in loaded["nodes"].items() if v.get("source") == src and v.get("status") in ("qualified", "superseded") and v["kind"] != "formal_claim")
-        C.append(f"- **{src}**: {len(q)}: " + ", ".join(f"`{k}`" for k in q))
-    files["contradictions-and-nulls.md"] = "\n".join(C) + "\n"
+        N.append(f"- **{src}**: {len(q)}: " + ", ".join(f"`{k}`" for k in q))
+    N += ["", "## Rejected false-attractor controls (rubric 03)", ""]
+    for p in sorted(shared["proposals"], key=lambda p: p["proposal_id"]):
+        if p.get("false_attractor_control"):
+            N.append(f"- **{p['proposal_id']}** REJECTED: {p['rationale']} {short(p['decision_rationale'], 400)}")
+    files["contradictions.md"] = "\n".join(C) + "\n"
+    files["nulls.md"] = "\n".join(N) + "\n"
 
     # ---- questions --------------------------------------------------------------------
     Q = ["# Open questions and discriminating tests", "", "Shared cross-programme questions (`ledger/questions.jsonl`). No test listed here is authorised by this layer; each needs its programme's own frozen plan.", ""]
@@ -157,6 +173,17 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
         B += ["", "Top 10 unreviewed retrieval candidates:", ""]
         for c in discovery["candidates"][:10]:
             B.append(f"- {c['similarity']:.3f} `{c['from']}` ↔ `{c['to']}` (shared terms: {', '.join(c['shared_terms'][:5])}){' [' + ', '.join(c['flags']) + ']' if c['flags'] else ''}")
+    R = ledger.Resolver(manifest, loaded["nodes"], shared)
+    unresolved = []
+    for rec in shared["proposals"] + shared["questions"]:
+        rid = rec.get("proposal_id") or rec.get("question_id")
+        refs = rec.get("sources") or rec.get("refs") or [rec.get("from"), rec.get("to")]
+        for ref in refs:
+            if ref:
+                res = R.resolve(ref)
+                if not res["ok"]:
+                    unresolved.append(f"- `{rid}` → `{ref}`: {res['reason']}")
+    B += ["", "## Review diagnostics: unresolved references (staged, never shown as agreement)", ""] + (sorted(set(unresolved)) or ["- none"])
     files["candidate-bridges.md"] = "\n".join(B) + "\n"
 
     # ---- metaphors -------------------------------------------------------------------------
@@ -173,7 +200,7 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     for m in sorted(shared["metaphors"], key=lambda m: m["metaphor_id"]):
         MC += [f"### {m['title']} (`{m['metaphor_id']}`; {m['status']}, non-evidentiary)", "", m["explanation"], "", "| In the picture | Stands for |", "| --- | --- |"]
         MC += [f"| {esc(r['figure'])} | {esc(r['object'])} |" for r in m["mapping"]]
-        MC += ["", "**It does not mean:** " + "; ".join(m["does_not_mean"]) + ".", "", "**Misleading readings:** " + "; ".join(m["misleading_readings"]) + ".", ""]
+        MC += ["", f"**Audience:** {m['audience']}. **Useful scope:** {m.get('useful_scope', 'not stated')}", "", "**It does not mean:** " + "; ".join(m["does_not_mean"]) + ".", "", "**Misleading readings:** " + "; ".join(m["misleading_readings"]) + ".", ""]
     files["metaphor-coverage.md"] = "\n".join(MC) + "\n"
     MO = ["# Overlapping metaphor coverage", "", "Concepts explained by more than one metaphor, and how metaphors relate to each other (complements, bridges, conflicts).", ""]
     for c in concepts:
@@ -206,6 +233,11 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     unmapped = sorted({t for m in shared["metaphor_drafts"] for t in m.get("unmapped_concept_targets", [])})
     if unmapped:
         MG += ["", "## Seed concept targets with no shared concept yet", "", "Candidates for new concepts, or for mapping by the author. Not created automatically.", ""] + [f"- `{t}`" for t in unmapped]
+    MG += ["", "## Metaphors that overreach or need qualification", "", "Reviewed metaphors with recorded failures or qualifications. Drafts' review flags are listed above."]
+    for link in links:
+        if link["link_type"] in ("fails_for", "requires_qualification"):
+            MG.append(f"- `{link['from']}` {link['link_type'].replace('_', ' ')} `{link['to']}`: {link['note']}")
+    MG += ["", "Coverage counts are not evidence: several metaphors explaining one concept add nothing to any finding's support."]
     files["metaphor-gaps.md"] = "\n".join(MG) + "\n"
     MM = ["graph LR"]
     seen = set()
@@ -217,7 +249,7 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
                 MM.append(f"  {mid(r)}{shape}")
         MM.append(f"  {mid(link['from'])} -.->|{link['link_type']}| {mid(link['to'])}")
     MM.append("  %% dotted edges: metaphor layer only (non-evidentiary)")
-    files["metaphors.mmd"] = "\n".join(MM) + "\n"
+    files["metaphor-links.mmd"] = "\n".join(MM) + "\n"
 
     # ---- chronology ---------------------------------------------------------------------------
     CH = ["# Chronology of change", "", "Order of first appearance of each programme generation in the pinned ledgers, then the shared layer's own records.", ""]
@@ -261,8 +293,9 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
         for m in sorted(covers.get(cid, [])):
             TM.append(f"  {mid(m)}([{mm(m)}]) -.->|metaphor| {mid(cid)}")
         TM.append("  classDef concept fill:#fff4d6,stroke:#a07a00")
-        T += ["", "```mermaid", *TM, "```", ""]
+        T += ["", f"Diagram: [{cid.split('::')[1]}.mmd]({cid.split('::')[1]}.mmd)", "", "```mermaid", *TM, "```", ""]
         files[f"themes/{cid.split('::')[1]}.md"] = "\n".join(T) + "\n"
+        files[f"themes/{cid.split('::')[1]}.mmd"] = "\n".join(TM) + "\n"
 
     # ---- front page -------------------------------------------------------------------------------
     st = Counter(x["review_status"] for x in conns)
@@ -273,7 +306,9 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
         n = sum(1 for v in loaded["nodes"].values() if v.get("source") == s["source_key"])
         I.append(f"| {esc(s['programme'])} (`{s['namespace']}::`) | **{s['status'].upper()}** | `{(s.get('commit') or '—')[:12]}` | {n} |")
     I += ["", "## Shared layer", "", f"- Concepts: {len(concepts)}", f"- Cross-programme connections: {len(conns)} ({', '.join(f'{k}: {v}' for k, v in sorted(st.items()))}); none human-accepted", f"- Proposals: {len(shared['proposals'])} ({', '.join(f'{k}: {v}' for k, v in sorted(ps.items()))})", f"- Shared questions: {len(shared['questions'])} ({sum(q['status'] == 'pending_source' for q in shared['questions'])} pending a missing source)", f"- Metaphors: {len(shared['metaphors'])} reviewed by agent, {len(shared['metaphor_drafts'])} draft (all non-evidentiary)", ""]
-    I += ["## Views", "", "| View | What it shows |", "| --- | --- |", "| [provenance.md](provenance.md) · [provenance.mmd](provenance.mmd) | Sources, pins, artifacts, lineage, local-tree presence |", "| [links.md](links.md) · [links.mmd](links.mmd) | Reviewed cross-programme connections with rationale |", "| [contradictions-and-nulls.md](contradictions-and-nulls.md) | Contrasts, qualifications, rejected proposals, programme negative findings |", "| [questions.md](questions.md) | Shared questions and discriminating tests; programme open questions |", "| [candidate-bridges.md](candidate-bridges.md) | Proposals and retrieval diagnostics (not evidence) |", "| [metaphor-coverage.md](metaphor-coverage.md) · [metaphor-overlap.md](metaphor-overlap.md) · [metaphor-gaps.md](metaphor-gaps.md) · [metaphors.mmd](metaphors.mmd) | Explanations, overlaps, conflicts, gaps |", "| [chronology.md](chronology.md) | Change over time |", "| [graph.json](graph.json) | Machine-readable projection (scientific, metaphor and provenance edges kept separate) |", ""]
+    dc = Counter(x["decision_category"] for x in conns)
+    I += [f"- Connection decision categories (agent recommendations): {', '.join(f'{k}: {v}' for k, v in sorted(dc.items()))}", "", "## Headlines", "", "- **Open cross-programme question:** XQ::01. Which declared comparator separates organisation (or history) from kinetics in both programmes? See [questions.md](questions.md).", "- **Contradiction resolved by scope:** X::0004. 'Reweighting can break reversibility' (CL) against 'single-witness templates are always reversible' (GT) differ in rule class (label covariance), not in fact. See [contradictions.md](contradictions.md).", "- **Open disagreement:** seed P::SYN-C003 (compatible) against agent review X::0003 (contrast). Author decision required.", "- **Limitation:** results from CL 008N and GT-P009 are closed but unreviewed; links resting on them are capped at `qualified`.", "- **Not claimed:** no record derives physical gravity, quantum behaviour or physical time.", ""]
+    I += ["## Views", "", "| View | What it shows |", "| --- | --- |", "| [provenance.md](provenance.md) · [provenance.mmd](provenance.mmd) | Sources, pins, artifacts, lineage, local-tree presence |", "| [links.md](links.md) · [links.mmd](links.mmd) | Reviewed cross-programme connections with rationale |", "| [contradictions.md](contradictions.md) · [nulls.md](nulls.md) | Contrasts, qualifications, rejected proposals; programme negative and qualified findings; false-attractor controls |", "| [questions.md](questions.md) | Shared questions and discriminating tests; programme open questions |", "| [candidate-bridges.md](candidate-bridges.md) | Proposals and retrieval diagnostics (not evidence) |", "| [metaphor-coverage.md](metaphor-coverage.md) · [metaphor-overlap.md](metaphor-overlap.md) · [metaphor-gaps.md](metaphor-gaps.md) · [metaphor-links.mmd](metaphor-links.mmd) | Explanations, overlaps, conflicts, gaps, overreach |", "| [chronology.md](chronology.md) | Change over time |", "| [graph.json](graph.json) | Lossless machine-readable export: all nodes, edges (scientific, metaphor, provenance kept separate), shared records, statuses and source pins |", ""]
     I += ["## Themes", ""] + [f"- [{c['label']}](themes/{c['concept_id'].split('::')[1]}.md)" for c in concepts]
     files["index.md"] = "\n".join(I) + "\n"
     return files

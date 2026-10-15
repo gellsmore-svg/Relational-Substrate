@@ -37,6 +37,10 @@ CONNECTION_TYPES = {
     "supersedes_interpretation",  # a later reading replaces an earlier one (directed)
     "untested_hypothesis",  # a proposed bridge with no check yet
     "instance_of_theme",  # a finding is an instance of a shared concept/theme
+    # added from the architecture contract (02); semantics documented in docs/crosswalk.md
+    "refines",  # one claim narrows or sharpens the other within the same scope
+    "fails_under_projection",  # a correspondence that holds on full state but not under a declared projection
+    "requires_scope_alignment",  # cannot be compared until scopes (state, clock, projection, horizon) are aligned
 }
 EVIDENTIAL_CONNECTION_TYPES = {"exact_theorem_correspondence", "tested_structural_analogy", "common_definition"}
 
@@ -48,6 +52,27 @@ COMPARISON_DIMENSIONS = ("state", "transition_law", "support", "clock", "project
 
 QUESTION_STATUSES = {"open", "partially_answered", "answered", "retired", "pending_source"}
 
+# Decision categories (discovery rubric 03). Kept separate from *who* reviewed (review_status).
+DECISION_CATEGORIES = {"accepted_formal", "accepted_bounded", "qualified", "candidate", "rejected", "blocked_missing_source"}
+ACCEPTED_DECISIONS = {"accepted_formal", "accepted_bounded"}
+# Epistemic basis of a shared relation (architecture contract 02).
+EPISTEMIC_BASES = {"formal", "observed", "interpretive", "methodological", "question"}
+# Review vector (03): nine independent axes, never summed.
+REVIEW_VECTOR_AXES = ("semantic_resemblance", "formal_comparability", "observable_comparability", "scope_compatibility", "evidence_status", "independence", "counterexamples_or_nulls", "falsifiability", "research_relevance")
+EVIDENCE_STATUSES = {"theorem", "numerical_exact", "monte_carlo_estimate", "qualitative_report", "post_hoc_exploratory", "unexecuted_plan", "mixed", "unknown"}
+# Allowed review-status transitions in a record's append-only decision history.
+STATUS_TRANSITIONS = {
+    None: {"proposed", "under_review", "agent_reviewed", "rejected", "undetermined"},
+    "proposed": {"under_review", "agent_reviewed", "rejected", "undetermined", "proposed"},
+    "under_review": {"agent_reviewed", "rejected", "undetermined", "under_review"},
+    "undetermined": {"under_review", "agent_reviewed", "rejected", "undetermined"},
+    "agent_reviewed": {"human_accepted", "rejected", "undetermined", "under_review", "agent_reviewed"},
+    "human_accepted": {"rejected", "undetermined", "under_review"},  # later counterevidence may retract
+    "rejected": {"under_review"},  # reopening is recorded, never silent
+}
+# Terms that must not appear in an accepted claim's rationale as if confirmed (04, research safeguards).
+PHYSICAL_OVERREACH_TERMS = ("gravity", "gravitational", "quantum", "spacetime", "physical time", "time dilation")
+
 # Metaphor layer: link types are disjoint from every scientific type.
 METAPHOR_LINK_TYPES = {"covers_concept", "illustrates_relation", "bridges_metaphors", "complements", "conflicts_with", "fails_for", "requires_qualification"}
 METAPHOR_STATUSES = {"draft", "agent_reviewed", "human_accepted", "retired"}
@@ -56,7 +81,8 @@ METAPHOR_REQUIRED = ("metaphor_id", "title", "audience", "concepts", "mapping", 
 # when used without qualification in a metaphor's mapping.
 SMUGGLING_TERMS = ("distance", "space", "force", "push", "pull", "wants", "tries", "decides", "intends", "moves through", "travels", "attracts", "gravity")
 
-SOURCE_STATUSES = {"included", "catalogued_only", "lineage_only", "missing", "pending_intake"}
+SOURCE_STATUSES = {"included", "catalogued_only", "lineage_only", "missing", "pending_intake", "external_stored"}
+UNRESOLVABLE_SOURCE_STATUSES = {"missing", "pending_intake", "external_stored"}
 
 assert not (METAPHOR_LINK_TYPES & CONNECTION_TYPES)
 

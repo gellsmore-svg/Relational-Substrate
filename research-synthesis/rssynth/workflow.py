@@ -79,8 +79,11 @@ def verify_snapshots() -> list[str]:
 # --- review decisions -------------------------------------------------------------------
 
 
-def review_proposal(proposal_id: str, decision: str, reviewer: str, rationale: str, *, human: bool, root: Path | None = None) -> dict:
-    """Record a decision on a proposal. 'agent_reviewed'/'human_accepted' promote it into the ledger after validation."""
+def review_proposal(proposal_id: str, decision: str, reviewer: str, rationale: str, *, human: bool, decision_category: str | None = None, root: Path | None = None) -> dict:
+    """Append a decision to a proposal's history; promote it to the ledger only through the validator.
+
+    Nothing is written unless the changed record (and any promoted connection) validates.
+    """
     root = root or core.ROOT
     if decision not in ("agent_reviewed", "human_accepted", "rejected", "undetermined", "under_review"):
         raise ValueError(f"unknown decision {decision}")
@@ -88,30 +91,49 @@ def review_proposal(proposal_id: str, decision: str, reviewer: str, rationale: s
         raise ValueError("human acceptance needs --human and a named human reviewer")
     prop_path = root / "proposals" / "candidate-relations.jsonl"
     props = core.read_jsonl(prop_path)
-    (p,) = [x for x in props if x["proposal_id"] == proposal_id] or [None]
-    if p is None:
+    matches = [x for x in props if x["proposal_id"] == proposal_id]
+    if not matches:
         raise KeyError(proposal_id)
+    p = matches[0]
+    original = json.loads(json.dumps(p))
+    dc = "rejected" if decision == "rejected" else (decision_category or p.get("decision_category") or "candidate")
+    today = datetime.date.today().isoformat()
     rid = proposal_id.replace("::", "-")
-    rec = f"proposals/reviews/{rid}-{decision}.md"
-    core.write_text(root / rec, f"# Review record {proposal_id}\n\n- **Reviewer:** {reviewer}\n- **Human:** {human}\n- **Decision:** {decision}\n- **Date:** {datetime.date.today().isoformat()}\n\n## Rationale\n\n{rationale}\n")
-    p["status"] = decision
-    p["decision_rationale"] = rationale
-    p["review"] = {"reviewer": reviewer, "date": datetime.date.today().isoformat(), "record": rec, "human": human}
+    rec = f"proposals/reviews/{rid}-{len(p.get('decision_history', [])) + 1:02d}-{decision}.md"
+    p["decision_history"] = list(p.get("decision_history", [])) + [{"date": today, "actor": reviewer, "human": human, "status": decision, "decision_category": dc, "rationale": rationale}]
+    p.update({"status": decision, "decision_category": dc, "decision_rationale": rationale, "review": {"reviewer": reviewer, "date": today, "record": rec, "human": human}})
+    if "review_vector" not in p:
+        p["review_vector"] = {axis: {"assessment": "unknown"} for axis in core.REVIEW_VECTOR_AXES}
+        p["review_vector"]["evidence_status"]["status"] = "unknown"
+    manifest = sources.load_manifest()
+    loaded = sources.load_sources(manifest)
+    shared = ledger.load_shared(root)
+    shared["proposals"] = [p if x["proposal_id"] == proposal_id else x for x in shared["proposals"]]
+    R = ledger.Resolver(manifest, loaded["nodes"], shared)
+    new_conn = None
     if decision in ("agent_reviewed", "human_accepted"):
+        if p.get("kind") == "seed_claim":
+            raise ValueError("a seed claim cannot be promoted directly; restate it as pairwise proposals and review those")
         conns = core.read_jsonl(root / "ledger" / "connections.jsonl")
         n = 1 + max([int(x["connection_id"].split("::")[1]) for x in conns] or [0])
-        new = {k: v for k, v in p.items() if k not in ("proposal_id", "status", "decision_rationale")}
-        new.update({"connection_id": f"X::{n:04d}", "review_status": decision, "promoted_from": proposal_id})
-        manifest = sources.load_manifest()
-        loaded = sources.load_sources(manifest)
-        shared = ledger.load_shared(root)
-        R = ledger.Resolver(manifest, loaded["nodes"], shared)
-        problems = ledger.validate_connection(new, R, in_ledger=True, root=root)
-        if problems:
-            raise ValueError("promotion refused: " + "; ".join(problems))
-        conns.append(new)
+        new_conn = {k: v for k, v in p.items() if k not in ("proposal_id", "status", "decision_rationale")}
+        pins = {s["source_key"]: s.get("commit") for s in manifest["sources"]}
+        srcs = {r.split("::")[0] for r in (p["from"], p["to"]) if r.split("::")[0] in pins}
+        new_conn.update({"connection_id": f"X::{n:04d}", "review_status": decision, "promoted_from": proposal_id, "reviewed_source_commits": {k: pins[k] for k in srcs}})
+    # write the review record first so record-existence checks see it, then validate; roll back on failure
+    core.write_text(root / rec, f"# Review record {proposal_id}\n\n- **Reviewer:** {reviewer}\n- **Human:** {human}\n- **Decision:** {decision}\n- **Decision category:** {dc}\n- **Date:** {today}\n\n## Rationale\n\n{rationale}\n")
+    problems = ledger.validate_seed_claim(p, R) if p.get("kind") == "seed_claim" else ledger.validate_connection(p, R, in_ledger=False, root=root)
+    if new_conn is not None:
+        problems += ledger.validate_connection(new_conn, R, in_ledger=True, root=root)
+    if problems:
+        (root / rec).unlink()
+        p.clear()
+        p.update(original)
+        raise ValueError("review refused: " + "; ".join(problems))
+    if new_conn is not None:
+        conns.append(new_conn)
         core.write_jsonl(root / "ledger" / "connections.jsonl", conns)
-        p["promoted_to"] = new["connection_id"]
+        p["promoted_to"] = new_conn["connection_id"]
     core.write_jsonl(prop_path, props)
     return p
 
@@ -149,7 +171,15 @@ def _seed_claim(row: dict, receipt: dict) -> dict:
         "status": "proposed",
         "origin": "author_seed",
         "intake": receipt,
+        "decision_category": "blocked_missing_source" if any(r.startswith(("HIST::", "EXT::")) for r in row.get("sources", [])) else "candidate",
+        "epistemic_basis": "question" if ledger.SEED_RELATION_MAP.get(rel) is None else "interpretive",
+        "counterevidence_refs": [],
     }
+
+
+def _with_intake_history(rec: dict) -> dict:
+    rec["decision_history"] = [{"date": datetime.date.today().isoformat(), "actor": "intake (rssynth intake-seeds)", "human": False, "status": "proposed", "decision_category": rec["decision_category"], "rationale": f"Staged from author seed {rec['seed_id']} (seed review status {rec.get('seed_review_status')!r}); unreviewed"}]
+    return rec
 
 
 def _seed_metaphor(row: dict, receipt: dict) -> dict:
@@ -207,7 +237,7 @@ def intake_seeds(seed_dir: Path, root: Path | None = None, *, label: str | None 
         n = 1 + max([int(p["proposal_id"].split("::")[1]) for p in props if p["proposal_id"].split("::")[1].isdigit()] or [0])
         for row in core.read_jsonl(rel):
             if "claim" in row and "sources" in row:
-                rec = _seed_claim(row, receipt)
+                rec = _with_intake_history(_seed_claim(row, receipt))
                 if rec["relation_type_proposed"] not in ledger.SEED_RELATION_MAP:
                     report["problems"].append(f"{rec['seed_id']}: unmapped relation type {rec['relation_type_proposed']!r}")
             else:
@@ -218,6 +248,11 @@ def intake_seeds(seed_dir: Path, root: Path | None = None, *, label: str | None 
                 for k in ("comparison", "controls", "alternatives", "falsifiers", "evidence_refs"):
                     rec.setdefault(k, {} if k in ("comparison", "controls") else [])
                 rec.setdefault("independence", "unknown")
+                rec.setdefault("decision_category", "candidate")
+                rec.setdefault("epistemic_basis", "interpretive")
+                rec.setdefault("counterevidence_refs", [])
+                rec.setdefault("seed_id", rec["proposal_id"])
+                _with_intake_history(rec)
             if rec["proposal_id"] in have:
                 report["skipped_existing"].append(rec["proposal_id"])
                 continue
@@ -260,17 +295,27 @@ def check(*, use_git: bool = True, scope_base: str | None = "origin/main") -> di
     manifest = sources.load_manifest()
     report["errors"] += [f"manifest: {p}" for p in sources.validate_manifest(manifest)]
     for rec in sources.verify_artifacts(manifest, use_git=use_git):
+        if rec.get("copy") in ("missing", "TAMPERED") and rec.get("pin") == "local_in_branch":
+            report["errors"].append(f"stored external document {rec['path']} {rec['copy']}")
+            continue
         if rec.get("copy") in ("missing", "TAMPERED"):
             report["errors"].append(f"materialised copy {rec['source']}:{rec['path']} {rec['copy']}")
         if rec["pin"] in ("PIN_DIGEST_MISMATCH", "path_missing_at_pin"):
             report["errors"].append(f"pin {rec['source']}:{rec['path']} {rec['pin']}: upstream changed under the pin; stop and review")
         if rec["pin"] == "pin_unreachable":
-            report["warnings"].append(f"pin {rec['source']} unreachable in this clone (verified against materialised copy only)")
+            report["errors"].append(f"pin {rec['source']}:{rec['path']}: pinned commit not reachable; fetch the branch history (git fetch origin, or checkout with fetch-depth 0) or run check --no-git to verify materialised copies only")
     loaded = sources.load_sources(manifest)
     for k, r in loaded["reports"].items():
         report["errors"] += [f"source {k}: {p}" for p in r["problems"]]
     shared = ledger.load_shared()
     report["errors"] += [f"shared: {p}" for p in ledger.validate_all(manifest, loaded, shared)]
+    report["warnings"] += ledger.stale_reviews(manifest, shared["connections"])
+    if use_git:
+        for rel, key in (("ledger/connections.jsonl", "connection_id"), ("proposals/candidate-relations.jsonl", "proposal_id")):
+            old = subprocess.run(["git", "-C", str(core.REPO), "show", f"HEAD:research-synthesis/{rel}"], capture_output=True, text=True)
+            if old.returncode == 0:
+                old_rows = [json.loads(line) for line in old.stdout.splitlines() if line.strip()]
+                report["errors"] += [f"append-only: {p}" for p in ledger.history_is_append_only(old_rows, core.read_jsonl(core.ROOT / rel), key)]
     disc_path = core.ROOT / "proposals" / "discovery-diagnostics.json"
     files = generate.build(manifest, loaded, shared, core.read_json(disc_path) if disc_path.exists() else None)
     report["errors"] += [f"generated view stale: {p}" for p in generate.stale(files)]

@@ -283,6 +283,7 @@ REVIEW_TEMPLATE = """# Review record {rid}
 - **Reviewer:** {reviewer}
 - **Date:** {date}
 - **Status set:** {status}
+- **Decision category (agent recommendation):** {decision}
 - **Human acceptance:** not given. This record supports agent review only; adoption needs the author's review of the draft PR.
 
 ## Claim
@@ -307,14 +308,110 @@ REVIEW_TEMPLATE = """# Review record {rid}
 """
 
 
+PINS = {"CL": "e650d71bda7203c8018d8bd134c5496a03d74a11", "GT": "79fa6b0119449bd56359acf4436015df27855f43"}
+RETRIEVAL = "TF-IDF cosine over statements (rssynth discover, 2026-10-15); a ranking aid only"
+
+# Conformance fields (architecture contract 02, discovery rubric 03). Decision categories are the agent's
+# recommendation; review_status says who reviewed. Links resting on closed-but-unreviewed rounds (CL 008N,
+# GT-P009) are capped at 'qualified'.
+DECISIONS = {
+    "X::0001": ("qualified", "observed", ["GT::GT-F77-PATHF-CENTRES-PERSIST-AGAINST-MATCHED-ND"], 0.0, "numerical_exact", "Both sides exact on finite chains; rests on 008N and GT-P009, both closed but unreviewed"),
+    "X::0002": ("qualified", "methodological", [], 0.061497, "mixed", "Methodological agreement under shared lineage; GT side from unreviewed GT-P009"),
+    "X::0003": ("accepted_bounded", "formal", [], 0.023507, "mixed", "The contrast of clock operations follows from the two definitions"),
+    "X::0004": ("accepted_bounded", "formal", [], 0.038925, "mixed", "The rule classes are read from both programmes' definitions"),
+    "X::0005": ("accepted_bounded", "formal", [], 0.0, "theorem", "A lineage fact: GT kernels use the CL 8G DSL"),
+    "X::0006": ("qualified", "observed", ["GT::GT-F51-ONE-WAY-RELEASE-MODE"], 0.0, "mixed", "Holds only for the measured stationary observables; the support still changes"),
+    "X::0007": ("qualified", "interpretive", [], 0.030043, "mixed", "Weak, generic compatibility; GT side from unreviewed GT-P009"),
+    "X::0008": ("qualified", "methodological", [], 0.050017, "qualitative_report", "A definitional qualification of an open GT-P009 question"),
+    "X::0009": ("qualified", "formal", [], 0.103294, "theorem", "Both identities proved; GT side from unreviewed GT-P009"),
+}
+
+
+def review_vector(*, retrieval, evidence, formal, observable, scope, independence, counter, falsify, relevance):
+    return {
+        "semantic_resemblance": {"assessment": "lexical retrieval only; not evidence", "retrieval_score": retrieval, "method": RETRIEVAL} if retrieval is not None else {"assessment": "unknown"},
+        "formal_comparability": {"assessment": formal},
+        "observable_comparability": {"assessment": observable},
+        "scope_compatibility": {"assessment": scope},
+        "evidence_status": {"assessment": evidence[1], "status": evidence[0]},
+        "independence": {"assessment": independence},
+        "counterexamples_or_nulls": {"assessment": counter},
+        "falsifiability": {"assessment": falsify},
+        "research_relevance": {"assessment": relevance},
+    }
+
+
+def history(*entries):
+    return [{"date": DATE, "actor": REVIEWER, "human": False, "status": st, "decision_category": dc, "rationale": why} for st, dc, why in entries]
+
+
+def add_conformance(x: dict) -> None:
+    dc, basis, counter, score, ev, note = DECISIONS[x["connection_id"]]
+    comp = x["comparison"]
+    x["decision_category"] = dc
+    x["epistemic_basis"] = basis
+    x["counterevidence_refs"] = counter
+    x["reviewed_source_commits"] = {ns: PINS[ns] for ns in ("CL", "GT") if x["from"].startswith(ns + "::") or x["to"].startswith(ns + "::")}
+    x["review_vector"] = review_vector(
+        retrieval=score, evidence=(ev, note),
+        formal="; ".join(f"{d}: {comp[d]['verdict']}" for d in ("state", "transition_law", "support")),
+        observable="; ".join(f"{d}: {comp[d]['verdict']}" for d in ("projection", "clock")),
+        scope="; ".join(f"{d}: {comp[d]['verdict']}" for d in ("horizon", "conditioning", "intervention")),
+        independence=f"{x['independence']}: {x.get('independence_note', 'shared 8G lineage')}",
+        counter="; ".join(x["alternatives"]) or "none recorded",
+        falsify="; ".join(x["falsifiers"]) or "none recorded",
+        relevance=x["scope"])
+    x["decision_history"] = history(("agent_reviewed", dc, f"Agent review on {DATE}: {note}. Awaiting the author's acceptance."))
+
+
+FALSE_ATTRACTORS = [
+    ("P::FA-01", "GT::GT-F09-POTENTIAL-AS-MECHANISM", "C::physical-attraction", "tested_structural_analogy",
+     "Tempting: the GT relational basin is gravitational attraction.",
+     "Rejected (false-attractor control, rubric 03): the shared word is 'basin' or 'attractive'. GT derives no acceleration, metric, displacement or moving object, and raw gathering is density composition (GT-F62). A metaphor is not a derivation.",
+     ["GT::GT-F62-NATIVE-GATHERING-IS-DENSITY-COMPOSITION", "GT::GT-F72-NO-LABELLED-CENTRE-AT-FINITE-N"]),
+    ("P::FA-02", "GT::GT-F74-INTACT-MOTIFS-NO-CT-PERSISTENCE", "GT::GT-F80-CLOSEW-CLOSURE-RECOVERY", "common_definition",
+     "Tempting: retention and reconstruction are the same persistence.",
+     "Rejected (false-attractor control): in the same E5A laws intact motifs are not retained beyond ND (GT-F74), while closure re-forms lost links in flexible organisations (GT-F80). Retention and reconstruction vary independently.",
+     ["GT::GT-F74-INTACT-MOTIFS-NO-CT-PERSISTENCE"]),
+    ("P::FA-03", "CL::CL-T31", "GT::GT-F19-ACTIVITY-WITHOUT-BASIN", "exact_theorem_correspondence",
+     "Tempting: a stationary match means an identical path law.",
+     "Rejected (false-attractor control): both records show a stationary match (CL-T31: H0 occupancy and one-step rows; GT-F19: COMPETE's law equals NULL's) together with different processes (CL-T33: exact order two; GT-F19: different activity; GT-F78: different lifetimes).",
+     ["CL::CL-T33", "CL::F8H-PROCESS-GRAMMAR-WITHOUT-OCCUPANCY", "GT::GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW"]),
+    ("P::FA-04", "CL::F8C-PROJECTION-GEOMETRY", "CL::CL-T55", "common_definition",
+     "Tempting: the same abstract graph class carries the same higher-order role.",
+     "Rejected (false-attractor control): graph-class conditioning retains only part of the slot information (F8C-PROJECTION-GEOMETRY), graph-only quotienting is invalid for labelled rules (F011), and the graph-class-preserving refinement needs 28 marked-pair roles (CL-T55).",
+     ["CL::F011-QUOTIENT-INVALID", "CL::CL-T55"]),
+    ("P::FA-05", "CL::F8H-CURRENT-VS-INITIAL-MEMORY", "GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY", "common_definition",
+     "Tempting: persistent current-history efficacy is persistent memory of the initial register.",
+     "Rejected (false-attractor control): CL-F8H shows current history stays efficacious while initial information decays, so the two are distinct. GT-F81 measures only decay of an initial selection. The compatible reading is X::0007, not an identity.",
+     ["CL::F8H-CURRENT-VS-INITIAL-MEMORY"]),
+]
+
+
 def write_all(root: Path = ROOT) -> None:
     (root / "proposals" / "reviews").mkdir(parents=True, exist_ok=True)
     for x in CONNECTIONS:
+        add_conformance(x)
         rid = x["connection_id"].replace("::", "-")
         x["review"] = {"reviewer": REVIEWER, "date": DATE, "record": f"proposals/reviews/{rid}.md", "human": False}
         rows = "\n".join(f"| {d} | {v['verdict']} | {v['note']} |" for d, v in x["comparison"].items())
         alts = "\n".join([f"- Alternative: {a}" for a in x["alternatives"]] + [f"- Falsifier: {f}" for f in x["falsifiers"]]) or "- none recorded"
-        (root / x["review"]["record"]).write_text(REVIEW_TEMPLATE.format(rid=x["connection_id"], reviewer=REVIEWER, date=DATE, status=x["review_status"], rationale=x["rationale"], rows=rows, independence=x["independence"], independence_note=x.get("independence_note", ""), alts=alts), encoding="utf-8")
+        (root / x["review"]["record"]).write_text(REVIEW_TEMPLATE.format(rid=x["connection_id"], reviewer=REVIEWER, date=DATE, status=x["review_status"], decision=x["decision_category"], rationale=x["rationale"], rows=rows, independence=x["independence"], independence_note=x.get("independence_note", ""), alts=alts), encoding="utf-8")
+    for pid, a, b, ctype, rationale, decision, counter in FALSE_ATTRACTORS:
+        PROPOSALS.append({"proposal_id": pid, "from": a, "to": b, "connection_type": ctype, "status": "rejected", "scope": "False-attractor control (discovery rubric 03)", "rationale": rationale, "decision_rationale": decision,
+                          "comparison": {}, "independence": "unknown", "controls": {"positive": [], "negative": []}, "alternatives": [], "falsifiers": [], "evidence_refs": [], "origin": "agent_drafted", "false_attractor_control": True,
+                          "review": {"reviewer": REVIEWER, "date": DATE, "record": f"proposals/reviews/{pid.replace('::', '-')}.md", "human": False}, "counterevidence_refs": counter})
+    for p in PROPOSALS:
+        pending = p["from"].startswith(("HIST::", "EXT::"))
+        dc = {"rejected": "rejected", "undetermined": "candidate", "proposed": "blocked_missing_source" if pending else "candidate"}[p["status"]]
+        p["decision_category"] = dc
+        p["epistemic_basis"] = "question" if p["connection_type"] == "untested_hypothesis" else "formal"
+        p.setdefault("counterevidence_refs", [])
+        if p["status"] == "proposed":
+            p["decision_history"] = history(("proposed", dc, "Agent draft; unreviewed"))
+        else:
+            p["review_vector"] = review_vector(retrieval=None, evidence=("unknown", "not assessed beyond the decision rationale"), formal=p.get("decision_rationale", ""), observable="unknown", scope=p["scope"], independence=p["independence"], counter="; ".join(p["counterevidence_refs"]) or "see decision rationale", falsify="; ".join(p["falsifiers"]) or "unknown", relevance="unknown")
+            p["decision_history"] = history(("proposed", "candidate", "Agent draft"), (p["status"], dc, p["decision_rationale"]))
     for p in PROPOSALS:
         if "review" in p:
             (root / p["review"]["record"]).write_text(f"# Review record {p['proposal_id']}\n\n- **Reviewer:** {REVIEWER}\n- **Date:** {DATE}\n- **Decision:** {p['status']}\n\n## Proposal\n\n{p['rationale']}\n\n## Decision rationale\n\n{p['decision_rationale']}\n", encoding="utf-8")
@@ -324,7 +421,8 @@ def write_all(root: Path = ROOT) -> None:
         (root / path).write_text("".join(json.dumps(r, sort_keys=True, ensure_ascii=False) + "\n" for r in rows), encoding="utf-8")
 
     dump("ledger/connections.jsonl", CONNECTIONS)
-    dump("proposals/candidate-relations.jsonl", PROPOSALS)
+    existing = [json.loads(line) for line in (root / "proposals/candidate-relations.jsonl").read_text().splitlines() if line.strip()] if (root / "proposals/candidate-relations.jsonl").exists() else []
+    dump("proposals/candidate-relations.jsonl", PROPOSALS + [r for r in existing if r.get("origin") == "author_seed"])
     dump("ledger/questions.jsonl", QUESTIONS)
 
 

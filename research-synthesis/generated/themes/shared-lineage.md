@@ -24,6 +24,8 @@
 
 - none (see metaphor-gaps.md)
 
+Diagram: [shared-lineage.mmd](shared-lineage.mmd)
+
 ```mermaid
 graph LR
   n_C__shared_lineage["Shared code and kernel lineage"]:::concept

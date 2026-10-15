@@ -1,6 +1,6 @@
 # Acceptance list and test coverage
 
-`04_ACCEPTANCE_AND_REVIEW.md` arrived with the author pack after the build and has **not yet been applied**. This list is the Stage H list of the 01 prompt, plus the requirements stated in its Stages B–G. Tests are in `tests/test_rssynth.py`: 53 tests, standard library only.
+`04_ACCEPTANCE_AND_REVIEW.md` arrived with the author pack after the build. **The item-by-item conformance pass against 02, 03 and 04 is in [conformance-02-04.md](conformance-02-04.md).** This list is the Stage H list of the 01 prompt, plus the requirements stated in its Stages B–G. Tests are in `tests/test_rssynth.py`: 65 tests, standard library only.
 
 | Requirement (01 prompt) | Tests | Status |
 | --- | --- | --- |
@@ -20,5 +20,5 @@
 
 ## Not covered, or only partly covered
 
-- **The `03_DISCOVERY_RUBRIC.md` dimensions.** These are unknown, because the file was not supplied. Discovery tags only the eight comparison dimensions of the 01 prompt, as `mentioned_both`, `mentioned_one_side` or `unknown`.
-- **Requirements unique to `02_ARCHITECTURE_CONTRACT.md` or `04_ACCEPTANCE_AND_REVIEW.md`** cannot be checked until those files are supplied.
+- **The 03 rubric.** Now applied: nine-axis review vectors, decision categories and false-attractor controls (see the conformance record).
+- **02 and 04.** Checked item by item in [conformance-02-04.md](conformance-02-04.md); the remaining partial items are listed there.

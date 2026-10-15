@@ -131,11 +131,20 @@
       "namespace": "CL",
       "programme": "Constraint Laboratory",
       "repo": "gellsmore-svg/Relational-Substrate",
+      "review_note": "008N closed at the pin; the branch records External Review 008M (8075827) but no review of 008N. Findings created in 008N are shown as closed-but-unreviewed; links resting on them cannot be accepted.",
+      "reviewed_source_commit": "e650d71bda7203c8018d8bd134c5496a03d74a11",
       "revision_label": "008n",
       "role": "research_programme",
       "round_boundary": "Prompt 008N closed at e650d71 ('provenance: close Prompt 008N ...'); immutable snapshot through-generation-008n.md published in cc9678b",
       "source_key": "CL",
-      "status": "included"
+      "source_schema": {
+        "validator_git_blob": "1fc80911d99fc548d0ac33b7367999188d16ad88",
+        "validator_path": "constraint-lab/src/rs_constraint_lab/coherence.py"
+      },
+      "status": "included",
+      "unreviewed_generations": [
+        "008N"
+      ]
     },
     {
       "adapter_options": {
@@ -280,11 +289,20 @@
       "namespace": "GT",
       "programme": "Gravity, Temporality and Emergent Spatiality",
       "repo": "gellsmore-svg/Relational-Substrate",
+      "review_note": "GT-P009 (E5A) closed at the pin; awaiting the author's review in draft PR #6. Findings created in GT-P009 are closed-but-unreviewed.",
+      "reviewed_source_commit": "79fa6b0119449bd56359acf4436015df27855f43",
       "revision_label": "p009",
       "role": "research_programme",
       "round_boundary": "GT-P009 (E5A) closed at 79fa6b0 ('GT-P009: provenance close ...'); snapshot through-gt-e5a.md",
       "source_key": "GT",
-      "status": "included"
+      "source_schema": {
+        "validator_git_blob": "1fc80911d99fc548d0ac33b7367999188d16ad88",
+        "validator_path": "constraint-lab/src/rs_constraint_lab/coherence.py"
+      },
+      "status": "included",
+      "unreviewed_generations": [
+        "GT-P009"
+      ]
     },
     {
       "adapter_options": {
@@ -344,10 +362,15 @@
       "namespace": "CL",
       "programme": "Constraint Laboratory (8G, common ancestor)",
       "repo": "gellsmore-svg/Relational-Substrate",
+      "reviewed_source_commit": "22e252e560cc711d337b6ae506b0fb76728247d6",
       "revision_label": "008g",
       "role": "lineage_anchor",
       "round_boundary": "8G closed; common ancestor of CL 8N and GT",
       "source_key": "CL-8G",
+      "source_schema": {
+        "validator_git_blob": "1fc80911d99fc548d0ac33b7367999188d16ad88",
+        "validator_path": "constraint-lab/src/rs_constraint_lab/coherence.py"
+      },
       "status": "lineage_only"
     },
     {
@@ -427,6 +450,7 @@
       "namespace": "SC",
       "programme": "Stochastic Relational Calculator",
       "repo": "gellsmore-svg/Relational-Substrate",
+      "reviewed_source_commit": "aa06213ce42e5166ae2a0d21846a2a7c218f6b50",
       "revision_label": "pr2",
       "role": "test_apparatus",
       "round_boundary": "draft PR #2; last commit 2026-09-10; no structured ledger",
@@ -483,6 +507,7 @@
       "namespace": "OTR",
       "programme": "Open-Thetical Research method (shared)",
       "repo": "gellsmore-svg/Relational-Substrate",
+      "reviewed_source_commit": "05b15b0d903d46070b99ac84f9cab1bd898046ba",
       "revision_label": "1.0",
       "role": "shared_method",
       "round_boundary": "OTR 1.0 on main (PR #7)",
@@ -511,15 +536,33 @@
         "extra_finding_fields": []
       },
       "adapters": [],
-      "artifacts": [],
+      "artifacts": [
+        {
+          "bytes": 26669,
+          "description": "External exploratory synthesis (verbatim)",
+          "git_blob": "854df4976ee4a6d96579967c826db7c97a46625c",
+          "kind": "document",
+          "local": true,
+          "materialised": false,
+          "path": "research-synthesis/reports/external-2026-10-15-cross-research-synthesis.md",
+          "sha256": "1c817747b15ef3301d808180f9f13924f396396daef580e66bafc2a048bc9b09"
+        }
+      ],
       "default_revision": true,
+      "ingestion_receipt": {
+        "by": "agent: Claude Opus 5.5",
+        "checks": [
+          "stored verbatim on this branch; sha256 recorded; not a pinned programme source"
+        ],
+        "date": "2026-10-15"
+      },
       "lineage": [],
       "namespace": "EXT",
-      "note": "background/2026-10-15-cross-research-synthesis.md was named as an input but not supplied. A dated interpretation, not experiment evidence, when supplied.",
+      "note": "Supplied with the author pack (background/2026-10-15-cross-research-synthesis.md) and stored verbatim. Exploratory evidence synthesis by its own statement; its cosine scores are lexical retrieval measures, not evidence. A dated interpretation, not independent experiment evidence. Its historical claims are secondary pointers into private archives (HIST, pending).",
       "programme": "External cross-research synthesis (2026-10-15)",
       "role": "external_interpretation",
       "source_key": "EXT-SYNTH-20261015",
-      "status": "missing"
+      "status": "external_stored"
     },
     {
       "adapter_options": {

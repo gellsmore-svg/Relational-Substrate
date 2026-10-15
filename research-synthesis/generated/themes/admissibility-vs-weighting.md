@@ -26,6 +26,8 @@
 
 - `M::heavy-door-locked-door`
 
+Diagram: [admissibility-vs-weighting.mmd](admissibility-vs-weighting.mmd)
+
 ```mermaid
 graph LR
   n_C__admissibility_vs_weighting["Admissibility versus weighting"]:::concept

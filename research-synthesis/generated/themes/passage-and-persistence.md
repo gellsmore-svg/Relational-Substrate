@@ -27,6 +27,8 @@
 
 - `M::rotating-committee`
 
+Diagram: [passage-and-persistence.mmd](passage-and-persistence.mmd)
+
 ```mermaid
 graph LR
   n_C__passage_and_persistence["Retention, resilience, reconstruction, occupancy and passage"]:::concept

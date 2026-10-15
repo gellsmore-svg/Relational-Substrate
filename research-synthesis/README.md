@@ -57,7 +57,7 @@ python3 research-synthesis/synth validate           # manifest, source ledgers (
 python3 research-synthesis/synth generate           # rebuild generated/ (deterministic)
 python3 research-synthesis/synth check              # everything CI checks (add --no-git for copies only)
 python3 research-synthesis/synth update-candidates  # retrieval diagnostics -> proposals/ (never the ledger)
-python3 research-synthesis/synth review --id P::0003 --decision undetermined --reviewer "<name>" --rationale "..." [--human]
+python3 research-synthesis/synth review --id P::0003 --decision undetermined --decision-category candidate --reviewer "<name>" --rationale "..." [--human]
 python3 research-synthesis/synth propose-pin --source GT --commit <sha>   # milestone pin proposal (diff + warnings)
 python3 research-synthesis/synth apply-pin --source GT --commit <sha> --reviewed-by "<human name>"
 python3 research-synthesis/synth snapshot --name <milestone> --title "<title>"
@@ -81,5 +81,7 @@ More detail:
 - [`docs/architecture.md`](docs/architecture.md)
 - [`docs/epistemic-policy.md`](docs/epistemic-policy.md)
 - [`docs/acceptance.md`](docs/acceptance.md)
+- [`docs/conformance-02-04.md`](docs/conformance-02-04.md) (author pack 02, 03, 04)
+- [`docs/crosswalk.md`](docs/crosswalk.md) (relation labels and fields)
 - [`docs/cadence.md`](docs/cadence.md)
 - [`audits/2026-10-15-starting-audit.md`](audits/2026-10-15-starting-audit.md)

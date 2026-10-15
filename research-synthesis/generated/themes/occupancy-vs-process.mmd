@@ -1,0 +1,15 @@
+graph LR
+  n_C__occupancy_vs_process["Occupancy does not fix process"]:::concept
+  n_CL__F8H_PROCESS_GRAMMAR_WITHOUT_OCCUPANCY["CL::F8H-PROCESS-GRAMMAR-WITHOUT-OCCUPANCY"] --- n_C__occupancy_vs_process
+  n_CL__F8H_TEMPORAL_TESTS_REQUIRED["CL::F8H-TEMPORAL-TESTS-REQUIRED"] --- n_C__occupancy_vs_process
+  n_CL__F004_PASSAGE_AFTER_OCCUPANCY["CL::F004-PASSAGE-AFTER-OCCUPANCY"] --- n_C__occupancy_vs_process
+  n_CL__F8N_MFPT_RESIDUAL["CL::F8N-MFPT-RESIDUAL"] --- n_C__occupancy_vs_process
+  n_CL__CL_T88["CL::CL-T88"] --- n_C__occupancy_vs_process
+  n_GT__GT_F19_ACTIVITY_WITHOUT_BASIN["GT::GT-F19-ACTIVITY-WITHOUT-BASIN"] --- n_C__occupancy_vs_process
+  n_GT__GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW["GT::GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW"] --- n_C__occupancy_vs_process
+  n_GT__GT_F79_ND_MATCHES_EDGE_LIFETIME["GT::GT-F79-ND-MATCHES-EDGE-LIFETIME"] --- n_C__occupancy_vs_process
+  n_CL__F8N_MFPT_RESIDUAL -->|tested_structural_analogy · agent_reviewed| n_GT__GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW
+  n_CL__F8H_TEMPORAL_TESTS_REQUIRED -->|epistemic_compatibility · agent_reviewed| n_GT__GT_F82_E5A_COMPARATOR_AND_NUMERICAL_QUALIFICATIONS
+  n_CL__CL_T88 -->|tested_structural_analogy · agent_reviewed| n_GT__GT_F79_ND_MATCHES_EDGE_LIFETIME
+  n_M__two_towns(["M::two-towns"]) -.->|metaphor| n_C__occupancy_vs_process
+  classDef concept fill:#fff4d6,stroke:#a07a00

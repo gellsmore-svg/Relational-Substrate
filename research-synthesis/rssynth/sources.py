@@ -154,6 +154,13 @@ def verify_artifacts(manifest: dict, *, use_git: bool = True) -> list[dict]:
         reach = commit_reachable(s["commit"]) if have_git and s.get("commit") else None
         for a in s.get("artifacts", []):
             rec = {"source": s["source_key"], "path": a["path"], "kind": a["kind"], "materialised": bool(a.get("materialised"))}
+            if a.get("local"):
+                f = core.REPO / a["path"]
+                rec["copy"] = "missing" if not f.exists() else ("ok" if core.sha256_bytes(f.read_bytes()) == a["sha256"] else "TAMPERED")
+                rec["pin"] = "local_in_branch"
+                rec["in_checked_out_tree"] = f.exists()
+                records.append(rec)
+                continue
             if a.get("materialised"):
                 p = materialised_path(s, a)
                 if not p.exists():

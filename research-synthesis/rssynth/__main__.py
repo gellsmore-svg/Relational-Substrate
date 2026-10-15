@@ -32,6 +32,7 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--reviewer", required=True)
     r.add_argument("--rationale", required=True)
     r.add_argument("--human", action="store_true")
+    r.add_argument("--decision-category", choices=sorted(core.DECISION_CATEGORIES))
     pp = sub.add_parser("propose-pin", help="diff a newer commit of a source against its pin (writes a proposal)")
     pp.add_argument("--source", required=True)
     pp.add_argument("--commit", required=True)
@@ -80,7 +81,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"snapshot {a.name}: content hash {lock['content_hash']}")
         return 0
     if a.cmd == "review":
-        p = workflow.review_proposal(a.id, a.decision, a.reviewer, a.rationale, human=a.human)
+        p = workflow.review_proposal(a.id, a.decision, a.reviewer, a.rationale, human=a.human, decision_category=a.decision_category)
         print(json.dumps(p, indent=2))
         return 0
     if a.cmd == "propose-pin":

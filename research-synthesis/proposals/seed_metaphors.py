@@ -17,6 +17,7 @@ AUDIENCE = "thoughtful non-specialist reader"
 METAPHORS = [
     {
         "metaphor_id": "M::two-towns",
+        "useful_scope": "Helps a reader see why matched occupancy (or density) cannot settle questions about lifetime or passage; useful for CL-T88/F8N and GT-F78/F79.",
         "title": "Two towns with the same number of open cafés",
         "concepts": ["C::occupancy-vs-process", "C::matched-control-design"],
         "mapping": [
@@ -33,6 +34,7 @@ METAPHORS = [
     },
     {
         "metaphor_id": "M::photo-and-diary",
+        "useful_scope": "Helps separate predictive sufficiency of the current state from history as a predictive variable, and an observer reading history from a rule acting on it.",
         "title": "A photograph and a diary",
         "concepts": ["C::history-as-predictive-variable", "C::predictive-sufficiency"],
         "mapping": [
@@ -50,6 +52,7 @@ METAPHORS = [
     },
     {
         "metaphor_id": "M::minutes-and-moves",
+        "useful_scope": "Helps explain why clock choice changes conclusions, and why CL's epoch (hiding events) differs from GT's two clocks.",
         "title": "Counting minutes or counting moves",
         "concepts": ["C::clock-readout-dependence"],
         "mapping": [
@@ -65,6 +68,7 @@ METAPHORS = [
     },
     {
         "metaphor_id": "M::heavy-door-locked-door",
+        "useful_scope": "Helps separate soft suppression from hard prohibition, including why some observables look continuous while support changes.",
         "title": "A heavy door and a locked door",
         "concepts": ["C::admissibility-vs-weighting"],
         "mapping": [
@@ -81,6 +85,7 @@ METAPHORS = [
     },
     {
         "metaphor_id": "M::rotating-committee",
+        "useful_scope": "Helps explain persistence of an anchored property through member turnover, and why long life alone does not show organisation.",
         "title": "A committee whose members rotate",
         "concepts": ["C::passage-and-persistence"],
         "mapping": [
@@ -97,6 +102,7 @@ METAPHORS = [
     },
     {
         "metaphor_id": "M::tallest-in-the-room",
+        "useful_scope": "Helps explain why selecting an extreme vertex is not evidence that it stays special.",
         "title": "Picking the tallest person in the room",
         "concepts": ["C::selection-vs-persistence"],
         "mapping": [
@@ -115,6 +121,7 @@ METAPHORS = [
 DRAFTS = [
     {
         "metaphor_id": "M::fading-echo",
+        "useful_scope": "Helps separate decaying initial-condition memory from dependence on current structure (draft).",
         "title": "A fading echo in a shaped hall",
         "concepts": ["C::retention-vs-current-dependence"],
         "mapping": [
@@ -164,7 +171,8 @@ def write_all(root: Path = ROOT) -> None:
         (root / path).write_text("".join(json.dumps(r, sort_keys=True, ensure_ascii=False) + "\n" for r in rows), encoding="utf-8")
 
     dump("ledger/metaphors.jsonl", METAPHORS)
-    dump("proposals/metaphor-drafts.jsonl", DRAFTS)
+    existing = [json.loads(line) for line in (root / "proposals/metaphor-drafts.jsonl").read_text().splitlines() if line.strip()] if (root / "proposals/metaphor-drafts.jsonl").exists() else []
+    dump("proposals/metaphor-drafts.jsonl", DRAFTS + [r for r in existing if r.get("origin") == "author_seed"])
     dump("ledger/metaphor-links.jsonl", links)
 
 

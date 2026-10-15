@@ -1,25 +1,10 @@
-# Contradictions, contrasts, qualifications and nulls
+# Nulls, negative findings and qualified findings
 
-Disagreement and negative results are kept as visible as agreement.
-
-## Cross-programme contrasts and qualifications
-
-- **X::0003** explicit_contrast: `CL::F003-CLOCK-SPLIT` / `GT::GT-F20-TRIAD-CLOCK-REVERSAL`: Both programmes find that conclusions depend on the clock, but the operations are not the same. CL's pair-event epoch counts only pair events and hides triad events, so a first-order full process looks memoryful on the epoch (projection plus time change). GT's continuous time and jump clock share one event sequence and differ only in holding-time weighting, so they change orderings (relaxation, s…
-- **X::0004** explicit_contrast: `CL::F001-PAIRWISE-RISE` / `GT::GT-F12-SINGLE-WITNESS-REVERSIBLE`: An apparent contradiction ('reweighting can break reversibility' versus 'every single-witness composition is reversible') dissolves on the formal objects. CL Generation 1 rules are labelled: each acts on one named edge and reads present/absent literals on other named edges (constraint-lab/docs/constraint-dsl.md). GT-F12 covers only label-covariant templates whose weight depends on witness counts.…
-- **X::0006** qualifies: `GT::GT-F54-HARD-BAN-END-OF-SOFT-LADDER` / `CL::CL-T01`: CL-T01 places the zero (prohibit) weight outside the logarithmic algebra. GT-F54 shows that, for the measured stationary observables (partner index, flux), the hard ban sits at the continuous end of the soft ladder 1/2, 1/4, 1/9, 1/16, 0. 'Outside the algebra' therefore does not imply 'discontinuous in every observable'. The support still changes (one-way transitions, GT-F51), so the qualificatio…
-- **X::0008** qualifies: `CL::F8G-FORMAL-H-L-DISTINCTION` / `GT::GT-Q22-IDENTITY-THROUGH-REPLACEMENT`: CL's H axis concerns rules that read history at identical complete current state. GT-Q22 asks only for an observable computed on trajectories; no rule reads it. CL's distinction therefore qualifies GT-Q22: answering it does not require or test a history axis, and the 8G compilation gate is not engaged.
-
-## Rejected and undetermined proposals (kept with rationale)
-
-- **P::0001** REJECTED: `CL::F003-CLOCK-SPLIT` → `GT::GT-F69-CLOCK-SEPARATED-SORTING` (exact_theorem_correspondence). Rejected after comparing formal objects: CL's epoch hides triad events (projection plus time change), GT's clocks share one event sequence. Replaced by X::0003 (explicit contrast).
-- **P::0002** REJECTED: `CL::F001-PAIRWISE-RISE` → `GT::GT-F12-SINGLE-WITNESS-REVERSIBLE` (explicit_contrast). Rejected as a contradiction: the rule classes differ (labelled literal rules vs label-covariant single-witness templates). Kept as a scoped contrast in X::0004.
-- **P::0004** UNDETERMINED: `GT::GT-F68-FIRST-ORDER-SORTING-INDEX` → `CL::F016-CURRENT-SLOT-INFORMATION` (tested_structural_analogy). Undetermined: the objects differ (a first-order stationary odds expansion around the uniform law versus local conditional slot information) and no map between witness counts and gate literals has been checked. Theme membership is recorded through C::higher-order-context instead.
-- **P::0007** UNDETERMINED: `GT::GT-F80-CLOSEW-CLOSURE-RECOVERY` → `CL::Q-H2-CONTROLLED-PASSAGE` (untested_hypothesis). Undetermined: GT's comparator is qualified (X-KINHET) and CL's question uses a matched-source design GT has not applied. Recorded as shared question XQ::01 instead.
-- **P::0008** REJECTED: `CL::CL-F05` → `GT::GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS` (common_definition). Rejected: a false positive from shared methodological boilerplate ('frozen', 'checks', 'items', 'controls'). CL-F05 is a finite verification record for H0 items; GT-F82 is a comparator and numerical qualification for E5A. No shared formal object. Kept as a test case of retrieval false positives.
+Negative results are evidence too. Statements are abbreviated; the pinned ledgers are authoritative.
 
 ## Negative findings recorded by the programmes
 
-Findings whose structural roles include `negative_finding`, by source (statements abbreviated; the pinned ledger is authoritative).
+Findings whose structural roles include `negative_finding`, by source.
 
 **CL** (29):
 - `CL::F001-PAIRWISE-RISE` [active]: In the searched memoryless pairwise cells, reweighting moves stationary triangle mass and can break reversibility, and it does not move the…
@@ -77,3 +62,11 @@ Findings whose structural roles include `negative_finding`, by source (statement
 
 - **CL**: 21: `CL::F006-SCALAR-AGGREGATE`, `CL::F8C-DRIFT-DIRECTION`, `CL::F8C-GRADE-ASYMMETRY`, `CL::F8D-ADDITIVE-FEATURE-GRAMMAR`, `CL::F8D-NO-GATE-PRODUCT`, `CL::F8D-RS-COMPOSITIONAL-BOUND`, `CL::F8E-GENERAL-K-INTERACTION`, `CL::Q-CLASS-REMAINDER`, `CL::Q-GATE-COMPOSITION`, `CL::Q-H-COARSE-GRAINING`, `CL::Q-H-CONSEQUENTIAL-FUNCTIONS`, `CL::Q-H-MINIMAL-STATE`, `CL::Q-H-PERSISTENT-STRUCTURE`, `CL::Q-H-POSITIVE`, `CL::Q-H2-CONTROLLED-PASSAGE`, `CL::Q-H2-LAST-PAIR-COMPILER`, `CL::Q-H2-STRUCTURAL-UTILITY`, `CL::Q-K3-CONJUNCTION`, `CL::Q-LOCAL-SLOT`, `CL::Q-PATH-SHAPE`, `CL::Q-WEAK-GRADE`
 - **GT**: 2: `GT::GT-F76-FLEXIBLE-ORGANISATION-OUTLIVES-ND-QUALIFIED`, `GT::GT-F80-CLOSEW-CLOSURE-RECOVERY`
+
+## Rejected false-attractor controls (rubric 03)
+
+- **P::FA-01** REJECTED: Tempting: the GT relational basin is gravitational attraction. Rejected (false-attractor control, rubric 03): the shared word is 'basin' or 'attractive'. GT derives no acceleration, metric, displacement or moving object, and raw gathering is density composition (GT-F62). A metaphor is not a derivation.
+- **P::FA-02** REJECTED: Tempting: retention and reconstruction are the same persistence. Rejected (false-attractor control): in the same E5A laws intact motifs are not retained beyond ND (GT-F74), while closure re-forms lost links in flexible organisations (GT-F80). Retention and reconstruction vary independently.
+- **P::FA-03** REJECTED: Tempting: a stationary match means an identical path law. Rejected (false-attractor control): both records show a stationary match (CL-T31: H0 occupancy and one-step rows; GT-F19: COMPETE's law equals NULL's) together with different processes (CL-T33: exact order two; GT-F19: different activity; GT-F78: different lifetimes).
+- **P::FA-04** REJECTED: Tempting: the same abstract graph class carries the same higher-order role. Rejected (false-attractor control): graph-class conditioning retains only part of the slot information (F8C-PROJECTION-GEOMETRY), graph-only quotienting is invalid for labelled rules (F011), and the graph-class-preserving refinement needs 28 marked-pair roles (CL-T55).
+- **P::FA-05** REJECTED: Tempting: persistent current-history efficacy is persistent memory of the initial register. Rejected (false-attractor control): CL-F8H shows current history stays efficacious while initial information decays, so the two are distinct. GT-F81 measures only decay of an initial selection. The compatible reading is X::0007, not an identity.

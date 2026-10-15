@@ -11,16 +11,26 @@ A navigable, generated view across research programmes. **It does not merge or r
 | Constraint Laboratory (8G, common ancestor) (`CL::`) | **LINEAGE_ONLY** | `22e252e560cc` | 0 |
 | Stochastic Relational Calculator (`SC::`) | **CATALOGUED_ONLY** | `aa06213ce42e` | 4 |
 | Open-Thetical Research method (shared) (`OTR::`) | **CATALOGUED_ONLY** | `05b15b0d903d` | 1 |
-| External cross-research synthesis (2026-10-15) (`EXT::`) | **MISSING** | `—` | 0 |
+| External cross-research synthesis (2026-10-15) (`EXT::`) | **EXTERNAL_STORED** | `—` | 0 |
 | Historical archives (505-507, Work 11, 46-48) (`HIST::`) | **PENDING_INTAKE** | `—` | 0 |
 
 ## Shared layer
 
-- Concepts: 12
+- Concepts: 13
 - Cross-programme connections: 9 (agent_reviewed: 9); none human-accepted
-- Proposals: 16 (proposed: 11, rejected: 3, undetermined: 2)
+- Proposals: 21 (proposed: 11, rejected: 8, undetermined: 2)
 - Shared questions: 7 (2 pending a missing source)
 - Metaphors: 6 reviewed by agent, 8 draft (all non-evidentiary)
+
+- Connection decision categories (agent recommendations): accepted_bounded: 3, qualified: 6
+
+## Headlines
+
+- **Open cross-programme question:** XQ::01. Which declared comparator separates organisation (or history) from kinetics in both programmes? See [questions.md](questions.md).
+- **Contradiction resolved by scope:** X::0004. 'Reweighting can break reversibility' (CL) against 'single-witness templates are always reversible' (GT) differ in rule class (label covariance), not in fact. See [contradictions.md](contradictions.md).
+- **Open disagreement:** seed P::SYN-C003 (compatible) against agent review X::0003 (contrast). Author decision required.
+- **Limitation:** results from CL 008N and GT-P009 are closed but unreviewed; links resting on them are capped at `qualified`.
+- **Not claimed:** no record derives physical gravity, quantum behaviour or physical time.
 
 ## Views
 
@@ -28,12 +38,12 @@ A navigable, generated view across research programmes. **It does not merge or r
 | --- | --- |
 | [provenance.md](provenance.md) · [provenance.mmd](provenance.mmd) | Sources, pins, artifacts, lineage, local-tree presence |
 | [links.md](links.md) · [links.mmd](links.mmd) | Reviewed cross-programme connections with rationale |
-| [contradictions-and-nulls.md](contradictions-and-nulls.md) | Contrasts, qualifications, rejected proposals, programme negative findings |
+| [contradictions.md](contradictions.md) · [nulls.md](nulls.md) | Contrasts, qualifications, rejected proposals; programme negative and qualified findings; false-attractor controls |
 | [questions.md](questions.md) | Shared questions and discriminating tests; programme open questions |
 | [candidate-bridges.md](candidate-bridges.md) | Proposals and retrieval diagnostics (not evidence) |
-| [metaphor-coverage.md](metaphor-coverage.md) · [metaphor-overlap.md](metaphor-overlap.md) · [metaphor-gaps.md](metaphor-gaps.md) · [metaphors.mmd](metaphors.mmd) | Explanations, overlaps, conflicts, gaps |
+| [metaphor-coverage.md](metaphor-coverage.md) · [metaphor-overlap.md](metaphor-overlap.md) · [metaphor-gaps.md](metaphor-gaps.md) · [metaphor-links.mmd](metaphor-links.mmd) | Explanations, overlaps, conflicts, gaps, overreach |
 | [chronology.md](chronology.md) | Change over time |
-| [graph.json](graph.json) | Machine-readable projection (scientific, metaphor and provenance edges kept separate) |
+| [graph.json](graph.json) | Lossless machine-readable export: all nodes, edges (scientific, metaphor, provenance kept separate), shared records, statuses and source pins |
 
 ## Themes
 
@@ -44,6 +54,7 @@ A navigable, generated view across research programmes. **It does not merge or r
 - [Matched-control design](themes/matched-control-design.md)
 - [Occupancy does not fix process](themes/occupancy-vs-process.md)
 - [Retention, resilience, reconstruction, occupancy and passage](themes/passage-and-persistence.md)
+- [Physical gravitational attraction (external notion)](themes/physical-attraction.md)
 - [Future-relative predictive sufficiency](themes/predictive-sufficiency.md)
 - [Retention versus current dependence](themes/retention-vs-current-dependence.md)
 - [Reversibility and stationary arrow](themes/reversibility-and-arrow.md)

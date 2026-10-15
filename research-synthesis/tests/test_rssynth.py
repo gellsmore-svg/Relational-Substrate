@@ -67,7 +67,7 @@ class SourceLockAndHashes(unittest.TestCase):
     @unittest.skipUnless(git_pins_available(), "pinned commits not reachable")
     def test_copies_equal_git_objects_at_the_pins(self):
         recs = sources.verify_artifacts(sources.load_manifest())
-        self.assertTrue(all(r["pin"] == "ok" for r in recs), [r for r in recs if r["pin"] != "ok"])
+        self.assertTrue(all(r["pin"] in ("ok", "local_in_branch") for r in recs), [r for r in recs if r["pin"] not in ("ok", "local_in_branch")])
 
     def test_tampered_copy_is_detected(self):
         with sandbox() as root:
@@ -337,8 +337,8 @@ class NegativeAndContradictoryPreservation(unittest.TestCase):
 
     def test_contrasts_and_rejections_are_visible(self):
         files = generate.build(*generate.load_inputs())
-        text = files["contradictions-and-nulls.md"]
-        for token in ("X::0003", "X::0004", "P::0001", "P::0002", "P::0008", "REJECTED", "negative_finding"):
+        text = files["contradictions.md"] + files["nulls.md"]
+        for token in ("X::0003", "X::0004", "P::0001", "P::0002", "P::0008", "REJECTED", "negative_finding", "P::FA-01", "SYN-C003"):
             self.assertIn(token, text)
 
 
@@ -348,14 +348,14 @@ class ViewsCoverageAndReadability(unittest.TestCase):
         m, loaded, shared = inputs()
         for c in shared["concepts"]:
             self.assertIn(f"themes/{c['concept_id'].split('::')[1]}.md", files)
-        for view in ("provenance.md", "links.md", "contradictions-and-nulls.md", "questions.md", "candidate-bridges.md", "metaphor-coverage.md", "metaphor-overlap.md", "metaphor-gaps.md", "chronology.md", "graph.json"):
+        for view in ("provenance.md", "links.md", "contradictions.md", "nulls.md", "questions.md", "candidate-bridges.md", "metaphor-coverage.md", "metaphor-overlap.md", "metaphor-gaps.md", "metaphor-links.mmd", "chronology.md", "graph.json"):
             self.assertIn(view, files)
             self.assertIn(view, files["index.md"])
 
     def test_statuses_in_text_and_mermaid_views_stay_small(self):
         files = generate.build(*generate.load_inputs())
         self.assertIn("AGENT-REVIEWED", files["links.md"])
-        self.assertIn("MISSING", files["provenance.md"])
+        self.assertIn("EXTERNAL_STORED", files["provenance.md"])
         self.assertIn("PENDING_INTAKE", files["provenance.md"])
         for rel, text in files.items():
             if rel.endswith(".mmd") or rel.startswith("themes/"):
@@ -367,7 +367,7 @@ class ViewsCoverageAndReadability(unittest.TestCase):
 
     def test_graph_export_keeps_edge_families_separate(self):
         g = json.loads(generate.build(*generate.load_inputs())["graph.json"])
-        self.assertEqual({"schema", "nodes", "scientific_edges", "metaphor_edges", "provenance_edges", "note"}, set(g))
+        self.assertEqual({"schema", "nodes", "scientific_edges", "metaphor_edges", "provenance_edges", "note", "shared_records", "sources"}, set(g))
         self.assertTrue(all(e["kind"] == "metaphor_link" for e in g["metaphor_edges"]))
         self.assertFalse(any(e["kind"] == "metaphor_link" for e in g["scientific_edges"]))
 
@@ -467,6 +467,135 @@ class AuthorPackSeedIntake(unittest.TestCase):
         receipt = core.read_json(store / "receipt.json")
         for name, rec in receipt["files"].items():
             self.assertEqual(core.sha256_file(store / name), rec["sha256"])
+
+
+class Conformance0204(unittest.TestCase):
+    """Architecture contract (02), discovery rubric (03), acceptance list (04)."""
+
+    def setUp(self):
+        self.m, self.loaded, self.shared = inputs()
+
+    def errs(self, shared):
+        return ledger.validate_all(self.m, self.loaded, shared)
+
+    def test_decision_history_is_append_only_and_transitions_are_checked(self):
+        old = copy.deepcopy(self.shared["connections"])
+        new = copy.deepcopy(old)
+        new[0]["decision_history"][0]["rationale"] = "rewritten"
+        self.assertTrue(any("rewritten" in p for p in ledger.history_is_append_only(old, new, "connection_id")))
+        appended = copy.deepcopy(old)
+        appended[0]["decision_history"].append(dict(appended[0]["decision_history"][-1], status="under_review"))
+        self.assertEqual(ledger.history_is_append_only(old, appended, "connection_id"), [])
+        bad = copy.deepcopy(self.shared)
+        bad["connections"][0]["decision_history"] = [dict(bad["connections"][0]["decision_history"][0], status="human_accepted")]
+        self.assertTrue(any("transition" in p or "human" in p for p in self.errs(bad)))
+        stale = copy.deepcopy(self.shared)
+        stale["connections"][0]["review_status"] = "under_review"
+        self.assertTrue(any("last decision_history entry" in p for p in self.errs(stale)))
+
+    def test_unreviewed_rounds_cap_the_decision(self):
+        bad = copy.deepcopy(self.shared)
+        x = [c for c in bad["connections"] if c["connection_id"] == "X::0001"][0]  # CL 008N and GT-P009
+        x["decision_category"] = "accepted_bounded"
+        x["decision_history"][-1]["decision_category"] = "accepted_bounded"
+        self.assertTrue(any("unreviewed round" in p for p in self.errs(bad)))
+        x3 = [c for c in self.shared["connections"] if c["connection_id"] == "X::0003"][0]
+        self.assertEqual(x3["decision_category"], "accepted_bounded")  # older, reviewed rounds may be accepted
+
+    def test_unresolved_sources_stay_blocked(self):
+        bad = copy.deepcopy(self.shared)
+        p = [x for x in bad["proposals"] if x["proposal_id"] == "P::SYN-C001"][0]
+        self.assertEqual(p["decision_category"], "blocked_missing_source")
+        p["decision_category"] = "candidate"
+        p["decision_history"][-1]["decision_category"] = "candidate"
+        self.assertTrue(any("must stay blocked_missing_source" in e for e in self.errs(bad)))
+
+    def test_review_vector_has_nine_unsummed_axes(self):
+        bad = copy.deepcopy(self.shared)
+        bad["connections"][0]["review_vector"]["overall"] = {"assessment": "high"}
+        self.assertTrue(any("exactly the axes" in p for p in self.errs(bad)))
+        bad2 = copy.deepcopy(self.shared)
+        bad2["connections"][0]["review_vector"]["formal_comparability"]["score"] = 4
+        self.assertTrue(any("not scored or summed" in p for p in self.errs(bad2)))
+        bad3 = copy.deepcopy(self.shared)
+        bad3["connections"][0]["review_vector"]["falsifiability"]["retrieval_score"] = 0.9
+        self.assertTrue(any("only semantic_resemblance" in p for p in self.errs(bad3)))
+
+    def test_false_attractors_are_recorded_rejected_and_cannot_be_promoted(self):
+        fa = {p["proposal_id"]: p for p in self.shared["proposals"] if p.get("false_attractor_control")}
+        self.assertEqual(set(fa), {"P::FA-01", "P::FA-02", "P::FA-03", "P::FA-04", "P::FA-05"})
+        self.assertTrue(all(p["status"] == "rejected" and p["decision_category"] == "rejected" and p["counterevidence_refs"] for p in fa.values()))
+        with sandbox():
+            with self.assertRaises(Exception):
+                workflow.review_proposal("P::FA-01", "agent_reviewed", "agent: test", "promote", human=False)
+
+    def test_metaphor_coverage_is_not_corroboration(self):
+        # sixth false attractor: coverage by several metaphors adds no evidence to any finding
+        base = ledger.project_graph(self.m, self.loaded, self.shared)
+        more = copy.deepcopy(self.shared)
+        for i in range(3):
+            more["metaphors"].append(dict(more["metaphors"][0], metaphor_id=f"M::cover-{i}"))
+            more["metaphor_links"].append({"link_id": f"ML::9{i}", "link_type": "covers_concept", "from": f"M::cover-{i}", "to": "C::occupancy-vs-process", "note": "x"})
+        after = ledger.project_graph(self.m, self.loaded, more)
+        self.assertEqual(base["scientific_edges"], after["scientific_edges"])
+        self.assertFalse(any("evidence_count" in n for n in after["nodes"]))
+
+    def test_unreachable_pin_fails_with_actionable_diagnostic(self):
+        with sandbox() as root:
+            m = core.read_json(root / "sources/manifest.json")
+            m["sources"][1]["commit"] = "1" * 40
+            core.write_json(root / "sources/manifest.json", m)
+            rep = workflow.check(use_git=True, scope_base=None)
+            msgs = [e for e in rep["errors"] if "not reachable" in e]
+            self.assertTrue(msgs and "fetch" in msgs[0])
+
+    def test_graph_json_is_lossless(self):
+        g = json.loads(generate.build(*generate.load_inputs())["graph.json"])
+        for k in ("concepts", "connections", "questions", "metaphors", "metaphor_links", "proposals", "metaphor_drafts"):
+            self.assertEqual(len(g["shared_records"][k]), len(self.shared[k]))
+        conn = [c for c in g["shared_records"]["connections"] if c["connection_id"] == "X::0001"][0]
+        self.assertIn("review_vector", conn)
+        self.assertIn("decision_history", conn)
+        node = [n for n in g["nodes"] if n["id"] == "GT::GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW"][0]
+        self.assertTrue(node["unreviewed_round"])
+        self.assertEqual(len(node["source_commit"]), 40)
+
+    def test_required_view_names(self):
+        files = generate.build(*generate.load_inputs())
+        for c in self.shared["concepts"]:
+            stem = c["concept_id"].split("::")[1]
+            self.assertIn(f"themes/{stem}.mmd", files)
+        self.assertIn("YES", files["links.md"])  # unreviewed-round marker shown in text
+        self.assertIn("Review diagnostics: unresolved references", files["candidate-bridges.md"])
+        self.assertIn("HIST::", files["candidate-bridges.md"])
+        self.assertIn("overreach", files["metaphor-gaps.md"])
+        self.assertIn("Open cross-programme question", files["index.md"])
+
+    def test_metaphors_need_useful_scope(self):
+        bad = copy.deepcopy(self.shared)
+        bad["metaphors"][0].pop("useful_scope")
+        self.assertTrue(any("useful scope missing" in p for p in self.errs(bad)))
+
+    def test_accepted_records_cannot_claim_physics(self):
+        bad = copy.deepcopy(self.shared)
+        x = [c for c in bad["connections"] if c["decision_category"] == "accepted_bounded"][0]
+        x["rationale"] += " This derives gravity."
+        self.assertTrue(any("must not assert 'gravity'" in p for p in self.errs(bad)))
+
+    def test_false_positive_seed_is_rejected_and_unresolved_seed_stays_unresolved(self):
+        with sandbox() as root:
+            seeds = root / "fp-seeds"
+            seeds.mkdir()
+            rows = [{"proposal_id": "SYN-FP1", "claim": "basin is gravity", "cannot_infer": "", "discriminator": "", "theme": "fp", "relation_type_proposed": "compatible_with", "review_status": "candidate", "sources": ["GT::GT-F09-POTENTIAL-AS-MECHANISM", "C::physical-attraction"]},
+                    {"proposal_id": "SYN-UN1", "claim": "historical bridge", "cannot_infer": "", "discriminator": "", "theme": "un", "relation_type_proposed": "compatible_with", "review_status": "candidate", "sources": ["CL::F004-PASSAGE-AFTER-OCCUPANCY", "HIST::rs_work_round11/findings.md"]}]
+            (seeds / "candidate-relations.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
+            workflow.intake_seeds(seeds, label="fp")
+            rec = workflow.review_proposal("P::SYN-FP1", "rejected", "agent: test", "shared metaphor only; no derived acceleration", human=False, decision_category="rejected")
+            self.assertEqual((rec["status"], rec["decision_category"]), ("rejected", "rejected"))
+            self.assertEqual([h["status"] for h in rec["decision_history"]], ["proposed", "rejected"])
+            with self.assertRaises(ValueError):
+                workflow.review_proposal("P::SYN-UN1", "undetermined", "agent: test", "trying to advance", human=False, decision_category="candidate")
+            self.assertEqual(ledger.validate_all(*inputs()), [])
 
 
 class NonMutationOfResearchRecords(unittest.TestCase):

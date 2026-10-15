@@ -25,6 +25,8 @@
 
 - none (see metaphor-gaps.md)
 
+Diagram: [retention-vs-current-dependence.mmd](retention-vs-current-dependence.mmd)
+
 ```mermaid
 graph LR
   n_C__retention_vs_current_dependence["Retention versus current dependence"]:::concept

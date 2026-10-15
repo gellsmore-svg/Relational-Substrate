@@ -49,3 +49,15 @@
 - Accept, qualify or reject X::0001 to X::0009 (`review --decision human_accepted --human …`, or `rejected`).
 - Supply the missing pack files. Seeds can be staged with `intake-seeds`.
 - Decide whether SC should get a structured ledger before any SC finding is ingested.
+
+## Addendum (later on 2026-10-15): the author pack arrived
+
+The body above is unchanged and was written before the pack arrived. Since then:
+- **Seed intake.** The author's seeds were taken in as unreviewed proposals (`proposals/seeds/2026-10-15-author-pack/intake-report.md`).
+- **External synthesis.** It is stored verbatim and labelled exploratory (`reports/external-2026-10-15-cross-research-synthesis.md`).
+- **Conformance pass.** The system was checked against 02, 03 and 04 (`docs/conformance-02-04.md`).
+
+Consequences for the findings above:
+- **Decision categories.** Under rubric 03, X::0003, X::0004 and X::0005 are recommended `accepted_bounded`. X::0001, X::0002 and X::0006 to X::0009 are `qualified`: most rest on CL 008N or GT-P009, which are closed but unreviewed, and X::0006 is limited to the measured observables.
+- **Open disagreement.** Seed SYN-C003 (`compatible_with`) and X::0003 (contrast) disagree; the author must decide.
+- **False attractors.** Five false-attractor controls are recorded as rejected.

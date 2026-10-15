@@ -25,6 +25,8 @@
 
 - none (see metaphor-gaps.md)
 
+Diagram: [reversibility-and-arrow.mmd](reversibility-and-arrow.mmd)
+
 ```mermaid
 graph LR
   n_C__reversibility_and_arrow["Reversibility and stationary arrow"]:::concept

@@ -26,6 +26,8 @@
 
 - `M::minutes-and-moves`
 
+Diagram: [clock-readout-dependence.mmd](clock-readout-dependence.mmd)
+
 ```mermaid
 graph LR
   n_C__clock_readout_dependence["Clock and readout dependence"]:::concept

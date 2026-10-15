@@ -2,17 +2,19 @@
 
 Only records in `ledger/connections.jsonl`. Every one carries an explicit review status; none is human-accepted yet. Evidential types compare formal objects on eight dimensions (see each review record). Independence is stated because GT and CL share 8G lineage.
 
-| Id | Type | From | To | Review status | Independence | Review record |
-| --- | --- | --- | --- | --- | --- | --- |
-| X::0001 | tested_structural_analogy | `CL::F8N-MFPT-RESIDUAL` | `GT::GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0001.md](../proposals/reviews/X-0001.md) |
-| X::0002 | epistemic_compatibility | `CL::F8H-TEMPORAL-TESTS-REQUIRED` | `GT::GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0002.md](../proposals/reviews/X-0002.md) |
-| X::0003 | explicit_contrast | `CL::F003-CLOCK-SPLIT` | `GT::GT-F20-TRIAD-CLOCK-REVERSAL` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0003.md](../proposals/reviews/X-0003.md) |
-| X::0004 | explicit_contrast | `CL::F001-PAIRWISE-RISE` | `GT::GT-F12-SINGLE-WITNESS-REVERSIBLE` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0004.md](../proposals/reviews/X-0004.md) |
-| X::0005 | shared_implementation_assumption | `GT::GT-F05-RELATIONAL-POTENTIAL` | `CL::CL-T01` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0005.md](../proposals/reviews/X-0005.md) |
-| X::0006 | qualifies | `GT::GT-F54-HARD-BAN-END-OF-SOFT-LADDER` | `CL::CL-T01` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0006.md](../proposals/reviews/X-0006.md) |
-| X::0007 | epistemic_compatibility | `CL::F018-LOCAL-VERSUS-INITIAL` | `GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0007.md](../proposals/reviews/X-0007.md) |
-| X::0008 | qualifies | `CL::F8G-FORMAL-H-L-DISTINCTION` | `GT::GT-Q22-IDENTITY-THROUGH-REPLACEMENT` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0008.md](../proposals/reviews/X-0008.md) |
-| X::0009 | tested_structural_analogy | `CL::CL-T88` | `GT::GT-F79-ND-MATCHES-EDGE-LIFETIME` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0009.md](../proposals/reviews/X-0009.md) |
+**Decision category** is the agent's recommended category (rubric 03); **review status** says who has reviewed it. A connection resting on a closed but **unreviewed** round (CL 008N, GT-P009) is marked and cannot be accepted.
+
+| Id | Type | From | To | Decision | Review status | Rests on unreviewed round | Independence | Review record |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| X::0001 | tested_structural_analogy | `CL::F8N-MFPT-RESIDUAL` | `GT::GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW` | QUALIFIED | AGENT-REVIEWED (awaiting human acceptance) | YES | shared_lineage | [X-0001.md](../proposals/reviews/X-0001.md) |
+| X::0002 | epistemic_compatibility | `CL::F8H-TEMPORAL-TESTS-REQUIRED` | `GT::GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS` | QUALIFIED | AGENT-REVIEWED (awaiting human acceptance) | YES | shared_lineage | [X-0002.md](../proposals/reviews/X-0002.md) |
+| X::0003 | explicit_contrast | `CL::F003-CLOCK-SPLIT` | `GT::GT-F20-TRIAD-CLOCK-REVERSAL` | ACCEPTED_BOUNDED | AGENT-REVIEWED (awaiting human acceptance) | no | shared_lineage | [X-0003.md](../proposals/reviews/X-0003.md) |
+| X::0004 | explicit_contrast | `CL::F001-PAIRWISE-RISE` | `GT::GT-F12-SINGLE-WITNESS-REVERSIBLE` | ACCEPTED_BOUNDED | AGENT-REVIEWED (awaiting human acceptance) | no | shared_lineage | [X-0004.md](../proposals/reviews/X-0004.md) |
+| X::0005 | shared_implementation_assumption | `GT::GT-F05-RELATIONAL-POTENTIAL` | `CL::CL-T01` | ACCEPTED_BOUNDED | AGENT-REVIEWED (awaiting human acceptance) | no | shared_lineage | [X-0005.md](../proposals/reviews/X-0005.md) |
+| X::0006 | qualifies | `GT::GT-F54-HARD-BAN-END-OF-SOFT-LADDER` | `CL::CL-T01` | QUALIFIED | AGENT-REVIEWED (awaiting human acceptance) | no | shared_lineage | [X-0006.md](../proposals/reviews/X-0006.md) |
+| X::0007 | epistemic_compatibility | `CL::F018-LOCAL-VERSUS-INITIAL` | `GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY` | QUALIFIED | AGENT-REVIEWED (awaiting human acceptance) | YES | shared_lineage | [X-0007.md](../proposals/reviews/X-0007.md) |
+| X::0008 | qualifies | `CL::F8G-FORMAL-H-L-DISTINCTION` | `GT::GT-Q22-IDENTITY-THROUGH-REPLACEMENT` | QUALIFIED | AGENT-REVIEWED (awaiting human acceptance) | YES | shared_lineage | [X-0008.md](../proposals/reviews/X-0008.md) |
+| X::0009 | tested_structural_analogy | `CL::CL-T88` | `GT::GT-F79-ND-MATCHES-EDGE-LIFETIME` | QUALIFIED | AGENT-REVIEWED (awaiting human acceptance) | YES | shared_lineage | [X-0009.md](../proposals/reviews/X-0009.md) |
 
 ## Rationale
 

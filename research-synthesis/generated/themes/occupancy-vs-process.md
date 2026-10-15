@@ -31,6 +31,8 @@
 
 - `M::two-towns`
 
+Diagram: [occupancy-vs-process.mmd](occupancy-vs-process.mmd)
+
 ```mermaid
 graph LR
   n_C__occupancy_vs_process["Occupancy does not fix process"]:::concept

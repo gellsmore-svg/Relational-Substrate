@@ -1,0 +1,9 @@
+graph LR
+  n_C__higher_order_context["Higher-order and topological context"]:::concept
+  n_CL__F016_CURRENT_SLOT_INFORMATION["CL::F016-CURRENT-SLOT-INFORMATION"] --- n_C__higher_order_context
+  n_CL__F018_LOCAL_VERSUS_INITIAL["CL::F018-LOCAL-VERSUS-INITIAL"] --- n_C__higher_order_context
+  n_GT__GT_F13_NONGRADIENT_ARROW["GT::GT-F13-NONGRADIENT-ARROW"] --- n_C__higher_order_context
+  n_GT__GT_F12_SINGLE_WITNESS_REVERSIBLE["GT::GT-F12-SINGLE-WITNESS-REVERSIBLE"] --- n_C__higher_order_context
+  n_CL__F001_PAIRWISE_RISE -->|explicit_contrast · agent_reviewed| n_GT__GT_F12_SINGLE_WITNESS_REVERSIBLE
+  n_CL__F018_LOCAL_VERSUS_INITIAL -->|epistemic_compatibility · agent_reviewed| n_GT__GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY
+  classDef concept fill:#fff4d6,stroke:#a07a00

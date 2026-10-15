@@ -26,6 +26,8 @@
 
 - none (see metaphor-gaps.md)
 
+Diagram: [higher-order-context.mmd](higher-order-context.mmd)
+
 ```mermaid
 graph LR
   n_C__higher_order_context["Higher-order and topological context"]:::concept

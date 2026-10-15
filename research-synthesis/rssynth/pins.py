@@ -33,12 +33,21 @@ def build_manifest(spec_path=None, *, date: str | None = None, by: str = "agent"
         entry["adapter_options"] = {"core_finding_fields": spec["core_finding_fields"], "extra_finding_fields": s.get("extra_finding_fields", [])}
         entry.pop("extra_finding_fields", None)
         entry["artifacts"] = []
+        if s["status"] == "external_stored":
+            for a in s.get("artifacts", []):
+                data = (core.REPO / a["path"]).read_bytes()
+                entry["artifacts"].append({"path": a["path"], "kind": a["kind"], "sha256": core.sha256_bytes(data), "bytes": len(data), "git_blob": core.git_blob_id(data), "materialised": False, "local": True, "description": a.get("description", "")})
+            entry["ingestion_receipt"] = {"date": date or datetime.date.today().isoformat(), "by": by, "checks": ["stored verbatim on this branch; sha256 recorded; not a pinned programme source"]}
         if s["status"] in ("included", "catalogued_only", "lineage_only"):
+            entry["reviewed_source_commit"] = s["commit"]
             if not sources.commit_reachable(s["commit"]):
                 raise sources.SourceError(f"{s['source_key']}: pinned commit {s['commit']} is not reachable; fetch it first")
             for a in s.get("artifacts", []):
                 entry["artifacts"].append(sources.pin_artifact(s["commit"], a["path"], a["kind"], materialise=bool(a.get("materialise")) and s["status"] == "included", source_key=s["source_key"], description=a.get("description", "")))
             entry["ingestion_receipt"] = {"date": date or datetime.date.today().isoformat(), "by": by, "checks": ["commit reachable", "every artifact path present at the pinned commit", "sha256 and git blob recorded", "materialised copies written byte-identically"]}
+        val = [a for a in entry["artifacts"] if a["kind"] == "validator"]
+        if val:
+            entry["source_schema"] = {"validator_path": val[0]["path"], "validator_git_blob": val[0]["git_blob"]}
         out["sources"].append(entry)
     problems = sources.validate_manifest(out)
     if problems:

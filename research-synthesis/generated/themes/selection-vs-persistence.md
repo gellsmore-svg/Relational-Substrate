@@ -24,6 +24,8 @@
 
 - `M::tallest-in-the-room`
 
+Diagram: [selection-vs-persistence.mmd](selection-vs-persistence.mmd)
+
 ```mermaid
 graph LR
   n_C__selection_vs_persistence["Selection is not persistence"]:::concept

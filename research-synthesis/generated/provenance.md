@@ -9,8 +9,22 @@ Generated view. Programme ledgers are authoritative in their own branches; the s
 | `CL-8G` (CL::) | Constraint Laboratory (8G, common ancestor) | lineage_anchor | **LINEAGE_ONLY** | `research/constraint-lab-v0.8g-formal-integration` | `22e252e560cc` | 8G closed; common ancestor of CL 8N and GT |
 | `SC` (SC::) | Stochastic Relational Calculator | test_apparatus | **CATALOGUED_ONLY** | `research/stochastic-calculator` | `aa06213ce42e` | draft PR #2; last commit 2026-09-10; no structured ledger |
 | `OTR` (OTR::) | Open-Thetical Research method (shared) | shared_method | **CATALOGUED_ONLY** | `main` | `05b15b0d903d` | OTR 1.0 on main (PR #7) |
-| `EXT-SYNTH-20261015` (EXT::) | External cross-research synthesis (2026-10-15) | external_interpretation | **MISSING** | `—` | `—` | background/2026-10-15-cross-research-synthesis.md was named as an input but not supplied. A dated interpretation, not experiment evidence, when supplied. |
+| `EXT-SYNTH-20261015` (EXT::) | External cross-research synthesis (2026-10-15) | external_interpretation | **EXTERNAL_STORED** | `—` | `—` | Supplied with the author pack (background/2026-10-15-cross-research-synthesis.md) and stored verbatim. Exploratory evidence synthesis by its own statement; its cosine scores are lexical retrieval measures, not evidence. A dated interpretation, not independent experiment evidence. Its historical claims are secondary pointers into private archives (HIST, pending). |
 | `HIST` (HIST::) | Historical archives (505-507, Work 11, 46-48) | historical_archive | **PENDING_INTAKE** | `—` | `—` | Private archives; not in the repository or the local workspace (searched 2026-10-15 by name). Expected archive names, sha256 and primary paths come from the author's seed manifest (proposals/seeds/2026-10-15-author-pack/source-manifest.json) and are unverified until the original bytes are available. Intake follows 05_HISTORICAL_INTAKE.md. Only pending pointers may reference this namespace. |
+
+## Reviewed pins, schemas and round review state
+
+`commit` is the **reviewed source commit**. Moving branch heads are reported by `synth audit` and `synth check` (staleness) and are never substituted for a pin.
+
+| Source | Reviewed source commit | Source schema (validator blob) | Closed but unreviewed rounds | Note |
+| --- | --- | --- | --- | --- |
+| `CL` | `e650d71bda72` | `1fc80911d99f` | 008N | 008N closed at the pin; the branch records External Review 008M (8075827) but no review of 008N. Findings created in 008N are shown as closed-but-unreviewed; links resting on them cannot be accepted. |
+| `GT` | `79fa6b011944` | `1fc80911d99f` | GT-P009 | GT-P009 (E5A) closed at the pin; awaiting the author's review in draft PR #6. Findings created in GT-P009 are closed-but-unreviewed. |
+| `CL-8G` | `22e252e560cc` | `1fc80911d99f` | — |  |
+| `SC` | `aa06213ce42e` | `—` | — |  |
+| `OTR` | `05b15b0d903d` | `—` | — |  |
+| `EXT-SYNTH-20261015` | `—` | `—` | — |  |
+| `HIST` | `—` | `—` | — |  |
 
 ## Artifacts at the pins
 
@@ -42,6 +56,7 @@ Generated view. Programme ledgers are authoritative in their own branches; the s
 | `SC` | `stochastic-calculator/HYPOTHESES.md` | document | `b48f44b74020…` | no (pointer only) | ABSENT (not tracked on this branch) |
 | `SC` | `stochastic-calculator/research/VALIDATION.md` | document | `f5eeaa0e891b…` | no (pointer only) | ABSENT (not tracked on this branch) |
 | `OTR` | `research-methods/open-thetical-research.md` | document | `2d9023955ddf…` | no (pointer only) | present |
+| `EXT-SYNTH-20261015` | `research-synthesis/reports/external-2026-10-15-cross-research-synthesis.md` | document | `1c817747b15e…` | no (pointer only) | present |
 
 ## Lineage
 
