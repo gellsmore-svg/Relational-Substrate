@@ -1,0 +1,647 @@
+{
+  "H1_comparators": {
+    "H0": "not opened; redundant for declared depth-specific question",
+    "KU": "uniform average of NORMALISED H2 rows over h2; exact 28-orbit H1 solve, full 384 residual",
+    "Kpi": "stationary conditional pi(h2|P,h1) average; exact one/two-time H1 joint and balance"
+  },
+  "analysis_version": "generation-008m-ordered-h2/v1",
+  "clock": "pair-event epoch",
+  "compiler": {
+    "H1_state": "exactly complete X and most recent pair identity h1",
+    "allow": [
+      "arbitrary positive K/J"
+    ],
+    "augmentation": "allowed at raw kernel level, not semantic H1",
+    "equivalence": "all reachable conditioned pair/full rows; strong projection to (P,h1)",
+    "exclude": [
+      "hidden state",
+      "phase",
+      "persistent seed",
+      "expanded/re-encoded history alphabet",
+      "changed support",
+      "changed clock",
+      "per-history programme"
+    ]
+  },
+  "controller": "one ordered S4 role indicator, optionally conjoined with FORM or DISSOLVE; selected weight m, otherwise 1",
+  "execution": {
+    "atomic_write": "existing fsync/parse/replace durable API",
+    "heartbeat_seconds": 5,
+    "merge": "restartable deterministic summary assembly, complement check both executed partners",
+    "numeric_threads": 1,
+    "quarantine": "retain separate failure receipt, stop supervisor, preserve all completed items",
+    "resume": "skip only valid matching freeze/source/payload hashes",
+    "retry": "no automatic scientific retries",
+    "split": "if time/memory limit reached stop; freeze engineering amendment before splitting stage, never change scientific depth/estimands",
+    "watchdog_seconds": 300,
+    "workers": 1
+  },
+  "experiment_id": "generation-008m-h2-structural-consequence",
+  "formal_expectations_not_algorithm_inputs": {
+    "ANY": "product uniform material x stationary history",
+    "S4_augmented_orbits": 120,
+    "complement": "FORM/DISSOLVE conjugacy",
+    "direction_cells": 24,
+    "orbit_size_counts": {
+      "12": 24,
+      "24": 80,
+      "6": 16
+    },
+    "roles": 12,
+    "support": "one recurrent class, period two",
+    "word_L3": "adjacent H1 matching plus register recovery implies material triples match"
+  },
+  "information_unit": "nats",
+  "input_hashes": {
+    "constraint-lab/exploration/generation-008m/charter.md": "e27c33c2789645ba9fbc00a18bf72db700ac1dcbb462c0dcec79343a080e6e62",
+    "constraint-lab/exploration/generation-008m/open-thetical-possibilities.md": "6a9020c98fa788be22a4a2bc82f050f3f8202e0e531898681166ccd72f0bfed2",
+    "constraint-lab/exploration/generation-008m/predeclared-expectations.md": "fac39ba4b964236cac966e83a3b26140dc2ef553cbeb04d7ab534ac03aa3539b",
+    "constraint-lab/provenance/prompts/008M-v0.8m-agent-input.md": "dfd22bb42ac9254dd3fb70031eb21c4b9e7663f51f22ae0895030f514c704991",
+    "constraint-lab/reports/tables/generation-008m-augmented-s4-orbits.json": "255984604706d0c7e06e51f3c75bdc87ee45697d23816265ea5dd23f121749cb",
+    "constraint-lab/reports/tables/generation-008m-h2-role-atlas.json": "1b72d1603e616816b21bec421699f1f2e7a318af527d51a60bb1fd047d79b115",
+    "constraint-lab/tests/test_v08m_plumbing.py": "e8c6202f36675cae60bc0c26c405b25426294b91f689a73e17db946d2750ad3e"
+  },
+  "items": [
+    {
+      "family": "ANY",
+      "item_id": "M0-NEUTRAL",
+      "m": "1",
+      "role": 0
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R00-m025",
+      "m": "1/4",
+      "role": 0
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R00-m4",
+      "m": "4",
+      "role": 0
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R01-m025",
+      "m": "1/4",
+      "role": 1
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R01-m4",
+      "m": "4",
+      "role": 1
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R02-m025",
+      "m": "1/4",
+      "role": 2
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R02-m4",
+      "m": "4",
+      "role": 2
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R03-m025",
+      "m": "1/4",
+      "role": 3
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R03-m4",
+      "m": "4",
+      "role": 3
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R04-m025",
+      "m": "1/4",
+      "role": 4
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R04-m4",
+      "m": "4",
+      "role": 4
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R05-m025",
+      "m": "1/4",
+      "role": 5
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R05-m4",
+      "m": "4",
+      "role": 5
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R06-m025",
+      "m": "1/4",
+      "role": 6
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R06-m4",
+      "m": "4",
+      "role": 6
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R07-m025",
+      "m": "1/4",
+      "role": 7
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R07-m4",
+      "m": "4",
+      "role": 7
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R08-m025",
+      "m": "1/4",
+      "role": 8
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R08-m4",
+      "m": "4",
+      "role": 8
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R09-m025",
+      "m": "1/4",
+      "role": 9
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R09-m4",
+      "m": "4",
+      "role": 9
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R10-m025",
+      "m": "1/4",
+      "role": 10
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R10-m4",
+      "m": "4",
+      "role": 10
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R11-m025",
+      "m": "1/4",
+      "role": 11
+    },
+    {
+      "family": "ANY",
+      "item_id": "M0-ANY-R11-m4",
+      "m": "4",
+      "role": 11
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R00-m025",
+      "m": "1/4",
+      "role": 0
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R00-m4",
+      "m": "4",
+      "role": 0
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R01-m025",
+      "m": "1/4",
+      "role": 1
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R01-m4",
+      "m": "4",
+      "role": 1
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R02-m025",
+      "m": "1/4",
+      "role": 2
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R02-m4",
+      "m": "4",
+      "role": 2
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R03-m025",
+      "m": "1/4",
+      "role": 3
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R03-m4",
+      "m": "4",
+      "role": 3
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R04-m025",
+      "m": "1/4",
+      "role": 4
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R04-m4",
+      "m": "4",
+      "role": 4
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R05-m025",
+      "m": "1/4",
+      "role": 5
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R05-m4",
+      "m": "4",
+      "role": 5
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R06-m025",
+      "m": "1/4",
+      "role": 6
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R06-m4",
+      "m": "4",
+      "role": 6
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R07-m025",
+      "m": "1/4",
+      "role": 7
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R07-m4",
+      "m": "4",
+      "role": 7
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R08-m025",
+      "m": "1/4",
+      "role": 8
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R08-m4",
+      "m": "4",
+      "role": 8
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R09-m025",
+      "m": "1/4",
+      "role": 9
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R09-m4",
+      "m": "4",
+      "role": 9
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R10-m025",
+      "m": "1/4",
+      "role": 10
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R10-m4",
+      "m": "4",
+      "role": 10
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R11-m025",
+      "m": "1/4",
+      "role": 11
+    },
+    {
+      "family": "FORM",
+      "item_id": "M0-FORM-R11-m4",
+      "m": "4",
+      "role": 11
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R00-m025",
+      "m": "1/4",
+      "role": 0
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R00-m4",
+      "m": "4",
+      "role": 0
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R01-m025",
+      "m": "1/4",
+      "role": 1
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R01-m4",
+      "m": "4",
+      "role": 1
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R02-m025",
+      "m": "1/4",
+      "role": 2
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R02-m4",
+      "m": "4",
+      "role": 2
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R03-m025",
+      "m": "1/4",
+      "role": 3
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R03-m4",
+      "m": "4",
+      "role": 3
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R04-m025",
+      "m": "1/4",
+      "role": 4
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R04-m4",
+      "m": "4",
+      "role": 4
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R05-m025",
+      "m": "1/4",
+      "role": 5
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R05-m4",
+      "m": "4",
+      "role": 5
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R06-m025",
+      "m": "1/4",
+      "role": 6
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R06-m4",
+      "m": "4",
+      "role": 6
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R07-m025",
+      "m": "1/4",
+      "role": 7
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R07-m4",
+      "m": "4",
+      "role": 7
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R08-m025",
+      "m": "1/4",
+      "role": 8
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R08-m4",
+      "m": "4",
+      "role": 8
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R09-m025",
+      "m": "1/4",
+      "role": 9
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R09-m4",
+      "m": "4",
+      "role": 9
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R10-m025",
+      "m": "1/4",
+      "role": 10
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R10-m4",
+      "m": "4",
+      "role": 10
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R11-m025",
+      "m": "1/4",
+      "role": 11
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "M0-DISSOLVE-R11-m4",
+      "m": "4",
+      "role": 11
+    }
+  ],
+  "logarithm": "natural",
+  "mode": "OTR bounded palette / Mode A exact cells",
+  "neutral_baselines": 1,
+  "non_neutral_primary_systems": 72,
+  "ontology": {
+    "G": 0,
+    "H_pair": 2,
+    "L": 0,
+    "N": 4,
+    "O": 3,
+    "S": 0,
+    "hypergraph": "independent"
+  },
+  "ordinary_support": "six pair and four triad single toggles",
+  "parent_commit": "147d3156e396f92e3a4a12252468e5fc9dced8cd",
+  "plan_hash": "c74237447c4bfa0a6f1b130abe54a859e11224c0945c615e304ec150845a5036",
+  "pre_freeze_exposure": {
+    "calibration": "neutral and synthetic only",
+    "new_non_neutral_8M_primary_cells": 0,
+    "not_imported": "no alternate scientific output copied into M0",
+    "prior_related": "8L and alternate H1 role/coarse branches known; not blind to generic structural possibility"
+  },
+  "precision_decimal_digits": 160,
+  "prompt_id": "008M",
+  "resources": {
+    "disk_budget_bytes": 300000000,
+    "engineering_test_correction": "pre-freeze neutral decimal string parsed as Decimal, not fmpq; no scientific exposure",
+    "estimate_seconds_per_primary_item": 30,
+    "historical_regressions": "test_v08l_plumbing.py (published H1/H2 only); no new non-neutral ROLE",
+    "neutral_item_bytes": 47061,
+    "neutral_stationary_seconds": 0.20184893799887504,
+    "neutral_words_L1_L6_seconds": 1.1919397349993233,
+    "new_non_neutral_8M_targets_executed": 0,
+    "numeric_threads": 1,
+    "synthetic_dense_120_solve_seconds": 0.02234268400934525,
+    "timeout_seconds_per_item": 300,
+    "word_support": [
+      {
+        "S4_records": 11,
+        "labelled_words": 64,
+        "length": 1
+      },
+      {
+        "S4_records": 28,
+        "labelled_words": 384,
+        "length": 2
+      },
+      {
+        "S4_records": 120,
+        "labelled_words": 2304,
+        "length": 3
+      },
+      {
+        "S4_records": 624,
+        "labelled_words": 13824,
+        "length": 4
+      },
+      {
+        "S4_records": 3552,
+        "labelled_words": 82944,
+        "length": 5
+      },
+      {
+        "S4_records": 20928,
+        "labelled_words": 497664,
+        "length": 6
+      }
+    ],
+    "workers": 1
+  },
+  "round_id": "M0",
+  "sentinel": "if either unavailable all weights 1; pair update (e,h1); triad update identity",
+  "source_hashes": {
+    "constraint-lab/pyproject.toml": "86bafc851177a88c5b49c0098277e3d757d8d193b54c0ba4f02524437dc307ad",
+    "constraint-lab/src/rs_constraint_lab/durable.py": "3b5c705847c7b2a15b9e66a74d34fa1c2a333abf2cc5cf6fb15f0c79f9e1ae41",
+    "constraint-lab/src/rs_constraint_lab/exact.py": "ec8976dc3f10dac6842bccce0669382deb85fb2d1c16082ad30cf19a7e18efb1",
+    "constraint-lab/src/rs_constraint_lab/explore08.py": "457a993ba7cfc0b66c9805d700871dc39abda474d1d7650cd23dbe148343a5ec",
+    "constraint-lab/src/rs_constraint_lab/gen008m_exec.py": "831b0e862a87dbc5306053db1ce1a966b453ba5cde94d94514fc4bce67939717",
+    "constraint-lab/src/rs_constraint_lab/graphs.py": "78381488bacebc1a8b2719a3fb9b342811af724950d75a1f463784aee0f5a287",
+    "constraint-lab/src/rs_constraint_lab/h2_role_words.py": "2476ac57e8a0a57d008ad02d0d867f9da3d75045e17d75db07e14ba3042c51df",
+    "constraint-lab/src/rs_constraint_lab/h2_roles.py": "f737a7d664ff5264c87899841007ac424ca6067eb68e1da7d93c146770de27ef",
+    "constraint-lab/src/rs_constraint_lab/history.py": "ffe2b960828b6c1143cb20d1dd5d2df18533f52de1346cc7e9936f3285444048",
+    "constraint-lab/src/rs_constraint_lab/state.py": "a5132429fa8697b5b3f98d985516356d9e997b32ca90b05c19a96e7fc726108c"
+  },
+  "stationary_estimands": [
+    "P",
+    "edge count",
+    "graph class",
+    "ordered history pair",
+    "orbit joint",
+    "P,h1",
+    "strict H2/H1 strong-lumping classification and explicit witness",
+    "neutral exact density/shape categories",
+    "KL pair/class/count plus direct conditional shape and chain gap",
+    "I(P;H1)",
+    "I(P;H2|H1)",
+    "I(P;H1,H2)",
+    "I(H1;H2)",
+    "experienced h2 expected KL to uniform",
+    "H2 versus KU exact laws, KL density/shape and JS",
+    "Kpi H1 exact adjacent equality"
+  ],
+  "stationary_method": "python-flint 0.8.0 exact 120-state fmpq_mat dixon solve; fflu independent solve EVERY item; full 2304 sparse residual",
+  "stationary_symmetry": "generated kernel all 24 permutations, all states/events; all orbit-member block sums exact",
+  "tolerances": {
+    "classification": "exact distribution equality",
+    "information_chain_gap": "1e-25",
+    "matched_laws": "exact",
+    "quotient": "exact",
+    "rational_identities": "exact",
+    "stationary_residual": "exact",
+    "word_normalization": "exact"
+  },
+  "triad_closure": "unit triad weights, no triad read, pair weights unchanged during triad excursions",
+  "words": {
+    "coarse_encoding": "aggregate complete mask-word census by graph class or edge count",
+    "encoding": "S4 orbit-canonical labelled-mask words with exact per-word mass and orbit size; deterministic expansion",
+    "independent_check": "direct hidden-state forward propagation through L4 EVERY item",
+    "lengths": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "matched_controls": "L1/L2 mandatory; derived L3 material matching also exact; neutral all lengths",
+    "metrics": [
+      "positive support counts",
+      "exact normalization",
+      "canonical exact distribution SHA256",
+      "equal-prior JS nats",
+      "maximum rational probability gap",
+      "lexicographic first maximum word",
+      "first exact distinguishing length, or none through 6"
+    ],
+    "orientation": "stationary forward (Y_0,...,Y_(L-1))",
+    "projections": [
+      "pair_mask",
+      "graph_class",
+      "edge_count"
+    ]
+  }
+}
