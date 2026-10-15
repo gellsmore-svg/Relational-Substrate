@@ -1,0 +1,798 @@
+{
+  "MFPT_tasks": [
+    [
+      "e2-deg2110-tri0-comp2",
+      "e2-deg1111-tri0-comp2"
+    ],
+    [
+      "e2-deg1111-tri0-comp2",
+      "e2-deg2110-tri0-comp2"
+    ],
+    [
+      "e3-deg3111-tri0-comp1",
+      "e3-deg2220-tri1-comp2"
+    ],
+    [
+      "e3-deg3111-tri0-comp1",
+      "e3-deg2211-tri0-comp1"
+    ],
+    [
+      "e3-deg2220-tri1-comp2",
+      "e3-deg3111-tri0-comp1"
+    ],
+    [
+      "e3-deg2220-tri1-comp2",
+      "e3-deg2211-tri0-comp1"
+    ],
+    [
+      "e3-deg2211-tri0-comp1",
+      "e3-deg3111-tri0-comp1"
+    ],
+    [
+      "e3-deg2211-tri0-comp1",
+      "e3-deg2220-tri1-comp2"
+    ],
+    [
+      "e4-deg3221-tri1-comp1",
+      "e4-deg2222-tri0-comp1"
+    ],
+    [
+      "e4-deg2222-tri0-comp1",
+      "e4-deg3221-tri1-comp1"
+    ]
+  ],
+  "analysis_version": "generation-008n-stationary-source-passage/v1",
+  "clock": "pair-event epoch",
+  "committor_tasks": [
+    {
+      "ordered_targets": [
+        "e3-deg2220-tri1-comp2",
+        "e3-deg2211-tri0-comp1"
+      ],
+      "source": "e3-deg3111-tri0-comp1"
+    },
+    {
+      "ordered_targets": [
+        "e3-deg3111-tri0-comp1",
+        "e3-deg2211-tri0-comp1"
+      ],
+      "source": "e3-deg2220-tri1-comp2"
+    },
+    {
+      "ordered_targets": [
+        "e3-deg3111-tri0-comp1",
+        "e3-deg2220-tri1-comp2"
+      ],
+      "source": "e3-deg2211-tri0-comp1"
+    }
+  ],
+  "controls": [
+    "source/target occupancy",
+    "stationary adjacent and first step",
+    "F2 equality",
+    "odd length zero",
+    "nu R = nu",
+    "Kac 1/pi(class)",
+    "neutral all passage null",
+    "all FORM/DISSOLVE complement partners",
+    "R05/R06 opposite-pair transport for all families/grades; target order accounted for"
+  ],
+  "execution": {
+    "atomic": "fsync/parse/replace via durable API",
+    "heartbeat_seconds": 5,
+    "merge": "restartable tables from valid items; independently recheck all lifted equations and conjugacy",
+    "numeric_threads": 1,
+    "quarantine": "failure receipt, stop and preserve completed items",
+    "resume": "skip only matching item/freeze/source/payload hashes",
+    "retry": "none automatic",
+    "split": "only deterministic system x layer, engineering amendment before changed execution; no estimand changes",
+    "watchdog_seconds": 900,
+    "workers": 1
+  },
+  "experiment_id": "generation-008n-h2-controlled-passage",
+  "full_validation": "lift every harmonic/reward solution and verify every 2304/384 sparse boundary/equation; exact normalization and nonnegative tail",
+  "hitting": "exact absorbing mean times for all sibling tasks; three K3 ordered competing-target committors",
+  "immutable_8M_item_hashes": {
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R00-m025.json": "a703b665a9c8da03198c52de35d5bd82eb7d55acf7b5b2b3e502370359c09ae1",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R00-m4.json": "6074b0709d6c1032197a7846b9e140517f8a5455eea33fbdb469afd7f7290328",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R01-m025.json": "e198526851d344151d09c7ee2e08ec3f31e9e5a53f5c3edb35748e827bf6903a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R01-m4.json": "1d59c810a1ef823d88378eca20e32cb02fa069f8d705c9b3752ac7b71eac30db",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R02-m025.json": "8af0d988c64066ee02f6d2ec5d551e6ec76c1a6366a6fc36606a3d81f2019a8a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R02-m4.json": "a7c97d96aa2de8c790b366e594638c4d7b05197078732794b3b7ac7f65c5f4ac",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R03-m025.json": "922a0158a001d2a2b5fc983273fd136868a7a935aec60ad53a87baa1f7ed6072",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R03-m4.json": "10b29ae6f787938f11cd4c88da08c901d58c2de2a81aa86547aa5581925bc59b",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R04-m025.json": "8286bd57c2da1fde949471d7fba3690eb1dbdadca0fb85ed36d69c5ec878d028",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R04-m4.json": "d410ab06d3d0c56de82c2a58366679b40d389a9b9d26301017730c677b5f685f",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R05-m025.json": "ba52a4898827ca2262704cca7f3931d5113dffaec40b29d5f46419668d18b992",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R05-m4.json": "accfdaf735750c7c503fd00fd526a60cd8acaf4cb14c9dc2e5c6dd7b4ab2aed5",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R06-m025.json": "d81c119659a7dc4ff818d8bd0075b8eece6c76bd30c4591c0a65ca7c4fa13121",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R06-m4.json": "3a8b56fa27859889d19d5ba2b645ca33a16084b0e6020d29a612db73a9c5cc18",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R07-m025.json": "1fbec05897db24923afce5bc884bf766643621dc8ff046758a7ce9e352096a9b",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R07-m4.json": "c393db3259fb282c8d6e45b1eaa2efb896d1a1fbf7e73d75dce785f62f7c3f3d",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R08-m025.json": "7bad6acf4d21df5f0c02392bfab2527c1955c7ced4dc7f7f201049d1bfd57219",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R08-m4.json": "794f4fbd3b2b14d1075c57836c5246a0e09975bd1ec23c56da35e8dae0049fac",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R09-m025.json": "70d3afafefb404e781d48386cffe729135cac2df0de3aeb791eee494dd6741d6",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R09-m4.json": "386e9867c9607c33b0a258b4f232c90c57c3c1a81b4c86fac2fe9ba790eca5bc",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R10-m025.json": "81e934e8b786b9342352fec424e44ee11c9db39209e4899d814f8316a0bf7414",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R10-m4.json": "7c0707b5cdff5d1896d00260a0405504a00f32025aa2383746b4d2f28ff0c493",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R11-m025.json": "bf3eee7c73dd98c5bd4953341c681886ab33fc79ff0d68f80f996ac463bd9245",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R11-m4.json": "9a77ea5aea583c4c61048db98256d7b9d486f8f4fdffa89fd7c9220011ddee6d",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R00-m025.json": "611cea2a3128825a48d8cd71b98adc4ec4b93b591e33e13da1a94e2529c4a4de",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R00-m4.json": "6ad9c52448454c9a4f91fc0c5cc80362e90de15558cf350854109489503c98e9",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R01-m025.json": "10b859d137cd8dba7e93394fe82cb0c1d2b73856b9e4b6488c9e7fc42ced426b",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R01-m4.json": "11879b1aa612909b1971194f88e228776efa734d65ac0ed1fd40e5cca018b569",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R02-m025.json": "05f651475d373319e55c8726e6a0e0ae77e1a38b24cae91b06041f9abf6103dd",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R02-m4.json": "23a3bb351c6b595e8eef3074e7555093ccd1bdf89f50584d66c04c52f48e2d8a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R03-m025.json": "408d0d57b54ad776d28756b140c5698de4b1b9b28a90600bcd8677de3b96f1aa",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R03-m4.json": "f33afbceb26deeabb1004729c004899e0d00d2283d8d6202c9a813a0a3858d7f",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R04-m025.json": "ade0cd19e3d5bd280f09ceb3536774ee7860b836fce47d38ea7b129a553e7941",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R04-m4.json": "11e2d843ca72f97b93c1b4fcc65bf9f3dbc1258249a485669beede0f3d2d8da7",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R05-m025.json": "113104290a1308e13dd03ab81d72b3e61b0adde7c166374c9dca1c9d9fc6f973",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R05-m4.json": "b6ec145cf439c9d75c36fa906f85f17ccbafb320a58109f7ab4a63a237c0a11d",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R06-m025.json": "bccbb0ff0ccacaf6b3e0baafec378720092577444aa621558a24227e9adfc9b4",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R06-m4.json": "49f8565423cfb887acfe01a953797e74279a42baa79eff326354783d78d2c109",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R07-m025.json": "d2b3ebc4e8f6616e071c55212f58f9db3cbc0d5770beaf143477f045a962ac62",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R07-m4.json": "8eef21e179020467c7def331629ff1d36c785f7808eb204178a23b49ec2ba9b3",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R08-m025.json": "eccaf5439cab8db187baaf4dd598ef3d37443bee0e5eca4ae00284e4dd7467fc",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R08-m4.json": "19e5262eec2459da4df8b8dc2f51e8057e24b5ebe0d92ac04ff544763e73c0d7",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R09-m025.json": "22a345eb207d3eb33f1ef3c06356ae02e6ed0d7e53abbd02c7f10a5625f5f7d7",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R09-m4.json": "d6f2ce360ce71d2faffe176026d3428ede0f4c91479391de81315f489ec634cc",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R10-m025.json": "a9b725cc43eccf6d5bed04a1620b3e93223fb56d128861dddf38a86778f23150",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R10-m4.json": "b962547e64d2058267e9cd332dd45514b7af0ab3f446205c884d8cf60f6ac578",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R11-m025.json": "31857b6edb917f3b7297b506770550a17bff4411feacf14c1543feb61defa96c",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R11-m4.json": "ca3cb42ec9d9fe8a1e5e565c96ad61e5ca6f7508e3e4f20c567543edf3a51e7a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R00-m025.json": "0b67e94378b8a11dcdc34396df670635d3d926c6b44044760b0abe0ca96fd6c1",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R00-m4.json": "45a25702efdcf12e2b50ddc311fc385d1227a32b98daa655bf57fb29bf53007e",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R01-m025.json": "0fc00b5fb300b67ce15df6585e211a358338abfbedd297e6e62926755c978da5",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R01-m4.json": "204b0fd8d7a4620865ff841e189bb72c3e0592ea15101449d9e725e7072b49ce",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R02-m025.json": "ff89347ff512887f49d8931f55e7555484ab031780f265763d9c24f4d9ec01a9",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R02-m4.json": "e4817080bcb89d425d03037a47ff7d56e2e35f312188feb4c4a2ed6950d5c3a8",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R03-m025.json": "4dc76ab4735aeda67c28e90ed8bf6468edf81a311a7411346f537610951c54f7",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R03-m4.json": "8c8f72b8bd58bb143985b2fd8374602184af46c6a6b9198d52d165ef30eabe68",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R04-m025.json": "a1100408db41c343bcfbbe7a8e54c8355299075b7b40bf2af1bf7b717442e8b9",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R04-m4.json": "32f5160c559fde33e0fa4d499455a012623581965b6515eb24ee705d46036d06",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R05-m025.json": "196fd69c045ff80f109c5ac77c7c8b2f70bff09b40c063c6920a18fab49eb90e",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R05-m4.json": "a50414ef13693c353e33ea7e1f1ada5e618fb35b5a44072621b8b5825f2808d3",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R06-m025.json": "229c051a7c5ee5e8eb9f10cf1e697495780e7c016448e240172b9fb19c4aa898",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R06-m4.json": "ff2e95a87b4686879eedaeda32e8e43c32dc24d89143b5ae87d337856c113583",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R07-m025.json": "fad62bd181a7ff10879f061f641a8d490c3f575ecba5456c74b2dc08f0a2408a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R07-m4.json": "a99704d07c3e1bab806684a02f31937f58dafd857ab41d00764027684ad9ba0b",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R08-m025.json": "07759c6186b3bd709461b5e858f90d39beb9d26ad1d207f11b1a409d881779b5",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R08-m4.json": "df5eee6e7537ba376356787e4806b6a3efa320cbbcae51dce8a605afdd0e2a8a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R09-m025.json": "69909a4a63d88292b3d7888a5139ee70077f1ec0d3c2cbf15e616e38e87e387f",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R09-m4.json": "866dbdb763c46d0654402c1babbdd26e36c70290201eee8a1eba9550f388a255",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R10-m025.json": "f342f67e70f8dcd05c42f48af7be602955acc49c5bf1f988cf6108e89a2de019",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R10-m4.json": "3f91be3fa69853b8689db9a3592f25f37ed60458acac4406d54a18e8ac64cd6a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R11-m025.json": "b3dc45fa34dca2ed31b03ad44fdde87d0b0a73c5f17bcb5035c515a19c755af9",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R11-m4.json": "34709126b4c1ade2d795ae7a8f367134fa2b2fd125fac47f8c6eb5e4a8d43509",
+    "constraint-lab/reports/items/generation-008m-m0/M0-NEUTRAL.json": "4294deed7ce081ba4ec4735f8912a3e606c155dbfd862500935268ee6b05c1b9"
+  },
+  "input_hashes": {
+    "constraint-lab/exploration/generation-008m/round-m0-plan.json": "0bb59815000f7223e65062c145e7d0d8297dc8e48e94a12f675277733f1dd63c",
+    "constraint-lab/exploration/generation-008m/round-m1-plan.json": "2a8dd5cc6051740f2ef8c69582ed85a0e602db2023aca00f7532bcd0c22914e8",
+    "constraint-lab/exploration/generation-008n/charter.md": "37e0fd1ed5425bd62df7df6aeaffa0c58b8fa03959f2c13356f657176a55072d",
+    "constraint-lab/exploration/generation-008n/namespace-audit.json": "d8843472cff63e71ce0f449166f3fb42957ba872c33430aef070df971e1b389c",
+    "constraint-lab/exploration/generation-008n/open-thetical-possibilities.md": "888303b551a4828b99ab86ab639a333bf264b6554db9ec80481291960bc5f260",
+    "constraint-lab/exploration/generation-008n/predeclared-controls.md": "8b3c12ef096d3239e2274a14374fb105acb3d4b8ee67b43f4b15823fbbd0353a",
+    "constraint-lab/provenance/prompts/008N-v0.8n-agent-input.md": "fe9c95fcf2640b17f582e2a77c24e416eca67d60d5d1174e5f94c854fda45261",
+    "constraint-lab/reports/tables/generation-008m-augmented-s4-orbits.json": "255984604706d0c7e06e51f3c75bdc87ee45697d23816265ea5dd23f121749cb",
+    "constraint-lab/reports/tables/generation-008m-h2-role-atlas.json": "1b72d1603e616816b21bec421699f1f2e7a318af527d51a60bb1fd047d79b115",
+    "constraint-lab/reports/tables/generation-008m-m1-opposite-pair.json": "271098c459c7343bc871fe9c7799df377fcf4b0f3bfc3d08493184000bfb3b1c",
+    "constraint-lab/tests/test_v08n_plumbing.py": "ba544fbbeae00d4d1d18460b47e9d29800de1a9f0301044f32868a403309ce81"
+  },
+  "items": [
+    {
+      "family": "ANY",
+      "item_id": "P0-NEUTRAL",
+      "m": "1",
+      "role": 0,
+      "source_item_id": "M0-NEUTRAL"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R00-m025",
+      "m": "1/4",
+      "role": 0,
+      "source_item_id": "M0-ANY-R00-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R00-m4",
+      "m": "4",
+      "role": 0,
+      "source_item_id": "M0-ANY-R00-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R01-m025",
+      "m": "1/4",
+      "role": 1,
+      "source_item_id": "M0-ANY-R01-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R01-m4",
+      "m": "4",
+      "role": 1,
+      "source_item_id": "M0-ANY-R01-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R02-m025",
+      "m": "1/4",
+      "role": 2,
+      "source_item_id": "M0-ANY-R02-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R02-m4",
+      "m": "4",
+      "role": 2,
+      "source_item_id": "M0-ANY-R02-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R03-m025",
+      "m": "1/4",
+      "role": 3,
+      "source_item_id": "M0-ANY-R03-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R03-m4",
+      "m": "4",
+      "role": 3,
+      "source_item_id": "M0-ANY-R03-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R04-m025",
+      "m": "1/4",
+      "role": 4,
+      "source_item_id": "M0-ANY-R04-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R04-m4",
+      "m": "4",
+      "role": 4,
+      "source_item_id": "M0-ANY-R04-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R05-m025",
+      "m": "1/4",
+      "role": 5,
+      "source_item_id": "M0-ANY-R05-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R05-m4",
+      "m": "4",
+      "role": 5,
+      "source_item_id": "M0-ANY-R05-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R06-m025",
+      "m": "1/4",
+      "role": 6,
+      "source_item_id": "M0-ANY-R06-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R06-m4",
+      "m": "4",
+      "role": 6,
+      "source_item_id": "M0-ANY-R06-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R07-m025",
+      "m": "1/4",
+      "role": 7,
+      "source_item_id": "M0-ANY-R07-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R07-m4",
+      "m": "4",
+      "role": 7,
+      "source_item_id": "M0-ANY-R07-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R08-m025",
+      "m": "1/4",
+      "role": 8,
+      "source_item_id": "M0-ANY-R08-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R08-m4",
+      "m": "4",
+      "role": 8,
+      "source_item_id": "M0-ANY-R08-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R09-m025",
+      "m": "1/4",
+      "role": 9,
+      "source_item_id": "M0-ANY-R09-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R09-m4",
+      "m": "4",
+      "role": 9,
+      "source_item_id": "M0-ANY-R09-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R10-m025",
+      "m": "1/4",
+      "role": 10,
+      "source_item_id": "M0-ANY-R10-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R10-m4",
+      "m": "4",
+      "role": 10,
+      "source_item_id": "M0-ANY-R10-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R11-m025",
+      "m": "1/4",
+      "role": 11,
+      "source_item_id": "M0-ANY-R11-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "P0-ANY-R11-m4",
+      "m": "4",
+      "role": 11,
+      "source_item_id": "M0-ANY-R11-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R00-m025",
+      "m": "1/4",
+      "role": 0,
+      "source_item_id": "M0-FORM-R00-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R00-m4",
+      "m": "4",
+      "role": 0,
+      "source_item_id": "M0-FORM-R00-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R01-m025",
+      "m": "1/4",
+      "role": 1,
+      "source_item_id": "M0-FORM-R01-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R01-m4",
+      "m": "4",
+      "role": 1,
+      "source_item_id": "M0-FORM-R01-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R02-m025",
+      "m": "1/4",
+      "role": 2,
+      "source_item_id": "M0-FORM-R02-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R02-m4",
+      "m": "4",
+      "role": 2,
+      "source_item_id": "M0-FORM-R02-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R03-m025",
+      "m": "1/4",
+      "role": 3,
+      "source_item_id": "M0-FORM-R03-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R03-m4",
+      "m": "4",
+      "role": 3,
+      "source_item_id": "M0-FORM-R03-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R04-m025",
+      "m": "1/4",
+      "role": 4,
+      "source_item_id": "M0-FORM-R04-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R04-m4",
+      "m": "4",
+      "role": 4,
+      "source_item_id": "M0-FORM-R04-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R05-m025",
+      "m": "1/4",
+      "role": 5,
+      "source_item_id": "M0-FORM-R05-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R05-m4",
+      "m": "4",
+      "role": 5,
+      "source_item_id": "M0-FORM-R05-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R06-m025",
+      "m": "1/4",
+      "role": 6,
+      "source_item_id": "M0-FORM-R06-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R06-m4",
+      "m": "4",
+      "role": 6,
+      "source_item_id": "M0-FORM-R06-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R07-m025",
+      "m": "1/4",
+      "role": 7,
+      "source_item_id": "M0-FORM-R07-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R07-m4",
+      "m": "4",
+      "role": 7,
+      "source_item_id": "M0-FORM-R07-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R08-m025",
+      "m": "1/4",
+      "role": 8,
+      "source_item_id": "M0-FORM-R08-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R08-m4",
+      "m": "4",
+      "role": 8,
+      "source_item_id": "M0-FORM-R08-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R09-m025",
+      "m": "1/4",
+      "role": 9,
+      "source_item_id": "M0-FORM-R09-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R09-m4",
+      "m": "4",
+      "role": 9,
+      "source_item_id": "M0-FORM-R09-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R10-m025",
+      "m": "1/4",
+      "role": 10,
+      "source_item_id": "M0-FORM-R10-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R10-m4",
+      "m": "4",
+      "role": 10,
+      "source_item_id": "M0-FORM-R10-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R11-m025",
+      "m": "1/4",
+      "role": 11,
+      "source_item_id": "M0-FORM-R11-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "P0-FORM-R11-m4",
+      "m": "4",
+      "role": 11,
+      "source_item_id": "M0-FORM-R11-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R00-m025",
+      "m": "1/4",
+      "role": 0,
+      "source_item_id": "M0-DISSOLVE-R00-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R00-m4",
+      "m": "4",
+      "role": 0,
+      "source_item_id": "M0-DISSOLVE-R00-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R01-m025",
+      "m": "1/4",
+      "role": 1,
+      "source_item_id": "M0-DISSOLVE-R01-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R01-m4",
+      "m": "4",
+      "role": 1,
+      "source_item_id": "M0-DISSOLVE-R01-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R02-m025",
+      "m": "1/4",
+      "role": 2,
+      "source_item_id": "M0-DISSOLVE-R02-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R02-m4",
+      "m": "4",
+      "role": 2,
+      "source_item_id": "M0-DISSOLVE-R02-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R03-m025",
+      "m": "1/4",
+      "role": 3,
+      "source_item_id": "M0-DISSOLVE-R03-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R03-m4",
+      "m": "4",
+      "role": 3,
+      "source_item_id": "M0-DISSOLVE-R03-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R04-m025",
+      "m": "1/4",
+      "role": 4,
+      "source_item_id": "M0-DISSOLVE-R04-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R04-m4",
+      "m": "4",
+      "role": 4,
+      "source_item_id": "M0-DISSOLVE-R04-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R05-m025",
+      "m": "1/4",
+      "role": 5,
+      "source_item_id": "M0-DISSOLVE-R05-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R05-m4",
+      "m": "4",
+      "role": 5,
+      "source_item_id": "M0-DISSOLVE-R05-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R06-m025",
+      "m": "1/4",
+      "role": 6,
+      "source_item_id": "M0-DISSOLVE-R06-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R06-m4",
+      "m": "4",
+      "role": 6,
+      "source_item_id": "M0-DISSOLVE-R06-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R07-m025",
+      "m": "1/4",
+      "role": 7,
+      "source_item_id": "M0-DISSOLVE-R07-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R07-m4",
+      "m": "4",
+      "role": 7,
+      "source_item_id": "M0-DISSOLVE-R07-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R08-m025",
+      "m": "1/4",
+      "role": 8,
+      "source_item_id": "M0-DISSOLVE-R08-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R08-m4",
+      "m": "4",
+      "role": 8,
+      "source_item_id": "M0-DISSOLVE-R08-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R09-m025",
+      "m": "1/4",
+      "role": 9,
+      "source_item_id": "M0-DISSOLVE-R09-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R09-m4",
+      "m": "4",
+      "role": 9,
+      "source_item_id": "M0-DISSOLVE-R09-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R10-m025",
+      "m": "1/4",
+      "role": 10,
+      "source_item_id": "M0-DISSOLVE-R10-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R10-m4",
+      "m": "4",
+      "role": 10,
+      "source_item_id": "M0-DISSOLVE-R10-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R11-m025",
+      "m": "1/4",
+      "role": 11,
+      "source_item_id": "M0-DISSOLVE-R11-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "P0-DISSOLVE-R11-m4",
+      "m": "4",
+      "role": 11,
+      "source_item_id": "M0-DISSOLVE-R11-m4"
+    }
+  ],
+  "kernels": "immutable 8M H2 reconstruction and Kpi event rows; no new controller/stationary solve",
+  "layers": {
+    "2": [
+      "e2-deg2110-tri0-comp2",
+      "e2-deg1111-tri0-comp2"
+    ],
+    "3": [
+      "e3-deg3111-tri0-comp1",
+      "e3-deg2220-tri1-comp2",
+      "e3-deg2211-tri0-comp1"
+    ],
+    "4": [
+      "e4-deg3221-tri1-comp1",
+      "e4-deg2222-tri0-comp1"
+    ]
+  },
+  "logs": "natural/nats",
+  "method": "FLINT 0.8.0 fmpq_mat dixon; independently fflu EVERY solve; S4 H2=120 / Kpi=28 verified from full rows",
+  "ontology": {
+    "G": 0,
+    "H_pair": 2,
+    "L": 0,
+    "N": 4,
+    "O": 3,
+    "S": 0
+  },
+  "outputs": [
+    "return-kernels",
+    "return-lengths",
+    "mfpt",
+    "committor",
+    "summary",
+    "validation"
+  ],
+  "parent_commit": "9b2f857687be2ca6867d698fa9eda51db2f788a5",
+  "plan_hash": "d913549ba4d3f702b482ce8e24e2939b8390a62137704402c7800bcf1cd41236",
+  "pre_freeze_exposure": {
+    "allowed": "immutable prerequisites, neutral, synthetic, historical regressions, symbolic controls",
+    "known": "all 8M kernels/stationary laws and L4+ words; not blind to these",
+    "new_non_neutral_8N_passage_outputs": 0
+  },
+  "precision": 160,
+  "prompt_id": "008N",
+  "resources": {
+    "disk_budget_bytes": 1000000000,
+    "estimated_total_seconds": 730,
+    "historical_regressions": "test_v08m_plumbing.py; published roles only, no new passage output",
+    "neutral_complete_bytes": 43414,
+    "neutral_complete_seconds": 0.3913019460014766,
+    "new_non_neutral_8N_passage_outputs": 0,
+    "numeric_threads": 1,
+    "reason": "small neutral run plus dense rational synthetic; conservative timeout; preserve and amend on overrun",
+    "synthetic_dense_120_seconds": 0.13424901700636838,
+    "watchdog_seconds": 900,
+    "workers": 1
+  },
+  "return": {
+    "interpretation": "one return only; class return sequence not assumed Markov",
+    "kernel": "T_AB (I-T_BB)^-1 T_BA; class aggregate under stationary source",
+    "lengths": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "metrics": [
+      "exact delta/equality",
+      "row JS",
+      "first exact distinguishing slice or tail",
+      "route cancellation"
+    ],
+    "routes": [
+      "UP first step k+1",
+      "DOWN first step k-1"
+    ],
+    "tail": "exact R minus explicit lengths",
+    "tau": "inf{t>=1:K_t=k}"
+  },
+  "round_id": "P0",
+  "source_hashes": {
+    "constraint-lab/pyproject.toml": "86bafc851177a88c5b49c0098277e3d757d8d193b54c0ba4f02524437dc307ad",
+    "constraint-lab/src/rs_constraint_lab/durable.py": "3b5c705847c7b2a15b9e66a74d34fa1c2a333abf2cc5cf6fb15f0c79f9e1ae41",
+    "constraint-lab/src/rs_constraint_lab/exact.py": "ec8976dc3f10dac6842bccce0669382deb85fb2d1c16082ad30cf19a7e18efb1",
+    "constraint-lab/src/rs_constraint_lab/explore08.py": "457a993ba7cfc0b66c9805d700871dc39abda474d1d7650cd23dbe148343a5ec",
+    "constraint-lab/src/rs_constraint_lab/gen008m_exec.py": "831b0e862a87dbc5306053db1ce1a966b453ba5cde94d94514fc4bce67939717",
+    "constraint-lab/src/rs_constraint_lab/gen008m_symmetry.py": "3281b40bc6b4d7a2e386c76fc4da174ecacb2ef861c2bce9cf6919c7b95b2f5a",
+    "constraint-lab/src/rs_constraint_lab/gen008n_exec.py": "559fc84f8f93f2dfca874af1d8858450a7cb5dd31b238169c848f03b2aec98a5",
+    "constraint-lab/src/rs_constraint_lab/graphs.py": "78381488bacebc1a8b2719a3fb9b342811af724950d75a1f463784aee0f5a287",
+    "constraint-lab/src/rs_constraint_lab/h2_passage.py": "aef9da4efe8cec59e73de4b07146c93771bf554a5b2955587c2a2d729afdefec",
+    "constraint-lab/src/rs_constraint_lab/h2_roles.py": "f737a7d664ff5264c87899841007ac424ca6067eb68e1da7d93c146770de27ef",
+    "constraint-lab/src/rs_constraint_lab/history.py": "ffe2b960828b6c1143cb20d1dd5d2df18533f52de1346cc7e9936f3285444048",
+    "constraint-lab/src/rs_constraint_lab/state.py": "a5132429fa8697b5b3f98d985516356d9e997b32ca90b05c19a96e7fc726108c"
+  },
+  "source_law": "pi2 conditioned C=c; pi1 conditioned C=c; exact labelled and (P,h1) pushforward before passage",
+  "support": "six positive single pair toggles; triads exactly summed out as in 8M",
+  "tolerances": {
+    "all_rational": "exact",
+    "classification": "exact rational zero",
+    "independent_JS_routes": "1e-25"
+  }
+}
