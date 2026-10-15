@@ -1,0 +1,13 @@
+{
+  "disk_budget_bytes": 1000000000,
+  "estimated_total_seconds": 730,
+  "historical_regressions": "test_v08m_plumbing.py; published roles only, no new passage output",
+  "neutral_complete_bytes": 43414,
+  "neutral_complete_seconds": 0.3913019460014766,
+  "new_non_neutral_8N_passage_outputs": 0,
+  "numeric_threads": 1,
+  "reason": "small neutral run plus dense rational synthetic; conservative timeout; preserve and amend on overrun",
+  "synthetic_dense_120_seconds": 0.13424901700636838,
+  "watchdog_seconds": 900,
+  "workers": 1
+}
