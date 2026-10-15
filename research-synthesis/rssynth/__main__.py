@@ -62,8 +62,8 @@ def main(argv: list[str] | None = None) -> int:
         m = sources.load_manifest()
         loaded = sources.load_sources(m)
         out = discover.discover(loaded["nodes"], ledger.load_shared(), m, limit=a.limit)
-        core.write_json(discover.DIAGNOSTICS, out)
-        print(f"wrote {discover.DIAGNOSTICS.relative_to(core.REPO)}: {len(out['candidates'])} retrieval candidates (not evidence)")
+        core.write_json(discover.diagnostics_path(), out)
+        print(f"wrote {discover.diagnostics_path().relative_to(core.REPO)}: {len(out['candidates'])} retrieval candidates (not evidence)")
         return 0
     if a.cmd == "generate":
         files = generate.build(*generate.load_inputs())

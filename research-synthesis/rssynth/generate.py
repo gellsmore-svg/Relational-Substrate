@@ -11,7 +11,8 @@ from collections import Counter, defaultdict
 
 from . import core, ledger, sources
 
-GEN = core.ROOT / "generated"
+def gen_dir():
+    return core.ROOT / "generated"
 STATUS_TEXT = {"agent_reviewed": "AGENT-REVIEWED (awaiting human acceptance)", "human_accepted": "HUMAN-ACCEPTED", "rejected": "REJECTED", "undetermined": "UNDETERMINED", "under_review": "UNDER REVIEW", "proposed": "PROPOSED (unreviewed)"}
 
 
@@ -270,17 +271,19 @@ def load_inputs():
     return manifest, loaded, shared, discovery
 
 
-def write(files: dict[str, str], dest=GEN) -> None:
+def write(files: dict[str, str], dest=None) -> None:
     import shutil
 
+    dest = dest or gen_dir()
     if dest.exists():
         shutil.rmtree(dest)
     for rel, text in files.items():
         core.write_text(dest / rel, text)
 
 
-def stale(files: dict[str, str], dest=GEN) -> list[str]:
+def stale(files: dict[str, str], dest=None) -> list[str]:
     """Generated files that differ from what the inputs produce (or are extra)."""
+    dest = dest or gen_dir()
     out = []
     for rel, text in files.items():
         p = dest / rel

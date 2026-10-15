@@ -9,7 +9,8 @@ from pathlib import Path
 
 from . import core, generate, ledger, sources
 
-SNAPSHOTS = core.ROOT / "snapshots"
+def snapshots_dir():
+    return core.ROOT / "snapshots"
 ALLOWED_PREFIXES = ("research-synthesis/", ".github/workflows/research-synthesis.yml")
 
 
@@ -24,7 +25,7 @@ def create_snapshot(name: str, title: str) -> dict:
     """Immutable milestone view: generated files + lock (source pins, ledger and manifest digests, content hash)."""
     if not name or "/" in name or name.startswith("."):
         raise ValueError("snapshot name must be a simple directory name")
-    dest = SNAPSHOTS / name
+    dest = snapshots_dir() / name
     if dest.exists():
         raise FileExistsError(f"snapshot {name} exists; snapshots are immutable")
     manifest, loaded, shared, discovery = generate.load_inputs()
@@ -37,7 +38,7 @@ def create_snapshot(name: str, title: str) -> dict:
         "schema": "rssynth.snapshot-lock/v1",
         "name": name,
         "title": title,
-        "manifest_sha256": core.sha256_file(sources.MANIFEST),
+        "manifest_sha256": core.sha256_file(sources.manifest_path()),
         "source_pins": {s["source_key"]: s.get("commit") for s in manifest["sources"]},
         "shared_record_sha256": {f: core.sha256_file(core.ROOT / f) for f in ledger_files},
         "view_sha256": {rel: core.sha256_bytes(b) for rel, b in sorted(data.items())},
@@ -53,9 +54,9 @@ def create_snapshot(name: str, title: str) -> dict:
 
 def verify_snapshots() -> list[str]:
     problems = []
-    if not SNAPSHOTS.exists():
+    if not snapshots_dir().exists():
         return problems
-    for d in sorted(p for p in SNAPSHOTS.iterdir() if p.is_dir()):
+    for d in sorted(p for p in snapshots_dir().iterdir() if p.is_dir()):
         lock_path = d / "lock.json"
         if not lock_path.exists():
             problems.append(f"snapshot {d.name}: lock.json missing")
@@ -78,8 +79,9 @@ def verify_snapshots() -> list[str]:
 # --- review decisions -------------------------------------------------------------------
 
 
-def review_proposal(proposal_id: str, decision: str, reviewer: str, rationale: str, *, human: bool, root: Path = core.ROOT) -> dict:
+def review_proposal(proposal_id: str, decision: str, reviewer: str, rationale: str, *, human: bool, root: Path | None = None) -> dict:
     """Record a decision on a proposal. 'agent_reviewed'/'human_accepted' promote it into the ledger after validation."""
+    root = root or core.ROOT
     if decision not in ("agent_reviewed", "human_accepted", "rejected", "undetermined", "under_review"):
         raise ValueError(f"unknown decision {decision}")
     if decision == "human_accepted" and (not human or reviewer.lower().startswith("agent")):
@@ -117,8 +119,9 @@ def review_proposal(proposal_id: str, decision: str, reviewer: str, rationale: s
 # --- seed intake ----------------------------------------------------------------------------
 
 
-def intake_seeds(seed_dir: Path, root: Path = core.ROOT) -> dict:
+def intake_seeds(seed_dir: Path, root: Path | None = None) -> dict:
     """Stage the author's seed files as *unapproved* proposals. Never writes to the ledger."""
+    root = root or core.ROOT
     report = {"candidate_relations": 0, "metaphors": 0, "problems": []}
     rel = seed_dir / "candidate-relations.jsonl"
     if rel.exists():

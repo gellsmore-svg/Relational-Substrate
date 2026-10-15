@@ -1,0 +1,35 @@
+name: Research synthesis
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "research-synthesis/**"
+      - ".github/workflows/research-synthesis.yml"
+  pull_request:
+    paths:
+      - "research-synthesis/**"
+      - ".github/workflows/research-synthesis.yml"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository (full history, so pinned source commits resolve)
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Acceptance tests (standard library only; no research suite is run)
+        run: python3 -m unittest discover -s research-synthesis/tests -v
+
+      - name: Integrity, validation, freshness and scope check
+        run: python3 research-synthesis/synth check --scope-base origin/main

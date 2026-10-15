@@ -16,8 +16,12 @@ from pathlib import Path
 
 from . import core
 
-MANIFEST = core.ROOT / "sources" / "manifest.json"
-MATERIALISED = core.ROOT / "sources" / "materialised"
+def manifest_path() -> Path:
+    return core.ROOT / "sources" / "manifest.json"
+
+
+def materialised_dir() -> Path:
+    return core.ROOT / "sources" / "materialised"
 
 
 class SourceError(ValueError):
@@ -70,8 +74,8 @@ def tracked_in_worktree(path: str) -> bool:
 # --- manifest ---------------------------------------------------------------------
 
 
-def load_manifest(path: Path = MANIFEST) -> dict:
-    m = core.read_json(path)
+def load_manifest(path: Path | None = None) -> dict:
+    m = core.read_json(path or manifest_path())
     if m.get("schema") != "rssynth.source-manifest/v1":
         raise SourceError("unknown manifest schema")
     return m
@@ -87,7 +91,7 @@ def sources_by_key(manifest: dict) -> dict[str, dict]:
 
 
 def materialised_path(source: dict, artifact: dict) -> Path:
-    return MATERIALISED / source["source_key"] / artifact["path"]
+    return materialised_dir() / source["source_key"] / artifact["path"]
 
 
 def validate_manifest(manifest: dict) -> list[str]:
@@ -361,7 +365,7 @@ def pin_artifact(commit: str, path: str, kind: str, *, materialise: bool, source
     if description:
         rec["description"] = description
     if materialise:
-        dest = MATERIALISED / source_key / path
+        dest = materialised_dir() / source_key / path
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_bytes(data)
     return rec

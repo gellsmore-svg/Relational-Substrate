@@ -11,12 +11,11 @@ from pathlib import Path
 
 from . import core, sources
 
-LEDGER = core.ROOT / "ledger"
-PROPOSALS = core.ROOT / "proposals"
 FORBIDDEN_SCORE_FIELDS = {"score", "confidence", "probability", "similarity", "cosine", "overall_confidence", "overall_score", "finding_strength", "coherence_score", "strength_score", "master_score"}
 
 
-def load_shared(root: Path = core.ROOT) -> dict:
+def load_shared(root: Path | None = None) -> dict:
+    root = root or core.ROOT
     return {
         "concepts": core.read_jsonl(root / "ledger" / "concepts.jsonl"),
         "connections": core.read_jsonl(root / "ledger" / "connections.jsonl"),
@@ -215,7 +214,8 @@ def validate_metaphor_link(link: dict, ids: dict) -> list[str]:
     return p
 
 
-def validate_all(manifest: dict, loaded: dict, shared: dict, root: Path = core.ROOT) -> list[str]:
+def validate_all(manifest: dict, loaded: dict, shared: dict, root: Path | None = None) -> list[str]:
+    root = root or core.ROOT
     p = []
     R = Resolver(manifest, loaded["nodes"], shared)
     seen = set()

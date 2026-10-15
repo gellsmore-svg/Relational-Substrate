@@ -1,0 +1,36 @@
+# Cross-programme connections
+
+Only records in `ledger/connections.jsonl`. Every one carries an explicit review status; none is human-accepted yet. Evidential types compare formal objects on eight dimensions (see each review record). Independence is stated because GT and CL share 8G lineage.
+
+| Id | Type | From | To | Review status | Independence | Review record |
+| --- | --- | --- | --- | --- | --- | --- |
+| X::0001 | tested_structural_analogy | `CL::F8N-MFPT-RESIDUAL` | `GT::GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0001.md](../proposals/reviews/X-0001.md) |
+| X::0002 | epistemic_compatibility | `CL::F8H-TEMPORAL-TESTS-REQUIRED` | `GT::GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0002.md](../proposals/reviews/X-0002.md) |
+| X::0003 | explicit_contrast | `CL::F003-CLOCK-SPLIT` | `GT::GT-F20-TRIAD-CLOCK-REVERSAL` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0003.md](../proposals/reviews/X-0003.md) |
+| X::0004 | explicit_contrast | `CL::F001-PAIRWISE-RISE` | `GT::GT-F12-SINGLE-WITNESS-REVERSIBLE` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0004.md](../proposals/reviews/X-0004.md) |
+| X::0005 | shared_implementation_assumption | `GT::GT-F05-RELATIONAL-POTENTIAL` | `CL::CL-T01` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0005.md](../proposals/reviews/X-0005.md) |
+| X::0006 | qualifies | `GT::GT-F54-HARD-BAN-END-OF-SOFT-LADDER` | `CL::CL-T01` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0006.md](../proposals/reviews/X-0006.md) |
+| X::0007 | epistemic_compatibility | `CL::F018-LOCAL-VERSUS-INITIAL` | `GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0007.md](../proposals/reviews/X-0007.md) |
+| X::0008 | qualifies | `CL::F8G-FORMAL-H-L-DISTINCTION` | `GT::GT-Q22-IDENTITY-THROUGH-REPLACEMENT` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0008.md](../proposals/reviews/X-0008.md) |
+| X::0009 | tested_structural_analogy | `CL::CL-T88` | `GT::GT-F79-ND-MATCHES-EDGE-LIFETIME` | AGENT-REVIEWED (awaiting human acceptance) | shared_lineage | [X-0009.md](../proposals/reviews/X-0009.md) |
+
+## Rationale
+
+**X::0001** (tested_structural_analogy; AGENT-REVIEWED (awaiting human acceptance)). Both programmes exhibit, exactly and on their own side, a passage-type statistic that differs between two processes whose matched stationary quantities are equal: CL ordered-sibling MFPTs differ (446 slower, 274 faster) at identical source/target occupancy, clock and Kac recurrence; GT flexible-motif episode lifetimes differ by up to x25 between PCOMP and a comparator with the same stationary law, density, mean rate and edge lifetime. Map: matched occupancy <-> matched stationary law/density; Kac recurrence control <-> CT edge-lifetime calibration; MFPT <-> entrance-episode lifetime.
+
+**X::0002** (epistemic_compatibility; AGENT-REVIEWED (awaiting human acceptance)). Both programmes conclude, from their own exact results, that one-time stationary occupancy is not a sufficient test: CL requires multi-time statistics, conditional process tests and Markov-order checks with explicit clock and projection; GT requires a comparator that declares where activity sits. The recommendations are compatible and mutually reinforcing as method, not as evidence about any mechanism.
+
+**X::0003** (explicit_contrast; AGENT-REVIEWED (awaiting human acceptance)). Both programmes find that conclusions depend on the clock, but the operations are not the same. CL's pair-event epoch counts only pair events and hides triad events, so a first-order full process looks memoryful on the epoch (projection plus time change). GT's continuous time and jump clock share one event sequence and differ only in holding-time weighting, so they change orderings (relaxation, sorting) but cannot create apparent memory. Treating them as one phenomenon would be an error; the shared theme is that the clock belongs to the estimand.
+
+**X::0004** (explicit_contrast; AGENT-REVIEWED (awaiting human acceptance)). An apparent contradiction ('reweighting can break reversibility' versus 'every single-witness composition is reversible') dissolves on the formal objects. CL Generation 1 rules are labelled: each acts on one named edge and reads present/absent literals on other named edges (constraint-lab/docs/constraint-dsl.md). GT-F12 covers only label-covariant templates whose weight depends on witness counts. Label covariance plus single-witness structure gives a Gibbs potential; labelled multi-literal rules need not. GT-F13 shows label-covariant two-witness templates also break reversibility. The boundary is label covariance and witness arity.
+
+**X::0005** (shared_implementation_assumption; AGENT-REVIEWED (awaiting human acceptance)). GT's relational potential (pi proportional to m^S) is the Gibbs law of a multiplicative-weight template. That multiplicative composition is CL-T01, inherited with the 8G DSL and kernel builder on which the GT branch was created. The agreement is shared implementation, not independent evidence.
+
+**X::0006** (qualifies; AGENT-REVIEWED (awaiting human acceptance)). CL-T01 places the zero (prohibit) weight outside the logarithmic algebra. GT-F54 shows that, for the measured stationary observables (partner index, flux), the hard ban sits at the continuous end of the soft ladder 1/2, 1/4, 1/9, 1/16, 0. 'Outside the algebra' therefore does not imply 'discontinuous in every observable'. The support still changes (one-way transitions, GT-F51), so the qualification is limited to those observables.
+
+**X::0007** (epistemic_compatibility; AGENT-REVIEWED (awaiting human acceptance)). CL separates exact dependence on current higher-order structure from memory of the initial triad, which the visible pair process forgets. GT finds that a selected hub's advantage (a memory of an initial selection) decays toward zero in every law while current-state rules still shape the decay rate. The two are compatible instances of retention being distinct from current dependence; no shared formal object is asserted.
+
+**X::0008** (qualifies; AGENT-REVIEWED (awaiting human acceptance)). CL's H axis concerns rules that read history at identical complete current state. GT-Q22 asks only for an observable computed on trajectories; no rule reads it. CL's distinction therefore qualifies GT-Q22: answering it does not require or test a history axis, and the 8G compilation gate is not engaged.
+
+**X::0009** (tested_structural_analogy; AGENT-REVIEWED (awaiting human acceptance)). Both are 'matching X fixes Y' identities that turn an apparent discriminator into a control. CL-T88: starting from the stationary conditional law on D, E[tau_D^+] = 1/pi(D), so equal occupancy forces equal Kac recurrence. GT-F79: E_pi[q] = 2M J_edge by exchangeability, so matching density and mean rate forces equal CT edge present-lifetime. Map: pi(D) <-> edge occupancy; Kac recurrence <-> edge present-lifetime; both follow from stationary flux balance across a set boundary.
+

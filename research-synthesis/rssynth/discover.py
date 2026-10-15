@@ -15,7 +15,8 @@ from collections import Counter, defaultdict
 
 from . import core
 
-DIAGNOSTICS = core.ROOT / "proposals" / "discovery-diagnostics.json"
+def diagnostics_path():
+    return core.ROOT / "proposals" / "discovery-diagnostics.json"
 STOP = set("a an and are as at be been between both but by can does each for from has have if in into is it its may more most no not of on one only or other same so such than that the their then there these this those through to under was were when where which while with without within".split())
 # Formal-object dimensions (01 prompt, Stage C). Missing evidence for a dimension stays 'unknown'.
 DIMENSION_TERMS = {

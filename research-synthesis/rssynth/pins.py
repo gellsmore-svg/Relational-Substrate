@@ -15,12 +15,16 @@ import shutil
 
 from . import core, sources
 
-SPEC = core.ROOT / "sources" / "pin-spec.json"
-PIN_PROPOSALS = core.ROOT / "proposals" / "pin-updates"
+def spec_path_default() -> "core.Path":
+    return core.ROOT / "sources" / "pin-spec.json"
 
 
-def build_manifest(spec_path=SPEC, *, date: str | None = None, by: str = "agent") -> dict:
-    spec = core.read_json(spec_path)
+def pin_proposals_dir():
+    return core.ROOT / "proposals" / "pin-updates"
+
+
+def build_manifest(spec_path=None, *, date: str | None = None, by: str = "agent") -> dict:
+    spec = core.read_json(spec_path or spec_path_default())
     if spec.get("schema") != "rssynth.pin-spec/v1":
         raise sources.SourceError("unknown pin-spec schema")
     out = {"schema": "rssynth.source-manifest/v1", "generated_from": "sources/pin-spec.json", "sources": []}
@@ -44,7 +48,7 @@ def build_manifest(spec_path=SPEC, *, date: str | None = None, by: str = "agent"
 
 def write_manifest(manifest: dict) -> None:
     # drop stale materialised copies of sources that no longer materialise anything
-    core.write_json(sources.MANIFEST, manifest)
+    core.write_json(sources.manifest_path(), manifest)
 
 
 def _ledger_rows(commit: str, path: str) -> dict[str, dict]:
@@ -81,16 +85,17 @@ def propose_pin(manifest: dict, source_key: str, new_commit: str, *, note: str =
         report["warnings"].append(f"{len(rewritten)} upstream rows changed in place; shared connections citing them need re-review")
     if removed:
         report["warnings"].append(f"{len(removed)} upstream rows removed")
-    PIN_PROPOSALS.mkdir(parents=True, exist_ok=True)
-    core.write_json(PIN_PROPOSALS / f"{source_key}-{new_commit[:12]}.json", report)
+    pin_proposals_dir().mkdir(parents=True, exist_ok=True)
+    core.write_json(pin_proposals_dir() / f"{source_key}-{new_commit[:12]}.json", report)
     return report
 
 
-def apply_pin(source_key: str, new_commit: str, *, reviewed_by: str, spec_path=SPEC) -> dict:
+def apply_pin(source_key: str, new_commit: str, *, reviewed_by: str, spec_path=None) -> dict:
     """Adopt a reviewed pin: update the spec, rebuild the manifest, record the decision on the proposal."""
     if not reviewed_by or reviewed_by.lower().startswith("agent"):
         raise sources.SourceError("a pin is adopted only with a named human reviewer")
-    prop_path = PIN_PROPOSALS / f"{source_key}-{new_commit[:12]}.json"
+    spec_path = spec_path or spec_path_default()
+    prop_path = pin_proposals_dir() / f"{source_key}-{new_commit[:12]}.json"
     if not prop_path.exists():
         raise sources.SourceError("no pin proposal for this commit; run propose-pin first")
     spec = core.read_json(spec_path)
@@ -98,7 +103,7 @@ def apply_pin(source_key: str, new_commit: str, *, reviewed_by: str, spec_path=S
         if s["source_key"] == source_key:
             s["commit"] = new_commit
     core.write_json(spec_path, spec)
-    stale = sources.MATERIALISED / source_key
+    stale = sources.materialised_dir() / source_key
     if stale.exists():
         shutil.rmtree(stale)
     manifest = build_manifest(spec_path, by=f"human review: {reviewed_by}")

@@ -306,8 +306,8 @@
       "flags": [],
       "from": "CL::F8D-LOG-ADDITIVITY",
       "shared_terms": [
-        "fractions",
         "minus",
+        "fractions",
         "log",
         "sum",
         "state",
@@ -725,8 +725,8 @@
       "shared_terms": [
         "reachable",
         "state",
-        "identical",
-        "support"
+        "support",
+        "identical"
       ],
       "similarity": 0.124277,
       "status": "unreviewed_retrieval_candidate",
@@ -768,8 +768,8 @@
       "from": "CL::F8IP-PROJECTION-RELATIVE-MEMORY",
       "shared_terms": [
         "claim",
-        "physical",
-        "relation"
+        "relation",
+        "physical"
       ],
       "similarity": 0.123389,
       "status": "unreviewed_retrieval_candidate",
