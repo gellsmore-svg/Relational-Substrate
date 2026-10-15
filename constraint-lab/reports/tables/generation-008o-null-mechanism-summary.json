@@ -1,0 +1,598 @@
+{
+  "by_family": [
+    {
+      "count": 296,
+      "family": "ANY",
+      "mechanism": "ACTIVE"
+    },
+    {
+      "count": 40,
+      "family": "ANY",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY"
+    },
+    {
+      "count": 256,
+      "family": "DISSOLVE",
+      "mechanism": "ACTIVE"
+    },
+    {
+      "count": 48,
+      "family": "DISSOLVE",
+      "mechanism": "N1_TARGET_INSENSITIVITY"
+    },
+    {
+      "count": 32,
+      "family": "DISSOLVE",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY"
+    },
+    {
+      "count": 256,
+      "family": "FORM",
+      "mechanism": "ACTIVE"
+    },
+    {
+      "count": 48,
+      "family": "FORM",
+      "mechanism": "N1_TARGET_INSENSITIVITY"
+    },
+    {
+      "count": 32,
+      "family": "FORM",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY"
+    }
+  ],
+  "by_layer_source": [
+    {
+      "count": 100,
+      "k": "2",
+      "mechanism": "ACTIVE",
+      "source": "e2-deg1111-tri0-comp2"
+    },
+    {
+      "count": 24,
+      "k": "2",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "source": "e2-deg1111-tri0-comp2"
+    },
+    {
+      "count": 20,
+      "k": "2",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "source": "e2-deg1111-tri0-comp2"
+    },
+    {
+      "count": 100,
+      "k": "2",
+      "mechanism": "ACTIVE",
+      "source": "e2-deg2110-tri0-comp2"
+    },
+    {
+      "count": 24,
+      "k": "2",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "source": "e2-deg2110-tri0-comp2"
+    },
+    {
+      "count": 20,
+      "k": "2",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "source": "e2-deg2110-tri0-comp2"
+    },
+    {
+      "count": 136,
+      "k": "3",
+      "mechanism": "ACTIVE",
+      "source": "e3-deg2211-tri0-comp1"
+    },
+    {
+      "count": 8,
+      "k": "3",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "source": "e3-deg2211-tri0-comp1"
+    },
+    {
+      "count": 136,
+      "k": "3",
+      "mechanism": "ACTIVE",
+      "source": "e3-deg2220-tri1-comp2"
+    },
+    {
+      "count": 8,
+      "k": "3",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "source": "e3-deg2220-tri1-comp2"
+    },
+    {
+      "count": 136,
+      "k": "3",
+      "mechanism": "ACTIVE",
+      "source": "e3-deg3111-tri0-comp1"
+    },
+    {
+      "count": 8,
+      "k": "3",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "source": "e3-deg3111-tri0-comp1"
+    },
+    {
+      "count": 100,
+      "k": "4",
+      "mechanism": "ACTIVE",
+      "source": "e4-deg2222-tri0-comp1"
+    },
+    {
+      "count": 24,
+      "k": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "source": "e4-deg2222-tri0-comp1"
+    },
+    {
+      "count": 20,
+      "k": "4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "source": "e4-deg2222-tri0-comp1"
+    },
+    {
+      "count": 100,
+      "k": "4",
+      "mechanism": "ACTIVE",
+      "source": "e4-deg3221-tri1-comp1"
+    },
+    {
+      "count": 24,
+      "k": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "source": "e4-deg3221-tri1-comp1"
+    },
+    {
+      "count": 20,
+      "k": "4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "source": "e4-deg3221-tri1-comp1"
+    }
+  ],
+  "by_role_grade": [
+    {
+      "count": 30,
+      "m": "1/4",
+      "mechanism": "ACTIVE",
+      "role": "0"
+    },
+    {
+      "count": 4,
+      "m": "1/4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "0"
+    },
+    {
+      "count": 8,
+      "m": "1/4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "0"
+    },
+    {
+      "count": 30,
+      "m": "4",
+      "mechanism": "ACTIVE",
+      "role": "0"
+    },
+    {
+      "count": 4,
+      "m": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "0"
+    },
+    {
+      "count": 8,
+      "m": "4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "0"
+    },
+    {
+      "count": 30,
+      "m": "1/4",
+      "mechanism": "ACTIVE",
+      "role": "1"
+    },
+    {
+      "count": 4,
+      "m": "1/4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "1"
+    },
+    {
+      "count": 8,
+      "m": "1/4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "1"
+    },
+    {
+      "count": 30,
+      "m": "4",
+      "mechanism": "ACTIVE",
+      "role": "1"
+    },
+    {
+      "count": 4,
+      "m": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "1"
+    },
+    {
+      "count": 8,
+      "m": "4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "1"
+    },
+    {
+      "count": 38,
+      "m": "1/4",
+      "mechanism": "ACTIVE",
+      "role": "10"
+    },
+    {
+      "count": 4,
+      "m": "1/4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "10"
+    },
+    {
+      "count": 38,
+      "m": "4",
+      "mechanism": "ACTIVE",
+      "role": "10"
+    },
+    {
+      "count": 4,
+      "m": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "10"
+    },
+    {
+      "count": 32,
+      "m": "1/4",
+      "mechanism": "ACTIVE",
+      "role": "11"
+    },
+    {
+      "count": 4,
+      "m": "1/4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "11"
+    },
+    {
+      "count": 6,
+      "m": "1/4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "11"
+    },
+    {
+      "count": 32,
+      "m": "4",
+      "mechanism": "ACTIVE",
+      "role": "11"
+    },
+    {
+      "count": 4,
+      "m": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "11"
+    },
+    {
+      "count": 6,
+      "m": "4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "11"
+    },
+    {
+      "count": 30,
+      "m": "1/4",
+      "mechanism": "ACTIVE",
+      "role": "2"
+    },
+    {
+      "count": 4,
+      "m": "1/4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "2"
+    },
+    {
+      "count": 8,
+      "m": "1/4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "2"
+    },
+    {
+      "count": 30,
+      "m": "4",
+      "mechanism": "ACTIVE",
+      "role": "2"
+    },
+    {
+      "count": 4,
+      "m": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "2"
+    },
+    {
+      "count": 8,
+      "m": "4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "2"
+    },
+    {
+      "count": 30,
+      "m": "1/4",
+      "mechanism": "ACTIVE",
+      "role": "3"
+    },
+    {
+      "count": 4,
+      "m": "1/4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "3"
+    },
+    {
+      "count": 8,
+      "m": "1/4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "3"
+    },
+    {
+      "count": 30,
+      "m": "4",
+      "mechanism": "ACTIVE",
+      "role": "3"
+    },
+    {
+      "count": 4,
+      "m": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "3"
+    },
+    {
+      "count": 8,
+      "m": "4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "3"
+    },
+    {
+      "count": 32,
+      "m": "1/4",
+      "mechanism": "ACTIVE",
+      "role": "4"
+    },
+    {
+      "count": 4,
+      "m": "1/4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "4"
+    },
+    {
+      "count": 6,
+      "m": "1/4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "4"
+    },
+    {
+      "count": 32,
+      "m": "4",
+      "mechanism": "ACTIVE",
+      "role": "4"
+    },
+    {
+      "count": 4,
+      "m": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "4"
+    },
+    {
+      "count": 6,
+      "m": "4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "4"
+    },
+    {
+      "count": 38,
+      "m": "1/4",
+      "mechanism": "ACTIVE",
+      "role": "5"
+    },
+    {
+      "count": 4,
+      "m": "1/4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "5"
+    },
+    {
+      "count": 38,
+      "m": "4",
+      "mechanism": "ACTIVE",
+      "role": "5"
+    },
+    {
+      "count": 4,
+      "m": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "5"
+    },
+    {
+      "count": 38,
+      "m": "1/4",
+      "mechanism": "ACTIVE",
+      "role": "6"
+    },
+    {
+      "count": 4,
+      "m": "1/4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "6"
+    },
+    {
+      "count": 38,
+      "m": "4",
+      "mechanism": "ACTIVE",
+      "role": "6"
+    },
+    {
+      "count": 4,
+      "m": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "6"
+    },
+    {
+      "count": 38,
+      "m": "1/4",
+      "mechanism": "ACTIVE",
+      "role": "7"
+    },
+    {
+      "count": 4,
+      "m": "1/4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "7"
+    },
+    {
+      "count": 38,
+      "m": "4",
+      "mechanism": "ACTIVE",
+      "role": "7"
+    },
+    {
+      "count": 4,
+      "m": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "7"
+    },
+    {
+      "count": 38,
+      "m": "1/4",
+      "mechanism": "ACTIVE",
+      "role": "8"
+    },
+    {
+      "count": 4,
+      "m": "1/4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "8"
+    },
+    {
+      "count": 38,
+      "m": "4",
+      "mechanism": "ACTIVE",
+      "role": "8"
+    },
+    {
+      "count": 4,
+      "m": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "8"
+    },
+    {
+      "count": 30,
+      "m": "1/4",
+      "mechanism": "ACTIVE",
+      "role": "9"
+    },
+    {
+      "count": 4,
+      "m": "1/4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "9"
+    },
+    {
+      "count": 8,
+      "m": "1/4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "9"
+    },
+    {
+      "count": 30,
+      "m": "4",
+      "mechanism": "ACTIVE",
+      "role": "9"
+    },
+    {
+      "count": 4,
+      "m": "4",
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "role": "9"
+    },
+    {
+      "count": 8,
+      "m": "4",
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "role": "9"
+    }
+  ],
+  "by_route": [
+    {
+      "count": 404,
+      "mechanism": "ACTIVE",
+      "route": "DOWN"
+    },
+    {
+      "count": 48,
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "route": "DOWN"
+    },
+    {
+      "count": 52,
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "route": "DOWN"
+    },
+    {
+      "count": 404,
+      "mechanism": "ACTIVE",
+      "route": "UP"
+    },
+    {
+      "count": 48,
+      "mechanism": "N1_TARGET_INSENSITIVITY",
+      "route": "UP"
+    },
+    {
+      "count": 52,
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY",
+      "route": "UP"
+    }
+  ],
+  "cancellation_subtypes": [
+    {
+      "cancellation_subtype": "None",
+      "count": 808,
+      "mechanism": "ACTIVE"
+    },
+    {
+      "cancellation_subtype": "ORBITWISE_ZERO",
+      "count": 96,
+      "mechanism": "N1_TARGET_INSENSITIVITY"
+    },
+    {
+      "cancellation_subtype": "FIBREWISE_CANCELLATION",
+      "count": 24,
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY"
+    },
+    {
+      "cancellation_subtype": "ORBITWISE_ZERO",
+      "count": 80,
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY"
+    }
+  ],
+  "mechanisms": [
+    {
+      "count": 808,
+      "mechanism": "ACTIVE"
+    },
+    {
+      "count": 96,
+      "mechanism": "N1_TARGET_INSENSITIVITY"
+    },
+    {
+      "count": 104,
+      "mechanism": "N2_BILINEAR_ORTHOGONALITY"
+    }
+  ],
+  "neutral_rows": 14,
+  "non_neutral_rows": 1008
+}

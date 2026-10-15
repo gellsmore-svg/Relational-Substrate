@@ -1,0 +1,775 @@
+{
+  "all_full_sparse_residuals": true,
+  "conjugacies": [
+    {
+      "exact": true,
+      "left": "F0-FORM-R00-m025",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R00-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R00-m025",
+      "map": "complement",
+      "right": "F0-ANY-R00-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R00-m4",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R00-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R00-m4",
+      "map": "complement",
+      "right": "F0-ANY-R00-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R01-m025",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R01-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R01-m025",
+      "map": "complement",
+      "right": "F0-ANY-R01-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R01-m4",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R01-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R01-m4",
+      "map": "complement",
+      "right": "F0-ANY-R01-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R02-m025",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R02-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R02-m025",
+      "map": "complement",
+      "right": "F0-ANY-R02-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R02-m4",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R02-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R02-m4",
+      "map": "complement",
+      "right": "F0-ANY-R02-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R03-m025",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R03-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R03-m025",
+      "map": "complement",
+      "right": "F0-ANY-R03-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R03-m4",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R03-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R03-m4",
+      "map": "complement",
+      "right": "F0-ANY-R03-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R04-m025",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R04-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R04-m025",
+      "map": "complement",
+      "right": "F0-ANY-R04-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R04-m4",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R04-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R04-m4",
+      "map": "complement",
+      "right": "F0-ANY-R04-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R05-m025",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R05-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R05-m025",
+      "map": "complement",
+      "right": "F0-ANY-R05-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R05-m4",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R05-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R05-m4",
+      "map": "complement",
+      "right": "F0-ANY-R05-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R06-m025",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R06-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R06-m025",
+      "map": "complement",
+      "right": "F0-ANY-R06-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R06-m4",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R06-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R06-m4",
+      "map": "complement",
+      "right": "F0-ANY-R06-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R07-m025",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R07-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R07-m025",
+      "map": "complement",
+      "right": "F0-ANY-R07-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R07-m4",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R07-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R07-m4",
+      "map": "complement",
+      "right": "F0-ANY-R07-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R08-m025",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R08-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R08-m025",
+      "map": "complement",
+      "right": "F0-ANY-R08-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R08-m4",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R08-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R08-m4",
+      "map": "complement",
+      "right": "F0-ANY-R08-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R09-m025",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R09-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R09-m025",
+      "map": "complement",
+      "right": "F0-ANY-R09-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R09-m4",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R09-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R09-m4",
+      "map": "complement",
+      "right": "F0-ANY-R09-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R10-m025",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R10-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R10-m025",
+      "map": "complement",
+      "right": "F0-ANY-R10-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R10-m4",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R10-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R10-m4",
+      "map": "complement",
+      "right": "F0-ANY-R10-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R11-m025",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R11-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R11-m025",
+      "map": "complement",
+      "right": "F0-ANY-R11-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R11-m4",
+      "map": "complement",
+      "right": "F0-DISSOLVE-R11-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R11-m4",
+      "map": "complement",
+      "right": "F0-ANY-R11-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R00-m025",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R00-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R01-m025",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R01-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R02-m025",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R02-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R03-m025",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R03-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R04-m025",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R04-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R05-m025",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R06-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R07-m025",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R07-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R08-m025",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R08-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R09-m025",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R09-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R10-m025",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R10-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R11-m025",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R11-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R00-m4",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R00-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R01-m4",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R01-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R02-m4",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R02-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R03-m4",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R03-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R04-m4",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R04-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R05-m4",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R06-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R07-m4",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R07-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R08-m4",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R08-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R09-m4",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R09-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R10-m4",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R10-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-ANY-R11-m4",
+      "map": "opposite_pair",
+      "right": "F0-ANY-R11-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R00-m025",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R00-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R01-m025",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R01-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R02-m025",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R02-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R03-m025",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R03-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R04-m025",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R04-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R05-m025",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R06-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R07-m025",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R07-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R08-m025",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R08-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R09-m025",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R09-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R10-m025",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R10-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R11-m025",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R11-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R00-m4",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R00-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R01-m4",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R01-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R02-m4",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R02-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R03-m4",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R03-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R04-m4",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R04-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R05-m4",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R06-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R07-m4",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R07-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R08-m4",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R08-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R09-m4",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R09-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R10-m4",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R10-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-FORM-R11-m4",
+      "map": "opposite_pair",
+      "right": "F0-FORM-R11-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R00-m025",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R00-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R01-m025",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R01-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R02-m025",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R02-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R03-m025",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R03-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R04-m025",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R04-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R05-m025",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R06-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R07-m025",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R07-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R08-m025",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R08-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R09-m025",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R09-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R10-m025",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R10-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R11-m025",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R11-m025"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R00-m4",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R00-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R01-m4",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R01-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R02-m4",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R02-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R03-m4",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R03-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R04-m4",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R04-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R05-m4",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R06-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R07-m4",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R07-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R08-m4",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R08-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R09-m4",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R09-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R10-m4",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R10-m4"
+    },
+    {
+      "exact": true,
+      "left": "F0-DISSOLVE-R11-m4",
+      "map": "opposite_pair",
+      "right": "F0-DISSOLVE-R11-m4"
+    }
+  ],
+  "freeze": "bf3fae54c438a8d586bb578e5d5430274274ed00",
+  "independent_solve": "Dixon and fflu every occupation solve",
+  "items": 73,
+  "plan_hash": "42477b27c57169520249aef7274e3e35f4cb7c9202cf72505f99dd13d25c12fc",
+  "result_hashes": {
+    "F0-ANY-R00-m025": "da184b655b17c0536f1465acc8b2d73f3828b5164d3d9107a05e6da56f7ce96f",
+    "F0-ANY-R00-m4": "bfed48e27e6ceb9c907f74e71474e0fb1cbe996d9efd4b27fb78f1b3d02f38df",
+    "F0-ANY-R01-m025": "62c138c5202cd6fabb6e3c144b8b4ae2f6b99320ad21b821e69b435aced1a8d5",
+    "F0-ANY-R01-m4": "72f313921ec1d6c725b2646dc95c5dbe0a577ed99af4dec260aa29beeedd4f84",
+    "F0-ANY-R02-m025": "3de18160a9b3bb51f985fc286af67c29a6c4b018b8cc983f7df9270b17518643",
+    "F0-ANY-R02-m4": "31da2ce3a1735d9d7232803c1fd99214727fcf5685fde70a87be71f9e7cdcddc",
+    "F0-ANY-R03-m025": "0c85daa0cafa4a00c5e5b807728c573b90df8f659cba000a5e3c38440b13a30c",
+    "F0-ANY-R03-m4": "c0ddb4fa4e2c2fd85c0083ccd1151edbb567d96ca07ea8b21748f673723f831d",
+    "F0-ANY-R04-m025": "9209bfbee24a1a013cca212509f2046f9042215c13e23ae4a5d274e69211bd1e",
+    "F0-ANY-R04-m4": "c8037f953238a67dd0c555a479c414bfe626199be3c4864c5c6ea78bd105b659",
+    "F0-ANY-R05-m025": "b4099e025adb662302a8f63776d18f978640e90652af12d89f456b0f35df88b1",
+    "F0-ANY-R05-m4": "647386692a8d0d51979fb98ef855211e2320d21a23e3bf22ac6a059281cd558b",
+    "F0-ANY-R06-m025": "527456bfc2935aed8ca1c951bbd779bf596518d0b164e2a22f0674d0411b55e7",
+    "F0-ANY-R06-m4": "791722f04efc9fae054106bdde44dacdd1ec02b7d7e9102b55a58610c5c5c3e8",
+    "F0-ANY-R07-m025": "d3a3815a792308aee148358585e5f57c35f19c4158676bb7351432729e91db96",
+    "F0-ANY-R07-m4": "8066397ce74ab8d62be44883fbf267d303a0d0c33f9186cfc219479970dc185c",
+    "F0-ANY-R08-m025": "f171cd9a9b940475c9f2c3dceea0ecb5a8082baa5eab0dd7baf97f9f0e5abfa3",
+    "F0-ANY-R08-m4": "c98fd586b83f5ba8edc463726ceec229b3e0d1786218a11f65434dd334731c79",
+    "F0-ANY-R09-m025": "8ff5e3486ae90dd8f8b40527e25b847c82b35834f41c41b7a8513b0186027402",
+    "F0-ANY-R09-m4": "e71da79cc550f42221b04329a51b6fa97f2b9cea7021461f4adbc7c8250c8489",
+    "F0-ANY-R10-m025": "c9e4bb5b2d76e68fa8e166a8ab8184f5e6a41c1ce6f348c972359e4f5b7413b7",
+    "F0-ANY-R10-m4": "dbb290757753eb13802fad87c60ddd57c2044a6190609126cd0c2a59db210497",
+    "F0-ANY-R11-m025": "6e6c2572cf22487bf67771290129484531f266d8060d71e4654d080b8504eed6",
+    "F0-ANY-R11-m4": "04efadb9be0f61db15a585759427e5fdc7957f7f510f1e01e983569f808e9664",
+    "F0-DISSOLVE-R00-m025": "93edcd1440c121a327e6af56856c3b0c61357bee835bc87ac44c23b06f5de08d",
+    "F0-DISSOLVE-R00-m4": "50259f3a7397cc65a04e5b3237da691b695fc3277989a15e213d34a056477813",
+    "F0-DISSOLVE-R01-m025": "91493410ddb279bfadab0807e1cc1b73bb2a8c84e8ef6101a44e7365be83e7c8",
+    "F0-DISSOLVE-R01-m4": "6104e67dd81b260013d4cd202a047e1be403861e9f689db787aca334b1580109",
+    "F0-DISSOLVE-R02-m025": "7ba418f038bdab5f046a6ae840369858329ad1b2622e6fc9a6b1131133315cae",
+    "F0-DISSOLVE-R02-m4": "97d065735baf31fb9092351aa0ab7d8fbb688ff78970eb2e34a19b5634f28ab5",
+    "F0-DISSOLVE-R03-m025": "102d0ab812db67c60ccb1b81cc5c62e60048b280de53ee2fd5418865e20aaa08",
+    "F0-DISSOLVE-R03-m4": "d7b0c781d936f2e7d47a45db11afa7520bdf035f31fea26269c7131aff5073dd",
+    "F0-DISSOLVE-R04-m025": "557565c7a41b2005df181e12a0d6a1dac266ef2d8a888188882e472a64c7cc32",
+    "F0-DISSOLVE-R04-m4": "a8cd3dddf5e87806bfe21ac0b798941e959a98cdccb0713dee5a82de16640772",
+    "F0-DISSOLVE-R05-m025": "d53326ece9fe83371f916c46bd7eb6292d08e8bba857deba0c9f0b3372b49b88",
+    "F0-DISSOLVE-R05-m4": "3e97a65912c47e1e3327a34c3c28c5ac4d8ab82ae340815a73361a712dd88fd7",
+    "F0-DISSOLVE-R06-m025": "a2c34db2ae41f8f34d97144316a00a972b772ff1b650b8175f9f71a932aeeb70",
+    "F0-DISSOLVE-R06-m4": "c2a6f323ea4783a43024d2ec02e94da807cf04063b50e9a8277ac2443cb9f43c",
+    "F0-DISSOLVE-R07-m025": "0c1a8e34b480d4e527bf580a2608f04386e0e1e3f3f1a446bc5b51bcfc7f0fd7",
+    "F0-DISSOLVE-R07-m4": "7665a938fa40813bc30bb4e02752afce8aedb3ffacd042daa180110219ce93b7",
+    "F0-DISSOLVE-R08-m025": "17c5f490b962228481e1ecae230b66817ca04b4b6bc00a550be6b3ace354eb6a",
+    "F0-DISSOLVE-R08-m4": "03aec6b67cc56817887447597f1c6ce9f9202938b37226267bd71e7e8d699ef0",
+    "F0-DISSOLVE-R09-m025": "7e4361af4f0c0860dd9cc54bde612e0e1429f30cf34921bf9bc2646eb4af34c5",
+    "F0-DISSOLVE-R09-m4": "45a3e328cece55674b01dc4b4fc28fcc40a75d2fbc7fc8b4b1c87bc36dcd729c",
+    "F0-DISSOLVE-R10-m025": "a22feac7060e6de3a7992dc984d25e90d70172876f9e33d5588ef8a695fab8ce",
+    "F0-DISSOLVE-R10-m4": "9586076903f2ea59d523703f27f49928c55916ce26ff91041165adf71ee7f264",
+    "F0-DISSOLVE-R11-m025": "2d2ad9ff4eb503339c19274694c8a1e0829e4f8ecf3fa082c27550011bbcac3f",
+    "F0-DISSOLVE-R11-m4": "af801c3921cd42a39abca95d58226f5e175bdb44b20b47e856c6dcabddfbceee",
+    "F0-FORM-R00-m025": "bba5343bd8501f4e397e58dc0a2b5353a06f5f0b773ed447a71d567ebde40d51",
+    "F0-FORM-R00-m4": "4c7563daa038bf407b5de8fa56e4efc02ce241b26d8bb4eed233d0a4c1112b69",
+    "F0-FORM-R01-m025": "bb20e4b4c54b46563e42708a4ee5da18877be975b982dbc42d03f2b31b56dbbf",
+    "F0-FORM-R01-m4": "f2473fa803c085182cbcf55e46a7d000bf48c7044650de869c7eb09a759dd865",
+    "F0-FORM-R02-m025": "12d40ebdfbd392149ef969dd1212a5d396a80a6f44181a8b8d7e6b2ac3b28782",
+    "F0-FORM-R02-m4": "ec711af5877ebc49dbc1ddda6060617eb90c66c8f3b29528d9a8f497fa2a75a4",
+    "F0-FORM-R03-m025": "f90a660aa015a939023da3a395295e4b2c2c6109d7c7cae7bdbbffb993b954a2",
+    "F0-FORM-R03-m4": "cdb98ddabef379d222630afbcff935a00d33e0dc4f0b7871ba0805cafcbf743e",
+    "F0-FORM-R04-m025": "bfaf03ed960d66e957b292c501a17f2a1dec84d5a59925342d61ea4d389577e9",
+    "F0-FORM-R04-m4": "910471d0e928e10f7cc8e18d1d6ecf21deb399ae9eac207c325343fd5c49e32d",
+    "F0-FORM-R05-m025": "0b91917a0e9042aeaec5a1fb123eb74ca9b2b633e7e1d7f45be54f9b674d25ef",
+    "F0-FORM-R05-m4": "7642c1dcc2ba997423777e5cbf9754cf8bea5b61d5cc7435f6f0abb979f5347a",
+    "F0-FORM-R06-m025": "9faf7ab9c7d20a7bd21b99ca13927c537b3ee879e645bce8048a242ae9f69c16",
+    "F0-FORM-R06-m4": "992e1c758a062d269c24912c88348235fa2f358fe65c39bae0dba7135cb3a8e2",
+    "F0-FORM-R07-m025": "8b86824c3ff5ed52745fcfe97344e906fe29b66aefe19f01c8fd117f244f9efd",
+    "F0-FORM-R07-m4": "1590bec4d7e62a2526b83ff3ea70603a4116d27d1a0e99a4b9ac249a50789d42",
+    "F0-FORM-R08-m025": "b3c0f7deee8a5b064cb64eed557e3aaa20f15331c629387a61f61f238c3f3774",
+    "F0-FORM-R08-m4": "3da89c699250a290b14e00144d3087917f6ad2a6e485b41a40d622536c47fc87",
+    "F0-FORM-R09-m025": "2ed75d1245c0b14e704e634e6e04e051dfcac9dc4f29d6efc30b79ab86d3a2a7",
+    "F0-FORM-R09-m4": "0f069534074a35893b9289863cd14429c56f9c2ddc62389a4a53dbc2ebc1cad0",
+    "F0-FORM-R10-m025": "01ca62fccc1f6e8280eed288ccef8634a31a41940bc1a8562eff73ada0b48bb7",
+    "F0-FORM-R10-m4": "db0cb7f66ab701e87f8027972e1856c4b37bd13240efd93980f93c40a8530eb6",
+    "F0-FORM-R11-m025": "49ab2dfdf57878e01aaa42c3e883b8834ff454f1e8c5fe9a5ca471c633e4bdb9",
+    "F0-FORM-R11-m4": "3b1905f6a801f7d3aabbb06d1f0385c256c3831699e3201f1ca922003521331a",
+    "F0-NEUTRAL": "b12a347892dedfea00254655362b64a761071c6a088ef246772d1010ab639848"
+  },
+  "source_route_rows": 1022,
+  "status": "VERIFIED",
+  "table_hashes": {
+    "null-mechanism-summary": "7d9db56b8697e0f97cc3a063ffcfdd2a5baa95b4b214e36d18fe4a1610022d46",
+    "route-null-factorization": "3d95be2e75439637952cf00aa3ec86014c45bdc9580f72f69d58cf70a088e121",
+    "timing-factorization": "cff6bf82bdf5279d18f3b46ec28ed61c7a35b811710bb50931445138a6d16e4b"
+  }
+}

@@ -1,0 +1,6264 @@
+{
+  "freeze": "bf3fae54c438a8d586bb578e5d5430274274ed00",
+  "item": {
+    "family": "ANY",
+    "item_id": "F0-NEUTRAL",
+    "m": "1",
+    "role": 0,
+    "source_item_id": "M0-NEUTRAL",
+    "source_passage_id": "P0-NEUTRAL"
+  },
+  "plan_hash": "42477b27c57169520249aef7274e3e35f4cb7c9202cf72505f99dd13d25c12fc",
+  "result": {
+    "Kpi_LTC_exact": true,
+    "LC_identity": true,
+    "Pi_idempotence": true,
+    "dimensions": {
+      "full_S": 384,
+      "full_Z": 2304,
+      "sector_S": 28,
+      "sector_Z": 120
+    },
+    "operator_hashes": {
+      "C": "68724c89473158f5f8ae5909e87cffee86b09a62125f980d3e7e8e684fbca497",
+      "L": "a9dbacad48347c45d28beb0244718929aebf67bb1abcf32aeef93f562a6be4de",
+      "Pi": "fb001caa2366836f0fcc281f6830527b54ef9733f9812538d69fb26443dabf29"
+    },
+    "rows": [
+      {
+        "DeltaR": [
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4",
+        "family": "ANY",
+        "k": 2,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "62aa74658da343ae1bb3272083df1b999349ba21ec772836eb84e4c12da900b7",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 1,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 1260,
+          "full_I_minus_Pi": 1260,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 60,
+          "sector_I_minus_Pi": 60
+        },
+        "role": 0,
+        "route": "UP",
+        "source": "e2-deg2110-tri0-comp2",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      },
+      {
+        "DeltaR": [
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4",
+        "family": "ANY",
+        "k": 2,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "62aa74658da343ae1bb3272083df1b999349ba21ec772836eb84e4c12da900b7",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 1,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 1260,
+          "full_I_minus_Pi": 1260,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 60,
+          "sector_I_minus_Pi": 60
+        },
+        "role": 0,
+        "route": "UP",
+        "source": "e2-deg1111-tri0-comp2",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      },
+      {
+        "DeltaR": [
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4",
+        "family": "ANY",
+        "k": 2,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "42d9f9b37f1121641744bba76707821dc886ba6e6a6a3b495ab743ba61ec1a67",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 1,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 210,
+          "full_I_minus_Pi": 210,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 11,
+          "sector_I_minus_Pi": 11
+        },
+        "role": 0,
+        "route": "DOWN",
+        "source": "e2-deg2110-tri0-comp2",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      },
+      {
+        "DeltaR": [
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4",
+        "family": "ANY",
+        "k": 2,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "42d9f9b37f1121641744bba76707821dc886ba6e6a6a3b495ab743ba61ec1a67",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 1,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 210,
+          "full_I_minus_Pi": 210,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 11,
+          "sector_I_minus_Pi": 11
+        },
+        "role": 0,
+        "route": "DOWN",
+        "source": "e2-deg1111-tri0-comp2",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      },
+      {
+        "DeltaR": [
+          "0",
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "b00c01404358e234588f6e1c13b6b72ef1f4a192021aa2c012b7e3c16daa1c43",
+        "family": "ANY",
+        "k": 3,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "3e450582f939c3ce850ecc424945f1cfc19fda474ab59536c06b98e9c2bb94bc",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 2,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 660,
+          "full_I_minus_Pi": 660,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 32,
+          "sector_I_minus_Pi": 32
+        },
+        "role": 0,
+        "route": "UP",
+        "source": "e3-deg3111-tri0-comp1",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      },
+      {
+        "DeltaR": [
+          "0",
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "b00c01404358e234588f6e1c13b6b72ef1f4a192021aa2c012b7e3c16daa1c43",
+        "family": "ANY",
+        "k": 3,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "3e450582f939c3ce850ecc424945f1cfc19fda474ab59536c06b98e9c2bb94bc",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 2,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 660,
+          "full_I_minus_Pi": 660,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 32,
+          "sector_I_minus_Pi": 32
+        },
+        "role": 0,
+        "route": "UP",
+        "source": "e3-deg2220-tri1-comp2",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      },
+      {
+        "DeltaR": [
+          "0",
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "b00c01404358e234588f6e1c13b6b72ef1f4a192021aa2c012b7e3c16daa1c43",
+        "family": "ANY",
+        "k": 3,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "3e450582f939c3ce850ecc424945f1cfc19fda474ab59536c06b98e9c2bb94bc",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 2,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 660,
+          "full_I_minus_Pi": 660,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 32,
+          "sector_I_minus_Pi": 32
+        },
+        "role": 0,
+        "route": "UP",
+        "source": "e3-deg2211-tri0-comp1",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      },
+      {
+        "DeltaR": [
+          "0",
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "b00c01404358e234588f6e1c13b6b72ef1f4a192021aa2c012b7e3c16daa1c43",
+        "family": "ANY",
+        "k": 3,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "3e450582f939c3ce850ecc424945f1cfc19fda474ab59536c06b98e9c2bb94bc",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 2,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 660,
+          "full_I_minus_Pi": 660,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 32,
+          "sector_I_minus_Pi": 32
+        },
+        "role": 0,
+        "route": "DOWN",
+        "source": "e3-deg3111-tri0-comp1",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      },
+      {
+        "DeltaR": [
+          "0",
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "b00c01404358e234588f6e1c13b6b72ef1f4a192021aa2c012b7e3c16daa1c43",
+        "family": "ANY",
+        "k": 3,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "3e450582f939c3ce850ecc424945f1cfc19fda474ab59536c06b98e9c2bb94bc",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 2,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 660,
+          "full_I_minus_Pi": 660,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 32,
+          "sector_I_minus_Pi": 32
+        },
+        "role": 0,
+        "route": "DOWN",
+        "source": "e3-deg2220-tri1-comp2",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      },
+      {
+        "DeltaR": [
+          "0",
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "b00c01404358e234588f6e1c13b6b72ef1f4a192021aa2c012b7e3c16daa1c43",
+        "family": "ANY",
+        "k": 3,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "3e450582f939c3ce850ecc424945f1cfc19fda474ab59536c06b98e9c2bb94bc",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 2,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 660,
+          "full_I_minus_Pi": 660,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 32,
+          "sector_I_minus_Pi": 32
+        },
+        "role": 0,
+        "route": "DOWN",
+        "source": "e3-deg2211-tri0-comp1",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      },
+      {
+        "DeltaR": [
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4",
+        "family": "ANY",
+        "k": 4,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "42d9f9b37f1121641744bba76707821dc886ba6e6a6a3b495ab743ba61ec1a67",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 1,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 210,
+          "full_I_minus_Pi": 210,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 11,
+          "sector_I_minus_Pi": 11
+        },
+        "role": 0,
+        "route": "UP",
+        "source": "e4-deg3221-tri1-comp1",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      },
+      {
+        "DeltaR": [
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4",
+        "family": "ANY",
+        "k": 4,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "42d9f9b37f1121641744bba76707821dc886ba6e6a6a3b495ab743ba61ec1a67",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 1,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 210,
+          "full_I_minus_Pi": 210,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 11,
+          "sector_I_minus_Pi": 11
+        },
+        "role": 0,
+        "route": "UP",
+        "source": "e4-deg2222-tri0-comp1",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      },
+      {
+        "DeltaR": [
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4",
+        "family": "ANY",
+        "k": 4,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "62aa74658da343ae1bb3272083df1b999349ba21ec772836eb84e4c12da900b7",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 1,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 1260,
+          "full_I_minus_Pi": 1260,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 60,
+          "sector_I_minus_Pi": 60
+        },
+        "role": 0,
+        "route": "DOWN",
+        "source": "e4-deg3221-tri1-comp1",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      },
+      {
+        "DeltaR": [
+          "0",
+          "0"
+        ],
+        "U_zero": false,
+        "V_zero": false,
+        "W_zero": true,
+        "bilinear_product_zero": true,
+        "cancellation_subtype": "ORBITWISE_ZERO",
+        "contribution_convention": "U orbit mass times W invariant value; omitted entries zero; complete B order in side certificate",
+        "exact_DeltaR_hash": "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4",
+        "family": "ANY",
+        "k": 4,
+        "m": "1",
+        "mechanism": "N1_TARGET_INSENSITIVITY",
+        "model_id": "F0-NEUTRAL",
+        "orbit_contribution_hash": "62aa74658da343ae1bb3272083df1b999349ba21ec772836eb84e4c12da900b7",
+        "published_route_active": false,
+        "ranks": {
+          "U_class_rows": 1,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 1260,
+          "full_I_minus_Pi": 1260,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 60,
+          "sector_I_minus_Pi": 60
+        },
+        "role": 0,
+        "route": "DOWN",
+        "source": "e4-deg2222-tri0-comp1",
+        "source_8N": "P0-NEUTRAL",
+        "sparse_orbit_contributions": [],
+        "symmetry_explanation_id": null,
+        "validation": {
+          "entrance_reset": true,
+          "factorization": true,
+          "full_sparse": true,
+          "published_rows": true
+        }
+      }
+    ],
+    "sides": {
+      "2-DOWN": {
+        "B_orbit_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "Delta": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "F4": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "F4_insertions": [
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        ],
+        "Pi_B_hash": "de417b66895939848340307d34d0c229ac4483a19963f4f789114772a1b16132",
+        "Q_hash": "4077d4e85c2c09e1f8d9fc29195916b3a58d7ae0df93834d27086d828576693d",
+        "U": [
+          [
+            "0",
+            "1/90",
+            "-1/90",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-2/45",
+            "2/45",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "V": [
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ]
+        ],
+        "W": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "W_zero": true,
+        "classes": [
+          "e2-deg2110-tri0-comp2",
+          "e2-deg1111-tri0-comp2"
+        ],
+        "entrance": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/18",
+            "2/9",
+            "1/18"
+          ]
+        ],
+        "fibre_ids": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3
+        ],
+        "full_validation": {
+          "all_sparse_occupation_and_reset_equations": true,
+          "exact_gap": "0",
+          "full_B_states": 252,
+          "full_S_states": 42
+        },
+        "identity_on_readout": true,
+        "k": 2,
+        "occupation": [
+          [
+            "1/90",
+            "1/18",
+            "0",
+            "1/90",
+            "2/45",
+            "1/90",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1/90",
+            "0",
+            "1/18",
+            "1/90",
+            "2/45",
+            "1/90",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/18",
+            "2/9",
+            "1/18"
+          ]
+        ],
+        "ranks": {
+          "U_class_rows": 1,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 210,
+          "full_I_minus_Pi": 210,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 11,
+          "sector_I_minus_Pi": 11
+        },
+        "route": "DOWN"
+      },
+      "2-UP": {
+        "B_orbit_indices": [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119
+        ],
+        "Delta": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "F4": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "F4_insertions": [
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        ],
+        "Pi_B_hash": "3368fa13909adc9c5bf838678cdfcef1a7865f42ec8476c00b24fed5b7e2cace",
+        "Q_hash": "f3df47a41bb9e7c543f72566a231eb97ee0b3dd1b9f0722b272cfecd478338fc",
+        "U": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-7/1530",
+            "2/765",
+            "2/765",
+            "-1/1530",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-7/1530",
+            "2/765",
+            "2/765",
+            "-1/1530",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-7/1530",
+            "-7/1530",
+            "4/765",
+            "4/765",
+            "-1/1530",
+            "-1/1530",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/1530",
+            "2/765",
+            "-1/765",
+            "-1/1530",
+            "7/1530",
+            "-31/765",
+            "23/1530",
+            "23/1530",
+            "1/765",
+            "7/1530",
+            "4/765",
+            "-2/765",
+            "2/765",
+            "-4/765",
+            "4/765",
+            "2/765",
+            "-2/765",
+            "-4/765",
+            "-2/765",
+            "1/1530",
+            "1/1530",
+            "1/1530",
+            "1/1530",
+            "0",
+            "-1/1530",
+            "1/1530",
+            "0",
+            "7/1530",
+            "1/1530",
+            "23/1530",
+            "-31/1530",
+            "1/1530",
+            "-1/765",
+            "1/1530",
+            "-7/1530",
+            "-1/1530",
+            "4/765",
+            "4/765",
+            "-7/1530",
+            "-1/1530",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/1530",
+            "-1/1530"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "14/765",
+            "-8/765",
+            "-8/765",
+            "2/765",
+            "0",
+            "0",
+            "0",
+            "0",
+            "14/765",
+            "-8/765",
+            "-8/765",
+            "2/765",
+            "0",
+            "0",
+            "0",
+            "0",
+            "14/765",
+            "14/765",
+            "-16/765",
+            "-16/765",
+            "2/765",
+            "2/765",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "2/765",
+            "-8/765",
+            "4/765",
+            "2/765",
+            "-14/765",
+            "124/765",
+            "-46/765",
+            "-46/765",
+            "-4/765",
+            "-14/765",
+            "-16/765",
+            "8/765",
+            "-8/765",
+            "16/765",
+            "-16/765",
+            "-8/765",
+            "8/765",
+            "16/765",
+            "8/765",
+            "-2/765",
+            "-2/765",
+            "-2/765",
+            "-2/765",
+            "0",
+            "2/765",
+            "-2/765",
+            "0",
+            "-14/765",
+            "-2/765",
+            "-46/765",
+            "62/765",
+            "-2/765",
+            "4/765",
+            "-2/765",
+            "14/765",
+            "2/765",
+            "-16/765",
+            "-16/765",
+            "14/765",
+            "2/765",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-2/765",
+            "2/765"
+          ]
+        ],
+        "V": [
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ]
+        ],
+        "W": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "W_zero": true,
+        "classes": [
+          "e2-deg2110-tri0-comp2",
+          "e2-deg1111-tri0-comp2"
+        ],
+        "entrance": [
+          [
+            "1/36",
+            "1/18",
+            "1/18",
+            "1/36",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/36",
+            "1/18",
+            "1/18",
+            "1/36",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/9",
+            "2/9",
+            "2/9",
+            "1/9",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "fibre_ids": [
+          8,
+          8,
+          8,
+          8,
+          9,
+          9,
+          9,
+          9,
+          10,
+          10,
+          10,
+          10,
+          11,
+          11,
+          11,
+          11,
+          14,
+          14,
+          14,
+          14,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          17,
+          17,
+          17,
+          17,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          19,
+          19,
+          19,
+          19,
+          20,
+          20,
+          20,
+          20,
+          21,
+          21,
+          21,
+          21,
+          21,
+          21,
+          22,
+          22,
+          22,
+          23,
+          23,
+          23,
+          23,
+          24,
+          24,
+          24,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          26,
+          26,
+          26,
+          27,
+          27,
+          27
+        ],
+        "full_validation": {
+          "all_sparse_occupation_and_reset_equations": true,
+          "exact_gap": "0",
+          "full_B_states": 1512,
+          "full_S_states": 252
+        },
+        "identity_on_readout": true,
+        "k": 2,
+        "occupation": [
+          [
+            "1/36",
+            "1/18",
+            "1/18",
+            "1/36",
+            "31/765",
+            "77/3060",
+            "77/3060",
+            "2/45",
+            "1/36",
+            "1/18",
+            "1/18",
+            "1/36",
+            "31/765",
+            "77/3060",
+            "77/3060",
+            "2/45",
+            "0",
+            "0",
+            "0",
+            "0",
+            "31/765",
+            "31/765",
+            "77/1530",
+            "77/1530",
+            "2/45",
+            "2/45",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "31/1530",
+            "2/45",
+            "31/765",
+            "31/1530",
+            "23/510",
+            "0",
+            "1/18",
+            "1/18",
+            "32/765",
+            "23/510",
+            "1/18",
+            "23/1020",
+            "1/36",
+            "23/510",
+            "1/18",
+            "1/36",
+            "23/1020",
+            "23/510",
+            "32/765",
+            "23/510",
+            "23/510",
+            "23/510",
+            "23/510",
+            "2/45",
+            "8/765",
+            "23/510",
+            "1/90",
+            "23/510",
+            "16/765",
+            "1/18",
+            "0",
+            "1/90",
+            "31/765",
+            "1/90",
+            "31/765",
+            "2/45",
+            "77/1530",
+            "77/1530",
+            "31/765",
+            "2/45",
+            "1/90",
+            "2/45",
+            "1/90",
+            "1/90",
+            "23/510",
+            "8/765"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "46/765",
+            "8/765",
+            "8/765",
+            "2/45",
+            "0",
+            "0",
+            "0",
+            "0",
+            "46/765",
+            "8/765",
+            "8/765",
+            "2/45",
+            "1/9",
+            "2/9",
+            "2/9",
+            "1/9",
+            "46/765",
+            "46/765",
+            "16/765",
+            "16/765",
+            "2/45",
+            "2/45",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "23/765",
+            "2/45",
+            "46/765",
+            "23/765",
+            "32/765",
+            "2/9",
+            "0",
+            "0",
+            "14/255",
+            "32/765",
+            "0",
+            "16/765",
+            "0",
+            "32/765",
+            "0",
+            "0",
+            "16/765",
+            "32/765",
+            "14/255",
+            "32/765",
+            "32/765",
+            "32/765",
+            "32/765",
+            "2/45",
+            "7/510",
+            "32/765",
+            "1/90",
+            "32/765",
+            "7/255",
+            "0",
+            "1/9",
+            "1/90",
+            "46/765",
+            "1/90",
+            "46/765",
+            "2/45",
+            "16/765",
+            "16/765",
+            "46/765",
+            "2/45",
+            "1/90",
+            "2/45",
+            "1/90",
+            "1/90",
+            "32/765",
+            "7/510"
+          ]
+        ],
+        "ranks": {
+          "U_class_rows": 1,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 1260,
+          "full_I_minus_Pi": 1260,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 60,
+          "sector_I_minus_Pi": 60
+        },
+        "route": "UP"
+      },
+      "3-DOWN": {
+        "B_orbit_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57
+        ],
+        "Delta": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "F4": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "F4_insertions": [
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        ],
+        "Pi_B_hash": "15cb5fab07c270b3caa2c80c680f6b5d1dc0ad04d60f68a6317df0d9e8f61b00",
+        "Q_hash": "4cdf32d35dea2a137b8b1af1750ffec3bf5dfba0eeb0fffd707c2eafeceaef3a",
+        "U": [
+          [
+            "0",
+            "1/180",
+            "-1/180",
+            "0",
+            "0",
+            "0",
+            "-1/180",
+            "-1/180",
+            "23/180",
+            "-7/180",
+            "-7/180",
+            "-7/180",
+            "1/180",
+            "-1/90",
+            "1/180",
+            "1/180",
+            "0",
+            "1/180",
+            "1/180",
+            "-1/45",
+            "1/180",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/180",
+            "-1/180",
+            "0"
+          ],
+          [
+            "0",
+            "1/180",
+            "-1/180",
+            "0",
+            "0",
+            "0",
+            "-1/180",
+            "-1/180",
+            "-7/180",
+            "23/180",
+            "-7/180",
+            "-7/180",
+            "1/180",
+            "-1/90",
+            "1/180",
+            "1/180",
+            "0",
+            "1/180",
+            "1/180",
+            "-1/45",
+            "1/180",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/180",
+            "-1/180",
+            "0"
+          ],
+          [
+            "0",
+            "-1/270",
+            "1/270",
+            "0",
+            "0",
+            "0",
+            "1/270",
+            "1/270",
+            "-4/135",
+            "-4/135",
+            "7/270",
+            "7/270",
+            "-1/270",
+            "1/135",
+            "-1/270",
+            "-1/270",
+            "0",
+            "-1/270",
+            "-1/270",
+            "2/135",
+            "-1/270",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/270",
+            "1/270",
+            "0"
+          ]
+        ],
+        "V": [
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ]
+        ],
+        "W": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "W_zero": true,
+        "classes": [
+          "e3-deg3111-tri0-comp1",
+          "e3-deg2220-tri1-comp2",
+          "e3-deg2211-tri0-comp1"
+        ],
+        "entrance": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/6",
+            "1/12",
+            "1/12",
+            "1/6",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/6",
+            "1/12",
+            "1/12",
+            "1/6",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/36",
+            "1/18",
+            "1/18",
+            "1/36",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "fibre_ids": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          12,
+          12,
+          12,
+          12,
+          13,
+          13,
+          13
+        ],
+        "full_validation": {
+          "all_sparse_occupation_and_reset_equations": true,
+          "exact_gap": "0",
+          "full_B_states": 792,
+          "full_S_states": 132
+        },
+        "identity_on_readout": true,
+        "k": 3,
+        "occupation": [
+          [
+            "1/120",
+            "7/180",
+            "1/360",
+            "1/120",
+            "1/30",
+            "1/120",
+            "1/30",
+            "1/30",
+            "1/6",
+            "0",
+            "0",
+            "0",
+            "1/120",
+            "0",
+            "1/120",
+            "7/180",
+            "1/30",
+            "7/180",
+            "7/180",
+            "1/90",
+            "7/180",
+            "1/6",
+            "1/12",
+            "1/12",
+            "1/6",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "7/180",
+            "1/360",
+            "1/120"
+          ],
+          [
+            "1/120",
+            "7/180",
+            "1/360",
+            "1/120",
+            "1/30",
+            "1/120",
+            "1/30",
+            "1/30",
+            "0",
+            "1/6",
+            "0",
+            "0",
+            "1/120",
+            "0",
+            "1/120",
+            "7/180",
+            "1/30",
+            "7/180",
+            "7/180",
+            "1/90",
+            "7/180",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/6",
+            "1/12",
+            "1/12",
+            "1/6",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "7/180",
+            "1/360",
+            "1/120"
+          ],
+          [
+            "1/120",
+            "4/135",
+            "13/1080",
+            "1/120",
+            "1/30",
+            "1/120",
+            "1/30",
+            "1/30",
+            "0",
+            "0",
+            "1/18",
+            "1/18",
+            "1/120",
+            "1/18",
+            "1/120",
+            "4/135",
+            "1/30",
+            "4/135",
+            "4/135",
+            "13/270",
+            "4/135",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/36",
+            "1/18",
+            "1/18",
+            "1/36",
+            "4/135",
+            "13/1080",
+            "1/120"
+          ]
+        ],
+        "ranks": {
+          "U_class_rows": 2,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 660,
+          "full_I_minus_Pi": 660,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 32,
+          "sector_I_minus_Pi": 32
+        },
+        "route": "DOWN"
+      },
+      "3-UP": {
+        "B_orbit_indices": [
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119
+        ],
+        "Delta": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "F4": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "F4_insertions": [
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        ],
+        "Pi_B_hash": "faedb5f74d87409b97dc81d0c384c464829ae3948df96c128d500a5a7500d72a",
+        "Q_hash": "5dda30d17ee23958c41571653209b99966924d90afeaf491721aa314efad6879",
+        "U": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/45",
+            "1/180",
+            "1/180",
+            "1/180",
+            "1/180",
+            "0",
+            "-1/180",
+            "1/180",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/180",
+            "-1/90",
+            "1/180",
+            "-7/180",
+            "-1/180",
+            "23/180",
+            "-7/180",
+            "-7/180",
+            "-1/180",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/180",
+            "-1/180"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/45",
+            "1/180",
+            "1/180",
+            "1/180",
+            "1/180",
+            "0",
+            "-1/180",
+            "1/180",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/180",
+            "-1/90",
+            "1/180",
+            "-7/180",
+            "-1/180",
+            "-7/180",
+            "23/180",
+            "-7/180",
+            "-1/180",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/180",
+            "-1/180"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "2/135",
+            "-1/270",
+            "-1/270",
+            "-1/270",
+            "-1/270",
+            "0",
+            "1/270",
+            "-1/270",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/270",
+            "1/135",
+            "-1/270",
+            "7/270",
+            "1/270",
+            "-4/135",
+            "-4/135",
+            "7/270",
+            "1/270",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/270",
+            "1/270"
+          ]
+        ],
+        "V": [
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "7/30",
+            "7/30",
+            "8/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ],
+          [
+            "1/15",
+            "1/15",
+            "13/15"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "1/5",
+            "1/5",
+            "3/5"
+          ]
+        ],
+        "W": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "W_zero": true,
+        "classes": [
+          "e3-deg3111-tri0-comp1",
+          "e3-deg2220-tri1-comp2",
+          "e3-deg2211-tri0-comp1"
+        ],
+        "entrance": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/6",
+            "1/12",
+            "1/12",
+            "1/6",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/6",
+            "1/12",
+            "1/12",
+            "1/6",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/18",
+            "1/36",
+            "1/18",
+            "1/36",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "fibre_ids": [
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          19,
+          19,
+          19,
+          19,
+          20,
+          20,
+          20,
+          20,
+          21,
+          21,
+          21,
+          21,
+          21,
+          21,
+          22,
+          22,
+          22,
+          23,
+          23,
+          23,
+          23,
+          24,
+          24,
+          24,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          26,
+          26,
+          26,
+          27,
+          27,
+          27
+        ],
+        "full_validation": {
+          "all_sparse_occupation_and_reset_equations": true,
+          "exact_gap": "0",
+          "full_B_states": 792,
+          "full_S_states": 132
+        },
+        "identity_on_readout": true,
+        "k": 3,
+        "occupation": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/6",
+            "1/12",
+            "1/12",
+            "1/6",
+            "1/90",
+            "7/180",
+            "7/180",
+            "7/180",
+            "7/180",
+            "1/30",
+            "1/360",
+            "7/180",
+            "1/120",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/120",
+            "0",
+            "1/120",
+            "0",
+            "1/30",
+            "1/6",
+            "0",
+            "0",
+            "1/30",
+            "1/120",
+            "1/30",
+            "1/120",
+            "1/120",
+            "7/180",
+            "1/360"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/6",
+            "1/12",
+            "1/12",
+            "1/6",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/90",
+            "7/180",
+            "7/180",
+            "7/180",
+            "7/180",
+            "1/30",
+            "1/360",
+            "7/180",
+            "1/120",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/120",
+            "0",
+            "1/120",
+            "0",
+            "1/30",
+            "0",
+            "1/6",
+            "0",
+            "1/30",
+            "1/120",
+            "1/30",
+            "1/120",
+            "1/120",
+            "7/180",
+            "1/360"
+          ],
+          [
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "13/270",
+            "4/135",
+            "4/135",
+            "4/135",
+            "4/135",
+            "1/30",
+            "13/1080",
+            "4/135",
+            "1/120",
+            "1/18",
+            "1/36",
+            "1/18",
+            "1/36",
+            "1/120",
+            "1/18",
+            "1/120",
+            "1/18",
+            "1/30",
+            "0",
+            "0",
+            "1/18",
+            "1/30",
+            "1/120",
+            "1/30",
+            "1/120",
+            "1/120",
+            "4/135",
+            "13/1080"
+          ]
+        ],
+        "ranks": {
+          "U_class_rows": 2,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 660,
+          "full_I_minus_Pi": 660,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 32,
+          "sector_I_minus_Pi": 32
+        },
+        "route": "UP"
+      },
+      "4-DOWN": {
+        "B_orbit_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77
+        ],
+        "Delta": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "F4": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "F4_insertions": [
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        ],
+        "Pi_B_hash": "52b407b4f49d9b65471436da675f5b93047192a39bb4fc62172129618809dba9",
+        "Q_hash": "d2c93786174bfe7797c52712d21883c02e3d22411ca595d288784afbc6f139b2",
+        "U": [
+          [
+            "0",
+            "1/1530",
+            "-1/1530",
+            "0",
+            "0",
+            "0",
+            "-1/1530",
+            "-1/1530",
+            "4/765",
+            "4/765",
+            "-7/1530",
+            "-7/1530",
+            "1/1530",
+            "-1/765",
+            "1/1530",
+            "1/1530",
+            "0",
+            "1/1530",
+            "1/1530",
+            "-2/765",
+            "1/1530",
+            "-4/765",
+            "-2/765",
+            "2/765",
+            "4/765",
+            "-4/765",
+            "2/765",
+            "-2/765",
+            "4/765",
+            "1/765",
+            "7/1530",
+            "23/1530",
+            "23/1530",
+            "7/1530",
+            "-31/765",
+            "2/765",
+            "-1/1530",
+            "-7/1530",
+            "2/765",
+            "0",
+            "0",
+            "0",
+            "0",
+            "2/765",
+            "-1/1530",
+            "-7/1530",
+            "2/765",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/1530",
+            "23/1530",
+            "7/1530",
+            "-31/1530",
+            "1/1530",
+            "-1/1530",
+            "0",
+            "-1/1530",
+            "-1/765",
+            "2/765",
+            "-1/1530",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/1530",
+            "4/765",
+            "-7/1530",
+            "-1/1530",
+            "4/765",
+            "-7/1530",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-2/765",
+            "2/765",
+            "0",
+            "0",
+            "0",
+            "2/765",
+            "2/765",
+            "-16/765",
+            "-16/765",
+            "14/765",
+            "14/765",
+            "-2/765",
+            "4/765",
+            "-2/765",
+            "-2/765",
+            "0",
+            "-2/765",
+            "-2/765",
+            "8/765",
+            "-2/765",
+            "16/765",
+            "8/765",
+            "-8/765",
+            "-16/765",
+            "16/765",
+            "-8/765",
+            "8/765",
+            "-16/765",
+            "-4/765",
+            "-14/765",
+            "-46/765",
+            "-46/765",
+            "-14/765",
+            "124/765",
+            "-8/765",
+            "2/765",
+            "14/765",
+            "-8/765",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-8/765",
+            "2/765",
+            "14/765",
+            "-8/765",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-2/765",
+            "-46/765",
+            "-14/765",
+            "62/765",
+            "-2/765",
+            "2/765",
+            "0",
+            "2/765",
+            "4/765",
+            "-8/765",
+            "2/765",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "2/765",
+            "-16/765",
+            "14/765",
+            "2/765",
+            "-16/765",
+            "14/765",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "V": [
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "69/85",
+            "16/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "77/85",
+            "8/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "64/85",
+            "21/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ],
+          [
+            "62/85",
+            "23/85"
+          ]
+        ],
+        "W": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "W_zero": true,
+        "classes": [
+          "e4-deg3221-tri1-comp1",
+          "e4-deg2222-tri0-comp1"
+        ],
+        "entrance": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/18",
+            "1/36",
+            "1/36",
+            "1/18",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/18",
+            "1/36",
+            "1/36",
+            "1/18",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/9",
+            "2/9",
+            "2/9",
+            "1/9"
+          ]
+        ],
+        "fibre_ids": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          8,
+          8,
+          8,
+          8,
+          9,
+          9,
+          9,
+          9,
+          10,
+          10,
+          10,
+          10,
+          11,
+          11,
+          11,
+          11,
+          12,
+          12,
+          12,
+          12,
+          13,
+          13,
+          13,
+          14,
+          14,
+          14,
+          14,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          17,
+          17,
+          17,
+          17
+        ],
+        "full_validation": {
+          "all_sparse_occupation_and_reset_equations": true,
+          "exact_gap": "0",
+          "full_B_states": 1512,
+          "full_S_states": 252
+        },
+        "identity_on_readout": true,
+        "k": 4,
+        "occupation": [
+          [
+            "1/90",
+            "23/510",
+            "8/765",
+            "1/90",
+            "2/45",
+            "1/90",
+            "2/45",
+            "2/45",
+            "77/1530",
+            "77/1530",
+            "31/765",
+            "31/765",
+            "1/90",
+            "31/765",
+            "1/90",
+            "23/510",
+            "2/45",
+            "23/510",
+            "23/510",
+            "32/765",
+            "23/510",
+            "23/510",
+            "23/1020",
+            "1/36",
+            "1/18",
+            "23/510",
+            "1/36",
+            "23/1020",
+            "1/18",
+            "32/765",
+            "23/510",
+            "1/18",
+            "1/18",
+            "23/510",
+            "0",
+            "77/3060",
+            "2/45",
+            "31/765",
+            "77/3060",
+            "1/18",
+            "1/36",
+            "1/36",
+            "1/18",
+            "77/3060",
+            "2/45",
+            "31/765",
+            "77/3060",
+            "1/18",
+            "1/36",
+            "1/36",
+            "1/18",
+            "16/765",
+            "1/18",
+            "23/510",
+            "0",
+            "23/510",
+            "8/765",
+            "1/90",
+            "31/1530",
+            "31/765",
+            "2/45",
+            "31/1530",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "2/45",
+            "77/1530",
+            "31/765",
+            "2/45",
+            "77/1530",
+            "31/765",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1/90",
+            "32/765",
+            "7/510",
+            "1/90",
+            "2/45",
+            "1/90",
+            "2/45",
+            "2/45",
+            "16/765",
+            "16/765",
+            "46/765",
+            "46/765",
+            "1/90",
+            "46/765",
+            "1/90",
+            "32/765",
+            "2/45",
+            "32/765",
+            "32/765",
+            "14/255",
+            "32/765",
+            "32/765",
+            "16/765",
+            "0",
+            "0",
+            "32/765",
+            "0",
+            "16/765",
+            "0",
+            "14/255",
+            "32/765",
+            "0",
+            "0",
+            "32/765",
+            "2/9",
+            "8/765",
+            "2/45",
+            "46/765",
+            "8/765",
+            "0",
+            "0",
+            "0",
+            "0",
+            "8/765",
+            "2/45",
+            "46/765",
+            "8/765",
+            "0",
+            "0",
+            "0",
+            "0",
+            "7/255",
+            "0",
+            "32/765",
+            "1/9",
+            "32/765",
+            "7/510",
+            "1/90",
+            "23/765",
+            "46/765",
+            "2/45",
+            "23/765",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "2/45",
+            "16/765",
+            "46/765",
+            "2/45",
+            "16/765",
+            "46/765",
+            "1/9",
+            "2/9",
+            "2/9",
+            "1/9"
+          ]
+        ],
+        "ranks": {
+          "U_class_rows": 1,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 1260,
+          "full_I_minus_Pi": 1260,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 60,
+          "sector_I_minus_Pi": 60
+        },
+        "route": "DOWN"
+      },
+      "4-UP": {
+        "B_orbit_indices": [
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119
+        ],
+        "Delta": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "F4": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "F4_insertions": [
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        ],
+        "Pi_B_hash": "3d3219e5b63a7caf5cdcdadc39fd238f253069cb33f2fb33067285250f2b8d52",
+        "Q_hash": "75215f2d387f7a43173f522a4406c6543d453021541b483b4aa2d8445e90e12b",
+        "U": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/90",
+            "-1/90"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-2/45",
+            "2/45"
+          ]
+        ],
+        "V": [
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ]
+        ],
+        "W": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "W_zero": true,
+        "classes": [
+          "e4-deg3221-tri1-comp1",
+          "e4-deg2222-tri0-comp1"
+        ],
+        "entrance": [
+          [
+            "0",
+            "0",
+            "0",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1/18",
+            "2/9",
+            "1/18",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "fibre_ids": [
+          24,
+          24,
+          24,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          26,
+          26,
+          26,
+          27,
+          27,
+          27
+        ],
+        "full_validation": {
+          "all_sparse_occupation_and_reset_equations": true,
+          "exact_gap": "0",
+          "full_B_states": 252,
+          "full_S_states": 42
+        },
+        "identity_on_readout": true,
+        "k": 4,
+        "occupation": [
+          [
+            "0",
+            "0",
+            "0",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/18",
+            "1/90",
+            "2/45",
+            "1/90",
+            "1/90",
+            "1/18",
+            "0"
+          ],
+          [
+            "1/18",
+            "2/9",
+            "1/18",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/90",
+            "2/45",
+            "1/90",
+            "1/90",
+            "0",
+            "1/18"
+          ]
+        ],
+        "ranks": {
+          "U_class_rows": 1,
+          "W_full_and_sector": 0,
+          "full_Ares_I_minus_Pi": 210,
+          "full_I_minus_Pi": 210,
+          "full_rank_method": "conditional projection dimension and invertible left factor; not inferred from sector",
+          "route_class_map": 0,
+          "sector_Ares_I_minus_Pi": 11,
+          "sector_I_minus_Pi": 11
+        },
+        "route": "UP"
+      }
+    },
+    "source_8N_result_hash": "795200dc36eff426053ad33c05d17b98173f8d51b2133a32cedbd6b56c36e9b9",
+    "stationary_source_controls": {
+      "H1_quotient_states": 28,
+      "H2_quotient_states": 120,
+      "KU_equal_8M": true,
+      "category_8M": "MATERIAL_SILENT",
+      "class_probabilities": {
+        "e0-deg0000-tri0-comp4": "1/64",
+        "e1-deg1100-tri0-comp3": "3/32",
+        "e2-deg1111-tri0-comp2": "3/64",
+        "e2-deg2110-tri0-comp2": "3/16",
+        "e3-deg2211-tri0-comp1": "3/16",
+        "e3-deg2220-tri1-comp2": "1/16",
+        "e3-deg3111-tri0-comp1": "1/16",
+        "e4-deg2222-tri0-comp1": "3/64",
+        "e4-deg3221-tri1-comp1": "3/16",
+        "e5-deg3322-tri2-comp1": "3/32",
+        "e6-deg3333-tri4-comp1": "1/64"
+      },
+      "first_step_match": true,
+      "occupancy_match": true,
+      "source_H1_hashes": {
+        "e2-deg1111-tri0-comp2": "56a9de9e4c90bca653bb76f60c9c1d6b593af8b54c632c22a75969d879e9cabc",
+        "e2-deg2110-tri0-comp2": "608835da7195caf534485c55d923c83b6caf8ab76719b9c9c207284f891c7fa9",
+        "e3-deg2211-tri0-comp1": "2ca9851693c0d45842157cd2b78acfe43a570b393a3337fc50b36939773443b1",
+        "e3-deg2220-tri1-comp2": "3f99f8984ee61fa46580ea742be9472e7b8c5927b7643613ce41b12f4b9a79bc",
+        "e3-deg3111-tri0-comp1": "155422b1c7fbce061ffaa742696139173e84b0aa896e11a69fc2dbf54c740f67",
+        "e4-deg2222-tri0-comp1": "f9011e51568fdc9ead6fe2fd7841c2bad6540908d41735c3a58deaccb1939182",
+        "e4-deg3221-tri1-comp1": "f080abf52d27a18ebc5257b7ad245cbdcf510910918c4f6d6236dbf456bfd9f8"
+      },
+      "source_H2_hashes": {
+        "e2-deg1111-tri0-comp2": "3bcbcb0ead09d3725007c43e1d53c64a82957af327b157dbadfa24bfb6587503",
+        "e2-deg2110-tri0-comp2": "bfdf2ba5e840de3c3103280d9ded27c3d910c23ebdaa0d34f0874a8d2b99ec84",
+        "e3-deg2211-tri0-comp1": "e7f8175a46a431830f79deac9187cbcbeed89956525e8e67729f0514009b056a",
+        "e3-deg2220-tri1-comp2": "dcbed0020875a6a551437ac7a15cf54098e4c35e730c6a01521a2000fd073c0a",
+        "e3-deg3111-tri0-comp1": "58adcc7f581b419e1030eea5719c219c782700f562eaac09957a26017d8c5e30",
+        "e4-deg2222-tri0-comp1": "affa9c8c3822275636cb784ecc34723a34a8007d5f8a98a77be5a4e25f86e754",
+        "e4-deg3221-tri1-comp1": "1f022faec9a6c4fa6658443082bae6a6c11868f4dae4a980e6a8e85548889657"
+      },
+      "source_pushforward_match": true,
+      "source_result_hash": "a6015eb1402024171b31a6c0ceb6a7239633e76dcdbd2b7c2c2532b0c096c238",
+      "stationary_H1_hash": "6dfb7a2efe8109779d096af014000ec3d1d7300bcd02e672dcd674cb7f5454f6",
+      "stationary_H2_hash": "68397a30c08d1dccb4e65745d723f8b15e4e5bf6213fce4ff56c70852fdf7fee"
+    },
+    "timing_rows": [
+      {
+        "aggregation_annihilates": true,
+        "classification": "NEUTRAL",
+        "destination_delta4": [
+          "0",
+          "0"
+        ],
+        "insertion_timing_contributions": [
+          "0",
+          "0",
+          "0"
+        ],
+        "k": 2,
+        "model_id": "F0-NEUTRAL",
+        "source": "e2-deg2110-tri0-comp2",
+        "structured_nonzero": false,
+        "timing_delta4": "0"
+      },
+      {
+        "aggregation_annihilates": true,
+        "classification": "NEUTRAL",
+        "destination_delta4": [
+          "0",
+          "0"
+        ],
+        "insertion_timing_contributions": [
+          "0",
+          "0",
+          "0"
+        ],
+        "k": 2,
+        "model_id": "F0-NEUTRAL",
+        "source": "e2-deg1111-tri0-comp2",
+        "structured_nonzero": false,
+        "timing_delta4": "0"
+      },
+      {
+        "aggregation_annihilates": true,
+        "classification": "NEUTRAL",
+        "destination_delta4": [
+          "0",
+          "0",
+          "0"
+        ],
+        "insertion_timing_contributions": [
+          "0",
+          "0",
+          "0"
+        ],
+        "k": 3,
+        "model_id": "F0-NEUTRAL",
+        "source": "e3-deg3111-tri0-comp1",
+        "structured_nonzero": false,
+        "timing_delta4": "0"
+      },
+      {
+        "aggregation_annihilates": true,
+        "classification": "NEUTRAL",
+        "destination_delta4": [
+          "0",
+          "0",
+          "0"
+        ],
+        "insertion_timing_contributions": [
+          "0",
+          "0",
+          "0"
+        ],
+        "k": 3,
+        "model_id": "F0-NEUTRAL",
+        "source": "e3-deg2220-tri1-comp2",
+        "structured_nonzero": false,
+        "timing_delta4": "0"
+      },
+      {
+        "aggregation_annihilates": true,
+        "classification": "NEUTRAL",
+        "destination_delta4": [
+          "0",
+          "0",
+          "0"
+        ],
+        "insertion_timing_contributions": [
+          "0",
+          "0",
+          "0"
+        ],
+        "k": 3,
+        "model_id": "F0-NEUTRAL",
+        "source": "e3-deg2211-tri0-comp1",
+        "structured_nonzero": false,
+        "timing_delta4": "0"
+      },
+      {
+        "aggregation_annihilates": true,
+        "classification": "NEUTRAL",
+        "destination_delta4": [
+          "0",
+          "0"
+        ],
+        "insertion_timing_contributions": [
+          "0",
+          "0",
+          "0"
+        ],
+        "k": 4,
+        "model_id": "F0-NEUTRAL",
+        "source": "e4-deg3221-tri1-comp1",
+        "structured_nonzero": false,
+        "timing_delta4": "0"
+      },
+      {
+        "aggregation_annihilates": true,
+        "classification": "NEUTRAL",
+        "destination_delta4": [
+          "0",
+          "0"
+        ],
+        "insertion_timing_contributions": [
+          "0",
+          "0",
+          "0"
+        ],
+        "k": 4,
+        "model_id": "F0-NEUTRAL",
+        "source": "e4-deg2222-tri0-comp1",
+        "structured_nonzero": false,
+        "timing_delta4": "0"
+      }
+    ]
+  },
+  "result_hash": "b12a347892dedfea00254655362b64a761071c6a088ef246772d1010ab639848",
+  "status": "VERIFIED",
+  "wall_seconds": 0.4705188990046736
+}
