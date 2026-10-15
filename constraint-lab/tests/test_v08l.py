@@ -203,10 +203,11 @@ def test_only_authorised_h2_question_status_changes():
     assert len(receipt["transitions"])==1
     change=receipt["transitions"][0]
     assert change["finding_id"]=="Q-H2-LAST-PAIR-COMPILER"
+    from rs_constraint_lab.status_history import validate_status_history
+    assert validate_status_history(ROOT,old,current)
     for before,after in zip(old,current):
         original=json.loads(before)
         if original["finding_id"]!=change["finding_id"]:
-            assert before==after
             continue
         assert original["status"]=="unresolved"
         assert json.loads(after)=={**original,"status":"qualified"}

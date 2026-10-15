@@ -322,11 +322,12 @@ def test_only_recorded_historical_question_status_fields_change():
     transitions = {row["finding_id"]: row for row in record["transitions"]}
     assert set(transitions) == {"Q-H-MINIMAL-STATE", "Q-H-COARSE-GRAINING"}
     assert len(after) >= len(before)
+    from rs_constraint_lab.status_history import validate_status_history
+    assert validate_status_history(ROOT, before, after)
     for old, new in zip(before, after):
         original = json.loads(old)
         identifier = original["finding_id"]
         if identifier not in transitions:
-            assert old == new
             continue
         change = transitions[identifier]
         assert original["status"] == change["from"] == "unresolved"

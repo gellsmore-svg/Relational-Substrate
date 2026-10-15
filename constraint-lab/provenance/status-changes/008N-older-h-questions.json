@@ -1,0 +1,36 @@
+{
+  "record_type": "coherence_status_change",
+  "prompt_id": "008N",
+  "date": "2026-10-15",
+  "baseline_commit": "9b2f857687be2ca6867d698fa9eda51db2f788a5",
+  "evidence_commit": "ea022205deef6b72f9b4bda231e058f3a93966fb",
+  "authorized_by": "Prompt 008N section 17; existing qualified convention audited; no new passage outcome used",
+  "transitions": [
+    {
+      "finding_id": "Q-H-PERSISTENT-STRUCTURE",
+      "from": "unresolved",
+      "to": "qualified",
+      "changed_fields": [
+        "status"
+      ],
+      "before_row_sha256": "34b12f685589a65b4aa4a69833e5a38600cb22bd41d9eb10d7210154e1d9f503",
+      "after_row_sha256": "eaeae2ebcaa8fe7f100ec4ef1e1f5481f9c6924d868b2457a2be3214d85722ae",
+      "meaning": "Scoped existence and bounded function families established by 8H/8L/8M; broad classification remains open.",
+      "row_hash_convention": "UTF-8 JSONL line excluding newline"
+    },
+    {
+      "finding_id": "Q-H-CONSEQUENTIAL-FUNCTIONS",
+      "from": "unresolved",
+      "to": "qualified",
+      "changed_fields": [
+        "status"
+      ],
+      "before_row_sha256": "a0940c697b57e6ec9968dbd60ea175208631cfeec0a88d1c268208dcad802b60",
+      "after_row_sha256": "ca08f35c4a7bd29577afdb344b7a9ba57f8fd18eed156d7549e1e35264b59aca",
+      "meaning": "Scoped existence and bounded function families established by 8H/8L/8M; broad classification remains open.",
+      "row_hash_convention": "UTF-8 JSONL line excluding newline"
+    }
+  ],
+  "record_path": "constraint-lab/provenance/status-changes/008N-older-h-questions.json",
+  "notes": "Status only; statements, creation metadata and snapshots unchanged. General classification not closed."
+}

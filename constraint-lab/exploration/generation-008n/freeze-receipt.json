@@ -1,0 +1,18 @@
+{
+  "round_id": "P0",
+  "prompt_id": "008N",
+  "frozen_analysis_plan_commit": "b4835b812226da179d75d1758e6d2b934fa3f852",
+  "plan_path": "constraint-lab/exploration/generation-008n/round-p0-plan.json",
+  "canonical_plan_hash": "d913549ba4d3f702b482ce8e24e2939b8390a62137704402c7800bcf1cd41236",
+  "plan_file_sha256": "a634c4d0104c9e8938e5d624cfd47416f6a02dab8664c49a5aeff5a8de07322f",
+  "pushed_before_target_execution": true,
+  "new_non_neutral_8N_passage_outputs_before_freeze": 0,
+  "known_prior_exposure": "8M kernels, stationary laws and L4+ words; this is not blind to those. No new non-neutral passage output before freeze.",
+  "systems": 73,
+  "non_neutral": 72,
+  "neutral": 1,
+  "workers": 1,
+  "numeric_threads": 1,
+  "independent_policy": "dixon and fflu every exact solve; every solution lifted to full sparse equations",
+  "scientific_amendments": 0
+}
