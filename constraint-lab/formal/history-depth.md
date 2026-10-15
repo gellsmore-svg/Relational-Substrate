@@ -278,3 +278,13 @@ All twelve scientific result payload hashes and all four summary-table hashes
 match v1 EXACTLY. Original plans/results remain immutable and the original
 verifier passes at its own result commit. See the amendment and replay receipts
 under exploration/generation-008l. No tolerance, controller or claim changes.
+
+## Generation 8M: Depth-Specific Structural Consequence
+
+[Ordered H2 roles](history-role-depth-two.md) extend the same two-slot semantics
+without increasing depth. The complete one-role grammar separates strict H2
+row necessity, persistent material occupancy and matched-H1 feedback/process
+consequences. ANY material silence generalises 8L's SECOND-RECENT null to
+arbitrary positive history-only pair laws. Direction coupling can change density
+and shape; occupancy alone is not a depth proof. The reviewed 8L capability and
+validation-amendment history remain unchanged.

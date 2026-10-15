@@ -270,3 +270,13 @@ two. This is a new worked instance of CL-T52/CL-T63, not a redefinition of
 history depth as splitting rounds. No graph/count H2 minimisation is claimed.
 See [proofs and compact certificates](history-depth.md#cl-t72).
 No physical ontology, observer or irreversible-time conclusion follows.
+
+## Generation 8M: Strong Projection Versus Stationary H1 Matching
+
+The strict projection drops h2 from (P,h1,h2). Strong lumpability tests every
+conditioned row independently of a prior. Stationary Kpi-H1 instead averages
+using pi(h2|P,h1), exactly matching one/two-time (P,h1) laws, not all paths.
+Adjacent masks recover h1, so material triples also match. Positive support
+and strict h2 row dependence guarantee a labelled four-mask difference.
+Coarse class/count separation is separately observed, not inferred by a false
+converse to data processing. See the [matched-law proof](history-role-depth-two.md#comparators).

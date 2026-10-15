@@ -53,3 +53,12 @@ boundary, multi-round refinement and lag-selective pair-clock diagnostics.
 The canonical continuation is now research/constraint-lab-v0.8l-history-depth-two,
 descending exactly from reviewed 8K. The earlier branch declaration is retained
 as historical context; alternate 8I/8J remain separate.
+
+Generation 8M continues from reviewed 8L at
+147d3156e396f92e3a4a12252468e5fc9dced8cd. Its
+[ordered H2 formalism](history-role-depth-two.md) separates local depth,
+persistent structure and matched H1 consequences. M0 exhausts 72 non-neutral
+systems plus one neutral baseline; separately frozen M1 checks opposite-pair
+conjugacy. Canonical continuation:
+research/constraint-lab-v0.8m-h2-structural-consequence.
+Alternate 8I/8J remain preserved and unmerged.

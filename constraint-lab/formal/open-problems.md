@@ -113,3 +113,22 @@ H3 is not automatic: another engineered delay needs a new scientific question.
 No next controller, branch or experiment is opened; seven separate attention
 vectors and reasons are recorded in the 8L report. Broader scale and controlled
 dissolution questions remain available, not executed.
+
+## Generation 8M: Bounded Structural Answer And Sharper Questions
+
+Q-H2-STRUCTURAL-UTILITY receives a scoped complete-grammar answer: strict H2 in
+all non-neutral cells; ANY stationary material silence; direction-coupled
+density and sometimes conditional shape and uniform-H1 feedback. Kpi-H1 still
+captures occupancy exactly; all tested P/C/K words first differ at L4.
+The broader utility question is qualified, not closed.
+
+- General mathematics: derive all-m density-only and feedback-silence factorisations; explain R00/R09's identical stationary joint.
+- Laboratory mechanism: explain the tiny R04 shape residue without equating size with importance.
+- Controlled passage: declare source/target, matched occupancy/support/clock and hitting estimands before testing historical access.
+- Scale: N5 only to challenge a named N4 property such as unique disjoint-pair conjugacy or synchronization.
+- Architecture: Q-L-COMPILER-SEMANTICS remains unresolved, separate from fixed L=0.
+- Method: combine roles only to resolve a specific ambiguity, not enlarge effects.
+- Ontology/coherence: no physical memory, purpose or time claim follows.
+
+Separately frozen M1 resolves STAR/TRIANGLE conjugacy. Stop after M1.
+No H3 depth question is newly motivated. Books remain untouched.

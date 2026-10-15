@@ -373,3 +373,12 @@ event MI and four-time conditional information are positive non-neutrally.
 Uniform pair-epoch occupancy remains unchanged. See
 [history depth](history-depth.md) for compiler restrictions, exact proofs,
 finite verification and explicit absence of a raw full-clock order claim.
+
+## Generation 8M: Ordered History And Present Action
+
+The [ordered-role grammar](history-role-depth-two.md) reads structural relations
+among h1,h2,e, optionally conjoined with current candidate presence. All rules
+remain fixed L=0 programmes. The invariant basis has 12 roles including the
+ternary STAR/TRIANGLE split. Strict H2 necessity, persistent visible structure
+and specified matched-H1 discrepancies are different claims. Neither statistical
+dependence nor stationary occupancy alone proves necessary historical depth.

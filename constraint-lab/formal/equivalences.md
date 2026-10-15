@@ -87,3 +87,14 @@ The non-neutral 8H/8I mask/class/count processes are examples of stationary
 ONE-STEP equality without weak lumpability, not examples of stationary Markov
 projection. Parity has the separate all-order process proof. CE-WEAK shows
 that actual stationary weak lumpability can occur without strong lumpability.
+
+## Generation 8M: Comparator And Alphabet Scope
+
+KU-H1 uniformly averages already-normalised rows in older history and has its
+own stationary law. Kpi-H1 conditionally averages using the actual stationary
+law and matches adjacent (P,h1) joints, not all paths. Exact equal stationary
+joint laws can coexist with unequal kernels: M0 R00/R09 direction partners.
+STAR/TRIANGLE instead have opposite-pair kernel conjugacy, not same-labelled
+kernel equality. Transporting the class alphabet exchanges star and triangle
+while leaving count fixed. Equal scalar information under that bijection is
+weaker than identical raw class laws.

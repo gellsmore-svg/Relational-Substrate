@@ -245,3 +245,14 @@ This does not satisfy the declared semantic H1 contract. The result applies
 CL-M04; it does not defeat raw kernel flattening or resolve L semantics.
 SECOND-RECENT is fixed throughout, so ontology L=0 remains unchanged.
 See [history-depth proofs](history-depth.md#cl-t69).
+
+## Generation 8M: Three Levels Of Structural Consequence
+
+The strict semantic H1 compiler is exactly (X,h1), arbitrary positive K/J,
+no recoding, hidden state, phase, changed support or clock. All non-neutral
+one-role cells fail that row compiler. A stationary H1 Kpi nevertheless always
+matches occupancy. H2-vs-uniform-H1 occupancy and H2-vs-Kpi longer-word gaps
+answer different questions, neither defeating unrestricted augmentation.
+The STAR/TRIANGLE conjugacy uses a non-vertex pair-coordinate permutation;
+it is not an ontology-preserving identification of labelled relations.
+See [ordered depth-two roles](history-role-depth-two.md).

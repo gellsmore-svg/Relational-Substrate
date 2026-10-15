@@ -78,3 +78,18 @@ Earlier maturity rows remain historical. Neither book is edited.
 | Adjacent null versus lag-two dependence | READY_WITH_SCOPE | Temporal diagnostics example | Stationary pair-event clock and this fixed controller only |
 | SECOND-RECENT numerical magnitudes | PROVISIONAL | Supporting tables | Frozen three-grade, 160-digit natural-log evaluations; external review pending |
 | Physical historical depth | DO_NOT_INTEGRATE_YET | None | Formal capability does not establish event stacks or H2 memory in nature |
+
+## Generation 8M: Ordered Roles And Matched Structural Controls
+
+Earlier maturity rows remain historical. Neither book is edited.
+
+| Content | Maturity | Proposed location | Scope |
+| --- | --- | --- | --- |
+| Reviewed H2 depth necessity | READY_WITH_SCOPE | Representation appendix | Strict semantic H1, not arbitrary recoding |
+| Ordered 12-role invariant basis | READY_WITH_SCOPE | Technical appendix | Local (h1,h2,e) and candidate direction only |
+| History-only material-uniformity theorem | READY_WITH_SCOPE | Relational process examples | Positive pair support, no current-mask read |
+| Kpi-H1 matching and material triples | READY_WITH_SCOPE | Equivalence appendix | Stationary, not strong lumping or all paths |
+| Opposite-pair conjugacy | READY_WITH_SCOPE | Symmetry appendix | N4 slot involution, not vertex relabelling |
+| Persistent H2 structural atlas | PROVISIONAL | Laboratory report | Grade-specific; pending external review |
+| Numerical information and tiny residues | PROVISIONAL | Supporting tables | Model-specific; no master memory score |
+| L-positive semantics or physical history | DO_NOT_INTEGRATE_YET | None | Fixed programmes, no physical inference |
