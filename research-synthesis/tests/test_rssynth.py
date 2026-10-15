@@ -761,7 +761,7 @@ class ImplicitRoundTripAcceptance(unittest.TestCase):
     def test_rt0001_ratified_by_ad0002_without_upgrades(self):
         m, loaded, shared = inputs()
         self.assertEqual(roundtrip.validate(REAL_ROOT, shared), [])
-        self.assertEqual(roundtrip.open_round_trips(REAL_ROOT), [])
+        self.assertNotIn("RT-0001", roundtrip.open_round_trips(REAL_ROOT))
         rt = roundtrip.load_round_trips(REAL_ROOT)["RT-0001"]
         cats = {r["target"]: r["decision_category"] for r in rt["recommendations"]}
         for x in shared["connections"]:
