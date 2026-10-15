@@ -1,0 +1,1024 @@
+[
+  {
+    "active_MFPT_tasks": 0,
+    "active_committor_sources": 0,
+    "active_source_rows": 0,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_SILENT",
+      "DOWN_ROUTE": "DOWN_ROUTE_SILENT",
+      "K3_COMMITTOR": "K3_COMMITTOR_SILENT",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_SILENT",
+      "RETURN_ROUTING": "RETURN_ROUTING_SILENT",
+      "UP_ROUTE": "UP_ROUTE_SILENT"
+    },
+    "system_id": "P0-NEUTRAL"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R00-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R00-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R01-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R01-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R02-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R02-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R03-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R03-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R04-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R04-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R05-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R05-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R06-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R06-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R07-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R07-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R08-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R08-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R09-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R09-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R10-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R10-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R11-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-ANY-R11-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R00-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R00-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R01-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R01-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R02-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R02-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R03-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R03-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R04-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R04-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 3,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R05-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 3,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R05-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 3,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R06-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 3,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R06-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R07-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R07-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R08-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R08-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R09-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R09-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R10-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R10-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R11-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-FORM-R11-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R00-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R00-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R01-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R01-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R02-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R02-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R03-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R03-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R04-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R04-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 3,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R05-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 3,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R05-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 3,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R06-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 3,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R06-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R07-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R07-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R08-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R08-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R09-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R09-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R10-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R10-m4"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R11-m025"
+  },
+  {
+    "active_MFPT_tasks": 10,
+    "active_committor_sources": 2,
+    "active_source_rows": 7,
+    "classifications": {
+      "CROSS_CLASS_MFPT": "CROSS_CLASS_MFPT_ACTIVE",
+      "DOWN_ROUTE": "DOWN_ROUTE_ACTIVE",
+      "K3_COMMITTOR": "K3_COMMITTOR_ACTIVE",
+      "LENGTH_PROFILE": "LENGTH_PROFILE_ACTIVE",
+      "RETURN_ROUTING": "RETURN_ROUTING_ACTIVE",
+      "UP_ROUTE": "UP_ROUTE_ACTIVE"
+    },
+    "system_id": "P0-DISSOLVE-R11-m4"
+  }
+]

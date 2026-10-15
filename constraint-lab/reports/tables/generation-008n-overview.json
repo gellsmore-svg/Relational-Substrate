@@ -1,0 +1,85 @@
+{
+  "ALL": {
+    "DOWN_active": 404,
+    "MFPT_active": 720,
+    "MFPT_faster": 274,
+    "MFPT_slower": 446,
+    "MFPT_tasks": 720,
+    "UP_active": 404,
+    "committor_active": 152,
+    "committor_silent": 64,
+    "committor_tasks": 216,
+    "first_lengths": {
+      "4": 504
+    },
+    "length_active": 504,
+    "routing_active": 504,
+    "source_rows": 504,
+    "tail_active": 504
+  },
+  "ANY": {
+    "DOWN_active": 148,
+    "MFPT_active": 240,
+    "MFPT_faster": 68,
+    "MFPT_slower": 172,
+    "MFPT_tasks": 240,
+    "UP_active": 148,
+    "committor_active": 48,
+    "committor_silent": 24,
+    "committor_tasks": 72,
+    "first_lengths": {
+      "4": 168
+    },
+    "length_active": 168,
+    "routing_active": 168,
+    "source_rows": 168,
+    "tail_active": 168
+  },
+  "DISSOLVE": {
+    "DOWN_active": 108,
+    "MFPT_active": 240,
+    "MFPT_faster": 103,
+    "MFPT_slower": 137,
+    "MFPT_tasks": 240,
+    "UP_active": 148,
+    "committor_active": 52,
+    "committor_silent": 20,
+    "committor_tasks": 72,
+    "first_lengths": {
+      "4": 168
+    },
+    "length_active": 168,
+    "routing_active": 168,
+    "source_rows": 168,
+    "tail_active": 168
+  },
+  "FORM": {
+    "DOWN_active": 148,
+    "MFPT_active": 240,
+    "MFPT_faster": 103,
+    "MFPT_slower": 137,
+    "MFPT_tasks": 240,
+    "UP_active": 108,
+    "committor_active": 52,
+    "committor_silent": 20,
+    "committor_tasks": 72,
+    "first_lengths": {
+      "4": 168
+    },
+    "length_active": 168,
+    "routing_active": 168,
+    "source_rows": 168,
+    "tail_active": 168
+  },
+  "execution": {
+    "item_bytes": 23390981,
+    "items": 73,
+    "max_item_seconds": 0.9558477660029894,
+    "quarantine": 0,
+    "retry": 0,
+    "scientific_amendment": 0,
+    "split": 0,
+    "sum_item_seconds": 37.25911121003446
+  },
+  "interpretation": "Exact finite palette counts, not all-positive-m passage theorems or a scalar ranking."
+}
