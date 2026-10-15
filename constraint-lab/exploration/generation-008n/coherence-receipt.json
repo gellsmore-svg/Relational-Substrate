@@ -1,0 +1,10 @@
+{
+  "canonical_ledger_sha256": "d9e609785d41c47ae68d22d872b60ace99480381e0755f4feb136390e3be0392",
+  "findings": 216,
+  "historical_snapshots_modified": false,
+  "ledger_commit": "cbb0456e847e7334f9ecef3c5fa5945312271408",
+  "relations": 331,
+  "snapshot_path": "constraint-lab/coherence/snapshots/through-generation-008n.md",
+  "snapshot_sha256": "ffcd7dfd69f72c177b47978c971677e670f8b3cc8d16687f64f07697da8a0275",
+  "title": "Through Generation 008N: Occupancy-Matched Controlled Passage"
+}
