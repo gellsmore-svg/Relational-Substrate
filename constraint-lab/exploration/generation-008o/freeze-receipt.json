@@ -1,0 +1,13 @@
+{
+  "prompt_id": "008O",
+  "round_id": "F0",
+  "frozen_analysis_plan_commit": "bf3fae54c438a8d586bb578e5d5430274274ed00",
+  "canonical_plan_hash": "42477b27c57169520249aef7274e3e35f4cb7c9202cf72505f99dd13d25c12fc",
+  "plan_file_sha256": "19bda9bf73ffe5eed021301546d1aa7a9f049579f5482451b52126a254993b97",
+  "pushed_before_new_non_neutral_factor_diagnostics": true,
+  "new_non_neutral_factor_diagnostics_before_freeze": 0,
+  "qualification": "Explanatory and post hoc about published route-null locations; new factor diagnostics predeclared. No blind-discovery claim.",
+  "pre_freeze_validation": "Six neutral/synthetic tests passed; immutable 8N prerequisite hashes and existing neutral route laws used; no new non-neutral ROLE factor cell.",
+  "hub_commit": "38c2501bbab22ca1eb2288ea76a962ac0170d5e6",
+  "hub_role": "read-only planning context, not CL evidence"
+}
