@@ -1,0 +1,810 @@
+{
+  "analysis_only": true,
+  "analysis_version": "gt-e2a/v1",
+  "chosen_because": "GT-E1 reflection section 6 (handover mechanism recommended) and GT-P005; coverage audit gravity-time/docs/e2-coverage-audit.md",
+  "clocks": {
+    "continuous": "pi_ct = pi_jump / R; currents and circulations per unit time",
+    "jump": "pi_jump; event-order, partner frame, matched-dissolution weights and passage horizons in jump events"
+  },
+  "comparisons": {
+    "C1_sigma_versus_orientation": "for every irreversible cell, the sign of sigma against the sign of the partner-frame index and (HELD) the handover index; no expectation beyond the local identity",
+    "C2_circulation_alignment": "share of adjacent-square circulation (|C| mass) aligned with, counter to, or on squares without local affinity",
+    "C3_matched_dissolution": "per relation class and action, the mechanism list (strict enabling/disabling, rate facilitation/suppression, normalisation-dominated, passage raised/lowered at H=8) and the precedence ratio beside the intervention effects",
+    "C4_frames": "partner-frame index against class-free and hub-frame event-order asymmetry, HELD and FREE",
+    "C5_n5_n6": "HELD attachment/probe squares with negative far-endpoint degree difference (impossible at N=5 by I5) and their circulation share at N=6",
+    "C6_grade_ladder": "PATHF and PATHH across prohibit, strong_suppress, weak_suppress, weak_favour, strong_favour: flux, density, partner index, handover index",
+    "C7_hard_support": "EXCL, EXPH, EXPF and the two prohibit path cells: closed-class structure, one-way transitions, strict-enabling shares, and whether strict enabling coexists with circulation",
+    "no_aggregate_score": "no handover-strength or relevance score is formed; cells are not ranked"
+  },
+  "controls_and_identities": {
+    "I1_square_formula": "on every intact square of every cell, |A - sigma*(deg_x(r) - deg_x(q))| <= 1e-12 (theorem, docs/e2-formal-mechanism.md; checked pre-freeze on synthetic factor tables at N=4, 5)",
+    "I2_disjoint_squares": "every intact square on disjoint slots has |A| <= 1e-12 (corollary)",
+    "I3_sigma_zero": "cells with sigma = 0 (NULL, CLOSEW, EXCL, PFD ws+ws, PFD wf+wf): irreversible flux, |partner index|, hub-frame asymmetry and (HELD) |handover index| <= 1e-9 (corollary of I1 plus Kolmogorov, where the class has no one-way transitions)",
+    "I4_rate_symmetric": "NULL, PFD ws+ws, PFD wf+wf: form and dissolve factors are equal on every pair, so pi is uniform on the class (class-level L1 <= 1e-9)",
+    "I5_held_n5": "at HELD N=5 no attachment/probe square has a negative far-endpoint degree difference (a source vertex has the two other source vertices; a probe has at most two other neighbours besides the pair), so every such square has the sign of sigma",
+    "Z5_numerical": "stationary two-start agreement, residual, symmetry, autocorrelation cap, kernel sample (rule strings), affinity reference (rule strings, exact Fractions), long-double residual, GTH referee, partner-frame loop reference and passage path-enumeration reference; tolerances as E1 (gte1) and 1e-12 for the new references",
+    "separation_note": "I1-I5 are identities; none predicts the sign or size of a stationary current, an event-order index, a matched-dissolution effect or a passage probability"
+  },
+  "deliberate_omissions": {
+    "fine_grade_tuning": "grades are the W4 alphabet as listed; no interpolation",
+    "free_n7_and_n7": "not run (GT-P005 boundary; no N=7)",
+    "new_primitives": "none; 'prohibit' and adj_form are existing grammar",
+    "spectrum": "unavailable in every cell"
+  },
+  "estimands": "every gtobs channel, the square census, partner frame, matched dissolution and one-way structure of each cell, and C1-C7",
+  "experiment_id": "gt-round-e2a-mechanism-atlas",
+  "families": {
+    "ADPF": {
+      "strong_suppress+weak_favour": {
+        "components": [
+          {
+            "grade": "strong_suppress",
+            "kind": "adj_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_form"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": -0.6931471805599453
+      }
+    },
+    "ADPS": {
+      "strong_suppress+weak_suppress": {
+        "components": [
+          {
+            "grade": "strong_suppress",
+            "kind": "adj_form"
+          },
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": 0.6931471805599453
+      }
+    },
+    "CLOSEW": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "close_form"
+          }
+        ],
+        "gradient": true,
+        "hard_component": false,
+        "sigma": 0.0
+      }
+    },
+    "EXCL": {
+      "prohibit": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "close_form"
+          }
+        ],
+        "gradient": true,
+        "hard_component": true,
+        "sigma": 0.0
+      }
+    },
+    "EXPF": {
+      "prohibit+weak_suppress": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "close_form"
+          },
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          }
+        ],
+        "gradient": false,
+        "hard_component": true,
+        "sigma": 0.6931471805599453
+      }
+    },
+    "EXPH": {
+      "prohibit+weak_favour": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "close_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "gradient": false,
+        "hard_component": true,
+        "sigma": 0.6931471805599453
+      }
+    },
+    "NULL": {
+      "none": {
+        "components": [],
+        "gradient": true,
+        "hard_component": false,
+        "sigma": 0.0
+      }
+    },
+    "PATHF": {
+      "prohibit": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "path_form"
+          }
+        ],
+        "gradient": false,
+        "hard_component": true,
+        "sigma": 0.0
+      },
+      "strong_favour": {
+        "components": [
+          {
+            "grade": "strong_favour",
+            "kind": "path_form"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": -1.3862943611198906
+      },
+      "strong_suppress": {
+        "components": [
+          {
+            "grade": "strong_suppress",
+            "kind": "path_form"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": 1.3862943611198906
+      },
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_form"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": -0.6931471805599453
+      },
+      "weak_suppress": {
+        "components": [
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": 0.6931471805599453
+      }
+    },
+    "PATHH": {
+      "prohibit": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "path_dissolve"
+          }
+        ],
+        "gradient": false,
+        "hard_component": true,
+        "sigma": 0.0
+      },
+      "strong_favour": {
+        "components": [
+          {
+            "grade": "strong_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": 1.3862943611198906
+      },
+      "strong_suppress": {
+        "components": [
+          {
+            "grade": "strong_suppress",
+            "kind": "path_dissolve"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": -1.3862943611198906
+      },
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": 0.6931471805599453
+      },
+      "weak_suppress": {
+        "components": [
+          {
+            "grade": "weak_suppress",
+            "kind": "path_dissolve"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": -0.6931471805599453
+      }
+    },
+    "PFD": {
+      "weak_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": 0.0
+      },
+      "weak_favour+weak_suppress": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_form"
+          },
+          {
+            "grade": "weak_suppress",
+            "kind": "path_dissolve"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": -1.3862943611198906
+      },
+      "weak_suppress+weak_favour": {
+        "components": [
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": 1.3862943611198906
+      },
+      "weak_suppress+weak_suppress": {
+        "components": [
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          },
+          {
+            "grade": "weak_suppress",
+            "kind": "path_dissolve"
+          }
+        ],
+        "gradient": false,
+        "hard_component": false,
+        "sigma": 0.0
+      }
+    }
+  },
+  "history": false,
+  "horizons_jump_events": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "initial_conditions": "as E0: HELD starts at the source triangle, FREE at the empty graph; the reachable class from the start is analysed; if it is not recurrent and has exactly one closed class of more than one state, that class is analysed and the restriction is recorded; otherwise the cell is reported by its class structure only",
+  "items": [
+    {
+      "family": "PATHF",
+      "grade": "prohibit",
+      "item_id": "HELD-N5-PATHF-prohibit",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHF",
+      "grade": "prohibit",
+      "item_id": "FREE-N5-PATHF-prohibit",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHF",
+      "grade": "strong_suppress",
+      "item_id": "HELD-N5-PATHF-strong_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHF",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N5-PATHF-strong_suppress",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N5-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N5-PATHF-weak_suppress",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-PATHF-weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-PATHF-weak_favour",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHF",
+      "grade": "strong_favour",
+      "item_id": "HELD-N5-PATHF-strong_favour",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHF",
+      "grade": "strong_favour",
+      "item_id": "FREE-N5-PATHF-strong_favour",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHH",
+      "grade": "prohibit",
+      "item_id": "HELD-N5-PATHH-prohibit",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHH",
+      "grade": "prohibit",
+      "item_id": "FREE-N5-PATHH-prohibit",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHH",
+      "grade": "strong_suppress",
+      "item_id": "HELD-N5-PATHH-strong_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHH",
+      "grade": "strong_suppress",
+      "item_id": "FREE-N5-PATHH-strong_suppress",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N5-PATHH-weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N5-PATHH-weak_suppress",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-PATHH-weak_favour",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHH",
+      "grade": "strong_favour",
+      "item_id": "HELD-N5-PATHH-strong_favour",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PATHH",
+      "grade": "strong_favour",
+      "item_id": "FREE-N5-PATHH-strong_favour",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S1_single_path_ladder"
+    },
+    {
+      "family": "PFD",
+      "grade": "weak_suppress+weak_suppress",
+      "item_id": "HELD-N5-PFD-weak_suppress+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S2_form_dissolve_pairs"
+    },
+    {
+      "family": "PFD",
+      "grade": "weak_suppress+weak_suppress",
+      "item_id": "FREE-N5-PFD-weak_suppress+weak_suppress",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S2_form_dissolve_pairs"
+    },
+    {
+      "family": "PFD",
+      "grade": "weak_suppress+weak_favour",
+      "item_id": "HELD-N5-PFD-weak_suppress+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S2_form_dissolve_pairs"
+    },
+    {
+      "family": "PFD",
+      "grade": "weak_suppress+weak_favour",
+      "item_id": "FREE-N5-PFD-weak_suppress+weak_favour",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S2_form_dissolve_pairs"
+    },
+    {
+      "family": "PFD",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "HELD-N5-PFD-weak_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S2_form_dissolve_pairs"
+    },
+    {
+      "family": "PFD",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "FREE-N5-PFD-weak_favour+weak_suppress",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S2_form_dissolve_pairs"
+    },
+    {
+      "family": "PFD",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N5-PFD-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S2_form_dissolve_pairs"
+    },
+    {
+      "family": "PFD",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "FREE-N5-PFD-weak_favour+weak_favour",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S2_form_dissolve_pairs"
+    },
+    {
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "HELD-N5-NULL-none",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S3_reversible_and_hard_controls"
+    },
+    {
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "FREE-N5-NULL-none",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S3_reversible_and_hard_controls"
+    },
+    {
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S3_reversible_and_hard_controls"
+    },
+    {
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-CLOSEW-weak_favour",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S3_reversible_and_hard_controls"
+    },
+    {
+      "family": "EXCL",
+      "grade": "prohibit",
+      "item_id": "HELD-N5-EXCL-prohibit",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S3_reversible_and_hard_controls"
+    },
+    {
+      "family": "EXCL",
+      "grade": "prohibit",
+      "item_id": "FREE-N5-EXCL-prohibit",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S3_reversible_and_hard_controls"
+    },
+    {
+      "family": "EXPH",
+      "grade": "prohibit+weak_favour",
+      "item_id": "HELD-N5-EXPH-prohibit+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S4_hard_support_plus_path"
+    },
+    {
+      "family": "EXPH",
+      "grade": "prohibit+weak_favour",
+      "item_id": "FREE-N5-EXPH-prohibit+weak_favour",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S4_hard_support_plus_path"
+    },
+    {
+      "family": "EXPF",
+      "grade": "prohibit+weak_suppress",
+      "item_id": "HELD-N5-EXPF-prohibit+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S4_hard_support_plus_path"
+    },
+    {
+      "family": "EXPF",
+      "grade": "prohibit+weak_suppress",
+      "item_id": "FREE-N5-EXPF-prohibit+weak_suppress",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S4_hard_support_plus_path"
+    },
+    {
+      "family": "ADPF",
+      "grade": "strong_suppress+weak_favour",
+      "item_id": "HELD-N5-ADPF-strong_suppress+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S5_opposing_density"
+    },
+    {
+      "family": "ADPF",
+      "grade": "strong_suppress+weak_favour",
+      "item_id": "FREE-N5-ADPF-strong_suppress+weak_favour",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S5_opposing_density"
+    },
+    {
+      "family": "ADPS",
+      "grade": "strong_suppress+weak_suppress",
+      "item_id": "HELD-N5-ADPS-strong_suppress+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "stratum": "S5_opposing_density"
+    },
+    {
+      "family": "ADPS",
+      "grade": "strong_suppress+weak_suppress",
+      "item_id": "FREE-N5-ADPS-strong_suppress+weak_suppress",
+      "mode": "FREE",
+      "n": 5,
+      "stratum": "S5_opposing_density"
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N6-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "stratum": "S6_n6_held_robustness"
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "stratum": "S6_n6_held_robustness"
+    },
+    {
+      "family": "PATHF",
+      "grade": "strong_suppress",
+      "item_id": "HELD-N6-PATHF-strong_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "stratum": "S6_n6_held_robustness"
+    },
+    {
+      "family": "PATHH",
+      "grade": "strong_favour",
+      "item_id": "HELD-N6-PATHH-strong_favour",
+      "mode": "HELD",
+      "n": 6,
+      "stratum": "S6_n6_held_robustness"
+    }
+  ],
+  "matched_dissolution_definition": "for every non-source slot g and every state x with g present whose partner x- = x without g is in the class: conditioning weight pi_jump(x) normalised over those x (an intervention instrument that removes g from a stationary state; not a claim that the model contains interventions). For every other slot f and action (form if f absent in x, else dissolve): strict enabling share (W(x,f)=0, W(x-,f)>0), strict disabling share, mean log rate ratio log W(x-,f)/W(x,f) where both positive, mean log jump-probability ratio and its normalisation part (jump minus rate), passage delta u_H(x-,f) - u_H(x,f) for H in {1,2,4,8} jump events with u_H the probability that f toggles at least once within H events, and the precedence ratio p(next event toggles f | dissolve g just executed) / p(an event toggles f). Grouped by slot class of g and f, adjacency and the shared vertex type",
+  "meta_constraints": false,
+  "method": {
+    "name": "Open-Thetical Research",
+    "path": "research-methods/open-thetical-research.md",
+    "version": "1.0"
+  },
+  "mode": "B",
+  "new_primitives": false,
+  "numerical_policy": "gtobs stationary (two starts, relative stop), GTH referee on every cell (every class has at most 4,096 states), long-double per-entry residual, kernel sample check (rule strings, exact Fractions, 400 states), affinity reference (120 seeded intact squares from rule strings), partner-frame loop reference, passage path-enumeration reference (12 seeded (state, slot) pairs, H = 1, 2, 3); children single-threaded",
+  "observables": {
+    "gtobs": "every channel of gtobs.analyse (gt-e1-observables/v1)",
+    "round": "square census, partner frame, handover index (HELD), matched dissolution, one-way transitions, frozen exemplars (largest |circulation|, largest |affinity|, largest |circulation| against its affinity)",
+    "trajectories": "illustrative, as E0, seeds sha256('round-e2a:<item_id>:<k>')[:16]"
+  },
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      5,
+      6
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL"
+  },
+  "open_questions_without_prediction": [
+    "Does the sign of every irreversible cell's partner-frame index (and HELD handover index) follow the sign of sigma, or do aggregated statistics cancel or reverse it anywhere?",
+    "How much stationary circulation sits on squares with no local affinity, and how much runs against local affinity?",
+    "When sigma < 0, is there a reversed stationary current of comparable size, or does saturation hide it (S1, S5)?",
+    "Which cells show strict enabling by dissolution, and does strict enabling coexist with circulation or only with reversible dynamics?",
+    "Does the observed precedence after a dissolution agree with the intervention effect, or is it a selection effect?",
+    "Does the partner frame make FREE circulation legible where the class-free frame does not, and how does it compare with the hub frame?",
+    "At HELD N=6, how much circulation sits on reversed attachment/probe squares?",
+    "Anything not anticipated above."
+  ],
+  "parameter_fit": false,
+  "plan_hash": "94a53734c94f6b763b0a61e9a395f64569291ccfa885198384feb36e9d18e933",
+  "pre_freeze_exposure": {
+    "engineering": "plumbing tests and a smoke run use synthetic N=4 cells (all 21 family-grades, HELD and FREE; N=4 is not a round size) and synthetic factor tables. The smoke run was read: among other things it showed one-way irreversibility without square affinity in FREE N=4 path_form prohibit (flux 0.12) and an arrested single state in HELD N=4 path_form prohibit. Timing used the published HELD N=6 CLOSEW cell (not a round cell; only costs read)",
+    "formula_fixtures": "the square formula was checked before freezing on synthetic factor tables (non-alphabet factors 0.13, 0.41, 2.7, 6.3 and 0) at N=4 and N=5, HELD and FREE, for four synthetic mixes; no round cell kernel or law was used",
+    "note": "the cells listed have published standard gtobs/E0 channels; their square census, partner frame, matched-dissolution and one-way channels have never been computed. No other round cell was computed before freezing",
+    "published_cells_standard_channels": {
+      "FREE-N5-CLOSEW-weak_favour": "E0B FREE-N5-CLOSEW-weak_favour",
+      "FREE-N5-EXCL-prohibit": "E0A FREE-N5-EXCL-prohibit",
+      "FREE-N5-NULL-none": "E0A FREE-N5-NULL-none",
+      "FREE-N5-PATHF-weak_favour": "E0A FREE-N5-PATHF-weak_favour",
+      "FREE-N5-PATHF-weak_suppress": "E0A FREE-N5-PATHF-weak_suppress",
+      "FREE-N5-PATHH-weak_favour": "E0A FREE-N5-PATHH-weak_favour",
+      "FREE-N5-PATHH-weak_suppress": "E0A FREE-N5-PATHH-weak_suppress",
+      "FREE-N5-PFD-weak_favour+weak_favour": "E0B FREE-N5-PCOMP-weak_favour+weak_favour",
+      "HELD-N5-CLOSEW-weak_favour": "E0B HELD-N5-CLOSEW-weak_favour",
+      "HELD-N5-EXCL-prohibit": "E0A HELD-N5-EXCL-prohibit",
+      "HELD-N5-NULL-none": "E0A HELD-N5-NULL-none",
+      "HELD-N5-PATHF-weak_favour": "E0A HELD-N5-PATHF-weak_favour",
+      "HELD-N5-PATHF-weak_suppress": "E0A HELD-N5-PATHF-weak_suppress",
+      "HELD-N5-PATHH-weak_favour": "E0A HELD-N5-PATHH-weak_favour",
+      "HELD-N5-PATHH-weak_suppress": "E0A HELD-N5-PATHH-weak_suppress",
+      "HELD-N5-PFD-weak_favour+weak_favour": "E0B HELD-N5-PCOMP-weak_favour+weak_favour",
+      "HELD-N6-PATHF-weak_suppress": "E0A HELD-N6-PATHF-weak_suppress",
+      "HELD-N6-PATHH-weak_favour": "E0A HELD-N6-PATHH-weak_favour"
+    },
+    "reference_hashes": {
+      "constraint-lab/docs/scientific-plan-discipline.md": "4101d64f8b4d228dd1cb6ca46d77848e14e79f768041aff839f962da6fecd974",
+      "constraint-lab/formal/open-problems.md": "468dfd1f63984de17150450361a97595e6b5b9633f1273afed9ed739fec9fa1d",
+      "gravity-time/docs/e2-coverage-audit.md": "960e5c3cc8a2feddac964bdf859821af26fd20cfc7e8059a6b5cf2c07fcdc584",
+      "gravity-time/docs/e2-formal-mechanism.md": "4c20dbb52cf31dbd1d77c1531bf8632dce1e901f3bf1d1d8fc1d65967e0aee82",
+      "gravity-time/plans/round-e1-plan.json": "d7b8a73e7aecc02cb30680c0655c09337cab0cf96081549073ca9ac4708376ab",
+      "gravity-time/provenance/prompts/GT-P005-agent-input.md": "ca324d371294b1e04482d38db9faeea97b30ad23ab182ce6bbb204d5ad0f742e",
+      "gravity-time/reports/gt-e1-reflection.md": "31defa51c7b5eb39fe151cd7a4c6d6890cbd1207582fb0bcb26f1cd6c5ecc264",
+      "gravity-time/reports/gt-e1-report.md": "e1fcb4fb3cddc95f4eb5c809c198597b340057f1412b86f8e8abc7c9c50474ae",
+      "gravity-time/reports/round-e0a-tables.json": "db927a0f5ffb344b0b69b9b01a9da0add55e61385a92158766979560f8615f8b",
+      "gravity-time/reports/round-e0b-tables.json": "e02aa5a50cf8f095e7e46bf9bbd44cd9fa41f5d2f5ba629374db14ec4436c518",
+      "gravity-time/reports/round-e1-tables.json": "f6ab204ab1332b606eb82af1c2b4d20a8675812cd15551448a20f7ff9a1409e4",
+      "research-methods/open-thetical-research.md": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd"
+    }
+  },
+  "programme": "GT",
+  "prompt_id": "GT-P005",
+  "question": "What makes relational changes occur in directionally ordered sequences, and when does dissolving a relation enable a later change rather than merely precede it?",
+  "round_id": "round-e2a",
+  "sampling": "exact census of 46 declared cells: five strata at N=5 in HELD and FREE, plus four HELD N=6 robustness cells",
+  "schema": "rs-gt.e2a-plan/v1",
+  "selection_rule": "strata chosen from the coverage audit: (S1) every W4 grade of each single path component; (S2) all four form/dissolve weak-grade pairs, which give sigma = -2 log 2, 0, 0, +2 log 2; (S3) the reversible gradient control, the null and the hard closure exclusion (strict support without path terms); (S4) hard closure exclusion plus each unsaturated path component; (S5) the strong adjacency suppression opposed to each weak path-form grade (one sigma<0, one sigma>0 comparator), fixed before results; (S6) HELD N=6 for the two published weak path cells and the two strong grades with sigma>0. Excluded: other closure/adjacency grades, three-component mixes, N=7, FREE N=6",
+  "software": {
+    "analysis_module": "rs_constraint_lab.gte2a",
+    "numpy": "2.5.3",
+    "observables": "gt-e1-observables/v1",
+    "python": "3.12.3"
+  },
+  "stochastic_trajectories": "illustrative_only",
+  "stop_conditions": {
+    "amendment": "any change of cells or estimands after freeze stops the round for explicit amendment",
+    "item": "watchdog {5: 900, 6: 900} seconds by N; a killed cell is recorded unresolved",
+    "round": "all items or the 7200-second wall cap; then stop",
+    "unresolved": "recorded as unresolved; no retuning"
+  },
+  "tolerances": {
+    "e1_numerical": "gte1 constants (referee 1e-10 L1 and 1e-8 relative; residual 1e-9; kernel 1e-12)",
+    "formula": 1e-12,
+    "identity": 1e-09,
+    "references": 1e-12,
+    "sigma_zero": 1e-12
+  },
+  "work_count": {
+    "estimate_note": "measured before freezing: synthetic N=4 cells 0.04-0.08 s; published HELD N=6 CLOSEW (not a round cell) 48 s at 312 MB, of which 47 s are the GTH referee and loop references. Round estimate: 42 N=5 cells at seconds each plus 4 N=6 cells at about 1 minute: under 10 minutes on 4 workers",
+    "items": 46,
+    "largest_state_space": 4096,
+    "round_wall_cap_seconds": 7200,
+    "watchdog_seconds": {
+      "5": 900,
+      "6": 900
+    },
+    "workers": 4
+  }
+}

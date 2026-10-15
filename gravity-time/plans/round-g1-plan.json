@@ -1,0 +1,202 @@
+{
+  "analysis_only": true,
+  "analysis_version": "gt-g1/v1",
+  "clocks": {
+    "continuous": "per-slot exponential rates equal to the event weights; activity is a rate per unit time",
+    "jump": "lab full-event kernel; activity is a probability per event"
+  },
+  "experiment_id": "gt-round-g1-recurrence-rates",
+  "families": {
+    "ADJ": [
+      "weak_favour",
+      "strong_favour"
+    ],
+    "CLOSE": [
+      "weak_favour",
+      "strong_favour"
+    ],
+    "DENS": [
+      "weak_favour",
+      "strong_favour"
+    ],
+    "HOLD": [
+      "weak_suppress",
+      "strong_suppress"
+    ],
+    "NULL": []
+  },
+  "frozen_predictions": {
+    "P1_close_hold_same_continuous_basin": "CLOSE(m) and HOLD(1/m) have identical continuous-time shell masses within 1e-12 (derivation: both have rate ratio m^w for an edge with w common neighbours, so pi_ct is proportional to m^triangles)",
+    "P2_opposite_near_far_rate_shift": "Under the continuous clock the near/far activity ratio rho = A(1)/A(2) is above NULL's for CLOSE(m) and below NULL's for HOLD(1/m), at N=5 and N=6 and both grades. This is a directional expectation from the rate structure (CLOSE multiplies near-source formation rates; HOLD divides near-source dissolution rates), not a derivation, and may fail.",
+    "P3_jump_clock_separates_the_pair": "CLOSE(m) and HOLD(1/m) jump-chain shell masses differ by more than 1e-9 (derivation: pi_jump is proportional to pi_ct times the total rate, which differs between them)"
+  },
+  "history": false,
+  "items": [
+    {
+      "family": "NULL",
+      "grade": null,
+      "item_id": "HELD-N5-NULL-none",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "DENS",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-DENS-weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "DENS",
+      "grade": "strong_favour",
+      "item_id": "HELD-N5-DENS-strong_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "ADJ",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-ADJ-weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "ADJ",
+      "grade": "strong_favour",
+      "item_id": "HELD-N5-ADJ-strong_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "CLOSE",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-CLOSE-weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "CLOSE",
+      "grade": "strong_favour",
+      "item_id": "HELD-N5-CLOSE-strong_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "HOLD",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N5-HOLD-weak_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "HOLD",
+      "grade": "strong_suppress",
+      "item_id": "HELD-N5-HOLD-strong_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "NULL",
+      "grade": null,
+      "item_id": "HELD-N6-NULL-none",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "DENS",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-DENS-weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "DENS",
+      "grade": "strong_favour",
+      "item_id": "HELD-N6-DENS-strong_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "ADJ",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-ADJ-weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "ADJ",
+      "grade": "strong_favour",
+      "item_id": "HELD-N6-ADJ-strong_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "CLOSE",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-CLOSE-weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "CLOSE",
+      "grade": "strong_favour",
+      "item_id": "HELD-N6-CLOSE-strong_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "HOLD",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N6-HOLD-weak_suppress",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "HOLD",
+      "grade": "strong_suppress",
+      "item_id": "HELD-N6-HOLD-strong_suppress",
+      "mode": "HELD",
+      "n": 6
+    }
+  ],
+  "meta_constraints": false,
+  "mode": "B",
+  "motivation": "G0 found that each template's continuous-time stationary law is m^S/Z with S edges, wedges or triangles, and that CLOSE(m) and HOLD(1/m) share one basin. G1 asks whether a shared basin carries one recurrence-rate signature.",
+  "new_primitives": false,
+  "observables": [
+    "shell masses under both clocks",
+    "shell activity A(k) under both clocks",
+    "near/far ratio rho = A(1)/A(2) under both clocks",
+    "inward share by shell under both clocks (reported without prediction: formation preference raises it)"
+  ],
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      5,
+      6
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL",
+    "mode": "HELD"
+  },
+  "plan_hash": "1707f1783acb3509d33f39177ff76e501be7406e5c9ae6fc8470cc88882d67c4",
+  "pre_freeze_exposure": "The G1 observables were run only on an N=4 fixture before this plan was frozen. G0 tables (published) were read; they contain shell masses but not activities, rates or inward shares.",
+  "programme": "GT",
+  "question": "Does the configuration that produces a G0 basin also change the relative recurrence rate of a probe's own relations by relational distance, and does a shared basin determine one rate signature?",
+  "round_id": "round-g1",
+  "schema": "rs-gt.recurrence-plan/v1",
+  "stochastic_trajectories": false,
+  "tolerances": {
+    "identity": 1e-12,
+    "mass_floor": 1e-12
+  },
+  "work_count": {
+    "items": 18,
+    "largest_state_space": 4096,
+    "watchdog_seconds": 120,
+    "workers": 1
+  }
+}
