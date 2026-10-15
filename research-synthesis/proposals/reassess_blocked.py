@@ -44,15 +44,19 @@ def run(root: Path = ROOT) -> dict:
             local = ref.split("::", 1)[1]
             lm = landmarks.get(local)
             is_member = "/" in local or local.endswith(".md")
+            located = plan["status"] != "awaiting_archives"
+            member_state = "read_locally_awaiting_publication_consent" if located else "archive_inaccessible"
             anchors.append({"ref": ref, "landmark": bool(lm), "expected_member": local if is_member else None,
-                            "state": "archive_inaccessible" if is_member else "no_member_path_named (a range or label; needs mapping to primary reports at intake)"})
+                            "state": member_state if is_member else "no_member_path_named (a range or label; needs mapping to primary reports at intake)"})
         r["missing_anchors"] = anchors
         hist = r.get("decision_history") or []
         last = hist[-1] if hist else {"status": r.get("status")}
         r["decision_history"] = hist + [{
             "date": DATE, "actor": ACTOR, "human": False, "status": last["status"], "decision_category": "blocked_missing_source",
             "reassessment": plan["plan_id"],
-            "rationale": "Re-evaluated against the historical intake of 2026-10-15: the archives (" + ", ".join(f"{k}: {v}" for k, v in sorted(archive_state.items())) + ") were not available, so no primary source was read. Still blocked on: " + ", ".join(a["ref"] for a in anchors) + ". Not reconstructed from the external synthesis or model memory.",
+            "rationale": ("Re-evaluated against the historical intake of 2026-10-15: the archives (" + ", ".join(f"{k}: {v}" for k, v in sorted(archive_state.items())) + ") were not available, so no primary source was read. Still blocked on: " + ", ".join(a["ref"] for a in anchors) + ". Not reconstructed from the external synthesis or model memory.")
+                          if plan["status"] == "awaiting_archives" else
+                          ("Re-evaluated at intake " + plan["plan_id"] + ": archive custody verified and the cited sources read locally; the assessment is staged privately because no publication consent has been recorded. Stays blocked until consented, source-verified HIST findings exist for: " + ", ".join(a["ref"] for a in anchors) + "."),
         }]
         r["status"] = last["status"]
         touched += 1

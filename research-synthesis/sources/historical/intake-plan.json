@@ -1,19 +1,25 @@
 {
-  "plan_id": "HIST-INTAKE-2026-10-15",
-  "status": "awaiting_archives",
-  "note": "Intake plan combining the pack's controlled-intake procedure (05_HISTORICAL_INTAKE.md) with the author's 2026-10-15 instruction (Historical Corpus Intake and Cross-Programme Reconciliation). The archives were not present on the machine running this session (searched by name across the Linux home and the Windows user profile, 2026-10-15). Nothing below has been read, verified or extracted.",
+  "plan_id": "HIST-INTAKE-2026-10-15-B",
+  "status": "verified_awaiting_publication_consent",
+  "note": "Archives supplied in the author's closeout transfer bundle (2026-10-15) and kept outside the repository. Custody verified: whole-file sha256 and member counts match; every file member matches the bundle's integrity manifest. Priority sources were read read-only from the ZIP members. Derived findings and cross-programme candidates are staged privately; nothing historical is public until the author records an explicit publication_consent decision. Earlier plan id: HIST-INTAKE-2026-10-15 (archives then absent).",
   "archives": [
     {
       "name": "RS_Work_Research.zip",
       "sha256": "3ecfd22f9d4b64c17c2a2c9c198615ee1e1c6e3d08512e6971ae7b4090261e46",
       "entries": 403,
-      "state": "inaccessible"
+      "state": "verified_locally",
+      "members_matched_manifest": true,
+      "unsafe_members": 0,
+      "inventory_digest": "5773c58aefe1660234384e8dff905eb56f2f2d1e5f8b0c983352c3e7a6d87c84"
     },
     {
       "name": "RS_Work_Round46_Supplement.zip",
       "sha256": "630da2d942b15247a164d5e1fd262f759483941210f38a9ab29b12c1a6ce4b5e",
       "entries": 9,
-      "state": "inaccessible"
+      "state": "verified_locally",
+      "members_matched_manifest": true,
+      "unsafe_members": 0,
+      "inventory_digest": "e522c13fe7b04fc95b6405c4ff128217e641992844e9fdd5ec60e346903e2a2d"
     }
   ],
   "cautions": [
@@ -28,63 +34,63 @@
       "path": "rs_work_round11/findings.md",
       "question": "A",
       "role_expected": "primary_report",
-      "state": "not_inventoried"
+      "state": "read"
     },
     {
       "path": "rs_work_round46_moments/REPORT.md",
       "question": "A",
       "role_expected": "primary_report",
-      "state": "not_inventoried"
+      "state": "read"
     },
     {
       "path": "rs_work_round47/REPORT.md",
       "question": "A",
       "role_expected": "primary_report",
-      "state": "not_inventoried"
+      "state": "read"
     },
     {
       "path": "rs_work_round48/REPORT.md",
       "question": "A",
       "role_expected": "primary_report",
-      "state": "not_inventoried"
+      "state": "read"
     },
     {
       "path": "rs_sources/RS_Baseline_Post_506Z/RS_Baseline_Post_506Z/02_EXPERIMENT_LEDGER_505_506.md",
       "question": "B, C",
       "role_expected": "run_ledger",
-      "state": "not_inventoried"
+      "state": "read"
     },
     {
       "path": "rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md",
       "question": "B, C",
       "role_expected": "run_ledger",
-      "state": "not_inventoried"
+      "state": "read"
     },
     {
       "path": "rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_Post_507_Canonical_Baseline.md",
       "question": "E",
       "role_expected": "retrospective_baseline",
-      "state": "not_inventoried"
+      "state": "read"
     },
     {
       "path": "rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_508_Starting_Questions.md",
       "question": "plan",
       "role_expected": "future_question",
-      "state": "not_inventoried",
+      "state": "read",
       "caution": "A question or plan unless a separate executed result is shown; 508 is not counted as run."
     },
     {
       "path": "rs_work_round32_to35/RECOVERED_CONVERSATION_RECORD.md",
       "question": "provenance",
       "role_expected": "recovered_record",
-      "state": "not_inventoried",
+      "state": "read",
       "caution": "Retrospective recovered content, not a contemporaneous execution report; may contain private conversation and must not be published."
     },
     {
       "path": "rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Negatives_And_Corrections.md",
       "question": "B, C",
       "role_expected": "correction",
-      "state": "not_inventoried",
+      "state": "read",
       "caution": "Named by the external synthesis (EXT-C13); not in the pack's list of verified entry paths."
     }
   ],
@@ -109,5 +115,17 @@
       "only then create HIST:: nodes and propose cross-programme edges",
       "leave unmapped runs unverified, not absent; keep 508 as an unverified boundary"
     ]
+  },
+  "custody": {
+    "date": "2026-10-15",
+    "bundle": "RS_Complete_Research_Synthesis_Closeout_Handoff_2026-10-15.zip",
+    "bundle_sha256": "db5ca146fa1c49da9f22c1b855c3e9f869afd01fad8b0ca9b453288a09cfa743",
+    "integrity_manifest_schema": "rs-private-history-integrity/v1",
+    "method": "synth hist-inventory (no extraction of inner archives; nested archives not opened; no code executed)"
+  },
+  "publication": {
+    "state": "awaiting_author_consent",
+    "public_findings": 0,
+    "note": "A single scoped publication_consent decision (fields, length limits, exclusions) has been requested from the author."
   }
 }

@@ -2,7 +2,7 @@
 
 The old mathematical programme lives in two private archives. This page sets out how they enter the shared layer without the public repository becoming a mirror of them.
 
-**Current state (2026-10-15):** `HIST` is `pending_intake`. Neither archive was present on the machine running the session, so no historical source has been read and no historical finding is registered. See [`generated/historical-coverage.md`](../generated/historical-coverage.md).
+**Current state (2026-10-15, later):** archives supplied in the author's closeout bundle and verified (whole-file and member hashes); priority sources read locally. `HIST` stays `pending_intake` because no `publication_consent` decision has been recorded: derived findings are staged privately outside the repository. See [`generated/historical-coverage.md`](../generated/historical-coverage.md).
 
 ## Sources of this procedure
 
@@ -81,3 +81,7 @@ Records live in `sources/historical/findings.jsonl` as `HIST::<id>`. Each one ca
   - lineage, controls and alternatives.
 - Re-evaluate the blocked records in [`historical-coverage.md`](../generated/historical-coverage.md) from the primary sources.
 - Acceptance follows the round trip (`docs/cadence.md`). It never upgrades a category.
+
+## Publication consent (AD-0004)
+
+Source integrity and publication permission are separate. A public `HIST::` record needs an explicit human decision of kind `publication_consent` in `proposals/author-decisions.jsonl`. It may carry `limits` (maximum characters per field) and `excluded_members`; the validator enforces both. Round-trip acceptance is never consent. Until consent exists, findings are kept in a private review packet outside the repository with disposition `awaiting_publication_approval`.

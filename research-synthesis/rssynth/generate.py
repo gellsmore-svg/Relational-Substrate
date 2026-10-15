@@ -332,12 +332,16 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
           "Historical archives are private and stay outside the repository. A `HIST::` reference resolves only to a registered finding that was source-verified at intake and approved for publication by a logged human decision. Everything else stays pending, and records citing it stay `blocked_missing_source`.", "",
           "Verification levels are separate: **local source verified** (bytes hashed at intake), **public pointer attested** (record consistent, but CI cannot rebuild it), **numerically reproduced** (independently recomputed). Author acceptance is a review status, not a verification level.", "",
           "## Archives", "", "| Archive | Expected sha256 | Expected members | State |", "| --- | --- | ---: | --- |"]
-    HC += [f"| `{a['name']}` | `{a['sha256'][:16]}…` | {a['entries']} | {a['state']} |" for a in plan.get("archives", [])]
+    HC += [f"| `{a['name']}` | `{a['sha256'][:16]}…` | {a['entries']} | {a['state']}" + (f"; members match the integrity manifest; inventory digest `{a['inventory_digest'][:12]}…`" if a.get("inventory_digest") else "") + " |" for a in plan.get("archives", [])]
+    pub = plan.get("publication")
+    if pub:
+        HC += ["", f"**Publication:** {pub['state']}; public historical findings: {pub['public_findings']}. {esc(pub.get('note', ''))}"]
     HC += ["", "## Coverage matrix", "", "Unknown means unknown, not false.", "", "| Source (landmark) | Question | Expected role | Inventoried | Read | Source-attested | Structured findings | Cross-compared |", "| --- | --- | --- | --- | --- | --- | ---: | --- |"]
     for lm in plan.get("landmarks", []):
         n = sum(1 for f in hf if f.get("member_path") == lm["path"])
         done = lm["state"] != "not_inventoried"
-        HC.append(f"| `{lm['path']}`" + (f" ({esc(lm['caution'])})" if lm.get("caution") else "") + f" | {lm['question']} | {lm['role_expected']} | {'yes' if done else 'no'} | no | no | {n} | no |")
+        read = lm["state"] == "read"
+        HC.append(f"| `{lm['path']}`" + (f" ({esc(lm['caution'])})" if lm.get("caution") else "") + f" | {lm['question']} | {lm['role_expected']} | {'yes' if done else 'no'} | {'yes' if read else 'no'} | {'privately (awaiting consent)' if read and not n else ('yes' if n else 'no')} | {n} | {'privately' if read and not n else ('yes' if n else 'no')} |")
     HC += ["", f"Registered historical findings: **{len(hf)}**.", "", "## Records blocked on historical sources", "", "| Record | Kind | Decision | Missing anchors |", "| --- | --- | --- | --- |"]
     for p in sorted((p for p in shared["proposals"] if p.get("missing_anchors")), key=lambda p: p["proposal_id"]):
         HC.append(f"| `{p['proposal_id']}` | {p.get('kind') or 'proposal'} | {p['decision_category']} | " + "<br>".join(f"`{a['ref']}` ({a['state'].split(' ')[0]})" for a in p["missing_anchors"]) + " |")

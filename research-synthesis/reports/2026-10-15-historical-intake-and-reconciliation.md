@@ -109,3 +109,12 @@ The author's rule, "human accept needs to be implicit in the round trip process"
 1. **Supply the archives** outside the repository and repeat this round from the gate. The code path is ready: `hist-inventory`, then findings, then `check` with `RS_HIST_ARCHIVE_DIR`. Trade-off: none beyond the author's time; this is the only route to real historical integration.
 2. **Approve a publication policy first.** Decide whether member paths and short derived summaries may be public, so the first findings do not stall at the privacy check. Trade-off: one more decision before intake, fewer stops during it.
 3. **Narrow the first intake to question A** (Work 11, 46–48: four files). This is the smallest set that tests the strongest external claim (EXT-C01) against CL's exact H1-vs-H2 results. Trade-off: B–F wait for a later round.
+
+## Addendum (later on 2026-10-15): archives supplied; custody verified; publication awaits consent
+
+The body above is unchanged; it was written while the archives were absent.
+
+- **Custody passed.** The author's closeout transfer bundle supplied both archives. Whole-file sha256 and member counts match, every file member matches the bundle's integrity manifest, and no member is unsafe. Inner archives were not extracted and nothing was executed.
+- **Sources read.** The priority sources (Work 11, 45, both Work 46 branches, 47, 48; the 505-507 ledgers, negatives, the post-507 baseline and the 508 plan) were read read-only from the ZIP members.
+- **Nothing historical is public yet.** Derived findings, cross-programme candidates and the assessment of every blocked record are staged privately outside the repository. The closeout instruction requires an explicit, scoped `publication_consent` decision, and AD-0002 is not consent. HIST therefore stays `pending_intake`, and the 11 blocked records and XQ::05 stay blocked, each with an appended re-evaluation entry (`HIST-INTAKE-2026-10-15-B`).
+- **Next.** The operational readiness report (`reports/2026-10-15-operational-readiness.md`) carries the release gates and the decision requested.
