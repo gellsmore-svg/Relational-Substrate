@@ -122,3 +122,36 @@ def test_exact_stationary_information_zero_certificates():
         if c["conditional_independence_obstruction"]:
             w=c["conditional_independence_obstruction"]
             assert Q(w["product_left"])!=Q(w["product_right"])
+
+
+def test_coherence_status_transition_is_only_historical_change():
+    path="constraint-lab/coherence/findings.jsonl"
+    old=subprocess.check_output(["git","show",BASE+":"+path],cwd=ROOT).splitlines()
+    current=(ROOT/path).read_bytes().splitlines()
+    receipt=read("constraint-lab/provenance/status-changes/008M-h2-structural-question.json")
+    change=receipt["transitions"][0]
+    assert change["finding_id"]=="Q-H2-STRUCTURAL-UTILITY"
+    assert change["changed_fields"]==["status"]
+    for before,after in zip(old,current):
+        row=json.loads(before)
+        if row["finding_id"]!="Q-H2-STRUCTURAL-UTILITY":
+            assert before==after
+        else:
+            assert json.loads(after)=={**row,"status":"qualified"}
+            assert sha256(before).hexdigest()==change["before_row_sha256"]
+            assert sha256(after).hexdigest()==change["after_row_sha256"]
+    rows=[json.loads(line) for line in current]
+    assert next(r for r in rows if r["finding_id"]=="Q-L-COMPILER-SEMANTICS")["status"]=="unresolved"
+    assert len(rows)==198
+
+
+def test_8m_snapshot_reproduces_pinned_ledger(tmp_path):
+    from rs_constraint_lab.coherence import canonical_ledger_bytes,snapshot_text
+    receipt=read(DIRECTORY+"/coherence-receipt.json")
+    for name in ("findings.jsonl","relations.jsonl"):
+        data=subprocess.check_output(["git","show",receipt["ledger_commit"]+":constraint-lab/coherence/"+name],cwd=ROOT)
+        (tmp_path/name).write_bytes(data)
+    actual=(ROOT/receipt["snapshot_path"]).read_bytes()
+    assert snapshot_text(tmp_path,title=receipt["title"]).encode()==actual
+    assert sha256(actual).hexdigest()==receipt["snapshot_sha256"]
+    assert sha256(canonical_ledger_bytes(tmp_path)).hexdigest()==receipt["canonical_ledger_sha256"]

@@ -1,0 +1,19 @@
+{
+  "canonical_ledger_sha256": "9ee482cf2c743a698ca10f6b5ff36a4dd0977bc47b65363adf4f9ec7e2218b1b",
+  "findings": 198,
+  "formal_catalogue_entries": 100,
+  "historical_status_change": "Q-H2-STRUCTURAL-UTILITY unresolved->qualified only; statement/creation metadata unchanged",
+  "ledger_commit": "21476cc4a3e123570484dace25fb9613bbf19b59",
+  "map_hashes": {
+    "findings": 198,
+    "markdown_sha256": "ed92fb03ae3e8f37adbe0b938851ecf43139ae720063f3b7b459196febed2639",
+    "mermaid_sha256": "c939bc3effac9ecd72ba274ff317652a44508cd651b94ae9fb8aff700641cac1",
+    "relations": 300
+  },
+  "new_findings": 21,
+  "new_relations": 35,
+  "relations": 300,
+  "snapshot_path": "constraint-lab/coherence/snapshots/through-generation-008m.md",
+  "snapshot_sha256": "70ba1ef3950d877ad881facf24959022d1d4b37913360aeb59e2c2a08f272257",
+  "title": "Constraint Laboratory coherence through Generation 008M"
+}
