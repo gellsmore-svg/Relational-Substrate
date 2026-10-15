@@ -1,0 +1,19 @@
+{
+  "engineering_validation_maintenance": "Live-ledger tests 8I/8K/8L/8M now accept only provenance-backed hash-linked status-only changes. First full test run: 593 passed, one older 8I guard failed; focused corrected guard passed. No frozen scientific source or item changed.",
+  "full_sparse_residuals": "every solution, both models",
+  "independent_exact_solvers": "Dixon and fraction-free EVERY boundary/reward solve",
+  "independent_full_state_path_sum_checks": 73,
+  "independent_full_state_test_seconds": 102.45,
+  "items_complete": 73,
+  "manifest_path": "constraint-lab/reports/generation-008n-p0-tables.json",
+  "manifest_sha256": "df6a5a59f26689745c4037ab2a44daf5feed9a35996520f1cdd8c509728d055d",
+  "neutral": 1,
+  "new_non_neutral_passage_exposure_before_freeze": 0,
+  "non_neutral": 72,
+  "numeric_threads": 1,
+  "scientific_amendment": 0,
+  "scientific_quarantine": 0,
+  "scientific_retry": 0,
+  "scientific_split": 0,
+  "workers": 1
+}
