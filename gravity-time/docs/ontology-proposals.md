@@ -179,3 +179,7 @@ So "what is likely" and "what lasts" are separate questions. A comparator that m
 ## GT-P011 note
 
 No new ontology proposal. E5C refines OP-20's practice: persistence claims should separate *reaching* a renewed state from *surviving* it, and should condition on the first-hit state rather than a stationary sample. No primitive, history axis or rule change.
+
+## GT-P012 note
+
+No new ontology proposal. E5D adds to OP-20 that comparator projections should be refined one declared step at a time, and that directed (possibly circulating) projected fluxes must be preserved rather than symmetrised. No primitive, history axis or rule change.

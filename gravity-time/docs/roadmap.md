@@ -216,3 +216,11 @@ The sections above are unchanged.
 - **Findings:** renewal is transient everywhere; CSPH triangle renewal is flicker-assisted; PATHH triangle survives better than NK; PATHF's advantage fades after one anchor event; PCOMP size≥2 triangles show a within-class durability effect; F_2PATH at N=5 cannot survive renewal (T14).
 - **Recommended next (not run):** an anchor-local kinetic comparator for PATHH/PCOMP (GT-Q25), or a principled pause; an unlabelled-identity feasibility design later.
 - **Hub:** a staged hub milestone for GT-P010 and GT-P011 on a separate hub branch; pin adoption awaits a named human reviewer. No E5D.
+
+## E5D status (GT-P012)
+
+The sections above are unchanged.
+- **E5D executed once** under frozen plan `c74d896`, results `6749346`: 18 analyses (F_TRI × 12 laws, F_2PATH × six N=6 laws) against N0, ND, NK and the new local/remote traffic comparator NL; all frozen checks hold.
+- **Findings:** PATHH triangle durability survives NL; PATHF's centre effect is explained by NL; PCOMP's class residual survives NL; CSPH remains flicker-assisted; PATH/CSPH projections circulate.
+- **Recommended next (not run):** a completer-resolved projection (GT-Q26), with the definitional risk argued first; or a principled pause.
+- **Hub:** the staged milestone (PR #9) is extended to GT-P010 to GT-P012; pin adoption awaits a named human. No E5E.

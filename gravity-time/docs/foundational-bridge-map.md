@@ -431,6 +431,32 @@ graph LR
 
 ---
 
+## 14. Revision after E5D (GT-P012; sections 1–13 unchanged)
+
+| Entry | Before (section 13) | After E5D | State | Evidence |
+| --- | --- | --- | --- | --- |
+| P6 Identity through change | Durability measured: transient; PATHH triangle durable beyond NK | PATHH triangle durability also exceeds the local/remote traffic comparator NL (both sizes, both classes); PATHF's centre effect is explained by NL; PCOMP's class residual survives NL; renewal remains transient | observed; projection-relative | GT-F100–F103 |
+| New B20: NL comparator | — | Ordered-flux lift on (local, remote) counts; stationary by macro conservation; preserves circulation (T16–T19) | proved | definitions note |
+| A-node: emergent reference | Not produced at N ≤ 6 | Unchanged; the one durable residual is configuration-dependent survival, not a self-maintaining reference | observed | — |
+| P7 Displacement, interaction, acceleration | Undefined | Unchanged | undefined | — |
+| Gravity-like attraction | Blocked | Unchanged | blocked | — |
+
+```mermaid
+graph LR
+  NL[NL: local/remote ordered-flux lift]:::proved --> PF[PATHF centre effect = traffic]:::observed
+  NL --> PH[PATHH triangle durable beyond NL]:::observed
+  NL --> PC[PCOMP class residual beyond NL]:::observed
+  PH -.->|D1 or D3?| CR[Completer-resolved projection]:::undefined
+  PH -.-> MET[Self-maintaining reference]:::undefined -.-> MOB[Mobile identity]:::undefined --> DISP[Displacement]:::undefined
+  classDef proved fill:#d8f0d8,stroke:#2a7a2a
+  classDef observed fill:#e6eefc,stroke:#2a4a8a
+  classDef undefined fill:#eeeeee,stroke:#777,stroke-dasharray: 4 3
+```
+
+**Narrative.** Bottom-up: one family shows configuration-dependent survival after renewal that neither layer traffic nor local/remote traffic explains. Methodological: refining the projection explained one long-standing effect (PATHF) and left another (PATHH). Top-down: no rung above identity-through-change has moved.
+
+---
+
 ## Revision history
 
 - **Baseline:** sections 1–7 at the GT-P006 pre-freeze commit (`c4ab745`, E3A code commit).
@@ -440,3 +466,4 @@ graph LR
 - **Revision 4 (after E5A; GT-P009):** section 11.
 - **Revision 5 (after E5B; GT-P010):** section 12.
 - **Revision 6 (after E5C; GT-P011):** section 13.
+- **Revision 7 (after E5D; GT-P012):** section 14.
