@@ -51,6 +51,12 @@ flowchart TD
     GT_F64_CHORD_SWITCHES_SITE_OFF["GT-F64-CHORD-SWITCHES-SITE-OFF: The free P3 closing chord raises the middle's internal witnesses from 0 to 2; when it i..."]
     GT_F65_HANDOVER_ACROSS_REFERENCES["GT-F65-HANDOVER-ACROSS-REFERENCES: The handover keeps the E0 orientation in every sigma>0 cell under all five held referen..."]
     GT_F71_SORTING_DECOMPOSITION_POSTHOC["GT-F71-SORTING-DECOMPOSITION-POSTHOC: Post hoc on exposed E4 tables: the exact floor term is 71-100% of the continuous log-od..."]
+    GT_F74_INTACT_MOTIFS_NO_CT_PERSISTENCE["GT-F74-INTACT-MOTIFS-NO-CT-PERSISTENCE: Intact motifs (I_TRI, I_STAR, I_2PATH) outlive the density-matched comparator ND in con..."]
+    GT_F76_FLEXIBLE_ORGANISATION_OUTLIVES_ND_QUALIFIED["GT-F76-FLEXIBLE-ORGANISATION-OUTLIVES-ND-QUALIFIED: Flexible anchored organisations (F_TRI, F_STAR, F_2PATH) outlive ND in both clocks in 1..."]
+    GT_F77_PATHF_CENTRES_PERSIST_AGAINST_MATCHED_ND["GT-F77-PATHF-CENTRES-PERSIST-AGAINST-MATCHED-ND: Against PATHF's ND, which matches density in both clocks, mean rate (c=1), edge lifetim..."]
+    GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW["GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW: PCOMP and NULL share the stationary law (checked within 1e-9) and PCOMP's ND equals NUL..."]
+    GT_F80_CLOSEW_CLOSURE_RECOVERY["GT-F80-CLOSEW-CLOSURE-RECOVERY: Under CLOSEW flexible organisations outlive ND in both clocks, growing from N=5 to 6 (F..."]
+    GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY["GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY: A once-selected maximum-degree vertex's advantage decays toward zero in every law; it d..."]
   end
   subgraph INFERENCE [Inferences]
     GT_F09_POTENTIAL_AS_MECHANISM["GT-F09-POTENTIAL-AS-MECHANISM: In the existing grammar a basin around a held relational structure arises from minimal ..."]
@@ -69,6 +75,8 @@ flowchart TD
     GT_F69_CLOCK_SEPARATED_SORTING["GT-F69-CLOCK-SEPARATED-SORTING: Theorems S2b, S5, S6: PCOMP's continuous-time law is uniform at any strength (no contin..."]
     GT_F70_MARGIN_NOT_FIRST_ORDER["GT-F70-MARGIN-NOT-FIRST-ORDER: Theorem S7/S7b: the raw-margin slope at eps=0 is (1/2M)[sum_A kappa - r0 sum_F kappa]; ..."]
     GT_F72_NO_LABELLED_CENTRE_AT_FINITE_N["GT-F72-NO-LABELLED-CENTRE-AT-FINITE-N: Propositions R1-R3: in FREE label-covariant irreducible models the stationary law is in..."]
+    GT_F75_INTACT_LIFETIME_IS_DISSOLUTION_KINETICS["GT-F75-INTACT-LIFETIME-IS-DISSOLUTION-KINETICS: Post hoc theorem: under a formation-only family (PATHF, CLOSEW) every present edge diss..."]
+    GT_F79_ND_MATCHES_EDGE_LIFETIME["GT-F79-ND-MATCHES-EDGE-LIFETIME: Post hoc identity: by exchangeability E_pi[q] = 2M J_edge, so at matched density the ND..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     GT_F03_DRIFT_CRITERION_CONFOUNDED["GT-F03-DRIFT-CRITERION-CONFOUNDED: The frozen G0 inward-drift criterion does not separate attraction from density: DENS pa..."]
@@ -77,6 +85,7 @@ flowchart TD
     GT_F32_E0C_NOT_RUN["GT-F32-E0C-NOT-RUN: No E0C round was run. The only consequential remaining ambiguity, whether basin-arrow c..."]
     GT_F35_E0_NUMERICAL_QUALIFICATIONS["GT-F35-E0-NUMERICAL-QUALIFICATIONS: Three numerical fragilities qualify published E0 values; no published finding, report s..."]
     GT_F73_ORBIT_CONTRAST_QUALIFICATIONS["GT-F73-ORBIT-CONTRAST-QUALIFICATIONS: Within-cell orbit contrasts (GT-F60) are matched observations, not interventions on the..."]
+    GT_F82_E5A_COMPARATOR_AND_NUMERICAL_QUALIFICATIONS["GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS: E5A executed 12/12 items, 32/34 frozen checks hold; two CT lag-propagator checks failed..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     GT_F11_RS_POTENTIAL_AND_CLOCK["GT-F11-RS-POTENTIAL-AND-CLOCK: Inside this model, relational primacy yields basins as potentials without a primitive c..."]
@@ -103,6 +112,8 @@ flowchart TD
     GT_Q18_REVERSAL_AT_W4["GT-Q18-REVERSAL-AT-W4: Do the first-order floor reversals (GT-F68, e.g. held graph {01,02,03,12,14} at N=6) su..."]
     GT_Q19_METASTABLE_FREE_REFERENCE["GT-Q19-METASTABLE-FREE-REFERENCE: Does any GT family maintain a grammar-generated motif (triangle, star, two-path) beyond..."]
     GT_Q20_RESIDUE_MECHANISM["GT-Q20-RESIDUE-MECHANISM: Why does the exact residue reinforce the floor at W4 while it offsets it at first order..."]
+    GT_Q21_KINETICS_AWARE_COMPARATOR["GT-Q21-KINETICS-AWARE-COMPARATOR: Which declared comparator controls the arrangement of activity (anchor-local clock, rat..."]
+    GT_Q22_IDENTITY_THROUGH_REPLACEMENT["GT-Q22-IDENTITY-THROUGH-REPLACEMENT: Does any anchored flexible organisation ever complete replacement of all its entry part..."]
   end
   GT_F02_INCIDENCE_SELECTIVITY -->|contrasts_with| GT_F01_DENS_NULL
   GT_F03_DRIFT_CRITERION_CONFOUNDED -->|qualifies| GT_F02_INCIDENCE_SELECTIVITY
@@ -231,3 +242,18 @@ flowchart TD
   GT_Q19_METASTABLE_FREE_REFERENCE -->|raised_by| GT_F72_NO_LABELLED_CENTRE_AT_FINITE_N
   GT_Q20_RESIDUE_MECHANISM -->|raised_by| GT_F71_SORTING_DECOMPOSITION_POSTHOC
   GT_Q15_DISPLACEMENT_DEFINITION_GAP -->|partially_answered_by| GT_F72_NO_LABELLED_CENTRE_AT_FINITE_N
+  GT_F74_INTACT_MOTIFS_NO_CT_PERSISTENCE -->|partially_answered_by| GT_Q19_METASTABLE_FREE_REFERENCE
+  GT_Q19_METASTABLE_FREE_REFERENCE -->|partially_answered_by| GT_F76_FLEXIBLE_ORGANISATION_OUTLIVES_ND_QUALIFIED
+  GT_Q19_METASTABLE_FREE_REFERENCE -->|partially_answered_by| GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY
+  GT_F75_INTACT_LIFETIME_IS_DISSOLUTION_KINETICS -->|explains| GT_F74_INTACT_MOTIFS_NO_CT_PERSISTENCE
+  GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW -->|qualifies| GT_F76_FLEXIBLE_ORGANISATION_OUTLIVES_ND_QUALIFIED
+  GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW -->|qualifies| GT_F80_CLOSEW_CLOSURE_RECOVERY
+  GT_F79_ND_MATCHES_EDGE_LIFETIME -->|explains| GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW
+  GT_F77_PATHF_CENTRES_PERSIST_AGAINST_MATCHED_ND -->|refines| GT_F76_FLEXIBLE_ORGANISATION_OUTLIVES_ND_QUALIFIED
+  GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW -->|raises_question| GT_Q21_KINETICS_AWARE_COMPARATOR
+  GT_F76_FLEXIBLE_ORGANISATION_OUTLIVES_ND_QUALIFIED -->|raises_question| GT_Q22_IDENTITY_THROUGH_REPLACEMENT
+  GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY -->|compatible_with| GT_F23_LOCAL_PERSISTENCE_SPARSE
+  GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY -->|compatible_with| GT_F72_NO_LABELLED_CENTRE_AT_FINITE_N
+  GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW -->|refines| GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY
+  GT_F80_CLOSEW_CLOSURE_RECOVERY -->|compatible_with| GT_F05_RELATIONAL_POTENTIAL
+  GT_F82_E5A_COMPARATOR_AND_NUMERICAL_QUALIFICATIONS -->|qualifies| GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY

@@ -46,3 +46,71 @@
 - **Source commit:** `1c91766`. CI succeeded there before the freeze (push run 38710597748, pull_request run 38710607908).
 - **Remote check:** the plan commit was pushed and `origin/research/gravity-time-admissibility` contains it. The plan bytes at the commit re-hash to the file sha256 above.
 - **Journey step 24:** recorded before execution.
+
+### Execution
+
+- **Command:** `python -m rs_constraint_lab.gte5a run --commit 1dc43c6…`. The runner refuses a plan commit that is not on a remote-tracking branch or whose manifest has drifted.
+- **Timing:** started 2026-10-15T09:11:09Z, finished 09:13:27Z.
+- **Items:** 12/12 complete, on 4 workers.
+  - N=5 items: under 1 s each.
+  - N=6 items: 38–110 s each, peak 669 MB.
+  - No watchdog fired, and the wall cap was not reached.
+- **Generated item files:** `gravity-time/generated/round-e5a/` (gitignored).
+- **Publication:** `python -m rs_constraint_lab.gte5a publish` and `atlas`. Tables payload `6e978571d83ea17448dfcb03eb59083eca71dda4c1fbbd01a4d2dad7e1a73633`.
+- **Results commit:** `59eb682`.
+
+### Frozen checks: 32 of 34 hold
+
+**Holding:**
+- every replication of the published E0B laws (class masses and mean rates within max(10^−10, 10^−8 × published));
+- the NULL closed forms and NULL lag closed forms at N = 5, 6;
+- the ND fixed point;
+- PCOMP CT uniformity;
+- PCOMP ND = scaled NULL;
+- every per-item check on 10 of 12 items.
+
+**Not holding (recorded, not repaired):**
+- `Z-FREE-N6-PATHH-weak_favour`. The CT lag propagator:
+  - row-sum error 9.7×10^−9;
+  - stationarity L1 6.6×10^−9;
+  - the comparison-degree spread 9.2×10^−9.
+
+  The frozen tolerance is 10^−9 for all three. The matrix exponential needed 22 squarings (25 in the semigroup check).
+- `Z-FREE-N6-CSPH-strong_favour+weak_favour`. The CT lag propagator row-sum error was 3.4×10^−9, after 21 squarings.
+- **Independent checks on both items held:** the non-dyadic semigroup check (≤ 2.4×10^−10), lumpability (0), lumped against full jump chain (≤ 9×10^−16) and pair-permutation covariance (0).
+- **Interpretation:** rounding accumulates over repeated squaring of a stiff generator, with rates spanning about 10^7. The CT lag values of these two items are reported as **numerically qualified**, with errors of about 10^−8. Their JT lag values and every episode, turnover and ND channel are unaffected.
+
+### Secondary channel
+
+All 144 killed-chain solves (12 items × target and ND × 6 predicates) converged. The entrance first-passage mean reproduces every flux lifetime within 2.6×10^−10, and residual life obeys the Palm bound everywhere.
+
+### Post hoc identities (derived after the results; verified on the published tables)
+
+- **ND matches edge lifetime.** E_π[q] = 2M·J_edge, so ND's CT edge present-lifetime equals the target's: within 7×10^−15 on 12 items.
+- **Form-only intact lifetime.** Formation-only families give an intact-motif L_CT of exactly 1/r.
+- **PATHF's ND is fully matched.** It has c = 1, unit deaths and the same JT density (L1 ≤ 2×10^−14).
+
+These are labelled post hoc in every document.
+
+### Deviations
+
+1. **No change to plan, cells, predicates, comparators or tolerances after freezing.**
+2. **Two frozen checks failed.** See above: they were recorded, not repaired.
+3. **The ND comparator proved weaker than intended.** It controls density and average edge lifetime, but not the arrangement of activity (GT-F78, GT-F79). This is recorded as a lesson for a later round, not corrected in this one.
+
+### Documents (after results)
+
+- `reports/gt-e5a-report.md`, `reports/gt-e5a-reflection.md`, `docs/gt-e5a-cross-programme-transfer.md`.
+- Bridge map section 11 (revision 4; sections 1–10 byte-identical).
+- Ledger GT-F74 to GT-F82, GT-Q21, GT-Q22, GT-R128 to GT-R142; views; snapshot `through-gt-e5a.md`.
+- Hypotheses: E5 columns (earlier fields unchanged) and the new artefact X-KINHET.
+- OP-19.
+- README; roadmap.
+- Journey step 25.
+
+**No E5B was frozen or executed.**
+
+## Tests and CI
+
+The full suite count and the CI result after the push are recorded in the execution row of `provenance/ledger.jsonl`. This file is part of the commit being tested.
+

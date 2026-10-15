@@ -312,6 +312,48 @@ graph LR
 - **Top-down**, the bridge now has an explicit first step that does not presuppose a held reference: a pattern the dynamics maintains longer than its parts. Exchangeability shows that such a reference can only be metastable at finite size, so its test is a ratio of time scales.
 - Everything beyond that (identity, displacement, interaction, acceleration) remains undefined, in that order of dependence.
 
+## 11. Revision after E5A (GT-P009; sections 1–10 unchanged)
+
+**Evidence states:** proved; observed; post hoc; conjectured; undefined; qualified.
+
+| Entry | Before (section 10) | After E5A | State | Evidence |
+| --- | --- | --- | --- | --- |
+| A-node: emergent (metastable) reference | Undefined; a definition needed first | **Intact motifs:** no CT persistence beyond the density-matched comparator ND, except the PATHH star (×1.004, ×1.093). They cannot persist through replacement (T4). **Flexible anchored organisations:** outlive ND in 18/30 rows, with more turnover in 28/30, but the equal-ratio control shows that ND contrasts can be produced by rate heterogeneity alone. Qualified candidates: PATHF centres (×1.04–1.10, fully matched ND) and CLOSEW (×1.1–2.8, closure-driven, heterogeneity-exposed) | intact: proved (T4) and observed; flexible: observed, comparator-dependent | E5A report; reflection §1–§6; atlas |
+| New B17: lifetime is not a function of the stationary law | — | PCOMP and NULL share the stationary law; PCOMP's ND is NULL × c with the same density, mean rate and edge lifetime; yet flexible lifetimes differ by up to ×25 (CT) and ×31 (JT) | proved by example; observed | E5A tables; reflection §3–§4 |
+| New B18: what a mean-rate-calibrated comparator matches | — | At matched density, matching the mean rate forces the CT edge present-lifetime to match (E[q] = 2M·J_edge). ND therefore differs from a target only in how rates are arranged | post hoc theorem, verified on 12 laws | reflection §3 |
+| Selected hub (selected-frame memory) | Selection, not persistence (R1) | Decays toward zero in every law (T8). Slower than ND in both clocks under PATHF, PATHH and CSPH; faster in JT under CLOSEW and PCOMP. Consistent with published degree autocorrelation | proved (decay); observed | E5A report point 5 |
+| P6 Identity through change | Undefined | Still **undefined**. Ω counts toggles, not replacements. Replacement completion is defined as a proposal only (not run) | undefined | definitions D-4; reflection §8 |
+| P7 Displacement, interaction, acceleration | Undefined | Unchanged | undefined | — |
+| Gravity-like attraction | Blocked | Unchanged | blocked | — |
+
+**Gap register: changed rows**
+
+| Prerequisite | Capability now | Next information-bearing question |
+| --- | --- | --- |
+| Persistence of a self-made pattern | Exact lifetime, turnover and lag measures in both clocks; a null for intact motifs; comparator-dependent positives for anchored flexible organisations | Do the CLOSEW and PATHF signals survive an anchor-local clock and a replacement count (proposed E5B, not authorised)? |
+| Comparator for lifetimes | Density and average edge lifetime matched (ND) | Which declared comparator controls the arrangement of activity? (GT-Q21) |
+| Identity through change | Not defined | Replacement completion as a trajectory observable (no history state) |
+
+```mermaid
+graph LR
+  T4[Intact motifs cannot outlive replacement]:::proved --> INT[Intact persistence beyond ND: absent in CT]:::observed
+  B17[Lifetime not fixed by the stationary law]:::proved --> CMP[Comparator must declare where activity sits]:::observed
+  FLEX[Flexible anchored organisations outlive ND]:::observed -.->|qualified by| CMP
+  CL[CLOSEW closure-driven recovery]:::conjectural -.-> FLEX
+  PF[PATHF centres, fully matched ND, small]:::observed --> FLEX
+  FLEX -.-> MET[Metastable FREE reference]:::undefined
+  MET --> ID[Identity through replacement]:::undefined --> DISP[Displacement]:::undefined
+  classDef proved fill:#d8f0d8,stroke:#2a7a2a
+  classDef observed fill:#e6eefc,stroke:#2a4a8a
+  classDef conjectural fill:#fff4d6,stroke:#a07a00,stroke-dasharray: 3 3
+  classDef undefined fill:#eeeeee,stroke:#777,stroke-dasharray: 4 3
+```
+
+**Narrative.**
+- **Bottom-up:** a fixed set of relations cannot hold itself together beyond its own dissolution kinetics. What can outlast a matched comparison is a *property* maintained while partners change, and the clearest case is under closure.
+- **Methodological:** the round's control shows that a stationary picture, even with matched average turnover, does not fix lifetimes. Persistence claims need a comparator that declares where activity happens.
+- **Top-down:** the first rung of the bridge (a self-made long-lived pattern) is partially answered and comparator-dependent. Identity, displacement and everything above remain undefined.
+
 ---
 
 ## Revision history
@@ -320,3 +362,4 @@ graph LR
 - **Revision 1 (after E3A, E3B):** section 8.
 - **Revision 2 (after E4A, E4B; GT-P007):** section 9.
 - **Revision 3 (GT-P008 consolidation, no experiment):** section 10.
+- **Revision 4 (after E5A; GT-P009):** section 11.

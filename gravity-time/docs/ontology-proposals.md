@@ -157,3 +157,14 @@ Both occur in the model and separate by whether recovery can happen directly (GT
 
 **Status if adopted:** a methodological ordering principle. It adds no primitive. Tracking identity needs no history axis (8G gate: an observable on trajectories).
 **Would count against:** a natural reference notion in the grammar that needs no persistence (none is known).
+
+## OP-19. Lifetime is not a property of the stationary picture (from E5A)
+
+**Proposal.** A model-scoped persistence claim must name its kinetics and its comparator, not only a stationary distribution. In E5A:
+- PCOMP and NULL share the stationary law, and PCOMP's density-matched comparator has the same density, mean event rate and average edge lifetime;
+- even so, flexible-pattern lifetimes differ by up to 25 times in model time and 31 times in events.
+
+So "what is likely" and "what lasts" are separate questions. A comparator that matches density and average activity can still be fooled by where activity is concentrated (artefact X-KINHET).
+
+**Status if adopted:** a methodological principle, refining OP-18. It adds no primitive and changes no rule.
+**Would count against:** a comparator construction, declared in advance, under which lifetime contrasts become functions of the stationary law alone for every GT family. None is known.

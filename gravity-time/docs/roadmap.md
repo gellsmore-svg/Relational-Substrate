@@ -175,3 +175,20 @@ The sections above are unchanged.
   - principal: option C, FREE persistence feasibility, with definitions agreed first;
   - fall-back: option B, the floor-reversal test (`docs/gt-p008-next-round-options.md`).
 - **No E5 cell was computed.**
+
+## E5A status (GT-P009)
+
+The sections above are unchanged.
+- **E5A executed once** under frozen plan `1dc43c6`, results `59eb682`:
+  - 12 FREE kernels, 72 predicate analyses, N0 and ND comparators, lagged hub;
+  - 32/34 frozen checks hold; two CT lag checks (PATHH and CSPH at N=6) are numerically qualified.
+- **Findings** (`reports/gt-e5a-report.md`):
+  - intact motifs show no CT persistence beyond ND (one marginal exception) and cannot persist through replacement;
+  - flexible anchored organisations outlive ND in 18/30 rows, but the PCOMP control shows that ND contrasts can come from rate heterogeneity alone;
+  - qualified candidates: PATHF centres (small, fully matched ND) and CLOSEW (large, closure-driven);
+  - no persistent hub.
+- **Recommended next (not authorised, not run):**
+  - principal: E5B with an anchor-local clock and replacement completion on the same 12 laws;
+  - fall-back: the floor-reversal test (`reports/gt-e5a-reflection.md` §9).
+- **E5B was not frozen or executed.**
+

@@ -59,8 +59,14 @@ An independently governed research programme built on the Constraint Laboratory 
 | Next-round options (proposals; nothing frozen) | [`docs/gt-p008-next-round-options.md`](docs/gt-p008-next-round-options.md) |
 | GT-P008 cross-programme transfer note | [`docs/gt-p008-cross-programme-transfer.md`](docs/gt-p008-cross-programme-transfer.md) |
 | GT-P008 execution record | [`provenance/execution-GT-P008.md`](provenance/execution-GT-P008.md) |
+| **GT-P009 (E5A, FREE persistence): plain-English report** | [`reports/gt-e5a-report.md`](reports/gt-e5a-report.md) |
+| E5 coverage and definition audit | [`docs/e5-coverage-and-definition-audit.md`](docs/e5-coverage-and-definition-audit.md) |
+| E5 definitions and null construction (T1–T8) | [`docs/e5-definitions-and-null-construction.md`](docs/e5-definitions-and-null-construction.md) |
+| E5A frozen plan, tables, atlas, reflection | [`plans/round-e5a-plan.json`](plans/round-e5a-plan.json), [`reports/round-e5a-tables.json`](reports/round-e5a-tables.json), [`reports/gt-e5a-atlas.md`](reports/gt-e5a-atlas.md), [`reports/gt-e5a-reflection.md`](reports/gt-e5a-reflection.md) |
+| GT-P009 cross-programme transfer note | [`docs/gt-e5a-cross-programme-transfer.md`](docs/gt-e5a-cross-programme-transfer.md) |
+| GT-P009 execution record | [`provenance/execution-GT-P009.md`](provenance/execution-GT-P009.md) |
 | Coherence ledger and snapshot | [`coherence/`](coherence/) |
 | Ontology proposals for later review | [`docs/ontology-proposals.md`](docs/ontology-proposals.md) |
 | Provenance | [`provenance/`](provenance/) |
 
-Code: `constraint-lab/src/rs_constraint_lab/gt0.py`, `gt0_exec.py`, `gt1.py`, `gte0a.py`, `gte0b.py`, `gte0_atlas.py`, `gtkernel.py`, `gtobs.py`, `gtobs_validate.py`, `gtobs_fixtures.py`, `gtscale.py`. Commands: `python -m rs_constraint_lab gt0|gt1|gte0a|gte0b ...`. Tests: `constraint-lab/tests/test_gt0.py`, `test_gte0a.py`, `test_gte0b.py`, `test_gtkernel.py`, `test_gtobs.py`. Generated items go to `gravity-time/generated/`, which is gitignored.
+Code: `constraint-lab/src/rs_constraint_lab/gt0.py`, `gt0_exec.py`, `gt1.py`, `gte0a.py`, `gte0b.py`, `gte0_atlas.py`, `gtkernel.py`, `gtobs.py`, `gtobs_validate.py`, `gtobs_fixtures.py`, `gtscale.py`, `gtsort.py`, `gtpersist.py`, `gte5a.py` (E5A: `python -m rs_constraint_lab.gte5a plan|run|publish|atlas`). Commands: `python -m rs_constraint_lab gt0|gt1|gte0a|gte0b ...`. Tests: `constraint-lab/tests/test_gt0.py`, `test_gte0a.py`, `test_gte0b.py`, `test_gtkernel.py`, `test_gtobs.py`. Generated items go to `gravity-time/generated/`, which is gitignored.
