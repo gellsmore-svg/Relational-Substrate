@@ -133,6 +133,14 @@ three-mask path and vice versa; stationary material L3 laws also match.
 Potential distinctions first occur at L4. Equality through frozen L6 is
 not all-order equality unless another proof establishes it.
 
+Uniqueness corollary: if a fixed first-order kernel B on exactly s=(P,h1)
+matches both pi_s and the true adjacent s joint J, positivity forces
+B(s,s')=J(s,s')/pi_s(s)=Kpi(s,s') on every state. Therefore a longer observed
+word difference excludes EVERY such stationary-adjacent-matched strict H1
+kernel, not just an arbitrary selected representative. This does not exclude
+H1 models matching only material occupancy, or compilers with extra hidden
+state, changed clocks or a different represented history alphabet.
+
 For this positive-support two-slot grammar, strict h2 row dependence also
 guarantees a material L4 difference: a three-mask word reconstructs the
 current (P,h1,h2) and has positive mass. A nonconstant h2 row family cannot

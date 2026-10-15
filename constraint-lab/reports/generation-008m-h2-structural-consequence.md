@@ -209,6 +209,12 @@ Additionally h1 is recoverable from adjacent pair masks, forcing all material
 triples to match. These are exact rational identities, not fitted agreement.
 Stationary matching is not strong lumpability or all-history compilation.
 
+Within a precise narrower class the comparator is unique: any fixed kernel
+on exactly (P,h1) matching the full stationary one/two-time (P,h1) law must
+equal J(s,s')/pi_s(s)=Kpi on all positive states. Thus the L4 differences
+exclude every such matched strict H1 Markov representation. They do not
+exclude every H1 model matching occupancy alone or allowing hidden recoding.
+
 ## S. Process Words
 
 For ALL 72 non-neutral cells and ALL projections P,C,K:
