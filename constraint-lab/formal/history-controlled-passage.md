@@ -5,6 +5,7 @@ This document uses 8K's compiler-relative state/equivalence framework. Ordinary
 X retains six pair and four independent triad bits. At recurrent pair epochs,
 triad-blind 8M controllers close on Z=(P,h1,h2). There is no dynamic eta (L=0).
 
+<a id="matched-sources"></a>
 ## Matched Sources
 
 Let pi2 be the positive stationary H2 law and pi1(P,h1)=sum_j pi2(P,h1,j).
@@ -49,6 +50,7 @@ Markov approximation. R_k describes ONE return from the stationary source.
 Successive returned classes need not themselves form a first-order chain;
 do not iterate R_k to obtain multi-return laws without a sufficiency proof.
 
+<a id="restricted-invariant-law"></a>
 ## Restricted Invariant Law
 
 Write stationary balance in blocks. Since
@@ -59,6 +61,7 @@ where nu_k(c)=pi(C=c|K=k) (CL-T86). This establishes invariant one-return
 weights despite a potentially non-Markov class-return sequence. Both compared
 models have exactly the same nu_k; a routing residual is not layer occupancy.
 
+<a id="length-and-direction"></a>
 ## Length And Direction
 
 For n>=2, F_n=T_AB Q^(n-2)T_BA. All odd n vanish: each toggle flips count
@@ -90,6 +93,7 @@ committor nor an MFPT is inferred by pretending C is first-order. First
 return asks the next destination at a repeated density; MFPT asks time to
 a particular sibling. They are not interchangeable.
 
+<a id="kac-control"></a>
 ## Kac Control
 
 For a positive recurrent finite stationary chain and nonempty D, start from
@@ -102,6 +106,7 @@ Thus E[tau_D^+]=1/pi(D) (CL-T88), without requiring D to be a singleton or
 the chain to be aperiodic. Computationally use m_D above and average
 1+T m_D on D. H2/Kpi same-class means must match; cross-class MFPT need not.
 
+<a id="matched-h1-exclusion"></a>
 ## Matched H1 Exclusion
 
 For positive pi1, a fixed first-order kernel B on exactly S=(P,h1) matching
@@ -113,6 +118,7 @@ H1 models matching occupancy only, arbitrary hidden recodings, enlarged
 state, phase, clocks or different semantic history alphabets. This is an
 application of CL-M04, not absolute non-Markovianity.
 
+<a id="passage-transport"></a>
 ## Passage Transport
 
 If a state bijection g conjugates two kernels and pushes their stationary

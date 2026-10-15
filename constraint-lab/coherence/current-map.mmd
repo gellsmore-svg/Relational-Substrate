@@ -111,6 +111,14 @@ flowchart TD
     F8M_DENSITY_ONLY_FEEDBACK_NULL["F8M-DENSITY-ONLY-FEEDBACK-NULL: The 12 direction cells for R00/R03/R09 are strict H2 with persistent density change yet..."]
     F8M_EXACT_STATIONARY_EQUIVALENCE["F8M-EXACT-STATIONARY-EQUIVALENCE: At each tested grade R00/R09 direction partners have identical full stationary augmente..."]
     F8M_TINY_SHAPE_RETAINED["F8M-TINY-SHAPE-RETAINED: R04 FORM suppression has exact nonzero conditional-shape residue with KL about 1.033306..."]
+    F8N_RETURN_ROUTING["F8N-RETURN-ROUTING: All 216 non-neutral model/layer return matrices and all 504 source rows differ from adj..."]
+    F8N_ANY_PASSAGE["F8N-ANY-PASSAGE: All 24 stationary-material-silent ANY systems have active return routing in every layer..."]
+    F8N_DENSITY_ONLY_PASSAGE["F8N-DENSITY-ONLY-PASSAGE: All 12 direction density-only, KU-material-matched systems remain return-routing and si..."]
+    F8N_MFPT_RESIDUAL["F8N-MFPT-RESIDUAL: All 720 non-neutral ordered sibling MFPTs differ exactly: 446 slower and 274 faster und..."]
+    F8N_K3_COMMITTOR["F8N-K3-COMMITTOR: 152 of 216 competing-target probabilities differ; 64 P4-source tasks agree at one half...."]
+    F8N_ROUTE_SELECTIVE_NULLS["F8N-ROUTE-SELECTIVE-NULLS: UP and DOWN each differ in 404 of 504 non-neutral source rows, retaining 100 exact sile..."]
+    F8N_FIRST_LENGTH_FOUR["F8N-FIRST-LENGTH-FOUR: Every non-neutral source-row first-return difference begins at four events; all slices ..."]
+    F8N_NEUTRAL_PASSAGE_NULL["F8N-NEUTRAL-PASSAGE-NULL: The common neutral baseline matches every frozen return total, direction, length/tail, ..."]
   end
   subgraph INFERENCE [Inferences]
     F008_COMPOSITION_REPRESENTATION["F008-COMPOSITION-REPRESENTATION: The magnitude of a two-rule interaction residual depends on the representation and the ..."]
@@ -131,6 +139,8 @@ flowchart TD
     F8K_H_L_BOUNDARY["F8K-H-L-BOUNDARY: History summarises prior ordinary events; candidate eta configures constraint machinery..."]
     F8K_H2_NEXT_CAPABILITY["F8K-H2-NEXT-CAPABILITY: Recommend an unexecuted H2 same-(X,h_1), different-h_2 design as the next clean nested ..."]
     F8L_H1_NONCOMPILABILITY["F8L-H1-NONCOMPILABILITY: No fixed first-order kernel on exactly (X,last-pair h1) can reproduce all conditioned S..."]
+    F8N_ACCESS_BEYOND_OCCUPANCY["F8N-ACCESS-BEYOND-OCCUPANCY: Within the declared finite representation, stationary-adjacent averaging can discard tr..."]
+    F8N_CONTROLLED_PASSAGE_QUALIFICATION["F8N-CONTROLLED-PASSAGE-QUALIFICATION: The complete bounded grammar answers Q-H2-CONTROLLED-PASSAGE within frozen priors, task..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     F011_QUOTIENT_INVALID["F011-QUOTIENT-INVALID: Graph-only hidden-context quotienting is formally invalid for labelled rules. The wrong..."]
@@ -172,6 +182,12 @@ flowchart TD
     F8L_H2_QUESTION_QUALIFICATION["F8L-H2-QUESTION-QUALIFICATION: Q-H2-LAST-PAIR-COMPILER changes unresolved->qualified with a recorded status-only trans..."]
     F8M_THREE_LEVEL_DISCIPLINE["F8M-THREE-LEVEL-DISCIPLINE: Local strict H2 necessity, persistent visible occupancy and specified matched-H1 feedba..."]
     F8M_STRUCTURAL_UTILITY_QUALIFICATION["F8M-STRUCTURAL-UTILITY-QUALIFICATION: Q-H2-STRUCTURAL-UTILITY changes unresolved->qualified by an explicit status-only record..."]
+    F8N_MATCHED_SOURCE_PASSAGE["F8N-MATCHED-SOURCE-PASSAGE: Stationary class-conditioned H2 sources push exactly to Kpi sources on (P,h1), matching..."]
+    F8N_RETURN_INVARIANT["F8N-RETURN-INVARIANT: The hidden-state embedded return kernel preserves stationary mass restricted to the ret..."]
+    F8N_TWO_EVENT_CONTROL["F8N-TWO-EVENT-CONTROL: Equality of stationary material triples and source masses implies exactly equal two-eve..."]
+    F8N_KAC_CONTROL["F8N-KAC-CONTROL: Stationary-conditional same-class positive return means equal 1/pi(class) for H2 and Kp..."]
+    F8N_H1_MATCHED_PASSAGE_BOUNDARY["F8N-H1-MATCHED-PASSAGE-BOUNDARY: Kpi is unique on exactly (P,h1) under full stationary adjacent matching. A passage resi..."]
+    F8N_CONJUGATE_PASSAGE["F8N-CONJUGATE-PASSAGE: Kernel conjugacy transports stationary-source passage laws and stopping sets. All 24 FO..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
@@ -184,6 +200,7 @@ flowchart TD
     F8K_LOCAL_RS_READING["F8K-LOCAL-RS-READING: Predictive sufficiency and historical information are representation/observation-relati..."]
     F8L_LOCAL_RS_READING["F8L-LOCAL-RS-READING: Within this model, earlier historical order can affect predictive futures beyond identi..."]
     F8M_LOCAL_RS_READING["F8M-LOCAL-RS-READING: Within this finite model, ordered historical relational role can remain structurally co..."]
+    F8N_RS_ACCESS_INTERPRETATION["F8N-RS-ACCESS-INTERPRETATION: Within this model, deeper relational history can alter access between structures withou..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     Q_PATH_SHAPE["Q-PATH-SHAPE: Why does path topology convert early triadic context into shape information at the firs..."]
@@ -208,6 +225,7 @@ flowchart TD
     Q_H2_STRUCTURAL_UTILITY["Q-H2-STRUCTURAL-UTILITY: Which depth-two history functions yield structural or controlled-passage consequences b..."]
     Q_H2_CONTROLLED_PASSAGE["Q-H2-CONTROLLED-PASSAGE: Under independently declared source/target, matched occupancy, unchanged support/clock ..."]
     Q_H2_ROLE_FACTORIZATION["Q-H2-ROLE-FACTORIZATION: Which all-m balance or factorisation identities explain the density-only feedback-silen..."]
+    Q_H2_ROUTE_NULL_FACTORIZATION["Q-H2-ROUTE-NULL-FACTORIZATION: Which exact path factorisations explain the direction-specific passage nulls despite ac..."]
   end
   F014_EXACT_FIRST_DESTINATION -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
   F015_TRANSIENT_CLASS_MEMORY -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
@@ -509,3 +527,34 @@ flowchart TD
   Q_H2_ROLE_FACTORIZATION -->|motivated_by| F8M_TINY_SHAPE_RETAINED
   F8M_H2_ROLE_GRAMMAR -->|enables| F8M_AUGMENTED_S4_QUOTIENT
   F8M_STRICT_H2_ROLE_ATLAS -->|compatible_with| F8M_H2_PERSISTENT_SHAPE
+  F8N_MATCHED_SOURCE_PASSAGE -->|formalises| F8M_STATIONARY_H1_MATCHING
+  F8N_RETURN_INVARIANT -->|depends_on| F8N_MATCHED_SOURCE_PASSAGE
+  F8N_TWO_EVENT_CONTROL -->|derived_from| F8M_H2_STATIONARY_H1_RESIDUAL
+  F8N_KAC_CONTROL -->|depends_on| F8N_RETURN_INVARIANT
+  F8N_H1_MATCHED_PASSAGE_BOUNDARY -->|refines| F8K_COMPILATION_CLASS
+  F8N_H1_MATCHED_PASSAGE_BOUNDARY -->|depends_on| F8N_RETURN_ROUTING
+  F8N_CONJUGATE_PASSAGE -->|formalises| F8M_COMPLEMENT_SYMMETRY
+  F8N_CONJUGATE_PASSAGE -->|formalises| F8M_OPPOSITE_PAIR_CONJUGACY
+  F8N_RETURN_ROUTING -->|refines| F004_PASSAGE_AFTER_OCCUPANCY
+  F8N_RETURN_ROUTING -->|depends_on| F8N_MATCHED_SOURCE_PASSAGE
+  F8N_RETURN_ROUTING -->|compatible_with| F8N_RETURN_INVARIANT
+  F8N_ANY_PASSAGE -->|contrasts_with| F8M_HISTORY_ONLY_STRUCTURAL_SILENCE
+  F8N_DENSITY_ONLY_PASSAGE -->|refines| F8M_DENSITY_ONLY_FEEDBACK_NULL
+  F8N_MFPT_RESIDUAL -->|contrasts_with| F8N_KAC_CONTROL
+  F8N_K3_COMMITTOR -->|derived_from| F8N_CONJUGATE_PASSAGE
+  F8N_ROUTE_SELECTIVE_NULLS -->|refines| F007_SELECTIVITY_SURVIVES
+  F8N_ROUTE_SELECTIVE_NULLS -->|compatible_with| F006_SCALAR_AGGREGATE
+  F8N_FIRST_LENGTH_FOUR -->|refines| F8N_TWO_EVENT_CONTROL
+  F8N_NEUTRAL_PASSAGE_NULL -->|qualifies| F8N_RETURN_ROUTING
+  F8N_ACCESS_BEYOND_OCCUPANCY -->|derived_from| F8N_ANY_PASSAGE
+  F8N_H1_MATCHED_PASSAGE_BOUNDARY -->|qualifies| F8N_ACCESS_BEYOND_OCCUPANCY
+  F8N_RS_ACCESS_INTERPRETATION -->|derived_from| F8N_ACCESS_BEYOND_OCCUPANCY
+  Q_H2_CONTROLLED_PASSAGE -->|partially_answered_by| F8N_CONTROLLED_PASSAGE_QUALIFICATION
+  F8N_CONTROLLED_PASSAGE_QUALIFICATION -->|derived_from| F8N_RETURN_ROUTING
+  F8N_CONTROLLED_PASSAGE_QUALIFICATION -->|derived_from| F8N_MFPT_RESIDUAL
+  Q_H2_ROUTE_NULL_FACTORIZATION -->|motivated_by| F8N_ROUTE_SELECTIVE_NULLS
+  Q_H_PERSISTENT_STRUCTURE -->|partially_answered_by| F8M_H2_PERSISTENT_SHAPE
+  Q_H_CONSEQUENTIAL_FUNCTIONS -->|partially_answered_by| F8M_STRICT_H2_ROLE_ATLAS
+  F8N_ACCESS_BEYOND_OCCUPANCY -->|qualifies| Q_L_COMPILER_SEMANTICS
+  F8N_RETURN_ROUTING -->|compatible_with| F8N_CONJUGATE_PASSAGE
+  F8N_K3_COMMITTOR -->|contrasts_with| F8N_MFPT_RESIDUAL

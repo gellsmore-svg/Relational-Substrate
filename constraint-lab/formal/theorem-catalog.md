@@ -1696,3 +1696,141 @@ Source generations: 008M
 Boundary: Log-derived decimal magnitudes are not algebraic rational identities or evidence for physical significance.
 Notes: Proof status is separate from coherence layer. Counts are finite exact combinatorics; log magnitudes are separately CL-N10. No physical ontology claim.
 
+## CL-T85: Matched stationary source and first-step law
+
+**ALGEBRAIC_THEOREM**
+
+Positive stationary H2 law and its stationary-conditional Kpi-H1 have equal class-conditioned source pushforward on (P,h1), equal material occupancy and equal class-conditioned first-event material laws.
+
+Assumptions: Finite irreducible Markov chain, positive stationary conditioning sets; Declared matched source and comparator where asserted; Single-toggle pair-event support where parity/short-return controls are used.
+Scope: Generic finite-chain argument under stated hypotheses; N4 role applications as scoped. No unrestricted H1 exclusion.
+
+Proof: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md#matched-sources). Sum over h2 in the stationary source conditional; divide the common stationary adjacent flow by the common positive source-class mass.
+Evidence: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md), [generation-008n-h2-controlled-passage.md](../../constraint-lab/reports/generation-008n-h2-controlled-passage.md), [generation-008n-validation.json](../../constraint-lab/reports/tables/generation-008n-validation.json), [generation-008n-summary.json](../../constraint-lab/reports/tables/generation-008n-summary.json), [test_v08n.py](../../constraint-lab/tests/test_v08n.py)
+Coherence: `F8N-MATCHED-SOURCE-PASSAGE`
+Dependencies: CL-T82
+Source generations: 008N
+Boundary: No claim of Markov graph-class return process, physical memory, purpose, task benefit or exclusion of hidden-state recodings.
+Notes: Symbolic proof is distinct from finite palette verification; no all-m promotion of finite nonzero outcomes.
+
+## CL-T86: Restricted invariant return law
+
+**ALGEBRAIC_THEOREM**
+
+For a finite irreducible chain, stationary mass restricted to a nonempty return set is invariant for the embedded positive-return chain. Its stationary-source class aggregation preserves restricted class weights without requiring returned classes to be Markov.
+
+Assumptions: Finite irreducible Markov chain, positive stationary conditioning sets; Declared matched source and comparator where asserted; Single-toggle pair-event support where parity/short-return controls are used.
+Scope: Generic finite-chain argument under stated hypotheses; N4 role applications as scoped. No unrestricted H1 exclusion.
+
+Proof: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md#restricted-invariant-law). Solve stationary block balance pi_B=pi_A T_AB(I-T_BB)^-1 and substitute into pi_A balance, then normalise and aggregate.
+Evidence: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md), [generation-008n-h2-controlled-passage.md](../../constraint-lab/reports/generation-008n-h2-controlled-passage.md), [generation-008n-validation.json](../../constraint-lab/reports/tables/generation-008n-validation.json), [generation-008n-summary.json](../../constraint-lab/reports/tables/generation-008n-summary.json), [test_v08n.py](../../constraint-lab/tests/test_v08n.py)
+Coherence: `F8N-RETURN-INVARIANT`
+Dependencies: none
+Source generations: 008N
+Boundary: No claim of Markov graph-class return process, physical memory, purpose, task benefit or exclusion of hidden-state recodings.
+Notes: Symbolic proof is distinct from finite palette verification; no all-m promotion of finite nonzero outcomes.
+
+## CL-T87: Matched two-event first-return law
+
+**ALGEBRAIC_THEOREM**
+
+Equality of stationary three-mask laws and positive source-class masses implies equality of class-conditioned two-event first-return distributions in a single-toggle edge-count layer.
+
+Assumptions: Finite irreducible Markov chain, positive stationary conditioning sets; Declared matched source and comparator where asserted; Single-toggle pair-event support where parity/short-return controls are used.
+Scope: Generic finite-chain argument under stated hypotheses; N4 role applications as scoped. No unrestricted H1 exclusion.
+
+Proof: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md#length-and-direction). Condition the common triple law by its source class and sum triples with K0=K2=k; single toggles make K1!=k automatically. Parity excludes odd return times.
+Evidence: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md), [generation-008n-h2-controlled-passage.md](../../constraint-lab/reports/generation-008n-h2-controlled-passage.md), [generation-008n-validation.json](../../constraint-lab/reports/tables/generation-008n-validation.json), [generation-008n-summary.json](../../constraint-lab/reports/tables/generation-008n-summary.json), [test_v08n.py](../../constraint-lab/tests/test_v08n.py)
+Coherence: `F8N-TWO-EVENT-CONTROL`, `F8N-FIRST-LENGTH-FOUR`
+Dependencies: CL-T82, CL-T85
+Source generations: 008N
+Boundary: No claim of Markov graph-class return process, physical memory, purpose, task benefit or exclusion of hidden-state recodings.
+Notes: Symbolic proof is distinct from finite palette verification; no all-m promotion of finite nonzero outcomes.
+
+## CL-T88: Matched Kac set recurrence control
+
+**ALGEBRAIC_THEOREM**
+
+For a finite irreducible stationary chain, starting from its stationary conditional law on nonempty D gives E[tau_D^+]=1/pi(D). Equal class occupancy therefore forces equal same-class mean positive recurrence, not cross-class MFPT.
+
+Assumptions: Finite irreducible Markov chain, positive stationary conditioning sets; Declared matched source and comparator where asserted; Single-toggle pair-event support where parity/short-return controls are used.
+Scope: Generic finite-chain argument under stated hypotheses; N4 role applications as scoped. No unrestricted H1 exclusion.
+
+Proof: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md#kac-control). The embedded return chain is stationary under pi restricted to D; excursion occupation normalisation (or stationary visit frequency) gives mean interval one divided by pi(D). Periodicity does not invalidate the identity.
+Evidence: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md), [generation-008n-h2-controlled-passage.md](../../constraint-lab/reports/generation-008n-h2-controlled-passage.md), [generation-008n-validation.json](../../constraint-lab/reports/tables/generation-008n-validation.json), [generation-008n-summary.json](../../constraint-lab/reports/tables/generation-008n-summary.json), [test_v08n.py](../../constraint-lab/tests/test_v08n.py)
+Coherence: `F8N-KAC-CONTROL`
+Dependencies: CL-T86
+Source generations: 008N
+Boundary: No claim of Markov graph-class return process, physical memory, purpose, task benefit or exclusion of hidden-state recodings.
+Notes: Symbolic proof is distinct from finite palette verification; no all-m promotion of finite nonzero outcomes.
+
+## CL-T89: Adjacent-matched H1 passage exclusion
+
+**ALGEBRAIC_THEOREM**
+
+If H2 and Kpi have unequal passage under the declared matched source law, no fixed first-order kernel on exactly (P,h1) matching the full stationary adjacent H1 law reproduces both that law and the H2 passage functional.
+
+Assumptions: Finite irreducible Markov chain, positive stationary conditioning sets; Declared matched source and comparator where asserted; Single-toggle pair-event support where parity/short-return controls are used.
+Scope: Generic finite-chain argument under stated hypotheses; N4 role applications as scoped. No unrestricted H1 exclusion.
+
+Proof: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md#matched-h1-exclusion). Positive pi_s and adjacent joint J force B(s,s')=J(s,s')/pi_s(s)=Kpi. The stipulated source is then also fixed; an unequal passage functional contradicts simultaneous matching.
+Evidence: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md), [generation-008n-h2-controlled-passage.md](../../constraint-lab/reports/generation-008n-h2-controlled-passage.md), [generation-008n-validation.json](../../constraint-lab/reports/tables/generation-008n-validation.json), [generation-008n-summary.json](../../constraint-lab/reports/tables/generation-008n-summary.json), [test_v08n.py](../../constraint-lab/tests/test_v08n.py)
+Coherence: `F8N-H1-MATCHED-PASSAGE-BOUNDARY`
+Dependencies: CL-T82, CL-T85
+Source generations: 008N
+Boundary: No claim of Markov graph-class return process, physical memory, purpose, task benefit or exclusion of hidden-state recodings.
+Notes: Symbolic proof is distinct from finite palette verification; no all-m promotion of finite nonzero outcomes.
+
+## CL-T90: Passage transport under kernel conjugacy
+
+**ALGEBRAIC_THEOREM**
+
+A bijective kernel conjugacy transporting the stationary source and stopping sets transports first-return totals, length slices, route pieces, MFPT and competing-target probabilities, with target-order complementation when needed.
+
+Assumptions: Finite irreducible Markov chain, positive stationary conditioning sets; Declared matched source and comparator where asserted; Single-toggle pair-event support where parity/short-return controls are used.
+Scope: Generic finite-chain argument under stated hypotheses; N4 role applications as scoped. No unrestricted H1 exclusion.
+
+Proof: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md#passage-transport). The bijection preserves each finite stopped path probability and time. Sum disjoint first-hit paths or use uniqueness of Dirichlet solutions. Self-conjugacies fixing P4 and exchanging its alternatives force committor one half.
+Evidence: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md), [generation-008n-h2-controlled-passage.md](../../constraint-lab/reports/generation-008n-h2-controlled-passage.md), [generation-008n-validation.json](../../constraint-lab/reports/tables/generation-008n-validation.json), [generation-008n-summary.json](../../constraint-lab/reports/tables/generation-008n-summary.json), [test_v08n.py](../../constraint-lab/tests/test_v08n.py)
+Coherence: `F8N-CONJUGATE-PASSAGE`, `F8N-K3-COMMITTOR`
+Dependencies: CL-T80, CL-T84
+Source generations: 008N
+Boundary: No claim of Markov graph-class return process, physical memory, purpose, task benefit or exclusion of hidden-state recodings.
+Notes: Symbolic proof is distinct from finite palette verification; no all-m promotion of finite nonzero outcomes.
+
+## CL-F11: Complete occupancy-matched H2 passage atlas
+
+**FINITE_EXHAUSTIVE_RESULT**
+
+All 72 non-neutral frozen systems differ from Kpi in all 216 layer return matrices, 504 source rows and 720 ordered sibling MFPTs. Every first return difference begins at four events; 152/216 committors differ and 64 are exact symmetry nulls. Neutral is silent; 100 rows per route direction remain silent.
+
+Assumptions: Hash-pinned immutable 8M kernels and stationary laws; Frozen P0 stationary class-conditioned sources and exact rational methods.
+Scope: N4 O3 G0 S0 L0 H_pair=2 independent hypergraph; fixed positive one-role 8M controllers and pair-event clock. Exact stationary class-conditioned source and adjacent-matched strict H1 comparator; finite census at 1/4 and 4 plus neutral. No physical or task-value claim.
+
+Enumeration: 73 systems, three density layers, seven source rows, ten sibling MFPTs, three K3 committors, return slices 2/4/6/8/10/12 plus exact tail; exact count 73. Verifier: [gen008n_exec.py](../../constraint-lab/src/rs_constraint_lab/gen008n_exec.py)
+Evidence: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md), [generation-008n-h2-controlled-passage.md](../../constraint-lab/reports/generation-008n-h2-controlled-passage.md), [generation-008n-validation.json](../../constraint-lab/reports/tables/generation-008n-validation.json), [generation-008n-summary.json](../../constraint-lab/reports/tables/generation-008n-summary.json), [test_v08n.py](../../constraint-lab/tests/test_v08n.py)
+Coherence: `F8N-RETURN-ROUTING`, `F8N-ANY-PASSAGE`, `F8N-DENSITY-ONLY-PASSAGE`, `F8N-MFPT-RESIDUAL`, `F8N-K3-COMMITTOR`, `F8N-ROUTE-SELECTIVE-NULLS`, `F8N-FIRST-LENGTH-FOUR`, `F8N-NEUTRAL-PASSAGE-NULL`
+Dependencies: CL-T85, CL-T86, CL-T87, CL-T88, CL-T90
+Source generations: 008N
+Boundary: Finite two-grade atlas does not prove universal all-m activity or absence of other passage-silent functionals.
+Notes: All equations verified on full sparse states, two independent exact solve routes, independent full-state finite path sums.
+
+## CL-N11: High-precision matched-return routing magnitude
+
+**NUMERICAL_KERNEL_RESULT**
+
+Exact non-neutral return-row laws give positive JS magnitudes from about 1.0708e-10 to 0.00124199 nats, evaluated at 160 digits. Exact rational equality, not a tolerance, classifies silence.
+
+Assumptions: Exact frozen P0 rational distributions; Natural logarithms.
+Scope: N4 O3 G0 S0 L0 H_pair=2 independent hypergraph; fixed positive one-role 8M controllers and pair-event clock. Exact stationary class-conditioned source and adjacent-matched strict H1 comparator; finite census at 1/4 and 4 plus neutral. No physical or task-value claim.
+
+Method: 160-digit mpmath JS and independent entropy-mixture route on exact rational laws
+Domain: 504 non-neutral source rows plus seven neutral rows
+Tolerances: `{"independent_route_gap": "1e-25", "zero_classification": "exact rational"}`
+Evidence: [history-controlled-passage.md](../../constraint-lab/formal/history-controlled-passage.md), [generation-008n-h2-controlled-passage.md](../../constraint-lab/reports/generation-008n-h2-controlled-passage.md), [generation-008n-validation.json](../../constraint-lab/reports/tables/generation-008n-validation.json), [generation-008n-summary.json](../../constraint-lab/reports/tables/generation-008n-summary.json), [test_v08n.py](../../constraint-lab/tests/test_v08n.py)
+Coherence: `F8N-RETURN-ROUTING`
+Dependencies: CL-F11
+Source generations: 008N
+Boundary: Magnitude is not functional value, statistical significance or a scalar memory score.
+Notes: No sampling or Monte Carlo.
+

@@ -1,0 +1,25 @@
+{
+  "record_type": "coherence_status_change",
+  "prompt_id": "008N",
+  "date": "2026-10-15",
+  "baseline_commit": "9b2f857687be2ca6867d698fa9eda51db2f788a5",
+  "evidence_commit": "11e70b4b92c1932df5f875bfd0de806d4fbecdd1",
+  "authorized_by": "Prompt 008N section 94 after complete P0 and full-state verification",
+  "transitions": [
+    {
+      "finding_id": "Q-H2-CONTROLLED-PASSAGE",
+      "from": "unresolved",
+      "to": "qualified",
+      "changed_fields": [
+        "status"
+      ],
+      "before_row_sha256": "c2c6c8aaf62522cde968e64101b36833b7e5a78e5d3997c019c1d97eb99f480e",
+      "after_row_sha256": "f50d5eed54f8c4c6453fba84264e26fdafc00d2d180a5657adbe1098584ae7a8",
+      "row_hash_convention": "UTF-8 JSONL line excluding newline",
+      "resolution_finding": "F8N-CONTROLLED-PASSAGE-QUALIFICATION",
+      "meaning": "Complete bounded one-role/task/grade atlas answers controlled access; broader priors, compilers, tasks and functional value remain open."
+    }
+  ],
+  "record_path": "constraint-lab/provenance/status-changes/008N-controlled-passage-question.json",
+  "notes": "Statements, scope, creation metadata and old snapshots unchanged. L semantics unresolved."
+}
