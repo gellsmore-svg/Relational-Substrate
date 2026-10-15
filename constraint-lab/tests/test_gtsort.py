@@ -220,8 +220,19 @@ def test_extraction_checks_on_published_tables():
     assert [round(v, 3) for v in sel["S4-N6-PATHF centre/leaves ct"]] == [0.363, 0.093]
 
 
+def _same(a, b) -> bool:
+    """Structural equality; floats within 1e-12 absolute or 1e-9 relative (summation order differs across machines)."""
+    if isinstance(a, dict) and isinstance(b, dict):
+        return a.keys() == b.keys() and all(_same(a[k], b[k]) for k in a)
+    if isinstance(a, list) and isinstance(b, list):
+        return len(a) == len(b) and all(_same(x, y) for x, y in zip(a, b))
+    if isinstance(a, float) or isinstance(b, float):
+        return isinstance(a, (int, float)) and isinstance(b, (int, float)) and math.isclose(a, b, rel_tol=1e-9, abs_tol=1e-12)
+    return a == b
+
+
 def test_committed_secondary_json_is_reproducible():
     path = REPO / gtsort.OUT_RELPATH
     if not path.is_file():
         pytest.skip("secondary analysis not yet written")
-    assert json.loads(path.read_text(encoding="utf-8")) == json.loads(json.dumps(gtsort.build(REPO), sort_keys=True))
+    assert _same(json.loads(path.read_text(encoding="utf-8")), json.loads(json.dumps(gtsort.build(REPO), sort_keys=True)))
