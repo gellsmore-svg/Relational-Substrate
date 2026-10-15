@@ -32,7 +32,8 @@ from . import core
 EVIDENCE_LAYERS = {"observation", "exact_result", "simulation_result", "inference", "interpretation", "negative_null", "question", "plan"}
 VERIFICATION_LEVELS = {"local_source_verified", "public_pointer_attested", "numerically_reproduced"}
 SOURCE_ROLES = {"primary_report", "run_ledger", "specification", "code", "result_table", "raw_array", "interpretation", "correction", "retrospective_baseline", "recovered_record", "future_question", "unknown"}
-PRIVACY_DISPOSITIONS = {"unreviewed", "public_summary_approved", "withheld"}
+PRIVACY_DISPOSITIONS = {"unreviewed", "awaiting_publication_approval", "public_summary_approved", "withheld"}
+CONSENT_KIND = "publication_consent"
 NESTED_ARCHIVE_SUFFIXES = (".zip", ".tar", ".tgz", ".gz", ".bz2", ".xz", ".7z", ".rar", ".jar", ".whl")
 EXECUTABLE_SUFFIXES = (".py", ".pyc", ".pyo", ".pkl", ".pickle", ".npy", ".npz", ".joblib", ".sh", ".exe", ".dll", ".so", ".bat", ".ps1")
 MEDIA = {".md": "text/markdown", ".txt": "text/plain", ".json": "application/json", ".jsonl": "application/jsonl", ".csv": "text/csv", ".tsv": "text/tab-separated-values",
@@ -195,7 +196,8 @@ def validate_findings(manifest: dict, findings: list[dict], decisions: list[dict
     expected = _expected(manifest)
     src = hist_source(manifest)
     status = src.get("status")
-    human_decisions = {d["decision_id"] for d in (decisions or []) if d.get("human")}
+    # publication consent is its own explicit human decision; round-trip acceptance is never consent
+    consents = {d["decision_id"]: d for d in (decisions or []) if d.get("human") and d.get("kind") == CONSENT_KIND}
     if findings and status == "pending_intake":
         p.append("HIST is pending_intake: no historical finding may be registered until intake passes the custody gate")
     if status == "included_partial":
@@ -243,8 +245,15 @@ def validate_findings(manifest: dict, findings: list[dict], decisions: list[dict
             p.append(f"{fid}: privacy.disposition must be one of {sorted(PRIVACY_DISPOSITIONS)}")
         if pr.get("disposition") != "public_summary_approved":
             p.append(f"{fid}: a public historical record needs privacy approval (disposition public_summary_approved)")
-        elif not pr.get("approved_by") or str(pr["approved_by"]).lower().startswith("agent") or pr.get("decision_id") not in human_decisions:
-            p.append(f"{fid}: privacy approval must be a logged human decision (approved_by and decision_id in author-decisions)")
+        elif not pr.get("approved_by") or str(pr["approved_by"]).lower().startswith("agent") or pr.get("decision_id") not in consents:
+            p.append(f"{fid}: privacy approval must be a logged human publication_consent decision (approved_by and decision_id in author-decisions); round-trip acceptance is not consent")
+        else:
+            c = consents[pr["decision_id"]]
+            for field, limit in (c.get("limits") or {}).items():
+                if len(str(f.get(field, ""))) > int(limit):
+                    p.append(f"{fid}: {field} exceeds the {limit}-character limit of {c['decision_id']}")
+            if f.get("member_path") in set(c.get("excluded_members") or []):
+                p.append(f"{fid}: {f['member_path']} is excluded from publication by {c['decision_id']}")
         for k in ("summary", "claim"):
             text = str(f.get(k, ""))
             if len(text) > MAX_SUMMARY_CHARS:

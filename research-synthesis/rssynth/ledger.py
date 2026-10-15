@@ -26,6 +26,8 @@ def load_shared(root: Path | None = None) -> dict:
         "metaphor_drafts": core.read_jsonl(root / "proposals" / "metaphor-drafts.jsonl"),
         "hist_findings": historical.load_findings(root),
         "hist_intake_plan": historical.load_intake_plan(root),
+        "round_trips": [core.read_json(p) for p in sorted((root / "proposals" / "round-trips").glob("RT-*.json"))] if (root / "proposals" / "round-trips").exists() else [],
+        "author_decisions": core.read_jsonl(root / "proposals" / "author-decisions.jsonl") if (root / "proposals" / "author-decisions.jsonl").exists() else [],
     }
 
 

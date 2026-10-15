@@ -12,17 +12,26 @@ Ratification accepts a recommendation as it was reported and never upgrades it:
   claims are never accepted this way.
 
 Round-trip records (proposals/round-trips/RT-*.json) are immutable once written.
+
+Policy amendment AD-0004 (forward-looking; RT-0001 and RT-0002 are grandfathered):
+- each recommendation carries its scope and qualification, and the closing commit's
+  generated/round-trips.md must display every listed item before ratification;
+- three kinds of acceptance stay separate: accepting a synthesis interpretation (the round
+  trip), scientific review of a CL/GT generation (never through the round trip) and consent
+  to publish private historical material (an explicit publication_consent decision only).
 """
 
 from __future__ import annotations
 
 import json
+import subprocess
 from pathlib import Path
 
-from . import core
+from . import core, sources
 
 AUTHOR_IMPLICIT = "author (repository owner): implicit acceptance through the round trip"
 KIND = "implicit_round_trip_acceptance"
+POLICY = "policy_amendment"
 
 
 def rt_dir(root: Path) -> Path:
@@ -43,19 +52,68 @@ def load_decisions(root: Path) -> list[dict]:
     return core.read_jsonl(p) if p.exists() else []
 
 
+def _unreviewed_refs(root: Path) -> set[str]:
+    try:
+        m = sources.load_manifest()
+        nodes = sources.load_sources(m)["nodes"]
+    except Exception:  # noqa: BLE001 - qualification is descriptive; absence of sources must not block closing a round
+        return set()
+    gens = {s["source_key"]: set(s.get("unreviewed_generations", [])) for s in m["sources"]}
+    return {k for k, v in nodes.items() if str(v.get("created_generation")) in gens.get(v.get("source"), set())}
+
+
 def _targets(root: Path) -> list[dict]:
-    """Everything currently agent-reviewed and not yet accepted: the agent's open recommendations."""
+    """Everything currently agent-reviewed and not yet accepted: the agent's open recommendations,
+    each with its scope and qualification so that the closure view can display it."""
+    unrev = _unreviewed_refs(root)
     out = []
+
+    def rec(x, key, kind):
+        ends = [x.get("from"), x.get("to")]
+        return {"target": x[key], "kind": kind, "decision_category": x["decision_category"],
+                "scope": x.get("scope", ""), "connection_type": x.get("connection_type"),
+                "rests_on_unreviewed_round": any(e in unrev for e in ends),
+                "qualification": (x.get("decision_rationale") or (x.get("decision_history") or [{}])[-1].get("rationale", ""))[:300]}
+
     for x in core.read_jsonl(root / "ledger" / "connections.jsonl"):
         if x.get("review_status") == "agent_reviewed":
-            out.append({"target": x["connection_id"], "kind": "connection", "decision_category": x["decision_category"]})
+            out.append(rec(x, "connection_id", "connection"))
     for x in core.read_jsonl(root / "proposals" / "candidate-relations.jsonl"):
         if x.get("status") == "agent_reviewed":
-            out.append({"target": x["proposal_id"], "kind": "proposal", "decision_category": x["decision_category"]})
+            out.append(rec(x, "proposal_id", "proposal"))
     for m in core.read_jsonl(root / "ledger" / "metaphors.jsonl"):
         if m.get("status") == "agent_reviewed":
-            out.append({"target": m["metaphor_id"], "kind": "metaphor", "decision_category": None})
+            out.append({"target": m["metaphor_id"], "kind": "metaphor", "decision_category": None, "scope": m.get("useful_scope", ""),
+                        "rests_on_unreviewed_round": False, "qualification": "non-evidentiary metaphor"})
     return out
+
+
+def grandfathered(root: Path) -> set[str]:
+    return {rt for d in load_decisions(root) if d.get("kind") == POLICY for rt in d.get("grandfathered", [])}
+
+
+def closing_commit(root: Path, rt_id: str) -> str | None:
+    """The first commit that added the round-trip record."""
+    try:
+        rel = (rt_dir(root) / f"{rt_id}.json").resolve().relative_to(core.REPO.resolve())
+    except ValueError:
+        return None  # not inside the repository (e.g. a test sandbox): nothing was committed, so nothing was displayed
+    r = subprocess.run(["git", "-C", str(core.REPO), "log", "--diff-filter=A", "--format=%H", "--", str(rel)], capture_output=True, text=True)
+    lines = r.stdout.split()
+    return lines[-1] if r.returncode == 0 and lines else None
+
+
+def displayed(root: Path, rt_id: str, targets: list[str]) -> list[str]:
+    """Targets missing from generated/round-trips.md at the round trip's closing commit (all, if it cannot be read)."""
+    c = closing_commit(root, rt_id)
+    if not c:
+        return list(targets)
+    rel = (root / "generated" / "round-trips.md").resolve().relative_to(core.REPO.resolve())
+    r = subprocess.run(["git", "-C", str(core.REPO), "show", f"{c}:{rel}"], capture_output=True, text=True)
+    if r.returncode != 0 or f"## {rt_id}" not in r.stdout:
+        return list(targets)
+    section = r.stdout.split(f"## {rt_id}", 1)[1].split("\n## ", 1)[0]
+    return [t for t in targets if f"`{t}`" not in section]
 
 
 def open_round_trip(rt_id: str, date: str, report: str, reported_at: str, note: str = "", root: Path | None = None) -> dict:
@@ -88,6 +146,10 @@ def ratify(rt_id: str, decision_id: str, date: str, instruction: str, objections
     if unknown:
         raise ValueError(f"objections name items not in {rt_id}: {sorted(unknown)}")
     accepted = [r["target"] for r in recs if r["target"] not in objections]
+    if rt_id not in grandfathered(root) and any(d.get("kind") == POLICY for d in log):
+        missing = displayed(root, rt_id, [r["target"] for r in recs])
+        if missing:
+            raise ValueError(f"{rt_id}: items not displayed in generated/round-trips.md at its closing commit, so they cannot be accepted implicitly: {missing}")
     if not any(d["decision_id"] == decision_id for d in log):
         entry = {"decision_id": decision_id, "date": date, "kind": KIND, "round_trip": rt_id, "instruction": instruction,
                  "accepted": accepted, "objected": objections, "decided_by": AUTHOR_IMPLICIT, "human": True,
@@ -168,9 +230,15 @@ def validate(root: Path, shared: dict) -> list[str]:
         listed = {r["target"] for r in rt["recommendations"]}
         if set(d.get("accepted", [])) | set(d.get("objected", [])) != listed or set(d.get("accepted", [])) & set(d.get("objected", [])):
             p.append(f"{did}: accepted and objected items must partition the items listed in {d['round_trip']}")
+    gf = grandfathered(root)
+    amended = any(d.get("kind") == POLICY for d in log)
     for rt_id, rt in rts.items():
         if rt.get("round_trip_id") != rt_id:
             p.append(f"{rt_id}: round_trip_id does not match the file name")
+        if amended and rt_id not in gf:
+            for r in rt.get("recommendations", []):
+                if not all(k in r for k in ("scope", "qualification", "rests_on_unreviewed_round")):
+                    p.append(f"{rt_id}: recommendation {r.get('target')} lacks scope/qualification (AD-0004)")
     cats = {}
     for did, d in rat.items():
         rt = rts.get(d.get("round_trip"), {})

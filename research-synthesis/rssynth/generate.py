@@ -348,6 +348,26 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     HC += ["", "## Cautions", ""] + [f"- {esc(c)}" for c in plan.get("cautions", [])]
     files["historical-coverage.md"] = "\n".join(HC) + "\n"
 
+    # ---- round trips: the agent's recommendations, displayed before any implicit acceptance --------
+    rats = {d.get("round_trip"): d for d in shared.get("author_decisions", []) if d.get("kind") == "implicit_round_trip_acceptance"}
+    pol = [d for d in shared.get("author_decisions", []) if d.get("kind") == "policy_amendment"]
+    RT = ["# Round trips and recommendations", "",
+          "Human acceptance of **synthesis interpretations** is implicit in the round trip: the author's next instruction ratifies the items listed for the latest closed round, unless the author objects. Since AD-0004, only items displayed here at the round's closing commit can be ratified. Ratification never upgrades a decision category.", "",
+          "The round trip **never** gives scientific review of a CL/GT generation, and **never** gives consent to publish private historical material (that needs an explicit `publication_consent` decision).", ""]
+    for d in pol:
+        RT += [f"**Policy amendment {d['decision_id']}** ({d['date']}): " + "; ".join(d.get("rules", [])) + f". Grandfathered: {', '.join(d.get('grandfathered', [])) or 'none'}.", "", f"Audit note: {esc(d.get('audit_note', ''))}", ""]
+    for rt in sorted(shared.get("round_trips", []), key=lambda r: r["round_trip_id"], reverse=True):
+        d = rats.get(rt["round_trip_id"])
+        state = f"ratified by {d['decision_id']} ({len(d.get('accepted', []))} accepted, objections: {', '.join(d.get('objected', [])) or 'none'})" if d else "**OPEN: the author's next instruction ratifies the items below unless the author objects**"
+        RT += [f"## {rt['round_trip_id']}", "", f"- Closed: {rt['date']}; report `{rt['report']}`; describes commit `{rt['reported_at_commit'][:12]}`.", f"- State: {state}.", f"- Note: {esc(rt.get('note', ''))}", ""]
+        if rt["recommendations"]:
+            RT += ["| Item | Kind | Type | Decision category | Rests on unreviewed round | Scope |", "| --- | --- | --- | --- | --- | --- |"]
+            RT += [f"| `{r['target']}` | {r['kind']} | {r.get('connection_type') or '—'} | {r['decision_category'] or '—'} | {'YES' if r.get('rests_on_unreviewed_round') else ('no' if 'rests_on_unreviewed_round' in r else 'not recorded')} | {esc(short(r.get('scope', '') or 'not recorded', 160))} |" for r in rt["recommendations"]]
+        else:
+            RT.append("No recommendations were open at this round's close.")
+        RT.append("")
+    files["round-trips.md"] = "\n".join(RT) + "\n"
+
     # ---- front page -------------------------------------------------------------------------------
     st = Counter(x["review_status"] for x in conns)
     ps = Counter(p["status"] for p in shared["proposals"])
@@ -362,7 +382,7 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     resolved = [p for p in shared["proposals"] if p.get("relation_override")]
     I += [f"- **Author decision:** {p['proposal_id']} classified as `{p['relation_override']['to']}`" + (f" (matching {p['relation_override']['matches']})" if p['relation_override'].get('matches') else "") + ". See [contradictions.md](contradictions.md)." for p in sorted(resolved, key=lambda p: p["proposal_id"])]
     I += ["- **Limitation:** results from CL 008N and GT-P009 are closed but unreviewed; links resting on them are capped at `qualified`.", "- **Historical intake:** `HIST` is `" + hsrc.get("status", "absent") + "`; " + str(len(hf)) + " historical findings registered. See [historical-coverage.md](historical-coverage.md).", "- **Not claimed:** no record derives physical gravity, quantum behaviour or physical time.", ""]
-    I += ["## Views", "", "| View | What it shows |", "| --- | --- |", "| [provenance.md](provenance.md) · [provenance.mmd](provenance.mmd) | Sources, pins, artifacts, lineage, local-tree presence |", "| [links.md](links.md) · [links.mmd](links.mmd) | Reviewed cross-programme connections with rationale |", "| [contradictions.md](contradictions.md) · [nulls.md](nulls.md) | Contrasts, qualifications, rejected proposals; programme negative and qualified findings; false-attractor controls |", "| [questions.md](questions.md) | Shared questions and discriminating tests; programme open questions |", "| [candidate-bridges.md](candidate-bridges.md) | Proposals and retrieval diagnostics (not evidence) |", "| [metaphor-coverage.md](metaphor-coverage.md) · [metaphor-overlap.md](metaphor-overlap.md) · [metaphor-gaps.md](metaphor-gaps.md) · [metaphor-links.mmd](metaphor-links.mmd) | Explanations, overlaps, conflicts, gaps, overreach |", "| [chronology.md](chronology.md) | Change over time |", "| [historical-coverage.md](historical-coverage.md) | Historical archives, coverage matrix, source attestation and records blocked on historical sources |", "| [graph.json](graph.json) | Lossless machine-readable export: all nodes, edges (scientific, metaphor, provenance kept separate), shared records, statuses and source pins |", ""]
+    I += ["## Views", "", "| View | What it shows |", "| --- | --- |", "| [provenance.md](provenance.md) · [provenance.mmd](provenance.mmd) | Sources, pins, artifacts, lineage, local-tree presence |", "| [links.md](links.md) · [links.mmd](links.mmd) | Reviewed cross-programme connections with rationale |", "| [contradictions.md](contradictions.md) · [nulls.md](nulls.md) | Contrasts, qualifications, rejected proposals; programme negative and qualified findings; false-attractor controls |", "| [questions.md](questions.md) | Shared questions and discriminating tests; programme open questions |", "| [candidate-bridges.md](candidate-bridges.md) | Proposals and retrieval diagnostics (not evidence) |", "| [metaphor-coverage.md](metaphor-coverage.md) · [metaphor-overlap.md](metaphor-overlap.md) · [metaphor-gaps.md](metaphor-gaps.md) · [metaphor-links.mmd](metaphor-links.mmd) | Explanations, overlaps, conflicts, gaps, overreach |", "| [chronology.md](chronology.md) | Change over time |", "| [round-trips.md](round-trips.md) | Each round's recommendations, what the author's next instruction ratifies, and the policy on what it never covers |", "| [historical-coverage.md](historical-coverage.md) | Historical archives, coverage matrix, source attestation and records blocked on historical sources |", "| [graph.json](graph.json) | Lossless machine-readable export: all nodes, edges (scientific, metaphor, provenance kept separate), shared records, statuses and source pins |", ""]
     I += ["## Themes", ""] + [f"- [{c['label']}](themes/{c['concept_id'].split('::')[1]}.md)" for c in concepts]
     files["index.md"] = "\n".join(I) + "\n"
     return files

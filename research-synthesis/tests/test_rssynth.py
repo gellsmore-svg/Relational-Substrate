@@ -744,6 +744,25 @@ class AuthorDecisions(unittest.TestCase):
 class ImplicitRoundTripAcceptance(unittest.TestCase):
     """The author's rule: human acceptance is implicit in the round trip, at the reported category."""
 
+    def setUp(self):
+        self._displayed = roundtrip.displayed
+
+    def tearDown(self):
+        roundtrip.displayed = self._displayed
+
+    def test_ad0004_grandfathers_and_requires_displayed_scoped_items(self):
+        self.assertEqual(roundtrip.grandfathered(REAL_ROOT), {"RT-0001", "RT-0002"})
+        with sandbox() as root:
+            rtp = root / "proposals/round-trips/RT-9005.json"
+            core.write_json(rtp, {"round_trip_id": "RT-9005", "date": "2026-10-16", "report": "r", "reported_at_commit": "0" * 40, "note": "", "recommendations": [{"target": "X::0001", "kind": "connection", "decision_category": "qualified"}]})
+            self.assertTrue(any("lacks scope/qualification" in p for p in roundtrip.validate(root, ledger.load_shared(root))))
+
+    def test_round_trip_acceptance_is_never_publication_consent(self):
+        m = sources.load_manifest()
+        rat = [d for d in roundtrip.load_decisions(REAL_ROOT) if d["decision_id"] == "AD-0002"]
+        f = {"finding_id": "HIST::X-F01", "privacy": {"disposition": "public_summary_approved", "approved_by": "author", "decision_id": "AD-0002"}}
+        self.assertTrue(any("not consent" in p for p in historical.validate_findings(m, [f], rat)))
+
     def _reopen(self, root, cid):
         rows = core.read_jsonl(root / "ledger/connections.jsonl")
         for x in rows:
@@ -794,6 +813,9 @@ class ImplicitRoundTripAcceptance(unittest.TestCase):
             self._reopen(root, "X::0002")
             self._reopen(root, "X::0006")
             rt = roundtrip.open_round_trip("RT-9002", "2026-10-16", "research-synthesis/README.md", "0" * 40)
+            with self.assertRaises(ValueError):  # AD-0004: a sandbox round trip was never committed, so never displayed
+                roundtrip.ratify("RT-9002", "AD-9003", "2026-10-16", "next prompt")
+            roundtrip.displayed = lambda root, rt_id, targets: []  # simulate a closing commit that displayed every item
             self.assertEqual({r["target"] for r in rt["recommendations"]}, {"X::0002", "X::0006"})
             self.assertIn("RT-9002", roundtrip.open_round_trips(root))
             rep = roundtrip.ratify("RT-9002", "AD-9003", "2026-10-16", "next prompt", objections=["X::0002"])
@@ -860,7 +882,7 @@ class HistoricalAdapter(unittest.TestCase):
         f.update(kw)
         return f
 
-    DEC = [{"decision_id": "AD-T1", "human": True}]
+    DEC = [{"decision_id": "AD-T1", "human": True, "kind": "publication_consent"}]
 
     def test_good_finding_validates_and_resolves_gaps_stay_pending(self):
         m, f = self._manifest(), self._finding()
@@ -905,9 +927,18 @@ class HistoricalAdapter(unittest.TestCase):
         m = self._manifest()
         self.assertTrue(any("needs privacy approval" in p for p in historical.validate_findings(m, [self._finding(privacy={"disposition": "unreviewed"})], self.DEC)))
         agent = self._finding(privacy={"disposition": "public_summary_approved", "approved_by": "agent: x", "decision_id": "AD-T1"})
-        self.assertTrue(any("logged human decision" in p for p in historical.validate_findings(m, [agent], self.DEC)))
+        self.assertTrue(any("publication_consent decision" in p for p in historical.validate_findings(m, [agent], self.DEC)))
         quote = self._finding(summary='"' + "y" * 300 + '"')
         self.assertTrue(any("quotes more than" in p for p in historical.validate_findings(m, [quote], self.DEC)))
+
+    def test_consent_limits_and_exclusions_are_enforced(self):
+        m = self._manifest()
+        dec = [{"decision_id": "AD-T1", "human": True, "kind": "publication_consent", "limits": {"claim": 10}, "excluded_members": ["rs_work_round11/findings.md"]}]
+        probs = historical.validate_findings(m, [self._finding()], dec)
+        self.assertTrue(any("10-character limit" in p for p in probs))
+        self.assertTrue(any("excluded from publication" in p for p in probs))
+        awaiting = self._finding(privacy={"disposition": "awaiting_publication_approval"})
+        self.assertTrue(any("needs privacy approval" in p for p in historical.validate_findings(m, [awaiting], self.DEC)))
 
     def test_duplicate_ids_and_source_conflicts(self):
         m = self._manifest()

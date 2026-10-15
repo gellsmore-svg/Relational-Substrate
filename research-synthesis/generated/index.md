@@ -44,6 +44,7 @@ A navigable, generated view across research programmes. **It does not merge or r
 | [candidate-bridges.md](candidate-bridges.md) | Proposals and retrieval diagnostics (not evidence) |
 | [metaphor-coverage.md](metaphor-coverage.md) · [metaphor-overlap.md](metaphor-overlap.md) · [metaphor-gaps.md](metaphor-gaps.md) · [metaphor-links.mmd](metaphor-links.mmd) | Explanations, overlaps, conflicts, gaps, overreach |
 | [chronology.md](chronology.md) | Change over time |
+| [round-trips.md](round-trips.md) | Each round's recommendations, what the author's next instruction ratifies, and the policy on what it never covers |
 | [historical-coverage.md](historical-coverage.md) | Historical archives, coverage matrix, source attestation and records blocked on historical sources |
 | [graph.json](graph.json) | Lossless machine-readable export: all nodes, edges (scientific, metaphor, provenance kept separate), shared records, statuses and source pins |
 
