@@ -132,3 +132,17 @@ The broader utility question is qualified, not closed.
 
 Separately frozen M1 resolves STAR/TRIANGLE conjugacy. Stop after M1.
 No H3 depth question is newly motivated. Books remain untouched.
+
+## Generation 8N: Access After Occupancy Matching
+
+- Laboratory-specific: Q-H2-CONTROLLED-PASSAGE is partially answered by the complete frozen atlas: every non-neutral role changes next-return routing and sibling MFPT against adjacent-matched Kpi. Broader controllers, priors, grades and tasks remain open.
+- General mathematics: which path factorisations force equality of selected passage functionals despite unequal full path laws? The 8N finite atlas has no non-neutral total-routing-silent case, but has route- and committor-specific nulls.
+- Laboratory-specific: explain exactly the UP/DOWN route-null pattern, including why FORM R04/R11 K3 UP is silent and complement transports this to DISSOLVE DOWN. Do not replace this with scalar correlation.
+- Compiler boundary: the result excludes simultaneous adjacent-law and passage matching only on exactly (P,h1). Occupancy-only H1 fits, hidden-state recodings and altered clocks are different open classes.
+- Task-valued structure: access changes do not yet define functional utility. A later task needs an independent value/resource/failure criterion, not a post hoc preferred topology.
+- Scale: N5 is justified only to challenge a named N4 property such as unique opposite-pair transport; no scale experiment is opened.
+- Constraint semantics: Q-L-COMPILER-SEMANTICS remains unresolved; every 8N programme is fixed, L=0.
+- Ontology/coherence: neither finite historical access nor a shorter MFPT proves agency, purpose, repair, adaptation, physical memory or design.
+
+No M1 or H3 continuation is opened. Consolidation and route-null explanation
+take precedence over expanding a successful palette.

@@ -93,3 +93,18 @@ Earlier maturity rows remain historical. Neither book is edited.
 | Persistent H2 structural atlas | PROVISIONAL | Laboratory report | Grade-specific; pending external review |
 | Numerical information and tiny residues | PROVISIONAL | Supporting tables | Model-specific; no master memory score |
 | L-positive semantics or physical history | DO_NOT_INTEGRATE_YET | None | Fixed programmes, no physical inference |
+
+## Generation 8N: Occupancy-Matched Access
+
+Earlier rows are historical. Neither book is edited.
+
+| Content | Maturity | Proposed location | Scope |
+| --- | --- | --- | --- |
+| Reviewed H2 necessity and persistent structure | READY_WITH_SCOPE | Process examples | Reviewed 8L/8M, strict semantic compiler and finite grammar |
+| Matched-H1 process residual | READY_WITH_SCOPE | Equivalence appendix | Positive stationary adjacent (P,h1) law, not arbitrary H1 exclusion |
+| Matched stationary source construction | READY_WITH_SCOPE | Passage methods | Exact source pushforward; same support and pair clock |
+| Return invariant weights and Kac control | READY_WITH_SCOPE | Technical appendix | Hidden-state return chain; raw class-return process need not be Markov |
+| Two-event return equality and transported passage | READY_WITH_SCOPE | Equivalence examples | Declared stationary laws and bijective kernel conjugacy |
+| Complete 8N controlled-access atlas | PROVISIONAL | Laboratory supporting report | Exact finite results, external review pending; not all-m or functional utility |
+| Purpose, repair or adaptation | DO_NOT_INTEGRATE | None | No independent task value was defined |
+| L-positive dynamic constraints | DO_NOT_INTEGRATE_YET | None | No eta or rule-state dynamics implemented |

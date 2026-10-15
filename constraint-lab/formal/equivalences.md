@@ -98,3 +98,13 @@ STAR/TRIANGLE instead have opposite-pair kernel conjugacy, not same-labelled
 kernel equality. Transporting the class alphabet exchanges star and triangle
 while leaving count fixed. Equal scalar information under that bijection is
 weaker than identical raw class laws.
+
+## Generation 8N: Passage Equality
+
+Equality of selected return, MFPT or committor functionals is weaker than
+full path equality. Different path laws can give equal selected functionals;
+same occupancy and stationary adjacency do not force passage equality.
+Kernel conjugacy transports stopping sets, starts and passage alphabets, not
+necessarily identical raw labelled outputs. A one-return class kernel under
+stationary conditional starts is not automatically a strong Markov quotient.
+See [history-controlled passage](history-controlled-passage.md).

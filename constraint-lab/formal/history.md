@@ -382,3 +382,11 @@ remain fixed L=0 programmes. The invariant basis has 12 roles including the
 ternary STAR/TRIANGLE split. Strict H2 necessity, persistent visible structure
 and specified matched-H1 discrepancies are different claims. Neither statistical
 dependence nor stationary occupancy alone proves necessary historical depth.
+
+## Generation 8N: Matched Structural Access
+
+[Controlled passage](history-controlled-passage.md) compares H2 with the unique
+first-order kernel on exactly (P,h1) matching its full stationary adjacent law.
+Stationary source-class conditionals match on (P,h1). Return routing, excursion
+length, cross-class access time and competing-target probability are distinct
+functionals; none assigns purpose or value to a topology.

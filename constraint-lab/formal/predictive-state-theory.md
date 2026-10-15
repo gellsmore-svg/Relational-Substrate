@@ -280,3 +280,12 @@ Adjacent masks recover h1, so material triples also match. Positive support
 and strict h2 row dependence guarantee a labelled four-mask difference.
 Coarse class/count separation is separately observed, not inferred by a false
 converse to data processing. See the [matched-law proof](history-role-depth-two.md#comparators).
+
+## Generation 8N: Stopping-Time Functionals
+
+[Passage laws](history-controlled-passage.md) need a valid hidden Markov state,
+not a presumed graph-class Markov chain. Strong S4 quotients preserve the
+class-defined absorbing equations exactly. A stationary-source one-return
+class matrix may have invariant class weights without being an autonomous
+quotient of the successive-return process. Process distinction and distinction
+by a selected stopping-time functional are separate equivalence requirements.

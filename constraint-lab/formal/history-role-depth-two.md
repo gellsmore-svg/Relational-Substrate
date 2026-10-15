@@ -220,3 +220,11 @@ The separately frozen finite check covers all six family/grade pairs, every
 labelled-word orbits through L6 per pair. It independently reconstructs
 144 immutable M0 word-distribution hashes. No new stationary solve or
 controller was introduced. See the M1 plan and exact permutation receipt.
+
+## Generation 8N: Reuse Without New Controllers
+
+The 73 immutable M0 payloads, source hashes and symmetry data are inputs to
+[controlled passage](history-controlled-passage.md). No 8M cell is altered.
+Kpi is the relevant adjacent-matched comparator, not KU. All roles and both
+grades receive the same complete sibling-shape task family, irrespective of
+their stationary structural category or effect magnitude.

@@ -288,3 +288,10 @@ consequences. ANY material silence generalises 8L's SECOND-RECENT null to
 arbitrary positive history-only pair laws. Direction coupling can change density
 and shape; occupancy alone is not a depth proof. The reviewed 8L capability and
 validation-amendment history remain unchanged.
+
+## Generation 8N: Access Is A Separate Question
+
+The depth boundary is not retested. [Passage](history-controlled-passage.md)
+uses the frozen 8M roles and occupancy-matched stationary H1 Markovisation.
+It tests whether a known higher-order residual is consumed by a specified
+access functional, not whether a longer register is intrinsically useful.

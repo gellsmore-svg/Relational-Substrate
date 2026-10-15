@@ -256,3 +256,12 @@ answer different questions, neither defeating unrestricted augmentation.
 The STAR/TRIANGLE conjugacy uses a non-vertex pair-coordinate permutation;
 it is not an ontology-preserving identification of labelled relations.
 See [ordered depth-two roles](history-role-depth-two.md).
+
+## Generation 8N: Adjacent-Matched Passage Exclusion
+
+Given positive pi_s and full stationary adjacent J(s,s'), any first-order
+kernel on exactly s=(P,h1) matching both is uniquely J/pi_s=Kpi. A passage
+residual therefore excludes matching both observables throughout that narrow
+class. It does not exclude occupancy-only H1 fits, hidden recodings, larger
+alphabets, altered clocks or unrestricted augmentation. See
+[the precise argument](history-controlled-passage.md#matched-h1-exclusion).

@@ -62,3 +62,10 @@ systems plus one neutral baseline; separately frozen M1 checks opposite-pair
 conjugacy. Canonical continuation:
 research/constraint-lab-v0.8m-h2-structural-consequence.
 Alternate 8I/8J remain preserved and unmerged.
+
+Generation 8N continues exactly from reviewed 8M at
+9b2f857687be2ca6867d698fa9eda51db2f788a5. Its
+[controlled-passage formalism](history-controlled-passage.md) fixes matched
+stationary sources and distinguishes routing, length, MFPT and committor.
+The canonical continuation is research/constraint-lab-v0.8n-h2-controlled-passage.
+The generation suffix does not change N=4. No alternate branch is merged.
