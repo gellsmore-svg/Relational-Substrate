@@ -1,0 +1,15 @@
+{
+  "round_id": "M1-OPPOSITE-PAIR",
+  "frozen_analysis_plan_commit": "ef31659a6313350f849751efe166f9438fa10b88",
+  "canonical_plan_hash": "4220d68913b4d10a402d18abcf0fce650074313a44c33c58c2161b1da3768bea",
+  "plan_file_sha256": "2a8dd5cc6051740f2ef8c69582ed85a0e602db2023aca00f7532bcd0c22914e8",
+  "pushed_before_probe_execution": true,
+  "remote_containing_ref": "origin/research/constraint-lab-v0.8m-h2-structural-consequence",
+  "prior_exposure": "Complete M0 and explanatory conjugacy conjecture; not blind",
+  "pre_freeze_M1_probe_executions": 0,
+  "new_controllers": 0,
+  "new_stationary_solves": 0,
+  "new_grades": 0,
+  "scientific_word_depth_expansion": false,
+  "basis": "Ten candidates compared separately after full census; selected for explanatory compression, not effect size"
+}
