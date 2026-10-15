@@ -175,3 +175,7 @@ So "what is likely" and "what lasts" are separate questions. A comparator that m
 
 **Status if adopted:** a methodological principle refining OP-19. It adds no primitive, no history axis and changes no rule. GT-P010 proposes no other ontology change.
 **Would count against:** a family whose persistence ranking is invariant under every declared projection comparator (none observed).
+
+## GT-P011 note
+
+No new ontology proposal. E5C refines OP-20's practice: persistence claims should separate *reaching* a renewed state from *surviving* it, and should condition on the first-hit state rather than a stationary sample. No primitive, history axis or rule change.

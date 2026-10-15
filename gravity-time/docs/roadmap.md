@@ -208,3 +208,11 @@ The sections above are unchanged.
   - F_STAR complete renewal is structurally impossible at N <= 6; size-1 triangle renewal equals a departure.
 - **Recommended next (not authorised, not run):** a durable-renewal test on the rows above NK (`reports/gt-e5b-reflection.md` §8); alternative: no further round and consolidation.
 - **Hub:** a separate, reviewed milestone cycle may take in this close (`docs/gt-p010-shared-synthesis-handoff.md`). No E5C.
+
+## E5C status (GT-P011)
+
+The sections above are unchanged.
+- **E5C executed once** under frozen plan `469ee28`, results `5080199`: 12 laws, 24 analyses (F_2PATH; F_TRI by entry size), N0/ND/NK, survival over h = 0–8 anchor-local events; all frozen checks hold.
+- **Findings:** renewal is transient everywhere; CSPH triangle renewal is flicker-assisted; PATHH triangle survives better than NK; PATHF's advantage fades after one anchor event; PCOMP size≥2 triangles show a within-class durability effect; F_2PATH at N=5 cannot survive renewal (T14).
+- **Recommended next (not run):** an anchor-local kinetic comparator for PATHH/PCOMP (GT-Q25), or a principled pause; an unlabelled-identity feasibility design later.
+- **Hub:** a staged hub milestone for GT-P010 and GT-P011 on a separate hub branch; pin adoption awaits a named human reviewer. No E5D.

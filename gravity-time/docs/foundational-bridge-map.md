@@ -397,6 +397,40 @@ graph LR
 
 ---
 
+## 13. Revision after E5C (GT-P011; sections 1–12 unchanged)
+
+| Entry | Before (section 12) | After E5C | State | Evidence |
+| --- | --- | --- | --- | --- |
+| P6 Identity through change | Defined (observer), partially observed; durability untested | **Durability measured:** renewed organisations are transient in every law (C_4 ≲ 0.08); CSPH triangle renewal is flicker-assisted; PATHH triangle survival exceeds NK (D1 weak or local kinetics); PATHF's advantage fades after one anchor event; F_2PATH at N=5 cannot survive renewal (T14) | observed; qualified | GT-F91–F97 |
+| A-node: emergent (metastable) reference | Residual persistence beyond NK for some families | No renewed organisation persists beyond a few anchor events; a self-maintaining reference is not produced at N ≤ 6 | observed (negative) | GT-F91 |
+| P7 Displacement, interaction, acceleration | Undefined | Unchanged | undefined | — |
+| Gravity-like attraction | Blocked | Unchanged | blocked | — |
+
+**Gap register: changed rows**
+
+| Prerequisite | Capability now | Next information-bearing question |
+| --- | --- | --- |
+| Identity through change | First-renewal law, durability over local events, return/exit causes, T12–T15 | Is PATHH's durability local kinetics or organisation? (GT-Q25) |
+| Mobile/unlabelled identity | Not defined | Feasibility of an anchor-free persistence notion at N ≤ 6 (a definitions question first) |
+
+```mermaid
+graph LR
+  T14[Post-renewal feasibility T14]:::proved --> DUR[Durability measured]:::observed
+  DUR --> TRANS[Renewal transient in every law]:::observed
+  DUR --> FLK[CSPH: flicker-assisted]:::observed
+  DUR --> PH[PATHH triangle: durable beyond NK]:::observed
+  PH -.->|local kinetics?| LK[Anchor-local comparator]:::undefined
+  TRANS -.-> MET[Self-maintaining reference]:::undefined
+  MET -.-> MOB[Mobile identity]:::undefined --> DISP[Displacement]:::undefined
+  classDef proved fill:#d8f0d8,stroke:#2a7a2a
+  classDef observed fill:#e6eefc,stroke:#2a4a8a
+  classDef undefined fill:#eeeeee,stroke:#777,stroke-dasharray: 4 3
+```
+
+**Narrative.** Bottom-up: replacement happens and can be measured, but what is renewed does not last. Methodological: separating reaching from surviving renewal, and conditioning on the first-hit state, changed the CSPH reading entirely. Top-down: the identity rung is now measured and mostly negative; mobile identity and everything above remain undefined.
+
+---
+
 ## Revision history
 
 - **Baseline:** sections 1–7 at the GT-P006 pre-freeze commit (`c4ab745`, E3A code commit).
@@ -405,3 +439,4 @@ graph LR
 - **Revision 3 (GT-P008 consolidation, no experiment):** section 10.
 - **Revision 4 (after E5A; GT-P009):** section 11.
 - **Revision 5 (after E5B; GT-P010):** section 12.
+- **Revision 6 (after E5C; GT-P011):** section 13.

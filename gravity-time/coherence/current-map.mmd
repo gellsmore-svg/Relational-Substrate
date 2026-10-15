@@ -62,6 +62,11 @@ flowchart TD
     GT_F85_CLOSEW_EFFECT_MOSTLY_PREVALENCE_AND_TRAFFIC["GT-F85-CLOSEW-EFFECT-MOSTLY-PREVALENCE-AND-TRAFFIC: CLOSEW's E5A advantage over ND (x1.1-x2.8) shrinks to x1.02-x1.07 against NK at N=5 and..."]
     GT_F86_PATHH_CSPH_NK_SURVIVORS_QUALIFIED["GT-F86-PATHH-CSPH-NK-SURVIVORS-QUALIFIED: PATHH F_TRI and F_STAR exceed NK at both sizes in all three counts, F_STAR with less im..."]
     GT_F89_COMPARATOR_MATTERS_MORE_THAN_CLOCK["GT-F89-COMPARATOR-MATTERS-MORE-THAN-CLOCK: 28 of 90 lifetime classifications (CT, JT, anchor-local x 30 rows) change between ND an..."]
+    GT_F91_RENEWAL_IS_TRANSIENT["GT-F91-RENEWAL-IS-TRANSIENT: In every law, conditional survival after first complete renewal decays within a few anc..."]
+    GT_F92_CSPH_TRIANGLE_RENEWAL_IS_FLICKER_ASSISTED["GT-F92-CSPH-TRIANGLE-RENEWAL-IS-FLICKER-ASSISTED: CSPH F_TRI reaches renewal x2.2-2.6 more often than NK and U_h is x1.9-3.0, but conditi..."]
+    GT_F93_PATHH_TRIANGLE_DURABLE_BEYOND_NK["GT-F93-PATHH-TRIANGLE-DURABLE-BEYOND-NK: PATHH F_TRI survives after renewal better than NK at both sizes and in both size-1 and ..."]
+    GT_F94_PATHF_RENEWAL_ADVANTAGE_SHORT_LIVED["GT-F94-PATHF-RENEWAL-ADVANTAGE-SHORT-LIVED: PATHF F_2PATH at N=6 renews more often than NK (R0 x1.32; U_h x1.31-1.67) and survives ..."]
+    GT_F95_PCOMP_WITHIN_CLASS_DURABILITY["GT-F95-PCOMP-WITHIN-CLASS-DURABILITY: PCOMP F_TRI entries with two or more completers survive four anchor events better than ..."]
   end
   subgraph INFERENCE [Inferences]
     GT_F09_POTENTIAL_AS_MECHANISM["GT-F09-POTENTIAL-AS-MECHANISM: In the existing grammar a basin around a held relational structure arises from minimal ..."]
@@ -83,6 +88,7 @@ flowchart TD
     GT_F75_INTACT_LIFETIME_IS_DISSOLUTION_KINETICS["GT-F75-INTACT-LIFETIME-IS-DISSOLUTION-KINETICS: Post hoc theorem: under a formation-only family (PATHF, CLOSEW) every present edge diss..."]
     GT_F79_ND_MATCHES_EDGE_LIFETIME["GT-F79-ND-MATCHES-EDGE-LIFETIME: Post hoc identity: by exchangeability E_pi[q] = 2M J_edge, so at matched density the ND..."]
     GT_F87_RENEWAL_FEASIBILITY_AND_SIZE_ONE_EQUIVALENCE["GT-F87-RENEWAL-FEASIBILITY-AND-SIZE-ONE-EQUIVALENCE: T10: complete renewal from an entry set of size s needs K-s >= threshold (K candidates)..."]
+    GT_F96_POST_RENEWAL_FEASIBILITY_T14["GT-F96-POST-RENEWAL-FEASIBILITY-T14: T14: for a vertex predicate (threshold k, K candidates, entry size s), survival after r..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     GT_F03_DRIFT_CRITERION_CONFOUNDED["GT-F03-DRIFT-CRITERION-CONFOUNDED: The frozen G0 inward-drift criterion does not separate attraction from density: DENS pa..."]
@@ -94,6 +100,7 @@ flowchart TD
     GT_F82_E5A_COMPARATOR_AND_NUMERICAL_QUALIFICATIONS["GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS: E5A executed 12/12 items, 32/34 frozen checks hold; two CT lag-propagator checks failed..."]
     GT_F88_NK_LAYER_TRAFFIC_COMPARATOR["GT-F88-NK-LAYER-TRAFFIC-COMPARATOR: T11: NK (b_k = J[k,k+1]/((M-k)p_k), d_{k+1} = J[k,k+1]/((k+1)p_{k+1})) is label-covaria..."]
     GT_F90_E5A_INTACT_COUNT_IS_2_OF_30["GT-F90-E5A-INTACT-COUNT-IS-2-OF-30: Append-only qualification of GT-F74: from the unrounded E5A tables, intact motifs outli..."]
+    GT_F97_FIRST_HIT_SAMPLING_MATTERS["GT-F97-FIRST-HIT-SAMPLING-MATTERS: The first-renewal state law differs from the stationary law restricted to the renewed s..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     GT_F11_RS_POTENTIAL_AND_CLOCK["GT-F11-RS-POTENTIAL-AND-CLOCK: Inside this model, relational primacy yields basins as potentials without a primitive c..."]
@@ -124,6 +131,7 @@ flowchart TD
     GT_Q22_IDENTITY_THROUGH_REPLACEMENT["GT-Q22-IDENTITY-THROUGH-REPLACEMENT: Does any anchored flexible organisation ever complete replacement of all its entry part..."]
     GT_Q23_DURABLE_RENEWAL["GT-Q23-DURABLE-RENEWAL: Do the effects that survive NK (PATHF centres; PATHH F_TRI/F_STAR; CSPH F_TRI) reflect ..."]
     GT_Q24_WITHIN_LAYER_ARRANGEMENT_CONTROL["GT-Q24-WITHIN-LAYER-ARRANGEMENT-CONTROL: Which part of the residual PATHF/PATHH effects is anchor-neighbourhood kinetics that NK..."]
+    GT_Q25_ANCHOR_LOCAL_KINETIC_COMPARATOR["GT-Q25-ANCHOR-LOCAL-KINETIC-COMPARATOR: Are the residual durable effects (PATHH F_TRI; PCOMP F_TRI size>=2) anchor-local kineti..."]
   end
   GT_F02_INCIDENCE_SELECTIVITY -->|contrasts_with| GT_F01_DENS_NULL
   GT_F03_DRIFT_CRITERION_CONFOUNDED -->|qualifies| GT_F02_INCIDENCE_SELECTIVITY
@@ -280,3 +288,14 @@ flowchart TD
   GT_Q23_DURABLE_RENEWAL -->|raised_by| GT_F87_RENEWAL_FEASIBILITY_AND_SIZE_ONE_EQUIVALENCE
   GT_Q24_WITHIN_LAYER_ARRANGEMENT_CONTROL -->|raised_by| GT_F84_PATHF_CENTRES_SURVIVE_NK_AND_LOCAL_COUNT
   GT_F86_PATHH_CSPH_NK_SURVIVORS_QUALIFIED -->|raises_question| GT_Q23_DURABLE_RENEWAL
+  GT_Q23_DURABLE_RENEWAL -->|partially_answered_by| GT_F91_RENEWAL_IS_TRANSIENT
+  GT_Q23_DURABLE_RENEWAL -->|partially_answered_by| GT_F92_CSPH_TRIANGLE_RENEWAL_IS_FLICKER_ASSISTED
+  GT_Q23_DURABLE_RENEWAL -->|partially_answered_by| GT_F93_PATHH_TRIANGLE_DURABLE_BEYOND_NK
+  GT_F92_CSPH_TRIANGLE_RENEWAL_IS_FLICKER_ASSISTED -->|qualifies| GT_F86_PATHH_CSPH_NK_SURVIVORS_QUALIFIED
+  GT_F93_PATHH_TRIANGLE_DURABLE_BEYOND_NK -->|supports| GT_F86_PATHH_CSPH_NK_SURVIVORS_QUALIFIED
+  GT_F94_PATHF_RENEWAL_ADVANTAGE_SHORT_LIVED -->|qualifies| GT_F84_PATHF_CENTRES_SURVIVE_NK_AND_LOCAL_COUNT
+  GT_F96_POST_RENEWAL_FEASIBILITY_T14 -->|refines| GT_F87_RENEWAL_FEASIBILITY_AND_SIZE_ONE_EQUIVALENCE
+  GT_F97_FIRST_HIT_SAMPLING_MATTERS -->|enables| GT_F91_RENEWAL_IS_TRANSIENT
+  GT_Q24_WITHIN_LAYER_ARRANGEMENT_CONTROL -->|partially_answered_by| GT_F95_PCOMP_WITHIN_CLASS_DURABILITY
+  GT_Q25_ANCHOR_LOCAL_KINETIC_COMPARATOR -->|raised_by| GT_F93_PATHH_TRIANGLE_DURABLE_BEYOND_NK
+  GT_Q25_ANCHOR_LOCAL_KINETIC_COMPARATOR -->|raised_by| GT_F95_PCOMP_WITHIN_CLASS_DURABILITY
