@@ -205,3 +205,7 @@ new left-occupation equations by Dixon and independently fraction-free FLINT.
 This establishes finite stochastic-process distinctions. It establishes neither
 physical memory/time nor purpose, benefit, gravity or a common CL/GT mechanism.
 The hub is planning context only; its records are not evidence for these statements.
+
+## 8P Additive Follow-Up
+
+The finite 8O classifications above remain historical statements. [All-positive-m proofs](route-null-weight-identities.md) now explain the locations of the 80 disjoint-factor and 24 fibre nulls, alongside the existing 96 target-insensitivity benchmark. No new actual scientific grade was evaluated. [Task-relative sufficiency](task-relative-stopping-sufficiency.md) adds a finite all-length criterion, while [timing scope](insertionwise-timing-cancellation.md) preserves the unresolved all-m boundary for the twenty complete timing zeros.

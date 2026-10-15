@@ -125,6 +125,7 @@ flowchart TD
     F8O_FOUR_EVENT_DEFECT["F8O-FOUR-EVENT-DEFECT: The finite insertion identity reproduces all published four-event residuals. Entrance b..."]
     F8O_TIMING_AGGREGATION_CANCELLATION["F8O-TIMING-AGGREGATION-CANCELLATION: All twenty known non-neutral four-event timing nulls are insertionwise target-aggregati..."]
     F8O_FACTOR_TRANSPORT["F8O-FACTOR-TRANSPORT: All 114 frozen complement/opposite-pair factor transports pass exactly, including kerne..."]
+    F8P_HORIZON_COUNTEREXAMPLES["F8P-HORIZON-COUNTEREXAMPLES: Synthetic stationary rational chains separate eventual equality, all-length terminal eq..."]
   end
   subgraph INFERENCE [Inferences]
     F008_COMPOSITION_REPRESENTATION["F008-COMPOSITION-REPRESENTATION: The magnitude of a two-rule interaction residual depends on the representation and the ..."]
@@ -147,6 +148,10 @@ flowchart TD
     F8L_H1_NONCOMPILABILITY["F8L-H1-NONCOMPILABILITY: No fixed first-order kernel on exactly (X,last-pair h1) can reproduce all conditioned S..."]
     F8N_ACCESS_BEYOND_OCCUPANCY["F8N-ACCESS-BEYOND-OCCUPANCY: Within the declared finite representation, stationary-adjacent averaging can discard tr..."]
     F8N_CONTROLLED_PASSAGE_QUALIFICATION["F8N-CONTROLLED-PASSAGE-QUALIFICATION: The complete bounded grammar answers Q-H2-CONTROLLED-PASSAGE within frozen priors, task..."]
+    F8P_ALL_LENGTH_CRITERION["F8P-ALL-LENGTH-CRITERION: For fixed source/readout families, all killed terminal-length observations agree iff th..."]
+    F8P_DISJOINT_ALL_WEIGHTS["F8P-DISJOINT-ALL-WEIGHTS: The locations of all 80 published disjoint-factor route nulls have all-positive-m expla..."]
+    F8P_FIBRE_ALL_WEIGHTS["F8P-FIBRE-ALL-WEIGHTS: The 24 published R04/R11 fibre-cancellation locations are all-positive-m route identiti..."]
+    F8P_TIMING_SCOPE["F8P-TIMING-SCOPE: A restricted recent-selector sparse-side four-event timing insertion identity holds for..."]
   end
   subgraph METHODOLOGICAL [Methodological corrections]
     F011_QUOTIENT_INVALID["F011-QUOTIENT-INVALID: Graph-only hidden-context quotienting is formally invalid for labelled rules. The wrong..."]
@@ -214,6 +219,7 @@ flowchart TD
     F8M_LOCAL_RS_READING["F8M-LOCAL-RS-READING: Within this finite model, ordered historical relational role can remain structurally co..."]
     F8N_RS_ACCESS_INTERPRETATION["F8N-RS-ACCESS-INTERPRETATION: Within this model, deeper relational history can alter access between structures withou..."]
     F8O_RS_SCOPED_READOUT["F8O-RS-SCOPED-READOUT: Within this finite model, a declared stopping task consumes only the process difference..."]
+    F8P_RS_TASK_EQUIVALENCE["F8P-RS-TASK-EQUIVALENCE: Within the finite formalism, equivalence must name source, route, readout and horizon; ..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     Q_PATH_SHAPE["Q-PATH-SHAPE: Why does path topology convert early triadic context into shape information at the firs..."]
@@ -592,3 +598,15 @@ flowchart TD
   F8O_STOPPING_MARKOVIZATION_DEFECT -->|depends_on| F8O_STATIONARY_RESET_PROJECTION
   F8O_ROUTE_NULL_FACTORIZATION -->|depends_on| F8O_STOPPING_MARKOVIZATION_DEFECT
   F8O_FOUR_EVENT_DEFECT -->|depends_on| F8O_ENTRANCE_BALANCE
+  F8P_ALL_LENGTH_CRITERION -->|formalises| F8O_TASK_SPECIFIC_PREDICTIVE_EQUALITY
+  F8P_ALL_LENGTH_CRITERION -->|depends_on| F8O_STATIONARY_RESET_PROJECTION
+  F8P_DISJOINT_ALL_WEIGHTS -->|explains| F8O_DISJOINT_FACTOR_SUPPORT
+  F8P_FIBRE_ALL_WEIGHTS -->|explains| F8O_FIBREWISE_CANCELLATION
+  Q_H2_ROLE_FACTORIZATION -->|partially_answered_by| F8P_DISJOINT_ALL_WEIGHTS
+  Q_H2_ROLE_FACTORIZATION -->|partially_answered_by| F8P_FIBRE_ALL_WEIGHTS
+  F8P_TIMING_SCOPE -->|qualifies| F8O_TIMING_AGGREGATION_CANCELLATION
+  F8P_HORIZON_COUNTEREXAMPLES -->|supports| F8O_TASK_PROJECTION_SCOPE
+  F8P_TIMING_SCOPE -->|contrasts_with| F8P_DISJOINT_ALL_WEIGHTS
+  F8P_RS_TASK_EQUIVALENCE -->|derived_from| F8P_ALL_LENGTH_CRITERION
+  F8P_HORIZON_COUNTEREXAMPLES -->|bounds| F8P_ALL_LENGTH_CRITERION
+  F8P_FIBRE_ALL_WEIGHTS -->|depends_on| F8O_ENTRANCE_BALANCE

@@ -273,3 +273,7 @@ explains what the unique adjacent-matched strict H1 comparator resets. A
 route-specific null does not broaden that compiler to arbitrary hidden-state
 recodings or establish whole-process compilation. No local clock change,
 new semantic axis, or GT comparator is tested.
+
+## 8P Task-Relative Boundary
+
+The [all-length stopping criterion](task-relative-stopping-sufficiency.md) is not a new H1 compiler. It preserves only the named terminal task family and does not supersede strict semantic H1 non-compilability. Arbitrary recoding, changed clocks and L-positive state remain different classes.

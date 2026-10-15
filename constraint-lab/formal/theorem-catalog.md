@@ -1953,3 +1953,54 @@ Source generations: 008O
 Boundary: No universal shared CL/GT mechanism or implicit change of compiler class.
 Notes: Principle is not a new algebraic theorem or evidence drawn from the hub.
 
+## CL-T96: Source-readout all-length stopping criterion
+
+**ALGEBRAIC_THEOREM**
+
+For fixed source/readout families, all killed terminal-length observations agree iff the reachable difference space annihilates the readout; an exact finite closure, or powers 0 through 2b-1, decides this.
+
+Assumptions: Finite typed Q,P,M,R; idempotent reset P; transience needed only for eventual summation; CL application uses stationary class-conditioned joint route source, not arbitrary hidden initialization.
+Scope: General finite killed-chain algebra for the horizon theorem; CL weight identities only for fixed N4 one-role positive scalar m, pair-event clock, L=0, stationary graph-class sources and graph-class readouts. No new actual parameter cell; finite timing data remain at 1/4 and 4.
+
+Proof: [task-relative-stopping-sufficiency.md](../../constraint-lab/formal/task-relative-stopping-sufficiency.md#criterion). Block realization and reachable/observable invariant-subspace proof; Cayley-Hamilton gives a sufficient generic 2b bound, not claimed sharp.
+Evidence: [task-relative-stopping-sufficiency.md](../../constraint-lab/formal/task-relative-stopping-sufficiency.md), [route-null-weight-identities.md](../../constraint-lab/formal/route-null-weight-identities.md), [insertionwise-timing-cancellation.md](../../constraint-lab/formal/insertionwise-timing-cancellation.md), [generation-008p-proof-checks.json](../../constraint-lab/reports/tables/generation-008p-proof-checks.json), [test_v08p.py](../../constraint-lab/tests/test_v08p.py)
+Coherence: `F8P-ALL-LENGTH-CRITERION`
+Dependencies: CL-T92, CL-T93
+Source generations: 008P
+Boundary: No inference of strong lumpability, all projected paths, additional null exclusion, arbitrary independent weights, GT identity or physical memory. Generic formal criterion and CL-specialized weight identity are separate statements.
+Notes: Classical finite linear algebra specialized as a new CL interface, not a novelty claim in general mathematics.
+
+## CL-T97: All-positive-weight disjoint route mechanisms
+
+**ALGEBRAIC_THEOREM**
+
+The locations of all 80 published disjoint-factor route nulls have all-positive-m explanations: 48 gate-regeneration and 32 recent-selector exit-ratio instances at the published grades.
+
+Assumptions: Positive finite one-role scalar m; unit unselected weights; specified R00/01/02/03/09 ANY/FORM sparse routes and complement transports; CL application uses stationary class-conditioned joint route source, not arbitrary hidden initialization.
+Scope: General finite killed-chain algebra for the horizon theorem; CL weight identities only for fixed N4 one-role positive scalar m, pair-event clock, L=0, stationary graph-class sources and graph-class readouts. No new actual parameter cell; finite timing data remain at 1/4 and 4.
+
+Proof: [route-null-weight-identities.md](../../constraint-lab/formal/route-null-weight-identities.md#disjoint). Entrance-only centering, equal-history gate regeneration and stationary block balance; recent-selector constant exit proportions.
+Evidence: [task-relative-stopping-sufficiency.md](../../constraint-lab/formal/task-relative-stopping-sufficiency.md), [route-null-weight-identities.md](../../constraint-lab/formal/route-null-weight-identities.md), [insertionwise-timing-cancellation.md](../../constraint-lab/formal/insertionwise-timing-cancellation.md), [generation-008p-proof-checks.json](../../constraint-lab/reports/tables/generation-008p-proof-checks.json), [test_v08p.py](../../constraint-lab/tests/test_v08p.py)
+Coherence: `F8P-DISJOINT-ALL-WEIGHTS`
+Dependencies: CL-T94, CL-T95
+Source generations: 008P
+Boundary: No inference of strong lumpability, all projected paths, additional null exclusion, arbitrary independent weights, GT identity or physical memory. Generic formal criterion and CL-specialized weight identity are separate statements.
+Notes: Symbolic proof, full-state parameter-free selector checks and old-grade exact regressions; not extrapolation from two grades.
+
+## CL-T98: All-positive-weight two-level fibre cancellation
+
+**ALGEBRAIC_THEOREM**
+
+The 24 published R04/R11 fibre-cancellation locations are all-positive-m route identities under stationary class sources and graph-class targets, by two-level readout and active-coordinate flux centering.
+
+Assumptions: R04/R11 FORM k3 UP and complementary DISSOLVE k3 DOWN; positive finite scalar m; stationary source and graph-class readout; CL application uses stationary class-conditioned joint route source, not arbitrary hidden initialization.
+Scope: General finite killed-chain algebra for the horizon theorem; CL weight identities only for fixed N4 one-role positive scalar m, pair-event clock, L=0, stationary graph-class sources and graph-class readouts. No new actual parameter cell; finite timing data remain at 1/4 and 4.
+
+Proof: [route-null-weight-identities.md](../../constraint-lab/formal/route-null-weight-identities.md#fibre). Two-level target action; homogeneous flux identity [36D²-5vδ²]x=36D[6D+vδ]y with positive denominator; active-coordinate centering and fibre zero-sum.
+Evidence: [task-relative-stopping-sufficiency.md](../../constraint-lab/formal/task-relative-stopping-sufficiency.md), [route-null-weight-identities.md](../../constraint-lab/formal/route-null-weight-identities.md), [insertionwise-timing-cancellation.md](../../constraint-lab/formal/insertionwise-timing-cancellation.md), [generation-008p-proof-checks.json](../../constraint-lab/reports/tables/generation-008p-proof-checks.json), [test_v08p.py](../../constraint-lab/tests/test_v08p.py)
+Coherence: `F8P-FIBRE-ALL-WEIGHTS`
+Dependencies: CL-T91, CL-T94
+Source generations: 008P
+Boundary: No inference of strong lumpability, all projected paths, additional null exclusion, arbitrary independent weights, GT identity or physical memory. Generic formal criterion and CL-specialized weight identity are separate statements.
+Notes: Symbolic proof, full-state parameter-free selector checks and old-grade exact regressions; not extrapolation from two grades.
+

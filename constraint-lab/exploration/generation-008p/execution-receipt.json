@@ -1,0 +1,23 @@
+{
+  "plan_commit": "3991f8c2ba4310d92df077ea9b730178ad7e996b",
+  "plan_file_sha256": "6578c7106be01a3dc66f0b5a72787cac19116a2120fe71303b0a7bf96f9c4e99",
+  "pushed_before_new_exact_computation": true,
+  "kind": "formal method boundary; not a scientific parameter freeze",
+  "new_actual_scientific_cells": 0,
+  "old_atlas_exposed": true,
+  "proof_code_commit": "5b4d6554505494c01ba298247abbdc99d24588e5",
+  "proof_output_sha256": "393c2a3c2fa13384b108abd4f0e2ee1de105778b65a13408c2d2fbefe25be932",
+  "validation_notes": [
+    "Initial ad hoc polynomial-check expression was incorrectly scaled; original flux equation then cross-multiplied correctly and verified as an indeterminate polynomial identity.",
+    "First old-certificate followup branch treated a W-zero row as the disjoint subtype; taxonomy precedence corrected before output publication.",
+    "Internal multipath state initially used unsupported qualitative schema labels; repaired and structural validator passes. No such schema check is proof.",
+    "Historical 8O snapshot regression now regenerates from the immutable 8O ledger, not the current growing ledger; no old snapshot or frozen science source changed."
+  ],
+  "new_theorems": [
+    "CL-T96",
+    "CL-T97",
+    "CL-T98"
+  ],
+  "external_8O_review": "pending",
+  "external_8P_review": "pending"
+}

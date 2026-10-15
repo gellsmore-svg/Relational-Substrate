@@ -144,3 +144,17 @@ def test_preserve_parent_evidence_and_no_hub_science_import():
         "constraint-lab/coherence/snapshots/","constraint-lab/provenance/prompts/"))}
     assert not protected.intersection(changed)
     assert not subprocess.check_output(["git","ls-files","research-synthesis/"],cwd=ROOT)
+    for path in ("constraint-lab/coherence/findings.jsonl", "constraint-lab/coherence/relations.jsonl",
+                 "constraint-lab/formal/theorem-catalog.jsonl"):
+        previous = subprocess.check_output(["git","show",BASE+":"+path],cwd=ROOT)
+        assert (ROOT/path).read_bytes().startswith(previous)
+    from rs_constraint_lab.coherence import canonical_ledger_bytes, snapshot_text
+    directory = ROOT/"constraint-lab/coherence"
+    snapshot = (directory/"snapshots/through-generation-008p.md").read_bytes()
+    assert snapshot == snapshot_text(directory,title="Through Generation 008P: Task-Relative Stopping Sufficiency").encode()
+    assert sha256(snapshot).hexdigest() == "efa90d19e585ce5a46a2e51aaa101c3f209bc57d73619dd1a44d7297df714b58"
+    assert sha256(canonical_ledger_bytes(directory)).hexdigest() == "6c8e4c763cc65c97effcd2291eb5dbaf1831615f75533f3c3ba45c5d419e64b2"
+    for line in (ROOT/"constraint-lab/coherence/findings.jsonl").read_text().splitlines():
+        row=json.loads(line)
+        if row["created_generation"] == "008P":
+            assert all(not r.startswith(("X::","XQ::","research-synthesis/")) and "synthesis-handoffs" not in r for r in row["evidence_refs"])

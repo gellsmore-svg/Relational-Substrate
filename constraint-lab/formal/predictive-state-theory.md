@@ -297,3 +297,7 @@ makes the distinction explicit: strong lumpability suffices for every coarse
 stopping functional to agree, while a single zero U W proves only a scoped
 source/route/target equality. Conditional stationary reset is not a predictive
 strong refinement. Invariant-sector ranks are not unrestricted state-space ranks.
+
+## 8P: Terminal Task Sufficiency Is Weaker
+
+The [finite reachable/readout criterion](task-relative-stopping-sufficiency.md) can certify every terminal return length for declared sources and targets without strong lumpability. The [synthetic counterexamples](stopping-sufficiency-counterexamples.md) include an exact stationary triple-word difference despite identical all-length return law. This does not change the definition of strong predictive refinement.

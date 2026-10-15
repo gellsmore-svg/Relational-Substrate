@@ -100,6 +100,15 @@ def stopped_fixture(t, fibres, a_indices, source):
     ar, mr = generic_identity(q, p, r)
     a = Mat([source])
     assert a.ncols() == len(b_indices) and min(source) >= 0 and sum(source) == 1
+    coarse_a = sorted({fibres[z] for z in a_indices})
+    coarse_b = sorted(set(labels) - set(coarse_a))
+    cb = subset(c, b_indices, coarse_b)
+    kb = subset(kpi, coarse_b, coarse_b)
+    kr = subset(kpi, coarse_b, coarse_a)
+    # These fixtures have singleton terminal fibres. Compare the ordinary coarse
+    # Dirichlet solve, not just two rearrangements of the fine resolvent identity.
+    assert len(coarse_a) == len(a_indices)
+    assert a*p*mr*r == a*cb*(eye(kb.nrows())-kb).solve(kr)
     return {"pi": pi, "C": c, "L": lifting, "Pi": reset, "Kpi": kpi,
             "Q": q, "P": p, "R": r, "a": a,
             "U": a * ar * (eye(q.nrows()) - p),

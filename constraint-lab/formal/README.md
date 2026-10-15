@@ -77,3 +77,14 @@ provides a typed conditional-reset factorization and a frozen derived census.
 The canonical continuation is research/constraint-lab-v0.8o-route-null-factorization.
 The federated hub is read-only planning context, never CL evidence. Its
 programme-side handoff is separate from the scientific/coherence ledger.
+
+## Generation 8P: Task-Relative Sufficiency
+
+8P continues from the closed 8O tag at 99565d14e9c0fc172d925fd335965e127d950868; 8O external scientific review remains pending. This is a proof-first consolidation, not another model sweep.
+
+- [Source/readout/horizon sufficiency](task-relative-stopping-sufficiency.md)
+- [All-positive multiplier route identities](route-null-weight-identities.md)
+- [Insertionwise timing scope](insertionwise-timing-cancellation.md)
+- [Exact converse examples](stopping-sufficiency-counterexamples.md)
+
+The generic criterion and N4-specific all-weight mechanisms have different scopes. No new actual scientific parameter cell was run. The hub remains read-only context, with a separate proposal-only handoff.

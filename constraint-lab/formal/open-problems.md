@@ -157,3 +157,11 @@ take precedence over expanding a successful palette.
 - Laboratory-specific future clock/task/scale proposals require a new local question and freeze. No hub suggestion authorizes a local experiment.
 
 Immediate default: review and consolidation, not a larger controller grammar.
+
+## Generation 8P: Scoped Weight Proofs, Remaining Timing Boundary
+
+CL-T96 gives a finite source/readout all-length criterion. CL-T97 and CL-T98 prove all-positive-m identities for the locations of the 80 disjoint-support and 24 fibre-cancellation rows. Together with CL-T95, every known 8O route-null location has a scoped all-positive-m explanation. This does not classify all active rows away from published grades or exclude extra zeros.
+
+Q-H2-ROLE-FACTORIZATION remains unresolved: general stationary density/feedback factorization, R00/R09 stationary equivalence and the R04 residue are not settled. Q-H2-ROUTE-NULL-FACTORIZATION stays qualified; its old statement and metadata are unchanged. The complete twenty timing zeros have no all-m or all-horizon proof here, despite a narrower route-specific all-m control. See [timing scope](insertionwise-timing-cancellation.md).
+
+Default next step is independent scientific review and a separate reviewed hub intake. No parameter counterexample, local clock, L-positive semantics, scale or history extension is authorised by this consolidation.

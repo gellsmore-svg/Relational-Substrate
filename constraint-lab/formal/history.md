@@ -398,3 +398,7 @@ represents Kpi as L T C, not a strong quotient. Its lifted dynamics repeatedly
 reset older-history conditionals. Comparing stopping before and after that
 operation yields an exact resolvent defect, without adding a controller or
 asserting physical memory.
+
+## 8P Readout And Horizon Scope
+
+[Task-relative stopping sufficiency](task-relative-stopping-sufficiency.md) states equality relative to sources, readouts and horizons; it does not remove the historical coordinate or make a non-lumpable projection Markov. Existing strict H1 capability claims remain unchanged.

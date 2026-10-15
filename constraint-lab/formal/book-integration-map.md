@@ -121,3 +121,15 @@ Earlier maturity rows remain historical. Neither book is edited.
 | Route-null mechanism census | READY_WITH_SCOPE | Scoped laboratory example | Exact frozen 8N palette and F0 diagnostics; 8O external review pending |
 | Common cross-programme operator | DO_NOT_INTEGRATE | None as established fact | CL operator is explicit; GT comparison has not been performed |
 | Physical memory, purpose, gravity or L-positive ontology | DO_NOT_INTEGRATE_YET | None | No such consequence follows |
+
+## Generation 8P: Formal Task Interface
+
+No books edited. Formal readiness is not independent scientific approval; 8O and 8P external review remain pending.
+
+| Content | Maturity | Proposed location | Scope |
+| --- | --- | --- | --- |
+| Finite source/readout all-length criterion | READY_WITH_SCOPE | Finite-process appendix | Classical linear algebra; declared killed task, not all paths |
+| All-positive-m route identities | READY_WITH_SCOPE | Scoped N4 example | Named one-role families and stationary graph-class sources/readouts |
+| Twenty complete timing zeros | PROVISIONAL | Laboratory report | Two published grades; total all-m explanation unresolved |
+| CL/GT common reset operator | DO_NOT_INTEGRATE | None as established fact | Must test whether GT actually performs the same conditional reset |
+| Physical memory, gravity, purpose or theology | DO_NOT_INTEGRATE | None | Not consequences of finite task equivalence |

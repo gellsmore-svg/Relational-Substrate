@@ -165,3 +165,7 @@ initial stationary entrance balance from propagated occupation annihilation,
 target insensitivity and bilinear cancellation. Exact equality of one route
 functional is not path equality; complement transport is not automatically
 an internal cancellation mechanism.
+
+## 8P Task-Relative Follow-Up
+
+[Stopping sufficiency](task-relative-stopping-sufficiency.md) distinguishes eventual return, each declared event length, and full paths. [Weight identities](route-null-weight-identities.md) explain the known route-null locations for all positive one-role multipliers without new scientific cells. The complete twenty timing zeros retain finite-grade status; a route-joint identity must not be silently converted to a differently normalized task.

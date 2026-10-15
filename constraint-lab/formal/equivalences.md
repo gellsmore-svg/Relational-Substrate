@@ -116,3 +116,7 @@ is exactly U W=0 for the declared killed/reset/readout operators. Nonzero
 factors can annihilate in a product. This criterion is neither strong lumpability
 nor equality of every future word; changing source, route or target changes the
 criterion. Kernel conjugacy transports the criterion to a renamed task.
+
+## 8P Stopping Equivalences
+
+Eventual target equality, all-length terminal equality and full coarse path equality are different equivalences. [Exact rational counterexamples](stopping-sufficiency-counterexamples.md) disprove the tempting converses. Source/target linear spans are algebraic testing spaces, not arbitrary admissible stochastic priors.

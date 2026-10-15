@@ -9,6 +9,14 @@ A process may have exactly the same eventual 50:50 destination split as its cond
 The exact synthetic fixtures in stopping_sufficiency.py demonstrate these three distinctions. They are not CL scientific cells. All priors called stationary are solved and checked by both FLINT and independent Fraction Gauss-Jordan elimination.
 
 <a id="criterion"></a>
+## Finite Stationary Construction
+
+Let T be an n-by-n finite irreducible row-stochastic matrix with positive stationary row pi2. A surjective map psi to s coarse states has deterministic matrix C (n-by-s). Put pi1=pi2 C and L[u,z]=pi2[z]/pi1[u] on its fibre, zero otherwise (s-by-n). Direct fibre summation proves LC=I, Pi=CL is idempotent and pi2 Pi=pi2. Then Kpi=LTC and pi1[u]Kpi[u,v] is exactly the stationary coarse adjacent flow. Kpi L=LT Pi; this is stationary conditional reset, not strong lumpability.
+
+A and its complement B must be fibre saturated. The comparator killed kernel is L_B Q C_B. Its lifted continuation is QP with P=C_B L_B. Coarse irreducibility follows because every fine positive path induces a coarse positive path. Both fine and coarse killed chains hit a nonempty stopping set almost surely; finite irreducibility bounds the survival probability geometrically over a sufficiently long block. Thus both are transient. QP and L_B Q C_B have the same nonzero spectrum (rectangular product identity), so the lifted killed inverse exists too. This inference would not hold for an arbitrary unrelated reset without checking transience.
+
+For target map G on A that is coarse measurable, R=T_BA G; incoming a on B is compared with aP. The original killed continuation is aQ^jR, and the lifted comparator is aP(QP)^jR. A stationary class/route entrance in CL additionally satisfies aP=a, but this is not required for the general algebra below.
+
 ## Typed Task and All-Length Criterion
 
 Use row distributions. On a finite killed domain B of size b, Q is b-by-b; P is an idempotent b-by-b conditional reset. The CL construction additionally makes Q and QP nonnegative transient substochastic matrices. M is r-by-b, with rows spanning a declared finite family of entrance/route rows; R is b-by-q and gives declared exit readouts, including the exit subkernel. Physical source rows are nonnegative, normalized or route-joint subprobabilities. Signed linear combinations below are algebraic tests, not extra physical priors.

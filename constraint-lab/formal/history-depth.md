@@ -302,3 +302,7 @@ access functional, not whether a longer register is intrinsically useful.
 H_pair=2. It describes which component of an existing H2/H1 difference survives
 a fixed stopping readout. A silent route is not evidence that h2 is unnecessary
 for the full process or that all passage tasks are silent.
+
+## 8P Formal Consolidation
+
+History depth remains a semantic coordinate, not a task-equivalence score. A fixed H2 process may be invisible to one declared stopping task while differing on complete paths. See [task-relative sufficiency](task-relative-stopping-sufficiency.md); no new history register or parameter point is introduced.
