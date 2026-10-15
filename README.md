@@ -6,6 +6,8 @@ Its current, evidence-backed standing is a **directional / conceptual lens**: it
 
 > **New here, or non-technical?** Start with the [**plain-language explainer**](docs/plain-language-explainer.md) — what we tried, how we tested it honestly, and what it does and doesn't mean.
 
+> **Cross-programme research map.** The shared synthesis hub links the Constraint Laboratory and Gravity/Time programmes, their contrasts, nulls, open questions and metaphors: start at [`research-synthesis/generated/index.md`](research-synthesis/generated/index.md). How to run and update it: [`research-synthesis/docs/runbook.md`](research-synthesis/docs/runbook.md). The hub reads pinned programme ledgers; it has no authority over either programme's plans, validators or results.
+
 It does not simulate `T0` directly and does not treat rendered curves, molecules, lattices, materials, or interfaces as substrate objects. It is a browser-based conceptual model for:
 
 ```text

@@ -7,7 +7,7 @@ import json
 import sys
 from pathlib import Path
 
-from . import core, discover, generate, historical, ledger, pins, roundtrip, sources, workflow
+from . import core, discover, generate, historical, ledger, pins, roundtrip, smoke, sources, workflow
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -60,6 +60,7 @@ def main(argv: list[str] | None = None) -> int:
     hi.add_argument("--out", required=True, help="directory outside the repository for the private inventory")
     hv = sub.add_parser("hist-verify", help="re-hash the archive members that historical findings cite")
     hv.add_argument("--archive-dir", required=True)
+    sub.add_parser("smoke-cycle", help="run one complete hub cycle in a temporary copy (no experiment, no upstream mutation)")
     a = ap.parse_args(argv)
 
     if a.cmd == "audit":
@@ -138,6 +139,10 @@ def main(argv: list[str] | None = None) -> int:
         rep = historical.verify_local(m, historical.load_findings(core.ROOT), Path(a.archive_dir))
         print(json.dumps(rep, indent=2))
         return 1 if rep["problems"] else 0
+    if a.cmd == "smoke-cycle":
+        rep = smoke.run()
+        print(json.dumps(rep, indent=2))
+        return 0 if rep["ok"] else 1
     if a.cmd == "intake-seeds":
         print(json.dumps(workflow.intake_seeds(Path(a.dir)), indent=2))
         return 0

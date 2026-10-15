@@ -13,6 +13,7 @@ from . import core, generate, historical, ledger, roundtrip, sources
 def snapshots_dir():
     return core.ROOT / "snapshots"
 ALLOWED_PREFIXES = ("research-synthesis/", ".github/workflows/research-synthesis.yml")
+ALLOWED_FILES = ("README.md",)  # one root link to the hub (closeout instruction, stage 7)
 
 
 # --- snapshots ----------------------------------------------------------------------
@@ -293,7 +294,7 @@ def scope_violations(base: str = "origin/main") -> list[str] | None:
     out = subprocess.run(["git", "-C", str(core.REPO), "diff", "--name-only", f"{base}...HEAD"], capture_output=True, text=True)
     if out.returncode != 0:
         return None
-    return sorted(p for p in out.stdout.split() if not p.startswith(ALLOWED_PREFIXES))
+    return sorted(p for p in out.stdout.split() if not p.startswith(ALLOWED_PREFIXES) and p not in ALLOWED_FILES)
 
 
 def check(*, use_git: bool = True, scope_base: str | None = "origin/main") -> dict:

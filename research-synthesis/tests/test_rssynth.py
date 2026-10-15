@@ -21,7 +21,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(HERE))
 
-from rssynth import core, discover, generate, historical, ledger, pins, roundtrip, sources, workflow  # noqa: E402
+from rssynth import core, discover, generate, historical, ledger, pins, roundtrip, smoke, sources, workflow  # noqa: E402
 
 REAL_ROOT = core.ROOT
 
@@ -972,6 +972,13 @@ class HistoricalAdapter(unittest.TestCase):
         with self.assertRaises(historical.ArchiveError):
             historical.write_private_inventory(rep, REAL_ROOT / "sources")
         self.assertTrue(historical.write_private_inventory(rep, self.tmp / "out").exists())
+
+
+class OperationalSmokeCycle(unittest.TestCase):
+    def test_full_cycle_in_a_temporary_copy_leaves_the_real_tree_untouched(self):
+        rep = smoke.run()
+        self.assertTrue(rep["ok"], [s for s in rep["steps"] if not s["ok"]])
+        self.assertEqual(len(rep["steps"]), 9)
 
 
 class NonMutationOfResearchRecords(unittest.TestCase):
