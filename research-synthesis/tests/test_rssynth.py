@@ -608,13 +608,17 @@ class ExternalSynthesisClaims(unittest.TestCase):
         doc = (REAL_ROOT / "reports/external-2026-10-15-cross-research-synthesis.md").read_text(encoding="utf-8")
         for p in self.ext.values():
             self.assertIn(p["quote"], doc)
-            self.assertEqual((p["source_mapping"], p["status"], p["origin"]), ("agent", "proposed", "external_synthesis"))
+            self.assertEqual((p["source_mapping"], p["origin"]), ("agent", "external_synthesis"))
+            self.assertIn(p["status"], ("proposed", "under_review"))  # under_review once checked against records
             self.assertTrue(p["provenance_ref"].startswith("EXT::"))
 
     def test_historical_claims_are_blocked_and_others_candidate(self):
         for p in self.ext.values():
             hist = any(r.startswith("HIST::") for r in p["sources"])
-            self.assertEqual(p["decision_category"], "blocked_missing_source" if hist else "candidate", p["proposal_id"])
+            if hist:
+                self.assertEqual(p["decision_category"], "blocked_missing_source", p["proposal_id"])
+            else:
+                self.assertIn(p["decision_category"], ("candidate", "qualified"), p["proposal_id"])
 
     def test_altered_quote_or_promotion_is_refused(self):
         bad = copy.deepcopy(self.shared)
@@ -636,6 +640,57 @@ class ExternalSynthesisClaims(unittest.TestCase):
             reg.write(root)
             after = core.read_jsonl(root / "proposals/candidate-relations.jsonl")
             self.assertEqual(sorted(json.dumps(r, sort_keys=True) for r in before), sorted(json.dumps(r, sort_keys=True) for r in after))
+
+
+class ExternalClaimRestatement(unittest.TestCase):
+    def setUp(self):
+        self.m, self.loaded, self.shared = inputs()
+        self.props = {p["proposal_id"]: p for p in self.shared["proposals"]}
+
+    def test_checked_claims_link_to_existing_restatements(self):
+        checked = [p for p in self.props.values() if p.get("kind") == "external_claim" and p.get("check_outcome")]
+        self.assertEqual(len(checked), 15)
+        for c in checked:
+            self.assertEqual(c["status"], "under_review")
+            self.assertEqual([h["status"] for h in c["decision_history"]], ["proposed", "under_review"])
+            for r in c["restated_as"]:
+                rp = self.props[r]
+                self.assertTrue(rp["derived_from_claim"] == c["proposal_id"] or c["proposal_id"].removeprefix("P::") in rp["rationale"], (c["proposal_id"], r))
+        blocked = [p for p in self.props.values() if p.get("kind") == "external_claim" and p["decision_category"] == "blocked_missing_source"]
+        self.assertTrue(blocked and all(not p.get("check_outcome") for p in blocked))
+
+    def test_cited_upstream_relations_exist_in_pinned_ledgers(self):
+        edge_ids = {e["id"] for e in self.loaded["edges"]}
+        for p in self.props.values():
+            for rel in p.get("upstream_relations", []):
+                self.assertIn(rel.split(" ")[0], edge_ids, p["proposal_id"])
+
+    def test_within_programme_relations_never_enter_the_shared_ledger(self):
+        u1 = self.props["P::EXT-C06-U1"]
+        self.assertTrue(u1["within_programme"])
+        with sandbox():
+            with self.assertRaises(ValueError):
+                workflow.review_proposal("P::EXT-C06-U1", "agent_reviewed", "agent: test", "promote", human=False, decision_category="qualified")
+        bad = copy.deepcopy(self.shared)
+        x = dict(bad["connections"][0], connection_id="X::0999", **{"from": "GT::GT-F68-FIRST-ORDER-SORTING-INDEX", "to": "GT::GT-F71-SORTING-DECOMPOSITION-POSTHOC"})
+        bad["connections"].append(x)
+        self.assertTrue(any("cross-programme relations only" in e for e in ledger.validate_all(self.m, self.loaded, bad)))
+        unmarked = copy.deepcopy(self.shared)
+        [p for p in unmarked["proposals"] if p["proposal_id"] == "P::EXT-C06-U1"][0]["within_programme"] = False
+        self.assertTrue(any("mark within_programme" in e for e in ledger.validate_all(self.m, self.loaded, unmarked)))
+
+    def test_restatement_is_idempotent_and_append_only(self):
+        import importlib.util
+
+        spec = importlib.util.spec_from_file_location("restate", REAL_ROOT / "proposals/restate_external_claims.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        with sandbox() as root:
+            before = core.read_jsonl(root / "proposals/candidate-relations.jsonl")
+            self.assertEqual(mod.run(root), {"proposals_added": 0, "claims_checked": 0})
+            after = core.read_jsonl(root / "proposals/candidate-relations.jsonl")
+            self.assertEqual(before, after)
+            self.assertEqual(ledger.history_is_append_only(before, after, "proposal_id"), [])
 
 
 class NonMutationOfResearchRecords(unittest.TestCase):

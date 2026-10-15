@@ -400,7 +400,7 @@ def write_all(root: Path = ROOT) -> None:
         (root / x["review"]["record"]).write_text(REVIEW_TEMPLATE.format(rid=x["connection_id"], reviewer=REVIEWER, date=DATE, status=x["review_status"], decision=x["decision_category"], rationale=x["rationale"], rows=rows, independence=x["independence"], independence_note=x.get("independence_note", ""), alts=alts), encoding="utf-8")
     for pid, a, b, ctype, rationale, decision, counter in FALSE_ATTRACTORS:
         PROPOSALS.append({"proposal_id": pid, "from": a, "to": b, "connection_type": ctype, "status": "rejected", "scope": "False-attractor control (discovery rubric 03)", "rationale": rationale, "decision_rationale": decision,
-                          "comparison": {}, "independence": "unknown", "controls": {"positive": [], "negative": []}, "alternatives": [], "falsifiers": [], "evidence_refs": [], "origin": "agent_drafted", "false_attractor_control": True,
+                          "comparison": {}, "independence": "unknown", "controls": {"positive": [], "negative": []}, "alternatives": [], "falsifiers": [], "evidence_refs": [], "origin": "agent_drafted", "false_attractor_control": True, "within_programme": a.split("::")[0] == b.split("::")[0],
                           "review": {"reviewer": REVIEWER, "date": DATE, "record": f"proposals/reviews/{pid.replace('::', '-')}.md", "human": False}, "counterevidence_refs": counter})
     for p in PROPOSALS:
         pending = p["from"].startswith(("HIST::", "EXT::"))
@@ -423,7 +423,7 @@ def write_all(root: Path = ROOT) -> None:
 
     dump("ledger/connections.jsonl", CONNECTIONS)
     existing = [json.loads(line) for line in (root / "proposals/candidate-relations.jsonl").read_text().splitlines() if line.strip()] if (root / "proposals/candidate-relations.jsonl").exists() else []
-    dump("proposals/candidate-relations.jsonl", PROPOSALS + [r for r in existing if r.get("origin") in ("author_seed", "external_synthesis")])
+    dump("proposals/candidate-relations.jsonl", PROPOSALS + [r for r in existing if r.get("origin") in ("author_seed", "external_synthesis", "agent_restatement")])
     dump("ledger/questions.jsonl", QUESTIONS)
 
 

@@ -7,8 +7,8 @@ The synthesis is stored verbatim in reports/external-2026-10-15-cross-research-s
   `source_mapping: agent`, because the synthesis cites reports and generations, not ids.
 - The synthesis is the claim's provenance (`provenance_ref`), not its evidence.
 - Claims resting on private historical archives are blocked_missing_source.
-- Nothing is reviewed or promoted. Re-running replaces only records with origin
-  `external_synthesis` and leaves every other record untouched.
+- Nothing is reviewed or promoted. Re-running adds only claims not yet registered; existing records (and their
+  append-only histories) are never rebuilt.
 
 Usage: python3 research-synthesis/proposals/register_external_claims.py
 """
@@ -167,9 +167,9 @@ def build(root: Path = ROOT) -> list[dict]:
 def write(root: Path = ROOT) -> int:
     path = root / "proposals" / "candidate-relations.jsonl"
     rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
-    keep = [r for r in rows if r.get("origin") != "external_synthesis"]
-    new = build(root)
-    path.write_text("".join(json.dumps(r, sort_keys=True, ensure_ascii=False) + "\n" for r in keep + new), encoding="utf-8")
+    have = {r["proposal_id"] for r in rows}
+    new = [r for r in build(root) if r["proposal_id"] not in have]  # never rebuild existing records: their history is append-only
+    path.write_text("".join(json.dumps(r, sort_keys=True, ensure_ascii=False) + "\n" for r in rows + new), encoding="utf-8")
     return len(new)
 
 

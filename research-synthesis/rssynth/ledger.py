@@ -254,6 +254,11 @@ def validate_connection(x: dict, R: Resolver, *, in_ledger: bool, root: Path) ->
     if sa and sb and sa != "shared" and sb != "shared" and lineage_shared(R.manifest, sa, sb):
         if ind == "independent" and not x.get("independence_note"):
             p.append(f"{cid}: endpoints share lineage ({sa}, {sb}); 'independent' needs an independence_note")
+    if sa and sb and sa == sb and sa != "shared":
+        if not x.get("within_programme"):
+            p.append(f"{cid}: both endpoints are in {sa}; mark within_programme (a suggestion for that programme's own ledger)")
+        if in_ledger:
+            p.append(f"{cid}: the shared ledger holds cross-programme relations only; a within-programme relation belongs to {sa}'s own ledger")
     if ctype == "shared_implementation_assumption" and ind not in ("shared_lineage", "same_source"):
         p.append(f"{cid}: a shared implementation assumption is by definition not independent")
     if ctype == "untested_hypothesis" and not x.get("falsifiers"):

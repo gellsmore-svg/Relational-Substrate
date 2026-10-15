@@ -159,7 +159,8 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     B = ["# Candidate bridges (proposals)", "", "Staged in `proposals/`; none is in the ledger. Status is shown in text.", "", "## Pairwise proposals", "", "| Id | Type | From | To | Status | Origin |", "| --- | --- | --- | --- | --- | --- |"]
     for p in sorted(shared["proposals"], key=lambda p: p["proposal_id"]):
         if p.get("kind") not in ("seed_claim", "external_claim"):
-            B.append(f"| {p['proposal_id']} | {p['connection_type']} | `{p['from']}` | `{p['to']}` | {STATUS_TEXT[p['status']]} | {p['origin']} |")
+            origin = p["origin"] + (" · WITHIN-PROGRAMME (upstream suggestion; not promotable here)" if p.get("within_programme") else "") + (f" · from {p['derived_from_claim']}" if p.get("derived_from_claim") else "")
+            B.append(f"| {p['proposal_id']} | {p['connection_type']} | `{p['from']}` | `{p['to']}` | {STATUS_TEXT[p['status']]} | {origin} |")
     seeds = sorted((p for p in shared["proposals"] if p.get("kind") == "seed_claim"), key=lambda p: p["proposal_id"])
     if seeds:
         B += ["", "## Author seed claims (multi-source; unapproved)", "", "Kept verbatim (`seed_record`). The seed's relation type is mapped conservatively: question-type relations map to no connection type, and an analogy maps to `untested_hypothesis` until a formal comparison is reviewed. A seed claim enters the ledger only after it is restated as pairwise connections and reviewed.", ""]
@@ -177,7 +178,13 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     if ext:
         B += ["", "## Claims registered from the external 2026-10-15 synthesis (unapproved)", "", "Quoted verbatim from `reports/external-2026-10-15-cross-research-synthesis.md` (an exploratory synthesis; its cosines are retrieval measures). The mapping of cited items to pinned ids is the agent's (`source_mapping: agent`). Claims resting on private historical archives are `blocked_missing_source`. None is reviewed.", ""]
         for p in ext:
-            B += [f"### {p['proposal_id']} ({p['section']}; {p['decision_category'].upper()})", "", f"> {p['quote']}", "", f"- **Cited (as written):** {'; '.join(p['cited_as'])}"]
+            B += [f"### {p['proposal_id']} ({p['section']}; {p['decision_category'].upper()}; {STATUS_TEXT.get(p['status'], p['status'])})", "", f"> {p['quote']}", "", f"- **Cited (as written):** {'; '.join(p['cited_as'])}"]
+            if p.get("check_outcome"):
+                B.append(f"- **Check against pinned records:** {p['check_outcome'].replace('_', ' ').upper()}. {p['check_note']}")
+                if p.get("upstream_relations"):
+                    B.append(f"- **Already related in the programme's ledger:** {', '.join(p['upstream_relations'])}")
+                if p.get("restated_as"):
+                    B.append(f"- **Restated as:** {', '.join(f'`{r}`' for r in p['restated_as'])}")
             if p.get("synthesis_assessment"):
                 B.append(f"- **Synthesis's own assessment:** {p['synthesis_assessment']}")
             B.append(f"- **Mapped sources (agent):** {', '.join(f'`{r}`' for r in p['sources'])}")
