@@ -12,11 +12,13 @@
 
    A rewritten row means an upstream finding changed in place. Every shared connection citing it needs re-review.
 3. **Review.** Read the new findings. Draft any new connection or question as a proposal, never directly in the ledger, and write review records.
-4. **Adopt.** A named human runs `synth apply-pin --source GT --commit <sha> --reviewed-by "<name>"`. This updates `pin-spec.json`, rebuilds `manifest.json` and the materialised copies, and marks the proposal adopted.
+4. **Adopt.** Under the author's standing instruction (AD-0006, 2026-10-16: "skip the central approval steps and integrate automatically"), run `synth apply-pin --source GT --commit <sha> --standing-decision AD-0006`. This updates `pin-spec.json`, rebuilds `manifest.json` and the materialised copies, and marks the proposal adopted with `adoption_basis: AD-0006` and `human_reviewed: false`.
+   - It is refused when the proposal does not descend from the current pin or carries any warning (rows removed or rewritten in place). Those cases need a named human: `--reviewed-by "<name>"`.
+   - Nobody's name is entered as reviewer. Adoption is not scientific review: the generations stay in `unreviewed_generations`.
 5. **Regenerate, check, snapshot, open a PR.**
    - `synth generate`, then `synth check`.
    - `synth snapshot --name <milestone> --title "<title>"`. A snapshot is immutable and carries a lock with source pins, digests and a content hash.
-   - Open a PR for the author's review.
+   - Open a PR. Under AD-0006 the milestone PR is merged once CI is green; the author reviews after the fact.
 
 ## The round trip: implicit human acceptance
 

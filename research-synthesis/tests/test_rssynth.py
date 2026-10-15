@@ -289,6 +289,28 @@ class AncestryStalenessAndRevisions(unittest.TestCase):
             with self.assertRaises(sources.SourceError):
                 pins.apply_pin("GT", "0" * 40, reviewed_by="agent: me")
 
+    def test_standing_adoption_needs_a_logged_standing_decision(self):
+        with sandbox():
+            with self.assertRaises(sources.SourceError):
+                pins.auto_apply_pin("GT", "e2b5dc4cb65bafc423047f78468a63c9d6ceb218", decision_id="AD-0002")
+
+    def test_standing_adoption_refuses_a_proposal_with_warnings(self):
+        with sandbox() as root:
+            core.write_json(root / "proposals/pin-updates/GT-000000000000.json", {"descends_from_current": False, "warnings": ["parallel revision"]})
+            with self.assertRaises(sources.SourceError):
+                pins.auto_apply_pin("GT", "0" * 40)
+
+    @unittest.skipUnless(git_pins_available() and sources.commit_reachable("e2b5dc4cb65b"), "GT-P012 close not reachable")
+    def test_standing_adoption_records_its_basis_not_a_reviewer_name(self):
+        with sandbox() as root:
+            if not (root / "proposals/pin-updates/GT-e2b5dc4cb65b.json").exists():
+                self.skipTest("no GT-P012 pin proposal on this branch")
+            pins.auto_apply_pin("GT", "e2b5dc4cb65bafc423047f78468a63c9d6ceb218")
+            prop = core.read_json(root / "proposals/pin-updates/GT-e2b5dc4cb65b.json")
+            self.assertEqual(prop["adoption_basis"], "AD-0006")
+            self.assertFalse(prop["human_reviewed"])
+            self.assertIn("no line-by-line pin review", prop["reviewed_by"])
+
     def test_incompatible_upstream_schema_stops(self):
         src = copy.deepcopy([s for s in self.m["sources"] if s["source_key"] == "GT"][0])
         with sandbox() as root:

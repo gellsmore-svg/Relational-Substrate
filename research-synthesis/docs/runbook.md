@@ -22,11 +22,11 @@ Nothing runs on a timer. A cycle starts only when a CL or GT round is **closed**
 1. **Check provenance.** `synth audit` shows each pin, the branch head and whether the head moved past the pin (`behind_branch_head`, or `diverged_from_branch`).
 2. **Propose the pin.** `synth propose-pin --source GT --commit <close sha>` writes a pin proposal listing added, removed and rewritten upstream rows.
 3. **Review.** Read the new findings. Draft relations or questions as **proposals** (never in the ledger). Seed files from a programme go through `synth intake-seeds <dir>`.
-4. **Adopt.** A named human runs `synth apply-pin --source GT --commit <sha> --reviewed-by "<name>"`. Pins never move automatically.
+4. **Adopt.** `synth apply-pin --source GT --commit <sha> --standing-decision AD-0006` (the author's standing instruction of 2026-10-16). Refused for a non-descending proposal or one with warnings; those need `--reviewed-by "<name>"`. Pins never move on a timer: adoption still happens only at a milestone, after a round closes.
 5. **Regenerate and check.** `synth generate`, then `synth check`. Run `generate` twice: the output must be byte-identical.
 6. **Snapshot.** `synth snapshot --name <milestone> --title "<title>"`. Snapshots are immutable and hash-locked.
 7. **Close the round trip.** `synth round-close --id RT-000N --date <d> --report <path> --reported-at <sha>`, regenerate, commit. `round-trips.md` now displays every open recommendation with scope and qualification.
-8. **PR.** Open or update the synthesis PR for the author.
+8. **PR.** Open or update the synthesis PR, and merge it once CI is green (AD-0006).
 9. **Next instruction.** At the author's next instruction, run `synth ratify --round-trip RT-000N --decision-id AD-000M --date <d> --instruction "<verbatim>" [--object <id>]`. Ratification accepts synthesis interpretations at their displayed categories only. It is not scientific review of a CL/GT generation and not publication consent.
 
 ## Historical (private) inputs

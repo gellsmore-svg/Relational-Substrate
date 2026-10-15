@@ -37,10 +37,12 @@ def main(argv: list[str] | None = None) -> int:
     pp.add_argument("--source", required=True)
     pp.add_argument("--commit", required=True)
     pp.add_argument("--note", default="")
-    ap2 = sub.add_parser("apply-pin", help="adopt a reviewed pin proposal (named human reviewer)")
+    ap2 = sub.add_parser("apply-pin", help="adopt a pin proposal (named human reviewer, or the author's standing decision)")
     ap2.add_argument("--source", required=True)
     ap2.add_argument("--commit", required=True)
-    ap2.add_argument("--reviewed-by", required=True)
+    who = ap2.add_mutually_exclusive_group(required=True)
+    who.add_argument("--reviewed-by", help="the named human who reviewed the proposal")
+    who.add_argument("--standing-decision", help="adopt under the author's logged standing instruction (AD-0006)")
     si = sub.add_parser("intake-seeds", help="stage the author's seed files as unapproved proposals")
     si.add_argument("dir")
     rc = sub.add_parser("round-close", help="end a round: record the agent's open recommendations for implicit acceptance")
@@ -107,7 +109,10 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps({k: rep[k] for k in ("source", "current_commit", "proposed_commit", "descends_from_current", "warnings")}, indent=2))
         return 0
     if a.cmd == "apply-pin":
-        pins.apply_pin(a.source, a.commit, reviewed_by=a.reviewed_by)
+        if a.standing_decision:
+            pins.auto_apply_pin(a.source, a.commit, decision_id=a.standing_decision)
+        else:
+            pins.apply_pin(a.source, a.commit, reviewed_by=a.reviewed_by)
         print("pin adopted; run generate and check")
         return 0
     if a.cmd == "round-close":
