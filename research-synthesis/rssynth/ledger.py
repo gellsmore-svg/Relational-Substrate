@@ -193,6 +193,44 @@ def validate_metaphor(m: dict, concept_ids: set) -> list[str]:
     return p
 
 
+SEED_RELATION_MAP = {
+    # author seed relation_type_proposed -> shared connection type (None: a question, not a connection)
+    "compatible_with": "epistemic_compatibility",
+    "contrasts_with": "explicit_contrast",
+    "qualifies": "qualifies",
+    "candidate_mechanism_analogy": "untested_hypothesis",
+    "shared_question": None,
+    "raises_shared_question": None,
+}
+DRAFT_FLAG_MARKERS = ("without disclaiming", "not defined", "misleading reading")
+
+
+def split_draft_problems(problems: list[str]) -> tuple[list[str], list[str]]:
+    """For drafts, semantic issues are review flags; structural issues stay errors."""
+    flags = [x for x in problems if any(m in x for m in DRAFT_FLAG_MARKERS)]
+    return [x for x in problems if x not in flags], flags
+
+
+def validate_seed_claim(x: dict, R: "Resolver") -> list[str]:
+    """An author seed claim (multi-source). Kept verbatim; never a ledger connection until reviewed and restated."""
+    pid = x.get("proposal_id", "?")
+    p = []
+    if x.get("origin") != "author_seed" or not isinstance(x.get("seed_record"), dict):
+        p.append(f"{pid}: a seed claim keeps origin author_seed and its verbatim seed_record")
+    if x.get("status") not in ("proposed", "under_review", "rejected", "undetermined"):
+        p.append(f"{pid}: a seed claim cannot be promoted directly; restate it as a pairwise connection and review that")
+    if x.get("relation_type_proposed") not in SEED_RELATION_MAP:
+        p.append(f"{pid}: unmapped seed relation type {x.get('relation_type_proposed')!r}")
+    elif x.get("connection_type") != SEED_RELATION_MAP[x["relation_type_proposed"]]:
+        p.append(f"{pid}: connection_type does not follow the declared seed mapping")
+    for ref in x.get("sources", []):
+        res = R.resolve(ref)
+        if not res["ok"] and not res.get("pending"):
+            p.append(f"{pid}: source {ref}: {res['reason']}")
+    p += _no_scores(x, pid)
+    return p
+
+
 def validate_metaphor_link(link: dict, ids: dict) -> list[str]:
     lid = link.get("link_id", "?")
     t = link.get("link_type")
@@ -239,6 +277,9 @@ def validate_all(manifest: dict, loaded: dict, shared: dict, root: Path | None =
     for x in shared["connections"]:
         p += validate_connection(x, R, in_ledger=True, root=root)
     for x in shared["proposals"]:
+        if x.get("kind") == "seed_claim":
+            p += validate_seed_claim(x, R)
+            continue
         p += validate_connection(x, R, in_ledger=False, root=root)
         if not x.get("decision_rationale") and x.get("status") in ("rejected", "undetermined"):
             p.append(f"{x['proposal_id']}: rejected/undetermined proposals keep their rationale")
@@ -254,8 +295,11 @@ def validate_all(manifest: dict, loaded: dict, shared: dict, root: Path | None =
                     p.append(f"{q['question_id']}: {ref}: {res['reason']}")
         if not q.get("discriminating_tests"):
             p.append(f"{q.get('question_id')}: at least one candidate discriminating test is required")
-    for m in shared["metaphors"] + shared["metaphor_drafts"]:
+    for m in shared["metaphors"]:
         p += validate_metaphor(m, concept_ids)
+    for m in shared["metaphor_drafts"]:
+        errors, _flags = split_draft_problems(validate_metaphor(m, concept_ids))
+        p += errors
     for m in shared["metaphors"]:
         if m.get("status") == "draft":
             p.append(f"{m['metaphor_id']}: drafts belong in proposals/metaphor-drafts.jsonl")

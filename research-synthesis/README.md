@@ -40,7 +40,7 @@ Retrieval similarity is used only to suggest pairs for human review.
 | `ledger/connections.jsonl` | Cross-programme connections, each with an explicit review status | Shared layer |
 | `ledger/questions.jsonl` | Shared open questions and candidate discriminating tests | Shared layer |
 | `ledger/metaphors.jsonl`, `ledger/metaphor-links.jsonl` | Reviewed metaphors and typed coverage links (**never evidence**) | Shared layer |
-| `proposals/` | Candidate relations (including rejected ones, with rationale), draft metaphors, review records, retrieval diagnostics, pin-update proposals | Staging |
+| `proposals/` | Candidate relations (including rejected ones, with rationale), draft metaphors, review records, retrieval diagnostics, pin-update proposals; `proposals/seeds/<label>/` holds author seed files verbatim with a receipt and an intake report | Staging |
 | `generated/` | Deterministic views (Markdown, Mermaid, JSON) | Regenerated; never hand-edited |
 | `snapshots/` | Immutable milestone views with lock files | Immutable |
 | `reports/` | Dated syntheses with epistemic status | Dated |

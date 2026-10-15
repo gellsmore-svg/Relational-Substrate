@@ -14,7 +14,8 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="synth", description="Federated research-coherence layer (read-only over programme ledgers).")
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("audit", help="show pins, branch heads, artifact verification and lineage")
-    sub.add_parser("pin", help="rebuild sources/manifest.json and materialised copies from sources/pin-spec.json")
+    pn = sub.add_parser("pin", help="rebuild sources/manifest.json and materialised copies from sources/pin-spec.json")
+    pn.add_argument("--by", default="agent", help="who records the ingestion receipt")
     sub.add_parser("validate", help="validate manifest, source ledgers (under their pinned vocabularies) and shared records")
     d = sub.add_parser("update-candidates", aliases=["discover"], help="write retrieval diagnostics to proposals/ (never the ledger)")
     d.add_argument("--limit", type=int, default=40)
@@ -48,7 +49,7 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps({"staleness": sources.staleness(m), "artifacts": sources.verify_artifacts(m)}, indent=2))
         return 0
     if a.cmd == "pin":
-        m = pins.build_manifest()
+        m = pins.build_manifest(by=a.by)
         pins.write_manifest(m)
         print(f"manifest written: {len(m['sources'])} sources")
         return 0

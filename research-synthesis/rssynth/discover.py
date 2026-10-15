@@ -90,7 +90,7 @@ def discover(nodes: dict, shared: dict, manifest: dict, *, programmes=("CL", "GT
     cluster = {}
     for src, keys in by_source.items():
         cluster.update(_clusters(keys, vecs))
-    reviewed = {(x["from"], x["to"]) for x in shared["connections"] + shared["proposals"]}
+    reviewed = {(x["from"], x["to"]) for x in shared["connections"] + shared["proposals"] if "from" in x}
     reviewed |= {(b, a) for a, b in reviewed}
     a_keys, b_keys = by_source[programmes[0]], by_source[programmes[1]]
     pairs = []

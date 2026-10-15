@@ -10,7 +10,7 @@ Generated view. Programme ledgers are authoritative in their own branches; the s
 | `SC` (SC::) | Stochastic Relational Calculator | test_apparatus | **CATALOGUED_ONLY** | `research/stochastic-calculator` | `aa06213ce42e` | draft PR #2; last commit 2026-09-10; no structured ledger |
 | `OTR` (OTR::) | Open-Thetical Research method (shared) | shared_method | **CATALOGUED_ONLY** | `main` | `05b15b0d903d` | OTR 1.0 on main (PR #7) |
 | `EXT-SYNTH-20261015` (EXT::) | External cross-research synthesis (2026-10-15) | external_interpretation | **MISSING** | `—` | `—` | background/2026-10-15-cross-research-synthesis.md was named as an input but not supplied. A dated interpretation, not experiment evidence, when supplied. |
-| `HIST` (HIST::) | Historical archives (505-507, Work 11, 46-48) | historical_archive | **PENDING_INTAKE** | `—` | `—` | Private archives; not in the repository or the local workspace at audit time. Intake procedure (05_HISTORICAL_INTAKE.md) not supplied. Only pending pointers may reference this namespace. |
+| `HIST` (HIST::) | Historical archives (505-507, Work 11, 46-48) | historical_archive | **PENDING_INTAKE** | `—` | `—` | Private archives; not in the repository or the local workspace (searched 2026-10-15 by name). Expected archive names, sha256 and primary paths come from the author's seed manifest (proposals/seeds/2026-10-15-author-pack/source-manifest.json) and are unverified until the original bytes are available. Intake follows 05_HISTORICAL_INTAKE.md. Only pending pointers may reference this namespace. |
 
 ## Artifacts at the pins
 

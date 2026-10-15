@@ -119,41 +119,128 @@ def review_proposal(proposal_id: str, decision: str, reviewer: str, rationale: s
 # --- seed intake ----------------------------------------------------------------------------
 
 
-def intake_seeds(seed_dir: Path, root: Path | None = None) -> dict:
-    """Stage the author's seed files as *unapproved* proposals. Never writes to the ledger."""
+# Author seed concept targets -> shared concepts, only where the meaning is the same.
+# Everything else is kept verbatim and reported as an unmapped target (a coverage gap or a candidate concept).
+SEED_CONCEPT_MAP = {
+    "occupancy_vs_passage": "C::occupancy-vs-process",
+    "predictive_sufficiency": "C::predictive-sufficiency",
+    "higher_order_context": "C::higher-order-context",
+    "clock_dependence": "C::clock-readout-dependence",
+    "continuous_vs_jump_clock": "C::clock-readout-dependence",
+}
+
+
+def _seed_claim(row: dict, receipt: dict) -> dict:
+    rel = row.get("relation_type_proposed")
+    return {
+        "kind": "seed_claim",
+        "proposal_id": f"P::{row['proposal_id']}",
+        "seed_id": row["proposal_id"],
+        "seed_record": row,
+        "claim": row.get("claim", ""),
+        "cannot_infer": row.get("cannot_infer", ""),
+        "discriminator": row.get("discriminator", ""),
+        "theme": row.get("theme", ""),
+        "sources": list(row.get("sources", [])),
+        "relation_type_proposed": rel,
+        "connection_type": ledger.SEED_RELATION_MAP.get(rel),
+        "seed_review_status": row.get("review_status"),
+        "blocked_on_historical_primary": "historical" in str(row.get("review_status", "")),
+        "status": "proposed",
+        "origin": "author_seed",
+        "intake": receipt,
+    }
+
+
+def _seed_metaphor(row: dict, receipt: dict) -> dict:
+    targets = list(row.get("concept_targets", []))
+    mapped = sorted({SEED_CONCEPT_MAP[t] for t in targets if t in SEED_CONCEPT_MAP})
+    return {
+        "metaphor_id": f"M::{row['metaphor_id']}",
+        "seed_id": row["metaphor_id"],
+        "seed_record": row,
+        "title": row.get("name", ""),
+        "audience": row.get("audience", ""),
+        "concepts": mapped,
+        "concept_targets": targets,
+        "unmapped_concept_targets": [t for t in targets if t not in SEED_CONCEPT_MAP],
+        "mapping": [{"figure": a, "object": b} for a, b in row.get("maps", [])],
+        "explanation": row.get("explanation", ""),
+        "does_not_mean": [row["boundary"]] if row.get("boundary") else [],
+        "misleading_readings": [row["misleading_if"]] if row.get("misleading_if") else [],
+        "illustrative_status": f"author seed ({row.get('status')}); image suggestion: {row.get('image_suggestion', '')}",
+        "review": {"owner": "programme author (human)", "process": "docs/cadence.md (metaphor review)", "human_reviewed": False},
+        "status": "draft",
+        "evidentiary": False,
+        "origin": "author_seed",
+        "intake": receipt,
+    }
+
+
+def intake_seeds(seed_dir: Path, root: Path | None = None, *, label: str | None = None) -> dict:
+    """Stage the author's seed files as *unapproved* proposals. Never writes to the ledger.
+
+    The seed files are copied verbatim to proposals/seeds/<label>/ with a sha256
+    receipt. Records in the shared schema are staged as they are; records in the
+    author pack schema (claims with 'sources'; metaphors with 'maps') are kept
+    verbatim under 'seed_record' with mapped fields added. Re-running is
+    idempotent: ids already staged are reported and skipped.
+    """
     root = root or core.ROOT
-    report = {"candidate_relations": 0, "metaphors": 0, "problems": []}
+    seed_dir = Path(seed_dir)
+    label = label or datetime.date.today().isoformat()
+    store = root / "proposals" / "seeds" / label
+    store.mkdir(parents=True, exist_ok=True)
+    receipt_files = {}
+    for name in ("candidate-relations.jsonl", "metaphors.jsonl", "source-manifest.json"):
+        src = seed_dir / name
+        if src.exists():
+            data = src.read_bytes()
+            (store / name).write_bytes(data)
+            receipt_files[name] = {"sha256": core.sha256_bytes(data), "bytes": len(data)}
+    receipt = {"label": label, "stored_at": str(store.relative_to(root))}
+    report = {"candidate_relations": 0, "metaphors": 0, "skipped_existing": [], "problems": [], "files": receipt_files}
     rel = seed_dir / "candidate-relations.jsonl"
     if rel.exists():
         props = core.read_jsonl(root / "proposals" / "candidate-relations.jsonl")
         have = {p["proposal_id"] for p in props}
         n = 1 + max([int(p["proposal_id"].split("::")[1]) for p in props if p["proposal_id"].split("::")[1].isdigit()] or [0])
         for row in core.read_jsonl(rel):
-            row = dict(row)
-            row.setdefault("proposal_id", f"P::{n:04d}")
-            n += 1
-            if row["proposal_id"] in have:
-                report["problems"].append(f"duplicate proposal id {row['proposal_id']}")
+            if "claim" in row and "sources" in row:
+                rec = _seed_claim(row, receipt)
+                if rec["relation_type_proposed"] not in ledger.SEED_RELATION_MAP:
+                    report["problems"].append(f"{rec['seed_id']}: unmapped relation type {rec['relation_type_proposed']!r}")
+            else:
+                rec = dict(row)
+                rec.setdefault("proposal_id", f"P::{n:04d}")
+                n += 1
+                rec.update({"status": "proposed", "origin": "author_seed", "intake": receipt})
+                for k in ("comparison", "controls", "alternatives", "falsifiers", "evidence_refs"):
+                    rec.setdefault(k, {} if k in ("comparison", "controls") else [])
+                rec.setdefault("independence", "unknown")
+            if rec["proposal_id"] in have:
+                report["skipped_existing"].append(rec["proposal_id"])
                 continue
-            row["status"] = "proposed"
-            row["origin"] = "author_seed"
-            for k in ("comparison", "controls", "alternatives", "falsifiers", "evidence_refs"):
-                row.setdefault(k, {} if k in ("comparison", "controls") else [])
-            row.setdefault("independence", "unknown")
-            props.append(row)
+            props.append(rec)
+            have.add(rec["proposal_id"])
             report["candidate_relations"] += 1
         core.write_jsonl(root / "proposals" / "candidate-relations.jsonl", props)
     met = seed_dir / "metaphors.jsonl"
     if met.exists():
         drafts = core.read_jsonl(root / "proposals" / "metaphor-drafts.jsonl")
+        have = {m["metaphor_id"] for m in drafts} | {m["metaphor_id"] for m in core.read_jsonl(root / "ledger" / "metaphors.jsonl")}
         for row in core.read_jsonl(met):
-            row = dict(row, status="draft", origin="author_seed", evidentiary=False)
-            drafts.append(row)
+            rec = _seed_metaphor(row, receipt) if "maps" in row else dict(row, status="draft", origin="author_seed", evidentiary=False, intake=receipt)
+            if rec["metaphor_id"] in have:
+                report["skipped_existing"].append(rec["metaphor_id"])
+                continue
+            drafts.append(rec)
+            have.add(rec["metaphor_id"])
             report["metaphors"] += 1
         core.write_jsonl(root / "proposals" / "metaphor-drafts.jsonl", drafts)
-    manifest_seed = seed_dir / "source-manifest.json"
-    if manifest_seed.exists():
-        report["source_manifest"] = "received; compare by hand with sources/pin-spec.json and verify every path at its pinned commit before adopting (see docs/cadence.md)"
+    if (seed_dir / "source-manifest.json").exists():
+        report["source_manifest"] = "stored verbatim; compared with sources/pin-spec.json in the intake report (pins are never adopted from a seed without review)"
+    core.write_json(store / "receipt.json", report)
     return report
 
 

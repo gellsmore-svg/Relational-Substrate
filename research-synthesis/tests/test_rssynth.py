@@ -412,6 +412,63 @@ class ReviewAndHistoricalIntake(unittest.TestCase):
             self.assertEqual((staged["status"], staged["origin"]), ("proposed", "author_seed"))
 
 
+class AuthorPackSeedIntake(unittest.TestCase):
+    CLAIM = {"proposal_id": "SYN-T001", "claim": "c", "cannot_infer": "n", "discriminator": "d", "theme": "t", "relation_type_proposed": "candidate_mechanism_analogy", "review_status": "candidate", "sources": ["CL::F003-CLOCK-SPLIT", "GT::GT-F69-CLOCK-SEPARATED-SORTING", "HIST::some/archive/path.md"]}
+    METAPHOR = {"metaphor_id": "META-T", "name": "n", "audience": "general", "concept_targets": ["clock_dependence", "brand_new_target"], "maps": [["stopwatch", "continuous time"]], "explanation": "e", "boundary": "not physical time", "misleading_if": "read as physics", "image_suggestion": "i", "status": "proposed_non_evidentiary"}
+
+    def stage(self, root):
+        seeds = root / "incoming-pack"
+        seeds.mkdir()
+        (seeds / "candidate-relations.jsonl").write_text(json.dumps(self.CLAIM) + "\n")
+        (seeds / "metaphors.jsonl").write_text(json.dumps(self.METAPHOR) + "\n")
+        return seeds
+
+    def test_pack_schema_is_kept_verbatim_and_mapped_conservatively(self):
+        with sandbox() as root:
+            before = {p: core.sha256_file(p) for p in (root / "ledger").glob("*.jsonl")}
+            rep = workflow.intake_seeds(self.stage(root), label="test-pack")
+            self.assertEqual((rep["candidate_relations"], rep["metaphors"]), (1, 1))
+            claim = [p for p in core.read_jsonl(root / "proposals/candidate-relations.jsonl") if p["proposal_id"] == "P::SYN-T001"][0]
+            self.assertEqual(claim["seed_record"], self.CLAIM)
+            self.assertEqual((claim["kind"], claim["status"], claim["connection_type"]), ("seed_claim", "proposed", "untested_hypothesis"))
+            draft = [m for m in core.read_jsonl(root / "proposals/metaphor-drafts.jsonl") if m["metaphor_id"] == "M::META-T"][0]
+            self.assertEqual(draft["concepts"], ["C::clock-readout-dependence"])
+            self.assertEqual(draft["unmapped_concept_targets"], ["brand_new_target"])
+            self.assertIs(draft["evidentiary"], False)
+            self.assertEqual(before, {p: core.sha256_file(p) for p in (root / "ledger").glob("*.jsonl")})
+            self.assertTrue((root / "proposals/seeds/test-pack/receipt.json").exists())
+            self.assertEqual(ledger.validate_all(*inputs()), [])
+
+    def test_intake_is_idempotent(self):
+        with sandbox() as root:
+            seeds = self.stage(root)
+            workflow.intake_seeds(seeds, label="test-pack")
+            again = workflow.intake_seeds(seeds, label="test-pack")
+            self.assertEqual((again["candidate_relations"], again["metaphors"]), (0, 0))
+            self.assertEqual(sorted(again["skipped_existing"]), ["M::META-T", "P::SYN-T001"])
+
+    def test_seed_claim_cannot_be_promoted_or_remapped(self):
+        with sandbox() as root:
+            workflow.intake_seeds(self.stage(root), label="test-pack")
+            with self.assertRaises(ValueError):
+                workflow.review_proposal("P::SYN-T001", "agent_reviewed", "agent: test", "promote", human=False)
+            m, loaded, shared = inputs()
+            bad = copy.deepcopy(shared)
+            x = [p for p in bad["proposals"] if p["proposal_id"] == "P::SYN-T001"][0]
+            x["connection_type"] = "tested_structural_analogy"
+            self.assertTrue(any("seed mapping" in p for p in ledger.validate_all(m, loaded, bad)))
+            x["connection_type"], x["status"] = "untested_hypothesis", "agent_reviewed"
+            self.assertTrue(any("cannot be promoted directly" in p for p in ledger.validate_all(m, loaded, bad)))
+
+    def test_stored_author_seeds_are_byte_identical_to_their_receipt(self):
+        store = REAL_ROOT / "proposals/seeds/2026-10-15-author-pack"
+        if not store.exists():
+            self.skipTest("author pack not staged")
+        receipt = core.read_json(store / "receipt.json")
+        for name, rec in receipt["files"].items():
+            self.assertEqual(core.sha256_file(store / name), rec["sha256"])
+
+
 class NonMutationOfResearchRecords(unittest.TestCase):
     def test_branch_changes_only_the_shared_layer(self):
         v = workflow.scope_violations("origin/main")

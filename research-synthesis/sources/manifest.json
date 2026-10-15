@@ -545,9 +545,29 @@
       "adapters": [],
       "artifacts": [],
       "default_revision": true,
+      "expected_archives": [
+        {
+          "entries": 403,
+          "name": "RS_Work_Research.zip",
+          "sha256": "3ecfd22f9d4b64c17c2a2c9c198615ee1e1c6e3d08512e6971ae7b4090261e46"
+        },
+        {
+          "entries": 9,
+          "name": "RS_Work_Round46_Supplement.zip",
+          "sha256": "630da2d942b15247a164d5e1fd262f759483941210f38a9ab29b12c1a6ce4b5e"
+        }
+      ],
+      "expected_primary_paths": [
+        "rs_work_round11/findings.md",
+        "rs_work_round46_moments/REPORT.md",
+        "rs_work_round47/REPORT.md",
+        "rs_work_round48/REPORT.md",
+        "rs_sources/RS_Baseline_Post_506Z/RS_Baseline_Post_506Z/02_EXPERIMENT_LEDGER_505_506.md",
+        "rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md"
+      ],
       "lineage": [],
       "namespace": "HIST",
-      "note": "Private archives; not in the repository or the local workspace at audit time. Intake procedure (05_HISTORICAL_INTAKE.md) not supplied. Only pending pointers may reference this namespace.",
+      "note": "Private archives; not in the repository or the local workspace (searched 2026-10-15 by name). Expected archive names, sha256 and primary paths come from the author's seed manifest (proposals/seeds/2026-10-15-author-pack/source-manifest.json) and are unverified until the original bytes are available. Intake follows 05_HISTORICAL_INTAKE.md. Only pending pointers may reference this namespace.",
       "programme": "Historical archives (505-507, Work 11, 46-48)",
       "role": "historical_archive",
       "source_key": "HIST",

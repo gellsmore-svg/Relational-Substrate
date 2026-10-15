@@ -1,6 +1,6 @@
 # Acceptance list and test coverage
 
-`04_ACCEPTANCE_AND_REVIEW.md` was **not supplied**. This list is the Stage H list of the 01 prompt, plus the requirements stated in its Stages B–G. Tests are in `tests/test_rssynth.py`: 49 tests, standard library only.
+`04_ACCEPTANCE_AND_REVIEW.md` arrived with the author pack after the build and has **not yet been applied**. This list is the Stage H list of the 01 prompt, plus the requirements stated in its Stages B–G. Tests are in `tests/test_rssynth.py`: 53 tests, standard library only.
 
 | Requirement (01 prompt) | Tests | Status |
 | --- | --- | --- |
@@ -15,7 +15,7 @@
 | Frozen experiment, book and ledger non-mutation | `NonMutationOfResearchRecords`: the branch diff against `origin/main` touches only `research-synthesis/` and its workflow; generation writes only under `generated/` | Implemented |
 | Review workflow; no unreviewed promotion | `ReviewAndHistoricalIntake`: promotion refused for an incomplete evidential comparison; human acceptance needs a named human | Implemented |
 | Historical intake | Historical claims cannot be accepted before intake; pending pointers are allowed only in unresolved records | Implemented as a guard; **intake itself pending** (archives and procedure not supplied) |
-| Seed intake | Author seeds are staged as unapproved proposals only | Implemented; **author seeds not supplied** |
+| Seed intake | Author seeds are staged as unapproved proposals only; the pack schema is kept verbatim and mapped conservatively; a seed claim cannot be promoted directly; intake is idempotent (`AuthorPackSeedIntake`) | Implemented; **author seeds staged 2026-10-15** (`proposals/seeds/2026-10-15-author-pack/intake-report.md`) |
 | Discovery: reproducible, dominance-controlled, false positives in tests | `DiscoveryBehaviour`: a boilerplate false positive ranks first and is not promoted; per-node and near-duplicate caps hold; reviewed links can have zero similarity | Implemented (TF-IDF baseline; no embedding model) |
 
 ## Not covered, or only partly covered

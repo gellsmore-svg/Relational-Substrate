@@ -306,8 +306,8 @@
       "flags": [],
       "from": "CL::F8D-LOG-ADDITIVITY",
       "shared_terms": [
-        "minus",
         "fractions",
+        "minus",
         "log",
         "sum",
         "state",

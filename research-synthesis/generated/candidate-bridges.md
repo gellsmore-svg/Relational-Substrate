@@ -2,6 +2,8 @@
 
 Staged in `proposals/`; none is in the ledger. Status is shown in text.
 
+## Pairwise proposals
+
 | Id | Type | From | To | Status | Origin |
 | --- | --- | --- | --- | --- | --- |
 | P::0001 | exact_theorem_correspondence | `CL::F003-CLOCK-SPLIT` | `GT::GT-F69-CLOCK-SEPARATED-SORTING` | REJECTED | agent_drafted |
@@ -12,6 +14,83 @@ Staged in `proposals/`; none is in the ledger. Status is shown in text.
 | P::0006 | untested_hypothesis | `EXT::2026-10-15-cross-research-synthesis` | `C::predictive-sufficiency` | PROPOSED (unreviewed) | agent_drafted |
 | P::0007 | untested_hypothesis | `GT::GT-F80-CLOSEW-CLOSURE-RECOVERY` | `CL::Q-H2-CONTROLLED-PASSAGE` | UNDETERMINED | agent_drafted |
 | P::0008 | common_definition | `CL::CL-F05` | `GT::GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS` | REJECTED | discovery_candidate |
+
+## Author seed claims (multi-source; unapproved)
+
+Kept verbatim (`seed_record`). The seed's relation type is mapped conservatively: question-type relations map to no connection type, and an analogy maps to `untested_hypothesis` until a formal comparison is reviewed. A seed claim enters the ledger only after it is restated as pairwise connections and reviewed.
+
+### P::SYN-C001: predictive_sufficiency_under_projection (PROPOSED (unreviewed))
+
+- **Claim:** Some coarse representations erase distinctions that matter for specified future transitions or words.
+- **Cannot infer:** Common irreducible physical memory or exact operator identity across models.
+- **Discriminator:** Compare specified future intervention/observable/horizon contracts on verified mathematical source models.
+- **Proposed relation:** `shared_question` → mapped to `None`
+- **Seed review status:** `blocked_missing_or_unreviewed_historical_primary` (blocked on historical primary sources)
+- **Sources:** `CL::F8H-NONLUMPABLE-MATERIAL-PROJECTION`, `CL::F8M-H2-STATIONARY-H1-RESIDUAL`, `HIST::rs_work_round11/findings.md`
+
+### P::SYN-C002: occupancy_vs_passage (PROPOSED (unreviewed))
+
+- **Claim:** Occupation/persistence and access/route statistics are distinct estimands; some differences survive occupancy controls.
+- **Cannot infer:** Shared first-passage theorem or gravity-like attraction.
+- **Discriminator:** Track exact clock, stop sets, comparator, source conditioning and matched occupancy before claiming transfer.
+- **Proposed relation:** `compatible_with` → mapped to `epistemic_compatibility`
+- **Seed review status:** `candidate`
+- **Sources:** `CL::F004-PASSAGE-AFTER-OCCUPANCY`, `CL::F8M-H2-STATIONARY-H1-RESIDUAL`, `GT::GT-F04-RETENTION-NOT-APPROACH`
+
+### P::SYN-C003: clock_dependence (PROPOSED (unreviewed))
+
+- **Claim:** Choice of full-event, pair-event, continuous-time or jump-count sampling can expose differing statistics from related kernels.
+- **Cannot infer:** A physical theory of gravitational time dilation.
+- **Discriminator:** Formalise each clock as an operation on the kernel and compare whether commuting diagrams hold.
+- **Proposed relation:** `compatible_with` → mapped to `epistemic_compatibility`
+- **Seed review status:** `candidate`
+- **Sources:** `CL::F003-CLOCK-SPLIT`, `GT::GT-F07-SHARED-BASIN-DIFFERENT-CLOCKS`, `GT::GT-F69-CLOCK-SEPARATED-SORTING`
+
+### P::SYN-C004: relational_topology_and_context (PROPOSED (unreviewed))
+
+- **Claim:** Relational arrangement changes how local rules appear in visible shape, slots or attachment propensity.
+- **Cannot infer:** A universal substrate operator, geometrical metric or mathematical equivalence of CL/GT kernels.
+- **Discriminator:** Define and test common observables and structural maps with preserved support/clock and explicit null models.
+- **Proposed relation:** `candidate_mechanism_analogy` → mapped to `untested_hypothesis`
+- **Seed review status:** `candidate`
+- **Sources:** `CL::F8F-FIRST-PATH-SHAPE`, `CL::F8C-PROJECTION-GEOMETRY`, `GT::GT-F64-CHORD-SWITCHES-SITE-OFF`, `GT::GT-F67-FLOOR-IS-AN-EXACT-ODDS-LEVER`
+
+### P::SYN-C005: higher_order_influence_not_scalar_strength (PROPOSED (unreviewed))
+
+- **Claim:** Aggregated strength/count statistics can fail to predict contextual effects or interaction residuals.
+- **Cannot infer:** Same nonadditive form across models.
+- **Discriminator:** Predeclare what scalar baseline is matched and the residual structural observable.
+- **Proposed relation:** `shared_question` → mapped to `None`
+- **Seed review status:** `blocked_missing_or_unreviewed_historical_primary` (blocked on historical primary sources)
+- **Sources:** `CL::F005-COMPOSITION-NOT-SUM`, `CL::F007-SELECTIVITY-SURVIVES`, `GT::GT-F63-TOTAL-FLOOR-NOT-PREDICTIVE`, `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`
+
+### P::SYN-C006: historical_memory_vs_initial_memory (PROPOSED (unreviewed))
+
+- **Claim:** Current historical register efficacy, retained initial condition and visible stationary dependence are logically separate.
+- **Cannot infer:** All history generates persistent stationary geometry.
+- **Discriminator:** Separate I(current context; next step), I(initial context; later state) and stationary projected occupancy.
+- **Proposed relation:** `contrasts_with` → mapped to `explicit_contrast`
+- **Seed review status:** `candidate`
+- **Sources:** `CL::F018-LOCAL-VERSUS-INITIAL`, `CL::F8H-CURRENT-VS-INITIAL-MEMORY`, `CL::F8M-HISTORY-ONLY-STRUCTURAL-SILENCE`
+
+### P::SYN-C007: evidence_against_attraction_inference (PROPOSED (unreviewed))
+
+- **Claim:** Raw attachment/gathering is not a reliable density-independent measure of preferential relational attraction.
+- **Cannot infer:** A demonstrated gravitational basin.
+- **Discriminator:** Retain both raw and density-standardised estimates and matched-clock controls.
+- **Proposed relation:** `qualifies` → mapped to `qualifies`
+- **Seed review status:** `candidate`
+- **Sources:** `GT::GT-F61-NATIVE-K2-RAW-GATHERING`, `GT::GT-F62-NATIVE-GATHERING-IS-DENSITY-COMPOSITION`, `GT::GT-F01-DENS-NULL`
+
+### P::SYN-C008: endogenous_persistence_not_yet_proven (PROPOSED (unreviewed))
+
+- **Claim:** A self-maintained reference/functional lineage requires temporal observables and turnover/reconstruction controls, not merely a selected frame.
+- **Cannot infer:** Long-lived physical objects or an actual metric.
+- **Discriminator:** Completed E5A/GT-P009 evidence must be separately reviewed against matched lifetime/turnover nulls; no results presumed.
+- **Proposed relation:** `raises_shared_question` → mapped to `None`
+- **Seed review status:** `blocked_missing_or_unreviewed_historical_primary` (blocked on historical primary sources)
+- **Sources:** `GT::GT-Q19-METASTABLE-FREE-REFERENCE`, `GT::GT-F23-LOCAL-PERSISTENCE-SPARSE`, `HIST::rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md`
+
 
 ## Retrieval diagnostics (not evidence)
 

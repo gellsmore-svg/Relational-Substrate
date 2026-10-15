@@ -110,7 +110,7 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
             C.append(f"- **{x['connection_id']}** {x['connection_type']}: `{x['from']}` / `{x['to']}`: {short(x['rationale'], 400)}")
     C += ["", "## Rejected and undetermined proposals (kept with rationale)", ""]
     for p in sorted(shared["proposals"], key=lambda p: p["proposal_id"]):
-        if p["status"] in ("rejected", "undetermined"):
+        if p["status"] in ("rejected", "undetermined") and "from" in p:
             C.append(f"- **{p['proposal_id']}** {STATUS_TEXT[p['status']]}: `{p['from']}` → `{p['to']}` ({p['connection_type']}). {short(p.get('decision_rationale', ''), 400)}")
     C += ["", "## Negative findings recorded by the programmes", "", "Findings whose structural roles include `negative_finding`, by source (statements abbreviated; the pinned ledger is authoritative).", ""]
     for src in ("CL", "GT"):
@@ -140,9 +140,16 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     files["questions.md"] = "\n".join(Q) + "\n"
 
     # ---- candidate bridges --------------------------------------------------------------
-    B = ["# Candidate bridges (proposals)", "", "Staged in `proposals/`; none is in the ledger. Status is shown in text.", "", "| Id | Type | From | To | Status | Origin |", "| --- | --- | --- | --- | --- | --- |"]
+    B = ["# Candidate bridges (proposals)", "", "Staged in `proposals/`; none is in the ledger. Status is shown in text.", "", "## Pairwise proposals", "", "| Id | Type | From | To | Status | Origin |", "| --- | --- | --- | --- | --- | --- |"]
     for p in sorted(shared["proposals"], key=lambda p: p["proposal_id"]):
-        B.append(f"| {p['proposal_id']} | {p['connection_type']} | `{p['from']}` | `{p['to']}` | {STATUS_TEXT[p['status']]} | {p['origin']} |")
+        if p.get("kind") != "seed_claim":
+            B.append(f"| {p['proposal_id']} | {p['connection_type']} | `{p['from']}` | `{p['to']}` | {STATUS_TEXT[p['status']]} | {p['origin']} |")
+    seeds = sorted((p for p in shared["proposals"] if p.get("kind") == "seed_claim"), key=lambda p: p["proposal_id"])
+    if seeds:
+        B += ["", "## Author seed claims (multi-source; unapproved)", "", "Kept verbatim (`seed_record`). The seed's relation type is mapped conservatively: question-type relations map to no connection type, and an analogy maps to `untested_hypothesis` until a formal comparison is reviewed. A seed claim enters the ledger only after it is restated as pairwise connections and reviewed.", ""]
+        for p in seeds:
+            refs = ", ".join(f"`{r}`" for r in p["sources"])
+            B += [f"### {p['proposal_id']}: {p['theme']} ({STATUS_TEXT[p['status']]})", "", f"- **Claim:** {p['claim']}", f"- **Cannot infer:** {p['cannot_infer']}", f"- **Discriminator:** {p['discriminator']}", f"- **Proposed relation:** `{p['relation_type_proposed']}` → mapped to `{p['connection_type']}`", f"- **Seed review status:** `{p['seed_review_status']}`" + (" (blocked on historical primary sources)" if p.get("blocked_on_historical_primary") else ""), f"- **Sources:** {refs}", ""]
     if discovery:
         B += ["", "## Retrieval diagnostics (not evidence)", "", f"{discovery['score_meaning']}", "", "Calibration: similarity and rank of reviewed connections among all cross-programme pairs:", ""]
         for c in discovery["reviewed_connection_calibration"]:
@@ -188,7 +195,17 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     MG += ["", "## Connections with no illustrating metaphor", ""]
     MG += [f"- `{x['connection_id']}` {x['connection_type']} (`{x['from']}` → `{x['to']}`)" for x in conns if x["connection_id"] not in illustrated]
     MG += ["", "## Draft metaphors awaiting review (not counted as coverage)", ""]
-    MG += [f"- `{m['metaphor_id']}` {m['title']} → {', '.join(m['concepts'])}" for m in sorted(shared["metaphor_drafts"], key=lambda m: m["metaphor_id"])]
+    concept_ids = {c["concept_id"] for c in concepts}
+    for m in sorted(shared["metaphor_drafts"], key=lambda m: m["metaphor_id"]):
+        _, flags = ledger.split_draft_problems(ledger.validate_metaphor(m, concept_ids))
+        line = f"- `{m['metaphor_id']}` {m['title']} ({m.get('origin', '')}) → {', '.join(m['concepts']) or 'no mapped concept'}"
+        if m.get("unmapped_concept_targets"):
+            line += f"; unmapped seed targets: {', '.join(m['unmapped_concept_targets'])}"
+        MG.append(line)
+        MG += [f"  - review flag: {f.split(': ', 1)[1]}" for f in flags]
+    unmapped = sorted({t for m in shared["metaphor_drafts"] for t in m.get("unmapped_concept_targets", [])})
+    if unmapped:
+        MG += ["", "## Seed concept targets with no shared concept yet", "", "Candidates for new concepts, or for mapping by the author. Not created automatically.", ""] + [f"- `{t}`" for t in unmapped]
     files["metaphor-gaps.md"] = "\n".join(MG) + "\n"
     MM = ["graph LR"]
     seen = set()
