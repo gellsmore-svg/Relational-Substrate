@@ -1,0 +1,1387 @@
+[
+  {
+    "candidate_equals_h1": true,
+    "candidate_equals_h2": true,
+    "existing_controller_membership": [
+      "RECENT-REVERSAL",
+      "SECOND-RECENT"
+    ],
+    "history_slots_equal": true,
+    "orbit": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        2
+      ],
+      [
+        3,
+        3,
+        3
+      ],
+      [
+        4,
+        4,
+        4
+      ],
+      [
+        5,
+        5,
+        5
+      ]
+    ],
+    "orbit_size": 6,
+    "representative": [
+      0,
+      0,
+      0
+    ],
+    "rho12": "SAME",
+    "rho1e": "SAME",
+    "rho2e": "SAME",
+    "role_id": "R00",
+    "ternary_discriminator": null,
+    "vertex_union": [
+      0,
+      1
+    ]
+  },
+  {
+    "candidate_equals_h1": false,
+    "candidate_equals_h2": false,
+    "existing_controller_membership": [],
+    "history_slots_equal": true,
+    "orbit": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        4
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        3
+      ],
+      [
+        1,
+        1,
+        5
+      ],
+      [
+        2,
+        2,
+        0
+      ],
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        4
+      ],
+      [
+        2,
+        2,
+        5
+      ],
+      [
+        3,
+        3,
+        0
+      ],
+      [
+        3,
+        3,
+        1
+      ],
+      [
+        3,
+        3,
+        4
+      ],
+      [
+        3,
+        3,
+        5
+      ],
+      [
+        4,
+        4,
+        0
+      ],
+      [
+        4,
+        4,
+        2
+      ],
+      [
+        4,
+        4,
+        3
+      ],
+      [
+        4,
+        4,
+        5
+      ],
+      [
+        5,
+        5,
+        1
+      ],
+      [
+        5,
+        5,
+        2
+      ],
+      [
+        5,
+        5,
+        3
+      ],
+      [
+        5,
+        5,
+        4
+      ]
+    ],
+    "orbit_size": 24,
+    "representative": [
+      0,
+      0,
+      1
+    ],
+    "rho12": "SAME",
+    "rho1e": "ADJ",
+    "rho2e": "ADJ",
+    "role_id": "R01",
+    "ternary_discriminator": null,
+    "vertex_union": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "candidate_equals_h1": false,
+    "candidate_equals_h2": false,
+    "existing_controller_membership": [],
+    "history_slots_equal": true,
+    "orbit": [
+      [
+        0,
+        0,
+        5
+      ],
+      [
+        1,
+        1,
+        4
+      ],
+      [
+        2,
+        2,
+        3
+      ],
+      [
+        3,
+        3,
+        2
+      ],
+      [
+        4,
+        4,
+        1
+      ],
+      [
+        5,
+        5,
+        0
+      ]
+    ],
+    "orbit_size": 6,
+    "representative": [
+      0,
+      0,
+      5
+    ],
+    "rho12": "SAME",
+    "rho1e": "DISJ",
+    "rho2e": "DISJ",
+    "role_id": "R02",
+    "ternary_discriminator": null,
+    "vertex_union": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "candidate_equals_h1": true,
+    "candidate_equals_h2": false,
+    "existing_controller_membership": [
+      "RECENT-REVERSAL"
+    ],
+    "history_slots_equal": false,
+    "orbit": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        3,
+        1
+      ],
+      [
+        1,
+        5,
+        1
+      ],
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        4,
+        2
+      ],
+      [
+        2,
+        5,
+        2
+      ],
+      [
+        3,
+        0,
+        3
+      ],
+      [
+        3,
+        1,
+        3
+      ],
+      [
+        3,
+        4,
+        3
+      ],
+      [
+        3,
+        5,
+        3
+      ],
+      [
+        4,
+        0,
+        4
+      ],
+      [
+        4,
+        2,
+        4
+      ],
+      [
+        4,
+        3,
+        4
+      ],
+      [
+        4,
+        5,
+        4
+      ],
+      [
+        5,
+        1,
+        5
+      ],
+      [
+        5,
+        2,
+        5
+      ],
+      [
+        5,
+        3,
+        5
+      ],
+      [
+        5,
+        4,
+        5
+      ]
+    ],
+    "orbit_size": 24,
+    "representative": [
+      0,
+      1,
+      0
+    ],
+    "rho12": "ADJ",
+    "rho1e": "SAME",
+    "rho2e": "ADJ",
+    "role_id": "R03",
+    "ternary_discriminator": null,
+    "vertex_union": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "candidate_equals_h1": false,
+    "candidate_equals_h2": true,
+    "existing_controller_membership": [
+      "SECOND-RECENT"
+    ],
+    "history_slots_equal": false,
+    "orbit": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        2
+      ],
+      [
+        0,
+        3,
+        3
+      ],
+      [
+        0,
+        4,
+        4
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        3,
+        3
+      ],
+      [
+        1,
+        5,
+        5
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        4,
+        4
+      ],
+      [
+        2,
+        5,
+        5
+      ],
+      [
+        3,
+        0,
+        0
+      ],
+      [
+        3,
+        1,
+        1
+      ],
+      [
+        3,
+        4,
+        4
+      ],
+      [
+        3,
+        5,
+        5
+      ],
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        4,
+        2,
+        2
+      ],
+      [
+        4,
+        3,
+        3
+      ],
+      [
+        4,
+        5,
+        5
+      ],
+      [
+        5,
+        1,
+        1
+      ],
+      [
+        5,
+        2,
+        2
+      ],
+      [
+        5,
+        3,
+        3
+      ],
+      [
+        5,
+        4,
+        4
+      ]
+    ],
+    "orbit_size": 24,
+    "representative": [
+      0,
+      1,
+      1
+    ],
+    "rho12": "ADJ",
+    "rho1e": "ADJ",
+    "rho2e": "SAME",
+    "role_id": "R04",
+    "ternary_discriminator": null,
+    "vertex_union": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "candidate_equals_h1": false,
+    "candidate_equals_h2": false,
+    "existing_controller_membership": [],
+    "history_slots_equal": false,
+    "orbit": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        0,
+        4,
+        3
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        3,
+        5
+      ],
+      [
+        1,
+        5,
+        3
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        2,
+        4,
+        5
+      ],
+      [
+        2,
+        5,
+        4
+      ],
+      [
+        3,
+        0,
+        4
+      ],
+      [
+        3,
+        1,
+        5
+      ],
+      [
+        3,
+        4,
+        0
+      ],
+      [
+        3,
+        5,
+        1
+      ],
+      [
+        4,
+        0,
+        3
+      ],
+      [
+        4,
+        2,
+        5
+      ],
+      [
+        4,
+        3,
+        0
+      ],
+      [
+        4,
+        5,
+        2
+      ],
+      [
+        5,
+        1,
+        3
+      ],
+      [
+        5,
+        2,
+        4
+      ],
+      [
+        5,
+        3,
+        1
+      ],
+      [
+        5,
+        4,
+        2
+      ]
+    ],
+    "orbit_size": 24,
+    "representative": [
+      0,
+      1,
+      2
+    ],
+    "rho12": "ADJ",
+    "rho1e": "ADJ",
+    "rho2e": "ADJ",
+    "role_id": "R05",
+    "ternary_discriminator": "STAR",
+    "vertex_union": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "candidate_equals_h1": false,
+    "candidate_equals_h2": false,
+    "existing_controller_membership": [],
+    "history_slots_equal": false,
+    "orbit": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        2,
+        4
+      ],
+      [
+        0,
+        3,
+        1
+      ],
+      [
+        0,
+        4,
+        2
+      ],
+      [
+        1,
+        0,
+        3
+      ],
+      [
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        3,
+        0
+      ],
+      [
+        1,
+        5,
+        2
+      ],
+      [
+        2,
+        0,
+        4
+      ],
+      [
+        2,
+        1,
+        5
+      ],
+      [
+        2,
+        4,
+        0
+      ],
+      [
+        2,
+        5,
+        1
+      ],
+      [
+        3,
+        0,
+        1
+      ],
+      [
+        3,
+        1,
+        0
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        3,
+        5,
+        4
+      ],
+      [
+        4,
+        0,
+        2
+      ],
+      [
+        4,
+        2,
+        0
+      ],
+      [
+        4,
+        3,
+        5
+      ],
+      [
+        4,
+        5,
+        3
+      ],
+      [
+        5,
+        1,
+        2
+      ],
+      [
+        5,
+        2,
+        1
+      ],
+      [
+        5,
+        3,
+        4
+      ],
+      [
+        5,
+        4,
+        3
+      ]
+    ],
+    "orbit_size": 24,
+    "representative": [
+      0,
+      1,
+      3
+    ],
+    "rho12": "ADJ",
+    "rho1e": "ADJ",
+    "rho2e": "ADJ",
+    "role_id": "R06",
+    "ternary_discriminator": "TRIANGLE",
+    "vertex_union": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "candidate_equals_h1": false,
+    "candidate_equals_h2": false,
+    "existing_controller_membership": [],
+    "history_slots_equal": false,
+    "orbit": [
+      [
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        3,
+        2
+      ],
+      [
+        0,
+        4,
+        1
+      ],
+      [
+        1,
+        0,
+        5
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        1,
+        5,
+        0
+      ],
+      [
+        2,
+        0,
+        5
+      ],
+      [
+        2,
+        1,
+        4
+      ],
+      [
+        2,
+        4,
+        1
+      ],
+      [
+        2,
+        5,
+        0
+      ],
+      [
+        3,
+        0,
+        5
+      ],
+      [
+        3,
+        1,
+        4
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        3,
+        5,
+        0
+      ],
+      [
+        4,
+        0,
+        5
+      ],
+      [
+        4,
+        2,
+        3
+      ],
+      [
+        4,
+        3,
+        2
+      ],
+      [
+        4,
+        5,
+        0
+      ],
+      [
+        5,
+        1,
+        4
+      ],
+      [
+        5,
+        2,
+        3
+      ],
+      [
+        5,
+        3,
+        2
+      ],
+      [
+        5,
+        4,
+        1
+      ]
+    ],
+    "orbit_size": 24,
+    "representative": [
+      0,
+      1,
+      4
+    ],
+    "rho12": "ADJ",
+    "rho1e": "ADJ",
+    "rho2e": "DISJ",
+    "role_id": "R07",
+    "ternary_discriminator": null,
+    "vertex_union": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "candidate_equals_h1": false,
+    "candidate_equals_h2": false,
+    "existing_controller_membership": [],
+    "history_slots_equal": false,
+    "orbit": [
+      [
+        0,
+        1,
+        5
+      ],
+      [
+        0,
+        2,
+        5
+      ],
+      [
+        0,
+        3,
+        5
+      ],
+      [
+        0,
+        4,
+        5
+      ],
+      [
+        1,
+        0,
+        4
+      ],
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        1,
+        5,
+        4
+      ],
+      [
+        2,
+        0,
+        3
+      ],
+      [
+        2,
+        1,
+        3
+      ],
+      [
+        2,
+        4,
+        3
+      ],
+      [
+        2,
+        5,
+        3
+      ],
+      [
+        3,
+        0,
+        2
+      ],
+      [
+        3,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        2
+      ],
+      [
+        3,
+        5,
+        2
+      ],
+      [
+        4,
+        0,
+        1
+      ],
+      [
+        4,
+        2,
+        1
+      ],
+      [
+        4,
+        3,
+        1
+      ],
+      [
+        4,
+        5,
+        1
+      ],
+      [
+        5,
+        1,
+        0
+      ],
+      [
+        5,
+        2,
+        0
+      ],
+      [
+        5,
+        3,
+        0
+      ],
+      [
+        5,
+        4,
+        0
+      ]
+    ],
+    "orbit_size": 24,
+    "representative": [
+      0,
+      1,
+      5
+    ],
+    "rho12": "ADJ",
+    "rho1e": "DISJ",
+    "rho2e": "ADJ",
+    "role_id": "R08",
+    "ternary_discriminator": null,
+    "vertex_union": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "candidate_equals_h1": true,
+    "candidate_equals_h2": false,
+    "existing_controller_membership": [
+      "RECENT-REVERSAL"
+    ],
+    "history_slots_equal": false,
+    "orbit": [
+      [
+        0,
+        5,
+        0
+      ],
+      [
+        1,
+        4,
+        1
+      ],
+      [
+        2,
+        3,
+        2
+      ],
+      [
+        3,
+        2,
+        3
+      ],
+      [
+        4,
+        1,
+        4
+      ],
+      [
+        5,
+        0,
+        5
+      ]
+    ],
+    "orbit_size": 6,
+    "representative": [
+      0,
+      5,
+      0
+    ],
+    "rho12": "DISJ",
+    "rho1e": "SAME",
+    "rho2e": "DISJ",
+    "role_id": "R09",
+    "ternary_discriminator": null,
+    "vertex_union": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "candidate_equals_h1": false,
+    "candidate_equals_h2": false,
+    "existing_controller_membership": [],
+    "history_slots_equal": false,
+    "orbit": [
+      [
+        0,
+        5,
+        1
+      ],
+      [
+        0,
+        5,
+        2
+      ],
+      [
+        0,
+        5,
+        3
+      ],
+      [
+        0,
+        5,
+        4
+      ],
+      [
+        1,
+        4,
+        0
+      ],
+      [
+        1,
+        4,
+        2
+      ],
+      [
+        1,
+        4,
+        3
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        2,
+        3,
+        0
+      ],
+      [
+        2,
+        3,
+        1
+      ],
+      [
+        2,
+        3,
+        4
+      ],
+      [
+        2,
+        3,
+        5
+      ],
+      [
+        3,
+        2,
+        0
+      ],
+      [
+        3,
+        2,
+        1
+      ],
+      [
+        3,
+        2,
+        4
+      ],
+      [
+        3,
+        2,
+        5
+      ],
+      [
+        4,
+        1,
+        0
+      ],
+      [
+        4,
+        1,
+        2
+      ],
+      [
+        4,
+        1,
+        3
+      ],
+      [
+        4,
+        1,
+        5
+      ],
+      [
+        5,
+        0,
+        1
+      ],
+      [
+        5,
+        0,
+        2
+      ],
+      [
+        5,
+        0,
+        3
+      ],
+      [
+        5,
+        0,
+        4
+      ]
+    ],
+    "orbit_size": 24,
+    "representative": [
+      0,
+      5,
+      1
+    ],
+    "rho12": "DISJ",
+    "rho1e": "ADJ",
+    "rho2e": "ADJ",
+    "role_id": "R10",
+    "ternary_discriminator": null,
+    "vertex_union": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "candidate_equals_h1": false,
+    "candidate_equals_h2": true,
+    "existing_controller_membership": [
+      "SECOND-RECENT"
+    ],
+    "history_slots_equal": false,
+    "orbit": [
+      [
+        0,
+        5,
+        5
+      ],
+      [
+        1,
+        4,
+        4
+      ],
+      [
+        2,
+        3,
+        3
+      ],
+      [
+        3,
+        2,
+        2
+      ],
+      [
+        4,
+        1,
+        1
+      ],
+      [
+        5,
+        0,
+        0
+      ]
+    ],
+    "orbit_size": 6,
+    "representative": [
+      0,
+      5,
+      5
+    ],
+    "rho12": "DISJ",
+    "rho1e": "DISJ",
+    "rho2e": "SAME",
+    "role_id": "R11",
+    "ternary_discriminator": null,
+    "vertex_union": [
+      0,
+      1,
+      2,
+      3
+    ]
+  }
+]
