@@ -15,7 +15,7 @@
 
 ## Connections touching this theme
 
-- X::0007 epistemic_compatibility (AGENT-REVIEWED (awaiting human acceptance)): `CL::F018-LOCAL-VERSUS-INITIAL` → `GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY`
+- X::0007 epistemic_compatibility (HUMAN-ACCEPTED (at the stated decision category)): `CL::F018-LOCAL-VERSUS-INITIAL` → `GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY`
 
 ## Questions
 
@@ -34,7 +34,7 @@ graph LR
   n_CL__F8H_CURRENT_VS_INITIAL_MEMORY["CL::F8H-CURRENT-VS-INITIAL-MEMORY"] --- n_C__retention_vs_current_dependence
   n_GT__GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY["GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY"] --- n_C__retention_vs_current_dependence
   n_GT__GT_F23_LOCAL_PERSISTENCE_SPARSE["GT::GT-F23-LOCAL-PERSISTENCE-SPARSE"] --- n_C__retention_vs_current_dependence
-  n_CL__F018_LOCAL_VERSUS_INITIAL -->|epistemic_compatibility · agent_reviewed| n_GT__GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY
+  n_CL__F018_LOCAL_VERSUS_INITIAL -->|epistemic_compatibility · human_accepted| n_GT__GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY
   classDef concept fill:#fff4d6,stroke:#a07a00
 ```
 

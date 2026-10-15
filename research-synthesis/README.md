@@ -72,7 +72,7 @@ There are no third-party dependencies, no network access, and no research suite 
 
 ## Governance
 
-- **Who decides.** The author accepts connections and metaphors (`human_accepted`). Agent review (`agent_reviewed`) is labelled as such and awaits that acceptance.
+- **Who decides.** The author accepts connections and metaphors (`human_accepted`). Acceptance is implicit in the round trip: the author's next instruction ratifies the recommendations reported at the end of a round, at their stated decision category, unless the author objects. See [`docs/cadence.md`](docs/cadence.md).
 - **When things change.** Updates are milestone-triggered: a pin moves only after a completed, reviewed round. See [`docs/cadence.md`](docs/cadence.md).
 - **What must never be edited.**
   - Programme findings: they are qualified or superseded with directed edges instead.

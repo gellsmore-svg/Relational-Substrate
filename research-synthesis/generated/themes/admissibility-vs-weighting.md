@@ -15,8 +15,8 @@
 
 ## Connections touching this theme
 
-- X::0005 shared_implementation_assumption (AGENT-REVIEWED (awaiting human acceptance)): `GT::GT-F05-RELATIONAL-POTENTIAL` → `CL::CL-T01`
-- X::0006 qualifies (AGENT-REVIEWED (awaiting human acceptance)): `GT::GT-F54-HARD-BAN-END-OF-SOFT-LADDER` → `CL::CL-T01`
+- X::0005 shared_implementation_assumption (HUMAN-ACCEPTED (at the stated decision category)): `GT::GT-F05-RELATIONAL-POTENTIAL` → `CL::CL-T01`
+- X::0006 qualifies (HUMAN-ACCEPTED (at the stated decision category)): `GT::GT-F54-HARD-BAN-END-OF-SOFT-LADDER` → `CL::CL-T01`
 
 ## Questions
 
@@ -35,8 +35,8 @@ graph LR
   n_CL__F8D_LOG_ADDITIVITY["CL::F8D-LOG-ADDITIVITY"] --- n_C__admissibility_vs_weighting
   n_GT__GT_F54_HARD_BAN_END_OF_SOFT_LADDER["GT::GT-F54-HARD-BAN-END-OF-SOFT-LADDER"] --- n_C__admissibility_vs_weighting
   n_GT__GT_F51_ONE_WAY_RELEASE_MODE["GT::GT-F51-ONE-WAY-RELEASE-MODE"] --- n_C__admissibility_vs_weighting
-  n_GT__GT_F05_RELATIONAL_POTENTIAL -->|shared_implementation_assumption · agent_reviewed| n_CL__CL_T01
-  n_GT__GT_F54_HARD_BAN_END_OF_SOFT_LADDER -->|qualifies · agent_reviewed| n_CL__CL_T01
+  n_GT__GT_F05_RELATIONAL_POTENTIAL -->|shared_implementation_assumption · human_accepted| n_CL__CL_T01
+  n_GT__GT_F54_HARD_BAN_END_OF_SOFT_LADDER -->|qualifies · human_accepted| n_CL__CL_T01
   n_M__heavy_door_locked_door(["M::heavy-door-locked-door"]) -.->|metaphor| n_C__admissibility_vs_weighting
   classDef concept fill:#fff4d6,stroke:#a07a00
 ```

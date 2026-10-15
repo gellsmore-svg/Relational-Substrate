@@ -7,7 +7,7 @@ import json
 import subprocess
 from pathlib import Path
 
-from . import core, generate, ledger, sources
+from . import core, generate, ledger, roundtrip, sources
 
 def snapshots_dir():
     return core.ROOT / "snapshots"
@@ -314,6 +314,8 @@ def check(*, use_git: bool = True, scope_base: str | None = "origin/main") -> di
         report["errors"] += [f"source {k}: {p}" for p in r["problems"]]
     shared = ledger.load_shared()
     report["errors"] += [f"shared: {p}" for p in ledger.validate_all(manifest, loaded, shared)]
+    report["errors"] += [f"round trip: {p}" for p in roundtrip.validate(core.ROOT, shared)]
+    report["info"]["open_round_trips"] = roundtrip.open_round_trips(core.ROOT)
     report["warnings"] += ledger.stale_reviews(manifest, shared["connections"])
     if use_git:
         for rel, key in (("ledger/connections.jsonl", "connection_id"), ("proposals/candidate-relations.jsonl", "proposal_id")):

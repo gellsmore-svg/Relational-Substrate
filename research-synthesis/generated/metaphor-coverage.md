@@ -20,7 +20,7 @@ Metaphors are explanations, **never evidence**. A metaphor's status never change
 
 ## The metaphors
 
-### A heavy door and a locked door (`M::heavy-door-locked-door`; agent_reviewed, non-evidentiary)
+### A heavy door and a locked door (`M::heavy-door-locked-door`; human_accepted, non-evidentiary)
 
 A door that gets heavier is used less and less, and some counts of use slide smoothly toward what happens when it is locked. But locking it is different in kind: some routes stop existing, and some changes can no longer be undone. Forbidding is not just extreme discouragement, even when a few numbers look continuous.
 
@@ -37,7 +37,7 @@ A door that gets heavier is used less and less, and some counts of use slide smo
 
 **Misleading readings:** Concluding that hard bans are 'just' strong weights (support changes, GT-F51); Concluding that they are always discontinuous (GT-F54).
 
-### Counting minutes or counting moves (`M::minutes-and-moves`; agent_reviewed, non-evidentiary)
+### Counting minutes or counting moves (`M::minutes-and-moves`; human_accepted, non-evidentiary)
 
 In a board game where moves happen at random rates, whether the white pieces or the black pieces finish first can depend on whether you count minutes or moves. That is GT's clock dependence: the same sequence of moves, weighted differently. If you also stop recording the moves of one kind of piece, the record you keep can look as if it remembers things the full game does not: that is CL's epoch, which hides events as well as changing the clock.
 
@@ -53,7 +53,7 @@ In a board game where moves happen at random rates, whether the white pieces or 
 
 **Misleading readings:** Treating CL's and GT's clock effects as one phenomenon (X::0003 records the contrast).
 
-### A photograph and a diary (`M::photo-and-diary`; agent_reviewed, non-evidentiary)
+### A photograph and a diary (`M::photo-and-diary`; human_accepted, non-evidentiary)
 
 Sometimes a photograph of the present is all you need to forecast what happens next. Sometimes two identical photographs lead to different futures, and only the diary tells them apart: then history is a predictive variable. A historian can read a diary without the diary changing anything; a council that acts on the diary is different. Only the second makes history part of the rules.
 
@@ -71,7 +71,7 @@ Sometimes a photograph of the present is all you need to forecast what happens n
 
 **Misleading readings:** Thinking more diary is always better: beyond the sufficient register, extra history adds nothing (CL predictive quotients); Thinking a long diary means long memory: in irreducible chains information about the initial state decays.
 
-### A committee whose members rotate (`M::rotating-committee`; agent_reviewed, non-evidentiary)
+### A committee whose members rotate (`M::rotating-committee`; human_accepted, non-evidentiary)
 
 A committee can keep meeting for a long time while its members come and go. That is different from a fixed group of people who all have to stay. But a long-running committee does not prove anyone is keeping it together: if members rejoin as fast as they leave, the committee may last simply because everything around the chair is busy.
 
@@ -88,7 +88,7 @@ A committee can keep meeting for a long time while its members come and go. That
 
 **Misleading readings:** Reading persistence through turnover as organisation (GT-F78 shows uneven activity can produce it); Reading Omega as the number of replacements.
 
-### Picking the tallest person in the room (`M::tallest-in-the-room`; agent_reviewed, non-evidentiary)
+### Picking the tallest person in the room (`M::tallest-in-the-room`; human_accepted, non-evidentiary)
 
 If you pick the tallest person in a room, they are tall by construction; that tells you nothing about whether height lasts. In these models 'height' (number of links) keeps changing, and whoever was picked drifts back to average. The useful question is how fast, compared with a fair baseline.
 
@@ -104,7 +104,7 @@ If you pick the tallest person in a room, they are tall by construction; that te
 
 **Misleading readings:** Reading a slow return to average as a lasting centre.
 
-### Two towns with the same number of open cafés (`M::two-towns`; agent_reviewed, non-evidentiary)
+### Two towns with the same number of open cafés (`M::two-towns`; human_accepted, non-evidentiary)
 
 Two towns can have exactly the same number of cafés open on an average day. In one, each café stays open for years; in the other, cafés open and close every week in a busy quarter while the quiet quarter hardly changes. Counting open cafés on a random day cannot tell the towns apart. Following one café over time can.
 

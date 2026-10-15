@@ -14,7 +14,7 @@
 
 ## Connections touching this theme
 
-- X::0007 epistemic_compatibility (AGENT-REVIEWED (awaiting human acceptance)): `CL::F018-LOCAL-VERSUS-INITIAL` → `GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY`
+- X::0007 epistemic_compatibility (HUMAN-ACCEPTED (at the stated decision category)): `CL::F018-LOCAL-VERSUS-INITIAL` → `GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY`
 
 ## Questions
 
@@ -32,7 +32,7 @@ graph LR
   n_GT__GT_F72_NO_LABELLED_CENTRE_AT_FINITE_N["GT::GT-F72-NO-LABELLED-CENTRE-AT-FINITE-N"] --- n_C__selection_vs_persistence
   n_GT__GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY["GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY"] --- n_C__selection_vs_persistence
   n_GT__GT_F22_NO_EMERGENT_CENTRE["GT::GT-F22-NO-EMERGENT-CENTRE"] --- n_C__selection_vs_persistence
-  n_CL__F018_LOCAL_VERSUS_INITIAL -->|epistemic_compatibility · agent_reviewed| n_GT__GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY
+  n_CL__F018_LOCAL_VERSUS_INITIAL -->|epistemic_compatibility · human_accepted| n_GT__GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY
   n_M__tallest_in_the_room(["M::tallest-in-the-room"]) -.->|metaphor| n_C__selection_vs_persistence
   classDef concept fill:#fff4d6,stroke:#a07a00
 ```

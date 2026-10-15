@@ -15,7 +15,7 @@
 
 ## Connections touching this theme
 
-- X::0004 explicit_contrast (AGENT-REVIEWED (awaiting human acceptance)): `CL::F001-PAIRWISE-RISE` → `GT::GT-F12-SINGLE-WITNESS-REVERSIBLE`
+- X::0004 explicit_contrast (HUMAN-ACCEPTED (at the stated decision category)): `CL::F001-PAIRWISE-RISE` → `GT::GT-F12-SINGLE-WITNESS-REVERSIBLE`
 
 ## Questions
 
@@ -34,7 +34,7 @@ graph LR
   n_GT__GT_F13_NONGRADIENT_ARROW["GT::GT-F13-NONGRADIENT-ARROW"] --- n_C__reversibility_and_arrow
   n_GT__GT_F30_ARROW_BELONGS_TO_RATIO["GT::GT-F30-ARROW-BELONGS-TO-RATIO"] --- n_C__reversibility_and_arrow
   n_CL__F001_PAIRWISE_RISE["CL::F001-PAIRWISE-RISE"] --- n_C__reversibility_and_arrow
-  n_CL__F001_PAIRWISE_RISE -->|explicit_contrast · agent_reviewed| n_GT__GT_F12_SINGLE_WITNESS_REVERSIBLE
+  n_CL__F001_PAIRWISE_RISE -->|explicit_contrast · human_accepted| n_GT__GT_F12_SINGLE_WITNESS_REVERSIBLE
   classDef concept fill:#fff4d6,stroke:#a07a00
 ```
 

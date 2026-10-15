@@ -13,8 +13,8 @@
 
 ## Connections touching this theme
 
-- X::0005 shared_implementation_assumption (AGENT-REVIEWED (awaiting human acceptance)): `GT::GT-F05-RELATIONAL-POTENTIAL` → `CL::CL-T01`
-- X::0006 qualifies (AGENT-REVIEWED (awaiting human acceptance)): `GT::GT-F54-HARD-BAN-END-OF-SOFT-LADDER` → `CL::CL-T01`
+- X::0005 shared_implementation_assumption (HUMAN-ACCEPTED (at the stated decision category)): `GT::GT-F05-RELATIONAL-POTENTIAL` → `CL::CL-T01`
+- X::0006 qualifies (HUMAN-ACCEPTED (at the stated decision category)): `GT::GT-F54-HARD-BAN-END-OF-SOFT-LADDER` → `CL::CL-T01`
 
 ## Questions
 
@@ -31,8 +31,8 @@ graph LR
   n_C__shared_lineage["Shared code and kernel lineage"]:::concept
   n_CL__CL_T01["CL::CL-T01"] --- n_C__shared_lineage
   n_GT__GT_F05_RELATIONAL_POTENTIAL["GT::GT-F05-RELATIONAL-POTENTIAL"] --- n_C__shared_lineage
-  n_GT__GT_F05_RELATIONAL_POTENTIAL -->|shared_implementation_assumption · agent_reviewed| n_CL__CL_T01
-  n_GT__GT_F54_HARD_BAN_END_OF_SOFT_LADDER -->|qualifies · agent_reviewed| n_CL__CL_T01
+  n_GT__GT_F05_RELATIONAL_POTENTIAL -->|shared_implementation_assumption · human_accepted| n_CL__CL_T01
+  n_GT__GT_F54_HARD_BAN_END_OF_SOFT_LADDER -->|qualifies · human_accepted| n_CL__CL_T01
   classDef concept fill:#fff4d6,stroke:#a07a00
 ```
 

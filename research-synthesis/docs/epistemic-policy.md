@@ -19,7 +19,7 @@
 3. **Independence must be stated.**
    - Endpoints from sources that share lineage cannot be declared `independent` without an `independence_note`.
    - `shared_implementation_assumption` is never independent.
-4. **Promotion needs a written review.** `agent_reviewed` and `human_accepted` need a review record that exists. `human_accepted` needs a named human. Historical claims cannot be accepted before intake.
+4. **Promotion needs a written review.** `agent_reviewed` and `human_accepted` need a review record that exists. `human_accepted` needs a named human, or the author's implicit acceptance through a logged round-trip ratification (`docs/cadence.md`). Ratification accepts at the reported decision category and never upgrades it. Historical claims cannot be accepted before intake.
 5. **No scalar scores.** Shared records carry no score fields (score, confidence, probability, similarity, cosine, …).
 6. **Metaphors are not evidence.**
    - A metaphor cannot be cited as evidence or used as a connection endpoint.
@@ -35,7 +35,7 @@
 - **Agent recommendations.** All current categories are the agent's recommendations.
 - **Append-only history.** `decision_history` is append-only, and transitions must follow `core.STATUS_TRANSITIONS`. `check` fails if a committed history is rewritten or deleted.
 - **Review vector.** Its nine axes (semantic resemblance, formal comparability, observable comparability, scope compatibility, evidence status, independence, counterexamples or nulls, falsifiability, research relevance) are recorded separately and never summed. Only semantic resemblance may carry a retrieval score.
-- **Unreviewed rounds.** Records resting on a closed but unreviewed round (`unreviewed_generations` in the manifest) cannot be accepted.
+- **Unreviewed rounds.** Records resting on a closed but unreviewed round (`unreviewed_generations` in the manifest) cannot be `accepted_bounded` or `accepted_formal`. Human acceptance leaves them `qualified` or `candidate`.
 - **Unavailable sources.** Records citing an unavailable source stay `blocked_missing_source` (or `rejected`).
 - **Physical overreach.** Accepted records cannot assert physical gravity, quantum behaviour or physical time.
 

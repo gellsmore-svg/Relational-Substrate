@@ -18,6 +18,23 @@
    - `synth snapshot --name <milestone> --title "<title>"`. A snapshot is immutable and carries a lock with source pins, digests and a content hash.
    - Open a PR for the author's review.
 
+## The round trip: implicit human acceptance
+
+The author's rule (AD-0002, 2026-10-15): **human acceptance is implicit in the round trip.**
+
+1. **Close the round.** At the end of each round, after the report and the PR update, run `synth round-close --id RT-000N --date <d> --report <path> --reported-at <sha>`. This writes the immutable `proposals/round-trips/RT-000N.json`, listing every record that is currently agent-reviewed: the agent's open recommendations, each with its decision category.
+2. **The author's next instruction ratifies it.** When the author sends the next instruction without objecting, run `synth ratify --round-trip RT-000N --decision-id AD-000M --date <d> --instruction "<verbatim>" [--object <id> ...]`. This does three things:
+   - logs a human decision in `proposals/author-decisions.jsonl`;
+   - appends a human entry to each listed record's decision history;
+   - writes `proposals/reviews/AD-000M.md`.
+3. **What ratification does and does not do.**
+   - Listed items become `human_accepted` at their reported decision category. Ratification **never upgrades** a category. The unreviewed-round cap, the pending-source rule and the HIST-intake rule still apply, so a connection resting on CL 008N or GT-P009 stays `qualified`.
+   - An item the author objects to returns to `under_review`.
+   - Only agent-reviewed records are listed. Seeds, external claims and unreviewed proposals are never accepted this way.
+   - `check` validates every implicit acceptance against its logged ratification, and lists round trips still open.
+
+The author can still decide explicitly at any time (`synth review ... --human`, or a logged decision such as AD-0001).
+
 ## Stop conditions
 
 `check` fails, and work stops until the mismatch is reported and understood, when:
@@ -27,7 +44,7 @@
 
 ## Metaphor review
 
-Drafts live in `proposals/metaphor-drafts.jsonl`. A metaphor moves to `ledger/metaphors.jsonl` only after a review against its mapping, its "does not mean" list and its misleading readings. The author's acceptance makes it `human_accepted`.
+Drafts live in `proposals/metaphor-drafts.jsonl`. A metaphor moves to `ledger/metaphors.jsonl` only after a review against its mapping, its "does not mean" list and its misleading readings. The author's acceptance (explicit, or implicit through the round trip) makes it `human_accepted`. It stays non-evidentiary.
 
 ## Optional reminder
 
@@ -37,4 +54,4 @@ A monthly stale-link audit (`synth check`, reading the staleness section) may be
 
 - **Seed files.** The author's seed files are staged with `synth intake-seeds <dir>`. They become `proposed` proposals with `origin: author_seed`, never ledger entries.
 - **External syntheses.** These are registered as `EXT::` sources and their claims as proposals.
-- **Historical archives.** These stay `pending_intake` until a declared intake procedure is supplied. Private archives are never committed.
+- **Historical archives.** These stay `pending_intake` until the archives themselves pass the custody gate in [`historical-intake.md`](historical-intake.md). Private archives are never committed.

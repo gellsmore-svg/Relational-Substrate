@@ -16,7 +16,7 @@
 
 ## Connections touching this theme
 
-- X::0008 qualifies (AGENT-REVIEWED (awaiting human acceptance)): `CL::F8G-FORMAL-H-L-DISTINCTION` → `GT::GT-Q22-IDENTITY-THROUGH-REPLACEMENT`
+- X::0008 qualifies (HUMAN-ACCEPTED (at the stated decision category)): `CL::F8G-FORMAL-H-L-DISTINCTION` → `GT::GT-Q22-IDENTITY-THROUGH-REPLACEMENT`
 
 ## Questions
 
@@ -36,7 +36,7 @@ graph LR
   n_CL__F8L_H1_NONCOMPILABILITY["CL::F8L-H1-NONCOMPILABILITY"] --- n_C__history_as_predictive_variable
   n_CL__F8G_FORMAL_H_L_DISTINCTION["CL::F8G-FORMAL-H-L-DISTINCTION"] --- n_C__history_as_predictive_variable
   n_GT__GT_Q22_IDENTITY_THROUGH_REPLACEMENT["GT::GT-Q22-IDENTITY-THROUGH-REPLACEMENT"] --- n_C__history_as_predictive_variable
-  n_CL__F8G_FORMAL_H_L_DISTINCTION -->|qualifies · agent_reviewed| n_GT__GT_Q22_IDENTITY_THROUGH_REPLACEMENT
+  n_CL__F8G_FORMAL_H_L_DISTINCTION -->|qualifies · human_accepted| n_GT__GT_Q22_IDENTITY_THROUGH_REPLACEMENT
   n_M__photo_and_diary(["M::photo-and-diary"]) -.->|metaphor| n_C__history_as_predictive_variable
   classDef concept fill:#fff4d6,stroke:#a07a00
 ```

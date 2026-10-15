@@ -13,7 +13,7 @@ from . import core, ledger, sources
 
 def gen_dir():
     return core.ROOT / "generated"
-STATUS_TEXT = {"agent_reviewed": "AGENT-REVIEWED (awaiting human acceptance)", "human_accepted": "HUMAN-ACCEPTED", "rejected": "REJECTED", "undetermined": "UNDETERMINED", "under_review": "UNDER REVIEW", "proposed": "PROPOSED (unreviewed)"}
+STATUS_TEXT = {"agent_reviewed": "AGENT-REVIEWED (awaiting human acceptance)", "human_accepted": "HUMAN-ACCEPTED (at the stated decision category)", "rejected": "REJECTED", "undetermined": "UNDETERMINED", "under_review": "UNDER REVIEW", "proposed": "PROPOSED (unreviewed)"}
 
 
 def short(text: str, n: int = 140) -> str:
@@ -91,11 +91,11 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
 
     # ---- links ----------------------------------------------------------------------
     conns = sorted(shared["connections"], key=lambda x: x["connection_id"])
-    L = ["# Cross-programme connections", "", "Only records in `ledger/connections.jsonl`. Every one carries an explicit review status; none is human-accepted yet. Evidential types compare formal objects on eight dimensions (see each review record). Independence is stated because GT and CL share 8G lineage.", ""]
+    L = ["# Cross-programme connections", "", "Only records in `ledger/connections.jsonl`. Every one carries an explicit review status. Human acceptance is implicit in the round trip (`docs/cadence.md`): it accepts a reported recommendation at its stated decision category and never upgrades it. Evidential types compare formal objects on eight dimensions (see each review record). Independence is stated because GT and CL share 8G lineage.", ""]
     def unrev(x):
         return any(ledger.unreviewed_round(manifest, loaded["nodes"].get(x[e])) for e in ("from", "to"))
 
-    L += ["**Decision category** is the agent's recommended category (rubric 03); **review status** says who has reviewed it. A connection resting on a closed but **unreviewed** round (CL 008N, GT-P009) is marked and cannot be accepted.", ""]
+    L += ["**Decision category** is the category the agent recommended (rubric 03); human acceptance keeps it. **Review status** says who has reviewed it. A connection resting on a closed but **unreviewed** round (CL 008N, GT-P009) is marked and stays `qualified` (or `candidate`) even when human-accepted.", ""]
     L += ["| Id | Type | From | To | Decision | Review status | Rests on unreviewed round | Independence | Review record |", "| --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
     for x in conns:
         L.append(f"| {x['connection_id']} | {x['connection_type']} | `{x['from']}` | `{x['to']}` | {x['decision_category'].upper()} | {STATUS_TEXT.get(x['review_status'], x['review_status'])} | {'YES' if unrev(x) else 'no'} | {x['independence']} | [{x['review']['record'].split('/')[-1]}](../{x['review']['record']}) |")
@@ -285,9 +285,9 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
         CH.append(f"**{src}** findings by generation, in order of first appearance: " + ", ".join(f"{g} ({gens[g]})" for g in order))
         CH.append("")
     CH += ["**Shared layer**:", ""]
-    dates = Counter(x["review"]["date"] for x in shared["connections"])
-    for d, n in sorted(dates.items()):
-        CH.append(f"- {d}: {n} connections agent-reviewed")
+    events = Counter((h["date"], h["status"].replace("_", "-"), "human" if h.get("human") else "agent") for x in shared["connections"] for h in x.get("decision_history", []))
+    for (d, st, who), n in sorted(events.items()):
+        CH.append(f"- {d}: {n} connection decisions {st} ({who})")
     snaps = sorted(p.name for p in (core.ROOT / "snapshots").glob("*") if p.is_dir()) if (core.ROOT / "snapshots").exists() else []
     CH += ["", "Snapshots: " + (", ".join(f"`{s}`" for s in snaps) or "none yet"), ""]
     pins = sorted(p.name for p in (core.ROOT / "proposals" / "pin-updates").glob("*.json")) if (core.ROOT / "proposals" / "pin-updates").exists() else []
@@ -330,7 +330,7 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     for s in manifest["sources"]:
         n = sum(1 for v in loaded["nodes"].values() if v.get("source") == s["source_key"])
         I.append(f"| {esc(s['programme'])} (`{s['namespace']}::`) | **{s['status'].upper()}** | `{(s.get('commit') or '—')[:12]}` | {n} |")
-    I += ["", "## Shared layer", "", f"- Concepts: {len(concepts)}", f"- Cross-programme connections: {len(conns)} ({', '.join(f'{k}: {v}' for k, v in sorted(st.items()))}); none human-accepted", f"- Proposals: {len(shared['proposals'])} ({', '.join(f'{k}: {v}' for k, v in sorted(ps.items()))})", f"- Shared questions: {len(shared['questions'])} ({sum(q['status'] == 'pending_source' for q in shared['questions'])} pending a missing source)", f"- Metaphors: {len(shared['metaphors'])} reviewed by agent, {len(shared['metaphor_drafts'])} draft (all non-evidentiary)", ""]
+    I += ["", "## Shared layer", "", f"- Concepts: {len(concepts)}", f"- Cross-programme connections: {len(conns)} ({', '.join(f'{k}: {v}' for k, v in sorted(st.items()))})", f"- Proposals: {len(shared['proposals'])} ({', '.join(f'{k}: {v}' for k, v in sorted(ps.items()))})", f"- Shared questions: {len(shared['questions'])} ({sum(q['status'] == 'pending_source' for q in shared['questions'])} pending a missing source)", f"- Metaphors: {len(shared['metaphors'])} reviewed ({', '.join(f'{k}: {v}' for k, v in sorted(Counter(m['status'] for m in shared['metaphors']).items()))}), {len(shared['metaphor_drafts'])} draft (all non-evidentiary)", ""]
     dc = Counter(x["decision_category"] for x in conns)
     I += [f"- Connection decision categories (agent recommendations): {', '.join(f'{k}: {v}' for k, v in sorted(dc.items()))}", "", "## Headlines", "", "- **Open cross-programme question:** XQ::01. Which declared comparator separates organisation (or history) from kinetics in both programmes? See [questions.md](questions.md).", "- **Contradiction resolved by scope:** X::0004. 'Reweighting can break reversibility' (CL) against 'single-witness templates are always reversible' (GT) differ in rule class (label covariance), not in fact. See [contradictions.md](contradictions.md).", ]
     resolved = [p for p in shared["proposals"] if p.get("relation_override")]

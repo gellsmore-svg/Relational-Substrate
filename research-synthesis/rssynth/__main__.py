@@ -7,7 +7,7 @@ import json
 import sys
 from pathlib import Path
 
-from . import core, discover, generate, ledger, pins, sources, workflow
+from . import core, discover, generate, ledger, pins, roundtrip, sources, workflow
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -43,6 +43,18 @@ def main(argv: list[str] | None = None) -> int:
     ap2.add_argument("--reviewed-by", required=True)
     si = sub.add_parser("intake-seeds", help="stage the author's seed files as unapproved proposals")
     si.add_argument("dir")
+    rc = sub.add_parser("round-close", help="end a round: record the agent's open recommendations for implicit acceptance")
+    rc.add_argument("--id", required=True, help="RT-0001, RT-0002, ...")
+    rc.add_argument("--date", required=True)
+    rc.add_argument("--report", required=True, help="repo-relative path of the round's report")
+    rc.add_argument("--reported-at", required=True, help="commit the report describes")
+    rc.add_argument("--note", default="")
+    ra = sub.add_parser("ratify", help="apply the author's implicit acceptance of a round trip (their next instruction)")
+    ra.add_argument("--round-trip", required=True)
+    ra.add_argument("--decision-id", required=True, help="AD-000N in proposals/author-decisions.jsonl")
+    ra.add_argument("--date", required=True)
+    ra.add_argument("--instruction", required=True, help="the author's instruction that closed the round trip, verbatim")
+    ra.add_argument("--object", action="append", default=[], help="an item the author objected to (repeatable)")
     a = ap.parse_args(argv)
 
     if a.cmd == "audit":
@@ -91,6 +103,13 @@ def main(argv: list[str] | None = None) -> int:
     if a.cmd == "apply-pin":
         pins.apply_pin(a.source, a.commit, reviewed_by=a.reviewed_by)
         print("pin adopted; run generate and check")
+        return 0
+    if a.cmd == "round-close":
+        rec = roundtrip.open_round_trip(a.id, a.date, a.report, a.reported_at, a.note)
+        print(f"{a.id}: {len(rec['recommendations'])} recommendations await the author's next instruction")
+        return 0
+    if a.cmd == "ratify":
+        print(json.dumps(roundtrip.ratify(a.round_trip, a.decision_id, a.date, a.instruction, a.object), indent=2))
         return 0
     if a.cmd == "intake-seeds":
         print(json.dumps(workflow.intake_seeds(Path(a.dir)), indent=2))

@@ -17,10 +17,10 @@ A navigable, generated view across research programmes. **It does not merge or r
 ## Shared layer
 
 - Concepts: 13
-- Cross-programme connections: 9 (agent_reviewed: 9); none human-accepted
+- Cross-programme connections: 9 (human_accepted: 9)
 - Proposals: 50 (proposed: 24, rejected: 8, under_review: 16, undetermined: 2)
 - Shared questions: 7 (1 pending a missing source)
-- Metaphors: 6 reviewed by agent, 8 draft (all non-evidentiary)
+- Metaphors: 6 reviewed (human_accepted: 6), 8 draft (all non-evidentiary)
 
 - Connection decision categories (agent recommendations): accepted_bounded: 3, qualified: 6
 

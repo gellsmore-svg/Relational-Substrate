@@ -19,7 +19,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(HERE))
 
-from rssynth import core, discover, generate, ledger, pins, sources, workflow  # noqa: E402
+from rssynth import core, discover, generate, ledger, pins, roundtrip, sources, workflow  # noqa: E402
 
 REAL_ROOT = core.ROOT
 
@@ -354,7 +354,7 @@ class ViewsCoverageAndReadability(unittest.TestCase):
 
     def test_statuses_in_text_and_mermaid_views_stay_small(self):
         files = generate.build(*generate.load_inputs())
-        self.assertIn("AGENT-REVIEWED", files["links.md"])
+        self.assertIn("HUMAN-ACCEPTED", files["links.md"])
         self.assertIn("EXTERNAL_STORED", files["provenance.md"])
         self.assertIn("PENDING_INTAKE", files["provenance.md"])
         for rel, text in files.items():
@@ -706,7 +706,10 @@ class AuthorDecisions(unittest.TestCase):
         self.assertEqual((p["connection_type"], p["relation_override"]["matches"]), ("explicit_contrast", "X::0003"))
         self.assertTrue(p["decision_history"][-1]["human"])
         x3 = [c for c in self.shared["connections"] if c["connection_id"] == "X::0003"][0]
-        self.assertEqual((x3["connection_type"], x3["review_status"]), ("explicit_contrast", "agent_reviewed"))  # not human-accepted by this decision
+        self.assertEqual(x3["connection_type"], "explicit_contrast")
+        # AD-0001 did not accept X::0003; its acceptance came later and separately, through round trip RT-0001 (AD-0002)
+        self.assertFalse(any(h.get("decision_id") == "AD-0001" for h in x3["decision_history"]))
+        self.assertEqual((x3["review_status"], x3["decision_history"][-1]["decision_id"]), ("human_accepted", "AD-0002"))
 
     def test_override_must_be_human_and_consistent(self):
         bad = copy.deepcopy(self.shared)
@@ -734,6 +737,78 @@ class AuthorDecisions(unittest.TestCase):
         files = generate.build(*generate.load_inputs())
         self.assertIn("Author decision:** P::SYN-C003 classified as `explicit_contrast`", files["index.md"])
         self.assertNotIn("Author decision required", files["contradictions.md"] + files["index.md"])
+
+
+class ImplicitRoundTripAcceptance(unittest.TestCase):
+    """The author's rule: human acceptance is implicit in the round trip, at the reported category."""
+
+    def _reopen(self, root, cid):
+        rows = core.read_jsonl(root / "ledger/connections.jsonl")
+        for x in rows:
+            if x["connection_id"] == cid:
+                for st in ("under_review", "agent_reviewed"):
+                    x["decision_history"].append({"date": "2026-10-16", "actor": "agent: test", "human": False, "status": st, "decision_category": x["decision_category"], "rationale": "test"})
+                x["review_status"] = "agent_reviewed"
+                x["review"] = {"reviewer": "agent: test", "date": "2026-10-16", "record": x["review"]["record"], "human": False}
+        core.write_jsonl(root / "ledger/connections.jsonl", rows)
+
+    def _problems(self, root):
+        m, loaded, shared = inputs()
+        return ledger.validate_all(m, loaded, shared) + roundtrip.validate(root, shared)
+
+    def test_rt0001_ratified_by_ad0002_without_upgrades(self):
+        m, loaded, shared = inputs()
+        self.assertEqual(roundtrip.validate(REAL_ROOT, shared), [])
+        self.assertEqual(roundtrip.open_round_trips(REAL_ROOT), [])
+        rt = roundtrip.load_round_trips(REAL_ROOT)["RT-0001"]
+        cats = {r["target"]: r["decision_category"] for r in rt["recommendations"]}
+        for x in shared["connections"]:
+            self.assertEqual((x["review_status"], x["decision_category"]), ("human_accepted", cats[x["connection_id"]]))
+            self.assertTrue(x["decision_history"][-1]["human"])
+        self.assertEqual(cats["X::0001"], "qualified")  # rests on unreviewed 008N / GT-P009: the cap holds through acceptance
+        self.assertTrue(all(m["status"] == "human_accepted" and m["evidentiary"] is False for m in shared["metaphors"]))
+
+    def test_seeds_and_external_claims_are_never_listed(self):
+        rt = roundtrip.load_round_trips(REAL_ROOT)["RT-0001"]
+        self.assertFalse([r for r in rt["recommendations"] if r["target"].startswith(("P::SYN-", "P::EXT-"))])
+
+    def test_ratification_cannot_upgrade_a_category(self):
+        with sandbox() as root:
+            rows = core.read_jsonl(root / "ledger/connections.jsonl")
+            x = [r for r in rows if r["connection_id"] == "X::0006"][0]  # qualified, not on an unreviewed round
+            x["decision_history"][-1]["decision_category"] = x["decision_category"] = "accepted_bounded"
+            core.write_jsonl(root / "ledger/connections.jsonl", rows)
+            self.assertTrue(any("never upgrades" in p for p in self._problems(root)))
+
+    def test_a_round_trip_is_ratified_once_and_immutable(self):
+        with sandbox() as root:
+            with self.assertRaises(ValueError):
+                roundtrip.ratify("RT-0001", "AD-0099", "2026-10-16", "again")
+            with self.assertRaises(FileExistsError):
+                roundtrip.open_round_trip("RT-0001", "2026-10-16", "research-synthesis/README.md", "0" * 40)
+
+    def test_objection_reopens_and_the_rest_are_accepted(self):
+        with sandbox() as root:
+            self._reopen(root, "X::0002")
+            self._reopen(root, "X::0006")
+            rt = roundtrip.open_round_trip("RT-0002", "2026-10-16", "research-synthesis/README.md", "0" * 40)
+            self.assertEqual({r["target"] for r in rt["recommendations"]}, {"X::0002", "X::0006"})
+            self.assertEqual(roundtrip.open_round_trips(root), ["RT-0002"])
+            rep = roundtrip.ratify("RT-0002", "AD-0003", "2026-10-16", "next prompt", objections=["X::0002"])
+            self.assertEqual((rep["accepted"], rep["objected"]), (1, ["X::0002"]))
+            conns = {x["connection_id"]: x for x in core.read_jsonl(root / "ledger/connections.jsonl")}
+            self.assertEqual(conns["X::0002"]["review_status"], "under_review")
+            self.assertEqual((conns["X::0006"]["review_status"], conns["X::0006"]["decision_category"]), ("human_accepted", "qualified"))
+            self.assertEqual(self._problems(root), [])
+            with self.assertRaises(ValueError):
+                roundtrip.ratify("RT-0002", "AD-0004", "2026-10-16", "x", objections=["X::0009"])
+
+    def test_citing_an_unlogged_ratification_is_rejected(self):
+        with sandbox() as root:
+            rows = core.read_jsonl(root / "ledger/connections.jsonl")
+            rows[0]["decision_history"][-1]["decision_id"] = "AD-0777"
+            core.write_jsonl(root / "ledger/connections.jsonl", rows)
+            self.assertTrue(any("not a logged round-trip ratification" in p for p in self._problems(root)))
 
 
 class NonMutationOfResearchRecords(unittest.TestCase):

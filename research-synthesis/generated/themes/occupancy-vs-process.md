@@ -19,9 +19,9 @@
 
 ## Connections touching this theme
 
-- X::0001 tested_structural_analogy (AGENT-REVIEWED (awaiting human acceptance)): `CL::F8N-MFPT-RESIDUAL` → `GT::GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW`
-- X::0002 epistemic_compatibility (AGENT-REVIEWED (awaiting human acceptance)): `CL::F8H-TEMPORAL-TESTS-REQUIRED` → `GT::GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS`
-- X::0009 tested_structural_analogy (AGENT-REVIEWED (awaiting human acceptance)): `CL::CL-T88` → `GT::GT-F79-ND-MATCHES-EDGE-LIFETIME`
+- X::0001 tested_structural_analogy (HUMAN-ACCEPTED (at the stated decision category)): `CL::F8N-MFPT-RESIDUAL` → `GT::GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW`
+- X::0002 epistemic_compatibility (HUMAN-ACCEPTED (at the stated decision category)): `CL::F8H-TEMPORAL-TESTS-REQUIRED` → `GT::GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS`
+- X::0009 tested_structural_analogy (HUMAN-ACCEPTED (at the stated decision category)): `CL::CL-T88` → `GT::GT-F79-ND-MATCHES-EDGE-LIFETIME`
 
 ## Questions
 
@@ -44,9 +44,9 @@ graph LR
   n_GT__GT_F19_ACTIVITY_WITHOUT_BASIN["GT::GT-F19-ACTIVITY-WITHOUT-BASIN"] --- n_C__occupancy_vs_process
   n_GT__GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW["GT::GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW"] --- n_C__occupancy_vs_process
   n_GT__GT_F79_ND_MATCHES_EDGE_LIFETIME["GT::GT-F79-ND-MATCHES-EDGE-LIFETIME"] --- n_C__occupancy_vs_process
-  n_CL__F8N_MFPT_RESIDUAL -->|tested_structural_analogy · agent_reviewed| n_GT__GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW
-  n_CL__F8H_TEMPORAL_TESTS_REQUIRED -->|epistemic_compatibility · agent_reviewed| n_GT__GT_F82_E5A_COMPARATOR_AND_NUMERICAL_QUALIFICATIONS
-  n_CL__CL_T88 -->|tested_structural_analogy · agent_reviewed| n_GT__GT_F79_ND_MATCHES_EDGE_LIFETIME
+  n_CL__F8N_MFPT_RESIDUAL -->|tested_structural_analogy · human_accepted| n_GT__GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW
+  n_CL__F8H_TEMPORAL_TESTS_REQUIRED -->|epistemic_compatibility · human_accepted| n_GT__GT_F82_E5A_COMPARATOR_AND_NUMERICAL_QUALIFICATIONS
+  n_CL__CL_T88 -->|tested_structural_analogy · human_accepted| n_GT__GT_F79_ND_MATCHES_EDGE_LIFETIME
   n_M__two_towns(["M::two-towns"]) -.->|metaphor| n_C__occupancy_vs_process
   classDef concept fill:#fff4d6,stroke:#a07a00
 ```
