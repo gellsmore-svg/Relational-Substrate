@@ -1,4 +1,4 @@
-"""Stage agent-drafted cross-programme candidates from GT-P010 and GT-P011 (not yet in the live registry).
+"""Stage agent-drafted cross-programme candidates from GT-P010, GT-P011 and GT-P012 (not yet in the live registry).
 
 They cite GT findings that exist only at the proposed GT pin a81c505 (not yet adopted). They are
 written to proposals/staged/ and must be appended to proposals/candidate-relations.jsonl only
@@ -28,7 +28,7 @@ def cand(pid, frm, to, ctype, basis, scope, rationale, comp, falsifiers, alterna
         "decision_history": [{"actor": ACTOR, "date": "2026-10-15", "decision_category": "candidate", "human": False, "rationale": f"Agent draft from {source}; unreviewed; staged pending GT pin adoption", "status": "proposed"}],
         "epistemic_basis": basis, "evidence_refs": [], "falsifiers": falsifiers, "from": frm,
         "independence": "shared_lineage", "independence_note": "GT and CL both descend from CL 8G (22e252e) and share the constraint DSL, kernel builder and coherence validator lineage; agreement is not independent evidence.",
-        "origin": "agent_drafted", "proposal_id": pid, "rationale": rationale, "scope": scope, "staged_pending": {"requires_gt_pin": "a81c505a08ac5c4c83359234915bec65bb1f60c3", "source_handoff": source}, "status": "proposed", "to": to,
+        "origin": "agent_drafted", "proposal_id": pid, "rationale": rationale, "scope": scope, "staged_pending": {"requires_gt_pin": "a81c505a08ac5c4c83359234915bec65bb1f60c3 (C-1..C-3) / e2b5dc4cb65bafc423047f78468a63c9d6ceb218 (C-4); any pin at or after e2b5dc4 covers all", "source_handoff": source}, "status": "proposed", "to": to,
     }
 
 
@@ -51,6 +51,12 @@ ROWS = [
          comparison(state=("differs", ""), transition_law=("differs", ""), support=("differs", ""), clock=("differs", "epochs vs anchor-local counts"), projection=("differs", ""), intervention=("not_applicable", ""), horizon=("differs", "first return vs post-renewal survival"), conditioning=("same", "explicit source law")),
          ["A CL post-event functional invariant to replacing its source law"],
          ["The compatibility is methodological only; no shared quantity"], "gravity-time/docs/gt-p011-shared-synthesis-handoff.md (C-3)"),
+    cand("P::GT-C4", "GT::GT-F98-NL-LOCAL-REMOTE-TRAFFIC-COMPARATOR", "CL::F8N-H1-MATCHED-PASSAGE-BOUNDARY", "requires_scope_alignment", "formal",
+         "Coarse comparators defined from stationary flows on a projection",
+         "GT's NL lifts directed (possibly circulating) stationary macro fluxes on the (local, remote) count projection and is stationary by macro conservation alone; CL's Kpi matches the full stationary adjacent joint on (P,h1). Both are stationary-flow comparators on a projection; the scopes must be aligned before any correspondence is asserted.",
+         comparison(state=("differs", "graph vs (P,h1,h2)"), transition_law=("differs", "W4 vs 8M"), support=("differs", "full vs recurrent class"), clock=("differs", "CT vs epochs"), projection=("differs", "(l,r) counts vs (P,h1)"), intervention=("not_applicable", ""), horizon=("differs", "renewal survival vs passage"), conditioning=("same", "stationary flows on the projection")),
+         ["A CL projection on which the directed-flux lift and Kpi disagree on a matched quantity"],
+         ["The shared element may be only 'built from stationary flows'"], "gravity-time/docs/gt-p012-shared-synthesis-handoff.md (C-4)"),
 ]
 
 

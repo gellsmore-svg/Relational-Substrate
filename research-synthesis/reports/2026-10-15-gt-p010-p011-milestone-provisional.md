@@ -119,3 +119,7 @@ No metaphor is proposed. No `X::` record, decision or acceptance is created.
 5. `synth snapshot --name <milestone> --title "..."`, then `synth round-close` under `docs/cadence.md` (AD-0004: the closing commit must display any recommendations).
 
 The pin's presence is not acceptance of GT's claims. GT-P010 and GT-P011 stay *closed but scientifically unreviewed* until a separate scientific review.
+
+---
+
+*Addendum (later on 2026-10-15): superseded as the pin **target** by `2026-10-15-gt-p010-p012-milestone-provisional.md`, which proposes GT → `e2b5dc4` (GT-P012 close) and includes every row of this proposal. This report is unchanged above and kept as the audit trail.*

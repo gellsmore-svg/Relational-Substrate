@@ -1,0 +1,141 @@
+{
+  "artifacts": [
+    {
+      "added": [
+        "GT-F100-PATHH-TRIANGLE-DURABILITY-BEYOND-NL",
+        "GT-F101-PATHF-CENTRE-EFFECT-IS-LOCAL-REMOTE-TRAFFIC",
+        "GT-F102-PCOMP-WITHIN-CLASS-RESIDUAL-BEYOND-NL",
+        "GT-F103-CSPH-FLICKER-PERSISTS-UNDER-NL",
+        "GT-F83-PCOMP-PERSISTENCE-IS-BETWEEN-LAYER-TRAFFIC",
+        "GT-F84-PATHF-CENTRES-SURVIVE-NK-AND-LOCAL-COUNT",
+        "GT-F85-CLOSEW-EFFECT-MOSTLY-PREVALENCE-AND-TRAFFIC",
+        "GT-F86-PATHH-CSPH-NK-SURVIVORS-QUALIFIED",
+        "GT-F87-RENEWAL-FEASIBILITY-AND-SIZE-ONE-EQUIVALENCE",
+        "GT-F88-NK-LAYER-TRAFFIC-COMPARATOR",
+        "GT-F89-COMPARATOR-MATTERS-MORE-THAN-CLOCK",
+        "GT-F90-E5A-INTACT-COUNT-IS-2-OF-30",
+        "GT-F91-RENEWAL-IS-TRANSIENT",
+        "GT-F92-CSPH-TRIANGLE-RENEWAL-IS-FLICKER-ASSISTED",
+        "GT-F93-PATHH-TRIANGLE-DURABLE-BEYOND-NK",
+        "GT-F94-PATHF-RENEWAL-ADVANTAGE-SHORT-LIVED",
+        "GT-F95-PCOMP-WITHIN-CLASS-DURABILITY",
+        "GT-F96-POST-RENEWAL-FEASIBILITY-T14",
+        "GT-F97-FIRST-HIT-SAMPLING-MATTERS",
+        "GT-F98-NL-LOCAL-REMOTE-TRAFFIC-COMPARATOR",
+        "GT-F99-PROJECTED-CIRCULATION-PATH-CSPH",
+        "GT-Q23-DURABLE-RENEWAL",
+        "GT-Q24-WITHIN-LAYER-ARRANGEMENT-CONTROL",
+        "GT-Q25-ANCHOR-LOCAL-KINETIC-COMPARATOR",
+        "GT-Q26-COMPLETER-RESOLVED-PROJECTION"
+      ],
+      "changed": true,
+      "kind": "findings",
+      "path": "gravity-time/coherence/findings.jsonl",
+      "present": true,
+      "removed": [],
+      "rewritten": []
+    },
+    {
+      "added": [
+        "GT-R143",
+        "GT-R144",
+        "GT-R145",
+        "GT-R146",
+        "GT-R147",
+        "GT-R148",
+        "GT-R149",
+        "GT-R150",
+        "GT-R151",
+        "GT-R152",
+        "GT-R153",
+        "GT-R154",
+        "GT-R155",
+        "GT-R156",
+        "GT-R157",
+        "GT-R158",
+        "GT-R159",
+        "GT-R160",
+        "GT-R161",
+        "GT-R162",
+        "GT-R163",
+        "GT-R164",
+        "GT-R165",
+        "GT-R166",
+        "GT-R167",
+        "GT-R168",
+        "GT-R169",
+        "GT-R170",
+        "GT-R171",
+        "GT-R172",
+        "GT-R173",
+        "GT-R174",
+        "GT-R175",
+        "GT-R176",
+        "GT-R177",
+        "GT-R178"
+      ],
+      "changed": true,
+      "kind": "relations",
+      "path": "gravity-time/coherence/relations.jsonl",
+      "present": true,
+      "removed": [],
+      "rewritten": []
+    },
+    {
+      "changed": false,
+      "kind": "validator",
+      "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "snapshot",
+      "path": "gravity-time/coherence/snapshots/through-gt-e5a.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "gravity-time/docs/reference-architecture-review.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "gravity-time/docs/e3-cross-programme-transfer.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "gravity-time/docs/e4-cross-programme-transfer.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "gravity-time/docs/gt-p008-cross-programme-transfer.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "gravity-time/docs/gt-e5a-cross-programme-transfer.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "gravity-time/reports/gt-e5a-report.md",
+      "present": true
+    }
+  ],
+  "current_commit": "79fa6b0119449bd56359acf4436015df27855f43",
+  "descends_from_current": true,
+  "note": "GT-P010 (4aaf04c) + GT-P011 (a81c505) + GT-P012 (e2b5dc4); supersedes GT-a81c505a08ac.json as target; staged, awaiting a named human reviewer",
+  "proposed_commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+  "schema": "rssynth.pin-proposal/v1",
+  "source": "GT",
+  "status": "proposed",
+  "warnings": []
+}
