@@ -139,3 +139,21 @@ Both occur in the model and separate by whether recovery can happen directly (GT
 **Proposal.** Treat a source-relative occupancy preference as gathering only if it survives standardisation to a declared density reference. Natively, the above-null attachment under floor-free references is mostly density composition (GT-F62). This is a methodological rule for any gravity-motivated use of occupancy statistics.
 
 **Status if adopted:** methodological principle.
+
+## OP-16, qualified by GT-P008 (the text of OP-16 above is unchanged)
+
+- **What the derivation adds.** "Support can make a site less available" survives as the description of an exact local lever: an attachment's stationary odds carry the factor 2^(−floor) under the path families (GT-F67).
+- **What it shows is not true.** It is **not a general law**:
+  - at first order a site's held degree matters as much as its support, and some held structures favour their more-supported site (GT-F68);
+  - rate-symmetric rules cancel the lever entirely in continuous time (GT-F69).
+- **If adopted, OP-16 should read:** "support acts as a lever on availability, alongside other structural channels". It should not read: "support makes a site less available".
+
+## OP-18. Persistence before reference (from the GT-P008 architecture review)
+
+**Proposal.** Treat a "reference" as model-scoped only after it is shown to persist beyond its constituent relations. That means a lifetime-to-turnover ratio above a matched-density null, in each clock. The steps are:
+- in finite label-covariant models, references the system makes for itself can only be metastable (GT-F72);
+- held references are boundary conditions whose results do not transfer to emergent references without this test;
+- identity through change, and then displacement, come after persistence.
+
+**Status if adopted:** a methodological ordering principle. It adds no primitive. Tracking identity needs no history axis (8G gate: an observable on trajectories).
+**Would count against:** a natural reference notion in the grammar that needs no persistence (none is known).

@@ -266,6 +266,52 @@ graph LR
 - **The robust new capability is sorting.** A structure decides *where* relations form.
 - **What lies between this and anything gravitational is still definitional:** identity, displacement and separation.
 
+
+## 10. Revision after the GT-P008 consolidation (no new experiment; sections 1–9 unchanged)
+
+**Evidence states:** proved; observed; instrument-conditional; conjectured; blocked; unknown; undefined; rejected/qualified.
+
+| Entry | Before (section 9) | After GT-P008 | State | Evidence |
+| --- | --- | --- | --- | --- |
+| B10 Source as witness | Floor formula (F1), K2 unique (F2), F4 | Unchanged; F4's scope restated: cycle affinities only | proved | derivation §2; audit Q-3 |
+| B14 Floor-guided sorting | Observed, robust within references | **Split into four parts:**<br>(i) exact odds lever 2^(−floor) (S2);<br>(ii) first-order index floor + (7 − N)·held degree (S4b);<br>(iii) a global residue, reinforcing at W4 in 8/9 cases;<br>(iv) **not a general law**: weak-coupling reversals exist (S4c); PCOMP has floor but no continuous-clock sorting (S2b) | (i), (ii), (iv): proved; (iii): observed; the feedback mechanism: conjectured | derivation S2–S5; secondary analyses §2 |
+| New B15: held degree as a sorting channel | — | At first order a site's held degree tilts its witness environment as much as its floor does; closure families reward held degree. This explains the P4 residue in sign | proved (first order); observed match post hoc | derivation S4b, §4 |
+| New B16: clock-separated sorting | — | Continuous and per-event occupancies differ at first order. PCOMP sorts per event only. P4 PATHF reverses sign per event | proved (S6); observed | derivation S6 |
+| P8 Source–probe dependence (margins) | Mostly density composition | Also **not first-order**: K3 N=5 and P3 N=6 margins change sign between weak and W4 strength (S7b) | proved (sign change, using published values) | derivation S7b |
+| P1 Reference structure | Sorts attachment | The held reference is not a neutral ruler: floor, held degree and imposed infinite lifetime are all part of what was measured | observed / proved | architecture review §0, §5 |
+| New A-node: emergent reference | — | **Four distinct regimes** (held, selected, metastable, identifiable). At finite N a FREE reference can only be metastable (R1–R3). The first missing piece is a definition (motif predicate plus lifetime ratio), not new machinery | proved (R1–R3); undefined (metastable reference) | architecture review §1–§3 |
+| P6 Identity, P7 displacement | Undefined | Still **undefined**. Logical prerequisites now listed: two identities plus a separation; no metric space required. A history register is *not* required for tracking | undefined; prerequisites specified | architecture review §3.3, §3.9 |
+| Gravity-like attraction | Speculative | Unchanged: no density-independent preference; no emergent reference | blocked | GT-F62; review §4 |
+
+**Gap register: changed rows**
+
+| Prerequisite | Capability now | Next information-bearing question |
+| --- | --- | --- |
+| Sorting mechanism | Exact lever + first-order index + observed residue | Does a first-order reversal survive at W4? (option B); second-order theory (option D) |
+| Emergent reference | Definitions and limits (R1–R3) | Is any motif maintained beyond its parts (Λ above NULL at matched density, both clocks)? (option C) |
+| Identity through change | Matching-rule template | Only after a metastable reference exists |
+| Displacement / acceleration | Undefined | Blocked behind identity |
+
+```mermaid
+graph LR
+  S2[Exact floor lever in the odds]:::proved --> SORT[Sorting within held references]:::observed
+  S4[First-order index: floor plus held degree]:::proved --> SORT
+  RES[Global residue, feedback]:::conjectural -.-> SORT
+  S4c[Weak-coupling reversals]:::proved -.->|refutes floor-only law| SORT
+  SORT -.->|not transferable without| MET[Metastable FREE reference]:::undefined
+  R13[Exchangeability limits R1-R3]:::proved --> MET
+  MET --> ID[Identity through change]:::undefined --> DISP[Displacement]:::undefined
+  classDef proved fill:#d8f0d8,stroke:#2a7a2a
+  classDef observed fill:#e6eefc,stroke:#2a4a8a
+  classDef conjectural fill:#fff4d6,stroke:#a07a00,stroke-dasharray: 3 3
+  classDef undefined fill:#eeeeee,stroke:#777,stroke-dasharray: 4 3
+```
+
+**Narrative.**
+- **Bottom-up**, the grammar's effect of support on new relations is now understood at three levels: an exact local lever, a first-order formula in which a structure's held degree matters as much as its support, and a global remainder that is so far only observed. The simple story "less support, more attachment" is qualified by proofs of exceptions.
+- **Top-down**, the bridge now has an explicit first step that does not presuppose a held reference: a pattern the dynamics maintains longer than its parts. Exchangeability shows that such a reference can only be metastable at finite size, so its test is a ratio of time scales.
+- Everything beyond that (identity, displacement, interaction, acceleration) remains undefined, in that order of dependence.
+
 ---
 
 ## Revision history
@@ -273,3 +319,4 @@ graph LR
 - **Baseline:** sections 1–7 at the GT-P006 pre-freeze commit (`c4ab745`, E3A code commit).
 - **Revision 1 (after E3A, E3B):** section 8.
 - **Revision 2 (after E4A, E4B; GT-P007):** section 9.
+- **Revision 3 (GT-P008 consolidation, no experiment):** section 10.

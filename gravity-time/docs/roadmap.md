@@ -158,3 +158,20 @@ The sections above are unchanged.
   - The handover orientation is invariant across all five references.
 - **Recommended next (not run).** A derivation of floor-guided sorting (GT-Q16), and an architecture review of references (GT-Q17).
 - **Not authorised:** E4C and N=7.
+
+## GT-P008 status (consolidation; no experiment)
+
+The sections above are unchanged.
+- **Workstream A, sorting mechanism** (`docs/e4-sorting-mechanism-derivation.md`):
+  - the floor is an exact odds lever (S2);
+  - the first-order index is floor + (7 − N)·held degree, with weak-coupling reversals (S4c);
+  - PCOMP sorts per event only (S2b, S6);
+  - margins change sign with strength (S7b).
+- **Workstream B, reference architecture** (`docs/reference-architecture-review.md`):
+  - four regimes;
+  - no labelled centre at finite N (R1–R3);
+  - an emergent reference needs a persistence definition first.
+- **Recommended next (not authorised, not run):**
+  - principal: option C, FREE persistence feasibility, with definitions agreed first;
+  - fall-back: option B, the floor-reversal test (`docs/gt-p008-next-round-options.md`).
+- **No E5 cell was computed.**

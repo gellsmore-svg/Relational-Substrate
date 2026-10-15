@@ -51,6 +51,14 @@ An independently governed research programme built on the Constraint Laboratory 
 | E4B frozen plan, tables, atlas | [`plans/round-e4b-plan.json`](plans/round-e4b-plan.json), [`reports/round-e4b-tables.json`](reports/round-e4b-tables.json), [`reports/gt-e4b-atlas.md`](reports/gt-e4b-atlas.md) |
 | E4 synthesis; cross-programme transfer note | [`reports/gt-e4-synthesis.md`](reports/gt-e4-synthesis.md), [`docs/e4-cross-programme-transfer.md`](docs/e4-cross-programme-transfer.md) |
 | GT-P007 execution record | [`provenance/execution-GT-P007.md`](provenance/execution-GT-P007.md) |
+| **GT-P008 (consolidation, no experiment): plain-English report** | [`reports/gt-p008-consolidation-report.md`](reports/gt-p008-consolidation-report.md) |
+| GT-P008 coverage and integrity audit (with secondary-quantity definitions) | [`docs/gt-p008-coverage-and-integrity-audit.md`](docs/gt-p008-coverage-and-integrity-audit.md) |
+| Sorting-mechanism derivation (theorems, counterexamples, conjectures) | [`docs/e4-sorting-mechanism-derivation.md`](docs/e4-sorting-mechanism-derivation.md) |
+| Secondary (post hoc) analyses of E4 tables | [`reports/gt-p008-secondary-analyses.md`](reports/gt-p008-secondary-analyses.md), [`reports/gt-p008-secondary-analyses.json`](reports/gt-p008-secondary-analyses.json) |
+| Reference architecture review | [`docs/reference-architecture-review.md`](docs/reference-architecture-review.md) |
+| Next-round options (proposals; nothing frozen) | [`docs/gt-p008-next-round-options.md`](docs/gt-p008-next-round-options.md) |
+| GT-P008 cross-programme transfer note | [`docs/gt-p008-cross-programme-transfer.md`](docs/gt-p008-cross-programme-transfer.md) |
+| GT-P008 execution record | [`provenance/execution-GT-P008.md`](provenance/execution-GT-P008.md) |
 | Coherence ledger and snapshot | [`coherence/`](coherence/) |
 | Ontology proposals for later review | [`docs/ontology-proposals.md`](docs/ontology-proposals.md) |
 | Provenance | [`provenance/`](provenance/) |
