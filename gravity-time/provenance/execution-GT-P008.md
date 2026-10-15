@@ -65,3 +65,12 @@ See `reports/gt-p008-consolidation-report.md`.
 - **No labelled centre at finite N;** emergent references can only be metastable (GT-F72).
 - **Qualifications** of the GT-P007 wording (GT-F73).
 - **Recommended, not run:** option C (FREE persistence feasibility, definitions first); fall-back option B (floor-reversal test).
+
+## Addendum: CI on the closing commits
+
+- **`b2c0e1e`** (closing documents):
+  - the push run succeeded;
+  - **the pull_request run failed** (run 38695456423) in `test_committed_secondary_json_is_reproducible`;
+  - cause: one extraction-check residual differed between machines in the 16th digit (CLOSEW worst deviation 2.78e-15 on the runner, 2.66e-15 locally), and the test compared floats exactly.
+- **`498f670`:** the test now compares floats within 1e-12 absolute or 1e-9 relative. Both CI runs succeeded (push 38695871008, pull_request 38695878420).
+- **No analysis value or document changed.** Full local suite: 796 passed.
