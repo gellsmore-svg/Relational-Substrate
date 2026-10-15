@@ -10,7 +10,7 @@ Audit note: RT-0001 was opened retrospectively at the moment the implicit-accept
 
 ## RT-0004
 
-- Closed: 2026-10-16; report `research-synthesis/reports/2026-10-16-gt-p012-milestone-adopted.md`; describes commit `0ff1d73`.
+- Closed: 2026-10-16; report `research-synthesis/reports/2026-10-16-gt-p012-milestone-adopted.md`; describes commit `0ff1d73280f3`.
 - State: **OPEN: the author's next instruction ratifies the items below unless the author objects**.
 - Note: GT pin adopted through GT-P012 under AD-0006; candidates P::GT-C1..C4 proposed only
 
