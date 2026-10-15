@@ -603,7 +603,7 @@ def publish(root: Path, plan: dict, out: Path, *, frozen_plan_commit: str, e0b_t
     published = read_json(e0b_tables)["results"]
     assembled = assemble(results, published)
     item_records = {k: {"numerical_problems": check_problems(results[k]) if k in results else None, "peak_rss_mb": v.get("peak_rss_mb_parent_view", v.get("peak_rss_mb")), "role": next(it["role"] for it in plan["items"] if it["item_id"] == k), "status": v["status"], "wall_seconds": v.get("wall_seconds"), **({"interruption": v["interruption"]} if "interruption" in v else {}), **({"exit_code": v.get("exit_code"), "log_tail": v.get("log_tail")} if v["status"] == "failed" else {})} for k, v in records.items()}
-    payload = {"analysis_version": ANALYSIS_VERSION, "experiment_id": EXPERIMENT_ID, "frozen_analysis_plan_commit": frozen_plan_commit, "item_records": item_records, "plan_hash": plan["plan_hash"], "results": results, "round_id": ROUND_ID, "schema": "rs-gt.e5a-tables/v1", "status_counts": {s: sum(r["status"] == s for r in item_records.values()) for s in sorted({r["status"] for r in item_records.values()})}, **assembled}
+    payload = {"analysis_version": ANALYSIS_VERSION, "experiment_id": EXPERIMENT_ID, "frozen_analysis_plan_commit": frozen_plan_commit, "item_records": item_records, "plan_hash": plan["plan_hash"], "results": results, "round_id": ROUND_ID, "schema": "rs-gt.e5a-tables/v1", "source_commit": plan.get("source_commit"), "status_counts": {s: sum(r["status"] == s for r in item_records.values()) for s in sorted({r["status"] for r in item_records.values()})}, **assembled}
     body = dict(payload)
     body["payload_sha256"] = sha256_bytes(canonical_json(payload).encode("utf-8"))
     atomic_write_json(out, body)
