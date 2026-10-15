@@ -1,0 +1,80 @@
+{
+  "prompt_id": "008O",
+  "prompt_authored_hub_baseline": "38c2501bbab22ca1eb2288ea76a962ac0170d5e6",
+  "actual_hub_commit_consulted": "38c2501bbab22ca1eb2288ea76a962ac0170d5e6",
+  "hub_branch": "origin/main",
+  "consultation_date": "2026-10-15",
+  "fetch": "git fetch origin main",
+  "baseline_relationship": "exact equality; no research-synthesis delta",
+  "validated_main_runs": [
+    {
+      "workflow": "Research synthesis",
+      "run_id": 38769177370,
+      "conclusion": "success"
+    },
+    {
+      "workflow": "CI",
+      "run_id": 38769177312,
+      "conclusion": "success"
+    }
+  ],
+  "files_read": {
+    "research-synthesis/docs/branch-integration.md": {
+      "bytes": 2467,
+      "sha256": "d7aa1f7c55b614145eea0973118254c6c79dd6416259c7c62432f1e805cc6910"
+    },
+    "research-synthesis/docs/runbook.md": {
+      "bytes": 3538,
+      "sha256": "112f3dd703f13d31842ec36f6c28a2ae54c22e058dd5d4562e1652ef88af3db6"
+    },
+    "research-synthesis/docs/epistemic-policy.md": {
+      "bytes": 4890,
+      "sha256": "c4a3faabd5da70c799a569d355651de789ea93496b9d865a74b63b079f2c81d1"
+    },
+    "research-synthesis/docs/cadence.md": {
+      "bytes": 4477,
+      "sha256": "1c9ce31d441f09d6514301b46a4ac3d166c654fceedb77ae6951cd0a13728347"
+    },
+    "research-synthesis/generated/questions.md": {
+      "bytes": 5280,
+      "sha256": "64571b1d9ed38cef89e6a05a28be348e8cd6b269f265cd602916b15a451996c5"
+    },
+    "research-synthesis/generated/links.md": {
+      "bytes": 7976,
+      "sha256": "3093b4d6836636a7974f63eeadc9123dd9ba4665cc08e0f5d7c05313bb41025f"
+    },
+    "research-synthesis/sources/manifest.json": {
+      "bytes": 23211,
+      "sha256": "8e44c2dfce472b6348559a6da491aca8fc1a5bd9ae27cf33f1a1239c93974fc7"
+    }
+  },
+  "shared_records_influencing_planning": [
+    {
+      "id": "X::0001",
+      "influence": "Motivates explaining the CL-side passage residual and exact task-specific nulls; no shared CL/GT mechanism inferred."
+    },
+    {
+      "id": "X::0009",
+      "influence": "Retain occupancy-forced Kac null as a control; no transfer of GT lifetime identity into CL evidence."
+    },
+    {
+      "id": "XQ::01",
+      "influence": "Make explicit what conditional information the comparator resets; anchor-local clock proposal remains unauthorised and unexecuted."
+    },
+    {
+      "id": "XQ::07",
+      "influence": "Provide a typed CL finite-operator decomposition as a candidate for later hub comparison; no universal operator identity with GT."
+    }
+  ],
+  "authority_statement": "hub context is not Constraint Laboratory evidence",
+  "contract": "CL/GT own science; hub reads closed reviewed pins; no hub connections in local scientific evidence_refs; no research-synthesis merge/edit/pin move.",
+  "previous_CL_hub_pin": "e650d71bda7203c8018d8bd134c5496a03d74a11",
+  "hub_review_note": "008N closed at the pin; the branch records External Review 008M (8075827) but no review of 008N. Findings created in 008N are shown as closed-but-unreviewed; links resting on them cannot be accepted.",
+  "review_update_to_offer": "008N externally reviewed by supplied review in 008O; 008O awaits separate external review.",
+  "independence": "shared_lineage",
+  "lineage_anchor": "22e252e560cc711d337b6ae506b0fb76728247d6",
+  "independence_note": "CL and GT descend from CL 8G and share constraint DSL, kernel-builder and coherence-validator lineage; agreement is not automatically independent evidence.",
+  "direct_GT_files_read": [],
+  "private_HIST_material_used": false,
+  "post_freeze_hub_policy": "F0 fixes this context; later main movement cannot silently alter local plan or interpretation."
+}
