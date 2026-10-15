@@ -61,3 +61,4 @@ Consequences for the findings above:
 - **Decision categories.** Under rubric 03, X::0003, X::0004 and X::0005 are recommended `accepted_bounded`. X::0001, X::0002 and X::0006 to X::0009 are `qualified`: most rest on CL 008N or GT-P009, which are closed but unreviewed, and X::0006 is limited to the measured observables.
 - **Open disagreement.** Seed SYN-C003 (`compatible_with`) and X::0003 (contrast) disagree; the author must decide.
 - **False attractors.** Five false-attractor controls are recorded as rejected.
+- **Update (author decision AD-0001).** SYN-C003 is classified as an explicit contrast, matching X::0003. The disagreement is resolved, and X::0003 itself remains agent-reviewed.

@@ -74,7 +74,7 @@ Tests are in `tests/test_rssynth.py`: 65 in total, of which `Conformance0204` co
 | Reports show concepts lacking metaphors, and metaphors that overreach | met (changed) | `metaphor-gaps.md`: concepts without coverage, unmapped seed targets, draft flags, and an overreach section |
 | Historical archives not copied; historical claims need verified bytes, otherwise `blocked_missing_source` | met | `HIST` pending; seed claims citing HIST are `blocked_missing_source` |
 | Earlier synthesis labelled exploratory; its cosines labelled retrieval measures | met (changed) | Stored verbatim as `reports/external-2026-10-15-cross-research-synthesis.md`, and labelled in `reports/README.md` and in the manifest note |
-| At least one prominent unresolved question and one contradiction or limitation in the views | met (changed) | "Headlines" on `index.md`: XQ::01; X::0004; the SYN-C003 / X::0003 disagreement; the unreviewed-round limitation |
+| At least one prominent unresolved question and one contradiction or limitation in the views | met (changed) | "Headlines" on `index.md`: XQ::01; X::0004; author decisions (AD-0001 settled SYN-C003 as an explicit contrast); the unreviewed-round limitation |
 | No derived physics or ontology extension shown as a confirmed record | met (changed) | The overreach guard on accepted records. FA-01 records the gravity reading as rejected |
 | Commands documented; fast CI; diff and provenance; draft PR left unmerged; completion report; no new experiments or book edits | met | README; workflow; change record; PR #8 (draft) |
 

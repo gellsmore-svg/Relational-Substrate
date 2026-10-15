@@ -22,7 +22,7 @@ Disagreement is kept as visible as agreement. Programme negative and null findin
 - **P::FA-04** REJECTED: `CL::F8C-PROJECTION-GEOMETRY` → `CL::CL-T55` (common_definition). Rejected (false-attractor control): graph-class conditioning retains only part of the slot information (F8C-PROJECTION-GEOMETRY), graph-only quotienting is invalid for labelled rules (F011), and the graph-class-preserving refinement needs 28 marked-pair roles (CL-T55).
 - **P::FA-05** REJECTED: `CL::F8H-CURRENT-VS-INITIAL-MEMORY` → `GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY` (common_definition). Rejected (false-attractor control): CL-F8H shows current history stays efficacious while initial information decays, so the two are distinct. GT-F81 measures only decay of an initial selection. The compatible reading is X::0007, not an identity.
 
-## Open disagreement between an author seed and an agent review
+## Author decisions on relation types
 
-- `P::SYN-C003` (seed: clock dependence is `compatible_with`) against `X::0003` (agent review: explicit contrast of clock operations). Both readings can coexist; the ledger needs one relation type. **Author decision required.**
+- `P::SYN-C003`: the seed proposed `compatible_with`; the author classified it as **`explicit_contrast`**, matching `X::0003` (2026-10-15). Author decision: the clock dependence in CL and GT is an explicit contrast of operations, as recorded in X::0003. CL's pair-event epoch hides triad events (a time change plus a projection); GT's continuous and jump clocks share one event sequence and differ only in holding-time weighting. The seed's compatibility reading survives as theme membership (C::clock-readout-dependence), not as the relation type.
 

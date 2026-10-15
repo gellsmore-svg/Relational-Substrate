@@ -18,7 +18,7 @@ A navigable, generated view across research programmes. **It does not merge or r
 
 - Concepts: 13
 - Cross-programme connections: 9 (agent_reviewed: 9); none human-accepted
-- Proposals: 50 (proposed: 25, rejected: 8, under_review: 15, undetermined: 2)
+- Proposals: 50 (proposed: 24, rejected: 8, under_review: 16, undetermined: 2)
 - Shared questions: 7 (1 pending a missing source)
 - Metaphors: 6 reviewed by agent, 8 draft (all non-evidentiary)
 
@@ -28,7 +28,7 @@ A navigable, generated view across research programmes. **It does not merge or r
 
 - **Open cross-programme question:** XQ::01. Which declared comparator separates organisation (or history) from kinetics in both programmes? See [questions.md](questions.md).
 - **Contradiction resolved by scope:** X::0004. 'Reweighting can break reversibility' (CL) against 'single-witness templates are always reversible' (GT) differ in rule class (label covariance), not in fact. See [contradictions.md](contradictions.md).
-- **Open disagreement:** seed P::SYN-C003 (compatible) against agent review X::0003 (contrast). Author decision required.
+- **Author decision:** P::SYN-C003 classified as `explicit_contrast` (matching X::0003). See [contradictions.md](contradictions.md).
 - **Limitation:** results from CL 008N and GT-P009 are closed but unreviewed; links resting on them are capped at `qualified`.
 - **Not claimed:** no record derives physical gravity, quantum behaviour or physical time.
 

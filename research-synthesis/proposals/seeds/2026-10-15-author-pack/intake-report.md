@@ -90,3 +90,10 @@ Converted into the shared metaphor schema, with the original kept under `seed_re
 
 - **No claim or metaphor was reviewed, promoted or merged** with agent records, including the SYN-C003 / X::0003 disagreement.
 - **The other pack files are not applied yet:** `02_ARCHITECTURE_CONTRACT.md`, `03_DISCOVERY_RUBRIC.md`, `04_ACCEPTANCE_AND_REVIEW.md`, `05_HISTORICAL_INTAKE.md`, the background synthesis and the diagrams. The infrastructure was built from the 01 prompt alone. A conformance pass against 02–04, and registration of the background synthesis's claims, are the natural next steps.
+
+## Addendum: author decision AD-0001 (2026-10-15)
+
+The author classified SYN-C003 as an **explicit contrast**, matching X::0003. This settles the disagreement recorded above.
+- **What changed:** the seed record (verbatim) still proposes `compatible_with`. The claim now carries a human `relation_override` (`compatible_with` → `explicit_contrast`) and an appended human decision-history entry.
+- **Where it's logged:** `proposals/author-decisions.jsonl`.
+- **What didn't change:** the claim is not accepted, and X::0003 is not human-accepted by this decision.

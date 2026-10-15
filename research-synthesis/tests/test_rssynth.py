@@ -693,6 +693,49 @@ class ExternalClaimRestatement(unittest.TestCase):
             self.assertEqual(ledger.history_is_append_only(before, after, "proposal_id"), [])
 
 
+class AuthorDecisions(unittest.TestCase):
+    def setUp(self):
+        self.m, self.loaded, self.shared = inputs()
+
+    def syn3(self, shared):
+        return [p for p in shared["proposals"] if p["proposal_id"] == "P::SYN-C003"][0]
+
+    def test_syn_c003_is_an_explicit_contrast_by_author_decision(self):
+        p = self.syn3(self.shared)
+        self.assertEqual(p["seed_record"]["relation_type_proposed"], "compatible_with")  # verbatim seed untouched
+        self.assertEqual((p["connection_type"], p["relation_override"]["matches"]), ("explicit_contrast", "X::0003"))
+        self.assertTrue(p["decision_history"][-1]["human"])
+        x3 = [c for c in self.shared["connections"] if c["connection_id"] == "X::0003"][0]
+        self.assertEqual((x3["connection_type"], x3["review_status"]), ("explicit_contrast", "agent_reviewed"))  # not human-accepted by this decision
+
+    def test_override_must_be_human_and_consistent(self):
+        bad = copy.deepcopy(self.shared)
+        self.syn3(bad)["relation_override"]["human"] = False
+        self.assertTrue(any("recorded human decision" in e for e in ledger.validate_all(self.m, self.loaded, bad)))
+        bad2 = copy.deepcopy(self.shared)
+        self.syn3(bad2)["connection_type"] = "qualifies"
+        self.assertTrue(any("must equal the author's relation_override" in e for e in ledger.validate_all(self.m, self.loaded, bad2)))
+        bad3 = copy.deepcopy(self.shared)
+        self.syn3(bad3)["decision_history"] = self.syn3(bad3)["decision_history"][:1]
+        self.assertTrue(any("matching human entry" in e for e in ledger.validate_all(self.m, self.loaded, bad3)))
+
+    def test_decision_log_is_append_only_and_idempotent(self):
+        import importlib.util
+
+        spec = importlib.util.spec_from_file_location("ad", REAL_ROOT / "proposals/author_decisions.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        with sandbox() as root:
+            before = (root / "proposals/author-decisions.jsonl").read_bytes()
+            self.assertEqual(mod.run(root), {"logged": 0, "applied": 0})
+            self.assertEqual(before, (root / "proposals/author-decisions.jsonl").read_bytes())
+
+    def test_views_show_the_decision_not_an_open_disagreement(self):
+        files = generate.build(*generate.load_inputs())
+        self.assertIn("Author decision:** P::SYN-C003 classified as `explicit_contrast`", files["index.md"])
+        self.assertNotIn("Author decision required", files["contradictions.md"] + files["index.md"])
+
+
 class NonMutationOfResearchRecords(unittest.TestCase):
     def test_branch_changes_only_the_shared_layer(self):
         v = workflow.scope_violations("origin/main")

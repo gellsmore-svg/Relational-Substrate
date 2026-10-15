@@ -344,8 +344,20 @@ def validate_seed_claim(x: dict, R: "Resolver") -> list[str]:
         p.append(f"{pid}: a seed claim cannot be promoted directly; restate it as a pairwise connection and review that")
     if x.get("relation_type_proposed") not in SEED_RELATION_MAP:
         p.append(f"{pid}: unmapped seed relation type {x.get('relation_type_proposed')!r}")
-    elif x.get("connection_type") != SEED_RELATION_MAP[x["relation_type_proposed"]]:
-        p.append(f"{pid}: connection_type does not follow the declared seed mapping")
+    else:
+        ov = x.get("relation_override")
+        if ov:
+            # the only exception to the seed mapping: a recorded human (author) decision
+            if not ov.get("human") or str(ov.get("decided_by", "")).lower().startswith("agent") or ov.get("to") not in core.CONNECTION_TYPES:
+                p.append(f"{pid}: a relation_override must be a recorded human decision naming a shared connection type")
+            elif x.get("connection_type") != ov.get("to"):
+                p.append(f"{pid}: connection_type must equal the author's relation_override")
+            elif ov.get("from") != x.get("relation_type_proposed"):
+                p.append(f"{pid}: relation_override.from must name the seed's proposed relation type")
+            if not any(h.get("human") and h.get("date") == ov.get("date") for h in x.get("decision_history", [])):
+                p.append(f"{pid}: a relation_override needs a matching human entry in decision_history")
+        elif x.get("connection_type") != SEED_RELATION_MAP[x["relation_type_proposed"]]:
+            p.append(f"{pid}: connection_type does not follow the declared seed mapping")
     nodes, pending = [], False
     for ref in x.get("sources", []):
         res = R.resolve(ref)

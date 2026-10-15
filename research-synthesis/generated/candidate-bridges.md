@@ -49,12 +49,12 @@ Kept verbatim (`seed_record`). The seed's relation type is mapped conservatively
 - **Seed review status:** `candidate`
 - **Sources:** `CL::F004-PASSAGE-AFTER-OCCUPANCY`, `CL::F8M-H2-STATIONARY-H1-RESIDUAL`, `GT::GT-F04-RETENTION-NOT-APPROACH`
 
-### P::SYN-C003: clock_dependence (PROPOSED (unreviewed))
+### P::SYN-C003: clock_dependence (UNDER REVIEW)
 
 - **Claim:** Choice of full-event, pair-event, continuous-time or jump-count sampling can expose differing statistics from related kernels.
 - **Cannot infer:** A physical theory of gravitational time dilation.
 - **Discriminator:** Formalise each clock as an operation on the kernel and compare whether commuting diagrams hold.
-- **Proposed relation:** `compatible_with` → mapped to `epistemic_compatibility`
+- **Proposed relation:** `compatible_with` → mapped to `explicit_contrast`
 - **Seed review status:** `candidate`
 - **Sources:** `CL::F003-CLOCK-SPLIT`, `GT::GT-F07-SHARED-BASIN-DIFFERENT-CLOCKS`, `GT::GT-F69-CLOCK-SEPARATED-SORTING`
 

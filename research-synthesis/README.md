@@ -64,6 +64,7 @@ python3 research-synthesis/synth snapshot --name <milestone> --title "<title>"
 python3 research-synthesis/synth intake-seeds <dir>  # stage author seed files as unapproved proposals
 python3 research-synthesis/proposals/register_external_claims.py  # register the external synthesis's claims (idempotent)
 python3 research-synthesis/proposals/restate_external_claims.py   # check claims and restate checkable ones as pairwise proposals (idempotent)
+python3 research-synthesis/proposals/author_decisions.py          # apply logged author decisions (append-only log; idempotent)
 python3 -m unittest discover -s research-synthesis/tests
 ```
 
