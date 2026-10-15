@@ -1,0 +1,24 @@
+{
+  "prompt_id": "008O",
+  "transitions": [
+    {
+      "finding_id": "Q-H2-ROUTE-NULL-FACTORIZATION",
+      "from": "unresolved",
+      "to": "qualified",
+      "changed_fields": [
+        "status"
+      ],
+      "before_row_sha256": "90e9367c40239822d82675d14e59acfab50ad197f13b4bb4fcd168bc5e7ffc55",
+      "after_row_sha256": "635e6e6544ef03c6382d0163aad182450ab89e1d0aa14a93ce1a6e981d0481df",
+      "evidence_generation": "008O",
+      "meaning": "Exact factorization and complete finite null certificates answer the bounded task; generic role/all-m origins and other tasks remain open."
+    }
+  ],
+  "evidence_refs": [
+    "constraint-lab/formal/markovization-stopping-factorization.md",
+    "constraint-lab/reports/generation-008o-route-null-factorization.md",
+    "constraint-lab/reports/tables/generation-008o-factor-validation.json",
+    "constraint-lab/tests/test_v08o.py",
+    "constraint-lab/tests/test_v08o_plumbing.py"
+  ]
+}

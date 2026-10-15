@@ -119,6 +119,12 @@ flowchart TD
     F8N_ROUTE_SELECTIVE_NULLS["F8N-ROUTE-SELECTIVE-NULLS: UP and DOWN each differ in 404 of 504 non-neutral source rows, retaining 100 exact sile..."]
     F8N_FIRST_LENGTH_FOUR["F8N-FIRST-LENGTH-FOUR: Every non-neutral source-row first-return difference begins at four events; all slices ..."]
     F8N_NEUTRAL_PASSAGE_NULL["F8N-NEUTRAL-PASSAGE-NULL: The common neutral baseline matches every frozen return total, direction, length/tail, ..."]
+    F8O_ROUTE_NULL_FACTORIZATION["F8O-ROUTE-NULL-FACTORIZATION: All 1008 non-neutral route rows reproduce 8N: 808 active and 200 null. Nulls split into..."]
+    F8O_DISJOINT_FACTOR_SUPPORT["F8O-DISJOINT-FACTOR-SUPPORT: In 80 non-neutral null rows U and W are nonzero but every orbit-target product vanishes..."]
+    F8O_FIBREWISE_CANCELLATION["F8O-FIBREWISE-CANCELLATION: The remaining 24 route nulls have nonzero products which cancel separately within each ..."]
+    F8O_FOUR_EVENT_DEFECT["F8O-FOUR-EVENT-DEFECT: The finite insertion identity reproduces all published four-event residuals. Entrance b..."]
+    F8O_TIMING_AGGREGATION_CANCELLATION["F8O-TIMING-AGGREGATION-CANCELLATION: All twenty known non-neutral four-event timing nulls are insertionwise target-aggregati..."]
+    F8O_FACTOR_TRANSPORT["F8O-FACTOR-TRANSPORT: All 114 frozen complement/opposite-pair factor transports pass exactly, including kerne..."]
   end
   subgraph INFERENCE [Inferences]
     F008_COMPOSITION_REPRESENTATION["F008-COMPOSITION-REPRESENTATION: The magnitude of a two-rule interaction residual depends on the representation and the ..."]
@@ -188,6 +194,12 @@ flowchart TD
     F8N_KAC_CONTROL["F8N-KAC-CONTROL: Stationary-conditional same-class positive return means equal 1/pi(class) for H2 and Kp..."]
     F8N_H1_MATCHED_PASSAGE_BOUNDARY["F8N-H1-MATCHED-PASSAGE-BOUNDARY: Kpi is unique on exactly (P,h1) under full stationary adjacent matching. A passage resi..."]
     F8N_CONJUGATE_PASSAGE["F8N-CONJUGATE-PASSAGE: Kernel conjugacy transports stationary-source passage laws and stopping sets. All 24 FO..."]
+    F8O_STATIONARY_RESET_PROJECTION["F8O-STATIONARY-RESET-PROJECTION: Stationary conditional lifting satisfies LC=I, Pi=CL is idempotent, and the adjacent-ma..."]
+    F8O_STOPPING_MARKOVIZATION_DEFECT["F8O-STOPPING-MARKOVIZATION-DEFECT: The exact route stopping defect factors as a Ar(I-Pi)Mr Rexit, with both resolvents typ..."]
+    F8O_TASK_SPECIFIC_PREDICTIVE_EQUALITY["F8O-TASK-SPECIFIC-PREDICTIVE-EQUALITY: For a fixed source, route and target, equality is equivalent to U W=0; it can hold with..."]
+    F8O_ENTRANCE_BALANCE["F8O-ENTRANCE-BALANCE: Stationary material-class starts with the pair shift update give a Pi=a after a route-s..."]
+    F8O_TARGET_INSENSITIVITY["F8O-TARGET-INSENSITIVITY: All 96 target-insensitive rows are FORM k4/UP and DISSOLVE k2/DOWN. Equal opposite-dire..."]
+    F8O_TASK_PROJECTION_SCOPE["F8O-TASK-PROJECTION-SCOPE: Comparator adequacy is task- and projection-dependent: matching occupancy and stationar..."]
   end
   subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
     F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
@@ -201,6 +213,7 @@ flowchart TD
     F8L_LOCAL_RS_READING["F8L-LOCAL-RS-READING: Within this model, earlier historical order can affect predictive futures beyond identi..."]
     F8M_LOCAL_RS_READING["F8M-LOCAL-RS-READING: Within this finite model, ordered historical relational role can remain structurally co..."]
     F8N_RS_ACCESS_INTERPRETATION["F8N-RS-ACCESS-INTERPRETATION: Within this model, deeper relational history can alter access between structures withou..."]
+    F8O_RS_SCOPED_READOUT["F8O-RS-SCOPED-READOUT: Within this finite model, a declared stopping task consumes only the process difference..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     Q_PATH_SHAPE["Q-PATH-SHAPE: Why does path topology convert early triadic context into shape information at the firs..."]
@@ -558,3 +571,24 @@ flowchart TD
   F8N_ACCESS_BEYOND_OCCUPANCY -->|qualifies| Q_L_COMPILER_SEMANTICS
   F8N_RETURN_ROUTING -->|compatible_with| F8N_CONJUGATE_PASSAGE
   F8N_K3_COMMITTOR -->|contrasts_with| F8N_MFPT_RESIDUAL
+  F8O_STATIONARY_RESET_PROJECTION -->|formalises| F8M_H2_STATIONARY_H1_RESIDUAL
+  F8O_STOPPING_MARKOVIZATION_DEFECT -->|explains| F8N_ROUTE_SELECTIVE_NULLS
+  F8O_TASK_SPECIFIC_PREDICTIVE_EQUALITY -->|derived_from| F8O_STOPPING_MARKOVIZATION_DEFECT
+  F8O_ENTRANCE_BALANCE -->|explains| F8N_TWO_EVENT_CONTROL
+  F8O_ROUTE_NULL_FACTORIZATION -->|qualifies| Q_H2_ROUTE_NULL_FACTORIZATION
+  Q_H2_ROUTE_NULL_FACTORIZATION -->|partially_answered_by| F8O_ROUTE_NULL_FACTORIZATION
+  F8O_ROUTE_NULL_FACTORIZATION -->|refines| F8N_ROUTE_SELECTIVE_NULLS
+  F8O_TARGET_INSENSITIVITY -->|explains| F8O_ROUTE_NULL_FACTORIZATION
+  F8O_DISJOINT_FACTOR_SUPPORT -->|explains| F8O_ROUTE_NULL_FACTORIZATION
+  F8O_FIBREWISE_CANCELLATION -->|explains| F8O_ROUTE_NULL_FACTORIZATION
+  F8O_FIBREWISE_CANCELLATION -->|motivates| Q_H2_ROLE_FACTORIZATION
+  F8O_FOUR_EVENT_DEFECT -->|formalises| F8N_FIRST_LENGTH_FOUR
+  F8O_TIMING_AGGREGATION_CANCELLATION -->|qualifies| F8O_FOUR_EVENT_DEFECT
+  F8O_FACTOR_TRANSPORT -->|refines| F8N_CONJUGATE_PASSAGE
+  F8O_FACTOR_TRANSPORT -->|qualifies| F8O_FIBREWISE_CANCELLATION
+  F8O_TASK_PROJECTION_SCOPE -->|derived_from| F8O_TASK_SPECIFIC_PREDICTIVE_EQUALITY
+  F8O_TASK_PROJECTION_SCOPE -->|qualifies| F8N_H1_MATCHED_PASSAGE_BOUNDARY
+  F8O_RS_SCOPED_READOUT -->|derived_from| F8O_TASK_PROJECTION_SCOPE
+  F8O_STOPPING_MARKOVIZATION_DEFECT -->|depends_on| F8O_STATIONARY_RESET_PROJECTION
+  F8O_ROUTE_NULL_FACTORIZATION -->|depends_on| F8O_STOPPING_MARKOVIZATION_DEFECT
+  F8O_FOUR_EVENT_DEFECT -->|depends_on| F8O_ENTRANCE_BALANCE
