@@ -1,0 +1,19 @@
+{
+  "round_id": "M0",
+  "frozen_analysis_plan_commit": "c5042fbb0103436d15591e009d0c58b173283e8f",
+  "canonical_plan_hash": "c74237447c4bfa0a6f1b130abe54a859e11224c0945c615e304ec150845a5036",
+  "plan_file_sha256": "0bb59815000f7223e65062c145e7d0d8297dc8e48e94a12f675277733f1dd63c",
+  "remote_containing_ref": "origin/research/constraint-lab-v0.8m-h2-structural-consequence",
+  "push_verified_before_target_execution": true,
+  "new_non_neutral_8M_primary_cells_observed": 0,
+  "pre_freeze_tests": "16 passed: 8M neutral/combinatorial/synthetic and published 8L regression; no non-neutral ROLE target",
+  "prior_related_exposure": "8L and alternate H1 branches known; not blind to generic structural possibility",
+  "primary_non_neutral_items": 72,
+  "neutral_items": 1,
+  "workers": 1,
+  "numeric_threads": 1,
+  "information_precision_digits": 160,
+  "word_lengths": [1,2,3,4,5,6],
+  "source_drift_policy": "No frozen source or input modification; explicit amendment required",
+  "chronology_note": "A long git commit briefly held index.lock during staging; failed staging attempts were retried after completion. No target ran during this engineering ordering issue."
+}
