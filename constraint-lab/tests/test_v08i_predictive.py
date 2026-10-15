@@ -233,9 +233,9 @@ def test_prompt_variant_and_reviewed_artifacts_preserved():
         if name != "coherence/findings.jsonl":
             assert after.startswith(before)
             continue
+        from rs_constraint_lab.status_history import validate_status_history
+        assert validate_status_history(ROOT, before.splitlines(), after.splitlines())
         for old, current in zip(before.splitlines(), after.splitlines()):
             row = json.loads(old)
             if row["finding_id"] in {"Q-H-MINIMAL-STATE", "Q-H-COARSE-GRAINING"}:
                 assert json.loads(current) == {**row, "status": "qualified"}
-            else:
-                assert current == old

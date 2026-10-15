@@ -28,3 +28,15 @@ match in every item. These are finite model observations, not population tests.
 No M1 is opened. Symmetry explains the principal committor null directly from
 reviewed 8M conjugacies and the general passage-transport proof, without new
 model computation. Route-null factorisation remains a separate next question.
+
+## Joint Profile Versus Timing Marginal
+
+Destination sums of the already frozen joint F_n reveal 20 exact four-event
+aggregate cancellations: joint destination laws differ but the probability
+of returning at that length agrees. Their timing marginal first differs at
+six events. The other 484 non-neutral source rows have timing onset four.
+These are not total UP/DOWN cancellations, nor all-order timing equivalences.
+The additional machine-readable timing table only sums the existing frozen
+outputs; no return depth, model, task or solve is added. This retains the
+older scalar-aggregate lesson instead of treating joint and marginal laws
+as interchangeable.

@@ -143,6 +143,16 @@ slice 4,6,8,10,12 and every exact >12 tail differs. No tail-only onset, delayed
 onset or routing-silent/length-only cell occurs. The depth was not expanded.
 Rational tails are nonnegative and close the total return distribution exactly.
 
+The frozen F_n is JOINT length/destination, not just return duration. Summing
+its destination columns retains a further exact distinction: timing marginals
+first differ at four events in 484 source rows and six events in 20. The
+latter are direction-coupled R03 (matching, P4, cycle sources) and R09
+(two-edge-path, triangle+pendant sources), in both grades and families.
+Their four-event destination residuals cancel when destination is forgotten.
+Thus joint distinction at four does not imply duration distinction at four.
+This is marginal post-processing of the frozen tables, no additional length
+or solve. Every non-neutral row still has a timing distinction by six.
+
 ## M. UP/DOWN Route Decomposition
 
 UP is active in 404/504 rows; DOWN in 404/504. The other 100 rows per direction
