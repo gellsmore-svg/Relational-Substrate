@@ -8,6 +8,14 @@ The round trip **never** gives scientific review of a CL/GT generation, and **ne
 
 Audit note: RT-0001 was opened retrospectively at the moment the implicit-acceptance rule was introduced and ratified in the same session (AD-0002). Its 15 items had been shown to the author only in prose (reports/2026-10-15-initial-federation.md, the PR #8 description and the generated links and metaphor views), not as a structured list before the instruction that ratified them. AD-0002 stands and is not rewritten; it accepted synthesis interpretations at their reported categories only. It is not scientific review of CL 008N or GT-P009 and not publication consent. RT-0002 listed no items.
 
+## RT-0003
+
+- Closed: 2026-10-15; report `research-synthesis/reports/2026-10-15-operational-readiness.md`; describes commit `27c7455790c7`.
+- State: **OPEN: the author's next instruction ratifies the items below unless the author objects**.
+- Note: Operational close-out round. No agent-reviewed records are open in the repository: historical findings and cross-programme candidates are staged privately pending the author's publication_consent decision, which the round trip cannot grant.
+
+No recommendations were open at this round's close.
+
 ## RT-0002
 
 - Closed: 2026-10-15; report `research-synthesis/reports/2026-10-15-historical-intake-and-reconciliation.md`; describes commit `2c13b8d12f7c`.
