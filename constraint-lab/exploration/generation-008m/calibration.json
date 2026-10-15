@@ -1,0 +1,46 @@
+{
+  "disk_budget_bytes": 300000000,
+  "engineering_test_correction": "pre-freeze neutral decimal string parsed as Decimal, not fmpq; no scientific exposure",
+  "estimate_seconds_per_primary_item": 30,
+  "historical_regressions": "test_v08l_plumbing.py (published H1/H2 only); no new non-neutral ROLE",
+  "neutral_item_bytes": 47061,
+  "neutral_stationary_seconds": 0.20184893799887504,
+  "neutral_words_L1_L6_seconds": 1.1919397349993233,
+  "new_non_neutral_8M_targets_executed": 0,
+  "numeric_threads": 1,
+  "synthetic_dense_120_solve_seconds": 0.02234268400934525,
+  "timeout_seconds_per_item": 300,
+  "word_support": [
+    {
+      "S4_records": 11,
+      "labelled_words": 64,
+      "length": 1
+    },
+    {
+      "S4_records": 28,
+      "labelled_words": 384,
+      "length": 2
+    },
+    {
+      "S4_records": 120,
+      "labelled_words": 2304,
+      "length": 3
+    },
+    {
+      "S4_records": 624,
+      "labelled_words": 13824,
+      "length": 4
+    },
+    {
+      "S4_records": 3552,
+      "labelled_words": 82944,
+      "length": 5
+    },
+    {
+      "S4_records": 20928,
+      "labelled_words": 497664,
+      "length": 6
+    }
+  ],
+  "workers": 1
+}
