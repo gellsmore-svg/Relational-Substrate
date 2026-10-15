@@ -138,3 +138,19 @@ Run from main or a dedicated hub worktree under
 The hub naturally reports CL behind_branch_head until that pin is reviewed/moved.
 This expected staleness is not an 8O failure. No synth apply-pin, X/XQ record,
 human acceptance, source manifest edit or research-synthesis merge occurs here.
+
+## Closing Verification
+
+Local full suite: 678 passed in 444.84 seconds. Focused factor checks: 82 passed,
+plus the two subsequently added census/snapshot/handoff regressions passed.
+Formal/coherence/status history, old snapshot immutability, frozen hashes,
+generation-000 correctness and CI book-script/source checks pass.
+Pre-close delivery 41ce57b3695e827b7c697a3b34c9d6dee52410b5 passed both CI jobs
+in run 38789066092. This is not substituted for the final provenance-close head:
+the closing tag identifies that head and its exact CI must be checked after push.
+The closing response supplies the exact SHA/run; see also the programme-side
+`constraint-lab/exploration/generation-008o/close-out.md` receipt.
+
+Orbit contribution descriptions use the frozen U-times-W convention. Alternative
+factor/readout coordinates can redistribute individual contributions without
+changing the exact stopped defect; none is asserted to be a physical decomposition.
