@@ -1,0 +1,12 @@
+{
+  "disk_budget_bytes": 1000000000,
+  "estimated_seconds": 730,
+  "fixtures": "test_v08o_plumbing.py: neutral and synthetic noncommuting rational chains only",
+  "historical_regressions": "published 8N source reconstruction and immutable neutral route certificates; no new non-neutral factor outputs",
+  "neutral_bytes": 45941,
+  "neutral_seconds": 0.2722841490030987,
+  "new_non_neutral_8O_factor_diagnostics": 0,
+  "numeric_threads": 1,
+  "timeout_seconds": 300,
+  "workers": 1
+}
