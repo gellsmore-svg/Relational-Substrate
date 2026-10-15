@@ -1,0 +1,96 @@
+{
+  "schema": "rs-shared-coherence-handoff/source-manifest-v1",
+  "prepared_on": "2026-10-15",
+  "scope": "proposal pins only; verification and review required before canonical adoption",
+  "repository": "gellsmore-svg/Relational-Substrate",
+  "observed_active_heads_during_preparation": {
+    "main": "05b15b0d903d46070b99ac84f9cab1bd898046ba",
+    "constraint_lab_8n": "cc9678bf1316fa7c27ddfbc3940f6136c3d4ce38",
+    "gravity_time": "59eb6829ace118cdce6bd419457837ea23f37c32"
+  },
+  "source_sets": [
+    {
+      "id": "CL",
+      "programme": "Constraint Laboratory",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "ref": "research/constraint-lab-v0.8m-h2-structural-consequence",
+      "pinned_completed_head": "9b2f857687be2ca6867d698fa9eda51db2f788a5",
+      "findings": "constraint-lab/coherence/findings.jsonl",
+      "relations": "constraint-lab/coherence/relations.jsonl",
+      "status": "completed_8m; further_8n_status_recheck_required",
+      "seed_reports": [
+        "constraint-lab/reports/generation-008c-mechanistic-decomposition.md",
+        "constraint-lab/reports/generation-008f-interaction-to-topology-bridge.md",
+        "constraint-lab/reports/generation-008h-history-as-state.md",
+        "constraint-lab/reports/generation-008m-h2-structural-consequence.md"
+      ]
+    },
+    {
+      "id": "GT",
+      "programme": "Gravity, Temporality and Emergent Spatiality",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "ref": "research/gravity-time-admissibility",
+      "pinned_completed_head": "a73cd0260f38885121a89a607efa73e98732e59f",
+      "findings": "gravity-time/coherence/findings.jsonl",
+      "relations": "gravity-time/coherence/relations.jsonl",
+      "status": "completed_GT_P008; E5A/GT_P009_status_recheck_required",
+      "seed_reports": [
+        "gravity-time/reports/gt-g0-g1-report.md",
+        "gravity-time/reports/gt-e2-synthesis.md",
+        "gravity-time/reports/gt-e4-synthesis.md",
+        "gravity-time/reports/gt-p008-consolidation-report.md",
+        "gravity-time/docs/gt-p008-cross-programme-transfer.md"
+      ]
+    },
+    {
+      "id": "SC",
+      "programme": "Stochastic Calculator (separate apparatus)",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "ref": "research/stochastic-calculator",
+      "pinned_completed_head": "aa06213ce42e5166ae2a0d21846a2a7c218f6b50",
+      "status": "draft_PR2_not_one_of_two_active_programmes",
+      "seed_reports": [
+        "stochastic-calculator/RS_FINDINGS.md",
+        "stochastic-calculator/README.md"
+      ]
+    },
+    {
+      "id": "METHOD",
+      "programme": "Shared Open-Thetical Research Method",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "ref": "main",
+      "pinned_completed_head": "05b15b0d903d46070b99ac84f9cab1bd898046ba",
+      "status": "canonical_on_main",
+      "seed_reports": [
+        "research-methods/open-thetical-research.md",
+        "research-methods/README.md"
+      ]
+    },
+    {
+      "id": "HIST",
+      "programme": "Historical Chat-Based Experiments",
+      "status": "local_archive_not_in_git; private_source_review_required",
+      "archives": [
+        {
+          "name": "RS_Work_Research.zip",
+          "sha256": "3ecfd22f9d4b64c17c2a2c9c198615ee1e1c6e3d08512e6971ae7b4090261e46",
+          "entries": 403
+        },
+        {
+          "name": "RS_Work_Round46_Supplement.zip",
+          "sha256": "630da2d942b15247a164d5e1fd262f759483941210f38a9ab29b12c1a6ce4b5e",
+          "entries": 9
+        }
+      ],
+      "primary_paths": [
+        "rs_work_round11/findings.md",
+        "rs_work_round46_moments/REPORT.md",
+        "rs_work_round47/REPORT.md",
+        "rs_work_round48/REPORT.md",
+        "rs_sources/RS_Baseline_Post_506Z/RS_Baseline_Post_506Z/02_EXPERIMENT_LEDGER_505_506.md",
+        "rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md"
+      ]
+    }
+  ],
+  "provenance_policy": "Repository refs must be resolved at commit, not mutable branch, and each imported graph relation undergoes scope review. Archive sources must remain pending unless original bytes are accessible and publishability approved."
+}

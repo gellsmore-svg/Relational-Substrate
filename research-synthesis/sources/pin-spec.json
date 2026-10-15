@@ -1,0 +1,342 @@
+{
+  "schema": "rssynth.pin-spec/v1",
+  "note": "Human-edited declaration of which source revisions the shared layer reads. `rssynth pin` turns this into manifest.json and materialised copies after verifying every path at the pinned commit. Changing a commit here is a pin update and needs review (docs/cadence.md).",
+  "core_finding_fields": [
+    "created_commit",
+    "created_generation",
+    "epistemic_layer",
+    "evidence_refs",
+    "finding_id",
+    "literal_value",
+    "magnitude_class",
+    "notes",
+    "observable",
+    "robustness_vector",
+    "scope",
+    "statement",
+    "status",
+    "structural_roles",
+    "temporal_character"
+  ],
+  "sources": [
+    {
+      "source_key": "CL",
+      "namespace": "CL",
+      "programme": "Constraint Laboratory",
+      "role": "research_programme",
+      "status": "included",
+      "default_revision": true,
+      "revision_label": "008n",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "branch": "research/constraint-lab-v0.8n-h2-controlled-passage",
+      "commit": "e650d71bda7203c8018d8bd134c5496a03d74a11",
+      "round_boundary": "Prompt 008N closed at e650d71 ('provenance: close Prompt 008N ...'); immutable snapshot through-generation-008n.md published in cc9678b",
+      "adapters": [
+        "coherence_ledger_v1",
+        "theorem_catalog_v1"
+      ],
+      "extra_finding_fields": [
+        "formal_refs"
+      ],
+      "artifacts": [
+        {
+          "path": "constraint-lab/coherence/findings.jsonl",
+          "kind": "findings",
+          "materialise": true
+        },
+        {
+          "path": "constraint-lab/coherence/relations.jsonl",
+          "kind": "relations",
+          "materialise": true
+        },
+        {
+          "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+          "kind": "validator",
+          "materialise": true
+        },
+        {
+          "path": "constraint-lab/formal/theorem-catalog.jsonl",
+          "kind": "theorem_catalog",
+          "materialise": true
+        },
+        {
+          "path": "constraint-lab/formal/open-problems.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "Open problems CL-Q01 to CL-Q06"
+        },
+        {
+          "path": "constraint-lab/coherence/snapshots/through-generation-008n.md",
+          "kind": "snapshot",
+          "materialise": false,
+          "description": "Immutable CL coherence snapshot through 008N"
+        },
+        {
+          "path": "constraint-lab/reports/generation-008n-h2-controlled-passage.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "Generation 008N controlled-passage report"
+        },
+        {
+          "path": "constraint-lab/reports/generation-008k-predictive-state-synthesis.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "Generation 008K predictive-state synthesis"
+        },
+        {
+          "path": "constraint-lab/docs/scientific-plan-discipline.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "Plan discipline and the 8G compilation gate"
+        }
+      ],
+      "lineage": [
+        {
+          "relation": "descends_from",
+          "target": "CL-8G",
+          "what": "8N descends from 8G (22e252e) through 8H-8M"
+        }
+      ],
+      "unreviewed_generations": [
+        "008N"
+      ],
+      "review_note": "008N closed at the pin; the branch records External Review 008M (8075827) but no review of 008N. Findings created in 008N are shown as closed-but-unreviewed; links resting on them cannot be accepted."
+    },
+    {
+      "source_key": "GT",
+      "namespace": "GT",
+      "programme": "Gravity, Temporality and Emergent Spatiality",
+      "role": "research_programme",
+      "status": "included",
+      "default_revision": true,
+      "revision_label": "p009",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "branch": "research/gravity-time-admissibility",
+      "commit": "79fa6b0119449bd56359acf4436015df27855f43",
+      "round_boundary": "GT-P009 (E5A) closed at 79fa6b0 ('GT-P009: provenance close ...'); snapshot through-gt-e5a.md",
+      "adapters": [
+        "coherence_ledger_v1"
+      ],
+      "extra_finding_fields": [
+        "dependence"
+      ],
+      "artifacts": [
+        {
+          "path": "gravity-time/coherence/findings.jsonl",
+          "kind": "findings",
+          "materialise": true
+        },
+        {
+          "path": "gravity-time/coherence/relations.jsonl",
+          "kind": "relations",
+          "materialise": true
+        },
+        {
+          "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+          "kind": "validator",
+          "materialise": true
+        },
+        {
+          "path": "gravity-time/coherence/snapshots/through-gt-e5a.md",
+          "kind": "snapshot",
+          "materialise": false,
+          "description": "Immutable GT coherence snapshot through E5A"
+        },
+        {
+          "path": "gravity-time/docs/reference-architecture-review.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "GT-P008 reference architecture review (R1-R3)"
+        },
+        {
+          "path": "gravity-time/docs/e3-cross-programme-transfer.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "GT transfer note T-1 to T-4 (suggestions only)"
+        },
+        {
+          "path": "gravity-time/docs/e4-cross-programme-transfer.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "GT transfer note T-5 to T-7 (suggestions only)"
+        },
+        {
+          "path": "gravity-time/docs/gt-p008-cross-programme-transfer.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "GT transfer note T-8 to T-12 (suggestions only)"
+        },
+        {
+          "path": "gravity-time/docs/gt-e5a-cross-programme-transfer.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "GT transfer note T-13 to T-16 (suggestions only)"
+        },
+        {
+          "path": "gravity-time/reports/gt-e5a-report.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "GT E5A plain-English report"
+        }
+      ],
+      "lineage": [
+        {
+          "relation": "descends_from",
+          "target": "CL-8G",
+          "what": "GT branch was created from CL 8G (22e252e); shares the constraint-lab DSL, kernel builder and coherence validator"
+        },
+        {
+          "relation": "carries_inherited_copy_of",
+          "target": "CL-8G",
+          "what": "constraint-lab/coherence/{findings,relations}.jsonl on the GT branch are byte-identical to 8G and are NOT read as CL evidence"
+        }
+      ],
+      "unreviewed_generations": [
+        "GT-P009"
+      ],
+      "review_note": "GT-P009 (E5A) closed at the pin; awaiting the author's review in draft PR #6. Findings created in GT-P009 are closed-but-unreviewed."
+    },
+    {
+      "source_key": "CL-8G",
+      "namespace": "CL",
+      "programme": "Constraint Laboratory (8G, common ancestor)",
+      "role": "lineage_anchor",
+      "status": "lineage_only",
+      "default_revision": false,
+      "revision_label": "008g",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "branch": "research/constraint-lab-v0.8g-formal-integration",
+      "commit": "22e252e560cc711d337b6ae506b0fb76728247d6",
+      "round_boundary": "8G closed; common ancestor of CL 8N and GT",
+      "adapters": [],
+      "artifacts": [
+        {
+          "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+          "kind": "validator",
+          "materialise": false
+        },
+        {
+          "path": "constraint-lab/coherence/findings.jsonl",
+          "kind": "findings",
+          "materialise": false,
+          "description": "8G CL ledger; also the inherited copy carried by the GT branch"
+        }
+      ],
+      "lineage": []
+    },
+    {
+      "source_key": "SC",
+      "namespace": "SC",
+      "programme": "Stochastic Relational Calculator",
+      "role": "test_apparatus",
+      "status": "catalogued_only",
+      "default_revision": true,
+      "revision_label": "pr2",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "branch": "research/stochastic-calculator",
+      "commit": "aa06213ce42e5166ae2a0d21846a2a7c218f6b50",
+      "round_boundary": "draft PR #2; last commit 2026-09-10; no structured ledger",
+      "adapters": [],
+      "artifacts": [
+        {
+          "path": "stochastic-calculator/RS_FINDINGS.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "SC prose findings (not ingested as findings)"
+        },
+        {
+          "path": "stochastic-calculator/DISCOVERIES.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "SC discoveries (prose)"
+        },
+        {
+          "path": "stochastic-calculator/HYPOTHESES.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "SC hypotheses (prose)"
+        },
+        {
+          "path": "stochastic-calculator/research/VALIDATION.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "SC validation notes"
+        }
+      ],
+      "lineage": []
+    },
+    {
+      "source_key": "OTR",
+      "namespace": "OTR",
+      "programme": "Open-Thetical Research method (shared)",
+      "role": "shared_method",
+      "status": "catalogued_only",
+      "default_revision": true,
+      "revision_label": "1.0",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "branch": "main",
+      "commit": "05b15b0d903d46070b99ac84f9cab1bd898046ba",
+      "round_boundary": "OTR 1.0 on main (PR #7)",
+      "adapters": [],
+      "artifacts": [
+        {
+          "path": "research-methods/open-thetical-research.md",
+          "kind": "document",
+          "materialise": false,
+          "description": "OTR 1.0 (sha256 2d902395...88dd)"
+        }
+      ],
+      "lineage": []
+    },
+    {
+      "source_key": "EXT-SYNTH-20261015",
+      "namespace": "EXT",
+      "programme": "External cross-research synthesis (2026-10-15)",
+      "role": "external_interpretation",
+      "status": "external_stored",
+      "default_revision": true,
+      "note": "Supplied with the author pack (background/2026-10-15-cross-research-synthesis.md) and stored verbatim. Exploratory evidence synthesis by its own statement; its cosine scores are lexical retrieval measures, not evidence. A dated interpretation, not independent experiment evidence. Its historical claims are secondary pointers into private archives (HIST, pending).",
+      "adapters": [],
+      "artifacts": [
+        {
+          "path": "research-synthesis/reports/external-2026-10-15-cross-research-synthesis.md",
+          "kind": "document",
+          "description": "External exploratory synthesis (verbatim)"
+        }
+      ],
+      "lineage": []
+    },
+    {
+      "source_key": "HIST",
+      "namespace": "HIST",
+      "programme": "Historical archives (505-507, Work 11, 46-48)",
+      "role": "historical_archive",
+      "status": "pending_intake",
+      "default_revision": true,
+      "note": "Private archives; not in the repository or the local workspace (searched 2026-10-15 by name). Expected archive names, sha256 and primary paths come from the author's seed manifest (proposals/seeds/2026-10-15-author-pack/source-manifest.json) and are unverified until the original bytes are available. Intake follows 05_HISTORICAL_INTAKE.md. Only pending pointers may reference this namespace.",
+      "adapters": [],
+      "artifacts": [],
+      "lineage": [],
+      "expected_archives": [
+        {
+          "name": "RS_Work_Research.zip",
+          "sha256": "3ecfd22f9d4b64c17c2a2c9c198615ee1e1c6e3d08512e6971ae7b4090261e46",
+          "entries": 403
+        },
+        {
+          "name": "RS_Work_Round46_Supplement.zip",
+          "sha256": "630da2d942b15247a164d5e1fd262f759483941210f38a9ab29b12c1a6ce4b5e",
+          "entries": 9
+        }
+      ],
+      "expected_primary_paths": [
+        "rs_work_round11/findings.md",
+        "rs_work_round46_moments/REPORT.md",
+        "rs_work_round47/REPORT.md",
+        "rs_work_round48/REPORT.md",
+        "rs_sources/RS_Baseline_Post_506Z/RS_Baseline_Post_506Z/02_EXPERIMENT_LEDGER_505_506.md",
+        "rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md"
+      ]
+    }
+  ]
+}

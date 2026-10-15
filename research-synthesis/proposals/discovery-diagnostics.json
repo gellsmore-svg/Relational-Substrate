@@ -1,0 +1,2206 @@
+{
+  "calibration_note": "Ranks of connections that passed formal review. Reviewed structural links typically rank far below the top candidates: low similarity is not evidence of no convergence.",
+  "candidates": [
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "unknown",
+        "horizon": "mentioned_one_side",
+        "intervention": "mentioned_both",
+        "projection": "mentioned_one_side",
+        "state": "mentioned_one_side",
+        "support": "unknown",
+        "transition_law": "unknown"
+      },
+      "flags": [
+        "already_reviewed"
+      ],
+      "from": "CL::CL-F05",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.191914
+        }
+      },
+      "shared_terms": [
+        "checks",
+        "items",
+        "controls",
+        "frozen"
+      ],
+      "similarity": 0.191914,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "unknown",
+        "state": "unknown",
+        "support": "mentioned_one_side",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8E-K3-DRIFT-SURFACE",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.172343
+        }
+      },
+      "shared_terms": [
+        "drift",
+        "exactly"
+      ],
+      "similarity": 0.172343,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F04-RETENTION-NOT-APPROACH"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "mentioned_one_side",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8E-K3-DRIFT-SURFACE",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.171367
+        }
+      },
+      "shared_terms": [
+        "formation",
+        "dissolution",
+        "ratio",
+        "exactly"
+      ],
+      "similarity": 0.171367,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F25-KINETICS-SETS-OCCUPANCY-UNDER-IRREVERSIBILITY"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "mentioned_one_side",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "unknown",
+        "state": "unknown",
+        "support": "mentioned_one_side",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8D-WEAK-GRADE-SURFACE",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.170024
+        }
+      },
+      "shared_terms": [
+        "drift",
+        "exactly"
+      ],
+      "similarity": 0.170024,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F04-RETENTION-NOT-APPROACH"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "mentioned_one_side",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_both"
+      },
+      "flags": [],
+      "from": "CL::CL-T20",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.169857
+        }
+      },
+      "shared_terms": [
+        "justify",
+        "alone"
+      ],
+      "similarity": 0.169857,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-Q01-KINETIC-CONVENTION"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_both",
+        "conditioning": "unknown",
+        "horizon": "mentioned_one_side",
+        "intervention": "unknown",
+        "projection": "unknown",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "unknown"
+      },
+      "flags": [],
+      "from": "CL::F8M-HISTORY-ONLY-STRUCTURAL-SILENCE",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.164509
+        }
+      },
+      "shared_terms": [
+        "first",
+        "law",
+        "differ",
+        "any",
+        "uniform"
+      ],
+      "similarity": 0.164509,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F69-CLOCK-SEPARATED-SORTING"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "mentioned_one_side",
+        "projection": "mentioned_one_side",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8C-TOPOLOGY-ATLAS",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.162362
+        }
+      },
+      "shared_terms": [
+        "chord",
+        "middle",
+        "path"
+      ],
+      "similarity": 0.162362,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F64-CHORD-SWITCHES-SITE-OFF"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "unknown",
+        "horizon": "mentioned_one_side",
+        "intervention": "unknown",
+        "projection": "mentioned_one_side",
+        "state": "mentioned_one_side",
+        "support": "unknown",
+        "transition_law": "unknown"
+      },
+      "flags": [],
+      "from": "CL::CL-T58",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.15924
+        }
+      },
+      "shared_terms": [
+        "masses"
+      ],
+      "similarity": 0.15924,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F07-SHARED-BASIN-DIFFERENT-CLOCKS"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "mentioned_one_side",
+        "horizon": "mentioned_one_side",
+        "intervention": "unknown",
+        "projection": "unknown",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_both"
+      },
+      "flags": [],
+      "from": "CL::F8C-PATH-CONVERTS-SLOT",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.155543
+        }
+      },
+      "shared_terms": [
+        "count",
+        "edge",
+        "share",
+        "triangle"
+      ],
+      "similarity": 0.155543,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F05-RELATIONAL-POTENTIAL"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "mentioned_one_side",
+        "horizon": "unknown",
+        "intervention": "mentioned_one_side",
+        "projection": "unknown",
+        "state": "mentioned_both",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F008-COMPOSITION-REPRESENTATION",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.152104
+        }
+      },
+      "shared_terms": [
+        "discriminator",
+        "depends",
+        "graph"
+      ],
+      "similarity": 0.152104,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-Q18-REVERSAL-AT-W4"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "mentioned_one_side",
+        "horizon": "mentioned_one_side",
+        "intervention": "unknown",
+        "projection": "mentioned_one_side",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8C-DRIFT-DIRECTION",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.148919
+        }
+      },
+      "shared_terms": [
+        "formation",
+        "dissolution",
+        "sits",
+        "local"
+      ],
+      "similarity": 0.148919,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F25-KINETICS-SETS-OCCUPANCY-UNDER-IRREVERSIBILITY"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "unknown",
+        "state": "mentioned_one_side",
+        "support": "unknown",
+        "transition_law": "mentioned_both"
+      },
+      "flags": [],
+      "from": "CL::CL-T05",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.148788
+        }
+      },
+      "shared_terms": [
+        "factors",
+        "dissolve",
+        "form"
+      ],
+      "similarity": 0.148788,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F45-SQUARE-AFFINITY-IDENTITY"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "unknown",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_both"
+      },
+      "flags": [],
+      "from": "CL::F8E-K3-DRIFT-SURFACE",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.147108
+        }
+      },
+      "shared_terms": [
+        "ratio",
+        "formation",
+        "dissolution",
+        "exactly",
+        "every"
+      ],
+      "similarity": 0.147108,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F30-ARROW-BELONGS-TO-RATIO"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "unknown",
+        "state": "mentioned_both",
+        "support": "mentioned_one_side",
+        "transition_law": "mentioned_both"
+      },
+      "flags": [],
+      "from": "CL::F8D-LOG-ADDITIVITY",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.144179
+        }
+      },
+      "shared_terms": [
+        "fractions",
+        "minus",
+        "log",
+        "sum",
+        "state",
+        "every",
+        "exact",
+        "all"
+      ],
+      "similarity": 0.144179,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F45-SQUARE-AFFINITY-IDENTITY"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "mentioned_one_side",
+        "state": "mentioned_one_side",
+        "support": "mentioned_one_side",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F008-EDGE-VERSUS-SHAPE",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.144145
+        }
+      },
+      "shared_terms": [
+        "term",
+        "path",
+        "e-16"
+      ],
+      "similarity": 0.144145,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F52-HARD-ADJACENCY-SILENCES-PATHS"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "unknown",
+        "state": "unknown",
+        "support": "mentioned_one_side",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8L-MULTIROUND-REFINEMENT",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.139574
+        }
+      },
+      "shared_terms": [
+        "immediately",
+        "observed",
+        "after"
+      ],
+      "similarity": 0.139574,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-Q13-PRECEDENCE-VERSUS-ENABLING"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "mentioned_one_side",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8D-DRIFT-MAGNITUDE-SCOPE",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.138944
+        }
+      },
+      "shared_terms": [
+        "explains",
+        "sign"
+      ],
+      "similarity": 0.138944,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-Q08-HANDOVER-THEOREM"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "unknown",
+        "horizon": "mentioned_one_side",
+        "intervention": "unknown",
+        "projection": "unknown",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::CL-T33",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.136473
+        }
+      },
+      "shared_terms": [
+        "order",
+        "law"
+      ],
+      "similarity": 0.136473,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F69-CLOCK-SEPARATED-SORTING"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "unknown",
+        "horizon": "mentioned_one_side",
+        "intervention": "unknown",
+        "projection": "mentioned_one_side",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "unknown"
+      },
+      "flags": [],
+      "from": "CL::F8M-STAR-TRIANGLE-DISTINCTION",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.136225
+        }
+      },
+      "shared_terms": [
+        "masses",
+        "identical"
+      ],
+      "similarity": 0.136225,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F07-SHARED-BASIN-DIFFERENT-CLOCKS"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "mentioned_both",
+        "horizon": "unknown",
+        "intervention": "mentioned_one_side",
+        "projection": "mentioned_one_side",
+        "state": "mentioned_one_side",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8C-PATH-CONVERTS-SLOT",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.136009
+        }
+      },
+      "shared_terms": [
+        "bias",
+        "path",
+        "slot",
+        "inside",
+        "changes",
+        "triangle"
+      ],
+      "similarity": 0.136009,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F56-SOURCE-WITNESS-FLOOR"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "mentioned_one_side",
+        "horizon": "unknown",
+        "intervention": "mentioned_one_side",
+        "projection": "unknown",
+        "state": "mentioned_one_side",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F008-COMPOSITION-REPRESENTATION",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.134666
+        }
+      },
+      "shared_terms": [
+        "depends",
+        "magnitude"
+      ],
+      "similarity": 0.134666,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F65-HANDOVER-ACROSS-REFERENCES"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "mentioned_one_side",
+        "horizon": "mentioned_one_side",
+        "intervention": "unknown",
+        "projection": "mentioned_both",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8C-CHECKPOINT-EPOCH",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.134026
+        }
+      },
+      "shared_terms": [
+        "nats",
+        "carry",
+        "event",
+        "path"
+      ],
+      "similarity": 0.134026,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F13-NONGRADIENT-ARROW"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "unknown",
+        "state": "mentioned_one_side",
+        "support": "mentioned_both",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::CL-T03",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.133405
+        }
+      },
+      "shared_terms": [
+        "admissible"
+      ],
+      "similarity": 0.133405,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F06-LOCK-ARREST"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_both",
+        "conditioning": "unknown",
+        "horizon": "mentioned_one_side",
+        "intervention": "mentioned_one_side",
+        "projection": "unknown",
+        "state": "mentioned_one_side",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::CL-T15",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.131555
+        }
+      },
+      "shared_terms": [
+        "rho"
+      ],
+      "similarity": 0.131555,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F79-ND-MATCHES-EDGE-LIFETIME"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "unknown",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::Q-GATE-COMPOSITION",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.131234
+        }
+      },
+      "shared_terms": [
+        "first",
+        "second",
+        "share"
+      ],
+      "similarity": 0.131234,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F69-CLOCK-SEPARATED-SORTING"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "mentioned_both",
+        "horizon": "unknown",
+        "intervention": "mentioned_one_side",
+        "projection": "mentioned_one_side",
+        "state": "mentioned_one_side",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::CL-T04",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.130038
+        }
+      },
+      "shared_terms": [
+        "factor",
+        "factors"
+      ],
+      "similarity": 0.130038,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F56-SOURCE-WITNESS-FLOOR"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "mentioned_one_side",
+        "intervention": "mentioned_one_side",
+        "projection": "mentioned_one_side",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "unknown"
+      },
+      "flags": [],
+      "from": "CL::F8M-STAR-TRIANGLE-DISTINCTION",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.129256
+        }
+      },
+      "shared_terms": [
+        "triangle",
+        "structure"
+      ],
+      "similarity": 0.129256,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-Q03-SOURCE-DEPENDENCE"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "mentioned_one_side",
+        "horizon": "mentioned_one_side",
+        "intervention": "mentioned_one_side",
+        "projection": "mentioned_one_side",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_both"
+      },
+      "flags": [],
+      "from": "CL::F8D-WEAK-GRADE-SURFACE",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.128031
+        }
+      },
+      "shared_terms": [
+        "weak",
+        "favour",
+        "different"
+      ],
+      "similarity": 0.128031,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F17-EQUAL-RATIO-DIVERGENT-OCCUPANCY"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "mentioned_both",
+        "intervention": "mentioned_one_side",
+        "projection": "mentioned_one_side",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8M-H2-PERSISTENT-DENSITY",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.128005
+        }
+      },
+      "shared_terms": [
+        "suppress",
+        "favour",
+        "cells",
+        "stationary"
+      ],
+      "similarity": 0.128005,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F17-EQUAL-RATIO-DIVERGENT-OCCUPANCY"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "mentioned_both",
+        "intervention": "unknown",
+        "projection": "mentioned_one_side",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8M-H2-PERSISTENT-DENSITY",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.127229
+        }
+      },
+      "shared_terms": [
+        "suppress",
+        "favour",
+        "cells",
+        "stationary"
+      ],
+      "similarity": 0.127229,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F13-NONGRADIENT-ARROW"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "mentioned_one_side",
+        "state": "unknown",
+        "support": "mentioned_one_side",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8K-H-L-BOUNDARY",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.126487
+        }
+      },
+      "shared_terms": [
+        "candidate",
+        "open"
+      ],
+      "similarity": 0.126487,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-Q04-ARREST-AND-SUCCESSION"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "unknown",
+        "state": "mentioned_both",
+        "support": "mentioned_both",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8G-FORMAL-H-L-DISTINCTION",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.125544
+        }
+      },
+      "shared_terms": [
+        "reachable",
+        "state",
+        "identical",
+        "support"
+      ],
+      "similarity": 0.125544,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F52-HARD-ADJACENCY-SILENCES-PATHS"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "mentioned_one_side",
+        "state": "mentioned_one_side",
+        "support": "mentioned_one_side",
+        "transition_law": "unknown"
+      },
+      "flags": [],
+      "from": "CL::CL-T54",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.125353
+        }
+      },
+      "shared_terms": [
+        "candidate",
+        "event"
+      ],
+      "similarity": 0.125353,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-Q04-ARREST-AND-SUCCESSION"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "mentioned_one_side",
+        "intervention": "mentioned_one_side",
+        "projection": "unknown",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "unknown"
+      },
+      "flags": [],
+      "from": "CL::F8F-DRIFT-MATCHED-RESIDUAL",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.12389
+        }
+      },
+      "shared_terms": [
+        "global",
+        "local",
+        "edge-count"
+      ],
+      "similarity": 0.12389,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-Q06-LOCAL-PERSISTENCE-MECHANISM"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "unknown",
+        "state": "unknown",
+        "support": "mentioned_both",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8D-SLOT-GATE-XOR",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.123397
+        }
+      },
+      "shared_terms": [
+        "primitive",
+        "admissibility"
+      ],
+      "similarity": 0.123397,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-Q04-ARREST-AND-SUCCESSION"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "mentioned_one_side",
+        "state": "unknown",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8IP-PROJECTION-RELATIVE-MEMORY",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.123389
+        }
+      },
+      "shared_terms": [
+        "claim",
+        "relation",
+        "physical"
+      ],
+      "similarity": 0.123389,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F44-RS-SUCCESSION-VS-GATHERING"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "mentioned_one_side",
+        "projection": "unknown",
+        "state": "mentioned_one_side",
+        "support": "unknown",
+        "transition_law": "mentioned_both"
+      },
+      "flags": [],
+      "from": "CL::F8D-NORMALISATION-INTERACTION",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.122835
+        }
+      },
+      "shared_terms": [
+        "forms",
+        "rules",
+        "four"
+      ],
+      "similarity": 0.122835,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F37-HANDOVER-INVARIANT-ACROSS-SIZE-AND-STRENGTH"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "mentioned_one_side",
+        "intervention": "mentioned_one_side",
+        "projection": "mentioned_both",
+        "state": "mentioned_one_side",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8H-PURE-SHAPE-WITNESS",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.122692
+        }
+      },
+      "shared_terms": [
+        "identical",
+        "laws",
+        "different"
+      ],
+      "similarity": 0.122692,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F17-EQUAL-RATIO-DIVERGENT-OCCUPANCY"
+    },
+    {
+      "dimension_tags": {
+        "clock": "unknown",
+        "conditioning": "unknown",
+        "horizon": "unknown",
+        "intervention": "unknown",
+        "projection": "mentioned_one_side",
+        "state": "mentioned_one_side",
+        "support": "unknown",
+        "transition_law": "unknown"
+      },
+      "flags": [],
+      "from": "CL::Q-H-POSITIVE",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.122265
+        }
+      },
+      "shared_terms": [
+        "what",
+        "grammar",
+        "relational"
+      ],
+      "similarity": 0.122265,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-Q15-DISPLACEMENT-DEFINITION-GAP"
+    },
+    {
+      "dimension_tags": {
+        "clock": "mentioned_one_side",
+        "conditioning": "mentioned_one_side",
+        "horizon": "mentioned_one_side",
+        "intervention": "mentioned_both",
+        "projection": "unknown",
+        "state": "mentioned_one_side",
+        "support": "unknown",
+        "transition_law": "mentioned_one_side"
+      },
+      "flags": [],
+      "from": "CL::F8M-H2-UNIFORM-H1-FEEDBACK",
+      "review_vector": {
+        "counterexamples_or_nulls": {
+          "assessment": "unknown"
+        },
+        "evidence_status": {
+          "assessment": "unknown"
+        },
+        "falsifiability": {
+          "assessment": "unknown"
+        },
+        "formal_comparability": {
+          "assessment": "unknown"
+        },
+        "independence": {
+          "assessment": "unknown"
+        },
+        "observable_comparability": {
+          "assessment": "unknown"
+        },
+        "research_relevance": {
+          "assessment": "unknown"
+        },
+        "scope_compatibility": {
+          "assessment": "unknown"
+        },
+        "semantic_resemblance": {
+          "assessment": "lexical retrieval only",
+          "retrieval_score": 0.122082
+        }
+      },
+      "shared_terms": [
+        "differs",
+        "matched",
+        "density"
+      ],
+      "similarity": 0.122082,
+      "status": "unreviewed_retrieval_candidate",
+      "to": "GT::GT-F79-ND-MATCHES-EDGE-LIFETIME"
+    }
+  ],
+  "corpus": {
+    "CL": 324,
+    "GT": 104
+  },
+  "known_false_positive_patterns": [
+    "Shared vocabulary with different formal objects: 'clock' in CL (pair-event epoch, a projection) and GT (continuous vs jump time) - see X::0003",
+    "Shared vocabulary from inherited method text (scope boilerplate, 'W4', 'exact') under the common 8G lineage",
+    "Numbers and family names matching without a shared estimand"
+  ],
+  "method": {
+    "controls": {
+      "inherited_wording_flag_cosine": 0.8,
+      "max_per_near_duplicate_cluster": 2,
+      "near_duplicate_cosine": 0.9,
+      "top_per_node": 3
+    },
+    "deterministic": true,
+    "documents_selected": "every source_finding, formal_claim and source_question statement of the pinned CL and GT sources (SC documents excluded: catalogued only)",
+    "duplicate_handling": "greedy near-duplicate clustering within each source (cosine >= 0.9); at most 2 candidates per cluster pair",
+    "embedding_model": null,
+    "pairs": "cross-programme only",
+    "seed": null,
+    "synonyms": {
+      "coarse-graining": "projection",
+      "committor": "passage",
+      "detailed": "reversibility",
+      "embedded": "jump",
+      "event-clock": "jump",
+      "first-passage": "passage",
+      "hard": "admissibility",
+      "hitting": "passage",
+      "irreversible": "reversibility",
+      "jump-clock": "jump",
+      "lumpability": "projection",
+      "lumping": "projection",
+      "memory": "history",
+      "mfpt": "passage",
+      "occupation": "occupancy",
+      "per-event": "jump",
+      "prevalence": "occupancy",
+      "prohibit": "admissibility",
+      "prohibition": "admissibility",
+      "quotient": "projection",
+      "register": "history",
+      "reversible": "reversibility"
+    },
+    "tokeniser": "lowercase [a-z][a-z0-9-]+, stop-words removed, length > 2, then the declared synonym table",
+    "weighting": "sublinear tf times smoothed idf over the CL+GT statement corpus"
+  },
+  "reviewed_connection_calibration": [
+    {
+      "connection_id": "X::0001",
+      "connection_type": "tested_structural_analogy",
+      "cross_pairs": 11816,
+      "rank_among_cross_pairs": null,
+      "similarity": 0.0
+    },
+    {
+      "connection_id": "X::0002",
+      "connection_type": "epistemic_compatibility",
+      "cross_pairs": 11816,
+      "rank_among_cross_pairs": 837,
+      "similarity": 0.061497
+    },
+    {
+      "connection_id": "X::0003",
+      "connection_type": "explicit_contrast",
+      "cross_pairs": 11816,
+      "rank_among_cross_pairs": 5577,
+      "similarity": 0.023507
+    },
+    {
+      "connection_id": "X::0004",
+      "connection_type": "explicit_contrast",
+      "cross_pairs": 11816,
+      "rank_among_cross_pairs": 2557,
+      "similarity": 0.038925
+    },
+    {
+      "connection_id": "X::0005",
+      "connection_type": "shared_implementation_assumption",
+      "cross_pairs": 11816,
+      "rank_among_cross_pairs": null,
+      "similarity": 0.0
+    },
+    {
+      "connection_id": "X::0006",
+      "connection_type": "qualifies",
+      "cross_pairs": 11816,
+      "rank_among_cross_pairs": null,
+      "similarity": 0.0
+    },
+    {
+      "connection_id": "X::0007",
+      "connection_type": "epistemic_compatibility",
+      "cross_pairs": 11816,
+      "rank_among_cross_pairs": 3981,
+      "similarity": 0.030043
+    },
+    {
+      "connection_id": "X::0008",
+      "connection_type": "qualifies",
+      "cross_pairs": 11816,
+      "rank_among_cross_pairs": 1513,
+      "similarity": 0.050017
+    },
+    {
+      "connection_id": "X::0009",
+      "connection_type": "tested_structural_analogy",
+      "cross_pairs": 11816,
+      "rank_among_cross_pairs": 108,
+      "similarity": 0.103294
+    }
+  ],
+  "schema": "rssynth.discovery/v1",
+  "score_kind": "retrieval_similarity",
+  "score_meaning": "TF-IDF cosine between statement texts. A ranking aid for human review: not a probability, not a confidence in correctness, not evidence of structural convergence; a low value is not evidence against it."
+}

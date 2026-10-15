@@ -1,0 +1,21 @@
+{
+  "candidate_relations": 8,
+  "files": {
+    "candidate-relations.jsonl": {
+      "bytes": 5096,
+      "sha256": "2a8784fe92a8970205852286c496dece45a4eca8b1d5936fbce093e8aaa45b4b"
+    },
+    "metaphors.jsonl": {
+      "bytes": 5833,
+      "sha256": "4a5bd422a3bde6e846398a67a758b7a3657afb917a86c6f5fa698f85c2eda6c7"
+    },
+    "source-manifest.json": {
+      "bytes": 4138,
+      "sha256": "1d0fa94b1d622aea1712bf134ef9012b65d91a60fd395e0744bd2cfd135d4f42"
+    }
+  },
+  "metaphors": 7,
+  "problems": [],
+  "skipped_existing": [],
+  "source_manifest": "stored verbatim; compared with sources/pin-spec.json in the intake report (pins are never adopted from a seed without review)"
+}

@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-15",
+  "note": "Retrospective: the round trip that ended with the AD-0001 report (PR #8 at 0dbc9d2). Opened when the implicit-acceptance rule was introduced; lists what was then agent-reviewed and reported as awaiting the author.",
+  "recommendations": [
+    {
+      "decision_category": "qualified",
+      "kind": "connection",
+      "target": "X::0001"
+    },
+    {
+      "decision_category": "qualified",
+      "kind": "connection",
+      "target": "X::0002"
+    },
+    {
+      "decision_category": "accepted_bounded",
+      "kind": "connection",
+      "target": "X::0003"
+    },
+    {
+      "decision_category": "accepted_bounded",
+      "kind": "connection",
+      "target": "X::0004"
+    },
+    {
+      "decision_category": "accepted_bounded",
+      "kind": "connection",
+      "target": "X::0005"
+    },
+    {
+      "decision_category": "qualified",
+      "kind": "connection",
+      "target": "X::0006"
+    },
+    {
+      "decision_category": "qualified",
+      "kind": "connection",
+      "target": "X::0007"
+    },
+    {
+      "decision_category": "qualified",
+      "kind": "connection",
+      "target": "X::0008"
+    },
+    {
+      "decision_category": "qualified",
+      "kind": "connection",
+      "target": "X::0009"
+    },
+    {
+      "decision_category": null,
+      "kind": "metaphor",
+      "target": "M::two-towns"
+    },
+    {
+      "decision_category": null,
+      "kind": "metaphor",
+      "target": "M::photo-and-diary"
+    },
+    {
+      "decision_category": null,
+      "kind": "metaphor",
+      "target": "M::minutes-and-moves"
+    },
+    {
+      "decision_category": null,
+      "kind": "metaphor",
+      "target": "M::heavy-door-locked-door"
+    },
+    {
+      "decision_category": null,
+      "kind": "metaphor",
+      "target": "M::rotating-committee"
+    },
+    {
+      "decision_category": null,
+      "kind": "metaphor",
+      "target": "M::tallest-in-the-room"
+    }
+  ],
+  "report": "research-synthesis/reports/2026-10-15-initial-federation.md",
+  "reported_at_commit": "0dbc9d2703e9065255481faeabb154bba96c6641",
+  "round_trip_id": "RT-0001"
+}
