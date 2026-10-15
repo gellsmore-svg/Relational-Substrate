@@ -1,0 +1,152 @@
+{
+  "prompt_id": "008P",
+  "date": "2026-10-15",
+  "branch": "research/constraint-lab-v0.8p-stopping-sufficiency",
+  "parent": "99565d14e9c0fc172d925fd335965e127d950868",
+  "scientific_payload_anchor": "680b962b10131724ea1c8061cffbd4b468f1c881",
+  "closing_delivery_commit_ref": "refs/tags/constraint-lab-008p-close^{commit}",
+  "local_full_suite": {
+    "passed": 696,
+    "seconds": 496.47
+  },
+  "final_focused": {
+    "passed": 66,
+    "seconds": 92.85,
+    "scope": "8P, formal and coherence after final scientific source edits"
+  },
+  "unchanged_parent_full_suite": {
+    "passed": 678,
+    "seconds": 461.23
+  },
+  "formal": {
+    "entries": 118,
+    "new_ids": [
+      "CL-T96",
+      "CL-T97",
+      "CL-T98"
+    ],
+    "generated_views": 3,
+    "verified": true
+  },
+  "coherence": {
+    "findings": 235,
+    "relations": 364,
+    "new_findings": 6,
+    "new_relations": 12,
+    "old_rows_changed": 0,
+    "status_changes": 0,
+    "snapshot": "constraint-lab/coherence/snapshots/through-generation-008p.md",
+    "snapshot_sha256": "efa90d19e585ce5a46a2e51aaa101c3f209bc57d73619dd1a44d7297df714b58",
+    "canonical_ledger_sha256": "6c8e4c763cc65c97effcd2291eb5dbaf1831615f75533f3c3ba45c5d419e64b2",
+    "Q_H2_ROLE_FACTORIZATION": "unresolved",
+    "Q_H2_ROUTE_NULL_FACTORIZATION": "qualified, unchanged"
+  },
+  "formal_plan_commit": "3991f8c2ba4310d92df077ea9b730178ad7e996b",
+  "formal_plan_file_sha256": "6578c7106be01a3dc66f0b5a72787cac19116a2120fe71303b0a7bf96f9c4e99",
+  "new_actual_scientific_cells": 0,
+  "new_actual_parameter_points": 0,
+  "new_stationary_scientific_solves": 0,
+  "new_atlas": false,
+  "old_null_locations": {
+    "existing_benchmark": 96,
+    "disjoint_all_positive_m": 80,
+    "fibre_all_positive_m": 24,
+    "total": 200,
+    "does_not_exclude_extra_nulls": true
+  },
+  "timing_twenty": {
+    "existing_finite_certificates": 20,
+    "total_all_m": "unresolved",
+    "all_horizon": "unresolved",
+    "restricted_route_all_m": "proved; not the entire twenty"
+  },
+  "proof_check_sha256": "393c2a3c2fa13384b108abd4f0e2ee1de105778b65a13408c2d2fbefe25be932",
+  "validation": {
+    "parent_F0_gate": true,
+    "old_result_and_snapshot_guards": true,
+    "status_history": true,
+    "prompt_provenance": true,
+    "book_CI_checks": true,
+    "book_outputs_regenerated": false,
+    "books_edited": false,
+    "historical_generation_000": "complete on unchanged parent; closing CI independently repeats",
+    "historical_8K_synthesis": "VERIFIED; four diagrams, three pinned heads, zero conflicts",
+    "dependencies_added": false,
+    "local_versions": {
+      "python": "3.12.3",
+      "python_flint": "0.8.0",
+      "mpmath": "1.3.0"
+    }
+  },
+  "review": {
+    "external_8O": "pending; none supplied/found",
+    "external_8P": "pending",
+    "internal_audit": "document/code audit and two-path internal proof check, not external approval"
+  },
+  "hub": {
+    "consulted_commit": "38c2501bbab22ca1eb2288ea76a962ac0170d5e6",
+    "audit": true,
+    "validate": "valid",
+    "clean_worktree": true,
+    "pin_proposed": false,
+    "pin_adopted": false,
+    "interpretation_ratified": false,
+    "private_publication": false,
+    "GT_science": false,
+    "files_edited": false,
+    "handoff": "constraint-lab/provenance/synthesis-handoffs/008P/README.md",
+    "recipe_executed": false,
+    "staleness_note": "CL audit is current against configured 8N branch, not the later continuation; intake must inspect branch configuration"
+  },
+  "final_CI_protocol": "Push closing commit and annotated tag; query Actions on dereferenced exact closing SHA and report actual successful run externally. Do not substitute payload-head run or preclaim success.",
+  "files": {
+    "constraint-lab/src/rs_constraint_lab/stopping_sufficiency.py": {
+      "bytes": 6888,
+      "sha256": "15cccd34bc7d38194085a65a83223abb898ac6e248b1f3fe70237250f0bfc252"
+    },
+    "constraint-lab/src/rs_constraint_lab/gen008p_proofs.py": {
+      "bytes": 9062,
+      "sha256": "2587a4b4a0bb89309f62672d0f16de8593fdd31337a56843e6f9d3002323944e"
+    },
+    "constraint-lab/tests/test_v08p.py": {
+      "bytes": 7855,
+      "sha256": "4745a7d7a6da963efe0d867517dcddd4afde953b06d316e56fbd46ed0f06b001"
+    },
+    "constraint-lab/tests/test_v08o.py": {
+      "bytes": 7089,
+      "sha256": "65af753a3cb78911f588f717eb967416efb1b04f182d5fa3caadc441c7ab67dd"
+    },
+    "constraint-lab/formal/task-relative-stopping-sufficiency.md": {
+      "bytes": 6437,
+      "sha256": "4844cfcac71e285c70528212a0b5f7763b84a4001bc0a9510d575ca6bc7ee408"
+    },
+    "constraint-lab/formal/route-null-weight-identities.md": {
+      "bytes": 8032,
+      "sha256": "53dd5cee8a1dab70c4fc5d79e9bc094cbafc399ce8f513e96320eba7a6faf7db"
+    },
+    "constraint-lab/formal/insertionwise-timing-cancellation.md": {
+      "bytes": 2692,
+      "sha256": "5b671b58c3b5a1f58862f6aa75b109228105d9d71074c792c70054e8af2aaed1"
+    },
+    "constraint-lab/reports/tables/generation-008p-proof-checks.json": {
+      "bytes": 106863,
+      "sha256": "393c2a3c2fa13384b108abd4f0e2ee1de105778b65a13408c2d2fbefe25be932"
+    },
+    "constraint-lab/coherence/snapshots/through-generation-008p.md": {
+      "bytes": 135171,
+      "sha256": "efa90d19e585ce5a46a2e51aaa101c3f209bc57d73619dd1a44d7297df714b58"
+    },
+    "constraint-lab/provenance/synthesis-handoffs/008P/README.md": {
+      "bytes": 6878,
+      "sha256": "dfda26fe82c00cc6c858e4e4fb94f20794a7d046e4d99dc97b941ebbbaca6490"
+    },
+    "constraint-lab/provenance/synthesis-handoffs/008P/hub-cycle.sh": {
+      "bytes": 932,
+      "sha256": "efa77f4d5054b8202b19910214f45489cdf18c73c7cb39bda6d871e971d6e268"
+    },
+    ".github/workflows/ci.yml": {
+      "bytes": 1728,
+      "sha256": "1871e606424e34f864dfc695a55e43c33684a790b38d0e043a273d40d5dce20b"
+    }
+  }
+}
