@@ -65,8 +65,14 @@ An independently governed research programme built on the Constraint Laboratory 
 | E5A frozen plan, tables, atlas, reflection | [`plans/round-e5a-plan.json`](plans/round-e5a-plan.json), [`reports/round-e5a-tables.json`](reports/round-e5a-tables.json), [`reports/gt-e5a-atlas.md`](reports/gt-e5a-atlas.md), [`reports/gt-e5a-reflection.md`](reports/gt-e5a-reflection.md) |
 | GT-P009 cross-programme transfer note | [`docs/gt-e5a-cross-programme-transfer.md`](docs/gt-e5a-cross-programme-transfer.md) |
 | GT-P009 execution record | [`provenance/execution-GT-P009.md`](provenance/execution-GT-P009.md) |
+| **GT-P010 (E5B, replacement and the NK comparator): plain-English report** | [`reports/gt-e5b-report.md`](reports/gt-e5b-report.md) |
+| GT-P010 hub-and-E5B audit (hub pin `38c2501`; E5A 2/30 qualification) | [`docs/gt-p010-hub-and-e5b-audit.md`](docs/gt-p010-hub-and-e5b-audit.md) |
+| E5B definitions, controls and feasibility (T9–T11) | [`docs/e5b-definitions-controls-and-feasibility.md`](docs/e5b-definitions-controls-and-feasibility.md) |
+| E5B frozen plan, tables, atlas, reflection | [`plans/round-e5b-plan.json`](plans/round-e5b-plan.json), [`reports/round-e5b-tables.json`](reports/round-e5b-tables.json), [`reports/gt-e5b-atlas.md`](reports/gt-e5b-atlas.md), [`reports/gt-e5b-reflection.md`](reports/gt-e5b-reflection.md) |
+| GT-P010 cross-programme transfer note and shared-synthesis handoff | [`docs/gt-e5b-cross-programme-transfer.md`](docs/gt-e5b-cross-programme-transfer.md), [`docs/gt-p010-shared-synthesis-handoff.md`](docs/gt-p010-shared-synthesis-handoff.md) |
+| GT-P010 execution record | [`provenance/execution-GT-P010.md`](provenance/execution-GT-P010.md) |
 | Coherence ledger and snapshot | [`coherence/`](coherence/) |
 | Ontology proposals for later review | [`docs/ontology-proposals.md`](docs/ontology-proposals.md) |
 | Provenance | [`provenance/`](provenance/) |
 
-Code: `constraint-lab/src/rs_constraint_lab/gt0.py`, `gt0_exec.py`, `gt1.py`, `gte0a.py`, `gte0b.py`, `gte0_atlas.py`, `gtkernel.py`, `gtobs.py`, `gtobs_validate.py`, `gtobs_fixtures.py`, `gtscale.py`, `gtsort.py`, `gtpersist.py`, `gte5a.py` (E5A: `python -m rs_constraint_lab.gte5a plan|run|publish|atlas`). Commands: `python -m rs_constraint_lab gt0|gt1|gte0a|gte0b ...`. Tests: `constraint-lab/tests/test_gt0.py`, `test_gte0a.py`, `test_gte0b.py`, `test_gtkernel.py`, `test_gtobs.py`. Generated items go to `gravity-time/generated/`, which is gitignored.
+Code: `constraint-lab/src/rs_constraint_lab/gt0.py`, `gt0_exec.py`, `gt1.py`, `gte0a.py`, `gte0b.py`, `gte0_atlas.py`, `gtkernel.py`, `gtobs.py`, `gtobs_validate.py`, `gtobs_fixtures.py`, `gtscale.py`, `gtsort.py`, `gtpersist.py`, `gte5a.py` (E5A: `python -m rs_constraint_lab.gte5a plan|run|publish|atlas`), `gtrenew.py`, `gte5b.py` (E5B: `python -m rs_constraint_lab.gte5b plan|run|publish|atlas`). Commands: `python -m rs_constraint_lab gt0|gt1|gte0a|gte0b ...`. Tests: `constraint-lab/tests/test_gt0.py`, `test_gte0a.py`, `test_gte0b.py`, `test_gtkernel.py`, `test_gtobs.py`. Generated items go to `gravity-time/generated/`, which is gitignored.

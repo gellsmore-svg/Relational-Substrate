@@ -356,6 +356,47 @@ graph LR
 
 ---
 
+## 12. Revision after E5B (GT-P010; sections 1–11 unchanged)
+
+**Evidence states:** proved; observed; post hoc; conjectured; undefined; qualified.
+
+| Entry | Before (section 11) | After E5B | State | Evidence |
+| --- | --- | --- | --- | --- |
+| A-node: emergent (metastable) reference | Flexible organisations outlive ND, comparator-dependent | Against NK (layer traffic matched) residual persistence remains for PATHF centres (×1.04–1.10 CT, ×1.11–1.25 anchor events, with more replacement), PATHH F_TRI/F_STAR and CSPH F_TRI (flicker-qualified). PCOMP's vertex patterns fall below NK; CLOSEW shrinks to a few percent | observed, comparator-qualified | E5B report; reflection §1 |
+| B17 lifetime is not a function of the stationary law | proved by example | Refined: PCOMP's lifetimes are set by between-layer kinetics; NK, which matches layer traffic, removes the effect | observed | GT-F83 |
+| New B19: layer-traffic comparator NK | — | Reversible, covariant; matches CT density, every adjacent-layer flux, E[q\|k], mean rate and JT density; not within-layer rates | proved (T11) | definitions §6 |
+| P6 Identity through change | Undefined | **Defined (observer only) and partially observed.** Complete renewal of entry partners while the property holds is observed in feasible classes; F_STAR renewal is structurally impossible at N ≤ 6; size-1 F_TRI renewal equals a departure; durability untested | defined; observed; qualified | T10; GT-F84, GT-F87 |
+| P7 Displacement, interaction, acceleration | Undefined | Unchanged | undefined | — |
+| Gravity-like attraction | Blocked | Unchanged | blocked | — |
+
+**Gap register: changed rows**
+
+| Prerequisite | Capability now | Next information-bearing question |
+| --- | --- | --- |
+| Persistence of a self-made pattern | Exact lifetimes in three counts against N0, ND and NK; residual effects beyond NK for some families | Are the residual effects anchor-neighbourhood kinetics? (GT-Q24) |
+| Comparator for lifetimes | Density, mean rate and layer traffic matched (NK) | Within-layer arrangement remains unmatched |
+| Identity through change | Complete-renewal observer, feasibility theorem, departures, flicker | Is renewal durable (survives without an original returning)? (GT-Q23) |
+
+```mermaid
+graph LR
+  NK[NK: layer traffic matched]:::proved --> PC[PCOMP persistence = between-layer traffic]:::observed
+  NK --> RES[Residual persistence: PATHF centres, PATHH tri/star, CSPH tri]:::observed
+  T10[Renewal feasibility theorem]:::proved --> REN[Complete renewal observed in feasible classes]:::observed
+  REN -.->|size-1 = departure; durability open| DUR[Durable renewal]:::undefined
+  RES -.-> MET[Metastable FREE reference]:::undefined
+  DUR -.-> ID[Identity through replacement]:::undefined --> DISP[Displacement]:::undefined
+  classDef proved fill:#d8f0d8,stroke:#2a7a2a
+  classDef observed fill:#e6eefc,stroke:#2a4a8a
+  classDef undefined fill:#eeeeee,stroke:#777,stroke-dasharray: 4 3
+```
+
+**Narrative.**
+- **Bottom-up:** an operational property can persist while all its initial partners are replaced, and for some families slightly beyond a layer-traffic-matched control. The anchor is still fixed by the analyst.
+- **Methodological:** matching the right projection mattered more than the clock (28/90 classifications changed between ND and NK; 3/30 rows disagree across clocks).
+- **Top-down:** the persistence rung is now partially answered with a stricter control; identity remains open (durability untested; no unlabelled reference); displacement and above remain undefined.
+
+---
+
 ## Revision history
 
 - **Baseline:** sections 1–7 at the GT-P006 pre-freeze commit (`c4ab745`, E3A code commit).
@@ -363,3 +404,4 @@ graph LR
 - **Revision 2 (after E4A, E4B; GT-P007):** section 9.
 - **Revision 3 (GT-P008 consolidation, no experiment):** section 10.
 - **Revision 4 (after E5A; GT-P009):** section 11.
+- **Revision 5 (after E5B; GT-P010):** section 12.

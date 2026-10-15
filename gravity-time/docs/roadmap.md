@@ -192,3 +192,19 @@ The sections above are unchanged.
   - fall-back: the floor-reversal test (`reports/gt-e5a-reflection.md` §9).
 - **E5B was not frozen or executed.**
 
+## E5B status (GT-P010)
+
+The sections above are unchanged.
+- **Hub consulted** read-only at `38c2501` (shared questions XQ::01, XQ::04, XQ::07, XQ::03); the hub was not modified.
+- **E5B executed once** under frozen plan `fc3ec7d`, results `fcb17ae`:
+  - the 12 E5A laws, 36 flexible-predicate analyses, against N0, ND (unchanged) and NK (layer-traffic matched);
+  - anchor-local event count, entry-set tracking (departures, complete renewal with a feasibility theorem), flicker;
+  - every frozen check holds; no unresolved channel.
+- **Findings** (`reports/gt-e5b-report.md`):
+  - PCOMP's apparent persistence was between-layer traffic (below NK for its vertex patterns);
+  - PATHF centres survive NK and the local count with more replacement (small);
+  - CLOSEW's effect is mostly prevalence and traffic;
+  - PATHH triangle/star and CSPH triangle survive NK (CSPH flicker-qualified);
+  - F_STAR complete renewal is structurally impossible at N <= 6; size-1 triangle renewal equals a departure.
+- **Recommended next (not authorised, not run):** a durable-renewal test on the rows above NK (`reports/gt-e5b-reflection.md` §8); alternative: no further round and consolidation.
+- **Hub:** a separate, reviewed milestone cycle may take in this close (`docs/gt-p010-shared-synthesis-handoff.md`). No E5C.

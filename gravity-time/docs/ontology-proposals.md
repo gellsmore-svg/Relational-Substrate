@@ -168,3 +168,10 @@ So "what is likely" and "what lasts" are separate questions. A comparator that m
 
 **Status if adopted:** a methodological principle, refining OP-18. It adds no primitive and changes no rule.
 **Would count against:** a comparator construction, declared in advance, under which lifetime contrasts become functions of the stationary law alone for every GT family. None is known.
+
+## OP-20. State persistence claims by projection (from E5B)
+
+**Proposal.** A model-scoped persistence claim should name the projection its comparator matches (here: edge count and its adjacent-layer traffic), and report which effects survive it. In E5B, matching layer traffic removed PCOMP's apparent persistence entirely and most of CLOSEW's, while small residual effects survived for other families.
+
+**Status if adopted:** a methodological principle refining OP-19. It adds no primitive, no history axis and changes no rule. GT-P010 proposes no other ontology change.
+**Would count against:** a family whose persistence ranking is invariant under every declared projection comparator (none observed).
