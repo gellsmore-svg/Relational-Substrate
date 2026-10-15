@@ -1,0 +1,25 @@
+{
+  "record_type": "coherence_status_change",
+  "prompt_id": "008M",
+  "date": "2026-10-15",
+  "baseline_commit": "147d3156e396f92e3a4a12252468e5fc9dced8cd",
+  "evidence_commit": "ea022205deef6b72f9b4bda231e058f3a93966fb",
+  "authorized_by": "Prompt 008M section 98 after complete bounded grammar and matched comparisons",
+  "transitions": [
+    {
+      "finding_id": "Q-H2-STRUCTURAL-UTILITY",
+      "from": "unresolved",
+      "to": "qualified",
+      "changed_fields": [
+        "status"
+      ],
+      "before_row_sha256": "c6195383f1cc8d8e3ad16320f36dd4a72578e7d0a7922b4ff9522e1285fafe66",
+      "after_row_sha256": "64969c50730278dc0b039b11c31e49886d755c2ebae82a7a385b982c6200dbee",
+      "row_hash_convention": "UTF-8 JSONL line excluding newline",
+      "resolution_finding": "F8M-STRUCTURAL-UTILITY-QUALIFICATION",
+      "meaning": "Scoped persistent structure and feedback answered for complete one-role grammar; broader controlled utility remains open."
+    }
+  ],
+  "notes": "Statement, creation metadata, historical snapshots and other old rows unchanged; L semantics remains unresolved.",
+  "record_path": "constraint-lab/provenance/status-changes/008M-h2-structural-question.json"
+}

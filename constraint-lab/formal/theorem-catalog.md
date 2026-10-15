@@ -1523,3 +1523,176 @@ Source generations: 008L
 Boundary: Controller-specific lag-depth alignment is not a general theorem for arbitrary H_pair=d.
 Notes: No master memory score or automatic H3 escalation.
 
+## CL-T77: Ordered H2 role invariant basis
+
+**ALGEBRAIC_THEOREM**
+
+An S4-invariant real function of ordered pair slots (h1,h2,e) is exactly an orbit-constant function, with the twelve orbit indicators as a basis; restricted candidate-presence extension has 24 invariant cells.
+
+Assumptions: Finite declared recurrent pair state and ordinary single-toggle support; Positive m, with neutral/non-neutral distinctions as stated; Natural stationary law only where a stationary comparison is asserted.
+Scope: Finite N4 ordered local domain; not arbitrary functions of full P or triads.
+
+Proof: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md#role-basis). Disjoint nonempty orbit indicators are independent and span every orbit-constant function. Independent enumeration and Burnside give twelve; all-adjacent STAR and TRIANGLE require separate indicators. Presence is invariant and both binary values occur.
+Evidence: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md), [generation-008m-h2-structural-consequence.md](../../constraint-lab/reports/generation-008m-h2-structural-consequence.md), [test_v08m.py](../../constraint-lab/tests/test_v08m.py), [test_v08m_symmetry.py](../../constraint-lab/tests/test_v08m_symmetry.py)
+Coherence: `F8M-H2-ROLE-GRAMMAR`
+Dependencies: none
+Source generations: 008M
+Boundary: Does not establish unrestricted H1 non-compilability, globally minimal hidden models, general coarse-order bounds, L-positive dynamics or physical memory.
+Notes: Proof status is separate from coherence layer. Counts are finite exact combinatorics; log magnitudes are separately CL-N10. No physical ontology claim.
+
+## CL-T78: Exact H2 role quotient and positive support
+
+**ALGEBRAIC_THEOREM**
+
+Positive ordered-role controllers close exactly on (P,h1,h2), are simultaneously S4 covariant and strongly lump to 120 augmented orbits; their recurrent pair chain is irreducible with period two.
+
+Assumptions: Finite declared recurrent pair state and ordinary single-toggle support; Positive m, with neutral/non-neutral distinctions as stated; Natural stationary law only where a stationary comparison is asserted.
+Scope: N4 six pair/four independent triad single toggles; triad-blind unit-triad weights and pair-clock history.
+
+Proof: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md#quotient). Geometric triad absorption gives w_e/sum w. Covariance transports weights and update, making orbit block sums constant. Burnside gives 120. XOR prefixes plus two final slots reach every target; parity and a diagonal-history two-step return give period two.
+Evidence: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md), [generation-008m-h2-structural-consequence.md](../../constraint-lab/reports/generation-008m-h2-structural-consequence.md), [test_v08m.py](../../constraint-lab/tests/test_v08m.py), [test_v08m_symmetry.py](../../constraint-lab/tests/test_v08m_symmetry.py)
+Coherence: `F8M-AUGMENTED-S4-QUOTIENT`
+Dependencies: CL-T70
+Source generations: 008M
+Boundary: Does not establish unrestricted H1 non-compilability, globally minimal hidden models, general coarse-order bounds, L-positive dynamics or physical memory.
+Notes: Proof status is separate from coherence layer. Counts are finite exact combinatorics; log magnitudes are separately CL-N10. No physical ontology claim.
+
+## CL-T79: History-only product-uniform material law
+
+**ALGEBRAIC_THEOREM**
+
+For any positive pair law q(e|h1,h2) independent of current P, Uniform(P) times any stationary history law is stationary; positive support makes it unique, so material is uniform and independent of ordered history.
+
+Assumptions: Finite declared recurrent pair state and ordinary single-toggle support; Positive m, with neutral/non-neutral distinctions as stated; Natural stationary law only where a stationary comparison is asserted.
+Scope: Mask-independent positive pair law with two-slot shift; does not imply temporal path equality.
+
+Proof: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md#history-only). Incoming mass to (P',e,i) sums to sum_j nu(i,j)q(e|i,j)/64=nu(e,i)/64. Irreducibility gives uniqueness. No double-stochastic history assumption is needed.
+Evidence: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md), [generation-008m-h2-structural-consequence.md](../../constraint-lab/reports/generation-008m-h2-structural-consequence.md), [test_v08m.py](../../constraint-lab/tests/test_v08m.py), [test_v08m_symmetry.py](../../constraint-lab/tests/test_v08m_symmetry.py)
+Coherence: `F8M-HISTORY-ONLY-STRUCTURAL-SILENCE`
+Dependencies: CL-T78
+Source generations: 008M
+Boundary: Does not establish unrestricted H1 non-compilability, globally minimal hidden models, general coarse-order bounds, L-positive dynamics or physical memory.
+Notes: Proof status is separate from coherence layer. Counts are finite exact combinatorics; log magnitudes are separately CL-N10. No physical ontology claim.
+
+## CL-T80: H2 action complement conjugacy
+
+**ALGEBRAIC_THEOREM**
+
+For each ordered role and every m>0, material complement conjugates ROLE_FORM and ROLE_DISSOLVE, transporting stationary laws and observed paths under complemented alphabets.
+
+Assumptions: Finite declared recurrent pair state and ordinary single-toggle support; Positive m, with neutral/non-neutral distinctions as stated; Natural stationary law only where a stationary comparison is asserted.
+Scope: One fixed role, same multiplier and pair-event clock, complement-transformed observation.
+
+Proof: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md#complement). Complement swaps candidate presence, preserves role and update and commutes with toggles. Kernel conjugacy plus stationary uniqueness transports the law.
+Evidence: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md), [generation-008m-h2-structural-consequence.md](../../constraint-lab/reports/generation-008m-h2-structural-consequence.md), [test_v08m.py](../../constraint-lab/tests/test_v08m.py), [test_v08m_symmetry.py](../../constraint-lab/tests/test_v08m_symmetry.py)
+Coherence: `F8M-COMPLEMENT-SYMMETRY`
+Dependencies: CL-T78
+Source generations: 008M
+Boundary: Does not establish unrestricted H1 non-compilability, globally minimal hidden models, general coarse-order bounds, L-positive dynamics or physical memory.
+Notes: Proof status is separate from coherence layer. Counts are finite exact combinatorics; log magnitudes are separately CL-N10. No physical ontology claim.
+
+## CL-T81: Strict H2 necessity of every non-neutral one-role selector
+
+**ALGEBRAIC_THEOREM**
+
+Every ANY/FORM/DISSOLVE one-role controller with m!=1 fails strong projection (P,h1,h2)->(P,h1); hence no strict semantic H1 compiler reproduces every conditioned row.
+
+Assumptions: Finite declared recurrent pair state and ordinary single-toggle support; Positive m, with neutral/non-neutral distinctions as stated; Natural stationary law only where a stationary comparison is asserted.
+Scope: Strict last-pair H1 state, unchanged support/clock/observation, no recoding or hidden coordinates; arbitrary positive K/J.
+
+Proof: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md#strict-h2). For a compatible history, the role selects a proper nonempty candidate subset. An older history outside its h1-h2 relation type selects none. Their normalised rows differ. Empty/full P supplies FORM/DISSOLVE witnesses, and all states are reachable.
+Evidence: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md), [generation-008m-h2-structural-consequence.md](../../constraint-lab/reports/generation-008m-h2-structural-consequence.md), [test_v08m.py](../../constraint-lab/tests/test_v08m.py), [test_v08m_symmetry.py](../../constraint-lab/tests/test_v08m_symmetry.py)
+Coherence: `F8M-STRICT-H2-ROLE-ATLAS`
+Dependencies: CL-T69, CL-T77, CL-T78
+Source generations: 008M
+Boundary: Does not establish unrestricted H1 non-compilability, globally minimal hidden models, general coarse-order bounds, L-positive dynamics or physical memory.
+Notes: Proof status is separate from coherence layer. Counts are finite exact combinatorics; log magnitudes are separately CL-N10. No physical ontology claim.
+
+## CL-T82: Stationary H1 Markovisation and first possible material difference
+
+**ALGEBRAIC_THEOREM**
+
+Kpi-H1 exactly matches stationary adjacent (P,h1) laws, therefore material L1-L3 laws. Under positive two-slot support, strict h2 row dependence forces a labelled material L4 difference.
+
+Assumptions: Finite declared recurrent pair state and ordinary single-toggle support; Positive m, with neutral/non-neutral distinctions as stated; Natural stationary law only where a stationary comparison is asserted.
+Scope: Stationary pair-event process with deterministic last-two-pair register and full positive support. Coarse C/K L4 distinction is not implied generally.
+
+Proof: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md#comparators). Conditional averaging gives pi_s Kpi as the true adjacent joint and proves balance. Two adjacent masks recover h1, so adjacent s paths encode material triples. Triples reconstruct the H2 state; a nonconstant h2 row differs from its conditional average on a positive triple, separating a fourth mask.
+Evidence: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md), [generation-008m-h2-structural-consequence.md](../../constraint-lab/reports/generation-008m-h2-structural-consequence.md), [test_v08m.py](../../constraint-lab/tests/test_v08m.py), [test_v08m_symmetry.py](../../constraint-lab/tests/test_v08m_symmetry.py)
+Coherence: `F8M-H2-STATIONARY-H1-RESIDUAL`, `F8M-STATIONARY-H1-MATCHING`
+Dependencies: CL-T67, CL-T78
+Source generations: 008M
+Boundary: Does not establish unrestricted H1 non-compilability, globally minimal hidden models, general coarse-order bounds, L-positive dynamics or physical memory.
+Notes: Proof status is separate from coherence layer. Counts are finite exact combinatorics; log magnitudes are separately CL-N10. No physical ontology claim.
+
+## CL-T83: Stationary structural KL decomposition
+
+**ALGEBRAIC_THEOREM**
+
+For internally class-uniform S4-invariant material laws of full support, labelled-mask KL equals graph-class KL, which splits into edge-count KL plus conditional graph-shape KL.
+
+Assumptions: Finite declared recurrent pair state and ordinary single-toggle support; Positive m, with neutral/non-neutral distinctions as stated; Natural stationary law only where a stationary comparison is asserted.
+Scope: Positive S4-invariant material law and neutral or S4-invariant comparator; not generic CMI monotonicity.
+
+Proof: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md#decomposition). Class-uniform factors cancel the identical within-class multiplicity. Applying the KL chain rule to graph class and its deterministic edge count yields the direct conditional remainder.
+Evidence: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md), [generation-008m-h2-structural-consequence.md](../../constraint-lab/reports/generation-008m-h2-structural-consequence.md), [test_v08m.py](../../constraint-lab/tests/test_v08m.py), [test_v08m_symmetry.py](../../constraint-lab/tests/test_v08m_symmetry.py)
+Coherence: `F8M-H2-PERSISTENT-DENSITY`, `F8M-H2-PERSISTENT-SHAPE`, `F8M-H2-UNIFORM-H1-FEEDBACK`
+Dependencies: CL-T78
+Source generations: 008M
+Boundary: Does not establish unrestricted H1 non-compilability, globally minimal hidden models, general coarse-order bounds, L-positive dynamics or physical memory.
+Notes: Proof status is separate from coherence layer. Counts are finite exact combinatorics; log magnitudes are separately CL-N10. No physical ontology claim.
+
+## CL-T84: Opposite-pair STAR-TRIANGLE conjugacy
+
+**ALGEBRAIC_THEOREM**
+
+The unique disjoint-pair involution on N4 conjugates R05/R06 for every positive m and action family, transporting actual, KU and Kpi laws and all finite observed words under a class-alphabet bijection.
+
+Assumptions: Finite declared recurrent pair state and ordinary single-toggle support; Positive m, with neutral/non-neutral distinctions as stated; Natural stationary law only where a stationary comparison is asserted.
+Scope: N4 opposite-pair slot permutation, not same-labelled kernel equality or ontological identity.
+
+Proof: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md#opposite-pair). The involution preserves pairwise relations, swaps the two all-adjacent ternary orbits, preserves transformed presence and commutes with toggles/shift. It commutes with stationary averaging. On graph classes it swaps only star/triangle and fixes count; the map is not a vertex permutation.
+Evidence: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md), [generation-008m-h2-structural-consequence.md](../../constraint-lab/reports/generation-008m-h2-structural-consequence.md), [test_v08m.py](../../constraint-lab/tests/test_v08m.py), [test_v08m_symmetry.py](../../constraint-lab/tests/test_v08m_symmetry.py)
+Coherence: `F8M-STAR-TRIANGLE-DISTINCTION`, `F8M-OPPOSITE-PAIR-CONJUGACY`
+Dependencies: CL-T77, CL-T78
+Source generations: 008M
+Boundary: Does not establish unrestricted H1 non-compilability, globally minimal hidden models, general coarse-order bounds, L-positive dynamics or physical memory.
+Notes: Proof status is separate from coherence layer. Counts are finite exact combinatorics; log magnitudes are separately CL-N10. No physical ontology claim.
+
+## CL-F10: Complete exact ordered-H2 structural atlas
+
+**FINITE_EXHAUSTIVE_RESULT**
+
+All 72 non-neutral one-role systems plus neutral satisfy exact quotient and stationary checks. ANY cells are material silent; direction cells split into 12 density-only and 36 density-and-shape; uniform-H1 stationary discrepancy occurs in 36; all non-neutral P/C/K word comparisons with Kpi-H1 first differ at L4.
+
+Assumptions: Finite declared recurrent pair state and ordinary single-toggle support; Positive m, with neutral/non-neutral distinctions as stated; Natural stationary law only where a stationary comparison is asserted.
+Scope: Frozen M0 N4 palette at 1/4 and 4 plus common neutral, word depths one through six; grade-specific observations.
+
+Enumeration: 73 M0 model items, 12 structural roles, 120 augmented orbits, all 2304 recurrent states per item, deterministic word census to six; exact count 73. Verifier: [gen008m_exec.py](../../constraint-lab/src/rs_constraint_lab/gen008m_exec.py)
+Evidence: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md), [generation-008m-h2-structural-consequence.md](../../constraint-lab/reports/generation-008m-h2-structural-consequence.md), [test_v08m.py](../../constraint-lab/tests/test_v08m.py), [test_v08m_symmetry.py](../../constraint-lab/tests/test_v08m_symmetry.py)
+Coherence: `F8M-H2-ROLE-GRAMMAR`, `F8M-AUGMENTED-S4-QUOTIENT`, `F8M-HISTORY-ONLY-STRUCTURAL-SILENCE`, `F8M-STRICT-H2-ROLE-ATLAS`, `F8M-H2-PERSISTENT-DENSITY`, `F8M-H2-PERSISTENT-SHAPE`, `F8M-H2-UNIFORM-H1-FEEDBACK`, `F8M-H2-STATIONARY-H1-RESIDUAL`, `F8M-H2-STATIONARY-DEPENDENCE`, `F8M-COMPLEMENT-SYMMETRY`, `F8M-DENSITY-ONLY-FEEDBACK-NULL`, `F8M-EXACT-STATIONARY-EQUIVALENCE`, `F8M-TINY-SHAPE-RETAINED`
+Dependencies: CL-T77, CL-T78, CL-T79, CL-T80, CL-T81, CL-T82, CL-T83
+Source generations: 008M
+Boundary: Finite exact atlas is not a universal all-grade structural-effect theorem; bounded word equality is not all-order equivalence.
+Notes: Proof status is separate from coherence layer. Counts are finite exact combinatorics; log magnitudes are separately CL-N10. No physical ontology claim.
+
+## CL-N10: Ordered-H2 structural and matched-word information
+
+**NUMERICAL_KERNEL_RESULT**
+
+Information magnitudes are evaluated from exact rational stationary and word laws at 160 decimal digits. Tiny nonzero R04 shape and STAR/TRIANGLE differences are retained; rational equality, not tolerance, classifies zeros.
+
+Assumptions: Finite declared recurrent pair state and ordinary single-toggle support; Positive m, with neutral/non-neutral distinctions as stated; Natural stationary law only where a stationary comparison is asserted.
+Scope: Frozen M0 estimands and separately frozen M1 STAR/TRIANGLE comparison, natural logs in nats.
+
+Method: 160-digit mpmath logarithms on exact rational laws, independent information chain routes and exact independence certificates
+Domain: All M0 systems and selected six M1 family/grade pairs
+Tolerances: `{"distribution_equalities": "exact rational", "information_route_agreement": "1e-25"}`
+Method caveat: No stochastic estimation or aggregate scientific score; finite grades do not establish continuous monotonicity.
+Evidence: [history-role-depth-two.md](../../constraint-lab/formal/history-role-depth-two.md), [generation-008m-h2-structural-consequence.md](../../constraint-lab/reports/generation-008m-h2-structural-consequence.md), [test_v08m.py](../../constraint-lab/tests/test_v08m.py), [test_v08m_symmetry.py](../../constraint-lab/tests/test_v08m_symmetry.py)
+Coherence: `F8M-H2-STATIONARY-DEPENDENCE`, `F8M-STAR-TRIANGLE-DISTINCTION`, `F8M-TINY-SHAPE-RETAINED`
+Dependencies: CL-F10, CL-T83, CL-T84
+Source generations: 008M
+Boundary: Log-derived decimal magnitudes are not algebraic rational identities or evidence for physical significance.
+Notes: Proof status is separate from coherence layer. Counts are finite exact combinatorics; log magnitudes are separately CL-N10. No physical ontology claim.
+
