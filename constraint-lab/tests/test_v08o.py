@@ -83,13 +83,18 @@ def test_post_census_mechanism_regression_and_constant_outer_target_column():
         assert all([Q(x) for x in row] == [Q(4, 5), Q(1, 5)] for row in side["V"])
 
 
-def test_immutable_8o_snapshot_and_proposal_only_handoff():
+def test_immutable_8o_snapshot_and_proposal_only_handoff(tmp_path):
     from rs_constraint_lab.coherence import canonical_ledger_bytes, snapshot_text
     directory = ROOT / "constraint-lab/coherence"
-    text = snapshot_text(directory, title="Through Generation 008O: Route-Null Factorization")
+    # Historical snapshot guards must use the closed ledger, not a later append.
+    closed = "99565d14e9c0fc172d925fd335965e127d950868"
+    for name in ("findings.jsonl", "relations.jsonl"):
+        content = subprocess.check_output(["git", "show", closed + ":constraint-lab/coherence/" + name], cwd=ROOT)
+        (tmp_path / name).write_bytes(content)
+    text = snapshot_text(tmp_path, title="Through Generation 008O: Route-Null Factorization")
     assert (directory / "snapshots/through-generation-008o.md").read_text() == text
     assert sha256(text.encode()).hexdigest() == "638b5a73afbd85ceb41a4e20b695f914c1f155485aa54a76422aba91e39e5aee"
-    assert sha256(canonical_ledger_bytes(directory)).hexdigest() == "cbe0e48921757005847ab30f66e0ecf11e32b98c6956821fa05825aa210b8e56"
+    assert sha256(canonical_ledger_bytes(tmp_path)).hexdigest() == "cbe0e48921757005847ab30f66e0ecf11e32b98c6956821fa05825aa210b8e56"
     handoff = (ROOT / "constraint-lab/provenance/synthesis-handoffs/008O/README.md").read_text()
     assert "proposal, not accepted hub record" in handoff
     assert "shared_lineage" in handoff

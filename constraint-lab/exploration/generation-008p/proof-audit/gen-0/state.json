@@ -1,0 +1,120 @@
+{
+  "generation": 0,
+  "population_size": 2,
+  "independence": "full",
+  "error_correlation_risk": "high",
+  "source_invariants": [
+    {
+      "statement": "No new actual parameter cells",
+      "source_span": "Do not run any actual CL parameter point"
+    }
+  ],
+  "paths": [
+    {
+      "id": "g0p1",
+      "role": "blind",
+      "view": "blind",
+      "output_file": "gen-0/path-1.md"
+    },
+    {
+      "id": "g0p2",
+      "role": "blind",
+      "view": "blind",
+      "output_file": "gen-0/path-2.md"
+    }
+  ],
+  "conserved_findings": [
+    {
+      "claim": "Regeneration and scalar flux arguments reconstruct under the stated source/readout restrictions",
+      "paths": [
+        "g0p1",
+        "g0p2"
+      ],
+      "support": "agreement-only",
+      "recovered_under": "blind"
+    }
+  ],
+  "disagreements": [],
+  "minority_findings": [
+    {
+      "claim": "Use homogeneous balance, not x/y, for signed source combinations",
+      "path": "g0p2"
+    }
+  ],
+  "uncertainty": [
+    "Audits are not external scientific review or proof by consensus; existing numerical certificates checked separately",
+    "Complete twenty timing all-m explanation remains unresolved"
+  ],
+  "constraints": {
+    "hard": [
+      "no edits by children",
+      "no new scientific parameter computations",
+      "stationary graph-class sources"
+    ],
+    "soft": [
+      "exposition clarity"
+    ],
+    "inferred": []
+  },
+  "provenance": [{
+    "raw_outputs": [
+      "gen-0/path-1.md",
+      "gen-0/path-2.md"
+    ],
+    "source": "source.md",
+    "proof_reference": "../../../../formal/route-null-weight-identities.md"
+  }],
+  "admissible_alternatives": [
+    "Retain finite status if a later proof objection invalidates an assumption"
+  ],
+  "failure_modes": [
+    "Confusing covariance with stationarity",
+    "Treating unit weight as universal transition probability 1/6",
+    "Dividing signed source combinations by zero mass"
+  ],
+  "forbidden_collapses": [
+    "Agreement is proof",
+    "Internal agent audit is external review",
+    "Finite active counts extend to all m"
+  ],
+  "false_attractor_warnings": [],
+  "paired_balance": {
+    "retention": "medium",
+    "fresh_actualisation": "high",
+    "rationale": "Audit fixed proposed proof, no sibling communication",
+    "next_adjustment": "No recursive generation; budget cap1"
+  },
+  "score": {
+    "fidelity": "high",
+    "coherence": "high",
+    "uncertainty": "medium",
+    "diversity": "low",
+    "provenance_integrity": "high",
+    "constraint_satisfaction": "high",
+    "cross_order_consistency": "high",
+    "reconstructability": "medium"
+  },
+  "stability": {
+    "status": "MAX_DEPTH_REACHED",
+    "verified_stable_claims": [],
+    "reconstructed_stable_claims": [],
+    "mixed_stable_claims": [
+      "Regeneration and scalar flux arguments reconstruct under the stated source/readout restrictions"
+    ],
+    "inherited_stable_claims": [],
+    "unstable_claims": []
+  },
+  "recommended_next_action": {
+    "action": "stop",
+    "reason": "One-generation internal audit cap reached; proof and exact checks, not repeated agreement, decide acceptance"
+  },
+  "tree_fingerprint": {
+    "before": "3991f8c2ba4310d92df077ea9b730178ad7e996b\n?? constraint-lab/formal/insertionwise-timing-cancellation.md\n?? constraint-lab/formal/route-null-weight-identities.md\n?? constraint-lab/formal/task-relative-stopping-sufficiency.md\n?? constraint-lab/src/rs_constraint_lab/stopping_sufficiency.py\n",
+    "after": "3991f8c2ba4310d92df077ea9b730178ad7e996b\n?? constraint-lab/formal/insertionwise-timing-cancellation.md\n?? constraint-lab/formal/route-null-weight-identities.md\n?? constraint-lab/formal/task-relative-stopping-sufficiency.md\n?? constraint-lab/src/rs_constraint_lab/stopping_sufficiency.py\n"
+  },
+  "project_mutated": false,
+  "host_guarantees": {
+    "nesting": "prompt"
+  },
+  "notes": "Fingerprints include git HEAD/status and unchanged consulted note/source digests before and after; source files were not edited until both paths completed. No two-transition stability claim."
+}
