@@ -1,0 +1,549 @@
+{
+  "analysis_only": true,
+  "analysis_version": "gt-e5a/v1",
+  "chosen_because": "GT-P008 next-round option C (FREE persistence feasibility, definitions first); authorised by GT-P009",
+  "clocks": {
+    "continuous": "generator W, CT stationary law pi; lifetimes in model time units",
+    "jump": "jump chain P = W/q, law nu = pi q / E_pi[q]; lengths in jumps"
+  },
+  "comparators": {
+    "N0": "the NULL item at the same N (all rates 1); same predicates and formulas",
+    "ND": "per target item: p_k = CT edge-count profile of the target law; phi_k = p_k / C(M,k); birth_k = min(1, phi_{k+1}/phi_k), death_{k+1} = min(1, phi_k/phi_{k+1}); all rates multiplied by c = E_pi_target[q] / E_pi_ND,unscaled[q]. Reversible and label-covariant; matches the CT density marginal and the CT mean event rate only, NOT the full state law, local rates, correlations or the jump-clock density marginal (reported). Analytic law pi_ND(x) = phi_|x| verified by detailed and global balance; an iterative solve (cap 20,000 lazy iterations) is a cross-check only. Rare bins p_k < 1e-12 flagged with their masses; the smallest unscaled transition rate is reported (interior rare bins make ND near-reducible). A zero bin makes ND unresolved for that item; nothing is smoothed",
+    "static_reference": "ND's motif prevalence equals the static density-standardised prevalence (uniform within each k); it is reported as that and never as a dynamical result",
+    "underdetermination": "ND is one reasonable dynamics at a matched density profile; any contrast against it is a fact about that comparison"
+  },
+  "deliberate_omissions": {
+    "e5b": "not authorised",
+    "grade_sweep": "not authorised",
+    "held_or_multi_source": "not authorised",
+    "identity_tracking": "not defined in E5A (Omega counts toggles, not replacements)",
+    "n7": "not authorised",
+    "survival_curves": "not computed (optional in GT-P009)",
+    "trajectories": "none"
+  },
+  "discovery_matrix": {
+    "cells": [
+      "longer_both_clocks",
+      "longer_ct_only",
+      "longer_jump_only",
+      "tie_both_clocks",
+      "not_longer"
+    ],
+    "family_level_patterns_to_report": [
+      "sustained episode lifetime with Omega ~ comparator (intact-like persistence)",
+      "Omega above comparator without longer life",
+      "CT-only or jump-only enhancement",
+      "closure-only persistence (CLOSEW, CSPH)",
+      "path-family persistence (PATHF, PATHH, CSPH) together with their published nonzero circulation",
+      "no enhancement anywhere",
+      "unexpected distinctions"
+    ],
+    "no_threshold": "no magnitude threshold, aggregate score or success criterion; magnitudes are reported beside signs",
+    "per_row": "for every non-NULL family, N and predicate, against N0 and against ND: signs of lifetime (CT, jump), rho (CT, jump), Omega (flexible only) and CT prevalence; a sign is 'tie' when |a-b| <= 1e-9 max(|a|,|b|)",
+    "turnover_suffix": "intact rows: intact_no_turnover (theorem); flexible rows: turnover_more / turnover_fewer / turnover_tie"
+  },
+  "estimands": {
+    "density": "CT and jump edge-count profiles of target and ND; jump-profile L1 discrepancy and mean jump-clock edge count",
+    "edge": "present-episode lifetime of slot (0,1) by the same formulas; rho_ct = L_ct(A)/L_ct(edge), rho_jump = L_jump(A)/L_jump(edge)",
+    "episode": "J_A (entry = exit flux, both computed), L_ct = pi(A)/J_A, L_jump = E_pi[q 1_A]/J_A (jumps from A states per episode, exit jump included), off-episode means (1-pi(A))/J_A and (E_pi[q]-E_pi[q 1_A])/J_A, entry-to-entry recurrence 1/J_A and E_pi[q]/J_A (algebraically dependent on the above; not independent confirmations), entries per unit time J_A and per event J_A/E_pi[q], internal events per episode (= L_jump - 1)",
+    "lagged_hub": "x0 ~ pi (CT) or nu (jump); hub chosen once uniformly among maximum-degree vertices; comparison vertex uniform over all N vertices; at each lag: expected degree of hub and comparison vertex, gap, gap/gap(0), expected number of the hub's initial neighbours still adjacent and its ratio to the expected initial degree (and the same for the comparison vertex)",
+    "prevalence": "pi(A), nu(A) (re-expressions of published laws)",
+    "secondary": "residual (occupation-sampled) life in both clocks and the entrance first-passage mean life, from the killed jump chain on A by BiCGSTAB (relative residual 1e-12, cap 20,000 iterations or 60 s per solve); unresolved solves are recorded",
+    "turnover": "Omega = flux of eligible internal toggles / J_A (definitions note D-4, D-5); eligible share Omega/(L_jump - 1); intact predicates: required-edge internal flux (identically 0) and required-edge exit share (1); F_TRI exit shares: anchor dissolution versus loss of the last completer"
+  },
+  "experiment_id": "gt-round-e5a-free-persistence",
+  "families": {
+    "CLOSEW": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "close_form"
+          }
+        ]
+      }
+    },
+    "CSPH": {
+      "strong_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "strong_favour",
+            "kind": "close_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    },
+    "NULL": {
+      "none": {
+        "components": []
+      }
+    },
+    "PATHF": {
+      "weak_suppress": {
+        "components": [
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          }
+        ]
+      }
+    },
+    "PATHH": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    },
+    "PCOMP": {
+      "weak_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    }
+  },
+  "frozen_identities": {
+    "N0_closed_forms": "NULL items: every predicate's prevalence, J, L_ct, L_jump (= M L_ct) and Omega J equal gtpersist.null_closed_forms within 1e-9; edge L_ct = 1 and L_jump = M; lag normalised gap exp(-2t) (t = lag/M) and (1-2/M)^lag, retention 1/2 + 1/2 of the same",
+    "ND_fixed_point": "NULL items: ND activity scale 1 and every unscaled rate 1 within 1e-12",
+    "PCOMP_ND_is_scaled_NULL": "PCOMP: ND rates all 1 before scaling (uniform CT law gives a binomial profile), so ND CT lifetimes x c, jump lifetimes and Omega equal N0's within 1e-9",
+    "PCOMP_uniform_ct": "PCOMP: CT law uniform within 1e-9 relative per state",
+    "REP": "replication of the published E0B cell: class-level CT and jump masses and mean rate within max(1e-10, 1e-8 x |published|)",
+    "Z_item": "per item: positive-rate full FREE space; stationary resolved (two starts within 1e-10, residual <= 1e-12); law symmetric under S_N within 1e-10; for target and ND: entry/exit flux balance and jump-length identity within 1e-9; relabelled instances within 1e-9 relative; intact required-edge internal flux and Omega exactly 0; every predicate classified ergodic_episodes; comparison-vertex degree constant over lags within 1e-9; lag checks: lumpability defect <= 1e-12, propagator row sums within 1e-9 and entries >= -1e-12, stationarity L1 <= 1e-9, non-dyadic semigroup <= 1e-9, lumped versus full jump chain <= 1e-10, pair-permutation covariance <= 1e-10, uniformisation cross-check (where cheap) <= 1e-9; ND detailed balance <= 1e-12, global balance <= 1e-10, density L1 and mean-rate gap <= 1e-10",
+    "separation_note": "no expectation on any target lifetime, ratio, Omega or lag decay"
+  },
+  "history": false,
+  "initial_conditions": "primary estimates are stationary (unique class); no transient or cold-start observable is computed",
+  "instances": {
+    "F_2PATH": {
+      "primary": [
+        0
+      ],
+      "relabelled": "image under v -> N-1-v"
+    },
+    "F_STAR": {
+      "primary": [
+        0
+      ],
+      "relabelled": "image under v -> N-1-v"
+    },
+    "F_TRI": {
+      "primary": [
+        0,
+        1
+      ],
+      "relabelled": "image under v -> N-1-v"
+    },
+    "I_2PATH": {
+      "primary": [
+        1,
+        0,
+        2
+      ],
+      "relabelled": "image under v -> N-1-v"
+    },
+    "I_STAR": {
+      "primary": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "relabelled": "image under v -> N-1-v"
+    },
+    "I_TRI": {
+      "primary": [
+        0,
+        1,
+        2
+      ],
+      "relabelled": "image under v -> N-1-v"
+    }
+  },
+  "items": [
+    {
+      "components": [],
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "FREE-N5-NULL-none",
+      "n": 5,
+      "prior_cell": "round-e0b FREE-N5-NULL-none",
+      "role": "null_control_N0"
+    },
+    {
+      "components": [
+        [
+          "path_form",
+          "weak_suppress"
+        ]
+      ],
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N5-PATHF-weak_suppress",
+      "n": 5,
+      "prior_cell": "round-e0b FREE-N5-PATHF-weak_suppress",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-PATHH-weak_favour",
+      "n": 5,
+      "prior_cell": "round-e0b FREE-N5-PATHH-weak_favour",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "close_form",
+          "strong_favour"
+        ],
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "FREE-N5-CSPH-strong_favour+weak_favour",
+      "n": 5,
+      "prior_cell": "round-e0b FREE-N5-CSPH-strong_favour+weak_favour",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "close_form",
+          "weak_favour"
+        ]
+      ],
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-CLOSEW-weak_favour",
+      "n": 5,
+      "prior_cell": "round-e0b FREE-N5-CLOSEW-weak_favour",
+      "role": "control_reversible_closure"
+    },
+    {
+      "components": [
+        [
+          "path_form",
+          "weak_favour"
+        ],
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "FREE-N5-PCOMP-weak_favour+weak_favour",
+      "n": 5,
+      "prior_cell": "round-e0b FREE-N5-PCOMP-weak_favour+weak_favour",
+      "role": "control_equal_ratio"
+    },
+    {
+      "components": [],
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "FREE-N6-NULL-none",
+      "n": 6,
+      "prior_cell": "round-e0b FREE-N6-NULL-none",
+      "role": "null_control_N0"
+    },
+    {
+      "components": [
+        [
+          "path_form",
+          "weak_suppress"
+        ]
+      ],
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N6-PATHF-weak_suppress",
+      "n": 6,
+      "prior_cell": "round-e0b FREE-N6-PATHF-weak_suppress",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "FREE-N6-PATHH-weak_favour",
+      "n": 6,
+      "prior_cell": "round-e0b FREE-N6-PATHH-weak_favour",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "close_form",
+          "strong_favour"
+        ],
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "FREE-N6-CSPH-strong_favour+weak_favour",
+      "n": 6,
+      "prior_cell": "round-e0b FREE-N6-CSPH-strong_favour+weak_favour",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "close_form",
+          "weak_favour"
+        ]
+      ],
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "FREE-N6-CLOSEW-weak_favour",
+      "n": 6,
+      "prior_cell": "round-e0b FREE-N6-CLOSEW-weak_favour",
+      "role": "control_reversible_closure"
+    },
+    {
+      "components": [
+        [
+          "path_form",
+          "weak_favour"
+        ],
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "FREE-N6-PCOMP-weak_favour+weak_favour",
+      "n": 6,
+      "prior_cell": "round-e0b FREE-N6-PCOMP-weak_favour+weak_favour",
+      "role": "control_equal_ratio"
+    }
+  ],
+  "lag_set": {
+    "continuous": "t = lag / E_pi[q] of each law (its own mean rate; ND equals the target's by calibration), plus t = 0; a translation of average activity, not an equivalence of clocks",
+    "jump_events": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "method": "jump: exact full-space propagation; continuous: exact Pade-13 scaling-and-squaring matrix exponential of the generator lumped by the permutations fixing vertices 0 and 1 (240 states at N=5, 1,992 at N=6)"
+  },
+  "meta_constraints": false,
+  "method": {
+    "name": "Open-Thetical Research",
+    "path": "research-methods/open-thetical-research.md",
+    "version": "1.0"
+  },
+  "new_primitives": false,
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      5,
+      6
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL"
+  },
+  "open_questions_without_prediction": [
+    "central E5 question (GT-P009 section 0)",
+    "outcomes 1-7 of GT-P009 section 0",
+    "anything not anticipated"
+  ],
+  "parameter_fit": false,
+  "plan_hash": "31202d70b850b1ca046d4897b3e551bb40c2df68e81d8ddd701aab347b0d97a8",
+  "pre_freeze_exposure": {
+    "agent_viewed": "published values of FREE-N5-PATHF-weak_suppress (E0B hub_frame, autocorrelation; E2A hub_structure, partner frame) and two class-table rows of FREE-N6-CSPH during the audit",
+    "engineering": "proof fixtures: synthetic CTMCs and N<=4 FREE kernels of the six families (tests/test_gtpersist.py); timing: NULL N=6 with all rates x 2^24 and a synthetic density-only N=6 rule (dissolution 2^k); no E5A observable of any N=5 or N=6 cell was computed before freezing",
+    "published": "all 12 kernels are published E0B FREE cells; their class tables (hence every prevalence, the CT density profile p_k and E_pi[q], the ND inputs) are known; E0B/E0A N=5 autocorrelation times and E2A N=5 hub statistics are published (audit section 3)",
+    "reference_hashes": {
+      "constraint-lab/docs/scientific-plan-discipline.md": "4101d64f8b4d228dd1cb6ca46d77848e14e79f768041aff839f962da6fecd974",
+      "constraint-lab/src/rs_constraint_lab/gte5a.py": "6922f83c8d47c9aa13713d796bb938aeb9eb779a49c175e9df9fee2a54896566",
+      "constraint-lab/src/rs_constraint_lab/gtpersist.py": "86f083ee48be5e96d1d2d6692e715595b8509ef3ccdb3e6afdcb7545389ecdb2",
+      "constraint-lab/tests/test_gtpersist.py": "dde976958d6082d1460eafdce9a70a0aa6a46cea368eecc4736de99f6833a285",
+      "gravity-time/docs/e5-coverage-and-definition-audit.md": "86f59eb75e38bcc96c77a7cde779eadf9a89877800f576c4c1f47b9e3e7bfc73",
+      "gravity-time/docs/e5-definitions-and-null-construction.md": "be3d11a6e5c56eb1846ea8b6228458c16b0e6f75186518d743d97a34716273ba",
+      "gravity-time/docs/foundational-bridge-map.md": "909f962f525753b23d8a91315412778119bf2b0613c9102f325e7b814b82699d",
+      "gravity-time/docs/gt-p008-next-round-options.md": "5e456ec3a532ebff52b3837ab7a66a94d3948b99e9f290ca3f1f7491d1b8ebab",
+      "gravity-time/docs/reference-architecture-review.md": "bc7b74aa53ffcc5bd103e3f805d7b0d38e34e9781cf72d09ec0cf1e7b11a1462",
+      "gravity-time/plans/round-e0b-plan.json": "b5d46f94fddf5af22472b294975ce7f07fc112cdfa8bf0ab69103ab0ca93d65d",
+      "gravity-time/provenance/prompts/GT-P009-agent-input.md": "058c120ddbf6032101d3a5f8205c7e9822dabba5df79adde0f7db451b63f456c",
+      "gravity-time/reports/round-e0b-tables.json": "e02aa5a50cf8f095e7e46bf9bbd44cd9fa41f5d2f5ba629374db14ec4436c518",
+      "research-methods/open-thetical-research.md": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd"
+    }
+  },
+  "predicate_ids": [
+    "FREE-N5-NULL-none:I_TRI",
+    "FREE-N5-NULL-none:I_STAR",
+    "FREE-N5-NULL-none:I_2PATH",
+    "FREE-N5-NULL-none:F_TRI",
+    "FREE-N5-NULL-none:F_STAR",
+    "FREE-N5-NULL-none:F_2PATH",
+    "FREE-N5-PATHF-weak_suppress:I_TRI",
+    "FREE-N5-PATHF-weak_suppress:I_STAR",
+    "FREE-N5-PATHF-weak_suppress:I_2PATH",
+    "FREE-N5-PATHF-weak_suppress:F_TRI",
+    "FREE-N5-PATHF-weak_suppress:F_STAR",
+    "FREE-N5-PATHF-weak_suppress:F_2PATH",
+    "FREE-N5-PATHH-weak_favour:I_TRI",
+    "FREE-N5-PATHH-weak_favour:I_STAR",
+    "FREE-N5-PATHH-weak_favour:I_2PATH",
+    "FREE-N5-PATHH-weak_favour:F_TRI",
+    "FREE-N5-PATHH-weak_favour:F_STAR",
+    "FREE-N5-PATHH-weak_favour:F_2PATH",
+    "FREE-N5-CSPH-strong_favour+weak_favour:I_TRI",
+    "FREE-N5-CSPH-strong_favour+weak_favour:I_STAR",
+    "FREE-N5-CSPH-strong_favour+weak_favour:I_2PATH",
+    "FREE-N5-CSPH-strong_favour+weak_favour:F_TRI",
+    "FREE-N5-CSPH-strong_favour+weak_favour:F_STAR",
+    "FREE-N5-CSPH-strong_favour+weak_favour:F_2PATH",
+    "FREE-N5-CLOSEW-weak_favour:I_TRI",
+    "FREE-N5-CLOSEW-weak_favour:I_STAR",
+    "FREE-N5-CLOSEW-weak_favour:I_2PATH",
+    "FREE-N5-CLOSEW-weak_favour:F_TRI",
+    "FREE-N5-CLOSEW-weak_favour:F_STAR",
+    "FREE-N5-CLOSEW-weak_favour:F_2PATH",
+    "FREE-N5-PCOMP-weak_favour+weak_favour:I_TRI",
+    "FREE-N5-PCOMP-weak_favour+weak_favour:I_STAR",
+    "FREE-N5-PCOMP-weak_favour+weak_favour:I_2PATH",
+    "FREE-N5-PCOMP-weak_favour+weak_favour:F_TRI",
+    "FREE-N5-PCOMP-weak_favour+weak_favour:F_STAR",
+    "FREE-N5-PCOMP-weak_favour+weak_favour:F_2PATH",
+    "FREE-N6-NULL-none:I_TRI",
+    "FREE-N6-NULL-none:I_STAR",
+    "FREE-N6-NULL-none:I_2PATH",
+    "FREE-N6-NULL-none:F_TRI",
+    "FREE-N6-NULL-none:F_STAR",
+    "FREE-N6-NULL-none:F_2PATH",
+    "FREE-N6-PATHF-weak_suppress:I_TRI",
+    "FREE-N6-PATHF-weak_suppress:I_STAR",
+    "FREE-N6-PATHF-weak_suppress:I_2PATH",
+    "FREE-N6-PATHF-weak_suppress:F_TRI",
+    "FREE-N6-PATHF-weak_suppress:F_STAR",
+    "FREE-N6-PATHF-weak_suppress:F_2PATH",
+    "FREE-N6-PATHH-weak_favour:I_TRI",
+    "FREE-N6-PATHH-weak_favour:I_STAR",
+    "FREE-N6-PATHH-weak_favour:I_2PATH",
+    "FREE-N6-PATHH-weak_favour:F_TRI",
+    "FREE-N6-PATHH-weak_favour:F_STAR",
+    "FREE-N6-PATHH-weak_favour:F_2PATH",
+    "FREE-N6-CSPH-strong_favour+weak_favour:I_TRI",
+    "FREE-N6-CSPH-strong_favour+weak_favour:I_STAR",
+    "FREE-N6-CSPH-strong_favour+weak_favour:I_2PATH",
+    "FREE-N6-CSPH-strong_favour+weak_favour:F_TRI",
+    "FREE-N6-CSPH-strong_favour+weak_favour:F_STAR",
+    "FREE-N6-CSPH-strong_favour+weak_favour:F_2PATH",
+    "FREE-N6-CLOSEW-weak_favour:I_TRI",
+    "FREE-N6-CLOSEW-weak_favour:I_STAR",
+    "FREE-N6-CLOSEW-weak_favour:I_2PATH",
+    "FREE-N6-CLOSEW-weak_favour:F_TRI",
+    "FREE-N6-CLOSEW-weak_favour:F_STAR",
+    "FREE-N6-CLOSEW-weak_favour:F_2PATH",
+    "FREE-N6-PCOMP-weak_favour+weak_favour:I_TRI",
+    "FREE-N6-PCOMP-weak_favour+weak_favour:I_STAR",
+    "FREE-N6-PCOMP-weak_favour+weak_favour:I_2PATH",
+    "FREE-N6-PCOMP-weak_favour+weak_favour:F_TRI",
+    "FREE-N6-PCOMP-weak_favour+weak_favour:F_STAR",
+    "FREE-N6-PCOMP-weak_favour+weak_favour:F_2PATH"
+  ],
+  "predicates": {
+    "F_2PATH": "deg(c) >= 2; eligible turnover: as F_STAR",
+    "F_STAR": "deg(c) >= 3; eligible turnover: toggle of an edge at c, A before and after",
+    "F_TRI": "anchor ab present and at least one c with ac, bc present; eligible turnover: toggle of ac or bc whose other leg is present, A before and after",
+    "I_2PATH": "ab, bc present; ac free (instance (1,0,2): edges 01, 02)",
+    "I_STAR": "spokes ca, cb, cd present; leaf-leaf edges free",
+    "I_TRI": "ab, bc, ac present (non-induced)",
+    "notes": "F_STAR implies F_2PATH (not independent species); a persistent anchored centre is not an unlabelled mobile structure; anchors are measurement-only"
+  },
+  "programme": "GT",
+  "prompt_id": "GT-P009",
+  "question": "Without any held reference, do the existing label-covariant relational constraints sustain recognisable configurations longer than appropriate null dynamics would, and can an organisation persist through turnover of some of its constituent relations?",
+  "round_id": "round-e5a",
+  "rule_reading": "no rule reads a motif, anchor, selected hub, source label or history; all are analysis-defined",
+  "schema": "rs-gt.e5a-plan/v1",
+  "software": {
+    "analysis_module": "rs_constraint_lab.gte5a",
+    "kernel": "gt-vectorised-kernel/v1",
+    "numpy": "2.5.3",
+    "observables": "gt-e1-observables/v1",
+    "persistence": "gt-persist/v1",
+    "python": "3.12.3",
+    "scipy": "not used"
+  },
+  "source_commit": "1c91766f42d122f2ba1bc12b350087af5f8f80d1",
+  "stochastic_trajectories": "none",
+  "stop_conditions": {
+    "after_round": "no E5B",
+    "amendment": "any cell, predicate or estimand change stops the round",
+    "item": "watchdog {5: 900, 6: 3600} seconds by N",
+    "round": "all items or 14400 s; then stop",
+    "unresolved": "recorded; no retuning, no replacement cell, no changed tolerance"
+  },
+  "tolerances": {
+    "identity": 1e-09,
+    "killed_solve": [
+      1e-12,
+      20000,
+      60.0
+    ],
+    "lag": 1e-09,
+    "rare_mass": 1e-12,
+    "replication": [
+      1e-10,
+      1e-08
+    ],
+    "tie_relative": 1e-09
+  },
+  "work_count": {
+    "estimate_note": "about 1-3 min per N=6 item and seconds per N=5 item, measured on synthetic N=6 fixtures (execution record); under 30 min in total expected, not promised",
+    "items": 12,
+    "kernels": 12,
+    "largest_lumped_chain": 1992,
+    "largest_state_space": 32768,
+    "laws_per_item": "target and ND",
+    "memory_ceiling_per_worker_bytes": 2000000000,
+    "predicate_analyses": 72,
+    "round_wall_cap_seconds": 14400,
+    "watchdog_seconds": {
+      "5": 900,
+      "6": 3600
+    },
+    "workers": 4
+  }
+}
