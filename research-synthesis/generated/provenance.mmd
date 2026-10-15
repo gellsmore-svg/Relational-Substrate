@@ -1,0 +1,16 @@
+graph LR
+  n_CL["CL — included @ e650d71"]:::included
+  n_GT["GT — included @ 79fa6b0"]:::included
+  n_CL_8G["CL-8G — lineage_only @ 22e252e"]:::lineage_only
+  n_SC["SC — catalogued_only @ aa06213"]:::catalogued_only
+  n_OTR["OTR — catalogued_only @ 05b15b0"]:::catalogued_only
+  n_EXT_SYNTH_20261015["EXT-SYNTH-20261015 — missing @ none"]:::missing
+  n_HIST["HIST — pending_intake @ none"]:::pending_intake
+  n_CL -->|descends_from| n_CL_8G
+  n_GT -->|descends_from| n_CL_8G
+  n_GT -->|carries_inherited_copy_of| n_CL_8G
+  classDef included fill:#d8f0d8,stroke:#2a7a2a
+  classDef catalogued_only fill:#e6eefc,stroke:#2a4a8a
+  classDef lineage_only fill:#f2f2f2,stroke:#555
+  classDef missing fill:#fde2e2,stroke:#a33,stroke-dasharray: 4 3
+  classDef pending_intake fill:#fff4d6,stroke:#a07a00,stroke-dasharray: 4 3

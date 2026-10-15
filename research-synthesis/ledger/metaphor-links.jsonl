@@ -1,0 +1,19 @@
+{"from": "M::two-towns", "link_id": "ML::001", "link_type": "covers_concept", "note": "Core reading: one-time counts cannot separate processes", "to": "C::occupancy-vs-process"}
+{"from": "M::two-towns", "link_id": "ML::002", "link_type": "covers_concept", "note": "Same average count, different lifetimes: what a matched comparison does and does not fix", "to": "C::matched-control-design"}
+{"from": "M::two-towns", "link_id": "ML::003", "link_type": "illustrates_relation", "note": "Illustrates the matched-occupancy, different-passage analogy", "to": "X::0001"}
+{"from": "M::two-towns", "link_id": "ML::004", "link_type": "requires_qualification", "note": "The 'slow town' must not be read as organised; GT-F78 is a heterogeneity effect", "to": "GT::GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW"}
+{"from": "M::photo-and-diary", "link_id": "ML::005", "link_type": "covers_concept", "note": "Photograph versus diary", "to": "C::history-as-predictive-variable"}
+{"from": "M::photo-and-diary", "link_id": "ML::006", "link_type": "covers_concept", "note": "A photograph good enough that the diary adds nothing", "to": "C::predictive-sufficiency"}
+{"from": "M::photo-and-diary", "link_id": "ML::007", "link_type": "illustrates_relation", "note": "Historian versus council: observable versus rule reading history", "to": "X::0008"}
+{"from": "M::photo-and-diary", "link_id": "ML::008", "link_type": "fails_for", "note": "A diary suggests memory accumulates; in irreducible chains initial information decays", "to": "C::retention-vs-current-dependence"}
+{"from": "M::minutes-and-moves", "link_id": "ML::009", "link_type": "covers_concept", "note": "Minutes versus moves", "to": "C::clock-readout-dependence"}
+{"from": "M::minutes-and-moves", "link_id": "ML::010", "link_type": "illustrates_relation", "note": "Same moves weighted differently (GT) versus hiding one kind of move (CL)", "to": "X::0003"}
+{"from": "M::minutes-and-moves", "link_id": "ML::011", "link_type": "requires_qualification", "note": "Hiding moves also changes what is observed, not only the clock", "to": "CL::F003-CLOCK-SPLIT"}
+{"from": "M::heavy-door-locked-door", "link_id": "ML::012", "link_type": "covers_concept", "note": "Heavy versus locked", "to": "C::admissibility-vs-weighting"}
+{"from": "M::heavy-door-locked-door", "link_id": "ML::013", "link_type": "illustrates_relation", "note": "Some counts continuous along the ladder; support changes at the end", "to": "X::0006"}
+{"from": "M::rotating-committee", "link_id": "ML::014", "link_type": "covers_concept", "note": "Persistence through turnover versus fixed membership", "to": "C::passage-and-persistence"}
+{"from": "M::rotating-committee", "link_id": "ML::015", "link_type": "requires_qualification", "note": "Omega counts toggles including flicker; long life may be heterogeneity", "to": "GT::GT-F76-FLEXIBLE-ORGANISATION-OUTLIVES-ND-QUALIFIED"}
+{"from": "M::tallest-in-the-room", "link_id": "ML::016", "link_type": "covers_concept", "note": "Selection is not persistence", "to": "C::selection-vs-persistence"}
+{"from": "M::two-towns", "link_id": "ML::017", "link_type": "complements", "note": "Read together: long life may be busyness, not organisation", "to": "M::rotating-committee"}
+{"from": "M::rotating-committee", "link_id": "ML::018", "link_type": "conflicts_with", "note": "The committee invites an organisation reading of GT-F76 that the two towns warn against; keep both visible", "to": "M::two-towns"}
+{"from": "M::photo-and-diary", "link_id": "ML::019", "link_type": "bridges_metaphors", "note": "Hiding moves (a projection) can make a record look as if it needs a diary", "to": "M::minutes-and-moves"}

@@ -1,0 +1,43 @@
+graph LR
+  n_M__two_towns(["M::two-towns Two towns with the same number of open cafés"])
+  n_C__occupancy_vs_process["C::occupancy-vs-process"]
+  n_M__two_towns -.->|covers_concept| n_C__occupancy_vs_process
+  n_C__matched_control_design["C::matched-control-design"]
+  n_M__two_towns -.->|covers_concept| n_C__matched_control_design
+  n_X__0001["X::0001"]
+  n_M__two_towns -.->|illustrates_relation| n_X__0001
+  n_GT__GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW["GT::GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW"]
+  n_M__two_towns -.->|requires_qualification| n_GT__GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW
+  n_M__photo_and_diary(["M::photo-and-diary A photograph and a diary"])
+  n_C__history_as_predictive_variable["C::history-as-predictive-variable"]
+  n_M__photo_and_diary -.->|covers_concept| n_C__history_as_predictive_variable
+  n_C__predictive_sufficiency["C::predictive-sufficiency"]
+  n_M__photo_and_diary -.->|covers_concept| n_C__predictive_sufficiency
+  n_X__0008["X::0008"]
+  n_M__photo_and_diary -.->|illustrates_relation| n_X__0008
+  n_C__retention_vs_current_dependence["C::retention-vs-current-dependence"]
+  n_M__photo_and_diary -.->|fails_for| n_C__retention_vs_current_dependence
+  n_M__minutes_and_moves(["M::minutes-and-moves Counting minutes or counting moves"])
+  n_C__clock_readout_dependence["C::clock-readout-dependence"]
+  n_M__minutes_and_moves -.->|covers_concept| n_C__clock_readout_dependence
+  n_X__0003["X::0003"]
+  n_M__minutes_and_moves -.->|illustrates_relation| n_X__0003
+  n_CL__F003_CLOCK_SPLIT["CL::F003-CLOCK-SPLIT"]
+  n_M__minutes_and_moves -.->|requires_qualification| n_CL__F003_CLOCK_SPLIT
+  n_M__heavy_door_locked_door(["M::heavy-door-locked-door A heavy door and a locked door"])
+  n_C__admissibility_vs_weighting["C::admissibility-vs-weighting"]
+  n_M__heavy_door_locked_door -.->|covers_concept| n_C__admissibility_vs_weighting
+  n_X__0006["X::0006"]
+  n_M__heavy_door_locked_door -.->|illustrates_relation| n_X__0006
+  n_M__rotating_committee(["M::rotating-committee A committee whose members rotate"])
+  n_C__passage_and_persistence["C::passage-and-persistence"]
+  n_M__rotating_committee -.->|covers_concept| n_C__passage_and_persistence
+  n_GT__GT_F76_FLEXIBLE_ORGANISATION_OUTLIVES_ND_QUALIFIED["GT::GT-F76-FLEXIBLE-ORGANISATION-OUTLIVES-ND-QUALIFIED"]
+  n_M__rotating_committee -.->|requires_qualification| n_GT__GT_F76_FLEXIBLE_ORGANISATION_OUTLIVES_ND_QUALIFIED
+  n_M__tallest_in_the_room(["M::tallest-in-the-room Picking the tallest person in the ro…"])
+  n_C__selection_vs_persistence["C::selection-vs-persistence"]
+  n_M__tallest_in_the_room -.->|covers_concept| n_C__selection_vs_persistence
+  n_M__two_towns -.->|complements| n_M__rotating_committee
+  n_M__rotating_committee -.->|conflicts_with| n_M__two_towns
+  n_M__photo_and_diary -.->|bridges_metaphors| n_M__minutes_and_moves
+  %% dotted edges: metaphor layer only (non-evidentiary)
