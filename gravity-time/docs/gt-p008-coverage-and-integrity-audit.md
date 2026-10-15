@@ -144,3 +144,9 @@ All quantities are per cell and per source orbit O. Every slot in O is equivalen
 - **D8. Composition (collation only).** The published raw, normalised and standardised margins and overlap diagnostics are collated in one table. No new standardisation is computed.
 
 Uncertainty: these are exact finite-chain values with numerical error ≤ 1e-12 in the stationary residual. There is no sampling error.
+
+## 7. Addendum after computation (2026-10-15; sections 1–6 above unchanged)
+
+- **D1–D8 were computed as defined.** No definition was changed after the data were read. The extraction checks all passed (largest deviation 2e-14).
+- One check was added after the definitions were fixed: published NULL witness means against the S4 closed form (largest deviation 3e-15). It is an extraction check, not a scientific quantity.
+- **Q-4. Chord occupancy depends on the family.** The GT-P007 phrasings "the chord is rarely present" (E4 report) and "under σ > 0 path rules the held path suppresses the chord" (GT-F64) are correct for PATHF and PATHH (0.23–0.29). Under CSPH the P3 chord is at 0.45–0.53, close to NULL's 0.5, because closure rewards it. Recorded here; the earlier documents are not edited.
