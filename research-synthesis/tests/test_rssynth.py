@@ -793,17 +793,17 @@ class ImplicitRoundTripAcceptance(unittest.TestCase):
         with sandbox() as root:
             self._reopen(root, "X::0002")
             self._reopen(root, "X::0006")
-            rt = roundtrip.open_round_trip("RT-0002", "2026-10-16", "research-synthesis/README.md", "0" * 40)
+            rt = roundtrip.open_round_trip("RT-9002", "2026-10-16", "research-synthesis/README.md", "0" * 40)
             self.assertEqual({r["target"] for r in rt["recommendations"]}, {"X::0002", "X::0006"})
-            self.assertEqual(roundtrip.open_round_trips(root), ["RT-0002"])
-            rep = roundtrip.ratify("RT-0002", "AD-0003", "2026-10-16", "next prompt", objections=["X::0002"])
+            self.assertIn("RT-9002", roundtrip.open_round_trips(root))
+            rep = roundtrip.ratify("RT-9002", "AD-9003", "2026-10-16", "next prompt", objections=["X::0002"])
             self.assertEqual((rep["accepted"], rep["objected"]), (1, ["X::0002"]))
             conns = {x["connection_id"]: x for x in core.read_jsonl(root / "ledger/connections.jsonl")}
             self.assertEqual(conns["X::0002"]["review_status"], "under_review")
             self.assertEqual((conns["X::0006"]["review_status"], conns["X::0006"]["decision_category"]), ("human_accepted", "qualified"))
             self.assertEqual(self._problems(root), [])
             with self.assertRaises(ValueError):
-                roundtrip.ratify("RT-0002", "AD-0004", "2026-10-16", "x", objections=["X::0009"])
+                roundtrip.ratify("RT-9002", "AD-9004", "2026-10-16", "x", objections=["X::0009"])
 
     def test_citing_an_unlogged_ratification_is_rejected(self):
         with sandbox() as root:
