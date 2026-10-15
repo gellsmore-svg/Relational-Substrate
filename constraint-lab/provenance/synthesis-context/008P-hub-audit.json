@@ -1,0 +1,255 @@
+{
+  "staleness": [
+    {
+      "source": "CL",
+      "state": "current",
+      "head": "e650d71bda7203c8018d8bd134c5496a03d74a11"
+    },
+    {
+      "source": "GT",
+      "state": "behind_branch_head",
+      "head": "4aaf04c0601b4232fc9fa24f6aa5d5ce6390c7e2"
+    },
+    {
+      "source": "CL-8G",
+      "state": "current",
+      "head": "22e252e560cc711d337b6ae506b0fb76728247d6"
+    },
+    {
+      "source": "SC",
+      "state": "current",
+      "head": "aa06213ce42e5166ae2a0d21846a2a7c218f6b50"
+    },
+    {
+      "source": "OTR",
+      "state": "behind_branch_head",
+      "head": "38c2501bbab22ca1eb2288ea76a962ac0170d5e6"
+    }
+  ],
+  "artifacts": [
+    {
+      "source": "CL",
+      "path": "constraint-lab/coherence/findings.jsonl",
+      "kind": "findings",
+      "materialised": true,
+      "copy": "ok",
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "CL",
+      "path": "constraint-lab/coherence/relations.jsonl",
+      "kind": "relations",
+      "materialised": true,
+      "copy": "ok",
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "CL",
+      "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+      "kind": "validator",
+      "materialised": true,
+      "copy": "ok",
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "CL",
+      "path": "constraint-lab/formal/theorem-catalog.jsonl",
+      "kind": "theorem_catalog",
+      "materialised": true,
+      "copy": "ok",
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "CL",
+      "path": "constraint-lab/formal/open-problems.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "CL",
+      "path": "constraint-lab/coherence/snapshots/through-generation-008n.md",
+      "kind": "snapshot",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "CL",
+      "path": "constraint-lab/reports/generation-008n-h2-controlled-passage.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "CL",
+      "path": "constraint-lab/reports/generation-008k-predictive-state-synthesis.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "CL",
+      "path": "constraint-lab/docs/scientific-plan-discipline.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "GT",
+      "path": "gravity-time/coherence/findings.jsonl",
+      "kind": "findings",
+      "materialised": true,
+      "copy": "ok",
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "GT",
+      "path": "gravity-time/coherence/relations.jsonl",
+      "kind": "relations",
+      "materialised": true,
+      "copy": "ok",
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "GT",
+      "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+      "kind": "validator",
+      "materialised": true,
+      "copy": "ok",
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "GT",
+      "path": "gravity-time/coherence/snapshots/through-gt-e5a.md",
+      "kind": "snapshot",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "GT",
+      "path": "gravity-time/docs/reference-architecture-review.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "GT",
+      "path": "gravity-time/docs/e3-cross-programme-transfer.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "GT",
+      "path": "gravity-time/docs/e4-cross-programme-transfer.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "GT",
+      "path": "gravity-time/docs/gt-p008-cross-programme-transfer.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "GT",
+      "path": "gravity-time/docs/gt-e5a-cross-programme-transfer.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "GT",
+      "path": "gravity-time/reports/gt-e5a-report.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "CL-8G",
+      "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+      "kind": "validator",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "CL-8G",
+      "path": "constraint-lab/coherence/findings.jsonl",
+      "kind": "findings",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "SC",
+      "path": "stochastic-calculator/RS_FINDINGS.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "SC",
+      "path": "stochastic-calculator/DISCOVERIES.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "SC",
+      "path": "stochastic-calculator/HYPOTHESES.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "SC",
+      "path": "stochastic-calculator/research/VALIDATION.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": false
+    },
+    {
+      "source": "OTR",
+      "path": "research-methods/open-thetical-research.md",
+      "kind": "document",
+      "materialised": false,
+      "pin": "ok",
+      "in_checked_out_tree": true
+    },
+    {
+      "source": "EXT-SYNTH-20261015",
+      "path": "research-synthesis/reports/external-2026-10-15-cross-research-synthesis.md",
+      "kind": "document",
+      "materialised": false,
+      "copy": "ok",
+      "pin": "local_in_branch",
+      "in_checked_out_tree": true
+    }
+  ]
+}

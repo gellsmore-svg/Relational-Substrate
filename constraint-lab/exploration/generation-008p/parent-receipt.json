@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-15",
+  "parent": "99565d14e9c0fc172d925fd335965e127d950868",
+  "branch": "origin/research/constraint-lab-v0.8o-route-null-factorization",
+  "tag": "constraint-lab-008o-close",
+  "annotated_tag_object": "facef77087084ecbf4bbf1d032fce74ae3cbef66",
+  "dereferenced_commit": "99565d14e9c0fc172d925fd335965e127d950868",
+  "scientific_payload_anchor": "1f81c55053f547a4ea15961df0c09a0b479fd5e4",
+  "F0_commit": "bf3fae54c438a8d586bb578e5d5430274274ed00",
+  "F0_canonical_hash": "42477b27c57169520249aef7274e3e35f4cb7c9202cf72505f99dd13d25c12fc",
+  "F0_file_sha256": "19bda9bf73ffe5eed021301546d1aa7a9f049579f5482451b52126a254993b97",
+  "snapshot_sha256": "638b5a73afbd85ceb41a4e20b695f914c1f155485aa54a76422aba91e39e5aee",
+  "canonical_ledger_sha256": "cbe0e48921757005847ab30f66e0ecf11e32b98c6956821fa05825aa210b8e56",
+  "CI": {
+    "run": 38790237303,
+    "head": "99565d14e9c0fc172d925fd335965e127d950868",
+    "conclusion": "success",
+    "jobs": [
+      "constraint-lab: success",
+      "books: success"
+    ],
+    "independently_queried": true
+  },
+  "local_validation": {
+    "unchanged_parent_full_suite": "678 passed",
+    "seconds": 461.23,
+    "formal": "115 entries; three views valid",
+    "coherence": "229 findings, 352 relations; valid; snapshot matches",
+    "F0_gate": "all frozen source/input/result hashes valid",
+    "generation_000": "COMPLETE; seven shards; spec ccf70e8c8cefde0e7039479a65e899b0cdeb6003cbc3cdf49738083bb8f97d26",
+    "books": "bash -n and CI book input checks pass; no books edited"
+  },
+  "external_review": {
+    "exists_in_accessible_refs": false,
+    "supplied": false,
+    "status": "pending; not manufactured"
+  },
+  "files_read": {
+    "constraint-lab/reports/generation-008n-h2-controlled-passage.md": {
+      "bytes": 14973,
+      "sha256": "5100facd35f733c281a515a12a1c900f9e827d5d66b716efb7300ada17a56e76"
+    },
+    "constraint-lab/reports/generation-008o-route-null-factorization.md": {
+      "bytes": 13299,
+      "sha256": "d8482cc050c5041e5dad4cc9ce1e262817321585dd1687f8241d4b24a37b74fb"
+    },
+    "constraint-lab/formal/markovization-stopping-factorization.md": {
+      "bytes": 10672,
+      "sha256": "a2494e0ee46953dcc3b7e3b1a395828272e6bd7a3fc79281dab44836a6d54451"
+    },
+    "constraint-lab/formal/history-controlled-passage.md": {
+      "bytes": 8228,
+      "sha256": "b0643ac42f0c05ae03faf8dcf44a9ae58abbecde3acd8f12b49b054ab96f8f94"
+    },
+    "constraint-lab/formal/history-depth.md": {
+      "bytes": 15656,
+      "sha256": "78fdc5b720d6e5db750c070d121f9796fc9042eca96cc28bfa8d0f81f0c943f1"
+    },
+    "constraint-lab/formal/open-problems.md": {
+      "bytes": 13975,
+      "sha256": "24efd6ef351466c7599c342786c6e076adb5f4760a8680bbb3139a57961bd89b"
+    },
+    "constraint-lab/formal/theorem-catalog.jsonl": {
+      "bytes": 164522,
+      "sha256": "ddb158c32064e40cd734eed02a1f3ad2fb8583607f3df699d084de9fb6dd9914"
+    },
+    "constraint-lab/coherence/README.md": {
+      "bytes": 2189,
+      "sha256": "2b4272a607db96550e6eca1dd63d3678be980f66bc14fac73ae5792dbcc67cca"
+    },
+    "constraint-lab/coherence/findings.jsonl": {
+      "bytes": 324979,
+      "sha256": "eeeba035cce2a7fd4daf5c813b416ebb06ae9e79f2185efdbfce6a79315558cd"
+    },
+    "constraint-lab/coherence/relations.jsonl": {
+      "bytes": 245246,
+      "sha256": "bf5ba1d095e3468a1c6021ee40e3135e18789d2de6362ccebea769fd9e630daf"
+    },
+    "constraint-lab/coherence/snapshots/through-generation-008o.md": {
+      "bytes": 131920,
+      "sha256": "638b5a73afbd85ceb41a4e20b695f914c1f155485aa54a76422aba91e39e5aee"
+    },
+    "constraint-lab/exploration/generation-008o/close-out.md": {
+      "bytes": 3630,
+      "sha256": "e5b5475bc1a1fa264558f1418bf37f9faa6a8c4ef5cb44dbe86a837643d69d79"
+    },
+    "constraint-lab/exploration/generation-008o/open-thetical-decision.md": {
+      "bytes": 2247,
+      "sha256": "a062cef65ddc50a45672dfafe967fc741c03472800fcc496fad2d181c7c876be"
+    },
+    "constraint-lab/provenance/synthesis-context/008O.json": {
+      "bytes": 3629,
+      "sha256": "fa2dfd0532b5ff7cf92b3b2df35213071e1c29788e650a39e2a58a348bda4547"
+    },
+    "constraint-lab/provenance/synthesis-handoffs/008O/README.md": {
+      "bytes": 9096,
+      "sha256": "e3cbf1b7b569579e8b92856d75187b05ce8585f156463f28bf1bceb24d3fd491"
+    },
+    "constraint-lab/docs/scientific-plan-discipline.md": {
+      "bytes": 2827,
+      "sha256": "4101d64f8b4d228dd1cb6ca46d77848e14e79f768041aff839f962da6fecd974"
+    },
+    "constraint-lab/exploration/generation-008o/round-f0-plan.json": {
+      "bytes": 44817,
+      "sha256": "19bda9bf73ffe5eed021301546d1aa7a9f049579f5482451b52126a254993b97"
+    },
+    "constraint-lab/src/rs_constraint_lab/stopping_factorization.py": {
+      "bytes": 15262,
+      "sha256": "a1479f57c1e981e24be0823f3119c3f687906c21ed8e87ec0de4517a0aac53a2"
+    },
+    "constraint-lab/src/rs_constraint_lab/gen008o_exec.py": {
+      "bytes": 20099,
+      "sha256": "50c00f8c66868e9e1823415bc0fdf8d14981ebd9da507949f4bf8c1d9ac03181"
+    },
+    "constraint-lab/tests/test_v08o_plumbing.py": {
+      "bytes": 2617,
+      "sha256": "dfab8e661efc09f65383f1a820d4582427309a128f26f48218b17ef85dd18725"
+    },
+    "constraint-lab/tests/test_v08o.py": {
+      "bytes": 6729,
+      "sha256": "975d5c84732e942e1a1d950614ef6d210360cac5465f22e166a5e12a8e4959c4"
+    }
+  },
+  "governance": "No AGENTS.md found; scientific-plan-discipline and pinned hub/OTR govern; no incompatible change."
+}

@@ -1,0 +1,107 @@
+{
+  "prompt_id": "008P",
+  "date": "2026-10-15",
+  "authored_hub_baseline": "38c2501bbab22ca1eb2288ea76a962ac0170d5e6",
+  "consulted_hub_commit": "38c2501bbab22ca1eb2288ea76a962ac0170d5e6",
+  "branch": "origin/main",
+  "changed_from_baseline": false,
+  "files": {
+    "research-synthesis/README.md": {
+      "bytes": 6213,
+      "sha256": "3bf8bdad070081ff8257759d8ee52d3383d94598aa0e91c6ea3408e8f5ee309a",
+      "git_blob": "33442711138482dd4d9900711fcd98f9b304f944"
+    },
+    "research-synthesis/docs/branch-integration.md": {
+      "bytes": 2467,
+      "sha256": "d7aa1f7c55b614145eea0973118254c6c79dd6416259c7c62432f1e805cc6910",
+      "git_blob": "a3189091deee6b5567f6fc7d2c2ba34e3162b7ee"
+    },
+    "research-synthesis/docs/runbook.md": {
+      "bytes": 3538,
+      "sha256": "112f3dd703f13d31842ec36f6c28a2ae54c22e058dd5d4562e1652ef88af3db6",
+      "git_blob": "b0996991507a7c2d3302ac99afd2bdf7d55eea77"
+    },
+    "research-synthesis/docs/cadence.md": {
+      "bytes": 4477,
+      "sha256": "1c9ce31d441f09d6514301b46a4ac3d166c654fceedb77ae6951cd0a13728347",
+      "git_blob": "520e6f6cec2730149884a191e108238cc135a4b9"
+    },
+    "research-synthesis/docs/epistemic-policy.md": {
+      "bytes": 4890,
+      "sha256": "c4a3faabd5da70c799a569d355651de789ea93496b9d865a74b63b079f2c81d1",
+      "git_blob": "9548dca0e4b166a2062eb8bb01271898237e3c19"
+    },
+    "research-synthesis/docs/acceptance.md": {
+      "bytes": 5290,
+      "sha256": "f0b7cb429a07e40aa558784834c920c13020d11ab0f7a02720fd56eeff0f16b3",
+      "git_blob": "200d4c2ed6b461ca2045c1f8000a0a151a093c5a"
+    },
+    "research-synthesis/generated/index.md": {
+      "bytes": 4821,
+      "sha256": "48b97eff8782c1934f7c6b842f7776566af6cfa79f8589a4ad3b7ef995d3cf4d",
+      "git_blob": "036aa7773d2a889350e97a8acb8049e617308a6e"
+    },
+    "research-synthesis/generated/questions.md": {
+      "bytes": 5280,
+      "sha256": "64571b1d9ed38cef89e6a05a28be348e8cd6b269f265cd602916b15a451996c5",
+      "git_blob": "7b95cbdb6efbc3a7cba7d0c1bbe44ac591a35341"
+    },
+    "research-synthesis/generated/links.md": {
+      "bytes": 7976,
+      "sha256": "3093b4d6836636a7974f63eeadc9123dd9ba4665cc08e0f5d7c05313bb41025f",
+      "git_blob": "07433e4e4f4c700237087e5dcf42cc8690127d06"
+    },
+    "research-synthesis/generated/round-trips.md": {
+      "bytes": 4478,
+      "sha256": "0cb0c0f3a0e877fe3dfdd299cedc7f9876a314578c5ff17a307da34cf734b183",
+      "git_blob": "df7edb32bba138706eb265b4c34cb28207994d4a"
+    },
+    "research-synthesis/sources/pin-spec.json": {
+      "bytes": 12524,
+      "sha256": "1ee4547fffe563510534f3c0aaec9346b0ce9a85d53ee5eed1534cea8f8077ce",
+      "git_blob": "c8d325f818a5009bf876283f76c5a0ce06456147"
+    },
+    "research-synthesis/sources/manifest.json": {
+      "bytes": 23211,
+      "sha256": "8e44c2dfce472b6348559a6da491aca8fc1a5bd9ae27cf33f1a1239c93974fc7",
+      "git_blob": "ac3fbd37d5901040b23089f4f82ace521eeb8afd"
+    },
+    "research-methods/open-thetical-research.md": {
+      "bytes": 10048,
+      "sha256": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd",
+      "git_blob": "669754b54e4374d7f8c9a606b1faf4811b7b8569"
+    }
+  },
+  "authority": "hub context is not Constraint Laboratory evidence",
+  "evidence_refs": [],
+  "shared_lineage": "CL 8G 22e252e560cc711d337b6ae506b0fb76728247d6; shared DSL/kernel/coherence implementation; not independent corroboration",
+  "influence": {
+    "X::0001": "P0 separates path inequality from task-specific stopping equality; no shared mechanism claimed",
+    "X::0009": "Kac recurrence remains the occupancy-forced control; not contradicted by passage residuals",
+    "XQ::01": "P0 names the conditional reset and horizon; no local-clock experiment authorised",
+    "XQ::07": "P0 supplies a typed CL interface; ask whether GT actually has this reset, not verbal similarity"
+  },
+  "governance": {
+    "AD_0004": "Synthesis acceptance, independent scientific review, and explicit private publication_consent are separate",
+    "RT_0003": "already ratified by AD-0005; zero agent-reviewed recommendations; no additional implicit acceptance"
+  },
+  "operations": {
+    "worktree": "/tmp/rs-hub-008p",
+    "detached": true,
+    "audit": true,
+    "validate": "valid",
+    "initial_missing_GT_object": "fetch/environment issue; repaired by fetching remote objects, no source edit",
+    "hub_clean_before_after": true,
+    "pin_proposal": false,
+    "pin_applied": false,
+    "human_review_claimed": false,
+    "ratification": false,
+    "snapshot": false,
+    "PR": false,
+    "GT_science_run": false,
+    "private_HISTORY_used": false
+  },
+  "staleness_note": "synth audit reports CL current against its configured 8N branch, not against 8O. Manual ancestry shows 8O is a later closed continuation. A separate reviewed intake must consider both source commit and configured branch; do not claim the hub is updated.",
+  "review_status": "8O external scientific review not supplied/found; 8P internal audit is not that review",
+  "frozen_rationale": "No later hub movement silently changes this planning pin."
+}
