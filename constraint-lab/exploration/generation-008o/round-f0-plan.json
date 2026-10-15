@@ -1,0 +1,858 @@
+{
+  "analysis_version": "generation-008o-route-factor/v1",
+  "contributions": "complete ordered orbit list; U orbit MASS times W invariant VALUE per target; sparse nonzero contribution records with sign/absolute numerator/denominator and exact sum; no importance ranking",
+  "execution": {
+    "heartbeat_seconds": 1,
+    "numeric_threads": 1,
+    "resume": "skip valid item/freeze/plan/source/payload hashes only",
+    "retry": "none automatic; quarantine and stop",
+    "split": "engineering amendment before changed execution; never outcome-dependent",
+    "watchdog_seconds": 300,
+    "workers": 1
+  },
+  "experiment_id": "generation-008o-route-null-factorization",
+  "finite_length": "n=2,4 only new insertion diagnostics; j=n-2; Q^j-Pi(QPi)^j=sum_l Q^l(I-Pi)(QPi)^(j-l); verify a Pi=a, F2 zero; compare F4 with 8N; timing aggregation classified insertionwise or between-insertion cancellation",
+  "hub_authority": "read-only planning context; not CL evidence; no hub mutation or GT test",
+  "hub_context_commit": "38c2501bbab22ca1eb2288ea76a962ac0170d5e6",
+  "hub_records": [
+    "X::0001",
+    "X::0009",
+    "XQ::01",
+    "XQ::07"
+  ],
+  "input_hashes": {
+    "constraint-lab/exploration/generation-008n/round-p0-plan.json": "a634c4d0104c9e8938e5d624cfd47416f6a02dab8664c49a5aeff5a8de07322f",
+    "constraint-lab/exploration/generation-008o/calibration.json": "5c278693184d392de9d36f7474ffb4a039f811710b037ded42a02b0e9ec5eb1b",
+    "constraint-lab/exploration/generation-008o/charter.md": "cadec6f528ef9f2fd4627ae6858668ce21216f61b99651afa43f369b17926b20",
+    "constraint-lab/exploration/generation-008o/namespace-audit.json": "64d2fd7ab90394bc262b0dd18701b2319a0b5f6f8a76e7084e96c1dcc0ffe8eb",
+    "constraint-lab/exploration/generation-008o/open-thetical-possibilities.md": "42ac506ea52ecad402a30a3ee55039680ef2a9ddc270106efc55ff79ab9602a6",
+    "constraint-lab/exploration/generation-008o/predeclared-algebra.md": "105eb5be1161bc0f2f09bb4e73a6fd79209d76f80d66e10e4006e4d50b60ae1f",
+    "constraint-lab/provenance/prompts/008O-v0.8o-agent-input.md": "531b2bd99e603c0f5b03eb44e0f526a517f66a2e4f444a51aa6eb62acf19db3d",
+    "constraint-lab/provenance/synthesis-context/008O.json": "fa2dfd0532b5ff7cf92b3b2df35213071e1c29788e650a39e2a58a348bda4547",
+    "constraint-lab/pyproject.toml": "86bafc851177a88c5b49c0098277e3d757d8d193b54c0ba4f02524437dc307ad",
+    "constraint-lab/reports/generation-008n-p0-tables.json": "df6a5a59f26689745c4037ab2a44daf5feed9a35996520f1cdd8c509728d055d",
+    "constraint-lab/reports/tables/generation-008m-augmented-s4-orbits.json": "255984604706d0c7e06e51f3c75bdc87ee45697d23816265ea5dd23f121749cb",
+    "constraint-lab/reports/tables/generation-008m-h2-role-atlas.json": "1b72d1603e616816b21bec421699f1f2e7a318af527d51a60bb1fd047d79b115",
+    "constraint-lab/reports/tables/generation-008m-m1-opposite-pair.json": "271098c459c7343bc871fe9c7799df377fcf4b0f3bfc3d08493184000bfb3b1c",
+    "constraint-lab/tests/test_v08o_plumbing.py": "dfab8e661efc09f65383f1a820d4582427309a128f26f48218b17ef85dd18725"
+  },
+  "items": [
+    {
+      "family": "ANY",
+      "item_id": "F0-NEUTRAL",
+      "m": "1",
+      "role": 0,
+      "source_item_id": "M0-NEUTRAL",
+      "source_passage_id": "P0-NEUTRAL"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R00-m025",
+      "m": "1/4",
+      "role": 0,
+      "source_item_id": "M0-ANY-R00-m025",
+      "source_passage_id": "P0-ANY-R00-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R00-m4",
+      "m": "4",
+      "role": 0,
+      "source_item_id": "M0-ANY-R00-m4",
+      "source_passage_id": "P0-ANY-R00-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R01-m025",
+      "m": "1/4",
+      "role": 1,
+      "source_item_id": "M0-ANY-R01-m025",
+      "source_passage_id": "P0-ANY-R01-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R01-m4",
+      "m": "4",
+      "role": 1,
+      "source_item_id": "M0-ANY-R01-m4",
+      "source_passage_id": "P0-ANY-R01-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R02-m025",
+      "m": "1/4",
+      "role": 2,
+      "source_item_id": "M0-ANY-R02-m025",
+      "source_passage_id": "P0-ANY-R02-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R02-m4",
+      "m": "4",
+      "role": 2,
+      "source_item_id": "M0-ANY-R02-m4",
+      "source_passage_id": "P0-ANY-R02-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R03-m025",
+      "m": "1/4",
+      "role": 3,
+      "source_item_id": "M0-ANY-R03-m025",
+      "source_passage_id": "P0-ANY-R03-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R03-m4",
+      "m": "4",
+      "role": 3,
+      "source_item_id": "M0-ANY-R03-m4",
+      "source_passage_id": "P0-ANY-R03-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R04-m025",
+      "m": "1/4",
+      "role": 4,
+      "source_item_id": "M0-ANY-R04-m025",
+      "source_passage_id": "P0-ANY-R04-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R04-m4",
+      "m": "4",
+      "role": 4,
+      "source_item_id": "M0-ANY-R04-m4",
+      "source_passage_id": "P0-ANY-R04-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R05-m025",
+      "m": "1/4",
+      "role": 5,
+      "source_item_id": "M0-ANY-R05-m025",
+      "source_passage_id": "P0-ANY-R05-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R05-m4",
+      "m": "4",
+      "role": 5,
+      "source_item_id": "M0-ANY-R05-m4",
+      "source_passage_id": "P0-ANY-R05-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R06-m025",
+      "m": "1/4",
+      "role": 6,
+      "source_item_id": "M0-ANY-R06-m025",
+      "source_passage_id": "P0-ANY-R06-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R06-m4",
+      "m": "4",
+      "role": 6,
+      "source_item_id": "M0-ANY-R06-m4",
+      "source_passage_id": "P0-ANY-R06-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R07-m025",
+      "m": "1/4",
+      "role": 7,
+      "source_item_id": "M0-ANY-R07-m025",
+      "source_passage_id": "P0-ANY-R07-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R07-m4",
+      "m": "4",
+      "role": 7,
+      "source_item_id": "M0-ANY-R07-m4",
+      "source_passage_id": "P0-ANY-R07-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R08-m025",
+      "m": "1/4",
+      "role": 8,
+      "source_item_id": "M0-ANY-R08-m025",
+      "source_passage_id": "P0-ANY-R08-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R08-m4",
+      "m": "4",
+      "role": 8,
+      "source_item_id": "M0-ANY-R08-m4",
+      "source_passage_id": "P0-ANY-R08-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R09-m025",
+      "m": "1/4",
+      "role": 9,
+      "source_item_id": "M0-ANY-R09-m025",
+      "source_passage_id": "P0-ANY-R09-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R09-m4",
+      "m": "4",
+      "role": 9,
+      "source_item_id": "M0-ANY-R09-m4",
+      "source_passage_id": "P0-ANY-R09-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R10-m025",
+      "m": "1/4",
+      "role": 10,
+      "source_item_id": "M0-ANY-R10-m025",
+      "source_passage_id": "P0-ANY-R10-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R10-m4",
+      "m": "4",
+      "role": 10,
+      "source_item_id": "M0-ANY-R10-m4",
+      "source_passage_id": "P0-ANY-R10-m4"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R11-m025",
+      "m": "1/4",
+      "role": 11,
+      "source_item_id": "M0-ANY-R11-m025",
+      "source_passage_id": "P0-ANY-R11-m025"
+    },
+    {
+      "family": "ANY",
+      "item_id": "F0-ANY-R11-m4",
+      "m": "4",
+      "role": 11,
+      "source_item_id": "M0-ANY-R11-m4",
+      "source_passage_id": "P0-ANY-R11-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R00-m025",
+      "m": "1/4",
+      "role": 0,
+      "source_item_id": "M0-FORM-R00-m025",
+      "source_passage_id": "P0-FORM-R00-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R00-m4",
+      "m": "4",
+      "role": 0,
+      "source_item_id": "M0-FORM-R00-m4",
+      "source_passage_id": "P0-FORM-R00-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R01-m025",
+      "m": "1/4",
+      "role": 1,
+      "source_item_id": "M0-FORM-R01-m025",
+      "source_passage_id": "P0-FORM-R01-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R01-m4",
+      "m": "4",
+      "role": 1,
+      "source_item_id": "M0-FORM-R01-m4",
+      "source_passage_id": "P0-FORM-R01-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R02-m025",
+      "m": "1/4",
+      "role": 2,
+      "source_item_id": "M0-FORM-R02-m025",
+      "source_passage_id": "P0-FORM-R02-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R02-m4",
+      "m": "4",
+      "role": 2,
+      "source_item_id": "M0-FORM-R02-m4",
+      "source_passage_id": "P0-FORM-R02-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R03-m025",
+      "m": "1/4",
+      "role": 3,
+      "source_item_id": "M0-FORM-R03-m025",
+      "source_passage_id": "P0-FORM-R03-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R03-m4",
+      "m": "4",
+      "role": 3,
+      "source_item_id": "M0-FORM-R03-m4",
+      "source_passage_id": "P0-FORM-R03-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R04-m025",
+      "m": "1/4",
+      "role": 4,
+      "source_item_id": "M0-FORM-R04-m025",
+      "source_passage_id": "P0-FORM-R04-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R04-m4",
+      "m": "4",
+      "role": 4,
+      "source_item_id": "M0-FORM-R04-m4",
+      "source_passage_id": "P0-FORM-R04-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R05-m025",
+      "m": "1/4",
+      "role": 5,
+      "source_item_id": "M0-FORM-R05-m025",
+      "source_passage_id": "P0-FORM-R05-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R05-m4",
+      "m": "4",
+      "role": 5,
+      "source_item_id": "M0-FORM-R05-m4",
+      "source_passage_id": "P0-FORM-R05-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R06-m025",
+      "m": "1/4",
+      "role": 6,
+      "source_item_id": "M0-FORM-R06-m025",
+      "source_passage_id": "P0-FORM-R06-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R06-m4",
+      "m": "4",
+      "role": 6,
+      "source_item_id": "M0-FORM-R06-m4",
+      "source_passage_id": "P0-FORM-R06-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R07-m025",
+      "m": "1/4",
+      "role": 7,
+      "source_item_id": "M0-FORM-R07-m025",
+      "source_passage_id": "P0-FORM-R07-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R07-m4",
+      "m": "4",
+      "role": 7,
+      "source_item_id": "M0-FORM-R07-m4",
+      "source_passage_id": "P0-FORM-R07-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R08-m025",
+      "m": "1/4",
+      "role": 8,
+      "source_item_id": "M0-FORM-R08-m025",
+      "source_passage_id": "P0-FORM-R08-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R08-m4",
+      "m": "4",
+      "role": 8,
+      "source_item_id": "M0-FORM-R08-m4",
+      "source_passage_id": "P0-FORM-R08-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R09-m025",
+      "m": "1/4",
+      "role": 9,
+      "source_item_id": "M0-FORM-R09-m025",
+      "source_passage_id": "P0-FORM-R09-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R09-m4",
+      "m": "4",
+      "role": 9,
+      "source_item_id": "M0-FORM-R09-m4",
+      "source_passage_id": "P0-FORM-R09-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R10-m025",
+      "m": "1/4",
+      "role": 10,
+      "source_item_id": "M0-FORM-R10-m025",
+      "source_passage_id": "P0-FORM-R10-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R10-m4",
+      "m": "4",
+      "role": 10,
+      "source_item_id": "M0-FORM-R10-m4",
+      "source_passage_id": "P0-FORM-R10-m4"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R11-m025",
+      "m": "1/4",
+      "role": 11,
+      "source_item_id": "M0-FORM-R11-m025",
+      "source_passage_id": "P0-FORM-R11-m025"
+    },
+    {
+      "family": "FORM",
+      "item_id": "F0-FORM-R11-m4",
+      "m": "4",
+      "role": 11,
+      "source_item_id": "M0-FORM-R11-m4",
+      "source_passage_id": "P0-FORM-R11-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R00-m025",
+      "m": "1/4",
+      "role": 0,
+      "source_item_id": "M0-DISSOLVE-R00-m025",
+      "source_passage_id": "P0-DISSOLVE-R00-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R00-m4",
+      "m": "4",
+      "role": 0,
+      "source_item_id": "M0-DISSOLVE-R00-m4",
+      "source_passage_id": "P0-DISSOLVE-R00-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R01-m025",
+      "m": "1/4",
+      "role": 1,
+      "source_item_id": "M0-DISSOLVE-R01-m025",
+      "source_passage_id": "P0-DISSOLVE-R01-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R01-m4",
+      "m": "4",
+      "role": 1,
+      "source_item_id": "M0-DISSOLVE-R01-m4",
+      "source_passage_id": "P0-DISSOLVE-R01-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R02-m025",
+      "m": "1/4",
+      "role": 2,
+      "source_item_id": "M0-DISSOLVE-R02-m025",
+      "source_passage_id": "P0-DISSOLVE-R02-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R02-m4",
+      "m": "4",
+      "role": 2,
+      "source_item_id": "M0-DISSOLVE-R02-m4",
+      "source_passage_id": "P0-DISSOLVE-R02-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R03-m025",
+      "m": "1/4",
+      "role": 3,
+      "source_item_id": "M0-DISSOLVE-R03-m025",
+      "source_passage_id": "P0-DISSOLVE-R03-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R03-m4",
+      "m": "4",
+      "role": 3,
+      "source_item_id": "M0-DISSOLVE-R03-m4",
+      "source_passage_id": "P0-DISSOLVE-R03-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R04-m025",
+      "m": "1/4",
+      "role": 4,
+      "source_item_id": "M0-DISSOLVE-R04-m025",
+      "source_passage_id": "P0-DISSOLVE-R04-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R04-m4",
+      "m": "4",
+      "role": 4,
+      "source_item_id": "M0-DISSOLVE-R04-m4",
+      "source_passage_id": "P0-DISSOLVE-R04-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R05-m025",
+      "m": "1/4",
+      "role": 5,
+      "source_item_id": "M0-DISSOLVE-R05-m025",
+      "source_passage_id": "P0-DISSOLVE-R05-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R05-m4",
+      "m": "4",
+      "role": 5,
+      "source_item_id": "M0-DISSOLVE-R05-m4",
+      "source_passage_id": "P0-DISSOLVE-R05-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R06-m025",
+      "m": "1/4",
+      "role": 6,
+      "source_item_id": "M0-DISSOLVE-R06-m025",
+      "source_passage_id": "P0-DISSOLVE-R06-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R06-m4",
+      "m": "4",
+      "role": 6,
+      "source_item_id": "M0-DISSOLVE-R06-m4",
+      "source_passage_id": "P0-DISSOLVE-R06-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R07-m025",
+      "m": "1/4",
+      "role": 7,
+      "source_item_id": "M0-DISSOLVE-R07-m025",
+      "source_passage_id": "P0-DISSOLVE-R07-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R07-m4",
+      "m": "4",
+      "role": 7,
+      "source_item_id": "M0-DISSOLVE-R07-m4",
+      "source_passage_id": "P0-DISSOLVE-R07-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R08-m025",
+      "m": "1/4",
+      "role": 8,
+      "source_item_id": "M0-DISSOLVE-R08-m025",
+      "source_passage_id": "P0-DISSOLVE-R08-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R08-m4",
+      "m": "4",
+      "role": 8,
+      "source_item_id": "M0-DISSOLVE-R08-m4",
+      "source_passage_id": "P0-DISSOLVE-R08-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R09-m025",
+      "m": "1/4",
+      "role": 9,
+      "source_item_id": "M0-DISSOLVE-R09-m025",
+      "source_passage_id": "P0-DISSOLVE-R09-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R09-m4",
+      "m": "4",
+      "role": 9,
+      "source_item_id": "M0-DISSOLVE-R09-m4",
+      "source_passage_id": "P0-DISSOLVE-R09-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R10-m025",
+      "m": "1/4",
+      "role": 10,
+      "source_item_id": "M0-DISSOLVE-R10-m025",
+      "source_passage_id": "P0-DISSOLVE-R10-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R10-m4",
+      "m": "4",
+      "role": 10,
+      "source_item_id": "M0-DISSOLVE-R10-m4",
+      "source_passage_id": "P0-DISSOLVE-R10-m4"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R11-m025",
+      "m": "1/4",
+      "role": 11,
+      "source_item_id": "M0-DISSOLVE-R11-m025",
+      "source_passage_id": "P0-DISSOLVE-R11-m025"
+    },
+    {
+      "family": "DISSOLVE",
+      "item_id": "F0-DISSOLVE-R11-m4",
+      "m": "4",
+      "role": 11,
+      "source_item_id": "M0-DISSOLVE-R11-m4",
+      "source_passage_id": "P0-DISSOLVE-R11-m4"
+    }
+  ],
+  "method": "reuse pinned 8N harmonic certificates; V=Rexit+Q lift(g1), verify Pi V=lift(g1) and (I-QPi)V=Rexit; new left occupation solve only",
+  "neutral_source_route_count": 14,
+  "non_neutral_source_route_count": 1008,
+  "operators": {
+    "Ares": "(I-Q)^-1",
+    "Mres": "(I-Q Pi_B)^-1",
+    "Q": "T_BB",
+    "Rexit": "T_BA G",
+    "U": "a_d Ares(I-Pi_B)",
+    "V": "Mres Rexit",
+    "W": "(I-Pi_B)V",
+    "defect": "Delta=U V=U W",
+    "identity": "Ares-Pi_B Mres=Ares(I-Pi_B)Mres"
+  },
+  "orientation": "row distributions; T row stochastic; C:ZxS, L:SxZ; Pi=C L; LC=I; Kpi=L T C",
+  "outputs": [
+    "route-null-factorization",
+    "null-mechanism-summary",
+    "timing-factorization",
+    "factor-validation"
+  ],
+  "parent_commit": "e650d71bda7203c8018d8bd134c5496a03d74a11",
+  "plan_hash": "42477b27c57169520249aef7274e3e35f4cb7c9202cf72505f99dd13d25c12fc",
+  "pre_freeze_exposure": {
+    "allowed": "neutral/synthetic algebra, combinatorial indexing, immutable hashes, published regressions",
+    "known": "all 8N route flags and passage results; explanatory/post-hoc as to null locations, not independent discovery",
+    "new_non_neutral_8O_factor_diagnostics": 0
+  },
+  "precision": "exact rational throughout; no new log statistic",
+  "prompt_id": "008O",
+  "ranks": "full rank(I-Pi)=|Z_B|-|S_B|; same for Ares(I-Pi); independently exact invariant-sector projection rank, invariant W column rank, U/source-target map ranks; do not conflate sector/full ranks",
+  "resources": {
+    "disk_budget_bytes": 1000000000,
+    "estimated_seconds": 730,
+    "fixtures": "test_v08o_plumbing.py: neutral and synthetic noncommuting rational chains only",
+    "historical_regressions": "published 8N source reconstruction and immutable neutral route certificates; no new non-neutral factor outputs",
+    "neutral_bytes": 45941,
+    "neutral_seconds": 0.2722841490030987,
+    "new_non_neutral_8O_factor_diagnostics": 0,
+    "numeric_threads": 1,
+    "timeout_seconds": 300,
+    "workers": 1
+  },
+  "reused_hashes": {
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R00-m025.json": "a703b665a9c8da03198c52de35d5bd82eb7d55acf7b5b2b3e502370359c09ae1",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R00-m4.json": "6074b0709d6c1032197a7846b9e140517f8a5455eea33fbdb469afd7f7290328",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R01-m025.json": "e198526851d344151d09c7ee2e08ec3f31e9e5a53f5c3edb35748e827bf6903a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R01-m4.json": "1d59c810a1ef823d88378eca20e32cb02fa069f8d705c9b3752ac7b71eac30db",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R02-m025.json": "8af0d988c64066ee02f6d2ec5d551e6ec76c1a6366a6fc36606a3d81f2019a8a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R02-m4.json": "a7c97d96aa2de8c790b366e594638c4d7b05197078732794b3b7ac7f65c5f4ac",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R03-m025.json": "922a0158a001d2a2b5fc983273fd136868a7a935aec60ad53a87baa1f7ed6072",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R03-m4.json": "10b29ae6f787938f11cd4c88da08c901d58c2de2a81aa86547aa5581925bc59b",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R04-m025.json": "8286bd57c2da1fde949471d7fba3690eb1dbdadca0fb85ed36d69c5ec878d028",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R04-m4.json": "d410ab06d3d0c56de82c2a58366679b40d389a9b9d26301017730c677b5f685f",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R05-m025.json": "ba52a4898827ca2262704cca7f3931d5113dffaec40b29d5f46419668d18b992",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R05-m4.json": "accfdaf735750c7c503fd00fd526a60cd8acaf4cb14c9dc2e5c6dd7b4ab2aed5",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R06-m025.json": "d81c119659a7dc4ff818d8bd0075b8eece6c76bd30c4591c0a65ca7c4fa13121",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R06-m4.json": "3a8b56fa27859889d19d5ba2b645ca33a16084b0e6020d29a612db73a9c5cc18",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R07-m025.json": "1fbec05897db24923afce5bc884bf766643621dc8ff046758a7ce9e352096a9b",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R07-m4.json": "c393db3259fb282c8d6e45b1eaa2efb896d1a1fbf7e73d75dce785f62f7c3f3d",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R08-m025.json": "7bad6acf4d21df5f0c02392bfab2527c1955c7ced4dc7f7f201049d1bfd57219",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R08-m4.json": "794f4fbd3b2b14d1075c57836c5246a0e09975bd1ec23c56da35e8dae0049fac",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R09-m025.json": "70d3afafefb404e781d48386cffe729135cac2df0de3aeb791eee494dd6741d6",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R09-m4.json": "386e9867c9607c33b0a258b4f232c90c57c3c1a81b4c86fac2fe9ba790eca5bc",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R10-m025.json": "81e934e8b786b9342352fec424e44ee11c9db39209e4899d814f8316a0bf7414",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R10-m4.json": "7c0707b5cdff5d1896d00260a0405504a00f32025aa2383746b4d2f28ff0c493",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R11-m025.json": "bf3eee7c73dd98c5bd4953341c681886ab33fc79ff0d68f80f996ac463bd9245",
+    "constraint-lab/reports/items/generation-008m-m0/M0-ANY-R11-m4.json": "9a77ea5aea583c4c61048db98256d7b9d486f8f4fdffa89fd7c9220011ddee6d",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R00-m025.json": "611cea2a3128825a48d8cd71b98adc4ec4b93b591e33e13da1a94e2529c4a4de",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R00-m4.json": "6ad9c52448454c9a4f91fc0c5cc80362e90de15558cf350854109489503c98e9",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R01-m025.json": "10b859d137cd8dba7e93394fe82cb0c1d2b73856b9e4b6488c9e7fc42ced426b",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R01-m4.json": "11879b1aa612909b1971194f88e228776efa734d65ac0ed1fd40e5cca018b569",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R02-m025.json": "05f651475d373319e55c8726e6a0e0ae77e1a38b24cae91b06041f9abf6103dd",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R02-m4.json": "23a3bb351c6b595e8eef3074e7555093ccd1bdf89f50584d66c04c52f48e2d8a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R03-m025.json": "408d0d57b54ad776d28756b140c5698de4b1b9b28a90600bcd8677de3b96f1aa",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R03-m4.json": "f33afbceb26deeabb1004729c004899e0d00d2283d8d6202c9a813a0a3858d7f",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R04-m025.json": "ade0cd19e3d5bd280f09ceb3536774ee7860b836fce47d38ea7b129a553e7941",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R04-m4.json": "11e2d843ca72f97b93c1b4fcc65bf9f3dbc1258249a485669beede0f3d2d8da7",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R05-m025.json": "113104290a1308e13dd03ab81d72b3e61b0adde7c166374c9dca1c9d9fc6f973",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R05-m4.json": "b6ec145cf439c9d75c36fa906f85f17ccbafb320a58109f7ab4a63a237c0a11d",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R06-m025.json": "bccbb0ff0ccacaf6b3e0baafec378720092577444aa621558a24227e9adfc9b4",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R06-m4.json": "49f8565423cfb887acfe01a953797e74279a42baa79eff326354783d78d2c109",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R07-m025.json": "d2b3ebc4e8f6616e071c55212f58f9db3cbc0d5770beaf143477f045a962ac62",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R07-m4.json": "8eef21e179020467c7def331629ff1d36c785f7808eb204178a23b49ec2ba9b3",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R08-m025.json": "eccaf5439cab8db187baaf4dd598ef3d37443bee0e5eca4ae00284e4dd7467fc",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R08-m4.json": "19e5262eec2459da4df8b8dc2f51e8057e24b5ebe0d92ac04ff544763e73c0d7",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R09-m025.json": "22a345eb207d3eb33f1ef3c06356ae02e6ed0d7e53abbd02c7f10a5625f5f7d7",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R09-m4.json": "d6f2ce360ce71d2faffe176026d3428ede0f4c91479391de81315f489ec634cc",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R10-m025.json": "a9b725cc43eccf6d5bed04a1620b3e93223fb56d128861dddf38a86778f23150",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R10-m4.json": "b962547e64d2058267e9cd332dd45514b7af0ab3f446205c884d8cf60f6ac578",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R11-m025.json": "31857b6edb917f3b7297b506770550a17bff4411feacf14c1543feb61defa96c",
+    "constraint-lab/reports/items/generation-008m-m0/M0-DISSOLVE-R11-m4.json": "ca3cb42ec9d9fe8a1e5e565c96ad61e5ca6f7508e3e4f20c567543edf3a51e7a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R00-m025.json": "0b67e94378b8a11dcdc34396df670635d3d926c6b44044760b0abe0ca96fd6c1",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R00-m4.json": "45a25702efdcf12e2b50ddc311fc385d1227a32b98daa655bf57fb29bf53007e",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R01-m025.json": "0fc00b5fb300b67ce15df6585e211a358338abfbedd297e6e62926755c978da5",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R01-m4.json": "204b0fd8d7a4620865ff841e189bb72c3e0592ea15101449d9e725e7072b49ce",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R02-m025.json": "ff89347ff512887f49d8931f55e7555484ab031780f265763d9c24f4d9ec01a9",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R02-m4.json": "e4817080bcb89d425d03037a47ff7d56e2e35f312188feb4c4a2ed6950d5c3a8",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R03-m025.json": "4dc76ab4735aeda67c28e90ed8bf6468edf81a311a7411346f537610951c54f7",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R03-m4.json": "8c8f72b8bd58bb143985b2fd8374602184af46c6a6b9198d52d165ef30eabe68",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R04-m025.json": "a1100408db41c343bcfbbe7a8e54c8355299075b7b40bf2af1bf7b717442e8b9",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R04-m4.json": "32f5160c559fde33e0fa4d499455a012623581965b6515eb24ee705d46036d06",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R05-m025.json": "196fd69c045ff80f109c5ac77c7c8b2f70bff09b40c063c6920a18fab49eb90e",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R05-m4.json": "a50414ef13693c353e33ea7e1f1ada5e618fb35b5a44072621b8b5825f2808d3",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R06-m025.json": "229c051a7c5ee5e8eb9f10cf1e697495780e7c016448e240172b9fb19c4aa898",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R06-m4.json": "ff2e95a87b4686879eedaeda32e8e43c32dc24d89143b5ae87d337856c113583",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R07-m025.json": "fad62bd181a7ff10879f061f641a8d490c3f575ecba5456c74b2dc08f0a2408a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R07-m4.json": "a99704d07c3e1bab806684a02f31937f58dafd857ab41d00764027684ad9ba0b",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R08-m025.json": "07759c6186b3bd709461b5e858f90d39beb9d26ad1d207f11b1a409d881779b5",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R08-m4.json": "df5eee6e7537ba376356787e4806b6a3efa320cbbcae51dce8a605afdd0e2a8a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R09-m025.json": "69909a4a63d88292b3d7888a5139ee70077f1ec0d3c2cbf15e616e38e87e387f",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R09-m4.json": "866dbdb763c46d0654402c1babbdd26e36c70290201eee8a1eba9550f388a255",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R10-m025.json": "f342f67e70f8dcd05c42f48af7be602955acc49c5bf1f988cf6108e89a2de019",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R10-m4.json": "3f91be3fa69853b8689db9a3592f25f37ed60458acac4406d54a18e8ac64cd6a",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R11-m025.json": "b3dc45fa34dca2ed31b03ad44fdde87d0b0a73c5f17bcb5035c515a19c755af9",
+    "constraint-lab/reports/items/generation-008m-m0/M0-FORM-R11-m4.json": "34709126b4c1ade2d795ae7a8f367134fa2b2fd125fac47f8c6eb5e4a8d43509",
+    "constraint-lab/reports/items/generation-008m-m0/M0-NEUTRAL.json": "4294deed7ce081ba4ec4735f8912a3e606c155dbfd862500935268ee6b05c1b9",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R00-m025.json": "6607bf22cf236532180245b5aa26c634081b64576111ec27c30b67b9735c67bb",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R00-m4.json": "f96504dc1ad6b4f39a64f4ef7545187c5c710fa00426688b54462f24715c9248",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R01-m025.json": "9a7b8f0f5c4680cd9f5c8d16728b4b50a32d370243945591b8909f87d991fb77",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R01-m4.json": "0691a13ac433294684ec564b574f154b3d8ff71dce688fee62c1cd42fa5869f8",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R02-m025.json": "d1677ea624ef9b8d2b87b822708c71d056e8958643fc7b71d1deca30874ac3c9",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R02-m4.json": "e5cda5a8965b594643611142f00c722692a0deddb75507b12fc979ff523886a4",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R03-m025.json": "b798ec1768111ee6c424f7eaf86c2feb0ac44c4c4ec83e2f27aaa2f53313b406",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R03-m4.json": "2ddcfdf50353cfaf32d0fd49371a750f35e4b88ec468d2e12b55a2d34d13ee45",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R04-m025.json": "acd5bc69a5f0cf82ca2c0d15f5b715511a586a9691bdb8ce83b1cf957bcf54a0",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R04-m4.json": "13ec5e5f3db3f6422b3f8652e2cfc46965647c14037b6503f192a414465cb6dd",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R05-m025.json": "f26017ef565daf2a8c066e76cdceb95eb822b647d07fbc2e7ab8a8c91ec7b558",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R05-m4.json": "aa9fc0cc6064f912188b49bd667c6311d8de8758c4a33f2167eb137208312968",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R06-m025.json": "99ae60fe37c387e5e59bbbb2fb86df208106ee4318e7c17876322aed7242c57b",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R06-m4.json": "54b5cf90d58e947214fae2fcdb73858953c0eb1de25c5ea146519b5374a982c3",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R07-m025.json": "7820b8c5fb2b739b315931cccbc38afc8af185d78def48d7e824118fe54c6099",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R07-m4.json": "fe252f515df1b5818b35557a58e933a0b4f77ab07ef0b87d334926e2dc24a88f",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R08-m025.json": "3db6653d1b2c002609f21f47765a37f7765147c47a72c4ac1ae6439fbd9fa028",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R08-m4.json": "b64e1f2d358f7ab63cf26f2cd169147d4ad667668aa329dff0f6c04383e2a754",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R09-m025.json": "644020c815ea2da345a41df3d32b792c1204a2d201b2833722c9f89352534120",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R09-m4.json": "018c38168b0df945b96714ba81d433b39051c231420c6e2d18cbf42f5434a1da",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R10-m025.json": "81fadd0196d14865db7dad20fd1b9f8ab983c3c3af1cf41be7171b62df6b8e14",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R10-m4.json": "5255adc547236a7caedbfa89fdaaa72249b46807e990e7bed1f4f9f25072fc84",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R11-m025.json": "9aa12ac0a302fbcf2730672807a71a6abd12a7de6245017c8d9fd5cac0ca33e9",
+    "constraint-lab/reports/items/generation-008n-p0/P0-ANY-R11-m4.json": "df3ab7c35a1de416971a884f8a7f795f9620e5df4044caa6f707ca563dc4b039",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R00-m025.json": "b74c846e8e476e39ba26244f7b66e8696b6ec20bf35a8c926980b02a8e344310",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R00-m4.json": "432632d53070388ed556a4b0887c1c5cac2674bb736f8bd0661461c5ce36dd33",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R01-m025.json": "d1695b1ed5a8026410eb3fa80aef4501b8a1015d684c8ec663d18e84ba7d34ab",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R01-m4.json": "162df0dcc81ed788e040bd0ae25599c52815efba37fdd3e54474a533918bbabd",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R02-m025.json": "31944ee35cbf85ab297e5f30192aef7588c3ca1acdf7c24b2e84aadfcdabbe60",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R02-m4.json": "b16f3bf052990b443c56a8ebbe4ecc7858dfdcea2c0c4d9e0631215d308e4f85",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R03-m025.json": "390f02d76824f15c7aa4ede4d380fb289bea647216fbc27ec616498fbfbec016",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R03-m4.json": "202eef1c847950e62b7ab35ce9c94d73e725452eb328ac283a150489490eec40",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R04-m025.json": "e0137f4059853c095e72dfc8f89f39f518cc8156b1c7d99b3e7668eebdd70e26",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R04-m4.json": "d2869a7a498182e9d49a45142d5fa41b08b383e3bda51b121864b3db980d17ac",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R05-m025.json": "394bcf0eb0a914f69878f79bafc53dd653d9ade83c3bc4f8c836737f850d2ba2",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R05-m4.json": "a2e8594f87aa8f98cac35f1b845f49f13fc5c6101a7dbbe839003d39cc565d3d",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R06-m025.json": "40a098f46c1f393170d1b1c54044d429e6f276f35387e2fb09a0ef71bb703d23",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R06-m4.json": "ceaebfb4bfb10487578944b284672e1c992dfc6cd757dcdc1ac934c9593269c4",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R07-m025.json": "ea9fe6dbe4c8000501cd1b72b1f26367559795e508e16679e31b334f26122323",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R07-m4.json": "0931c06f6e0c0245934a01a65e068886a809edb45d60449a4b2356d10374c7ec",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R08-m025.json": "d14e04f68c1e0c837d78579fbce9fd7362c88014f675da440d122f2e0c7c525b",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R08-m4.json": "c5f8ee56f16e2180a0eaaf97e3aca8bc0ed488f98f1f08c659321b6f50a2d580",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R09-m025.json": "876321e2ba4a86516814870431c9b5399c970577081f9e68982fb7f6a3e4dd93",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R09-m4.json": "e50af2e67887bf8b42c6aca42b73f889dae0b5acde112045a2cdddb3db9fce26",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R10-m025.json": "b4dc48b18a25417fcaf565d4d3f4ca5276e674d94e24335223aab9e7b3dd9f36",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R10-m4.json": "5ab361dc3b99b83aafca354f3260efa4173e2fda20e347d4b1f2c03c9d285aac",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R11-m025.json": "59ce180a739dfe07aca133f5f2835b79a033ab37dd8b2243bb15e9ad63ece592",
+    "constraint-lab/reports/items/generation-008n-p0/P0-DISSOLVE-R11-m4.json": "a08d45fcf3f0277d385e99a032914498c7d5c4530331698dfb94c0ea7c22e353",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R00-m025.json": "7453d9d952e0c606b0fe6042f50a9593f788ade487ab7ac093959bd357f10563",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R00-m4.json": "53ab5f9a2a684212014c85ad234e61122ec6265200c0116bb8d5faa5b5335db8",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R01-m025.json": "e97e5ef8c2026e848bc5e4c3beb87cdd029d6539c22c019f8ffa72aa6c5f7e25",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R01-m4.json": "44683e393b11ce7acc21849c6557f5e0059972e59be8208770e1ce4554852fde",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R02-m025.json": "d6ec1125f753431a4ad62ad1e7b483b3463748b0a95818bbae80db8f4b29c0a8",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R02-m4.json": "98607f50a7a2afe764d44b9bbe80feacd9767059e09d816452bba51ea00ac0eb",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R03-m025.json": "316cc64b3be377afca2f92c13e4989ffc926e3538a8e1d00c0fe980882b42bb5",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R03-m4.json": "936b763c949aedb25af40b1d0f942b787e1a836ce6d910bc73f419a509b45b38",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R04-m025.json": "5084d90d7946825b4ba9356e30b65a13dd4a9a059eb7407b23d526305a4d3e06",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R04-m4.json": "cd87c13bfc671b2840684d7c0462bc988ea9d40e2d4402c3d4e3375b5d5f9a8c",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R05-m025.json": "919f7ba5860cf38c5c3daa4c7e2d473760316635541023e44d3e3b3c2dea7912",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R05-m4.json": "6afa634d42fe06e533cc003a5e7fd6f850cf080ae82efaa30afab5c115aa72cc",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R06-m025.json": "a1bf743b3f10a7dc98be625fb644923bb2f3a8e7c8df6b429d2feb76e81183fe",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R06-m4.json": "015d96b8529fb7d896b1797384e716152c3ba3d93e5cd3ec22be6ff51c2ba7d8",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R07-m025.json": "ba1838dc64a224c6791878687a44769a3b5dbf4a33c6fb2e5fb12b0e92e54122",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R07-m4.json": "3aa65b575ec76607ddd0a4dbe41eb439ce524b3351aad0c9c11e2e42b2cf8cec",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R08-m025.json": "79e8fec614376c3f632671bd170cbf1bfb5f9842f57e9c032430decc0c6d2f0e",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R08-m4.json": "62e22f0b9af2c12adcf3a77559790824c2c8f2de83de4fd2029cad84958417d2",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R09-m025.json": "e4a03d877a017f50fb221089a290612d85e898ccd40e60ee25f3a91094eee642",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R09-m4.json": "8bc57cc88f99959968354e7e0d5b45571c03b550b643b3408f90681a7353f57a",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R10-m025.json": "78877ad09fe9e73237954c823fc4368e82fec15c5c949a6f2ec7b4f0a947bfb8",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R10-m4.json": "816de9eaf3412db6ff8f423e7dd9a7ed621a085134432acf1ab44ee7908c2412",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R11-m025.json": "6b94df3b97cbac7c34269c81a6171d9128215316fbda05676d0b289c700300cb",
+    "constraint-lab/reports/items/generation-008n-p0/P0-FORM-R11-m4.json": "45852a1851e7f584e6b170a1cc1d21f9d383997c7be58d4562c49ea9df493281",
+    "constraint-lab/reports/items/generation-008n-p0/P0-NEUTRAL.json": "82a892bb1cc14ad625a930554f020361a6a485648fa9d5d6c7217733d8536d89",
+    "constraint-lab/reports/tables/generation-008n-classifications.json": "f9902ce0bd15fe879abe707f15a8eb5f85dfb4e58c5e07aa87d465f444cb95d5",
+    "constraint-lab/reports/tables/generation-008n-committor.json": "4ad2ea29235c00a2b8c009c3d37e8008c674e92db639ae1b330f592f6dca5e73",
+    "constraint-lab/reports/tables/generation-008n-mfpt.json": "404cd99caccb6bc70c26473672ef4e339cf780fa4f385f2734e10e3805eac473",
+    "constraint-lab/reports/tables/generation-008n-overview.json": "c8b172800afb931838435dffe430108feeb212b873de4709f4f670ea341e71bc",
+    "constraint-lab/reports/tables/generation-008n-return-kernels.json": "87f58949c9b8218828cb22ffc850b13c8bbafcbe29ba8f1744be427a073cd4de",
+    "constraint-lab/reports/tables/generation-008n-return-lengths.json": "7909e0c2feef8d0ee1ea7824c0e3a76545b7d83ba0e14db4ba15c4fd08c0ae2b",
+    "constraint-lab/reports/tables/generation-008n-summary.json": "e57d6910a0b944b4eee2fae5043b3d7d71668fea87db92f3479f79a599c21a7e",
+    "constraint-lab/reports/tables/generation-008n-timing-marginals.json": "79992b063a29220cbe064e0b4faa117180e15cfc5663f22f3a453a22cb748c54",
+    "constraint-lab/reports/tables/generation-008n-validation.json": "4753b3a320edcd4439d3c193357ceed78b80cbce80bcce9e0b42334a8e3720e5"
+  },
+  "round_id": "F0",
+  "source": "stationary conditional on current material class; a_d=mu1 L_A T_AB^d; route-joint (not route-conditioned) rows",
+  "source_hashes": {
+    "constraint-lab/src/rs_constraint_lab/durable.py": "3b5c705847c7b2a15b9e66a74d34fa1c2a333abf2cc5cf6fb15f0c79f9e1ae41",
+    "constraint-lab/src/rs_constraint_lab/exact.py": "ec8976dc3f10dac6842bccce0669382deb85fb2d1c16082ad30cf19a7e18efb1",
+    "constraint-lab/src/rs_constraint_lab/explore08.py": "457a993ba7cfc0b66c9805d700871dc39abda474d1d7650cd23dbe148343a5ec",
+    "constraint-lab/src/rs_constraint_lab/gen008m_exec.py": "831b0e862a87dbc5306053db1ce1a966b453ba5cde94d94514fc4bce67939717",
+    "constraint-lab/src/rs_constraint_lab/gen008m_symmetry.py": "3281b40bc6b4d7a2e386c76fc4da174ecacb2ef861c2bce9cf6919c7b95b2f5a",
+    "constraint-lab/src/rs_constraint_lab/gen008n_exec.py": "559fc84f8f93f2dfca874af1d8858450a7cb5dd31b238169c848f03b2aec98a5",
+    "constraint-lab/src/rs_constraint_lab/gen008o_exec.py": "50c00f8c66868e9e1823415bc0fdf8d14981ebd9da507949f4bf8c1d9ac03181",
+    "constraint-lab/src/rs_constraint_lab/graphs.py": "78381488bacebc1a8b2719a3fb9b342811af724950d75a1f463784aee0f5a287",
+    "constraint-lab/src/rs_constraint_lab/h2_passage.py": "aef9da4efe8cec59e73de4b07146c93771bf554a5b2955587c2a2d729afdefec",
+    "constraint-lab/src/rs_constraint_lab/h2_roles.py": "f737a7d664ff5264c87899841007ac424ca6067eb68e1da7d93c146770de27ef",
+    "constraint-lab/src/rs_constraint_lab/history.py": "ffe2b960828b6c1143cb20d1dd5d2df18533f52de1346cc7e9936f3285444048",
+    "constraint-lab/src/rs_constraint_lab/state.py": "a5132429fa8697b5b3f98d985516356d9e997b32ca90b05c19a96e7fc726108c",
+    "constraint-lab/src/rs_constraint_lab/stopping_factorization.py": "a1479f57c1e981e24be0823f3119c3f687906c21ed8e87ec0de4517a0aac53a2"
+  },
+  "stopping": "A=count k, k=2,3,4; B complement; independent route blocks B_UP=count>k / B_DOWN=count<k; complete side domain",
+  "symmetries": "all FORM/DISSOLVE complement partners; opposite-pair all families/roles/grades, R05<->R06; transform kernel/reset, route and target alphabets, all factors; test null contribution anti-pairing only under source/route/target-preserving explicit self maps",
+  "taxonomy": {
+    "ACTIVE": "UV!=0",
+    "N0_UPSTREAM_ANNIHILATION": "U=0",
+    "N1_TARGET_INSENSITIVITY": "U!=0,W=0 on complete route side",
+    "N2_BILINEAR_ORTHOGONALITY": "U!=0,W!=0,UV=0",
+    "refinements": [
+      "orbitwise zero",
+      "fibrewise cancellation",
+      "signed bilinear cancellation",
+      "explicit involution pairing if exactly certified"
+    ]
+  },
+  "validation": "Dixon plus independent fflu EVERY new solve; exact equations lifted to all original sparse states; reproduce published route/F4 rows; toy full-matrix resolvent identity",
+  "zero_criterion": "exact rational zero"
+}
