@@ -1,0 +1,130 @@
+{
+  "before_hashes": {
+    "/tmp/rs-synthesis-current/research-synthesis/sources/manifest.json": "49e4c885c16aee6ddac27fd8e7df9265b02fd8470f7646fae40f4873d3048d51",
+    "/tmp/rs-synthesis-current/research-synthesis/sources/pin-spec.json": "06e206109030389e228aba3daf7d94b5080a04d96fcc9af0255b7ed7ba1104cd"
+  },
+  "canonical_pins_unchanged": true,
+  "check": {
+    "errors": [],
+    "info": {
+      "continuation_candidates": [],
+      "counts": {
+        "connections": 12,
+        "metaphors": 6,
+        "proposals": 54,
+        "source_nodes": 487
+      },
+      "historical_private_checks": {
+        "archives": {
+          "RS_Work_Research.zip": "inaccessible",
+          "RS_Work_Round46_Supplement.zip": "inaccessible"
+        },
+        "note": "checks needing the private archives are not run without them and are never reported as passed",
+        "requires_private_input": 2
+      },
+      "open_round_trips": [
+        "RT-0004"
+      ],
+      "staleness": [
+        {
+          "head": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+          "source": "CL",
+          "state": "current"
+        },
+        {
+          "head": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+          "source": "GT",
+          "state": "current"
+        },
+        {
+          "head": "22e252e560cc711d337b6ae506b0fb76728247d6",
+          "source": "CL-8G",
+          "state": "current"
+        },
+        {
+          "head": "aa06213ce42e5166ae2a0d21846a2a7c218f6b50",
+          "source": "SC",
+          "state": "current"
+        },
+        {
+          "basis": "versioned_method_artifacts_unchanged; pin not advanced",
+          "head": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+          "source": "OTR",
+          "state": "current"
+        }
+      ]
+    },
+    "ok": true,
+    "warnings": [
+      "X::0001: reviewed against CL@e650d71, current pin 08d7017; needs re-review",
+      "X::0002: reviewed against CL@e650d71, current pin 08d7017; needs re-review",
+      "X::0003: reviewed against CL@e650d71, current pin 08d7017; needs re-review",
+      "X::0004: reviewed against CL@e650d71, current pin 08d7017; needs re-review",
+      "X::0005: reviewed against CL@e650d71, current pin 08d7017; needs re-review",
+      "X::0006: reviewed against CL@e650d71, current pin 08d7017; needs re-review",
+      "X::0007: reviewed against CL@e650d71, current pin 08d7017; needs re-review",
+      "X::0008: reviewed against CL@e650d71, current pin 08d7017; needs re-review",
+      "X::0009: reviewed against CL@e650d71, current pin 08d7017; needs re-review",
+      "X::0010: reviewed against CL@e650d71, current pin 08d7017; needs re-review",
+      "X::0011: reviewed against CL@e650d71, current pin 08d7017; needs re-review",
+      "X::0012: reviewed against CL@e650d71, current pin 08d7017; needs re-review"
+    ]
+  },
+  "generated_twice_byte_identical": true,
+  "human_pin_review": "pending",
+  "source_pins": {
+    "CL": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+    "CL-8G": "22e252e560cc711d337b6ae506b0fb76728247d6",
+    "EXT-SYNTH-20261015": null,
+    "GT": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+    "HIST": null,
+    "OTR": "05b15b0d903d46070b99ac84f9cab1bd898046ba",
+    "SC": "aa06213ce42e5166ae2a0d21846a2a7c218f6b50"
+  },
+  "status": "VALIDATED_HYPOTHETICAL_NOT_ADOPTED",
+  "view_sha256": {
+    "candidate-bridges.md": "fcd211fb71b8eecdaf937ba0c2b83d307b04284c333e983e060938c754eabf95",
+    "chronology.md": "1a0e451356c8675e2d056067cf50613017912895527d958d1da152a6b2580c55",
+    "contradictions.md": "c295a276119b11275a5e09fd22422124d87e60798e3fab28152c69a6a18f436d",
+    "graph.json": "7fd54c918d636237025d2de29c96b62354904c24cb10e98d8cc83b48b95dde3a",
+    "historical-coverage.md": "505b92031dc715a9747bb5bb96d7d4ab6534b3a5753c27551ac031c91b24bbe9",
+    "index.md": "617ce6ce343b34f3e12a602f4fcd27ad6ad5e75205041acd939a10e2d54681d8",
+    "links.md": "5c1929b81820bc799421b5e376e89e6b4786258d0e0f83395f92d94eb20aaa67",
+    "links.mmd": "1a3ccd0bf49ec94f8d78402cec890756271c610b1e4a81cfbf3a19c1da5eb1cd",
+    "metaphor-coverage.md": "c239031dd4e763fe3146782ae30a0db7939fe24c3a9783790c79cc89bd09157e",
+    "metaphor-gaps.md": "d2de1b3b28a2119e3a7e8879d83e4ba781979ed2494e518992566aabd8a7b4dd",
+    "metaphor-links.mmd": "194956022caa6b002c978b6a31b35258bc19f07dd909222ed15851a563ea8083",
+    "metaphor-overlap.md": "37279a2cef0d12439d1a7df9d9fb2acc1769b0978a9156a34cc4c98895097d2f",
+    "nulls.md": "31db0f375c735d34d9b34297245dd3481a9526379aaf7a7c0df91e5903d302c3",
+    "provenance.md": "63fef50c488dc510803bde6df76b09c2bc6f213305aa1a5d7b2767fd66e3e460",
+    "provenance.mmd": "598fa9ac08d7142b877349923d6d9c01978d1090b5ec5bb2c9da17a5c30f7049",
+    "questions.md": "9d043300b1a33765833ef43dc9b2208dca5ef145792162b438791c7c883fee9c",
+    "round-trips.md": "123509a44de38d73451788c28f6f90542b22b489c0b116e486b84313c8f81013",
+    "themes/admissibility-vs-weighting.md": "7820bca179df4b2d2ada19108fbb91d88ec80941574b8f78e08847993d4b279a",
+    "themes/admissibility-vs-weighting.mmd": "00fd1d22ec70da2977d07ec3b95ef69de6f85cc3c91527baab05f2c23a03dcc9",
+    "themes/clock-readout-dependence.md": "0363787d7d03ba8d60bc1fa0a4784cb85e87b350b9a23ad733e6e5c5602577f7",
+    "themes/clock-readout-dependence.mmd": "b7d155898a8a7494b5de8da79f210ec73c6434b5fdf1d5fca7abf92f0a85786c",
+    "themes/higher-order-context.md": "753c8d36855a85e308ca504c31d22112ff53a1eaf5b27ab8c14add23f690dbc1",
+    "themes/higher-order-context.mmd": "876e5c1bdae976eb3d17e776551f06220ad162b989219d79ff01a9d1dc7b1d1c",
+    "themes/history-as-predictive-variable.md": "00551e84000e4c3ce8bb7e2237c80294591b1acb64d3b9849749a6db43c5b160",
+    "themes/history-as-predictive-variable.mmd": "95fb2d8e044932a39cc40f62f586783f54aaef5c9ad39f402d957f542e16d141",
+    "themes/matched-control-design.md": "b2a3e0ab8cf8e8eee3ad8179e62eae91196f1cdb825c82e0faae2a0d62930d82",
+    "themes/matched-control-design.mmd": "57878ced2f4fab3138752cac88dbbd79859d07e3e3fe909c586d549062d9b806",
+    "themes/occupancy-vs-process.md": "c4fcefa7b6452059be8de31738570613fdc762ebc3235a802f921d58f5afe45b",
+    "themes/occupancy-vs-process.mmd": "1cab59441a3a624c58af02c2f27a37f83fe4e078a1f6ca1d341c495199ce5d54",
+    "themes/passage-and-persistence.md": "2a0fb9672f603a2457d9fb17ba15c647ece88c2db5167a2596d31cb51194f022",
+    "themes/passage-and-persistence.mmd": "e04105d51463938560a40f4b11b5cb31697cdcdbf680e9c2d2db6f0c5828e0a6",
+    "themes/physical-attraction.md": "89f556fcb94e2b0085627f8ff0693061c27d860df36e9795ba17f2edee1188ad",
+    "themes/physical-attraction.mmd": "9c3db950a245f267d07fca15ec93e4a1685047be2ea8821c81885d665a592924",
+    "themes/predictive-sufficiency.md": "fbfeff9fd5a934a133fda9a685a7ee005810a2db01bba9d0f0564b789b9fbd0f",
+    "themes/predictive-sufficiency.mmd": "64c40703049fb627866ba22cafafb06c7185b0444222098682ceb6b6a96335e5",
+    "themes/retention-vs-current-dependence.md": "311a4522965d1ddb787d28af46153656e9860baeb420d482df6714daa69c0080",
+    "themes/retention-vs-current-dependence.mmd": "0cc0e5ae1f1a8aa6a1ab7006aebb506b89b4a37c251f0485ccbc71328ad70d8c",
+    "themes/reversibility-and-arrow.md": "5bbc7bee36848b59ee8feccfb286ced9a72b61fb4fc39297e6c24b2bad10b24d",
+    "themes/reversibility-and-arrow.mmd": "737b79baa91c3358cb1ff188c8b5fba83125277f619493b8202b8eb23e297fe9",
+    "themes/selection-vs-persistence.md": "270cd150bfe9b7206e8c5b9d3dd9359d350dfe78cef3ddd7a9fcf7015bbf8193",
+    "themes/selection-vs-persistence.mmd": "18ac10c181804e9a429c5067066d4e771e49825c3f766e874003fbb93a19902f",
+    "themes/shared-lineage.md": "114ba2572c3e77adf727008e7660f5fda3babd420da19d3554524c4f471f7cc4",
+    "themes/shared-lineage.mmd": "0fcb9e556e0c59d635603561d50ef7285979074bd44c30bd7b8bae3bed644b47"
+  }
+}

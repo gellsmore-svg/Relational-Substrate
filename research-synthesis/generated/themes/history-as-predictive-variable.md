@@ -20,7 +20,7 @@
 
 ## Questions
 
-- XQ::04 (open): Can identity through replacement be defined as a trajectory observable that never engages a history axis, and does it distinguish GT's flexible organisations from flicker?
+- XQ::04 (partially_answered): Can identity through replacement be defined as a trajectory observable that never engages a history axis, and does it distinguish GT's flexible organisations from flicker?
 
 ## Metaphors (non-evidentiary)
 

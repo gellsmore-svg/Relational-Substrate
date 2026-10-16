@@ -23,7 +23,7 @@ git worktree add --detach ../rs-hub-$HUB $HUB
 
 Record in the round's plan (before freezing): the hub commit consulted and which hub records informed the question. That keeps the influence auditable and stops a later hub change from silently re-motivating a frozen round.
 
-Until the synthesis PR is merged, use the head of `infra/shared-research-coherence-v1` at a recorded commit.
+The original hub PR is merged. Use current main, or the explicitly selected active hub PR commit, at a recorded immutable SHA. Do not keep following the historical infrastructure branch.
 
 ## Proposing back to the hub (after a round closes)
 
@@ -35,3 +35,5 @@ Until the synthesis PR is merged, use the head of `infra/shared-research-coheren
 ## Staleness
 
 `synth audit` / `synth check` report a programme head that moved past its pin as `behind_branch_head` (or `diverged_from_branch`). That is a notification, not an action: the pin moves only through the reviewed cycle. A rewritten upstream row (a finding changed in place) marks every hub connection citing it for re-review.
+
+The audit also discovers descendant candidate continuations under the programme's branch namespace. This catches CL generations opening a new branch while the old branch still equals its pin. Unknown heads are not certified closed or reviewed. The authoritative source branch moves only with a hash-anchored metadata proposal under the adoption rules: AD-0006 for clean descending milestones, named-human review for any warning. See [synchronisation](synchronisation.md).

@@ -8,6 +8,21 @@ The round trip **never** gives scientific review of a CL/GT generation, and **ne
 
 Audit note: RT-0001 was opened retrospectively at the moment the implicit-acceptance rule was introduced and ratified in the same session (AD-0002). Its 15 items had been shown to the author only in prose (reports/2026-10-15-initial-federation.md, the PR #8 description and the generated links and metaphor views), not as a structured list before the instruction that ratified them. AD-0002 stands and is not rewritten; it accepted synthesis interpretations at their reported categories only. It is not scientific review of CL 008N or GT-P009 and not publication consent. RT-0002 listed no items.
 
+## RT-0005
+
+- Closed: 2026-10-16; report `research-synthesis/reports/2026-10-16-cl8p-gtp012-synchronisation.md`; describes commit `8ceaa64`.
+- State: **OPEN: the author's next instruction ratifies the items below unless the author objects**.
+- Note: Three qualified agent-reviewed relationships, represented by six connection/proposal records. CL pin warning review remains separate and pending; no ratification, scientific review or private publication is supplied by this instruction.
+
+| Item | Kind | Type | Decision category | Rests on unreviewed round | Scope | Qualification |
+| --- | --- | --- | --- | --- | --- | --- |
+| `X::0010` | connection | explicit_contrast | qualified | YES | GT FREE N=5,6 PCOMP vertex predicates; CL 8N non-neutral H2 systems | Qualified family-specific contrast: PCOMP pooled lifetime excess collapses against NK, while CL sibling MFPT residuals survive adjacent-H1 matching. GT within-entry-class durability persists against NK and NL, so this is not a claim that PCOMP has no consequence. Different tasks, clocks and shared i |
+| `X::0011` | connection | epistemic_compatibility | qualified | YES | Post-event functionals in both programmes | Qualified methodological compatibility, not equal source laws: CL intentionally starts at stationary class-conditioned sources; GT post-renewal survival uses the actual first-hit law. GT's source warning does not invalidate CL's distinct task. Any two-stage transfer must retain its own source law, r |
+| `X::0012` | connection | requires_scope_alignment | qualified | YES | GT P012 T16-T19 local/remote count generator versus CL 8N stationary-adjacent H1 comparator; method and typed coarse construction only. | Qualified stationary-flow construction correspondence only: GT NL preserves ordered local/remote coarse flux and circulation within its exchangeable support-preserving class; CL Kpi averages h2 under a stationary conditional. Fine reset operations, support, clocks and source tasks differ. PATHF coll |
+| `P::GT-C2` | proposal | explicit_contrast | qualified | YES | GT FREE N=5,6 PCOMP vertex predicates; CL 8N non-neutral H2 systems | Qualified family-specific contrast: PCOMP pooled lifetime excess collapses against NK, while CL sibling MFPT residuals survive adjacent-H1 matching. GT within-entry-class durability persists against NK and NL, so this is not a claim that PCOMP has no consequence. Different tasks, clocks and shared i |
+| `P::GT-C3` | proposal | epistemic_compatibility | qualified | YES | Post-event functionals in both programmes | Qualified methodological compatibility, not equal source laws: CL intentionally starts at stationary class-conditioned sources; GT post-renewal survival uses the actual first-hit law. GT's source warning does not invalidate CL's distinct task. Any two-stage transfer must retain its own source law, r |
+| `P::GT-C4` | proposal | requires_scope_alignment | qualified | YES | GT P012 T16-T19 local/remote count generator versus CL 8N stationary-adjacent H1 comparator; method and typed coarse construction only. | Qualified stationary-flow construction correspondence only: GT NL preserves ordered local/remote coarse flux and circulation within its exchangeable support-preserving class; CL Kpi averages h2 under a stationary conditional. Fine reset operations, support, clocks and source tasks differ. PATHF coll |
+
 ## RT-0004
 
 - Closed: 2026-10-16; report `research-synthesis/reports/2026-10-16-gt-p012-milestone-adopted.md`; describes commit `0ff1d73280f3`.
@@ -38,21 +53,21 @@ No recommendations were open at this round's close.
 - State: ratified by AD-0002 (15 accepted, objections: none).
 - Note: Retrospective: the round trip that ended with the AD-0001 report (PR #8 at 0dbc9d2). Opened when the implicit-acceptance rule was introduced; lists what was then agent-reviewed and reported as awaiting the author.
 
-| Item | Kind | Type | Decision category | Rests on unreviewed round | Scope |
-| --- | --- | --- | --- | --- | --- |
-| `X::0001` | connection | — | qualified | not recorded | not recorded |
-| `X::0002` | connection | — | qualified | not recorded | not recorded |
-| `X::0003` | connection | — | accepted_bounded | not recorded | not recorded |
-| `X::0004` | connection | — | accepted_bounded | not recorded | not recorded |
-| `X::0005` | connection | — | accepted_bounded | not recorded | not recorded |
-| `X::0006` | connection | — | qualified | not recorded | not recorded |
-| `X::0007` | connection | — | qualified | not recorded | not recorded |
-| `X::0008` | connection | — | qualified | not recorded | not recorded |
-| `X::0009` | connection | — | qualified | not recorded | not recorded |
-| `M::two-towns` | metaphor | — | — | not recorded | not recorded |
-| `M::photo-and-diary` | metaphor | — | — | not recorded | not recorded |
-| `M::minutes-and-moves` | metaphor | — | — | not recorded | not recorded |
-| `M::heavy-door-locked-door` | metaphor | — | — | not recorded | not recorded |
-| `M::rotating-committee` | metaphor | — | — | not recorded | not recorded |
-| `M::tallest-in-the-room` | metaphor | — | — | not recorded | not recorded |
+| Item | Kind | Type | Decision category | Rests on unreviewed round | Scope | Qualification |
+| --- | --- | --- | --- | --- | --- | --- |
+| `X::0001` | connection | — | qualified | not recorded | not recorded | not recorded |
+| `X::0002` | connection | — | qualified | not recorded | not recorded | not recorded |
+| `X::0003` | connection | — | accepted_bounded | not recorded | not recorded | not recorded |
+| `X::0004` | connection | — | accepted_bounded | not recorded | not recorded | not recorded |
+| `X::0005` | connection | — | accepted_bounded | not recorded | not recorded | not recorded |
+| `X::0006` | connection | — | qualified | not recorded | not recorded | not recorded |
+| `X::0007` | connection | — | qualified | not recorded | not recorded | not recorded |
+| `X::0008` | connection | — | qualified | not recorded | not recorded | not recorded |
+| `X::0009` | connection | — | qualified | not recorded | not recorded | not recorded |
+| `M::two-towns` | metaphor | — | — | not recorded | not recorded | not recorded |
+| `M::photo-and-diary` | metaphor | — | — | not recorded | not recorded | not recorded |
+| `M::minutes-and-moves` | metaphor | — | — | not recorded | not recorded | not recorded |
+| `M::heavy-door-locked-door` | metaphor | — | — | not recorded | not recorded | not recorded |
+| `M::rotating-committee` | metaphor | — | — | not recorded | not recorded | not recorded |
+| `M::tallest-in-the-room` | metaphor | — | — | not recorded | not recorded | not recorded |
 

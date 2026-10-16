@@ -1,0 +1,664 @@
+{
+  "schema": "rssynth.synchronisation-audit/v1",
+  "date": "2026-10-16",
+  "authored_main": "38c2501bbab22ca1eb2288ea76a962ac0170d5e6",
+  "initial_pr9_head": "42a474a2164d38d6fb00051a3fe583f4862cd556",
+  "prepared_before_concurrent_merge": "22012c9c24f98fa8e0b2bc5fbb1e189207f29e55",
+  "actual_base": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+  "pr9_state": "merged; successor branch required; no work overwritten",
+  "baseline": {
+    "initial_tests": 97,
+    "prepared_tests": 108,
+    "actual_main_tests": 100,
+    "actual_main_check": "ok; 0 errors; GT stale-review and method-head warnings retained"
+  },
+  "selected": {
+    "CL": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+    "GT": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218"
+  },
+  "adoption": {
+    "CL": "pending named-human warning review: one documented status-only rewrite",
+    "GT": "already adopted by merged PR9 under AD-0006; not re-adopted"
+  },
+  "scientific_reviews": {
+    "CL_8N": "external review supplied in 8O",
+    "CL_8O_8P": "pending",
+    "GT_P009_to_P012": "pending"
+  },
+  "boundaries": [
+    "No programme/book/SC scientific edits or experiments",
+    "No private archive access or publication",
+    "No new human decision or current-round ratification",
+    "OTR version unchanged"
+  ],
+  "artifacts": [
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/README.md",
+      "git_blob": "78c3d079a1615e013df0564c67f9ce96d2e23d70",
+      "bytes": 6248,
+      "sha256": "1dc6f1e35461c1d2593359cd9a4af2e41cc7a8987c7363b269dd35a662d7e974"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/docs/architecture.md",
+      "git_blob": "b67997b358091a98dede5fb1a010468668aacadc",
+      "bytes": 5697,
+      "sha256": "6d8f2b1f6b5a01c84fc8b649c9f942bfe4a0f253891aa6788e900719c0788deb"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/docs/branch-integration.md",
+      "git_blob": "a3189091deee6b5567f6fc7d2c2ba34e3162b7ee",
+      "bytes": 2467,
+      "sha256": "d7aa1f7c55b614145eea0973118254c6c79dd6416259c7c62432f1e805cc6910"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/docs/cadence.md",
+      "git_blob": "924ef7db8a5af9c58e0055d0669ae8d7f897a516",
+      "bytes": 5044,
+      "sha256": "1d97dc0289632dd083ae7e430c42db4f675569c4065994797e13c868587b28de"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/docs/runbook.md",
+      "git_blob": "fb39c3ccf4c0e84dd992c422c5b425963769bdda",
+      "bytes": 3760,
+      "sha256": "98245202a27cbc58bf6c6fd27e0f3001b1d7fd9ca44c661f90470f3cc1104715"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/docs/epistemic-policy.md",
+      "git_blob": "9548dca0e4b166a2062eb8bb01271898237e3c19",
+      "bytes": 4890,
+      "sha256": "c4a3faabd5da70c799a569d355651de789ea93496b9d865a74b63b079f2c81d1"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/docs/acceptance.md",
+      "git_blob": "de7e3b0758141d97898f3316f80f2dc731884c5c",
+      "bytes": 5399,
+      "sha256": "8d3f887f2b248f29d0a14b9b8e2057e8233e9d10123213caf309e3554e19895e"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/docs/conformance-02-04.md",
+      "git_blob": "35cddf95a8c3e40c02a451ff763b867ab710a98d",
+      "bytes": 14597,
+      "sha256": "27e498aa44bdd8aa7da48ffc900f0c240a6307279f884f7070814dccf0a2b628"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/proposals/author-decisions.jsonl",
+      "git_blob": "6aea60b959eab59fbae7ef60fb3a5b473c345b24",
+      "bytes": 5615,
+      "sha256": "da4161832856b9d5fbc2368cf22e36025f1235c99ecd4f54ecb8e40cbb3ec111"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/sources/pin-spec.json",
+      "git_blob": "3e5904b52a65e35716aacc1bfb159f548ce5042b",
+      "bytes": 14576,
+      "sha256": "06e206109030389e228aba3daf7d94b5080a04d96fcc9af0255b7ed7ba1104cd"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/sources/manifest.json",
+      "git_blob": "d9d5e769e21e761680c412585ef2426c3d073384",
+      "bytes": 26967,
+      "sha256": "49e4c885c16aee6ddac27fd8e7df9265b02fd8470f7646fae40f4873d3048d51"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/generated/index.md",
+      "git_blob": "c30de0836feb341a26508e11e7f0ce9c64dd5125",
+      "bytes": 4821,
+      "sha256": "abd0b54e0df83a85c9fc2111e1bc78f36eb434b15786fd84deb0092cba066963"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/generated/questions.md",
+      "git_blob": "7b95cbdb6efbc3a7cba7d0c1bbe44ac591a35341",
+      "bytes": 5280,
+      "sha256": "64571b1d9ed38cef89e6a05a28be348e8cd6b269f265cd602916b15a451996c5"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/generated/links.md",
+      "git_blob": "07433e4e4f4c700237087e5dcf42cc8690127d06",
+      "bytes": 7976,
+      "sha256": "3093b4d6836636a7974f63eeadc9123dd9ba4665cc08e0f5d7c05313bb41025f"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-synthesis/generated/round-trips.md",
+      "git_blob": "2af83ab96e575393678c115a87a54af68da9debd",
+      "bytes": 4869,
+      "sha256": "123509a44de38d73451788c28f6f90542b22b489c0b116e486b84313c8f81013"
+    },
+    {
+      "commit": "de066438c08aaa5032827e4077b0bbbb965c1c21",
+      "path": "research-methods/open-thetical-research.md",
+      "git_blob": "669754b54e4374d7f8c9a606b1faf4811b7b8569",
+      "bytes": 10048,
+      "sha256": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/coherence/findings.jsonl",
+      "git_blob": "cba8a84299ff42110f1e587f619c6f65ec65a129",
+      "bytes": 334355,
+      "sha256": "2fa6d863c8d8798f7f567d8948a389cb2e0e5ee883ca01a929fdda2e1e0cc6e7"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/coherence/relations.jsonl",
+      "git_blob": "eb8d495991376ed5cf2efb6893a25e8b9787394a",
+      "bytes": 256140,
+      "sha256": "b60ef7fc71713996dc577c63db689d789c79b9b31fbcceb43c629ac8e898e4b1"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+      "git_blob": "1fc80911d99fc548d0ac33b7367999188d16ad88",
+      "bytes": 11807,
+      "sha256": "a99d65438d3d332b7331d9b108f28a31e42228197f5d4d74956ec967ad8b9c2e"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/formal/theorem-catalog.jsonl",
+      "git_blob": "1b5c0f99699adcb98d90aae8565e4de1265e8f76",
+      "bytes": 170271,
+      "sha256": "4e29fa9d18dcc3ca51d008d9cee9e92549b4d59399ddcf3ad0a738236d946a25"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/formal/open-problems.md",
+      "git_blob": "2830cd6bf6e3fc269abd5681eb125066c5ac4161",
+      "bytes": 15071,
+      "sha256": "139c31942a8cfde2e9667d6d77df6b9154ebf4d360834830b79e31f9dfe93c8e"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/coherence/snapshots/through-generation-008n.md",
+      "git_blob": "aeb1fb2b2511ff9760821e393be9fb157b5dadda",
+      "bytes": 125767,
+      "sha256": "ffcd7dfd69f72c177b47978c971677e670f8b3cc8d16687f64f07697da8a0275"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/reports/generation-008n-h2-controlled-passage.md",
+      "git_blob": "100a0d4ca7f4ea6b3adc3dc8af2336ff7103f5ee",
+      "bytes": 14973,
+      "sha256": "5100facd35f733c281a515a12a1c900f9e827d5d66b716efb7300ada17a56e76"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/reports/generation-008k-predictive-state-synthesis.md",
+      "git_blob": "0a4a335d8a2a2fba6cd51e16403258c3efeb93c8",
+      "bytes": 17088,
+      "sha256": "d0e469a80d33462a3dead64e4832474dcb8c0c3176a8ab4734d49f86693e3d6f"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/docs/scientific-plan-discipline.md",
+      "git_blob": "2e6a8d35e1d9939c8d4406ae2f938413ba5b7c85",
+      "bytes": 2827,
+      "sha256": "4101d64f8b4d228dd1cb6ca46d77848e14e79f768041aff839f962da6fecd974"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/coherence/snapshots/through-generation-008o.md",
+      "git_blob": "a57d5fe8caf28ab39b9ca773422237e3b16ccb74",
+      "bytes": 131920,
+      "sha256": "638b5a73afbd85ceb41a4e20b695f914c1f155485aa54a76422aba91e39e5aee"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/coherence/snapshots/through-generation-008p.md",
+      "git_blob": "40bb59641a09d9e33b36355f74c0c824bbb7512a",
+      "bytes": 135171,
+      "sha256": "efa90d19e585ce5a46a2e51aaa101c3f209bc57d73619dd1a44d7297df714b58"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/reports/generation-008o-route-null-factorization.md",
+      "git_blob": "11fc917fe3b25f9802dc7bd2babca5c8f759f831",
+      "bytes": 13299,
+      "sha256": "d8482cc050c5041e5dad4cc9ce1e262817321585dd1687f8241d4b24a37b74fb"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/reports/generation-008p-stopping-sufficiency.md",
+      "git_blob": "c53950e204cea85975bbdb582fa338cd77ff3449",
+      "bytes": 11946,
+      "sha256": "979b306a157ed0d6b7cdd8a16abeb3ed5b27d2d795bc07226aa2afe70738a012"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/formal/markovization-stopping-factorization.md",
+      "git_blob": "28c2bac156839bbbbd71a82fc6b9279bdd8b83d9",
+      "bytes": 11238,
+      "sha256": "ec1c11aab315d78117459e3aefcbe87d51d3de1e360d82b51c0d3f9607d1b98e"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/formal/task-relative-stopping-sufficiency.md",
+      "git_blob": "057cc3a16986afb4cef941390d75dc5811e57fe6",
+      "bytes": 6437,
+      "sha256": "4844cfcac71e285c70528212a0b5f7763b84a4001bc0a9510d575ca6bc7ee408"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/formal/route-null-weight-identities.md",
+      "git_blob": "0cd3f65166cb9b355a8dec01fc704af37ebfdf9e",
+      "bytes": 8032,
+      "sha256": "53dd5cee8a1dab70c4fc5d79e9bc094cbafc399ce8f513e96320eba7a6faf7db"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/formal/insertionwise-timing-cancellation.md",
+      "git_blob": "652a73f1856f792dded8834d9bd2f357517922bc",
+      "bytes": 2692,
+      "sha256": "5b671b58c3b5a1f58862f6aa75b109228105d9d71074c792c70054e8af2aaed1"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/formal/stopping-sufficiency-counterexamples.md",
+      "git_blob": "816a1c5b60421083ac5f8cc214c3811fbabf30cb",
+      "bytes": 2143,
+      "sha256": "aa0c772af77f5902857c89a85b35989483cafa6a5620870ba2e5ecd3e49d7330"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/provenance/synthesis-handoffs/008O/README.md",
+      "git_blob": "d955205bfccccd763c85302d03eaae3a87e45789",
+      "bytes": 9096,
+      "sha256": "e3cbf1b7b569579e8b92856d75187b05ce8585f156463f28bf1bceb24d3fd491"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/provenance/synthesis-handoffs/008P/README.md",
+      "git_blob": "a32d9dc823877b74e2d0cc103ab65edaca3988e2",
+      "bytes": 6878,
+      "sha256": "dfda26fe82c00cc6c858e4e4fb94f20794a7d046e4d99dc97b941ebbbaca6490"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/provenance/reviews/008N-chatgpt-review-v0.8n.md",
+      "git_blob": "246c604abce3099f515c5aae744ae491a56f0394",
+      "bytes": 2907,
+      "sha256": "3ea790f772f04a7c6a81228d061fed6ca5447614f6cb7712007567fa2737c7ad"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/provenance/status-changes/008O.json",
+      "git_blob": "21b3424052b4d077629597cf4f8f96c7c14f807f",
+      "bytes": 939,
+      "sha256": "e87cb935ec384a518907e793f0cf8bcc688fc6795cb8e63598ce7654485e0b52"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/exploration/generation-008o/close-out.md",
+      "git_blob": "bd61b7a774901460a3bfc51929f70d3e7ea3f793",
+      "bytes": 3630,
+      "sha256": "e5b5475bc1a1fa264558f1418bf37f9faa6a8c4ef5cb44dbe86a837643d69d79"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/exploration/generation-008p/close-out.json",
+      "git_blob": "0921e736b93cab7e135f7d7c70315738737f0c99",
+      "bytes": 5767,
+      "sha256": "da9c140b79039b62c86b4aa55e1b0a20fe4f3469716dc13aefd0c0668c4546b3"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/reports/tables/generation-008o-factor-validation.json",
+      "git_blob": "39e696e1cfc9eb6db88becd05f52d266028d028a",
+      "bytes": 22243,
+      "sha256": "a25d4ef977b5b37e0d6f84bb5be157cfd636c836ebd2a33faab859e3e82e2560"
+    },
+    {
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "path": "constraint-lab/reports/tables/generation-008p-proof-checks.json",
+      "git_blob": "f4d39b967b11d8b0d245f2d5b517609186dc6ac9",
+      "bytes": 106863,
+      "sha256": "393c2a3c2fa13384b108abd4f0e2ee1de105778b65a13408c2d2fbefe25be932"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/coherence/findings.jsonl",
+      "git_blob": "34e029911637253d0141d9cffd4e54037af0f98c",
+      "bytes": 157793,
+      "sha256": "7061af382cdd55bb5a3ceb407441590ee678097286413a02c9c31438072cc31c"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/coherence/relations.jsonl",
+      "git_blob": "c0409bc770b88fdebc3ec2f3b99d6cd3975de388",
+      "bytes": 76901,
+      "sha256": "2559cbd1721bddc6f28f40eb0f51942bec1a6a170735e8d86671e236a39d936b"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+      "git_blob": "1fc80911d99fc548d0ac33b7367999188d16ad88",
+      "bytes": 11807,
+      "sha256": "a99d65438d3d332b7331d9b108f28a31e42228197f5d4d74956ec967ad8b9c2e"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/coherence/snapshots/through-gt-e5a.md",
+      "git_blob": "884192edd8bb8cffd9c518717c089ed7386cfa5a",
+      "bytes": 70930,
+      "sha256": "977127fa272d1f9a345faa7ba9f8526c3518eccac9e2599b4051c14aafe7ba79"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/docs/reference-architecture-review.md",
+      "git_blob": "b7d2c23eed0b325795598c77916a83eb3a5d13df",
+      "bytes": 18401,
+      "sha256": "bc7b74aa53ffcc5bd103e3f805d7b0d38e34e9781cf72d09ec0cf1e7b11a1462"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/docs/e3-cross-programme-transfer.md",
+      "git_blob": "3c2808e6151ec416b2f75f7f652510500e649667",
+      "bytes": 4943,
+      "sha256": "e20264f7ff6c496c38f8863f4f3968714caa15535033b023eaefd61128324cd7"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/docs/e4-cross-programme-transfer.md",
+      "git_blob": "29f24dddfac518bfe3be5fed772108fe4ff37e56",
+      "bytes": 1932,
+      "sha256": "4fecf0984f7feff05b03ffda151bbfa69cd3ebdf5090f34fe08362eae4072b1f"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/docs/gt-p008-cross-programme-transfer.md",
+      "git_blob": "b98da4f6187f001d4ab5aed87954e9a91f133919",
+      "bytes": 4486,
+      "sha256": "0564d68b23608a24ad93f8b277d0db38cd8fcb8fd7ac8209d2f0e403197e1329"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/docs/gt-e5a-cross-programme-transfer.md",
+      "git_blob": "29630251cfb187751877af2dad802dafba8964f7",
+      "bytes": 3135,
+      "sha256": "c755646adbaeaaf25e3f578ed70d09e867818dbb20ad2d748393f5dff17350e5"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/reports/gt-e5a-report.md",
+      "git_blob": "1f18c8d4ae8a3f7310bdd408fad7a355f3cfad97",
+      "bytes": 12607,
+      "sha256": "fcb0025512166bca8e07edf54588f897f455cd0e76403ef789a0e4cc616008ce"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/coherence/snapshots/through-gt-e5b.md",
+      "git_blob": "d8e869718dc53b30c1a4434b26813c75f65a7a2d",
+      "bytes": 77661,
+      "sha256": "5e96d6ee139584c333dbf5c83cfab8ab16e1298e8cf10eda44ce4b0c47402450"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/coherence/snapshots/through-gt-e5c.md",
+      "git_blob": "daadcd952b732f07d809c4ce86086731ea7f0181",
+      "bytes": 82490,
+      "sha256": "fc84a95ddb7bf669b28e15e33d7c6fc854ffedff35057975e89a0da72263fada"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/coherence/snapshots/through-gt-e5d.md",
+      "git_blob": "46cb6d55ff311b8fafa90b4c15b5ce4255467e65",
+      "bytes": 87347,
+      "sha256": "68b7a0b02b76292e06f176c91184fce142f6e72f21f0b22a2d96faaa73ca7235"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/docs/gt-e5b-cross-programme-transfer.md",
+      "git_blob": "04ff37515a3989434e83453482206c92b2cefbf1",
+      "bytes": 3157,
+      "sha256": "96a6325c8b952bd45ebd898e86a699a56d97b78e8c90c699db3f41e9cc1db19b"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/docs/gt-e5c-cross-programme-transfer.md",
+      "git_blob": "0edd9dce485039f9acfccea43a68cc5a9132138f",
+      "bytes": 2125,
+      "sha256": "8059cffd43ae3f403ef34613d659356280af4e3aef8c3d0a3fc430eb4ac936fd"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/docs/gt-e5d-cross-programme-transfer.md",
+      "git_blob": "70b3fe1b4612bd15f2eda556a0636ca9dfca9a7f",
+      "bytes": 1540,
+      "sha256": "f0731e3b327414638b781e7b0c3a5502e5363bef56fce937584522c285649c4c"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/reports/gt-e5b-report.md",
+      "git_blob": "6b936bf6d63d0268d9941fb71be511d01d6a5470",
+      "bytes": 11135,
+      "sha256": "af51fcf6ab31f5154f7287fc44343f168c6c50332c8ed4559ea0005d430f4a8e"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/reports/gt-e5c-report.md",
+      "git_blob": "0b62771461d9f40f4b91f0a3df4ec62bf88fb052",
+      "bytes": 6803,
+      "sha256": "1680b104bf8f6b2261b2ef2c95d58da7a5d4ff219c154ff035ecbdb01550d84b"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/reports/gt-e5d-report.md",
+      "git_blob": "439b8fb0939f7e7db401b4963b3f8f7f083a0079",
+      "bytes": 6292,
+      "sha256": "3bb7a9a94aec2fe6a32a774f398e70acfa31ec566a0ee7552e1bf531d3154fd7"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/reports/gt-e5b-reflection.md",
+      "git_blob": "1963bc504cfdb6ea9717451414d627eaea805d78",
+      "bytes": 8109,
+      "sha256": "5296e464ac70be8d01dbd8f016f5a58e79dbf91dd7a3fa48be31938978f2cc2c"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/plans/round-e5b-plan.json",
+      "git_blob": "ed6bac5eb0df20958dc2253112bf60f7df4bb45f",
+      "bytes": 16687,
+      "sha256": "f75265d762ed522706364f9a770ba19861557d0499a1735d6cf40ab2c26d26d1"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/reports/round-e5b-tables.json",
+      "git_blob": "76db741889174f5d893aa31356383e966057fa73",
+      "bytes": 1377712,
+      "sha256": "e9a7f6193375bce1c2f146cfbadde2f377d0c3caef0aee8482fa060939979e7d"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/provenance/execution-GT-P010.md",
+      "git_blob": "32ce1c3aeb3cc8919d5fb3d22b4c04c0a8f17e40",
+      "bytes": 5225,
+      "sha256": "56b61c12402b9b3abb699edbdc1da31fe569e03e4ac1b4fd284a14d316ccb480"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/reports/gt-e5c-reflection.md",
+      "git_blob": "c4f119000090ce2ccf20135646959abfa9a32938",
+      "bytes": 5920,
+      "sha256": "a6437b4ca9880240b306d32df03ede77d0231906c8f7952332b60627a4ba25c7"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/plans/round-e5c-plan.json",
+      "git_blob": "9f56647d8353215e1c3426018d0d49fcd961f65a",
+      "bytes": 15187,
+      "sha256": "83d2ae4d9ddf05220ee0014ae8e88cc5e4873c4950247540dbc3b0751dd5ae98"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/reports/round-e5c-tables.json",
+      "git_blob": "fa919ab33b535461998c13ad5dffdeb3981102da",
+      "bytes": 1494030,
+      "sha256": "44449d917080ae804b9ee7bc02b9416e6402a6218fbb141aba96c772c403763b"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/provenance/execution-GT-P011.md",
+      "git_blob": "bb0d669d7ea771b19032d75718c262c04571b851",
+      "bytes": 3687,
+      "sha256": "5b3de3539a5fa5569b14de416eab20053f3d549e38d7376116069b3b452f2e89"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/reports/gt-e5d-reflection.md",
+      "git_blob": "952f1f98d8c2ded4b6bf75f117e3f372bcd33a65",
+      "bytes": 4351,
+      "sha256": "ff3bfd90594228cb72e50912ff800c59915f400de628789e3061d094e5fa53a1"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/plans/round-e5d-plan.json",
+      "git_blob": "ddab82e22c69d4b555ca0ff19f9dc6bb0c9fd90e",
+      "bytes": 13966,
+      "sha256": "ad51ac5bcc567035087545a4e836a1dc04881166b8355c7917eebc373a50f69f"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/reports/round-e5d-tables.json",
+      "git_blob": "3c07194eb32da5b3a18974095e7df71b11eedeaf",
+      "bytes": 1799492,
+      "sha256": "4fa02bcc441123bb36e7a6206d3aed049c5ea06c95fd98779f2e7364ff020fab"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/provenance/execution-GT-P012.md",
+      "git_blob": "194f3eff5c905f2f0715f938ef38058f4b4f1e82",
+      "bytes": 2978,
+      "sha256": "db8edd686c15ab489dbdd1aedd10f44d639e26286a77e8d807bd9f3c1627de4e"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/docs/e5d-local-traffic-comparator.md",
+      "git_blob": "79bc85472e546d1fc9297ac223c9a646e8fba807",
+      "bytes": 8492,
+      "sha256": "0d635e7a639dc91b0e969f093873cd07169287f5c1195c0de50f96ed8f9b5c08"
+    },
+    {
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "path": "gravity-time/docs/e5c-durable-renewal-definitions.md",
+      "git_blob": "e437d0cada5ea84e434d6cfb9a4a3057cd6f209a",
+      "bytes": 9112,
+      "sha256": "73c35401fbd065998def60f334a9d7f056bd7252c0e439ce078f7c6e5e08307b"
+    }
+  ],
+  "exact_head_ci": [
+    {
+      "conclusion": "success",
+      "databaseId": 38790237303,
+      "headSha": "99565d14e9c0fc172d925fd335965e127d950868",
+      "jobs": [
+        {
+          "name": "constraint-lab",
+          "conclusion": "success",
+          "databaseId": 116612608049
+        },
+        {
+          "name": "books",
+          "conclusion": "success",
+          "databaseId": 116612608266
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38802246455,
+      "headSha": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "jobs": [
+        {
+          "name": "constraint-lab",
+          "conclusion": "success",
+          "databaseId": 116654003942
+        },
+        {
+          "name": "books",
+          "conclusion": "success",
+          "databaseId": 116654004477
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38787488394,
+      "headSha": "4aaf04c0601b4232fc9fa24f6aa5d5ce6390c7e2",
+      "jobs": [
+        {
+          "name": "books",
+          "conclusion": "success",
+          "databaseId": 116603150827
+        },
+        {
+          "name": "constraint-lab",
+          "conclusion": "success",
+          "databaseId": 116603151035
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38802931113,
+      "headSha": "a81c505a08ac5c4c83359234915bec65bb1f60c3",
+      "jobs": [
+        {
+          "name": "constraint-lab",
+          "conclusion": "success",
+          "databaseId": 116656357715
+        },
+        {
+          "name": "books",
+          "conclusion": "success",
+          "databaseId": 116656357982
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38812111023,
+      "headSha": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "jobs": [
+        {
+          "name": "books",
+          "conclusion": "success",
+          "databaseId": 116687625202
+        },
+        {
+          "name": "constraint-lab",
+          "conclusion": "success",
+          "databaseId": 116687625551
+        }
+      ],
+      "status": "completed"
+    }
+  ],
+  "tags": {
+    "CL_8O": {
+      "tag_object": "facef77087084ecbf4bbf1d032fce74ae3cbef66",
+      "commit": "99565d14e9c0fc172d925fd335965e127d950868"
+    },
+    "CL_8P": {
+      "tag_object": "c7decb3372cc6e5be2e966c65b7d5a422f7abff5",
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319"
+    }
+  },
+  "prepared_commit_scope": "Local preservation only, not a required remote source; carried-forward content is in this PR and public original PR9 commit42a474a."
+}

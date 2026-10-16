@@ -15,6 +15,9 @@
 - `X::0005` shared_implementation_assumption (`GT::GT-F05-RELATIONAL-POTENTIAL` → `CL::CL-T01`)
 - `X::0007` epistemic_compatibility (`CL::F018-LOCAL-VERSUS-INITIAL` → `GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY`)
 - `X::0009` tested_structural_analogy (`CL::CL-T88` → `GT::GT-F79-ND-MATCHES-EDGE-LIFETIME`)
+- `X::0010` explicit_contrast (`GT::GT-F83-PCOMP-PERSISTENCE-IS-BETWEEN-LAYER-TRAFFIC` → `CL::F8N-MFPT-RESIDUAL`)
+- `X::0011` epistemic_compatibility (`GT::GT-F97-FIRST-HIT-SAMPLING-MATTERS` → `CL::F8N-MATCHED-SOURCE-PASSAGE`)
+- `X::0012` requires_scope_alignment (`GT::GT-F98-NL-LOCAL-REMOTE-TRAFFIC-COMPARATOR` → `CL::F8N-H1-MATCHED-PASSAGE-BOUNDARY`)
 
 ## Draft metaphors awaiting review (not counted as coverage)
 

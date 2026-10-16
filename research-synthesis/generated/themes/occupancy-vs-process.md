@@ -22,10 +22,11 @@
 - X::0001 tested_structural_analogy (HUMAN-ACCEPTED (at the stated decision category)): `CL::F8N-MFPT-RESIDUAL` → `GT::GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW`
 - X::0002 epistemic_compatibility (HUMAN-ACCEPTED (at the stated decision category)): `CL::F8H-TEMPORAL-TESTS-REQUIRED` → `GT::GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS`
 - X::0009 tested_structural_analogy (HUMAN-ACCEPTED (at the stated decision category)): `CL::CL-T88` → `GT::GT-F79-ND-MATCHES-EDGE-LIFETIME`
+- X::0010 explicit_contrast (AGENT-REVIEWED (awaiting human acceptance)): `GT::GT-F83-PCOMP-PERSISTENCE-IS-BETWEEN-LAYER-TRAFFIC` → `CL::F8N-MFPT-RESIDUAL`
 
 ## Questions
 
-- XQ::07 (open): Is there a common mathematical operator behind CL's predictive sufficiency and GT's persistence, or only a common question?
+- XQ::07 (partially_answered): Is there a common mathematical operator behind CL's predictive sufficiency and GT's persistence, or only a common question?
 
 ## Metaphors (non-evidentiary)
 
@@ -47,6 +48,7 @@ graph LR
   n_CL__F8N_MFPT_RESIDUAL -->|tested_structural_analogy · human_accepted| n_GT__GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW
   n_CL__F8H_TEMPORAL_TESTS_REQUIRED -->|epistemic_compatibility · human_accepted| n_GT__GT_F82_E5A_COMPARATOR_AND_NUMERICAL_QUALIFICATIONS
   n_CL__CL_T88 -->|tested_structural_analogy · human_accepted| n_GT__GT_F79_ND_MATCHES_EDGE_LIFETIME
+  n_GT__GT_F83_PCOMP_PERSISTENCE_IS_BETWEEN_LAYER_TRAFFIC -->|explicit_contrast · agent_reviewed| n_CL__F8N_MFPT_RESIDUAL
   n_M__two_towns(["M::two-towns"]) -.->|metaphor| n_C__occupancy_vs_process
   classDef concept fill:#fff4d6,stroke:#a07a00
 ```

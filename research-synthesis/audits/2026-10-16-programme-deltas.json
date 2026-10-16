@@ -1,0 +1,552 @@
+[
+  {
+    "source": "CL",
+    "from": "e650d71bda7203c8018d8bd134c5496a03d74a11",
+    "to": "99565d14e9c0fc172d925fd335965e127d950868",
+    "ancestor": true,
+    "artifacts": {
+      "constraint-lab/coherence/findings.jsonl": {
+        "before_count": 216,
+        "after_count": 229,
+        "added": [
+          "F8O-DISJOINT-FACTOR-SUPPORT",
+          "F8O-ENTRANCE-BALANCE",
+          "F8O-FACTOR-TRANSPORT",
+          "F8O-FIBREWISE-CANCELLATION",
+          "F8O-FOUR-EVENT-DEFECT",
+          "F8O-ROUTE-NULL-FACTORIZATION",
+          "F8O-RS-SCOPED-READOUT",
+          "F8O-STATIONARY-RESET-PROJECTION",
+          "F8O-STOPPING-MARKOVIZATION-DEFECT",
+          "F8O-TARGET-INSENSITIVITY",
+          "F8O-TASK-PROJECTION-SCOPE",
+          "F8O-TASK-SPECIFIC-PREDICTIVE-EQUALITY",
+          "F8O-TIMING-AGGREGATION-CANCELLATION"
+        ],
+        "removed": [],
+        "rewritten": {
+          "Q-H2-ROUTE-NULL-FACTORIZATION": {
+            "fields": [
+              "status"
+            ],
+            "before": {
+              "finding_id": "Q-H2-ROUTE-NULL-FACTORIZATION",
+              "epistemic_layer": "OPEN_QUESTION",
+              "statement": "Which exact path factorisations explain the direction-specific passage nulls despite active total routing and unequal full path laws, without new controllers or grades?",
+              "observable": "occupancy-matched first-return, sibling access or competing-target law as scoped",
+              "literal_value": null,
+              "magnitude_class": "not_applicable",
+              "robustness_vector": {
+                "exactness": 0,
+                "replication": 0,
+                "control_separation": 0,
+                "parameter_robustness": 0,
+                "projection_robustness": 0
+              },
+              "temporal_character": "unknown",
+              "structural_roles": [
+                "open_question",
+                "routing"
+              ],
+              "status": "unresolved",
+              "created_generation": "008N",
+              "created_commit": "11e70b4b92c1932df5f875bfd0de806d4fbecdd1",
+              "scope": "N4 O3 G0 S0 L0 H_pair=2 independent hypergraph; fixed positive one-role 8M controllers and pair-event clock. Exact stationary class-conditioned source and adjacent-matched strict H1 comparator; finite census at 1/4 and 4 plus neutral. No physical or task-value claim.",
+              "evidence_refs": [
+                "constraint-lab/formal/history-controlled-passage.md",
+                "constraint-lab/reports/generation-008n-h2-controlled-passage.md",
+                "constraint-lab/reports/tables/generation-008n-validation.json",
+                "constraint-lab/reports/tables/generation-008n-summary.json",
+                "constraint-lab/tests/test_v08n.py"
+              ],
+              "formal_refs": [],
+              "notes": "Formal catalogue status and coherence epistemic layer remain distinct. Exact zeros are rational; logarithmic magnitude does not decide classification. No scalar score."
+            },
+            "after": {
+              "finding_id": "Q-H2-ROUTE-NULL-FACTORIZATION",
+              "epistemic_layer": "OPEN_QUESTION",
+              "statement": "Which exact path factorisations explain the direction-specific passage nulls despite active total routing and unequal full path laws, without new controllers or grades?",
+              "observable": "occupancy-matched first-return, sibling access or competing-target law as scoped",
+              "literal_value": null,
+              "magnitude_class": "not_applicable",
+              "robustness_vector": {
+                "exactness": 0,
+                "replication": 0,
+                "control_separation": 0,
+                "parameter_robustness": 0,
+                "projection_robustness": 0
+              },
+              "temporal_character": "unknown",
+              "structural_roles": [
+                "open_question",
+                "routing"
+              ],
+              "status": "qualified",
+              "created_generation": "008N",
+              "created_commit": "11e70b4b92c1932df5f875bfd0de806d4fbecdd1",
+              "scope": "N4 O3 G0 S0 L0 H_pair=2 independent hypergraph; fixed positive one-role 8M controllers and pair-event clock. Exact stationary class-conditioned source and adjacent-matched strict H1 comparator; finite census at 1/4 and 4 plus neutral. No physical or task-value claim.",
+              "evidence_refs": [
+                "constraint-lab/formal/history-controlled-passage.md",
+                "constraint-lab/reports/generation-008n-h2-controlled-passage.md",
+                "constraint-lab/reports/tables/generation-008n-validation.json",
+                "constraint-lab/reports/tables/generation-008n-summary.json",
+                "constraint-lab/tests/test_v08n.py"
+              ],
+              "formal_refs": [],
+              "notes": "Formal catalogue status and coherence epistemic layer remain distinct. Exact zeros are rational; logarithmic magnitude does not decide classification. No scalar score."
+            }
+          }
+        },
+        "before_sha256": "aa4060043716a83841f8e7f3639e67540fa4faeb5abb669e3a03b89ef9976711",
+        "after_sha256": "eeeba035cce2a7fd4daf5c813b416ebb06ae9e79f2185efdbfce6a79315558cd"
+      },
+      "constraint-lab/coherence/relations.jsonl": {
+        "before_count": 331,
+        "after_count": 352,
+        "added": [
+          "R8O-001",
+          "R8O-002",
+          "R8O-003",
+          "R8O-004",
+          "R8O-005",
+          "R8O-006",
+          "R8O-007",
+          "R8O-008",
+          "R8O-009",
+          "R8O-010",
+          "R8O-011",
+          "R8O-012",
+          "R8O-013",
+          "R8O-014",
+          "R8O-015",
+          "R8O-016",
+          "R8O-017",
+          "R8O-018",
+          "R8O-019",
+          "R8O-020",
+          "R8O-021"
+        ],
+        "removed": [],
+        "rewritten": {},
+        "before_sha256": "bcf35359425d7464d4e42d93c7675515dce023ca6fdbbf7429f8192a97d73b28",
+        "after_sha256": "bf5ba1d095e3468a1c6021ee40e3135e18789d2de6362ccebea769fd9e630daf"
+      },
+      "constraint-lab/formal/theorem-catalog.jsonl": {
+        "before_count": 108,
+        "after_count": 115,
+        "added": [
+          "CL-F12",
+          "CL-M07",
+          "CL-T91",
+          "CL-T92",
+          "CL-T93",
+          "CL-T94",
+          "CL-T95"
+        ],
+        "removed": [],
+        "rewritten": {},
+        "before_sha256": "09f6137c5c244161f8e19b3cd95236f5499326d313cba4cf90148e69b76ecd96",
+        "after_sha256": "ddb158c32064e40cd734eed02a1f3ad2fb8583607f3df699d084de9fb6dd9914"
+      }
+    }
+  },
+  {
+    "source": "CL",
+    "from": "99565d14e9c0fc172d925fd335965e127d950868",
+    "to": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+    "ancestor": true,
+    "artifacts": {
+      "constraint-lab/coherence/findings.jsonl": {
+        "before_count": 229,
+        "after_count": 235,
+        "added": [
+          "F8P-ALL-LENGTH-CRITERION",
+          "F8P-DISJOINT-ALL-WEIGHTS",
+          "F8P-FIBRE-ALL-WEIGHTS",
+          "F8P-HORIZON-COUNTEREXAMPLES",
+          "F8P-RS-TASK-EQUIVALENCE",
+          "F8P-TIMING-SCOPE"
+        ],
+        "removed": [],
+        "rewritten": {},
+        "before_sha256": "eeeba035cce2a7fd4daf5c813b416ebb06ae9e79f2185efdbfce6a79315558cd",
+        "after_sha256": "2fa6d863c8d8798f7f567d8948a389cb2e0e5ee883ca01a929fdda2e1e0cc6e7"
+      },
+      "constraint-lab/coherence/relations.jsonl": {
+        "before_count": 352,
+        "after_count": 364,
+        "added": [
+          "R8P-001",
+          "R8P-002",
+          "R8P-003",
+          "R8P-004",
+          "R8P-005",
+          "R8P-006",
+          "R8P-007",
+          "R8P-008",
+          "R8P-009",
+          "R8P-010",
+          "R8P-011",
+          "R8P-012"
+        ],
+        "removed": [],
+        "rewritten": {},
+        "before_sha256": "bf5ba1d095e3468a1c6021ee40e3135e18789d2de6362ccebea769fd9e630daf",
+        "after_sha256": "b60ef7fc71713996dc577c63db689d789c79b9b31fbcceb43c629ac8e898e4b1"
+      },
+      "constraint-lab/formal/theorem-catalog.jsonl": {
+        "before_count": 115,
+        "after_count": 118,
+        "added": [
+          "CL-T96",
+          "CL-T97",
+          "CL-T98"
+        ],
+        "removed": [],
+        "rewritten": {},
+        "before_sha256": "ddb158c32064e40cd734eed02a1f3ad2fb8583607f3df699d084de9fb6dd9914",
+        "after_sha256": "4e29fa9d18dcc3ca51d008d9cee9e92549b4d59399ddcf3ad0a738236d946a25"
+      }
+    }
+  },
+  {
+    "source": "CL",
+    "from": "e650d71bda7203c8018d8bd134c5496a03d74a11",
+    "to": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+    "ancestor": true,
+    "artifacts": {
+      "constraint-lab/coherence/findings.jsonl": {
+        "before_count": 216,
+        "after_count": 235,
+        "added": [
+          "F8O-DISJOINT-FACTOR-SUPPORT",
+          "F8O-ENTRANCE-BALANCE",
+          "F8O-FACTOR-TRANSPORT",
+          "F8O-FIBREWISE-CANCELLATION",
+          "F8O-FOUR-EVENT-DEFECT",
+          "F8O-ROUTE-NULL-FACTORIZATION",
+          "F8O-RS-SCOPED-READOUT",
+          "F8O-STATIONARY-RESET-PROJECTION",
+          "F8O-STOPPING-MARKOVIZATION-DEFECT",
+          "F8O-TARGET-INSENSITIVITY",
+          "F8O-TASK-PROJECTION-SCOPE",
+          "F8O-TASK-SPECIFIC-PREDICTIVE-EQUALITY",
+          "F8O-TIMING-AGGREGATION-CANCELLATION",
+          "F8P-ALL-LENGTH-CRITERION",
+          "F8P-DISJOINT-ALL-WEIGHTS",
+          "F8P-FIBRE-ALL-WEIGHTS",
+          "F8P-HORIZON-COUNTEREXAMPLES",
+          "F8P-RS-TASK-EQUIVALENCE",
+          "F8P-TIMING-SCOPE"
+        ],
+        "removed": [],
+        "rewritten": {
+          "Q-H2-ROUTE-NULL-FACTORIZATION": {
+            "fields": [
+              "status"
+            ],
+            "before": {
+              "finding_id": "Q-H2-ROUTE-NULL-FACTORIZATION",
+              "epistemic_layer": "OPEN_QUESTION",
+              "statement": "Which exact path factorisations explain the direction-specific passage nulls despite active total routing and unequal full path laws, without new controllers or grades?",
+              "observable": "occupancy-matched first-return, sibling access or competing-target law as scoped",
+              "literal_value": null,
+              "magnitude_class": "not_applicable",
+              "robustness_vector": {
+                "exactness": 0,
+                "replication": 0,
+                "control_separation": 0,
+                "parameter_robustness": 0,
+                "projection_robustness": 0
+              },
+              "temporal_character": "unknown",
+              "structural_roles": [
+                "open_question",
+                "routing"
+              ],
+              "status": "unresolved",
+              "created_generation": "008N",
+              "created_commit": "11e70b4b92c1932df5f875bfd0de806d4fbecdd1",
+              "scope": "N4 O3 G0 S0 L0 H_pair=2 independent hypergraph; fixed positive one-role 8M controllers and pair-event clock. Exact stationary class-conditioned source and adjacent-matched strict H1 comparator; finite census at 1/4 and 4 plus neutral. No physical or task-value claim.",
+              "evidence_refs": [
+                "constraint-lab/formal/history-controlled-passage.md",
+                "constraint-lab/reports/generation-008n-h2-controlled-passage.md",
+                "constraint-lab/reports/tables/generation-008n-validation.json",
+                "constraint-lab/reports/tables/generation-008n-summary.json",
+                "constraint-lab/tests/test_v08n.py"
+              ],
+              "formal_refs": [],
+              "notes": "Formal catalogue status and coherence epistemic layer remain distinct. Exact zeros are rational; logarithmic magnitude does not decide classification. No scalar score."
+            },
+            "after": {
+              "finding_id": "Q-H2-ROUTE-NULL-FACTORIZATION",
+              "epistemic_layer": "OPEN_QUESTION",
+              "statement": "Which exact path factorisations explain the direction-specific passage nulls despite active total routing and unequal full path laws, without new controllers or grades?",
+              "observable": "occupancy-matched first-return, sibling access or competing-target law as scoped",
+              "literal_value": null,
+              "magnitude_class": "not_applicable",
+              "robustness_vector": {
+                "exactness": 0,
+                "replication": 0,
+                "control_separation": 0,
+                "parameter_robustness": 0,
+                "projection_robustness": 0
+              },
+              "temporal_character": "unknown",
+              "structural_roles": [
+                "open_question",
+                "routing"
+              ],
+              "status": "qualified",
+              "created_generation": "008N",
+              "created_commit": "11e70b4b92c1932df5f875bfd0de806d4fbecdd1",
+              "scope": "N4 O3 G0 S0 L0 H_pair=2 independent hypergraph; fixed positive one-role 8M controllers and pair-event clock. Exact stationary class-conditioned source and adjacent-matched strict H1 comparator; finite census at 1/4 and 4 plus neutral. No physical or task-value claim.",
+              "evidence_refs": [
+                "constraint-lab/formal/history-controlled-passage.md",
+                "constraint-lab/reports/generation-008n-h2-controlled-passage.md",
+                "constraint-lab/reports/tables/generation-008n-validation.json",
+                "constraint-lab/reports/tables/generation-008n-summary.json",
+                "constraint-lab/tests/test_v08n.py"
+              ],
+              "formal_refs": [],
+              "notes": "Formal catalogue status and coherence epistemic layer remain distinct. Exact zeros are rational; logarithmic magnitude does not decide classification. No scalar score."
+            }
+          }
+        },
+        "before_sha256": "aa4060043716a83841f8e7f3639e67540fa4faeb5abb669e3a03b89ef9976711",
+        "after_sha256": "2fa6d863c8d8798f7f567d8948a389cb2e0e5ee883ca01a929fdda2e1e0cc6e7"
+      },
+      "constraint-lab/coherence/relations.jsonl": {
+        "before_count": 331,
+        "after_count": 364,
+        "added": [
+          "R8O-001",
+          "R8O-002",
+          "R8O-003",
+          "R8O-004",
+          "R8O-005",
+          "R8O-006",
+          "R8O-007",
+          "R8O-008",
+          "R8O-009",
+          "R8O-010",
+          "R8O-011",
+          "R8O-012",
+          "R8O-013",
+          "R8O-014",
+          "R8O-015",
+          "R8O-016",
+          "R8O-017",
+          "R8O-018",
+          "R8O-019",
+          "R8O-020",
+          "R8O-021",
+          "R8P-001",
+          "R8P-002",
+          "R8P-003",
+          "R8P-004",
+          "R8P-005",
+          "R8P-006",
+          "R8P-007",
+          "R8P-008",
+          "R8P-009",
+          "R8P-010",
+          "R8P-011",
+          "R8P-012"
+        ],
+        "removed": [],
+        "rewritten": {},
+        "before_sha256": "bcf35359425d7464d4e42d93c7675515dce023ca6fdbbf7429f8192a97d73b28",
+        "after_sha256": "b60ef7fc71713996dc577c63db689d789c79b9b31fbcceb43c629ac8e898e4b1"
+      },
+      "constraint-lab/formal/theorem-catalog.jsonl": {
+        "before_count": 108,
+        "after_count": 118,
+        "added": [
+          "CL-F12",
+          "CL-M07",
+          "CL-T91",
+          "CL-T92",
+          "CL-T93",
+          "CL-T94",
+          "CL-T95",
+          "CL-T96",
+          "CL-T97",
+          "CL-T98"
+        ],
+        "removed": [],
+        "rewritten": {},
+        "before_sha256": "09f6137c5c244161f8e19b3cd95236f5499326d313cba4cf90148e69b76ecd96",
+        "after_sha256": "4e29fa9d18dcc3ca51d008d9cee9e92549b4d59399ddcf3ad0a738236d946a25"
+      }
+    }
+  },
+  {
+    "source": "GT",
+    "from": "79fa6b0119449bd56359acf4436015df27855f43",
+    "to": "4aaf04c0601b4232fc9fa24f6aa5d5ce6390c7e2",
+    "ancestor": true,
+    "artifacts": {
+      "gravity-time/coherence/findings.jsonl": {
+        "before_count": 104,
+        "after_count": 114,
+        "added": [
+          "GT-F83-PCOMP-PERSISTENCE-IS-BETWEEN-LAYER-TRAFFIC",
+          "GT-F84-PATHF-CENTRES-SURVIVE-NK-AND-LOCAL-COUNT",
+          "GT-F85-CLOSEW-EFFECT-MOSTLY-PREVALENCE-AND-TRAFFIC",
+          "GT-F86-PATHH-CSPH-NK-SURVIVORS-QUALIFIED",
+          "GT-F87-RENEWAL-FEASIBILITY-AND-SIZE-ONE-EQUIVALENCE",
+          "GT-F88-NK-LAYER-TRAFFIC-COMPARATOR",
+          "GT-F89-COMPARATOR-MATTERS-MORE-THAN-CLOCK",
+          "GT-F90-E5A-INTACT-COUNT-IS-2-OF-30",
+          "GT-Q23-DURABLE-RENEWAL",
+          "GT-Q24-WITHIN-LAYER-ARRANGEMENT-CONTROL"
+        ],
+        "removed": [],
+        "rewritten": {},
+        "before_sha256": "cd79b3a9792c6eda21f6eb7d9ad547e3acfed5e0356a5ce4cf6d562c0c8a21bb",
+        "after_sha256": "d75ab4212b29f433cc8528babb514045deb342574aa44784a5259702748e45b4"
+      },
+      "gravity-time/coherence/relations.jsonl": {
+        "before_count": 142,
+        "after_count": 155,
+        "added": [
+          "GT-R143",
+          "GT-R144",
+          "GT-R145",
+          "GT-R146",
+          "GT-R147",
+          "GT-R148",
+          "GT-R149",
+          "GT-R150",
+          "GT-R151",
+          "GT-R152",
+          "GT-R153",
+          "GT-R154",
+          "GT-R155"
+        ],
+        "removed": [],
+        "rewritten": {},
+        "before_sha256": "386e38b863751053853da9698ac0aa795660da6658b0426aa6c5cd80c2265ac4",
+        "after_sha256": "9c8031412ffd8aa905addc5c88fe1ca964bd62b0849be21da2310d14c8502a07"
+      }
+    }
+  },
+  {
+    "source": "GT",
+    "from": "4aaf04c0601b4232fc9fa24f6aa5d5ce6390c7e2",
+    "to": "a81c505a08ac5c4c83359234915bec65bb1f60c3",
+    "ancestor": true,
+    "artifacts": {
+      "gravity-time/coherence/findings.jsonl": {
+        "before_count": 114,
+        "after_count": 122,
+        "added": [
+          "GT-F91-RENEWAL-IS-TRANSIENT",
+          "GT-F92-CSPH-TRIANGLE-RENEWAL-IS-FLICKER-ASSISTED",
+          "GT-F93-PATHH-TRIANGLE-DURABLE-BEYOND-NK",
+          "GT-F94-PATHF-RENEWAL-ADVANTAGE-SHORT-LIVED",
+          "GT-F95-PCOMP-WITHIN-CLASS-DURABILITY",
+          "GT-F96-POST-RENEWAL-FEASIBILITY-T14",
+          "GT-F97-FIRST-HIT-SAMPLING-MATTERS",
+          "GT-Q25-ANCHOR-LOCAL-KINETIC-COMPARATOR"
+        ],
+        "removed": [],
+        "rewritten": {},
+        "before_sha256": "d75ab4212b29f433cc8528babb514045deb342574aa44784a5259702748e45b4",
+        "after_sha256": "612cff057fda4f29e1d063e347775286ab9a3621e7b0687bde5dfce4369d610e"
+      },
+      "gravity-time/coherence/relations.jsonl": {
+        "before_count": 155,
+        "after_count": 166,
+        "added": [
+          "GT-R156",
+          "GT-R157",
+          "GT-R158",
+          "GT-R159",
+          "GT-R160",
+          "GT-R161",
+          "GT-R162",
+          "GT-R163",
+          "GT-R164",
+          "GT-R165",
+          "GT-R166"
+        ],
+        "removed": [],
+        "rewritten": {},
+        "before_sha256": "9c8031412ffd8aa905addc5c88fe1ca964bd62b0849be21da2310d14c8502a07",
+        "after_sha256": "d3f246f21bd819ffa68cbfff92c51fdfdee5ecdf6b2bb87ab66503e09d3fc76e"
+      }
+    }
+  },
+  {
+    "source": "GT",
+    "from": "79fa6b0119449bd56359acf4436015df27855f43",
+    "to": "a81c505a08ac5c4c83359234915bec65bb1f60c3",
+    "ancestor": true,
+    "artifacts": {
+      "gravity-time/coherence/findings.jsonl": {
+        "before_count": 104,
+        "after_count": 122,
+        "added": [
+          "GT-F83-PCOMP-PERSISTENCE-IS-BETWEEN-LAYER-TRAFFIC",
+          "GT-F84-PATHF-CENTRES-SURVIVE-NK-AND-LOCAL-COUNT",
+          "GT-F85-CLOSEW-EFFECT-MOSTLY-PREVALENCE-AND-TRAFFIC",
+          "GT-F86-PATHH-CSPH-NK-SURVIVORS-QUALIFIED",
+          "GT-F87-RENEWAL-FEASIBILITY-AND-SIZE-ONE-EQUIVALENCE",
+          "GT-F88-NK-LAYER-TRAFFIC-COMPARATOR",
+          "GT-F89-COMPARATOR-MATTERS-MORE-THAN-CLOCK",
+          "GT-F90-E5A-INTACT-COUNT-IS-2-OF-30",
+          "GT-F91-RENEWAL-IS-TRANSIENT",
+          "GT-F92-CSPH-TRIANGLE-RENEWAL-IS-FLICKER-ASSISTED",
+          "GT-F93-PATHH-TRIANGLE-DURABLE-BEYOND-NK",
+          "GT-F94-PATHF-RENEWAL-ADVANTAGE-SHORT-LIVED",
+          "GT-F95-PCOMP-WITHIN-CLASS-DURABILITY",
+          "GT-F96-POST-RENEWAL-FEASIBILITY-T14",
+          "GT-F97-FIRST-HIT-SAMPLING-MATTERS",
+          "GT-Q23-DURABLE-RENEWAL",
+          "GT-Q24-WITHIN-LAYER-ARRANGEMENT-CONTROL",
+          "GT-Q25-ANCHOR-LOCAL-KINETIC-COMPARATOR"
+        ],
+        "removed": [],
+        "rewritten": {},
+        "before_sha256": "cd79b3a9792c6eda21f6eb7d9ad547e3acfed5e0356a5ce4cf6d562c0c8a21bb",
+        "after_sha256": "612cff057fda4f29e1d063e347775286ab9a3621e7b0687bde5dfce4369d610e"
+      },
+      "gravity-time/coherence/relations.jsonl": {
+        "before_count": 142,
+        "after_count": 166,
+        "added": [
+          "GT-R143",
+          "GT-R144",
+          "GT-R145",
+          "GT-R146",
+          "GT-R147",
+          "GT-R148",
+          "GT-R149",
+          "GT-R150",
+          "GT-R151",
+          "GT-R152",
+          "GT-R153",
+          "GT-R154",
+          "GT-R155",
+          "GT-R156",
+          "GT-R157",
+          "GT-R158",
+          "GT-R159",
+          "GT-R160",
+          "GT-R161",
+          "GT-R162",
+          "GT-R163",
+          "GT-R164",
+          "GT-R165",
+          "GT-R166"
+        ],
+        "removed": [],
+        "rewritten": {},
+        "before_sha256": "386e38b863751053853da9698ac0aa795660da6658b0426aa6c5cd80c2265ac4",
+        "after_sha256": "d3f246f21bd819ffa68cbfff92c51fdfdee5ecdf6b2bb87ab66503e09d3fc76e"
+      }
+    }
+  }
+]

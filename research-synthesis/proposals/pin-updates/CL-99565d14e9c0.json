@@ -1,0 +1,112 @@
+{
+  "artifacts": [
+    {
+      "added": [
+        "F8O-DISJOINT-FACTOR-SUPPORT",
+        "F8O-ENTRANCE-BALANCE",
+        "F8O-FACTOR-TRANSPORT",
+        "F8O-FIBREWISE-CANCELLATION",
+        "F8O-FOUR-EVENT-DEFECT",
+        "F8O-ROUTE-NULL-FACTORIZATION",
+        "F8O-RS-SCOPED-READOUT",
+        "F8O-STATIONARY-RESET-PROJECTION",
+        "F8O-STOPPING-MARKOVIZATION-DEFECT",
+        "F8O-TARGET-INSENSITIVITY",
+        "F8O-TASK-PROJECTION-SCOPE",
+        "F8O-TASK-SPECIFIC-PREDICTIVE-EQUALITY",
+        "F8O-TIMING-AGGREGATION-CANCELLATION"
+      ],
+      "changed": true,
+      "kind": "findings",
+      "path": "constraint-lab/coherence/findings.jsonl",
+      "present": true,
+      "removed": [],
+      "rewritten": [
+        "Q-H2-ROUTE-NULL-FACTORIZATION"
+      ]
+    },
+    {
+      "added": [
+        "R8O-001",
+        "R8O-002",
+        "R8O-003",
+        "R8O-004",
+        "R8O-005",
+        "R8O-006",
+        "R8O-007",
+        "R8O-008",
+        "R8O-009",
+        "R8O-010",
+        "R8O-011",
+        "R8O-012",
+        "R8O-013",
+        "R8O-014",
+        "R8O-015",
+        "R8O-016",
+        "R8O-017",
+        "R8O-018",
+        "R8O-019",
+        "R8O-020",
+        "R8O-021"
+      ],
+      "changed": true,
+      "kind": "relations",
+      "path": "constraint-lab/coherence/relations.jsonl",
+      "present": true,
+      "removed": [],
+      "rewritten": []
+    },
+    {
+      "changed": false,
+      "kind": "validator",
+      "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+      "present": true
+    },
+    {
+      "changed": true,
+      "kind": "theorem_catalog",
+      "path": "constraint-lab/formal/theorem-catalog.jsonl",
+      "present": true
+    },
+    {
+      "changed": true,
+      "kind": "document",
+      "path": "constraint-lab/formal/open-problems.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "snapshot",
+      "path": "constraint-lab/coherence/snapshots/through-generation-008n.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "constraint-lab/reports/generation-008n-h2-controlled-passage.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "constraint-lab/reports/generation-008k-predictive-state-synthesis.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "constraint-lab/docs/scientific-plan-discipline.md",
+      "present": true
+    }
+  ],
+  "current_commit": "e650d71bda7203c8018d8bd134c5496a03d74a11",
+  "descends_from_current": true,
+  "note": "Closed 8O milestone; external scientific review pending. See separate N-to-O-to-P audit before adoption.",
+  "proposed_commit": "99565d14e9c0fc172d925fd335965e127d950868",
+  "schema": "rssynth.pin-proposal/v1",
+  "source": "CL",
+  "status": "proposed",
+  "warnings": [
+    "1 upstream rows changed in place; shared connections citing them need re-review"
+  ]
+}

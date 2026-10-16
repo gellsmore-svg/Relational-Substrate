@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-16",
+  "note": "Three qualified agent-reviewed relationships, represented by six connection/proposal records. CL pin warning review remains separate and pending; no ratification, scientific review or private publication is supplied by this instruction.",
+  "recommendations": [
+    {
+      "connection_type": "explicit_contrast",
+      "decision_category": "qualified",
+      "kind": "connection",
+      "qualification": "Qualified family-specific contrast: PCOMP pooled lifetime excess collapses against NK, while CL sibling MFPT residuals survive adjacent-H1 matching. GT within-entry-class durability persists against NK and NL, so this is not a claim that PCOMP has no consequence. Different tasks, clocks and shared i",
+      "rests_on_unreviewed_round": true,
+      "scope": "GT FREE N=5,6 PCOMP vertex predicates; CL 8N non-neutral H2 systems",
+      "target": "X::0010"
+    },
+    {
+      "connection_type": "epistemic_compatibility",
+      "decision_category": "qualified",
+      "kind": "connection",
+      "qualification": "Qualified methodological compatibility, not equal source laws: CL intentionally starts at stationary class-conditioned sources; GT post-renewal survival uses the actual first-hit law. GT's source warning does not invalidate CL's distinct task. Any two-stage transfer must retain its own source law, r",
+      "rests_on_unreviewed_round": true,
+      "scope": "Post-event functionals in both programmes",
+      "target": "X::0011"
+    },
+    {
+      "connection_type": "requires_scope_alignment",
+      "decision_category": "qualified",
+      "kind": "connection",
+      "qualification": "Qualified stationary-flow construction correspondence only: GT NL preserves ordered local/remote coarse flux and circulation within its exchangeable support-preserving class; CL Kpi averages h2 under a stationary conditional. Fine reset operations, support, clocks and source tasks differ. PATHF coll",
+      "rests_on_unreviewed_round": true,
+      "scope": "GT P012 T16-T19 local/remote count generator versus CL 8N stationary-adjacent H1 comparator; method and typed coarse construction only.",
+      "target": "X::0012"
+    },
+    {
+      "connection_type": "explicit_contrast",
+      "decision_category": "qualified",
+      "kind": "proposal",
+      "qualification": "Qualified family-specific contrast: PCOMP pooled lifetime excess collapses against NK, while CL sibling MFPT residuals survive adjacent-H1 matching. GT within-entry-class durability persists against NK and NL, so this is not a claim that PCOMP has no consequence. Different tasks, clocks and shared i",
+      "rests_on_unreviewed_round": true,
+      "scope": "GT FREE N=5,6 PCOMP vertex predicates; CL 8N non-neutral H2 systems",
+      "target": "P::GT-C2"
+    },
+    {
+      "connection_type": "epistemic_compatibility",
+      "decision_category": "qualified",
+      "kind": "proposal",
+      "qualification": "Qualified methodological compatibility, not equal source laws: CL intentionally starts at stationary class-conditioned sources; GT post-renewal survival uses the actual first-hit law. GT's source warning does not invalidate CL's distinct task. Any two-stage transfer must retain its own source law, r",
+      "rests_on_unreviewed_round": true,
+      "scope": "Post-event functionals in both programmes",
+      "target": "P::GT-C3"
+    },
+    {
+      "connection_type": "requires_scope_alignment",
+      "decision_category": "qualified",
+      "kind": "proposal",
+      "qualification": "Qualified stationary-flow construction correspondence only: GT NL preserves ordered local/remote coarse flux and circulation within its exchangeable support-preserving class; CL Kpi averages h2 under a stationary conditional. Fine reset operations, support, clocks and source tasks differ. PATHF coll",
+      "rests_on_unreviewed_round": true,
+      "scope": "GT P012 T16-T19 local/remote count generator versus CL 8N stationary-adjacent H1 comparator; method and typed coarse construction only.",
+      "target": "P::GT-C4"
+    }
+  ],
+  "report": "research-synthesis/reports/2026-10-16-cl8p-gtp012-synchronisation.md",
+  "reported_at_commit": "8ceaa64",
+  "round_trip_id": "RT-0005"
+}

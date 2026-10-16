@@ -96,7 +96,7 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     def unrev(x):
         return any(ledger.unreviewed_round(manifest, loaded["nodes"].get(x[e])) for e in ("from", "to"))
 
-    L += ["**Decision category** is the category the agent recommended (rubric 03); human acceptance keeps it. **Review status** says who has reviewed it. A connection resting on a closed but **unreviewed** round (CL 008N, GT-P009) is marked and stays `qualified` (or `candidate`) even when human-accepted.", ""]
+    L += ["**Decision category** is the category the agent recommended (rubric 03); human acceptance keeps it. **Review status** says who has reviewed it. A connection resting on a closed but **unreviewed** round is marked from the manifest's per-source review metadata and stays `qualified` (or `candidate`) even when human-accepted.", ""]
     L += ["| Id | Type | From | To | Decision | Review status | Rests on unreviewed round | Independence | Review record |", "| --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
     for x in conns:
         L.append(f"| {x['connection_id']} | {x['connection_type']} | `{x['from']}` | `{x['to']}` | {x['decision_category'].upper()} | {STATUS_TEXT.get(x['review_status'], x['review_status'])} | {'YES' if unrev(x) else 'no'} | {x['independence']} | [{x['review']['record'].split('/')[-1]}](../{x['review']['record']}) |")
@@ -293,6 +293,12 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     CH += ["", "Snapshots: " + (", ".join(f"`{s}`" for s in snaps) or "none yet"), ""]
     pins = sorted(p.name for p in (core.ROOT / "proposals" / "pin-updates").glob("*.json")) if (core.ROOT / "proposals" / "pin-updates").exists() else []
     CH += ["Pin-update proposals: " + (", ".join(f"`{p}`" for p in pins) or "none yet")]
+    CH += ["", "## Closed programme milestones retained under the current pins", "",
+           "Administrative source ingestion is not independent scientific review. Earlier milestones remain distinct.", "",
+           "| Source | Round | Closed commit | Scientific review | Receipt at source |", "| --- | --- | --- | --- | --- |"]
+    for source in manifest["sources"]:
+        for milestone in source.get("closed_milestones", []):
+            CH.append(f"| {source['source_key']} | {milestone['round']} | `{milestone['commit']}` | {esc(milestone.get('scientific_review', 'not established'))} | `{milestone.get('receipt', 'see source ledger')}` |")
     files["chronology.md"] = "\n".join(CH) + "\n"
 
     # ---- themes ---------------------------------------------------------------------------------
@@ -365,8 +371,8 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
         state = f"ratified by {d['decision_id']} ({len(d.get('accepted', []))} accepted, objections: {', '.join(d.get('objected', [])) or 'none'})" if d else "**OPEN: the author's next instruction ratifies the items below unless the author objects**"
         RT += [f"## {rt['round_trip_id']}", "", f"- Closed: {rt['date']}; report `{rt['report']}`; describes commit `{rt['reported_at_commit'][:12]}`.", f"- State: {state}.", f"- Note: {esc(rt.get('note', ''))}", ""]
         if rt["recommendations"]:
-            RT += ["| Item | Kind | Type | Decision category | Rests on unreviewed round | Scope |", "| --- | --- | --- | --- | --- | --- |"]
-            RT += [f"| `{r['target']}` | {r['kind']} | {r.get('connection_type') or '—'} | {r['decision_category'] or '—'} | {'YES' if r.get('rests_on_unreviewed_round') else ('no' if 'rests_on_unreviewed_round' in r else 'not recorded')} | {esc(short(r.get('scope', '') or 'not recorded', 160))} |" for r in rt["recommendations"]]
+            RT += ["| Item | Kind | Type | Decision category | Rests on unreviewed round | Scope | Qualification |", "| --- | --- | --- | --- | --- | --- | --- |"]
+            RT += [f"| `{r['target']}` | {r['kind']} | {r.get('connection_type') or '—'} | {r['decision_category'] or '—'} | {'YES' if r.get('rests_on_unreviewed_round') else ('no' if 'rests_on_unreviewed_round' in r else 'not recorded')} | {esc(r.get('scope', '') or 'not recorded')} | {esc(r.get('qualification', '') or 'not recorded')} |" for r in rt["recommendations"]]
         else:
             RT.append("No recommendations were open at this round's close.")
         RT.append("")
@@ -380,12 +386,17 @@ def build(manifest: dict, loaded: dict, shared: dict, discovery: dict | None) ->
     for s in manifest["sources"]:
         n = sum(1 for v in loaded["nodes"].values() if v.get("source") == s["source_key"])
         I.append(f"| {esc(s['programme'])} (`{s['namespace']}::`) | **{s['status'].upper()}** | `{(s.get('commit') or '—')[:12]}` | {n} |")
+    I += ["", "### Authoritative round boundaries", ""]
+    I += [f"- **{s['source_key']} through {s.get('revision_label', 'declared pin')}**: {s.get('round_boundary', '')}"
+          for s in manifest["sources"] if s.get("role") == "research_programme"]
     I += ["", "## Shared layer", "", f"- Concepts: {len(concepts)}", f"- Cross-programme connections: {len(conns)} ({', '.join(f'{k}: {v}' for k, v in sorted(st.items()))})", f"- Proposals: {len(shared['proposals'])} ({', '.join(f'{k}: {v}' for k, v in sorted(ps.items()))})", f"- Shared questions: {len(shared['questions'])} ({sum(q['status'] == 'pending_source' for q in shared['questions'])} pending a missing source)", f"- Metaphors: {len(shared['metaphors'])} reviewed ({', '.join(f'{k}: {v}' for k, v in sorted(Counter(m['status'] for m in shared['metaphors']).items()))}), {len(shared['metaphor_drafts'])} draft (all non-evidentiary)", ""]
     dc = Counter(x["decision_category"] for x in conns)
     I += [f"- Connection decision categories (recommended by the agent; human acceptance keeps them): {', '.join(f'{k}: {v}' for k, v in sorted(dc.items()))}", "", "## Headlines", "", "- **Open cross-programme question:** XQ::01. Which declared comparator separates organisation (or history) from kinetics in both programmes? See [questions.md](questions.md).", "- **Contradiction resolved by scope:** X::0004. 'Reweighting can break reversibility' (CL) against 'single-witness templates are always reversible' (GT) differ in rule class (label covariance), not in fact. See [contradictions.md](contradictions.md).", ]
     resolved = [p for p in shared["proposals"] if p.get("relation_override")]
     I += [f"- **Author decision:** {p['proposal_id']} classified as `{p['relation_override']['to']}`" + (f" (matching {p['relation_override']['matches']})" if p['relation_override'].get('matches') else "") + ". See [contradictions.md](contradictions.md)." for p in sorted(resolved, key=lambda p: p["proposal_id"])]
-    I += ["- **Limitation:** results from CL 008N and GT-P009 are closed but unreviewed; links resting on them are capped at `qualified`.", "- **Historical intake:** `HIST` is `" + hsrc.get("status", "absent") + "`; " + str(len(hf)) + " historical findings registered. See [historical-coverage.md](historical-coverage.md).", "- **Not claimed:** no record derives physical gravity, quantum behaviour or physical time.", ""]
+    unreviewed = "; ".join(s["source_key"] + ": " + ", ".join(s.get("unreviewed_generations", []))
+                           for s in manifest["sources"] if s.get("unreviewed_generations"))
+    I += [f"- **Limitation:** closed but scientifically unreviewed rounds: {unreviewed or 'none declared'}. Links resting on them are capped at `qualified` or `candidate`; administrative ingestion is not scientific review.", "- **Historical intake:** `HIST` is `" + hsrc.get("status", "absent") + "`; " + str(len(hf)) + " historical findings registered. See [historical-coverage.md](historical-coverage.md).", "- **Not claimed:** no record derives physical gravity, quantum behaviour or physical time.", ""]
     I += ["## Views", "", "| View | What it shows |", "| --- | --- |", "| [provenance.md](provenance.md) · [provenance.mmd](provenance.mmd) | Sources, pins, artifacts, lineage, local-tree presence |", "| [links.md](links.md) · [links.mmd](links.mmd) | Reviewed cross-programme connections with rationale |", "| [contradictions.md](contradictions.md) · [nulls.md](nulls.md) | Contrasts, qualifications, rejected proposals; programme negative and qualified findings; false-attractor controls |", "| [questions.md](questions.md) | Shared questions and discriminating tests; programme open questions |", "| [candidate-bridges.md](candidate-bridges.md) | Proposals and retrieval diagnostics (not evidence) |", "| [metaphor-coverage.md](metaphor-coverage.md) · [metaphor-overlap.md](metaphor-overlap.md) · [metaphor-gaps.md](metaphor-gaps.md) · [metaphor-links.mmd](metaphor-links.mmd) | Explanations, overlaps, conflicts, gaps, overreach |", "| [chronology.md](chronology.md) | Change over time |", "| [round-trips.md](round-trips.md) | Each round's recommendations, what the author's next instruction ratifies, and the policy on what it never covers |", "| [historical-coverage.md](historical-coverage.md) | Historical archives, coverage matrix, source attestation and records blocked on historical sources |", "| [graph.json](graph.json) | Lossless machine-readable export: all nodes, edges (scientific, metaphor, provenance kept separate), shared records, statuses and source pins |", ""]
     I += ["## Themes", ""] + [f"- [{c['label']}](themes/{c['concept_id'].split('::')[1]}.md)" for c in concepts]
     files["index.md"] = "\n".join(I) + "\n"

@@ -1,0 +1,103 @@
+{
+  "artifacts": [
+    {
+      "added": [
+        "GT-F83-PCOMP-PERSISTENCE-IS-BETWEEN-LAYER-TRAFFIC",
+        "GT-F84-PATHF-CENTRES-SURVIVE-NK-AND-LOCAL-COUNT",
+        "GT-F85-CLOSEW-EFFECT-MOSTLY-PREVALENCE-AND-TRAFFIC",
+        "GT-F86-PATHH-CSPH-NK-SURVIVORS-QUALIFIED",
+        "GT-F87-RENEWAL-FEASIBILITY-AND-SIZE-ONE-EQUIVALENCE",
+        "GT-F88-NK-LAYER-TRAFFIC-COMPARATOR",
+        "GT-F89-COMPARATOR-MATTERS-MORE-THAN-CLOCK",
+        "GT-F90-E5A-INTACT-COUNT-IS-2-OF-30",
+        "GT-Q23-DURABLE-RENEWAL",
+        "GT-Q24-WITHIN-LAYER-ARRANGEMENT-CONTROL"
+      ],
+      "changed": true,
+      "kind": "findings",
+      "path": "gravity-time/coherence/findings.jsonl",
+      "present": true,
+      "removed": [],
+      "rewritten": []
+    },
+    {
+      "added": [
+        "GT-R143",
+        "GT-R144",
+        "GT-R145",
+        "GT-R146",
+        "GT-R147",
+        "GT-R148",
+        "GT-R149",
+        "GT-R150",
+        "GT-R151",
+        "GT-R152",
+        "GT-R153",
+        "GT-R154",
+        "GT-R155"
+      ],
+      "changed": true,
+      "kind": "relations",
+      "path": "gravity-time/coherence/relations.jsonl",
+      "present": true,
+      "removed": [],
+      "rewritten": []
+    },
+    {
+      "changed": false,
+      "kind": "validator",
+      "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "snapshot",
+      "path": "gravity-time/coherence/snapshots/through-gt-e5a.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "gravity-time/docs/reference-architecture-review.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "gravity-time/docs/e3-cross-programme-transfer.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "gravity-time/docs/e4-cross-programme-transfer.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "gravity-time/docs/gt-p008-cross-programme-transfer.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "gravity-time/docs/gt-e5a-cross-programme-transfer.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "gravity-time/reports/gt-e5a-report.md",
+      "present": true
+    }
+  ],
+  "current_commit": "79fa6b0119449bd56359acf4436015df27855f43",
+  "descends_from_current": true,
+  "note": "Historical P010 closed milestone, preserved separately before target P011. Scientific review pending.",
+  "proposed_commit": "4aaf04c0601b4232fc9fa24f6aa5d5ce6390c7e2",
+  "schema": "rssynth.pin-proposal/v1",
+  "source": "GT",
+  "status": "proposed",
+  "warnings": []
+}

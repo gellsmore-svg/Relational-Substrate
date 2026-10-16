@@ -1,0 +1,324 @@
+{
+  "artifacts": [
+    {
+      "added": [
+        "F8O-DISJOINT-FACTOR-SUPPORT",
+        "F8O-ENTRANCE-BALANCE",
+        "F8O-FACTOR-TRANSPORT",
+        "F8O-FIBREWISE-CANCELLATION",
+        "F8O-FOUR-EVENT-DEFECT",
+        "F8O-ROUTE-NULL-FACTORIZATION",
+        "F8O-RS-SCOPED-READOUT",
+        "F8O-STATIONARY-RESET-PROJECTION",
+        "F8O-STOPPING-MARKOVIZATION-DEFECT",
+        "F8O-TARGET-INSENSITIVITY",
+        "F8O-TASK-PROJECTION-SCOPE",
+        "F8O-TASK-SPECIFIC-PREDICTIVE-EQUALITY",
+        "F8O-TIMING-AGGREGATION-CANCELLATION",
+        "F8P-ALL-LENGTH-CRITERION",
+        "F8P-DISJOINT-ALL-WEIGHTS",
+        "F8P-FIBRE-ALL-WEIGHTS",
+        "F8P-HORIZON-COUNTEREXAMPLES",
+        "F8P-RS-TASK-EQUIVALENCE",
+        "F8P-TIMING-SCOPE"
+      ],
+      "changed": true,
+      "kind": "findings",
+      "path": "constraint-lab/coherence/findings.jsonl",
+      "present": true,
+      "removed": [],
+      "rewritten": [
+        "Q-H2-ROUTE-NULL-FACTORIZATION"
+      ]
+    },
+    {
+      "added": [
+        "R8O-001",
+        "R8O-002",
+        "R8O-003",
+        "R8O-004",
+        "R8O-005",
+        "R8O-006",
+        "R8O-007",
+        "R8O-008",
+        "R8O-009",
+        "R8O-010",
+        "R8O-011",
+        "R8O-012",
+        "R8O-013",
+        "R8O-014",
+        "R8O-015",
+        "R8O-016",
+        "R8O-017",
+        "R8O-018",
+        "R8O-019",
+        "R8O-020",
+        "R8O-021",
+        "R8P-001",
+        "R8P-002",
+        "R8P-003",
+        "R8P-004",
+        "R8P-005",
+        "R8P-006",
+        "R8P-007",
+        "R8P-008",
+        "R8P-009",
+        "R8P-010",
+        "R8P-011",
+        "R8P-012"
+      ],
+      "changed": true,
+      "kind": "relations",
+      "path": "constraint-lab/coherence/relations.jsonl",
+      "present": true,
+      "removed": [],
+      "rewritten": []
+    },
+    {
+      "changed": false,
+      "kind": "validator",
+      "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+      "present": true
+    },
+    {
+      "changed": true,
+      "kind": "theorem_catalog",
+      "path": "constraint-lab/formal/theorem-catalog.jsonl",
+      "present": true
+    },
+    {
+      "changed": true,
+      "kind": "document",
+      "path": "constraint-lab/formal/open-problems.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "snapshot",
+      "path": "constraint-lab/coherence/snapshots/through-generation-008n.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "constraint-lab/reports/generation-008n-h2-controlled-passage.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "constraint-lab/reports/generation-008k-predictive-state-synthesis.md",
+      "present": true
+    },
+    {
+      "changed": false,
+      "kind": "document",
+      "path": "constraint-lab/docs/scientific-plan-discipline.md",
+      "present": true
+    }
+  ],
+  "current_commit": "e650d71bda7203c8018d8bd134c5496a03d74a11",
+  "descends_from_current": true,
+  "note": "Combined administrative pin-review checkpoint requested; no human decision yet. Only documented route-null status transition in old findings; separate N/O/P delta audit retained.",
+  "proposed_commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+  "schema": "rssynth.pin-proposal/v1",
+  "source": "CL",
+  "source_metadata": {
+    "artifacts": [
+      {
+        "kind": "findings",
+        "materialise": true,
+        "path": "constraint-lab/coherence/findings.jsonl"
+      },
+      {
+        "kind": "relations",
+        "materialise": true,
+        "path": "constraint-lab/coherence/relations.jsonl"
+      },
+      {
+        "kind": "validator",
+        "materialise": true,
+        "path": "constraint-lab/src/rs_constraint_lab/coherence.py"
+      },
+      {
+        "kind": "theorem_catalog",
+        "materialise": true,
+        "path": "constraint-lab/formal/theorem-catalog.jsonl"
+      },
+      {
+        "description": "Open problems CL-Q01 to CL-Q06",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/formal/open-problems.md"
+      },
+      {
+        "description": "Immutable CL coherence snapshot through 008N",
+        "kind": "snapshot",
+        "materialise": false,
+        "path": "constraint-lab/coherence/snapshots/through-generation-008n.md"
+      },
+      {
+        "description": "Generation 008N controlled-passage report",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/reports/generation-008n-h2-controlled-passage.md"
+      },
+      {
+        "description": "Generation 008K predictive-state synthesis",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/reports/generation-008k-predictive-state-synthesis.md"
+      },
+      {
+        "description": "Plan discipline and the 8G compilation gate",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/docs/scientific-plan-discipline.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "snapshot",
+        "materialise": false,
+        "path": "constraint-lab/coherence/snapshots/through-generation-008o.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "snapshot",
+        "materialise": false,
+        "path": "constraint-lab/coherence/snapshots/through-generation-008p.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/reports/generation-008o-route-null-factorization.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/reports/generation-008p-stopping-sufficiency.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/formal/markovization-stopping-factorization.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/formal/task-relative-stopping-sufficiency.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/formal/route-null-weight-identities.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/formal/insertionwise-timing-cancellation.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/formal/stopping-sufficiency-counterexamples.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/provenance/synthesis-handoffs/008O/README.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/provenance/synthesis-handoffs/008P/README.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/provenance/reviews/008N-chatgpt-review-v0.8n.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/provenance/status-changes/008O.json"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/exploration/generation-008o/close-out.md"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/exploration/generation-008p/close-out.json"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/reports/tables/generation-008o-factor-validation.json"
+      },
+      {
+        "description": "Closed CL milestone source; original programme authority and review state preserved",
+        "kind": "document",
+        "materialise": false,
+        "path": "constraint-lab/reports/tables/generation-008p-proof-checks.json"
+      }
+    ],
+    "branch": "research/constraint-lab-v0.8p-stopping-sufficiency",
+    "closed_milestones": [
+      {
+        "commit": "e650d71bda7203c8018d8bd134c5496a03d74a11",
+        "round": "008N",
+        "scientific_review": "external review recorded in 008O"
+      },
+      {
+        "commit": "99565d14e9c0fc172d925fd335965e127d950868",
+        "receipt": "constraint-lab/exploration/generation-008o/close-out.md",
+        "round": "008O",
+        "scientific_review": "pending"
+      },
+      {
+        "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+        "receipt": "constraint-lab/exploration/generation-008p/close-out.json",
+        "round": "008P",
+        "scientific_review": "pending"
+      }
+    ],
+    "continuation_branch_globs": [
+      "research/constraint-lab-v*"
+    ],
+    "lineage": [
+      {
+        "relation": "descends_from",
+        "target": "CL-8G",
+        "what": "8P descends from CL 8G through canonical predictive 8I, 8K, 8L, 8M, 8N and 8O; alternate 8I/8J unmerged"
+      }
+    ],
+    "review_note": "8N externally reviewed in 8O (008N-chatgpt-review-v0.8n.md). 8O and 8P closed, exact-head CI successful, external scientific review pending. Pin adoption is administrative intake, not scientific review or interpretation acceptance.",
+    "revision_label": "008p",
+    "round_boundary": "8P closed at 08d7017be85616df7bc5b2934e8076bdcc73a319; annotated tag constraint-lab-008p-close dereferenced; separate closed 8O milestone retained",
+    "unreviewed_generations": [
+      "008O",
+      "008P"
+    ]
+  },
+  "source_metadata_sha256": "d819a2614a22bc5a9dbfe46a651c6907a44fea41b17bd0ba3d89acae90c20340",
+  "status": "proposed",
+  "warnings": [
+    "1 upstream rows changed in place; shared connections citing them need re-review"
+  ]
+}
