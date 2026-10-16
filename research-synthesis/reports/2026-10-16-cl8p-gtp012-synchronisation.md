@@ -104,3 +104,14 @@ The live selected boundaries are CL 08d7017be85616df7bc5b2934e8076bdcc73a319 and
 After genuine CL warning review: apply its proposal and metadata, install the remaining staged C1/question/CL8P extensions, perform its agent review at qualified scope, regenerate twice, validate/check/test, snapshot the adopted milestone, close a round trip displaying every recommendation, push and verify exact-final-head CI. No same-instruction ratification or merge approval is inferred for a still-gated milestone.
 
 OTR next actions are separate: programme scientific review; cross-programme operator/source definitions; narrow infrastructure maintenance; or consolidation/no new experiment. A local-clock, new comparator, mobile-identity or task-valued test needs its own programme question, feasibility and freeze. Neither programme derives physical gravity, physical time, agency, purpose, design or theology from these finite models.
+
+## I. Staged Milestone And Recommendation Receipt
+
+Reconciliation payload: 8ceaa6439f95f110398892512c6385d669b6f5f7. RT-0005 records its unambiguous short prefix and lists six records representing three qualified agent-reviewed relationships: X::0010/P::GT-C2, X::0011/P::GT-C3, X::0012/P::GT-C4. Each scope and qualification is displayed in generated/round-trips.md. They rest on scientifically unreviewed GT rounds; none is accepted or ratified by the instruction opening this work. The earlier RT-0004 and all author decisions remain untouched.
+
+Immutable staged snapshot: snapshots/2026-10-16-cl8p-gtp012-reconciled-awaiting-cl-pin.
+Its authoritative pins are deliberately CL8N and GT-P012, **not** the proposed CL8P pin.
+Lock SHA256: bbd1f40fb17fed79f0b980afb4e5248510d862878a4554d7b5b94ce2bf351cf4.
+View content hash: fe72d8a1df6ddb6fe4ef526f22cdf3c9ba9f3f355750b58ee11e8479575a86dc.
+
+Focused synchronisation tests: 13 passed. Final full-suite, integrity and exact closing-head CI outcomes are reported in the continuation PR; a successful earlier payload run is not substituted for that head. The draft is not a completed update to main. The one remaining pin decision and executable resume command are in proposals/reviews/2026-10-16-CL-pin-decision.md.

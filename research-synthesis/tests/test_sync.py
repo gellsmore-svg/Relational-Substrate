@@ -9,7 +9,7 @@ import unittest
 from unittest.mock import patch
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from rssynth import core, pins, preview, sources
+from rssynth import core, generate, pins, preview, roundtrip, sources
 from test_rssynth import sandbox
 
 CL = "08d7017be85616df7bc5b2934e8076bdcc73a319"
@@ -136,6 +136,16 @@ class Synchronisation(unittest.TestCase):
     def test_preview_refuses_canonical_output_destination(self):
         with self.assertRaisesRegex(ValueError,"never canonical"):
             preview.preview_pins([],"unused","unused",core.ROOT/"generated")
+
+    def test_new_roundtrip_displays_each_scope_and_qualification(self):
+        record = roundtrip.load_round_trips(core.ROOT)["RT-0005"]
+        view = generate.build(*generate.load_inputs())["round-trips.md"]
+        section = view.split("## RT-0005", 1)[1].split("\n## ", 1)[0]
+        self.assertEqual(len(record["recommendations"]), 6)
+        for item in record["recommendations"]:
+            self.assertIn(item["target"], section)
+            self.assertIn(generate.esc(item["scope"]), section)
+            self.assertIn(generate.esc(item["qualification"]), section)
 
 
 if __name__=="__main__":unittest.main()
