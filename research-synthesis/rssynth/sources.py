@@ -10,6 +10,7 @@ pin) the git blob at the pinned commit.
 from __future__ import annotations
 
 import ast
+import fnmatch
 import json
 import subprocess
 from pathlib import Path
@@ -191,9 +192,41 @@ def staleness(manifest: dict) -> list[dict]:
             out.append({"source": s["source_key"], "state": "branch_not_visible"})
         elif head == s["commit"]:
             out.append({"source": s["source_key"], "state": "current", "head": head})
+        elif s.get("role") == "shared_method" and s.get("artifacts") and all(
+                _git("rev-parse", f"{head}:{a['path']}") == a["git_blob"] for a in s.get("artifacts", [])):
+            out.append({"source": s["source_key"], "state": "current", "head": head,
+                        "basis": "versioned_method_artifacts_unchanged; pin not advanced"})
         else:
             anc = is_ancestor(s["commit"], head)
             out.append({"source": s["source_key"], "state": "behind_branch_head" if anc else "diverged_from_branch", "head": head})
+    return out
+
+
+def continuation_candidates(manifest: dict) -> list[dict]:
+    """Notify about later branch heads; never certify a round or move a pin.
+
+    Old manifests need no migration: the CL programme's established branch
+    namespace is discovered even while its reviewed pin still tracks 8N.
+    Only a declared closed milestone is labelled closed; everything else has
+    unknown completion/review state, even when its head is newer.
+    """
+    refs = (_git("for-each-ref", "--format=%(refname:strip=3) %(objectname)", "refs/remotes/origin") or "").splitlines()
+    defaults = {"CL": ["research/constraint-lab-v*"], "GT": ["research/gravity-time-admissibility"]}
+    out = []
+    for s in manifest["sources"]:
+        patterns = s.get("continuation_branch_globs", defaults.get(s["source_key"], []))
+        closed = {m["commit"]: m for m in s.get("closed_milestones", [])}
+        for line in refs:
+            branch, head = line.split()
+            if not any(fnmatch.fnmatchcase(branch, p) for p in patterns) or head == s.get("commit"):
+                continue
+            if is_ancestor(s["commit"], head) is not True:
+                continue
+            out.append({"source": s["source_key"], "pinned_commit": s["commit"], "tracked_branch": s["branch"],
+                        "candidate_branch": branch, "candidate_head": head,
+                        "completion": "declared_closed_milestone" if head in closed else "unknown_do_not_ingest",
+                        "review": closed.get(head, {}).get("scientific_review", "not_established"),
+                        "action": "notification_only; review closed receipt and propose pin; never auto-adopt"})
     return out
 
 

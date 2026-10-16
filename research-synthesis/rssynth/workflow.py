@@ -336,6 +336,10 @@ def check(*, use_git: bool = True, scope_base: str | None = "origin/main") -> di
     report["errors"] += verify_snapshots()
     if use_git:
         report["info"]["staleness"] = sources.staleness(manifest)
+        report["info"]["continuation_candidates"] = sources.continuation_candidates(manifest)
+        for candidate in report["info"]["continuation_candidates"]:
+            report["warnings"].append(f"source {candidate['source']}: later continuation {candidate['candidate_branch']} "
+                                      "requires closed-milestone review; never auto-adopted")
         for s in report["info"]["staleness"]:
             if s["state"] not in ("current",):
                 report["warnings"].append(f"source {s['source']}: {s['state']} (a newer round may need a pin review)")

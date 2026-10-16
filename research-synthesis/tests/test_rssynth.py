@@ -305,6 +305,17 @@ class AncestryStalenessAndRevisions(unittest.TestCase):
         with sandbox() as root:
             if not (root / "proposals/pin-updates/GT-e2b5dc4cb65b.json").exists():
                 self.skipTest("no GT-P012 pin proposal on this branch")
+            # Replay only in the sandbox, from the real historical pre-adoption pin.
+            proposal_path = root / "proposals/pin-updates/GT-e2b5dc4cb65b.json"
+            pending = core.read_json(proposal_path)
+            pending["status"] = "proposed"
+            core.write_json(proposal_path, pending)
+            spec_path = root / "sources/pin-spec.json"
+            spec = core.read_json(spec_path)
+            for source in spec["sources"]:
+                if source["source_key"] == "GT":
+                    source["commit"] = pending["current_commit"]
+            core.write_json(spec_path, spec)
             pins.auto_apply_pin("GT", "e2b5dc4cb65bafc423047f78468a63c9d6ceb218")
             prop = core.read_json(root / "proposals/pin-updates/GT-e2b5dc4cb65b.json")
             self.assertEqual(prop["adoption_basis"], "AD-0006")
@@ -806,6 +817,9 @@ class ImplicitRoundTripAcceptance(unittest.TestCase):
         rt = roundtrip.load_round_trips(REAL_ROOT)["RT-0001"]
         cats = {r["target"]: r["decision_category"] for r in rt["recommendations"]}
         for x in shared["connections"]:
+            if x["connection_id"] not in cats:
+                self.assertFalse(any(h.get("decision_id") == "AD-0002" for h in x["decision_history"]))
+                continue
             self.assertEqual((x["review_status"], x["decision_category"]), ("human_accepted", cats[x["connection_id"]]))
             self.assertTrue(x["decision_history"][-1]["human"])
         self.assertEqual(cats["X::0001"], "qualified")  # rests on unreviewed 008N / GT-P009: the cap holds through acceptance
@@ -832,6 +846,14 @@ class ImplicitRoundTripAcceptance(unittest.TestCase):
 
     def test_objection_reopens_and_the_rest_are_accepted(self):
         with sandbox() as root:
+            # Isolate this two-item fixture from later real, unaccepted recommendations.
+            for rel, field in (("ledger/connections.jsonl", "review_status"), ("proposals/candidate-relations.jsonl", "status")):
+                rows = core.read_jsonl(root / rel)
+                for row in rows:
+                    if row.get(field) == "agent_reviewed":
+                        row[field] = "under_review"
+                        row["decision_history"].append({"date": "2026-10-16", "actor": "agent: test fixture", "human": False, "status": "under_review", "decision_category": row["decision_category"], "rationale": "Isolate the synthetic two-item objection fixture"})
+                core.write_jsonl(root / rel, rows)
             self._reopen(root, "X::0002")
             self._reopen(root, "X::0006")
             rt = roundtrip.open_round_trip("RT-9002", "2026-10-16", "research-synthesis/README.md", "0" * 40)

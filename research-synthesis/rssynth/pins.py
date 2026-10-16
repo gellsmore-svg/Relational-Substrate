@@ -28,6 +28,7 @@ def build_manifest(spec_path=None, *, date: str | None = None, by: str = "agent"
     if spec.get("schema") != "rssynth.pin-spec/v1":
         raise sources.SourceError("unknown pin-spec schema")
     out = {"schema": "rssynth.source-manifest/v1", "generated_from": "sources/pin-spec.json", "sources": []}
+    previous = sources.sources_by_key(sources.load_manifest()) if sources.manifest_path().exists() else {}
     for s in spec["sources"]:
         entry = {k: v for k, v in s.items() if k != "artifacts"}
         entry["adapter_options"] = {"core_finding_fields": spec["core_finding_fields"], "extra_finding_fields": s.get("extra_finding_fields", [])}
@@ -48,6 +49,9 @@ def build_manifest(spec_path=None, *, date: str | None = None, by: str = "agent"
         val = [a for a in entry["artifacts"] if a["kind"] == "validator"]
         if val:
             entry["source_schema"] = {"validator_path": val[0]["path"], "validator_git_blob": val[0]["git_blob"]}
+        old = previous.get(s["source_key"])
+        if old and "ingestion_receipt" in old and {k: v for k, v in old.items() if k != "ingestion_receipt"} == {k: v for k, v in entry.items() if k != "ingestion_receipt"}:
+            entry["ingestion_receipt"] = old["ingestion_receipt"]
         out["sources"].append(entry)
     problems = sources.validate_manifest(out)
     if problems:
@@ -69,7 +73,29 @@ def _ledger_rows(commit: str, path: str) -> dict[str, dict]:
     return {r[key]: r for r in rows}
 
 
-def propose_pin(manifest: dict, source_key: str, new_commit: str, *, note: str = "") -> dict:
+METADATA_FIELDS = {"branch", "revision_label", "round_boundary", "artifacts", "lineage",
+                   "unreviewed_generations", "review_note", "closed_milestones", "continuation_branch_globs"}
+
+
+def checked_metadata(metadata: dict, commit: str) -> dict:
+    """Reviewable metadata, never an implicit change of source authority/status."""
+    if set(metadata) - METADATA_FIELDS:
+        raise sources.SourceError("unsupported pin metadata fields")
+    for field in ("branch", "revision_label", "round_boundary", "review_note"):
+        if not isinstance(metadata.get(field), str) or not metadata[field].strip():
+            raise sources.SourceError(f"pin metadata requires {field}")
+    if not any(m.get("commit") == commit for m in metadata.get("closed_milestones", [])):
+        raise sources.SourceError("pin metadata must declare the selected closed milestone")
+    head = sources.remote_branch_head(metadata["branch"])
+    if head is None or sources.is_ancestor(commit, head) is not True:
+        raise sources.SourceError("selected commit is not on the declared continuation branch; fetch/review metadata")
+    for artifact in metadata.get("artifacts", []):
+        if sources.git_file(commit, artifact["path"]) is None:
+            raise sources.SourceError(f"artifact absent at selected commit: {artifact['path']}")
+    return metadata
+
+
+def propose_pin(manifest: dict, source_key: str, new_commit: str, *, note: str = "", metadata: dict | None = None) -> dict:
     """Diff the source's ledgers between the current pin and ``new_commit``; flag upstream rewrites."""
     s = sources.sources_by_key(manifest)[source_key]
     if not sources.commit_reachable(new_commit):
@@ -94,6 +120,9 @@ def propose_pin(manifest: dict, source_key: str, new_commit: str, *, note: str =
         report["warnings"].append(f"{len(rewritten)} upstream rows changed in place; shared connections citing them need re-review")
     if removed:
         report["warnings"].append(f"{len(removed)} upstream rows removed")
+    if metadata is not None:
+        report["source_metadata"] = checked_metadata(metadata, new_commit)
+        report["source_metadata_sha256"] = core.sha256_bytes(core.canonical(metadata).encode())
     pin_proposals_dir().mkdir(parents=True, exist_ok=True)
     core.write_json(pin_proposals_dir() / f"{source_key}-{new_commit[:12]}.json", report)
     return report
@@ -107,9 +136,25 @@ def apply_pin(source_key: str, new_commit: str, *, reviewed_by: str, spec_path=N
     prop_path = pin_proposals_dir() / f"{source_key}-{new_commit[:12]}.json"
     if not prop_path.exists():
         raise sources.SourceError("no pin proposal for this commit; run propose-pin first")
+    prop = core.read_json(prop_path)
+    if prop.get("status") != "proposed" or prop.get("proposed_commit") != new_commit or prop.get("source") != source_key:
+        raise sources.SourceError("pin proposal is not a pending review for this commit")
+    metadata = prop.get("source_metadata")
+    if metadata is not None:
+        if core.sha256_bytes(core.canonical(metadata).encode()) != prop.get("source_metadata_sha256"):
+            raise sources.SourceError("proposed metadata digest changed; re-propose and review")
+        checked_metadata(metadata, new_commit)
     spec = core.read_json(spec_path)
+    current = next((s for s in spec["sources"] if s["source_key"] == source_key), None)
+    if current is None or prop.get("current_commit") != current.get("commit"):
+        raise sources.SourceError("pin proposal is stale; re-propose against the authoritative current pin")
     for s in spec["sources"]:
         if s["source_key"] == source_key:
+            head = sources.remote_branch_head((metadata or s)["branch"])
+            if head is None or sources.is_ancestor(new_commit, head) is not True:
+                raise sources.SourceError("pin would track an abandoned/parallel branch; propose reviewed source metadata")
+            if metadata is not None:
+                s.update(metadata)
             s["commit"] = new_commit
     core.write_json(spec_path, spec)
     stale = sources.materialised_dir() / source_key
@@ -117,7 +162,6 @@ def apply_pin(source_key: str, new_commit: str, *, reviewed_by: str, spec_path=N
         shutil.rmtree(stale)
     manifest = build_manifest(spec_path, by=f"human review: {reviewed_by}")
     write_manifest(manifest)
-    prop = core.read_json(prop_path)
     prop.update({"status": "adopted", "reviewed_by": reviewed_by, "adopted_on": datetime.date.today().isoformat()})
     core.write_json(prop_path, prop)
     return manifest

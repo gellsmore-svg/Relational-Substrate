@@ -2,7 +2,7 @@
 
 Only records in `ledger/connections.jsonl`. Every one carries an explicit review status. Human acceptance is implicit in the round trip (`docs/cadence.md`): it accepts a reported recommendation at its stated decision category and never upgrades it. Evidential types compare formal objects on eight dimensions (see each review record). Independence is stated because GT and CL share 8G lineage.
 
-**Decision category** is the category the agent recommended (rubric 03); human acceptance keeps it. **Review status** says who has reviewed it. A connection resting on a closed but **unreviewed** round (CL 008N, GT-P009) is marked and stays `qualified` (or `candidate`) even when human-accepted.
+**Decision category** is the category the agent recommended (rubric 03); human acceptance keeps it. **Review status** says who has reviewed it. A connection resting on a closed but **unreviewed** round is marked from the manifest's per-source review metadata and stays `qualified` (or `candidate`) even when human-accepted.
 
 | Id | Type | From | To | Decision | Review status | Rests on unreviewed round | Independence | Review record |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -15,6 +15,9 @@ Only records in `ledger/connections.jsonl`. Every one carries an explicit review
 | X::0007 | epistemic_compatibility | `CL::F018-LOCAL-VERSUS-INITIAL` | `GT::GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY` | QUALIFIED | HUMAN-ACCEPTED (at the stated decision category) | YES | shared_lineage | [AD-0002.md](../proposals/reviews/AD-0002.md) |
 | X::0008 | qualifies | `CL::F8G-FORMAL-H-L-DISTINCTION` | `GT::GT-Q22-IDENTITY-THROUGH-REPLACEMENT` | QUALIFIED | HUMAN-ACCEPTED (at the stated decision category) | YES | shared_lineage | [AD-0002.md](../proposals/reviews/AD-0002.md) |
 | X::0009 | tested_structural_analogy | `CL::CL-T88` | `GT::GT-F79-ND-MATCHES-EDGE-LIFETIME` | QUALIFIED | HUMAN-ACCEPTED (at the stated decision category) | YES | shared_lineage | [AD-0002.md](../proposals/reviews/AD-0002.md) |
+| X::0010 | explicit_contrast | `GT::GT-F83-PCOMP-PERSISTENCE-IS-BETWEEN-LAYER-TRAFFIC` | `CL::F8N-MFPT-RESIDUAL` | QUALIFIED | AGENT-REVIEWED (awaiting human acceptance) | YES | shared_lineage | [P-GT-C2-03-agent_reviewed.md](../proposals/reviews/P-GT-C2-03-agent_reviewed.md) |
+| X::0011 | epistemic_compatibility | `GT::GT-F97-FIRST-HIT-SAMPLING-MATTERS` | `CL::F8N-MATCHED-SOURCE-PASSAGE` | QUALIFIED | AGENT-REVIEWED (awaiting human acceptance) | YES | shared_lineage | [P-GT-C3-03-agent_reviewed.md](../proposals/reviews/P-GT-C3-03-agent_reviewed.md) |
+| X::0012 | requires_scope_alignment | `GT::GT-F98-NL-LOCAL-REMOTE-TRAFFIC-COMPARATOR` | `CL::F8N-H1-MATCHED-PASSAGE-BOUNDARY` | QUALIFIED | AGENT-REVIEWED (awaiting human acceptance) | YES | shared_lineage | [P-GT-C4-03-agent_reviewed.md](../proposals/reviews/P-GT-C4-03-agent_reviewed.md) |
 
 ## Rationale
 
@@ -35,4 +38,10 @@ Only records in `ledger/connections.jsonl`. Every one carries an explicit review
 **X::0008** (qualifies; HUMAN-ACCEPTED (at the stated decision category)). CL's H axis concerns rules that read history at identical complete current state. GT-Q22 asks only for an observable computed on trajectories; no rule reads it. CL's distinction therefore qualifies GT-Q22: answering it does not require or test a history axis, and the 8G compilation gate is not engaged.
 
 **X::0009** (tested_structural_analogy; HUMAN-ACCEPTED (at the stated decision category)). Both are 'matching X fixes Y' identities that turn an apparent discriminator into a control. CL-T88: starting from the stationary conditional law on D, E[tau_D^+] = 1/pi(D), so equal occupancy forces equal Kac recurrence. GT-F79: E_pi[q] = 2M J_edge by exchangeability, so matching density and mean rate forces equal CT edge present-lifetime. Map: pi(D) <-> edge occupancy; Kac recurrence <-> edge present-lifetime; both follow from stationary flux balance across a set boundary.
+
+**X::0010** (explicit_contrast; AGENT-REVIEWED (awaiting human acceptance)). GT PCOMP's large ND lifetime excess disappears against layer-traffic-matched NK, whereas CL sibling MFPT differences survive full adjacent-(P,h1)-matched Kpi. This qualifies a mechanism reading of X::0001, not its occupancy/process analogy. PCOMP within-class durability can still differ; pooled lifetime is not durability.
+
+**X::0011** (epistemic_compatibility; AGENT-REVIEWED (awaiting human acceptance)). CL intentionally uses stationary class-conditioned sources. GT post-renewal survival uses a first-hit law. Both are legitimate for their distinct tasks: GT's stationary-restriction warning does not invalidate CL's original source convention. Future CL post-hit continuation would need an explicit first-hit law.
+
+**X::0012** (requires_scope_alignment; AGENT-REVIEWED (awaiting human acceptance)). Both comparators aggregate stationary directed flow under a declared projection. GT NL is a pool-exchangeable single-toggle realization preserving directed circulation, not CL's repeated conditional reset of h2. Restricted uniqueness and the different clocks, supports and sources prevent a common fine operator claim. PATHF's residual collapses while PATHH's survives, so finer matching does not have one universal effect.
 

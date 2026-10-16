@@ -4,10 +4,11 @@ Shared cross-programme questions (`ledger/questions.jsonl`). No test listed here
 
 ## XQ::01: Which declared comparison process separates organisation (or history) from kinetics in both programmes, and does each programme's design transfer to the other?
 
-Status: **OPEN**. Refs: `CL::Q-H2-CONTROLLED-PASSAGE`, `GT::GT-Q21-KINETICS-AWARE-COMPARATOR`, `C::matched-control-design`
+Status: **OPEN**. Refs: `CL::Q-H2-CONTROLLED-PASSAGE`, `GT::GT-Q21-KINETICS-AWARE-COMPARATOR`, `C::matched-control-design`, `GT::GT-F98-NL-LOCAL-REMOTE-TRAFFIC-COMPARATOR`, `GT::GT-F100-PATHH-TRIANGLE-DURABILITY-BEYOND-NL`, `GT::GT-F101-PATHF-CENTRE-EFFECT-IS-LOCAL-REMOTE-TRAFFIC`
 
 - Test (proposed_not_authorised): Apply CL's matched-source passage design (CL-T85, CL-T89) to GT's flexible predicates on the same 12 E5A laws. Would show: whether GT's CLOSEW/PATHF signals survive a CL-style matched control.
 - Test (proposed_not_authorised): Report CL MFPT residuals in an anchor-local event clock. Would show: whether CL's residuals depend on where activity sits.
+- Note: 2026-10-16: NK matches edge-count traffic; NL additionally matches ordered local/remote traffic. PATHF's residual collapses against NL; PATHH and within-class PCOMP retain projection-relative residuals. Neither comparator is automatically CL's fine conditional reset. New programme tests remain unauthorised.
 
 ## XQ::02: Does GT's stationary balance identity (T-8) hold for CL O=3 templates and contain CL-T18 as a special case?
 
@@ -17,15 +18,17 @@ Status: **OPEN**. Refs: `GT::GT-F67-FLOOR-IS-AN-EXACT-ODDS-LEVER`, `CL::CL-T18`
 
 ## XQ::03: Can every clock dependence in both programmes be written as a random time change plus a declared projection, and which effects need the projection?
 
-Status: **OPEN**. Refs: `CL::F003-CLOCK-SPLIT`, `GT::GT-F20-TRIAD-CLOCK-REVERSAL`, `C::clock-readout-dependence`
+Status: **OPEN**. Refs: `CL::F003-CLOCK-SPLIT`, `GT::GT-F20-TRIAD-CLOCK-REVERSAL`, `C::clock-readout-dependence`, `GT::GT-F96-POST-RENEWAL-FEASIBILITY-T14`, `CL::CL-T30`
 
 - Test (proposed_not_authorised): Express CL's pair epoch as a time change of the full process composed with the triad projection; check which CL memory effects vanish without the projection. Would show: whether clock effects and projection effects separate cleanly.
+- Note: 2026-10-16: GT T13 integrates remote jumps while retaining their effects on later rates. CL's eliminated triads are inert for pair-mask/history, not necessarily complete O3 material. This is readout-relative, not an assertion of equal physical clocks.
 
 ## XQ::04: Can identity through replacement be defined as a trajectory observable that never engages a history axis, and does it distinguish GT's flexible organisations from flicker?
 
-Status: **OPEN**. Refs: `GT::GT-Q22-IDENTITY-THROUGH-REPLACEMENT`, `CL::F8H-FIXED-STATE-NONCOMPILABILITY`, `C::history-as-predictive-variable`
+Status: **PARTIALLY_ANSWERED**. Refs: `GT::GT-Q22-IDENTITY-THROUGH-REPLACEMENT`, `CL::F8H-FIXED-STATE-NONCOMPILABILITY`, `C::history-as-predictive-variable`, `GT::GT-F91-RENEWAL-IS-TRANSIENT`, `GT::GT-F100-PATHH-TRIANGLE-DURABILITY-BEYOND-NL`, `GT::GT-F101-PATHF-CENTRE-EFFECT-IS-LOCAL-REMOTE-TRAFFIC`
 
 - Test (proposed_not_authorised): Define replacement completion on GT E5A laws and confirm by inspection that no rule reads it (8G gate not engaged). Would show: whether persistence through turnover is replacement or flicker.
+- Note: 2026-10-16: GT P010-P012 separate reaching renewal, flicker and conditional survival at analyst-fixed anchors; PATHF is explained by local/remote traffic, while PATHH survives that control. Renewal decays; mobile/unlabelled identity and sustained organisation remain undefined/unestablished.
 
 ## XQ::05: What do the historical 505-507 / Work 11 / 46-48 materials contribute to the occupancy-versus-process and predictive-sufficiency themes?
 
@@ -42,10 +45,11 @@ Status: **OPEN**. Refs: `P::EXT-C01`, `P::EXT-C02`, `P::EXT-C09`, `P::EXT-C22`
 
 ## XQ::07: Is there a common mathematical operator behind CL's predictive sufficiency and GT's persistence, or only a common question?
 
-Status: **OPEN**. Refs: `C::predictive-sufficiency`, `C::passage-and-persistence`, `C::occupancy-vs-process`
+Status: **PARTIALLY_ANSWERED**. Refs: `C::predictive-sufficiency`, `C::passage-and-persistence`, `C::occupancy-vs-process`, `GT::GT-F88-NK-LAYER-TRAFFIC-COMPARATOR`, `GT::GT-F98-NL-LOCAL-REMOTE-TRAFFIC-COMPARATOR`, `CL::F8N-H1-MATCHED-PASSAGE-BOUNDARY`
 
 - Test (proposed_not_authorised): Write both as functionals of the same generator and stopping sets, and check whether one determines the other on a shared small chain. Would show: a shared operator, a one-way relation, or none.
 - Note: The stronger common element is currently a question, not a universal operator, and not a derivation of gravity.
+2026-10-16: Restricted stationary-conditional coarse generator B=L_pi A C is comparable with CL Kpi at its typed coarse level. GT NK/NL's support-preserving exchangeable realization is not a general fine conditional reset. A common fine operator remains unestablished. CL8O/8P extension is read and staged, not yet an adopted source.
 
 ## Programme open questions (unresolved, from the pinned ledgers)
 

@@ -38,21 +38,21 @@ No recommendations were open at this round's close.
 - State: ratified by AD-0002 (15 accepted, objections: none).
 - Note: Retrospective: the round trip that ended with the AD-0001 report (PR #8 at 0dbc9d2). Opened when the implicit-acceptance rule was introduced; lists what was then agent-reviewed and reported as awaiting the author.
 
-| Item | Kind | Type | Decision category | Rests on unreviewed round | Scope |
-| --- | --- | --- | --- | --- | --- |
-| `X::0001` | connection | — | qualified | not recorded | not recorded |
-| `X::0002` | connection | — | qualified | not recorded | not recorded |
-| `X::0003` | connection | — | accepted_bounded | not recorded | not recorded |
-| `X::0004` | connection | — | accepted_bounded | not recorded | not recorded |
-| `X::0005` | connection | — | accepted_bounded | not recorded | not recorded |
-| `X::0006` | connection | — | qualified | not recorded | not recorded |
-| `X::0007` | connection | — | qualified | not recorded | not recorded |
-| `X::0008` | connection | — | qualified | not recorded | not recorded |
-| `X::0009` | connection | — | qualified | not recorded | not recorded |
-| `M::two-towns` | metaphor | — | — | not recorded | not recorded |
-| `M::photo-and-diary` | metaphor | — | — | not recorded | not recorded |
-| `M::minutes-and-moves` | metaphor | — | — | not recorded | not recorded |
-| `M::heavy-door-locked-door` | metaphor | — | — | not recorded | not recorded |
-| `M::rotating-committee` | metaphor | — | — | not recorded | not recorded |
-| `M::tallest-in-the-room` | metaphor | — | — | not recorded | not recorded |
+| Item | Kind | Type | Decision category | Rests on unreviewed round | Scope | Qualification |
+| --- | --- | --- | --- | --- | --- | --- |
+| `X::0001` | connection | — | qualified | not recorded | not recorded | not recorded |
+| `X::0002` | connection | — | qualified | not recorded | not recorded | not recorded |
+| `X::0003` | connection | — | accepted_bounded | not recorded | not recorded | not recorded |
+| `X::0004` | connection | — | accepted_bounded | not recorded | not recorded | not recorded |
+| `X::0005` | connection | — | accepted_bounded | not recorded | not recorded | not recorded |
+| `X::0006` | connection | — | qualified | not recorded | not recorded | not recorded |
+| `X::0007` | connection | — | qualified | not recorded | not recorded | not recorded |
+| `X::0008` | connection | — | qualified | not recorded | not recorded | not recorded |
+| `X::0009` | connection | — | qualified | not recorded | not recorded | not recorded |
+| `M::two-towns` | metaphor | — | — | not recorded | not recorded | not recorded |
+| `M::photo-and-diary` | metaphor | — | — | not recorded | not recorded | not recorded |
+| `M::minutes-and-moves` | metaphor | — | — | not recorded | not recorded | not recorded |
+| `M::heavy-door-locked-door` | metaphor | — | — | not recorded | not recorded | not recorded |
+| `M::rotating-committee` | metaphor | — | — | not recorded | not recorded | not recorded |
+| `M::tallest-in-the-room` | metaphor | — | — | not recorded | not recorded | not recorded |
 

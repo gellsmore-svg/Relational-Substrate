@@ -1,0 +1,880 @@
+{
+  "generated_from": "sources/pin-spec.json",
+  "schema": "rssynth.source-manifest/v1",
+  "sources": [
+    {
+      "adapter_options": {
+        "core_finding_fields": [
+          "created_commit",
+          "created_generation",
+          "epistemic_layer",
+          "evidence_refs",
+          "finding_id",
+          "literal_value",
+          "magnitude_class",
+          "notes",
+          "observable",
+          "robustness_vector",
+          "scope",
+          "statement",
+          "status",
+          "structural_roles",
+          "temporal_character"
+        ],
+        "extra_finding_fields": [
+          "formal_refs"
+        ]
+      },
+      "adapters": [
+        "coherence_ledger_v1",
+        "theorem_catalog_v1"
+      ],
+      "artifacts": [
+        {
+          "bytes": 334355,
+          "git_blob": "cba8a84299ff42110f1e587f619c6f65ec65a129",
+          "kind": "findings",
+          "materialised": true,
+          "path": "constraint-lab/coherence/findings.jsonl",
+          "sha256": "2fa6d863c8d8798f7f567d8948a389cb2e0e5ee883ca01a929fdda2e1e0cc6e7"
+        },
+        {
+          "bytes": 256140,
+          "git_blob": "eb8d495991376ed5cf2efb6893a25e8b9787394a",
+          "kind": "relations",
+          "materialised": true,
+          "path": "constraint-lab/coherence/relations.jsonl",
+          "sha256": "b60ef7fc71713996dc577c63db689d789c79b9b31fbcceb43c629ac8e898e4b1"
+        },
+        {
+          "bytes": 11807,
+          "git_blob": "1fc80911d99fc548d0ac33b7367999188d16ad88",
+          "kind": "validator",
+          "materialised": true,
+          "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+          "sha256": "a99d65438d3d332b7331d9b108f28a31e42228197f5d4d74956ec967ad8b9c2e"
+        },
+        {
+          "bytes": 170271,
+          "git_blob": "1b5c0f99699adcb98d90aae8565e4de1265e8f76",
+          "kind": "theorem_catalog",
+          "materialised": true,
+          "path": "constraint-lab/formal/theorem-catalog.jsonl",
+          "sha256": "4e29fa9d18dcc3ca51d008d9cee9e92549b4d59399ddcf3ad0a738236d946a25"
+        },
+        {
+          "bytes": 15071,
+          "description": "Open problems CL-Q01 to CL-Q06",
+          "git_blob": "2830cd6bf6e3fc269abd5681eb125066c5ac4161",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/formal/open-problems.md",
+          "sha256": "139c31942a8cfde2e9667d6d77df6b9154ebf4d360834830b79e31f9dfe93c8e"
+        },
+        {
+          "bytes": 125767,
+          "description": "Immutable CL coherence snapshot through 008N",
+          "git_blob": "aeb1fb2b2511ff9760821e393be9fb157b5dadda",
+          "kind": "snapshot",
+          "materialised": false,
+          "path": "constraint-lab/coherence/snapshots/through-generation-008n.md",
+          "sha256": "ffcd7dfd69f72c177b47978c971677e670f8b3cc8d16687f64f07697da8a0275"
+        },
+        {
+          "bytes": 14973,
+          "description": "Generation 008N controlled-passage report",
+          "git_blob": "100a0d4ca7f4ea6b3adc3dc8af2336ff7103f5ee",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/reports/generation-008n-h2-controlled-passage.md",
+          "sha256": "5100facd35f733c281a515a12a1c900f9e827d5d66b716efb7300ada17a56e76"
+        },
+        {
+          "bytes": 17088,
+          "description": "Generation 008K predictive-state synthesis",
+          "git_blob": "0a4a335d8a2a2fba6cd51e16403258c3efeb93c8",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/reports/generation-008k-predictive-state-synthesis.md",
+          "sha256": "d0e469a80d33462a3dead64e4832474dcb8c0c3176a8ab4734d49f86693e3d6f"
+        },
+        {
+          "bytes": 2827,
+          "description": "Plan discipline and the 8G compilation gate",
+          "git_blob": "2e6a8d35e1d9939c8d4406ae2f938413ba5b7c85",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/docs/scientific-plan-discipline.md",
+          "sha256": "4101d64f8b4d228dd1cb6ca46d77848e14e79f768041aff839f962da6fecd974"
+        },
+        {
+          "bytes": 131920,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "a57d5fe8caf28ab39b9ca773422237e3b16ccb74",
+          "kind": "snapshot",
+          "materialised": false,
+          "path": "constraint-lab/coherence/snapshots/through-generation-008o.md",
+          "sha256": "638b5a73afbd85ceb41a4e20b695f914c1f155485aa54a76422aba91e39e5aee"
+        },
+        {
+          "bytes": 135171,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "40bb59641a09d9e33b36355f74c0c824bbb7512a",
+          "kind": "snapshot",
+          "materialised": false,
+          "path": "constraint-lab/coherence/snapshots/through-generation-008p.md",
+          "sha256": "efa90d19e585ce5a46a2e51aaa101c3f209bc57d73619dd1a44d7297df714b58"
+        },
+        {
+          "bytes": 13299,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "11fc917fe3b25f9802dc7bd2babca5c8f759f831",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/reports/generation-008o-route-null-factorization.md",
+          "sha256": "d8482cc050c5041e5dad4cc9ce1e262817321585dd1687f8241d4b24a37b74fb"
+        },
+        {
+          "bytes": 11946,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "c53950e204cea85975bbdb582fa338cd77ff3449",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/reports/generation-008p-stopping-sufficiency.md",
+          "sha256": "979b306a157ed0d6b7cdd8a16abeb3ed5b27d2d795bc07226aa2afe70738a012"
+        },
+        {
+          "bytes": 11238,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "28c2bac156839bbbbd71a82fc6b9279bdd8b83d9",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/formal/markovization-stopping-factorization.md",
+          "sha256": "ec1c11aab315d78117459e3aefcbe87d51d3de1e360d82b51c0d3f9607d1b98e"
+        },
+        {
+          "bytes": 6437,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "057cc3a16986afb4cef941390d75dc5811e57fe6",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/formal/task-relative-stopping-sufficiency.md",
+          "sha256": "4844cfcac71e285c70528212a0b5f7763b84a4001bc0a9510d575ca6bc7ee408"
+        },
+        {
+          "bytes": 8032,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "0cd3f65166cb9b355a8dec01fc704af37ebfdf9e",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/formal/route-null-weight-identities.md",
+          "sha256": "53dd5cee8a1dab70c4fc5d79e9bc094cbafc399ce8f513e96320eba7a6faf7db"
+        },
+        {
+          "bytes": 2692,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "652a73f1856f792dded8834d9bd2f357517922bc",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/formal/insertionwise-timing-cancellation.md",
+          "sha256": "5b671b58c3b5a1f58862f6aa75b109228105d9d71074c792c70054e8af2aaed1"
+        },
+        {
+          "bytes": 2143,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "816a1c5b60421083ac5f8cc214c3811fbabf30cb",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/formal/stopping-sufficiency-counterexamples.md",
+          "sha256": "aa0c772af77f5902857c89a85b35989483cafa6a5620870ba2e5ecd3e49d7330"
+        },
+        {
+          "bytes": 9096,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "d955205bfccccd763c85302d03eaae3a87e45789",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/provenance/synthesis-handoffs/008O/README.md",
+          "sha256": "e3cbf1b7b569579e8b92856d75187b05ce8585f156463f28bf1bceb24d3fd491"
+        },
+        {
+          "bytes": 6878,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "a32d9dc823877b74e2d0cc103ab65edaca3988e2",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/provenance/synthesis-handoffs/008P/README.md",
+          "sha256": "dfda26fe82c00cc6c858e4e4fb94f20794a7d046e4d99dc97b941ebbbaca6490"
+        },
+        {
+          "bytes": 2907,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "246c604abce3099f515c5aae744ae491a56f0394",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/provenance/reviews/008N-chatgpt-review-v0.8n.md",
+          "sha256": "3ea790f772f04a7c6a81228d061fed6ca5447614f6cb7712007567fa2737c7ad"
+        },
+        {
+          "bytes": 939,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "21b3424052b4d077629597cf4f8f96c7c14f807f",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/provenance/status-changes/008O.json",
+          "sha256": "e87cb935ec384a518907e793f0cf8bcc688fc6795cb8e63598ce7654485e0b52"
+        },
+        {
+          "bytes": 3630,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "bd61b7a774901460a3bfc51929f70d3e7ea3f793",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/exploration/generation-008o/close-out.md",
+          "sha256": "e5b5475bc1a1fa264558f1418bf37f9faa6a8c4ef5cb44dbe86a837643d69d79"
+        },
+        {
+          "bytes": 5767,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "0921e736b93cab7e135f7d7c70315738737f0c99",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/exploration/generation-008p/close-out.json",
+          "sha256": "da9c140b79039b62c86b4aa55e1b0a20fe4f3469716dc13aefd0c0668c4546b3"
+        },
+        {
+          "bytes": 22243,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "39e696e1cfc9eb6db88becd05f52d266028d028a",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/reports/tables/generation-008o-factor-validation.json",
+          "sha256": "a25d4ef977b5b37e0d6f84bb5be157cfd636c836ebd2a33faab859e3e82e2560"
+        },
+        {
+          "bytes": 106863,
+          "description": "Closed CL milestone source; original programme authority and review state preserved",
+          "git_blob": "f4d39b967b11d8b0d245f2d5b517609186dc6ac9",
+          "kind": "document",
+          "materialised": false,
+          "path": "constraint-lab/reports/tables/generation-008p-proof-checks.json",
+          "sha256": "393c2a3c2fa13384b108abd4f0e2ee1de105778b65a13408c2d2fbefe25be932"
+        }
+      ],
+      "branch": "research/constraint-lab-v0.8p-stopping-sufficiency",
+      "closed_milestones": [
+        {
+          "commit": "e650d71bda7203c8018d8bd134c5496a03d74a11",
+          "round": "008N",
+          "scientific_review": "external review recorded in 008O"
+        },
+        {
+          "commit": "99565d14e9c0fc172d925fd335965e127d950868",
+          "receipt": "constraint-lab/exploration/generation-008o/close-out.md",
+          "round": "008O",
+          "scientific_review": "pending"
+        },
+        {
+          "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+          "receipt": "constraint-lab/exploration/generation-008p/close-out.json",
+          "round": "008P",
+          "scientific_review": "pending"
+        }
+      ],
+      "commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "continuation_branch_globs": [
+        "research/constraint-lab-v*"
+      ],
+      "default_revision": true,
+      "ingestion_receipt": {
+        "by": "agent: HYPOTHETICAL PREVIEW ONLY, no human adoption",
+        "checks": [
+          "commit reachable",
+          "every artifact path present at the pinned commit",
+          "sha256 and git blob recorded",
+          "materialised copies written byte-identically"
+        ],
+        "date": "2026-10-16"
+      },
+      "lineage": [
+        {
+          "relation": "descends_from",
+          "target": "CL-8G",
+          "what": "8P descends from CL 8G through canonical predictive 8I, 8K, 8L, 8M, 8N and 8O; alternate 8I/8J unmerged"
+        }
+      ],
+      "namespace": "CL",
+      "programme": "Constraint Laboratory",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "review_note": "8N externally reviewed in 8O (008N-chatgpt-review-v0.8n.md). 8O and 8P closed, exact-head CI successful, external scientific review pending. Pin adoption is administrative intake, not scientific review or interpretation acceptance.",
+      "reviewed_source_commit": "08d7017be85616df7bc5b2934e8076bdcc73a319",
+      "revision_label": "008p",
+      "role": "research_programme",
+      "round_boundary": "8P closed at 08d7017be85616df7bc5b2934e8076bdcc73a319; annotated tag constraint-lab-008p-close dereferenced; separate closed 8O milestone retained",
+      "source_key": "CL",
+      "source_schema": {
+        "validator_git_blob": "1fc80911d99fc548d0ac33b7367999188d16ad88",
+        "validator_path": "constraint-lab/src/rs_constraint_lab/coherence.py"
+      },
+      "status": "included",
+      "unreviewed_generations": [
+        "008O",
+        "008P"
+      ]
+    },
+    {
+      "adapter_options": {
+        "core_finding_fields": [
+          "created_commit",
+          "created_generation",
+          "epistemic_layer",
+          "evidence_refs",
+          "finding_id",
+          "literal_value",
+          "magnitude_class",
+          "notes",
+          "observable",
+          "robustness_vector",
+          "scope",
+          "statement",
+          "status",
+          "structural_roles",
+          "temporal_character"
+        ],
+        "extra_finding_fields": [
+          "dependence"
+        ]
+      },
+      "adapters": [
+        "coherence_ledger_v1"
+      ],
+      "artifacts": [
+        {
+          "bytes": 157793,
+          "git_blob": "34e029911637253d0141d9cffd4e54037af0f98c",
+          "kind": "findings",
+          "materialised": true,
+          "path": "gravity-time/coherence/findings.jsonl",
+          "sha256": "7061af382cdd55bb5a3ceb407441590ee678097286413a02c9c31438072cc31c"
+        },
+        {
+          "bytes": 76901,
+          "git_blob": "c0409bc770b88fdebc3ec2f3b99d6cd3975de388",
+          "kind": "relations",
+          "materialised": true,
+          "path": "gravity-time/coherence/relations.jsonl",
+          "sha256": "2559cbd1721bddc6f28f40eb0f51942bec1a6a170735e8d86671e236a39d936b"
+        },
+        {
+          "bytes": 11807,
+          "git_blob": "1fc80911d99fc548d0ac33b7367999188d16ad88",
+          "kind": "validator",
+          "materialised": true,
+          "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+          "sha256": "a99d65438d3d332b7331d9b108f28a31e42228197f5d4d74956ec967ad8b9c2e"
+        },
+        {
+          "bytes": 70930,
+          "description": "Immutable GT coherence snapshot through E5A",
+          "git_blob": "884192edd8bb8cffd9c518717c089ed7386cfa5a",
+          "kind": "snapshot",
+          "materialised": false,
+          "path": "gravity-time/coherence/snapshots/through-gt-e5a.md",
+          "sha256": "977127fa272d1f9a345faa7ba9f8526c3518eccac9e2599b4051c14aafe7ba79"
+        },
+        {
+          "bytes": 18401,
+          "description": "GT-P008 reference architecture review (R1-R3)",
+          "git_blob": "b7d2c23eed0b325795598c77916a83eb3a5d13df",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/docs/reference-architecture-review.md",
+          "sha256": "bc7b74aa53ffcc5bd103e3f805d7b0d38e34e9781cf72d09ec0cf1e7b11a1462"
+        },
+        {
+          "bytes": 4943,
+          "description": "GT transfer note T-1 to T-4 (suggestions only)",
+          "git_blob": "3c2808e6151ec416b2f75f7f652510500e649667",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/docs/e3-cross-programme-transfer.md",
+          "sha256": "e20264f7ff6c496c38f8863f4f3968714caa15535033b023eaefd61128324cd7"
+        },
+        {
+          "bytes": 1932,
+          "description": "GT transfer note T-5 to T-7 (suggestions only)",
+          "git_blob": "29f24dddfac518bfe3be5fed772108fe4ff37e56",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/docs/e4-cross-programme-transfer.md",
+          "sha256": "4fecf0984f7feff05b03ffda151bbfa69cd3ebdf5090f34fe08362eae4072b1f"
+        },
+        {
+          "bytes": 4486,
+          "description": "GT transfer note T-8 to T-12 (suggestions only)",
+          "git_blob": "b98da4f6187f001d4ab5aed87954e9a91f133919",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/docs/gt-p008-cross-programme-transfer.md",
+          "sha256": "0564d68b23608a24ad93f8b277d0db38cd8fcb8fd7ac8209d2f0e403197e1329"
+        },
+        {
+          "bytes": 3135,
+          "description": "GT transfer note T-13 to T-16 (suggestions only)",
+          "git_blob": "29630251cfb187751877af2dad802dafba8964f7",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/docs/gt-e5a-cross-programme-transfer.md",
+          "sha256": "c755646adbaeaaf25e3f578ed70d09e867818dbb20ad2d748393f5dff17350e5"
+        },
+        {
+          "bytes": 12607,
+          "description": "GT E5A plain-English report",
+          "git_blob": "1f18c8d4ae8a3f7310bdd408fad7a355f3cfad97",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/reports/gt-e5a-report.md",
+          "sha256": "fcb0025512166bca8e07edf54588f897f455cd0e76403ef789a0e4cc616008ce"
+        },
+        {
+          "bytes": 77661,
+          "description": "Immutable GT coherence snapshot through E5B",
+          "git_blob": "d8e869718dc53b30c1a4434b26813c75f65a7a2d",
+          "kind": "snapshot",
+          "materialised": false,
+          "path": "gravity-time/coherence/snapshots/through-gt-e5b.md",
+          "sha256": "5e96d6ee139584c333dbf5c83cfab8ab16e1298e8cf10eda44ce4b0c47402450"
+        },
+        {
+          "bytes": 82490,
+          "description": "Immutable GT coherence snapshot through E5C",
+          "git_blob": "daadcd952b732f07d809c4ce86086731ea7f0181",
+          "kind": "snapshot",
+          "materialised": false,
+          "path": "gravity-time/coherence/snapshots/through-gt-e5c.md",
+          "sha256": "fc84a95ddb7bf669b28e15e33d7c6fc854ffedff35057975e89a0da72263fada"
+        },
+        {
+          "bytes": 87347,
+          "description": "Immutable GT coherence snapshot through E5D",
+          "git_blob": "46cb6d55ff311b8fafa90b4c15b5ce4255467e65",
+          "kind": "snapshot",
+          "materialised": false,
+          "path": "gravity-time/coherence/snapshots/through-gt-e5d.md",
+          "sha256": "68b7a0b02b76292e06f176c91184fce142f6e72f21f0b22a2d96faaa73ca7235"
+        },
+        {
+          "bytes": 3157,
+          "description": "GT transfer note T-17 to T-20 (suggestions only)",
+          "git_blob": "04ff37515a3989434e83453482206c92b2cefbf1",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/docs/gt-e5b-cross-programme-transfer.md",
+          "sha256": "96a6325c8b952bd45ebd898e86a699a56d97b78e8c90c699db3f41e9cc1db19b"
+        },
+        {
+          "bytes": 2125,
+          "description": "GT transfer note T-21 to T-24 (suggestions only)",
+          "git_blob": "0edd9dce485039f9acfccea43a68cc5a9132138f",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/docs/gt-e5c-cross-programme-transfer.md",
+          "sha256": "8059cffd43ae3f403ef34613d659356280af4e3aef8c3d0a3fc430eb4ac936fd"
+        },
+        {
+          "bytes": 1540,
+          "description": "GT transfer note T-25 to T-26 (suggestions only)",
+          "git_blob": "70b3fe1b4612bd15f2eda556a0636ca9dfca9a7f",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/docs/gt-e5d-cross-programme-transfer.md",
+          "sha256": "f0731e3b327414638b781e7b0c3a5502e5363bef56fce937584522c285649c4c"
+        },
+        {
+          "bytes": 11135,
+          "description": "GT E5B plain-English report",
+          "git_blob": "6b936bf6d63d0268d9941fb71be511d01d6a5470",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/reports/gt-e5b-report.md",
+          "sha256": "af51fcf6ab31f5154f7287fc44343f168c6c50332c8ed4559ea0005d430f4a8e"
+        },
+        {
+          "bytes": 6803,
+          "description": "GT E5C plain-English report",
+          "git_blob": "0b62771461d9f40f4b91f0a3df4ec62bf88fb052",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/reports/gt-e5c-report.md",
+          "sha256": "1680b104bf8f6b2261b2ef2c95d58da7a5d4ff219c154ff035ecbdb01550d84b"
+        },
+        {
+          "bytes": 6292,
+          "description": "GT E5D plain-English report",
+          "git_blob": "439b8fb0939f7e7db401b4963b3f8f7f083a0079",
+          "kind": "document",
+          "materialised": false,
+          "path": "gravity-time/reports/gt-e5d-report.md",
+          "sha256": "3bb7a9a94aec2fe6a32a774f398e70acfa31ec566a0ee7552e1bf531d3154fd7"
+        }
+      ],
+      "branch": "research/gravity-time-admissibility",
+      "commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "default_revision": true,
+      "ingestion_receipt": {
+        "by": "agent: Claude Opus 5.5, adopting under the author's standing decision AD-0006 (no line-by-line review)",
+        "checks": [
+          "commit reachable",
+          "every artifact path present at the pinned commit",
+          "sha256 and git blob recorded",
+          "materialised copies written byte-identically"
+        ],
+        "date": "2026-10-16"
+      },
+      "lineage": [
+        {
+          "relation": "descends_from",
+          "target": "CL-8G",
+          "what": "GT branch was created from CL 8G (22e252e); shares the constraint-lab DSL, kernel builder and coherence validator"
+        },
+        {
+          "relation": "carries_inherited_copy_of",
+          "target": "CL-8G",
+          "what": "constraint-lab/coherence/{findings,relations}.jsonl on the GT branch are byte-identical to 8G and are NOT read as CL evidence"
+        }
+      ],
+      "namespace": "GT",
+      "programme": "Gravity, Temporality and Emergent Spatiality",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "review_note": "GT-P009 to GT-P012 closed at the pin; awaiting the author's scientific review in draft PR #6. Findings created in GT-P009 to GT-P012 are closed-but-unreviewed.",
+      "reviewed_source_commit": "e2b5dc4cb65bafc423047f78468a63c9d6ceb218",
+      "revision_label": "p012",
+      "role": "research_programme",
+      "round_boundary": "GT-P012 (E5D) closed at e2b5dc4 ('GT-P012: provenance close ...'); snapshot through-gt-e5d.md",
+      "source_key": "GT",
+      "source_schema": {
+        "validator_git_blob": "1fc80911d99fc548d0ac33b7367999188d16ad88",
+        "validator_path": "constraint-lab/src/rs_constraint_lab/coherence.py"
+      },
+      "status": "included",
+      "unreviewed_generations": [
+        "GT-P009",
+        "GT-P010",
+        "GT-P011",
+        "GT-P012"
+      ]
+    },
+    {
+      "adapter_options": {
+        "core_finding_fields": [
+          "created_commit",
+          "created_generation",
+          "epistemic_layer",
+          "evidence_refs",
+          "finding_id",
+          "literal_value",
+          "magnitude_class",
+          "notes",
+          "observable",
+          "robustness_vector",
+          "scope",
+          "statement",
+          "status",
+          "structural_roles",
+          "temporal_character"
+        ],
+        "extra_finding_fields": []
+      },
+      "adapters": [],
+      "artifacts": [
+        {
+          "bytes": 11807,
+          "git_blob": "1fc80911d99fc548d0ac33b7367999188d16ad88",
+          "kind": "validator",
+          "materialised": false,
+          "path": "constraint-lab/src/rs_constraint_lab/coherence.py",
+          "sha256": "a99d65438d3d332b7331d9b108f28a31e42228197f5d4d74956ec967ad8b9c2e"
+        },
+        {
+          "bytes": 137465,
+          "description": "8G CL ledger; also the inherited copy carried by the GT branch",
+          "git_blob": "339f6552cb7b6ac38cdb702e545dad4ef9ca6e28",
+          "kind": "findings",
+          "materialised": false,
+          "path": "constraint-lab/coherence/findings.jsonl",
+          "sha256": "ac9fef6f3a7f7e44baa9037c4147b0cc3a56bf128f0e8ffe65dfd00f32fc367e"
+        }
+      ],
+      "branch": "research/constraint-lab-v0.8g-formal-integration",
+      "commit": "22e252e560cc711d337b6ae506b0fb76728247d6",
+      "default_revision": false,
+      "ingestion_receipt": {
+        "by": "agent: Claude Opus 5.5",
+        "checks": [
+          "commit reachable",
+          "every artifact path present at the pinned commit",
+          "sha256 and git blob recorded",
+          "materialised copies written byte-identically"
+        ],
+        "date": "2026-10-15"
+      },
+      "lineage": [],
+      "namespace": "CL",
+      "programme": "Constraint Laboratory (8G, common ancestor)",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "reviewed_source_commit": "22e252e560cc711d337b6ae506b0fb76728247d6",
+      "revision_label": "008g",
+      "role": "lineage_anchor",
+      "round_boundary": "8G closed; common ancestor of CL 8N and GT",
+      "source_key": "CL-8G",
+      "source_schema": {
+        "validator_git_blob": "1fc80911d99fc548d0ac33b7367999188d16ad88",
+        "validator_path": "constraint-lab/src/rs_constraint_lab/coherence.py"
+      },
+      "status": "lineage_only"
+    },
+    {
+      "adapter_options": {
+        "core_finding_fields": [
+          "created_commit",
+          "created_generation",
+          "epistemic_layer",
+          "evidence_refs",
+          "finding_id",
+          "literal_value",
+          "magnitude_class",
+          "notes",
+          "observable",
+          "robustness_vector",
+          "scope",
+          "statement",
+          "status",
+          "structural_roles",
+          "temporal_character"
+        ],
+        "extra_finding_fields": []
+      },
+      "adapters": [],
+      "artifacts": [
+        {
+          "bytes": 21165,
+          "description": "SC prose findings (not ingested as findings)",
+          "git_blob": "0a49b01931eb028cba40f004f4c4970a2675c669",
+          "kind": "document",
+          "materialised": false,
+          "path": "stochastic-calculator/RS_FINDINGS.md",
+          "sha256": "a603f8895767942e3f26ea2d0ac4af71a14d24c55cef0aba2f10856f5ac543df"
+        },
+        {
+          "bytes": 9617,
+          "description": "SC discoveries (prose)",
+          "git_blob": "e65aa21e9c8ab73198cb0ae50cbadb668d67bb48",
+          "kind": "document",
+          "materialised": false,
+          "path": "stochastic-calculator/DISCOVERIES.md",
+          "sha256": "5344a6e20d882702653e582806d586461f2772426d18fa05d317dd703266d070"
+        },
+        {
+          "bytes": 8693,
+          "description": "SC hypotheses (prose)",
+          "git_blob": "710dcd4c9c72b1ff30a1934aa484610cdaa629c3",
+          "kind": "document",
+          "materialised": false,
+          "path": "stochastic-calculator/HYPOTHESES.md",
+          "sha256": "b48f44b7402046795292928780af18ae27db22f5d6fc1c3e2d2668e0f1d2a651"
+        },
+        {
+          "bytes": 9537,
+          "description": "SC validation notes",
+          "git_blob": "6833a7bc6546eb627cb644c4e9bb8edc3fc1ec5f",
+          "kind": "document",
+          "materialised": false,
+          "path": "stochastic-calculator/research/VALIDATION.md",
+          "sha256": "f5eeaa0e891b6445ab4477a4d19490131f01f99ff61d1bb53d6c638d045dc3be"
+        }
+      ],
+      "branch": "research/stochastic-calculator",
+      "commit": "aa06213ce42e5166ae2a0d21846a2a7c218f6b50",
+      "default_revision": true,
+      "ingestion_receipt": {
+        "by": "agent: Claude Opus 5.5",
+        "checks": [
+          "commit reachable",
+          "every artifact path present at the pinned commit",
+          "sha256 and git blob recorded",
+          "materialised copies written byte-identically"
+        ],
+        "date": "2026-10-15"
+      },
+      "lineage": [],
+      "namespace": "SC",
+      "programme": "Stochastic Relational Calculator",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "reviewed_source_commit": "aa06213ce42e5166ae2a0d21846a2a7c218f6b50",
+      "revision_label": "pr2",
+      "role": "test_apparatus",
+      "round_boundary": "draft PR #2; last commit 2026-09-10; no structured ledger",
+      "source_key": "SC",
+      "status": "catalogued_only"
+    },
+    {
+      "adapter_options": {
+        "core_finding_fields": [
+          "created_commit",
+          "created_generation",
+          "epistemic_layer",
+          "evidence_refs",
+          "finding_id",
+          "literal_value",
+          "magnitude_class",
+          "notes",
+          "observable",
+          "robustness_vector",
+          "scope",
+          "statement",
+          "status",
+          "structural_roles",
+          "temporal_character"
+        ],
+        "extra_finding_fields": []
+      },
+      "adapters": [],
+      "artifacts": [
+        {
+          "bytes": 10048,
+          "description": "OTR 1.0 (sha256 2d902395...88dd)",
+          "git_blob": "669754b54e4374d7f8c9a606b1faf4811b7b8569",
+          "kind": "document",
+          "materialised": false,
+          "path": "research-methods/open-thetical-research.md",
+          "sha256": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd"
+        }
+      ],
+      "branch": "main",
+      "commit": "05b15b0d903d46070b99ac84f9cab1bd898046ba",
+      "default_revision": true,
+      "ingestion_receipt": {
+        "by": "agent: Claude Opus 5.5",
+        "checks": [
+          "commit reachable",
+          "every artifact path present at the pinned commit",
+          "sha256 and git blob recorded",
+          "materialised copies written byte-identically"
+        ],
+        "date": "2026-10-15"
+      },
+      "lineage": [],
+      "namespace": "OTR",
+      "programme": "Open-Thetical Research method (shared)",
+      "repo": "gellsmore-svg/Relational-Substrate",
+      "reviewed_source_commit": "05b15b0d903d46070b99ac84f9cab1bd898046ba",
+      "revision_label": "1.0",
+      "role": "shared_method",
+      "round_boundary": "OTR 1.0 on main (PR #7)",
+      "source_key": "OTR",
+      "status": "catalogued_only"
+    },
+    {
+      "adapter_options": {
+        "core_finding_fields": [
+          "created_commit",
+          "created_generation",
+          "epistemic_layer",
+          "evidence_refs",
+          "finding_id",
+          "literal_value",
+          "magnitude_class",
+          "notes",
+          "observable",
+          "robustness_vector",
+          "scope",
+          "statement",
+          "status",
+          "structural_roles",
+          "temporal_character"
+        ],
+        "extra_finding_fields": []
+      },
+      "adapters": [],
+      "artifacts": [
+        {
+          "bytes": 26669,
+          "description": "External exploratory synthesis (verbatim)",
+          "git_blob": "854df4976ee4a6d96579967c826db7c97a46625c",
+          "kind": "document",
+          "local": true,
+          "materialised": false,
+          "path": "research-synthesis/reports/external-2026-10-15-cross-research-synthesis.md",
+          "sha256": "1c817747b15ef3301d808180f9f13924f396396daef580e66bafc2a048bc9b09"
+        }
+      ],
+      "default_revision": true,
+      "ingestion_receipt": {
+        "by": "agent: Claude Opus 5.5",
+        "checks": [
+          "stored verbatim on this branch; sha256 recorded; not a pinned programme source"
+        ],
+        "date": "2026-10-15"
+      },
+      "lineage": [],
+      "namespace": "EXT",
+      "note": "Supplied with the author pack (background/2026-10-15-cross-research-synthesis.md) and stored verbatim. Exploratory evidence synthesis by its own statement; its cosine scores are lexical retrieval measures, not evidence. A dated interpretation, not independent experiment evidence. Its historical claims are secondary pointers into private archives (HIST, pending).",
+      "programme": "External cross-research synthesis (2026-10-15)",
+      "role": "external_interpretation",
+      "source_key": "EXT-SYNTH-20261015",
+      "status": "external_stored"
+    },
+    {
+      "adapter_options": {
+        "core_finding_fields": [
+          "created_commit",
+          "created_generation",
+          "epistemic_layer",
+          "evidence_refs",
+          "finding_id",
+          "literal_value",
+          "magnitude_class",
+          "notes",
+          "observable",
+          "robustness_vector",
+          "scope",
+          "statement",
+          "status",
+          "structural_roles",
+          "temporal_character"
+        ],
+        "extra_finding_fields": []
+      },
+      "adapters": [],
+      "artifacts": [],
+      "default_revision": true,
+      "expected_archives": [
+        {
+          "entries": 403,
+          "name": "RS_Work_Research.zip",
+          "sha256": "3ecfd22f9d4b64c17c2a2c9c198615ee1e1c6e3d08512e6971ae7b4090261e46"
+        },
+        {
+          "entries": 9,
+          "name": "RS_Work_Round46_Supplement.zip",
+          "sha256": "630da2d942b15247a164d5e1fd262f759483941210f38a9ab29b12c1a6ce4b5e"
+        }
+      ],
+      "expected_primary_paths": [
+        "rs_work_round11/findings.md",
+        "rs_work_round46_moments/REPORT.md",
+        "rs_work_round47/REPORT.md",
+        "rs_work_round48/REPORT.md",
+        "rs_sources/RS_Baseline_Post_506Z/RS_Baseline_Post_506Z/02_EXPERIMENT_LEDGER_505_506.md",
+        "rs_sources/RS_Baseline_Post_507/RS_Baseline_Post_507/RS_507_Integrated_Ledger.md"
+      ],
+      "lineage": [],
+      "namespace": "HIST",
+      "note": "Private archives; not in the repository or the local workspace (searched 2026-10-15 by name). Expected archive names, sha256 and primary paths come from the author's seed manifest (proposals/seeds/2026-10-15-author-pack/source-manifest.json) and are unverified until the original bytes are available. Intake follows 05_HISTORICAL_INTAKE.md. Only pending pointers may reference this namespace.",
+      "programme": "Historical archives (505-507, Work 11, 46-48)",
+      "role": "historical_archive",
+      "source_key": "HIST",
+      "status": "pending_intake"
+    }
+  ]
+}

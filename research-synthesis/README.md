@@ -59,6 +59,7 @@ python3 research-synthesis/synth check              # everything CI checks (add 
 python3 research-synthesis/synth update-candidates  # retrieval diagnostics -> proposals/ (never the ledger)
 python3 research-synthesis/synth review --id P::0003 --decision undetermined --decision-category candidate --reviewer "<name>" --rationale "..." [--human]
 python3 research-synthesis/synth propose-pin --source GT --commit <sha>   # milestone pin proposal (diff + warnings)
+python3 research-synthesis/synth propose-pin --source CL --commit <sha> --metadata <reviewable-json>  # continuation branch + closed boundary
 python3 research-synthesis/synth apply-pin --source GT --commit <sha> --standing-decision AD-0006   # or --reviewed-by "<human name>"
 python3 research-synthesis/synth snapshot --name <milestone> --title "<title>"
 python3 research-synthesis/synth intake-seeds <dir>  # stage author seed files as unapproved proposals

@@ -7,7 +7,7 @@ import json
 import sys
 from pathlib import Path
 
-from . import core, discover, generate, historical, ledger, pins, roundtrip, smoke, sources, workflow
+from . import core, discover, generate, historical, ledger, pins, preview, roundtrip, smoke, sources, workflow
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -37,12 +37,18 @@ def main(argv: list[str] | None = None) -> int:
     pp.add_argument("--source", required=True)
     pp.add_argument("--commit", required=True)
     pp.add_argument("--note", default="")
-    ap2 = sub.add_parser("apply-pin", help="adopt a pin proposal (named human reviewer, or the author's standing decision)")
+    pp.add_argument("--metadata", type=Path, help="source-metadata proposal JSON (branch, closed rounds, review state, artifacts)")
+    pv = sub.add_parser("preview-pins", help="validate a hypothetical intake in a discarded copy, never adopt")
+    pv.add_argument("--proposal", type=Path, action="append", required=True)
+    pv.add_argument("--staged-candidates", type=Path, required=True)
+    pv.add_argument("--staged-questions", type=Path, required=True)
+    pv.add_argument("--out", type=Path, required=True)
+    ap2 = sub.add_parser("apply-pin", help="adopt a pin proposal (named reviewer or logged standing decision)")
     ap2.add_argument("--source", required=True)
     ap2.add_argument("--commit", required=True)
     who = ap2.add_mutually_exclusive_group(required=True)
     who.add_argument("--reviewed-by", help="the named human who reviewed the proposal")
-    who.add_argument("--standing-decision", help="adopt under the author's logged standing instruction (AD-0006)")
+    who.add_argument("--standing-decision", help="author's logged standing pin instruction, AD-0006")
     si = sub.add_parser("intake-seeds", help="stage the author's seed files as unapproved proposals")
     si.add_argument("dir")
     rc = sub.add_parser("round-close", help="end a round: record the agent's open recommendations for implicit acceptance")
@@ -67,7 +73,8 @@ def main(argv: list[str] | None = None) -> int:
 
     if a.cmd == "audit":
         m = sources.load_manifest()
-        print(json.dumps({"staleness": sources.staleness(m), "artifacts": sources.verify_artifacts(m)}, indent=2))
+        print(json.dumps({"staleness": sources.staleness(m), "continuation_candidates": sources.continuation_candidates(m),
+                          "artifacts": sources.verify_artifacts(m)}, indent=2))
         return 0
     if a.cmd == "pin":
         m = pins.build_manifest(by=a.by)
@@ -105,7 +112,8 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(p, indent=2))
         return 0
     if a.cmd == "propose-pin":
-        rep = pins.propose_pin(sources.load_manifest(), a.source, a.commit, note=a.note)
+        rep = pins.propose_pin(sources.load_manifest(), a.source, a.commit, note=a.note,
+                               metadata=core.read_json(a.metadata) if a.metadata else None)
         print(json.dumps({k: rep[k] for k in ("source", "current_commit", "proposed_commit", "descends_from_current", "warnings")}, indent=2))
         return 0
     if a.cmd == "apply-pin":
@@ -114,6 +122,11 @@ def main(argv: list[str] | None = None) -> int:
         else:
             pins.apply_pin(a.source, a.commit, reviewed_by=a.reviewed_by)
         print("pin adopted; run generate and check")
+        return 0
+    if a.cmd == "preview-pins":
+        result = preview.preview_pins(a.proposal, a.staged_candidates, a.staged_questions, a.out)
+        print(json.dumps({"status": result["status"], "canonical_pins_unchanged": True,
+                          "counts": result["check"]["info"]["counts"]}, indent=2))
         return 0
     if a.cmd == "round-close":
         rec = roundtrip.open_round_trip(a.id, a.date, a.report, a.reported_at, a.note)

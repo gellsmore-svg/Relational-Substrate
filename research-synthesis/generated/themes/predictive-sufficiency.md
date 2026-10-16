@@ -19,7 +19,7 @@
 
 ## Questions
 
-- XQ::07 (open): Is there a common mathematical operator behind CL's predictive sufficiency and GT's persistence, or only a common question?
+- XQ::07 (partially_answered): Is there a common mathematical operator behind CL's predictive sufficiency and GT's persistence, or only a common question?
 
 ## Metaphors (non-evidentiary)
 

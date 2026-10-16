@@ -21,7 +21,7 @@
 ## Questions
 
 - XQ::01 (open): Which declared comparison process separates organisation (or history) from kinetics in both programmes, and does each programme's design transfer to the other?
-- XQ::07 (open): Is there a common mathematical operator behind CL's predictive sufficiency and GT's persistence, or only a common question?
+- XQ::07 (partially_answered): Is there a common mathematical operator behind CL's predictive sufficiency and GT's persistence, or only a common question?
 
 ## Metaphors (non-evidentiary)
 
