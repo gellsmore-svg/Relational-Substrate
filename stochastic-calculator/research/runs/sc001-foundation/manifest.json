@@ -1,0 +1,52 @@
+{
+  "config": {
+    "base_seed": 41000,
+    "engine": {
+      "fault_rate": 0.0,
+      "locality": "global",
+      "max_relations": 20000,
+      "max_steps": 10000,
+      "regions": 8,
+      "strength": 1.0
+    },
+    "experiment": "SC-001",
+    "identities": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "neutral_pairs": 6,
+    "perturbations": [
+      "rewire",
+      "neutral",
+      "erase"
+    ],
+    "question": "Does conserved signed relational identity survive rewiring and neutral disturbances, and what happens after erasure?",
+    "runs": 200
+  },
+  "config_sha256": "af4150e62fcbfbbdbf8816480dbf780f1ed567849a0b50adf8ae5663e5f854a5",
+  "dirty": true,
+  "git_revision": "06cb0dc0be6aa952639a3337cf95606f1feaa4c4",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "rng": "random.Random / MT19937",
+  "seed_policy": "base_seed plus trial ordinal; independent PRNG per trial",
+  "source_files": {
+    "configs/foundation.json": "bf12777c552033f094b7523632e346be277f17d7e46373a161954e6b069f7f5c",
+    "rs_calc/__init__.py": "819b93e1a0a85b2757f8bf80369bd9e2521262f45c7b29831a73dcb4b433d44f",
+    "rs_calc/engine.py": "7b0eb0d4651a149ce6402f58109e9e5222c0422edf75c7b9d40e678f366eeca6",
+    "rs_calc/foundation.py": "4a21f95281e414a778e1211731cdc09b12d106c593675baac2bdee16f44155cf",
+    "rs_calc/metrics.py": "d7fdaaa1778a75c7a0e3668d41aec11b51cb81373704ec1c41fecf5e81b2a265",
+    "rs_calc/numbers.py": "5fb324e9f8ca9b4d4903fe2e49e51d8b4f11829fb001bd48d08692e74ab85289",
+    "rs_calc/provenance.py": "c1c6fd8a464a5882a13bb804b7afb3b9f905dc7417ac3659865a9e256330b398"
+  },
+  "source_sha256": "5d4214b612133b5d9d751b32ca577309275b9d9aff50c0b00f8d94e1e84615c8",
+  "timestamp": "2026-09-10T17:45:29.310296+00:00"
+}

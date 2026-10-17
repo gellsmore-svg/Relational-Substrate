@@ -1,0 +1,173 @@
+{
+  "C": {
+    "accuracy": 0.0,
+    "capacity_rejections": 7124,
+    "correct": 0,
+    "correct_occupancy": 0.0,
+    "ever_captured": 0,
+    "identity_preserved_runs": 100,
+    "mean_escapes": 0,
+    "mean_first_capture_conditional": null,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "None": 100
+    },
+    "runs": 100,
+    "terminal_readability": 0,
+    "unique_accepted_trajectories": 100,
+    "wilson95": [
+      3.469446951953614e-18,
+      0.03699349820698568
+    ]
+  },
+  "CG": {
+    "accuracy": 0.01,
+    "capacity_rejections": 0,
+    "correct": 1,
+    "correct_occupancy": 0.005755,
+    "ever_captured": 69,
+    "identity_preserved_runs": 100,
+    "mean_escapes": 1.62,
+    "mean_first_capture_conditional": 913.3478260869565,
+    "outcome_entropy_bits": 0.08079313589591118,
+    "outcomes": {
+      "7": 1,
+      "None": 99
+    },
+    "runs": 100,
+    "terminal_readability": 0.01,
+    "unique_accepted_trajectories": 100,
+    "wilson95": [
+      0.0017674320641406505,
+      0.054486196178705315
+    ]
+  },
+  "CGR": {
+    "accuracy": 1.0,
+    "capacity_rejections": 0,
+    "correct": 100,
+    "correct_occupancy": 0.905715,
+    "ever_captured": 100,
+    "identity_preserved_runs": 100,
+    "mean_escapes": 0,
+    "mean_first_capture_conditional": 189.57,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "7": 100
+    },
+    "runs": 100,
+    "terminal_readability": 1,
+    "unique_accepted_trajectories": 100,
+    "wilson95": [
+      0.9630065017930143,
+      1.0
+    ]
+  },
+  "CR": {
+    "accuracy": 0.0,
+    "capacity_rejections": 7124,
+    "correct": 0,
+    "correct_occupancy": 0.0,
+    "ever_captured": 0,
+    "identity_preserved_runs": 100,
+    "mean_escapes": 0,
+    "mean_first_capture_conditional": null,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "None": 100
+    },
+    "runs": 100,
+    "terminal_readability": 0,
+    "unique_accepted_trajectories": 100,
+    "wilson95": [
+      3.469446951953614e-18,
+      0.03699349820698568
+    ]
+  },
+  "G": {
+    "accuracy": 0.0,
+    "capacity_rejections": 0,
+    "correct": 0,
+    "correct_occupancy": 0.0,
+    "ever_captured": 0,
+    "identity_preserved_runs": 0,
+    "mean_escapes": 0,
+    "mean_first_capture_conditional": null,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "0": 100
+    },
+    "runs": 100,
+    "terminal_readability": 1,
+    "unique_accepted_trajectories": 100,
+    "wilson95": [
+      3.469446951953614e-18,
+      0.03699349820698568
+    ]
+  },
+  "GR": {
+    "accuracy": 0.0,
+    "capacity_rejections": 0,
+    "correct": 0,
+    "correct_occupancy": 0.0,
+    "ever_captured": 0,
+    "identity_preserved_runs": 0,
+    "mean_escapes": 0,
+    "mean_first_capture_conditional": null,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "0": 100
+    },
+    "runs": 100,
+    "terminal_readability": 1,
+    "unique_accepted_trajectories": 100,
+    "wilson95": [
+      3.469446951953614e-18,
+      0.03699349820698568
+    ]
+  },
+  "R": {
+    "accuracy": 0.0,
+    "capacity_rejections": 22,
+    "correct": 0,
+    "correct_occupancy": 0.0,
+    "ever_captured": 0,
+    "identity_preserved_runs": 0,
+    "mean_escapes": 0,
+    "mean_first_capture_conditional": null,
+    "outcome_entropy_bits": 0.08079313589591118,
+    "outcomes": {
+      "0": 1,
+      "None": 99
+    },
+    "runs": 100,
+    "terminal_readability": 0.01,
+    "unique_accepted_trajectories": 100,
+    "wilson95": [
+      3.469446951953614e-18,
+      0.03699349820698568
+    ]
+  },
+  "none": {
+    "accuracy": 0.0,
+    "capacity_rejections": 22,
+    "correct": 0,
+    "correct_occupancy": 0.0,
+    "ever_captured": 0,
+    "identity_preserved_runs": 0,
+    "mean_escapes": 0,
+    "mean_first_capture_conditional": null,
+    "outcome_entropy_bits": 0.08079313589591118,
+    "outcomes": {
+      "0": 1,
+      "None": 99
+    },
+    "runs": 100,
+    "terminal_readability": 0.01,
+    "unique_accepted_trajectories": 100,
+    "wilson95": [
+      3.469446951953614e-18,
+      0.03699349820698568
+    ]
+  }
+}

@@ -1,0 +1,582 @@
+{
+  "constraint-ablation-v1": {
+    "matched_tapes_verified": 100,
+    "paired_discordance": {
+      "C": {
+        "cell_only_correct": 0,
+        "reference": "CGR",
+        "reference_only_correct": 100
+      },
+      "CG": {
+        "cell_only_correct": 0,
+        "reference": "CGR",
+        "reference_only_correct": 99
+      },
+      "CGR": {
+        "cell_only_correct": 0,
+        "reference": "CGR",
+        "reference_only_correct": 0
+      },
+      "CR": {
+        "cell_only_correct": 0,
+        "reference": "CGR",
+        "reference_only_correct": 100
+      },
+      "G": {
+        "cell_only_correct": 0,
+        "reference": "CGR",
+        "reference_only_correct": 100
+      },
+      "GR": {
+        "cell_only_correct": 0,
+        "reference": "CGR",
+        "reference_only_correct": 100
+      },
+      "R": {
+        "cell_only_correct": 0,
+        "reference": "CGR",
+        "reference_only_correct": 100
+      },
+      "none": {
+        "cell_only_correct": 0,
+        "reference": "CGR",
+        "reference_only_correct": 100
+      }
+    },
+    "summary": {
+      "C": {
+        "accuracy": 0.0,
+        "capacity_rejections": 7124,
+        "correct": 0,
+        "correct_occupancy": 0.0,
+        "ever_captured": 0,
+        "identity_preserved_runs": 100,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": null,
+        "outcome_entropy_bits": -0.0,
+        "outcomes": {
+          "None": 100
+        },
+        "runs": 100,
+        "terminal_readability": 0,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ]
+      },
+      "CG": {
+        "accuracy": 0.01,
+        "capacity_rejections": 0,
+        "correct": 1,
+        "correct_occupancy": 0.005755,
+        "ever_captured": 69,
+        "identity_preserved_runs": 100,
+        "mean_escapes": 1.62,
+        "mean_first_capture_conditional": 913.3478260869565,
+        "outcome_entropy_bits": 0.08079313589591118,
+        "outcomes": {
+          "7": 1,
+          "None": 99
+        },
+        "runs": 100,
+        "terminal_readability": 0.01,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          0.0017674320641406505,
+          0.054486196178705315
+        ]
+      },
+      "CGR": {
+        "accuracy": 1.0,
+        "capacity_rejections": 0,
+        "correct": 100,
+        "correct_occupancy": 0.905715,
+        "ever_captured": 100,
+        "identity_preserved_runs": 100,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": 189.57,
+        "outcome_entropy_bits": -0.0,
+        "outcomes": {
+          "7": 100
+        },
+        "runs": 100,
+        "terminal_readability": 1,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          0.9630065017930143,
+          1.0
+        ]
+      },
+      "CR": {
+        "accuracy": 0.0,
+        "capacity_rejections": 7124,
+        "correct": 0,
+        "correct_occupancy": 0.0,
+        "ever_captured": 0,
+        "identity_preserved_runs": 100,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": null,
+        "outcome_entropy_bits": -0.0,
+        "outcomes": {
+          "None": 100
+        },
+        "runs": 100,
+        "terminal_readability": 0,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ]
+      },
+      "G": {
+        "accuracy": 0.0,
+        "capacity_rejections": 0,
+        "correct": 0,
+        "correct_occupancy": 0.0,
+        "ever_captured": 0,
+        "identity_preserved_runs": 0,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": null,
+        "outcome_entropy_bits": -0.0,
+        "outcomes": {
+          "0": 100
+        },
+        "runs": 100,
+        "terminal_readability": 1,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ]
+      },
+      "GR": {
+        "accuracy": 0.0,
+        "capacity_rejections": 0,
+        "correct": 0,
+        "correct_occupancy": 0.0,
+        "ever_captured": 0,
+        "identity_preserved_runs": 0,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": null,
+        "outcome_entropy_bits": -0.0,
+        "outcomes": {
+          "0": 100
+        },
+        "runs": 100,
+        "terminal_readability": 1,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ]
+      },
+      "R": {
+        "accuracy": 0.0,
+        "capacity_rejections": 22,
+        "correct": 0,
+        "correct_occupancy": 0.0,
+        "ever_captured": 0,
+        "identity_preserved_runs": 0,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": null,
+        "outcome_entropy_bits": 0.08079313589591118,
+        "outcomes": {
+          "0": 1,
+          "None": 99
+        },
+        "runs": 100,
+        "terminal_readability": 0.01,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ]
+      },
+      "none": {
+        "accuracy": 0.0,
+        "capacity_rejections": 22,
+        "correct": 0,
+        "correct_occupancy": 0.0,
+        "ever_captured": 0,
+        "identity_preserved_runs": 0,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": null,
+        "outcome_entropy_bits": 0.08079313589591118,
+        "outcomes": {
+          "0": 1,
+          "None": 99
+        },
+        "runs": 100,
+        "terminal_readability": 0.01,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ]
+      }
+    }
+  },
+  "constraint-followups-v1": {
+    "matched_tapes_verified": 100,
+    "paired_discordance": {
+      "100-global": {
+        "cell_only_correct": 0,
+        "reference": "100-global",
+        "reference_only_correct": 0
+      },
+      "100-local": {
+        "cell_only_correct": 0,
+        "reference": "100-global",
+        "reference_only_correct": 0
+      },
+      "45-global": {
+        "cell_only_correct": 0,
+        "reference": "45-global",
+        "reference_only_correct": 0
+      },
+      "45-local": {
+        "cell_only_correct": 1,
+        "reference": "45-global",
+        "reference_only_correct": 69
+      },
+      "negative-global": {
+        "cell_only_correct": 0,
+        "reference": "negative-global",
+        "reference_only_correct": 0
+      },
+      "negative-local": {
+        "cell_only_correct": 0,
+        "reference": "negative-global",
+        "reference_only_correct": 2
+      },
+      "s0.9": {
+        "cell_only_correct": 0,
+        "reference": "s1",
+        "reference_only_correct": 100
+      },
+      "s0.99": {
+        "cell_only_correct": 0,
+        "reference": "s1",
+        "reference_only_correct": 100
+      },
+      "s0.999": {
+        "cell_only_correct": 0,
+        "reference": "s1",
+        "reference_only_correct": 52
+      },
+      "s0.9999": {
+        "cell_only_correct": 0,
+        "reference": "s1",
+        "reference_only_correct": 5
+      },
+      "s1": {
+        "cell_only_correct": 0,
+        "reference": "s1",
+        "reference_only_correct": 0
+      },
+      "zero-global": {
+        "cell_only_correct": 0,
+        "reference": "zero-global",
+        "reference_only_correct": 0
+      },
+      "zero-local": {
+        "cell_only_correct": 0,
+        "reference": "zero-global",
+        "reference_only_correct": 0
+      }
+    },
+    "summary": {
+      "100-global": {
+        "accuracy": 0.0,
+        "capacity_rejections": 0,
+        "correct": 0,
+        "correct_occupancy": 0.0,
+        "ever_captured": 0,
+        "identity_preserved_runs": 100,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": null,
+        "outcome_entropy_bits": -0.0,
+        "outcomes": {
+          "None": 100
+        },
+        "runs": 100,
+        "terminal_readability": 0,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ]
+      },
+      "100-local": {
+        "accuracy": 0.0,
+        "capacity_rejections": 0,
+        "correct": 0,
+        "correct_occupancy": 0.0,
+        "ever_captured": 0,
+        "identity_preserved_runs": 100,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": null,
+        "outcome_entropy_bits": -0.0,
+        "outcomes": {
+          "None": 100
+        },
+        "runs": 100,
+        "terminal_readability": 0,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ]
+      },
+      "45-global": {
+        "accuracy": 0.87,
+        "capacity_rejections": 0,
+        "correct": 87,
+        "correct_occupancy": 0.23612,
+        "ever_captured": 87,
+        "identity_preserved_runs": 100,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": 1458.1954022988505,
+        "outcome_entropy_bits": 0.557438185027989,
+        "outcomes": {
+          "45": 87,
+          "None": 13
+        },
+        "runs": 100,
+        "terminal_readability": 0.87,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          0.7901964855992357,
+          0.9224283257275948
+        ]
+      },
+      "45-local": {
+        "accuracy": 0.19,
+        "capacity_rejections": 0,
+        "correct": 19,
+        "correct_occupancy": 0.0442,
+        "ever_captured": 19,
+        "identity_preserved_runs": 100,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": 1535.7368421052631,
+        "outcome_entropy_bits": 0.7014714598838974,
+        "outcomes": {
+          "45": 19,
+          "None": 81
+        },
+        "runs": 100,
+        "terminal_readability": 0.19,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          0.12514751509768735,
+          0.27778845379064376
+        ]
+      },
+      "negative-global": {
+        "accuracy": 1.0,
+        "capacity_rejections": 0,
+        "correct": 100,
+        "correct_occupancy": 0.931245,
+        "ever_captured": 100,
+        "identity_preserved_runs": 100,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": 138.51,
+        "outcome_entropy_bits": -0.0,
+        "outcomes": {
+          "-4": 100
+        },
+        "runs": 100,
+        "terminal_readability": 1,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          0.9630065017930143,
+          1.0
+        ]
+      },
+      "negative-local": {
+        "accuracy": 0.98,
+        "capacity_rejections": 0,
+        "correct": 98,
+        "correct_occupancy": 0.473415,
+        "ever_captured": 98,
+        "identity_preserved_runs": 100,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": 1034.8469387755101,
+        "outcome_entropy_bits": 0.14144054254182067,
+        "outcomes": {
+          "-4": 98,
+          "None": 2
+        },
+        "runs": 100,
+        "terminal_readability": 0.98,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          0.929988209271456,
+          0.9944980324498376
+        ]
+      },
+      "s0.9": {
+        "accuracy": 0.0,
+        "capacity_rejections": 0,
+        "correct": 0,
+        "correct_occupancy": 0.001195,
+        "ever_captured": 6,
+        "identity_preserved_runs": 0,
+        "mean_escapes": 0.06,
+        "mean_first_capture_conditional": 120.16666666666667,
+        "outcome_entropy_bits": -0.0,
+        "outcomes": {
+          "0": 100
+        },
+        "runs": 100,
+        "terminal_readability": 1,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ]
+      },
+      "s0.99": {
+        "accuracy": 0.0,
+        "capacity_rejections": 0,
+        "correct": 0,
+        "correct_occupancy": 0.09798,
+        "ever_captured": 59,
+        "identity_preserved_runs": 0,
+        "mean_escapes": 0.6,
+        "mean_first_capture_conditional": 164.59322033898306,
+        "outcome_entropy_bits": 1.4195037295138266,
+        "outcomes": {
+          "-1": 7,
+          "0": 74,
+          "1": 9,
+          "2": 2,
+          "3": 4,
+          "4": 3,
+          "None": 1
+        },
+        "runs": 100,
+        "terminal_readability": 0.99,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          3.469446951953614e-18,
+          0.03699349820698568
+        ]
+      },
+      "s0.999": {
+        "accuracy": 0.48,
+        "capacity_rejections": 0,
+        "correct": 48,
+        "correct_occupancy": 0.60995,
+        "ever_captured": 93,
+        "identity_preserved_runs": 48,
+        "mean_escapes": 0.45,
+        "mean_first_capture_conditional": 171.40860215053763,
+        "outcome_entropy_bits": 2.040106505650147,
+        "outcomes": {
+          "1": 2,
+          "3": 4,
+          "4": 7,
+          "5": 23,
+          "6": 15,
+          "7": 48,
+          "None": 1
+        },
+        "runs": 100,
+        "terminal_readability": 0.99,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          0.384645517580519,
+          0.5768342223477603
+        ]
+      },
+      "s0.9999": {
+        "accuracy": 0.95,
+        "capacity_rejections": 0,
+        "correct": 95,
+        "correct_occupancy": 0.893655,
+        "ever_captured": 99,
+        "identity_preserved_runs": 95,
+        "mean_escapes": 0.04,
+        "mean_first_capture_conditional": 172.02020202020202,
+        "outcome_entropy_bits": 0.3224933618603243,
+        "outcomes": {
+          "5": 4,
+          "6": 1,
+          "7": 95
+        },
+        "runs": 100,
+        "terminal_readability": 1,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          0.8882495307680808,
+          0.9784563208456319
+        ]
+      },
+      "s1": {
+        "accuracy": 1.0,
+        "capacity_rejections": 0,
+        "correct": 100,
+        "correct_occupancy": 0.914715,
+        "ever_captured": 100,
+        "identity_preserved_runs": 100,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": 171.57,
+        "outcome_entropy_bits": -0.0,
+        "outcomes": {
+          "7": 100
+        },
+        "runs": 100,
+        "terminal_readability": 1,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          0.9630065017930143,
+          1.0
+        ]
+      },
+      "zero-global": {
+        "accuracy": 1.0,
+        "capacity_rejections": 0,
+        "correct": 100,
+        "correct_occupancy": 0.976405,
+        "ever_captured": 100,
+        "identity_preserved_runs": 100,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": 48.19,
+        "outcome_entropy_bits": -0.0,
+        "outcomes": {
+          "0": 100
+        },
+        "runs": 100,
+        "terminal_readability": 1,
+        "unique_accepted_trajectories": 99,
+        "wilson95": [
+          0.9630065017930143,
+          1.0
+        ]
+      },
+      "zero-local": {
+        "accuracy": 1.0,
+        "capacity_rejections": 0,
+        "correct": 100,
+        "correct_occupancy": 0.73383,
+        "ever_captured": 100,
+        "identity_preserved_runs": 100,
+        "mean_escapes": 0,
+        "mean_first_capture_conditional": 533.34,
+        "outcome_entropy_bits": -0.0,
+        "outcomes": {
+          "0": 100
+        },
+        "runs": 100,
+        "terminal_readability": 1,
+        "unique_accepted_trajectories": 100,
+        "wilson95": [
+          0.9630065017930143,
+          1.0
+        ]
+      }
+    }
+  }
+}

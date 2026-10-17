@@ -1,0 +1,3247 @@
+{
+  "SC-002:identity-0:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 19.58,
+    "median_iterations": 20.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 0, 'remainder': 0}": 200
+    },
+    "p95_iterations": 27,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 1,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-002:identity-0:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 19.525,
+    "median_iterations": 19.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 0, 'remainder': 0}": 200
+    },
+    "p95_iterations": 28,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 1,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-002:identity-1:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 20.235,
+    "median_iterations": 20.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 1, 'remainder': 0}": 200
+    },
+    "p95_iterations": 28,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 61,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-002:identity-1:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 20.59,
+    "median_iterations": 20.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 1, 'remainder': 0}": 200
+    },
+    "p95_iterations": 29,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 62,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-002:identity-7:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 28.725,
+    "median_iterations": 28.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 7, 'remainder': 0}": 200
+    },
+    "p95_iterations": 37,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-002:identity-7:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 28.245,
+    "median_iterations": 28.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 7, 'remainder': 0}": 200
+    },
+    "p95_iterations": 37,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-002:identity-9:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 31.325,
+    "median_iterations": 30.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 9, 'remainder': 0}": 200
+    },
+    "p95_iterations": 41,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-002:identity-9:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 32,
+    "median_iterations": 32.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 9, 'remainder': 0}": 200
+    },
+    "p95_iterations": 41,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-003:identity-strength-0.0:rep-0": {
+    "accuracy": 0.145,
+    "correct": 29,
+    "mean_iterations": 27.64,
+    "median_iterations": 27.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.626227708994153,
+    "outcomes": {
+      "{'value': 1, 'remainder': 0}": 3,
+      "{'value': 2, 'remainder': 0}": 10,
+      "{'value': 3, 'remainder': 0}": 27,
+      "{'value': 4, 'remainder': 0}": 40,
+      "{'value': 5, 'remainder': 0}": 51,
+      "{'value': 6, 'remainder': 0}": 36,
+      "{'value': 7, 'remainder': 0}": 29,
+      "{'value': 8, 'remainder': 0}": 4
+    },
+    "p95_iterations": 36,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.10289350642004402,
+      0.20048667530781522
+    ]
+  },
+  "SC-003:identity-strength-0.0:rep-1": {
+    "accuracy": 0.09,
+    "correct": 18,
+    "mean_iterations": 28.575,
+    "median_iterations": 28.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.5932496783486774,
+    "outcomes": {
+      "{'value': 0, 'remainder': 0}": 2,
+      "{'value': 1, 'remainder': 0}": 2,
+      "{'value': 2, 'remainder': 0}": 7,
+      "{'value': 3, 'remainder': 0}": 21,
+      "{'value': 4, 'remainder': 0}": 47,
+      "{'value': 5, 'remainder': 0}": 59,
+      "{'value': 6, 'remainder': 0}": 38,
+      "{'value': 7, 'remainder': 0}": 18,
+      "{'value': 8, 'remainder': 0}": 5,
+      "{'value': 9, 'remainder': 0}": 1
+    },
+    "p95_iterations": 37,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 199,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.05768744886219316,
+      0.13776571876716542
+    ]
+  },
+  "SC-003:identity-strength-0.2:rep-0": {
+    "accuracy": 0.11,
+    "correct": 22,
+    "mean_iterations": 29.295,
+    "median_iterations": 29.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.508718272888237,
+    "outcomes": {
+      "{'value': 1, 'remainder': 0}": 1,
+      "{'value': 2, 'remainder': 0}": 3,
+      "{'value': 3, 'remainder': 0}": 16,
+      "{'value': 4, 'remainder': 0}": 41,
+      "{'value': 5, 'remainder': 0}": 51,
+      "{'value': 6, 'remainder': 0}": 56,
+      "{'value': 7, 'remainder': 0}": 22,
+      "{'value': 8, 'remainder': 0}": 8,
+      "{'value': 9, 'remainder': 0}": 2
+    },
+    "p95_iterations": 37,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.07377244460125303,
+      0.1609269099730149
+    ]
+  },
+  "SC-003:identity-strength-0.2:rep-1": {
+    "accuracy": 0.125,
+    "correct": 25,
+    "mean_iterations": 28.75,
+    "median_iterations": 29.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.620501815805127,
+    "outcomes": {
+      "{'value': 2, 'remainder': 0}": 6,
+      "{'value': 3, 'remainder': 0}": 19,
+      "{'value': 4, 'remainder': 0}": 42,
+      "{'value': 5, 'remainder': 0}": 42,
+      "{'value': 6, 'remainder': 0}": 51,
+      "{'value': 7, 'remainder': 0}": 25,
+      "{'value': 8, 'remainder': 0}": 13,
+      "{'value': 9, 'remainder': 0}": 2
+    },
+    "p95_iterations": 37,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.08611974475712644,
+      0.17801425002582347
+    ]
+  },
+  "SC-003:identity-strength-0.4:rep-0": {
+    "accuracy": 0.215,
+    "correct": 43,
+    "mean_iterations": 29.555,
+    "median_iterations": 29.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.300468934717816,
+    "outcomes": {
+      "{'value': 2, 'remainder': 0}": 2,
+      "{'value': 3, 'remainder': 0}": 9,
+      "{'value': 4, 'remainder': 0}": 31,
+      "{'value': 5, 'remainder': 0}": 54,
+      "{'value': 6, 'remainder': 0}": 57,
+      "{'value': 7, 'remainder': 0}": 43,
+      "{'value': 8, 'remainder': 0}": 4
+    },
+    "p95_iterations": 37,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.1637187625450758,
+      0.27702307348996613
+    ]
+  },
+  "SC-003:identity-strength-0.4:rep-1": {
+    "accuracy": 0.225,
+    "correct": 45,
+    "mean_iterations": 29.87,
+    "median_iterations": 29.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.3345726795990056,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 6,
+      "{'value': 4, 'remainder': 0}": 32,
+      "{'value': 5, 'remainder': 0}": 46,
+      "{'value': 6, 'remainder': 0}": 59,
+      "{'value': 7, 'remainder': 0}": 45,
+      "{'value': 8, 'remainder': 0}": 11,
+      "{'value': 9, 'remainder': 0}": 1
+    },
+    "p95_iterations": 40,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.17262369715089126,
+      0.2877412323566053
+    ]
+  },
+  "SC-003:identity-strength-0.6:rep-0": {
+    "accuracy": 0.345,
+    "correct": 69,
+    "mean_iterations": 30.625,
+    "median_iterations": 30.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.1441613569721274,
+    "outcomes": {
+      "{'value': 2, 'remainder': 0}": 1,
+      "{'value': 3, 'remainder': 0}": 4,
+      "{'value': 4, 'remainder': 0}": 10,
+      "{'value': 5, 'remainder': 0}": 37,
+      "{'value': 6, 'remainder': 0}": 67,
+      "{'value': 7, 'remainder': 0}": 69,
+      "{'value': 8, 'remainder': 0}": 11,
+      "{'value': 9, 'remainder': 0}": 1
+    },
+    "p95_iterations": 39,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.2825979437674894,
+      0.4132441074094632
+    ]
+  },
+  "SC-003:identity-strength-0.6:rep-1": {
+    "accuracy": 0.29,
+    "correct": 58,
+    "mean_iterations": 30.31,
+    "median_iterations": 30.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.1841825435836015,
+    "outcomes": {
+      "{'value': 2, 'remainder': 0}": 1,
+      "{'value': 3, 'remainder': 0}": 3,
+      "{'value': 4, 'remainder': 0}": 13,
+      "{'value': 5, 'remainder': 0}": 41,
+      "{'value': 6, 'remainder': 0}": 71,
+      "{'value': 7, 'remainder': 0}": 58,
+      "{'value': 8, 'remainder': 0}": 12,
+      "{'value': 9, 'remainder': 0}": 1
+    },
+    "p95_iterations": 39,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.23154025607067882,
+      0.3563747810077731
+    ]
+  },
+  "SC-003:identity-strength-0.8:rep-0": {
+    "accuracy": 0.535,
+    "correct": 107,
+    "mean_iterations": 31.735,
+    "median_iterations": 31.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.6645755916883844,
+    "outcomes": {
+      "{'value': 4, 'remainder': 0}": 4,
+      "{'value': 5, 'remainder': 0}": 16,
+      "{'value': 6, 'remainder': 0}": 60,
+      "{'value': 7, 'remainder': 0}": 107,
+      "{'value': 8, 'remainder': 0}": 13
+    },
+    "p95_iterations": 42,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.4658664687236316,
+      0.6028143584299599
+    ]
+  },
+  "SC-003:identity-strength-0.8:rep-1": {
+    "accuracy": 0.485,
+    "correct": 97,
+    "mean_iterations": 31.465,
+    "median_iterations": 31.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.7763964321670633,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 1,
+      "{'value': 4, 'remainder': 0}": 3,
+      "{'value': 5, 'remainder': 0}": 18,
+      "{'value': 6, 'remainder': 0}": 64,
+      "{'value': 7, 'remainder': 0}": 97,
+      "{'value': 8, 'remainder': 0}": 17
+    },
+    "p95_iterations": 42,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.41667385171877513,
+      0.5538915080725428
+    ]
+  },
+  "SC-003:identity-strength-0.95:rep-0": {
+    "accuracy": 0.825,
+    "correct": 165,
+    "mean_iterations": 32.555,
+    "median_iterations": 32.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.8503484581910199,
+    "outcomes": {
+      "{'value': 5, 'remainder': 0}": 1,
+      "{'value': 6, 'remainder': 0}": 24,
+      "{'value': 7, 'remainder': 0}": 165,
+      "{'value': 8, 'remainder': 0}": 10
+    },
+    "p95_iterations": 42,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.7663556885175099,
+      0.8713948493372666
+    ]
+  },
+  "SC-003:identity-strength-0.95:rep-1": {
+    "accuracy": 0.805,
+    "correct": 161,
+    "mean_iterations": 32.605,
+    "median_iterations": 31.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.9479116650354857,
+    "outcomes": {
+      "{'value': 5, 'remainder': 0}": 2,
+      "{'value': 6, 'remainder': 0}": 27,
+      "{'value': 7, 'remainder': 0}": 161,
+      "{'value': 8, 'remainder': 0}": 9,
+      "{'value': 9, 'remainder': 0}": 1
+    },
+    "p95_iterations": 43,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.7445595562538726,
+      0.8539447946559949
+    ]
+  },
+  "SC-003:identity-strength-0.99:rep-0": {
+    "accuracy": 0.99,
+    "correct": 198,
+    "mean_iterations": 32.31,
+    "median_iterations": 32.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.08079313589591118,
+    "outcomes": {
+      "{'value': 6, 'remainder': 0}": 2,
+      "{'value': 7, 'remainder': 0}": 198
+    },
+    "p95_iterations": 42,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9642782382838231,
+      0.9972533418664555
+    ]
+  },
+  "SC-003:identity-strength-0.99:rep-1": {
+    "accuracy": 0.96,
+    "correct": 192,
+    "mean_iterations": 32.305,
+    "median_iterations": 31.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.2747433140607801,
+    "outcomes": {
+      "{'value': 6, 'remainder': 0}": 6,
+      "{'value': 7, 'remainder': 0}": 192,
+      "{'value': 8, 'remainder': 0}": 2
+    },
+    "p95_iterations": 44,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.923067931799067,
+      0.9795943679338476
+    ]
+  },
+  "SC-003:identity-strength-0.9:rep-0": {
+    "accuracy": 0.665,
+    "correct": 133,
+    "mean_iterations": 32.275,
+    "median_iterations": 32.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.2517216211777336,
+    "outcomes": {
+      "{'value': 5, 'remainder': 0}": 7,
+      "{'value': 6, 'remainder': 0}": 52,
+      "{'value': 7, 'remainder': 0}": 133,
+      "{'value': 8, 'remainder': 0}": 8
+    },
+    "p95_iterations": 41,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.5970219120796653,
+      0.7267591302158368
+    ]
+  },
+  "SC-003:identity-strength-0.9:rep-1": {
+    "accuracy": 0.74,
+    "correct": 148,
+    "mean_iterations": 32,
+    "median_iterations": 31.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.1088780028380105,
+    "outcomes": {
+      "{'value': 4, 'remainder': 0}": 1,
+      "{'value': 5, 'remainder': 0}": 5,
+      "{'value': 6, 'remainder': 0}": 40,
+      "{'value': 7, 'remainder': 0}": 148,
+      "{'value': 8, 'remainder': 0}": 6
+    },
+    "p95_iterations": 40,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.6750925439746589,
+      0.7958616993642531
+    ]
+  },
+  "SC-003:identity-strength-1.0:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 32.45,
+    "median_iterations": 32.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 7, 'remainder': 0}": 200
+    },
+    "p95_iterations": 44,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-003:identity-strength-1.0:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 32.05,
+    "median_iterations": 32.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 7, 'remainder': 0}": 200
+    },
+    "p95_iterations": 42,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-006:addition-strength-0.0:rep-0": {
+    "accuracy": 0.125,
+    "correct": 25,
+    "mean_iterations": 15.735,
+    "median_iterations": 15.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.1671523068215928,
+    "outcomes": {
+      "{'value': 2, 'remainder': 0}": 2,
+      "{'value': 3, 'remainder': 0}": 12,
+      "{'value': 4, 'remainder': 0}": 34,
+      "{'value': 5, 'remainder': 0}": 58,
+      "{'value': 6, 'remainder': 0}": 69,
+      "{'value': 7, 'remainder': 0}": 25
+    },
+    "p95_iterations": 22,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.08611974475712644,
+      0.17801425002582347
+    ]
+  },
+  "SC-006:addition-strength-0.0:rep-1": {
+    "accuracy": 0.115,
+    "correct": 23,
+    "mean_iterations": 16.125,
+    "median_iterations": 16.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.187586103441536,
+    "outcomes": {
+      "{'value': 2, 'remainder': 0}": 2,
+      "{'value': 3, 'remainder': 0}": 14,
+      "{'value': 4, 'remainder': 0}": 37,
+      "{'value': 5, 'remainder': 0}": 56,
+      "{'value': 6, 'remainder': 0}": 68,
+      "{'value': 7, 'remainder': 0}": 23
+    },
+    "p95_iterations": 23,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.07786373232561955,
+      0.16664716898487572
+    ]
+  },
+  "SC-006:addition-strength-0.2:rep-0": {
+    "accuracy": 0.195,
+    "correct": 39,
+    "mean_iterations": 15.48,
+    "median_iterations": 15.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.0332639340005376,
+    "outcomes": {
+      "{'value': 2, 'remainder': 0}": 1,
+      "{'value': 3, 'remainder': 0}": 5,
+      "{'value': 4, 'remainder': 0}": 22,
+      "{'value': 5, 'remainder': 0}": 60,
+      "{'value': 6, 'remainder': 0}": 73,
+      "{'value': 7, 'remainder': 0}": 39
+    },
+    "p95_iterations": 21,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.1460552053440051,
+      0.25544044374612745
+    ]
+  },
+  "SC-006:addition-strength-0.2:rep-1": {
+    "accuracy": 0.15,
+    "correct": 30,
+    "mean_iterations": 16,
+    "median_iterations": 15.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.0613373485984914,
+    "outcomes": {
+      "{'value': 2, 'remainder': 0}": 3,
+      "{'value': 3, 'remainder': 0}": 7,
+      "{'value': 4, 'remainder': 0}": 24,
+      "{'value': 5, 'remainder': 0}": 50,
+      "{'value': 6, 'remainder': 0}": 86,
+      "{'value': 7, 'remainder': 0}": 30
+    },
+    "p95_iterations": 23,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.10713593562241995,
+      0.20605579284166659
+    ]
+  },
+  "SC-006:addition-strength-0.4:rep-0": {
+    "accuracy": 0.275,
+    "correct": 55,
+    "mean_iterations": 16.83,
+    "median_iterations": 16.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.9205566468469082,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 4,
+      "{'value': 4, 'remainder': 0}": 14,
+      "{'value': 5, 'remainder': 0}": 49,
+      "{'value': 6, 'remainder': 0}": 78,
+      "{'value': 7, 'remainder': 0}": 55
+    },
+    "p95_iterations": 24,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.21779700329307355,
+      0.34068339357669647
+    ]
+  },
+  "SC-006:addition-strength-0.4:rep-1": {
+    "accuracy": 0.27,
+    "correct": 54,
+    "mean_iterations": 16.9,
+    "median_iterations": 17.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.93249241072489,
+    "outcomes": {
+      "{'value': 2, 'remainder': 0}": 1,
+      "{'value': 3, 'remainder': 0}": 4,
+      "{'value': 4, 'remainder': 0}": 13,
+      "{'value': 5, 'remainder': 0}": 46,
+      "{'value': 6, 'remainder': 0}": 82,
+      "{'value': 7, 'remainder': 0}": 54
+    },
+    "p95_iterations": 25,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.21323449814685846,
+      0.33543435198668425
+    ]
+  },
+  "SC-006:addition-strength-0.6:rep-0": {
+    "accuracy": 0.455,
+    "correct": 91,
+    "mean_iterations": 17.205,
+    "median_iterations": 17.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.5845471728826805,
+    "outcomes": {
+      "{'value': 4, 'remainder': 0}": 5,
+      "{'value': 5, 'remainder': 0}": 29,
+      "{'value': 6, 'remainder': 0}": 75,
+      "{'value': 7, 'remainder': 0}": 91
+    },
+    "p95_iterations": 25,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.387482193098835,
+      0.524213886275119
+    ]
+  },
+  "SC-006:addition-strength-0.6:rep-1": {
+    "accuracy": 0.445,
+    "correct": 89,
+    "mean_iterations": 16.39,
+    "median_iterations": 16.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.6062577345076643,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 2,
+      "{'value': 4, 'remainder': 0}": 5,
+      "{'value': 5, 'remainder': 0}": 23,
+      "{'value': 6, 'remainder': 0}": 81,
+      "{'value': 7, 'remainder': 0}": 89
+    },
+    "p95_iterations": 23,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.3778060100295335,
+      0.5142669758719658
+    ]
+  },
+  "SC-006:addition-strength-0.8:rep-0": {
+    "accuracy": 0.66,
+    "correct": 132,
+    "mean_iterations": 17.52,
+    "median_iterations": 17.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.2508656031588234,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 1,
+      "{'value': 4, 'remainder': 0}": 3,
+      "{'value': 5, 'remainder': 0}": 10,
+      "{'value': 6, 'remainder': 0}": 54,
+      "{'value': 7, 'remainder': 0}": 132
+    },
+    "p95_iterations": 26,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.5918849552683626,
+      0.7220845402909121
+    ]
+  },
+  "SC-006:addition-strength-0.8:rep-1": {
+    "accuracy": 0.61,
+    "correct": 122,
+    "mean_iterations": 18.06,
+    "median_iterations": 17.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.2063586044298051,
+    "outcomes": {
+      "{'value': 5, 'remainder': 0}": 12,
+      "{'value': 6, 'remainder': 0}": 66,
+      "{'value': 7, 'remainder': 0}": 122
+    },
+    "p95_iterations": 26,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.5409374595716976,
+      0.6749165686253038
+    ]
+  },
+  "SC-006:addition-strength-0.95:rep-0": {
+    "accuracy": 0.905,
+    "correct": 181,
+    "mean_iterations": 18.425,
+    "median_iterations": 18.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.4529425481872832,
+    "outcomes": {
+      "{'value': 6, 'remainder': 0}": 19,
+      "{'value': 7, 'remainder': 0}": 181
+    },
+    "p95_iterations": 27,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.8563983883518006,
+      0.9383368972826135
+    ]
+  },
+  "SC-006:addition-strength-0.95:rep-1": {
+    "accuracy": 0.89,
+    "correct": 178,
+    "mean_iterations": 18.395,
+    "median_iterations": 18.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.5292601068228608,
+    "outcomes": {
+      "{'value': 5, 'remainder': 0}": 1,
+      "{'value': 6, 'remainder': 0}": 21,
+      "{'value': 7, 'remainder': 0}": 178
+    },
+    "p95_iterations": 27,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.839073090026985,
+      0.926227555398747
+    ]
+  },
+  "SC-006:addition-strength-0.99:rep-0": {
+    "accuracy": 0.96,
+    "correct": 192,
+    "mean_iterations": 18.04,
+    "median_iterations": 18.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.24229218908241482,
+    "outcomes": {
+      "{'value': 6, 'remainder': 0}": 8,
+      "{'value': 7, 'remainder': 0}": 192
+    },
+    "p95_iterations": 26,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.923067931799067,
+      0.9795943679338476
+    ]
+  },
+  "SC-006:addition-strength-0.99:rep-1": {
+    "accuracy": 0.99,
+    "correct": 198,
+    "mean_iterations": 18.075,
+    "median_iterations": 18.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.08079313589591118,
+    "outcomes": {
+      "{'value': 6, 'remainder': 0}": 2,
+      "{'value': 7, 'remainder': 0}": 198
+    },
+    "p95_iterations": 24,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9642782382838231,
+      0.9972533418664555
+    ]
+  },
+  "SC-006:addition-strength-0.9:rep-0": {
+    "accuracy": 0.83,
+    "correct": 166,
+    "mean_iterations": 17.77,
+    "median_iterations": 17.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.6902484320626323,
+    "outcomes": {
+      "{'value': 5, 'remainder': 0}": 1,
+      "{'value': 6, 'remainder': 0}": 33,
+      "{'value': 7, 'remainder': 0}": 166
+    },
+    "p95_iterations": 27,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.7718411637168737,
+      0.8757209208741302
+    ]
+  },
+  "SC-006:addition-strength-0.9:rep-1": {
+    "accuracy": 0.835,
+    "correct": 167,
+    "mean_iterations": 17.37,
+    "median_iterations": 17.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.7502814237545757,
+    "outcomes": {
+      "{'value': 4, 'remainder': 0}": 1,
+      "{'value': 5, 'remainder': 0}": 3,
+      "{'value': 6, 'remainder': 0}": 29,
+      "{'value': 7, 'remainder': 0}": 167
+    },
+    "p95_iterations": 24,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.7773421846094045,
+      0.8800314467178268
+    ]
+  },
+  "SC-006:addition-strength-1.0:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 18.2,
+    "median_iterations": 18.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 7, 'remainder': 0}": 200
+    },
+    "p95_iterations": 28,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-006:addition-strength-1.0:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 17.65,
+    "median_iterations": 17.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 7, 'remainder': 0}": 200
+    },
+    "p95_iterations": 25,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-007:cancellation--7--3:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 15.815,
+    "median_iterations": 16.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -4, 'remainder': 0}": 200
+    },
+    "p95_iterations": 22,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-007:cancellation--7--3:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 15.995,
+    "median_iterations": 16.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -4, 'remainder': 0}": 200
+    },
+    "p95_iterations": 23,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-007:cancellation-0-0:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 2,
+    "median_iterations": 2.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 0, 'remainder': 0}": 200
+    },
+    "p95_iterations": 2,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": -0.0,
+    "unique_final_structures": 1,
+    "unique_trajectories": 1,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-007:cancellation-0-0:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 2,
+    "median_iterations": 2.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 0, 'remainder': 0}": 200
+    },
+    "p95_iterations": 2,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": -0.0,
+    "unique_final_structures": 1,
+    "unique_trajectories": 1,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-007:cancellation-100-100:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 287.445,
+    "median_iterations": 289.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 0, 'remainder': 0}": 200
+    },
+    "p95_iterations": 315,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 1,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-007:cancellation-100-100:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 286.35,
+    "median_iterations": 287.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 0, 'remainder': 0}": 200
+    },
+    "p95_iterations": 323,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 1,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-007:cancellation-3-7:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 15.86,
+    "median_iterations": 16.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -4, 'remainder': 0}": 200
+    },
+    "p95_iterations": 22,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-007:cancellation-3-7:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 15.555,
+    "median_iterations": 15.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -4, 'remainder': 0}": 200
+    },
+    "p95_iterations": 23,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-008:midrun-erase-1:rep-0": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "mean_iterations": 92.115,
+    "median_iterations": 91.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 44, 'remainder': 0}": 200
+    },
+    "p95_iterations": 110,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      1.734723475976807e-18,
+      0.018845326377266575
+    ]
+  },
+  "SC-008:midrun-erase-1:rep-1": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "mean_iterations": 92.2,
+    "median_iterations": 92.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 44, 'remainder': 0}": 200
+    },
+    "p95_iterations": 109,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      1.734723475976807e-18,
+      0.018845326377266575
+    ]
+  },
+  "SC-008:midrun-erase-20:rep-0": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "mean_iterations": 91.25,
+    "median_iterations": 91.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 44, 'remainder': 0}": 200
+    },
+    "p95_iterations": 106,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      1.734723475976807e-18,
+      0.018845326377266575
+    ]
+  },
+  "SC-008:midrun-erase-20:rep-1": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "mean_iterations": 91.995,
+    "median_iterations": 92.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 44, 'remainder': 0}": 200
+    },
+    "p95_iterations": 110,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      1.734723475976807e-18,
+      0.018845326377266575
+    ]
+  },
+  "SC-008:midrun-erase-6:rep-0": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "mean_iterations": 91.915,
+    "median_iterations": 91.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 44, 'remainder': 0}": 200
+    },
+    "p95_iterations": 108,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      1.734723475976807e-18,
+      0.018845326377266575
+    ]
+  },
+  "SC-008:midrun-erase-6:rep-1": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "mean_iterations": 90.57,
+    "median_iterations": 90.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 44, 'remainder': 0}": 200
+    },
+    "p95_iterations": 107,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      1.734723475976807e-18,
+      0.018845326377266575
+    ]
+  },
+  "SC-008:midrun-neutral-1:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 94.54,
+    "median_iterations": 95.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 45, 'remainder': 0}": 200
+    },
+    "p95_iterations": 108,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-008:midrun-neutral-1:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 95.135,
+    "median_iterations": 94.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 45, 'remainder': 0}": 200
+    },
+    "p95_iterations": 114,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-008:midrun-neutral-20:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 129,
+    "median_iterations": 129.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 45, 'remainder': 0}": 200
+    },
+    "p95_iterations": 144,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-008:midrun-neutral-20:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 127.915,
+    "median_iterations": 128.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 45, 'remainder': 0}": 200
+    },
+    "p95_iterations": 143,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-008:midrun-neutral-6:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 101.355,
+    "median_iterations": 100.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 45, 'remainder': 0}": 200
+    },
+    "p95_iterations": 119,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-008:midrun-neutral-6:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 102.155,
+    "median_iterations": 102.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 45, 'remainder': 0}": 200
+    },
+    "p95_iterations": 119,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-009:occupancy-flip:rep-0": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "mean_iterations": 138,
+    "median_iterations": 138.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -1, 'remainder': 0}": 200
+    },
+    "p95_iterations": 151,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 62,
+    "unique_trajectories": 200,
+    "wilson95": [
+      1.734723475976807e-18,
+      0.018845326377266575
+    ]
+  },
+  "SC-009:occupancy-flip:rep-1": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "mean_iterations": 136.965,
+    "median_iterations": 137.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -1, 'remainder': 0}": 200
+    },
+    "p95_iterations": 151,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 58,
+    "unique_trajectories": 200,
+    "wilson95": [
+      1.734723475976807e-18,
+      0.018845326377266575
+    ]
+  },
+  "SC-009:occupancy-neutral:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 338.695,
+    "median_iterations": 338.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 7, 'remainder': 0}": 200
+    },
+    "p95_iterations": 368,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-009:occupancy-neutral:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 339.12,
+    "median_iterations": 339.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 7, 'remainder': 0}": 200
+    },
+    "p95_iterations": 365,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-010:product--7-6:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 158.21,
+    "median_iterations": 158.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -42, 'remainder': 0}": 200
+    },
+    "p95_iterations": 176,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-010:product--7-6:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 158.795,
+    "median_iterations": 158.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -42, 'remainder': 0}": 200
+    },
+    "p95_iterations": 180,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-010:product-12-13:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 525.775,
+    "median_iterations": 527.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 156, 'remainder': 0}": 200
+    },
+    "p95_iterations": 559,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-010:product-12-13:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 522.865,
+    "median_iterations": 520.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 156, 'remainder': 0}": 200
+    },
+    "p95_iterations": 558,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-010:product-3-4:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 57.13,
+    "median_iterations": 56.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 12, 'remainder': 0}": 200
+    },
+    "p95_iterations": 69,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-010:product-3-4:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 56.385,
+    "median_iterations": 56.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 12, 'remainder': 0}": 200
+    },
+    "p95_iterations": 66,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-010:repeated--7-6:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 387.08,
+    "median_iterations": 386.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -42, 'remainder': 0}": 200
+    },
+    "p95_iterations": 417,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-010:repeated--7-6:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 385.79,
+    "median_iterations": 384.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -42, 'remainder': 0}": 200
+    },
+    "p95_iterations": 413,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-010:repeated-12-13:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 2120.465,
+    "median_iterations": 2124.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 156, 'remainder': 0}": 200
+    },
+    "p95_iterations": 2189,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-010:repeated-12-13:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 2118.71,
+    "median_iterations": 2121.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 156, 'remainder': 0}": 200
+    },
+    "p95_iterations": 2194,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-010:repeated-3-4:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 74.845,
+    "median_iterations": 74.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 12, 'remainder': 0}": 200
+    },
+    "p95_iterations": 88,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-010:repeated-3-4:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 74.105,
+    "median_iterations": 74.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 12, 'remainder': 0}": 200
+    },
+    "p95_iterations": 86,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition--13--3:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 66.245,
+    "median_iterations": 65.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 4, 'remainder': -1}": 200
+    },
+    "p95_iterations": 76,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition--13--3:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 65.225,
+    "median_iterations": 65.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 4, 'remainder': -1}": 200
+    },
+    "p95_iterations": 74,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition--13-3:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 66.055,
+    "median_iterations": 66.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -4, 'remainder': -1}": 200
+    },
+    "p95_iterations": 76,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition--13-3:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 66.175,
+    "median_iterations": 66.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -4, 'remainder': -1}": 200
+    },
+    "p95_iterations": 77,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition-0-3:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 11.8,
+    "median_iterations": 11.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 0, 'remainder': 0}": 200
+    },
+    "p95_iterations": 16,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 1,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition-0-3:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 11.895,
+    "median_iterations": 11.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 0, 'remainder': 0}": 200
+    },
+    "p95_iterations": 17,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 1,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition-12-3:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 60,
+    "median_iterations": 59.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 4, 'remainder': 0}": 200
+    },
+    "p95_iterations": 72,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition-12-3:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 59.77,
+    "median_iterations": 60.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 4, 'remainder': 0}": 200
+    },
+    "p95_iterations": 70,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition-13--3:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 66.195,
+    "median_iterations": 65.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -4, 'remainder': 1}": 200
+    },
+    "p95_iterations": 78,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition-13--3:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 65.8,
+    "median_iterations": 65.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -4, 'remainder': 1}": 200
+    },
+    "p95_iterations": 75,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition-13-3:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 66.01,
+    "median_iterations": 65.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 4, 'remainder': 1}": 200
+    },
+    "p95_iterations": 77,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition-13-3:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 65.995,
+    "median_iterations": 65.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 4, 'remainder': 1}": 200
+    },
+    "p95_iterations": 76,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition-2-5:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 24.76,
+    "median_iterations": 24.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 0, 'remainder': 2}": 200
+    },
+    "p95_iterations": 30,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 186,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-011:partition-2-5:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 24.895,
+    "median_iterations": 24.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 0, 'remainder': 2}": 200
+    },
+    "p95_iterations": 31,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 196,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-012:decimal--37--48:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -85, 'remainder': 0}": 200
+    },
+    "p95_iterations": 5,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-012:decimal--37--48:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -85, 'remainder': 0}": 200
+    },
+    "p95_iterations": 5,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-012:decimal-1--100:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -99, 'remainder': 0}": 200
+    },
+    "p95_iterations": 5,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-012:decimal-1--100:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': -99, 'remainder': 0}": 200
+    },
+    "p95_iterations": 5,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-012:decimal-100--1:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 99, 'remainder': 0}": 200
+    },
+    "p95_iterations": 5,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-012:decimal-100--1:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 99, 'remainder': 0}": 200
+    },
+    "p95_iterations": 5,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-012:decimal-37-48:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 200
+    },
+    "p95_iterations": 5,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-012:decimal-37-48:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 200
+    },
+    "p95_iterations": 5,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-012:decimal-999-1:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 11,
+    "median_iterations": 11.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 1000, 'remainder': 0}": 200
+    },
+    "p95_iterations": 11,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 63,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-012:decimal-999-1:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 11,
+    "median_iterations": 11.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 1000, 'remainder': 0}": 200
+    },
+    "p95_iterations": 11,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 61,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-013:global-2:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 29.955,
+    "median_iterations": 30.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 200
+    },
+    "p95_iterations": 40,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 20,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-013:global-2:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 30.365,
+    "median_iterations": 30.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 200
+    },
+    "p95_iterations": 41,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 20,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-013:global-32:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 29.93,
+    "median_iterations": 29.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 200
+    },
+    "p95_iterations": 39,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-013:global-32:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 30.125,
+    "median_iterations": 29.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 200
+    },
+    "p95_iterations": 41,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-013:global-8:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 30.555,
+    "median_iterations": 30.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 200
+    },
+    "p95_iterations": 41,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 199,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-013:global-8:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 29.82,
+    "median_iterations": 29.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 200
+    },
+    "p95_iterations": 40,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-013:local-2:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 30.565,
+    "median_iterations": 30.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 200
+    },
+    "p95_iterations": 40,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 4,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-013:local-2:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 29.695,
+    "median_iterations": 29.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 200
+    },
+    "p95_iterations": 39,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 4,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-013:local-32:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 376.28,
+    "median_iterations": 308.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 200
+    },
+    "p95_iterations": 856,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-013:local-32:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 334.89,
+    "median_iterations": 283.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 200
+    },
+    "p95_iterations": 792,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-013:local-8:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 48.115,
+    "median_iterations": 43.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 200
+    },
+    "p95_iterations": 82,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 172,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-013:local-8:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 42.915,
+    "median_iterations": 40.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 3, 'remainder': 0}": 200
+    },
+    "p95_iterations": 67,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 170,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-014:coordination-False-noise-0.0:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 200
+    },
+    "p95_iterations": 5,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-014:coordination-False-noise-0.0:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 200
+    },
+    "p95_iterations": 5,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-014:coordination-False-noise-0.15:rep-0": {
+    "accuracy": 0.805,
+    "correct": 161,
+    "mean_iterations": 5.195,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.7118146702143195,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 161,
+      "{'value': 95, 'remainder': 0}": 39
+    },
+    "p95_iterations": 6,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.7445595562538726,
+      0.8539447946559949
+    ]
+  },
+  "SC-014:coordination-False-noise-0.15:rep-1": {
+    "accuracy": 0.85,
+    "correct": 170,
+    "mean_iterations": 5.15,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.6098403047164004,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 170,
+      "{'value': 95, 'remainder': 0}": 30
+    },
+    "p95_iterations": 6,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.7939442071583334,
+      0.89286406437758
+    ]
+  },
+  "SC-014:coordination-False-noise-0.5:rep-0": {
+    "accuracy": 0.465,
+    "correct": 93,
+    "mean_iterations": 5.535,
+    "median_iterations": 6.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.9964625048848763,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 93,
+      "{'value': 95, 'remainder': 0}": 107
+    },
+    "p95_iterations": 6,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.3971856415700402,
+      0.5341335312763685
+    ]
+  },
+  "SC-014:coordination-False-noise-0.5:rep-1": {
+    "accuracy": 0.495,
+    "correct": 99,
+    "mean_iterations": 5.505,
+    "median_iterations": 6.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.9999278640456615,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 99,
+      "{'value': 95, 'remainder': 0}": 101
+    },
+    "p95_iterations": 6,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.4264584535990475,
+      0.5637299996647251
+    ]
+  },
+  "SC-014:coordination-True-noise-0.0:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 200
+    },
+    "p95_iterations": 5,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-014:coordination-True-noise-0.0:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 200
+    },
+    "p95_iterations": 5,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-014:coordination-True-noise-0.15:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5.19,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 200
+    },
+    "p95_iterations": 6,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-014:coordination-True-noise-0.15:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5.185,
+    "median_iterations": 5.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 200
+    },
+    "p95_iterations": 6,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-014:coordination-True-noise-0.5:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5.545,
+    "median_iterations": 6.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 200
+    },
+    "p95_iterations": 6,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-014:coordination-True-noise-0.5:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 5.565,
+    "median_iterations": 6.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 200
+    },
+    "p95_iterations": 6,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-015:scale-137-148:rep-0": {
+    "accuracy": 1.0,
+    "correct": 50,
+    "mean_iterations": 570.3,
+    "median_iterations": 569.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 285, 'remainder': 0}": 50
+    },
+    "p95_iterations": 614,
+    "runs": 50,
+    "trajectory_entropy_proxy_bits": 5.643856189774724,
+    "unique_final_structures": 50,
+    "unique_trajectories": 50,
+    "wilson95": [
+      0.9286524008666414,
+      1.0
+    ]
+  },
+  "SC-015:scale-137-148:rep-1": {
+    "accuracy": 1.0,
+    "correct": 50,
+    "mean_iterations": 569.82,
+    "median_iterations": 570.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 285, 'remainder': 0}": 50
+    },
+    "p95_iterations": 601,
+    "runs": 50,
+    "trajectory_entropy_proxy_bits": 5.643856189774724,
+    "unique_final_structures": 50,
+    "unique_trajectories": 50,
+    "wilson95": [
+      0.9286524008666414,
+      1.0
+    ]
+  },
+  "SC-015:scale-37-48:rep-0": {
+    "accuracy": 1.0,
+    "correct": 50,
+    "mean_iterations": 173.84,
+    "median_iterations": 174.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 50
+    },
+    "p95_iterations": 191,
+    "runs": 50,
+    "trajectory_entropy_proxy_bits": 5.643856189774724,
+    "unique_final_structures": 50,
+    "unique_trajectories": 50,
+    "wilson95": [
+      0.9286524008666414,
+      1.0
+    ]
+  },
+  "SC-015:scale-37-48:rep-1": {
+    "accuracy": 1.0,
+    "correct": 50,
+    "mean_iterations": 172.22,
+    "median_iterations": 171.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 85, 'remainder': 0}": 50
+    },
+    "p95_iterations": 201,
+    "runs": 50,
+    "trajectory_entropy_proxy_bits": 5.643856189774724,
+    "unique_final_structures": 50,
+    "unique_trajectories": 50,
+    "wilson95": [
+      0.9286524008666414,
+      1.0
+    ]
+  },
+  "SC-015:scale-500-500:rep-0": {
+    "accuracy": 1.0,
+    "correct": 50,
+    "mean_iterations": 2000.9,
+    "median_iterations": 1996.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 1000, 'remainder': 0}": 50
+    },
+    "p95_iterations": 2069,
+    "runs": 50,
+    "trajectory_entropy_proxy_bits": 5.643856189774724,
+    "unique_final_structures": 50,
+    "unique_trajectories": 50,
+    "wilson95": [
+      0.9286524008666414,
+      1.0
+    ]
+  },
+  "SC-015:scale-500-500:rep-1": {
+    "accuracy": 1.0,
+    "correct": 50,
+    "mean_iterations": 1999.92,
+    "median_iterations": 2005.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 1000, 'remainder': 0}": 50
+    },
+    "p95_iterations": 2081,
+    "runs": 50,
+    "trajectory_entropy_proxy_bits": 5.643856189774724,
+    "unique_final_structures": 50,
+    "unique_trajectories": 50,
+    "wilson95": [
+      0.9286524008666414,
+      1.0
+    ]
+  },
+  "SC-015:scale-7-5:rep-0": {
+    "accuracy": 1.0,
+    "correct": 50,
+    "mean_iterations": 26.42,
+    "median_iterations": 25.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 12, 'remainder': 0}": 50
+    },
+    "p95_iterations": 38,
+    "runs": 50,
+    "trajectory_entropy_proxy_bits": 5.643856189774724,
+    "unique_final_structures": 50,
+    "unique_trajectories": 50,
+    "wilson95": [
+      0.9286524008666414,
+      1.0
+    ]
+  },
+  "SC-015:scale-7-5:rep-1": {
+    "accuracy": 1.0,
+    "correct": 50,
+    "mean_iterations": 26.32,
+    "median_iterations": 25.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 12, 'remainder': 0}": 50
+    },
+    "p95_iterations": 36,
+    "runs": 50,
+    "trajectory_entropy_proxy_bits": 5.643856189774724,
+    "unique_final_structures": 50,
+    "unique_trajectories": 50,
+    "wilson95": [
+      0.9286524008666414,
+      1.0
+    ]
+  },
+  "SC-016:scheduler-ordered:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 37,
+    "median_iterations": 37.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 8, 'remainder': 0}": 200
+    },
+    "p95_iterations": 37,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-016:scheduler-ordered:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 37,
+    "median_iterations": 37.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 8, 'remainder': 0}": 200
+    },
+    "p95_iterations": 37,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-016:scheduler-random:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 35.85,
+    "median_iterations": 35.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 8, 'remainder': 0}": 200
+    },
+    "p95_iterations": 48,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-016:scheduler-random:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 35.53,
+    "median_iterations": 35.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 8, 'remainder': 0}": 200
+    },
+    "p95_iterations": 43,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-017:covariance-erase:rep-0": {
+    "accuracy": 0.22,
+    "correct": 44,
+    "mean_iterations": 46.175,
+    "median_iterations": 46.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.973456799644067,
+    "outcomes": {
+      "{'value': 0, 'remainder': 0}": 1,
+      "{'value': 1, 'remainder': 0}": 2,
+      "{'value': 10, 'remainder': 0}": 8,
+      "{'value': 2, 'remainder': 0}": 11,
+      "{'value': 3, 'remainder': 0}": 13,
+      "{'value': 4, 'remainder': 0}": 16,
+      "{'value': 5, 'remainder': 0}": 24,
+      "{'value': 6, 'remainder': 0}": 45,
+      "{'value': 7, 'remainder': 0}": 44,
+      "{'value': 8, 'remainder': 0}": 29,
+      "{'value': 9, 'remainder': 0}": 7
+    },
+    "p95_iterations": 85,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.16816538358833258,
+      0.28238799918293667
+    ]
+  },
+  "SC-017:covariance-erase:rep-1": {
+    "accuracy": 0.24,
+    "correct": 48,
+    "mean_iterations": 46.435,
+    "median_iterations": 46.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.9835082278331844,
+    "outcomes": {
+      "{'value': 0, 'remainder': 0}": 3,
+      "{'value': 1, 'remainder': 0}": 4,
+      "{'value': 10, 'remainder': 0}": 2,
+      "{'value': 11, 'remainder': 0}": 1,
+      "{'value': 12, 'remainder': 0}": 1,
+      "{'value': 2, 'remainder': 0}": 6,
+      "{'value': 3, 'remainder': 0}": 8,
+      "{'value': 4, 'remainder': 0}": 26,
+      "{'value': 5, 'remainder': 0}": 24,
+      "{'value': 6, 'remainder': 0}": 44,
+      "{'value': 7, 'remainder': 0}": 48,
+      "{'value': 8, 'remainder': 0}": 23,
+      "{'value': 9, 'remainder': 0}": 10
+    },
+    "p95_iterations": 88,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 198,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.1860661599241369,
+      0.30373340979204166
+    ]
+  },
+  "SC-017:covariance-neutral:rep-0": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 49.5,
+    "median_iterations": 46.5,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 7, 'remainder': 0}": 200
+    },
+    "p95_iterations": 91,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-017:covariance-neutral:rep-1": {
+    "accuracy": 1.0,
+    "correct": 200,
+    "mean_iterations": 51.75,
+    "median_iterations": 50.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 7, 'remainder': 0}": 200
+    },
+    "p95_iterations": 90,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 200,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.9811546736227335,
+      1.0
+    ]
+  },
+  "SC-018:local-budget-10:rep-0": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "mean_iterations": 10,
+    "median_iterations": 10.0,
+    "nonconvergence": 1.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "None": 200
+    },
+    "p95_iterations": 10,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 1,
+    "unique_trajectories": 200,
+    "wilson95": [
+      1.734723475976807e-18,
+      0.018845326377266575
+    ]
+  },
+  "SC-018:local-budget-10:rep-1": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "mean_iterations": 10,
+    "median_iterations": 10.0,
+    "nonconvergence": 1.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "None": 200
+    },
+    "p95_iterations": 10,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 1,
+    "unique_trajectories": 200,
+    "wilson95": [
+      1.734723475976807e-18,
+      0.018845326377266575
+    ]
+  },
+  "SC-018:local-budget-200:rep-0": {
+    "accuracy": 0.345,
+    "correct": 69,
+    "mean_iterations": 177.29,
+    "median_iterations": 200.0,
+    "nonconvergence": 0.655,
+    "outcome_entropy_bits": 0.9295231861792264,
+    "outcomes": {
+      "None": 131,
+      "{'value': 3, 'remainder': 0}": 69
+    },
+    "p95_iterations": 200,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 70,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.2825979437674894,
+      0.4132441074094632
+    ]
+  },
+  "SC-018:local-budget-200:rep-1": {
+    "accuracy": 0.28,
+    "correct": 56,
+    "mean_iterations": 180.965,
+    "median_iterations": 200.0,
+    "nonconvergence": 0.72,
+    "outcome_entropy_bits": 0.8554508105601306,
+    "outcomes": {
+      "None": 144,
+      "{'value': 3, 'remainder': 0}": 56
+    },
+    "p95_iterations": 200,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 57,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.22236889773949026,
+      0.3459230458665071
+    ]
+  },
+  "SC-018:local-budget-50:rep-0": {
+    "accuracy": 0.005,
+    "correct": 1,
+    "mean_iterations": 49.955,
+    "median_iterations": 50.0,
+    "nonconvergence": 0.995,
+    "outcome_entropy_bits": 0.0454146923337941,
+    "outcomes": {
+      "None": 199,
+      "{'value': 3, 'remainder': 0}": 1
+    },
+    "p95_iterations": 50,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 2,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.0008831687156009814,
+      0.02777370439789293
+    ]
+  },
+  "SC-018:local-budget-50:rep-1": {
+    "accuracy": 0.005,
+    "correct": 1,
+    "mean_iterations": 49.93,
+    "median_iterations": 50.0,
+    "nonconvergence": 0.995,
+    "outcome_entropy_bits": 0.0454146923337941,
+    "outcomes": {
+      "None": 199,
+      "{'value': 3, 'remainder': 0}": 1
+    },
+    "p95_iterations": 50,
+    "runs": 200,
+    "trajectory_entropy_proxy_bits": 7.643856189774724,
+    "unique_final_structures": 2,
+    "unique_trajectories": 200,
+    "wilson95": [
+      0.0008831687156009814,
+      0.02777370439789293
+    ]
+  },
+  "SC-019:fixed-initial-17-28:rep-0": {
+    "accuracy": 1.0,
+    "correct": 1000,
+    "mean_iterations": 91.839,
+    "median_iterations": 91.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 45, 'remainder': 0}": 1000
+    },
+    "p95_iterations": 109,
+    "runs": 1000,
+    "trajectory_entropy_proxy_bits": 9.965784284662087,
+    "unique_final_structures": 1000,
+    "unique_trajectories": 1000,
+    "wilson95": [
+      0.996173241514445,
+      1.0
+    ]
+  },
+  "SC-019:fixed-initial-17-28:rep-1": {
+    "accuracy": 1.0,
+    "correct": 1000,
+    "mean_iterations": 91.809,
+    "median_iterations": 91.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 45, 'remainder': 0}": 1000
+    },
+    "p95_iterations": 108,
+    "runs": 1000,
+    "trajectory_entropy_proxy_bits": 9.965784284662087,
+    "unique_final_structures": 1000,
+    "unique_trajectories": 1000,
+    "wilson95": [
+      0.996173241514445,
+      1.0
+    ]
+  },
+  "SC-019:fixed-initial-3-4:rep-0": {
+    "accuracy": 1.0,
+    "correct": 1000,
+    "mean_iterations": 15.986,
+    "median_iterations": 15.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 7, 'remainder': 0}": 1000
+    },
+    "p95_iterations": 23,
+    "runs": 1000,
+    "trajectory_entropy_proxy_bits": 9.965784284662087,
+    "unique_final_structures": 1000,
+    "unique_trajectories": 1000,
+    "wilson95": [
+      0.996173241514445,
+      1.0
+    ]
+  },
+  "SC-019:fixed-initial-3-4:rep-1": {
+    "accuracy": 1.0,
+    "correct": 1000,
+    "mean_iterations": 15.965,
+    "median_iterations": 15.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": -0.0,
+    "outcomes": {
+      "{'value': 7, 'remainder': 0}": 1000
+    },
+    "p95_iterations": 23,
+    "runs": 1000,
+    "trajectory_entropy_proxy_bits": 9.965784284662087,
+    "unique_final_structures": 1000,
+    "unique_trajectories": 1000,
+    "wilson95": [
+      0.996173241514445,
+      1.0
+    ]
+  }
+}

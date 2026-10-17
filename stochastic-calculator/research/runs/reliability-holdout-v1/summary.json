@@ -1,0 +1,286 @@
+{
+  "SC-022:noise-0.05-strength-0.5:rep-0": {
+    "accuracy": 0.74,
+    "correct": 296,
+    "mean_iterations": 16.285,
+    "median_iterations": 16.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.9608925742945542,
+    "outcomes": {
+      "{'value': 5, 'remainder': 0}": 12,
+      "{'value': 6, 'remainder': 0}": 92,
+      "{'value': 7, 'remainder': 0}": 296
+    },
+    "p95_iterations": 24,
+    "runs": 400,
+    "trajectory_entropy_proxy_bits": 8.643856189774725,
+    "unique_final_structures": 400,
+    "unique_trajectories": 400,
+    "wilson95": [
+      0.6948757457668063,
+      0.7805583529527312
+    ]
+  },
+  "SC-022:noise-0.05-strength-0.5:rep-1": {
+    "accuracy": 0.6675,
+    "correct": 267,
+    "mean_iterations": 16.36,
+    "median_iterations": 16.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.1383629216807227,
+    "outcomes": {
+      "{'value': 5, 'remainder': 0}": 23,
+      "{'value': 6, 'remainder': 0}": 110,
+      "{'value': 7, 'remainder': 0}": 267
+    },
+    "p95_iterations": 24,
+    "runs": 400,
+    "trajectory_entropy_proxy_bits": 8.643856189774725,
+    "unique_final_structures": 400,
+    "unique_trajectories": 400,
+    "wilson95": [
+      0.6199313395835853,
+      0.7118820418144254
+    ]
+  },
+  "SC-022:noise-0.05-strength-0.9:rep-0": {
+    "accuracy": 0.9575,
+    "correct": 383,
+    "mean_iterations": 16.2825,
+    "median_iterations": 16.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.25363946182843883,
+    "outcomes": {
+      "{'value': 6, 'remainder': 0}": 17,
+      "{'value': 7, 'remainder': 0}": 383
+    },
+    "p95_iterations": 23,
+    "runs": 400,
+    "trajectory_entropy_proxy_bits": 8.643856189774725,
+    "unique_final_structures": 400,
+    "unique_trajectories": 400,
+    "wilson95": [
+      0.9329979456752499,
+      0.9732983050088689
+    ]
+  },
+  "SC-022:noise-0.05-strength-0.9:rep-1": {
+    "accuracy": 0.935,
+    "correct": 374,
+    "mean_iterations": 16.3025,
+    "median_iterations": 16.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 0.36226885791886404,
+    "outcomes": {
+      "{'value': 5, 'remainder': 0}": 1,
+      "{'value': 6, 'remainder': 0}": 25,
+      "{'value': 7, 'remainder': 0}": 374
+    },
+    "p95_iterations": 24,
+    "runs": 400,
+    "trajectory_entropy_proxy_bits": 8.643856189774725,
+    "unique_final_structures": 400,
+    "unique_trajectories": 400,
+    "wilson95": [
+      0.9064647858253625,
+      0.9552595181037997
+    ]
+  },
+  "SC-022:noise-0.05-strength-0:rep-0": {
+    "accuracy": 0.4475,
+    "correct": 179,
+    "mean_iterations": 15.8875,
+    "median_iterations": 15.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.5389751471793311,
+    "outcomes": {
+      "{'value': 4, 'remainder': 0}": 8,
+      "{'value': 5, 'remainder': 0}": 51,
+      "{'value': 6, 'remainder': 0}": 162,
+      "{'value': 7, 'remainder': 0}": 179
+    },
+    "p95_iterations": 22,
+    "runs": 400,
+    "trajectory_entropy_proxy_bits": 8.643856189774725,
+    "unique_final_structures": 400,
+    "unique_trajectories": 400,
+    "wilson95": [
+      0.39950089322688126,
+      0.4964978976782199
+    ]
+  },
+  "SC-022:noise-0.05-strength-0:rep-1": {
+    "accuracy": 0.5075,
+    "correct": 203,
+    "mean_iterations": 15.7275,
+    "median_iterations": 15.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.492251307696843,
+    "outcomes": {
+      "{'value': 4, 'remainder': 0}": 7,
+      "{'value': 5, 'remainder': 0}": 47,
+      "{'value': 6, 'remainder': 0}": 143,
+      "{'value': 7, 'remainder': 0}": 203
+    },
+    "p95_iterations": 22,
+    "runs": 400,
+    "trajectory_entropy_proxy_bits": 8.643856189774725,
+    "unique_final_structures": 400,
+    "unique_trajectories": 400,
+    "wilson95": [
+      0.45866859619769573,
+      0.5561887193872896
+    ]
+  },
+  "SC-022:noise-0.3-strength-0.5:rep-0": {
+    "accuracy": 0.1175,
+    "correct": 47,
+    "mean_iterations": 17.32,
+    "median_iterations": 17.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.175661755850533,
+    "outcomes": {
+      "{'value': 1, 'remainder': 0}": 1,
+      "{'value': 2, 'remainder': 0}": 6,
+      "{'value': 3, 'remainder': 0}": 18,
+      "{'value': 4, 'remainder': 0}": 75,
+      "{'value': 5, 'remainder': 0}": 139,
+      "{'value': 6, 'remainder': 0}": 114,
+      "{'value': 7, 'remainder': 0}": 47
+    },
+    "p95_iterations": 25,
+    "runs": 400,
+    "trajectory_entropy_proxy_bits": 8.643856189774725,
+    "unique_final_structures": 400,
+    "unique_trajectories": 400,
+    "wilson95": [
+      0.08952194095010377,
+      0.15275496421563303
+    ]
+  },
+  "SC-022:noise-0.3-strength-0.5:rep-1": {
+    "accuracy": 0.145,
+    "correct": 58,
+    "mean_iterations": 17.14,
+    "median_iterations": 17.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.221535601092779,
+    "outcomes": {
+      "{'value': 0, 'remainder': 0}": 1,
+      "{'value': 2, 'remainder': 0}": 7,
+      "{'value': 3, 'remainder': 0}": 21,
+      "{'value': 4, 'remainder': 0}": 64,
+      "{'value': 5, 'remainder': 0}": 120,
+      "{'value': 6, 'remainder': 0}": 129,
+      "{'value': 7, 'remainder': 0}": 58
+    },
+    "p95_iterations": 24,
+    "runs": 400,
+    "trajectory_entropy_proxy_bits": 8.643856189774725,
+    "unique_final_structures": 400,
+    "unique_trajectories": 400,
+    "wilson95": [
+      0.11387048965924287,
+      0.18288323931810765
+    ]
+  },
+  "SC-022:noise-0.3-strength-0.9:rep-0": {
+    "accuracy": 0.6575,
+    "correct": 263,
+    "mean_iterations": 19.5425,
+    "median_iterations": 19.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.1613788574179733,
+    "outcomes": {
+      "{'value': 4, 'remainder': 0}": 4,
+      "{'value': 5, 'remainder': 0}": 15,
+      "{'value': 6, 'remainder': 0}": 118,
+      "{'value': 7, 'remainder': 0}": 263
+    },
+    "p95_iterations": 28,
+    "runs": 400,
+    "trajectory_entropy_proxy_bits": 8.643856189774725,
+    "unique_final_structures": 400,
+    "unique_trajectories": 400,
+    "wilson95": [
+      0.6096946457889129,
+      0.7023089814957836
+    ]
+  },
+  "SC-022:noise-0.3-strength-0.9:rep-1": {
+    "accuracy": 0.67,
+    "correct": 268,
+    "mean_iterations": 19.4825,
+    "median_iterations": 19.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 1.2023643554080639,
+    "outcomes": {
+      "{'value': 4, 'remainder': 0}": 4,
+      "{'value': 5, 'remainder': 0}": 24,
+      "{'value': 6, 'remainder': 0}": 104,
+      "{'value': 7, 'remainder': 0}": 268
+    },
+    "p95_iterations": 28,
+    "runs": 400,
+    "trajectory_entropy_proxy_bits": 8.643856189774725,
+    "unique_final_structures": 400,
+    "unique_trajectories": 400,
+    "wilson95": [
+      0.622494095885007,
+      0.7142717240413322
+    ]
+  },
+  "SC-022:noise-0.3-strength-0:rep-0": {
+    "accuracy": 0.015,
+    "correct": 6,
+    "mean_iterations": 15.375,
+    "median_iterations": 15.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.356201994891612,
+    "outcomes": {
+      "{'value': 0, 'remainder': 0}": 1,
+      "{'value': 1, 'remainder': 0}": 8,
+      "{'value': 2, 'remainder': 0}": 35,
+      "{'value': 3, 'remainder': 0}": 111,
+      "{'value': 4, 'remainder': 0}": 111,
+      "{'value': 5, 'remainder': 0}": 93,
+      "{'value': 6, 'remainder': 0}": 35,
+      "{'value': 7, 'remainder': 0}": 6
+    },
+    "p95_iterations": 21,
+    "runs": 400,
+    "trajectory_entropy_proxy_bits": 8.643856189774725,
+    "unique_final_structures": 399,
+    "unique_trajectories": 400,
+    "wilson95": [
+      0.006892291919440893,
+      0.03233463358482672
+    ]
+  },
+  "SC-022:noise-0.3-strength-0:rep-1": {
+    "accuracy": 0.0175,
+    "correct": 7,
+    "mean_iterations": 15.385,
+    "median_iterations": 15.0,
+    "nonconvergence": 0.0,
+    "outcome_entropy_bits": 2.3229044354876485,
+    "outcomes": {
+      "{'value': 1, 'remainder': 0}": 11,
+      "{'value': 2, 'remainder': 0}": 37,
+      "{'value': 3, 'remainder': 0}": 98,
+      "{'value': 4, 'remainder': 0}": 131,
+      "{'value': 5, 'remainder': 0}": 91,
+      "{'value': 6, 'remainder': 0}": 25,
+      "{'value': 7, 'remainder': 0}": 7
+    },
+    "p95_iterations": 22,
+    "runs": 400,
+    "trajectory_entropy_proxy_bits": 8.643856189774725,
+    "unique_final_structures": 399,
+    "unique_trajectories": 400,
+    "wilson95": [
+      0.008502291107038103,
+      0.03567707292555804
+    ]
+  }
+}

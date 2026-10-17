@@ -1,0 +1,20 @@
+{
+  "base_seed": 900000,
+  "replications": 2,
+  "runs_per_cell": 100,
+  "engine": {"regions": 8, "max_steps": 100000, "max_relations": 20000},
+  "question": "Does the SC-009 sign-flip oscillation follow parity, and do carry replay errors grow with represented scale?",
+  "status": "Follow-up declared after observing SC-009; not an a priori prediction.",
+  "cells": [
+    {"experiment": "SC-020", "label": "parity-0", "kind": "basin", "runs": 100, "a": 0, "perturb": "flip", "rounds": 24},
+    {"experiment": "SC-020", "label": "parity-1", "kind": "basin", "runs": 100, "a": 1, "perturb": "flip", "rounds": 24},
+    {"experiment": "SC-020", "label": "parity-2", "kind": "basin", "runs": 100, "a": 2, "perturb": "flip", "rounds": 24},
+    {"experiment": "SC-020", "label": "parity-6", "kind": "basin", "runs": 100, "a": 6, "perturb": "flip", "rounds": 24},
+    {"experiment": "SC-020", "label": "parity-7", "kind": "basin", "runs": 100, "a": 7, "perturb": "flip", "rounds": 24},
+    {"experiment": "SC-020", "label": "parity-8", "kind": "basin", "runs": 100, "a": 8, "perturb": "flip", "rounds": 24},
+    {"experiment": "SC-020", "label": "parity-9", "kind": "basin", "runs": 100, "a": 9, "perturb": "flip", "rounds": 24},
+    {"experiment": "SC-021", "label": "replay-9", "kind": "radix", "runs": 200, "a": 9, "b": 1, "coordination": false, "fault_rate": 0.25},
+    {"experiment": "SC-021", "label": "replay-99", "kind": "radix", "runs": 200, "a": 99, "b": 1, "coordination": false, "fault_rate": 0.25},
+    {"experiment": "SC-021", "label": "replay-999", "kind": "radix", "runs": 200, "a": 999, "b": 1, "coordination": false, "fault_rate": 0.25}
+  ]
+}

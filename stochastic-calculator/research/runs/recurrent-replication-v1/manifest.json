@@ -1,0 +1,110 @@
+{
+  "config": {
+    "base_seed": 271000,
+    "burn_in": 4000,
+    "cells": [
+      {
+        "birth_admission": 0.01,
+        "capacity": 32,
+        "constraints": {
+          "no_growth": false,
+          "readiness": false
+        },
+        "inputs": [
+          3,
+          4
+        ],
+        "label": "b0.01-cap32"
+      },
+      {
+        "birth_admission": 0.05,
+        "capacity": 32,
+        "constraints": {
+          "no_growth": false,
+          "readiness": false
+        },
+        "inputs": [
+          3,
+          4
+        ],
+        "label": "b0.05-cap32"
+      },
+      {
+        "birth_admission": 0.2,
+        "capacity": 32,
+        "constraints": {
+          "no_growth": false,
+          "readiness": false
+        },
+        "inputs": [
+          3,
+          4
+        ],
+        "label": "b0.2-cap32"
+      },
+      {
+        "birth_admission": 0.5,
+        "capacity": 32,
+        "constraints": {
+          "no_growth": false,
+          "readiness": false
+        },
+        "inputs": [
+          3,
+          4
+        ],
+        "label": "b0.5-cap32"
+      }
+    ],
+    "experiment": "SC-027R",
+    "horizons": [
+      8000
+    ],
+    "neutral_pairs": 8,
+    "regions": 8,
+    "runs": 50
+  },
+  "config_sha256": "73b9a29df6f4c7a21013b46644dfa4449f686305472683d2f57bb3d8e7c006c5",
+  "dirty": true,
+  "git_revision": "f011bcbc6944ecc69735bb7f875c71c44acdc25e",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "protocol_sha256": "836143f79da88ff9701baf870a4ed6ff9bccc3322df0dd81a4a6fb75a80b6b25",
+  "python": "3.12.3",
+  "rng": "random.Random / MT19937",
+  "seed_policy": "base_seed + replication index; paired tapes across cells and prefixes across horizons",
+  "source_files": {
+    "configs/constraint-ablation.json": "f7c71b7d835f2044c4eb4fd8a2c0b7252790653c9bb035bd5d051442223e21ec",
+    "configs/constraint-followups.json": "ed3bd30079029b37cb84910c479f5fc0747c21e574567337beefa90cdaaea4ca",
+    "configs/followups.json": "d95e222463260d7ae849e568112ffcb86db152a1100965068970e8070a60ac0d",
+    "configs/foundation.json": "bf12777c552033f094b7523632e346be277f17d7e46373a161954e6b069f7f5c",
+    "configs/observer-controls.json": "9083c08a4d7a63693f83f4202fedd9ae8e6f97b61737d6d76eb41ab2ee50db35",
+    "configs/programme.json": "f1e2daf1e83cc72498b6f18b8ef50d9aed28fa663db8c860f6c6e07bd48a6029",
+    "configs/recurrent-replication.json": "66f4a4f3f4852eedba1b191fb391cb6f042d1eb900d6ca36b63c3c1cd5f16f31",
+    "configs/recurrent-resolution.json": "4dfe801ab8fba8ff569d84f26549e021e8a56188eefa36235e7636724854e2b0",
+    "configs/reliability-holdout.json": "acdb1c9ad030152142ca0ebc3ce5d8d169d2d0a8c3572e1ed6f80f703d3c6050",
+    "rs_calc/__init__.py": "819b93e1a0a85b2757f8bf80369bd9e2521262f45c7b29831a73dcb4b433d44f",
+    "rs_calc/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "rs_calc/analyze.py": "f67493c2a0c009271ab0c60edad16a064eed67833246a49164ae1e85524e7c22",
+    "rs_calc/analyze_constraints.py": "9abc9d350218e6abd8a61ed9e7072492b797499683b04c2340b5283201b4d94b",
+    "rs_calc/analyze_dynamics.py": "7e0148e96f2abb4a46f4b41b1456a5f3d15cd0e11f54440d10b5bd9b9f66fd8f",
+    "rs_calc/calculator.py": "b9f6bc6e93a7d117408eae2b2959471a5201a0c3e1540fea80a7666252c90dd5",
+    "rs_calc/cli.py": "8fc4fb4a7067342fadf551e5f30cedf34917f9181e8c7c05c9de183ebddf4ab7",
+    "rs_calc/constraint_lab.py": "06e23377ce05ec77a48d76dfe1dde90abebbeeea1971eeaa7c253d86c062e5f3",
+    "rs_calc/defect_prediction.py": "541ec9440daa6903e6b67a218e4f2dd18104876129ff95f6717f3803d582c0d9",
+    "rs_calc/dynamics_lab.py": "7537e9496f38457d77599269f2256b9da224021a1dfd5e104fe5ecae69455009",
+    "rs_calc/engine.py": "4b2062ad8736d94fc6c972d0016eba147db8e146b8fc941633be6909d288e15c",
+    "rs_calc/experiments.py": "8f2172c83d36816463f3132267e4ad30d13652b1f7c5cf3354bde367f3891a26",
+    "rs_calc/foundation.py": "c717551ffe4c89f506a512e41cb654d4cf4d33ea998aaddf6b1c27666ed15681",
+    "rs_calc/metrics.py": "d7fdaaa1778a75c7a0e3668d41aec11b51cb81373704ec1c41fecf5e81b2a265",
+    "rs_calc/numbers.py": "5fb324e9f8ca9b4d4903fe2e49e51d8b4f11829fb001bd48d08692e74ab85289",
+    "rs_calc/operations.py": "6066bf446a7b06a0aafd6f5dac68eeba80ad42ccc23fe98dcfd966a1562b837a",
+    "rs_calc/proposal_kernel.py": "b726a826f89a4941d54bba7a6053b8af94a96013b89d9edd353bb3488301413d",
+    "rs_calc/provenance.py": "6e31a7d230eb3fb444c8b2c027684b1dd2b4c8de7061be59466a9804d7089c9a",
+    "rs_calc/radix.py": "175d9724a43d0a23f3ae942cff36466dc3a366b2b846e18130f090ae480cc95d",
+    "rs_calc/recurrent_kernel.py": "d7432bcefa6455470cc3b7e23dafc8d64f9aa80a93719ca829ec3495558a080c",
+    "rs_calc/replay.py": "c60c4dbdd34e1cf7ce9c00aaae979db382b33bf7415db64df42f108e7e7f73c7",
+    "rs_calc/verification.py": "6d8ec09799d1c2ddcf6ed6982a81a973253ccb8b9d4b67cb4c071ed4a6ebf5ad"
+  },
+  "source_sha256": "40ab94a567224539cca4989a55242dfd0e29bd9f4a149a85127dec73f0ce0af4",
+  "timestamp": "2026-09-10T20:46:58.129608+00:00"
+}
