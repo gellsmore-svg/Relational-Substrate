@@ -1,12 +1,16 @@
 # Relational Substrate
 
-Relational Substrate is a research repository. As of the constraint-laboratory boundary (2026-10-03) it has three roles:
+Relational Substrate is a research repository. As of the constraint-laboratory boundary (2026-10-03) it has three roles, and from the recursive-relational-complexity branch a fourth independent programme:
 
 ```text
-books/            active manuscripts
-constraint-lab/   active experiment (this branch)
-archive/          historical modelling programme, preserved
+books/                  active manuscripts
+constraint-lab/         constraint-grammar experiment
+gravity-time/           gravity, temporality and emergent spatiality
+relational-complexity/  recursive relational complexity (this branch)
+archive/                historical modelling programme, preserved
 ```
+
+`relational-complexity/` is Open-Thetical Research on recursively composed relational structures. It reads the Constraint Laboratory and Gravity–Temporality records and does not rewrite them. Its own charter is `relational-complexity/charter.md`.
 
 The books remain at the repository root:
 

@@ -17,3 +17,4 @@ __pycache__/
 # exemplars, and manifests. Everything under generated/ is disposable.
 constraint-lab/generated/
 gravity-time/generated/
+relational-complexity/generated/

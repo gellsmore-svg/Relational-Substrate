@@ -1,0 +1,9 @@
+{"from_finding":"RRC-M01-NO-NEW-AXIS","rationale":"The first round studies reductions only because the gate placed the candidate rules inside the existing grammar.","relation_id":"RRC-R001","relation_type":"raises_question","to_finding":"RRC-Q04"}
+{"from_finding":"RRC-Q04","rationale":"A finite interface is one way a bound on consequential local information could show up.","relation_id":"RRC-R002","relation_type":"motivates","to_finding":"RRC-Q02"}
+{"from_finding":"RRC-Q04","rationale":"Closure of the reduced chain is the grammar question attached to an exact interface.","relation_id":"RRC-R003","relation_type":"motivates","to_finding":"RRC-Q05"}
+{"from_finding":"RRC-Q04","rationale":"A positive defect is a witness that the external signature is not predictively sufficient.","relation_id":"RRC-R004","relation_type":"motivates","to_finding":"RRC-Q07"}
+{"from_finding":"RRC-Q01","rationale":"Neighbour sizes are how a claimed six-node distinction would have to be seen.","relation_id":"RRC-R005","relation_type":"motivates","to_finding":"RRC-Q03"}
+{"from_finding":"RRC-Q04","rationale":"Composition is the same interface question asked of two designated structures at once.","relation_id":"RRC-R006","relation_type":"motivates","to_finding":"RRC-Q09"}
+{"from_finding":"RRC-M01-NO-NEW-AXIS","rationale":"The item budget decides which of these reductions can actually be calculated.","relation_id":"RRC-R007","relation_type":"raises_question","to_finding":"RRC-Q08"}
+{"from_finding":"RRC-Q01","rationale":"Propagation along a path index is a different size question from the number of nodes inside one structure.","relation_id":"RRC-R008","relation_type":"motivates","to_finding":"RRC-Q06"}
+{"from_finding":"RRC-Q02","rationale":"Behaviour that the named questions do not classify is still part of the coherence map.","relation_id":"RRC-R009","relation_type":"raises_question","to_finding":"RRC-Q10"}

@@ -1,9 +1,11 @@
 # Contributing
 
-Relational Substrate currently has three active layers:
+Relational Substrate currently has these active layers:
 
 - `books/` — the manuscripts. Treat the prose as read-only unless the task is explicitly a book edit.
-- `constraint-lab/` — the active experimental programme.
+- `constraint-lab/` — the constraint-grammar experiment.
+- `gravity-time/` — the gravity, temporality and emergent spatiality programme, on its own branch.
+- `relational-complexity/` — recursive relational complexity, on its own branch. It keeps its own plans, results and ledger. It does not rewrite Constraint Laboratory or Gravity–Temporality history.
 - `archive/pre-constraint-lab-2026-10-03/` — the historical modelling programme. Preserve it. Do not delete it, and do not silently import its physical assumptions into the laboratory grammar.
 
 The repository licence is the MIT licence at the root.
