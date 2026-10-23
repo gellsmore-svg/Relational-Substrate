@@ -9,6 +9,7 @@ import time
 from pathlib import Path
 
 from rrc import ENGINE_VERSION
+from rrc.items import execute_lumpability, execute_propagation
 from rrc.model import (
     build_weights,
     lumpability,
@@ -245,6 +246,38 @@ def command_preflight(args: argparse.Namespace) -> int:
             solved = stationary_balanced(weights, "uniform", 1e-10, 20000)
             stationary_s = time.perf_counter() - started
             converged = solved["converged"]
+        started = time.perf_counter()
+        bundle = execute_lumpability(
+            {
+                "id": f"calibration-bundle-{n}",
+                "round_id": "preflight",
+                "n": n,
+                "role": "calibration",
+                "rule": {"family": "calibration_weights"},
+                "partition": partition,
+                "augmentations": ["edge_count", "parity", "interface_wedge_counts"],
+                "closure": n <= args.closure_max_n,
+            }
+        )
+        bundle_s = time.perf_counter() - started
+        propagation_s = None
+        if n <= args.stationary_max_n:
+            started = time.perf_counter()
+            propagation = execute_propagation(
+                {
+                    "id": f"calibration-propagation-{n}",
+                    "round_id": "preflight",
+                    "n": n,
+                    "tolerance": 1e-12,
+                    "cross_tolerance": 1e-8,
+                    "max_iter": 10000,
+                    "dense_max_states": 1024,
+                    "base_rule": {"family": "calibration_weights"},
+                    "perturbed_rule": {"family": "unconstrained"},
+                }
+            )
+            propagation_s = time.perf_counter() - started
+            del propagation
         records.append(
             {
                 "n": n,
@@ -254,16 +287,19 @@ def command_preflight(args: argparse.Namespace) -> int:
                 "build_s": round(build_s, 6),
                 "lumpability_s": round(lump_s, 6),
                 "closure_s": None if closure_s is None else round(closure_s, 6),
-                "closure_blocks": closure_blocks,
                 "stationary_s": None if stationary_s is None else round(stationary_s, 6),
                 "stationary_converged": converged,
+                "bundle_s": round(bundle_s, 6),
+                "bundle_elapsed_reported_s": bundle["elapsed_s"],
+                "propagation_bundle_s": None if propagation_s is None else round(propagation_s, 6),
                 "defect_recorded": False,
                 "scientific": False,
                 "rule_family": "calibration_weights",
             }
         )
-        # The defect is intentionally omitted. Calibration is a timing cell.
+        # Scientific fields of the calibration bundle are discarded.
         del report
+        del bundle
     payload = {
         "scientific": False,
         "engine_version": ENGINE_VERSION,

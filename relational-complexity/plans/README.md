@@ -1,5 +1,5 @@
 # Plans
 
-No scientific round is frozen yet.
+`plans/rrc-001.json` is the frozen first round. It was committed before its scientific cells ran. Do not edit it in response to results.
 
-`plan`, `run`, `resume`, `verify` and `report` refuse to execute science until a plan file is committed here. Calibration timings, when they exist, go to `generated/preflight.json` and are not results.
+`generated/preflight.json` is a disposable calibration timing file and is not a result. The timings that justified the plan are in `docs/rrc-001-preflight.md`.

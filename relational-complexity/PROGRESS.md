@@ -23,8 +23,8 @@ See `provenance/base-commits.md`. The shared synthesis architecture is not on th
 | --- | --- | --- |
 | A. Charter, audit, registers, feasibility estimate, journal | committed and pushed | `7260f0477ab4e3d9d25896fc0c5087eb945d6ebe` |
 | B. Minimal engine and recovery tests | committed and pushed | `399dba247061b10823f31bfbf5148d9a8099c9a7` |
-| C. Formal definitions for RRC-001 | in progress in this edit | `docs/definitions.md` |
-| D. Freeze RRC-001 | not started | no scientific cells have been run |
+| C. Formal definitions for RRC-001 | committed and pushed | `2053b8bddc94b3a9b1d5db712f4c91c6518a681b` |
+| D. Freeze RRC-001 | in progress in this edit | plan written, cells not run |
 | E. Execute RRC-001 | not started | |
 | F. Interpret and challenge | not started | |
 | G. Coherence reflection and RRC-002 decision | not started | |
@@ -52,4 +52,10 @@ Package `relational-complexity/src/rrc`. Version `rrc-0.1.0`.
 
 ## Next action
 
-Commit and push Stage C. Then time calibration bundles with `python -m rrc preflight`, write the timings into the feasibility record, freeze `plans/rrc-001.json`, and push that plan before any soft-wedge or hard-wedge cell runs.
+Push this freeze commit. Only after it is on `origin` run:
+
+```text
+python -m rrc run --round rrc-001 --max-items 6 --budget-seconds 180
+```
+
+Repeat until pending is 0. Do not edit `plans/rrc-001.json`. Then verify, write the atlas, and only then interpret.

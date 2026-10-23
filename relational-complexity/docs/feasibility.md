@@ -38,3 +38,7 @@ Any of these, including a null for (4), answers a live question. The round is no
 ## Stopping
 
 If preflight puts every informative N=6 item over 120 seconds, RRC-001 freezes without those items and says so. It does not sample them. If the N≤5 contrasts already separate (1)–(5) as far as this grammar can, a second round still has to name a new question. It is not opened to enlarge N.
+
+## Measured before RRC-001
+
+The prior table above is not the decision. The decision is `docs/rrc-001-preflight.md`: a calibration bundle in the heaviest planned shape (N=6, three augmentations, closure) took 10.522 seconds. N=6 remains in the frozen plan. N=7 does not.

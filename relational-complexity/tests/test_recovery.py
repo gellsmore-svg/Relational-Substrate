@@ -33,10 +33,11 @@ def _inprocess(item, _timeout):
     return execute_spec_catching(item)
 
 
-def test_plan_command_refuses_before_a_round_is_frozen():
+def test_plan_command_refuses_an_unfrozen_round_and_does_not_run_the_frozen_one():
     with pytest.raises(SystemExit) as caught:
-        main(["plan", "--round", "rrc-001"])
+        main(["plan", "--round", "rrc-999"])
     assert caught.value.code != 0
+    assert main(["plan", "--round", "rrc-001"]) == 0
 
 
 def test_completed_item_is_not_repeated(tmp_path):
@@ -170,6 +171,25 @@ def test_subprocess_timeout_kills_a_sleeping_item(tmp_path):
     assert summary["counts"]["timeout"] == 1
     again = execute_plan(plan, tmp_path, max_items=2, budget_seconds=20, timeout=1, child=run_child)
     assert again["ran"] == 0
+
+
+def test_preflight_records_time_and_not_a_defect(tmp_path):
+    destination = tmp_path / "preflight.json"
+    assert main([
+        "preflight",
+        "--sizes",
+        "4",
+        "--closure-max-n",
+        "4",
+        "--stationary-max-n",
+        "4",
+        "--out",
+        str(destination),
+    ]) == 0
+    text = destination.read_text(encoding="utf-8")
+    assert '"scientific": false' in text
+    assert "defect_l1" not in text
+    assert "exact" not in text
 
 
 def test_subprocess_probe_completes(tmp_path):
