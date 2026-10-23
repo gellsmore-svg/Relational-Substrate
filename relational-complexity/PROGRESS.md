@@ -24,8 +24,8 @@ See `provenance/base-commits.md`. The shared synthesis architecture is not on th
 | A. Charter, audit, registers, feasibility estimate, journal | committed and pushed | `7260f0477ab4e3d9d25896fc0c5087eb945d6ebe` |
 | B. Minimal engine and recovery tests | committed and pushed | `399dba247061b10823f31bfbf5148d9a8099c9a7` |
 | C. Formal definitions for RRC-001 | committed and pushed | `2053b8bddc94b3a9b1d5db712f4c91c6518a681b` |
-| D. Freeze RRC-001 | in progress in this edit | plan written, cells not run |
-| E. Execute RRC-001 | not started | |
+| D. Freeze RRC-001 | committed and pushed | `92ae7425e8b711ba8b24c7905c0208eeea129d33` |
+| E. Execute RRC-001 | committed with this record | hash recorded by the next commit |
 | F. Interpret and challenge | not started | |
 | G. Coherence reflection and RRC-002 decision | not started | |
 
@@ -50,12 +50,10 @@ Package `relational-complexity/src/rrc`. Version `rrc-0.1.0`.
 - Recovery tests cover death during an item, death after a valid result, a partial write, invalid JSON, a failed item, a timeout, a sibling item surviving, and an incompatible plan.
 - Identity fixtures cover the unconstrained kernel, including a bit-exact match to `rs_constraint_lab.kernel.build_kernel` at N=3 and N=4. They do not compute soft-wedge or hard-wedge lumpability.
 
+## Execution
+
+RRC-001 has been executed and verified. The record is `provenance/rrc-001-execution.md`. Results are `results/rrc-001/`. The atlas is `reports/rrc-001-atlas.md`. Do not edit `plans/rrc-001.json`. Do not rerun completed items.
+
 ## Next action
 
-Push this freeze commit. Only after it is on `origin` run:
-
-```text
-python -m rrc run --round rrc-001 --max-items 6 --budget-seconds 180
-```
-
-Repeat until pending is 0. Do not edit `plans/rrc-001.json`. Then verify, write the atlas, and only then interpret.
+Interpret the verified cells. Separate exact properties, model observations, numerical residuals, and representation effects. Compare N=3, 4, 5 and 6. Update the coherence ledger by adding findings. Leave the RRC-000 rows unchanged. Regenerate the coherence view. Decide whether any further round is informative. Do not enlarge N, and do not federate into the shared synthesis.

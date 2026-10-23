@@ -16,9 +16,10 @@ This directory does not modify the Constraint Laboratory or the Gravity–Tempor
 | `plans/` | Frozen rounds, written before execution |
 | `src/rrc/` | Exact engine and resumable runner (from Stage B) |
 | `tests/` | Identity, fixture and recovery tests |
-| `generated/` | Disposable item output. Not committed |
+| `generated/` | Disposable timing output. Not committed |
+| `results/` | Per-item results, receipts, and the round manifest |
 | `reports/` | Atlases and findings written from completed items |
-| `provenance/` | Source commits |
+| `provenance/` | Source commits and the execution record |
 
 ## Commands
 
