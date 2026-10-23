@@ -4,7 +4,7 @@ Suppose you drop the stone from the path. It falls. Time the fall and measure th
 
 Now ask a different question. What *is* gravity? Is it a force reaching across space, as Newton's equations seem to say? Is it the curvature of a spacetime that exists as a kind of thing in its own right? Or is spacetime itself a set of relations between events, with no existence apart from them? Physicists and philosophers who accept every one of those measurements still disagree about these questions, and nobody yet knows how gravity fits with quantum theory. The disagreement is not about whether the stone falls, or how fast. It is about what kind of reality the equations describe.
 
-That gap, between describing how something behaves and knowing what it is, is the subject of this chapter. It runs through all of our knowledge of the physical world. A discipline can be locally exact and still leave globally consequential questions about what exists unanswered, and seeing that clearly is the key to everything this book attempts.
+That gap, between describing how something behaves and knowing what it is, is the subject of this chapter. Seeing it clearly is the key to everything this book attempts.
 
 ## Six layers of knowing
 
@@ -31,31 +31,26 @@ Here it helps to distinguish two things often run together. **Methodological nat
 
 The same discipline applies to theology. Quoting Scripture does not make an argument rigorous if the step from the text to the conclusion is left unexplained. This book begins from Scripture openly. It also tries to show, at each important point, whether a claim is something Scripture teaches, something inferred from what Scripture teaches, or a proposal that Scripture permits but does not state. Metaphysical honesty means making these assumptions and inferences visible, so a reader can see where they are and decide what to make of them.
 
-## The levels of claim in this book
+## The status of each claim
 
-Because of that, the book keeps track of what kind of claim it is making. It does not label every sentence, which would make it unreadable, but these distinctions are always in play:
+Because of that, the book keeps track of what kind of claim it is making. It does not label every sentence, which would make it unreadable, but it uses one small, fixed vocabulary of status throughout:
 
-| Kind of claim | Example from this book |
+| Status | Example from this book |
 | --- | --- |
-| Scriptural commitment | God created the heaven and the earth. |
-| Observation | A dropped stone falls. |
-| Mathematical description | Distance fallen grows with the square of the time. |
-| Well-tested physical model | General relativity's predictions are precisely confirmed. |
-| Contested interpretation | Whether quantum events are fundamentally chancy. |
-| Philosophical or ontological inference | Description does not by itself settle ontology. |
-| Theological inference | The substrate is a creature and not divine. |
+| Scriptural or theological constraint | God created the heaven and the earth. The substrate, if it exists, is a creature (an inference from Scripture, marked as one). |
+| Empirical observation | A dropped stone falls. |
+| Mathematical or physical constraint | Distance fallen grows with the square of the time. General relativity's predictions are precisely confirmed. |
+| Ontological inference | Description does not by itself settle ontology. |
 | Relational Substrate working hypothesis | Physical things are constituted within relations. |
-| Model result | In a computer model, a rule that forbids a change differs exactly from one that merely makes it unlikely. |
-| Exploratory research, not yet a formal record | Two states that look the same can differ in ways a later interaction reveals. |
-| Open question | How consciousness relates to physical order. |
+| Mechanism candidate | A specific proposed structure for matter. The book names such candidates and does not rely on them. |
+| Open question | How consciousness relates to physical order. Whether quantum events are fundamentally chancy. |
+| Rejected | That a coherent account is thereby true. |
 
-Appendix E applies the same vocabulary to every major claim in the book.
-
-When the book reports something from one of the project's computer models, it means that it happened in a model built on stated assumptions. A model can show that an idea is possible, coherent and capable of doing work. It cannot show that nature works that way. Some conclusions come from exploratory sessions not yet published as formal records, and the book marks them.
+Two further labels say where a claim came from, not how firmly it is held. A **model result** happened in one of the project's computer models, built on stated assumptions. A model can show that an idea is possible, coherent and capable of doing work. It cannot show that nature works that way. An **exploratory** result comes from research sessions not yet published as formal records. Appendix E gives the status of every major claim in the book.
 
 ## Local, regional and global coherence
 
-How, then, does one judge an ontology, if no measurement can display it directly? The answer this book gives is **coherence**. At its simplest, coherence means that an account fits together without contradiction. That is necessary, but it is not enough. A sufficiently elaborate story can avoid every explicit contradiction while remaining a collection of separate compartments, each internally tidy and none genuinely connected to the others. Coherence in the sense this book uses also asks whether the parts are really connected, and whether real distinctions survive the connecting. Coherence comes in degrees of scope, and three are worth naming.
+How, then, does one judge an ontology, if no measurement can display it directly? The answer this book gives is **coherence**. Freedom from contradiction is necessary but not enough: an elaborate story can avoid every contradiction while remaining a set of tidy compartments, none really connected to the others. Coherence in this book's sense also asks whether the parts are connected, and whether real distinctions survive the connecting. It comes in three degrees of scope.
 
 **Local coherence** is achieved when a model explains a bounded phenomenon internally. An equation fits the measurements of falling stones. A theory accounts for the colours of a particular kind of glass. A model reproduces a pattern in one regime. Much of science operates, quite properly, at this level.
 
@@ -94,22 +89,16 @@ The appeal to coherence is not a special method invented for this book. It is ho
 
 Consider a doctor diagnosing an illness. She has a set of symptoms, some test results and a patient's history, none of which is conclusive alone. She forms the diagnosis that best accounts for all of them together, and remains ready to revise it if a new result does not fit. A jury does the same with testimony and evidence. So does a historian reconstructing what happened in a century no living person saw. So, on a smaller scale, do you, when you recognise a friend's voice on a crackling telephone line, or decide that a noise downstairs is the cat. Philosophers call the pattern *inference to the best explanation*. Studies of reasoning describe how people weigh competing hypotheses by how much of the evidence each explains and how well the pieces hang together.
 
-Cognitive science adds that perception itself works in a related way. On one influential family of accounts, the brain continually anticipates its incoming signals and corrects its expectations against them. What we experience as simply seeing the stone is already the product of a great deal of rapid, unconscious inference under uncertainty. The specific models are debated, and this book does not depend on any of them. The modest point is enough: **human understanding normally depends on assembling the most coherent account available from incomplete evidence.** We rarely possess exhaustive, certain access to the facts. We judge, compare, anticipate, and revise. Our sense of certainty is often the felt result of a coherence we have not noticed ourselves constructing.
+Perception itself may work in a related way: on one influential family of accounts, the brain continually anticipates its incoming signals and corrects its expectations against them. The models are debated, and the book does not depend on them. The modest point is enough: **human understanding normally depends on assembling the most coherent account available from incomplete evidence.** We rarely possess exhaustive, certain access to the facts. We judge, compare, anticipate, and revise. Our sense of certainty is often the felt result of a coherence we have not noticed ourselves constructing.
 
 If that is how ordinary knowing works, then asking for the most globally coherent account of reality is not an eccentric substitute for evidence. It is the same activity, carried out at the largest scale.
 
-## Observation still decides a great deal
+## What observation decides, and what it cannot
 
 Coherence is not proof of truth. A worldview can be internally coherent and false; a detailed and consistent story about a flat Earth is still wrong. The book says this once, here, and takes it as read from now on. Observation constrains ontology powerfully, and in three ways.
 
 First, robust observation rules out accounts that contradict it. Any ontology of the physical world must account for the measured speed of light, the stability of atoms and the precise predictions of quantum theory, or it fails, however elegant it is. Second, observation reveals regularities that any account must respect, even when it cannot yet explain them. Third, observation can test specific proposals. If a framework predicts something definite, measurement can confirm it or reject it. Several proposals of the Relational Substrate project have been tested in exactly this way. Some survived, some failed, and the failures are recorded in the project's public research history.
 
-What observation cannot do by itself is display the deepest ontology as one more visible object. It narrows the field. It rarely, if ever, picks out a single winner. The deepest account is chosen, provisionally, by asking which of the accounts that observation still permits makes the most coherent sense of everything else we know.
-
-## What kind of argument this is
-
-No measurement can display the deepest structure of created reality as one more visible object. Empirical work tests predictions, rejects incompatible models and reveals regularities. It does not convert an interpretation of what lies beneath all measurement into something measured. So the book does not offer an empirical proof of the Relational Substrate.
-
-What it offers is a **global coherence argument**, and it holds itself to a plain standard. Here is what the book proposes. Here is why. Here is what supports it. Here is what would count against it. Here is what remains unknown. Then it follows the consequences. A hypothesis that is stated clearly enough to be wrong can be improved. One that is hedged until it says nothing cannot. Chapter 8 names observations that would count against particular claims.
+What observation cannot do is display the deepest structure of created reality as one more visible object. It narrows the field and rarely, if ever, picks out a single winner. So the book does not offer an empirical proof of the Relational Substrate. It offers a **global coherence argument**, and holds itself to a plain standard. Here is what the book proposes. Here is why. Here is what supports it. Here is what would count against it. Here is what remains unknown. Then it follows the consequences. A hypothesis stated clearly enough to be wrong can be improved. One hedged until it says nothing cannot. Chapter 8 names observations that would count against particular claims.
 
 With these tools in hand, the book can return to the stone and ask the first ontological question. The stone appears to be a separate thing, sitting on the path, distinct from the light, the air and you. Is that what it fundamentally is?

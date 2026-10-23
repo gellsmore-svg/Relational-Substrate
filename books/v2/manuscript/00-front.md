@@ -4,7 +4,7 @@
 
 *A Scripture-first account of a relational creation: how physical order, life, persons, corruption and restoration belong to one world without collapsing into one kind of thing.*
 
-Second edition, October 2026. Companion volumes: *The Relational Substrate* (technical), *A Coherent World* (general), *How to Hug the Right Tree* (devotional).
+Second edition, revision 2.5, October 2026. Companion volumes: *The Relational Substrate* (technical), *A Coherent World* (general), *How to Hug the Right Tree* (devotional).
 
 ---
 
@@ -33,8 +33,8 @@ The book does not prove the Relational Substrate. No set of measurements could d
 
 ## About this edition
 
-This is revision 2.4 of the second edition. The first edition rested on specific proposed mechanisms (knotted structures in a continuous medium, a closed list of five kinds of change, particular accounts of light and magnetism) that later work did not support. The second edition rebuilt the book on more foundational ideas. This revision re-centres it on its organising problem. The research behind the book is the work of one author, carried out with extensive computational and AI-assisted exploration. Its records are public, and Appendix B notes what they do and do not show.
+The book is written for an intelligent reader with no specialist training in physics, philosophy or theology who is willing to think carefully. Each technical term is explained where it is first needed. The opening chapter introduces one ordinary scene, seeing a stone in daylight, which returns throughout as a common reference point.
 
-The book is written for an intelligent reader with no specialist training in physics, philosophy or theology who is willing to think carefully. Each technical term is explained before it is needed. The opening chapter introduces one ordinary scene, seeing a stone in daylight, which returns throughout as a common reference point.
+This is revision 2.5 of the second edition. The first edition rested on specific mechanisms that later work did not support. The second rebuilds the book on more foundational ideas, and Appendix B records what changed and why. The research behind the book is the work of one author, carried out with extensive computational and AI-assisted exploration. Its records are public, and Appendix B notes what they do and do not show.
 
 A free electronic edition of this book is available, offered as an open intellectual contribution to encourage reading, sharing and honest discussion. Updated versions and related materials can be found through the project website at <https://relational-substrate.blogspot.com/> and the public research repository at <https://github.com/gellsmore-svg/Relational-Substrate>.

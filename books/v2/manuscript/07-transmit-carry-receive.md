@@ -4,7 +4,7 @@ Return to the path in the morning light. Sunlight falls on the stone. Its grey s
 
 Something about the stone made a difference in you. The stone did not move. Nothing from its surface flew into your head. Yet the distinction between its grey body and its pale vein became a distinction in what you see.
 
-This chapter asks what is required for that to happen, and its answer reaches far beyond light. Whenever one thing is consequential to another, three conditions hold. Something in one relational condition is capable of making a difference beyond itself. A dependency preserves that distinction well enough for something else to depend on it. And another state comes about, or is constrained, *because of* it. The project names this grammar **Transmit, Carry, Receive**, often written **T-C-R**. This book proposes that T-C-R is the grammar of consequential manifestation: the logical structure by which any distinction in created order becomes consequential to another state. The seeing of the stone is one instance. The chapter builds the grammar from that instance, then states the stronger claim.
+This chapter asks what is required for that to happen, and its answer reaches far beyond light. The project names the answer **Transmit, Carry, Receive**, often written **T-C-R**. This book proposes that T-C-R is the grammar of consequential manifestation: the logical structure by which any distinction in created order becomes consequential to another state. The seeing of the stone is one instance. The chapter builds the grammar from that instance, then states the stronger claim.
 
 ## The grammar in its minimal form
 
@@ -90,17 +90,7 @@ A distinction may be transmitted, and even carried, without ever reaching conseq
 
 ## The whole grammar
 
-In the manifest world the three parts often look like this:
-
-```text
-source distinction
-  → transmission            (the distinction becomes capable of constraining something
-                              beyond itself; the source may or may not be changed)
-  → carriage                (a chain of dependency preserves the relevant distinction,
-                              across one or more, possibly changing, carriers)
-  → consequential reception (another state is changed, or constrained, in a way that
-                              depends on what was carried)
-```
+In the manifest world each part usually has a visible vehicle: something emitted, a chain of carriers, a receiver changed by what arrives.
 
 ![Figure 4. Transmit, Carry, Receive, as it appears in manifest cases. A distinction at the source becomes capable of constraining something beyond itself; a chain of dependency preserves the relevant distinction across substitutable carriers; a compatible receiver is changed in a way that depends on it. The dependency persists while the vehicles change. At substrate depth the carrier may simply be the relation.](v2/figures/fig-tcr.png)
 
@@ -136,35 +126,21 @@ The book's working formulation is this:
 
 The formulation was checked against the project's simplest relational models before being adopted. In them, a three-way condition changes the likelihood of the next two-way event: a present distinction modifies what happens next by weighting it, without determining it. The initial value of that same condition is soon forgotten: within a short run, nothing in the visible state depends on it any longer. On the formulation, the initial distinction has stopped being causal for that state, because no dependency preserves it, while the condition's *current* value goes on mattering. That is the T-C-R test at work. Rules that forbid a change alter what can be reached at all, and rules that merely favour it alter only how likely it is. Those are two distinct ways of being causal. **Status:** working hypothesis. It fits the models. Whether it is the right account of causation in nature is a question of coherence, not of those models.
 
+The account also disciplines a common word. To say that one change "enabled" another can mean four different things: that it came first (*precedence*); that it removed competitors, so the other became the likelier next event (*opportunity*); that it changed the other's own tendency (*rate*); or that it made the other possible at all (*support*). Only the last two are changes of admissibility or tendency, and only support is the work of a forbidding rule. In the project's later models the senses came apart cleanly. Most soft "enabling" turned out to be opportunity.
+
 ## Manifestation
 
 There is one further reason T-C-R matters, and it is the deepest. The book has proposed a created relational order beneath the manifest physical world of stones and light. For that order to be manifest at all, as material and experienced reality, there must be a **consequence-preserving relationship** between distinctions in the underlying order and the actual world we meet. If distinctions at the deepest level could make no difference to anything manifest, they would be idle.
 
 That is a minimal claim, and it should be kept minimal. It is tempting to picture something invisible being *transformed* into something visible, as though a hidden object rose through layers and emerged as a stone. That is only one possible architecture, and the book does not assume it. The underlying order and the manifest world might be two descriptions of one relational fact. They might be different resolutions of one order. They might be related by a mapping not yet understood, or in a way not yet conceived. The question of whether the substrate is itself spatial, or whether space arises from it, also remains open. What the book does claim is that, whatever the architecture, consequence must be preserved between them. That is the T-C-R insight applied at its deepest point.
 
-## How T-C-R connects to what came before
+## How T-C-R gathers what came before
 
-T-C-R is not a separate principle added to the previous chapters. It draws them together.
+T-C-R is not a separate principle added to the previous chapters. It draws them together. It is what mediation requires, if nothing acts across a gap of non-relation (Chapter 3). It is shaped by **admissibility** (Chapter 4) in what a source can transmit, what dependencies exist and what a receiver can register. It is shot through with **constrained chance** (Chapter 5): which molecule in your retina absorbs light from the stone at a given instant is a matter of chance, and the image is steady because many such events compose. And it depends on **identity** (Chapter 6): the carried distinction persists as an equivalence class across changing carriers, with its provenance where something downstream depends on it.
 
-It is how **relation** becomes **consequence**. Chapter 3 proposed that nothing acts on anything else across a gap of non-relation. T-C-R says what mediation requires.
+Together these show that a relational world is not a frozen lattice in which everything is related and nothing happens. Relation becomes history: a distinction here makes a difference there, which can in turn be transmitted, carried and received. Life is built from such chains (Chapter 10), and so is human communication (Chapter 11). The theological chapters use the grammar, with care, as a lens on some forms of corruption and restoration (Chapters 13 and 14).
 
-It is shaped throughout by **admissibility** (Chapter 4): in what a source can transmit, in what dependencies are available, and in what a receiver can register.
-
-It is shot through with **constrained chance** (Chapter 5). At the level of atoms, emission and absorption are probabilistic. Which particular molecule in your retina absorbs light from the stone at a given instant is, on the standard reading of physics, a matter of chance. The image you see is reliable because very many such events, each open in itself, compose into a stable pattern.
-
-And it depends on **identity** (Chapter 6) at every stage. The carried distinction persists as an equivalence class across changing carriers. Provenance is carried with it where something downstream depends on it. The receiver is changed by reception and remains itself: your eye, having seen the stone, is still an eye.
-
-## What is established, and what is proposed
-
-Some of this is established. Emission, propagation and absorption are well-understood physics, and T-C-R organises that physics without replacing it. It has not been shown to predict anything the physics does not. Receivers really do differ in their semantics, and exactly-once reception really is a requirement only of transactional receivers.
-
-Some of it is proposed. That T-C-R is the form of consequential relation itself, that it reaches to the substrate, that it is recursive, and that it supplies the right account of cause: these are working hypotheses of this book.
-
-And some of it is open. In every model the project has built, the dependencies that carry distinctions were designed. Whether created order generates its own carriers and lineages from its minimal relations is not known. Nor is the architecture of manifestation known.
-
-## Why this matters
-
-T-C-R matters for the book because it shows how a relational world is a connected world of consequence, not a static web. Relation in Chapter 3 might have suggested a frozen lattice in which everything is related and nothing happens. T-C-R shows how relation becomes history. A distinction here makes a difference there, which becomes a distinction that can in turn be transmitted, carried and received. Life is built from such chains (Chapter 10). So is human communication (Chapter 11). The theological chapters will find it a useful lens, used with care, for some forms of corruption and restoration (Chapters 13 and 14).
+**Status.** Emission, propagation and absorption are established physics, and T-C-R organises that physics without replacing it. It has not been shown to predict anything the physics does not. That T-C-R is the form of consequential relation itself, reaches to the substrate, is recursive and supplies the right account of cause are working hypotheses. Two things are open. In every model the project has built, the dependencies that carry distinctions were designed, and whether created order generates its own carriers from minimal relations is not known. Nor is the architecture of manifestation.
 
 ## What T-C-R does not mean
 

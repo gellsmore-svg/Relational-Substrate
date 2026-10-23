@@ -69,7 +69,9 @@ This matters for how the book understands what is actual. Chapter 4 called the a
 
 **Persistence** can now be described more fully. It is the continued re-actualisation of a thing within its relevant equivalence class, and, for a continuing individual, along an unbroken history. The river persists because, moment by moment, flowing water keeps re-establishing a river-shaped pattern within its banks, carrying with it its channel's history. The flame persists because combustion keeps re-establishing a flame-shaped region of light and heat. On the relational proposal the stone persists in the same way, though far more slowly: its crystal lattices and the bonds that hold its grains keep re-establishing themselves through the small, ceaseless fluctuations of its atoms.
 
-Stability is always stability *of something*, *against some kind of disturbance*, *over some length of time*. The stone persists against rain for centuries and against a hammer for a moment. No created thing is stable against everything forever. To say that something persists is to say that the changes it actually undergoes stay within the class that preserves what it is.
+Chapter 5's three qualifiers apply: stability is of something, against some disturbance, for some time. The stone persists against rain for centuries and against a hammer for a moment. No created thing is stable against everything forever. To say that something persists is to say that the changes it actually undergoes stay within the class that preserves what it is.
+
+The project's later models added a discipline to the word. *What is likely* and *what lasts* are different questions: two model systems agreeing on how often each state occurs, how dense and how active they are, differed more than twentyfold in how long their patterns survived. So a claim of persistence must say what it was compared with, must separate *reaching* a state from *surviving* in it, and should show that a structure outlasts its own parts before treating it as a point of reference (Appendix E.8).
 
 ## Preserving is not repairing
 
@@ -81,10 +83,11 @@ An equivalence class survives every change that keeps a thing inside it. It does
 
 Provenance also gives the clearest sense of what memory is at the physical level. Bend a paper clip back and forth and it does not return to its first condition; eventually it breaks. A piece of iron, magnetised and released, stays magnetised. Its present state depends on its history, not only on its present surroundings. Physicists call this **hysteresis**, and it is well understood in many materials. That much is mainstream science.
 
-Two further pieces of support, of different strengths, point the same way.
+Three further pieces of support, of different strengths, point the same way.
 
 - **Directional evidence.** In published metal-fatigue data, the *order* of loads matters: gentle cycles first, then harsh, leaves a part more durable than the reverse at equal totals, though the simplest standard model says order makes no difference. The same direction appears in three unrelated domains. The project's model predicted the size of the effect badly, so this is a directional finding only.
 - **Memory without a history variable.** When a genuinely three-way relation in a small relational model was hidden from view, the visible two-way links behaved as though they remembered their recent past, although nothing in the rules recorded history. Apparent memory can come from present structure that a description leaves out (Chapter 8).
+- **History as present state.** In later models, one visible arrangement of links faced different futures depending on how it had come about. Counting the carried history as part of the present state made the future depend on the present alone again. That history stayed predictive after exact details were forgotten, and a coarse description could hide it entirely. These are model results, not a law of memory in nature.
 
 The book's proposal unites these. **Memory, at the physical level, is past distinctions embodied in present relations so that they alter what is currently reachable, how likely it is, or how a thing responds.** No separate memory substance is needed. The bent paper clip remembers its bending in its bent crystal structure and nowhere else. **Status:** RS working hypothesis. It will be useful later, when the book speaks of habits, of character, and of the slow hardening Scripture describes (Hebrews 3:13), always as a structural analogy and never as an explanation of moral life.
 
@@ -118,6 +121,8 @@ The same caution applies, at a different boundary, to human persons. Persons hav
 ## A word about time
 
 If change is the actualisation of admissible transitions, then time, on the relational proposal, is the **ordering of actualisation**: the before-and-after of change itself, rather than an independent container that would still be ticking if nothing happened. This is an old view, held in different forms by Leibniz and others, and it is an ontological interpretation. It must sit with what is measured: clocks run at different rates at different heights and speeds, exactly as general relativity predicts. General relativity's mathematics treats time geometrically, as part of spacetime. Whether spacetime is a substance or an ordering of relations among events is a question of interpretation, not of measurement. The book's reading is that clocks are physical processes, and the time they keep is the ordering of the changes they undergo.
+
+Ordering is not yet *direction*. The book calls a settled, directed order of change **succession**: this, then that, and not the reverse. In the project's simplest models succession does not come free. Rules that merely make some states more likely give preferred states but no direction. Direction needs a tendency that favours going round a cycle of changes one way, or a rule that makes some change one-way. Its characteristic pattern is a handover: a link forms, and the link that supported it dissolves. This is not a claim about the arrow of time in nature, and no model claim about time is free of the modeller's clock: counting steps and measuring continuous time can disagree (Appendix E.8).
 
 ## The stone, made manifest
 

@@ -121,7 +121,7 @@ Some of Scripture's language provokes questions without answering them. The prop
 
 Language like this sits uneasily with the habit of imagining space as an empty container that simply exists, and it invites the question of what extension itself is. It does not supply a geometry for the deep order of creation, and this book does not extract one from it. Scripture constrains and provokes. It is not a hidden physics textbook.
 
-There is a practical benefit in beginning this way. An inquiry that treats every conceivable account of origins as equally likely has no way to focus. Beginning from one Creator and one created order narrows the field to what can actually be investigated. It is not a cage on inquiry. It is a starting point that makes careful inquiry possible.
+Nor is beginning here a cage on inquiry. An inquiry that treats every conceivable account of origins as equally likely has no way to focus; beginning from one Creator and one created order narrows the field to what can actually be investigated.
 
 ## The questions the book will answer
 
