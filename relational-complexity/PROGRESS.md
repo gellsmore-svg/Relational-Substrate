@@ -22,8 +22,8 @@ See `provenance/base-commits.md`. The shared synthesis architecture is not on th
 | Stage | State | Commit |
 | --- | --- | --- |
 | A. Charter, audit, registers, feasibility estimate, journal | committed and pushed | `7260f0477ab4e3d9d25896fc0c5087eb945d6ebe` |
-| B. Minimal engine and recovery tests | in progress in this edit | not yet committed |
-| C. Formal definitions for RRC-001 | not started | |
+| B. Minimal engine and recovery tests | committed and pushed | `399dba247061b10823f31bfbf5148d9a8099c9a7` |
+| C. Formal definitions for RRC-001 | in progress in this edit | `docs/definitions.md` |
 | D. Freeze RRC-001 | not started | no scientific cells have been run |
 | E. Execute RRC-001 | not started | |
 | F. Interpret and challenge | not started | |
@@ -52,4 +52,4 @@ Package `relational-complexity/src/rrc`. Version `rrc-0.1.0`.
 
 ## Next action
 
-Commit and push Stage B. Then write `docs/definitions.md` (Stage C) naming the definitions RRC-001 will use. Do not run soft-wedge or hard-wedge scientific cells before the frozen plan is pushed. After Stage C, run `python -m rrc preflight` on calibration weights only, record the timings, and only then freeze RRC-001.
+Commit and push Stage C. Then time calibration bundles with `python -m rrc preflight`, write the timings into the feasibility record, freeze `plans/rrc-001.json`, and push that plan before any soft-wedge or hard-wedge cell runs.
