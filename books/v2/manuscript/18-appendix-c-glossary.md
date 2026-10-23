@@ -36,6 +36,8 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Equivalence class.** All the states that count as "the same" for a given purpose: those that no relevant interaction could tell apart. (Ch 6)
 
+**Gathering.** In the project's models, a time-weighted preference for relation to a reference structure. Distinct from *succession*; neither is gravity. A claim of gathering must name its clock and survive adjustment for density. (Ch 8)
+
 **Identity (of physical things).** Sameness of kind or state: continuity of a thing's relevant equivalence class through admissible change, judged by what reachable future interactions could discriminate. Invariants certify it, and provenance is part of it where it remains consequential. Distinct from *individual continuity*. Personal identity resembles both but is not defined by them. (Ch 6)
 
 **Individual continuity.** Being the same continuing individual, and not merely an equivalent replacement. It requires continuity of lineage and history in addition to equivalence. What carries it in physical things is an open question. (Ch 6)
@@ -73,6 +75,8 @@ Each term is used in this book in the single sense given here. The chapter in br
 **Relational substrate.** The proposed created relational order within which physical things are constituted and act. It is not matter, not ether, not a field under another name, not a mind, not a soul and not God. Whether it is itself spatial is open. (Ch 3)
 
 **Stochastic.** Described by probabilities over defined possibilities. The word itself does not say whether the probabilities are *epistemic* (ignorance of hidden details) or *ontic* (genuine openness). Not lawless, not arbitrary, not chaotic. (Ch 5)
+
+**Succession.** A settled, directed order of change. In the project's models it needs a non-gradient tendency or a one-way rule. Distinct from *gathering*. The book's reading of time as the ordering of actualisation concerns order; succession concerns direction. (Ch 6)
 
 **T0.** The book's label for whatever conditions actualisation. That much is a firm commitment. What kind of thing T0 is remains open; "constrained possibility" is the working reading (Appendix E). (Ch 4)
 

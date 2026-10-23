@@ -24,6 +24,7 @@ Scripture is quoted from the King James Version throughout.
 **Chapter 4.**
 
 - The constraint laboratory's Generation 001 report and charter are in the project repository, branch `research/constraint-lab-v0.1`, under `constraint-lab/reports/` and `constraint-lab/docs/`.
+- On forbidding, favouring and persisting absence in the Gravity/Time programme: `gravity-time/docs/ontology-proposals.md` (OP-4, OP-14, OP-15) and `gravity-time/reports/gt-e3-report.md`.
 
 **Chapter 5.**
 
@@ -40,7 +41,9 @@ Scripture is quoted from the King James Version throughout.
 
 - On conservation laws and symmetry: E. Noether, "Invariante Variationsprobleme" (1918).
 - On the July 2026 topological work and its stated limits: `docs/conceptual-phase-completion-2026-07-12.md` and `docs/theta-origin-wpa-2026-07-13.md` in the project repository.
-- On the June 2026 order-effect work: `docs/relational-substrate-validation-status.md`.
+- On the June 2026 order-effect work: `docs/relational-substrate-validation-status.md`; on its closure as objective drift and the re-anchoring on the vorton: decisions D1 and D2 in `docs/decision-log.md`.
+- On history carried as present state (Generations 8H–8P): the laboratory's reports on branch `research/constraint-lab-v0.8p-stopping-sufficiency`, under `constraint-lab/reports/`, and its scoping of what may enter the books, `constraint-lab/formal/book-integration-map.md`.
+- On direction of change, succession and persistence comparisons in the Gravity/Time programme: `gravity-time/docs/ontology-proposals.md` (OP-5, OP-7, OP-8, OP-10, OP-18 to OP-20) and `gravity-time/reports/` on branch `research/gravity-time-admissibility`.
 
 **Chapter 8.**
 
@@ -53,6 +56,7 @@ Scripture is quoted from the King James Version throughout.
 - On deriving fluid equations from kinetic theory: S. Chapman and T. G. Cowling, *The Mathematical Theory of Non-uniform Gases* (Cambridge University Press, 1970).
 - On the Navier–Stokes existence and smoothness problem: C. L. Fefferman's official problem description for the Clay Mathematics Institute Millennium Prize Problems.
 - E. Wigner, "The unreasonable effectiveness of mathematics in the natural sciences", *Communications on Pure and Applied Mathematics* 13 (1960).
+- On relational potentials, gathering, clocks and the negative result on clock rates: `gravity-time/docs/ontology-proposals.md` (OP-1 to OP-4, OP-6, OP-9, OP-12, OP-13, OP-16, OP-17) and the GT reports `gt-e0-report.md`, `gt-e1-report.md`, `gt-e2-report.md` and `gt-e5a-report.md` in `gravity-time/reports/` on branch `research/gravity-time-admissibility`. The programme's results are recorded alongside the laboratory's in the shared research-synthesis layer on `main` (`research-synthesis/`).
 
 **Chapter 9.**
 
