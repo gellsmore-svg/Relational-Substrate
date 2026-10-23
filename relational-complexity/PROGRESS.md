@@ -26,8 +26,8 @@ See `provenance/base-commits.md`. The shared synthesis architecture is not on th
 | C. Formal definitions for RRC-001 | committed and pushed | `2053b8bddc94b3a9b1d5db712f4c91c6518a681b` |
 | D. Freeze RRC-001 | committed and pushed | `92ae7425e8b711ba8b24c7905c0208eeea129d33` |
 | E. Execute RRC-001 | committed and pushed | `cdc1de55c3e6e2f4e1b646d33d78859101a3348a` |
-| F. Interpret and challenge | committed with this record | hash recorded by the next commit |
-| G. Coherence reflection and RRC-002 decision | committed with this record | hash recorded by the next commit |
+| F. Interpret and challenge | committed and pushed | `fb2016a0b6d2c2a2419cfa46488fa8be2e363f56` |
+| G. Coherence reflection and RRC-002 decision | committed and pushed | `fb2016a0b6d2c2a2419cfa46488fa8be2e363f56` |
 
 ## Hard rules already in force
 
