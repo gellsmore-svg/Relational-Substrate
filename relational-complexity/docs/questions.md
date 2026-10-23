@@ -13,7 +13,7 @@ These questions open the inquiry. They are not a checklist of predictions. A rou
 | RRC-Q07 | Can two different internal graphs share an external signature and still disagree about the future? What must be kept to remove the disagreement? | RRC-000 | Witness pairs when the defect is positive. Edge-count, parity and wedge-profile augmentations are the first repairs to test. They are not assumed to work |
 | RRC-Q08 | Which of these questions can be answered without listing a larger state space than the frozen bound? | RRC-000 | Exact enumeration through N=6 only where preflight fits the 120-second item budget. No sampling |
 | RRC-Q09 | What, if anything, is unchanged when a reduced unit is used as a component? | RRC-000 | One two-triad composition on N=6, if preflight allows. Otherwise the question stays open and the cell is marked not run |
-| RRC-Q10 | Which organisations showed up that this list did not name? | RRC-000 | Reserved for the reflection after execution. Empty until then |
+| RRC-Q10 | Which organisations showed up that this list did not name? | RRC-000 | After RRC-001: wedge-count refinement of an exact interface, and an exact occupation cancellation at N=4. See `reports/rrc-001-interpretation.md` |
 
 ## Distinctions that the wording must keep
 
@@ -22,3 +22,9 @@ These questions open the inquiry. They are not a checklist of predictions. A rou
 - Approximate agreement is a measured distance, with the metric named.
 - Graph distance in the complete graph of potential pairs is one hop for every distinct pair of nodes. It is not used as consequential depth.
 - An internal edge count is not a history variable. Both are current or past information of different kinds. RRC-001 augments current state only.
+
+## After RRC-001
+
+The opening wording above stays in place. The round's reading is `reports/rrc-001-interpretation.md`, and the plain-language account is `reports/rrc-001-findings.md`. Ledger rows RRC-000 are unchanged. New rows use the generation `RRC-001`.
+
+The five separations named in `docs/feasibility.md` before any cell ran are now scored there. N=7 stays closed. No second round is frozen.

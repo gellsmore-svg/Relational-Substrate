@@ -42,3 +42,17 @@ If preflight puts every informative N=6 item over 120 seconds, RRC-001 freezes w
 ## Measured before RRC-001
 
 The prior table above is not the decision. The decision is `docs/rrc-001-preflight.md`: a calibration bundle in the heaviest planned shape (N=6, three augmentations, closure) took 10.522 seconds. N=6 remains in the frozen plan. N=7 does not.
+
+## Scored after RRC-001
+
+The cells were executed from the frozen plan and verified: 29 complete, none failed, timed out, or left unresolved. Execution commit `cdc1de55c3e6e2f4e1b646d33d78859101a3348a`. The reading is `reports/rrc-001-interpretation.md`.
+
+The five separations above, scored only on this grammar and these designated subsets:
+
+1. Exact interface reduction for every rule. Closed against the round: every hard-wedge and soft-wedge cell has a positive rational defect.
+2. Exact when the weights ignore the hidden pairs, and already failing at N=3 once a wedge can use a hidden pair. This is what the cells show. Unconstrained cells have defect 0/1. Both wedge families fail from N=3 upward.
+3. An intermediate statistic restores exactness. Edge count and parity do so when they are the single hidden bit. The wedge-count profile does so in one cell only, the hard wedge at N=3 with one hidden pair. For every soft-wedge cell the lumpable closure is the full set of graphs.
+4. A first change at some N, with six as one candidate. The qualitative split is present at N=3. Six nodes repeats neighbour verdicts, including the hard-wedge triangle defect 51/40 at N=4, 5 and 6.
+5. A local weight change moves along the path index, or it rescales rates. Stationary toggle rates of the soft-wedge boost equal the state-independent orbit rates. Occupation moves between the star of node 0 and its complement. Depths greater than 0 repeat that complement because they are one symmetry orbit of the instrument.
+
+N≤5 already separates these five as far as this grammar and these instruments go. N=6 repeats them. The stopping rule above therefore leaves N=7 closed and does not open a second round in order to enlarge N. A later round has to name a new question. The candidate is `docs/rrc-002-proposal.md`, and it is not frozen.

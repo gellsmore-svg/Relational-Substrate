@@ -4,6 +4,8 @@ Independent Open-Thetical Research programme inside the Relational Substrate rep
 
 The question is whether relational structures can be composed recursively, and whether a finite interface can preserve their consequential behaviour. The charter is [`charter.md`](charter.md). The session hand-off is [`PROGRESS.md`](PROGRESS.md).
 
+RRC-001 is closed. The plain-language account is [`reports/rrc-001-findings.md`](reports/rrc-001-findings.md). The mathematical reading is [`reports/rrc-001-interpretation.md`](reports/rrc-001-interpretation.md). The next proposal is not a frozen plan: [`docs/rrc-002-proposal.md`](docs/rrc-002-proposal.md).
+
 This directory does not modify the Constraint Laboratory or the Gravity–Temporality programme.
 
 ## Layout
