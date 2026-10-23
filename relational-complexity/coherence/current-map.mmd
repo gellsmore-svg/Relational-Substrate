@@ -1,0 +1,27 @@
+%% Generated from findings.jsonl and relations.jsonl.
+%% Historical nodes appear when a later finding supersedes their interpretation.
+flowchart TD
+  subgraph METHODOLOGICAL [Methodological corrections]
+    RRC_M01_NO_NEW_AXIS["RRC-M01-NO-NEW-AXIS: RRC-001 does not add a dynamical primitive. Its rules are current-state weights on the ..."]
+  end
+  subgraph OPEN_QUESTION [Open questions]
+    RRC_Q01["RRC-Q01: What determines how many relational entities a class of behaviour needs, and which beha..."]
+    RRC_Q02["RRC-Q02: Does any class in this grammar have a finite bound on the local information consequenti..."]
+    RRC_Q03["RRC-Q03: Is six nodes distinguishable from neighbouring sizes in any exact property of these mod..."]
+    RRC_Q04["RRC-Q04: When can a designated structure be replaced by its external pairs without changing the ..."]
+    RRC_Q05["RRC-Q05: When an interface reduction is exact, does the reduced chain keep the original toggle g..."]
+    RRC_Q06["RRC-Q06: How does a local weight change affect stationary occupation and toggle rate along a dec..."]
+    RRC_Q07["RRC-Q07: Can two internal graphs share an external signature and induce different next-step laws..."]
+    RRC_Q08["RRC-Q08: Which of these questions can be settled by exact calculation inside the frozen item bud..."]
+    RRC_Q09["RRC-Q09: Which properties of a single designated structure, if any, remain exact when two such s..."]
+    RRC_Q10["RRC-Q10: Which structural or dynamical behaviour became visible that the opening questions did n..."]
+  end
+  RRC_M01_NO_NEW_AXIS -->|raises_question| RRC_Q04
+  RRC_Q04 -->|motivates| RRC_Q02
+  RRC_Q04 -->|motivates| RRC_Q05
+  RRC_Q04 -->|motivates| RRC_Q07
+  RRC_Q01 -->|motivates| RRC_Q03
+  RRC_Q04 -->|motivates| RRC_Q09
+  RRC_M01_NO_NEW_AXIS -->|raises_question| RRC_Q08
+  RRC_Q01 -->|motivates| RRC_Q06
+  RRC_Q02 -->|raises_question| RRC_Q10

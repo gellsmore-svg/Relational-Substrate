@@ -21,8 +21,8 @@ See `provenance/base-commits.md`. The shared synthesis architecture is not on th
 
 | Stage | State | Commit |
 | --- | --- | --- |
-| A. Charter, audit, registers, feasibility estimate, journal | in progress at the opening of this file | not yet committed |
-| B. Minimal engine and recovery tests | not started | |
+| A. Charter, audit, registers, feasibility estimate, journal | committed and pushed | `7260f0477ab4e3d9d25896fc0c5087eb945d6ebe` |
+| B. Minimal engine and recovery tests | in progress in this edit | not yet committed |
 | C. Formal definitions for RRC-001 | not started | |
 | D. Freeze RRC-001 | not started | no scientific cells have been run |
 | E. Execute RRC-001 | not started | |
@@ -39,6 +39,17 @@ See `provenance/base-commits.md`. The shared synthesis architecture is not on th
 - Do not promote a mathematical result into an ontological claim.
 - Bulk output belongs in `relational-complexity/generated/`, which is gitignored. Commit manifests, summaries and provenance.
 
+## Engine state at Stage B
+
+Package `relational-complexity/src/rrc`. Version `rrc-0.1.0`.
+
+- Exact rational strong lumpability, augmentations (`interface`, `edge_count`, `parity`, `interface_wedge_counts`), lumpable closure, recurrent classes.
+- Stationary laws use parity-balanced iteration (a positive single-toggle chain has period 2). Cross-check: a second start, and a dense solve when the state count is at most 1,024.
+- Commands: `plan`, `run`, `resume`, `status`, `verify`, `report`, `preflight`, `coherence-view`, plus a hidden `worker`.
+- `plan` refuses while `plans/rrc-001.json` is absent. That absence is intentional.
+- Recovery tests cover death during an item, death after a valid result, a partial write, invalid JSON, a failed item, a timeout, a sibling item surviving, and an incompatible plan.
+- Identity fixtures cover the unconstrained kernel, including a bit-exact match to `rs_constraint_lab.kernel.build_kernel` at N=3 and N=4. They do not compute soft-wedge or hard-wedge lumpability.
+
 ## Next action
 
-Finish Stage A by committing and pushing this opening record. Then build the smallest exact engine (Stage B) and validate it on identities and synthetic kernels, not on the unopened RRC-001 cells.
+Commit and push Stage B. Then write `docs/definitions.md` (Stage C) naming the definitions RRC-001 will use. Do not run soft-wedge or hard-wedge scientific cells before the frozen plan is pushed. After Stage C, run `python -m rrc preflight` on calibration weights only, record the timings, and only then freeze RRC-001.

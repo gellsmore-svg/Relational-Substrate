@@ -1,17 +1,17 @@
 # Current coherence map
 
-Opening register only. No scientific cells have been run. This view will be regenerated from the ledger once `python -m rrc coherence-view` exists. Until then it is a hand listing of the RRC-000 rows, and Stage B replaces it with the generated text.
+Generated from `findings.jsonl` and `relations.jsonl`. Magnitude, robustness, and temporal character stay in separate columns. There is no summed score.
 
-| ID | Layer | Status |
-| --- | --- | --- |
-| RRC-M01-NO-NEW-AXIS | METHODOLOGICAL | active |
-| RRC-Q01 | OPEN_QUESTION | unresolved |
-| RRC-Q02 | OPEN_QUESTION | unresolved |
-| RRC-Q03 | OPEN_QUESTION | unresolved |
-| RRC-Q04 | OPEN_QUESTION | unresolved |
-| RRC-Q05 | OPEN_QUESTION | unresolved |
-| RRC-Q06 | OPEN_QUESTION | unresolved |
-| RRC-Q07 | OPEN_QUESTION | unresolved |
-| RRC-Q08 | OPEN_QUESTION | unresolved |
-| RRC-Q09 | OPEN_QUESTION | unresolved |
-| RRC-Q10 | OPEN_QUESTION | unresolved |
+| ID | Layer | Finding | Literal value | Magnitude | Temporal character | Robustness vector | Structural role | Status | Key relations | Generation |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| RRC-M01-NO-NEW-AXIS | METHODOLOGICAL | RRC-001 does not add a dynamical primitive. Its rules are current-state weights on the existing single-toggle pair grammar. Strictly positive weights compile into that grammar if rule complexity and cardinality may grow. Hard zeros are the existing prohibit. Interface and composition questions are reduction questions about this grammar. | {"gate":"current-state single-toggle","hard_zero":"existing prohibit","positive_weights":"CL-T12"} | not_applicable | not_applicable | [0, 0, 0, 0, 0] | methodological_correction, expressiveness | active | raises_question → RRC-Q04; raises_question → RRC-Q08 | RRC-000 |
+| RRC-Q01 | OPEN_QUESTION | What determines how many relational entities a class of behaviour needs, and which behaviours that appear at larger N are the same behaviour on a larger carrier? |  | not_applicable | unknown | [0, 0, 0, 0, 0] | open_question | unresolved | motivates → RRC-Q03; motivates → RRC-Q06 | RRC-000 |
+| RRC-Q02 | OPEN_QUESTION | Does any class in this grammar have a finite bound on the local information consequential behaviour depends on, and does that bound belong to the grammar, the observable, the environment, or the representation? |  | not_applicable | unknown | [0, 0, 0, 0, 0] | open_question | unresolved | RRC-Q04 motivates →; raises_question → RRC-Q10 | RRC-000 |
+| RRC-Q03 | OPEN_QUESTION | Is six nodes distinguishable from neighbouring sizes in any exact property of these models? |  | not_applicable | unknown | [0, 0, 0, 0, 0] | open_question | unresolved | RRC-Q01 motivates → | RRC-000 |
+| RRC-Q04 | OPEN_QUESTION | When can a designated structure be replaced by its external pairs without changing the next-step law of those pairs, and when does hidden current state prevent that? |  | not_applicable | unknown | [0, 0, 0, 0, 0] | open_question | unresolved | RRC-M01-NO-NEW-AXIS raises_question →; motivates → RRC-Q02; motivates → RRC-Q05; motivates → RRC-Q07; motivates → RRC-Q09 | RRC-000 |
+| RRC-Q05 | OPEN_QUESTION | When an interface reduction is exact, does the reduced chain keep the original toggle grammar, keep only the single-toggle event shape with new weights, or lose a closed description? |  | not_applicable | unknown | [0, 0, 0, 0, 0] | open_question | unresolved | RRC-Q04 motivates → | RRC-000 |
+| RRC-Q06 | OPEN_QUESTION | How does a local weight change affect stationary occupation and toggle rate along a declared path index, and which part of that effect is global normalisation rather than depth-dependent transmission? |  | not_applicable | unknown | [0, 0, 0, 0, 0] | open_question | unresolved | RRC-Q01 motivates → | RRC-000 |
+| RRC-Q07 | OPEN_QUESTION | Can two internal graphs share an external signature and induce different next-step laws, and which of edge count, parity, wedge profile, or the full hidden graph removes the difference? |  | not_applicable | unknown | [0, 0, 0, 0, 0] | open_question | unresolved | RRC-Q04 motivates → | RRC-000 |
+| RRC-Q08 | OPEN_QUESTION | Which of these questions can be settled by exact calculation inside the frozen item budget, without enumerating a larger chain? |  | not_applicable | unknown | [0, 0, 0, 0, 0] | open_question | unresolved | RRC-M01-NO-NEW-AXIS raises_question → | RRC-000 |
+| RRC-Q09 | OPEN_QUESTION | Which properties of a single designated structure, if any, remain exact when two such structures interact through a cut? |  | not_applicable | unknown | [0, 0, 0, 0, 0] | open_question | unresolved | RRC-Q04 motivates → | RRC-000 |
+| RRC-Q10 | OPEN_QUESTION | Which structural or dynamical behaviour became visible that the opening questions did not name? |  | not_applicable | unknown | [0, 0, 0, 0, 0] | open_question | unresolved | RRC-Q02 raises_question → | RRC-000 |
