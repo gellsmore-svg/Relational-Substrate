@@ -82,7 +82,15 @@ The status vocabulary is small and fixed:
 | Dependence structure is constitutive of the physical whole | RS working hypothesis |
 | Mathematics describes regularity without being the reality described | Ontological inference |
 | Substrate spatiality | Open question |
-| Closure knots, five operations, torsional light | Mechanism candidate (technical volume; not relied on) |
+| A present state can carry its history: the same visible configuration can face different futures because of history carried in a richer present | Mathematical result in models; RS working hypothesis for created order (E.6) |
+| Forbidding and favouring differ in the structure of possible histories, though their aggregate statistics can grade into each other | Mathematical result in models (E.8) |
+| A persisting absence is either rate-limited or gate-limited | Mathematical result in models (E.8) |
+| Hard admissibility can arrest all change | Open question for created order (E.8) |
+| A direction of succession needs a non-gradient tendency or a one-way rule | Mechanism candidate, model-scoped (E.8) |
+| Succession (ordered change) and gathering (preference for a reference) are distinct | Mathematical result in models (E.8) |
+| "Attraction" as participation in a relational pattern | Mechanism candidate, model-scoped (E.8) |
+| What ties clock rates to relational structure | Open question; the models' rules do not supply it (E.8) |
+| The vorton (a stable knotted field structure), closure knots, five operations, torsional light | Mechanism candidate (technical volume and modelling programme; not relied on) |
 | A coherent account is thereby true | Rejected (coherence is not proof) |
 
 ## E.3 T0
@@ -140,6 +148,7 @@ There may be others. Scripture's language of heavens stretched out provokes ques
 - **Individual continuity** (lineage) is distinct from equivalence. An equivalent replacement is not the same individual.
 - **Four recoveries** are kept apart: of function; of organisation (structural or recursive); of the equivalence class; of the same individual. The first three can occur without the fourth.
 - **Personal identity** resembles physical identity and is not defined by it.
+- **History as present state.** In the project's models, the same visible configuration can face different futures because of history carried by the process. Admitting that history into a richer present state restores the dependence on the present alone. Such history can stay predictive after exact detail is forgotten, and a coarse enough description can hide it completely. This supports the reading of memory as past distinction embodied in present relation. It establishes no physical law of memory and no irreducible time.
 
 ## E.7 What the ontology does not currently claim
 
@@ -159,4 +168,25 @@ There may be others. Scripture's language of heavens stretched out provokes ques
 - Physical reconstruction is not personal continuity, and resurrection is not natural substrate reconstruction.
 - Moral evil is not merely physical instability, and redemption is not substrate self-repair.
 - Evil was not necessary.
+- No temporal claim drawn from a model is clock-free. A model's count of steps is not a universal clock.
+- Gathering in a model is not gravity, and a directed order of change in a model is not the arrow of time.
+- A model reference is not a centre of nature, and a held structure in a model is a boundary condition, not something the system made.
 - Coherence does not prove the Relational Substrate.
+
+## E.8 Gravity, time and persistence in the simplest models (adopted in revision 2.5)
+
+Revision 2.5 adopts the ontology proposals of the project's Gravity, Temporality and Emergent Spatiality programme (`gravity-time/docs/ontology-proposals.md`, OP-1 to OP-20). Each was written for later review, and each is adopted at the status it proposed for itself. Where a later proposal amends an earlier one, the amended form is adopted. **All are model-scoped**: they describe exact results in finite relational models, at most seven points, whose rules and clocks the experimenter chose. None is a claim about gravity or time in nature.
+
+**Forbidding and favouring (OP-10, OP-14, OP-15; Chapter 4).** In aggregate statistics such as how often, how directed, and how long absent, a hard ban behaves like the extreme of ever-stronger disfavouring. What is new with a ban is the *structure of possible histories*: one-way changes, recovery only by first undoing a supporting relation, and no direct way back. An absence that persists is therefore of two kinds. It is *rate-limited* when return is possible but slow, and *gate-limited* when return is impossible until something else changes. Under hard formation bans nothing is permanently lost. Hard admissibility can also drive a system into a state in which nothing at all is admissible, a total arrest; whether anything in created order corresponds to that is open (OP-4).
+
+**Direction of change (OP-5, OP-7, OP-10; Chapter 6).** Favouring rules come in two kinds. When the rule is the slope of some quantity, a *gradient* tendency, it produces a basin of preferred states with no settled direction of change. A *non-gradient* tendency produces a stationary, directed order of change, which the book calls **succession**. In these models a hard one-way rule can also produce direction, with no favouring at all. The characteristic directed pattern is a *handover*: a relation forms, then the relation that supported it dissolves. The book's reading of time as the ordering of actualisation is untouched. These results concern *direction*, not ordering. **Status:** mechanism candidate, model-scoped.
+
+**Succession is not gathering (OP-8, OP-17; Chapter 8).** **Gathering** is a time-weighted preference for relation to a reference structure. The two separate cleanly. The handover kept its direction in every case tested when the models grew from six to seven points, while the only gathering effect seen alongside it fell to the level of the null comparison. Evidence for one is not evidence for the other. An apparent gathering counts only if it survives adjustment for density; much of it is otherwise density alone.
+
+**Attraction, clocks and potential (OP-1, OP-2, OP-3, OP-6, OP-9; Chapter 8).** In these models a constraint rule defines a *relational potential*: a count of a relational pattern, weighted by the rule's strength. Preferred states follow that potential, and "attraction" toward a structure is participation in the counted pattern, with no named centre and no direction. **Status:** mechanism candidate, model-scoped. But the rules do *not* tie the rate of activity to the potential. The same basin admits very different near and far rates, depending on how a rule's weight is split between forming and dissolving. Under irreversible rules the split changes the preferred states themselves. A relational reading of gravitational clock-rate differences would therefore need a principle these rules do not supply. **Status:** open question, with a negative model result. Every statement that something "attracts" must say which clock is meant, whether it is adjusted for density, and in what density regime. Different clocks can give opposite signs.
+
+**A reference takes part (OP-12, OP-13, OP-16 as qualified; Chapter 8).** A reference made of relations acts on other relations through the same rules, not as a neutral frame. Its internal support is one lever on where new relations form, alongside other structural channels. It is not a general law that support makes a site less available. **Status:** methodological principle; the lever is a mechanism candidate.
+
+**Persistence before reference (OP-18, OP-19, OP-20; Chapter 6).** A structure counts as a reference only once it is shown to outlast its own constituent relations, compared with a matched null, in each clock. *What is likely* and *what lasts* are separate questions. Two systems with the same stationary picture, the same density and the same average activity can differ in lifetime by more than twenty times. A persistence claim must therefore name its comparison and what that comparison matches. It must separate *reaching* a renewed state from *surviving* in it, and it must preserve directed flows rather than averaging them away. **Status:** methodological principles.
+
+**Not adopted.** A size-normalised rule family (not needed; GT, "Not proposed"). Any inference from these models to gravity, physical time, memory, purpose or theology. Any common operator shared with the constraint laboratory, which has not been tested.

@@ -4,7 +4,7 @@
 
 *A Scripture-first account of a relational creation: how physical order, life, persons, corruption and restoration belong to one world without collapsing into one kind of thing.*
 
-Second edition, October 2026. Companion volumes: *The Relational Substrate* (technical), *A Coherent World* (general), *How to Hug the Right Tree* (devotional).
+Second edition, revision 2.5, October 2026. Companion volumes: *The Relational Substrate* (technical), *A Coherent World* (general), *How to Hug the Right Tree* (devotional).
 
 ---
 
@@ -33,9 +33,9 @@ The book does not prove the Relational Substrate. No set of measurements could d
 
 ## About this edition
 
-This is revision 2.4 of the second edition. The first edition rested on specific proposed mechanisms (knotted structures in a continuous medium, a closed list of five kinds of change, particular accounts of light and magnetism) that later work did not support. The second edition rebuilt the book on more foundational ideas. This revision re-centres it on its organising problem. The research behind the book is the work of one author, carried out with extensive computational and AI-assisted exploration. Its records are public, and Appendix B notes what they do and do not show.
+The book is written for an intelligent reader with no specialist training in physics, philosophy or theology who is willing to think carefully. Each technical term is explained where it is first needed. The opening chapter introduces one ordinary scene, seeing a stone in daylight, which returns throughout as a common reference point.
 
-The book is written for an intelligent reader with no specialist training in physics, philosophy or theology who is willing to think carefully. Each technical term is explained before it is needed. The opening chapter introduces one ordinary scene, seeing a stone in daylight, which returns throughout as a common reference point.
+This is revision 2.5 of the second edition. The first edition rested on specific mechanisms that later work did not support. The second rebuilds the book on more foundational ideas, and Appendix B records what changed and why. The research behind the book is the work of one author, carried out with extensive computational and AI-assisted exploration. Its records are public, and Appendix B notes what they do and do not show.
 
 A free electronic edition of this book is available, offered as an open intellectual contribution to encourage reading, sharing and honest discussion. Updated versions and related materials can be found through the project website at <https://relational-substrate.blogspot.com/> and the public research repository at <https://github.com/gellsmore-svg/Relational-Substrate>.
 
@@ -164,7 +164,7 @@ Some of Scripture's language provokes questions without answering them. The prop
 
 Language like this sits uneasily with the habit of imagining space as an empty container that simply exists, and it invites the question of what extension itself is. It does not supply a geometry for the deep order of creation, and this book does not extract one from it. Scripture constrains and provokes. It is not a hidden physics textbook.
 
-There is a practical benefit in beginning this way. An inquiry that treats every conceivable account of origins as equally likely has no way to focus. Beginning from one Creator and one created order narrows the field to what can actually be investigated. It is not a cage on inquiry. It is a starting point that makes careful inquiry possible.
+Nor is beginning here a cage on inquiry. An inquiry that treats every conceivable account of origins as equally likely has no way to focus; beginning from one Creator and one created order narrows the field to what can actually be investigated.
 
 ## The questions the book will answer
 
@@ -180,7 +180,7 @@ Suppose you drop the stone from the path. It falls. Time the fall and measure th
 
 Now ask a different question. What *is* gravity? Is it a force reaching across space, as Newton's equations seem to say? Is it the curvature of a spacetime that exists as a kind of thing in its own right? Or is spacetime itself a set of relations between events, with no existence apart from them? Physicists and philosophers who accept every one of those measurements still disagree about these questions, and nobody yet knows how gravity fits with quantum theory. The disagreement is not about whether the stone falls, or how fast. It is about what kind of reality the equations describe.
 
-That gap, between describing how something behaves and knowing what it is, is the subject of this chapter. It runs through all of our knowledge of the physical world. A discipline can be locally exact and still leave globally consequential questions about what exists unanswered, and seeing that clearly is the key to everything this book attempts.
+That gap, between describing how something behaves and knowing what it is, is the subject of this chapter. Seeing it clearly is the key to everything this book attempts.
 
 ## Six layers of knowing
 
@@ -207,31 +207,26 @@ Here it helps to distinguish two things often run together. **Methodological nat
 
 The same discipline applies to theology. Quoting Scripture does not make an argument rigorous if the step from the text to the conclusion is left unexplained. This book begins from Scripture openly. It also tries to show, at each important point, whether a claim is something Scripture teaches, something inferred from what Scripture teaches, or a proposal that Scripture permits but does not state. Metaphysical honesty means making these assumptions and inferences visible, so a reader can see where they are and decide what to make of them.
 
-## The levels of claim in this book
+## The status of each claim
 
-Because of that, the book keeps track of what kind of claim it is making. It does not label every sentence, which would make it unreadable, but these distinctions are always in play:
+Because of that, the book keeps track of what kind of claim it is making. It does not label every sentence, which would make it unreadable, but it uses one small, fixed vocabulary of status throughout:
 
-| Kind of claim | Example from this book |
+| Status | Example from this book |
 | --- | --- |
-| Scriptural commitment | God created the heaven and the earth. |
-| Observation | A dropped stone falls. |
-| Mathematical description | Distance fallen grows with the square of the time. |
-| Well-tested physical model | General relativity's predictions are precisely confirmed. |
-| Contested interpretation | Whether quantum events are fundamentally chancy. |
-| Philosophical or ontological inference | Description does not by itself settle ontology. |
-| Theological inference | The substrate is a creature and not divine. |
+| Scriptural or theological constraint | God created the heaven and the earth. The substrate, if it exists, is a creature (an inference from Scripture, marked as one). |
+| Empirical observation | A dropped stone falls. |
+| Mathematical or physical constraint | Distance fallen grows with the square of the time. General relativity's predictions are precisely confirmed. |
+| Ontological inference | Description does not by itself settle ontology. |
 | Relational Substrate working hypothesis | Physical things are constituted within relations. |
-| Model result | In a computer model, a rule that forbids a change differs exactly from one that merely makes it unlikely. |
-| Exploratory research, not yet a formal record | Two states that look the same can differ in ways a later interaction reveals. |
-| Open question | How consciousness relates to physical order. |
+| Mechanism candidate | A specific proposed structure for matter. The book names such candidates and does not rely on them. |
+| Open question | How consciousness relates to physical order. Whether quantum events are fundamentally chancy. |
+| Rejected | That a coherent account is thereby true. |
 
-Appendix E applies the same vocabulary to every major claim in the book.
-
-When the book reports something from one of the project's computer models, it means that it happened in a model built on stated assumptions. A model can show that an idea is possible, coherent and capable of doing work. It cannot show that nature works that way. Some conclusions come from exploratory sessions not yet published as formal records, and the book marks them.
+Two further labels say where a claim came from, not how firmly it is held. A **model result** happened in one of the project's computer models, built on stated assumptions. A model can show that an idea is possible, coherent and capable of doing work. It cannot show that nature works that way. An **exploratory** result comes from research sessions not yet published as formal records. Appendix E gives the status of every major claim in the book.
 
 ## Local, regional and global coherence
 
-How, then, does one judge an ontology, if no measurement can display it directly? The answer this book gives is **coherence**. At its simplest, coherence means that an account fits together without contradiction. That is necessary, but it is not enough. A sufficiently elaborate story can avoid every explicit contradiction while remaining a collection of separate compartments, each internally tidy and none genuinely connected to the others. Coherence in the sense this book uses also asks whether the parts are really connected, and whether real distinctions survive the connecting. Coherence comes in degrees of scope, and three are worth naming.
+How, then, does one judge an ontology, if no measurement can display it directly? The answer this book gives is **coherence**. Freedom from contradiction is necessary but not enough: an elaborate story can avoid every contradiction while remaining a set of tidy compartments, none really connected to the others. Coherence in this book's sense also asks whether the parts are connected, and whether real distinctions survive the connecting. It comes in three degrees of scope.
 
 **Local coherence** is achieved when a model explains a bounded phenomenon internally. An equation fits the measurements of falling stones. A theory accounts for the colours of a particular kind of glass. A model reproduces a pattern in one regime. Much of science operates, quite properly, at this level.
 
@@ -270,23 +265,17 @@ The appeal to coherence is not a special method invented for this book. It is ho
 
 Consider a doctor diagnosing an illness. She has a set of symptoms, some test results and a patient's history, none of which is conclusive alone. She forms the diagnosis that best accounts for all of them together, and remains ready to revise it if a new result does not fit. A jury does the same with testimony and evidence. So does a historian reconstructing what happened in a century no living person saw. So, on a smaller scale, do you, when you recognise a friend's voice on a crackling telephone line, or decide that a noise downstairs is the cat. Philosophers call the pattern *inference to the best explanation*. Studies of reasoning describe how people weigh competing hypotheses by how much of the evidence each explains and how well the pieces hang together.
 
-Cognitive science adds that perception itself works in a related way. On one influential family of accounts, the brain continually anticipates its incoming signals and corrects its expectations against them. What we experience as simply seeing the stone is already the product of a great deal of rapid, unconscious inference under uncertainty. The specific models are debated, and this book does not depend on any of them. The modest point is enough: **human understanding normally depends on assembling the most coherent account available from incomplete evidence.** We rarely possess exhaustive, certain access to the facts. We judge, compare, anticipate, and revise. Our sense of certainty is often the felt result of a coherence we have not noticed ourselves constructing.
+Perception itself may work in a related way: on one influential family of accounts, the brain continually anticipates its incoming signals and corrects its expectations against them. The models are debated, and the book does not depend on them. The modest point is enough: **human understanding normally depends on assembling the most coherent account available from incomplete evidence.** We rarely possess exhaustive, certain access to the facts. We judge, compare, anticipate, and revise. Our sense of certainty is often the felt result of a coherence we have not noticed ourselves constructing.
 
 If that is how ordinary knowing works, then asking for the most globally coherent account of reality is not an eccentric substitute for evidence. It is the same activity, carried out at the largest scale.
 
-## Observation still decides a great deal
+## What observation decides, and what it cannot
 
 Coherence is not proof of truth. A worldview can be internally coherent and false; a detailed and consistent story about a flat Earth is still wrong. The book says this once, here, and takes it as read from now on. Observation constrains ontology powerfully, and in three ways.
 
 First, robust observation rules out accounts that contradict it. Any ontology of the physical world must account for the measured speed of light, the stability of atoms and the precise predictions of quantum theory, or it fails, however elegant it is. Second, observation reveals regularities that any account must respect, even when it cannot yet explain them. Third, observation can test specific proposals. If a framework predicts something definite, measurement can confirm it or reject it. Several proposals of the Relational Substrate project have been tested in exactly this way. Some survived, some failed, and the failures are recorded in the project's public research history.
 
-What observation cannot do by itself is display the deepest ontology as one more visible object. It narrows the field. It rarely, if ever, picks out a single winner. The deepest account is chosen, provisionally, by asking which of the accounts that observation still permits makes the most coherent sense of everything else we know.
-
-## What kind of argument this is
-
-No measurement can display the deepest structure of created reality as one more visible object. Empirical work tests predictions, rejects incompatible models and reveals regularities. It does not convert an interpretation of what lies beneath all measurement into something measured. So the book does not offer an empirical proof of the Relational Substrate.
-
-What it offers is a **global coherence argument**, and it holds itself to a plain standard. Here is what the book proposes. Here is why. Here is what supports it. Here is what would count against it. Here is what remains unknown. Then it follows the consequences. A hypothesis that is stated clearly enough to be wrong can be improved. One that is hedged until it says nothing cannot. Chapter 8 names observations that would count against particular claims.
+What observation cannot do is display the deepest structure of created reality as one more visible object. It narrows the field and rarely, if ever, picks out a single winner. So the book does not offer an empirical proof of the Relational Substrate. It offers a **global coherence argument**, and holds itself to a plain standard. Here is what the book proposes. Here is why. Here is what supports it. Here is what would count against it. Here is what remains unknown. Then it follows the consequences. A hypothesis stated clearly enough to be wrong can be improved. One hedged until it says nothing cannot. Chapter 8 names observations that would count against particular claims.
 
 With these tools in hand, the book can return to the stone and ask the first ontological question. The stone appears to be a separate thing, sitting on the path, distinct from the light, the air and you. Is that what it fundamentally is?
 
@@ -318,7 +307,7 @@ There are reasons to doubt that assumption at the deepest level. Two come from p
 
 The first reason is that physics has found no truly isolated thing. Everything physics describes interacts, and its properties are specified by how it interacts. An electron's charge is not a little label it carries; it is its capacity to interact in a particular way. In quantum field theory, the mathematics treats particles as excitations of fields rather than as self-standing pellets in a void. What that mathematics describes is debated, but the pellet picture no longer sits comfortably at the base.
 
-The second reason is that the deepest successful theories describe relations more naturally than things. General relativity describes gravity in terms of the geometry relating events. Quantum theory describes systems whose joint state cannot be broken down into separate states of the parts. This is entanglement, and it has been confirmed many times. Some physicists and philosophers have drawn relational conclusions. Gottfried Leibniz argued in the eighteenth century that space is nothing over and above the order of relations among things. In the 1990s the physicist Carlo Rovelli proposed a *relational* interpretation of quantum mechanics, in which properties are always properties relative to other systems. A school in the philosophy of science called structural realism holds that what our best theories most securely describe is structure, the pattern of relations, rather than the intrinsic natures of objects. These positions are contested, and the book's argument does not rest on any one of them. They show that the same mathematics is compatible with relation-first readings. The description underdetermines the ontology.
+The second reason is that the deepest successful theories describe relations more naturally than things. General relativity describes gravity in terms of the geometry relating events. Quantum theory describes systems whose joint state cannot be broken down into separate states of the parts. This is entanglement, and it has been confirmed many times. Some have drawn relational conclusions: Leibniz, that space is nothing over and above the order of relations among things; Carlo Rovelli, that quantum properties are always relative to other systems; the structural realists, that our best theories most securely describe structure, the pattern of relations. These positions are contested, and the argument does not rest on any of them. They show that the same mathematics is compatible with relation-first readings. The description underdetermines the ontology.
 
 The third reason is the one this book cares about most, and it comes from coherence rather than from physics. If the basic furniture of reality is self-contained objects, then every relation has to come from somewhere outside the objects. Causation, influence, communication, dependence, belonging, responsibility: each has to be added on top of a world that does not, in itself, contain any of them. This becomes a serious difficulty when we reach life and persons, where relation is central. Chapter 9 will press the point in detail. Here it is enough to notice that the object picture makes relation secondary all the way down. The rest of the book tests whether that makes the world harder to understand as a whole.
 
@@ -425,7 +414,7 @@ A rule can **forbid**. It can make some transition impossible, so that the door 
 
 The difference can be made exact in the simplest relational setting one can write down. Imagine a handful of points between which links form and dissolve one at a time. Left alone, every link toggles with equal chance, and the system wanders through every pattern of links. Now add rules. A rule might say "never form the link between these two points", or "when two links are present, the third is four times as likely to form". The project's constraint laboratory listed every rule of this kind, and every combination of up to three, for the smallest such worlds, and worked out *exactly*, by calculation rather than simulation, how each rule set changed the system's long-run behaviour.
 
-The result was clean. Rules that **forbid** were the only rules that changed which patterns could be reached at all. Only they could create dead ends, change the basic rhythm of movement, or cut the space of possibilities in two. Rules that merely **favour** never did. They shifted how much time the system spent in each pattern, sometimes substantially, but every pattern reachable before stayed reachable. The same held when rules were allowed to respond to how many links were present in the whole system: every genuinely new pattern of possibility came from a forbidding rule. Two further results matter. Structurally different rules could together cancel exactly, leaving the system as it was, so more rules do not automatically mean more effect. And some rules changed how the system moved between patterns while leaving simple summaries exactly where they were.
+The result was clean. Rules that **forbid** were the only rules that changed which patterns could be reached at all. Only they could create dead ends, change the basic rhythm of movement, or cut the space of possibilities in two. Rules that merely **favour** never did. They shifted how much time the system spent in each pattern, sometimes substantially, but every pattern reachable before stayed reachable. The same held when rules were allowed to respond to how many links were present in the whole system: every genuinely new pattern of possibility came from a forbidding rule.
 
 These are mathematical facts about a model, not discoveries about nature. What the model exhibits is a distinction that can be named:
 
@@ -433,6 +422,8 @@ These are mathematical facts about a model, not discoveries about nature. What t
 - **Tendency** is how likely an admissible transition is compared with the others.
 
 Admissibility decides the shape of the possible. Tendency weights the possible without changing its shape. Tendency is not a probability that anyone, or anything, assigns. It names how created order is disposed among the admissible options: more often this, less often that. The book proposes that the same distinction runs through created physical order: whatever conditions actualisation has both a shape and a weighting. The model shows that the distinction is sharp and fruitful. It does not show that the created world uses it.
+
+Later work in the same models located the difference more exactly. In averages, a ban behaves like the far end of ever-stronger disfavouring. What only a ban changes is the *shape of the histories that are possible*: some changes become one-way, and some states can be regained only by first undoing something else. So a persisting absence is either slow, where return is possible but unlikely, or *gated*, where return is impossible until another relation changes. A ban on forming links never made anything permanently unrecoverable, but hard rules could leave a system where nothing at all can happen. Whether anything in created order corresponds to that total arrest is open (Appendix E.8).
 
 One caution about the word. In this book, *admissible* means "physically possible within created order". It never means "morally permitted". Chapter 12 will distinguish physical, operational and moral admissibility explicitly. Until then the word carries only its physical sense.
 
@@ -524,7 +515,7 @@ Notice what the word does not yet say. Calling a process stochastic says how it 
 
 Radioactive decay is not an isolated curiosity, and the layers of Chapter 2 sort it cleanly. *Observation and measurement:* repeated quantum measurements produce outcomes whose frequencies are stable and exact. *Mathematical relation:* quantum theory gives its predictions as probabilities. It does not say where an electron will be found, only how likely each place is.
 
-*Interpretation:* whether nature itself is fundamentally chancy is a different question, and a contested one. On several interpretations of quantum theory, the probabilities express genuine openness in the world: until an outcome occurs, it is not fixed. On others, the probabilities express our ignorance of hidden details, or reflect the way a single deterministic universe looks from inside one of its branches, and the underlying reality is fully determined. These interpretations agree about every measurement made so far and disagree about what is there. (Theories that modify the quantum dynamics with spontaneous collapse make slightly different predictions, and experiments are testing them.) A superbly successful description is joined to more than one ontology. The probabilities are established. Whether nature is fundamentally indeterministic is not.
+*Interpretation:* whether nature itself is fundamentally chancy is a different question, and a contested one. As Chapter 2 noted, some interpretations of quantum theory read the probabilities as genuine openness in the world, and others as ignorance of a reality that is fully determined, while all agree about every measurement made so far. The probabilities are established. Whether nature is fundamentally indeterministic is not.
 
 ## The proposal: constrained stochastic actualisation
 
@@ -630,7 +621,9 @@ This matters for how the book understands what is actual. Chapter 4 called the a
 
 **Persistence** can now be described more fully. It is the continued re-actualisation of a thing within its relevant equivalence class, and, for a continuing individual, along an unbroken history. The river persists because, moment by moment, flowing water keeps re-establishing a river-shaped pattern within its banks, carrying with it its channel's history. The flame persists because combustion keeps re-establishing a flame-shaped region of light and heat. On the relational proposal the stone persists in the same way, though far more slowly: its crystal lattices and the bonds that hold its grains keep re-establishing themselves through the small, ceaseless fluctuations of its atoms.
 
-Stability is always stability *of something*, *against some kind of disturbance*, *over some length of time*. The stone persists against rain for centuries and against a hammer for a moment. No created thing is stable against everything forever. To say that something persists is to say that the changes it actually undergoes stay within the class that preserves what it is.
+Chapter 5's three qualifiers apply: stability is of something, against some disturbance, for some time. The stone persists against rain for centuries and against a hammer for a moment. No created thing is stable against everything forever. To say that something persists is to say that the changes it actually undergoes stay within the class that preserves what it is.
+
+The project's later models added a discipline to the word. *What is likely* and *what lasts* are different questions: two model systems agreeing on how often each state occurs, how dense and how active they are, differed more than twentyfold in how long their patterns survived. So a claim of persistence must say what it was compared with, must separate *reaching* a state from *surviving* in it, and should show that a structure outlasts its own parts before treating it as a point of reference (Appendix E.8).
 
 ## Preserving is not repairing
 
@@ -642,10 +635,11 @@ An equivalence class survives every change that keeps a thing inside it. It does
 
 Provenance also gives the clearest sense of what memory is at the physical level. Bend a paper clip back and forth and it does not return to its first condition; eventually it breaks. A piece of iron, magnetised and released, stays magnetised. Its present state depends on its history, not only on its present surroundings. Physicists call this **hysteresis**, and it is well understood in many materials. That much is mainstream science.
 
-Two further pieces of support, of different strengths, point the same way.
+Three further pieces of support, of different strengths, point the same way.
 
 - **Directional evidence.** In published metal-fatigue data, the *order* of loads matters: gentle cycles first, then harsh, leaves a part more durable than the reverse at equal totals, though the simplest standard model says order makes no difference. The same direction appears in three unrelated domains. The project's model predicted the size of the effect badly, so this is a directional finding only.
 - **Memory without a history variable.** When a genuinely three-way relation in a small relational model was hidden from view, the visible two-way links behaved as though they remembered their recent past, although nothing in the rules recorded history. Apparent memory can come from present structure that a description leaves out (Chapter 8).
+- **History as present state.** In later models, one visible arrangement of links faced different futures depending on how it had come about. Counting the carried history as part of the present state made the future depend on the present alone again. That history stayed predictive after exact details were forgotten, and a coarse description could hide it entirely. These are model results, not a law of memory in nature.
 
 The book's proposal unites these. **Memory, at the physical level, is past distinctions embodied in present relations so that they alter what is currently reachable, how likely it is, or how a thing responds.** No separate memory substance is needed. The bent paper clip remembers its bending in its bent crystal structure and nowhere else. **Status:** RS working hypothesis. It will be useful later, when the book speaks of habits, of character, and of the slow hardening Scripture describes (Hebrews 3:13), always as a structural analogy and never as an explanation of moral life.
 
@@ -680,6 +674,8 @@ The same caution applies, at a different boundary, to human persons. Persons hav
 
 If change is the actualisation of admissible transitions, then time, on the relational proposal, is the **ordering of actualisation**: the before-and-after of change itself, rather than an independent container that would still be ticking if nothing happened. This is an old view, held in different forms by Leibniz and others, and it is an ontological interpretation. It must sit with what is measured: clocks run at different rates at different heights and speeds, exactly as general relativity predicts. General relativity's mathematics treats time geometrically, as part of spacetime. Whether spacetime is a substance or an ordering of relations among events is a question of interpretation, not of measurement. The book's reading is that clocks are physical processes, and the time they keep is the ordering of the changes they undergo.
 
+Ordering is not yet *direction*. The book calls a settled, directed order of change **succession**: this, then that, and not the reverse. In the project's simplest models succession does not come free. Rules that merely make some states more likely give preferred states but no direction. Direction needs a tendency that favours going round a cycle of changes one way, or a rule that makes some change one-way. Its characteristic pattern is a handover: a link forms, and the link that supported it dissolves. This is not a claim about the arrow of time in nature, and no model claim about time is free of the modeller's clock: counting steps and measuring continuous time can disagree (Appendix E.8).
+
 ## The stone, made manifest
 
 The stone is a stable, history-bearing configuration. It is also *manifest*: it presents itself to other things, scattering light, resisting pressure, making itself detectable and encounterable. Manifestation in this sense belongs to physical order. It is something a stone does whether or not anyone is looking. It is not the same as anyone's *awareness* of the stone, which belongs to the category of persons, as Chapter 11 will insist. For the stone to make any difference to you, some distinction in it must become consequential to you. In the daylight scene, light is how that happens. What is required for any distinction to become consequential to another state is the subject of the next chapter.
@@ -692,7 +688,7 @@ Return to the path in the morning light. Sunlight falls on the stone. Its grey s
 
 Something about the stone made a difference in you. The stone did not move. Nothing from its surface flew into your head. Yet the distinction between its grey body and its pale vein became a distinction in what you see.
 
-This chapter asks what is required for that to happen, and its answer reaches far beyond light. Whenever one thing is consequential to another, three conditions hold. Something in one relational condition is capable of making a difference beyond itself. A dependency preserves that distinction well enough for something else to depend on it. And another state comes about, or is constrained, *because of* it. The project names this grammar **Transmit, Carry, Receive**, often written **T-C-R**. This book proposes that T-C-R is the grammar of consequential manifestation: the logical structure by which any distinction in created order becomes consequential to another state. The seeing of the stone is one instance. The chapter builds the grammar from that instance, then states the stronger claim.
+This chapter asks what is required for that to happen, and its answer reaches far beyond light. The project names the answer **Transmit, Carry, Receive**, often written **T-C-R**. This book proposes that T-C-R is the grammar of consequential manifestation: the logical structure by which any distinction in created order becomes consequential to another state. The seeing of the stone is one instance. The chapter builds the grammar from that instance, then states the stronger claim.
 
 ## The grammar in its minimal form
 
@@ -778,17 +774,7 @@ A distinction may be transmitted, and even carried, without ever reaching conseq
 
 ## The whole grammar
 
-In the manifest world the three parts often look like this:
-
-```text
-source distinction
-  → transmission            (the distinction becomes capable of constraining something
-                              beyond itself; the source may or may not be changed)
-  → carriage                (a chain of dependency preserves the relevant distinction,
-                              across one or more, possibly changing, carriers)
-  → consequential reception (another state is changed, or constrained, in a way that
-                              depends on what was carried)
-```
+In the manifest world each part usually has a visible vehicle: something emitted, a chain of carriers, a receiver changed by what arrives.
 
 ![Figure 4. Transmit, Carry, Receive, as it appears in manifest cases. A distinction at the source becomes capable of constraining something beyond itself; a chain of dependency preserves the relevant distinction across substitutable carriers; a compatible receiver is changed in a way that depends on it. The dependency persists while the vehicles change. At substrate depth the carrier may simply be the relation.](v2/figures/fig-tcr.png)
 
@@ -824,35 +810,21 @@ The book's working formulation is this:
 
 The formulation was checked against the project's simplest relational models before being adopted. In them, a three-way condition changes the likelihood of the next two-way event: a present distinction modifies what happens next by weighting it, without determining it. The initial value of that same condition is soon forgotten: within a short run, nothing in the visible state depends on it any longer. On the formulation, the initial distinction has stopped being causal for that state, because no dependency preserves it, while the condition's *current* value goes on mattering. That is the T-C-R test at work. Rules that forbid a change alter what can be reached at all, and rules that merely favour it alter only how likely it is. Those are two distinct ways of being causal. **Status:** working hypothesis. It fits the models. Whether it is the right account of causation in nature is a question of coherence, not of those models.
 
+The account also disciplines a common word. To say that one change "enabled" another can mean four different things: that it came first (*precedence*); that it removed competitors, so the other became the likelier next event (*opportunity*); that it changed the other's own tendency (*rate*); or that it made the other possible at all (*support*). Only the last two are changes of admissibility or tendency, and only support is the work of a forbidding rule. In the project's later models the senses came apart cleanly. Most soft "enabling" turned out to be opportunity.
+
 ## Manifestation
 
 There is one further reason T-C-R matters, and it is the deepest. The book has proposed a created relational order beneath the manifest physical world of stones and light. For that order to be manifest at all, as material and experienced reality, there must be a **consequence-preserving relationship** between distinctions in the underlying order and the actual world we meet. If distinctions at the deepest level could make no difference to anything manifest, they would be idle.
 
 That is a minimal claim, and it should be kept minimal. It is tempting to picture something invisible being *transformed* into something visible, as though a hidden object rose through layers and emerged as a stone. That is only one possible architecture, and the book does not assume it. The underlying order and the manifest world might be two descriptions of one relational fact. They might be different resolutions of one order. They might be related by a mapping not yet understood, or in a way not yet conceived. The question of whether the substrate is itself spatial, or whether space arises from it, also remains open. What the book does claim is that, whatever the architecture, consequence must be preserved between them. That is the T-C-R insight applied at its deepest point.
 
-## How T-C-R connects to what came before
+## How T-C-R gathers what came before
 
-T-C-R is not a separate principle added to the previous chapters. It draws them together.
+T-C-R is not a separate principle added to the previous chapters. It draws them together. It is what mediation requires, if nothing acts across a gap of non-relation (Chapter 3). It is shaped by **admissibility** (Chapter 4) in what a source can transmit, what dependencies exist and what a receiver can register. It is shot through with **constrained chance** (Chapter 5): which molecule in your retina absorbs light from the stone at a given instant is a matter of chance, and the image is steady because many such events compose. And it depends on **identity** (Chapter 6): the carried distinction persists as an equivalence class across changing carriers, with its provenance where something downstream depends on it.
 
-It is how **relation** becomes **consequence**. Chapter 3 proposed that nothing acts on anything else across a gap of non-relation. T-C-R says what mediation requires.
+Together these show that a relational world is not a frozen lattice in which everything is related and nothing happens. Relation becomes history: a distinction here makes a difference there, which can in turn be transmitted, carried and received. Life is built from such chains (Chapter 10), and so is human communication (Chapter 11). The theological chapters use the grammar, with care, as a lens on some forms of corruption and restoration (Chapters 13 and 14).
 
-It is shaped throughout by **admissibility** (Chapter 4): in what a source can transmit, in what dependencies are available, and in what a receiver can register.
-
-It is shot through with **constrained chance** (Chapter 5). At the level of atoms, emission and absorption are probabilistic. Which particular molecule in your retina absorbs light from the stone at a given instant is, on the standard reading of physics, a matter of chance. The image you see is reliable because very many such events, each open in itself, compose into a stable pattern.
-
-And it depends on **identity** (Chapter 6) at every stage. The carried distinction persists as an equivalence class across changing carriers. Provenance is carried with it where something downstream depends on it. The receiver is changed by reception and remains itself: your eye, having seen the stone, is still an eye.
-
-## What is established, and what is proposed
-
-Some of this is established. Emission, propagation and absorption are well-understood physics, and T-C-R organises that physics without replacing it. It has not been shown to predict anything the physics does not. Receivers really do differ in their semantics, and exactly-once reception really is a requirement only of transactional receivers.
-
-Some of it is proposed. That T-C-R is the form of consequential relation itself, that it reaches to the substrate, that it is recursive, and that it supplies the right account of cause: these are working hypotheses of this book.
-
-And some of it is open. In every model the project has built, the dependencies that carry distinctions were designed. Whether created order generates its own carriers and lineages from its minimal relations is not known. Nor is the architecture of manifestation known.
-
-## Why this matters
-
-T-C-R matters for the book because it shows how a relational world is a connected world of consequence, not a static web. Relation in Chapter 3 might have suggested a frozen lattice in which everything is related and nothing happens. T-C-R shows how relation becomes history. A distinction here makes a difference there, which becomes a distinction that can in turn be transmitted, carried and received. Life is built from such chains (Chapter 10). So is human communication (Chapter 11). The theological chapters will find it a useful lens, used with care, for some forms of corruption and restoration (Chapters 13 and 14).
+**Status.** Emission, propagation and absorption are established physics, and T-C-R organises that physics without replacing it. It has not been shown to predict anything the physics does not. That T-C-R is the form of consequential relation itself, reaches to the substrate, is recursive and supplies the right account of cause are working hypotheses. Two things are open. In every model the project has built, the dependencies that carry distinctions were designed, and whether created order generates its own carriers from minimal relations is not known. Nor is the architecture of manifestation.
 
 ## What T-C-R does not mean
 
@@ -886,15 +858,15 @@ Several different problems are hidden inside the question of regularity, and it 
 
 Part of the answer has long been understood, and it belongs to mainstream science rather than to the Relational Substrate project. When very many chance events are combined, their total can be highly predictable even though each event is open. Flip a coin ten times and you might get seven heads. Flip it ten million times and the proportion of heads will almost certainly lie within a tenth of a per cent of a half. This is the **law of large numbers**. In its simplest familiar form it concerns independent events. Mathematicians have proved versions of it for events that are dependent on one another, provided the dependence fades enough over time or distance.
 
-Physics is built on this in many places. The gas laws describe the combined behaviour of countless molecular collisions. The restless jittering of tiny particles suspended in water, and the steady spreading of one substance through another, were traced in 1905 by Albert Einstein to the random jostling of molecules. His analysis became one of the first strong pieces of evidence that molecules are real. The precise half-lives of radioactive elements (Chapter 5) are the aggregate of countless open individual decays. In each case a deterministic-looking law at the large scale is the stable behaviour of many chancy events at the small scale.
+Physics is built on this in many places: the gas laws; the jittering of small particles in water, which Albert Einstein traced in 1905 to the random jostling of molecules; the precise half-lives of Chapter 5. In each case a deterministic-looking law at the large scale is the stable behaviour of many chancy events at the small scale.
 
 Physicists call such laws **effective**: they hold to great precision at the scale where they apply, without describing what happens underneath. The book uses the phrase **effective determinism** for behaviour that is regular, reliable and predictable to the precision we can observe, whatever the underlying process. It is a fact about regularity, not a metaphysical claim that nothing could have happened otherwise.
 
-Two neighbouring ideas need to be kept apart from it. **Mathematical determinism** is a property of equations: given the state at one moment, the equations fix the state at every later moment. Many of the equations of physics are deterministic in this sense, including the fluid equations discussed below, even when what they describe is the aggregate of very many chancy events. A deterministic equation can therefore describe excellently a process that is not deterministic beneath it. And an **attractor** is a precisely defined idea in the mathematics of changing systems. It is a state, or set of states, toward which a system tends from a wide range of starting points and to which it returns when slightly disturbed. The word is easily used loosely for any outcome that turns up often. The illustration in Chapter 5 is a warning: its system reliably reached the right answer, but conservation and an ordinary survival calculation explained that, not any "well" drawing it in. Reliable outcomes are not, by themselves, evidence of an attractor.
+Two neighbouring ideas need to be kept apart from it. **Mathematical determinism** is a property of equations: given the state at one moment, the equations fix the state at every later moment. Many of the equations of physics are deterministic in this sense, including the fluid equations discussed below, even when what they describe is the aggregate of very many chancy events. A deterministic equation can therefore describe excellently a process that is not deterministic beneath it. And an **attractor** is a precisely defined idea in the mathematics of changing systems. It is a state, or set of states, toward which a system tends from a wide range of starting points and to which it returns when slightly disturbed. The word is easily used loosely for any outcome that turns up often. But a reliable outcome is not by itself evidence of an attractor: the illustration in Chapter 5 reached the right answer every time because of conservation, not because anything drew it there.
 
 ## Same odds, different behaviour
 
-That is the first problem, and averaging answers it. Notice what averaging does and does not settle. Independent chance events are already enough to make an average stable. Nothing more is needed for the pressure in a tyre to be steady. But an average is only one feature of a whole. The second problem begins with a simple puzzle.
+Averaging answers the first problem: independent chance events are enough to keep the pressure in a tyre steady. But an average is only one feature of a whole. The second problem begins with a simple puzzle.
 
 Imagine two rooms, each with a hundred people tossing fair coins at the same moment, again and again. In the first room everyone tosses independently. In the second, people are paired, and each pair agrees in advance that whatever one gets, the partner will report the opposite. For any single person, in either room, the chance of heads is exactly one half. Nothing about the individual odds differs. Yet the rooms behave completely differently as wholes. In the first room the number of heads wanders from toss to toss, sometimes 44, sometimes 57. In the second room it is exactly fifty, every time.
 
@@ -925,15 +897,9 @@ The two rooms of coin-tossers had the same average. They differed in everything 
 
 Exploratory work on chance events arranged in rings of locally coupled units, not yet a formal record, sharpens the point. Units with the same local chances could produce very different global behaviour depending on how their fluctuations were coupled. And it was not correlation as such that mattered. A relation between two events can be statistically strong and still irrelevant to the property in question. A modest dependence can be decisive if it is aligned with what matters. The questions that decide the outcome are these: which events are coupled, in which direction, under which conditions, what their coupling preserves, and what difference it makes downstream. Coordination that depends on the current state, tightening where a fluctuation would otherwise do harm, behaves differently from coordination applied uniformly.
 
-The same work drew a distinction that is easy to miss. A system can be stable *on average* while its fluctuations are not. The average may settle and a simple law may describe it well, while the size and shape of the variations around it remain unlike those of another system with the same average. Stability can then be layered. Some quantities of a whole may be stable in their mean, some sharply concentrated, some exactly conserved, and some still genuinely variable. A stable mean is not stable fluctuations, and stable fluctuations are not yet the full relational coherence of the whole.
+The same work showed that stability comes in layers. A whole can be stable in its mean while its fluctuations are not, and some of its quantities may be exactly conserved while others still genuinely vary. A stable mean is not stable fluctuations, and stable fluctuations are not yet the full relational coherence of the whole.
 
-None of this mathematics belongs to a relation-first ontology. Probability theory, statistical mechanics and network science describe dependence and coupling with great sophistication, and object-based models represent them routinely. What the relational proposal changes is the reading. On an object-first reading, the dependence structure is an extra fact about how already-complete things happen to be related. On the relational reading, it belongs to *what the physical whole is*: the coordination of its parts is part of their constitution, not a statistic laid over them. That is the book's ontological proposal about the mathematics, not a discovery within it.
-
-## Local rules and global order
-
-One more distinction is worth carrying forward. Local rules can preserve a global result, and they need not make it cheap. In the Chapter 5 model, restricting cancellation to neighbouring regions still gave exact answers every time, but the number of steps grew with the number of regions. Some operations could not be done by purely local rules at all. When this book speaks of the regularity of created order as a whole, it does not claim that local relations alone account for it. It claims that the regularity is real, and that local relation, coordination and constraint are part of how it holds.
-
-Three things are now on the table, and it is worth holding them apart before going on. Averaging can make a mean stable on its own. Coordination among events shapes everything else about the whole: its joint behaviour, its fluctuations, the quantities it holds exactly, and the paths it takes. And neither of these is yet the mathematics that describes the whole. The remaining sections turn to that mathematics, and to what it can leave out.
+None of this mathematics belongs to a relation-first ontology. Probability theory, statistical mechanics and network science describe dependence and coupling with great sophistication, and object-based models represent them routinely. What the relational proposal changes is the reading. On an object-first reading, the dependence structure is an extra fact about how already-complete things happen to be related. On the relational reading, it belongs to *what the physical whole is*: the coordination of its parts is part of their constitution, not a statistic laid over them. That is the book's ontological proposal about the mathematics, not a discovery within it. Nor does the book claim that local relations alone account for the regularity of created order as a whole. Its claim is that the regularity is real, and that local relation, coordination and constraint are part of how it holds.
 
 ## What mathematics is doing
 
@@ -974,6 +940,18 @@ The layers of Chapter 2 apply here with full force. What physics measures about 
 
 What a field is, whether spacetime is a thing or an ordering of relations, whether quantum chance is fundamental, and what a particle is between measurements are questions of interpretation, and they remain open. The equations do not dictate the answers. When an answer is presented as though they did, a metaphysical assumption has borrowed the authority of a measurement. The remedy is not to distrust measurement. It is to notice the assumption, and to test it for coherence like any other proposal.
 
+## Gravity and time in the simplest models
+
+Chapter 2 opened with a question the book has not yet answered: what *is* gravity? The project does not know, and has not derived gravity from the relational substrate. Its Gravity/Time programme asked something narrower: what can the simplest relational models show about attraction and about time? The answers are exact results on systems of at most seven points, and the book adopts them at that scope (Appendix E.8).
+
+First, a rule that favours some pattern of links defines a *relational potential*: a count of that pattern, weighted by the rule. The system spends more time where the count is high. "Attraction" toward a structure is then participation in the favoured pattern, with no named centre and no force reaching across. **Status:** mechanism candidate, in models only.
+
+Second, **gathering**, a lasting preference for relation to a reference structure, is not **succession** (Chapter 6). When the models grew from six points to seven, the directed handover kept its direction in every case, while the only gathering seen alongside it fell to the level of the comparison. Much apparent gathering is density alone, so a claim of gathering must survive adjustment for density. And a reference made of relations is not a neutral frame: its own links take part through the same rules.
+
+Third, a negative result. The rules do *not* tie the rate of activity to the potential. The same preferred states admit very different rates near a structure and far from it, depending on how a rule's weight is split between forming and dissolving links. Measured clocks really do run slower deeper in a gravitational field. A relational reading of that fact would need a principle linking clock rates to relational structure, and these rules do not contain one. Every model claim about attraction or time must also name its clock, because counting steps and measuring continuous time can give opposite answers.
+
+None of this is gravity, and none of it is a theory of time. It shows what the simplest relational rules can and cannot do.
+
 ## What would count against these proposals
 
 A proposal that cannot be wrong in any identifiable way tells us little. So it is worth stating what would count against the specific claims of Chapters 3 to 7, and where they are currently hard to test.
@@ -981,6 +959,7 @@ A proposal that cannot be wrong in any identifiable way tells us little. So it i
 - **Contradicting precise measurement.** Any specific Relational Substrate mechanism that contradicted a precise measurement would fail, however coherent it looked. This has already happened. A model the project built in 2026 predicted the direction of an effect in metal fatigue but its size many times too small, and the project recorded it as a failure of magnitude rather than adjusting the model to fit.
 - **Intrinsic properties at the base.** The relation-first proposal (Chapter 3) would be seriously weakened if physics came to show that its most fundamental entities have fully intrinsic properties, fixed independently of every interaction. The trend of the last century runs the other way, but the question is open.
 - **Entanglement and mediation.** The proposal that influence is always mediated (Chapters 3 and 7) faces real pressure from quantum entanglement. Measurements on two distant entangled particles show correlations that, by Bell's theorem, no theory satisfying certain locality assumptions can reproduce, and experiments have confirmed those correlations. They cannot be used to send a signal, which is why relativity is not violated, and several interpretations, including relational ones, give accounts of them. Bell's theorem rules out a specific class of local explanations, not every conceivable notion of mediation. But entanglement remains the hardest test case for an account of mediated relation, and it is not a solved problem for this one.
+- **Gravity's clocks.** The project has no relational account of gravitational time dilation, and its simplest models show that one would need a principle they do not contain (above). That is an open gap, not yet a refutation, and it marks where a relational account of gravity is most exposed.
 - **The stochastic hypothesis is currently hard to test.** The standard interpretations of quantum theory agree on every measurement made so far, so present evidence cannot decide between a fundamentally chancy world and a deterministic one at that level. (Theories that modify quantum dynamics with spontaneous collapse do make slightly different predictions, which experiments are now testing.) That protects the hypothesis from easy refutation, and it is also a reason to hold it no more firmly than a coherent hypothesis.
 - **The models do not single out RS.** The project's models demonstrate possibilities. Ordinary computer science and probability account for every result they produced. The laboratory's most recent generation also recorded a negative result: a pattern of "dissolution leading to new organisation" that the project hoped to find in its simplest systems did not appear (Appendix B). Results of this kind narrow what the ideas can claim. They show that the ideas are coherent and workable, not that nature uses them.
 
@@ -988,7 +967,7 @@ These limits do not empty the proposals of value. They locate it. The value lies
 
 ## From the stone to everything else
 
-The physical arc of the book is now complete. The stone on the path is a stable configuration within a created order of relation. Its possible forms were bounded and weighted before any became actual. Its actual history unfolded by constrained chance, and that history is still partly present in it. It remains the same kind of thing because its changes keep it within its relevant equivalence class, and the same stone because its history continues unbroken. You see it because a distinction at its surface constrains the light it returns, is preserved by a chain of dependency across changing carriers, and becomes a consequence in an eye able to be changed by it. And its behaviour, along with that of the light, is regular enough to be written in exact mathematics, because many chance events, constrained and coordinated, add up to a reliable whole.
+The physical arc of the book is now complete. The stone is a stable, history-bearing configuration within a created order of relation, seen through a chain of preserved dependency, and regular enough to be written in exact mathematics because many constrained and coordinated chance events add up to a reliable whole.
 
 The problem underneath this whole chapter, then, is not merely how randomness averages out. Mainstream science already understands that well. It is what relational organisation makes stable identity, stable consequence and stable effective law possible across scales, while preserving the distinctions that still matter. Averaging, coordination, effective equations and hidden structure are four different parts of that one question. The Relational Substrate project has not answered it. It has learned to ask it more precisely.
 
@@ -1724,7 +1703,7 @@ Some of it is observation, measurement and well-tested mathematics. Physics desc
 
 Some of it is philosophical argument. Description does not by itself settle ontology. Every account starts from assumptions. Structural analogy is not identity. And, most importantly, global coherence is a stronger test of a worldview than local success. These the book has argued for, and they stand or fall with the arguments.
 
-And some of it is the Relational Substrate proposal itself: that relation is foundational, that actualisation is constrained chance, that relational equivalence can preserve sameness of kind through change (individual continuity being a further question of lineage), that T-C-R names something basic about how created order is connected. These are hypotheses. The project's models have shown them to be coherent and workable, and they do not show that nature works this way. The book's case for them is the case of Chapter 9: that together they make the whole of what we know hang together better than the alternative, with no gulf between the physical world and the human one.
+And some of it is the Relational Substrate proposal itself: that relation is foundational, that actualisation is constrained chance, that relational equivalence can preserve sameness of kind through change (individual continuity being a further question of lineage), that T-C-R names something basic about how created order is connected. These are hypotheses. The project's models have shown them to be coherent and workable, and they do not show that nature works this way. The models have also marked limits: the simplest relational rules give no account of gravity's effect on clocks (Chapter 8). The book's case for them is the case of Chapter 9: that together they make the whole of what we know hang together better than the alternative, with no gulf between the physical world and the human one.
 
 That combination calls for what the first edition called *disciplined confidence*: confidence where the grounds are strong, openness where they are not, and honesty about which is which. Appendix E records the current status of every major claim in one place, together with the questions that remain open and the readings the book rejects.
 
@@ -1826,8 +1805,8 @@ The research behind this book is the work of one author. It has made extensive u
 
 | Programme | Date | What it established | What it did not establish |
 | --- | --- | --- | --- |
-| Validation and order effects | June 2026 | The direction of a history-dependence prediction in metal fatigue was confirmed on open data, and the same direction held in three further domains | The size of the effect: the model's magnitudes were many times too small. Classified by the project as a directional lens, not a quantitative theory |
-| Topological modelling | July 2026 | A coherent derivation, from one assumed substrate structure, of several structural features of matter. Computational checks, with no adjustable parameters, that identity can be carried by a whole-number invariant | Any measured number. The derivation of fermion behaviour and charge quantisation holds only in a special, non-generic case that remains unproven. The substrate structure was chosen, not demonstrated |
+| Validation and order effects | June 2026 | The direction of a history-dependence prediction in metal fatigue was confirmed on open data, and the same direction held in three further domains | The size of the effect: the model's magnitudes were many times too small. Classified by the project as a directional lens, not a quantitative theory. In July 2026 the programme was closed as a drift from the project's objective (decision D1); the directional finding was not withdrawn |
+| Topological modelling | July 2026 | Since July the modelling programme's stated objective has been the *vorton*: a stable knotted structure in the substrate, proposed as the one structural primitive of matter, with light, electricity and magnetism downstream of it (decision D2). A coherent derivation, from one assumed substrate structure, of several structural features of matter. Computational checks, with no adjustable parameters, that identity can be carried by a whole-number invariant | Any measured number. The derivation of fermion behaviour and charge quantisation holds only in a special, non-generic case that remains unproven. The substrate structure was chosen, not demonstrated. The book therefore does not rely on the vorton |
 | Stochastic calculator (SC-001 to SC-027R) | September 2026 | Exact arithmetic outputs from very many distinct chance-driven paths. A number's sameness carried as a conserved equivalence class. No recovery after destruction. A working transmit–carry–receive protocol for decimal carry, in which correctness depended on the receiver counting each carry once. Designed covariance stabilising an aggregate. Reliability explained by an ordinary survival formula | Any unique Relational Substrate mechanism or physical implication. The project's own analysis concludes that ordinary computer science and probability explain every result. The protocol's particular choices (consuming the source, once-only receipt) suit arithmetic and are not general features of T-C-R |
 | Constraint laboratory, Generation 1 | 3 Oct 2026 | Exhaustive census of the smallest relational rule systems (two to five points, links forming and dissolving). Forbidding rules alone change which patterns are reachable, the rhythm of movement and whether the system halts; favouring rules change only how time is distributed | Any claim about nature. Its report of a "cancelling pair" was later reclassified (next row) |
 | Constraint laboratory, Generation 1b | 3 Oct 2026 | The same census, re-analysed after removing sets that write one rule twice with two weights. That reclassifies the "cancelling pair" as a single rule with stacked weights. Genuine global cancellations at three points are 40 structured triples. Exact calculation reveals large hidden variety: one coarse family contains 1,042 distinct exact behaviours, and at five points two systems share every recorded summary yet differ in entropy ("observable equality is not kernel equality") | It does not replace Generation 1's committed records, which stand as the history |
@@ -1835,6 +1814,8 @@ The research behind this book is the work of one author. It has made extensive u
 | Constraint laboratory, Generation 3 | 3 Oct 2026 | An independent three-way relation among three points, existing alongside the pairwise links (16 states). In 7,385 rule sets, a three-way relation that conditions a pairwise change alters the law of pairwise change irreducibly (2,940 sets). Hiding the three-way relation makes the visible pairwise process non-Markov in 5,250 sets: apparent memory with no history variable in the rules. Pure pairwise rules never did either | No new pairwise patterns of possibility. No genuine global cancellations. Constructive reorganisation cannot even be expressed at three points, because pairwise graphs with the same number of links are all alike there. The laboratory now names a probe at four points, not added history, as the next step |
 
 | Constraint laboratory, Generations 4–8D | October 2026 | At four points, with a three-way relation: a current three-way condition exactly changes the weighting of the next pairwise event, while information about its *initial* value in the pairwise state falls below 10⁻¹⁰ within 64 pairwise events. Current efficacy and memory of the initial condition are different properties. Two such conditions compose by adding their log-weights, and their probability consequences are coupled only through normalisation. Systems with the same balanced local information can still behave differently from a given starting graph | Any claim about nature: the rule grammar is the experimenter's. These generations were used in this edition only to check the working account of causation in Chapter 7 |
+| Constraint laboratory, Generations 8E–8P | October 2026 | Constraints compose in an ordinary hierarchy: more complex rules add higher-order relational terms, and several rules add together. Local interaction effects can become lasting differences of shape and occupancy. History carried by the process lets one visible configuration face different futures, and admitting that history into a richer present restores dependence on the present alone. Such history stays predictive when exact detail is forgotten, and a coarse description can hide it completely. History two steps deep can matter where one step does not. Exact accounts of when a passage between states is unaffected by history, and of how much a task needs to know | Physical memory, physical time, gravity, purpose or theology: the laboratory's own integration map excludes these. External review of 8O and 8P is pending. Used in this edition for Chapter 6 (memory) and Appendix E.6 |
+| Gravity, Temporality and Emergent Spatiality (GT), rounds G0–E5D (GT-P001 to GT-P012) | 13–15 Oct 2026 | In the laboratory's grammar, with N ≤ 7 points: rules define relational potentials ("basins"); a direction of change needs a non-gradient tendency or a one-way rule; directed change (succession) and preference for a reference (gathering) separate; a reference made of relations takes part through the same rules; and what is likely is a different question from what lasts. Twenty ontology proposals, adopted in revision 2.5 at their own stated status (Appendix E.8) | Any claim about gravity or time in nature. The rules do not tie clock rates to potential, which is a negative result. Gathering at seven points fell to the null. Several apparent persistence effects reduce to traffic between states once comparisons are matched; a few survive, notably one triangle pattern's durability |
 
 The negative results in Generations 2 and 3 are valuable. It shows that simple pairwise rules, even with a whole-system count added, do not produce the kind of constructive reorganisation the project was looking for, and it narrows the next question. Generation 3 then showed that an independently existing higher-order relation is dynamically productive in a specific way: it carries information about the next pairwise change that the pairwise state alone does not. It does not show that higher-order relation is physically fundamental. None of this is a failure of the ontology, and none of it is a confirmation.
 
@@ -1866,6 +1847,12 @@ The exploratory research distinguished four kinds of recovery: of function, of o
 ## An open problem: where carriers come from
 
 The project has built models in which distinctions, provenance and equivalence are carried through explicitly designed relational protocols, and it has shown that carriers can be substituted while what matters is preserved. It has **not** shown that a physically adequate architecture of carriers and lineages emerges by itself from minimal relational rules, or that nature uses the project's carrier grammar. That is one of the most important open questions in the programme.
+
+## Revisions of this edition
+
+The first edition rested on specific proposed mechanisms (knotted closures in a continuous medium, a closed list of five kinds of change, particular accounts of light and magnetism) that later work did not support; the section below records where each went. The second edition (October 2026) rebuilt the book on more foundational ideas. Revisions 2.1 to 2.3 corrected it against further research and review. Revision 2.4 followed a full human reading: it made global coherence run in both directions, reopened T0, restated T-C-R as the grammar of consequential manifestation, and added Appendix E. Revision 2.5 reduced the reader's load in the Preface and Chapters 1 to 8, gave the book one vocabulary of claim status, adopted the Gravity/Time ontology proposals at model scope (Appendix E.8), and brought this appendix up to date. The working record of each revision is kept with the manuscript in the project repository.
+
+Since October 2026 the project's research rounds have followed a stated method the author calls *open-thetical research*: each round is frozen before it runs, weak, null and failed results are recorded alongside positive ones, and the next round is chosen because of what was observed, not to confirm a prediction.
 
 ## First-edition material now held here
 
@@ -1927,6 +1914,8 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Equivalence class.** All the states that count as "the same" for a given purpose: those that no relevant interaction could tell apart. (Ch 6)
 
+**Gathering.** In the project's models, a time-weighted preference for relation to a reference structure. Distinct from *succession*; neither is gravity. A claim of gathering must name its clock and survive adjustment for density. (Ch 8)
+
 **Identity (of physical things).** Sameness of kind or state: continuity of a thing's relevant equivalence class through admissible change, judged by what reachable future interactions could discriminate. Invariants certify it, and provenance is part of it where it remains consequential. Distinct from *individual continuity*. Personal identity resembles both but is not defined by them. (Ch 6)
 
 **Individual continuity.** Being the same continuing individual, and not merely an equivalent replacement. It requires continuity of lineage and history in addition to equivalence. What carries it in physical things is an open question. (Ch 6)
@@ -1964,6 +1953,8 @@ Each term is used in this book in the single sense given here. The chapter in br
 **Relational substrate.** The proposed created relational order within which physical things are constituted and act. It is not matter, not ether, not a field under another name, not a mind, not a soul and not God. Whether it is itself spatial is open. (Ch 3)
 
 **Stochastic.** Described by probabilities over defined possibilities. The word itself does not say whether the probabilities are *epistemic* (ignorance of hidden details) or *ontic* (genuine openness). Not lawless, not arbitrary, not chaotic. (Ch 5)
+
+**Succession.** A settled, directed order of change. In the project's models it needs a non-gradient tendency or a one-way rule. Distinct from *gathering*. The book's reading of time as the ordering of actualisation concerns order; succession concerns direction. (Ch 6)
 
 **T0.** The book's label for whatever conditions actualisation. That much is a firm commitment. What kind of thing T0 is remains open; "constrained possibility" is the working reading (Appendix E). (Ch 4)
 
@@ -2005,6 +1996,7 @@ Scripture is quoted from the King James Version throughout.
 **Chapter 4.**
 
 - The constraint laboratory's Generation 001 report and charter are in the project repository, branch `research/constraint-lab-v0.1`, under `constraint-lab/reports/` and `constraint-lab/docs/`.
+- On forbidding, favouring and persisting absence in the Gravity/Time programme: `gravity-time/docs/ontology-proposals.md` (OP-4, OP-14, OP-15) and `gravity-time/reports/gt-e3-report.md`.
 
 **Chapter 5.**
 
@@ -2021,7 +2013,9 @@ Scripture is quoted from the King James Version throughout.
 
 - On conservation laws and symmetry: E. Noether, "Invariante Variationsprobleme" (1918).
 - On the July 2026 topological work and its stated limits: `docs/conceptual-phase-completion-2026-07-12.md` and `docs/theta-origin-wpa-2026-07-13.md` in the project repository.
-- On the June 2026 order-effect work: `docs/relational-substrate-validation-status.md`.
+- On the June 2026 order-effect work: `docs/relational-substrate-validation-status.md`; on its closure as objective drift and the re-anchoring on the vorton: decisions D1 and D2 in `docs/decision-log.md`.
+- On history carried as present state (Generations 8H–8P): the laboratory's reports on branch `research/constraint-lab-v0.8p-stopping-sufficiency`, under `constraint-lab/reports/`, and its scoping of what may enter the books, `constraint-lab/formal/book-integration-map.md`.
+- On direction of change, succession and persistence comparisons in the Gravity/Time programme: `gravity-time/docs/ontology-proposals.md` (OP-5, OP-7, OP-8, OP-10, OP-18 to OP-20) and `gravity-time/reports/` on branch `research/gravity-time-admissibility`.
 
 **Chapter 8.**
 
@@ -2034,6 +2028,7 @@ Scripture is quoted from the King James Version throughout.
 - On deriving fluid equations from kinetic theory: S. Chapman and T. G. Cowling, *The Mathematical Theory of Non-uniform Gases* (Cambridge University Press, 1970).
 - On the Navier–Stokes existence and smoothness problem: C. L. Fefferman's official problem description for the Clay Mathematics Institute Millennium Prize Problems.
 - E. Wigner, "The unreasonable effectiveness of mathematics in the natural sciences", *Communications on Pure and Applied Mathematics* 13 (1960).
+- On relational potentials, gathering, clocks and the negative result on clock rates: `gravity-time/docs/ontology-proposals.md` (OP-1 to OP-4, OP-6, OP-9, OP-12, OP-13, OP-16, OP-17) and the GT reports `gt-e0-report.md`, `gt-e1-report.md`, `gt-e2-report.md` and `gt-e5a-report.md` in `gravity-time/reports/` on branch `research/gravity-time-admissibility`. The programme's results are recorded alongside the laboratory's in the shared research-synthesis layer on `main` (`research-synthesis/`).
 
 **Chapter 9.**
 
@@ -2155,7 +2150,15 @@ The status vocabulary is small and fixed:
 | Dependence structure is constitutive of the physical whole | RS working hypothesis |
 | Mathematics describes regularity without being the reality described | Ontological inference |
 | Substrate spatiality | Open question |
-| Closure knots, five operations, torsional light | Mechanism candidate (technical volume; not relied on) |
+| A present state can carry its history: the same visible configuration can face different futures because of history carried in a richer present | Mathematical result in models; RS working hypothesis for created order (E.6) |
+| Forbidding and favouring differ in the structure of possible histories, though their aggregate statistics can grade into each other | Mathematical result in models (E.8) |
+| A persisting absence is either rate-limited or gate-limited | Mathematical result in models (E.8) |
+| Hard admissibility can arrest all change | Open question for created order (E.8) |
+| A direction of succession needs a non-gradient tendency or a one-way rule | Mechanism candidate, model-scoped (E.8) |
+| Succession (ordered change) and gathering (preference for a reference) are distinct | Mathematical result in models (E.8) |
+| "Attraction" as participation in a relational pattern | Mechanism candidate, model-scoped (E.8) |
+| What ties clock rates to relational structure | Open question; the models' rules do not supply it (E.8) |
+| The vorton (a stable knotted field structure), closure knots, five operations, torsional light | Mechanism candidate (technical volume and modelling programme; not relied on) |
 | A coherent account is thereby true | Rejected (coherence is not proof) |
 
 ## E.3 T0
@@ -2213,6 +2216,7 @@ There may be others. Scripture's language of heavens stretched out provokes ques
 - **Individual continuity** (lineage) is distinct from equivalence. An equivalent replacement is not the same individual.
 - **Four recoveries** are kept apart: of function; of organisation (structural or recursive); of the equivalence class; of the same individual. The first three can occur without the fourth.
 - **Personal identity** resembles physical identity and is not defined by it.
+- **History as present state.** In the project's models, the same visible configuration can face different futures because of history carried by the process. Admitting that history into a richer present state restores the dependence on the present alone. Such history can stay predictive after exact detail is forgotten, and a coarse enough description can hide it completely. This supports the reading of memory as past distinction embodied in present relation. It establishes no physical law of memory and no irreducible time.
 
 ## E.7 What the ontology does not currently claim
 
@@ -2232,4 +2236,25 @@ There may be others. Scripture's language of heavens stretched out provokes ques
 - Physical reconstruction is not personal continuity, and resurrection is not natural substrate reconstruction.
 - Moral evil is not merely physical instability, and redemption is not substrate self-repair.
 - Evil was not necessary.
+- No temporal claim drawn from a model is clock-free. A model's count of steps is not a universal clock.
+- Gathering in a model is not gravity, and a directed order of change in a model is not the arrow of time.
+- A model reference is not a centre of nature, and a held structure in a model is a boundary condition, not something the system made.
 - Coherence does not prove the Relational Substrate.
+
+## E.8 Gravity, time and persistence in the simplest models (adopted in revision 2.5)
+
+Revision 2.5 adopts the ontology proposals of the project's Gravity, Temporality and Emergent Spatiality programme (`gravity-time/docs/ontology-proposals.md`, OP-1 to OP-20). Each was written for later review, and each is adopted at the status it proposed for itself. Where a later proposal amends an earlier one, the amended form is adopted. **All are model-scoped**: they describe exact results in finite relational models, at most seven points, whose rules and clocks the experimenter chose. None is a claim about gravity or time in nature.
+
+**Forbidding and favouring (OP-10, OP-14, OP-15; Chapter 4).** In aggregate statistics such as how often, how directed, and how long absent, a hard ban behaves like the extreme of ever-stronger disfavouring. What is new with a ban is the *structure of possible histories*: one-way changes, recovery only by first undoing a supporting relation, and no direct way back. An absence that persists is therefore of two kinds. It is *rate-limited* when return is possible but slow, and *gate-limited* when return is impossible until something else changes. Under hard formation bans nothing is permanently lost. Hard admissibility can also drive a system into a state in which nothing at all is admissible, a total arrest; whether anything in created order corresponds to that is open (OP-4).
+
+**Direction of change (OP-5, OP-7, OP-10; Chapter 6).** Favouring rules come in two kinds. When the rule is the slope of some quantity, a *gradient* tendency, it produces a basin of preferred states with no settled direction of change. A *non-gradient* tendency produces a stationary, directed order of change, which the book calls **succession**. In these models a hard one-way rule can also produce direction, with no favouring at all. The characteristic directed pattern is a *handover*: a relation forms, then the relation that supported it dissolves. The book's reading of time as the ordering of actualisation is untouched. These results concern *direction*, not ordering. **Status:** mechanism candidate, model-scoped.
+
+**Succession is not gathering (OP-8, OP-17; Chapter 8).** **Gathering** is a time-weighted preference for relation to a reference structure. The two separate cleanly. The handover kept its direction in every case tested when the models grew from six to seven points, while the only gathering effect seen alongside it fell to the level of the null comparison. Evidence for one is not evidence for the other. An apparent gathering counts only if it survives adjustment for density; much of it is otherwise density alone.
+
+**Attraction, clocks and potential (OP-1, OP-2, OP-3, OP-6, OP-9; Chapter 8).** In these models a constraint rule defines a *relational potential*: a count of a relational pattern, weighted by the rule's strength. Preferred states follow that potential, and "attraction" toward a structure is participation in the counted pattern, with no named centre and no direction. **Status:** mechanism candidate, model-scoped. But the rules do *not* tie the rate of activity to the potential. The same basin admits very different near and far rates, depending on how a rule's weight is split between forming and dissolving. Under irreversible rules the split changes the preferred states themselves. A relational reading of gravitational clock-rate differences would therefore need a principle these rules do not supply. **Status:** open question, with a negative model result. Every statement that something "attracts" must say which clock is meant, whether it is adjusted for density, and in what density regime. Different clocks can give opposite signs.
+
+**A reference takes part (OP-12, OP-13, OP-16 as qualified; Chapter 8).** A reference made of relations acts on other relations through the same rules, not as a neutral frame. Its internal support is one lever on where new relations form, alongside other structural channels. It is not a general law that support makes a site less available. **Status:** methodological principle; the lever is a mechanism candidate.
+
+**Persistence before reference (OP-18, OP-19, OP-20; Chapter 6).** A structure counts as a reference only once it is shown to outlast its own constituent relations, compared with a matched null, in each clock. *What is likely* and *what lasts* are separate questions. Two systems with the same stationary picture, the same density and the same average activity can differ in lifetime by more than twenty times. A persistence claim must therefore name its comparison and what that comparison matches. It must separate *reaching* a renewed state from *surviving* in it, and it must preserve directed flows rather than averaging them away. **Status:** methodological principles.
+
+**Not adopted.** A size-normalised rule family (not needed; GT, "Not proposed"). Any inference from these models to gravity, physical time, memory, purpose or theology. Any common operator shared with the constraint laboratory, which has not been tested.
