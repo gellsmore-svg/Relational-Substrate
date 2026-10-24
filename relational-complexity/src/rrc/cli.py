@@ -6,6 +6,7 @@ import argparse
 import json
 import sys
 import time
+from fractions import Fraction
 from pathlib import Path
 
 import numpy as np
@@ -181,6 +182,23 @@ def _composition_problems(item: dict, result: dict) -> list[str]:
         problems.append(f"{name} block count disagrees with the label count")
     if result.get("kernel_method") != "row_gcd_halt_self_loop":
         problems.append(f"{name} kernel method is not the halt_self_loop reduction")
+    quotient = result.get("quotient")
+    if isinstance(quotient, dict):
+        defined = quotient.get("defined") is True
+        if exact != defined:
+            problems.append(f"{name} quotient flag disagrees with exactness")
+        rows = quotient.get("rows")
+        if exact:
+            if not isinstance(rows, list) or len(rows) != result.get("n_blocks"):
+                problems.append(f"{name} quotient shape disagrees with the block count")
+            else:
+                for row in rows:
+                    total = sum(Fraction(int(cell["num"]), int(cell["den"])) for cell in row)
+                    if total != 1:
+                        problems.append(f"{name} quotient row does not sum to 1")
+                        break
+        elif rows is not None:
+            problems.append(f"{name} stores a quotient row without strong lumpability")
     problems.extend(_stored_table_problems(name, result))
     return problems
 

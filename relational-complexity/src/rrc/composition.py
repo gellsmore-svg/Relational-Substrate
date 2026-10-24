@@ -8,13 +8,15 @@ recorded only when the output is an object the same operator accepts.
 from __future__ import annotations
 
 import json
-from itertools import combinations
+from itertools import combinations, permutations
 
 from rrc.constraints import present_graph
-from rrc.model import lumpability
+from rrc.model import lumpability, quotient_kernel
 
 
 MAX_NERVE_BLOCKS = 12
+# 8! = 40320. The search is exhaustive relabelling. A larger graph is refused.
+MAX_CANONICAL_VERTICES = 8
 
 
 def _endpoint(value) -> int:
@@ -216,7 +218,11 @@ def apply_again(result: dict) -> dict:
         nxt = line_graph(result["bare_edges"])
         nxt["applied_to"] = "bare_line_graph"
         return nxt
-    if operator in ("intersection_graph", "nerve"):
+    if operator == "canonical_simple_graph":
+        nxt = canonical_simple_graph(result["vertex_count"], result["edges"])
+        nxt["applied_to"] = "canonical_simple_graph"
+        return nxt
+    if operator in ("intersection_graph", "nerve", "labelled_line_graph", "carrier_orbit"):
         return {
             "operator": operator,
             "input_type": result["output_type"],
@@ -259,6 +265,261 @@ def intersection_representation(vertex_count: int, edges) -> list[list]:
         incident = [index for index, edge in enumerate(ordered) if vertex in edge]
         blocks.append(incident + [("private", vertex)])
     return blocks
+
+
+def _bounded_order(vertex_count) -> int:
+    if isinstance(vertex_count, bool) or not isinstance(vertex_count, int) or vertex_count < 0:
+        raise ValueError("vertex_count must be a non-negative integer")
+    if vertex_count > MAX_CANONICAL_VERTICES:
+        raise ValueError(
+            f"canonical form is refused above the cap of {MAX_CANONICAL_VERTICES} vertices"
+        )
+    return vertex_count
+
+
+def _placed_edges(vertex_count: int, edges) -> list[tuple[int, int]]:
+    ordered = simple_edges(edges)
+    for left, right in ordered:
+        if left >= vertex_count or right >= vertex_count:
+            raise ValueError("an endpoint lies outside vertex_count")
+    return ordered
+
+
+def canonical_simple_graph(vertex_count, edges) -> dict:
+    """Lex-minimum edge list over every numbering of the vertices.
+
+    ``vertex_count`` retains isolated vertices. Two orders are different
+    graphs. The search is every permutation. Above the cap it is refused,
+    and the refusal is not a canonical form. A second application returns
+    the same edge list. That is idempotence, not a further level.
+    """
+    order = _bounded_order(vertex_count)
+    placed = _placed_edges(order, edges)
+    best: tuple[tuple[int, int], ...] | None = None
+    for perm in permutations(range(order)):
+        image = tuple(sorted(
+            (perm[left], perm[right]) if perm[left] < perm[right] else (perm[right], perm[left])
+            for left, right in placed
+        ))
+        if best is None or image < best:
+            best = image
+    return {
+        "operator": "canonical_simple_graph",
+        "representation": "R3_unlabelled_isomorphism",
+        "input_type": "simple_undirected_graph",
+        "output_type": "canonical_simple_graph",
+        "new_state": False,
+        "dynamics": "none",
+        "second_application": "defined_and_idempotent",
+        "vertex_count": order,
+        "edges": _bare(list(best or ())),
+        "method": "exhaustive_lex_min_relabeling",
+        "cap": MAX_CANONICAL_VERTICES,
+        "isolated_vertices_retained": True,
+        "undefined_reason": None,
+    }
+
+
+def relabeling_exists(vertex_count, left_edges, right_edges) -> bool:
+    """Whether some vertex numbering carries the left edge set onto the right.
+
+    Degree pruning and backtracking are a separate search from the lex-min
+    certificate. The two agree on the graphs the tests enumerate. Above the
+    cap the search is refused.
+    """
+    order = _bounded_order(vertex_count)
+    left = set(_placed_edges(order, left_edges))
+    right = set(_placed_edges(order, right_edges))
+    if len(left) != len(right):
+        return False
+    left_degree = [0] * order
+    right_degree = [0] * order
+    for start, end in left:
+        left_degree[start] += 1
+        left_degree[end] += 1
+    for start, end in right:
+        right_degree[start] += 1
+        right_degree[end] += 1
+    if sorted(left_degree) != sorted(right_degree):
+        return False
+    candidates = [
+        [image for image in range(order) if right_degree[image] == left_degree[vertex]]
+        for vertex in range(order)
+    ]
+    sequence = sorted(range(order), key=lambda vertex: -left_degree[vertex])
+    used = [False] * order
+    assignment = [-1] * order
+
+    def agrees(vertex: int, image: int) -> bool:
+        for earlier in range(order):
+            if assignment[earlier] < 0:
+                continue
+            left_edge = (earlier, vertex) if earlier < vertex else (vertex, earlier)
+            mapped_left = assignment[earlier]
+            right_edge = (mapped_left, image) if mapped_left < image else (image, mapped_left)
+            if (left_edge in left) != (right_edge in right):
+                return False
+        return True
+
+    def search(position: int) -> bool:
+        if position == order:
+            return True
+        vertex = sequence[position]
+        for image in candidates[vertex]:
+            if used[image] or not agrees(vertex, image):
+                continue
+            used[image] = True
+            assignment[vertex] = image
+            if search(position + 1):
+                return True
+            assignment[vertex] = -1
+            used[image] = False
+        return False
+
+    return search(0)
+
+
+def labelled_line_graph(edges) -> dict:
+    """Line graph whose vertices are the original edges.
+
+    The vertex list is sorted, so the carrier edge order does not change
+    the label. A node permutation does. The output is not a simple graph
+    on integer endpoints, so ``line_graph`` does not accept it. No encoding
+    is added to make a second application possible.
+    """
+    ordered = simple_edges(edges)
+    vertices = sorted(_bare(ordered))
+    adjacent = []
+    for left, right in combinations(range(len(ordered)), 2):
+        if set(ordered[left]) & set(ordered[right]):
+            adjacent.append(sorted([list(ordered[left]), list(ordered[right])]))
+    adjacent.sort()
+    return {
+        "operator": "labelled_line_graph",
+        "representation": "R1_relationship_labelled",
+        "input_type": "simple_undirected_graph",
+        "output_type": "edge_labelled_line_graph",
+        "new_state": False,
+        "dynamics": "none",
+        "second_application": "undefined",
+        "vertices": vertices,
+        "adjacent": adjacent,
+        "recovers_present_edges": True,
+        "undefined_reason": (
+            "the vertices are the original edges, and the line-graph operator "
+            "accepts integer endpoints"
+        ),
+    }
+
+
+def carrier_automorphisms(vertex_count, edges) -> list[tuple[int, ...]]:
+    """Vertex permutations that preserve the carrier edge set.
+
+    The search is exhaustive. Above the cap it is refused.
+    """
+    order = _bounded_order(vertex_count)
+    placed = _placed_edges(order, edges)
+    target = set(placed)
+    found = []
+    for perm in permutations(range(order)):
+        image = {
+            (perm[left], perm[right]) if perm[left] < perm[right] else (perm[right], perm[left])
+            for left, right in target
+        }
+        if image == target:
+            found.append(perm)
+    return found
+
+
+def carrier_orbit(vertex_count, edges) -> dict:
+    """Type of the carrier-orbit map. No subgraph is selected here."""
+    automorphisms = carrier_automorphisms(vertex_count, edges)
+    return {
+        "operator": "carrier_orbit",
+        "representation": "R4_carrier_automorphism",
+        "input_type": "subgraph_of_a_fixed_carrier",
+        "output_type": "edge_subset_of_the_same_carrier",
+        "new_state": False,
+        "dynamics": "none",
+        "second_application": "undefined",
+        "automorphism_count": len(automorphisms),
+        "method": "exhaustive_vertex_permutations",
+        "cap": MAX_CANONICAL_VERTICES,
+        "undefined_reason": (
+            "the automorphism group belongs to the carrier, and a representative "
+            "subgraph does not determine that carrier"
+        ),
+    }
+
+
+def _orbit_representative(vertex_count: int, edges, present, automorphisms) -> list[list[int]]:
+    ordered = _placed_edges(vertex_count, edges)
+    index = {edge: bit for bit, edge in enumerate(ordered)}
+    present_edges = _placed_edges(vertex_count, present)
+    for edge in present_edges:
+        if edge not in index:
+            raise ValueError("a present edge is not a carrier edge")
+    best: tuple[tuple[int, int], ...] | None = None
+    for perm in automorphisms:
+        image = tuple(sorted(
+            (perm[left], perm[right]) if perm[left] < perm[right] else (perm[right], perm[left])
+            for left, right in present_edges
+        ))
+        if best is None or image < best:
+            best = image
+    return _bare(list(best or ()))
+
+
+def present_labelled_line_graph_labels(edges) -> list[dict]:
+    """R1. One labelled line graph for each present subset."""
+    ordered = simple_edges(edges)
+    labels = []
+    width = len(ordered)
+    for state in range(1 << width):
+        present = [list(ordered[bit]) for bit in range(width) if (state >> bit) & 1]
+        graph = labelled_line_graph(present)
+        labels.append({"vertices": graph["vertices"], "adjacent": graph["adjacent"]})
+    return labels
+
+
+def present_canonical_line_graph_labels(edges) -> list[dict]:
+    """R3. Unlabelled isomorphism class of the bare line graph.
+
+    The class keeps the line-graph vertex count, including isolated
+    line-graph vertices. It does not keep the original edge names.
+    """
+    ordered = simple_edges(edges)
+    labels = []
+    width = len(ordered)
+    for state in range(1 << width):
+        present = [list(ordered[bit]) for bit in range(width) if (state >> bit) & 1]
+        graph = line_graph(present)
+        certificate = canonical_simple_graph(graph["vertex_count"], graph["bare_edges"])
+        labels.append({
+            "vertex_count": certificate["vertex_count"],
+            "edges": certificate["edges"],
+        })
+    return labels
+
+
+def present_carrier_orbit_labels(vertex_count: int, edges) -> list[dict]:
+    """R4. Lex-min present edge set under automorphisms of the carrier.
+
+    The minimum is the sorted edge list, so the carrier's list order does
+    not choose the representative. The integer node labels do.
+    """
+    ordered = _placed_edges(vertex_count, edges)
+    automorphisms = carrier_automorphisms(vertex_count, ordered)
+    labels = []
+    width = len(ordered)
+    for state in range(1 << width):
+        present = [list(ordered[bit]) for bit in range(width) if (state >> bit) & 1]
+        labels.append({
+            "representative_edges": _orbit_representative(
+                vertex_count, ordered, present, automorphisms
+            ),
+        })
+    return labels
 
 
 def _compact(labels: list) -> tuple[list[int], int]:
@@ -313,6 +574,13 @@ def observation_law(weights, labels: list) -> dict:
         raise ValueError("labels must cover every state")
     compact, distinct = _compact(labels)
     report = lumpability(weights, compact)
+    kernel = quotient_kernel(weights, compact)
+    quotient_rows = None
+    if kernel["defined"]:
+        quotient_rows = [
+            [dict(cell) for cell in row]
+            for row in kernel["rows"]
+        ]
     return {
         "exact": report["exact"],
         "defect_l1": report["defect_l1"],
@@ -323,4 +591,10 @@ def observation_law(weights, labels: list) -> dict:
         "max_block_size": report["max_block_size"],
         "new_state": False,
         "witness": report["witness"],
+        "quotient": {
+            "defined": kernel["defined"],
+            "reason": kernel["reason"],
+            "blocks": kernel["blocks"],
+            "rows": quotient_rows,
+        },
     }

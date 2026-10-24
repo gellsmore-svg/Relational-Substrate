@@ -2,22 +2,32 @@
 
 from __future__ import annotations
 
+import json
 from fractions import Fraction
 
 import pytest
 
 from rrc.composition import (
+    MAX_CANONICAL_VERTICES,
+    _compact,
     apply_again,
+    canonical_simple_graph,
+    carrier_orbit,
     intersection_graph,
     intersection_representation,
     iterate_line_graph,
+    labelled_line_graph,
     line_graph,
     line_of_intersection,
     nerve,
     observation_law,
+    present_canonical_line_graph_labels,
+    present_carrier_orbit_labels,
     present_degree_labels,
     present_edge_count_labels,
+    present_labelled_line_graph_labels,
     present_line_graph_labels,
+    relabeling_exists,
 )
 from rrc.constraints import compile_weight_table
 from rrc.items import execute_composition_observation
@@ -377,6 +387,8 @@ def test_composition_observation_item_matches_the_chain_fixture():
     assert result["defect_l1"]["den"] == "9"
     assert result["n_states"] == 8
     assert result["n_distinct_labels"] == 5
+    assert result["quotient"]["defined"] is False
+    assert result["quotient"]["rows"] is None
     count = execute_composition_observation(
         {
             "id": "fixture-chain-count",
@@ -391,3 +403,224 @@ def test_composition_observation_item_matches_the_chain_fixture():
     assert count["exact"] is True
     assert count["defect_l1"]["num"] == "0"
     assert count["weight_sha256"] == result["weight_sha256"]
+
+
+CYCLE4 = [[0, 1], [1, 2], [2, 3], [0, 3]]
+
+
+def _fraction(cell):
+    return Fraction(int(cell["num"]), int(cell["den"]))
+
+
+def _law(n, edges, labels, constraints=None):
+    weights = compile_weight_table(
+        n,
+        {"kind": "listed", "edges": edges},
+        [] if constraints is None else constraints,
+    )
+    return observation_law(weights, labels)
+
+
+def test_canonical_form_agrees_with_an_independent_search_and_stops_at_the_cap():
+    from itertools import combinations
+
+    possible = [list(pair) for pair in combinations(range(4), 2)]
+    graphs = []
+    for mask in range(1 << len(possible)):
+        graphs.append([possible[bit] for bit in range(len(possible)) if (mask >> bit) & 1])
+    certificates = [
+        tuple(tuple(edge) for edge in canonical_simple_graph(4, edges)["edges"])
+        for edges in graphs
+    ]
+    for left in range(len(graphs)):
+        for right in range(left, len(graphs)):
+            same = relabeling_exists(4, graphs[left], graphs[right])
+            assert (certificates[left] == certificates[right]) is same
+    cycle = canonical_simple_graph(4, CYCLE4)
+    rotated = canonical_simple_graph(4, [[1, 2], [2, 3], [0, 3], [0, 1]])
+    assert cycle["edges"] == rotated["edges"]
+    assert relabeling_exists(4, CYCLE4, [[1, 2], [2, 3], [0, 3], [0, 1]]) is True
+    path = [[0, 1], [1, 2], [2, 3]]
+    assert relabeling_exists(4, CYCLE4, path) is False
+    assert canonical_simple_graph(4, path)["edges"] != cycle["edges"]
+    assert canonical_simple_graph(3, [[0, 1]])["vertex_count"] == 3
+    assert canonical_simple_graph(2, [[0, 1]])["edges"] == [[0, 1]]
+    assert canonical_simple_graph(0, [])["edges"] == []
+    again = apply_again(cycle)
+    assert again["edges"] == cycle["edges"]
+    assert again["second_application"] == "defined_and_idempotent"
+    with pytest.raises(ValueError, match="cap"):
+        canonical_simple_graph(MAX_CANONICAL_VERTICES + 1, [])
+    assert canonical_simple_graph(MAX_CANONICAL_VERTICES, [])["vertex_count"] == MAX_CANONICAL_VERTICES
+
+
+def test_labelled_line_graph_keeps_edges_and_does_not_reapply():
+    forward = labelled_line_graph([[0, 1], [1, 2], [2, 3]])
+    reordered = labelled_line_graph([[2, 3], [0, 1], [1, 2]])
+    shifted = labelled_line_graph([[1, 2], [2, 3], [3, 4]])
+    assert forward["vertices"] == reordered["vertices"]
+    assert forward["adjacent"] == reordered["adjacent"]
+    assert forward["vertices"] != shifted["vertices"]
+    assert forward["second_application"] == "undefined"
+    assert apply_again(forward)["output_type"] == "undefined"
+    triangle = labelled_line_graph(TRIANGLE)
+    star = labelled_line_graph(STAR)
+    assert triangle["vertices"] != star["vertices"]
+    bare_triangle = canonical_simple_graph(3, line_graph(TRIANGLE)["bare_edges"])
+    bare_star = canonical_simple_graph(3, line_graph(STAR)["bare_edges"])
+    assert bare_triangle["edges"] == bare_star["edges"]
+    labels = present_labelled_line_graph_labels(CYCLE4)
+    assert len(labels) == len({json.dumps(label, sort_keys=True) for label in labels})
+    for constraints in (
+        [],
+        [{
+            "effect": "multiply",
+            "factor": 3,
+            "event": [0, 1],
+            "action": "either",
+            "when": {"edge": [1, 2], "polarity": "present"},
+        }],
+    ):
+        law = _law(4, CYCLE4, labels, constraints)
+        assert law["injective"] is True
+        assert law["exact"] is True
+        assert law["new_state"] is False
+        assert law["defect_l1"] == 0
+        assert law["quotient"]["defined"] is True
+
+
+def test_four_cycle_canonical_line_graph_is_exact_and_the_indexed_label_is_not():
+    indexed = present_line_graph_labels(CYCLE4)
+    canonical = present_canonical_line_graph_labels(CYCLE4)
+    orbits = present_carrier_orbit_labels(4, CYCLE4)
+    degrees = present_degree_labels(4, CYCLE4)
+    counts = present_edge_count_labels(CYCLE4)
+    indexed_law = _law(4, CYCLE4, indexed)
+    canonical_law = _law(4, CYCLE4, canonical)
+    orbit_law = _law(4, CYCLE4, orbits)
+    assert indexed_law["n_distinct_labels"] == 8
+    assert indexed_law["exact"] is False
+    assert indexed_law["defect_l1"] == Fraction(1, 2)
+    assert indexed_law["quotient"]["defined"] is False
+    assert canonical_law["n_distinct_labels"] == 6
+    assert canonical_law["exact"] is True
+    assert canonical_law["defect_l1"] == 0
+    assert orbit_law["exact"] is True
+    assert orbit_law["n_distinct_labels"] == 6
+    assert _same_partition(canonical, orbits)
+    assert _same_partition(canonical, degrees)
+    assert not _same_partition(canonical, indexed)
+    assert not _same_partition(canonical, counts)
+    drawing_a = line_graph([CYCLE4[0], CYCLE4[2], CYCLE4[3]])
+    drawing_b = line_graph([CYCLE4[0], CYCLE4[1], CYCLE4[2]])
+    assert drawing_a["bare_edges"] != drawing_b["bare_edges"]
+    assert canonical_simple_graph(drawing_a["vertex_count"], drawing_a["bare_edges"])["edges"] == (
+        canonical_simple_graph(drawing_b["vertex_count"], drawing_b["bare_edges"])["edges"]
+    )
+    compact, _blocks = _compact(canonical)
+    rows = canonical_law["quotient"]["rows"]
+
+    def probability(state, target):
+        cell = rows[compact[state]][compact[target]]
+        return _fraction(cell)
+
+    for row in rows:
+        assert sum(_fraction(cell) for cell in row) == 1
+    assert probability(0, 1) == 1
+    assert probability(1, 0) == Fraction(1, 4)
+    assert probability(1, 0b0011) == Fraction(1, 2)
+    assert probability(1, 0b0101) == Fraction(1, 4)
+    assert probability(0b0011, 1) == Fraction(1, 2)
+    assert probability(0b0011, 0b0111) == Fraction(1, 2)
+    assert probability(0b0101, 1) == Fraction(1, 2)
+    assert probability(0b0101, 0b0111) == Fraction(1, 2)
+    assert probability(0b0111, 0b0011) == Fraction(1, 2)
+    assert probability(0b0111, 0b0101) == Fraction(1, 4)
+    assert probability(0b0111, 0b1111) == Fraction(1, 4)
+    assert probability(0b1111, 0b0111) == 1
+
+
+def test_carrier_orbit_follows_baseline_symmetry_and_not_a_broken_law():
+    assert carrier_orbit(4, CYCLE4)["automorphism_count"] == 8
+    assert carrier_orbit(5, PATH4)["automorphism_count"] == 2
+    assert carrier_orbit(3, TRIANGLE)["automorphism_count"] == 6
+    assert apply_again(carrier_orbit(4, CYCLE4))["output_type"] == "undefined"
+    for n, edges in ((4, CYCLE4), (5, PATH4), (4, CHAIN), (3, TRIANGLE), (4, STAR)):
+        law = _law(n, edges, present_carrier_orbit_labels(n, edges))
+        assert law["exact"] is True
+        assert law["new_state"] is False
+        assert law["quotient"]["defined"] is True
+    forward = present_carrier_orbit_labels(5, PATH4)
+    backward = present_carrier_orbit_labels(5, list(reversed(PATH4)))
+    assert forward[1]["representative_edges"] == backward[1 << 3]["representative_edges"]
+    assert forward[1]["representative_edges"] != forward[1 << 1]["representative_edges"]
+    end = present_canonical_line_graph_labels(PATH4)
+    assert end[1] == end[1 << 1]
+    chain_indexed = present_line_graph_labels(CHAIN)
+    chain_canonical = present_canonical_line_graph_labels(CHAIN)
+    chain_orbits = present_carrier_orbit_labels(4, CHAIN)
+    assert _same_partition(chain_indexed, chain_canonical)
+    assert not _same_partition(chain_canonical, chain_orbits)
+    assert _law(4, CHAIN, chain_orbits)["n_distinct_labels"] == 6
+    path_indexed = present_line_graph_labels(PATH4)
+    path_canonical = present_canonical_line_graph_labels(PATH4)
+    path_orbits = present_carrier_orbit_labels(5, PATH4)
+    path_degrees = present_degree_labels(5, PATH4)
+    assert _same_partition(path_canonical, path_degrees)
+    assert not _same_partition(path_indexed, path_canonical)
+    assert not _same_partition(path_orbits, path_canonical)
+    assert _law(5, PATH4, path_indexed)["defect_l1"] == Fraction(1, 3)
+    assert _law(5, PATH4, path_canonical)["defect_l1"] == Fraction(1, 3)
+    assert _law(5, PATH4, path_indexed)["n_distinct_labels"] == 8
+    assert _law(5, PATH4, path_canonical)["n_distinct_labels"] == 7
+    assert _law(5, PATH4, path_orbits)["n_distinct_labels"] == 10
+    for edges in (TRIANGLE, STAR):
+        n = 3 if edges is TRIANGLE else 4
+        maps = [
+            present_line_graph_labels(edges),
+            present_canonical_line_graph_labels(edges),
+            present_carrier_orbit_labels(n, edges),
+            present_degree_labels(n, edges),
+            present_edge_count_labels(edges),
+        ]
+        for other in maps[1:]:
+            assert _same_partition(maps[0], other)
+    broken = [{
+        "effect": "multiply",
+        "factor": 3,
+        "event": [0, 1],
+        "action": "either",
+        "when": {"edge": [1, 2], "polarity": "present"},
+    }]
+    broken_law = _law(4, CYCLE4, present_carrier_orbit_labels(4, CYCLE4), broken)
+    assert broken_law["exact"] is False
+    assert broken_law["n_distinct_labels"] == 6
+    assert broken_law["defect_l1"] == Fraction(11, 24)
+    assert broken_law["quotient"]["rows"] is None
+
+
+def test_representation_records_stay_fixtures():
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    ideas = {
+        json.loads(line)["idea_id"]: json.loads(line)
+        for line in (root / "atlas" / "ideas.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    equivalences = {
+        json.loads(line)["equivalence_id"]: json.loads(line)
+        for line in (root / "atlas" / "equivalences.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    coverage = {
+        json.loads(line)["coverage_id"]: json.loads(line)
+        for line in (root / "atlas" / "coverage.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert ideas["IDEA-L18"]["status"] == "partial"
+    assert "not a frozen cell" in ideas["IDEA-L18"]["methods"]
+    assert equivalences["EQ-022"]["status"] == "method"
+    assert equivalences["EQ-023"]["status"] == "method"
+    assert "constrained" in equivalences["EQ-023"]["not_claimed"]
+    assert coverage["COV-REPRESENTATIONS"]["status"] == "open"
+    note = (root / "docs" / "representations.md").read_text(encoding="utf-8")
+    assert "No scientific cell is attached to this note." in note
+    assert "8 vertices" in note

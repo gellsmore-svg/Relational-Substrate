@@ -227,6 +227,69 @@ def test_preflight_records_time_and_not_a_defect(tmp_path):
     assert "exact" not in text
 
 
+def test_representation_items_complete_through_the_worker_and_resume(tmp_path):
+    from rrc.cli import _problems
+    from rrc.lifecycle import exercise
+
+    cycle = [[0, 1], [1, 2], [2, 3], [0, 3]]
+    omitted = {
+        "id": "canonical",
+        "type": "composition_observation",
+        "n": 4,
+        "carrier": {"kind": "listed", "edges": cycle},
+        "constraints": [],
+        "baseline": 1,
+        "observation": "canonical_line_graph",
+    }
+    present = {
+        "id": "orbit",
+        "type": "composition_observation",
+        "round_id": "lifecycle-fixture",
+        "n": 4,
+        "carrier": {"kind": "listed", "edges": cycle},
+        "constraints": [],
+        "baseline": 1,
+        "observation": "carrier_orbit",
+    }
+    plan = {
+        "round_id": "lifecycle-fixture",
+        "engine_version": ENGINE_VERSION,
+        "watchdog_seconds": 120,
+        "hard_ceiling_seconds": 300,
+        "items": [omitted, present],
+    }
+    report = exercise(plan, tmp_path)
+    assert report["problems"] == []
+    assert report["first"]["counts"]["complete"] == 2
+    assert report["second"]["ran"] == 1
+    assert "round_id" not in omitted
+    store = Store(tmp_path, plan)
+    assert _problems(store) == []
+    canonical = store.load_result("canonical")
+    assert canonical["exact"] is True
+    assert canonical["n_distinct_labels"] == 6
+    assert canonical["quotient"]["defined"] is True
+    assert canonical["round_id"] == "lifecycle-fixture"
+    failed_dir = tmp_path / "failed-schema"
+    bad = _plan([{
+        "id": "missing-map",
+        "type": "composition_observation",
+        "n": 3,
+        "carrier": {"kind": "listed", "edges": [[0, 1], [1, 2], [0, 2]]},
+        "constraints": [],
+        "baseline": 1,
+        "observation": "not_a_map",
+    }], round_id="bad-schema")
+    first = execute_plan(bad, failed_dir, max_items=2, budget_seconds=30, timeout=15, child=run_child)
+    second = execute_plan(bad, failed_dir, max_items=2, budget_seconds=30, timeout=15, child=run_child)
+    stored = Store(failed_dir, bad).load_result("missing-map")
+    assert first["counts"]["failed"] == 1
+    assert second["ran"] == 0
+    assert stored["status"] == "failed"
+    assert "unknown observation" in stored["error"]
+    assert "weights" not in stored
+
+
 def test_subprocess_probe_completes(tmp_path):
     plan = _plan([_ok("a", 11)])
     summary = execute_plan(plan, tmp_path, max_items=2, budget_seconds=20, timeout=15, child=run_child)

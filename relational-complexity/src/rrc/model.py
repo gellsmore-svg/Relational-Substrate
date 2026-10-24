@@ -315,6 +315,41 @@ def lumpability(weights: np.ndarray, labels: list[int]) -> dict:
     }
 
 
+def quotient_kernel(weights: np.ndarray, labels: list[int]) -> dict:
+    """The common next-block law when ``labels`` is strongly lumpable.
+
+    Rows follow the sorted block ids. A zero weight row is the self-loop
+    already used by ``lumpability``. No row is invented when the defect is
+    positive: the states in a block need not share a next-block law.
+    """
+    report = lumpability(weights, labels)
+    blocks = sorted({int(label) for label in labels})
+    if not report["exact"]:
+        return {
+            "defined": False,
+            "reason": "not strongly lumpable",
+            "blocks": blocks,
+            "rows": None,
+        }
+    sums = weights.sum(axis=1)
+    representative: dict[int, int] = {}
+    for state, label in enumerate(labels):
+        representative.setdefault(int(label), state)
+    rows = []
+    for block in blocks:
+        total, masses = _masses(representative[block], weights, sums, labels)
+        rows.append([
+            fraction_payload(Fraction(masses.get(target, 0), total))
+            for target in blocks
+        ])
+    return {
+        "defined": True,
+        "reason": "strong lumpability",
+        "blocks": blocks,
+        "rows": rows,
+    }
+
+
 def fraction_payload(value: Fraction) -> dict:
     return {
         "num": str(value.numerator),

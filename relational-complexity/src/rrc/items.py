@@ -10,8 +10,11 @@ import numpy as np
 from rrc import ENGINE_VERSION
 from rrc.composition import (
     observation_law,
+    present_canonical_line_graph_labels,
+    present_carrier_orbit_labels,
     present_degree_labels,
     present_edge_count_labels,
+    present_labelled_line_graph_labels,
     present_line_graph_labels,
 )
 from rrc.constraints import (
@@ -361,6 +364,9 @@ OBSERVATION_LABELS = {
     "present_line_graph": lambda n, edges: present_line_graph_labels(edges),
     "present_edge_count": lambda n, edges: present_edge_count_labels(edges),
     "present_degree_sequence": lambda n, edges: present_degree_labels(n, edges),
+    "labelled_line_graph": lambda n, edges: present_labelled_line_graph_labels(edges),
+    "canonical_line_graph": lambda n, edges: present_canonical_line_graph_labels(edges),
+    "carrier_orbit": lambda n, edges: present_carrier_orbit_labels(n, edges),
 }
 
 
@@ -402,6 +408,7 @@ def execute_composition_observation(spec: dict) -> dict:
         "new_state": False,
         "exact": law["exact"],
         "defect_l1": fraction_payload(law["defect_l1"]),
+        "quotient": law["quotient"],
         "further_label": "undefined",
         "further_label_reason": "no second label map is declared",
         "dynamics": "halt_self_loop projection; Markov only when exact",

@@ -324,6 +324,24 @@ Two invocations, `--max-items 8` and `--budget-seconds 60`: 8 items in 1.274 sec
 
 `COV-PLACEMENT-SAMPLE` is `partial`. `COV-COMPOSITION` stays `open`. ATLAS-Q01 stays open. PAT-012 records the shared-mean separation and is not scheduled. Ledger row `RRC-ATLAS-010` was appended, with relation `RRC-R044`. Its `created_commit` is the freeze `89c92d3`. This commit appended the row. The hash of this commit is not written here.
 
+## Representations
+
+The atlas-009 calculation commit is `be98212dbf8078ef90a9b840bad4e10d075410ed`. The execution section above does not contain it.
+
+Four representations of a present line graph are defined in `docs/representations.md`. The engine stays `rrc-0.4.0`. The weight compiler is unchanged. No plan is frozen.
+
+R1 keeps the present edges as vertex labels. It separates the carrier states. EQ-022 records that the singleton partition is strongly lumpable for every weight table. A second application is undefined. The retained names are not a compression.
+
+R2 is the position-indexed bare line graph stored by atlas-008. The label depends on the carrier edge order.
+
+R3 is the canonical unlabelled line graph. The search enumerates every numbering and is refused above 8 vertices. A second application returns the same graph. That is idempotence, not a further level. An independent backtracking search agrees on every simple graph of order 4.
+
+R4 is the lex-min present edge set under automorphisms of the carrier. A second application is undefined, because the representative does not determine the carrier. EQ-023: under an empty list, a positive integer baseline, and `halt_self_loop`, this orbit label is strongly lumpable. The reason is equivariance of the baseline kernel. A constrained table is outside that identity.
+
+On the unconstrained four-cycle the fixture recomputes R2 as 8 labels with defect `1/2`, and R3 as 6 labels with defect 0. R3, R4, and the degree sequence are one partition there. Atlas-008 stored the R2 cell and the degree cell. Those files are unchanged. The quotient of R3 is the six-class kernel in the fixture. On the triangle and the three-edge star, R2, R3, R4, the degree sequence, and the edge count are one exact partition. On the three-edge chain, R2 and R3 share the degree partition and defect `4/9`, while R4 has 6 labels and is exact. On the four-edge path, R3 and the degree sequence share 7 labels and defect `1/3`. R2 has 8 labels and the same defect, on a different partition. R4 has 10 labels and is exact. One multiply by 3 on the four-cycle leaves the R4 partition in place and raises the defect to `11/24`.
+
+`IDEA-L18` is `partial`. `COV-REPRESENTATIONS` is `open`. `COV-COMPOSITION` stays `open`. No ledger row was added. This section does not name its own commit.
+
 ## Next action
 
-Do not edit `plans/atlas-007.json`, `plans/atlas-008.json`, or `plans/atlas-009.json`. Do not rerun `results/atlas-007`. Do not add a token cell for the static line graph or for a cover that only repeats the fixtures. Do not declare the cover operator recursive. Do not schedule the atlas-008 defects, the atlas-009 marginals, PAT-010, PAT-011, PAT-012, or EQ-020. `COV-COMPOSITION` stays `open`. The static line graph and the cover operators remain unfrozen as cells. A second label of the edge-count chain is undefined. Common-neighbour counts stay open. ATLAS-Q01 through ATLAS-Q12 stay open.
+Do not edit `plans/atlas-007.json`, `plans/atlas-008.json`, or `plans/atlas-009.json`. Do not rerun `results/atlas-007`. Do not add a token cell for the static line graph or for a cover that only repeats the fixtures. Do not declare the cover operator recursive. Do not schedule the atlas-008 defects, the atlas-009 marginals, the four-cycle quotient, PAT-010, PAT-011, PAT-012, EQ-020, EQ-022, or EQ-023. A representation round, if frozen, needs a subprocess dry-run of its own item schema, a constrained table, and a carrier where the maps agree. `COV-COMPOSITION` stays `open`. The static line graph and the cover operators remain unfrozen as cells. A second label of the edge-count chain is undefined. Common-neighbour counts stay open. ATLAS-Q01 through ATLAS-Q12 stay open.
