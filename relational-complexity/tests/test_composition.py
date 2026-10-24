@@ -10,12 +10,16 @@ import pytest
 from rrc.composition import (
     MAX_CANONICAL_VERTICES,
     _compact,
+    active_intersection_labels,
     apply_again,
     canonical_simple_graph,
     carrier_orbit,
     intersection_graph,
     intersection_representation,
     iterate_line_graph,
+    cover_count_labels,
+    fixed_cover,
+    labelled_active_block_labels,
     labelled_line_graph,
     line_graph,
     line_of_intersection,
@@ -597,6 +601,96 @@ def test_carrier_orbit_follows_baseline_symmetry_and_not_a_broken_law():
     assert broken_law["n_distinct_labels"] == 6
     assert broken_law["defect_l1"] == Fraction(11, 24)
     assert broken_law["quotient"]["rows"] is None
+
+
+def test_a_fixed_cover_is_not_a_new_state_and_not_a_line_graph():
+    partition = [PATH4[0:2], PATH4[2:4]]
+    overlap = [PATH4[0:3], PATH4[1:4]]
+    record = fixed_cover(PATH4, overlap)
+    assert record["new_state"] is False
+    assert record["dynamics"] == "none"
+    assert apply_again(record)["output_type"] == "undefined"
+    with pytest.raises(ValueError, match="not a carrier edge"):
+        cover_count_labels(PATH4, [[[0, 1], [5, 6]]])
+    with pytest.raises(ValueError, match="duplicate"):
+        cover_count_labels(PATH4, [[[0, 1], [0, 1]]])
+    only = {name: 1 << bit for bit, name in enumerate(("e0", "e1", "e2", "e3"))}
+    part = cover_count_labels(PATH4, partition)
+    over = cover_count_labels(PATH4, overlap)
+    assert part[only["e0"]] == part[only["e1"]]
+    assert part[only["e1"]] != part[only["e2"]]
+    assert over[only["e0"]] != over[only["e1"]]
+    assert over[only["e1"]] == over[only["e2"]]
+    bare = active_intersection_labels(PATH4, overlap)
+    labelled = labelled_active_block_labels(PATH4, overlap)
+    assert bare[only["e0"]] == bare[only["e3"]]
+    assert labelled[only["e0"]] != labelled[only["e3"]]
+    both = only["e0"] | only["e3"]
+    # The partition blocks share a vertex and no edge. Both being active
+    # leaves the intersection graph edgeless. The overlapping blocks share
+    # edges, so the same present pair puts an edge in their active graph.
+    part_bare = active_intersection_labels(PATH4, partition)
+    assert part_bare[both]["vertices"] == 2
+    assert part_bare[both]["edges"] == []
+    assert bare[both]["edges"] == [[0, 1]]
+    part_law = _law(5, PATH4, part)
+    over_law = _law(5, PATH4, over)
+    assert part_law["exact"] is True
+    assert part_law["new_state"] is False
+    assert part_law["n_distinct_labels"] == 9
+    assert part_law["quotient"]["defined"] is True
+    assert over_law["exact"] is False
+    assert over_law["defect_l1"] == 1
+    assert over_law["n_distinct_labels"] == 10
+    broken = [{
+        "effect": "multiply",
+        "factor": 3,
+        "event": [0, 1],
+        "action": "either",
+        "when": {"edge": [1, 2], "polarity": "present"},
+    }]
+    broken_part = _law(5, PATH4, part, broken)
+    assert broken_part["exact"] is False
+    assert broken_part["defect_l1"] == Fraction(1, 4)
+    stored = execute_composition_observation({
+        "id": "fixture-cover-count",
+        "round_id": "fixture",
+        "type": "composition_observation",
+        "n": 5,
+        "carrier": {"kind": "listed", "edges": PATH4},
+        "constraints": [],
+        "baseline": 1,
+        "observation": "cover_count",
+        "cover": partition,
+    })
+    assert stored["cover"] == partition
+    assert stored["new_state"] is False
+    assert stored["exact"] is True
+    with pytest.raises(ValueError, match="requires a cover"):
+        execute_composition_observation({
+            "id": "fixture-cover-missing",
+            "type": "composition_observation",
+            "n": 5,
+            "carrier": {"kind": "listed", "edges": PATH4},
+            "constraints": [],
+            "observation": "cover_count",
+        })
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    ideas = {
+        json.loads(line)["idea_id"]: json.loads(line)
+        for line in (root / "atlas" / "ideas.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    coverage = {
+        json.loads(line)["coverage_id"]: json.loads(line)
+        for line in (root / "atlas" / "coverage.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert ideas["IDEA-L19"]["status"] == "partial"
+    assert "not a frozen cell" in ideas["IDEA-L19"]["methods"]
+    assert coverage["COV-COVER-OBSERVATION"]["status"] == "open"
+    note = (root / "docs" / "cover-observations.md").read_text(encoding="utf-8")
+    assert "No scientific cell is attached to this note." in note
 
 
 def test_representation_records_stay_fixtures():

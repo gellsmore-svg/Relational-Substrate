@@ -9,6 +9,9 @@ import numpy as np
 
 from rrc import ENGINE_VERSION
 from rrc.composition import (
+    active_intersection_labels,
+    cover_count_labels,
+    labelled_active_block_labels,
     observation_law,
     present_canonical_line_graph_labels,
     present_carrier_orbit_labels,
@@ -361,13 +364,18 @@ def execute_atlas_core(spec: dict) -> dict:
 
 
 OBSERVATION_LABELS = {
-    "present_line_graph": lambda n, edges: present_line_graph_labels(edges),
-    "present_edge_count": lambda n, edges: present_edge_count_labels(edges),
-    "present_degree_sequence": lambda n, edges: present_degree_labels(n, edges),
-    "labelled_line_graph": lambda n, edges: present_labelled_line_graph_labels(edges),
-    "canonical_line_graph": lambda n, edges: present_canonical_line_graph_labels(edges),
-    "carrier_orbit": lambda n, edges: present_carrier_orbit_labels(n, edges),
+    "present_line_graph": lambda n, edges, cover: present_line_graph_labels(edges),
+    "present_edge_count": lambda n, edges, cover: present_edge_count_labels(edges),
+    "present_degree_sequence": lambda n, edges, cover: present_degree_labels(n, edges),
+    "labelled_line_graph": lambda n, edges, cover: present_labelled_line_graph_labels(edges),
+    "canonical_line_graph": lambda n, edges, cover: present_canonical_line_graph_labels(edges),
+    "carrier_orbit": lambda n, edges, cover: present_carrier_orbit_labels(n, edges),
+    "cover_count": lambda n, edges, cover: cover_count_labels(edges, cover),
+    "active_intersection": lambda n, edges, cover: active_intersection_labels(edges, cover),
+    "labelled_active_blocks": lambda n, edges, cover: labelled_active_block_labels(edges, cover),
 }
+
+COVER_OBSERVATIONS = ("cover_count", "active_intersection", "labelled_active_blocks")
 
 
 def execute_composition_observation(spec: dict) -> dict:
@@ -379,7 +387,10 @@ def execute_composition_observation(spec: dict) -> dict:
     baseline = spec.get("baseline", 1)
     model = compile_model(spec["n"], spec["carrier"], list(spec.get("constraints", [])), baseline)
     edges = [list(edge) for edge in model["carrier_edges"]]
-    labels = OBSERVATION_LABELS[observation](model["n"], edges)
+    cover = spec.get("cover")
+    if observation in COVER_OBSERVATIONS and not isinstance(cover, list):
+        raise ValueError(f"{observation} requires a cover")
+    labels = OBSERVATION_LABELS[observation](model["n"], edges, cover)
     law = observation_law(model["weights"], labels)
     weights = model["weights"]
     witness = law["witness"]
@@ -399,6 +410,7 @@ def execute_composition_observation(spec: dict) -> dict:
         "role": spec.get("role", "observation"),
         "idea_ids": list(spec.get("idea_ids", [])),
         "observation": observation,
+        "cover": cover if observation in COVER_OBSERVATIONS else None,
         "n": model["n"],
         "n_states": int(weights.shape[0]),
         "n_edges": int(weights.shape[1]),

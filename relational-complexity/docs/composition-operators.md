@@ -67,6 +67,10 @@ No constrained weight table is in this fixture. No second observation is compose
 
 The edge-count paragraph above is not limited to weight 1. The assumptions are an empty constraint list, a baseline that is an integer at least 1, and `halt_self_loop`. Every row is that constant. From `k` present edges among `m`, the present edges are the decreases and the absent edges are the increases. The next count is `k/m` toward `k-1` and `(m-k)/m` toward `k+1`. It depends only on `k`, so the present-edge-count label is strongly lumpable on every finite simple carrier. EQ-021 records that identity. The test checks the weights, including baseline 5 on two disjoint edges. Atlas-008's five edge-count cells have defect 0. The degree sequence and the present line graph are outside the identity. A constrained table is outside it. A second label of the count chain is not declared.
 
+## Fixed covers
+
+`docs/cover-observations.md` defines three observations of a cover that stays fixed while the present edges change. A count and an active intersection graph are not covers, so a second application is undefined. The note has fixtures and no frozen cell.
+
 ## Position index and canonical form
 
 The present-line-graph row above is the position-indexed bare line graph. A canonical unlabelled line graph, a relationship-labelled line graph, and a carrier-automorphism orbit are different maps. `docs/representations.md` defines them. On the unconstrained four-cycle the fixture recomputes 8 labels and defect `1/2` for the position-indexed map, and 6 labels and defect 0 for the canonical map. Atlas-008 already stored the position-indexed cell. That result file is unchanged.

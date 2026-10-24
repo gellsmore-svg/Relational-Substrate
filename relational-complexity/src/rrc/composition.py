@@ -222,7 +222,13 @@ def apply_again(result: dict) -> dict:
         nxt = canonical_simple_graph(result["vertex_count"], result["edges"])
         nxt["applied_to"] = "canonical_simple_graph"
         return nxt
-    if operator in ("intersection_graph", "nerve", "labelled_line_graph", "carrier_orbit"):
+    if operator in (
+        "intersection_graph",
+        "nerve",
+        "labelled_line_graph",
+        "carrier_orbit",
+        "fixed_cover",
+    ):
         return {
             "operator": operator,
             "input_type": result["output_type"],
@@ -519,6 +525,107 @@ def present_carrier_orbit_labels(vertex_count: int, edges) -> list[dict]:
                 vertex_count, ordered, present, automorphisms
             ),
         })
+    return labels
+
+
+def _carrier_blocks(edges, blocks):
+    if not isinstance(blocks, list):
+        raise ValueError("a cover must be a list of blocks")
+    ordered = simple_edges(edges)
+    index = {edge: bit for bit, edge in enumerate(ordered)}
+    parsed = []
+    for block in blocks:
+        members = simple_edges(block)
+        bits = []
+        for edge in members:
+            if edge not in index:
+                raise ValueError("a block edge is not a carrier edge")
+            bits.append(index[edge])
+        parsed.append(tuple(bits))
+    return ordered, parsed
+
+
+def fixed_cover(edges, blocks) -> dict:
+    """A cover fixed on a carrier. The cover is not a state variable.
+
+    Counts and active-block graphs derived from it are functions of the
+    present edges. A count tuple is not a cover, so the operator does not
+    accept its own output.
+    """
+    _ordered, parsed = _carrier_blocks(edges, blocks)
+    return {
+        "operator": "fixed_cover",
+        "input_type": "carrier_and_ordered_cover",
+        "output_type": "label_of_the_carrier_state",
+        "new_state": False,
+        "dynamics": "none",
+        "second_application": "undefined",
+        "undefined_reason": "a count tuple or an intersection graph is not a cover of carrier edges",
+        "n_blocks": len(parsed),
+    }
+
+
+def cover_count_labels(edges, blocks) -> list[dict]:
+    """How many edges of each fixed block are present.
+
+    The cover stays put. Empty blocks stay at count 0. Overlap is allowed,
+    and a block is not required to be disjoint from the others.
+    """
+    ordered, parsed = _carrier_blocks(edges, blocks)
+    width = len(ordered)
+    labels = []
+    for state in range(1 << width):
+        labels.append({
+            "counts": [sum((state >> bit) & 1 for bit in bits) for bits in parsed],
+        })
+    return labels
+
+
+def _active_blocks(ordered, parsed, state):
+    active = []
+    for index, bits in enumerate(parsed):
+        if any((state >> bit) & 1 for bit in bits):
+            active.append(index)
+    return active
+
+
+def active_intersection_labels(edges, blocks) -> list[dict]:
+    """Bare intersection graph of the blocks that contain a present edge.
+
+    Two blocks are adjacent when their fixed edge sets meet, whether or not
+    the shared edge is the one that is present. The bare graph drops the
+    block indices. The vertex count keeps an empty active set distinct from
+    a single active block.
+    """
+    ordered, parsed = _carrier_blocks(edges, blocks)
+    sets = [frozenset(bits) for bits in parsed]
+    width = len(ordered)
+    labels = []
+    for state in range(1 << width):
+        active = _active_blocks(ordered, parsed, state)
+        chosen = [[int(bit) for bit in sets[index]] for index in active]
+        graph = intersection_graph(chosen)
+        labels.append({"vertices": graph["vertex_count"], "edges": graph["bare_edges"]})
+    return labels
+
+
+def labelled_active_block_labels(edges, blocks) -> list[dict]:
+    """Active block indices, and the pairs of those blocks that intersect.
+
+    The indices are the cover's own order. This keeps which block is active.
+    The bare intersection graph does not.
+    """
+    ordered, parsed = _carrier_blocks(edges, blocks)
+    sets = [frozenset(bits) for bits in parsed]
+    width = len(ordered)
+    labels = []
+    for state in range(1 << width):
+        active = _active_blocks(ordered, parsed, state)
+        adjacent = []
+        for left, right in combinations(active, 2):
+            if sets[left] & sets[right]:
+                adjacent.append([left, right])
+        labels.append({"active": active, "adjacent": adjacent})
     return labels
 
 
