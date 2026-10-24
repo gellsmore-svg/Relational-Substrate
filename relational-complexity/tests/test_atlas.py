@@ -1066,3 +1066,126 @@ def test_atlas_012_plan_pairs_polarity_with_event_arrangement():
     assert one[0]["event"] == one[1]["event"]
     assert two[0]["event"] != two[1]["event"]
     assert {constraint["when"]["polarity"] for constraint in one + two} == {"present"}
+
+
+def test_atlas_012_execution_separates_arrangement_from_a_bit_relabeling():
+    assert main(["verify", "--round", "atlas-012", "--out", str(ROOT / "results" / "atlas-012")]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-012.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "1dffac3ff30ff7d6a37fbe0df4c63e90b1988cf454a9d8a7a4ba746515de5185"
+    items = ROOT / "results" / "atlas-012" / "items"
+
+    def load(name, directory="atlas-012"):
+        return json.loads((ROOT / "results" / directory / "items" / name / "result.json").read_text(encoding="utf-8"))
+
+    names = [
+        "A12-base",
+        "A12-pol-present",
+        "A12-pol-absent",
+        "A12-single-far",
+        "A12-single-other",
+        "A12-one-event",
+        "A12-two-event",
+    ]
+    stored = {name: load(name) for name in names}
+    hashes = {
+        "A12-base": "3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7",
+        "A12-pol-present": "7b4f2c8ef26032e36f92000c69cc7c0fcf032e4f1353009ff490efa1f4b37be9",
+        "A12-pol-absent": "a30d2af41e1b65601390615151522d627502825abba5d36195739e051a798cff",
+        "A12-single-far": "35818e425b302f38df5d28715a61ec5e21b1a765ab3ceee5f81ee55c40156e82",
+        "A12-single-other": "f4b5f62c8045ae02a0e81f3fde6202933c166f3c92862e0348b0f3382b3945ad",
+        "A12-one-event": "4689196251660b2458b053cf65ecf08d19ca17a2182ac10f8f040495d6ff2328",
+        "A12-two-event": "f1e515bd6d9dba119ac4ea8833c34d628796fb62f07736ea6951c787b88bacc5",
+    }
+    assert len(set(hashes.values())) == 7
+    from fractions import Fraction
+
+    for name, result in stored.items():
+        assert result["weight_sha256"] == hashes[name]
+        assert result["kernel_sha256"] == result["weight_sha256"]
+        assert result["engine_version"] == plan["engine_version"]
+        assert result["plan_hash"] == digest(plan)
+        assert result["grammar_id"] == "opening-prohibit-multiply-v1"
+        assert result["compilation"]["new_primitive"] is False
+        assert result["zero_cells"] == 0
+        assert result["classes"]["recurrent_classes"] == 1
+        assert result["occupation"]["method"] == "integer_pi_proportional_to_total_weight"
+        edges = Fraction(int(result["occupation"]["mean_present_edges"]["num"]), int(result["occupation"]["mean_present_edges"]["den"]))
+        components = Fraction(int(result["occupation"]["mean_components"]["num"]), int(result["occupation"]["mean_components"]["den"]))
+        assert components == 4 - edges
+    assert stored["A12-base"]["bookkeeping"]["effective_cardinality"] == 0
+    assert stored["A12-pol-present"]["bookkeeping"]["effective_cardinality"] == 1
+    assert stored["A12-pol-absent"]["bookkeeping"]["effective_cardinality"] == 1
+    assert stored["A12-one-event"]["bookkeeping"]["effective_cardinality"] == 2
+    assert stored["A12-two-event"]["bookkeeping"]["effective_cardinality"] == 2
+    assert stored["A12-one-event"]["bookkeeping"]["kernel_effective_cardinality"] == 2
+    assert stored["A12-two-event"]["bookkeeping"]["kernel_effective_cardinality"] == 2
+    chain = load("A10-chain-mul-canon", "atlas-010")
+    assert stored["A12-pol-present"]["weight_sha256"] == chain["weight_sha256"]
+    singles = ["A12-pol-present", "A12-pol-absent", "A12-single-far", "A12-single-other"]
+    for length2 in ("A12-one-event", "A12-two-event"):
+        assert stored[length2]["weight_sha256"] not in {stored[name]["weight_sha256"] for name in singles}
+        assert stored[length2]["weight_sha256"] != stored["A12-base"]["weight_sha256"]
+    assert stored["A12-one-event"]["weight_sha256"] != stored["A12-two-event"]["weight_sha256"]
+
+    def marginals(name):
+        return tuple(
+            Fraction(int(cell["num"]), int(cell["den"]))
+            for cell in stored[name]["occupation"]["edge_presence"]
+        )
+
+    assert marginals("A12-pol-present") == (Fraction(1, 2), Fraction(5, 8), Fraction(1, 2))
+    assert marginals("A12-pol-absent") == (Fraction(1, 2), Fraction(3, 8), Fraction(1, 2))
+    assert marginals("A12-single-far") == (Fraction(1, 2), Fraction(1, 2), Fraction(5, 8))
+    assert marginals("A12-single-other") == marginals("A12-pol-present")
+    assert marginals("A12-one-event") == (Fraction(1, 2), Fraction(2, 3), Fraction(2, 3))
+    assert marginals("A12-two-event") == (Fraction(1, 2), Fraction(7, 10), Fraction(1, 2))
+
+    def rev_state(state):
+        return ((state & 1) << 2) | (state & 2) | ((state >> 2) & 1)
+
+    def translated(table, mask):
+        return [table[state ^ mask] for state in range(8)]
+
+    def reversed_table(table):
+        out = [[None] * 3 for _ in range(8)]
+        for state in range(8):
+            for edge, image in ((0, 2), (1, 1), (2, 0)):
+                out[rev_state(state)][image] = table[state][edge]
+        return out
+
+    def product(left, right):
+        return [[left[state][edge] * right[state][edge] for edge in range(3)] for state in range(8)]
+
+    present = stored["A12-pol-present"]["weights"]
+    absent = stored["A12-pol-absent"]["weights"]
+    far = stored["A12-single-far"]["weights"]
+    other = stored["A12-single-other"]["weights"]
+    one = stored["A12-one-event"]["weights"]
+    two = stored["A12-two-event"]["weights"]
+    assert absent == translated(present, 2)
+    assert other == reversed_table(present)
+    assert far != reversed_table(present)
+    assert one == product(present, far)
+    assert two == product(present, other)
+
+    import itertools
+
+    def image(table, perm, mask):
+        out = [[None] * 3 for _ in range(8)]
+        for state in range(8):
+            sigma = mask
+            for edge in range(3):
+                if (state >> edge) & 1:
+                    sigma ^= 1 << perm[edge]
+            for edge in range(3):
+                out[sigma][perm[edge]] = table[state][edge]
+        return out
+
+    perms = list(itertools.permutations(range(3)))
+    assert not any(image(one, perm, mask) == two for perm in perms for mask in range(8))
+    for single in (present, absent, far, other, stored["A12-base"]["weights"]):
+        assert not any(image(one, perm, mask) == single for perm in perms for mask in range(8))
+        assert not any(image(two, perm, mask) == single for perm in perms for mask in range(8))
+    assert items.is_dir()
