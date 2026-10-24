@@ -27,6 +27,7 @@ flowchart TD
     RRC_M01_NO_NEW_AXIS["RRC-M01-NO-NEW-AXIS: RRC-001 does not add a dynamical primitive. Its rules are current-state weights on the ..."]
     RRC_001_NO_ONTOLOGY["RRC-001-NO-ONTOLOGY: RRC-001 records no Relational Substrate ontological reading. The cells describe one cur..."]
     RRC_ATLAS_M01["RRC-ATLAS-M01: The continuation after RRC-001 builds a coverage atlas of elementary current-state cons..."]
+    RRC_ATLAS_006["RRC-ATLAS-006: Under that one rule, a state is a deadlock exactly when the present edges are a total d..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     RRC_Q01["RRC-Q01: What determines how many relational entities a class of behaviour needs, and which beha..."]
@@ -80,3 +81,4 @@ flowchart TD
   RRC_ATLAS_003 -->|derived_from| RRC_ATLAS_M01
   RRC_ATLAS_004 -->|derived_from| RRC_ATLAS_M01
   RRC_ATLAS_005 -->|contrasts_with| RRC_ATLAS_003
+  RRC_ATLAS_006 -->|formalises| RRC_ATLAS_005

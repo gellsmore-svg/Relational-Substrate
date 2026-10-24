@@ -16,4 +16,4 @@ Status words for coverage: `open`, `frozen`, `exhaustive`, `partial`, `sampled`,
 
 Status words for ideas: `open`, `selected`, `partial`, `explored`. `selected` means a frozen plan names the idea. `explored` means a verified batch has reported it. Neither word means the idea was confirmed.
 
-Equivalence status `method` is an identity of the comparison, checked by a unit test. It is not a scientific cell. EQ-008 uses that status.
+Equivalence status `method` is an identity of the comparison, checked by a unit test. It is not a scientific cell. EQ-008 and EQ-014 use that status. EQ-014 has type `line_graph_total_domination`: deadlock states of one incident-prohibit template, not equality of whole weight tables across grammars.

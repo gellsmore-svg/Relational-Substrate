@@ -101,7 +101,7 @@ Active continuation of RRC. Not a new programme. RRC-001 plan, results, interpre
 | Engine gap | `docs/atlas-engine-gap.md` |
 | Idea library | `atlas/ideas.jsonl` |
 | Coverage | `atlas/coverage.jsonl` |
-| Equivalences | `atlas/equivalences.jsonl`. EQ-001 to EQ-013. Composer rows may precede a round. Cell rows follow a verified batch. EQ-008 is a method identity, not a cell |
+| Equivalences | `atlas/equivalences.jsonl`. EQ-001 to EQ-014. Composer rows may precede a round. Cell rows follow a verified batch. EQ-008 and EQ-014 are method identities, not cells |
 | Patterns | `atlas/patterns.jsonl`. PAT-001 to PAT-007. A row is not an order to investigate |
 | Open questions | `atlas/questions.jsonl` |
 | Navigation | `atlas/README.md` |
@@ -184,6 +184,10 @@ Composition stays in the idea library. `IDEA-L11`, `IDEA-L13`, `IDEA-L14`, `COV-
 
 The expansion note above says that no batch has reported a kernel hash. That sentence described the state before atlas-003. Atlas-003 and atlas-004 store `kernel_sha256` on every completed cell. `COV-KERNEL` is now `partial`. `IDEA-E02` is now `partial`. EQ-008 remains the method identity. No two cells in those rounds share a kernel without sharing the integer table. ATLAS-Q08 stays open.
 
+## Line-graph total domination
+
+`docs/line-graph-domination.md` records a scoped identity. For the uniform present-polarity incident prohibit on every edge, deadlock states are the total dominating sets of the carrier's line graph. An independent enumeration agrees, including two disjoint edges, where both sides are empty. The three-edge chain has more recurrent classes than deadlocks. Dropping one constraint, multiplying, changing polarity, or restricting the action leaves the identity. EQ-014 is a method row. `COV-LINE-DOMINATION` is `analytical`. `IDEA-G01` is `partial`: the identity is scoped to this rule. Ledger row `RRC-ATLAS-006` was appended, with relation `RRC-R040`. Its `created_commit` is `26bf891`, the commit that defined the predicate. This check appended the row. The atlas-004 cells were not rerun. This identity does not appoint the next round.
+
 ## Next action
 
-Check the candidate correspondence between uniform incident prohibition and total domination of the line graph. Record the identity only if an independent enumeration agrees, including the empty-neighbourhood case. Do not open a round whose purpose is to recompute the atlas-004 deadlock counts. Do not edit frozen plans.
+Add the composition taxonomy to the idea library, with several formulations and no placeholder cell. Then preflight a cardinality sample on a carrier with more than three edges. Do not edit frozen plans. Do not chase the domination identity.

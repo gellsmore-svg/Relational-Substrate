@@ -36,6 +36,10 @@ An imposed syntax cycle occurs with one recurrent class and with more than one. 
 
 In atlas-003 the two-event cell and the factor-4 cell share mean edges 5/3 and mean components 3/2 and do not share a hash. Those means do not identify the table.
 
+## Line-graph total domination
+
+For one rule, the uniform present-polarity incident prohibit on every edge, a state is a deadlock exactly when the present edges are a total dominating set of the carrier's line graph. The argument and the counterconditions are in `docs/line-graph-domination.md`. EQ-014. The atlas-004 deadlock counts agree. Recurrent classes on the three-edge chain outnumber those deadlocks. The identity is not a reason to centre the next round on domination.
+
 ## Regions not in the comparison
 
 Cardinality 5 and cardinality 10. N=5. Absent-polarity incident rules. Count predicates. History. Independent hyperedges. A search over graph isomorphism. Any clock other than `halt_self_loop`.
