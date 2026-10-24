@@ -246,6 +246,8 @@ EQ-018: on two disjoint edges, the `eq 1` and `ge 2` tables are the baseline tab
 
 Ledger row `RRC-ATLAS-008` was appended, with relation `RRC-R042`. Its `created_commit` is the freeze `6e77689`. This commit appended the row. The hash of this commit is not written here.
 
+The atlas-006 calculation commit is `ba493ed9d11951814ac3445777315779931f33d2`. The execution section above does not contain it.
+
 ## Next action
 
 Choose the next bounded sample from a portfolio other than these `eq 1` and `ge 2` templates. A composition cell requires one named operator, with its state, recoverability, and second application written down, before any plan. Do not use a placeholder cell. Do not rerun atlas-006. Do not chase PAT-010 or PAT-011. Do not centre the next round on chain-versus-branch separation. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.
