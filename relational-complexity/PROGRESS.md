@@ -226,6 +226,14 @@ The live engine is `rrc-0.4.0`. Definition: `docs/atlas-0.4.md`. The new predica
 
 No ledger row was added. This section does not name its own commit. No count cell was run. ATLAS-Q01 through ATLAS-Q12 stay open.
 
+## atlas-006
+
+Frozen. Plan hash `9b551e3e24afb1bdf21c243f52e6a08cb4d287880ce14553d92170cd2ee3cdcb`. Definitions commit `ba8661b`. Engine `rrc-0.4.0`. Preflight `docs/atlas-006-preflight.md`: the 5-node cycle with five `eq 1` multiplies took 0.007 seconds. Observables from that timing were not retained.
+
+The round is fifteen cells. Five listed carriers: the three-edge chain, the three-edge branch, two disjoint edges, the five-node chain, and the five-node cycle. On each carrier, one designated-bit multiply by 3, one uniform `eq 1` multiply by 3, and one uniform `ge 2` multiply by 3. `ge 1` and `eq 0` are not in the plan. EQ-017 already identifies them. This commit does not execute the cells.
+
+`COV-INCIDENT-COUNT-SAMPLE` is `frozen`. `COV-COUNTS` stays `open`. `IDEA-I04` and `IDEA-C08` stay `partial`. ATLAS-Q09 is named and stays open. The round is not scheduled to explain chain-versus-branch separation, PAT-008, PAT-009, or the 4-edge baseline identity.
+
 ## Next action
 
-Freeze a small matched sample of `eq 1` and `ge 2` against a designated-bit baseline, on more than one carrier, as its own plan under `rrc-0.4.0`. Preflight before the freeze. Do not put that cell in the engine commit. Do not rerun atlas-005. Do not chase PAT-008, PAT-009, or the 4-edge baseline identity. Do not attach a composition cell. A precise composition operator is still unnamed. `COV-COMPOSITION` stays `open`.
+Execute atlas-006 under its frozen plan. Use `--max-items` and `--budget-seconds`. Do not edit the plan after a result is seen. Do not rerun atlas-005. Do not chase PAT-008, PAT-009, or the 4-edge baseline identity. Do not attach a composition cell. A precise composition operator is still unnamed. `COV-COMPOSITION` stays `open`.

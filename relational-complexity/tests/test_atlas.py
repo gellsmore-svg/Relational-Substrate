@@ -582,14 +582,78 @@ def test_historical_round_still_verifies_and_is_not_reexecuted(tmp_path):
     assert main(["verify", "--round", "rrc-001", "--out", str(ROOT / "results" / "rrc-001")]) == 0
     assert main(["verify", "--round", "atlas-001", "--out", str(ROOT / "results" / "atlas-001")]) == 0
     assert main(["verify", "--round", "atlas-002", "--out", str(ROOT / "results" / "atlas-002")]) == 0
+    assert main(["verify", "--round", "atlas-003", "--out", str(ROOT / "results" / "atlas-003")]) == 0
+    assert main(["verify", "--round", "atlas-004", "--out", str(ROOT / "results" / "atlas-004")]) == 0
+    assert main(["verify", "--round", "atlas-005", "--out", str(ROOT / "results" / "atlas-005")]) == 0
     plan = json.loads((ROOT / "plans" / "rrc-001.json").read_text(encoding="utf-8"))
     assert plan["engine_version"] != ENGINE_VERSION
 
     def explode(_item, _timeout):
         raise AssertionError("historical item was started")
 
-    for round_id in ("rrc-001", "atlas-001", "atlas-002"):
+    for round_id in ("rrc-001", "atlas-001", "atlas-002", "atlas-003", "atlas-004", "atlas-005"):
         historical = json.loads((ROOT / "plans" / f"{round_id}.json").read_text(encoding="utf-8"))
         with pytest.raises(SystemExit):
             execute_plan(historical, tmp_path, max_items=1, budget_seconds=5, child=explode)
         assert not (tmp_path / "manifest.json").exists()
+
+
+def test_atlas_006_plan_is_a_matched_count_sample():
+    assert main(["plan", "--round", "atlas-006"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-006.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "9b551e3e24afb1bdf21c243f52e6a08cb4d287880ce14553d92170cd2ee3cdcb"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    assert plan["definitions_commit"] == "ba8661b95da2863094438626d33b28a36d9072cb"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.007
+    assert plan["no_sampling"] is True
+    assert plan["coverage"]["declared_sample"] is True
+    assert plan["coverage"]["not_every_threshold"] is True
+    assert plan["coverage"]["six_is_not_a_target"] is True
+    assert plan["coverage"]["ge_1_not_rerun"] is True
+    assert plan["questions"] == ["ATLAS-Q09"]
+    assert "ATLAS-Q11" in plan["questions_not_in_this_round"]
+    assert "ATLAS-Q12" in plan["questions_not_in_this_round"]
+    assert "PAT-008" in plan["selection"]
+    carriers = {
+        "chain": [(0, 1), (1, 2), (2, 3)],
+        "branch": [(0, 1), (0, 2), (0, 3)],
+        "disc": [(0, 1), (2, 3)],
+        "path5": [(0, 1), (1, 2), (2, 3), (3, 4)],
+        "cycle5": [(0, 1), (1, 2), (2, 3), (3, 4), (0, 4)],
+    }
+    assert len(plan["items"]) == 15
+    seen = {}
+    for item in plan["items"]:
+        name, grammar = item["id"].removeprefix("A6-").rsplit("-", 1)
+        edges = [tuple(edge) for edge in item["carrier"]["edges"]]
+        assert edges == carriers[name]
+        assert item["n"] == (5 if name in {"path5", "cycle5"} else 4)
+        seen.setdefault(name, set()).add(grammar)
+        for constraint in item["constraints"]:
+            assert constraint["effect"] == "multiply"
+            assert constraint["factor"] == 3
+            assert constraint["action"] == "either"
+        if grammar == "bit":
+            assert item["role"] == "instrument"
+            assert "not claimed covariant" in item["label"]
+            assert len(item["constraints"]) == 1
+            constraint = item["constraints"][0]
+            assert tuple(constraint["event"]) == edges[0]
+            assert tuple(constraint["when"]["edge"]) == edges[1]
+            assert constraint["when"]["polarity"] == "present"
+            assert "kind" not in constraint["when"]
+        else:
+            assert item["role"] == "template"
+            assert "IDEA-I04" in item["idea_ids"]
+            relation, threshold = ("eq", 1) if grammar == "eq1" else ("ge", 2)
+            assert [tuple(constraint["event"]) for constraint in item["constraints"]] == edges
+            for constraint in item["constraints"]:
+                assert constraint["when"] == {
+                    "kind": "incident_count",
+                    "relation": relation,
+                    "threshold": threshold,
+                }
+    assert seen == {name: {"bit", "eq1", "ge2"} for name in carriers}
