@@ -22,7 +22,9 @@ ATLAS-Q08 stays open. No continuous-time rate was computed. Agreement under `hal
 
 ## Incident count
 
-EQ-017 is a method identity of `rrc-0.4.0`. `ge 1` matches `incident_neighbour` present, and `eq 0` matches absent, including an empty neighbourhood. `eq 1` and `ge 2` differ from `ge 1` when a neighbourhood has two or more edges. The check is `tests/test_count.py`. No scientific cell uses the count. A common-neighbour count is not this predicate.
+EQ-017 is a method identity of `rrc-0.4.0`. `ge 1` matches `incident_neighbour` present, and `eq 0` matches absent, including an empty neighbourhood. `eq 1` and `ge 2` differ from `ge 1` when a neighbourhood has two or more edges. The check is `tests/test_count.py`. Atlas-006 later used uniform `eq 1` and `ge 2` multiplies. Other count relations, and a common-neighbour count, have no cell. A common-neighbour count is not this predicate.
+
+EQ-020 is the uniform `ge 2` cardinality identity. One multiply on every edge, factor at least 2, no other constraint. Weight-effective cardinality equals the number of edges with at least two incident carrier edges. Kernel-effective cardinality equals that number for `either` and for `form`. For `dissolve` it does too, except on a triangle and on a three-edge star, where the kernel is the baseline kernel and the integer table is not. A duplicate multiply, and a prohibit on the same guard, leave the family. The argument is `docs/incident-count-cardinality.md`. Atlas-006 was not rerun. The identity is not the next round.
 
 ## Relabelling
 

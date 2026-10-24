@@ -286,9 +286,16 @@ def test_registers_keep_the_count_as_a_method():
     assert ideas["IDEA-I04"]["status"] == "explored"
     assert coverage["COV-INCIDENT-COUNT-SAMPLE"]["status"] == "partial"
     assert "common-neighbour" in ideas["IDEA-I04"]["formulation"]
+    assert "common-neighbour" in ideas["IDEA-C08"]["feasibility"]
+    assert "No scientific cell" not in ideas["IDEA-C08"]["feasibility"]
+    assert "No scientific cell" not in ideas["IDEA-I04"]["feasibility"]
     assert coverage["COV-COUNTS"]["status"] == "open"
+    assert "atlas-006" in coverage["COV-COUNTS"]["method"]
+    assert "no cell" not in coverage["COV-COUNTS"]["method"]
     assert equivalences["EQ-017"]["status"] == "method"
     assert equivalences["EQ-017"]["equivalence_type"] == "weight_table"
+    assert equivalences["EQ-020"]["status"] == "method"
+    assert equivalences["EQ-020"]["equivalence_type"] == "effective_cardinality"
     text = (ROOT / "docs" / "atlas-0.4.md").read_text(encoding="utf-8")
     assert "common-neighbour" in text
     assert "not a scientific cell" in text

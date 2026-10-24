@@ -1,6 +1,6 @@
 # Engine rrc-0.4.0
 
-Status: definition and validation. This note is not a scientific cell. No scientific cell uses this engine.
+Status: definition and validation. This note is not a scientific cell. Atlas-006 later ran under this string.
 
 `rrc-0.3.0` remains the engine of atlas-003, atlas-004, and atlas-005. Those plans keep their own strings. `run` refuses them. `verify` still accepts their results. Designated-edge tables and `incident_neighbour` tables compiled here match the tables those rounds stored.
 
@@ -24,6 +24,8 @@ On a neighbourhood of one edge, `eq 1` and `ge 1` are the same guard. On a neigh
 - state `0b001`, one neighbour present: `ge 1` weighs 3, `eq 1` weighs 3, `ge 2` weighs 1.
 
 `ge 0` holds in every state. It is one empty conjunction. It is not the absent polarity once the neighbourhood can be nonempty.
+
+For one multiply on every carrier edge, factor at least 2, threshold `ge 2`, and no other constraint, weight-effective cardinality equals the number of edges whose neighbourhood has size at least 2. EQ-020. The dissolve kernel has one exception. The argument and the counterexamples are in `docs/incident-count-cardinality.md`. That identity is not a cell.
 
 A threshold the neighbourhood cannot reach never matches. Its expansion is empty.
 
@@ -49,4 +51,4 @@ A uniform template copied onto every carrier edge is checked for path reversal. 
 
 ## Still excluded
 
-History, independent hyperedges, multi-pair events, and any count other than this incident-edge count. A common-neighbour count is one of those excluded counts. Continuous-time rates are not a clock of this engine. No scientific cell is frozen with this predicate.
+History, independent hyperedges, multi-pair events, and any count other than this incident-edge count. A common-neighbour count is one of those excluded counts. Continuous-time rates are not a clock of this engine. Atlas-006 froze uniform `eq 1` and `ge 2` multiplies with this predicate. Other thresholds, prohibit counts, and a common-neighbour count are not those cells.

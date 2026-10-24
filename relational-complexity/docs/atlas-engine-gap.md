@@ -38,6 +38,6 @@ Still excluded at that string: history, independent hyperedges, count predicates
 
 ## Status after rrc-0.4.0
 
-The live engine string is `rrc-0.4.0`. It adds `incident_count` on the incident-neighbourhood bits: relation `eq` or `ge`, and an integer threshold. The definition is `docs/atlas-0.4.md`. `ge 1` matches incident present, and `eq 0` matches incident absent. That identity is EQ-017, a unit test, not a cell. Designated-edge tables and incident-neighbour tables are unchanged. No scientific cell uses this string.
+The live engine string is `rrc-0.4.0`. It adds `incident_count` on the incident-neighbourhood bits: relation `eq` or `ge`, and an integer threshold. The definition is `docs/atlas-0.4.md`. `ge 1` matches incident present, and `eq 0` matches incident absent. That identity is EQ-017, a unit test, not a cell. Designated-edge tables and incident-neighbour tables are unchanged. Atlas-006 later ran fifteen cells under this string. This paragraph does not freeze a plan.
 
 A common-neighbour count is still not compiled. History, independent hyperedges, and multi-pair events stay excluded. A count is still not one literal.

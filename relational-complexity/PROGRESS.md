@@ -248,6 +248,14 @@ Ledger row `RRC-ATLAS-008` was appended, with relation `RRC-R042`. Its `created_
 
 The atlas-006 calculation commit is `ba493ed9d11951814ac3445777315779931f33d2`. The execution section above does not contain it.
 
+## Count-coverage correction and EQ-020
+
+The sentences above that say no count cell had been frozen described the state before atlas-006. They stay. The living records now name the later round.
+
+`COV-COUNTS` stays `open`. Its method no longer says that no cell exists. Atlas-006 sampled `eq 1` and `ge 2`. Other counts, including a common-neighbour count, stay open. `COV-INCIDENT-COUNT-SAMPLE` stays `partial`. `IDEA-C08` stays `partial`. `IDEA-I04` stays `explored`. The feasibility lines no longer say that no scientific cell exists. `docs/atlas-engine-gap.md`, `docs/atlas-crosswalk.md`, and `docs/atlas-0.4.md` name atlas-006 on the living `rrc-0.4.0` string. Frozen plans were not rewritten.
+
+EQ-020 is a method identity. For one `ge 2` multiply on every carrier edge, factor at least 2, and no other constraint, weight-effective cardinality equals the number of edges with at least two incident carrier edges. Kernel-effective cardinality equals that number for `either` and for `form`. For `dissolve` it does too, except on a triangle and on a three-edge star: the kernel is the baseline kernel, the integer table is not, and the kernel-removal count stays 3. A second copy of the multiply raises the effective count. A prohibit on the same guard makes that multiply redundant. The argument is `docs/incident-count-cardinality.md`. The check is `tests/test_count_cardinality.py`. Atlas-006 was not rerun. PAT-011 is unchanged and is not scheduled. EQ-014 is unchanged. No ledger row was added. This section does not name its own commit.
+
 ## Next action
 
-Choose the next bounded sample from a portfolio other than these `eq 1` and `ge 2` templates. A composition cell requires one named operator, with its state, recoverability, and second application written down, before any plan. Do not use a placeholder cell. Do not rerun atlas-006. Do not chase PAT-010 or PAT-011. Do not centre the next round on chain-versus-branch separation. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.
+Type at least two composition operators, with input, output, state, recoverability, and second application, before any composition plan. Static line-graph iteration and an overlap construction are the first candidates. Do not use a placeholder cell. Do not rerun atlas-006. Do not chase PAT-010, PAT-011, or EQ-020. Do not centre the next round on chain-versus-branch separation or on line-graph domination. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.
