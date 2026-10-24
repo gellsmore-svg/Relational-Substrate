@@ -223,6 +223,23 @@ def test_atlas_007_plan_is_a_baseline_observation_sample():
     assert all(value == expected for value in seen.values())
 
 
+def test_atlas_007_execution_stored_no_law():
+    import json
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1] / "results" / "atlas-007" / "items"
+    names = sorted(path.name for path in root.iterdir())
+    assert len(names) == 15
+    for name in names:
+        result = json.loads((root / name / "result.json").read_text(encoding="utf-8"))
+        assert result["status"] == "failed"
+        assert result["round_id"] == "atlas-007"
+        assert "KeyError: 'round_id'" in result["error"]
+        assert "weights" not in result
+        assert "defect_l1" not in result
+        assert "exact" not in result
+
+
 def test_composition_observation_item_matches_the_chain_fixture():
     result = execute_composition_observation(
         {
