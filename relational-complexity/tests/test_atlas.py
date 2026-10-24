@@ -931,3 +931,96 @@ def test_atlas_011_plan_observes_covers_outside_the_path_fixture():
     opposite = [item for item in plan["items"] if item["id"].startswith("A11-cyc-opp-")]
     assert len(opposite) == 4
     assert opposite[0]["cover"] == [[[0, 1], [2, 3]], [[1, 2], [0, 3]]]
+
+
+def test_atlas_011_execution_separates_omission_from_a_collapsed_cover():
+    assert main(["verify", "--round", "atlas-011", "--out", str(ROOT / "results" / "atlas-011")]) == 0
+    items = ROOT / "results" / "atlas-011" / "items"
+
+    def load(name, directory="atlas-011"):
+        return json.loads((ROOT / "results" / directory / "items" / name / "result.json").read_text(encoding="utf-8"))
+
+    def defect(result):
+        return (result["defect_l1"]["num"], result["defect_l1"]["den"])
+
+    expected = {
+        "A11-tri-single-base-count": (True, 8, ("0", "1"), True),
+        "A11-tri-single-mul-count": (True, 8, ("0", "1"), True),
+        "A11-tri-single-mul-bare": (False, 4, ("4", "9"), False),
+        "A11-tri-over-base-count": (False, 7, ("1", "1"), False),
+        "A11-tri-over-mul-count": (False, 7, ("1", "1"), False),
+        "A11-tri-over-base-active": (False, 4, ("4", "5"), False),
+        "A11-tri-over-mul-active": (False, 4, ("68", "75"), False),
+        "A11-tri-far-base-count": (True, 4, ("0", "1"), False),
+        "A11-tri-far-mul-count": (True, 4, ("0", "1"), False),
+        "A11-tri-cond-base-count": (True, 4, ("0", "1"), False),
+        "A11-tri-cond-mul-count": (False, 4, ("4", "15"), False),
+        "A11-tri-event-base-count": (True, 4, ("0", "1"), False),
+        "A11-tri-event-mul-count": (True, 4, ("0", "1"), False),
+        "A11-cyc-opp-base-count": (True, 9, ("0", "1"), False),
+        "A11-cyc-opp-mul-count": (False, 9, ("5", "12"), False),
+        "A11-cyc-opp-base-active": (False, 4, ("2", "3"), False),
+        "A11-cyc-opp-mul-active": (False, 4, ("37", "54"), False),
+    }
+    from fractions import Fraction
+
+    stored = {}
+    for name, (exact, labels, pair, injective) in expected.items():
+        result = load(name)
+        stored[name] = result
+        assert result["exact"] is exact
+        assert result["n_distinct_labels"] == labels
+        assert defect(result) == pair
+        assert result["injective"] is injective
+        assert result["new_state"] is False
+        assert result["further_label"] == "undefined"
+        assert result["kernel_sha256"] == result["weight_sha256"]
+        assert result["quotient"]["defined"] is exact
+        if exact:
+            for row in result["quotient"]["rows"]:
+                assert sum(Fraction(int(cell["num"]), int(cell["den"])) for cell in row) == 1
+        else:
+            assert result["quotient"]["rows"] is None
+
+    triangle_multiply = load("A10-triangle-mul-canon", "atlas-010")
+    cycle_multiply = load("A10-cycle4-mul-canon", "atlas-010")
+    assert stored["A11-tri-single-mul-bare"]["weight_sha256"] == triangle_multiply["weight_sha256"]
+    assert defect(stored["A11-tri-single-mul-bare"]) == defect(triangle_multiply)
+    assert stored["A11-cyc-opp-mul-count"]["weight_sha256"] == cycle_multiply["weight_sha256"]
+    assert stored["A11-tri-over-base-count"]["weight_sha256"] == stored["A11-tri-single-base-count"]["weight_sha256"]
+    assert stored["A11-tri-over-mul-count"]["weight_sha256"] != stored["A11-tri-over-base-count"]["weight_sha256"]
+
+    from rrc.composition import (
+        active_intersection_labels,
+        cover_count_labels,
+        labelled_active_block_labels,
+        present_canonical_line_graph_labels,
+        present_edge_count_labels,
+    )
+
+    def same_partition(left, right):
+        return all(
+            (left[i] == left[j]) == (right[i] == right[j])
+            for i in range(len(left))
+            for j in range(len(right))
+        )
+
+    triangle = [[0, 1], [1, 2], [0, 2]]
+    cycle = [[0, 1], [1, 2], [2, 3], [0, 3]]
+    singletons = [[[0, 1]], [[1, 2]], [[0, 2]]]
+    overlap = [[[0, 1], [1, 2]], [[1, 2], [0, 2]]]
+    far = [[[0, 1]], [[1, 2]]]
+    condition = [[[0, 1]], [[0, 2]]]
+    event = [[[1, 2]], [[0, 2]]]
+    opposite = [[[0, 1], [2, 3]], [[1, 2], [0, 3]]]
+    adjacent = [[[0, 1], [1, 2]], [[2, 3], [0, 3]]]
+    bare = active_intersection_labels(triangle, singletons)
+    assert same_partition(bare, present_edge_count_labels(triangle))
+    assert same_partition(bare, present_canonical_line_graph_labels(triangle))
+    assert not same_partition(cover_count_labels(triangle, singletons), bare)
+    assert not same_partition(cover_count_labels(triangle, overlap), labelled_active_block_labels(triangle, overlap))
+    assert not same_partition(labelled_active_block_labels(triangle, overlap), active_intersection_labels(triangle, overlap))
+    assert not same_partition(cover_count_labels(triangle, far), cover_count_labels(triangle, condition))
+    assert not same_partition(cover_count_labels(triangle, far), cover_count_labels(triangle, event))
+    assert not same_partition(cover_count_labels(cycle, opposite), labelled_active_block_labels(cycle, opposite))
+    assert not same_partition(cover_count_labels(cycle, opposite), cover_count_labels(cycle, adjacent))
