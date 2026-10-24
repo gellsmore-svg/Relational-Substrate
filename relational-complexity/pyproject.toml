@@ -1,7 +1,7 @@
 [project]
 name = "rrc"
-version = "0.1.0"
-description = "Exact interface and composition experiments for recursive relational complexity."
+version = "0.2.0"
+description = "Exact relational-constraint atlas and the historical RRC-001 interface engine."
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.26"]
 

@@ -25,3 +25,9 @@ Read at the opening of the atlas continuation. This is a gap list, not a claim t
 ## What the first code increment should add
 
 A declarative compiler from a constraint list to an integer weight table, a carrier argument, the bookkeeping fields above, and one item type that reports the common core. No lumpability grid, no path index, and no replay of the wedge families in the first atlas batch.
+
+## Status after the opening compiler
+
+`src/rrc/constraints.py` compiles `opening-prohibit-multiply-v1`, including a listed carrier. `atlas_core` items report the common core in `docs/atlas-grammar.md`. The live engine string is `rrc-0.2.0`. RRC-001 remains `rrc-0.1.0`: `run` refuses that plan, and `verify` compares a result with the engine string in its own plan.
+
+Still excluded: history, independent hyperedges, count predicates, and multi-pair events. Lumpability is not part of the atlas core. No atlas plan is frozen by the compiler commit itself.

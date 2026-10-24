@@ -10,6 +10,7 @@ from pathlib import Path
 
 from rrc import ENGINE_VERSION
 from rrc.items import execute_lumpability, execute_propagation
+from rrc.constraints import resolve_carrier
 from rrc.model import (
     build_weights,
     lumpability,
@@ -132,7 +133,7 @@ def _problems(store: Store) -> list[str]:
             problems.append(f"{item['id']} is {state}")
             continue
         result = store.load_result(item["id"])
-        if result.get("engine_version") != ENGINE_VERSION:
+        if result.get("engine_version") != store.plan.get("engine_version"):
             problems.append(f"{item['id']} engine version drifted")
         if item["type"] == "lumpability":
             exact = result.get("exact")
@@ -149,6 +150,54 @@ def _problems(store: Store) -> list[str]:
                 problems.append(f"{item['id']} propagation identity did not hold")
         if item["type"] == "probe" and result.get("value") != item.get("value") and item.get("mode") == "ok":
             problems.append(f"{item['id']} probe value drifted")
+        if item["type"] == "atlas_core":
+            problems.extend(_atlas_problems(item, result))
+    return problems
+
+
+def _atlas_problems(item: dict, result: dict) -> list[str]:
+    """Record consistency. This does not recompute the weight table."""
+    problems = []
+    name = item["id"]
+    constraints = item.get("constraints")
+    book = result.get("bookkeeping") or {}
+    if not isinstance(constraints, list):
+        return [f"{name} has no constraint list"]
+    if book.get("declared_cardinality") != len(constraints):
+        problems.append(f"{name} declared cardinality drifted")
+    if book.get("j_positive", 0) + book.get("j_prohibit", 0) != len(constraints):
+        problems.append(f"{name} J fields do not add up to the constraint list")
+    n_states = result.get("n_states")
+    n_edges = result.get("n_edges")
+    if not isinstance(n_states, int) or not isinstance(n_edges, int) or n_states != (1 << n_edges):
+        problems.append(f"{name} state count is not 2 to the carrier size")
+    try:
+        edges, _kind = resolve_carrier(item["n"], item["carrier"])
+    except (TypeError, ValueError, KeyError):
+        problems.append(f"{name} carrier does not resolve")
+        edges = None
+    if edges is not None and len(edges) != n_edges:
+        problems.append(f"{name} edge count drifted from the carrier")
+    digest = result.get("weight_sha256")
+    if not isinstance(digest, str) or len(digest) != 64 or any(char not in "0123456789abcdef" for char in digest):
+        problems.append(f"{name} weight hash is missing")
+    positive = result.get("positive_transitions")
+    zeros = result.get("zero_cells")
+    if not isinstance(positive, int) or not isinstance(zeros, int) or positive + zeros != n_states * n_edges:
+        problems.append(f"{name} support cells do not cover the table")
+    occupation = result.get("occupation") or {}
+    status = occupation.get("status")
+    classes = (result.get("classes") or {}).get("recurrent_classes")
+    if status == "unique":
+        if classes != 1:
+            problems.append(f"{name} reports a unique law with several recurrent classes")
+        if "mean_present_edges" not in occupation:
+            problems.append(f"{name} unique law has no mean")
+    elif status == "not_unique":
+        if "mean_present_edges" in occupation or "distribution" in occupation:
+            problems.append(f"{name} reports a mean for a non-unique law")
+    else:
+        problems.append(f"{name} occupation status is {status}")
     return problems
 
 
@@ -173,6 +222,45 @@ def command_verify(args: argparse.Namespace) -> int:
     return 0
 
 
+def _report_atlas(plan: dict, store: Store) -> str:
+    lines = [
+        f"# {plan['round_id']} report",
+        "",
+        "Generated from completed item files. A weight hash identifies the integer table.",
+        "Occupation is reported only when the stationary law is unique.",
+        "The carrier and the imposed rule-dependency path are instruments.",
+        "",
+        "| Item | N | Edges | Declared | Effective | Removal-sensitive | max K | Classes | Deadlocks | Occupation | Hash |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+    ]
+    for item in plan["items"]:
+        state = store.classify(item["id"])
+        if state != "complete":
+            lines.append(
+                f"| {item['id']} | {item.get('n', '')} |  |  |  |  |  |  |  | {state} |  |"
+            )
+            continue
+        result = store.load_result(item["id"])
+        book = result["bookkeeping"]
+        occupation = result["occupation"]["status"]
+        lines.append(
+            "| {id} | {n} | {edges} | {declared} | {effective} | {sensitive} | {k} | {classes} | {dead} | {occupation} | `{digest}` |".format(
+                id=item["id"],
+                n=result["n"],
+                edges=result["n_edges"],
+                declared=book["declared_cardinality"],
+                effective=book["effective_cardinality"],
+                sensitive=book["removal_sensitive_count"],
+                k=book["max_positive_k"],
+                classes=result["classes"]["recurrent_classes"],
+                dead=result["classes"]["deadlock_states"],
+                occupation=occupation,
+                digest=result["weight_sha256"][:12],
+            )
+        )
+    return "\n".join(lines) + "\n"
+
+
 def command_report(args: argparse.Namespace) -> int:
     plan = load_plan(args.round)
     out = Path(args.out) if args.out else default_out(args.round)
@@ -182,6 +270,15 @@ def command_report(args: argparse.Namespace) -> int:
     except IncompatiblePlan as exc:
         print(str(exc), file=sys.stderr)
         return 2
+    kinds = {item["type"] for item in plan["items"]}
+    if kinds == {"atlas_core"}:
+        text = _report_atlas(plan, store)
+        sys.stdout.write(text)
+        if args.write:
+            destination = Path(args.write)
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(text, encoding="utf-8")
+        return 0
     lines = [
         f"# {plan['round_id']} report",
         "",

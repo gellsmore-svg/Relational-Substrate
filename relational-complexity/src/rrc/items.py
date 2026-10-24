@@ -8,12 +8,14 @@ import traceback
 import numpy as np
 
 from rrc import ENGINE_VERSION
+from rrc.constraints import GRAMMAR_ID, compile_model, occupation_report, support_report, weight_table_hash
 from rrc.model import (
     build_weights,
     check_state_independent_identity,
     describe_state,
     edge_list,
     edge_presence,
+    HALT_COMPLETION,
     fraction_payload,
     grammar_form,
     lumpability,
@@ -262,6 +264,80 @@ def execute_probe(spec: dict) -> dict:
     raise ValueError(f"unknown probe mode {mode}")
 
 
+def execute_atlas_core(spec: dict) -> dict:
+    """Common-core atlas cell. Does not decide which outcome would be interesting."""
+    started = time.perf_counter()
+    baseline = spec.get("baseline", 1)
+    model = compile_model(spec["n"], spec["carrier"], spec["constraints"], baseline)
+    tolerance = float(spec["tolerance"])
+    cross = float(spec["cross_tolerance"])
+    maximum = int(spec["max_iter"])
+    dense_max = int(spec["dense_max_states"])
+    occupied = occupation_report(model, tolerance, cross, maximum, dense_max)
+    support = support_report(model["weights"])
+    status = "complete"
+    if support["classes"] != occupied["classes"]:
+        status = "failed"
+    if occupied["occupation"]["status"] == "unresolved":
+        status = "unresolved"
+    if model["action_bit_independent"] and not model["empirical_bit_independent"]:
+        status = "failed"
+    weights = model["weights"]
+    return {
+        "status": status,
+        "engine_version": ENGINE_VERSION,
+        "grammar_id": GRAMMAR_ID,
+        "item_id": spec["id"],
+        "round_id": spec["round_id"],
+        "type": "atlas_core",
+        "role": spec.get("role", "unopened"),
+        "idea_ids": list(spec.get("idea_ids", [])),
+        "n": model["n"],
+        "n_states": int(weights.shape[0]),
+        "n_edges": int(weights.shape[1]),
+        "carrier": {
+            "kind": model["carrier_kind"],
+            "edges": [[left, right] for left, right in model["carrier_edges"]],
+            "components": model["carrier_components"],
+            "components_note": "components of the carrier graph, isolated nodes included; an instrument",
+        },
+        "baseline": model["baseline"],
+        "composer": {
+            "name": "prohibit_then_product",
+            "order_independent": True,
+        },
+        "clock": {
+            "name": HALT_COMPLETION,
+            "step": "one carrier pair, probability proportional to its current weight",
+        },
+        "compilation": {
+            "all_weights_positive": bool(np.all(weights > 0)),
+            "gate": "current-state single-toggle weights",
+            "history": False,
+            "hyperedge": False,
+            "multi_pair_event": False,
+        },
+        "bookkeeping": model["bookkeeping"],
+        "imposed_rule_dependency": model["imposed_rule_dependency"],
+        "action_bit_independent": bool(model["action_bit_independent"]),
+        "empirical_bit_independent": bool(model["empirical_bit_independent"]),
+        "weight_sha256": weight_table_hash(weights),
+        "positive_transitions": support["positive_transitions"],
+        "zero_cells": support["zero_cells"],
+        "classes": support["classes"],
+        "occupation": occupied["occupation"],
+        "solver_budget": {
+            "cross_tolerance": cross,
+            "dense_max_states": dense_max,
+            "max_iter": maximum,
+            "tolerance": tolerance,
+            "used": occupied["occupation"].get("method") == "stationary_balanced",
+        },
+        "method": "exact_weight_table",
+        "elapsed_s": round(time.perf_counter() - started, 6),
+    }
+
+
 def execute_spec(spec: dict) -> dict:
     kind = spec["type"]
     if kind == "lumpability":
@@ -270,6 +346,8 @@ def execute_spec(spec: dict) -> dict:
         return execute_propagation(spec)
     if kind == "probe":
         return execute_probe(spec)
+    if kind == "atlas_core":
+        return execute_atlas_core(spec)
     raise ValueError(f"unknown item type {kind}")
 
 

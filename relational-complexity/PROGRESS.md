@@ -110,6 +110,10 @@ Active continuation of RRC. Not a new programme. RRC-001 plan, results, interpre
 
 Coverage status words: `open`, `frozen`, `exhaustive`, `partial`, `sampled`, `analytical`, `infeasible`. Idea status words: `open`, `selected`, `partial`, `explored`. `selected` means a frozen plan names the idea. `explored` means a verified batch reported it. Neither word means confirmed.
 
+## Grammar
+
+`opening-prohibit-multiply-v1` is defined in `docs/atlas-grammar.md` and compiled by `src/rrc/constraints.py`. The live engine string is `rrc-0.2.0`. RRC-001 stays `rrc-0.1.0`. `verify` compares a result with the engine string in its plan. `run --round rrc-001` raises and does not recompute those items. Pytest after the compiler: 50 passed. No atlas plan is frozen yet.
+
 ## Next action
 
-Stage A is commit `146ebb8`. Build the opening grammar compiler next. The atlas engine string will be `rrc-0.2.0`. `verify` must compare a result with the engine string stored in its plan, so `verify --round rrc-001 --out results/rrc-001` still passes. `run --round rrc-001` must refuse once the live engine string moves, so the historical round is not recomputed. Freeze `plans/atlas-001.json` only after a timing preflight, and do not execute those cells in the freeze commit. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
+Time the heaviest intended `atlas-001` cell and record seconds only. Freeze `plans/atlas-001.json` in a commit that does not contain results. Then execute into `results/atlas-001` in bounded batches. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.

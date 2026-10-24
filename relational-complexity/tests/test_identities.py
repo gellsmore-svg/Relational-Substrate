@@ -39,9 +39,12 @@ def test_six_claims_stay_distinct():
 
 
 def test_engine_does_not_special_case_six_nodes():
-    source = Path(__file__).resolve().parents[1].joinpath("src/rrc/model.py").read_text(encoding="utf-8")
-    assert "n == 6" not in source
-    assert "n==6" not in source
+    root = Path(__file__).resolve().parents[1] / "src" / "rrc"
+    sources = [path.read_text(encoding="utf-8") for path in sorted(root.glob("*.py"))]
+    assert sources
+    for source in sources:
+        assert "n == 6" not in source
+        assert "n==6" not in source
 
 
 def test_path_index_is_not_complete_graph_distance():
