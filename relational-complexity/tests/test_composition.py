@@ -191,6 +191,38 @@ def test_baseline_observations_are_description_dependent():
         assert not _same_partition(line, present_edge_count_labels(edges))
 
 
+def test_atlas_007_plan_is_a_baseline_observation_sample():
+    import json
+    from pathlib import Path
+
+    from rrc.store import digest
+
+    plan = json.loads((Path(__file__).resolve().parents[1] / "plans" / "atlas-007.json").read_text(encoding="utf-8"))
+    assert digest(plan) == "8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    assert plan["definitions_commit"] == "e5a97d27cfec31aa76ae2f7e8c88e73231cab649"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.001
+    assert plan["no_sampling"] is True
+    assert plan["questions"] == ["ATLAS-Q10"]
+    assert "ATLAS-Q12" in plan["questions_not_in_this_round"]
+    assert "EQ-020" in plan["selection"]
+    assert len(plan["items"]) == 15
+    seen = {}
+    for item in plan["items"]:
+        assert item["type"] == "composition_observation"
+        assert item["constraints"] == []
+        assert item["baseline"] == 1
+        seen.setdefault(item["id"].split("-")[1], set()).add(item["observation"])
+    expected = {
+        "present_line_graph",
+        "present_edge_count",
+        "present_degree_sequence",
+    }
+    assert seen.keys() == {"triangle", "chain", "star", "path4", "cycle4"}
+    assert all(value == expected for value in seen.values())
+
+
 def test_composition_observation_item_matches_the_chain_fixture():
     result = execute_composition_observation(
         {

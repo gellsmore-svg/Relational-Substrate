@@ -270,6 +270,14 @@ A third reading labels states of an existing baseline chain. It adds no state. P
 
 `composition_observation` records strong lumpability of one named label map. The weight compiler is unchanged. A further label is undefined. The engine string stays `rrc-0.4.0`. No plan is frozen in this section. This section does not name its own commit.
 
+## atlas-007
+
+Frozen. Plan hash `8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766`. Definitions commit `e5a97d2`. Engine `rrc-0.4.0`. Preflight `docs/atlas-007-preflight.md`: the four-edge path degree sequence took 0.001 seconds. Observables from that timing were not retained.
+
+The round is fifteen cells. Five baseline carriers: the triangle, the three-edge chain, the three-edge star, the four-edge path, and the four-cycle. On each carrier, the bare line graph of the present edges, the present edge count, and the present degree sequence. Every constraint list is empty. A further label is undefined. Static line-graph iteration is not a cell. The cover operators are not cells. This commit does not execute the cells.
+
+`COV-COMPOSITION-OBSERVATION` is `frozen`. `COV-COMPOSITION` stays `open`. ATLAS-Q10 is named and stays open. The round is not scheduled to explain chain-versus-branch separation, PAT-010, PAT-011, EQ-020, or the four-cycle degree defect.
+
 ## Next action
 
-Freeze a baseline observation plan for `present_line_graph`, `present_edge_count`, and `present_degree_sequence` on the five fixture carriers. Do not add a token cell for the static line graph. Do not declare the cover operator recursive. Do not rerun atlas-006. Do not chase PAT-010, PAT-011, EQ-020, or the four-cycle degree defect. An independent constraint sample remains a separate plan. `COV-COMPOSITION` stays `open` until a cell is frozen. ATLAS-Q01 through ATLAS-Q12 stay open.
+Execute atlas-007 after this freeze. Do not edit the plan after the results. Do not add a token cell for the static line graph. Do not declare the cover operator recursive. Do not rerun atlas-006. An independent constraint sample remains a separate plan. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.
