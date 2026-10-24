@@ -1,0 +1,394 @@
+{
+  "round_id": "atlas-013",
+  "engine_version": "rrc-0.4.0",
+  "grammar_id": "incident-count-v1+opening-prohibit-multiply-v1",
+  "definitions_commit": "9068c99f0c79a43a61a2ef1f14b5e696104901fc",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q02"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q01",
+    "ATLAS-Q03",
+    "ATLAS-Q04",
+    "ATLAS-Q05",
+    "ATLAS-Q06",
+    "ATLAS-Q07",
+    "ATLAS-Q08",
+    "ATLAS-Q09",
+    "ATLAS-Q10",
+    "ATLAS-Q11",
+    "ATLAS-Q12",
+    "ATLAS-Q13",
+    "ATLAS-Q14",
+    "ATLAS-Q15"
+  ],
+  "selection": "One three-edge star. The slice is the empty list, three uniform incident-count prohibits, and one single eq-2 prohibit. The uniform lists are eq 1, eq 2, and ge 2, action either, one constraint on each star edge. That slice is fully enumerated. It is not every threshold and not every carrier. The effect is prohibit. There is no multiply and no factor. The three-edge chain is not the carrier. Atlas-006's factor-3 eq-1 and ge-2 multiplies are not rerun. eq 0 and ge 0 are not in the slice. Formation and dissolution are not in the slice. The three uniform lists differ by relation or threshold. Comparing the single eq-2 prohibit with a uniform list changes the declared cardinality. That comparison is joint. ATLAS-Q02 is the question of the round and stays open. The round does not close it. Not scheduled to extend PAT-002, the atlas-006 templates, the atlas-012 factor-3 chain, or the activity-bit fixture.",
+  "grammar": {
+    "ids": [
+      "incident-count-v1",
+      "opening-prohibit-multiply-v1"
+    ],
+    "note": "docs/atlas-0.4.md. Uniform lists use incident_count. The empty list is the opening baseline. Effect prohibit. Action either. No multiply.",
+    "baseline": 1
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-013-preflight.md",
+    "heaviest_cell_s": 0.002,
+    "shape": "three-edge star, uniform eq 2 prohibit, 8 states",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "n": [
+      4
+    ],
+    "carriers": [
+      "star"
+    ],
+    "cells": 5,
+    "declared_sample": true,
+    "slice_exhaustive": true,
+    "baseline_only": false,
+    "six_is_not_a_target": true,
+    "excluded": [
+      "factor-3 multiplies",
+      "the three-edge chain",
+      "eq 0 and ge 0",
+      "formation and dissolution",
+      "designated-bit polarity pairs",
+      "other carriers",
+      "N=6",
+      "common-neighbour counts",
+      "rerun of results/atlas-006",
+      "rerun of results/atlas-012"
+    ]
+  },
+  "stopping": [
+    "Do not add, remove or edit items after this file is committed.",
+    "Do not widen tolerances after an item has run.",
+    "A failed, timed-out or unresolved item stays in that state.",
+    "Incomplete or invalid records may be recomputed only under the same spec.",
+    "Do not describe an unrun item as a result.",
+    "Do not treat this star as every graph on four nodes.",
+    "Do not add a threshold after reading the five results.",
+    "Do not rerun atlas-006 or atlas-012."
+  ],
+  "items": [
+    {
+      "id": "A13-base",
+      "round_id": "atlas-013",
+      "type": "atlas_core",
+      "role": "baseline",
+      "label": "empty list",
+      "idea_ids": [
+        "IDEA-C00"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "placement": "empty list",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A13-eq1",
+      "round_id": "atlas-013",
+      "type": "atlas_core",
+      "role": "template",
+      "label": "uniform eq 1 prohibit on every star edge",
+      "idea_ids": [
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "prohibit",
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "prohibit",
+          "action": "either",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "prohibit",
+          "action": "either",
+          "event": [
+            0,
+            3
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        }
+      ],
+      "placement": "one incident-count prohibit on each listed edge",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A13-eq2",
+      "round_id": "atlas-013",
+      "type": "atlas_core",
+      "role": "template",
+      "label": "uniform eq 2 prohibit on every star edge",
+      "idea_ids": [
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "prohibit",
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "prohibit",
+          "action": "either",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "prohibit",
+          "action": "either",
+          "event": [
+            0,
+            3
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 2
+          }
+        }
+      ],
+      "placement": "one incident-count prohibit on each listed edge",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A13-ge2",
+      "round_id": "atlas-013",
+      "type": "atlas_core",
+      "role": "template",
+      "label": "uniform ge 2 prohibit on every star edge",
+      "idea_ids": [
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "prohibit",
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "prohibit",
+          "action": "either",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "prohibit",
+          "action": "either",
+          "event": [
+            0,
+            3
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        }
+      ],
+      "placement": "one incident-count prohibit on each listed edge",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A13-one",
+      "round_id": "atlas-013",
+      "type": "atlas_core",
+      "role": "instrument",
+      "label": "eq 2 prohibit on the first star edge only",
+      "idea_ids": [
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "prohibit",
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 2
+          }
+        }
+      ],
+      "placement": "one incident-count prohibit on (0,1); the other two edges are unconstrained",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    }
+  ]
+}
