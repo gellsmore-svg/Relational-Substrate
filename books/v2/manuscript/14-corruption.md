@@ -1,4 +1,4 @@
-# Chapter 13: Corruption
+# Chapter 14: Corruption
 
 Any account of reality that speaks only of order soon becomes unbelievable. The stone on the path is beautiful in the morning light, but the path also has litter on it, the river it follows may be poisoned, and the person who sees the stone may be grieving, or bitter, or lying to someone they love. The world is good, and it is also deeply wrong. This chapter asks what that wrongness is, within the account of creation this book has given.
 
@@ -18,7 +18,7 @@ The way these fit together has been understood in Christian thought since August
 
 ## Corruption as persisting misalignment
 
-Chapter 12 described alignment as fitting the order one is made for. Misalignment, a departure from that order, is not by itself the whole of corruption. Every growing creature departs from its mature form, and every learner makes mistakes. A wrong act is wrong in itself, whether or not it is ever repeated: a single lie, swiftly repented of, was still a lie, and a single act of cruelty is still cruel. Its wrongness lies in what it is and whom it wrongs, judged by the moral order of Chapter 12, not in how long it lasts. What persistence explains is something else: how wrongdoing **entrenches**. Misalignment that is not restored persists and spreads, hardening into habit, narrowing what a person can see and choose, and reaching into others. Corruption, in the full sense this chapter describes, includes both the wrong and its entrenchment.
+Chapter 13 described alignment as fitting the order one is made for. Misalignment, a departure from that order, is not by itself the whole of corruption. Every growing creature departs from its mature form, and every learner makes mistakes. A wrong act is wrong in itself, whether or not it is ever repeated: a single lie, swiftly repented of, was still a lie, and a single act of cruelty is still cruel. Its wrongness lies in what it is and whom it wrongs, judged by the moral order of Chapter 13, not in how long it lasts. What persistence explains is something else: how wrongdoing **entrenches**. Misalignment that is not restored persists and spreads, hardening into habit, narrowing what a person can see and choose, and reaching into others. Corruption, in the full sense this chapter describes, includes both the wrong and its entrenchment.
 
 Scripture describes sin in exactly these terms: not as a series of isolated lapses but as a trajectory that hardens, enslaves and narrows:
 
@@ -92,7 +92,7 @@ And human beings are not only victims of corruption. They are agents of it:
 > `For all have sinned, and come short of the glory of God.`
 > *Romans 3:23*
 
-Any account of corruption that described it only as impersonal process, as decay or entropy or breakdown, would miss what Scripture insists on. Corruption is also personal, moral and culpable. The relational account helps here only in a limited way. It shows how personal wrongdoing can have consequences that reach far beyond the person: into others, into communities and into the land, as Hosea saw (Chapter 9). It cannot make sin less personal than it is, and it does not try to.
+Any account of corruption that described it only as impersonal process, as decay or entropy or breakdown, would miss what Scripture insists on. Corruption is also personal, moral and culpable. The relational account helps here only in a limited way. It shows how personal wrongdoing can have consequences that reach far beyond the person: into others, into communities and into the land, as Hosea saw (Chapter 10). It cannot make sin less personal than it is, and it does not try to.
 
 ## Limitation is not corruption
 

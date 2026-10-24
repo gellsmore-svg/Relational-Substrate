@@ -33,7 +33,7 @@ Admissibility decides the shape of the possible. Tendency weights the possible w
 
 Later work in the same models located the difference more exactly. In averages, a ban behaves like the far end of ever-stronger disfavouring. What only a ban changes is the *shape of the histories that are possible*: some changes become one-way, and some states can be regained only by first undoing something else. So a persisting absence is either slow, where return is possible but unlikely, or *gated*, where return is impossible until another relation changes. A ban on forming links never made anything permanently unrecoverable, but hard rules could leave a system where nothing at all can happen. Whether anything in created order corresponds to that total arrest is open (Appendix E.8).
 
-One caution about the word. In this book, *admissible* means "physically possible within created order". It never means "morally permitted". Chapter 12 will distinguish physical, operational and moral admissibility explicitly. Until then the word carries only its physical sense.
+One caution about the word. In this book, *admissible* means "physically possible within created order". It never means "morally permitted". Chapter 13 will distinguish physical, operational and moral admissibility explicitly. Until then the word carries only its physical sense.
 
 ## Constraint makes things possible
 
@@ -50,7 +50,7 @@ Scripture presents created order in exactly these terms. Its account of creation
 > `He hath also stablished them for ever and ever: he hath made a decree which shall not pass.`
 > *Psalm 148:6*
 
-Light is divided from darkness, waters from waters, land from sea, kind from kind. Each division is a constraint, and each constraint makes room for a richer world. The theme reaches further in Scripture than physical order. Law, wisdom and discipline are presented throughout as the conditions of flourishing rather than its enemies, and Chapter 12 will return to that. Here it is enough that boundary belongs to how the world is made, not to how it is restricted.
+Light is divided from darkness, waters from waters, land from sea, kind from kind. Each division is a constraint, and each constraint makes room for a richer world. The theme reaches further in Scripture than physical order. Law, wisdom and discipline are presented throughout as the conditions of flourishing rather than its enemies, and Chapter 13 will return to that. Here it is enough that boundary belongs to how the world is made, not to how it is restricted.
 
 ## From the possible to the actual
 
@@ -93,7 +93,7 @@ This arrangement protects two truths at once. It protects purpose: the world is 
 
 Two older mistakes are avoided. One is the view that God acts in every event as a fresh, bespoke intervention, so that created things have no real operations of their own; this makes nonsense of the stable regularity Scripture promises. The other is the view that God made the world and withdrew; this contradicts the continuous upholding of Colossians 1:17 and Hebrews 1:3. The position here is the mainstream Christian one: created order operates lawfully and really, under God's continual upholding, within a range of possibility that his purpose has shaped. The book calls this **non-agentic runtime**. The physical order is purposed without being purposeful in itself.
 
-One more caution belongs here, and Chapter 14 will develop it. To say that physical order runs without the substrate intending anything is not to say that God's action is confined to the substrate's possibilities. God is not one more cause among the causes of the world. He is the Creator of all its possibilities. The book makes no claim to describe how God acts in miracles, in providence or in redemption. It describes the ordinary operation of what he has made.
+One more caution belongs here, and Chapter 15 will develop it. To say that physical order runs without the substrate intending anything is not to say that God's action is confined to the substrate's possibilities. God is not one more cause among the causes of the world. He is the Creator of all its possibilities. The book makes no claim to describe how God acts in miracles, in providence or in redemption. It describes the ordinary operation of what he has made.
 
 ## The stone, again
 

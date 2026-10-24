@@ -1,4 +1,4 @@
-# Chapter 15: One World, Many Kinds
+# Chapter 16: One World, Many Kinds
 
 The stone is still on the path. Nothing about it has changed since the first page. What has changed, the book hopes, is how much can be seen in it.
 
@@ -26,7 +26,7 @@ Some of it is observation, measurement and well-tested mathematics. Physics desc
 
 Some of it is philosophical argument. Description does not by itself settle ontology. Every account starts from assumptions. Structural analogy is not identity. And, most importantly, global coherence is a stronger test of a worldview than local success. These the book has argued for, and they stand or fall with the arguments.
 
-And some of it is the Relational Substrate proposal itself: that relation is foundational, that actualisation is constrained chance, that relational equivalence can preserve sameness of kind through change (individual continuity being a further question of lineage), that T-C-R names something basic about how created order is connected. These are hypotheses. The project's models have shown them to be coherent and workable, and they do not show that nature works this way. The models have also marked limits: the simplest relational rules give no account of gravity's effect on clocks (Chapter 8). The book's case for them is the case of Chapter 9: that together they make the whole of what we know hang together better than the alternative, with no gulf between the physical world and the human one.
+And some of it is the Relational Substrate proposal itself: that relation is foundational, that actualisation is constrained chance, that relational equivalence can preserve sameness of kind through change (individual continuity being a further question of lineage), that T-C-R names something basic about how created order is connected. These are hypotheses. The project's models have shown them to be coherent and workable, and they do not show that nature works this way. The models have also marked limits: the simplest relational rules give no account of gravity's effect on clocks (Chapter 9). The book's case for them is the case of Chapter 10: that together they make the whole of what we know hang together better than the alternative, with no gulf between the physical world and the human one.
 
 That combination calls for what the first edition called *disciplined confidence*: confidence where the grounds are strong, openness where they are not, and honesty about which is which. Appendix E records the current status of every major claim in one place, together with the questions that remain open and the readings the book rejects.
 
@@ -46,7 +46,7 @@ But Job's question is not a rebuke to inquiry. The same book that asks "where wa
 
 ## Living in a relational world
 
-If the world is as described here, some practical consequences follow. They are not deductions from physics, which would contradict Chapter 12, but ways of living that fit the grain of the world.
+If the world is as described here, some practical consequences follow. They are not deductions from physics, which would contradict Chapter 13, but ways of living that fit the grain of the world.
 
 Science is to be honoured. It studies a real, ordered, intelligible creation, and its successes are possible precisely because creation is not chaos. It is also to be held in its place: it describes how the created order behaves, and the questions of what that order is, what it is for and how we should live in it are not answered by description alone.
 

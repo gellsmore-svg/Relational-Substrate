@@ -5,8 +5,8 @@
    "first": "Ch 1",
    "reactivate": [
     "Ch 2",
-    "Ch 9",
-    "Ch 14"
+    "Ch 10",
+    "Ch 15"
    ]
   },
   "creator-creature": {
@@ -14,9 +14,9 @@
    "reactivate": [
     "Ch 3",
     "Ch 4",
-    "Ch 9",
-    "Ch 14",
-    "Ch 15"
+    "Ch 10",
+    "Ch 15",
+    "Ch 16"
    ]
   },
   "creation-real": {
@@ -34,132 +34,132 @@
   "category": {
    "first": "Ch 1",
    "reactivate": [
-    "Ch 9",
-    "Ch 11",
-    "Ch 15"
+    "Ch 10",
+    "Ch 12",
+    "Ch 16"
    ]
   },
   "analogy-vs-identity": {
    "first": "Ch 1",
    "reactivate": [
     "Ch 7",
-    "Ch 9",
-    "Ch 11",
-    "Ch 13"
+    "Ch 10",
+    "Ch 12",
+    "Ch 14"
    ]
   },
   "description": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 8"
+    "Ch 9"
    ]
   },
   "ontology": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 8"
+    "Ch 9"
    ]
   },
   "desc-not-ont": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 8",
-    "Ch 9"
+    "Ch 9",
+    "Ch 10"
    ]
   },
   "assumptions": {
    "first": "Ch 2",
    "reactivate": [
     "Ch 3",
-    "Ch 9"
+    "Ch 10"
    ]
   },
   "epistemic-levels": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 8",
-    "Ch 15"
+    "Ch 9",
+    "Ch 16"
    ]
   },
   "coherence": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 9"
+    "Ch 10"
    ]
   },
   "local-coherence": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 9"
+    "Ch 10"
    ]
   },
   "regional-coherence": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 9"
+    "Ch 10"
    ]
   },
   "global-coherence": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 9",
-    "Ch 15"
+    "Ch 10",
+    "Ch 16"
    ]
   },
   "knowing-coherence": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 9"
+    "Ch 10"
    ]
   },
   "empirical-constraint": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 8",
-    "Ch 9"
+    "Ch 9",
+    "Ch 10"
    ]
   },
   "not-proof": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 9",
-    "Ch 15"
+    "Ch 10",
+    "Ch 16"
    ]
   },
   "coherence-not-fidelity": {
-   "first": "Ch 9",
+   "first": "Ch 10",
    "reactivate": [
-    "Ch 15"
+    "Ch 16"
    ]
   },
   "object-first": {
    "first": "Ch 3",
    "reactivate": [
-    "Ch 9"
+    "Ch 10"
    ]
   },
   "relation": {
    "first": "Ch 3",
    "reactivate": [
     "Ch 7",
-    "Ch 9",
-    "Ch 11",
-    "Ch 15"
+    "Ch 10",
+    "Ch 12",
+    "Ch 16"
    ]
   },
   "substrate": {
    "first": "Ch 3",
    "reactivate": [
     "Ch 4",
-    "Ch 9",
-    "Ch 15"
+    "Ch 10",
+    "Ch 16"
    ]
   },
   "runtime": {
    "first": "Ch 3",
    "reactivate": [
     "Ch 4",
-    "Ch 14"
+    "Ch 15"
    ]
   },
   "mediation": {
@@ -172,7 +172,7 @@
    "first": "Ch 4",
    "reactivate": [
     "Ch 5",
-    "Ch 12"
+    "Ch 13"
    ]
   },
   "admissibility": {
@@ -180,7 +180,7 @@
    "reactivate": [
     "Ch 5",
     "Ch 7",
-    "Ch 12"
+    "Ch 13"
    ]
   },
   "tendency": {
@@ -199,72 +199,72 @@
   "purpose-upstream": {
    "first": "Ch 4",
    "reactivate": [
-    "Ch 10",
-    "Ch 14"
+    "Ch 11",
+    "Ch 15"
    ]
   },
   "non-agentic": {
    "first": "Ch 4",
    "reactivate": [
-    "Ch 8",
-    "Ch 14"
+    "Ch 9",
+    "Ch 15"
    ]
   },
   "constraint-generative": {
    "first": "Ch 4",
    "reactivate": [
     "Ch 6",
-    "Ch 12"
+    "Ch 13"
    ]
   },
   "stochasticity": {
    "first": "Ch 5",
    "reactivate": [
-    "Ch 8"
+    "Ch 9"
    ]
   },
   "constrained-stochasticity": {
    "first": "Ch 5",
    "reactivate": [
     "Ch 6",
-    "Ch 8",
-    "Ch 9"
+    "Ch 9",
+    "Ch 10"
    ]
   },
   "identity-invariant": {
    "first": "Ch 6",
    "reactivate": [
     "Ch 7",
-    "Ch 11",
-    "Ch 14"
+    "Ch 12",
+    "Ch 15"
    ]
   },
   "persistence": {
    "first": "Ch 6",
    "reactivate": [
     "Ch 7",
-    "Ch 10",
-    "Ch 11"
+    "Ch 11",
+    "Ch 12"
    ]
   },
   "information-loss": {
    "first": "Ch 6",
    "reactivate": [
-    "Ch 14"
+    "Ch 15"
    ]
   },
   "memory-configuration": {
    "first": "Ch 6",
    "reactivate": [
-    "Ch 11",
-    "Ch 13"
+    "Ch 12",
+    "Ch 14"
    ]
   },
   "matter": {
    "first": "Ch 6",
    "reactivate": [
-    "Ch 10",
-    "Ch 11"
+    "Ch 11",
+    "Ch 12"
    ]
   },
   "time": {
@@ -274,195 +274,195 @@
   "manifestation": {
    "first": "Ch 6",
    "reactivate": [
-    "Ch 11"
+    "Ch 12"
    ]
   },
   "difference": {
    "first": "Ch 7",
    "reactivate": [
-    "Ch 9"
+    "Ch 10"
    ]
   },
   "transmit": {
    "first": "Ch 7",
    "reactivate": [
-    "Ch 13"
+    "Ch 14"
    ]
   },
   "carry": {
    "first": "Ch 7",
    "reactivate": [
-    "Ch 13"
+    "Ch 14"
    ]
   },
   "substitutability": {
    "first": "Ch 7",
    "reactivate": [
-    "Ch 10"
+    "Ch 11"
    ]
   },
   "receive": {
    "first": "Ch 7",
    "reactivate": [
-    "Ch 13"
+    "Ch 14"
    ]
   },
   "tcr": {
    "first": "Ch 7",
    "reactivate": [
-    "Ch 8",
     "Ch 9",
     "Ch 10",
     "Ch 11",
-    "Ch 13",
+    "Ch 12",
     "Ch 14",
-    "Ch 15"
+    "Ch 15",
+    "Ch 16"
    ]
   },
   "nested-tcr": {
    "first": "Ch 7",
    "reactivate": [
-    "Ch 9",
-    "Ch 10"
+    "Ch 10",
+    "Ch 11"
    ]
   },
   "coordination": {
-   "first": "Ch 8",
+   "first": "Ch 9",
+   "reactivate": [
+    "Ch 11"
+   ]
+  },
+  "local-global": {
+   "first": "Ch 9",
+   "reactivate": []
+  },
+  "regularity": {
+   "first": "Ch 9",
    "reactivate": [
     "Ch 10"
    ]
   },
-  "local-global": {
-   "first": "Ch 8",
-   "reactivate": []
-  },
-  "regularity": {
-   "first": "Ch 8",
-   "reactivate": [
-    "Ch 9"
-   ]
-  },
   "mathematics": {
-   "first": "Ch 8",
+   "first": "Ch 9",
    "reactivate": [
-    "Ch 15"
+    "Ch 16"
    ]
   },
   "bridge": {
-   "first": "Ch 9",
+   "first": "Ch 10",
    "reactivate": [
-    "Ch 11",
     "Ch 12",
     "Ch 13",
-    "Ch 15"
+    "Ch 14",
+    "Ch 16"
    ]
   },
   "life": {
-   "first": "Ch 10",
-   "reactivate": [
-    "Ch 11"
-   ]
-  },
-  "higher-order": {
-   "first": "Ch 10",
-   "reactivate": [
-    "Ch 11"
-   ]
-  },
-  "embodiment": {
-   "first": "Ch 11",
-   "reactivate": [
-    "Ch 14"
-   ]
-  },
-  "personhood": {
-   "first": "Ch 11",
-   "reactivate": [
-    "Ch 12",
-    "Ch 14"
-   ]
-  },
-  "soul-spirit": {
-   "first": "Ch 11",
-   "reactivate": [
-    "Ch 14"
-   ]
-  },
-  "consciousness": {
-   "first": "Ch 11",
-   "reactivate": []
-  },
-  "image": {
    "first": "Ch 11",
    "reactivate": [
     "Ch 12"
    ]
   },
-  "three-admissibility": {
+  "higher-order": {
+   "first": "Ch 11",
+   "reactivate": [
+    "Ch 12"
+   ]
+  },
+  "embodiment": {
+   "first": "Ch 12",
+   "reactivate": [
+    "Ch 15"
+   ]
+  },
+  "personhood": {
+   "first": "Ch 12",
+   "reactivate": [
+    "Ch 13",
+    "Ch 15"
+   ]
+  },
+  "soul-spirit": {
+   "first": "Ch 12",
+   "reactivate": [
+    "Ch 15"
+   ]
+  },
+  "consciousness": {
+   "first": "Ch 12",
+   "reactivate": []
+  },
+  "image": {
    "first": "Ch 12",
    "reactivate": [
     "Ch 13"
    ]
   },
-  "alignment": {
-   "first": "Ch 12",
+  "three-admissibility": {
+   "first": "Ch 13",
    "reactivate": [
-    "Ch 13",
     "Ch 14"
+   ]
+  },
+  "alignment": {
+   "first": "Ch 13",
+   "reactivate": [
+    "Ch 14",
+    "Ch 15"
    ]
   },
   "corruption": {
-   "first": "Ch 13",
+   "first": "Ch 14",
    "reactivate": [
-    "Ch 14"
+    "Ch 15"
    ]
   },
   "limitation": {
-   "first": "Ch 13",
+   "first": "Ch 14",
    "reactivate": []
   },
   "restoration": {
-   "first": "Ch 14",
+   "first": "Ch 15",
    "reactivate": [
-    "Ch 15"
+    "Ch 16"
    ]
   },
   "resurrection": {
-   "first": "Ch 14",
+   "first": "Ch 15",
    "reactivate": []
   },
   "divine-action": {
-   "first": "Ch 14",
+   "first": "Ch 15",
    "reactivate": [
-    "Ch 15"
+    "Ch 16"
    ]
   },
   "connectivity": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 9"
+    "Ch 10"
    ]
   },
   "boundary-validity": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 9",
-    "Ch 11",
-    "Ch 12"
+    "Ch 10",
+    "Ch 12",
+    "Ch 13"
    ]
   },
   "propagation-cycle": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 9",
-    "Ch 15"
+    "Ch 10",
+    "Ch 16"
    ]
   },
   "projection": {
    "first": "Ch 6",
    "reactivate": [
-    "Ch 8",
-    "Ch 9"
+    "Ch 9",
+    "Ch 10"
    ]
   },
   "discriminability": {
@@ -475,49 +475,49 @@
    "first": "Ch 6",
    "reactivate": [
     "Ch 7",
-    "Ch 10",
     "Ch 11",
-    "Ch 14"
+    "Ch 12",
+    "Ch 15"
    ]
   },
   "provenance": {
    "first": "Ch 6",
    "reactivate": [
     "Ch 7",
-    "Ch 10",
-    "Ch 13"
+    "Ch 11",
+    "Ch 14"
    ]
   },
   "compatibility": {
    "first": "Ch 7",
    "reactivate": [
-    "Ch 10",
-    "Ch 14"
+    "Ch 11",
+    "Ch 15"
    ]
   },
   "joint-process": {
-   "first": "Ch 8",
+   "first": "Ch 9",
    "reactivate": [
-    "Ch 9"
+    "Ch 10"
    ]
   },
   "aggregation": {
-   "first": "Ch 8",
+   "first": "Ch 9",
    "reactivate": [
-    "Ch 9"
+    "Ch 10"
    ]
   },
   "layered-stability": {
-   "first": "Ch 8",
+   "first": "Ch 9",
    "reactivate": [
-    "Ch 15"
+    "Ch 16"
    ]
   },
   "recovery-kinds": {
    "first": "Ch 6",
    "reactivate": [
-    "Ch 10",
-    "Ch 14"
+    "Ch 11",
+    "Ch 15"
    ]
   },
   "endogenous-carrier": {
@@ -527,22 +527,22 @@
   "individual-continuity": {
    "first": "Ch 6",
    "reactivate": [
-    "Ch 11",
-    "Ch 14",
-    "Ch 15"
+    "Ch 12",
+    "Ch 15",
+    "Ch 16"
    ]
   },
   "bidirectional": {
    "first": "Ch 2",
    "reactivate": [
-    "Ch 8",
-    "Ch 15"
+    "Ch 9",
+    "Ch 16"
    ]
   },
   "interoperability": {
    "first": "Ch 3",
    "reactivate": [
-    "Ch 9"
+    "Ch 10"
    ]
   },
   "t0-open": {
@@ -561,13 +561,13 @@
   "tcr-recursive": {
    "first": "Ch 7",
    "reactivate": [
-    "Ch 15"
+    "Ch 16"
    ]
   },
   "causation": {
    "first": "Ch 7",
    "reactivate": [
-    "Ch 15"
+    "Ch 16"
    ]
   }
  }

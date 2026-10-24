@@ -102,7 +102,7 @@ It **nests**. Within one act of seeing there are transmissions inside transmissi
 
 It **composes**. Many transmissions run in parallel: light from every point of the stone reaching every part of the retina at once, together forming one image. Others run in sequence: Sun to stone, stone to eye, eye to brain. You may then *tell* someone what you saw, and the scene has become part of a conversation.
 
-And multiple chains are **coordinated**. Your two eyes receive slightly different images, and depth is seen in how they are related, not in either alone. Your ears receive sound at slightly different times, and direction is heard in the difference. Chapter 8 will show why relations among many chancy events can matter more than the events taken one by one.
+And multiple chains are **coordinated**. Your two eyes receive slightly different images, and depth is seen in how they are related, not in either alone. Your ears receive sound at slightly different times, and direction is heard in the difference. Chapter 9 will show why relations among many chancy events can matter more than the events taken one by one.
 
 ## A grammar that recurs
 
@@ -138,7 +138,7 @@ That is a minimal claim, and it should be kept minimal. It is tempting to pictur
 
 T-C-R is not a separate principle added to the previous chapters. It draws them together. It is what mediation requires, if nothing acts across a gap of non-relation (Chapter 3). It is shaped by **admissibility** (Chapter 4) in what a source can transmit, what dependencies exist and what a receiver can register. It is shot through with **constrained chance** (Chapter 5): which molecule in your retina absorbs light from the stone at a given instant is a matter of chance, and the image is steady because many such events compose. And it depends on **identity** (Chapter 6): the carried distinction persists as an equivalence class across changing carriers, with its provenance where something downstream depends on it.
 
-Together these show that a relational world is not a frozen lattice in which everything is related and nothing happens. Relation becomes history: a distinction here makes a difference there, which can in turn be transmitted, carried and received. Life is built from such chains (Chapter 10), and so is human communication (Chapter 11). The theological chapters use the grammar, with care, as a lens on some forms of corruption and restoration (Chapters 13 and 14).
+Together these show that a relational world is not a frozen lattice in which everything is related and nothing happens. Relation becomes history: a distinction here makes a difference there, which can in turn be transmitted, carried and received. Life is built from such chains (Chapter 11), and so is human communication (Chapter 12). The theological chapters use the grammar, with care, as a lens on some forms of corruption and restoration (Chapters 14 and 15).
 
 **Status.** Emission, propagation and absorption are established physics, and T-C-R organises that physics without replacing it. It has not been shown to predict anything the physics does not. That T-C-R is the form of consequential relation itself, reaches to the substrate, is recursive and supplies the right account of cause are working hypotheses. Two things are open. In every model the project has built, the dependencies that carry distinctions were designed, and whether created order generates its own carriers from minimal relations is not known. Nor is the architecture of manifestation.
 
@@ -158,4 +158,4 @@ If anything, the direction of illumination runs the other way. A world made by a
 
 ## The question that remains
 
-The light from the stone arrives at your eye as a vast number of individual events, each one a matter of chance, and yet you see a steady image. Light bends through glass by exactly the amount an optician can calculate in advance. If what happens at the deepest level is constrained chance, where does such exact regularity come from? And what is the mathematics that describes it so well? Those are the questions of Chapter 8.
+The light from the stone arrives at your eye as a vast number of individual events, each one a matter of chance, and yet you see a steady image. Light bends through glass by exactly the amount an optician can calculate in advance. If what happens at the deepest level is constrained chance, where does such exact regularity come from? And what is the mathematics that describes it so well? Those are the questions of Chapter 9.

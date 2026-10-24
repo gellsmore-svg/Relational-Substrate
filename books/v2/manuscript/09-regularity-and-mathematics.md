@@ -1,4 +1,4 @@
-# Chapter 8: Regularity, Coordination, and the Place of Mathematics
+# Chapter 9: Regularity, Coordination, and the Place of Mathematics
 
 Pump up a bicycle tyre and feel it grow firm. The pressure you feel is the combined effect of a vast number of air molecules striking the inner wall. Each moves erratically, its path impossible to follow. Yet the pressure is steady, and it obeys a simple law: squeeze the air into half the volume at the same temperature and the pressure doubles. Out of the tumult of individual molecules comes a regularity you can write in a single line.
 
@@ -123,4 +123,4 @@ The physical arc of the book is now complete. The stone is a stable, history-bea
 
 The problem underneath this whole chapter, then, is not merely how randomness averages out. Mainstream science already understands that well. It is what relational organisation makes stable identity, stable consequence and stable effective law possible across scales, while preserving the distinctions that still matter. Averaging, coordination, effective equations and hidden structure are four different parts of that one question. The Relational Substrate project has not answered it. It has learned to ask it more precisely.
 
-So far this is an account of stones and light. The book's claim, however, is that it matters for far more than stones and light, and that a relation-first physical world changes how the rest of reality, including you, can be understood. Chapter 9 makes that case.
+So far this is an account of stones and light. The book's claim, however, is that it matters for far more than stones and light, and that a relation-first physical world changes how the rest of reality, including you, can be understood. Chapter 10 makes that case.

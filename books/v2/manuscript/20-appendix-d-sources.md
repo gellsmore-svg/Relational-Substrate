@@ -45,7 +45,7 @@ Scripture is quoted from the King James Version throughout.
 - On history carried as present state (Generations 8H–8P): the laboratory's reports on branch `research/constraint-lab-v0.8p-stopping-sufficiency`, under `constraint-lab/reports/`, and its scoping of what may enter the books, `constraint-lab/formal/book-integration-map.md`.
 - On direction of change, succession and persistence comparisons in the Gravity/Time programme: `gravity-time/docs/ontology-proposals.md` (OP-5, OP-7, OP-8, OP-10, OP-18 to OP-20) and `gravity-time/reports/` on branch `research/gravity-time-admissibility`.
 
-**Chapter 8.**
+**Chapter 9.**
 
 - On laws of large numbers for dependent sequences (ergodic and mixing processes): R. Durrett, *Probability: Theory and Examples* (5th ed., Cambridge University Press, 2019), ch. 7.
 - On Bell's theorem and its assumptions: the *Stanford Encyclopedia of Philosophy* entry "Bell's Theorem".
@@ -58,11 +58,11 @@ Scripture is quoted from the King James Version throughout.
 - E. Wigner, "The unreasonable effectiveness of mathematics in the natural sciences", *Communications on Pure and Applied Mathematics* 13 (1960).
 - On relational potentials, gathering, clocks and the negative result on clock rates: `gravity-time/docs/ontology-proposals.md` (OP-1 to OP-4, OP-6, OP-9, OP-12, OP-13, OP-16, OP-17) and the GT reports `gt-e0-report.md`, `gt-e1-report.md`, `gt-e2-report.md` and `gt-e5a-report.md` in `gravity-time/reports/` on branch `research/gravity-time-admissibility`. The programme's results are recorded alongside the laboratory's in the shared research-synthesis layer on `main` (`research-synthesis/`).
 
-**Chapter 9.**
+**Chapter 10.**
 
 - On powers (dispositional) ontologies: the *Stanford Encyclopedia of Philosophy* entry "Dispositions". On the Humean mosaic view: D. Lewis, *Philosophical Papers* vol. II (Oxford University Press, 1986), introduction. On emergence: the *Stanford Encyclopedia of Philosophy* entry "Emergent Properties".
 
-**Chapter 11.**
+**Chapter 12.**
 
 - On the "hard problem" of consciousness: D. Chalmers, "Facing up to the problem of consciousness", *Journal of Consciousness Studies* 2 (1995).
 
@@ -70,11 +70,11 @@ Scripture is quoted from the King James Version throughout.
 
 The book stands within a long Christian intellectual tradition, and the following debts are the most direct.
 
-- **The parasitic account of evil** (Chapter 13) is Augustine's (*Confessions*, *Enchiridion*), developed by Aquinas (*Summa Theologiae* I).
+- **The parasitic account of evil** (Chapter 14) is Augustine's (*Confessions*, *Enchiridion*), developed by Aquinas (*Summa Theologiae* I).
 - **Creation as good, intelligible and spoken into being through the Word** draws on Irenaeus (*Against Heresies*) and Athanasius (*On the Incarnation*).
-- **The distinction between personhood and embodiment** (Chapter 11) draws on the Cappadocian Fathers' formulation of the Trinity and on Augustine's *On the Trinity*.
+- **The distinction between personhood and embodiment** (Chapter 12) draws on the Cappadocian Fathers' formulation of the Trinity and on Augustine's *On the Trinity*.
 - **Continuous providence and the Creator–creature distinction** are shaped by Calvin's *Institutes* and by Jonathan Edwards.
-- **The hope of new creation rather than escape** (Chapter 14) is indebted to N. T. Wright (*Surprised by Hope*), Anthony Hoekema (*The Bible and the Future*) and Richard Bauckham (*The Bible and Ecology*).
+- **The hope of new creation rather than escape** (Chapter 15) is indebted to N. T. Wright (*Surprised by Hope*), Anthony Hoekema (*The Bible and the Future*) and Richard Bauckham (*The Bible and Ecology*).
 - **The treatment of the image of God** owes much to Hoekema (*Created in God's Image*) and J. Richard Middleton (*The Liberating Image*).
 - **On the philosophical side,** the recovery of form, purpose and multiple kinds of cause draws on the Aristotelian–Thomistic tradition. The case for the legitimacy of metaphysics within physics draws on Tim Maudlin (*The Metaphysics Within Physics*). The book's account of relation has points of contact with Whitehead's process philosophy, but the book does not adopt process theology's account of God.
 
