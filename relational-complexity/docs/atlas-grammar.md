@@ -2,7 +2,7 @@
 
 Status: definition, before any atlas cell runs. The frozen cells, once they exist, are a plan file. This note is the language those cells use.
 
-Grammar id: `opening-prohibit-multiply-v1`. Atlas-001 and atlas-002 freeze this grammar under engine `rrc-0.2.0`. RRC-001 stays `rrc-0.1.0` and is not recomputed. A later engine that uses only this composer produces the same integer tables. New plans run only when they name the live engine. The incident-neighbour predicate is a separate grammar in `docs/atlas-0.3.md`.
+Grammar id: `opening-prohibit-multiply-v1`. Atlas-001 and atlas-002 freeze this grammar under engine `rrc-0.2.0`. RRC-001 stays `rrc-0.1.0` and is not recomputed. A later engine that uses only this composer produces the same integer tables. New plans run only when they name the live engine. The incident-neighbour predicate is a separate grammar in `docs/atlas-0.3.md`. The incident-count predicate is a separate grammar in `docs/atlas-0.4.md`.
 
 ## State and carrier
 

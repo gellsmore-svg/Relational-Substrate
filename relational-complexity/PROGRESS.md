@@ -101,8 +101,8 @@ Active continuation of RRC. Not a new programme. RRC-001 plan, results, interpre
 | Engine gap | `docs/atlas-engine-gap.md` |
 | Idea library | `atlas/ideas.jsonl` |
 | Coverage | `atlas/coverage.jsonl` |
-| Equivalences | `atlas/equivalences.jsonl`. EQ-001 to EQ-014. Composer rows may precede a round. Cell rows follow a verified batch. EQ-008 and EQ-014 are method identities, not cells |
-| Patterns | `atlas/patterns.jsonl`. PAT-001 to PAT-007. A row is not an order to investigate |
+| Equivalences | `atlas/equivalences.jsonl`. EQ-001 to EQ-017. Composer rows may precede a round. Cell rows follow a verified batch. EQ-008, EQ-014, and EQ-017 are method identities, not cells |
+| Patterns | `atlas/patterns.jsonl`. PAT-001 to PAT-009. A row is not an order to investigate |
 | Open questions | `atlas/questions.jsonl` |
 | Navigation | `atlas/README.md` |
 | Ledger | `RRC-ATLAS-M01` appended in `146ebb8`. `created_commit` on the row stays `56b7381`, the last closed-round commit. The row was not rewritten to insert its own commit |
@@ -112,7 +112,7 @@ Coverage status words: `open`, `frozen`, `exhaustive`, `partial`, `sampled`, `an
 
 ## Grammar
 
-`opening-prohibit-multiply-v1` is defined in `docs/atlas-grammar.md` and compiled by `src/rrc/constraints.py` in `c4e404a`. The live engine string is `rrc-0.3.0`. A designated-edge list under that string has the same integer table as under `rrc-0.2.0`. RRC-001 stays `rrc-0.1.0`. `verify` compares a result with the engine string in its plan. `run --round rrc-001` raises and does not recompute those items.
+`opening-prohibit-multiply-v1` is defined in `docs/atlas-grammar.md` and compiled by `src/rrc/constraints.py` in `c4e404a`. The engine string recorded in this section is `rrc-0.3.0`. A designated-edge list under that string has the same integer table as under `rrc-0.2.0`. RRC-001 stays `rrc-0.1.0`. `verify` compares a result with the engine string in its plan. `run --round rrc-001` raises and does not recompute those items. The live string after this section is in the `rrc-0.4.0` section.
 
 ## atlas-001
 
@@ -142,7 +142,7 @@ Ledger row `RRC-ATLAS-003` was appended, with relation `RRC-R037`. Its `created_
 
 Opened at `a0f4160`. Note: `docs/atlas-expansion.md`. Frozen plans stay on the engine string they name.
 
-The live engine is `rrc-0.3.0`. Definition: `docs/atlas-0.3.md`. It stores `kernel_sha256` by row gcd under `halt_self_loop`, one incident-neighbour predicate with a separate expansion cost, the integer weight table, and `structure_sha256` of the present graph. EQ-008 records that baseline 1 and baseline 2 have the same kernel and different integer tables. The evidence is a unit test. No scientific cell has been run. `COV-KERNEL` and `IDEA-E02` stay `open`: the method exists, and no batch has reported it.
+The engine opened in this section is `rrc-0.3.0`. Definition: `docs/atlas-0.3.md`. It stores `kernel_sha256` by row gcd under `halt_self_loop`, one incident-neighbour predicate with a separate expansion cost, the integer weight table, and `structure_sha256` of the present graph. EQ-008 records that baseline 1 and baseline 2 have the same kernel and different integer tables. The evidence is a unit test. No scientific cell has been run. `COV-KERNEL` and `IDEA-E02` stay `open`: the method exists, and no batch has reported it.
 
 Constraint cardinality, weight alphabets, incidence-aware predicates, kernel equivalence, relabelling, and compositional definitions are separate open avenues. PAT-004 and ATLAS-Q07 stay as they are. They do not appoint the next cell. Composition is not given a placeholder experiment.
 
@@ -216,6 +216,16 @@ EQ-015: the N=3 baseline reproduces the 3-edge baseline table. EQ-016: the 5-nod
 
 Ledger row `RRC-ATLAS-007` was appended, with relation `RRC-R041`. Its `created_commit` is the freeze `a29fbbd`. This commit appended the row. The hash of this commit is not written here.
 
+## rrc-0.4.0 incident count
+
+The atlas-005 calculation commit is `351c1a41ab6681b49f28b665598456e6626a1366`. The execution section above does not name it. That round stays on `rrc-0.3.0`. It was not rerun.
+
+The live engine is `rrc-0.4.0`. Definition: `docs/atlas-0.4.md`. The new predicate is `incident_count`, with relation `eq` or `ge` and an integer threshold, on the same incident neighbourhood as `incident_neighbour`. `ge 1` matches present. `eq 0` matches absent, including an empty neighbourhood. EQ-017 records both. The evidence is `tests/test_count.py`. It is a method identity. `eq 1` and `ge 2` differ from `ge 1` when the neighbourhood has two or more edges. On the middle edge of the three-edge chain, `expansion_j` is 2, 1, and 3 for those three guards. Declared J stays 1. `new_primitive` stays false. A common-neighbour count is not this predicate.
+
+`IDEA-C08` is `partial` for this neighbourhood count only. `IDEA-I04` is `partial`. `COV-COUNTS` stays `open`: the compiler exists, and no scientific cell has been frozen. Historical plans keep the engine string they name. The atlas-003, atlas-004, and atlas-005 tests compare those plans with the literal `rrc-0.3.0`.
+
+No ledger row was added. This section does not name its own commit. No count cell was run. ATLAS-Q01 through ATLAS-Q12 stay open.
+
 ## Next action
 
-Add one elementary incidence predicate beyond `incident_neighbour`, or keep that work in the library if the predicate is not yet a function. A semantic change needs a new engine string. Historical plans stay on the engine they name, and their tests must not require the live engine string. Do not rerun atlas-005. Do not chase PAT-008, PAT-009, or the 4-edge baseline identity. Do not attach a composition cell.
+Freeze a small matched sample of `eq 1` and `ge 2` against a designated-bit baseline, on more than one carrier, as its own plan under `rrc-0.4.0`. Preflight before the freeze. Do not put that cell in the engine commit. Do not rerun atlas-005. Do not chase PAT-008, PAT-009, or the 4-edge baseline identity. Do not attach a composition cell. A precise composition operator is still unnamed. `COV-COMPOSITION` stays `open`.

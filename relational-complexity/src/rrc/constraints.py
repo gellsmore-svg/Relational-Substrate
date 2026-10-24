@@ -43,13 +43,16 @@ from rrc.model import (
 
 GRAMMAR_ID = "opening-prohibit-multiply-v1"
 INCIDENT_GRAMMAR_ID = "incident-neighbour-v1"
+COUNT_GRAMMAR_ID = "incident-count-v1"
 MIXED_GRAMMAR_ID = "opening-plus-incident-v1"
+COUNT_MIXED_GRAMMAR_ID = "mixed-current-state-v1"
 KERNEL_METHOD = "row_gcd_halt_self_loop"
 STRUCTURE_METHOD = "present_degree_components_cycle"
 EFFECTS = ("prohibit", "multiply")
 ACTIONS = ("either", "form", "dissolve")
 POLARITIES = ("present", "absent")
-CONDITION_KINDS = ("designated_edge", "incident_neighbour")
+CONDITION_KINDS = ("designated_edge", "incident_neighbour", "incident_count")
+COUNT_RELATIONS = ("eq", "ge")
 EFFECTIVE_METHOD = "minimum_equivalent_subset"
 MAX_EXACT_ABLATION = 16
 MAX_EXACT_DEPENDENCY_NODES = 12
@@ -118,9 +121,6 @@ def _constraint(raw: dict, n: int) -> dict:
     kind = when.get("kind", "designated_edge")
     if kind not in CONDITION_KINDS:
         raise ValueError(f"unknown condition kind {kind}")
-    polarity = when.get("polarity")
-    if polarity not in POLARITIES:
-        raise ValueError(f"unknown polarity {polarity}")
     factor = None
     if effect == "multiply":
         raw_factor = raw.get("factor")
@@ -129,6 +129,29 @@ def _constraint(raw: dict, n: int) -> dict:
         factor = raw_factor
     elif "factor" in raw:
         raise ValueError("a prohibit does not take a factor")
+    if kind == "incident_count":
+        if "edge" in when or "polarity" in when:
+            raise ValueError("an incident-count condition does not take an edge or a polarity")
+        relation = when.get("relation")
+        if relation not in COUNT_RELATIONS:
+            raise ValueError(f"unknown count relation {relation}")
+        threshold = when.get("threshold")
+        if isinstance(threshold, bool) or not isinstance(threshold, int) or threshold < 0:
+            raise ValueError("a count threshold must be an integer >= 0")
+        return {
+            "effect": effect,
+            "action": action,
+            "event": event,
+            "kind": kind,
+            "condition": None,
+            "polarity": None,
+            "relation": relation,
+            "threshold": threshold,
+            "factor": factor,
+        }
+    polarity = when.get("polarity")
+    if polarity not in POLARITIES:
+        raise ValueError(f"unknown polarity {polarity}")
     if kind == "incident_neighbour":
         if "edge" in when:
             raise ValueError("an incident-neighbour condition does not name a designated edge")
@@ -205,6 +228,20 @@ def _incident_guard(state: int, bits: list[int], event_bit: int, polarity: str, 
     return _action_holds(state, event_bit, action)
 
 
+def _count_guard(state: int, bits: list[int], event_bit: int, relation: str, threshold: int, action: str) -> bool:
+    """True when the number of present incident edges meets the threshold."""
+    count = sum((state >> bit) & 1 for bit in bits)
+    if relation == "eq":
+        holds = count == threshold
+    elif relation == "ge":
+        holds = count >= threshold
+    else:
+        raise ValueError(f"unknown count relation {relation}")
+    if not holds:
+        return False
+    return _action_holds(state, event_bit, action)
+
+
 def compile_weight_table(n: int, carrier, constraints: list, baseline: int = 1) -> np.ndarray:
     """Integer weights, shape ``(2**|carrier|, |carrier|)``, columns in carrier order."""
     weights, _edges, _parsed, _active = _compile(n, carrier, constraints, baseline)
@@ -225,7 +262,7 @@ def _compile(n: int, carrier, constraints: list, baseline: int):
             raise ValueError("a constraint names an edge outside the carrier")
         if constraint["kind"] == "designated_edge" and constraint["condition"] not in index:
             raise ValueError("a constraint names an edge outside the carrier")
-        if constraint["kind"] == "incident_neighbour":
+        if constraint["kind"] in ("incident_neighbour", "incident_count"):
             bits = _incident_bits(edges, index[constraint["event"]])
             constraint["incident_bits"] = bits
             constraint["incident_edges"] = len(bits)
@@ -250,12 +287,21 @@ def _compile(n: int, carrier, constraints: list, baseline: int):
                         constraint["polarity"],
                         constraint["action"],
                     )
-                else:
+                elif constraint["kind"] == "incident_neighbour":
                     matched = _incident_guard(
                         state,
                         constraint["incident_bits"],
                         edge,
                         constraint["polarity"],
+                        constraint["action"],
+                    )
+                else:
+                    matched = _count_guard(
+                        state,
+                        constraint["incident_bits"],
+                        edge,
+                        constraint["relation"],
+                        constraint["threshold"],
                         constraint["action"],
                     )
                 if not matched:
@@ -351,13 +397,65 @@ def _expansion(constraint: dict) -> dict:
     }
 
 
+def _count_expansion(constraint: dict) -> dict:
+    """Exact minterms of an incident count. The count is not one literal.
+
+    ``ge 1`` is the present-polarity disjunction. ``eq 0`` is the absent
+    conjunction. A threshold the neighbourhood cannot reach never matches.
+    ``ge 0`` is true in every state, so it is one empty conjunction.
+    """
+    width = int(constraint["incident_edges"])
+    relation = constraint["relation"]
+    threshold = int(constraint["threshold"])
+    action_literals = 1 if constraint["action"] in ("form", "dissolve") else 0
+    if constraint["effect"] == "prohibit":
+        family = "prohibit features, not the positive CL-T12 construction"
+    else:
+        family = "positive conjunction features inside CL-T12"
+    if relation == "ge" and threshold == 0:
+        return {
+            "expansion_j": 1,
+            "expansion_k": 1 + action_literals,
+            "expansion_note": "ge 0 holds in every state. One empty conjunction. Declared J stays 1. " + family,
+        }
+    if threshold > width or (relation == "eq" and threshold == 0 and width == 0):
+        if relation == "eq" and threshold == 0 and width == 0:
+            return {
+                "expansion_j": 1,
+                "expansion_k": 1 + action_literals,
+                "expansion_note": "empty neighbourhood; eq 0 matches in every state. " + family,
+            }
+        return {
+            "expansion_j": 0,
+            "expansion_k": 0,
+            "expansion_note": "the neighbourhood cannot meet the threshold. " + family,
+        }
+    if relation == "eq":
+        ways = math.comb(width, threshold)
+        return {
+            "expansion_j": ways,
+            "expansion_k": 1 + width + action_literals,
+            "expansion_note": "exact minterms of one incident count. Declared J stays 1. " + family,
+        }
+    ways = sum(math.comb(width, index) for index in range(threshold, width + 1))
+    return {
+        "expansion_j": ways,
+        "expansion_k": 1 + width + action_literals,
+        "expansion_note": "exact minterms of a lower-bounded incident count. Declared J stays 1. " + family,
+    }
+
+
 def grammar_of(parsed: list) -> str:
     kinds = {item["kind"] for item in parsed}
     if kinds <= {"designated_edge"}:
         return GRAMMAR_ID
     if kinds == {"incident_neighbour"}:
         return INCIDENT_GRAMMAR_ID
-    return MIXED_GRAMMAR_ID
+    if kinds == {"incident_count"}:
+        return COUNT_GRAMMAR_ID
+    if kinds <= {"designated_edge", "incident_neighbour"}:
+        return MIXED_GRAMMAR_ID
+    return COUNT_MIXED_GRAMMAR_ID
 
 
 def empirical_bit_independent(weights: np.ndarray) -> bool:
@@ -482,13 +580,17 @@ def _bookkeeping(edges, parsed, active, weights) -> dict:
                 feature["factor"] = item["factor"]
                 feature["positive_k"] = 1 + literals
         else:
-            expansion = _expansion(item)
+            expansion = _count_expansion(item) if item["kind"] == "incident_count" else _expansion(item)
             incident_widths.append(item["incident_edges"])
             expansion_j_total += expansion["expansion_j"]
             if expansion["expansion_k"]:
                 expansion_ks.append(expansion["expansion_k"])
             feature["incident_edges"] = item["incident_edges"]
             feature.update(expansion)
+            if item["kind"] == "incident_count":
+                feature["relation"] = item["relation"]
+                feature["threshold"] = item["threshold"]
+                feature.pop("polarity", None)
             if item["effect"] == "multiply":
                 feature["factor"] = item["factor"]
         features.append(feature)

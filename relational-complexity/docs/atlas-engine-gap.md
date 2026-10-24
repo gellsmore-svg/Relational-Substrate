@@ -32,6 +32,12 @@ A declarative compiler from a constraint list to an integer weight table, a carr
 
 ## Status after rrc-0.3.0
 
-The live engine string is `rrc-0.3.0`. It adds `kernel_sha256` under `row_gcd_halt_self_loop`, the `incident-neighbour-v1` predicate, stored integer weights, and `structure_sha256`. The definitions are in `docs/atlas-0.3.md`. Designated-edge tables of the opening composer are unchanged. No scientific cell has been run under this string, and this note does not freeze a plan.
+`rrc-0.3.0` adds `kernel_sha256` under `row_gcd_halt_self_loop`, the `incident-neighbour-v1` predicate, stored integer weights, and `structure_sha256`. The definitions are in `docs/atlas-0.3.md`. Designated-edge tables of the opening composer are unchanged. Atlas-003, atlas-004, and atlas-005 later ran under this string. This paragraph does not freeze a plan.
 
-Still excluded: history, independent hyperedges, count predicates treated as one literal, and multi-pair events. Lumpability is not part of the atlas core. Continuous-time rates are not a clock.
+Still excluded at that string: history, independent hyperedges, count predicates treated as one literal, and multi-pair events. Lumpability is not part of the atlas core. Continuous-time rates are not a clock.
+
+## Status after rrc-0.4.0
+
+The live engine string is `rrc-0.4.0`. It adds `incident_count` on the incident-neighbourhood bits: relation `eq` or `ge`, and an integer threshold. The definition is `docs/atlas-0.4.md`. `ge 1` matches incident present, and `eq 0` matches incident absent. That identity is EQ-017, a unit test, not a cell. Designated-edge tables and incident-neighbour tables are unchanged. No scientific cell uses this string.
+
+A common-neighbour count is still not compiled. History, independent hyperedges, and multi-pair events stay excluded. A count is still not one literal.

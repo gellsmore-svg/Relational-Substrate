@@ -20,6 +20,10 @@ In atlas-003 and atlas-004, no two items shared a kernel without also sharing th
 
 ATLAS-Q08 stays open. No continuous-time rate was computed. Agreement under `halt_self_loop` is not agreement under every clock.
 
+## Incident count
+
+EQ-017 is a method identity of `rrc-0.4.0`. `ge 1` matches `incident_neighbour` present, and `eq 0` matches absent, including an empty neighbourhood. `eq 1` and `ge 2` differ from `ge 1` when a neighbourhood has two or more edges. The check is `tests/test_count.py`. No scientific cell uses the count. A common-neighbour count is not this predicate.
+
 ## Relabelling
 
 No frozen cell declares a node permutation. Hash equality without that mapping is not relabelling equivalence. IDEA-E03 and `COV-RELABEL` stay open.
@@ -52,7 +56,7 @@ PAT-008: length 12 of this generator has effective cardinality 9 on three edges 
 
 ## Regions not in the comparison
 
-Complete N=5. Cardinalities other than the atlas-005 lengths, and every list the generator did not write. Absent-polarity incident rules. Count predicates. History. Independent hyperedges. A search over graph isomorphism. Any clock other than `halt_self_loop`. A composition cell.
+Complete N=5. Cardinalities other than the atlas-005 lengths, and every list the generator did not write. Absent-polarity incident rules. Count predicates other than the compiler identities in EQ-017. No count cell. History. Independent hyperedges. A search over graph isomorphism. Any clock other than `halt_self_loop`. A composition cell.
 
 ## Composition
 

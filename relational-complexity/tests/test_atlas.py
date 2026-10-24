@@ -326,7 +326,6 @@ def test_atlas_003_plan_is_a_declared_cardinality_sample():
 
     assert digest(plan) == "05de332578ff435f6e25eb2550db0a92ca576fdda187c99c8861fb9fdb77fc26"
     assert plan["engine_version"] == "rrc-0.3.0"
-    assert plan["engine_version"] == ENGINE_VERSION
     assert plan["grammar_id"] == "opening-prohibit-multiply-v1"
     assert plan["preflight_summary"]["scientific"] is False
     assert plan["preflight_summary"]["heaviest_cell_s"] == 0.013
@@ -417,7 +416,6 @@ def test_atlas_004_plan_is_an_incidence_sample_not_a_chase():
 
     assert digest(plan) == "f6a9680feb02700b5dd8aa9fe024dfe1668d51bdfcbc8aaf5c64607d6c8391fe"
     assert plan["engine_version"] == "rrc-0.3.0"
-    assert plan["engine_version"] == ENGINE_VERSION
     assert plan["preflight_summary"]["scientific"] is False
     assert plan["preflight_summary"]["heaviest_cell_s"] == 0.003
     assert plan["no_sampling"] is True
@@ -479,7 +477,6 @@ def test_atlas_005_plan_is_a_spread_cardinality_sample():
 
     assert digest(plan) == "2ab849ad8e43bd643685feea729533fcb3815d6f898a58aa19e236da57142f45"
     assert plan["engine_version"] == "rrc-0.3.0"
-    assert plan["engine_version"] == ENGINE_VERSION
     assert plan["grammar_id"] == "opening-prohibit-multiply-v1"
     assert plan["definitions_commit"] == "26bf891ddf064ee4b90097dadf343bb7672720a0"
     assert plan["preflight_summary"]["scientific"] is False
