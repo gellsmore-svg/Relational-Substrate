@@ -879,3 +879,55 @@ def test_atlas_010_execution_separates_the_weight_table_from_the_observation():
         else:
             assert edges == [[0, 1], [1, 2], [2, 3], [0, 3]]
             assert same_partition(canon, orbit) and not same_partition(line, canon)
+
+
+def test_atlas_011_plan_observes_covers_outside_the_path_fixture():
+    assert main(["plan", "--round", "atlas-011"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-011.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "9b3309c6d9dc9880be6fb8948ab408aa5636816a77de03d397923f996bd27993"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    assert plan["definitions_commit"] == "e4eb431350325d0b2179a695d185c44d2e1b890a"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.002
+    assert plan["no_sampling"] is True
+    assert plan["questions"] == ["ATLAS-Q10"]
+    assert "ATLAS-Q12" in plan["questions_not_in_this_round"]
+    assert "four-edge path" in plan["selection"]
+    assert "EQ-021" in plan["selection"]
+    assert "nested cover" in plan["coverage"]["excluded"]
+    assert len(plan["items"]) == 17
+    bare = []
+    omissions = []
+    for item in plan["items"]:
+        assert item["round_id"] == "atlas-011"
+        assert item["type"] == "composition_observation"
+        assert item["baseline"] == 1
+        assert item["n"] in (3, 4)
+        assert isinstance(item["cover"], list) and item["cover"]
+        assert [3, 4] not in item["carrier"]["edges"]
+        assert "IDEA-L19" in item["idea_ids"]
+        if item["constraints"]:
+            constraint = item["constraints"][0]
+            assert constraint["factor"] == 3
+            assert constraint["event"] == [0, 1]
+            assert constraint["when"]["edge"] == [1, 2]
+        if item["observation"] == "active_intersection":
+            bare.append(item)
+        if item["id"].startswith("A11-tri-") and item["id"].split("-")[2] in {"far", "cond", "event"}:
+            omissions.append(item)
+    assert len(bare) == 1
+    assert bare[0]["id"] == "A11-tri-single-mul-bare"
+    assert bare[0]["constraints"]
+    assert {item["id"] for item in omissions} == {
+        "A11-tri-far-base-count",
+        "A11-tri-far-mul-count",
+        "A11-tri-cond-base-count",
+        "A11-tri-cond-mul-count",
+        "A11-tri-event-base-count",
+        "A11-tri-event-mul-count",
+    }
+    opposite = [item for item in plan["items"] if item["id"].startswith("A11-cyc-opp-")]
+    assert len(opposite) == 4
+    assert opposite[0]["cover"] == [[[0, 1], [2, 3]], [[1, 2], [0, 3]]]
