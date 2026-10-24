@@ -306,6 +306,16 @@ Present edge count is exact on all five carriers. EQ-021: under an empty list, a
 
 `COV-COMPOSITION-LABELS` is `partial`. `COV-COMPOSITION` stays `open`. `IDEA-L13` is `partial`. `IDEA-L16` stays `partial`: the independent bit is not implemented, and static iteration was not a cell. ATLAS-Q10 stays open. The path defects, the chain partition agreement, and the four-cycle split are not scheduled. No second label was declared. Ledger row `RRC-ATLAS-009` was appended, with relation `RRC-R043`. Its `created_commit` is the freeze `8ac7afa`. This commit appended the row. The hash of this commit is not written here.
 
+The atlas-008 calculation commit is `405e804dc1136b6fa54454cdc524e0dbdc2e48cb`. The execution section above does not contain it.
+
+## atlas-009
+
+Frozen. Plan hash `51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8`. Definitions commit `405e804`. Engine `rrc-0.4.0`. Preflight `docs/atlas-009-preflight.md`: the two-constraint path instrument took 0.000872 seconds. The plan records 0.001 seconds. Observables from that timing were not retained.
+
+The round is one four-edge path. The first method is the grammar grid: every designated multiply of factor 2, action `either`, polarity present, condition different from the event. That is 12 cells, cardinality 1. The second method is three declared dependency instruments at cardinality 2: a path, a mutual pair, and two disjoint arcs. The arcs are imposed rule text. The empty list is the baseline cell. The atlas-005 modular menu is not used. A difference between cardinality 1 and cardinality 2 is joint. This commit does not execute the cells.
+
+`COV-PLACEMENT-SAMPLE` is `frozen`. `COV-COMPOSITION` stays `open`. ATLAS-Q01 is named and stays open. ATLAS-Q03 is not in the round: there is no matched cell with two constraints on one event. The round is not scheduled to explain PAT-010, PAT-011, EQ-020, the atlas-008 defects, or chain-versus-branch separation. No ledger row was added. This section does not name its own commit.
+
 ## Next action
 
-An independent constraint sample remains a separate plan. Use at least two selection methods that are not the atlas-005 generator. Do not edit `plans/atlas-007.json` or `plans/atlas-008.json`. Do not rerun `results/atlas-007` or atlas-006. Do not add a token cell for the static line graph. Do not declare the cover operator recursive. Do not schedule the atlas-008 defects, PAT-010, PAT-011, or EQ-020. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.
+Execute atlas-009 after this freeze. Do not edit the plan after the results. Do not edit `plans/atlas-007.json` or `plans/atlas-008.json`. Do not rerun `results/atlas-007` or atlas-006. Do not add a token cell for the static line graph. Do not declare the cover operator recursive. Do not schedule the atlas-008 defects, PAT-010, PAT-011, or EQ-020. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.

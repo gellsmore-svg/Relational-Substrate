@@ -657,3 +657,43 @@ def test_atlas_006_plan_is_a_matched_count_sample():
                     "threshold": threshold,
                 }
     assert seen == {name: {"bit", "eq1", "ge2"} for name in carriers}
+
+
+def test_atlas_009_plan_uses_two_placement_methods():
+    assert main(["plan", "--round", "atlas-009"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-009.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    assert plan["definitions_commit"] == "405e804dc1136b6fa54454cdc524e0dbdc2e48cb"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.001
+    assert plan["no_sampling"] is True
+    assert plan["questions"] == ["ATLAS-Q01"]
+    assert "ATLAS-Q03" in plan["questions_not_in_this_round"]
+    assert "atlas-005" in plan["selection"]
+    assert "EQ-020" in plan["selection"]
+    assert len(plan["items"]) == 16
+    roles = {}
+    for item in plan["items"]:
+        assert item["round_id"] == "atlas-009"
+        assert item["type"] == "atlas_core"
+        assert item["baseline"] == 1
+        assert item["n"] == 5
+        roles.setdefault(item["role"], []).append(item)
+        for constraint in item["constraints"]:
+            assert constraint["effect"] == "multiply"
+            assert constraint["factor"] == 2
+            assert constraint["action"] == "either"
+            assert constraint["when"]["polarity"] == "present"
+            assert constraint["event"] != constraint["when"]["edge"]
+    assert len(roles["baseline"]) == 1 and roles["baseline"][0]["constraints"] == []
+    assert len(roles["grammar"]) == 12
+    assert {item["id"] for item in roles["instrument"]} == {
+        "A9-dep-path",
+        "A9-dep-mutual",
+        "A9-dep-disjoint",
+    }
+    assert all(len(item["constraints"]) == 2 for item in roles["instrument"])
+    assert all(len(item["constraints"]) == 1 for item in roles["grammar"])
