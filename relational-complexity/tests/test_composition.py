@@ -34,6 +34,7 @@ from rrc.composition import (
     present_labelled_line_graph_labels,
     present_line_graph_labels,
     relabeling_exists,
+    successive_observations,
 )
 from rrc.constraints import compile_weight_table
 from rrc.items import execute_composition_observation
@@ -838,7 +839,9 @@ def test_block_family_report_separates_covers_from_partial_families():
         json.loads(line)["question_id"]: json.loads(line)
         for line in (root / "atlas" / "questions.jsonl").read_text(encoding="utf-8").splitlines()
     }
-    for idea_id in ("IDEA-L20", "IDEA-L21", "IDEA-L22", "IDEA-L23"):
+    assert ideas["IDEA-L20"]["status"] == "partial"
+    assert "not a frozen cell" in ideas["IDEA-L20"]["methods"]
+    for idea_id in ("IDEA-L21", "IDEA-L22", "IDEA-L23"):
         assert ideas[idea_id]["status"] == "open"
         assert "not a frozen cell" in ideas[idea_id]["methods"]
     for coverage_id in (
@@ -857,3 +860,124 @@ def test_block_family_report_separates_covers_from_partial_families():
     assert "No scientific cell is attached to this note." in cover
     assert "partial family" in cover
     assert "realised overlap" in cover
+
+
+def _parity_labels(edges):
+    return [{"parity": label["present_edges"] & 1} for label in present_edge_count_labels(edges)]
+
+
+def _constant_labels(edges):
+    return [{"trivial": True} for _label in present_edge_count_labels(edges)]
+
+
+def _empty_labels(edges):
+    return [
+        {"empty": label["present_edges"] == 0}
+        for label in present_edge_count_labels(edges)
+    ]
+
+
+def test_successive_quotients_separate_exact_undefined_and_untyped_maps():
+    import numpy as np
+
+    weights = compile_weight_table(4, {"kind": "listed", "edges": CYCLE4}, [])
+    counts = present_edge_count_labels(CYCLE4)
+    parity = _parity_labels(CYCLE4)
+    constant = _constant_labels(CYCLE4)
+    for state in range(weights.shape[0]):
+        total = int(weights[state].sum())
+        assert total > 0
+        stayed = 0
+        for edge, weight in enumerate(weights[state]):
+            weight = int(weight)
+            if weight == 0:
+                continue
+            nxt = state ^ (1 << edge)
+            if (nxt.bit_count() & 1) == (state.bit_count() & 1):
+                stayed += weight
+        assert stayed == 0
+    chain = successive_observations(weights, [counts, parity, constant])
+    assert chain["new_state"] is False
+    assert chain["exact_prefix"] == 3
+    assert chain["agreement"] == "exact"
+    assert chain["kernels_agree"] is True
+    assert chain["conditional_exactness"] == "not_computed"
+    assert chain["history_dependent"] == "not_computed"
+    assert [stage["exact"] for stage in chain["stages"]] == [True, True, True]
+    assert chain["label_counts"] == [5, 2, 1]
+    parity_rows = chain["stages"][1]["quotient_rows"]
+    assert _fraction(parity_rows[0][0]) == 0
+    assert _fraction(parity_rows[0][1]) == 1
+    assert _fraction(parity_rows[1][0]) == 1
+    assert _fraction(parity_rows[1][1]) == 0
+    assert _fraction(chain["stages"][2]["quotient_rows"][0][0]) == 1
+    for stage in chain["stages"]:
+        for row in stage["quotient_rows"]:
+            assert sum(_fraction(cell) for cell in row) == 1
+    broken = successive_observations(weights, [counts, parity, counts])
+    assert broken["exact_prefix"] == 2
+    assert broken["agreement"] == "exact"
+    assert broken["stages"][2]["typed"] is False
+    assert broken["stages"][2]["exact"] is None
+    assert broken["stages"][2]["defect_l1"] is None
+    assert broken["stages"][2]["quotient_rows"] is None
+    degrees = present_degree_labels(4, CYCLE4)
+    untyped = successive_observations(weights, [counts, degrees])
+    assert untyped["stages"][1]["typed"] is False
+    assert untyped["stages"][1]["factors_through_previous"] is False
+    assert untyped["stages"][1]["exact"] is None
+    assert untyped["direct"][1]["exact"] is True
+    assert untyped["agreement"] == "undefined"
+    assert untyped["kernels_agree"] is None
+    indexed = present_line_graph_labels(CYCLE4)
+    intermediate = successive_observations(weights, [indexed, counts])
+    assert intermediate["stages"][0]["exact"] is False
+    assert intermediate["stages"][0]["defect_l1"] == Fraction(1, 2)
+    assert intermediate["stages"][0]["quotient_rows"] is None
+    assert intermediate["stages"][1]["typed"] is True
+    assert intermediate["stages"][1]["exact"] is None
+    assert intermediate["stages"][1]["defect_l1"] is None
+    assert intermediate["stages"][1]["quotient_rows"] is None
+    assert intermediate["stages"][1]["undefined_reason"] == "the previous partition is not strongly lumpable"
+    assert intermediate["direct"][1]["exact"] is True
+    assert intermediate["agreement"] == "undefined"
+    empty = successive_observations(weights, [counts, _empty_labels(CYCLE4)])
+    assert empty["stages"][0]["exact"] is True
+    assert empty["stages"][1]["typed"] is True
+    assert empty["stages"][1]["exact"] is False
+    assert empty["stages"][1]["defect_l1"] > 0
+    assert empty["stages"][1]["quotient_rows"] is None
+    assert empty["direct"][1]["exact"] is False
+    assert empty["direct"][1]["quotient_rows"] is None
+    both = successive_observations(weights, [indexed, _empty_labels(CYCLE4)])
+    assert both["stages"][0]["exact"] is False
+    assert both["stages"][1]["quotient_rows"] is None
+    assert both["direct"][1]["exact"] is False
+    halted = np.ones((4, 2), dtype=int)
+    halted[0] = 0
+    disjoint = [[0, 1], [2, 3]]
+    halted_chain = successive_observations(
+        halted,
+        [present_edge_count_labels(disjoint), _parity_labels(disjoint)],
+    )
+    assert halted_chain["stages"][0]["exact"] is True
+    assert halted_chain["stages"][1]["exact"] is False
+    assert halted_chain["stages"][1]["quotient_rows"] is None
+    assert halted_chain["direct"][1]["quotient_rows"] is None
+    baseline = compile_weight_table(4, {"kind": "listed", "edges": disjoint}, [], baseline=5)
+    again = successive_observations(
+        baseline,
+        [present_edge_count_labels(disjoint), _parity_labels(disjoint)],
+    )
+    assert again["agreement"] == "exact"
+    assert again["label_counts"] == [3, 2]
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    equivalences = {
+        json.loads(line)["equivalence_id"]: json.loads(line)
+        for line in (root / "atlas" / "equivalences.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert equivalences["EQ-026"]["status"] == "method"
+    assert "zero" in equivalences["EQ-026"]["not_claimed"]
+    assert "not a new theorem" in (root / "docs" / "composition-operators.md").read_text(encoding="utf-8")

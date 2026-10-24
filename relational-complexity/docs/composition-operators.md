@@ -61,11 +61,19 @@ The other two maps do not follow from that fact.
 
 Equal defects on the four-edge path are equal numbers for two different partitions. They are not an identity of the maps. The chain agreement is this carrier. The four-cycle separates the degree sequence, which is exact, from the line-graph label, which is not.
 
-No constrained weight table is in this fixture. No second observation is composed with a lumpable quotient: the edge-count chain is a Markov chain on `0 .. m`, and a further label of that chain is not declared. RRC-001's two-subset cut is not used.
+No constrained weight table is in this fixture. The edge-count chain is a Markov chain on `0 .. m`. A further label of that chain is a successive observation only when the further label is a function of the count. RRC-001's two-subset cut is not used.
 
 ## Edge-count identity
 
-The edge-count paragraph above is not limited to weight 1. The assumptions are an empty constraint list, a baseline that is an integer at least 1, and `halt_self_loop`. Every row is that constant. From `k` present edges among `m`, the present edges are the decreases and the absent edges are the increases. The next count is `k/m` toward `k-1` and `(m-k)/m` toward `k+1`. It depends only on `k`, so the present-edge-count label is strongly lumpable on every finite simple carrier. EQ-021 records that identity. The test checks the weights, including baseline 5 on two disjoint edges. Atlas-008's five edge-count cells have defect 0. The degree sequence and the present line graph are outside the identity. A constrained table is outside it. A second label of the count chain is not declared.
+The edge-count paragraph above is not limited to weight 1. The assumptions are an empty constraint list, a baseline that is an integer at least 1, and `halt_self_loop`. Every row is that constant. From `k` present edges among `m`, the present edges are the decreases and the absent edges are the increases. The next count is `k/m` toward `k-1` and `(m-k)/m` toward `k+1`. It depends only on `k`, so the present-edge-count label is strongly lumpable on every finite simple carrier. EQ-021 records that identity. The test checks the weights, including baseline 5 on two disjoint edges. Atlas-008's five edge-count cells have defect 0. The degree sequence and the present line graph are outside the identity. A constrained table is outside it. EQ-021 does not claim a second label of the count chain.
+
+## Successive observations
+
+`successive_observations` takes label maps of one carrier chain, in order. The first map is tested by `observation_law`. A later map is a map on the previous quotient only when two conditions hold. It is constant on each block of the previous label, and that previous partition is strongly lumpable. The sequential rows are then the lump of the quotient kernel. The lump of a rational kernel is `rational_lumpability`, which does not call the integer toggle test. If either condition fails, the sequential rows stay undefined. They are not filled with zeros.
+
+The direct law of the later label on the carrier is a separate object. It can be exact when the intermediate quotient is undefined. It can also be exact when the later label does not factor through the intermediate label. That second situation is an undefined composition, not a failed quotient.
+
+On the baseline, the parity of the present-edge count is a function of the count. Every toggle changes the count by one, so the parity flips with probability 1. The direct parity quotient and the quotient of the count chain by parity agree. That agreement is the definition of strong lumpability applied to the count chain. It is not a new theorem. EQ-026 records the scoped identity. A zero weight row is outside it: a halted state keeps its parity, and another state of the same parity can leave. The constant label is a third map. It is exact and trivial: one block, and a self-loop of probability 1. The degree sequence of the four-cycle does not factor through the edge count. The position-indexed line graph of the four-cycle is not strongly lumpable, and the edge count on the same table is. Conditional exactness and a history-dependent kernel are not computed. No scientific cell is attached to this check.
 
 ## Fixed covers
 

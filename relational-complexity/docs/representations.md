@@ -72,8 +72,8 @@ Calling the canonicaliser again is not the same operation as building another li
 - Canonicalising a graph that is already canonical returns the same edge list. `second_application` is `defined_and_idempotent`. That is idempotence of the numbering.
 - Applying `line_graph` to the graph represented by that certificate builds a different graph. The certificate of the three-edge path on four vertices is `[[0,1],[0,2],[1,3]]`, another numbering of that path. Its line graph has three vertices and edges `[[0,1],[0,2]]`. The edge lists differ.
 - Iterating the line-graph operator applies that construction again. `iterate_line_graph` records step 0 as the input. One further application of this line graph is a single edge.
-- Iterating an observation function would send a label through the same map again. No observation map in this note declares that second label.
-- Iterating a dynamical quotient would take a quotient kernel, when one exists, and lump it by a further partition. No such second quotient is constructed here. `observation_law` either returns the quotient rows of one label of the carrier chain or leaves those rows undefined.
+- Iterating an observation function would send a label through the same map again. No observation map in this note does that.
+- Iterating a dynamical quotient lumps a quotient kernel, when one exists, by a further partition. `successive_observations` does that only when the further label is a function of the previous label and the previous partition is strongly lumpable. Otherwise the next rows stay undefined. That construction is not a second canonicalisation, and it is not a second application of `line_graph`.
 
 A second canonicalisation is the same graph. It is not a new relational level, and it is not evidence that the line-graph operator has been iterated.
 

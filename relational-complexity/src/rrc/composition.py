@@ -8,10 +8,12 @@ recorded only when the output is an object the same operator accepts.
 from __future__ import annotations
 
 import json
+from collections import defaultdict
+from fractions import Fraction
 from itertools import combinations, permutations
 
 from rrc.constraints import present_graph
-from rrc.model import lumpability, quotient_kernel
+from rrc.model import fraction_payload, lumpability, quotient_kernel
 
 
 MAX_NERVE_BLOCKS = 12
@@ -748,4 +750,301 @@ def observation_law(weights, labels: list) -> dict:
             "blocks": kernel["blocks"],
             "rows": quotient_rows,
         },
+    }
+
+
+def _label_key(label) -> str:
+    return json.dumps(label, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+
+
+def _payload_fraction(cell) -> Fraction:
+    return Fraction(int(cell["num"]), int(cell["den"]))
+
+
+def factors_through(fine: list, coarse: list) -> bool:
+    """Whether ``coarse`` is constant on each block of ``fine``.
+
+    The second label is a function of the first label only when this holds.
+    Two maps of the carrier can each be exact and still fail this test.
+    """
+    if len(fine) != len(coarse):
+        raise ValueError("label maps must have the same length")
+    image: dict[str, str] = {}
+    for left, right in zip(fine, coarse):
+        key = _label_key(left)
+        other = _label_key(right)
+        if key in image and image[key] != other:
+            return False
+        image[key] = other
+    return True
+
+
+def rational_lumpability(rows: list[list[Fraction]], labels: list[int]) -> dict:
+    """Strong lumpability of a kernel whose entries are already probabilities.
+
+    This reads the quotient rows. It does not read integer toggle weights
+    and it does not call ``lumpability``. ``exact`` is true only when the
+    maximum L1 distance to the mean law of a block is zero. No row is
+    invented when that distance is positive.
+    """
+    if len(rows) != len(labels):
+        raise ValueError("labels must cover every quotient state")
+    if any(isinstance(label, bool) or not isinstance(label, int) for label in labels):
+        raise ValueError("quotient labels must be integers")
+    for row in rows:
+        if len(row) != len(rows):
+            raise ValueError("a quotient kernel must be square")
+        if sum(row, Fraction(0)) != 1:
+            raise ValueError("a quotient row must sum to 1")
+    groups: dict[int, list[int]] = defaultdict(list)
+    for index, label in enumerate(labels):
+        groups[int(label)].append(index)
+    defect = Fraction(0)
+    witness = None
+    for block, members in groups.items():
+        laws = []
+        for index in members:
+            law: dict[int, Fraction] = defaultdict(lambda: Fraction(0))
+            for target, prob in enumerate(rows[index]):
+                law[int(labels[target])] += prob
+            laws.append(dict(law))
+        keys = set()
+        for law in laws:
+            keys |= set(law)
+        mean = {
+            key: sum((law.get(key, Fraction(0)) for law in laws), Fraction(0)) / len(laws)
+            for key in keys
+        }
+        for index, law in zip(members, laws):
+            distance = sum(
+                (abs(law.get(key, Fraction(0)) - mean.get(key, Fraction(0))) for key in keys),
+                Fraction(0),
+            )
+            if distance > defect:
+                defect = distance
+                witness = {"block": int(block), "state": int(index)}
+    blocks = sorted(groups)
+    exact = defect == 0
+    quotient_rows = None
+    if exact:
+        quotient_rows = []
+        for block in blocks:
+            law: dict[int, Fraction] = defaultdict(lambda: Fraction(0))
+            index = groups[block][0]
+            for target, prob in enumerate(rows[index]):
+                law[int(labels[target])] += prob
+            quotient_rows.append([law[target] for target in blocks])
+    return {
+        "exact": exact,
+        "defect_l1": defect,
+        "blocks": blocks,
+        "rows": quotient_rows,
+        "witness": witness,
+        "defined": exact,
+        "reason": "strong lumpability" if exact else "not strongly lumpable",
+    }
+
+
+def successive_observations(weights, stages: list[list]) -> dict:
+    """Typed sequence of label maps on one carrier chain.
+
+    Each stage is a label of every carrier state. Stage ``k + 1`` is a map
+    on the quotient of stage ``k`` only when it is constant on that stage's
+    blocks and that stage is strongly lumpable. Otherwise the sequential
+    quotient is undefined. The direct law of each stage on the carrier is
+    still reported. Agreement of a direct law with the sequential quotient
+    is the standard compatibility of strong lumpability. It is not a new
+    theorem. Conditional exactness and a history-dependent kernel are not
+    computed. No coordinate is added.
+    """
+    if not isinstance(stages, list) or not stages:
+        raise ValueError("at least one label map is required")
+    n_states = int(weights.shape[0])
+    for stage in stages:
+        if len(stage) != n_states:
+            raise ValueError("labels must cover every state")
+    direct = [observation_law(weights, stage) for stage in stages]
+    reports = []
+    current_rows: list[list[Fraction]] | None = None
+    current_keys: list[str] | None = None
+    previous_typed = True
+    previous_exact = True
+    exact_prefix = 0
+    prefix_rows: list[list[Fraction]] | None = None
+    prefix_keys: list[str] | None = None
+
+    for depth, stage in enumerate(stages):
+        keys = [_label_key(label) for label in stage]
+        if depth == 0:
+            law = direct[0]
+            exact = bool(law["exact"])
+            reports.append({
+                "depth": 0,
+                "typed": True,
+                "factors_through_previous": True,
+                "n_distinct_labels": law["n_distinct_labels"],
+                "exact": exact,
+                "defect_l1": law["defect_l1"],
+                "quotient_defined": exact,
+                "quotient_rows": law["quotient"]["rows"] if exact else None,
+                "undefined_reason": None if exact else "not strongly lumpable",
+                "new_state": False,
+            })
+            if exact:
+                compact, _distinct = _compact(stage)
+                id_to_key: dict[int, str] = {}
+                for state, cid in enumerate(compact):
+                    id_to_key.setdefault(cid, keys[state])
+                blocks = law["quotient"]["blocks"]
+                current_keys = [id_to_key[block] for block in blocks]
+                current_rows = [
+                    [_payload_fraction(cell) for cell in row]
+                    for row in law["quotient"]["rows"]
+                ]
+                exact_prefix = 1
+                prefix_rows = current_rows
+                prefix_keys = current_keys
+            else:
+                previous_exact = False
+            continue
+
+        factors = factors_through(stages[depth - 1], stage)
+        if not previous_typed or not factors:
+            reports.append({
+                "depth": depth,
+                "typed": False,
+                "factors_through_previous": factors and previous_typed,
+                "n_distinct_labels": direct[depth]["n_distinct_labels"],
+                "exact": None,
+                "defect_l1": None,
+                "quotient_defined": False,
+                "quotient_rows": None,
+                "undefined_reason": (
+                    "the label is not a function of the previous label"
+                    if not factors
+                    else "the previous stage is not a typed quotient"
+                ),
+                "new_state": False,
+            })
+            previous_typed = False
+            previous_exact = False
+            current_rows = None
+            current_keys = None
+            continue
+        if not previous_exact or current_rows is None or current_keys is None:
+            reports.append({
+                "depth": depth,
+                "typed": True,
+                "factors_through_previous": True,
+                "n_distinct_labels": direct[depth]["n_distinct_labels"],
+                "exact": None,
+                "defect_l1": None,
+                "quotient_defined": False,
+                "quotient_rows": None,
+                "undefined_reason": "the previous partition is not strongly lumpable",
+                "new_state": False,
+            })
+            previous_exact = False
+            current_rows = None
+            current_keys = None
+            continue
+
+        previous_key_to_next = {
+            _label_key(previous): _label_key(nxt)
+            for previous, nxt in zip(stages[depth - 1], stage)
+        }
+        next_keys = [previous_key_to_next[key] for key in current_keys]
+        index: dict[str, int] = {}
+        compact_labels = []
+        for key in next_keys:
+            if key not in index:
+                index[key] = len(index)
+            compact_labels.append(index[key])
+        checked = rational_lumpability(current_rows, compact_labels)
+        id_to_key = {}
+        for cid, key in zip(compact_labels, next_keys):
+            id_to_key.setdefault(cid, key)
+        exact = bool(checked["exact"])
+        payload_rows = None
+        if exact and checked["rows"] is not None:
+            payload_rows = [
+                [fraction_payload(prob) for prob in row]
+                for row in checked["rows"]
+            ]
+        reports.append({
+            "depth": depth,
+            "typed": True,
+            "factors_through_previous": True,
+            "n_distinct_labels": len(index),
+            "exact": exact,
+            "defect_l1": checked["defect_l1"],
+            "quotient_defined": exact,
+            "quotient_rows": payload_rows,
+            "undefined_reason": None if exact else "not strongly lumpable",
+            "new_state": False,
+        })
+        if exact:
+            blocks = checked["blocks"]
+            current_keys = [id_to_key[block] for block in blocks]
+            current_rows = checked["rows"]
+            exact_prefix += 1
+            prefix_rows = current_rows
+            prefix_keys = current_keys
+        else:
+            previous_exact = False
+            current_rows = None
+            current_keys = None
+
+    kernels_agree = None
+    agreement = "undefined"
+    if exact_prefix >= 2 and prefix_rows is not None and prefix_keys is not None:
+        direct_law = direct[exact_prefix - 1]
+        compact, _distinct = _compact(stages[exact_prefix - 1])
+        keys = [_label_key(label) for label in stages[exact_prefix - 1]]
+        id_to_key = {}
+        for state, cid in enumerate(compact):
+            id_to_key.setdefault(cid, keys[state])
+        if direct_law["exact"]:
+            blocks = direct_law["quotient"]["blocks"]
+            direct_keys = [id_to_key[block] for block in blocks]
+            direct_rows = [
+                [_payload_fraction(cell) for cell in row]
+                for row in direct_law["quotient"]["rows"]
+            ]
+            sequential = {
+                (prefix_keys[row], prefix_keys[col]): prefix_rows[row][col]
+                for row in range(len(prefix_keys))
+                for col in range(len(prefix_keys))
+            }
+            pulled = {
+                (direct_keys[row], direct_keys[col]): direct_rows[row][col]
+                for row in range(len(direct_keys))
+                for col in range(len(direct_keys))
+            }
+            kernels_agree = sequential == pulled
+            agreement = "exact" if kernels_agree else "disagreement"
+        else:
+            kernels_agree = False
+            agreement = "disagreement"
+
+    return {
+        "n_states": n_states,
+        "new_state": False,
+        "stages": reports,
+        "direct": [
+            {
+                "exact": law["exact"],
+                "defect_l1": law["defect_l1"],
+                "n_distinct_labels": law["n_distinct_labels"],
+                "quotient_defined": law["quotient"]["defined"],
+                "quotient_rows": law["quotient"]["rows"] if law["exact"] else None,
+            }
+            for law in direct
+        ],
+        "exact_prefix": exact_prefix,
+        "kernels_agree": kernels_agree,
+        "agreement": agreement,
+        "conditional_exactness": "not_computed",
+        "history_dependent": "not_computed",
+        "label_counts": [report["n_distinct_labels"] for report in reports],
     }
