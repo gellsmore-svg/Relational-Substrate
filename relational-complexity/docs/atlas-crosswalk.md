@@ -46,6 +46,6 @@ Cardinality 5 and cardinality 10. N=5. Absent-polarity incident rules. Count pre
 
 ## Composition
 
-`IDEA-L11`, `IDEA-L13`, `IDEA-L14`, `COV-COMPOSITION`, and `COV-COMPOSITION-LIBRARY` stay open. No composition cell was run. A named map, with its defect or its failure, is not yet frozen. Overlap is not stored as a tree. RRC-001's two-subset cut is not reopened as the definition of composition.
+`docs/composition-taxonomy.md` formulates C1 through C8 and keeps dependency, reach, composition, and recursion as four readings. `IDEA-L01`, `IDEA-L04`, `IDEA-L06`, `IDEA-L08`, `IDEA-L09`, `IDEA-L11`, `IDEA-L13`, and `IDEA-L14` stay `open`. `IDEA-L15`, `IDEA-L16`, and `IDEA-L17` are the new open rows. `COV-COMPOSITION` and `COV-COMPOSITION-LIBRARY` stay `open`. No composition cell was run. A named map, with its defect or its failure, is not yet frozen. Overlap is not stored as a tree. RRC-001's two-subset cut is not reopened as the definition of composition. The static line-graph operator is recorded as a unary operation on simple graphs. EQ-014 is not rerun and is not that operator's dynamics.
 
-ATLAS-Q01 through ATLAS-Q11 stay open.
+ATLAS-Q01 through ATLAS-Q12 stay open. ATLAS-Q12 asks which named operators accept their own output. It is not scheduled.

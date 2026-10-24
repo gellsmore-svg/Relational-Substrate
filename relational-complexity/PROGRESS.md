@@ -188,6 +188,14 @@ The expansion note above says that no batch has reported a kernel hash. That sen
 
 `docs/line-graph-domination.md` records a scoped identity. For the uniform present-polarity incident prohibit on every edge, deadlock states are the total dominating sets of the carrier's line graph. An independent enumeration agrees, including two disjoint edges, where both sides are empty. The three-edge chain has more recurrent classes than deadlocks. Dropping one constraint, multiplying, changing polarity, or restricting the action leaves the identity. EQ-014 is a method row. `COV-LINE-DOMINATION` is `analytical`. `IDEA-G01` is `partial`: the identity is scoped to this rule. Ledger row `RRC-ATLAS-006` was appended, with relation `RRC-R040`. Its `created_commit` is `26bf891`, the commit that defined the predicate. This check appended the row. The atlas-004 cells were not rerun. This identity does not appoint the next round.
 
+## Composition taxonomy
+
+`docs/composition-taxonomy.md` separates dependency, reach, composition, and recursion, and formulates C1 through C8. Each family records its objects, operator, state, further participation, associativity, overlap, recoverability, grammar, established mathematics, small-scale calculation, and open questions. Where no operator is named, associativity and a second application are undefined.
+
+Existing idea statuses are unchanged. `IDEA-L15`, `IDEA-L16`, and `IDEA-L17` are new and `open`. `COV-COMPOSITION` and `COV-COMPOSITION-LIBRARY` stay `open`: a written formulation is not a calculated region. No cell was run. The engine is unchanged. No ledger row was added, because there is no calculation. RRC-001's two-subset cut is not reopened. EQ-014 is not rerun. Static iteration of the line-graph operator is cited as a textbook fact about simple graphs, not as a Markov-chain result.
+
+ATLAS-Q01 through ATLAS-Q11 stay open. ATLAS-Q12 asks which named operators accept their own output. It is not scheduled. Six levels of composition are not a target.
+
 ## Next action
 
-Add the composition taxonomy to the idea library, with several formulations and no placeholder cell. Then preflight a cardinality sample on a carrier with more than three edges. Do not edit frozen plans. Do not chase the domination identity.
+Preflight a declared cardinality sample on a listed carrier with more than three edges. Include a cardinality above 8 if the ablation cap and the timing allow. Spread some lists across the larger carrier, and keep at least one longer list on the three-edge carrier so the two landscapes are not the same sample. Do not edit frozen plans. Do not chase domination, PAT-007, or a composition placeholder.

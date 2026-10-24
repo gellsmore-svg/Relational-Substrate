@@ -9,3 +9,4 @@
 {"question_id":"ATLAS-Q09","statement":"Which incidence predicates separate carriers that a designated-bit rule does not separate, and what conjunction-expansion cost does each predicate have?","status":"open"}
 {"question_id":"ATLAS-Q10","statement":"Which proposed composition maps are projections of the current pair state, and which would need a new coordinate under the compilation gate?","status":"open"}
 {"question_id":"ATLAS-Q11","statement":"Where does a label-free template stay covariant under a declared node permutation, and where does a designated label break that covariance?","status":"open"}
+{"question_id":"ATLAS-Q12","statement":"For which named composition operators is the output an object the same operator can accept, and for which does a second application become undefined?","status":"open"}
