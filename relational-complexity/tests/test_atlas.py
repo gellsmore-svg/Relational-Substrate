@@ -737,3 +737,49 @@ def test_atlas_009_execution_separates_tables_that_share_a_mean():
         assert item["bookkeeping"]["effective_cardinality"] == 2
         assert item["occupation"]["mean_present_edges"]["num"] == "21"
         assert item["occupation"]["mean_present_edges"]["den"] == "10"
+
+
+def test_atlas_010_plan_compares_three_representations():
+    assert main(["plan", "--round", "atlas-010"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-010.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "1d838e1e4a3c038ac08ca03816b67118442ceaf03d9466a072934a0ef5e5285a"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    assert plan["definitions_commit"] == "2ecea775b6ef37083d9e12273fe19337a22fdb01"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.002
+    assert plan["no_sampling"] is True
+    assert plan["questions"] == ["ATLAS-Q10"]
+    assert "ATLAS-Q11" in plan["questions_not_in_this_round"]
+    assert "atlas-008" in plan["selection"]
+    assert "EQ-023" in plan["selection"]
+    assert len(plan["items"]) == 15
+    baseline = []
+    constrained = []
+    for item in plan["items"]:
+        assert item["round_id"] == "atlas-010"
+        assert item["type"] == "composition_observation"
+        assert item["baseline"] == 1
+        assert item["n"] in (3, 4)
+        if item["constraints"] == []:
+            baseline.append(item)
+            assert item["observation"] in {"canonical_line_graph", "carrier_orbit"}
+        else:
+            constrained.append(item)
+            assert len(item["constraints"]) == 1
+            constraint = item["constraints"][0]
+            assert constraint["factor"] == 3
+            assert constraint["effect"] == "multiply"
+            assert constraint["action"] == "either"
+            assert constraint["when"]["polarity"] == "present"
+            assert constraint["event"] == [0, 1]
+            assert constraint["when"]["edge"] == [1, 2]
+    assert len(baseline) == 6
+    assert len(constrained) == 9
+    assert {item["observation"] for item in constrained} == {
+        "present_line_graph",
+        "canonical_line_graph",
+        "carrier_orbit",
+    }
+    assert "baseline present_line_graph" in plan["coverage"]["excluded"]

@@ -352,6 +352,16 @@ On the four-edge path the fixture uses a partition cover and an overlapping cove
 
 `IDEA-L19` is `partial`. `COV-COVER-OBSERVATION` is `open`. `COV-COMPOSITION` stays `open`. No ledger row was added. This section does not name its own commit.
 
+## atlas-010
+
+The fixed-cover commit is `2ecea775b6ef37083d9e12273fe19337a22fdb01`. The section above does not contain it.
+
+Frozen. Plan hash `1d838e1e4a3c038ac08ca03816b67118442ceaf03d9466a072934a0ef5e5285a`. Definitions commit `2ecea77`. Engine `rrc-0.4.0`. Preflight `docs/atlas-010-preflight.md`: the four-cycle position-indexed multiply took 0.001449 seconds. The plan records 0.002 seconds. A worker dry-run of the fifteen items completed, resume recomputed one interrupted item, and the verify problem list was empty. Observables from that dry-run were not retained.
+
+The round is the triangle, the three-edge chain, and the four-cycle. The empty list uses the canonical line graph and the carrier orbit. One multiply by 3 of edge `(0,1)` when edge `(1,2)` is present adds the position-indexed line graph. The baseline position-indexed map is the atlas-008 cell and is not repeated. Cover observations are not cells. A difference between carriers is joint with where that designated pair sits. This commit does not execute the cells.
+
+`COV-REPRESENTATION-SAMPLE` is `frozen`. `COV-REPRESENTATIONS` stays `open`. `COV-COMPOSITION` stays `open`. ATLAS-Q10 is named and stays open. ATLAS-Q11 is not in the round. The round is not scheduled to explain the atlas-008 defects, the atlas-009 marginals, PAT-010, PAT-011, PAT-012, EQ-020, EQ-022, or EQ-023. No ledger row was added. This section does not name its own commit.
+
 ## Next action
 
-Do not edit `plans/atlas-007.json`, `plans/atlas-008.json`, or `plans/atlas-009.json`. Do not rerun `results/atlas-007`. Do not add a token cell for the static line graph or for a cover that only repeats the fixtures. Do not declare the cover operator recursive. Do not schedule the atlas-008 defects, the atlas-009 marginals, the four-cycle quotient, the path-cover defects, PAT-010, PAT-011, PAT-012, EQ-020, EQ-022, or EQ-023. A representation round, if frozen, needs a subprocess dry-run of its own item schema, a constrained table, and a carrier where the maps agree. `COV-COMPOSITION` stays `open`. The static line graph and the cover operators remain unfrozen as cells. A second label of the edge-count chain is undefined. Common-neighbour counts stay open. ATLAS-Q01 through ATLAS-Q12 stay open.
+Execute atlas-010 after this freeze. Do not edit the plan after the results. Do not edit `plans/atlas-007.json`, `plans/atlas-008.json`, or `plans/atlas-009.json`. Do not rerun `results/atlas-007` or `results/atlas-008`. Do not add a token cell for the static line graph or for a cover that only repeats the fixtures. Do not declare the cover operator recursive. Do not schedule the atlas-008 defects, the atlas-009 marginals, the path-cover defects, PAT-010, PAT-011, PAT-012, EQ-020, EQ-022, or EQ-023. `COV-COMPOSITION` stays `open`. A second label of the edge-count chain is undefined. Common-neighbour counts stay open. ATLAS-Q01 through ATLAS-Q12 stay open.
