@@ -172,8 +172,14 @@ EQ-011: baselines and bit prohibits reproduce the atlas-002 tables, including th
 
 `IDEA-I01` and `IDEA-I03` are `explored`. That word does not mean confirmed. `IDEA-I02` stays `open`. `COV-INCIDENCE-NEIGHBOUR` is `partial`. ATLAS-Q01 through ATLAS-Q11 stay open.
 
-Ledger row `RRC-ATLAS-005` was appended, with relation `RRC-R039`. Its `created_commit` is the freeze `5181cc6`. This calculation commit appended the row.
+Ledger row `RRC-ATLAS-005` was appended, with relation `RRC-R039`. Its `created_commit` is the freeze `5181cc6`. The calculation commit that appended the row is `5fb6e23`.
+
+## Cross-atlas index
+
+`docs/atlas-crosswalk.md` indexes EQ-001 through EQ-013 and PAT-001 through PAT-007. It does not add a cell and it does not draw one conclusion. RRC-001 results are not compared as weight hashes. Relabelling stays open: the path-reversal check is a compiler test, and the named chain edges are instruments. ATLAS-Q01 through ATLAS-Q11 stay open.
+
+Composition stays in the idea library. `IDEA-L11`, `IDEA-L13`, `IDEA-L14`, `COV-COMPOSITION`, and `COV-COMPOSITION-LIBRARY` are `open`. No placeholder cell was added.
 
 ## Next action
 
-Write a short cross-atlas note of the typed equivalences already recorded. Do not add a unifying conclusion. Leave composition in the idea library unless a precise calculation is already justified. Do not invent a weak composition cell. Do not edit frozen plans. Do not federate into the shared synthesis.
+No cell is queued. A later round chooses from the open coverage rows: cardinality 5 and 10, N=5, absent-polarity incidence, a declared relabelling cell, or a named composition map. Do not start from PAT-007. Do not edit frozen plans. Do not federate into the shared synthesis.
