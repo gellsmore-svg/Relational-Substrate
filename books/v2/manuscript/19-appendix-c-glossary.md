@@ -34,11 +34,21 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Effective determinism.** Regular, reliable, predictable behaviour at the scale observed, whatever the underlying process. A fact about regularity, not a metaphysical claim. (Ch 9)
 
+**Emergence within matter; emergence of matter.** The first is the rise of higher-order identities from the organisation of existing matter, observed everywhere. The second is the constitution of material individuality within a created order that is not itself material, the book's working hypothesis. The first does not demonstrate the second. (Ch 6)
+
 **Equivalence class.** All the states that count as "the same" for a given purpose: those that no relevant interaction could tell apart. (Ch 6)
 
 **Gathering.** In the project's models, a time-weighted preference for relation to a reference structure. Distinct from *succession*; neither is gravity. A claim of gathering must name its clock and survive adjustment for density. (Ch 9)
 
+**Handling; perturbation.** Handling relocates or manipulates an identifiable entity while preserving its identity. Perturbation changes the condition, behaviour or configuration of something without relocating a separately identifiable entity. A useful distinction, not a universal classification. (Ch 6)
+
+**Higher-order identity.** A configuration that has acquired recognisable, persistent organisation and functions as a distinguishable whole: it outlasts its constituents against a matched comparison, is consequential as a unit, and can be realised in more than one way. The last stage of the working grammar *distinction → relationship → organisation → higher-order identity*. (Ch 8)
+
 **Identity (of physical things).** Sameness of kind or state: continuity of a thing's relevant equivalence class through admissible change, judged by what reachable future interactions could discriminate. Invariants certify it, and provenance is part of it where it remains consequential. Distinct from *individual continuity*. Personal identity resembles both but is not defined by them. (Ch 6)
+
+**Identity coherer.** A relational organisation capable of preserving or reconstructing consequentially relevant identity from variations received through a compatible interface. A functional role, chiefly on the receiving side of T-C-R; not a substance. (Ch 7)
+
+**Identity organiser.** A relational organisation or process that establishes, structures or constrains distinctions so that they can take part in a coherent, consequential identity. A functional role, chiefly on the transmitting side of T-C-R; not a substance. (Ch 7)
 
 **Individual continuity.** Being the same continuing individual, and not merely an equivalent replacement. It requires continuity of lineage and history in addition to equivalence. What carries it in physical things is an open question. (Ch 6)
 
@@ -48,11 +58,17 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Manifestation.** Created order presenting itself to other things: detectable and encounterable. A physical matter, distinct from anyone's awareness of it. (Ch 6)
 
+**Material.** Working definition: exhibiting persistent, spatially individuated identity that can, in principle, be mechanically manipulated or relocated while preserving continuity as an identifiable entity. Narrower than *physical*. Not to be widened to rescue a proposition. (Ch 3)
+
+**Material organisation.** A real configuration, pattern or process instantiated through material reality, whose organisational identity need not be an additional, independently material entity: a sound wave, a chord, a river. Some acquire entity-like individuality (a solitary wave, a skyrmion) and remain material organisation. (Ch 6)
+
 **Mathematical determinism.** A property of equations: the state at one moment fixes the state at every later moment. Compatible with a non-deterministic world underneath. (Ch 9)
 
-**Matter.** Stable relational form, not primitive substance. Real, measurable and consequential. (Ch 6)
+**Matter.** Material individuals and the kinds they belong to. On the book's working hypothesis, stable relational form, not primitive substance. Real, measurable and consequential. See *material*. (Ch 3, Ch 6)
 
 **Memory (physical).** Past distinctions embodied in present relations so that they alter what is currently reachable, how likely it is, or how a thing responds. No separate memory substance is required. A working hypothesis. (Ch 6)
+
+**Metaphysical elasticity.** Assigning additional, insufficiently justified properties to an explanatory entity whenever they are needed to preserve an interpretation, without acknowledging the added assumptions or evidential burden. Colloquially, the *Harry Potter problem*. (Ch 2)
 
 **Ontology.** An account of what must be there for described behaviour to be possible. Distinct from description. (Ch 2)
 
@@ -66,11 +82,15 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Provenance.** Past distinctions that survive in present relational structure. Part of a thing's identity where some reachable future could draw on them; safely ignored where none could. (Ch 6)
 
+**Qualitative plausibility.** A comparative judgment that one account is more or less plausible than another, given stated observations, constraints, assumptions and alternatives. Distinct from logical possibility and from numerical probability, and valid without the latter. Classed as robust, conditional or unavailable. (Ch 2)
+
 **Reception.** Another state changed, or constrained in what it can become, because of the source distinction. Reception is consequence, not mere arrival. How a receiver treats repeated or continuing arrivals (once, continuously, cumulatively, or harmlessly repeated) is a property of the receiver. (Ch 7)
 
-**Receiver compatibility.** What a receiver can register, and how it responds, as set by its own admissibility. (Ch 7)
+**Receiver compatibility.** What a receiver can register, and how it responds, as set by its own admissibility. Consequential reception depends on compatibility between the organisation in which a distinction is preserved and the organisation of the receiver. (Ch 7)
 
 **Relation.** A real standing-between in which each relatum is conditioned by the other. *Interactional* relation holds between things already fully what they are. *Constitutive* relation partly makes things what they are. The Relational Substrate proposal concerns the second. (Ch 3)
+
+**Relational identity compatibility.** The working principle that a distinguishable identity remains coherent across changes of instantiation when the relationships needed for its consequential recognition or operation are preserved through compatible T-C-R processes. (Ch 8)
 
 **Relational substrate.** The proposed created relational order within which physical things are constituted and act. It is not matter, not ether, not a field under another name, not a mind, not a soul and not God. Whether it is itself spatial is open. (Ch 3)
 

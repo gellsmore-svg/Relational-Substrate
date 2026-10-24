@@ -18,6 +18,14 @@ On the second picture, reality is fundamentally **relational**. Things are real 
 
 The first picture has been enormously useful, and in many practical situations it is perfectly adequate. Engineers build bridges with it. But it carries an assumption that is rarely stated: that the basic furniture of the world is mutually independent and self-contained, and that relation is an afterthought.
 
+## What "material" means
+
+Much of what follows turns on the word *material*, and it is easily stretched, so it needs a fixed meaning.
+
+The stone is the paradigm. You can pick it up, carry it across the path and put it down, and it is the same stone in your hand as it was on the ground. The book takes that as its working definition. **A form of reality is material when it exhibits persistent, spatially individuated identity that can, in principle, be mechanically manipulated or relocated while preserving its continuity as an identifiable entity.** Hands are the reference point, and instruments extend them. A grain of sand under tweezers has been handled, and so has a single atom nudged across a surface by the tip of a microscope. Being too small or too far away to touch does not make something non-material.
+
+The definition is deliberately narrower than "physical". A sound crossing a room is physical and consequential, but nobody can pick up a sound and carry it elsewhere. Chapter 6 develops that difference and the hard cases that test it. The definition is a working one, open to refinement. It is not to be widened whenever a case proves awkward, because a word that stretches to cover everything decides nothing.
+
 ## Why the object picture strains
 
 There are reasons to doubt that assumption at the deepest level. Two come from physics, and one comes from coherence.
@@ -26,27 +34,49 @@ The first reason is that physics has found no truly isolated thing. Everything p
 
 The second reason is that the deepest successful theories describe relations more naturally than things. General relativity describes gravity in terms of the geometry relating events. Quantum theory describes systems whose joint state cannot be broken down into separate states of the parts. This is entanglement, and it has been confirmed many times. Some have drawn relational conclusions: Leibniz, that space is nothing over and above the order of relations among things; Carlo Rovelli, that quantum properties are always relative to other systems; the structural realists, that our best theories most securely describe structure, the pattern of relations. These positions are contested, and the argument does not rest on any of them. They show that the same mathematics is compatible with relation-first readings. The description underdetermines the ontology.
 
-The third reason is the one this book cares about most, and it comes from coherence rather than from physics. If the basic furniture of reality is self-contained objects, then every relation has to come from somewhere outside the objects. Causation, influence, communication, dependence, belonging, responsibility: each has to be added on top of a world that does not, in itself, contain any of them. This becomes a serious difficulty when we reach life and persons, where relation is central. Chapter 10 will press the point in detail. Here it is enough to notice that the object picture makes relation secondary all the way down. The rest of the book tests whether that makes the world harder to understand as a whole.
+The third reason comes from coherence rather than physics, and it matters most to this book. If the basic furniture of reality is self-contained objects, then causation, influence, communication, dependence, belonging and responsibility must each be added to a world that does not, in itself, contain any of them. That becomes a serious difficulty with life and persons, where relation is central, and Chapter 10 presses it.
 
 ## One grammar everywhere
 
 There is a fact so ordinary that it is easy to miss. Pick up a piece of granite in Hampshire and another in Western Australia. They look alike, and that is not surprising: similar processes made them. The striking thing is something else. The two stones, formed half a world apart with no shared history that anyone arranged, are *mutually intelligible*. Bring them together and they press, scratch, warm and cool each other according to the same relations. Light from either is received by the same eye. A grain of one could be built into the crystal lattice of the other.
 
-This holds everywhere. Independently located physical things can affect one another. Each has a receptivity compatible with what the other does. The same interaction relations hold in places that have never been in contact. Physical quantities are commensurable, so that the mass of a stone here and the mass of a star there are the same kind of thing. Matter everywhere composes into stable higher structures. Something newly encountered, a meteorite or a sample from another world, turns out to join the same causal grammar at once.
+This holds everywhere. Independently located physical things can affect one another. Each has a receptivity compatible with what the other does. The same interaction relations hold in places that have never been in contact. Physical quantities are commensurable, so that the mass of a stone here and the mass of a star there are the same kind of thing. Matter everywhere composes into stable higher structures. Something newly encountered, a meteorite or a sample from another world, turns out to join the same causal grammar at once. So does something newly made: a new alloy or a newly synthesised molecule behaves coherently toward everything else, though no separate rule was ever written for it.
 
 Call this **universal interoperability**. It is an observation, and an ontology has to account for it.
+
+Part of it is less surprising than it looks. In any account where a composite's behaviour is built from the behaviour of its parts, new composites inherit their parts' compatibility. The deeper fact lies at the base. Every fundamental kind of thing shares one finely matched grammar. The electric charges of the proton and the electron, for example, are equal in size to at least one part in a thousand billion billion, which is why ordinary matter is neutral. Physicists do not treat this as luck. They look for a common structure that requires it, and have found partial ones.
 
 An ontology of wholly self-contained objects cannot take it for free. If each thing is complete in itself, nothing in its own nature guarantees that it will have an interface compatible with every other thing. Something common must supply the interface. Serious accounts supply it in serious ways: common laws of nature, common fields, shared symmetries, common forms, universal dispositions, or a common generative history. Each of these does real work, and some come close to the view of this book. But each is a common structure doing exactly the work that the objects, taken as self-contained, could not do. The question to put to every ontology, this one included, is what that common structure is and what it costs.
 
 A relation-first ontology answers directly. Things are constituted within one created relational order, so they inherit their compatibility from it. Interoperability is not a coincidence to be explained after the objects are in place. It is what being constituted within the same relations means. An object-first ontology has to recover that common grammar somewhere else.
 
-This is an argument from explanatory coherence, not a calculation of odds. No defensible sample space exists from which one could compute how surprising interoperability would be. Its force is comparative: one picture treats the common interface as foundational, and the other must add it.
+The comparison is qualitative, in the sense of Chapter 2, and conditional. *If* each kind's capacities were specified independently of every other kind's, their exact matching would be a coincidence, and an account that needs such coincidences is less plausible than one that does not. No number can be put on this, because there is no defensible way to count the alternatives. None is needed for the ordering, provided the assumption it rests on is stated.
+
+## Three propositions
+
+The argument is sharper with the positions set side by side and the definition of *material* held fixed.
+
+- **A. Material fundamentality.** Material entities are fundamental within creation. Their capacities to relate belong intrinsically to them, and material individuality does not arise from any more fundamental non-material created order.
+- **B. A non-material foundation, with matter emergent.** A more fundamental created relational reality, not itself material, constitutes and sustains material individuality. Matter is genuinely real, but its materiality is emergent rather than self-standing.
+- **C. Two fundamental orders.** Material entities and a distinct non-material relational order are both fundamental. The relational order supplies the capacities through which material entities interact, so their behaviour depends on it, but they are not constituted by it. This is the "non-material glue" view.
+
+All three are compatible with creation: whichever is true was designed and is upheld by God. But design does not end the inquiry. One can still ask what was designed and how it operates, and design alone favours none of the three.
+
+**A** must give every fundamental kind of material thing intrinsic capacities that match every other kind's exactly. Pressed to explain the matching, it has three routes. It can say that a thing's capacities are intrinsically directed at its partners, so that a charge is, in its nature, a capacity to act on other charges. That is a serious position, and it is faithful to A, but it makes relation part of what things are. The disagreement with B then narrows to whether relational natures belong to separately fundamental things, or things to a relational order. It can add a governing order, laws or fields standing over the entities. That supplies the matching, but it is C without the name. Or it can say that the matching simply holds, which leaves it unexplained. None of this shows that A is incoherent. It shows that A, when pressed, relies on something it does not state.
+
+A also meets pressure from physics. Material individuals are created and destroyed: radiation passing near an atomic nucleus can produce an electron and its antiparticle where there was no matter before. And particles of one kind carry no individual labels, so two electrons cannot be told apart even in principle. The natural response is that the fundamental things are not particles but fields. A field spread through all of space, however, is not a persistent, spatially individuated entity that can be picked up and moved. To call it material would keep the word and change the proposition, which is the elasticity Chapter 2 named.
+
+**C** avoids A's difficulty by positing the relational order openly. Like B, it explains the matching by a common order. It pays with two fundamental orders instead of one, and it must still say why independently existing material entities fit that order so exactly. Until it does, part of the coincidence has only been moved.
+
+**B** posits one order, and interoperability is what being constituted within it means. Its cost is different, and real. B owes an account of how stable material individuals arise within an order that is not itself material, and no such account has yet been demonstrated. That is the largest open debt in this book.
+
+The comparison is clear without being final. B does best on economy and on integration across domains, provided its debt can be paid. C remains open. A in its plain form carries the heaviest burden. One caution keeps this honest. B is a family, not only this book's view. A realist reading of quantum fields, on which particles are excitations of a field that is not itself a material object, belongs to it too. The considerations from physics favour the family. They do not single out its relational member, which has to be argued for on its own grounds.
 
 ## The claim: relation is foundational
 
 The Relational Substrate project makes a definite proposal in response. It can be stated in one sentence. **What is most fundamental about created physical reality is relation.** Whatever appears as a stable, distinct unit, such as an atom, a stone or a star, appears as a configuration within relation, never as an item that first exists independently and then participates in relations secondarily.
 
-This is an **ontological thesis**, the book's central one. It is not an observation, since relation as such cannot be put on a laboratory bench, and it is not a theorem. It is a claim about what kind of reality best accounts for everything else we know. It is supported by the strain in the object picture, by the underdetermination of physical description and by universal interoperability. It would be weakened by an object-first account that explained interoperability, life and personhood with equal economy and fewer unexplained interfaces. The following chapters develop it and test it.
+In the terms just set out, this is Proposition B in its relational form. It is an **ontological thesis**, the book's central one. It is not an observation, since relation as such cannot be put on a laboratory bench, and it is not a theorem. It is a claim about what kind of reality best accounts for everything else we know. It is supported by the strain in the object picture, by the underdetermination of physical description and by universal interoperability. It would be weakened by an object-first account that explained interoperability, life and personhood with equal economy and fewer unexplained interfaces. The following chapters develop it and test it.
 
 Three clarifications prevent common misunderstandings.
 
@@ -73,7 +103,7 @@ Because the word can mislead, it helps to say plainly what the substrate is not.
 - It is not a mind. It thinks nothing and intends nothing.
 - Above all, it is not God, and it is not a soul.
 
-The language of a *language* can help, with its own limits. The words of a language have their meanings only within the whole order of the language: in their contrasts with other words, the grammar that admits some combinations and excludes others, and the history of use. A word torn out of its language becomes a sound. The relational proposal says something similar about physical things: they have what they are within an order of relation. The comparison fails in a way worth noticing. A language is made and sustained by speakers who mean things by it, while the substrate is not a medium of meaning and has no speakers inside it. Its order is given by its Creator, not negotiated by its parts.
+A language offers a comparison, with its limits. A word has its meaning only within the whole order of its language; torn out of it, it becomes a sound. The relational proposal says that physical things likewise have what they are within an order of relation. But a language is sustained by speakers who mean things by it, and the substrate has no speakers inside it. Its order is given by its Creator, not negotiated by its parts.
 
 ## Influence through continuity
 
@@ -83,11 +113,7 @@ Physics has moved in a consonant direction, away from instantaneous action at a 
 
 ## Created order as operating
 
-A second term needs introducing before the next chapter. The book speaks of **created runtime order**, and the phrase needs explaining because it borrows from computing.
-
-A computer program can be considered in two ways: as written, and as running. The second is called its "runtime". Creation can likewise be considered in two ways: in its origin, the creative act of God by which it exists at all, and in its ongoing operation, the ordinary unfolding of physical process within the order God made. *Runtime* names the second. Falling stones, travelling light, chemical reactions, the growth of crystals: these belong to created runtime order. The phrase keeps two levels apart that are often confused. Asking how the stone falls is a question about runtime order. Asking why there is a world in which stones fall at all is a question about creation.
-
-The analogy has a sharp limit, and the reader should hold it firmly. Creation is not a computer. The world is not code, and God is not a programmer who wrote software and stepped away. A better image might be a piece of music, distinguishing its composition from its performance, except that in creation the Composer also upholds every note as it sounds. The borrowed word earns its place only by naming a real distinction, between the order as given and the order as operating. Nothing more should be read into it.
+One more term is needed. The book speaks of **created runtime order**, borrowing a word from computing, where a program can be considered as written or as running. Creation can likewise be considered in its origin, the creative act by which it exists at all, or in its ongoing operation, the ordinary unfolding of physical process. *Runtime* names the second. How the stone falls is a question about runtime order. Why there is a world in which stones fall is a question about creation. The borrowing has a sharp limit. Creation is not a computer, the world is not code, and God is not a programmer who wrote software and stepped away. A better image might be a piece of music, its composition distinguished from its performance, except that here the Composer also upholds every note as it sounds.
 
 ## What Scripture requires here
 

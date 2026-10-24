@@ -86,6 +86,20 @@ flowchart TB
   restoration["Restoration and redemption"]
   resurrection["Resurrection"]
   divine_action["Divine action is not substrate process"]
+  material["Material (working definition)"]
+  material_organisation["Material organisation"]
+  handling_perturbation["Handling and perturbation"]
+  two_emergences["Emergence within matter vs emergence of matter"]
+  propositions_abc["Propositions A, B and C"]
+  qualitative_plausibility["Qualitative plausibility"]
+  elasticity["Metaphysical elasticity"]
+  epistemic_boundary["Behaviour versus intrinsic ontology"]
+  identity_organiser["Identity organiser"]
+  identity_coherer["Identity coherer"]
+  receiver_constitution["Receiver takes part in manifested identity"]
+  relational_identity_compat["Relational identity compatibility"]
+  emergence_grammar["Grammar of emergence"]
+  order_parameter["Downward constraint (order parameter)"]
   scripture --> creator_creature
   scripture --> creation_real
   creation_real --> darkness
@@ -223,6 +237,32 @@ flowchart TB
   equivalence --> resurrection
   non_agentic --> divine_action
   divine_action --> restoration
+  relation --> material
+  material --> handling_perturbation
+  handling_perturbation --> material_organisation
+  identity_invariant --> material_organisation
+  material_organisation --> two_emergences
+  matter --> two_emergences
+  material --> propositions_abc
+  qualitative_plausibility --> propositions_abc
+  elasticity --> propositions_abc
+  global_coherence --> qualitative_plausibility
+  desc_not_ont --> elasticity
+  desc_not_ont --> epistemic_boundary
+  transmit --> identity_organiser
+  receive --> identity_coherer
+  compatibility --> identity_coherer
+  identity_coherer --> receiver_constitution
+  equivalence --> relational_identity_compat
+  tcr --> relational_identity_compat
+  identity_organiser --> relational_identity_compat
+  identity_coherer --> relational_identity_compat
+  relational_identity_compat --> emergence_grammar
+  higher_order --> emergence_grammar
+  emergence_grammar --> order_parameter
+  two_emergences -. not identical .- emergence_grammar
+  relational_identity_compat -. not identical .- soul_spirit
+  receiver_constitution -. not identical .- creation_real
   substrate -. not identical .- creator_creature
   substrate -. not identical .- soul_spirit
   tcr -. not identical .- soul_spirit
@@ -242,5 +282,5 @@ flowchart TB
     actualisation & admissibility & aggregation & carry & causation & compatibility & constrained_stochasticity & constraint_generative & coordination & difference & discriminability & endogenous_carrier & equivalence & identity_invariant & individual_continuity & information_loss & interoperability & joint_process & layered_stability & local_global & manifestation & mathematics & matter & mediation & memory_configuration & nested_tcr & non_agentic & object_first & persistence & possibility & projection & provenance & purpose_upstream & reachable & receive & recovery_kinds & regularity & relation & runtime & stochasticity & substitutability & substrate & t0_open & tcr & tcr_recursive & tendency & time & transmit
   end
   subgraph Life["Life, persons, theology"]
-    alignment & bridge & consciousness & corruption & divine_action & embodiment & higher_order & image & life & limitation & personhood & restoration & resurrection & soul_spirit & three_admissibility
+    alignment & bridge & consciousness & corruption & divine_action & elasticity & embodiment & emergence_grammar & epistemic_boundary & handling_perturbation & higher_order & identity_coherer & identity_organiser & image & life & limitation & material & material_organisation & order_parameter & personhood & propositions_abc & qualitative_plausibility & receiver_constitution & relational_identity_compat & restoration & resurrection & soul_spirit & three_admissibility & two_emergences
   end

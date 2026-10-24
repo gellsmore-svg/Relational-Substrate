@@ -186,3 +186,38 @@ Grouped by provenance. Rows supersede v2.1 rows where noted.
 | E1 | A real command and real possibility of disobedience before the Fall show that moral freedom did not require actualised evil | theological inference from Genesis 1:31; 2:16–17 | H | Ch 15 | — |
 | SC | The stochastic calculator is an illustration (Ch 5) and provenance (App B), not evidence for T-C-R or the ontology | methodological | H | Ch 5, App B | calculator as recurring evidence |
 
+
+## v2.6 revisions (2026-10-24)
+
+Source: the author's ontological brief, examined in `v2.6-ontological-revision-record.md`. Appendix E.9 is the governing statement. Confidence keeps its meaning above: how strongly the book may assert, not the probability of truth.
+
+| # | Claim | Category | Conf. | Location | Supersedes |
+| --- | --- | --- | --- | --- | --- |
+| MAT1 | Working definition of *material*: persistent, spatially individuated identity, in principle manipulable or relocatable with continuity preserved | philosophical (stipulated definition) | H (as a definition) | Ch 3, App E.9 | — |
+| MAT2 | Material organisation is real without being an additional material entity; carrier, activity, organisational identity and mathematical description are distinct | ontological | H | Ch 6 | — |
+| MAT3 | Organisational individuals (solitary wave, skyrmion) are material organisation with entity-like individuality, not extra material entities | ontological | M | Ch 6 | — |
+| MAT4 | Materiality belongs first to individuated configurations and depends on regime (trapped versus collective electrons) | ontological + scientific-consensus | M | Ch 6 | — |
+| MAT5 | Under B, handling versus perturbation is a difference in preserved identity, not in whether stuff travels | ontological (consequence of RS) | M | Ch 6 | — |
+| EM1 | Emergence within matter is observed; emergence of matter is RS hypothesis; the first does not demonstrate the second | observational + RS-working-hypothesis | H (distinction); L–M (B) | Ch 6, Ch 8 | — |
+| PR1 | Particle creation and indistinguishability press on plain A; calling fields "material" changes A | ontological + scientific-consensus | M | Ch 3 | — |
+| PR2 | Pressed on interaction, A takes one of three routes: partner-directed powers, an unacknowledged governing order (C), or brute regularity | philosophical (explanatory, not logical) | M | Ch 3, App E.9 | — |
+| PR3 | B is a family; physics-based considerations favour the family, not RS specifically | ontological | H | Ch 3 | — |
+| PR4 | Composite interoperability follows from base compatibility in any compositional ontology; the burden sits at the base grammar | ontological | H | Ch 3 | C3 (refined) |
+| PR5 | B preferred on economy and integration, conditional on its unpaid mechanism debt; C open; plain A heaviest | ontological (conditional qualitative comparison) | L–M | Ch 3, App E.9 | — |
+| QP1 | Logical possibility, qualitative plausibility and quantitative probability are distinct; the second is valid without the third | philosophical + mathematical (comparative probability) | H | Ch 2 | v2.4 constraint 11 (refined: numbers still excluded) |
+| QP2 | Global coherence includes how naturally an account explains without unnecessary independent assumptions | philosophical | M–H | Ch 2 | — |
+| EL1 | Metaphysical elasticity is a category error; binds RS equally | philosophical | H | Ch 2 | — |
+| EB1 | Knowledge of consequential behaviour does not fix intrinsic ontology; four classes of the unobserved are distinct | philosophical + mathematical (spectral geometry) | H | Ch 2 | — |
+| ID1 | Consequential reception requires compatibility between preserved organisation and receiver | ontological | H | Ch 7 | — |
+| ID2 | Identity organiser and identity coherer as T-C-R roles specialised to identities | RS-working-hypothesis (developing) | L | Ch 7 | — |
+| ID3 | A compatible receiver may take part in constituting an identity as consequentially manifested | RS-working-hypothesis (author's candidate) | L | Ch 8 | — |
+| ID4 | Relational identity compatibility | RS-working-hypothesis | L–M | Ch 8 | — |
+| ID5 | Preserved identity-relevant information is distinct from continued existence of the original instantiation; reconstruction yields at most equivalence | ontological | H | Ch 8 | — |
+| ID6 | The book's equivalence criterion stands in the tradition of causal states (computational mechanics) | mathematical (attribution) | H | Ch 6, App D | — |
+| GR1 | Distinction → relationship → organisation → higher-order identity, recursively; restates the first-edition stack as process | RS-working-hypothesis | L–M | Ch 8 | first-edition T1A–T1D2 (as process, without tiers) |
+| GR2 | Higher-order identity tests: persistence beyond constituents against a matched null; consequence as a unit; multiple realisability | ontological (methodological) | M | Ch 8 | first-edition aggregate-to-body criteria (absorbed) |
+| GR3 | How a higher-order identity enters the next order | open question | — | Ch 8, App E.9 | — |
+| GR4 | Downward constraint by order parameters (Haken) | scientific-consensus within matter; RS-working-hypothesis across orders | H (laser); L (orders) | Ch 8 | — |
+| OS1 | Coupled oscillation, mode relations and localised patterns as what constitutes material individuality | speculative (mechanism candidate) | S | Ch 8, App B | — |
+| BA1 | Indivisible stochastic processes as a reading of quantum theory | scientifically-contested (connection, not adopted) | — | Ch 5, App B | — |
+| QFT1 | QFT's predictive success does not by itself establish fundamental fields as material substances, nor the substrate | philosophical | H | Ch 9 | — |

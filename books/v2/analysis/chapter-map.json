@@ -364,8 +364,9 @@
    ]
   },
   "higher-order": {
-   "first": "Ch 11",
+   "first": "Ch 8",
    "reactivate": [
+    "Ch 11",
     "Ch 12"
    ]
   },
@@ -569,6 +570,85 @@
    "reactivate": [
     "Ch 16"
    ]
+  },
+  "material": {
+   "first": "Ch 3",
+   "reactivate": [
+    "Ch 6",
+    "Ch 16"
+   ]
+  },
+  "handling-perturbation": {
+   "first": "Ch 6",
+   "reactivate": []
+  },
+  "material-organisation": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 8"
+   ]
+  },
+  "two-emergences": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 8",
+    "Ch 9"
+   ]
+  },
+  "propositions-abc": {
+   "first": "Ch 3",
+   "reactivate": [
+    "Ch 9"
+   ]
+  },
+  "qualitative-plausibility": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 3"
+   ]
+  },
+  "elasticity": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 3",
+    "Ch 9"
+   ]
+  },
+  "epistemic-boundary": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 16"
+   ]
+  },
+  "identity-organiser": {
+   "first": "Ch 7",
+   "reactivate": [
+    "Ch 8"
+   ]
+  },
+  "identity-coherer": {
+   "first": "Ch 7",
+   "reactivate": [
+    "Ch 8"
+   ]
+  },
+  "receiver-constitution": {
+   "first": "Ch 8",
+   "reactivate": []
+  },
+  "relational-identity-compat": {
+   "first": "Ch 8",
+   "reactivate": []
+  },
+  "emergence-grammar": {
+   "first": "Ch 8",
+   "reactivate": [
+    "Ch 16"
+   ]
+  },
+  "order-parameter": {
+   "first": "Ch 8",
+   "reactivate": []
   }
  }
 }

@@ -4,7 +4,7 @@
 
 *A Scripture-first account of a relational creation: how physical order, life, persons, corruption and restoration belong to one world without collapsing into one kind of thing.*
 
-Second edition, revision 2.5, October 2026. Companion volumes: *The Relational Substrate* (technical), *A Coherent World* (general), *How to Hug the Right Tree* (devotional).
+Second edition, revision 2.6, October 2026. Companion volumes: *The Relational Substrate* (technical), *A Coherent World* (general), *How to Hug the Right Tree* (devotional).
 
 ---
 
@@ -14,7 +14,7 @@ A discipline can be exact in its own domain and still leave the deepest question
 
 This book exists to ask them together. Its question is not whether modern science works. It does. The question is what kind of created reality can make everything we know, physical, living, personal, moral and revealed, belong coherently to one world.
 
-The book's answer is that created physical reality is *relational* from its foundation. Things are not first made as sealed, self-contained objects that are later connected. They are constituted within an order of relation that God made and upholds. The project calls that order the Relational Substrate. Two further proposals give the answer its working shape:
+The book's answer is that created physical reality is *relational* from its foundation. Things are not first made as sealed, self-contained objects that are later connected. They are constituted within an order of relation that God made and upholds. The project calls that order the Relational Substrate. Matter, on this proposal, is fully real but not foundational, and the book's central question is whether materiality is the acquisition of persistent, manipulable individuality by a configuration of something that is not itself material. Two further proposals give the answer its working shape:
 
 - what actually happens is drawn, with real chance, from what the created order makes possible and favours;
 - a difference anywhere becomes consequential somewhere else through one recurring grammar: something distinguishes, the distinction is carried by a dependency that preserves it, and another state is changed because of it.
@@ -35,6 +35,6 @@ The book does not prove the Relational Substrate. No set of measurements could d
 
 The book is written for an intelligent reader with no specialist training in physics, philosophy or theology who is willing to think carefully. Each technical term is explained where it is first needed. The opening chapter introduces one ordinary scene, seeing a stone in daylight, which returns throughout as a common reference point.
 
-This is revision 2.5 of the second edition. The first edition rested on specific mechanisms that later work did not support. The second rebuilds the book on more foundational ideas, and Appendix B records what changed and why. The research behind the book is the work of one author, carried out with extensive computational and AI-assisted exploration. Its records are public, and Appendix B notes what they do and do not show.
+This is revision 2.6 of the second edition. The first edition rested on specific mechanisms that later work did not support. The second rebuilds the book on more foundational ideas, and Appendix B records what changed and why. The research behind the book is the work of one author, carried out with extensive computational and AI-assisted exploration. Its records are public, and Appendix B notes what they do and do not show.
 
 A free electronic edition of this book is available, offered as an open intellectual contribution to encourage reading, sharing and honest discussion. Updated versions and related materials can be found through the project website at <https://relational-substrate.blogspot.com/> and the public research repository at <https://github.com/gellsmore-svg/Relational-Substrate>.
