@@ -256,6 +256,18 @@ The sentences above that say no count cell had been frozen described the state b
 
 EQ-020 is a method identity. For one `ge 2` multiply on every carrier edge, factor at least 2, and no other constraint, weight-effective cardinality equals the number of edges with at least two incident carrier edges. Kernel-effective cardinality equals that number for `either` and for `form`. For `dissolve` it does too, except on a triangle and on a three-edge star: the kernel is the baseline kernel, the integer table is not, and the kernel-removal count stays 3. A second copy of the multiply raises the effective count. A prohibit on the same guard makes that multiply redundant. The argument is `docs/incident-count-cardinality.md`. The check is `tests/test_count_cardinality.py`. Atlas-006 was not rerun. PAT-011 is unchanged and is not scheduled. EQ-014 is unchanged. No ledger row was added. This section does not name its own commit.
 
+## Typed composition operators
+
+`src/rrc/composition.py` implements two operators. The engine string stays `rrc-0.4.0`. The specification is `docs/composition-operators.md`.
+
+`line_graph` takes a simple graph and returns a simple graph. The bare output drops edge labels. A second application is defined. A path of `m` edges reaches the empty edge list after `m` applications. A listed cycle keeps a five-vertex five-edge line graph across the fixture iterations. A triangle and a three-edge star have the same bare line graph and different labels. Isolated input vertices are absent from the output. The operator has no transition law.
+
+`intersection_graph` and `nerve` take an ordered cover. A second application is undefined, because the outputs are a graph and a complex. Three small covers share a bare complete intersection graph. Two of them share a bare nerve and differ as blocks. A nested cover is one of those two. `line_graph` may be applied to the bare intersection graph. That is not recursion of the cover operator. A nerve of more than 12 blocks is refused.
+
+A third reading labels states of an existing baseline chain. It adds no state. Present edge count is strongly lumpable on the fixture carriers. The present line graph has defect 0 on the triangle and the three-edge star, defect `4/9` on the three-edge chain, defect `1/3` on the four-edge path, and defect `1/2` on the four-cycle. The degree sequence matches the line-graph partition on the three-edge chain and differs on the four-cycle, where the degree sequence is exact. These checks are `tests/test_composition.py`. They are not a frozen round.
+
+`IDEA-L08`, `IDEA-L14`, and `IDEA-L16` are `partial`. `IDEA-L15` stays `open`. `COV-COMPOSITION` and `COV-COMPOSITION-LIBRARY` stay `open`. C4b is still undefined. No ledger row was added. This section does not name its own commit. ATLAS-Q01 through ATLAS-Q12 stay open.
+
 ## Next action
 
-Type at least two composition operators, with input, output, state, recoverability, and second application, before any composition plan. Static line-graph iteration and an overlap construction are the first candidates. Do not use a placeholder cell. Do not rerun atlas-006. Do not chase PAT-010, PAT-011, or EQ-020. Do not centre the next round on chain-versus-branch separation or on line-graph domination. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.
+Freeze a composition plan only for the observation maps already specified, on the baseline carriers already checked, if a runner item can record strong lumpability without a new weight semantics. Do not add a token cell for the static line graph. Do not declare the cover operator recursive. Do not rerun atlas-006. Do not chase PAT-010, PAT-011, EQ-020, or the four-cycle degree defect. An independent constraint sample remains a separate plan. `COV-COMPOSITION` stays `open` until a cell is frozen. ATLAS-Q01 through ATLAS-Q12 stay open.

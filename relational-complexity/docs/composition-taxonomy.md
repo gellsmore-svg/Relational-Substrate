@@ -198,4 +198,12 @@ One chain, and a declared set of observables. The six descriptions below stay se
 | C7 | Iteration typed only for static `L` | None |
 | C8 | Full state is the current model; the other five descriptions are not frozen | None |
 
+## Implemented operators
+
+The sentences above that leave an operator undefined describe this library at the time it was written. Two operators now have code. The note still has no scientific cell.
+
+`line_graph` is the static operator in C4a. `intersection_graph` and `nerve` are cover operators for C6. A second application is defined for the bare line graph and undefined for both cover operators. `line_graph` may be applied to a bare intersection graph. That composition is not recursion of the cover operator. The specifications, the triangle and star exception, the shared nerves, and the baseline observation defects are in `docs/composition-operators.md`.
+
+The present line graph, the present edge count, and the present degree sequence are label maps of an existing chain. They add no state. A label map is a Markov chain only when it is strongly lumpable. On the unconstrained baseline the edge count is lumpable. The present line graph is lumpable on some of the fixture carriers and not on others. Those checks do not freeze a cell. C4b remains undefined. No witness for an independent bit is claimed.
+
 `COV-COMPOSITION` and `COV-COMPOSITION-LIBRARY` stay `open`. A written formulation is not a calculated region. ATLAS-Q01 through ATLAS-Q11 stay open. ATLAS-Q12 is the iterability question and is not a queue.
