@@ -116,12 +116,16 @@ Coverage status words: `open`, `frozen`, `exhaustive`, `partial`, `sampled`, `an
 
 ## atlas-001
 
-Frozen. Plan hash `646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f`. Definitions commit `c4e404a`. Preflight `docs/atlas-001-preflight.md`: the heaviest cell shape took 0.013 seconds. Observables from that timing were not retained.
+Frozen in `6286a63`. Plan hash `646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f`. Definitions commit `c4e404a`. Preflight `docs/atlas-001-preflight.md`: the heaviest cell shape took 0.013 seconds. Observables from that timing were not retained.
 
-The round is 12 grammars on the complete carrier at N=3 and N=4, 24 items, common core only. It is not every literal placement. N=5, listed carriers, counts, history, hyperedges, and composition stay open. Composer identities EQ-001, EQ-002, and EQ-003 are in `atlas/equivalences.jsonl`. They are not cell results. `atlas/patterns.jsonl` stays empty.
+Executed after the freeze. 24 complete, 0 failed, 0 timeout, 0 unresolved. `verify` printed `verified`. Records: `results/atlas-001/`, `reports/atlas-001.md`, `reports/atlas-001-observations.md`, `provenance/atlas-001-execution.md`. The plan was not edited.
 
-Ideas named by the plan are `selected`. That word does not mean confirmed.
+The round is 12 grammars on the complete carrier at N=3 and N=4. It is not every literal placement. Coverage row `COV-COMPLETE-N3-N4-LITERAL` is `partial`. N=5, listed carriers, counts, history, hyperedges, and composition stay open.
+
+EQ-001 to EQ-003 are composer identities. EQ-004 and EQ-005 are the cell hash identities. PAT-001 to PAT-003 are recorded contrasts. `schedules_follow_up` is false on each. Ideas named by the plan are `explored`. That word does not mean confirmed. ATLAS-Q01 through ATLAS-Q06 stay open.
+
+Ledger rows `RRC-ATLAS-001` and `RRC-ATLAS-002` were appended. Their `created_commit` is the freeze `6286a63`. The commit that appended them is the calculation commit.
 
 ## Next action
 
-Execute `plans/atlas-001.json` into `results/atlas-001` in bounded batches. Verify. Do not edit the plan. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
+Do not edit `plans/atlas-001.json`. Do not schedule a round whose purpose is to explain PAT-001, PAT-002, or PAT-003. The uncovered coordinate with the next coverage claim is a small listed-carrier round: chain, branch, cycle, and disconnected, designed from the carrier row rather than from these contrasts. Freeze that plan before its cells. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
