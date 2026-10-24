@@ -23,6 +23,7 @@ from rrc.composition import (
     fixed_cover,
     labelled_active_block_labels,
     labelled_line_graph,
+    labelled_realised_block_labels,
     line_graph,
     line_of_intersection,
     nerve,
@@ -33,6 +34,8 @@ from rrc.composition import (
     present_edge_count_labels,
     present_labelled_line_graph_labels,
     present_line_graph_labels,
+    realised_intersection_labels,
+    realised_overlap_count_labels,
     relabeling_exists,
     successive_observations,
 )
@@ -841,7 +844,9 @@ def test_block_family_report_separates_covers_from_partial_families():
     }
     assert ideas["IDEA-L20"]["status"] == "partial"
     assert "not a frozen cell" in ideas["IDEA-L20"]["methods"]
-    for idea_id in ("IDEA-L21", "IDEA-L22", "IDEA-L23"):
+    assert ideas["IDEA-L21"]["status"] == "partial"
+    assert "not a frozen cell" in ideas["IDEA-L21"]["methods"]
+    for idea_id in ("IDEA-L22", "IDEA-L23"):
         assert ideas[idea_id]["status"] == "open"
         assert "not a frozen cell" in ideas[idea_id]["methods"]
     for coverage_id in (
@@ -981,3 +986,95 @@ def test_successive_quotients_separate_exact_undefined_and_untyped_maps():
     assert equivalences["EQ-026"]["status"] == "method"
     assert "zero" in equivalences["EQ-026"]["not_claimed"]
     assert "not a new theorem" in (root / "docs" / "composition-operators.md").read_text(encoding="utf-8")
+
+
+def test_realised_overlap_needs_a_present_shared_edge():
+    overlap = [PATH4[0:3], PATH4[1:4]]
+    partition = [PATH4[0:2], PATH4[2:4]]
+    both_ends = 1 | (1 << 3)
+    potential = active_intersection_labels(PATH4, overlap)
+    realised = realised_intersection_labels(PATH4, overlap)
+    assert potential[both_ends]["edges"] == [[0, 1]]
+    assert realised[both_ends] == {"vertices": 2, "edges": []}
+    labelled_potential = labelled_active_block_labels(PATH4, overlap)
+    labelled_realised = labelled_realised_block_labels(PATH4, overlap)
+    assert labelled_potential[both_ends]["adjacent"] == [[0, 1]]
+    assert labelled_realised[both_ends]["adjacent"] == []
+    one_shared = 1 << 1
+    two_shared = (1 << 1) | (1 << 2)
+    assert realised[one_shared]["edges"] == [[0, 1]]
+    assert realised[two_shared]["edges"] == [[0, 1]]
+    counts = realised_overlap_count_labels(PATH4, overlap)
+    assert counts[one_shared]["shared"] == [1]
+    assert counts[two_shared]["shared"] == [2]
+    assert realised_intersection_labels(PATH4, partition) == active_intersection_labels(PATH4, partition)
+    opposite = [[[0, 1], [2, 3]], [[1, 2], [0, 3]]]
+    assert realised_intersection_labels(CYCLE4, opposite) == active_intersection_labels(CYCLE4, opposite)
+    assert labelled_realised_block_labels(CYCLE4, opposite) == labelled_active_block_labels(CYCLE4, opposite)
+    constant = realised_overlap_count_labels(CYCLE4, opposite)
+    assert constant == [{"shared": [0]} for _state in range(1 << 4)]
+    omitted = [TRIANGLE[0:1], TRIANGLE[1:2]]
+    assert block_family_report(TRIANGLE, omitted)["partial_family"] is True
+    assert len(labelled_realised_block_labels(TRIANGLE, omitted)) == 1 << 3
+    with pytest.raises(ValueError, match="not a carrier edge"):
+        realised_intersection_labels(PATH4, [[[0, 1], [5, 6]]])
+    with pytest.raises(ValueError, match="duplicate"):
+        labelled_realised_block_labels(PATH4, [[[0, 1], [0, 1]]])
+    triangle_overlap = [TRIANGLE[0:2], [TRIANGLE[1], TRIANGLE[2]]]
+    base = _law(3, TRIANGLE, labelled_realised_block_labels(TRIANGLE, triangle_overlap))
+    assert base["exact"] is False
+    assert base["n_distinct_labels"] == 5
+    assert base["defect_l1"] == Fraction(1, 2)
+    assert base["quotient"]["rows"] is None
+    assert base["new_state"] is False
+    multiply = [{
+        "effect": "multiply",
+        "factor": 3,
+        "event": [0, 1],
+        "action": "either",
+        "when": {"edge": [1, 2], "polarity": "present"},
+    }]
+    constrained = _law(
+        3, TRIANGLE, labelled_realised_block_labels(TRIANGLE, triangle_overlap), multiply
+    )
+    assert constrained["n_distinct_labels"] == 5
+    assert constrained["defect_l1"] == Fraction(3, 10)
+    assert constrained["quotient"]["rows"] is None
+    for constraints in ([], multiply):
+        count_law = _law(
+            3, TRIANGLE, realised_overlap_count_labels(TRIANGLE, triangle_overlap), constraints
+        )
+        assert count_law["exact"] is True
+        assert count_law["n_distinct_labels"] == 2
+        assert count_law["quotient"]["defined"] is True
+    path_count = _law(5, PATH4, realised_overlap_count_labels(PATH4, overlap))
+    assert path_count["exact"] is True
+    assert path_count["n_distinct_labels"] == 3
+    path_constrained = _law(5, PATH4, realised_overlap_count_labels(PATH4, overlap), multiply)
+    assert path_constrained["exact"] is False
+    assert path_constrained["defect_l1"] == Fraction(1, 6)
+    assert path_constrained["quotient"]["rows"] is None
+    stored = execute_composition_observation({
+        "id": "fixture-realised",
+        "round_id": "fixture",
+        "type": "composition_observation",
+        "n": 3,
+        "carrier": {"kind": "listed", "edges": TRIANGLE},
+        "constraints": [],
+        "baseline": 1,
+        "observation": "labelled_realised_blocks",
+        "cover": triangle_overlap,
+    })
+    assert stored["cover"] == triangle_overlap
+    assert stored["new_state"] is False
+    assert stored["further_label"] == "undefined"
+    assert stored["exact"] is False
+    with pytest.raises(ValueError, match="requires a cover"):
+        execute_composition_observation({
+            "id": "fixture-realised-missing",
+            "type": "composition_observation",
+            "n": 3,
+            "carrier": {"kind": "listed", "edges": TRIANGLE},
+            "constraints": [],
+            "observation": "realised_overlap_count",
+        })

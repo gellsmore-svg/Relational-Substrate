@@ -12,6 +12,9 @@ from rrc.composition import (
     active_intersection_labels,
     cover_count_labels,
     labelled_active_block_labels,
+    labelled_realised_block_labels,
+    realised_intersection_labels,
+    realised_overlap_count_labels,
     observation_law,
     present_canonical_line_graph_labels,
     present_carrier_orbit_labels,
@@ -373,9 +376,19 @@ OBSERVATION_LABELS = {
     "cover_count": lambda n, edges, cover: cover_count_labels(edges, cover),
     "active_intersection": lambda n, edges, cover: active_intersection_labels(edges, cover),
     "labelled_active_blocks": lambda n, edges, cover: labelled_active_block_labels(edges, cover),
+    "realised_intersection": lambda n, edges, cover: realised_intersection_labels(edges, cover),
+    "labelled_realised_blocks": lambda n, edges, cover: labelled_realised_block_labels(edges, cover),
+    "realised_overlap_count": lambda n, edges, cover: realised_overlap_count_labels(edges, cover),
 }
 
-COVER_OBSERVATIONS = ("cover_count", "active_intersection", "labelled_active_blocks")
+COVER_OBSERVATIONS = (
+    "cover_count",
+    "active_intersection",
+    "labelled_active_blocks",
+    "realised_intersection",
+    "labelled_realised_blocks",
+    "realised_overlap_count",
+)
 
 
 def execute_composition_observation(spec: dict) -> dict:

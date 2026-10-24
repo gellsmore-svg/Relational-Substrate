@@ -675,6 +675,87 @@ def labelled_active_block_labels(edges, blocks) -> list[dict]:
     return labels
 
 
+def _realised_pairs(parsed, state) -> list[list[int]]:
+    """Pairs of blocks whose intersection meets the present edges.
+
+    The pair is recorded only when a shared carrier edge is present. A
+    nonempty fixed intersection with every shared edge absent contributes
+    no pair.
+    """
+    sets = [set(bits) for bits in parsed]
+    active = [
+        index for index, bits in enumerate(parsed)
+        if any((state >> bit) & 1 for bit in bits)
+    ]
+    pairs = []
+    for left, right in combinations(active, 2):
+        if any((state >> bit) & 1 for bit in sets[left] & sets[right]):
+            pairs.append([left, right])
+    return pairs
+
+
+def realised_intersection_labels(edges, blocks) -> list[dict]:
+    """Bare graph of active blocks joined only by a present shared edge.
+
+    Potential overlap can join two active blocks when their fixed sets meet
+    and the shared edge is absent. This label does not. The vertex count
+    keeps an empty active set distinct from one active block. Block indices
+    are dropped, and the edge list is renumbered in active-block order. The
+    family is not a state variable. A family that changes over time is a
+    different model and is not constructed here.
+    """
+    ordered, parsed = _carrier_blocks(edges, blocks)
+    width = len(ordered)
+    labels = []
+    for state in range(1 << width):
+        active = _active_blocks(ordered, parsed, state)
+        positions = {block: index for index, block in enumerate(active)}
+        edges_out = [
+            [positions[left], positions[right]]
+            for left, right in _realised_pairs(parsed, state)
+        ]
+        labels.append({"vertices": len(active), "edges": edges_out})
+    return labels
+
+
+def labelled_realised_block_labels(edges, blocks) -> list[dict]:
+    """Active block indices, and the pairs whose shared edge is present.
+
+    The indices are the family's own order. Adjacency is realised overlap.
+    ``labelled_active_block_labels`` keeps the same indices and uses
+    potential overlap instead.
+    """
+    ordered, parsed = _carrier_blocks(edges, blocks)
+    width = len(ordered)
+    labels = []
+    for state in range(1 << width):
+        labels.append({
+            "active": _active_blocks(ordered, parsed, state),
+            "adjacent": _realised_pairs(parsed, state),
+        })
+    return labels
+
+
+def realised_overlap_count_labels(edges, blocks) -> list[dict]:
+    """How many present edges lie in each pairwise block intersection.
+
+    Pairs follow block order. A pair with empty fixed intersection stays at
+    0 in every state. The count can separate one present shared edge from
+    two. The bare realised graph cannot.
+    """
+    ordered, parsed = _carrier_blocks(edges, blocks)
+    sets = [set(bits) for bits in parsed]
+    pair_index = list(combinations(range(len(sets)), 2))
+    width = len(ordered)
+    labels = []
+    for state in range(1 << width):
+        counts = []
+        for left, right in pair_index:
+            counts.append(sum((state >> bit) & 1 for bit in sets[left] & sets[right]))
+        labels.append({"shared": counts})
+    return labels
+
+
 def _compact(labels: list) -> tuple[list[int], int]:
     index = {}
     compact = []

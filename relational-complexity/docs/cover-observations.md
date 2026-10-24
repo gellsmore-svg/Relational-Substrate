@@ -40,3 +40,13 @@ The bare active intersection graph gives the same label to only `e0` and only `e
 One multiply by 3 of `e0` when `e1` is present uses the same partition-count label. The defect is `1/4`. The baseline exactness does not survive that law. This is one table.
 
 These numbers are fixtures. They are not a frozen round.
+
+## Realised overlap
+
+Potential overlap is fixed by the blocks. Realised overlap also requires a present shared edge. `realised_intersection` is the bare graph of the active blocks with that stricter adjacency. `labelled_realised_blocks` keeps the block indices. `realised_overlap_count` counts the present edges in each pairwise intersection. None of the three replaces `active_intersection` or `labelled_active_blocks`.
+
+On the four-edge path, the overlapping family shares two edges. When only the two end edges are present, both blocks are active and the potential graph has an edge. The realised graph has two vertices and no edge. One present shared edge and two present shared edges have the same bare realised graph and different counts.
+
+The blocks of opposite edges on the four-cycle are disjoint. Realised adjacency and potential adjacency are both empty, so those graphs agree. The shared-edge count is the constant 0.
+
+The triangle family `{{(0,1),(1,2)},{(1,2),(0,2)}}` has one possible shared edge. Its realised labelled graph is not the potential labelled graph. Under the empty list the realised labelled graph has 5 labels and defect `1/2`. Under one multiply by 3 of `(0,1)` when `(1,2)` is present it has 5 labels and defect `3/10`. The count of that shared edge has 2 labels and defect 0 under both laws. The guard of that multiply is the shared edge, so the weights are constant on each value of the count. These are fixtures. They are not a frozen round. A block family that changes over time is not one of these maps.
