@@ -22,17 +22,17 @@ Neither operator is the definition of relational composition. A third reading, a
 
 | Field | Value |
 | --- | --- |
-| Input | An ordered cover: a list of blocks. A block is a list of elements. Elements are integers, strings, or tuples. |
+| Input | An ordered family of blocks. A block is a list of elements. Elements are integers, strings, or tuples. The family need not cover a named ground set. |
 | Operator | The intersection graph has one vertex per block and an edge when the two blocks have an element in common. The nerve has a face for every set of blocks whose common intersection is nonempty. The intersection graph is the 1-skeleton, together with isolated block vertices that an edge list does not show. |
 | Output | A simple graph, or a simplicial complex on the block index set. The bare output drops the blocks. The augmented output stores them. |
 | State | None. |
 | Reapplication | Undefined for both operators. A graph is not a cover. A complex is not a cover. No encoding of edges as blocks is introduced in order to apply the operator again. |
 | Other composition | `line_graph` accepts the bare intersection graph, because that bare output is a simple graph. The result is composition of two operators. It is not a second application of the cover operator. |
-| Recoverability | The three covers `{{1,2},{2,3},{1,3}}`, `{{1,2},{1,3},{1,4}}`, and `{{1},{1,2},{1,2,3}}` have the same bare intersection graph, the complete graph on three vertices. The first nerve has no face on all three blocks. The other two nerves are the full 2-simplex and have the same faces. The augmented blocks separate them. A nested cover and an overlapping cover can therefore share a bare nerve. The bare graph does not determine the cover. |
+| Recoverability | The three families `{{1,2},{2,3},{1,3}}`, `{{1,2},{1,3},{1,4}}`, and `{{1},{1,2},{1,2,3}}` have the same bare intersection graph, the complete graph on three vertices. The first nerve has no face on all three blocks. The other two nerves are the full 2-simplex and have the same faces. The augmented blocks separate them. A nested family and an overlapping family can therefore share a bare nerve. The bare graph does not determine the family. |
 | Surjectivity | Every finite simple graph is the intersection graph of some cover. One standard cover gives each vertex the indices of its incident edges and a private element. The fixture checks a path and a graph with an isolated vertex. This is not a new theorem. Surjectivity of the nerve onto every simplicial complex is not computed. |
 | Dynamics | None. |
 | Cost | A nerve of more than 12 blocks is refused. The cap is the enumerated subcollections, not a change in the definition. |
-| Mathematics | Intersection graphs and the nerve of a cover. The cover is not stored as a tree. |
+| Mathematics | Intersection graphs and the nerve of a family of sets. The family is not stored as a tree. |
 
 ## Observations of an existing chain
 
@@ -69,7 +69,7 @@ The edge-count paragraph above is not limited to weight 1. The assumptions are a
 
 ## Fixed covers
 
-`docs/cover-observations.md` defines three observations of a cover that stays fixed while the present edges change. A count and an active intersection graph are not covers, so a second application is undefined. The note has fixtures and no frozen cell.
+`docs/cover-observations.md` defines three observations of a fixed family of carrier-edge blocks. The family may be a full cover, a partition, an overlapping cover, or a partial family. A count and an active intersection graph are not families of carrier edges, so a second application is undefined. The note has fixtures and no frozen cell. Atlas-011 stored cells outside the fixture. Its omission lists are partial families. Those plans were not rewritten. The adjacency used by the active-block maps is potential overlap of the fixed blocks. Realised overlap, which also requires a present shared edge, is not one of those maps.
 
 ## Position index and canonical form
 

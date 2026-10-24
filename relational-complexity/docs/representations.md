@@ -4,6 +4,18 @@ Status: definitions and validation fixtures. No scientific cell is attached to t
 
 Each map sends a carrier state to a label. The label is a function of the present edges. None of the four adds a coordinate. Exact means strong lumpability of that label under the integer weight table. A positive defect rules out strong lumpability of that partition. It does not rule out every history-dependent description.
 
+## Five operations
+
+A permutation is not one operation. These five are different.
+
+1. A permutation of the original node names that keeps each carrier edge in the same list position. The i-th edge is rewritten with the new names of its endpoints. Which positions share an endpoint does not change.
+2. A permutation of positions in the carrier-edge list. The same edges may appear, and the i-th position may now be a different edge.
+3. A graph isomorphism. A numbering of the vertices of one simple graph onto another. It need not preserve a fixed carrier, and it need not preserve list positions.
+4. An automorphism of a fixed carrier. A numbering of that carrier's vertices that preserves its edge set. The three-edge path has two: the identity and the reversal. An end edge and the middle edge are not in one orbit.
+5. A general permutation of edge bits that is not induced by any carrier automorphism. Swapping the middle edge of the three-edge path with one end edge is an example. It permutes toggle coordinates. It is not operation 4.
+
+R2 is unchanged by operation 1 and can change under operation 2. R1 changes under operation 1 and is unchanged by operation 2. R3 follows the isomorphism type of the line graph, which is operation 3. R4 is unchanged by operation 4. Operation 5 is a statement about weight tables and bit coordinates. It is not an automorphism of the carrier, and it is not a renumbering of line-graph vertices.
+
 ## R1 — relationship-labelled line graph
 
 | Field | Value |
@@ -15,8 +27,8 @@ Each map sends a carrier state to a label. The label is a function of the presen
 | Reapplication | Undefined. The vertices are edges, and `line_graph` accepts integer endpoints. No encoding is added in order to apply it again. |
 | Recoverability | The vertex names are the present edges, so the present edge set is the label. Given the carrier, the bitset is recovered. The recovery is the retained names. |
 | Dynamics | The label separates the carrier states. A partition into singletons is strongly lumpable for every weight table on those states. EQ-022 records that fact. The exactness retains the present edges. |
-| Preserved by | Reordering the carrier edge list. |
-| Changed by | A permutation of the node labels. |
+| Preserved by | Operation 2. Reordering the carrier edge list. The vertex names are the edges, and the names are sorted. |
+| Changed by | Operation 1. A permutation of the original node names. This is not a reordering of the edge list. |
 
 The bare line graphs of a triangle and a three-edge star are the same unlabelled graph. The labelled line graphs keep different edge names.
 
@@ -31,8 +43,8 @@ The bare line graphs of a triangle and a three-edge star are the same unlabelled
 | Reapplication | The static bare line graph accepts `line_graph` again. This observation map does not declare a second label. |
 | Recoverability | The bare list does not determine which carrier edges were present. |
 | Dynamics | Whatever strong lumpability says for this partition. |
-| Preserved by | Nothing in the list order. The same present edges, written in another order, can produce another bare list. |
-| Changed by | Carrier edge order, and a permutation of the node labels. |
+| Preserved by | Operation 1. A node-name permutation that keeps each carrier edge in the same list position. The endpoints of a listed edge move together, so the bare index list is unchanged. |
+| Changed by | Operation 2. A permutation of positions in the carrier-edge list. The line-graph vertices are numbered in that list order, so the bare list can change. |
 
 This is the `present_line_graph` map stored by atlas-008.
 
@@ -52,6 +64,18 @@ This is the `present_line_graph` map stored by atlas-008.
 | Cost | The search enumerates every permutation. It is refused above 8 vertices. The refusal is not a canonical form. An independent backtracking search agrees with the certificate on every simple graph of order 4. |
 
 An ordinary hash of an edge list is not this certificate.
+
+## Canonicalisation is not iteration
+
+Calling the canonicaliser again is not the same operation as building another line graph.
+
+- Canonicalising a graph that is already canonical returns the same edge list. `second_application` is `defined_and_idempotent`. That is idempotence of the numbering.
+- Applying `line_graph` to the graph represented by that certificate builds a different graph. The certificate of the three-edge path on four vertices is `[[0,1],[0,2],[1,3]]`, another numbering of that path. Its line graph has three vertices and edges `[[0,1],[0,2]]`. The edge lists differ.
+- Iterating the line-graph operator applies that construction again. `iterate_line_graph` records step 0 as the input. One further application of this line graph is a single edge.
+- Iterating an observation function would send a label through the same map again. No observation map in this note declares that second label.
+- Iterating a dynamical quotient would take a quotient kernel, when one exists, and lump it by a further partition. No such second quotient is constructed here. `observation_law` either returns the quotient rows of one label of the carrier chain or leaves those rows undefined.
+
+A second canonicalisation is the same graph. It is not a new relational level, and it is not evidence that the line-graph operator has been iterated.
 
 ## R4 — carrier-automorphism orbit
 

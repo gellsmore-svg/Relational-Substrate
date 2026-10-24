@@ -408,6 +408,18 @@ The empty list is the EQ-015 table. The present cell is the EQ-019 table. The ab
 
 `COV-GUARD-SAMPLE` is `partial`. `COV-PLACEMENT-SAMPLE` stays `partial`. `COV-COMPOSITION` stays `open`. ATLAS-Q03 stays open. ATLAS-Q01 and ATLAS-Q04 were not in the round. PAT-015 records the bit relabeling and the length-2 separation and is not scheduled. EQ-024 and EQ-025 are the two stored matrix identities. Ledger row `RRC-ATLAS-013` was appended, with relation `RRC-R047`. Its `created_commit` is the freeze `4eb1f14`. This commit appended the row. The hash of this commit is not written here.
 
+## Terminology
+
+The atlas-012 calculation commit is `914dbb4d1612322a350490636167a6d137e8f705`. The execution section above does not contain it.
+
+Living notes now separate five operations: a node-name permutation that preserves listed edge positions, a permutation of positions in the edge list, a graph isomorphism, a carrier automorphism, and a bit permutation that no carrier automorphism induces. The position-indexed label is unchanged by the first and can change under the second. Canonicalisation of an already canonical graph is idempotent. Applying the line-graph operator to that certificate is a different operation, and iterating it is a third. No new relational level is inferred from a second canonicalisation.
+
+A family of blocks whose union misses a carrier edge is a partial family, not a cover of that carrier. A full cover, a partition, an overlapping cover, a nested family, and a dynamically active subfamily are named separately. Atlas-011's omission lists are partial families. The frozen plans and result files were not rewritten. Potential overlap is a nonempty intersection of the fixed blocks. The active-block maps use that condition. Realised overlap, which also requires a present shared edge, is not implemented.
+
+`observation_law` builds one quotient of the carrier chain when the label is strongly lumpable, and it leaves the rows undefined when the defect is positive. It does not build a second quotient of that quotient. No coordinate independent of the pair bits is implemented. `rrc-0.4.0` is unchanged.
+
+`IDEA-L20`, `IDEA-L21`, `IDEA-L22`, and `IDEA-L23` are `open`. `COV-SUCCESSIVE-QUOTIENT`, `COV-REALISED-OVERLAP`, `COV-HIGHER-ORDER-STATE`, and `COV-DYNAMICAL-PROPAGATION` are `open`. ATLAS-Q13, ATLAS-Q14, and ATLAS-Q15 are `open`. ATLAS-Q01 through ATLAS-Q12 stay open. No ledger row was added. This section does not name its own commit.
+
 ## Next action
 
-Do not edit `plans/atlas-012.json` or `docs/atlas-012-preflight.md`. Do not rerun `results/atlas-012`. Do not edit the frozen plans or result directories of atlas-007 through atlas-011. Do not schedule the condition-bit translation, the shared mean `13/8`, the length-2 split, the atlas-009 marginals, the atlas-010 defects, the atlas-011 defects, PAT-012, PAT-014, or PAT-015. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open. A later round needs its own freeze. The restart keys are the freeze `4eb1f14` and plan hash `1dffac3ff30ff7d6a37fbe0df4c63e90b1988cf454a9d8a7a4ba746515de5185`.
+Do not edit `plans/atlas-012.json` or `docs/atlas-012-preflight.md`. Do not rerun `results/atlas-012`. Do not edit the frozen plans or result directories of atlas-007 through atlas-011. Do not schedule the condition-bit translation, the shared mean `13/8`, the length-2 split, the atlas-009 marginals, the atlas-010 defects, the atlas-011 defects, PAT-012, PAT-014, or PAT-015. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q15 stay open. `IDEA-L20` through `IDEA-L23` stay `open` and are not selected. A later round needs its own freeze. The restart keys are the atlas-012 execution `914dbb4d1612322a350490636167a6d137e8f705` and plan hash `1dffac3ff30ff7d6a37fbe0df4c63e90b1988cf454a9d8a7a4ba746515de5185`. The next increment is a typed successive quotient on small fixtures. This section does not name its own commit.

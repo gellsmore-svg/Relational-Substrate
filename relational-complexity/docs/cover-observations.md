@@ -2,7 +2,18 @@
 
 Status: definitions and validation fixtures. No scientific cell is attached to this note. The static intersection graph and the static nerve are unchanged. The engine string stays `rrc-0.4.0`. The functions are `src/rrc/composition.py`.
 
-A cover is an ordered list of blocks. A block is a set of carrier edges. The cover is chosen with the carrier. It is not a state variable, and it is not required to be a partition or a tree. Blocks may overlap. The present edges change. The cover does not.
+The operator accepts an ordered family of blocks. A block is a set of carrier edges. The family is chosen with the carrier. It is not a state variable, and it is not required to be a partition or a tree. The present edges change. The family does not.
+
+The usual mathematical words are not interchangeable.
+
+- A full cover is a family whose union is the whole carrier.
+- A partial family is a family whose union misses at least one carrier edge. Atlas-011 stored three omission lists on the triangle. Each omits one edge. Those lists are partial families. The stored cells were not rewritten, and this note does not rerun them.
+- A partition is a full cover whose blocks are pairwise disjoint and nonempty.
+- An overlapping cover is a full cover with at least one nonempty pairwise intersection.
+- A nested family contains a block that properly contains another block. Equal blocks are not nested.
+- A dynamically active subfamily is the subcollection of blocks that contain a present edge. It depends on the state. The block definitions do not.
+
+Potential overlap and realised overlap are different conditions. Two blocks potentially overlap when their fixed edge sets meet. That condition does not read the present edges. Two blocks have realised overlap in a state when a shared edge is present. The three maps below do not test realised overlap. `active_intersection` and `labelled_active_blocks` join active blocks when the fixed sets meet, even if the shared edge is absent.
 
 Intersection here means a shared carrier edge. Two blocks that share a vertex and no edge are disjoint for these maps. That is different from the line graph, which joins edges that share a vertex.
 
@@ -18,7 +29,7 @@ None adds a coordinate. A second application is undefined: a count tuple and an 
 
 ## One path, two covers
 
-The carrier is the four-edge path. The partition cover is `{{e0,e1},{e2,e3}}`. The overlapping cover is `{{e0,e1,e2},{e1,e2,e3}}`.
+The carrier is the four-edge path. The partition is `{{e0,e1},{e2,e3}}`. It is a full cover and a partition. The overlapping family is `{{e0,e1,e2},{e1,e2,e3}}`. It is a full overlapping cover, and it is not nested. Neither family is a partial family.
 
 On the empty constraint list the partition count has 9 labels and defect 0. The states with only `e0` and only `e1` share the count `(1,0)`. The quotient of that label is defined. The overlapping count separates those two states and merges only `e1` with only `e2`. It has 10 labels and defect 1. The quotient is undefined. Each cover keeps a distinction the other drops. Exactness and separation are different properties of the two maps.
 

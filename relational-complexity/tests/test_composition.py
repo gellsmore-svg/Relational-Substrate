@@ -12,7 +12,9 @@ from rrc.composition import (
     _compact,
     active_intersection_labels,
     apply_again,
+    block_family_report,
     canonical_simple_graph,
+    carrier_automorphisms,
     carrier_orbit,
     intersection_graph,
     intersection_representation,
@@ -718,3 +720,140 @@ def test_representation_records_stay_fixtures():
     note = (root / "docs" / "representations.md").read_text(encoding="utf-8")
     assert "No scientific cell is attached to this note." in note
     assert "8 vertices" in note
+
+
+def test_position_index_follows_edge_positions_and_not_node_names():
+    path = [[0, 1], [1, 2], [2, 3]]
+    renamed = [[1, 2], [2, 3], [3, 4]]
+    reordered = [[1, 2], [0, 1], [2, 3]]
+    assert present_line_graph_labels(path) == present_line_graph_labels(renamed)
+    assert present_line_graph_labels(path) != present_line_graph_labels(reordered)
+    assert labelled_line_graph(path)["vertices"] != labelled_line_graph(renamed)["vertices"]
+    full = (1 << 3) - 1
+    assert present_line_graph_labels(path)[full]["edges"] == [[0, 1], [1, 2]]
+    assert present_line_graph_labels(reordered)[full]["edges"] == [[0, 1], [0, 2]]
+    automorphisms = carrier_automorphisms(4, path)
+    assert automorphisms == [(0, 1, 2, 3), (3, 2, 1, 0)]
+    induced = []
+    for perm in automorphisms:
+        image = []
+        for left, right in path:
+            a, b = perm[left], perm[right]
+            image.append((a, b) if a < b else (b, a))
+        induced.append(tuple(image))
+    assert ((0, 1), (1, 2), (2, 3)) in induced
+    assert ((2, 3), (1, 2), (0, 1)) in induced
+    assert ((0, 1), (2, 3), (1, 2)) not in induced
+
+
+def test_canonicalisation_is_not_line_graph_iteration():
+    path = [[0, 1], [1, 2], [2, 3]]
+    certificate = canonical_simple_graph(4, path)
+    assert certificate["edges"] == [[0, 1], [0, 2], [1, 3]]
+    assert certificate["edges"] != path
+    again = apply_again(certificate)
+    assert again["edges"] == certificate["edges"]
+    assert again["second_application"] == "defined_and_idempotent"
+    assert again["applied_to"] == "canonical_simple_graph"
+    built = line_graph(certificate["edges"])
+    assert built["operator"] == "line_graph"
+    assert built["vertex_count"] == 3
+    assert built["bare_edges"] == [[0, 1], [0, 2]]
+    assert built["bare_edges"] != certificate["edges"]
+    steps = iterate_line_graph(certificate["edges"], 2)
+    assert steps[0]["bare_edges"] == certificate["edges"]
+    assert steps[1]["bare_edges"] == [[0, 1], [0, 2]]
+    assert steps[2]["bare_edges"] == [[0, 1]]
+    assert steps[2]["vertex_count"] == 2
+    assert certificate["dynamics"] == "none"
+    assert certificate["new_state"] is False
+
+
+def test_block_family_report_separates_covers_from_partial_families():
+    partition = [PATH4[0:2], PATH4[2:4]]
+    overlap = [PATH4[0:3], PATH4[1:4]]
+    part = block_family_report(PATH4, partition)
+    over = block_family_report(PATH4, overlap)
+    assert part["full_cover"] is True
+    assert part["partition"] is True
+    assert part["partial_family"] is False
+    assert part["overlapping"] is False
+    assert part["nested"] is False
+    assert part["new_state"] is False
+    assert part["dynamics"] == "none"
+    assert over["full_cover"] is True
+    assert over["overlapping"] is True
+    assert over["partition"] is False
+    assert over["nested"] is False
+    assert over["potential_overlap_pairs"] == [[0, 1]]
+    copies = block_family_report(PATH4, [PATH4, list(PATH4)])
+    assert copies["full_cover"] is True
+    assert copies["overlapping"] is True
+    assert copies["nested"] is False
+    assert copies["partition"] is False
+    omitted = block_family_report(TRIANGLE, [TRIANGLE[0:1], TRIANGLE[1:2]])
+    assert omitted["partial_family"] is True
+    assert omitted["full_cover"] is False
+    assert omitted["missed_edges"] == [[0, 2]]
+    nested = block_family_report(CYCLE4, [list(CYCLE4), [CYCLE4[0], CYCLE4[2]]])
+    assert nested["full_cover"] is True
+    assert nested["nested"] is True
+    assert nested["overlapping"] is True
+    assert nested["partition"] is False
+    empty_carrier = block_family_report([], [])
+    assert empty_carrier["full_cover"] is True
+    assert empty_carrier["partition"] is True
+    assert empty_carrier["partial_family"] is False
+    empty_family = block_family_report(PATH4, [])
+    assert empty_family["partial_family"] is True
+    assert empty_family["full_cover"] is False
+    assert empty_family["partition"] is False
+    with_empty = block_family_report(PATH4, [PATH4[0:2], PATH4[2:4], []])
+    assert with_empty["full_cover"] is True
+    assert with_empty["empty_block"] is True
+    assert with_empty["partition"] is False
+    with pytest.raises(ValueError, match="not a carrier edge"):
+        block_family_report(PATH4, [[[0, 1], [5, 6]]])
+    with pytest.raises(ValueError, match="duplicate"):
+        block_family_report(PATH4, [[[0, 1], [0, 1]]])
+    with pytest.raises(ValueError, match="a cover must be a list of blocks"):
+        block_family_report(PATH4, None)
+    # Both end edges are present and the two shared edges are absent.
+    # The active-block map still draws the fixed intersection.
+    both_ends = 1 | (1 << 3)
+    bare = active_intersection_labels(PATH4, overlap)
+    assert bare[both_ends]["edges"] == [[0, 1]]
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    ideas = {
+        json.loads(line)["idea_id"]: json.loads(line)
+        for line in (root / "atlas" / "ideas.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    coverage = {
+        json.loads(line)["coverage_id"]: json.loads(line)
+        for line in (root / "atlas" / "coverage.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    questions = {
+        json.loads(line)["question_id"]: json.loads(line)
+        for line in (root / "atlas" / "questions.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    for idea_id in ("IDEA-L20", "IDEA-L21", "IDEA-L22", "IDEA-L23"):
+        assert ideas[idea_id]["status"] == "open"
+        assert "not a frozen cell" in ideas[idea_id]["methods"]
+    for coverage_id in (
+        "COV-SUCCESSIVE-QUOTIENT",
+        "COV-REALISED-OVERLAP",
+        "COV-HIGHER-ORDER-STATE",
+        "COV-DYNAMICAL-PROPAGATION",
+    ):
+        assert coverage[coverage_id]["status"] == "open"
+    for question_id in ("ATLAS-Q13", "ATLAS-Q14", "ATLAS-Q15"):
+        assert questions[question_id]["status"] == "open"
+    representations = (root / "docs" / "representations.md").read_text(encoding="utf-8")
+    assert "Five operations" in representations
+    assert "Canonicalisation is not iteration" in representations
+    cover = (root / "docs" / "cover-observations.md").read_text(encoding="utf-8")
+    assert "No scientific cell is attached to this note." in cover
+    assert "partial family" in cover
+    assert "realised overlap" in cover

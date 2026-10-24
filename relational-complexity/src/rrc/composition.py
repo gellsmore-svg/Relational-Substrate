@@ -545,8 +545,51 @@ def _carrier_blocks(edges, blocks):
     return ordered, parsed
 
 
+def block_family_report(edges, blocks) -> dict:
+    """Classify a fixed family of carrier-edge blocks.
+
+    The union of the blocks decides a full cover against a partial family.
+    Potential overlap is a nonempty intersection of those blocks. It does
+    not read which edges are present. Realised overlap is a different
+    condition and is not computed here. The report does not change
+    ``cover_count_labels``, ``active_intersection_labels``, or
+    ``labelled_active_block_labels``.
+    """
+    ordered, parsed = _carrier_blocks(edges, blocks)
+    carrier = set(range(len(ordered)))
+    sets = [set(bits) for bits in parsed]
+    covered: set[int] = set()
+    for bits in sets:
+        covered |= bits
+    missed = sorted(carrier - covered)
+    empty_block = any(len(bits) == 0 for bits in sets)
+    potential_pairs = [
+        [left, right]
+        for left, right in combinations(range(len(sets)), 2)
+        if sets[left] & sets[right]
+    ]
+    nested = any(
+        sets[left] < sets[right] or sets[right] < sets[left]
+        for left, right in combinations(range(len(sets)), 2)
+    )
+    pairwise_disjoint = all(not (sets[left] & sets[right]) for left, right in combinations(range(len(sets)), 2))
+    full_cover = covered == carrier
+    return {
+        "full_cover": full_cover,
+        "partial_family": not full_cover,
+        "partition": full_cover and pairwise_disjoint and not empty_block,
+        "overlapping": bool(potential_pairs),
+        "nested": nested,
+        "empty_block": empty_block,
+        "missed_edges": [list(ordered[bit]) for bit in missed],
+        "potential_overlap_pairs": potential_pairs,
+        "new_state": False,
+        "dynamics": "none",
+    }
+
+
 def fixed_cover(edges, blocks) -> dict:
-    """A cover fixed on a carrier. The cover is not a state variable.
+    """A fixed family of blocks on a carrier. The family is not a state variable.
 
     Counts and active-block graphs derived from it are functions of the
     present edges. A count tuple is not a cover, so the operator does not
@@ -592,10 +635,10 @@ def _active_blocks(ordered, parsed, state):
 def active_intersection_labels(edges, blocks) -> list[dict]:
     """Bare intersection graph of the blocks that contain a present edge.
 
-    Two blocks are adjacent when their fixed edge sets meet, whether or not
-    the shared edge is the one that is present. The bare graph drops the
-    block indices. The vertex count keeps an empty active set distinct from
-    a single active block.
+    Adjacency is potential overlap: the fixed edge sets meet. The shared
+    edge need not be present. Realised overlap is not this label. The bare
+    graph drops the block indices. The vertex count keeps an empty active
+    set distinct from a single active block.
     """
     ordered, parsed = _carrier_blocks(edges, blocks)
     sets = [frozenset(bits) for bits in parsed]
@@ -612,8 +655,9 @@ def active_intersection_labels(edges, blocks) -> list[dict]:
 def labelled_active_block_labels(edges, blocks) -> list[dict]:
     """Active block indices, and the pairs of those blocks that intersect.
 
-    The indices are the cover's own order. This keeps which block is active.
-    The bare intersection graph does not.
+    The indices are the family's own order. This keeps which block is active.
+    The bare intersection graph does not. Adjacency is potential overlap of
+    the fixed blocks, not realised overlap.
     """
     ordered, parsed = _carrier_blocks(edges, blocks)
     sets = [frozenset(bits) for bits in parsed]

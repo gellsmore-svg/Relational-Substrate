@@ -10,3 +10,6 @@
 {"question_id":"ATLAS-Q10","statement":"Which proposed composition maps are projections of the current pair state, and which would need a new coordinate under the compilation gate?","status":"open"}
 {"question_id":"ATLAS-Q11","statement":"Where does a label-free template stay covariant under a declared node permutation, and where does a designated label break that covariance?","status":"open"}
 {"question_id":"ATLAS-Q12","statement":"For which named composition operators is the output an object the same operator can accept, and for which does a second application become undefined?","status":"open"}
+{"question_id":"ATLAS-Q13","statement":"When an intermediate observation of a carrier chain fails strong lumpability, can a coarser map from the carrier still be exact, and when does that coarser map factor through the intermediate observation?","status":"open"}
+{"question_id":"ATLAS-Q14","statement":"Which observations of a fixed block family depend only on the block definitions, and which change when a shared constituent becomes present or absent?","status":"open"}
+{"question_id":"ATLAS-Q15","statement":"When is a higher-order coordinate a function of the pair state, and when can two states share that pair state, differ in the coordinate, and assign different probabilities to one pair event?","status":"open"}
