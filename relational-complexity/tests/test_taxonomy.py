@@ -14,11 +14,10 @@ OPEN_ROWS = (
     "IDEA-L06",
     "IDEA-L09",
     "IDEA-L11",
-    "IDEA-L13",
     "IDEA-L15",
     "IDEA-L17",
 )
-PARTIAL_ROWS = ("IDEA-L08", "IDEA-L14", "IDEA-L16")
+PARTIAL_ROWS = ("IDEA-L08", "IDEA-L13", "IDEA-L14", "IDEA-L16")
 UNCHANGED_EXPLORED = ("IDEA-L02", "IDEA-L03", "IDEA-L05", "IDEA-L07")
 
 
@@ -52,6 +51,8 @@ def test_new_idea_rows_stay_open_and_old_rows_keep_their_status():
         assert ideas[idea_id]["status"] == "partial"
     assert "src/rrc/composition.py" in ideas["IDEA-L16"]["methods"]
     assert "independent bit" in ideas["IDEA-L16"]["methods"]
+    assert "Atlas-008" in ideas["IDEA-L13"]["methods"]
+    assert "second label" in ideas["IDEA-L13"]["methods"]
     for idea_id in UNCHANGED_EXPLORED:
         assert ideas[idea_id]["status"] == "explored"
     assert ideas["IDEA-G01"]["status"] == "partial"

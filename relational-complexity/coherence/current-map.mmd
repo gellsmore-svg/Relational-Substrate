@@ -20,6 +20,7 @@ flowchart TD
     RRC_ATLAS_005["RRC-ATLAS-005: The bit-prohibit controls reproduce the atlas-002 tables, including the chain-branch id..."]
     RRC_ATLAS_007["RRC-ATLAS-007: On this generator, length 12 has effective cardinality 9 on the 3-edge carrier and 12 o..."]
     RRC_ATLAS_008["RRC-ATLAS-008: On these five carriers the uniform eq-1 and ge-2 multiplies were calculated beside one ..."]
+    RRC_ATLAS_009["RRC-ATLAS-009: On these five baseline carriers, present edge count is strongly lumpable. The degree se..."]
   end
   subgraph INFERENCE [Inferences]
     RRC_001_HARD_ABSORBS["RRC-001-HARD-ABSORBS: Under the hard-wedge rule a present pair can always be deleted and the empty graph can ..."]
@@ -86,3 +87,4 @@ flowchart TD
   RRC_ATLAS_006 -->|formalises| RRC_ATLAS_005
   RRC_ATLAS_007 -->|contrasts_with| RRC_ATLAS_004
   RRC_ATLAS_008 -->|contrasts_with| RRC_ATLAS_005
+  RRC_ATLAS_009 -->|contrasts_with| RRC_ATLAS_003

@@ -1,6 +1,6 @@
 # Two typed composition operators
 
-Status: definitions and validation fixtures. Not a scientific cell. No engine change. `rrc-0.4.0` is unchanged. The functions are `src/rrc/composition.py`. The checks are `tests/test_composition.py`.
+Status: the two operators are definitions and validation fixtures. They are not scientific cells. Atlas-008 calculated the three label maps below on five baseline carriers. No engine change. `rrc-0.4.0` is unchanged. The functions are `src/rrc/composition.py`. The checks are `tests/test_composition.py`.
 
 Neither operator is the definition of relational composition. A third reading, a label map of an existing chain, is recorded below. It adds no state.
 
@@ -62,3 +62,7 @@ The other two maps do not follow from that fact.
 Equal defects on the four-edge path are equal numbers for two different partitions. They are not an identity of the maps. The chain agreement is this carrier. The four-cycle separates the degree sequence, which is exact, from the line-graph label, which is not.
 
 No constrained weight table is in this fixture. No second observation is composed with a lumpable quotient: the edge-count chain is a Markov chain on `0 .. m`, and a further label of that chain is not declared. RRC-001's two-subset cut is not used.
+
+## Edge-count identity
+
+The edge-count paragraph above is not limited to weight 1. The assumptions are an empty constraint list, a baseline that is an integer at least 1, and `halt_self_loop`. Every row is that constant. From `k` present edges among `m`, the present edges are the decreases and the absent edges are the increases. The next count is `k/m` toward `k-1` and `(m-k)/m` toward `k+1`. It depends only on `k`, so the present-edge-count label is strongly lumpable on every finite simple carrier. EQ-021 records that identity. The test checks the weights, including baseline 5 on two disjoint edges. Atlas-008's five edge-count cells have defect 0. The degree sequence and the present line graph are outside the identity. A constrained table is outside it. A second label of the count chain is not declared.

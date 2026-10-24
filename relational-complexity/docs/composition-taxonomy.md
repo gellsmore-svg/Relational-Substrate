@@ -2,6 +2,8 @@
 
 Status: idea library. No scientific cell is attached to this note. No engine change. No placeholder experiment. Existing idea rows keep the status they had before this note. Six levels of composition are not a target.
 
+Later status: `IDEA-L08`, `IDEA-L14`, and `IDEA-L16` are partial because the operators are implemented. `IDEA-L13` is partial after atlas-008 calculated three baseline label maps. That round is not a cell of this note.
+
 The formulations below are alternative mathematical objects. None is the definition of relational composition. A later round may freeze one named operator. It does not inherit the others.
 
 ## Four readings
@@ -127,7 +129,7 @@ An incidence graph of the carrier, with nodes on one side and carrier edges on t
 - **Grammar.** Preserved on the full pair state. On a projection, the compilation gate already records the alternatives: the same event shape with possibly different weights, or no closed interface grammar.
 - **Established mathematics.** Disjoint union of graphs; strong lumpability of Markov chains.
 - **Small-scale calculation.** A small product can be compiled as an ordinary listed carrier. That compilation does not test the unnamed entity map, so it is not run here. RRC-001's two-subset cut is not reopened.
-- **Open.** IDEA-L04, IDEA-L13, IDEA-L17, ATLAS-Q10, RRC-Q09.
+- **Open.** IDEA-L04, IDEA-L17, ATLAS-Q10, RRC-Q09. IDEA-L13 is partial and is not this family's cell.
 - **Library.** IDEA-L04, IDEA-L17, IDEA-R04.
 
 ## C6 — Overlapping structural composition
@@ -142,7 +144,7 @@ An incidence graph of the carrier, with nodes on one side and carrier edges on t
 - **Grammar.** Unchanged, because no operator acts on the chain.
 - **Established mathematics.** Set covers. The cover is not COV-HYPEREDGE: that row is an independent relation of order 3 as state.
 - **Small-scale calculation.** The underlying chain is the ordinary carrier. The cover adds no numerical question until an observable is declared that could differ between two covers. No such observable is declared. No cell.
-- **Open.** IDEA-L08 and IDEA-L14 stay open.
+- **Open.** IDEA-L08 and IDEA-L14 are partial. The implemented cover operators are not cells of this note.
 - **Library.** IDEA-L08, IDEA-L14.
 
 ## C7 — Repeated composition
@@ -157,7 +159,7 @@ An incidence graph of the carrier, with nodes on one side and carrier edges on t
 - **Grammar.** IDEA-L13 lists one-step possibilities: the transition law might be preserved, the weights might change shape, or a closed description might fail. Those are alternatives, not predictions. None is known for a second application.
 - **Established mathematics.** Iteration of the line-graph operator, as cited under C4a. No dynamical theorem is claimed.
 - **Small-scale calculation.** Iterating `L` on a named small graph is a graph-theory exercise. It is not run as an RRC cell. A token chain with a label "level 2" would not make `D` typed.
-- **Open.** IDEA-L06 and IDEA-L13 stay open. ATLAS-Q12 asks which named operators accept their own output. It is not scheduled. Six levels of composition are not a target.
+- **Open.** IDEA-L06 stays open. IDEA-L13 is partial: a second application of a label map is still undefined. ATLAS-Q12 asks which named operators accept their own output. It is not scheduled. Six levels of composition are not a target.
 - **Library.** IDEA-L06, IDEA-L13, IDEA-L15.
 
 ## C8 — Alternative effective descriptions
@@ -181,7 +183,7 @@ One chain, and a declared set of observables. The six descriptions below stay se
 - **Grammar.** (1) is the grammar. (2) may transform weights or lose the Markov property. (3) preserves the law of the chosen observables when the statistic is sufficient. (4) does not claim preservation. (5) is outside the grammar. (6) is not a grammar.
 - **Established mathematics.** Strong lumpability; sufficient statistics; functions of a Markov chain.
 - **Small-scale calculation.** (1) is the existing cell machinery. The others wait for a declaration. No cell.
-- **Open.** ATLAS-Q07, ATLAS-Q10, IDEA-L11, IDEA-L13, IDEA-C09.
+- **Open.** ATLAS-Q07, ATLAS-Q10, IDEA-L11, IDEA-C09. IDEA-L13 is partial. Atlas-008 calculated three of the named observables on the baseline and did not close the question.
 - **Library.** IDEA-L11, IDEA-L13, IDEA-C09, IDEA-O01.
 
 ## What remains untyped

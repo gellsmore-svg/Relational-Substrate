@@ -258,6 +258,68 @@ def test_atlas_008_plan_repeats_the_baseline_maps_with_round_ids():
     assert all(value == expected for value in seen.values())
 
 
+def test_edge_count_is_lumpable_for_any_constant_positive_baseline():
+    disjoint = [[0, 1], [2, 3]]
+    weights = compile_weight_table(4, {"kind": "listed", "edges": disjoint}, [], baseline=5)
+    width = 2
+    for state in range(1 << width):
+        present = state.bit_count()
+        row = [int(value) for value in weights[state]]
+        total = sum(row)
+        decrease = sum(row[bit] for bit in range(width) if (state >> bit) & 1)
+        assert decrease * width == present * total
+        assert (total - decrease) * width == (width - present) * total
+    law = observation_law(weights, present_edge_count_labels(disjoint))
+    assert law["exact"] is True
+    assert law["defect_l1"] == Fraction(0)
+    assert law["n_distinct_labels"] == 3
+    assert law["new_state"] is False
+    single = compile_weight_table(3, {"kind": "listed", "edges": [[0, 1]]}, [], baseline=1)
+    single_law = observation_law(single, present_edge_count_labels([[0, 1]]))
+    assert single_law["exact"] is True
+    assert single_law["n_distinct_labels"] == 2
+
+
+def test_atlas_008_execution_stores_the_label_laws():
+    import json
+    from pathlib import Path
+
+    from rrc.cli import main
+
+    root = Path(__file__).resolve().parents[1]
+    assert main(["verify", "--round", "atlas-008", "--out", str(root / "results" / "atlas-008")]) == 0
+    items = root / "results" / "atlas-008" / "items"
+
+    def load(name):
+        return json.loads((items / name / "result.json").read_text(encoding="utf-8"))
+
+    chain = load("A8-chain-line")
+    degree = load("A8-chain-degree")
+    count = load("A8-chain-count")
+    path_line = load("A8-path4-line")
+    path_degree = load("A8-path4-degree")
+    cycle_degree = load("A8-cycle4-degree")
+    cycle_line = load("A8-cycle4-line")
+    assert chain["defect_l1"]["num"] == "4" and chain["defect_l1"]["den"] == "9"
+    assert degree["defect_l1"]["num"] == "4" and degree["n_distinct_labels"] == 5
+    assert count["exact"] is True and count["n_distinct_labels"] == 4
+    assert chain["weight_sha256"] == count["weight_sha256"] == degree["weight_sha256"]
+    assert chain["weight_sha256"] == "3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7"
+    assert path_line["defect_l1"]["num"] == "1" and path_line["defect_l1"]["den"] == "3"
+    assert path_line["n_distinct_labels"] == 8 and path_degree["n_distinct_labels"] == 7
+    assert path_degree["defect_l1"]["den"] == "3"
+    assert cycle_degree["exact"] is True and cycle_degree["n_distinct_labels"] == 6
+    assert cycle_line["defect_l1"]["num"] == "1" and cycle_line["defect_l1"]["den"] == "2"
+    assert cycle_line["n_distinct_labels"] == 8
+    assert path_line["weight_sha256"] == "5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3"
+    for name in ("A8-triangle-line", "A8-star-count", "A8-cycle4-count"):
+        result = load(name)
+        assert result["new_state"] is False
+        assert result["injective"] is False
+        assert result["further_label"] == "undefined"
+        assert result["kernel_sha256"] == result["weight_sha256"]
+
+
 def test_atlas_007_execution_stored_no_law():
     import json
     from pathlib import Path
