@@ -319,6 +319,97 @@ def test_atlas_002_plan_is_a_carrier_batch_not_a_replay():
     assert len(seen) == 4
 
 
+def test_atlas_003_plan_is_a_declared_cardinality_sample():
+    assert main(["plan", "--round", "atlas-003"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-003.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "05de332578ff435f6e25eb2550db0a92ca576fdda187c99c8861fb9fdb77fc26"
+    assert plan["engine_version"] == "rrc-0.3.0"
+    assert plan["engine_version"] == ENGINE_VERSION
+    assert plan["grammar_id"] == "opening-prohibit-multiply-v1"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.013
+    assert plan["no_sampling"] is True
+    assert plan["coverage"]["declared_sample"] is True
+    assert plan["coverage"]["not_exhaustive_lists"] is True
+    assert plan["coverage"]["six_is_not_a_target"] is True
+    assert plan["questions"] == ["ATLAS-Q08"]
+    assert "ATLAS-Q07" in plan["questions_not_in_this_round"]
+    edges = [(0, 1), (0, 2), (1, 2)]
+    factors = [2, 3, 5]
+    generated = []
+    for index, factor in enumerate(factors):
+        event = edges[index]
+        condition_a = edges[(index + 1) % 3]
+        condition_b = edges[(index + 2) % 3]
+        generated.append(
+            {
+                "action": "either",
+                "effect": "prohibit",
+                "event": [event[0], event[1]],
+                "when": {"edge": [condition_a[0], condition_a[1]], "polarity": "present"},
+            }
+        )
+        generated.append(
+            {
+                "action": "either",
+                "effect": "multiply",
+                "event": [event[0], event[1]],
+                "factor": factor,
+                "when": {"edge": [condition_b[0], condition_b[1]], "polarity": "present"},
+            }
+        )
+    tail = generated + [
+        {
+            "action": "either",
+            "effect": "multiply",
+            "event": [0, 1],
+            "factor": 4,
+            "when": {"edge": [0, 2], "polarity": "absent"},
+        },
+        {
+            "action": "dissolve",
+            "effect": "prohibit",
+            "event": [0, 2],
+            "when": {"edge": [1, 2], "polarity": "present"},
+        },
+    ]
+    by_id = {item["id"]: item for item in plan["items"]}
+    assert len(by_id) == 13
+    assert [len(item["constraints"]) for item in plan["items"]] == [0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 4, 6, 8]
+    assert by_id["A3-12-card6"]["constraints"] == generated
+    assert by_id["A3-11-card4"]["constraints"] == generated[:4]
+    assert by_id["A3-13-card8"]["constraints"] == tail
+    assert by_id["A3-04-mul-present-4"]["role"] == "control"
+    assert by_id["A3-04-mul-present-4"]["constraints"][0]["factor"] == 4
+    forbidden = {"weight_sha256", "occupation", "expected", "exact", "kernel_sha256"}
+    seen_factors = set()
+    for item in plan["items"]:
+        assert item["type"] == "atlas_core"
+        assert item["n"] == 3
+        assert item["baseline"] == 1
+        assert item["carrier"] == {"kind": "complete"}
+        assert forbidden.isdisjoint(item)
+        for constraint in item["constraints"]:
+            assert "kind" not in constraint.get("when", {})
+            assert tuple(constraint["event"]) in set(edges)
+            assert tuple(constraint["when"]["edge"]) in set(edges)
+            if constraint["effect"] == "multiply":
+                seen_factors.add(constraint["factor"])
+            else:
+                assert "factor" not in constraint
+    assert seen_factors == {2, 3, 4, 5}
+    both = [
+        item
+        for item in plan["items"]
+        if sum(constraint["effect"] == "prohibit" for constraint in item["constraints"]) >= 2
+        and {constraint["when"]["polarity"] for constraint in item["constraints"] if constraint["effect"] == "prohibit"}
+        == {"present", "absent"}
+    ]
+    assert both == []
+
+
 def test_historical_round_still_verifies_and_is_not_reexecuted(tmp_path):
     assert main(["verify", "--round", "rrc-001", "--out", str(ROOT / "results" / "rrc-001")]) == 0
     assert main(["verify", "--round", "atlas-001", "--out", str(ROOT / "results" / "atlas-001")]) == 0

@@ -148,6 +148,14 @@ Constraint cardinality, weight alphabets, incidence-aware predicates, kernel equ
 
 New idea rows and coverage rows are `open`. New questions are ATLAS-Q08 through ATLAS-Q11. ATLAS-Q01 through ATLAS-Q07 stay open.
 
+## atlas-003
+
+Plan `plans/atlas-003.json` is frozen and has not been executed. Plan hash `05de332578ff435f6e25eb2550db0a92ca576fdda187c99c8861fb9fdb77fc26`. Definitions commit `26bf891`. Engine `rrc-0.3.0`. Preflight `docs/atlas-003-preflight.md`: the length-8 cell took 0.013 seconds. Observables from that timing were not retained.
+
+The round is 13 opening-grammar lists on the N=3 complete carrier. Declared cardinalities are 0, 1, 2, 4, 6 and 8. Factors are 2, 3, 4 and 5. The lists are a declared sample, not every list. Cardinality 6 counts constraints and is not a six-node target. The incident predicate is not in this plan. PAT-001 through PAT-004 do not appoint the cells.
+
+`IDEA-C10` and `IDEA-C11` are `selected`. `COV-CARDINALITY-BROAD` and `COV-WEIGHT-ALPHABET` are `frozen`. ATLAS-Q08 stays open. ATLAS-Q01 through ATLAS-Q07 and ATLAS-Q09 through ATLAS-Q11 stay open.
+
 ## Next action
 
-Preflight and freeze a compact opening-grammar round on constraint cardinality and weight factors. Engine `rrc-0.3.0`. Do not execute in the freeze commit. Do not use the incident predicate in that plan. Do not edit `plans/atlas-001.json`, `plans/atlas-002.json`, CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
+Execute atlas-003 in bounded chunks with `--max-items` and `--budget-seconds`. Do not edit `plans/atlas-003.json`. Then verify and record. The incidence round is a separate later freeze. Do not edit `plans/atlas-001.json`, `plans/atlas-002.json`, CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
