@@ -8,9 +8,11 @@ import sys
 import time
 from pathlib import Path
 
+import numpy as np
+
 from rrc import ENGINE_VERSION
 from rrc.items import execute_lumpability, execute_propagation
-from rrc.constraints import resolve_carrier
+from rrc.constraints import kernel_fingerprint, resolve_carrier, weight_table_hash
 from rrc.model import (
     build_weights,
     lumpability,
@@ -198,6 +200,33 @@ def _atlas_problems(item: dict, result: dict) -> list[str]:
             problems.append(f"{name} reports a mean for a non-unique law")
     else:
         problems.append(f"{name} occupation status is {status}")
+    if result.get("engine_version") not in {"rrc-0.1.0", "rrc-0.2.0"}:
+        problems.extend(_stored_table_problems(name, result))
+    return problems
+
+
+def _stored_table_problems(name: str, result: dict) -> list[str]:
+    """Checksum the stored integer table. This does not recompile the rule."""
+    problems = []
+    raw = result.get("weights")
+    if not isinstance(raw, list) or not raw:
+        return [f"{name} does not store its weight table"]
+    try:
+        weights = np.asarray(raw, dtype=np.int64)
+    except (TypeError, ValueError):
+        return [f"{name} weight table is not integral"]
+    if weights.shape != (result.get("n_states"), result.get("n_edges")):
+        problems.append(f"{name} stored weight table has the wrong shape")
+        return problems
+    if weight_table_hash(weights) != result.get("weight_sha256"):
+        problems.append(f"{name} weight hash does not match the stored table")
+    if result.get("kernel_method") != "row_gcd_halt_self_loop":
+        problems.append(f"{name} kernel method is not the halt_self_loop reduction")
+    elif kernel_fingerprint(weights) != result.get("kernel_sha256"):
+        problems.append(f"{name} kernel hash does not match the stored table")
+    digest = result.get("structure_sha256")
+    if not isinstance(digest, str) or len(digest) != 64:
+        problems.append(f"{name} structure hash is missing")
     return problems
 
 
@@ -233,18 +262,30 @@ def _report_atlas(plan: dict, store: Store) -> str:
         "| Item | N | Edges | Declared | Effective | Removal-sensitive | max K | Classes | Deadlocks | Occupation | Hash |",
         "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
+    show_kernel = False
+    for item in plan["items"]:
+        if store.classify(item["id"]) != "complete":
+            continue
+        if "kernel_sha256" in store.load_result(item["id"]):
+            show_kernel = True
+            break
+    if show_kernel:
+        lines[-2] = lines[-2] + " Kernel |"
+        lines[-1] = lines[-1] + " --- |"
     for item in plan["items"]:
         state = store.classify(item["id"])
         if state != "complete":
-            lines.append(
-                f"| {item['id']} | {item.get('n', '')} |  |  |  |  |  |  |  | {state} |  |"
-            )
+            gap = " |  |" if show_kernel else " |"
+            lines.append(f"| {item['id']} | {item.get('n', '')} |  |  |  |  |  |  |  | {state} |  {gap}")
             continue
         result = store.load_result(item["id"])
         book = result["bookkeeping"]
         occupation = result["occupation"]["status"]
+        kernel = ""
+        if show_kernel:
+            kernel = " `{0}` |".format(result.get("kernel_sha256", "")[:12])
         lines.append(
-            "| {id} | {n} | {edges} | {declared} | {effective} | {sensitive} | {k} | {classes} | {dead} | {occupation} | `{digest}` |".format(
+            "| {id} | {n} | {edges} | {declared} | {effective} | {sensitive} | {k} | {classes} | {dead} | {occupation} | `{digest}` |{kernel}".format(
                 id=item["id"],
                 n=result["n"],
                 edges=result["n_edges"],
@@ -256,6 +297,7 @@ def _report_atlas(plan: dict, store: Store) -> str:
                 dead=result["classes"]["deadlock_states"],
                 occupation=occupation,
                 digest=result["weight_sha256"][:12],
+                kernel=kernel,
             )
         )
     return "\n".join(lines) + "\n"

@@ -28,6 +28,10 @@ A declarative compiler from a constraint list to an integer weight table, a carr
 
 ## Status after the opening compiler
 
-`src/rrc/constraints.py` compiles `opening-prohibit-multiply-v1`, including a listed carrier. `atlas_core` items report the common core in `docs/atlas-grammar.md`. The live engine string is `rrc-0.2.0`. RRC-001 remains `rrc-0.1.0`: `run` refuses that plan, and `verify` compares a result with the engine string in its own plan.
+`src/rrc/constraints.py` compiles `opening-prohibit-multiply-v1`, including a listed carrier. `atlas_core` items report the common core in `docs/atlas-grammar.md`. Atlas-001 and atlas-002 used `rrc-0.2.0`. RRC-001 remains `rrc-0.1.0`: `run` refuses that plan, and `verify` compares a result with the engine string in its own plan.
 
-Still excluded: history, independent hyperedges, count predicates, and multi-pair events. Lumpability is not part of the atlas core. No atlas plan is frozen by the compiler commit itself.
+## Status after rrc-0.3.0
+
+The live engine string is `rrc-0.3.0`. It adds `kernel_sha256` under `row_gcd_halt_self_loop`, the `incident-neighbour-v1` predicate, stored integer weights, and `structure_sha256`. The definitions are in `docs/atlas-0.3.md`. Designated-edge tables of the opening composer are unchanged. No scientific cell has been run under this string, and this note does not freeze a plan.
+
+Still excluded: history, independent hyperedges, count predicates treated as one literal, and multi-pair events. Lumpability is not part of the atlas core. Continuous-time rates are not a clock.

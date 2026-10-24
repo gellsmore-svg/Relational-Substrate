@@ -15,3 +15,5 @@ Experiment output lives in `results/<round-id>/`, one directory per frozen round
 Status words for coverage: `open`, `frozen`, `exhaustive`, `partial`, `sampled`, `analytical`, `infeasible`.
 
 Status words for ideas: `open`, `selected`, `partial`, `explored`. `selected` means a frozen plan names the idea. `explored` means a verified batch has reported it. Neither word means the idea was confirmed.
+
+Equivalence status `method` is an identity of the comparison, checked by a unit test. It is not a scientific cell. EQ-008 uses that status.

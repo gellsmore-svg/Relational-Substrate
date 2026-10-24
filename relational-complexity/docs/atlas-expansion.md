@@ -37,4 +37,4 @@ New equivalence rows carry `equivalence_type`. Older rows do not. For those, `st
 
 ## Engine
 
-`rrc-0.2.0` is the engine of atlas-001 and atlas-002. A change of mathematical semantics uses a later engine string. `verify` still compares a result with the engine string in its own plan. `run` refuses a plan whose string is not the live one.
+`rrc-0.2.0` is the engine of atlas-001 and atlas-002. `rrc-0.3.0` is the later string: it adds the kernel fingerprint and the incident-neighbour predicate, defined in `docs/atlas-0.3.md`. `verify` still compares a result with the engine string in its own plan. `run` refuses a plan whose string is not the live one.

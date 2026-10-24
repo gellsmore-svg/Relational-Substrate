@@ -268,7 +268,8 @@ def test_atlas_001_plan_is_frozen_coverage_not_a_result():
     from rrc.store import digest
 
     assert digest(plan) == "646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f"
-    assert plan["engine_version"] == ENGINE_VERSION
+    assert plan["engine_version"] == "rrc-0.2.0"
+    assert plan["engine_version"] != ENGINE_VERSION
     assert plan["preflight_summary"]["scientific"] is False
     assert plan["no_sampling"] is True
     assert len(plan["items"]) == 24
@@ -297,7 +298,8 @@ def test_atlas_002_plan_is_a_carrier_batch_not_a_replay():
     from rrc.store import digest
 
     assert digest(plan) == "937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e"
-    assert plan["engine_version"] == ENGINE_VERSION
+    assert plan["engine_version"] == "rrc-0.2.0"
+    assert plan["engine_version"] != ENGINE_VERSION
     assert plan["preflight_summary"]["scientific"] is False
     assert plan["coverage"]["complete_carrier_not_repeated"] is True
     assert len(plan["items"]) == 16
@@ -319,12 +321,16 @@ def test_atlas_002_plan_is_a_carrier_batch_not_a_replay():
 
 def test_historical_round_still_verifies_and_is_not_reexecuted(tmp_path):
     assert main(["verify", "--round", "rrc-001", "--out", str(ROOT / "results" / "rrc-001")]) == 0
+    assert main(["verify", "--round", "atlas-001", "--out", str(ROOT / "results" / "atlas-001")]) == 0
+    assert main(["verify", "--round", "atlas-002", "--out", str(ROOT / "results" / "atlas-002")]) == 0
     plan = json.loads((ROOT / "plans" / "rrc-001.json").read_text(encoding="utf-8"))
     assert plan["engine_version"] != ENGINE_VERSION
 
     def explode(_item, _timeout):
         raise AssertionError("historical item was started")
 
-    with pytest.raises(SystemExit):
-        execute_plan(plan, tmp_path, max_items=1, budget_seconds=5, child=explode)
-    assert not (tmp_path / "manifest.json").exists()
+    for round_id in ("rrc-001", "atlas-001", "atlas-002"):
+        historical = json.loads((ROOT / "plans" / f"{round_id}.json").read_text(encoding="utf-8"))
+        with pytest.raises(SystemExit):
+            execute_plan(historical, tmp_path, max_items=1, budget_seconds=5, child=explode)
+        assert not (tmp_path / "manifest.json").exists()

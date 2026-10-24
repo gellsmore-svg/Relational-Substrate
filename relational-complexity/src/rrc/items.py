@@ -8,7 +8,14 @@ import traceback
 import numpy as np
 
 from rrc import ENGINE_VERSION
-from rrc.constraints import GRAMMAR_ID, compile_model, occupation_report, support_report, weight_table_hash
+from rrc.constraints import (
+    KERNEL_METHOD,
+    STRUCTURE_METHOD,
+    compile_model,
+    occupation_report,
+    support_report,
+    weight_table_hash,
+)
 from rrc.model import (
     build_weights,
     check_state_independent_identity,
@@ -286,7 +293,7 @@ def execute_atlas_core(spec: dict) -> dict:
     return {
         "status": status,
         "engine_version": ENGINE_VERSION,
-        "grammar_id": GRAMMAR_ID,
+        "grammar_id": model["grammar_id"],
         "item_id": spec["id"],
         "round_id": spec["round_id"],
         "type": "atlas_core",
@@ -316,12 +323,18 @@ def execute_atlas_core(spec: dict) -> dict:
             "history": False,
             "hyperedge": False,
             "multi_pair_event": False,
+            "new_primitive": False,
         },
         "bookkeeping": model["bookkeeping"],
         "imposed_rule_dependency": model["imposed_rule_dependency"],
         "action_bit_independent": bool(model["action_bit_independent"]),
         "empirical_bit_independent": bool(model["empirical_bit_independent"]),
         "weight_sha256": weight_table_hash(weights),
+        "kernel_sha256": model["kernel_sha256"],
+        "kernel_method": KERNEL_METHOD,
+        "structure_sha256": model["structure_sha256"],
+        "structure_method": STRUCTURE_METHOD,
+        "weights": [[int(value) for value in row] for row in weights.tolist()],
         "positive_transitions": support["positive_transitions"],
         "zero_cells": support["zero_cells"],
         "classes": support["classes"],
