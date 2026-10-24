@@ -31,3 +31,4 @@
 {"from_finding":"RRC-001-OPEN-ANALYTIC","rationale":"The N=4 presence cancellation is exact for the frozen multiplier and lacks a general proof.","relation_id":"RRC-R031","relation_type":"raised_by","to_finding":"RRC-001-OCCUPATION"}
 {"from_finding":"RRC-001-NO-ONTOLOGY","rationale":"The interface failure is a fact about this grammar. It is not an ontological claim.","relation_id":"RRC-R032","relation_type":"qualifies","to_finding":"RRC-001-HIDDEN-DEPENDENCE"}
 {"from_finding":"RRC-Q05","rationale":"The two-triangle cut keeps unconstrained_lazy when the interface is exact.","relation_id":"RRC-R033","relation_type":"partially_answered_by","to_finding":"RRC-001-COMPOSITION"}
+{"from_finding":"RRC-ATLAS-M01","rationale":"The analytic leftovers of RRC-001 stay open. They are not promoted into the atlas queue.","relation_id":"RRC-R034","relation_type":"qualifies","to_finding":"RRC-001-OPEN-ANALYTIC"}

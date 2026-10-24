@@ -80,3 +80,9 @@ If it can, RRC records the trade-off. The opening decision is in `docs/compilati
 - Journal: `PROGRESS.md`
 
 The ledger uses the laboratory schema (layers, robustness coordinates, relation types) so a later federation adapter can read it. Magnitude, robustness and temporal character stay separate. Nothing is summed into a score.
+
+## 8. Atlas continuation
+
+RRC-001 is a closed historical round. The continuation is an atlas of elementary relational constraints, their combinations, and small alternative carriers. Its charter is `docs/atlas-charter.md`. The navigable registers live under `atlas/`.
+
+The atlas does not take a particular RRC-001 observation as its organising question. Those observations stay in the historical record. Unexplained leftovers stay open without becoming the next queue.

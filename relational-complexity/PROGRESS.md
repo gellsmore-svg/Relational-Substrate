@@ -81,7 +81,7 @@ No ontological reading is recorded. N=7 stays closed. The shared synthesis branc
 | Mathematical model | `docs/architecture.md`, `docs/definitions.md`, package `src/rrc` |
 | Question and representation register | `docs/questions.md`, `docs/methods.md` |
 | Reuse audit and compilation gate | `docs/reuse-map.md`, `docs/compilation-gate.md` |
-| Executable engine | `rrc-0.1.0` |
+| Executable engine | `rrc-0.1.0` for RRC-001. Atlas code, when it lands, uses a later engine string and must not recompute RRC-001 |
 | Correctness and recovery tests | `tests/`, 35 passed after the interpretation |
 | Frozen plan | `plans/rrc-001.json`, commit `92ae742` |
 | Resumable bounded execution | used for the 29 items; see the execution record |
@@ -89,8 +89,27 @@ No ontological reading is recorded. N=7 stays closed. The shared synthesis branc
 | Null, negative, and unexpected results | interpretation and ledger |
 | Coherence ledger and journal | this file and `coherence/` |
 | Non-technical findings | `reports/rrc-001-findings.md` |
-| Next inquiry | proposed in `docs/rrc-002-proposal.md`, not frozen and not run |
+| Next inquiry | the atlas in `docs/atlas-charter.md`. `docs/rrc-002-proposal.md` stays an unfrozen note and is not the queue |
+
+## Atlas continuation
+
+Active continuation of RRC. Not a new programme. RRC-001 plan, results, interpretation, and ledger rows are not edited. The organising question is coverage of elementary current-state constraints and carriers. It is not an explanation of the RRC-001 interface results, the four-node occupation cancellation, or any six-node claim.
+
+| Record | Path |
+| --- | --- |
+| Charter | `docs/atlas-charter.md`, pointer in `charter.md` section 8 |
+| Engine gap | `docs/atlas-engine-gap.md` |
+| Idea library | `atlas/ideas.jsonl` |
+| Coverage | `atlas/coverage.jsonl` |
+| Equivalences | `atlas/equivalences.jsonl`, empty until a comparison is run |
+| Patterns | `atlas/patterns.jsonl`, empty until a synthesis pass. A row is not an order to investigate |
+| Open questions | `atlas/questions.jsonl` |
+| Navigation | `atlas/README.md` |
+| Ledger | `RRC-ATLAS-M01` appended. `created_commit` is `56b7381`, the last closed-round commit. The commit that added the row is recorded below once it exists |
+| RRC-002 note | still proposed. Analytic leftovers stay open and are not the atlas queue |
+
+Coverage status words: `open`, `frozen`, `exhaustive`, `partial`, `sampled`, `analytical`, `infeasible`. Idea status words: `open`, `selected`, `partial`, `explored`. `selected` means a frozen plan names the idea. `explored` means a verified batch reported it. Neither word means confirmed.
 
 ## Next action
 
-No further RRC-001 work. A new session should read this journal, the interpretation, and the RRC-002 proposal. Do not freeze or execute RRC-002 unless a new question is chosen and preflighted. The open analytic leftovers are not a computational queue. Do not enlarge N. Do not federate into the shared synthesis. Do not edit CL, GT, the books, or `research-methods/`.
+Stage A documents are in the worktree. Commit and push them, then build the opening grammar compiler. The atlas engine string will be `rrc-0.2.0`. `verify` must compare a result with the engine string stored in its plan, so `verify --round rrc-001 --out results/rrc-001` still passes. `run --round rrc-001` must refuse once the live engine string moves, so the historical round is not recomputed. Freeze `plans/atlas-001.json` only after a timing preflight, and do not execute those cells in the freeze commit. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.

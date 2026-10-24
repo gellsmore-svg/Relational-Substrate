@@ -2,6 +2,8 @@
 
 Status: proposed, not frozen, not executed.
 
+Continuation note: the active next programme is the atlas in `docs/atlas-charter.md`. This file is not that plan. The two analytic leftovers below stay open. They are not the atlas queue, and they are not deleted.
+
 RRC-001 is closed. The stopping rule in `docs/feasibility.md` says that once the N≤5 contrasts have separated the five pre-registered possibilities, a further round has to name a new question. It is not opened in order to enlarge N. Those five possibilities are scored in that file. N=6 repeated the N≤5 verdicts. N=7 stays closed.
 
 ## Why a second computational round is not opened now

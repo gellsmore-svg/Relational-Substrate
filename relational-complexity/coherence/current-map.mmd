@@ -21,6 +21,7 @@ flowchart TD
   subgraph METHODOLOGICAL [Methodological corrections]
     RRC_M01_NO_NEW_AXIS["RRC-M01-NO-NEW-AXIS: RRC-001 does not add a dynamical primitive. Its rules are current-state weights on the ..."]
     RRC_001_NO_ONTOLOGY["RRC-001-NO-ONTOLOGY: RRC-001 records no Relational Substrate ontological reading. The cells describe one cur..."]
+    RRC_ATLAS_M01["RRC-ATLAS-M01: The continuation after RRC-001 builds a coverage atlas of elementary current-state cons..."]
   end
   subgraph OPEN_QUESTION [Open questions]
     RRC_Q01["RRC-Q01: What determines how many relational entities a class of behaviour needs, and which beha..."]
@@ -68,3 +69,4 @@ flowchart TD
   RRC_001_OPEN_ANALYTIC -->|raised_by| RRC_001_OCCUPATION
   RRC_001_NO_ONTOLOGY -->|qualifies| RRC_001_HIDDEN_DEPENDENCE
   RRC_Q05 -->|partially_answered_by| RRC_001_COMPOSITION
+  RRC_ATLAS_M01 -->|qualifies| RRC_001_OPEN_ANALYTIC

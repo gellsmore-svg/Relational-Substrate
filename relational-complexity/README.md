@@ -4,7 +4,7 @@ Independent Open-Thetical Research programme inside the Relational Substrate rep
 
 The question is whether relational structures can be composed recursively, and whether a finite interface can preserve their consequential behaviour. The charter is [`charter.md`](charter.md). The session hand-off is [`PROGRESS.md`](PROGRESS.md).
 
-RRC-001 is closed. The plain-language account is [`reports/rrc-001-findings.md`](reports/rrc-001-findings.md). The mathematical reading is [`reports/rrc-001-interpretation.md`](reports/rrc-001-interpretation.md). The next proposal is not a frozen plan: [`docs/rrc-002-proposal.md`](docs/rrc-002-proposal.md).
+RRC-001 is closed. The plain-language account is [`reports/rrc-001-findings.md`](reports/rrc-001-findings.md). The mathematical reading is [`reports/rrc-001-interpretation.md`](reports/rrc-001-interpretation.md). The continuation is the atlas in [`docs/atlas-charter.md`](docs/atlas-charter.md). [`docs/rrc-002-proposal.md`](docs/rrc-002-proposal.md) is an unfrozen note and is not the atlas queue.
 
 This directory does not modify the Constraint Laboratory or the Gravity–Temporality programme.
 
@@ -13,7 +13,8 @@ This directory does not modify the Constraint Laboratory or the Gravity–Tempor
 | Path | Role |
 | --- | --- |
 | `charter.md` | OTR 1.0 charter |
-| `docs/` | Reuse map, questions, methods, architecture, feasibility, definitions |
+| `atlas/` | Idea library, coverage, equivalences, patterns, open questions |
+| `docs/` | Reuse map, questions, methods, architecture, feasibility, definitions, atlas charter |
 | `coherence/` | RRC ledger |
 | `plans/` | Frozen rounds, written before execution |
 | `src/rrc/` | Exact engine and resumable runner (from Stage B) |
