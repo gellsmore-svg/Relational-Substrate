@@ -101,8 +101,8 @@ Active continuation of RRC. Not a new programme. RRC-001 plan, results, interpre
 | Engine gap | `docs/atlas-engine-gap.md` |
 | Idea library | `atlas/ideas.jsonl` |
 | Coverage | `atlas/coverage.jsonl` |
-| Equivalences | `atlas/equivalences.jsonl`. EQ-001 to EQ-010. Composer rows may precede a round. Cell rows follow a verified batch. EQ-008 is a method identity, not a cell |
-| Patterns | `atlas/patterns.jsonl`. PAT-001 to PAT-006. A row is not an order to investigate |
+| Equivalences | `atlas/equivalences.jsonl`. EQ-001 to EQ-013. Composer rows may precede a round. Cell rows follow a verified batch. EQ-008 is a method identity, not a cell |
+| Patterns | `atlas/patterns.jsonl`. PAT-001 to PAT-007. A row is not an order to investigate |
 | Open questions | `atlas/questions.jsonl` |
 | Navigation | `atlas/README.md` |
 | Ledger | `RRC-ATLAS-M01` appended in `146ebb8`. `created_commit` on the row stays `56b7381`, the last closed-round commit. The row was not rewritten to insert its own commit |
@@ -164,12 +164,16 @@ Ledger row `RRC-ATLAS-004` was appended, with relation `RRC-R038`. Its `created_
 
 ## atlas-004
 
-Plan `plans/atlas-004.json` is frozen and has not been executed. Plan hash `f6a9680feb02700b5dd8aa9fe024dfe1668d51bdfcbc8aaf5c64607d6c8391fe`. Definitions commit `26bf891`. Engine `rrc-0.3.0`. Preflight `docs/atlas-004-preflight.md`: the 4-cycle with four incident multiplies took 0.003 seconds. Observables from that timing were not retained.
+Frozen in `5181cc6`. Plan hash `f6a9680feb02700b5dd8aa9fe024dfe1668d51bdfcbc8aaf5c64607d6c8391fe`. Definitions commit `26bf891`. Engine `rrc-0.3.0`. Preflight `docs/atlas-004-preflight.md`: the 4-cycle with four incident multiplies took 0.003 seconds. Observables from that timing were not retained.
 
-The round is 18 cells on the four atlas-002 carriers. Each carrier has a baseline, the atlas-002 bit-prohibit placement as a control, an incident multiply template, and an incident prohibit template. Two further cells name one chain edge. Those two are instruments and are not claimed to be label-covariant. Factor 3. The round is not scheduled to explain PAT-004.
+Executed after the freeze. 18 complete, 0 failed, 0 timeout, 0 unresolved. `verify` printed `verified`. Records: `results/atlas-004/`, `reports/atlas-004.md`, `reports/atlas-004-observations.md`, `provenance/atlas-004-execution.md`. The plan was not edited.
 
-`IDEA-I01` and `IDEA-I03` are `selected`. `IDEA-I02` stays `open`. `COV-INCIDENCE-NEIGHBOUR` is `frozen`. ATLAS-Q09 and ATLAS-Q11 stay open.
+EQ-011: baselines and bit prohibits reproduce the atlas-002 tables, including the chain-branch identity. EQ-012: on the disconnected carrier the present-polarity incident constraints match nothing and leave the baseline. EQ-013: the chain endpoint instrument matches the atlas-003 factor-3 bit table; mean components do not, because N differs. PAT-007: the incident multiply template and the incident prohibit template separate this chain from this branch. `schedules_follow_up` is false. The two named chain edges differ. That contrast is an instrument, not a covariance claim.
+
+`IDEA-I01` and `IDEA-I03` are `explored`. That word does not mean confirmed. `IDEA-I02` stays `open`. `COV-INCIDENCE-NEIGHBOUR` is `partial`. ATLAS-Q01 through ATLAS-Q11 stay open.
+
+Ledger row `RRC-ATLAS-005` was appended, with relation `RRC-R039`. Its `created_commit` is the freeze `5181cc6`. This calculation commit appended the row.
 
 ## Next action
 
-Execute atlas-004 in bounded chunks with `--max-items` and `--budget-seconds`. Do not edit `plans/atlas-004.json`. Then verify and record. Do not edit `plans/atlas-001.json`, `plans/atlas-002.json`, `plans/atlas-003.json`, CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
+Write a short cross-atlas note of the typed equivalences already recorded. Do not add a unifying conclusion. Leave composition in the idea library unless a precise calculation is already justified. Do not invent a weak composition cell. Do not edit frozen plans. Do not federate into the shared synthesis.
