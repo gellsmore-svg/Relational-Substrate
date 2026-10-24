@@ -101,8 +101,8 @@ Active continuation of RRC. Not a new programme. RRC-001 plan, results, interpre
 | Engine gap | `docs/atlas-engine-gap.md` |
 | Idea library | `atlas/ideas.jsonl` |
 | Coverage | `atlas/coverage.jsonl` |
-| Equivalences | `atlas/equivalences.jsonl`. EQ-001 to EQ-008. Composer rows may precede a round. Cell rows follow a verified batch. EQ-008 is a method identity, not a cell |
-| Patterns | `atlas/patterns.jsonl`. PAT-001 to PAT-004. A row is not an order to investigate |
+| Equivalences | `atlas/equivalences.jsonl`. EQ-001 to EQ-010. Composer rows may precede a round. Cell rows follow a verified batch. EQ-008 is a method identity, not a cell |
+| Patterns | `atlas/patterns.jsonl`. PAT-001 to PAT-006. A row is not an order to investigate |
 | Open questions | `atlas/questions.jsonl` |
 | Navigation | `atlas/README.md` |
 | Ledger | `RRC-ATLAS-M01` appended in `146ebb8`. `created_commit` on the row stays `56b7381`, the last closed-round commit. The row was not rewritten to insert its own commit |
@@ -150,12 +150,18 @@ New idea rows and coverage rows are `open`. New questions are ATLAS-Q08 through 
 
 ## atlas-003
 
-Plan `plans/atlas-003.json` is frozen and has not been executed. Plan hash `05de332578ff435f6e25eb2550db0a92ca576fdda187c99c8861fb9fdb77fc26`. Definitions commit `26bf891`. Engine `rrc-0.3.0`. Preflight `docs/atlas-003-preflight.md`: the length-8 cell took 0.013 seconds. Observables from that timing were not retained.
+Frozen in `e75d18a`. Plan hash `05de332578ff435f6e25eb2550db0a92ca576fdda187c99c8861fb9fdb77fc26`. Definitions commit `26bf891`. Engine `rrc-0.3.0`. Preflight `docs/atlas-003-preflight.md`: the length-8 cell took 0.013 seconds. Observables from that timing were not retained.
 
-The round is 13 opening-grammar lists on the N=3 complete carrier. Declared cardinalities are 0, 1, 2, 4, 6 and 8. Factors are 2, 3, 4 and 5. The lists are a declared sample, not every list. Cardinality 6 counts constraints and is not a six-node target. The incident predicate is not in this plan. PAT-001 through PAT-004 do not appoint the cells.
+Executed after the freeze. 13 complete, 0 failed, 0 timeout, 0 unresolved. `verify` printed `verified`. Records: `results/atlas-003/`, `reports/atlas-003.md`, `reports/atlas-003-observations.md`, `provenance/atlas-003-execution.md`. The plan was not edited.
 
-`IDEA-C10` and `IDEA-C11` are `selected`. `COV-CARDINALITY-BROAD` and `COV-WEIGHT-ALPHABET` are `frozen`. ATLAS-Q08 stays open. ATLAS-Q01 through ATLAS-Q07 and ATLAS-Q09 through ATLAS-Q11 stay open.
+The round is 13 opening-grammar lists on the N=3 complete carrier. Declared cardinalities are 0, 1, 2, 4, 6 and 8. Factors are 2, 3, 4 and 5. The lists are a declared sample, not every list. Cardinality 6 counts constraints and is not a six-node target. The incident predicate is not in this plan.
+
+EQ-009: five controls reproduce atlas-001 integer tables. EQ-010: the length-8 list matches itself without the final dissolve prohibit, which sits inside an either-prohibit already in the list. PAT-005: factors 2, 3 and 4 on one guard are three kernels. PAT-006: an imposed syntax cycle occurs with one recurrent class and with two. `schedules_follow_up` is false on each. Weight ablation and kernel ablation agreed on all 13 cells. No two items share a kernel. ATLAS-Q08 stays open.
+
+`IDEA-C10` and `IDEA-C11` are `explored`. That word does not mean confirmed. `COV-CARDINALITY-BROAD` and `COV-WEIGHT-ALPHABET` are `partial`. ATLAS-Q01 through ATLAS-Q11 stay open.
+
+Ledger row `RRC-ATLAS-004` was appended, with relation `RRC-R038`. Its `created_commit` is the freeze `e75d18a`. This calculation commit appended the row.
 
 ## Next action
 
-Execute atlas-003 in bounded chunks with `--max-items` and `--budget-seconds`. Do not edit `plans/atlas-003.json`. Then verify and record. The incidence round is a separate later freeze. Do not edit `plans/atlas-001.json`, `plans/atlas-002.json`, CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
+Preflight and freeze a separate incidence round. Include a bit-grammar control and an incident-neighbour template that can differ on a chain and a branch. Do not edit `plans/atlas-003.json` after seeing these cells. Do not execute in the freeze commit. Do not edit `plans/atlas-001.json`, `plans/atlas-002.json`, CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
