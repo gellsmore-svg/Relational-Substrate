@@ -21,6 +21,7 @@ flowchart TD
     RRC_ATLAS_007["RRC-ATLAS-007: On this generator, length 12 has effective cardinality 9 on the 3-edge carrier and 12 o..."]
     RRC_ATLAS_008["RRC-ATLAS-008: On these five carriers the uniform eq-1 and ge-2 multiplies were calculated beside one ..."]
     RRC_ATLAS_009["RRC-ATLAS-009: On these five baseline carriers, present edge count is strongly lumpable. The degree se..."]
+    RRC_ATLAS_010["RRC-ATLAS-010: On this path, the twelve cardinality-1 multiplies have twelve weight hashes and mean ed..."]
   end
   subgraph INFERENCE [Inferences]
     RRC_001_HARD_ABSORBS["RRC-001-HARD-ABSORBS: Under the hard-wedge rule a present pair can always be deleted and the empty graph can ..."]
@@ -88,3 +89,4 @@ flowchart TD
   RRC_ATLAS_007 -->|contrasts_with| RRC_ATLAS_004
   RRC_ATLAS_008 -->|contrasts_with| RRC_ATLAS_005
   RRC_ATLAS_009 -->|contrasts_with| RRC_ATLAS_003
+  RRC_ATLAS_010 -->|contrasts_with| RRC_ATLAS_007

@@ -78,4 +78,4 @@ Atlas-008 stored the fifteen maps. Verify printed `verified`. The three-edge wei
 
 ATLAS-Q01 through ATLAS-Q12 stay open. ATLAS-Q12 asks which named operators accept their own output. It is not scheduled.
 
-Atlas-009 is frozen and not executed. It is one four-edge path, a cardinality-1 grammar grid of factor-2 present multiplies, and three cardinality-2 dependency instruments. The atlas-005 modular menu is not that grid. A comparison across the two cardinalities would be joint.
+Atlas-009 verified 16 of 16 on one four-edge path. The baseline hash is the EQ-016 table. The twelve factor-2 present multiplies have twelve weight hashes and one mean, `37/18`. Cells with the same condition edge share the four edge marginals and not the weight hash. The three cardinality-2 instruments have three further hashes. The path and mutual instruments share marginals `11/20`, `11/20`, `1/2`, `1/2` and not the weight hash. Their `has_cycle` flags are the imposed rule text. A comparison of cardinality 1 with cardinality 2 is joint. The detail is `reports/atlas-009-observations.md`. ATLAS-Q01 stays open. PAT-012 has `schedules_follow_up` false.

@@ -697,3 +697,43 @@ def test_atlas_009_plan_uses_two_placement_methods():
     }
     assert all(len(item["constraints"]) == 2 for item in roles["instrument"])
     assert all(len(item["constraints"]) == 1 for item in roles["grammar"])
+
+
+def test_atlas_009_execution_separates_tables_that_share_a_mean():
+    assert main(["verify", "--round", "atlas-009", "--out", str(ROOT / "results" / "atlas-009")]) == 0
+    items = ROOT / "results" / "atlas-009" / "items"
+
+    def load(name):
+        return json.loads((items / name / "result.json").read_text(encoding="utf-8"))
+
+    def edges_of(result):
+        return [(item["num"], item["den"]) for item in result["occupation"]["edge_presence"]]
+
+    base = load("A9-base")
+    assert base["weight_sha256"] == "5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3"
+    assert base["occupation"]["mean_present_edges"]["num"] == "2"
+    grammar = [load(f"A9-g-e{event}-c{condition}") for event in range(4) for condition in range(4) if condition != event]
+    assert len({item["weight_sha256"] for item in grammar}) == 12
+    assert base["weight_sha256"] not in {item["weight_sha256"] for item in grammar}
+    for item in grammar:
+        assert item["bookkeeping"]["effective_cardinality"] == 1
+        assert item["occupation"]["mean_present_edges"]["num"] == "37"
+        assert item["occupation"]["mean_present_edges"]["den"] == "18"
+        assert item["kernel_sha256"] == item["weight_sha256"]
+    assert edges_of(load("A9-g-e0-c1")) == [("1", "2"), ("5", "9"), ("1", "2"), ("1", "2")]
+    assert edges_of(load("A9-g-e1-c0")) == [("5", "9"), ("1", "2"), ("1", "2"), ("1", "2")]
+    path = load("A9-dep-path")
+    mutual = load("A9-dep-mutual")
+    disjoint = load("A9-dep-disjoint")
+    assert path["weight_sha256"] != mutual["weight_sha256"]
+    assert edges_of(path) == edges_of(mutual) == [("11", "20"), ("11", "20"), ("1", "2"), ("1", "2")]
+    assert edges_of(disjoint) == [("1", "2"), ("11", "20"), ("1", "2"), ("11", "20")]
+    assert path["imposed_rule_dependency"]["has_cycle"] is False
+    assert path["imposed_rule_dependency"]["longest_simple_path_edges"] == 2
+    assert mutual["imposed_rule_dependency"]["has_cycle"] is True
+    assert disjoint["imposed_rule_dependency"]["has_cycle"] is False
+    for item in (path, mutual, disjoint):
+        assert item["bookkeeping"]["declared_cardinality"] == 2
+        assert item["bookkeeping"]["effective_cardinality"] == 2
+        assert item["occupation"]["mean_present_edges"]["num"] == "21"
+        assert item["occupation"]["mean_present_edges"]["den"] == "10"

@@ -316,6 +316,14 @@ The round is one four-edge path. The first method is the grammar grid: every des
 
 `COV-PLACEMENT-SAMPLE` is `frozen`. `COV-COMPOSITION` stays `open`. ATLAS-Q01 is named and stays open. ATLAS-Q03 is not in the round: there is no matched cell with two constraints on one event. The round is not scheduled to explain PAT-010, PAT-011, EQ-020, the atlas-008 defects, or chain-versus-branch separation. No ledger row was added. This section does not name its own commit.
 
+## atlas-009 execution
+
+Two invocations, `--max-items 8` and `--budget-seconds 60`: 8 items in 1.274 seconds, then 8 items in 1.275 seconds. Verify printed `verified`. Plan hash `51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8`. The freeze is `89c92d3`. Engine `rrc-0.4.0`.
+
+`A9-base` is the EQ-016 four-edge baseline. Mean edges `2/1`. The twelve grammar cells have twelve weight hashes, effective cardinality 1, and mean edges `37/18`. The condition edge has marginal `5/9`. The other three edges have marginal `1/2`. Three events with one condition share those marginals and not the hash. The three dependency instruments have three more hashes, effective cardinality 2, and mean edges `21/10`. The path and the mutual pair share marginals `11/20`, `11/20`, `1/2`, `1/2` and not the hash. The stored cycle flags are the imposed rule text. The carrier is a forest, so mean components are 5 minus mean edges. Kernel hashes equal weight hashes. No cell in the sample is redundant. A cardinality-1 versus cardinality-2 difference is joint. The detail is `reports/atlas-009-observations.md`.
+
+`COV-PLACEMENT-SAMPLE` is `partial`. `COV-COMPOSITION` stays `open`. ATLAS-Q01 stays open. PAT-012 records the shared-mean separation and is not scheduled. Ledger row `RRC-ATLAS-010` was appended, with relation `RRC-R044`. Its `created_commit` is the freeze `89c92d3`. This commit appended the row. The hash of this commit is not written here.
+
 ## Next action
 
-Execute atlas-009 after this freeze. Do not edit the plan after the results. Do not edit `plans/atlas-007.json` or `plans/atlas-008.json`. Do not rerun `results/atlas-007` or atlas-006. Do not add a token cell for the static line graph. Do not declare the cover operator recursive. Do not schedule the atlas-008 defects, PAT-010, PAT-011, or EQ-020. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.
+Do not edit `plans/atlas-007.json`, `plans/atlas-008.json`, or `plans/atlas-009.json`. Do not rerun `results/atlas-007`. Do not add a token cell for the static line graph or for a cover that only repeats the fixtures. Do not declare the cover operator recursive. Do not schedule the atlas-008 defects, the atlas-009 marginals, PAT-010, PAT-011, PAT-012, or EQ-020. `COV-COMPOSITION` stays `open`. The static line graph and the cover operators remain unfrozen as cells. A second label of the edge-count chain is undefined. Common-neighbour counts stay open. ATLAS-Q01 through ATLAS-Q12 stay open.
