@@ -472,6 +472,115 @@ def test_atlas_004_plan_is_an_incidence_sample_not_a_chase():
     assert "not claimed covariant" in mid["label"]
 
 
+def test_atlas_005_plan_is_a_spread_cardinality_sample():
+    assert main(["plan", "--round", "atlas-005"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-005.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "2ab849ad8e43bd643685feea729533fcb3815d6f898a58aa19e236da57142f45"
+    assert plan["engine_version"] == "rrc-0.3.0"
+    assert plan["engine_version"] == ENGINE_VERSION
+    assert plan["grammar_id"] == "opening-prohibit-multiply-v1"
+    assert plan["definitions_commit"] == "26bf891ddf064ee4b90097dadf343bb7672720a0"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.857
+    assert plan["no_sampling"] is True
+    assert plan["coverage"]["declared_sample"] is True
+    assert plan["coverage"]["not_exhaustive_lists"] is True
+    assert plan["coverage"]["six_is_not_a_target"] is True
+    assert plan["coverage"]["cardinality_10"] == "chain only"
+    assert plan["questions"] == ["ATLAS-Q01", "ATLAS-Q05"]
+    assert "ATLAS-Q07" in plan["questions_not_in_this_round"]
+    assert "ATLAS-Q09" in plan["questions_not_in_this_round"]
+    assert "ATLAS-Q12" in plan["questions_not_in_this_round"]
+    menu = [
+        ("prohibit", "either", "present", None),
+        ("multiply", "either", "present", 2),
+        ("multiply", "either", "absent", 3),
+        ("prohibit", "form", "present", None),
+        ("multiply", "either", "present", 5),
+        ("prohibit", "dissolve", "absent", None),
+        ("multiply", "either", "absent", 4),
+        ("prohibit", "either", "absent", None),
+    ]
+
+    def generated(edges, length):
+        count = len(edges)
+        built = []
+        for index in range(length):
+            effect, action, polarity, factor = menu[index % len(menu)]
+            event_index = index % count
+            condition_index = (event_index + 1 + (index // count)) % count
+            if condition_index == event_index:
+                condition_index = (condition_index + 1) % count
+            event = edges[event_index]
+            condition = edges[condition_index]
+            constraint = {
+                "action": action,
+                "effect": effect,
+                "event": [event[0], event[1]],
+                "when": {"edge": [condition[0], condition[1]], "polarity": polarity},
+            }
+            if factor is not None:
+                constraint["factor"] = factor
+            built.append(constraint)
+        return built
+
+    carriers = {
+        "N3": (3, {"kind": "complete"}, [(0, 1), (0, 2), (1, 2)]),
+        "P5": (5, {"kind": "listed", "edges": [[0, 1], [1, 2], [2, 3], [3, 4]]}, [(0, 1), (1, 2), (2, 3), (3, 4)]),
+        "C5": (
+            5,
+            {"kind": "listed", "edges": [[0, 1], [1, 2], [2, 3], [3, 4], [0, 4]]},
+            [(0, 1), (1, 2), (2, 3), (3, 4), (0, 4)],
+        ),
+    }
+    expected = {
+        "A5-N3-base": ("N3", 0, "baseline"),
+        "A5-N3-card5": ("N3", 5, "concentrated"),
+        "A5-N3-card12": ("N3", 12, "concentrated"),
+        "A5-P5-base": ("P5", 0, "baseline"),
+        "A5-P5-card5": ("P5", 5, "spread"),
+        "A5-P5-card9": ("P5", 9, "spread"),
+        "A5-P5-card10": ("P5", 10, "spread"),
+        "A5-P5-card12": ("P5", 12, "spread"),
+        "A5-C5-base": ("C5", 0, "baseline"),
+        "A5-C5-card5": ("C5", 5, "spread"),
+        "A5-C5-card9": ("C5", 9, "spread"),
+        "A5-C5-card12": ("C5", 12, "spread"),
+    }
+    by_id = {item["id"]: item for item in plan["items"]}
+    assert list(by_id) == list(expected)
+    forbidden = {"weight_sha256", "occupation", "expected", "kernel_sha256", "classes"}
+    seen_factors = set()
+    for item_id, (carrier_name, length, role) in expected.items():
+        item = by_id[item_id]
+        n, carrier, edges = carriers[carrier_name]
+        assert item["n"] == n
+        assert item["carrier"] == carrier
+        assert item["role"] == role
+        assert item["type"] == "atlas_core"
+        assert item["baseline"] == 1
+        assert "covariance is not claimed" in item["label"]
+        assert forbidden.isdisjoint(item)
+        assert item["constraints"] == generated(edges, length)
+        guards = {}
+        for constraint in item["constraints"]:
+            assert constraint["when"].get("kind", "designated_edge") == "designated_edge"
+            assert tuple(constraint["event"]) != tuple(constraint["when"]["edge"])
+            assert tuple(constraint["event"]) in set(edges)
+            assert tuple(constraint["when"]["edge"]) in set(edges)
+            if constraint["effect"] == "multiply":
+                seen_factors.add(constraint["factor"])
+            else:
+                assert "factor" not in constraint
+                key = (tuple(constraint["event"]), tuple(constraint["when"]["edge"]), constraint["action"])
+                guards.setdefault(key, set()).add(constraint["when"]["polarity"])
+        assert all(polarities != {"present", "absent"} for polarities in guards.values())
+    assert seen_factors == {2, 3, 4, 5}
+    assert "incident" not in plan["grammar_id"]
+
+
 def test_historical_round_still_verifies_and_is_not_reexecuted(tmp_path):
     assert main(["verify", "--round", "rrc-001", "--out", str(ROOT / "results" / "rrc-001")]) == 0
     assert main(["verify", "--round", "atlas-001", "--out", str(ROOT / "results" / "atlas-001")]) == 0

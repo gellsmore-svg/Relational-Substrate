@@ -196,6 +196,14 @@ Existing idea statuses are unchanged. `IDEA-L15`, `IDEA-L16`, and `IDEA-L17` are
 
 ATLAS-Q01 through ATLAS-Q11 stay open. ATLAS-Q12 asks which named operators accept their own output. It is not scheduled. Six levels of composition are not a target.
 
+## atlas-005
+
+Frozen. Plan hash `2ab849ad8e43bd643685feea729533fcb3815d6f898a58aa19e236da57142f45`. Definitions commit `26bf891`. Engine `rrc-0.3.0`. Preflight `docs/atlas-005-preflight.md`: the 5-node cycle with 12 constraints took 0.857 seconds. Observables from that timing were not retained.
+
+The round is one opening-grammar generator on three carriers: the N=3 complete graph (3 edges), a 5-node chain (4 edges), and a 5-node cycle (5 edges). Lengths are 0, 5, 9 and 12, plus length 10 on the chain only. Twelve lists. Not every list. The incident predicate is not in the plan. Composition operators are not in the plan. This commit does not execute the cells.
+
+`COV-CARDINALITY-SPREAD` is `frozen`. `COV-CARDINALITY-BROAD` stays the atlas-003 record.
+
 ## Next action
 
-Preflight a declared cardinality sample on a listed carrier with more than three edges. Include a cardinality above 8 if the ablation cap and the timing allow. Spread some lists across the larger carrier, and keep at least one longer list on the three-edge carrier so the two landscapes are not the same sample. Do not edit frozen plans. Do not chase domination, PAT-007, or a composition placeholder.
+Execute atlas-005 under the frozen plan, in short invocations. Do not edit the plan. Do not chase the cells toward domination, PAT-007, or a composition placeholder.
