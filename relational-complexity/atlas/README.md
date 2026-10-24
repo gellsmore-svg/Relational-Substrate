@@ -16,6 +16,6 @@ Status words for coverage: `open`, `frozen`, `exhaustive`, `partial`, `sampled`,
 
 Status words for ideas: `open`, `selected`, `partial`, `explored`. `selected` means a frozen plan names the idea. `explored` means a verified batch has reported it. Neither word means the idea was confirmed.
 
-Equivalence status `method` is an identity of the comparison, checked by a unit test. It is not a scientific cell. EQ-008, EQ-014, and EQ-017 use that status. EQ-014 has type `line_graph_total_domination`: deadlock states of one incident-prohibit template, not equality of whole weight tables across grammars. EQ-017 is weight-table identity of `incident_count` `ge 1` with incident present, and of `eq 0` with incident absent.
+Equivalence status `method` is an identity of the comparison, checked by a unit test. It is not a scientific cell. EQ-008, EQ-014, and EQ-017 use that status. EQ-014 has type `line_graph_total_domination`: deadlock states of one incident-prohibit template, not equality of whole weight tables across grammars. EQ-017 is weight-table identity of `incident_count` `ge 1` with incident present, and of `eq 0` with incident absent. EQ-018 and EQ-019 are atlas-006 cell rows.
 
 Composition formulations are in `docs/composition-taxonomy.md`. That note is not a round. `COV-COMPOSITION` and `COV-COMPOSITION-LIBRARY` stay `open`.

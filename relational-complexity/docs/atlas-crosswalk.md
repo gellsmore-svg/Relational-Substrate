@@ -2,7 +2,7 @@
 
 A reading of records that already exist. Not a conclusion. Not a queue.
 
-Rounds in view: RRC-001 (`rrc-0.1.0`), atlas-001 and atlas-002 (`rrc-0.2.0`), atlas-003 and atlas-004 (`rrc-0.3.0`). Hashes are compared only when the integer tables have the same shape and the same declared edge order, or when a row states the bit rule that makes two shapes match. RRC-001 items are not `atlas_core` weight tables. Their lumpability numbers are not compared with these hashes.
+Rounds in view: RRC-001 (`rrc-0.1.0`), atlas-001 and atlas-002 (`rrc-0.2.0`), atlas-003, atlas-004, and atlas-005 (`rrc-0.3.0`), atlas-006 (`rrc-0.4.0`). Hashes are compared only when the integer tables have the same shape and the same declared edge order, or when a row states the bit rule that makes two shapes match. RRC-001 items are not `atlas_core` weight tables. Their lumpability numbers are not compared with these hashes.
 
 ## Weight tables
 
@@ -54,9 +54,19 @@ EQ-016: `A5-P5-base`, the 5-node chain, matches the 4-cycle baseline hash `5c458
 
 PAT-008: length 12 of this generator has effective cardinality 9 on three edges and 12 on four edges and on five edges. PAT-009: length 9 has two recurrent classes on the chain and one on the cycle. `schedules_follow_up` is false on both. No two lists in the round share a weight hash or a kernel hash. Weight ablation and kernel ablation agreed on all 12 cells. ATLAS-Q01, ATLAS-Q05 and ATLAS-Q08 stay open.
 
+## atlas-006
+
+Fifteen cells. Five carriers, one designated-bit multiply by 3, and uniform `eq 1` and `ge 2` multiplies by 3. `ge 1` was not rerun.
+
+EQ-018: `A6-disc-eq1` and `A6-disc-ge2` match the disconnected baseline hash `7d68b5c4119211a50d84f89b7f843e9ae6da04183d69ba4b542b04aeb2280273`. Mean edges 1/1. Mean components 3/1. Each neighbourhood is empty. The bit instrument on that carrier has a different hash.
+
+EQ-019: `A6-chain-bit` and `A6-branch-bit` match `A4-chain-end-mul` and `A3-03-mul-present-3`, hash `7b4f2c8ef26032e36f92000c69cc7c0fcf032e4f1353009ff490efa1f4b37be9`. Mean edges 13/8. Mean components 19/8 on the chain and the branch, and 49/32 on the N=3 cell. The structure hashes differ.
+
+PAT-010: the `eq 1` template and the `ge 2` template each give different hashes on the three-edge chain and the three-edge branch. The bit instruments share a hash. PAT-011: on the five `ge 2` lists, effective cardinality equals the number of edges with at least two incident neighbours. `schedules_follow_up` is false on both. All 15 cells have one recurrent class and no deadlock. Four cells have a kernel hash different from their weight hash. Weight ablation and kernel ablation agreed on all 15. ATLAS-Q09 and ATLAS-Q08 stay open. EQ-014 does not apply.
+
 ## Regions not in the comparison
 
-Complete N=5. Cardinalities other than the atlas-005 lengths, and every list the generator did not write. Absent-polarity incident rules. Count predicates other than the compiler identities in EQ-017. No count cell. History. Independent hyperedges. A search over graph isomorphism. Any clock other than `halt_self_loop`. A composition cell.
+Complete N=5. Cardinalities other than the atlas-005 lengths, and every list the generator did not write. Absent-polarity incident rules. Count thresholds other than the atlas-006 `eq 1` and `ge 2` templates. Common-neighbour counts. History. Independent hyperedges. A search over graph isomorphism. Any clock other than `halt_self_loop`. A composition cell.
 
 ## Composition
 

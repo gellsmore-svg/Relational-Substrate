@@ -283,7 +283,8 @@ def test_registers_keep_the_count_as_a_method():
         if line
     }
     assert ideas["IDEA-C08"]["status"] == "partial"
-    assert ideas["IDEA-I04"]["status"] == "partial"
+    assert ideas["IDEA-I04"]["status"] == "explored"
+    assert coverage["COV-INCIDENT-COUNT-SAMPLE"]["status"] == "partial"
     assert "common-neighbour" in ideas["IDEA-I04"]["formulation"]
     assert coverage["COV-COUNTS"]["status"] == "open"
     assert equivalences["EQ-017"]["status"] == "method"

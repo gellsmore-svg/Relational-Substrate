@@ -101,8 +101,8 @@ Active continuation of RRC. Not a new programme. RRC-001 plan, results, interpre
 | Engine gap | `docs/atlas-engine-gap.md` |
 | Idea library | `atlas/ideas.jsonl` |
 | Coverage | `atlas/coverage.jsonl` |
-| Equivalences | `atlas/equivalences.jsonl`. EQ-001 to EQ-017. Composer rows may precede a round. Cell rows follow a verified batch. EQ-008, EQ-014, and EQ-017 are method identities, not cells |
-| Patterns | `atlas/patterns.jsonl`. PAT-001 to PAT-009. A row is not an order to investigate |
+| Equivalences | `atlas/equivalences.jsonl`. EQ-001 to EQ-019. Composer rows may precede a round. Cell rows follow a verified batch. EQ-008, EQ-014, and EQ-017 are method identities, not cells |
+| Patterns | `atlas/patterns.jsonl`. PAT-001 to PAT-011. A row is not an order to investigate |
 | Open questions | `atlas/questions.jsonl` |
 | Navigation | `atlas/README.md` |
 | Ledger | `RRC-ATLAS-M01` appended in `146ebb8`. `created_commit` on the row stays `56b7381`, the last closed-round commit. The row was not rewritten to insert its own commit |
@@ -234,6 +234,18 @@ The round is fifteen cells. Five listed carriers: the three-edge chain, the thre
 
 `COV-INCIDENT-COUNT-SAMPLE` is `frozen`. `COV-COUNTS` stays `open`. `IDEA-I04` and `IDEA-C08` stay `partial`. ATLAS-Q09 is named and stays open. The round is not scheduled to explain chain-versus-branch separation, PAT-008, PAT-009, or the 4-edge baseline identity.
 
+## atlas-006 execution
+
+Executed after the freeze. 15 complete, 0 failed, 0 timeout, 0 unresolved. `verify` printed `verified`. Records: `results/atlas-006/`, `reports/atlas-006.md`, `reports/atlas-006-observations.md`, `provenance/atlas-006-execution.md`. The plan was not edited.
+
+Two invocations, `--max-items 8` and `--budget-seconds 60`: 8 items in 1.252 seconds, then 7 items in 1.154 seconds.
+
+EQ-018: on two disjoint edges, the `eq 1` and `ge 2` tables are the baseline table. EQ-019: the chain and branch bit instruments share the earlier factor-3 endpoint table. Mean components are 19/8 on those two carriers and 49/32 on the N=3 cell. PAT-010: the two count templates separate the chain from the branch, and the bit instruments do not. PAT-011: on the five `ge 2` lists, effective cardinality equals the number of edges with neighbourhood size at least 2. `schedules_follow_up` is false on both. Every cell has one recurrent class, no deadlock, and an integer occupation. Four cells have a kernel hash different from their weight hash. Weight ablation and kernel ablation agreed on all 15 cells. EQ-014 does not apply.
+
+`COV-INCIDENT-COUNT-SAMPLE` is `partial`. `COV-COUNTS` stays `open`. `IDEA-I04` is `explored`. That word does not mean confirmed. `IDEA-C08` stays `partial`: common-neighbour counts are still uncompiled. ATLAS-Q01 through ATLAS-Q12 stay open.
+
+Ledger row `RRC-ATLAS-008` was appended, with relation `RRC-R042`. Its `created_commit` is the freeze `6e77689`. This commit appended the row. The hash of this commit is not written here.
+
 ## Next action
 
-Execute atlas-006 under its frozen plan. Use `--max-items` and `--budget-seconds`. Do not edit the plan after a result is seen. Do not rerun atlas-005. Do not chase PAT-008, PAT-009, or the 4-edge baseline identity. Do not attach a composition cell. A precise composition operator is still unnamed. `COV-COMPOSITION` stays `open`.
+Choose the next bounded sample from a portfolio other than these `eq 1` and `ge 2` templates. A composition cell requires one named operator, with its state, recoverability, and second application written down, before any plan. Do not use a placeholder cell. Do not rerun atlas-006. Do not chase PAT-010 or PAT-011. Do not centre the next round on chain-versus-branch separation. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.
