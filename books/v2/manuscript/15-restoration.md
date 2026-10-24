@@ -1,4 +1,4 @@
-# Chapter 14: Restoration
+# Chapter 15: Restoration
 
 Human beings are capable of optimism, distraction, denial and private consolation. None of these is hope. Hope, in the strong sense, requires that reality itself contain more promise than corruption can destroy. If disorder is ultimate, hope is theatre. If creation is God's, and God remains its Lord, hope may be the most realistic stance there is.
 
@@ -6,7 +6,7 @@ This chapter asks what restoration means within the account the book has given, 
 
 ## Restoration is God's act
 
-Chapter 6 drew a lesson: preserving an equivalence class is not the same as repairing it. When information was destroyed, nothing in the system brought it back. Conservation kept what remained. It did not restore what was lost. Chapter 10 showed how living things partly overcome this, by carrying templates from which damage can be repaired. But that capacity is itself limited, and it fails in the end: every living thing dies.
+Chapter 6 drew a lesson: preserving an equivalence class is not the same as repairing it. When information was destroyed, nothing in the system brought it back. Conservation kept what remained. It did not restore what was lost. Chapter 11 showed how living things partly overcome this, by carrying templates from which damage can be repaired. But that capacity is itself limited, and it fails in the end: every living thing dies.
 
 So the healing of creation cannot be expected from creation's own resources. If restoration came only from the persistence of the world's invariants, there would be no restoration of what corruption has destroyed: no raising of the dead, no righting of wrongs, no new creation. Scripture places restoration elsewhere, in the action of God:
 
@@ -37,7 +37,7 @@ The scope is not modest, and it is not only human. *The creature itself* is deli
 
 ## Why a relational creation matters for hope
 
-Chapter 9 argued that a relational physical world removes the gulf between the material creation and the relational life Scripture describes. That argument has its fullest consequence here.
+Chapter 10 argued that a relational physical world removes the gulf between the material creation and the relational life Scripture describes. That argument has its fullest consequence here.
 
 If the physical world were a collection of sealed objects with no intrinsic bearing on persons, then the redemption of persons and the renewal of creation would be two unrelated projects. One would be spiritual and the other cosmic, and it would be hard to see why the second should matter to the first. Some forms of Christianity have drifted toward exactly that, imagining salvation as the rescue of souls from a material world destined for the scrap heap. Scripture does not allow it. The whole creation groans *with* humanity and waits *for* the revealing of the children of God (Romans 8:19-22). Its deliverance and theirs belong together.
 
@@ -45,7 +45,7 @@ On the relational account, that belonging is not a puzzle. Persons are formed fr
 
 ## Restoring reception
 
-Chapter 13 described corruption as, among other things, a failure of reception: a word that arrives and is not heard. Scripture describes restoration as, among other things, the restoring of reception:
+Chapter 14 described corruption as, among other things, a failure of reception: a word that arrives and is not heard. Scripture describes restoration as, among other things, the restoring of reception:
 
 > `A new heart also will I give you, and a new spirit will I put within you: and I will take away the stony heart out of your flesh, and I will give you an heart of flesh.`
 > *Ezekiel 36:26*
@@ -70,7 +70,7 @@ The central hope of Christian faith is resurrection, and it is a hope about *ide
 
 The risen Christ is recognisably himself: *it is I myself*, with the wounds of the crucifixion. The resurrection of the dead is the raising of the same persons, transformed, not the manufacture of replacements. And Scripture is plain that it concerns everyone, the righteous and the unrighteous alike, to life or to judgment.
 
-How can the same person be raised, when the body has returned to dust? Chapter 6 offered an account of how physical things remain the same kind of thing, by remaining within their relevant equivalence class through admissible change. It also drew a sharper line. Something reconstructed to be indistinguishable from what was lost may belong to the same equivalence class without being the same individual, and when what carries identity is destroyed, conservation cannot bring it back. Chapter 11 added that a person's identity is not merely an invariant of bodily configuration, but is grounded in the continuity of the inner person and in God's knowing and calling.
+How can the same person be raised, when the body has returned to dust? Chapter 6 offered an account of how physical things remain the same kind of thing, by remaining within their relevant equivalence class through admissible change. It also drew a sharper line. Something reconstructed to be indistinguishable from what was lost may belong to the same equivalence class without being the same individual, and when what carries identity is destroyed, conservation cannot bring it back. Chapter 12 added that a person's identity is not merely an invariant of bodily configuration, but is grounded in the continuity of the inner person and in God's knowing and calling.
 
 Put together, these give an honest answer. Resurrection is not the substrate preserving a person's invariants through death, and it is not the reconstruction of an indistinguishable replacement. Death destroys the configuration, and the dust returns to the earth (Ecclesiastes 12:7). The identity of the person raised is held by God. The spirit "shall return unto God who gave it". God, who calls his people by name, does not lose track of whom he has called. The book makes no claim about the mechanism of resurrection, and Scripture gives none: "it doth not yet appear what we shall be" (1 John 3:2). What the relational account contributes is a negative clarity. It shows exactly why resurrection cannot be a natural process of created order, and therefore why it must be, as Scripture says it is, the act of God.
 
@@ -148,7 +148,7 @@ Judgment belongs to this hope, not against it. If corruption is real, hope canno
 
 ## A foretaste in the gathered people of God
 
-Between the resurrection of Christ and the renewal of all things, Scripture places the gathered people of God. In concrete local assemblies, believers pray, worship, teach, correct, suffer and serve together. These assemblies do not bring in the new creation; that is God's work. But they can be real, if imperfect, places where restored relation becomes visible: where truth is spoken and received, wrongs are confessed and forgiven, and remembrance (Chapter 13) is kept. The book does not attempt a doctrine of the church, and readers from different traditions will fill this out differently. It notes only that the restoration Scripture promises has a present, embodied, communal foretaste, not only a future one.
+Between the resurrection of Christ and the renewal of all things, Scripture places the gathered people of God. In concrete local assemblies, believers pray, worship, teach, correct, suffer and serve together. These assemblies do not bring in the new creation; that is God's work. But they can be real, if imperfect, places where restored relation becomes visible: where truth is spoken and received, wrongs are confessed and forgiven, and remembrance (Chapter 14) is kept. The book does not attempt a doctrine of the church, and readers from different traditions will fill this out differently. It notes only that the restoration Scripture promises has a present, embodied, communal foretaste, not only a future one.
 
 ## The ground of hope
 

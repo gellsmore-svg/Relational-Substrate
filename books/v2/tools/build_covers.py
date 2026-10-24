@@ -155,7 +155,7 @@ BACK = [
 def back() -> str:
     beam = (1480, 160, 760, 1300)
     lines = [text(W / 2, 330, "COHERENT BIBLICAL ONTOLOGY", 56, weight="bold", spacing=6),
-             text(W / 2, 398, "Second Edition, revision 2.5", 40, colour="#d6b875", style="italic")]
+             text(W / 2, 398, "Second Edition, revision 2.6", 40, colour="#d6b875", style="italic")]
     y = 560
     for ln in BACK:
         if ln:

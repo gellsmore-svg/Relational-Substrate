@@ -1,4 +1,4 @@
-# Chapter 12: What Is Allowed
+# Chapter 13: What Is Allowed
 
 A surgeon draws a scalpel across a patient's skin. An assailant draws a knife across a victim's skin. Physically, the two acts may be almost identical: the same sharp edge, the same depth, the same parting of tissue. One is an act of healing and the other a crime. Nothing in the physics of the cut tells you which is which.
 
@@ -24,9 +24,9 @@ Each loses a real distinction, and each has done real harm.
 
 ## Why the physical cannot settle the moral
 
-This distinction is the book's firmest safeguard against misreading Chapter 9. That chapter argued that a relational physical world removes the gulf between the material creation and a human life in which consequence, relation and responsibility are fundamental. It is now possible to say exactly what that argument does and does not imply.
+This distinction is the book's firmest safeguard against misreading Chapter 10. That chapter argued that a relational physical world removes the gulf between the material creation and a human life in which consequence, relation and responsibility are fundamental. It is now possible to say exactly what that argument does and does not imply.
 
-It does imply that moral acts are real events in the world. When you lie, a falsehood is sent out, carried and received. It becomes a change in someone who now believes something untrue and acts on it. When you keep a promise, a commitment carried across days is honoured in a way that has real consequences for another. The relational physics of Chapters 3 to 8 describes the *kind of world* in which such acts can be real and consequential. Moral life is not a ghostly overlay on a world of sealed objects that it cannot touch.
+It does imply that moral acts are real events in the world. When you lie, a falsehood is sent out, carried and received. It becomes a change in someone who now believes something untrue and acts on it. When you keep a promise, a commitment carried across days is honoured in a way that has real consequences for another. The relational physics of Chapters 3 to 9 describes the *kind of world* in which such acts can be real and consequential. Moral life is not a ghostly overlay on a world of sealed objects that it cannot touch.
 
 It does not imply that physical admissibility, or any physical fact, settles moral admissibility. The physics of a lie and the physics of a true statement are the same physics. A relational account of the world can tell you that your words will be received and will have consequences. It cannot tell you that you ought to tell the truth. The moral question belongs to a different category, the category of persons answerable to one another and to God, and it is answered by a different authority.
 

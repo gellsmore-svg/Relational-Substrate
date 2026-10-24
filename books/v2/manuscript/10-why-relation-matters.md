@@ -1,4 +1,4 @@
-# Chapter 9: Why Relation Matters Beyond Physics
+# Chapter 10: Why Relation Matters Beyond Physics
 
 On Monday you promise a friend that you will help her move house on Saturday. On Saturday morning you would rather stay in bed. You get up and go.
 
@@ -39,7 +39,7 @@ A relation-first ontology does not need that bridge. Its base already has the *f
 - constitutive relation (Chapter 3);
 - identity as relational equivalence carrying its own history (Chapter 6);
 - distinctions preserved by dependency and received as consequence (Chapter 7);
-- wholes stabilised by the coordination of their parts (Chapter 8).
+- wholes stabilised by the coordination of their parts (Chapter 9).
 
 When relation becomes personal and moral, it does not appear as a stranger from a different reality. It appears in a world whose grain it already follows.
 
@@ -53,7 +53,7 @@ The central argument of the book can now be stated in steps:
 4. Other things being equal, an account with fewer unexplained discontinuities and fewer ad hoc bridge assumptions between its domains is more globally coherent, by the tests of connection and faithful translation.
 5. Therefore, *if* a relation-first picture of physical order is consistent with everything we observe, it is to be preferred on grounds of global coherence.
 
-The argument does not claim that other ontologies make promises impossible or responsibility unintelligible. That would be stronger than the book needs, and probably false. It claims something more modest and more defensible: relation-first ontology offers a more *economical continuity of form* across physical, living and personal reality, provided the boundaries between categories stay intact. The conditional in step 5 matters. That is why Chapters 3 to 8 took such care over what physics does and does not say.
+The argument does not claim that other ontologies make promises impossible or responsibility unintelligible. That would be stronger than the book needs, and probably false. It claims something more modest and more defensible: relation-first ontology offers a more *economical continuity of form* across physical, living and personal reality, provided the boundaries between categories stay intact. The conditional in step 5 matters. That is why Chapters 3 to 9 took such care over what physics does and does not say.
 
 If the argument is sound, it shows why the physics of this book is not an optional technical appendix to a theological book. *How* the material world is real bears on whether the rest of reality hangs together.
 
@@ -71,13 +71,13 @@ The common relational grounding of material things is a kind of glue. It allows 
 - Resurrection is not the substrate repairing itself.
 - Divine action is not a wider set of physical permissions.
 
-The relational picture does not tell you that you ought to keep your promise. Chapter 12 will distinguish what is physically possible from what is morally right, and insist that the first never settles the second. What the relational picture does is remove the strangeness of a world in which promises could bind at all.
+The relational picture does not tell you that you ought to keep your promise. Chapter 13 will distinguish what is physically possible from what is morally right, and insist that the first never settles the second. What the relational picture does is remove the strangeness of a world in which promises could bind at all.
 
 ## The strongest objection: emergence
 
 The most serious reply runs like this. Nobody claims that promises exist among particles. They *emerge*. Complex arrangements display properties their parts lack: wetness emerges from molecules that are not wet, and life from chemistry that is not alive. Why should constitutive relation not emerge in the same way, from a base without it?
 
-The book accepts emergence fully. Chapter 10 will argue that living organisation is genuinely new and genuinely explanatory at its own level. The disagreement is narrower. In familiar cases, what emerges is a new and higher expression of capacities the base already has. Wetness expresses the attraction molecules already have for one another. Life expresses chemistry that already includes catalysis, templating and self-assembly. The question is not whether new properties appear. It is whether the base already contains the *relational resources* that make the emergent structures intelligible.
+The book accepts emergence fully. Chapter 11 will argue that living organisation is genuinely new and genuinely explanatory at its own level. The disagreement is narrower. In familiar cases, what emerges is a new and higher expression of capacities the base already has. Wetness expresses the attraction molecules already have for one another. Life expresses chemistry that already includes catalysis, templating and self-assembly. The question is not whether new properties appear. It is whether the base already contains the *relational resources* that make the emergent structures intelligible.
 
 If the base contains entities individuated independently of their relations, whose relations are always something added or exercised, then constitutive relation emerges from a base where nothing is constituted by its relations. That can be asserted, but it is precisely the kind of discontinuity step 2 names. A powers ontology narrows the gap, because powers are already other-directed, and the book counts that as convergence. It does not count it as refutation. The relational picture's claim is a claim of *continuity of structural capacity*: what emerges in living, personal and moral life is new in kind, and it emerges from a base that already has its form. It is not a claim to derive moral truth from physics. That is a more coherent position, though not one that can be proved.
 
@@ -109,7 +109,7 @@ A book that argues for coherence must face its limits here.
 
 A coherent account can be wrong. A detective story can be perfectly coherent and accuse the wrong suspect. More subtly, an argument can become *more* coherent as it proceeds while moving *further* from the truth, if every step builds on an early mistake nobody questions. The research behind this project met this directly, though in exploratory work rather than in formally recorded experiments. While developing an AI-assisted method of reasoning that runs several independent lines of thought on one problem, the author observed that when the lines were repeatedly merged into a shared summary and fed back, agreement rose steadily, and an error present in one early line could harden into a confident consensus. The project calls this a *false attractor*. The lesson, which this book adopts, is that coherence is not the same as fidelity to the truth. Agreement can be produced by a shared hidden premise as easily as by a shared grasp of reality.
 
-That applies to this book. Its argument is coherent, but that does not make it true, and its own coherence could be a false attractor. The safeguards are those already described. The argument stays accountable to observation wherever observation can reach (Chapter 8 named where it cannot). It keeps its levels of claim distinct. It keeps alternatives in view (Appendix A). And it submits its conclusions to Scripture, which is not one more input to the coherence but the frame within which coherence is sought.
+That applies to this book. Its argument is coherent, but that does not make it true, and its own coherence could be a false attractor. The safeguards are those already described. The argument stays accountable to observation wherever observation can reach (Chapter 9 named where it cannot). It keeps its levels of claim distinct. It keeps alternatives in view (Appendix A). And it submits its conclusions to Scripture, which is not one more input to the coherence but the frame within which coherence is sought.
 
 There is also a reason this matters for global coherence in particular. Global coherence is the most demanding test there is, because it must hold across every domain at once, and because errors hidden in one domain tend to surface as drift on the round trip through the others. A false attractor in one place is likely, sooner or later, to produce a contradiction or a silent change of meaning somewhere else. That is exactly why global coherence is a stronger test than local success, and why the book is willing to be judged by it.
 
@@ -119,10 +119,10 @@ There is also a reason this matters for global coherence in particular. Global c
 
 The chapter can now complete what Chapter 1 began. Creation contains distinct categories of reality, and relation appears in each of them differently.
 
-- In the **physical** world, relation is constraint, equivalence, coordination and the carriage of distinctions (Chapters 3 to 8).
-- In the **living** world, it becomes metabolism, signalling, templating and repair (Chapter 10).
-- In the **personal** world, it becomes address and response, knowledge and love, promise and trust (Chapter 11).
-- In the **moral** world, it becomes obligation, rightness and wrong (Chapter 12).
+- In the **physical** world, relation is constraint, equivalence, coordination and the carriage of distinctions (Chapters 3 to 9).
+- In the **living** world, it becomes metabolism, signalling, templating and repair (Chapter 11).
+- In the **personal** world, it becomes address and response, knowledge and love, promise and trust (Chapter 12).
+- In the **moral** world, it becomes obligation, rightness and wrong (Chapter 13).
 - In the **spiritual** world, it becomes communion with God.
 - God's relation to creation is that of Creator to creature. It belongs to no category within creation, and every created relation depends on it.
 
