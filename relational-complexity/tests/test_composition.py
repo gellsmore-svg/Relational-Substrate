@@ -846,9 +846,10 @@ def test_block_family_report_separates_covers_from_partial_families():
     assert "not a frozen cell" in ideas["IDEA-L20"]["methods"]
     assert ideas["IDEA-L21"]["status"] == "partial"
     assert "not a frozen cell" in ideas["IDEA-L21"]["methods"]
-    for idea_id in ("IDEA-L22", "IDEA-L23"):
-        assert ideas[idea_id]["status"] == "open"
-        assert "not a frozen cell" in ideas[idea_id]["methods"]
+    assert ideas["IDEA-L22"]["status"] == "partial"
+    assert "not a frozen cell" in ideas["IDEA-L22"]["methods"]
+    assert ideas["IDEA-L23"]["status"] == "open"
+    assert "not a frozen cell" in ideas["IDEA-L23"]["methods"]
     for coverage_id in (
         "COV-SUCCESSIVE-QUOTIENT",
         "COV-REALISED-OVERLAP",

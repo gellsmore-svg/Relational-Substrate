@@ -109,9 +109,9 @@ Two operators. They do not share a state space.
 - **Associativity.** Undefined.
 - **Overlap.** Undefined.
 - **Recoverability.** An independent bit is not recoverable from the pair state. That is the reason it is new state.
-- **Grammar.** Outside the current pair grammar. The compilation gate requires a witness before an engine change: two situations with the same pair bits and different next rows, or an event that is not a pair toggle. No witness is claimed.
+- **Grammar.** A presence bit that is not a listed carrier edge is outside the current pair grammar. The compilation gate requires a witness before an engine change: two situations with the same declared state and different next rows, or an event that is not a single toggle. Listing an activity bit as one more carrier edge keeps the single-toggle grammar. That listing is not this independent bit. No witness that this bit fails the gate is claimed.
 - **Established mathematics.** None is invoked, because the operator is not defined.
-- **Small-scale calculation.** Not available in this engine.
+- **Small-scale calculation.** Not available for this bit. A listed activity bit is calculated as ordinary pair state in `src/rrc/coordinate_examples.py`. It is not a cell of this note.
 - **Open.** IDEA-L16 and ATLAS-Q06. COV-HYPEREDGE stays open and is the independent-relation region, which is not this note's experiment.
 - **Library.** IDEA-L16, IDEA-C09 for history, which is a different extra coordinate.
 
@@ -206,6 +206,6 @@ The sentences above that leave an operator undefined describe this library at th
 
 `line_graph` is the static operator in C4a. `intersection_graph` and `nerve` accept an ordered family of blocks for C6. A second application is defined for the bare line graph and undefined for both of those operators. `line_graph` may be applied to a bare intersection graph. That composition is not recursion of the family operator. The specifications, the triangle and star exception, the shared nerves, and the baseline observation defects are in `docs/composition-operators.md`.
 
-The present line graph, the present edge count, and the present degree sequence are label maps of an existing chain. They add no state. A label map is a Markov chain only when it is strongly lumpable. On the unconstrained baseline the edge count is lumpable. The present line graph is lumpable on some of the fixture carriers and not on others. Those checks do not freeze a cell. C4b remains undefined. No witness for an independent bit is claimed.
+The present line graph, the present edge count, and the present degree sequence are label maps of an existing chain. They add no state. A label map is a Markov chain only when it is strongly lumpable. On the unconstrained baseline the edge count is lumpable. The present line graph is lumpable on some of the fixture carriers and not on others. Those checks do not freeze a cell. C4b remains undefined. No witness for an independent bit is claimed. A listed activity bit is ordinary pair state and is not that bit.
 
 `COV-COMPOSITION` and `COV-COMPOSITION-LIBRARY` stay `open`. A written formulation is not a calculated region. ATLAS-Q01 through ATLAS-Q11 stay open. ATLAS-Q12 is the iterability question and is not a queue. ATLAS-Q13, ATLAS-Q14, and ATLAS-Q15 ask about an intermediate quotient, realised overlap, and a higher-order coordinate. They are open and they are not a queue.

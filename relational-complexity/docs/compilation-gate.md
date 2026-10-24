@@ -31,3 +31,17 @@ The following are not opened in RRC-001, because each needs a witness rather tha
 - An independent hyperedge that is not a function of the pair bits.
 
 If a later observation cannot be compiled, RRC writes the witness (two reachable situations, same declared state, different future rows) before changing the engine.
+
+## A listed activity bit
+
+Two pair bits and one further bit can be written as three listed edges. The further bit is then ordinary pair state. It is not a new event type, and it is not a new primitive.
+
+The fixture in `src/rrc/coordinate_examples.py` uses bits `(pair0, pair1, activity)`. The weight of toggling pair0 is 3 when the activity bit is present and 1 when it is absent. The other pair toggle stays at weight 1. The activity toggle has weight 1 when pair0 is present and weight 0 when pair0 is absent. States 1 and 5 share the pair bits `01` and differ in the activity bit. The probability of toggling pair0 is `1/3` in state 1 and `3/5` in state 5. The pair bits alone do not determine that probability. The same eight rows are the four-node chain `[[0,1],[1,2],[2,3]]` at baseline 1, with one multiply by 3 of `(0,1)` when `(2,3)` is present and one prohibit of `(2,3)` when `(0,1)` is absent. EQ-027 records that equality for this table.
+
+The count of the two pair bits is a derived coordinate. Each pair mask has one count, and masks 1 and 2 share the count 1. That count agrees on states 1 and 5, so it does not restore the two rows.
+
+An empty constraint list on the same three edges gives weight 1 to every toggle. The probability of toggling pair0 is then `1/3` in both state 1 and state 5. A freely toggling third bit is not a witness that the extra coordinate changes the pair-toggle probability.
+
+A step that flips two bits at once leaves the single-toggle support. From state 0 the single-toggle successors are states 1, 2, and 4. State 5, the joint flip of bit 0 and bit 2, is not among them. No current-state weight table on this support assigns that step a positive probability. History at an unchanged current state is the other failure named above. Neither case is given an engine change here.
+
+These comparisons are fixtures. They are not a frozen round. `rrc-0.4.0` is unchanged. ATLAS-Q15 stays open. The equality is not a theorem about every higher-order coordinate.
