@@ -101,8 +101,8 @@ Active continuation of RRC. Not a new programme. RRC-001 plan, results, interpre
 | Engine gap | `docs/atlas-engine-gap.md` |
 | Idea library | `atlas/ideas.jsonl` |
 | Coverage | `atlas/coverage.jsonl` |
-| Equivalences | `atlas/equivalences.jsonl`, empty until a comparison is run |
-| Patterns | `atlas/patterns.jsonl`, empty until a synthesis pass. A row is not an order to investigate |
+| Equivalences | `atlas/equivalences.jsonl`. EQ-001 to EQ-007. Composer rows may precede a round. Cell rows follow a verified batch |
+| Patterns | `atlas/patterns.jsonl`. PAT-001 to PAT-004. A row is not an order to investigate |
 | Open questions | `atlas/questions.jsonl` |
 | Navigation | `atlas/README.md` |
 | Ledger | `RRC-ATLAS-M01` appended in `146ebb8`. `created_commit` on the row stays `56b7381`, the last closed-round commit. The row was not rewritten to insert its own commit |
@@ -120,7 +120,7 @@ Frozen in `6286a63`. Plan hash `646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199
 
 Executed after the freeze. 24 complete, 0 failed, 0 timeout, 0 unresolved. `verify` printed `verified`. Records: `results/atlas-001/`, `reports/atlas-001.md`, `reports/atlas-001-observations.md`, `provenance/atlas-001-execution.md`. The plan was not edited.
 
-The round is 12 grammars on the complete carrier at N=3 and N=4. It is not every literal placement. Coverage row `COV-COMPLETE-N3-N4-LITERAL` is `partial`. N=5 stays open. Listed carriers are frozen separately as atlas-002 and have not been run. Counts, history, hyperedges, and composition stay open.
+The round is 12 grammars on the complete carrier at N=3 and N=4. It is not every literal placement. Coverage row `COV-COMPLETE-N3-N4-LITERAL` is `partial`. N=5 stays open. Counts, history, hyperedges, and composition stay open. The listed-carrier round is atlas-002.
 
 EQ-001 to EQ-003 are composer identities. EQ-004 and EQ-005 are the cell hash identities. PAT-001 to PAT-003 are recorded contrasts. `schedules_follow_up` is false on each. Ideas named by the plan are `explored`. That word does not mean confirmed. ATLAS-Q01 through ATLAS-Q06 stay open.
 
@@ -128,8 +128,16 @@ Ledger rows `RRC-ATLAS-001` and `RRC-ATLAS-002` were appended. Their `created_co
 
 ## atlas-002
 
-Frozen, not executed. Plan hash `937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e`. N=4 listed carriers: chain, branch, cycle, disconnected. Four grammars on each: baseline, one prohibit, one multiply, one formation prohibit. The event is the first listed edge and the condition is the second. That placement is an instrument. The round does not repeat the complete carrier and does not target PAT-001, PAT-002, or PAT-003. Preflight `docs/atlas-002-preflight.md`: 0.003 seconds, observables discarded. `IDEA-R01` through `IDEA-R04` are `selected`.
+Frozen in `c3d316d`. Plan hash `937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e`. Executed after the freeze. 16 complete, 0 failed, 0 timeout, 0 unresolved. `verify` printed `verified`. Records: `results/atlas-002/`, `reports/atlas-002.md`, `reports/atlas-002-observations.md`, `provenance/atlas-002-execution.md`. The plan was not edited.
+
+N=4 listed carriers: chain, branch, cycle, disconnected. Four grammars on each: baseline, one prohibit, one multiply, one formation prohibit. The event is the first listed edge and the condition is the second. That placement is an instrument. The round does not repeat the complete carrier and does not target PAT-001, PAT-002, or PAT-003. Preflight `docs/atlas-002-preflight.md`: 0.003 seconds, observables discarded.
+
+EQ-006: the chain and the branch have the same weight table on each of the four grammars. EQ-007: those tables equal the N=3 complete-carrier cells with the same bit rule. Component means match between the chain and the branch and do not match N=3. The baseline means are 5/2 and 13/8. PAT-004: component count does not separate this chain from this branch. The non-increasing degree sequence does, on masks 5 and 7, and degree sequence is not in the common core. `schedules_follow_up` is false. ATLAS-Q07 holds that gap and does not schedule a degree observable. ATLAS-Q01 through ATLAS-Q06 stay open. ATLAS-Q05 stays open because both-polarity was not in this plan.
+
+`IDEA-R01` through `IDEA-R04` are `explored`. That word does not mean confirmed. `COV-CARRIERS-SMALL` is `partial`: N=5 was not run, and the common core did not separate the chain from the branch.
+
+Ledger row `RRC-ATLAS-003` was appended, with relation `RRC-R037`. Its `created_commit` is the freeze `c3d316d`. The commit that appended it is the calculation commit.
 
 ## Next action
 
-Execute `plans/atlas-002.json` into `results/atlas-002`. Do not edit the plan. Do not edit `plans/atlas-001.json`. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
+Stop. Do not edit `plans/atlas-001.json` or `plans/atlas-002.json`. Do not schedule a round to explain the chain and branch weight-table identity, to add a degree observable, to open N=5, or to start composition, counts, history, or hyperedges because of these cells. ATLAS-Q07 records the degree gap. Counts, history, hyperedges, and composition stay open in the library. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
