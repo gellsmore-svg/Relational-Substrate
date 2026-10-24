@@ -1189,3 +1189,151 @@ def test_atlas_012_execution_separates_arrangement_from_a_bit_relabeling():
         assert not any(image(one, perm, mask) == single for perm in perms for mask in range(8))
         assert not any(image(two, perm, mask) == single for perm in perms for mask in range(8))
     assert items.is_dir()
+
+
+def test_atlas_013_plan_is_the_star_prohibit_slice():
+    assert main(["plan", "--round", "atlas-013"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-013.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "5f39cf2cc5f5d8bd7975422eb0cd039544d606ef47e3fde38c07654bd79dc010"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    assert plan["definitions_commit"] == "9068c99f0c79a43a61a2ef1f14b5e696104901fc"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.002
+    assert plan["questions"] == ["ATLAS-Q02"]
+    assert "ATLAS-Q04" in plan["questions_not_in_this_round"]
+    assert "ATLAS-Q09" in plan["questions_not_in_this_round"]
+    assert len(plan["items"]) == 5
+    star = [[0, 1], [0, 2], [0, 3]]
+    for item in plan["items"]:
+        assert item["round_id"] == "atlas-013"
+        assert item["type"] == "atlas_core"
+        assert item["carrier"]["edges"] == star
+        assert item["baseline"] == 1
+        for constraint in item["constraints"]:
+            assert constraint["effect"] == "prohibit"
+            assert constraint["action"] == "either"
+            assert "factor" not in constraint
+            assert constraint["when"]["kind"] == "incident_count"
+    assert plan["items"][0]["constraints"] == []
+    assert [item["constraints"][0]["when"]["relation"] for item in plan["items"][1:]] == [
+        "eq",
+        "eq",
+        "ge",
+        "eq",
+    ]
+    assert [item["constraints"][0]["when"]["threshold"] for item in plan["items"][1:]] == [1, 2, 2, 2]
+    assert len(plan["items"][4]["constraints"]) == 1
+    assert len(plan["items"][1]["constraints"]) == 3
+
+
+def test_atlas_013_execution_separates_support_from_a_rescaled_rate():
+    assert main(["verify", "--round", "atlas-013", "--out", str(ROOT / "results" / "atlas-013")]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-013.json").read_text(encoding="utf-8"))
+    from fractions import Fraction
+
+    from rrc.model import strongly_connected_components, support_successors
+    from rrc.store import digest
+
+    assert digest(plan) == "5f39cf2cc5f5d8bd7975422eb0cd039544d606ef47e3fde38c07654bd79dc010"
+    items = ROOT / "results" / "atlas-013" / "items"
+
+    def load(name):
+        return json.loads((items / name / "result.json").read_text(encoding="utf-8"))
+
+    stored = {name: load(name) for name in ("A13-base", "A13-eq1", "A13-eq2", "A13-ge2", "A13-one")}
+    hashes = {
+        "A13-base": "3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7",
+        "A13-eq1": "1f82f333586889368e6492f1d1e050aa9bfe371d399299433a7b6b7080a45695",
+        "A13-eq2": "3811f60d68e33785a86d79fd47e1030351152dd33251b252e9cf164537db574c",
+        "A13-ge2": "3811f60d68e33785a86d79fd47e1030351152dd33251b252e9cf164537db574c",
+        "A13-one": "559a60132ec515f31a30395d46d560d4672a104e447331beaeaea53dfd6e4f6f",
+    }
+    for name, result in stored.items():
+        assert result["weight_sha256"] == hashes[name]
+        assert result["kernel_sha256"] == result["weight_sha256"]
+        assert result["engine_version"] == plan["engine_version"]
+        assert result["plan_hash"] == digest(plan)
+        assert result["compilation"]["new_primitive"] is False
+        assert result["empirical_bit_independent"] is True
+        assert result["structure_sha256"] == "6c959c90bc45976a55a7d874b0e0e4a6c4c31cf14f231e39417136e5ddf1e1d1"
+        assert result["bookkeeping"]["max_positive_k"] == 0
+    assert stored["A13-base"]["grammar_id"] == "opening-prohibit-multiply-v1"
+    assert stored["A13-eq1"]["grammar_id"] == "incident-count-v1"
+    assert stored["A13-eq2"]["weights"] == stored["A13-ge2"]["weights"]
+    assert stored["A13-eq1"]["occupation"]["status"] == "not_unique"
+    assert stored["A13-eq2"]["occupation"]["status"] == "not_unique"
+    assert "mean_present_edges" not in stored["A13-eq1"]["occupation"]
+    assert "mean_present_edges" not in stored["A13-eq2"]["occupation"]
+    assert stored["A13-eq2"]["classes"]["deadlock_states"] == 1
+    assert stored["A13-eq2"]["classes"]["recurrent_classes"] == 2
+    assert stored["A13-eq1"]["classes"]["deadlock_states"] == 0
+    assert stored["A13-eq1"]["zero_cells"] == 12
+    assert stored["A13-one"]["classes"]["recurrent_classes"] == 1
+    assert stored["A13-one"]["bookkeeping"]["declared_cardinality"] == 1
+    assert stored["A13-eq2"]["bookkeeping"]["effective_cardinality"] == 3
+
+    def fraction(payload):
+        return Fraction(int(payload["num"]), int(payload["den"]))
+
+    base = stored["A13-base"]["occupation"]
+    one = stored["A13-one"]["occupation"]
+    assert fraction(base["mean_present_edges"]) == Fraction(3, 2)
+    assert fraction(base["mean_components"]) == Fraction(5, 2)
+    assert fraction(one["mean_present_edges"]) == Fraction(31, 22)
+    assert fraction(one["mean_components"]) == Fraction(57, 22)
+    assert [fraction(cell) for cell in one["edge_presence"]] == [
+        Fraction(1, 2),
+        Fraction(5, 11),
+        Fraction(5, 11),
+    ]
+    assert fraction(base["mean_present_edges"]) + fraction(base["mean_components"]) == 4
+    assert fraction(one["mean_present_edges"]) + fraction(one["mean_components"]) == 4
+
+    def recurrent_masks(name):
+        weights = np.array(stored[name]["weights"], dtype=np.int64)
+        successors, _deadlocks = support_successors(weights)
+        found = []
+        for component in strongly_connected_components(successors):
+            members = set(component)
+            leaves = any(nxt not in members for state in component for nxt in successors[state])
+            if not leaves:
+                found.append(set(component))
+        return found
+
+    assert recurrent_masks("A13-eq1") == [{0, 1, 2, 4}, {3, 5, 6, 7}] or recurrent_masks("A13-eq1") == [
+        {3, 5, 6, 7},
+        {0, 1, 2, 4},
+    ]
+    assert {7} in recurrent_masks("A13-eq2")
+    assert recurrent_masks("A13-eq2") == recurrent_masks("A13-ge2")
+    questions = {
+        json.loads(line)["question_id"]: json.loads(line)
+        for line in (ROOT / "atlas" / "questions.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert questions["ATLAS-Q02"]["status"] == "open"
+    equivalences = {
+        json.loads(line)["equivalence_id"]: json.loads(line)
+        for line in (ROOT / "atlas" / "equivalences.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert equivalences["EQ-028"]["status"] == "cell"
+    assert "neighbourhood" in equivalences["EQ-028"]["not_claimed"]
+    wider = [[0, 1], [0, 2], [0, 3], [0, 4]]
+
+    def uniform(relation):
+        return [
+            {
+                "effect": "prohibit",
+                "action": "either",
+                "event": edge,
+                "when": {"kind": "incident_count", "relation": relation, "threshold": 2},
+            }
+            for edge in wider
+        ]
+
+    carrier = {"kind": "listed", "edges": wider}
+    assert not np.array_equal(
+        compile_weight_table(5, carrier, uniform("eq")),
+        compile_weight_table(5, carrier, uniform("ge")),
+    )
