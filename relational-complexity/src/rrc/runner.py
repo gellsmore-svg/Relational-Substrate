@@ -1,7 +1,9 @@
 """Run frozen items inside a wall-clock budget.
 
 Each item is a child process. The parent kills the process group when the
-watchdog expires and records a terminal timeout. It does not change the spec.
+watchdog expires and records a terminal timeout. It does not change the frozen
+spec. When an item omits round_id, the child receives a copy that carries the
+plan round id. The stored spec hash remains the hash of the frozen item.
 """
 
 from __future__ import annotations
@@ -120,7 +122,9 @@ def execute_plan(
         if state in RERUN and state != "pending":
             store.quarantine(item["id"])
         store.write_status(item["id"], "running")
-        result = child(item, watchdog)
+        payload = dict(item)
+        payload.setdefault("round_id", plan["round_id"])
+        result = child(payload, watchdog)
         store.commit_result(item["id"], result)
         ran += 1
     counts = store.counts()

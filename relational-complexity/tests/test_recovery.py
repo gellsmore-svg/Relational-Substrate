@@ -33,6 +33,41 @@ def _inprocess(item, _timeout):
     return execute_spec_catching(item)
 
 
+def test_omitted_round_id_is_copied_to_the_child_and_not_written_into_the_item(tmp_path):
+    item = {
+        "id": "obs",
+        "type": "composition_observation",
+        "n": 3,
+        "carrier": {"kind": "listed", "edges": [[0, 1], [1, 2], [0, 2]]},
+        "constraints": [],
+        "baseline": 1,
+        "observation": "present_edge_count",
+    }
+    plan = {
+        "round_id": "filled",
+        "engine_version": ENGINE_VERSION,
+        "watchdog_seconds": 120,
+        "hard_ceiling_seconds": 300,
+        "items": [item],
+    }
+    seen = {}
+
+    def child(spec, _timeout):
+        seen["round_id"] = spec.get("round_id")
+        seen["same_object"] = spec is item
+        return execute_spec_catching(spec)
+
+    summary = execute_plan(plan, tmp_path, max_items=1, budget_seconds=30, child=child)
+    stored = json.loads((tmp_path / "items" / "obs" / "result.json").read_text(encoding="utf-8"))
+    assert summary["counts"]["complete"] == 1
+    assert seen == {"round_id": "filled", "same_object": False}
+    assert "round_id" not in item
+    assert stored["round_id"] == "filled"
+    assert stored["exact"] is True
+    assert stored["spec_hash"] == Store(tmp_path, plan).spec_hash("obs")
+    assert stored["defect_l1"]["num"] == "0"
+
+
 def test_plan_command_refuses_an_unfrozen_round_and_does_not_run_the_frozen_one():
     with pytest.raises(SystemExit) as caught:
         main(["plan", "--round", "rrc-999"])

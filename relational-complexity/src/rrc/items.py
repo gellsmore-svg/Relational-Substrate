@@ -388,7 +388,7 @@ def execute_composition_observation(spec: dict) -> dict:
         "status": "complete",
         "engine_version": ENGINE_VERSION,
         "item_id": spec["id"],
-        "round_id": spec["round_id"],
+        "round_id": spec.get("round_id"),
         "type": "composition_observation",
         "role": spec.get("role", "observation"),
         "idea_ids": list(spec.get("idea_ids", [])),

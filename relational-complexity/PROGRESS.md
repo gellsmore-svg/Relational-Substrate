@@ -286,6 +286,10 @@ Each frozen item omits `round_id`. `execute_composition_observation` reads that 
 
 No observation from this round is a scientific result. The fixture defects in the operator section above are not these cells. `COV-COMPOSITION-OBSERVATION` stays `frozen`. Its note now records the failure. `COV-COMPOSITION` stays `open`. Idea statuses are unchanged. ATLAS-Q10 stays open. No ledger row was added. This section does not name its own commit.
 
+## Round-id copy
+
+The worker used to read `round_id` from the item while building a composition observation. Atlas-007 omitted the field, so the finished law was discarded. The parent now passes a copy that fills the field from the plan when the item omits it. The frozen item is not edited, and the stored spec hash is still the hash of that item. A direct call that omits the field returns the law with `round_id` null. The store then writes the plan id. The engine string stays `rrc-0.4.0`. The weight compiler is unchanged. `results/atlas-007` was not rerun. This section does not name its own commit.
+
 ## Next action
 
-The label comparison still has no stored law. A later plan may repeat the same fifteen baseline maps only as a new plan whose items carry `round_id`. Do not edit `plans/atlas-007.json`. Do not delete or rerun `results/atlas-007`. Do not add a token cell for the static line graph. Do not declare the cover operator recursive. Do not rerun atlas-006. An independent constraint sample remains a separate plan. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.
+Freeze a new baseline observation plan. Give every item its own `round_id`. Do not edit `plans/atlas-007.json`. Do not delete or rerun `results/atlas-007`. Do not add a token cell for the static line graph. Do not declare the cover operator recursive. Do not rerun atlas-006. An independent constraint sample remains a separate plan. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.

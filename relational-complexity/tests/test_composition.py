@@ -240,6 +240,25 @@ def test_atlas_007_execution_stored_no_law():
         assert "exact" not in result
 
 
+def test_composition_observation_completes_when_the_spec_omits_round_id():
+    spec = {
+        "id": "fixture-chain-line-bare",
+        "type": "composition_observation",
+        "n": 4,
+        "carrier": {"kind": "listed", "edges": CHAIN},
+        "constraints": [],
+        "baseline": 1,
+        "observation": "present_line_graph",
+    }
+    result = execute_composition_observation(spec)
+    assert "round_id" not in spec
+    assert result["status"] == "complete"
+    assert result["round_id"] is None
+    assert result["exact"] is False
+    assert result["defect_l1"]["num"] == "4"
+    assert result["defect_l1"]["den"] == "9"
+
+
 def test_composition_observation_item_matches_the_chain_fixture():
     result = execute_composition_observation(
         {
