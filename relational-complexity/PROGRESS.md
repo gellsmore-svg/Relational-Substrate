@@ -268,6 +268,8 @@ A third reading labels states of an existing baseline chain. It adds no state. P
 
 `IDEA-L08`, `IDEA-L14`, and `IDEA-L16` are `partial`. `IDEA-L15` stays `open`. `COV-COMPOSITION` and `COV-COMPOSITION-LIBRARY` stay `open`. C4b is still undefined. No ledger row was added. This section does not name its own commit. ATLAS-Q01 through ATLAS-Q12 stay open.
 
+`composition_observation` records strong lumpability of one named label map. The weight compiler is unchanged. A further label is undefined. The engine string stays `rrc-0.4.0`. No plan is frozen in this section. This section does not name its own commit.
+
 ## Next action
 
-Freeze a composition plan only for the observation maps already specified, on the baseline carriers already checked, if a runner item can record strong lumpability without a new weight semantics. Do not add a token cell for the static line graph. Do not declare the cover operator recursive. Do not rerun atlas-006. Do not chase PAT-010, PAT-011, EQ-020, or the four-cycle degree defect. An independent constraint sample remains a separate plan. `COV-COMPOSITION` stays `open` until a cell is frozen. ATLAS-Q01 through ATLAS-Q12 stay open.
+Freeze a baseline observation plan for `present_line_graph`, `present_edge_count`, and `present_degree_sequence` on the five fixture carriers. Do not add a token cell for the static line graph. Do not declare the cover operator recursive. Do not rerun atlas-006. Do not chase PAT-010, PAT-011, EQ-020, or the four-cycle degree defect. An independent constraint sample remains a separate plan. `COV-COMPOSITION` stays `open` until a cell is frozen. ATLAS-Q01 through ATLAS-Q12 stay open.

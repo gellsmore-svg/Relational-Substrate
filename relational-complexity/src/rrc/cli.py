@@ -154,6 +154,34 @@ def _problems(store: Store) -> list[str]:
             problems.append(f"{item['id']} probe value drifted")
         if item["type"] == "atlas_core":
             problems.extend(_atlas_problems(item, result))
+        if item["type"] == "composition_observation":
+            problems.extend(_composition_problems(item, result))
+    return problems
+
+
+def _composition_problems(item: dict, result: dict) -> list[str]:
+    """Record consistency for one label map. This does not recompute the law."""
+    problems = []
+    name = item["id"]
+    if result.get("observation") != item.get("observation"):
+        problems.append(f"{name} observation drifted")
+    if result.get("new_state") is not False:
+        problems.append(f"{name} reports new state")
+    if result.get("further_label") != "undefined":
+        problems.append(f"{name} further label is not undefined")
+    exact = result.get("exact")
+    numerator = (result.get("defect_l1") or {}).get("num")
+    if exact != (numerator == "0"):
+        problems.append(f"{name} exact flag disagrees with the defect")
+    n_states = result.get("n_states")
+    n_edges = result.get("n_edges")
+    if not isinstance(n_states, int) or not isinstance(n_edges, int) or n_states != (1 << n_edges):
+        problems.append(f"{name} state count is not 2 to the carrier size")
+    if result.get("n_blocks") != result.get("n_distinct_labels"):
+        problems.append(f"{name} block count disagrees with the label count")
+    if result.get("kernel_method") != "row_gcd_halt_self_loop":
+        problems.append(f"{name} kernel method is not the halt_self_loop reduction")
+    problems.extend(_stored_table_problems(name, result))
     return problems
 
 
@@ -303,6 +331,37 @@ def _report_atlas(plan: dict, store: Store) -> str:
     return "\n".join(lines) + "\n"
 
 
+def _report_composition(plan: dict, store: Store) -> str:
+    lines = [
+        f"# {plan['round_id']} report",
+        "",
+        "Generated from completed item files. Exact means strong lumpability of the named label map.",
+        "The label is a function of the current carrier state. A positive defect is not an approximate closure.",
+        "",
+        "| Item | Observation | States | Labels | Exact | Defect | Injective | Hash |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- |",
+    ]
+    for item in plan["items"]:
+        state = store.classify(item["id"])
+        if state != "complete":
+            lines.append(f"| {item['id']} | {item.get('observation', '')} |  |  |  |  |  | {state} |")
+            continue
+        result = store.load_result(item["id"])
+        lines.append(
+            "| {id} | {observation} | {states} | {labels} | {exact} | {defect} | {injective} | `{digest}` |".format(
+                id=item["id"],
+                observation=result["observation"],
+                states=result["n_states"],
+                labels=result["n_distinct_labels"],
+                exact=result["exact"],
+                defect=result["defect_l1"]["float"],
+                injective=result["injective"],
+                digest=result["weight_sha256"][:12],
+            )
+        )
+    return "\n".join(lines) + "\n"
+
+
 def command_report(args: argparse.Namespace) -> int:
     plan = load_plan(args.round)
     out = Path(args.out) if args.out else default_out(args.round)
@@ -313,6 +372,14 @@ def command_report(args: argparse.Namespace) -> int:
         print(str(exc), file=sys.stderr)
         return 2
     kinds = {item["type"] for item in plan["items"]}
+    if kinds == {"composition_observation"}:
+        text = _report_composition(plan, store)
+        sys.stdout.write(text)
+        if args.write:
+            destination = Path(args.write)
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(text, encoding="utf-8")
+        return 0
     if kinds == {"atlas_core"}:
         text = _report_atlas(plan, store)
         sys.stdout.write(text)

@@ -8,6 +8,12 @@ import traceback
 import numpy as np
 
 from rrc import ENGINE_VERSION
+from rrc.composition import (
+    observation_law,
+    present_degree_labels,
+    present_edge_count_labels,
+    present_line_graph_labels,
+)
 from rrc.constraints import (
     KERNEL_METHOD,
     STRUCTURE_METHOD,
@@ -351,6 +357,75 @@ def execute_atlas_core(spec: dict) -> dict:
     }
 
 
+OBSERVATION_LABELS = {
+    "present_line_graph": lambda n, edges: present_line_graph_labels(edges),
+    "present_edge_count": lambda n, edges: present_edge_count_labels(edges),
+    "present_degree_sequence": lambda n, edges: present_degree_labels(n, edges),
+}
+
+
+def execute_composition_observation(spec: dict) -> dict:
+    """Lumpability of one label map. The map is not a new coordinate."""
+    started = time.perf_counter()
+    observation = spec.get("observation")
+    if observation not in OBSERVATION_LABELS:
+        raise ValueError(f"unknown observation {observation}")
+    baseline = spec.get("baseline", 1)
+    model = compile_model(spec["n"], spec["carrier"], list(spec.get("constraints", [])), baseline)
+    edges = [list(edge) for edge in model["carrier_edges"]]
+    labels = OBSERVATION_LABELS[observation](model["n"], edges)
+    law = observation_law(model["weights"], labels)
+    weights = model["weights"]
+    witness = law["witness"]
+    witness_payload = None
+    if witness is not None:
+        witness_payload = {
+            "block": witness["block"],
+            "states": witness["states"],
+            "pairwise_l1": fraction_payload(witness["pairwise_l1"]),
+        }
+    return {
+        "status": "complete",
+        "engine_version": ENGINE_VERSION,
+        "item_id": spec["id"],
+        "round_id": spec["round_id"],
+        "type": "composition_observation",
+        "role": spec.get("role", "observation"),
+        "idea_ids": list(spec.get("idea_ids", [])),
+        "observation": observation,
+        "n": model["n"],
+        "n_states": int(weights.shape[0]),
+        "n_edges": int(weights.shape[1]),
+        "n_blocks": law["n_blocks"],
+        "n_distinct_labels": law["n_distinct_labels"],
+        "injective": law["injective"],
+        "new_state": False,
+        "exact": law["exact"],
+        "defect_l1": fraction_payload(law["defect_l1"]),
+        "further_label": "undefined",
+        "further_label_reason": "no second label map is declared",
+        "dynamics": "halt_self_loop projection; Markov only when exact",
+        "witness": witness_payload,
+        "baseline": model["baseline"],
+        "grammar_id": model["grammar_id"],
+        "carrier": {
+            "kind": model["carrier_kind"],
+            "edges": edges,
+        },
+        "weight_sha256": weight_table_hash(weights),
+        "kernel_sha256": model["kernel_sha256"],
+        "kernel_method": KERNEL_METHOD,
+        "structure_sha256": model["structure_sha256"],
+        "structure_method": STRUCTURE_METHOD,
+        "weights": [[int(value) for value in row] for row in weights.tolist()],
+        "clock": {
+            "name": HALT_COMPLETION,
+            "step": "one carrier pair, probability proportional to its current weight",
+        },
+        "elapsed_s": round(time.perf_counter() - started, 6),
+    }
+
+
 def execute_spec(spec: dict) -> dict:
     kind = spec["type"]
     if kind == "lumpability":
@@ -361,6 +436,8 @@ def execute_spec(spec: dict) -> dict:
         return execute_probe(spec)
     if kind == "atlas_core":
         return execute_atlas_core(spec)
+    if kind == "composition_observation":
+        return execute_composition_observation(spec)
     raise ValueError(f"unknown item type {kind}")
 
 

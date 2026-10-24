@@ -20,6 +20,7 @@ from rrc.composition import (
     present_line_graph_labels,
 )
 from rrc.constraints import compile_weight_table
+from rrc.items import execute_composition_observation
 
 
 PATH4 = [[0, 1], [1, 2], [2, 3], [3, 4]]
@@ -188,3 +189,40 @@ def test_baseline_observations_are_description_dependent():
         assert line_law["new_state"] is False
         assert _same_partition(degree, line) is same
         assert not _same_partition(line, present_edge_count_labels(edges))
+
+
+def test_composition_observation_item_matches_the_chain_fixture():
+    result = execute_composition_observation(
+        {
+            "id": "fixture-chain-line",
+            "round_id": "fixture",
+            "type": "composition_observation",
+            "n": 4,
+            "carrier": {"kind": "listed", "edges": CHAIN},
+            "constraints": [],
+            "baseline": 1,
+            "observation": "present_line_graph",
+        }
+    )
+    assert result["status"] == "complete"
+    assert result["new_state"] is False
+    assert result["further_label"] == "undefined"
+    assert result["exact"] is False
+    assert result["defect_l1"]["num"] == "4"
+    assert result["defect_l1"]["den"] == "9"
+    assert result["n_states"] == 8
+    assert result["n_distinct_labels"] == 5
+    count = execute_composition_observation(
+        {
+            "id": "fixture-chain-count",
+            "round_id": "fixture",
+            "type": "composition_observation",
+            "n": 4,
+            "carrier": {"kind": "listed", "edges": CHAIN},
+            "constraints": [],
+            "observation": "present_edge_count",
+        }
+    )
+    assert count["exact"] is True
+    assert count["defect_l1"]["num"] == "0"
+    assert count["weight_sha256"] == result["weight_sha256"]
