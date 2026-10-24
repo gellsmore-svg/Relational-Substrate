@@ -112,8 +112,16 @@ Coverage status words: `open`, `frozen`, `exhaustive`, `partial`, `sampled`, `an
 
 ## Grammar
 
-`opening-prohibit-multiply-v1` is defined in `docs/atlas-grammar.md` and compiled by `src/rrc/constraints.py`. The live engine string is `rrc-0.2.0`. RRC-001 stays `rrc-0.1.0`. `verify` compares a result with the engine string in its plan. `run --round rrc-001` raises and does not recompute those items. Pytest after the compiler: 50 passed. No atlas plan is frozen yet.
+`opening-prohibit-multiply-v1` is defined in `docs/atlas-grammar.md` and compiled by `src/rrc/constraints.py` in `c4e404a`. The live engine string is `rrc-0.2.0`. RRC-001 stays `rrc-0.1.0`. `verify` compares a result with the engine string in its plan. `run --round rrc-001` raises and does not recompute those items.
+
+## atlas-001
+
+Frozen. Plan hash `646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f`. Definitions commit `c4e404a`. Preflight `docs/atlas-001-preflight.md`: the heaviest cell shape took 0.013 seconds. Observables from that timing were not retained.
+
+The round is 12 grammars on the complete carrier at N=3 and N=4, 24 items, common core only. It is not every literal placement. N=5, listed carriers, counts, history, hyperedges, and composition stay open. Composer identities EQ-001, EQ-002, and EQ-003 are in `atlas/equivalences.jsonl`. They are not cell results. `atlas/patterns.jsonl` stays empty.
+
+Ideas named by the plan are `selected`. That word does not mean confirmed.
 
 ## Next action
 
-Time the heaviest intended `atlas-001` cell and record seconds only. Freeze `plans/atlas-001.json` in a commit that does not contain results. Then execute into `results/atlas-001` in bounded batches. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
+Execute `plans/atlas-001.json` into `results/atlas-001` in bounded batches. Verify. Do not edit the plan. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.

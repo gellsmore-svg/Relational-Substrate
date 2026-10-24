@@ -6,7 +6,7 @@ Machine-readable records for the continuation described in `docs/atlas-charter.m
 | --- | --- |
 | `ideas.jsonl` | Possibilities, including ones with no experiment |
 | `coverage.jsonl` | Regions and their status |
-| `equivalences.jsonl` | Distinct specs with the same weight table. Empty until a comparison is written |
+| `equivalences.jsonl` | Distinct specs with the same weight table. Composer identities may be recorded before a round. Cell comparisons wait for a verified batch |
 | `patterns.jsonl` | Cross-cell relations. Empty until a synthesis pass. A row here is not an order to investigate |
 | `questions.jsonl` | Open questions. No row has to be closed by the next round |
 

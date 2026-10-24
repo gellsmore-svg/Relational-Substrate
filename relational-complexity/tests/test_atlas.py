@@ -262,6 +262,35 @@ def test_malformed_constraints_are_rejected():
         compile_weight_table(3, {"kind": "listed", "edges": []}, [])
 
 
+def test_atlas_001_plan_is_frozen_coverage_not_a_result():
+    assert main(["plan", "--round", "atlas-001"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-001.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f"
+    assert plan["engine_version"] == ENGINE_VERSION
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["no_sampling"] is True
+    assert len(plan["items"]) == 24
+    assert len({item["id"] for item in plan["items"]}) == 24
+    assert {item["n"] for item in plan["items"]} == {3, 4}
+    by_size = {3: [], 4: []}
+    forbidden = {"weight_sha256", "occupation", "expected", "exact", "recurrent_classes"}
+    allowed_pairs = {(0, 1), (0, 2), (1, 2)}
+    for item in plan["items"]:
+        assert item["type"] == "atlas_core"
+        assert item["carrier"] == {"kind": "complete"}
+        assert item["baseline"] == 1
+        assert forbidden.isdisjoint(item)
+        by_size[item["n"]].append(item["constraints"])
+        for constraint in item["constraints"]:
+            assert tuple(constraint["event"]) in allowed_pairs
+            assert tuple(constraint["when"]["edge"]) in allowed_pairs
+            if "factor" in constraint:
+                assert constraint["factor"] == 4
+    assert by_size[3] == by_size[4]
+
+
 def test_historical_round_still_verifies_and_is_not_reexecuted(tmp_path):
     assert main(["verify", "--round", "rrc-001", "--out", str(ROOT / "results" / "rrc-001")]) == 0
     plan = json.loads((ROOT / "plans" / "rrc-001.json").read_text(encoding="utf-8"))
