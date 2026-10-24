@@ -410,6 +410,68 @@ def test_atlas_003_plan_is_a_declared_cardinality_sample():
     assert both == []
 
 
+def test_atlas_004_plan_is_an_incidence_sample_not_a_chase():
+    assert main(["plan", "--round", "atlas-004"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-004.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "f6a9680feb02700b5dd8aa9fe024dfe1668d51bdfcbc8aaf5c64607d6c8391fe"
+    assert plan["engine_version"] == "rrc-0.3.0"
+    assert plan["engine_version"] == ENGINE_VERSION
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.003
+    assert plan["no_sampling"] is True
+    assert plan["coverage"]["six_is_not_a_target"] is True
+    assert plan["coverage"]["not_every_graph"] is True
+    assert plan["questions"] == ["ATLAS-Q09", "ATLAS-Q11"]
+    assert "ATLAS-Q07" in plan["questions_not_in_this_round"]
+    previous = json.loads((ROOT / "plans" / "atlas-002.json").read_text(encoding="utf-8"))
+    previous_edges = {
+        item["id"].split("-")[1]: item["carrier"]["edges"]
+        for item in previous["items"]
+        if item["id"].endswith("-base")
+    }
+    by_id = {item["id"]: item for item in plan["items"]}
+    assert len(by_id) == 18
+    forbidden = {"weight_sha256", "occupation", "expected", "kernel_sha256"}
+    for name, edges in previous_edges.items():
+        for suffix, role in (
+            ("base", "baseline"),
+            ("bit-pro", "control"),
+            ("inc-mul", "template"),
+            ("inc-pro", "template"),
+        ):
+            item = by_id[f"A4-{name}-{suffix}"]
+            assert item["n"] == 4
+            assert item["carrier"]["edges"] == edges
+            assert item["role"] == role
+            assert forbidden.isdisjoint(item)
+        control = by_id[f"A4-{name}-bit-pro"]["constraints"]
+        assert len(control) == 1
+        assert control[0]["event"] == edges[0]
+        assert control[0]["when"] == {"edge": edges[1], "polarity": "present"}
+        assert control[0]["effect"] == "prohibit"
+        for suffix, effect in (("inc-mul", "multiply"), ("inc-pro", "prohibit")):
+            constraints = by_id[f"A4-{name}-{suffix}"]["constraints"]
+            assert len(constraints) == len(edges)
+            assert [constraint["event"] for constraint in constraints] == edges
+            for constraint in constraints:
+                assert constraint["effect"] == effect
+                assert constraint["when"] == {"kind": "incident_neighbour", "polarity": "present"}
+                assert constraint["action"] == "either"
+                if effect == "multiply":
+                    assert constraint["factor"] == 3
+                else:
+                    assert "factor" not in constraint
+    end = by_id["A4-chain-end-mul"]
+    mid = by_id["A4-chain-mid-mul"]
+    assert end["role"] == "instrument" and mid["role"] == "instrument"
+    assert end["constraints"][0]["event"] == [0, 1]
+    assert mid["constraints"][0]["event"] == [1, 2]
+    assert "not claimed covariant" in end["label"]
+    assert "not claimed covariant" in mid["label"]
+
+
 def test_historical_round_still_verifies_and_is_not_reexecuted(tmp_path):
     assert main(["verify", "--round", "rrc-001", "--out", str(ROOT / "results" / "rrc-001")]) == 0
     assert main(["verify", "--round", "atlas-001", "--out", str(ROOT / "results" / "atlas-001")]) == 0

@@ -160,8 +160,16 @@ EQ-009: five controls reproduce atlas-001 integer tables. EQ-010: the length-8 l
 
 `IDEA-C10` and `IDEA-C11` are `explored`. That word does not mean confirmed. `COV-CARDINALITY-BROAD` and `COV-WEIGHT-ALPHABET` are `partial`. ATLAS-Q01 through ATLAS-Q11 stay open.
 
-Ledger row `RRC-ATLAS-004` was appended, with relation `RRC-R038`. Its `created_commit` is the freeze `e75d18a`. This calculation commit appended the row.
+Ledger row `RRC-ATLAS-004` was appended, with relation `RRC-R038`. Its `created_commit` is the freeze `e75d18a`. The calculation commit that appended the row is `8f18d7c`.
+
+## atlas-004
+
+Plan `plans/atlas-004.json` is frozen and has not been executed. Plan hash `f6a9680feb02700b5dd8aa9fe024dfe1668d51bdfcbc8aaf5c64607d6c8391fe`. Definitions commit `26bf891`. Engine `rrc-0.3.0`. Preflight `docs/atlas-004-preflight.md`: the 4-cycle with four incident multiplies took 0.003 seconds. Observables from that timing were not retained.
+
+The round is 18 cells on the four atlas-002 carriers. Each carrier has a baseline, the atlas-002 bit-prohibit placement as a control, an incident multiply template, and an incident prohibit template. Two further cells name one chain edge. Those two are instruments and are not claimed to be label-covariant. Factor 3. The round is not scheduled to explain PAT-004.
+
+`IDEA-I01` and `IDEA-I03` are `selected`. `IDEA-I02` stays `open`. `COV-INCIDENCE-NEIGHBOUR` is `frozen`. ATLAS-Q09 and ATLAS-Q11 stay open.
 
 ## Next action
 
-Preflight and freeze a separate incidence round. Include a bit-grammar control and an incident-neighbour template that can differ on a chain and a branch. Do not edit `plans/atlas-003.json` after seeing these cells. Do not execute in the freeze commit. Do not edit `plans/atlas-001.json`, `plans/atlas-002.json`, CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
+Execute atlas-004 in bounded chunks with `--max-items` and `--budget-seconds`. Do not edit `plans/atlas-004.json`. Then verify and record. Do not edit `plans/atlas-001.json`, `plans/atlas-002.json`, `plans/atlas-003.json`, CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
