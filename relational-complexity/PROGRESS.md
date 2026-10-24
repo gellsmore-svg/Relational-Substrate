@@ -120,12 +120,16 @@ Frozen in `6286a63`. Plan hash `646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199
 
 Executed after the freeze. 24 complete, 0 failed, 0 timeout, 0 unresolved. `verify` printed `verified`. Records: `results/atlas-001/`, `reports/atlas-001.md`, `reports/atlas-001-observations.md`, `provenance/atlas-001-execution.md`. The plan was not edited.
 
-The round is 12 grammars on the complete carrier at N=3 and N=4. It is not every literal placement. Coverage row `COV-COMPLETE-N3-N4-LITERAL` is `partial`. N=5, listed carriers, counts, history, hyperedges, and composition stay open.
+The round is 12 grammars on the complete carrier at N=3 and N=4. It is not every literal placement. Coverage row `COV-COMPLETE-N3-N4-LITERAL` is `partial`. N=5 stays open. Listed carriers are frozen separately as atlas-002 and have not been run. Counts, history, hyperedges, and composition stay open.
 
 EQ-001 to EQ-003 are composer identities. EQ-004 and EQ-005 are the cell hash identities. PAT-001 to PAT-003 are recorded contrasts. `schedules_follow_up` is false on each. Ideas named by the plan are `explored`. That word does not mean confirmed. ATLAS-Q01 through ATLAS-Q06 stay open.
 
-Ledger rows `RRC-ATLAS-001` and `RRC-ATLAS-002` were appended. Their `created_commit` is the freeze `6286a63`. The commit that appended them is the calculation commit.
+Ledger rows `RRC-ATLAS-001` and `RRC-ATLAS-002` were appended. Their `created_commit` is the freeze `6286a63`. The calculation commit that appended them is `5a95e2e`.
+
+## atlas-002
+
+Frozen, not executed. Plan hash `937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e`. N=4 listed carriers: chain, branch, cycle, disconnected. Four grammars on each: baseline, one prohibit, one multiply, one formation prohibit. The event is the first listed edge and the condition is the second. That placement is an instrument. The round does not repeat the complete carrier and does not target PAT-001, PAT-002, or PAT-003. Preflight `docs/atlas-002-preflight.md`: 0.003 seconds, observables discarded. `IDEA-R01` through `IDEA-R04` are `selected`.
 
 ## Next action
 
-Do not edit `plans/atlas-001.json`. Do not schedule a round whose purpose is to explain PAT-001, PAT-002, or PAT-003. The uncovered coordinate with the next coverage claim is a small listed-carrier round: chain, branch, cycle, and disconnected, designed from the carrier row rather than from these contrasts. Freeze that plan before its cells. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
+Execute `plans/atlas-002.json` into `results/atlas-002`. Do not edit the plan. Do not edit `plans/atlas-001.json`. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.

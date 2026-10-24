@@ -291,6 +291,32 @@ def test_atlas_001_plan_is_frozen_coverage_not_a_result():
     assert by_size[3] == by_size[4]
 
 
+def test_atlas_002_plan_is_a_carrier_batch_not_a_replay():
+    assert main(["plan", "--round", "atlas-002"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-002.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e"
+    assert plan["engine_version"] == ENGINE_VERSION
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["coverage"]["complete_carrier_not_repeated"] is True
+    assert len(plan["items"]) == 16
+    seen = set()
+    for item in plan["items"]:
+        assert item["n"] == 4
+        assert item["type"] == "atlas_core"
+        assert item["carrier"]["kind"] == "listed"
+        edges = {tuple(pair) for pair in item["carrier"]["edges"]}
+        seen.add(frozenset(edges))
+        assert "occupation" not in item
+        for constraint in item["constraints"]:
+            assert tuple(constraint["event"]) in edges
+            assert tuple(constraint["when"]["edge"]) in edges
+            assert tuple(constraint["event"]) == tuple(item["carrier"]["edges"][0])
+            assert tuple(constraint["when"]["edge"]) == tuple(item["carrier"]["edges"][1])
+    assert len(seen) == 4
+
+
 def test_historical_round_still_verifies_and_is_not_reexecuted(tmp_path):
     assert main(["verify", "--round", "rrc-001", "--out", str(ROOT / "results" / "rrc-001")]) == 0
     plan = json.loads((ROOT / "plans" / "rrc-001.json").read_text(encoding="utf-8"))
