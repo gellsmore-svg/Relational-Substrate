@@ -180,6 +180,10 @@ Ledger row `RRC-ATLAS-005` was appended, with relation `RRC-R039`. Its `created_
 
 Composition stays in the idea library. `IDEA-L11`, `IDEA-L13`, `IDEA-L14`, `COV-COMPOSITION`, and `COV-COMPOSITION-LIBRARY` are `open`. No placeholder cell was added.
 
+## Kernel coverage
+
+The expansion note above says that no batch has reported a kernel hash. That sentence described the state before atlas-003. Atlas-003 and atlas-004 store `kernel_sha256` on every completed cell. `COV-KERNEL` is now `partial`. `IDEA-E02` is now `partial`. EQ-008 remains the method identity. No two cells in those rounds share a kernel without sharing the integer table. ATLAS-Q08 stays open.
+
 ## Next action
 
-No cell is queued. A later round chooses from the open coverage rows: cardinality 5 and 10, N=5, absent-polarity incidence, a declared relabelling cell, or a named composition map. Do not start from PAT-007. Do not edit frozen plans. Do not federate into the shared synthesis.
+Check the candidate correspondence between uniform incident prohibition and total domination of the line graph. Record the identity only if an independent enumeration agrees, including the empty-neighbourhood case. Do not open a round whose purpose is to recompute the atlas-004 deadlock counts. Do not edit frozen plans.
