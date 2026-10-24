@@ -6,7 +6,7 @@ Machine-readable records for the continuation described in `docs/atlas-charter.m
 | --- | --- |
 | `ideas.jsonl` | Possibilities, including ones with no experiment |
 | `coverage.jsonl` | Regions and their status |
-| `equivalences.jsonl` | Distinct specs with the same weight table. Composer identities may be recorded before a round. Cell comparisons follow a verified batch |
+| `equivalences.jsonl` | Distinct specs with the same mathematical object. Composer identities may be recorded before a round. Cell comparisons follow a verified batch. Rows from EQ-008 onward name `equivalence_type`. Earlier rows do not: `composer` is an identity of the opening composer, and `cell` is weight-table equality in the declared order |
 | `patterns.jsonl` | Cross-cell relations. A row here is not an order to investigate |
 | `questions.jsonl` | Open questions. No row has to be closed by the next round |
 

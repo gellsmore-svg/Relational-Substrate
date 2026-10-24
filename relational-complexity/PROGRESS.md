@@ -136,8 +136,16 @@ EQ-006: the chain and the branch have the same weight table on each of the four 
 
 `IDEA-R01` through `IDEA-R04` are `explored`. That word does not mean confirmed. `COV-CARRIERS-SMALL` is `partial`: N=5 was not run, and the common core did not separate the chain from the branch.
 
-Ledger row `RRC-ATLAS-003` was appended, with relation `RRC-R037`. Its `created_commit` is the freeze `c3d316d`. The commit that appended it is the calculation commit.
+Ledger row `RRC-ATLAS-003` was appended, with relation `RRC-R037`. Its `created_commit` is the freeze `c3d316d`. The calculation commit that appended it is `a0f4160`.
+
+## Atlas expansion
+
+Opened at `a0f4160`. Note: `docs/atlas-expansion.md`. The live engine is still `rrc-0.2.0` until a later commit changes mathematical semantics. Frozen plans stay on the engine string they name.
+
+Constraint cardinality, weight alphabets, incidence-aware predicates, kernel equivalence, relabelling, and compositional definitions are separate open avenues. PAT-004 and ATLAS-Q07 stay as they are. They do not appoint the next cell. Composition is not given a placeholder experiment.
+
+New idea rows and coverage rows are `open`. New questions are ATLAS-Q08 through ATLAS-Q11. ATLAS-Q01 through ATLAS-Q07 stay open.
 
 ## Next action
 
-Stop. Do not edit `plans/atlas-001.json` or `plans/atlas-002.json`. Do not schedule a round to explain the chain and branch weight-table identity, to add a degree observable, to open N=5, or to start composition, counts, history, or hyperedges because of these cells. ATLAS-Q07 records the degree gap. Counts, history, hyperedges, and composition stay open in the library. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
+Implement exact `halt_self_loop` kernel fingerprints and one incident-neighbour predicate. Give that semantics a new engine string. Add tests. Do not run scientific cells in that commit. Do not edit `plans/atlas-001.json`, `plans/atlas-002.json`, CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.

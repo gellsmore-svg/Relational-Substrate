@@ -35,8 +35,8 @@ Execution stays the RRC-001 cycle: a frozen plan, items of about one to three mi
 1. `atlas/ideas.jsonl` — mathematical possibilities, including ones with no experiment yet.
 2. `atlas/coverage.jsonl` — which regions are open, frozen, exhaustive, partial, sampled, analytical, or infeasible.
 3. Experiment records — one directory per frozen round under `results/`, with a manifest and per-item results.
-4. `atlas/equivalences.jsonl` — distinct descriptions with the same transition law. Empty until a comparison has been run.
-5. `atlas/patterns.jsonl` — cross-experiment relations. Empty until a synthesis pass. A pattern does not automatically become the next round.
+4. `atlas/equivalences.jsonl` — distinct descriptions with the same mathematical object. The object is named by `equivalence_type` on rows that carry it. A pattern of agreement does not automatically become the next round.
+5. `atlas/patterns.jsonl` — cross-experiment relations. A pattern does not automatically become the next round.
 6. `atlas/questions.jsonl` — open questions with no duty to close them in the next round.
 7. `coherence/findings.jsonl` — the existing ledger. New rows are appended. Old rows stay byte-for-byte.
 8. `PROGRESS.md` — the handoff.
