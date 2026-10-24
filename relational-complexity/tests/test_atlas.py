@@ -783,3 +783,99 @@ def test_atlas_010_plan_compares_three_representations():
         "carrier_orbit",
     }
     assert "baseline present_line_graph" in plan["coverage"]["excluded"]
+
+
+def test_atlas_010_execution_separates_the_weight_table_from_the_observation():
+    assert main(["verify", "--round", "atlas-010", "--out", str(ROOT / "results" / "atlas-010")]) == 0
+    items = ROOT / "results" / "atlas-010" / "items"
+    baseline = "3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7"
+    multiply = "7b4f2c8ef26032e36f92000c69cc7c0fcf032e4f1353009ff490efa1f4b37be9"
+    four = "5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3"
+    cycle_multiply = "c7f6b804ebe70d93942121c4df693dd9ff27cd3c33b03c799eeb1d2aa1860aa7"
+    expected = {
+        "A10-triangle-base-canon": (True, 4, ("0", "1"), baseline),
+        "A10-triangle-base-orbit": (True, 4, ("0", "1"), baseline),
+        "A10-triangle-mul-line": (False, 4, ("4", "9"), multiply),
+        "A10-triangle-mul-canon": (False, 4, ("4", "9"), multiply),
+        "A10-triangle-mul-orbit": (False, 4, ("4", "9"), multiply),
+        "A10-chain-base-canon": (False, 5, ("4", "9"), baseline),
+        "A10-chain-base-orbit": (True, 6, ("0", "1"), baseline),
+        "A10-chain-mul-line": (False, 5, ("28", "45"), multiply),
+        "A10-chain-mul-canon": (False, 5, ("28", "45"), multiply),
+        "A10-chain-mul-orbit": (False, 6, ("2", "5"), multiply),
+        "A10-cycle4-base-canon": (True, 6, ("0", "1"), four),
+        "A10-cycle4-base-orbit": (True, 6, ("0", "1"), four),
+        "A10-cycle4-mul-line": (False, 8, ("19", "24"), cycle_multiply),
+        "A10-cycle4-mul-canon": (False, 6, ("11", "24"), cycle_multiply),
+        "A10-cycle4-mul-orbit": (False, 6, ("11", "24"), cycle_multiply),
+    }
+
+    def load(name):
+        return json.loads((items / name / "result.json").read_text(encoding="utf-8"))
+
+    from fractions import Fraction
+
+    stored = {}
+    for name, (exact, labels, defect, digest) in expected.items():
+        result = load(name)
+        stored[name] = result
+        assert result["exact"] is exact
+        assert result["n_distinct_labels"] == labels
+        assert (result["defect_l1"]["num"], result["defect_l1"]["den"]) == defect
+        assert result["weight_sha256"] == digest
+        assert result["kernel_sha256"] == result["weight_sha256"]
+        assert result["new_state"] is False
+        assert result["injective"] is False
+        assert result["further_label"] == "undefined"
+        assert result["cover"] is None
+        assert result["grammar_id"] == "opening-prohibit-multiply-v1"
+        assert result["quotient"]["defined"] is exact
+        if exact:
+            rows = result["quotient"]["rows"]
+            assert len(rows) == result["n_blocks"]
+            for row in rows:
+                assert sum(Fraction(int(cell["num"]), int(cell["den"])) for cell in row) == 1
+        else:
+            assert result["quotient"]["rows"] is None
+
+    assert stored["A10-triangle-mul-canon"]["weights"] == stored["A10-chain-mul-canon"]["weights"]
+    assert stored["A10-triangle-base-canon"]["weights"] == stored["A10-chain-base-canon"]["weights"]
+    assert stored["A10-triangle-base-canon"]["n_distinct_labels"] != stored["A10-chain-base-canon"]["n_distinct_labels"]
+    earlier = json.loads((ROOT / "results" / "atlas-006" / "items" / "A6-chain-bit" / "result.json").read_text(encoding="utf-8"))
+    assert earlier["weight_sha256"] == multiply
+    indexed = json.loads((ROOT / "results" / "atlas-008" / "items" / "A8-cycle4-line" / "result.json").read_text(encoding="utf-8"))
+    assert indexed["weight_sha256"] == four
+    assert indexed["observation"] == "present_line_graph"
+    assert indexed["n_distinct_labels"] == 8
+    assert indexed["exact"] is False
+    assert (indexed["defect_l1"]["num"], indexed["defect_l1"]["den"]) == ("1", "2")
+
+    from rrc.composition import (
+        present_canonical_line_graph_labels,
+        present_carrier_orbit_labels,
+        present_line_graph_labels,
+    )
+
+    def same_partition(left, right):
+        return all(
+            (left[i] == left[j]) == (right[i] == right[j])
+            for i in range(len(left))
+            for j in range(len(right))
+        )
+
+    seen = {}
+    for result in stored.values():
+        seen[(result["n"], tuple(tuple(edge) for edge in result["carrier"]["edges"]))] = result["n"]
+    assert len(seen) == 3
+    for (n, edges_t) in seen:
+        edges = [list(edge) for edge in edges_t]
+        line = present_line_graph_labels(edges)
+        canon = present_canonical_line_graph_labels(edges)
+        orbit = present_carrier_orbit_labels(n, edges)
+        if n == 3:
+            assert same_partition(line, canon) and same_partition(canon, orbit)
+        elif edges == [[0, 1], [1, 2], [2, 3]]:
+            assert same_partition(line, canon) and not same_partition(canon, orbit)
+        else:
+            assert edges == [[0, 1], [1, 2], [2, 3], [0, 3]]
+            assert same_partition(canon, orbit) and not same_partition(line, canon)
