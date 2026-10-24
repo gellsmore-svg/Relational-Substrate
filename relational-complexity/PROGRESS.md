@@ -204,6 +204,18 @@ The round is one opening-grammar generator on three carriers: the N=3 complete g
 
 `COV-CARDINALITY-SPREAD` is `frozen`. `COV-CARDINALITY-BROAD` stays the atlas-003 record.
 
+## atlas-005 execution
+
+Executed after the freeze. 12 complete, 0 failed, 0 timeout, 0 unresolved. `verify` printed `verified`. Records: `results/atlas-005/`, `reports/atlas-005.md`, `reports/atlas-005-observations.md`, `provenance/atlas-005-execution.md`. The plan was not edited.
+
+Two invocations, `--max-items 8` and `--budget-seconds 60`: 8 items in 2.015 seconds, then 4 items in 1.655 seconds.
+
+EQ-015: the N=3 baseline reproduces the 3-edge baseline table. EQ-016: the 5-node chain baseline matches the 4-cycle baseline table, mean edges 2/1 on both, mean components 3/1 on the chain and 33/16 on the cycle. PAT-008: length 12 has effective cardinality 9 on three edges and 12 on four and on five. PAT-009: length 9 has two recurrent classes on the chain and one on the cycle. `schedules_follow_up` is false on both. No two items share a weight hash or a kernel hash. Weight ablation and kernel ablation agreed on all 12 cells. Five cells have a kernel hash different from their own weight hash. The only deadlock is the length-12 list on three edges. Those lists are designated-edge rules. EQ-014 does not apply.
+
+`COV-CARDINALITY-SPREAD` is `partial`. ATLAS-Q01 through ATLAS-Q12 stay open.
+
+Ledger row `RRC-ATLAS-007` was appended, with relation `RRC-R041`. Its `created_commit` is the freeze `a29fbbd`. This commit appended the row. The hash of this commit is not written here.
+
 ## Next action
 
-Execute atlas-005 under the frozen plan, in short invocations. Do not edit the plan. Do not chase the cells toward domination, PAT-007, or a composition placeholder.
+Add one elementary incidence predicate beyond `incident_neighbour`, or keep that work in the library if the predicate is not yet a function. A semantic change needs a new engine string. Historical plans stay on the engine they name, and their tests must not require the live engine string. Do not rerun atlas-005. Do not chase PAT-008, PAT-009, or the 4-edge baseline identity. Do not attach a composition cell.

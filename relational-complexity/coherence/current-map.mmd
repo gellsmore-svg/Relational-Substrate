@@ -18,6 +18,7 @@ flowchart TD
     RRC_ATLAS_003["RRC-ATLAS-003: On each of the four atlas-002 grammars, the N=4 chain and the N=4 branch have one weigh..."]
     RRC_ATLAS_004["RRC-ATLAS-004: Five atlas-003 controls reproduce the atlas-001 N=3 integer tables. Factors 2, 3 and 4 ..."]
     RRC_ATLAS_005["RRC-ATLAS-005: The bit-prohibit controls reproduce the atlas-002 tables, including the chain-branch id..."]
+    RRC_ATLAS_007["RRC-ATLAS-007: On this generator, length 12 has effective cardinality 9 on the 3-edge carrier and 12 o..."]
   end
   subgraph INFERENCE [Inferences]
     RRC_001_HARD_ABSORBS["RRC-001-HARD-ABSORBS: Under the hard-wedge rule a present pair can always be deleted and the empty graph can ..."]
@@ -82,3 +83,4 @@ flowchart TD
   RRC_ATLAS_004 -->|derived_from| RRC_ATLAS_M01
   RRC_ATLAS_005 -->|contrasts_with| RRC_ATLAS_003
   RRC_ATLAS_006 -->|formalises| RRC_ATLAS_005
+  RRC_ATLAS_007 -->|contrasts_with| RRC_ATLAS_004

@@ -40,9 +40,19 @@ In atlas-003 the two-event cell and the factor-4 cell share mean edges 5/3 and m
 
 For one rule, the uniform present-polarity incident prohibit on every edge, a state is a deadlock exactly when the present edges are a total dominating set of the carrier's line graph. The argument and the counterconditions are in `docs/line-graph-domination.md`. EQ-014. The atlas-004 deadlock counts agree. Recurrent classes on the three-edge chain outnumber those deadlocks. The identity is not a reason to centre the next round on domination.
 
+## atlas-005
+
+One generator, twelve lists, three carriers. State spaces have 8, 16 and 32 states, so weight hashes are compared only inside a shared shape.
+
+EQ-015: `A5-N3-base` reproduces the 3-edge baseline hash `3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7`. Mean edges 3/2. Mean components 13/8.
+
+EQ-016: `A5-P5-base`, the 5-node chain, matches the 4-cycle baseline hash `5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3`. Both are the constant-1 table on four edges. Mean edges 2/1 on both. Mean components are 3/1 on the chain and 33/16 on the cycle. The structure hashes differ.
+
+PAT-008: length 12 of this generator has effective cardinality 9 on three edges and 12 on four edges and on five edges. PAT-009: length 9 has two recurrent classes on the chain and one on the cycle. `schedules_follow_up` is false on both. No two lists in the round share a weight hash or a kernel hash. Weight ablation and kernel ablation agreed on all 12 cells. ATLAS-Q01, ATLAS-Q05 and ATLAS-Q08 stay open.
+
 ## Regions not in the comparison
 
-Cardinality 5 and cardinality 10. N=5. Absent-polarity incident rules. Count predicates. History. Independent hyperedges. A search over graph isomorphism. Any clock other than `halt_self_loop`.
+Complete N=5. Cardinalities other than the atlas-005 lengths, and every list the generator did not write. Absent-polarity incident rules. Count predicates. History. Independent hyperedges. A search over graph isomorphism. Any clock other than `halt_self_loop`. A composition cell.
 
 ## Composition
 
