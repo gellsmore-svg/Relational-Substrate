@@ -1024,3 +1024,45 @@ def test_atlas_011_execution_separates_omission_from_a_collapsed_cover():
     assert not same_partition(cover_count_labels(triangle, far), cover_count_labels(triangle, event))
     assert not same_partition(cover_count_labels(cycle, opposite), labelled_active_block_labels(cycle, opposite))
     assert not same_partition(cover_count_labels(cycle, opposite), cover_count_labels(cycle, adjacent))
+
+
+def test_atlas_012_plan_pairs_polarity_with_event_arrangement():
+    assert main(["plan", "--round", "atlas-012"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-012.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "1dffac3ff30ff7d6a37fbe0df4c63e90b1988cf454a9d8a7a4ba746515de5185"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    assert plan["definitions_commit"] == "040bfabddc848e3986dec4fd2000b932991eade7"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.001
+    assert plan["questions"] == ["ATLAS-Q03"]
+    assert "ATLAS-Q01" in plan["questions_not_in_this_round"]
+    assert "ATLAS-Q04" in plan["questions_not_in_this_round"]
+    assert "atlas-009" in plan["selection"]
+    assert "atlas-009 factor-2 path grid" in plan["coverage"]["excluded"]
+    assert len(plan["items"]) == 7
+    roles = {}
+    for item in plan["items"]:
+        assert item["round_id"] == "atlas-012"
+        assert item["type"] == "atlas_core"
+        assert item["n"] == 4
+        assert item["carrier"]["edges"] == [[0, 1], [1, 2], [2, 3]]
+        assert item["baseline"] == 1
+        roles.setdefault(item["role"], []).append(item)
+        for constraint in item["constraints"]:
+            assert constraint["effect"] == "multiply"
+            assert constraint["factor"] == 3
+            assert constraint["action"] == "either"
+    assert roles["baseline"][0]["constraints"] == []
+    present, absent = roles["polarity"]
+    assert present["constraints"][0]["when"]["polarity"] == "present"
+    assert absent["constraints"][0]["when"]["polarity"] == "absent"
+    assert present["constraints"][0]["event"] == absent["constraints"][0]["event"] == [0, 1]
+    assert present["constraints"][0]["when"]["edge"] == absent["constraints"][0]["when"]["edge"] == [1, 2]
+    one = roles["one_event"][0]["constraints"]
+    two = roles["two_event"][0]["constraints"]
+    assert len(one) == len(two) == 2
+    assert one[0]["event"] == one[1]["event"]
+    assert two[0]["event"] != two[1]["event"]
+    assert {constraint["when"]["polarity"] for constraint in one + two} == {"present"}

@@ -390,6 +390,16 @@ The singleton count has 8 labels and is injective and exact under both laws. Tha
 
 `COV-COVER-SAMPLE` is `partial`. `COV-COVER-OBSERVATION` stays `open`. `COV-COMPOSITION` stays `open`. ATLAS-Q10 stays open. PAT-014 records the omission split and the collapsed bare map and is not scheduled. Ledger row `RRC-ATLAS-012` was appended, with relation `RRC-R046`. Its `created_commit` is the freeze `b5ea6e5`. This commit appended the row. The hash of this commit is not written here.
 
+## atlas-012
+
+The atlas-011 calculation commit is `040bfabddc848e3986dec4fd2000b932991eade7`. The execution section above does not contain it.
+
+Frozen. Plan hash `1dffac3ff30ff7d6a37fbe0df4c63e90b1988cf454a9d8a7a4ba746515de5185`. Definitions commit `040bfab`. Engine `rrc-0.4.0`. Preflight `docs/atlas-012-preflight.md`: the empty list took 0.000809 seconds. The plan records 0.001 seconds. A worker dry-run of the seven items completed, resume recomputed one interrupted item, and the verify problem list was empty. Observables from that dry-run were not retained.
+
+The round is one three-edge chain. One method is a polarity pair at factor 3 on edge `(0,1)` when edge `(1,2)` is present or absent. The present cell is the atlas-010 three-edge multiply. The other method stores two guards on that event, and the same factor and polarity on two events that share the middle edge. The single constraints used by those lists are stored. The atlas-009 factor-2 path grid is not used. A comparison of a polarity cell with a length-2 cell is joint. Formation and dissolution are not in the round. This commit does not execute the cells.
+
+`COV-GUARD-SAMPLE` is `frozen`. `COV-PLACEMENT-SAMPLE` stays `partial`. `COV-COMPOSITION` stays `open`. ATLAS-Q03 is named and stays open. ATLAS-Q01 and ATLAS-Q04 are not in the round. The round is not scheduled to explain the atlas-009 marginals, the atlas-010 defects, the atlas-011 defects, PAT-012, or PAT-014. No ledger row was added. This section does not name its own commit.
+
 ## Next action
 
-Select an independent elementary constraint sample. Do not use the atlas-005 modular menu or the atlas-009 factor-2 present grid as the method. Do not make the atlas-009 marginals or the atlas-011 defects the target. Do not edit `plans/atlas-011.json`. Do not rerun `results/atlas-007`, `results/atlas-008`, `results/atlas-009`, `results/atlas-010`, or `results/atlas-011`. Do not add a token cell for the static line graph, a nested cover, or the path-fixture covers. Do not declare the cover operator recursive. Do not schedule the atlas-008 defects, the atlas-009 marginals, the atlas-010 defects, the atlas-011 defects, the path-cover defects, PAT-010 through PAT-014, EQ-020, EQ-021, EQ-022, or EQ-023. `COV-COMPOSITION` stays `open`. A second label of the edge-count chain is undefined. Common-neighbour counts stay open. ATLAS-Q01 through ATLAS-Q12 stay open.
+Execute atlas-012 after this freeze. Do not edit the plan after the results. Do not edit `plans/atlas-009.json`, `plans/atlas-010.json`, or `plans/atlas-011.json`. Do not rerun those result directories. Do not schedule the atlas-009 marginals, the atlas-010 defects, the atlas-011 defects, PAT-012, or PAT-014. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.

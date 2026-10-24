@@ -1,0 +1,449 @@
+{
+  "round_id": "atlas-012",
+  "engine_version": "rrc-0.4.0",
+  "grammar_id": "opening-prohibit-multiply-v1",
+  "definitions_commit": "040bfabddc848e3986dec4fd2000b932991eade7",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q03"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q01",
+    "ATLAS-Q02",
+    "ATLAS-Q04",
+    "ATLAS-Q05",
+    "ATLAS-Q06",
+    "ATLAS-Q07",
+    "ATLAS-Q08",
+    "ATLAS-Q09",
+    "ATLAS-Q10",
+    "ATLAS-Q11",
+    "ATLAS-Q12"
+  ],
+  "selection": "One three-edge chain and two selection methods. The first method is a polarity pair: multiply by 3 on edge (0,1) when edge (1,2) is present, and the same multiply when that edge is absent. The present cell is the atlas-010 three-edge multiply. It is the matched partner, not a new table. The second method is a length-2 pair at factor 3, action either, polarity present. One list puts two guards on (0,1). The other list puts one guard on (0,1) and one guard on (2,3), both conditioned on (1,2). The two single constraints used by those lists are stored. The atlas-009 factor-2 path grid is not this list. The atlas-005 modular menu is not this list. Not scheduled to explain the atlas-009 marginals, the atlas-010 defects, the atlas-011 defects, PAT-012, or PAT-014. A comparison of a polarity cell with a length-2 cell changes cardinality and arrangement together. It is joint. Formation and dissolution are not in the round. ATLAS-Q04 stays out.",
+  "grammar": {
+    "ids": [
+      "opening-prohibit-multiply-v1"
+    ],
+    "note": "Factor 3, action either. Polarity is present except for one absent partner. No incident-count predicate.",
+    "baseline": 1
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-012-preflight.md",
+    "heaviest_cell_s": 0.001,
+    "shape": "three-edge chain, empty list, 8 states",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "n": [
+      4
+    ],
+    "carriers": [
+      "chain"
+    ],
+    "cells": 7,
+    "declared_sample": true,
+    "baseline_only": false,
+    "six_is_not_a_target": true,
+    "excluded": [
+      "atlas-009 factor-2 path grid",
+      "atlas-005 modular menu",
+      "formation and dissolution",
+      "incident-count predicates",
+      "four-edge path",
+      "factors other than 3",
+      "N=6",
+      "a second carrier",
+      "rerun of results/atlas-009",
+      "rerun of results/atlas-010"
+    ]
+  },
+  "items": [
+    {
+      "id": "A12-base",
+      "round_id": "atlas-012",
+      "type": "atlas_core",
+      "role": "baseline",
+      "label": "empty list",
+      "idea_ids": [
+        "IDEA-C00"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "placement": "empty list",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A12-pol-present",
+      "round_id": "atlas-012",
+      "type": "atlas_core",
+      "role": "polarity",
+      "label": "multiply by 3 on (0,1) when (1,2) is present",
+      "idea_ids": [
+        "IDEA-C02",
+        "IDEA-C03"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "placement": "present polarity",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A12-pol-absent",
+      "round_id": "atlas-012",
+      "type": "atlas_core",
+      "role": "polarity",
+      "label": "multiply by 3 on (0,1) when (1,2) is absent",
+      "idea_ids": [
+        "IDEA-C02",
+        "IDEA-C03"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "absent"
+          }
+        }
+      ],
+      "placement": "absent polarity",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A12-single-far",
+      "round_id": "atlas-012",
+      "type": "atlas_core",
+      "role": "single",
+      "label": "multiply by 3 on (0,1) when (2,3) is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "placement": "single far condition",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A12-single-other",
+      "round_id": "atlas-012",
+      "type": "atlas_core",
+      "role": "single",
+      "label": "multiply by 3 on (2,3) when (1,2) is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "placement": "single other event",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A12-one-event",
+      "round_id": "atlas-012",
+      "type": "atlas_core",
+      "role": "one_event",
+      "label": "two guards on (0,1)",
+      "idea_ids": [
+        "IDEA-C05",
+        "IDEA-C07"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "placement": "two conditions, one event",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A12-two-event",
+      "round_id": "atlas-012",
+      "type": "atlas_core",
+      "role": "two_event",
+      "label": "one guard on (0,1) and one guard on (2,3)",
+      "idea_ids": [
+        "IDEA-C06",
+        "IDEA-C07"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "placement": "two events, one shared condition",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    }
+  ]
+}
