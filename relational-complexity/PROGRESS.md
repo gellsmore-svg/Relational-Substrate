@@ -290,6 +290,14 @@ No observation from this round is a scientific result. The fixture defects in th
 
 The worker used to read `round_id` from the item while building a composition observation. Atlas-007 omitted the field, so the finished law was discarded. The parent now passes a copy that fills the field from the plan when the item omits it. The frozen item is not edited, and the stored spec hash is still the hash of that item. A direct call that omits the field returns the law with `round_id` null. The store then writes the plan id. The engine string stays `rrc-0.4.0`. The weight compiler is unchanged. `results/atlas-007` was not rerun. This section does not name its own commit.
 
+## atlas-008
+
+Frozen. Plan hash `6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4`. Definitions commit `6778da8`. Engine `rrc-0.4.0`. Preflight `docs/atlas-008-preflight.md`: the four-edge path degree sequence took 0.000801 seconds. The plan records 0.001 seconds. Observables from that timing were not retained.
+
+The round is the same fifteen baseline maps as atlas-007. Five carriers: the triangle, the three-edge chain, the three-edge star, the four-edge path, and the four-cycle. On each carrier, the bare line graph of the present edges, the present edge count, and the present degree sequence. Every constraint list is empty. Every item carries `round_id`. A further label is undefined. Static line-graph iteration is not a cell. The cover operators are not cells. This commit does not execute the cells. `results/atlas-007` is not rerun.
+
+`COV-COMPOSITION-OBSERVATION` stays the failed atlas-007 record. `COV-COMPOSITION-LABELS` is `frozen` for this plan. `COV-COMPOSITION` stays `open`. ATLAS-Q10 is named and stays open. The round is not scheduled to explain chain-versus-branch separation, PAT-010, PAT-011, EQ-020, or the four-cycle degree defect. Idea statuses are unchanged. No ledger row was added. This section does not name its own commit.
+
 ## Next action
 
-Freeze a new baseline observation plan. Give every item its own `round_id`. Do not edit `plans/atlas-007.json`. Do not delete or rerun `results/atlas-007`. Do not add a token cell for the static line graph. Do not declare the cover operator recursive. Do not rerun atlas-006. An independent constraint sample remains a separate plan. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.
+Execute atlas-008 after this freeze. Do not edit the plan after the results. Do not edit `plans/atlas-007.json`. Do not delete or rerun `results/atlas-007`. Do not add a token cell for the static line graph. Do not declare the cover operator recursive. Do not rerun atlas-006. An independent constraint sample remains a separate plan. `COV-COMPOSITION` stays `open`. ATLAS-Q01 through ATLAS-Q12 stay open.

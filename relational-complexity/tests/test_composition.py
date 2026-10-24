@@ -223,6 +223,41 @@ def test_atlas_007_plan_is_a_baseline_observation_sample():
     assert all(value == expected for value in seen.values())
 
 
+def test_atlas_008_plan_repeats_the_baseline_maps_with_round_ids():
+    import json
+    from pathlib import Path
+
+    from rrc.store import digest
+
+    plan = json.loads((Path(__file__).resolve().parents[1] / "plans" / "atlas-008.json").read_text(encoding="utf-8"))
+    assert digest(plan) == "6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    assert plan["definitions_commit"] == "6778da87f25c7ec13f875960ed04ba99a5a0ef11"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.001
+    assert plan["no_sampling"] is True
+    assert plan["questions"] == ["ATLAS-Q10"]
+    assert "ATLAS-Q12" in plan["questions_not_in_this_round"]
+    assert "EQ-020" in plan["selection"]
+    assert "stored no law" in plan["selection"]
+    assert len(plan["items"]) == 15
+    seen = {}
+    for item in plan["items"]:
+        assert item["round_id"] == "atlas-008"
+        assert item["id"].startswith("A8-")
+        assert item["type"] == "composition_observation"
+        assert item["constraints"] == []
+        assert item["baseline"] == 1
+        seen.setdefault(item["id"].split("-")[1], set()).add(item["observation"])
+    expected = {
+        "present_line_graph",
+        "present_edge_count",
+        "present_degree_sequence",
+    }
+    assert seen.keys() == {"triangle", "chain", "star", "path4", "cycle4"}
+    assert all(value == expected for value in seen.values())
+
+
 def test_atlas_007_execution_stored_no_law():
     import json
     from pathlib import Path
