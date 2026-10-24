@@ -105,11 +105,11 @@ Active continuation of RRC. Not a new programme. RRC-001 plan, results, interpre
 | Patterns | `atlas/patterns.jsonl`, empty until a synthesis pass. A row is not an order to investigate |
 | Open questions | `atlas/questions.jsonl` |
 | Navigation | `atlas/README.md` |
-| Ledger | `RRC-ATLAS-M01` appended. `created_commit` is `56b7381`, the last closed-round commit. The commit that added the row is recorded below once it exists |
+| Ledger | `RRC-ATLAS-M01` appended in `146ebb8`. `created_commit` on the row stays `56b7381`, the last closed-round commit. The row was not rewritten to insert its own commit |
 | RRC-002 note | still proposed. Analytic leftovers stay open and are not the atlas queue |
 
 Coverage status words: `open`, `frozen`, `exhaustive`, `partial`, `sampled`, `analytical`, `infeasible`. Idea status words: `open`, `selected`, `partial`, `explored`. `selected` means a frozen plan names the idea. `explored` means a verified batch reported it. Neither word means confirmed.
 
 ## Next action
 
-Stage A documents are in the worktree. Commit and push them, then build the opening grammar compiler. The atlas engine string will be `rrc-0.2.0`. `verify` must compare a result with the engine string stored in its plan, so `verify --round rrc-001 --out results/rrc-001` still passes. `run --round rrc-001` must refuse once the live engine string moves, so the historical round is not recomputed. Freeze `plans/atlas-001.json` only after a timing preflight, and do not execute those cells in the freeze commit. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
+Stage A is commit `146ebb8`. Build the opening grammar compiler next. The atlas engine string will be `rrc-0.2.0`. `verify` must compare a result with the engine string stored in its plan, so `verify --round rrc-001 --out results/rrc-001` still passes. `run --round rrc-001` must refuse once the live engine string moves, so the historical round is not recomputed. Freeze `plans/atlas-001.json` only after a timing preflight, and do not execute those cells in the freeze commit. Do not edit CL, GT, the books, `research-methods/`, or frozen RRC-001 files. Do not federate into the shared synthesis.
