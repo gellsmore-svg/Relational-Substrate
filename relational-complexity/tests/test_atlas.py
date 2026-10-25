@@ -1191,6 +1191,51 @@ def test_atlas_012_execution_separates_arrangement_from_a_bit_relabeling():
     assert items.is_dir()
 
 
+def test_atlas_014_plan_is_the_four_cycle_successive_sample():
+    assert main(["plan", "--round", "atlas-014"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-014.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "c8f63dc8054478c71467db630aee633b4f39f884b5f2331cc76ec180a5715790"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    assert plan["definitions_commit"] == "d82d23ada194a4d5266bdaf29880b47e483eee26"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.004
+    assert plan["questions"] == ["ATLAS-Q13"]
+    assert "ATLAS-Q14" in plan["questions_not_in_this_round"]
+    assert "ATLAS-Q02" in plan["questions_not_in_this_round"]
+    assert len(plan["items"]) == 8
+    cycle = [[0, 1], [1, 2], [2, 3], [0, 3]]
+    prohibit = {
+        "action": "either",
+        "effect": "prohibit",
+        "event": [0, 1],
+        "when": {"edge": [2, 3], "polarity": "present"},
+    }
+    expected = [
+        ("A14-base-orbit-count", [], ["carrier_orbit", "present_edge_count"]),
+        ("A14-pro-orbit-count", [prohibit], ["carrier_orbit", "present_edge_count"]),
+        ("A14-pro-line-count", [prohibit], ["present_line_graph", "present_edge_count"]),
+        ("A14-pro-count-degree", [prohibit], ["present_edge_count", "present_degree_sequence"]),
+        ("A14-pro-degree-count", [prohibit], ["present_degree_sequence", "present_edge_count"]),
+        ("A14-pro-orbit-constant", [prohibit], ["carrier_orbit", "constant_label"]),
+        ("A14-pro-injective-degree", [prohibit], ["labelled_line_graph", "present_degree_sequence"]),
+        ("A14-pro-overlap-count", [prohibit], ["realised_overlap_count", "present_edge_count"]),
+    ]
+    for item, (item_id, constraints, observations) in zip(plan["items"], expected):
+        assert item["id"] == item_id
+        assert item["type"] == "successive_observation"
+        assert item["n"] == 4
+        assert item["carrier"]["edges"] == cycle
+        assert item["constraints"] == constraints
+        assert item["observations"] == observations
+        assert len(item["observations"]) == 2
+        assert "parity" not in "".join(item["observations"])
+    overlap = plan["items"][-1]
+    assert overlap["cover"] == [[[0, 1], [1, 2]], [[1, 2], [2, 3]]]
+    assert "cover" not in plan["items"][0]
+
+
 def test_atlas_013_plan_is_the_star_prohibit_slice():
     assert main(["plan", "--round", "atlas-013"]) == 0
     plan = json.loads((ROOT / "plans" / "atlas-013.json").read_text(encoding="utf-8"))

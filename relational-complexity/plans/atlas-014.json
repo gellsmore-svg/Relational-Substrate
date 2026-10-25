@@ -1,0 +1,530 @@
+{
+  "round_id": "atlas-014",
+  "engine_version": "rrc-0.4.0",
+  "grammar_id": "opening-prohibit-multiply-v1",
+  "definitions_commit": "d82d23ada194a4d5266bdaf29880b47e483eee26",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q13"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q01",
+    "ATLAS-Q02",
+    "ATLAS-Q03",
+    "ATLAS-Q04",
+    "ATLAS-Q05",
+    "ATLAS-Q06",
+    "ATLAS-Q07",
+    "ATLAS-Q08",
+    "ATLAS-Q09",
+    "ATLAS-Q10",
+    "ATLAS-Q11",
+    "ATLAS-Q12",
+    "ATLAS-Q14",
+    "ATLAS-Q15"
+  ],
+  "selection": "One four-cycle and two laws. The laws are the empty list and one prohibit of (0,1) when (2,3) is present. Those edges do not meet. Each item is two named maps. The baseline item is orbit then edge count. The prohibit items are orbit then edge count, position-indexed line graph then edge count, edge count then degree sequence, degree sequence then edge count, orbit then the one-block label, the relationship-labelled line graph then degree sequence, and the realised-overlap count of blocks [(0,1),(1,2)] and [(1,2),(2,3)] then edge count. That family misses (0,3). The maps were named before this plan was executed. Parity is not a map. A third map is not a stage. The three-edge star is not the carrier. Atlas-008 and atlas-010 are not the question. If both stages are exact, kernel agreement is the compatibility of strong lumpability, not a new theorem.",
+  "grammar": {
+    "ids": [
+      "opening-prohibit-multiply-v1"
+    ],
+    "note": "The prohibit is one designated constraint. The empty list is the baseline. Neither map adds a coordinate.",
+    "baseline": 1
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-014-preflight.md",
+    "heaviest_cell_s": 0.004,
+    "shape": "four-cycle, relationship-labelled line graph then degree sequence, one prohibit, 16 states",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "n": [
+      4
+    ],
+    "carriers": [
+      "cycle4"
+    ],
+    "cells": 8,
+    "laws": [
+      "empty",
+      "opposite-edge prohibit"
+    ],
+    "observations": [
+      "carrier_orbit",
+      "present_edge_count",
+      "present_line_graph",
+      "present_degree_sequence",
+      "constant_label",
+      "labelled_line_graph",
+      "realised_overlap_count"
+    ],
+    "declared_sample": true,
+    "baseline_only": false,
+    "six_is_not_a_target": true,
+    "state_space": "16 states, exhaustive",
+    "excluded": [
+      "parity of the present-edge count",
+      "a third map",
+      "the three-edge star",
+      "incident-count thresholds",
+      "the atlas-012 multiply list",
+      "the path and triangle realised-overlap fixtures",
+      "the later three-edge chain overlap sample",
+      "N=6",
+      "rerun of results/atlas-008",
+      "rerun of results/atlas-010",
+      "rerun of results/atlas-013"
+    ]
+  },
+  "stopping": [
+    "Do not add, remove or edit items after this file is committed.",
+    "Do not add parity or a third map after reading the eight results.",
+    "Do not treat kernel agreement as a new lumpability theorem.",
+    "Do not rerun atlas-008, atlas-010, or atlas-013.",
+    "Do not open the later chain overlap sample from the overlap item in this plan."
+  ],
+  "items": [
+    {
+      "id": "A14-base-orbit-count",
+      "round_id": "atlas-014",
+      "type": "successive_observation",
+      "role": "control",
+      "label": "baseline carrier orbit, then present-edge count",
+      "idea_ids": [
+        "IDEA-L20"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observations": [
+        "carrier_orbit",
+        "present_edge_count"
+      ]
+    },
+    {
+      "id": "A14-pro-orbit-count",
+      "round_id": "atlas-014",
+      "type": "successive_observation",
+      "role": "successive",
+      "label": "opposite-edge prohibit, carrier orbit, then present-edge count",
+      "idea_ids": [
+        "IDEA-L20"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observations": [
+        "carrier_orbit",
+        "present_edge_count"
+      ]
+    },
+    {
+      "id": "A14-pro-line-count",
+      "round_id": "atlas-014",
+      "type": "successive_observation",
+      "role": "successive",
+      "label": "opposite-edge prohibit, position-indexed line graph, then present-edge count",
+      "idea_ids": [
+        "IDEA-L20"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observations": [
+        "present_line_graph",
+        "present_edge_count"
+      ]
+    },
+    {
+      "id": "A14-pro-count-degree",
+      "round_id": "atlas-014",
+      "type": "successive_observation",
+      "role": "successive",
+      "label": "opposite-edge prohibit, present-edge count, then degree sequence",
+      "idea_ids": [
+        "IDEA-L20"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observations": [
+        "present_edge_count",
+        "present_degree_sequence"
+      ]
+    },
+    {
+      "id": "A14-pro-degree-count",
+      "round_id": "atlas-014",
+      "type": "successive_observation",
+      "role": "successive",
+      "label": "opposite-edge prohibit, degree sequence, then present-edge count",
+      "idea_ids": [
+        "IDEA-L20"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observations": [
+        "present_degree_sequence",
+        "present_edge_count"
+      ]
+    },
+    {
+      "id": "A14-pro-orbit-constant",
+      "round_id": "atlas-014",
+      "type": "successive_observation",
+      "role": "control",
+      "label": "opposite-edge prohibit, carrier orbit, then the one-block label",
+      "idea_ids": [
+        "IDEA-L20"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observations": [
+        "carrier_orbit",
+        "constant_label"
+      ]
+    },
+    {
+      "id": "A14-pro-injective-degree",
+      "round_id": "atlas-014",
+      "type": "successive_observation",
+      "role": "control",
+      "label": "opposite-edge prohibit, relationship-labelled line graph, then degree sequence",
+      "idea_ids": [
+        "IDEA-L20"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observations": [
+        "labelled_line_graph",
+        "present_degree_sequence"
+      ]
+    },
+    {
+      "id": "A14-pro-overlap-count",
+      "round_id": "atlas-014",
+      "type": "successive_observation",
+      "role": "successive",
+      "label": "opposite-edge prohibit, realised-overlap count of two adjacent blocks, then present-edge count",
+      "idea_ids": [
+        "IDEA-L20",
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observations": [
+        "realised_overlap_count",
+        "present_edge_count"
+      ],
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    }
+  ]
+}
