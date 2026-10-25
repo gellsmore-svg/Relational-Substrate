@@ -788,6 +788,16 @@ def present_edge_count_labels(edges) -> list[dict]:
     return [{"present_edges": (state.bit_count())} for state in range(1 << len(ordered))]
 
 
+def constant_labels(edges) -> list[dict]:
+    """One label on every state.
+
+    The partition has one block. Strong lumpability of that partition is
+    the one-block case of the existing definition. It is not a new theorem.
+    """
+    ordered = simple_edges(edges)
+    return [{"trivial": True} for _state in range(1 << len(ordered))]
+
+
 def present_degree_labels(n: int, edges) -> list[dict]:
     ordered = simple_edges(edges)
     return [

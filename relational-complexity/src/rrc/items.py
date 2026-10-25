@@ -4,12 +4,14 @@ from __future__ import annotations
 
 import time
 import traceback
+from fractions import Fraction
 
 import numpy as np
 
 from rrc import ENGINE_VERSION
 from rrc.composition import (
     active_intersection_labels,
+    constant_labels,
     cover_count_labels,
     labelled_active_block_labels,
     labelled_realised_block_labels,
@@ -22,6 +24,7 @@ from rrc.composition import (
     present_edge_count_labels,
     present_labelled_line_graph_labels,
     present_line_graph_labels,
+    successive_observations,
 )
 from rrc.constraints import (
     KERNEL_METHOD,
@@ -369,6 +372,7 @@ def execute_atlas_core(spec: dict) -> dict:
 OBSERVATION_LABELS = {
     "present_line_graph": lambda n, edges, cover: present_line_graph_labels(edges),
     "present_edge_count": lambda n, edges, cover: present_edge_count_labels(edges),
+    "constant_label": lambda n, edges, cover: constant_labels(edges),
     "present_degree_sequence": lambda n, edges, cover: present_degree_labels(n, edges),
     "labelled_line_graph": lambda n, edges, cover: present_labelled_line_graph_labels(edges),
     "canonical_line_graph": lambda n, edges, cover: present_canonical_line_graph_labels(edges),
@@ -458,6 +462,121 @@ def execute_composition_observation(spec: dict) -> dict:
     }
 
 
+def _fraction_ready(value):
+    if value is None:
+        return None
+    if isinstance(value, Fraction):
+        return fraction_payload(value)
+    if isinstance(value, dict) and "num" in value and "den" in value:
+        return {
+            "num": str(value["num"]),
+            "den": str(value["den"]),
+            "float": float(Fraction(int(value["num"]), int(value["den"]))),
+        }
+    raise TypeError("a defect must be a fraction or undefined")
+
+
+def _stage_ready(stage: dict) -> dict:
+    exact = stage["exact"]
+    rows = stage["quotient_rows"]
+    if exact is True and not isinstance(rows, list):
+        raise RuntimeError("an exact stage has no quotient rows")
+    if exact is not True and rows is not None:
+        raise RuntimeError("an undefined stage stores quotient rows")
+    return {
+        "depth": stage["depth"],
+        "typed": stage["typed"],
+        "factors_through_previous": stage["factors_through_previous"],
+        "n_distinct_labels": stage["n_distinct_labels"],
+        "exact": exact,
+        "defect_l1": _fraction_ready(stage["defect_l1"]),
+        "quotient_defined": stage["quotient_defined"],
+        "quotient_rows": rows,
+        "undefined_reason": stage["undefined_reason"],
+        "new_state": False,
+    }
+
+
+def _direct_ready(law: dict) -> dict:
+    exact = law["exact"]
+    rows = law["quotient_rows"]
+    if exact is True and not isinstance(rows, list):
+        raise RuntimeError("an exact direct law has no quotient rows")
+    if exact is not True and rows is not None:
+        raise RuntimeError("an inexact direct law stores quotient rows")
+    return {
+        "exact": exact,
+        "defect_l1": _fraction_ready(law["defect_l1"]),
+        "n_distinct_labels": law["n_distinct_labels"],
+        "quotient_defined": law["quotient_defined"],
+        "quotient_rows": rows,
+    }
+
+
+def execute_successive_observation(spec: dict) -> dict:
+    """Store a typed sequence of label maps. The maps add no state.
+
+    A later sequential kernel exists only when ``successive_observations``
+    defines it. This item does not manufacture a kernel for a non-exact
+    or untyped stage. The transition law remains the carrier weight table.
+    """
+    started = time.perf_counter()
+    names = spec.get("observations")
+    if not isinstance(names, list) or len(names) < 2:
+        raise ValueError("a successive observation names at least two maps")
+    if any(not isinstance(name, str) or name not in OBSERVATION_LABELS for name in names):
+        raise ValueError("unknown observation")
+    baseline = spec.get("baseline", 1)
+    model = compile_model(spec["n"], spec["carrier"], list(spec.get("constraints", [])), baseline)
+    edges = [list(edge) for edge in model["carrier_edges"]]
+    cover = spec.get("cover")
+    if any(name in COVER_OBSERVATIONS for name in names) and not isinstance(cover, list):
+        raise ValueError("a cover observation requires a cover")
+    stages = [OBSERVATION_LABELS[name](model["n"], edges, cover) for name in names]
+    report = successive_observations(model["weights"], stages)
+    weights = model["weights"]
+    return {
+        "status": "complete",
+        "engine_version": ENGINE_VERSION,
+        "item_id": spec["id"],
+        "round_id": spec.get("round_id"),
+        "type": "successive_observation",
+        "role": spec.get("role", "successive"),
+        "idea_ids": list(spec.get("idea_ids", [])),
+        "observations": list(names),
+        "cover": cover if any(name in COVER_OBSERVATIONS for name in names) else None,
+        "n": model["n"],
+        "n_states": int(weights.shape[0]),
+        "n_edges": int(weights.shape[1]),
+        "new_state": False,
+        "stages": [_stage_ready(stage) for stage in report["stages"]],
+        "direct": [_direct_ready(law) for law in report["direct"]],
+        "exact_prefix": report["exact_prefix"],
+        "kernels_agree": report["kernels_agree"],
+        "agreement": report["agreement"],
+        "conditional_exactness": report["conditional_exactness"],
+        "history_dependent": report["history_dependent"],
+        "label_counts": report["label_counts"],
+        "baseline": model["baseline"],
+        "grammar_id": model["grammar_id"],
+        "carrier": {
+            "kind": model["carrier_kind"],
+            "edges": edges,
+        },
+        "weight_sha256": weight_table_hash(weights),
+        "kernel_sha256": model["kernel_sha256"],
+        "kernel_method": KERNEL_METHOD,
+        "structure_sha256": model["structure_sha256"],
+        "structure_method": STRUCTURE_METHOD,
+        "weights": [[int(value) for value in row] for row in weights.tolist()],
+        "clock": {
+            "name": HALT_COMPLETION,
+            "step": "one carrier pair, probability proportional to its current weight",
+        },
+        "elapsed_s": round(time.perf_counter() - started, 6),
+    }
+
+
 def execute_spec(spec: dict) -> dict:
     kind = spec["type"]
     if kind == "lumpability":
@@ -470,6 +589,8 @@ def execute_spec(spec: dict) -> dict:
         return execute_atlas_core(spec)
     if kind == "composition_observation":
         return execute_composition_observation(spec)
+    if kind == "successive_observation":
+        return execute_successive_observation(spec)
     raise ValueError(f"unknown item type {kind}")
 
 

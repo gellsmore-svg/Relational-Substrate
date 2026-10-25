@@ -157,6 +157,8 @@ def _problems(store: Store) -> list[str]:
             problems.extend(_atlas_problems(item, result))
         if item["type"] == "composition_observation":
             problems.extend(_composition_problems(item, result))
+        if item["type"] == "successive_observation":
+            problems.extend(_successive_problems(item, result))
     return problems
 
 
@@ -200,6 +202,91 @@ def _composition_problems(item: dict, result: dict) -> list[str]:
         elif rows is not None:
             problems.append(f"{name} stores a quotient row without strong lumpability")
     problems.extend(_stored_table_problems(name, result))
+    return problems
+
+
+def _successive_problems(item: dict, result: dict) -> list[str]:
+    """Record consistency for a sequence of label maps. This does not recompute them."""
+    problems = []
+    name = item["id"]
+    if result.get("observations") != item.get("observations"):
+        problems.append(f"{name} observations drifted")
+    if result.get("new_state") is not False:
+        problems.append(f"{name} reports new state")
+    if result.get("conditional_exactness") != "not_computed":
+        problems.append(f"{name} computes conditional exactness")
+    if result.get("history_dependent") != "not_computed":
+        problems.append(f"{name} computes a history-dependent kernel")
+    stages = result.get("stages")
+    direct = result.get("direct")
+    names = item.get("observations")
+    if (
+        not isinstance(stages, list)
+        or not isinstance(direct, list)
+        or not isinstance(names, list)
+        or len(stages) != len(names)
+        or len(direct) != len(stages)
+    ):
+        problems.append(f"{name} stage count disagrees with the named maps")
+        return problems
+    prefix = 0
+    for stage, law in zip(stages, direct):
+        if stage.get("new_state") is not False:
+            problems.append(f"{name} stage reports new state")
+        problems.extend(_exact_row_problems(name, stage.get("exact"), stage.get("defect_l1"), stage.get("quotient_rows")))
+        problems.extend(_exact_row_problems(name, law.get("exact"), law.get("defect_l1"), law.get("quotient_rows"), allow_none=False))
+        if stage.get("exact") is True and len(stage.get("quotient_rows") or []) != stage.get("n_distinct_labels"):
+            problems.append(f"{name} sequential quotient shape disagrees with its labels")
+        if law.get("exact") is True and len(law.get("quotient_rows") or []) != law.get("n_distinct_labels"):
+            problems.append(f"{name} direct quotient shape disagrees with its labels")
+        if stage.get("typed") is True and stage.get("exact") is True and prefix == stage.get("depth"):
+            prefix += 1
+        elif stage.get("exact") is None and stage.get("quotient_defined") is not False:
+            problems.append(f"{name} undefined stage claims a quotient")
+    if result.get("exact_prefix") != prefix:
+        problems.append(f"{name} exact prefix disagrees with the leading exact stages")
+    agreement = result.get("agreement")
+    kernels = result.get("kernels_agree")
+    if agreement == "exact" and kernels is not True:
+        problems.append(f"{name} agreement disagrees with the kernel flag")
+    elif agreement == "disagreement" and kernels is not False:
+        problems.append(f"{name} disagreement flag is not false")
+    elif agreement == "undefined" and kernels is not None:
+        problems.append(f"{name} undefined agreement stores a kernel flag")
+    elif agreement not in {"exact", "disagreement", "undefined"}:
+        problems.append(f"{name} agreement is {agreement}")
+    if prefix < 2 and agreement != "undefined":
+        problems.append(f"{name} claims kernel agreement before two exact stages")
+    if prefix >= 2 and agreement == "undefined":
+        problems.append(f"{name} leaves two exact stages without an agreement")
+    n_states = result.get("n_states")
+    n_edges = result.get("n_edges")
+    if not isinstance(n_states, int) or not isinstance(n_edges, int) or n_states != (1 << n_edges):
+        problems.append(f"{name} state count is not 2 to the carrier size")
+    problems.extend(_stored_table_problems(name, result))
+    return problems
+
+
+def _exact_row_problems(name: str, exact, defect, rows, allow_none: bool = True) -> list[str]:
+    problems = []
+    numerator = defect.get("num") if isinstance(defect, dict) else None
+    if exact is True:
+        if numerator != "0" or not isinstance(rows, list) or not rows:
+            problems.append(f"{name} exact stage disagrees with its rows")
+        else:
+            for row in rows:
+                total = sum(Fraction(int(cell["num"]), int(cell["den"])) for cell in row)
+                if total != 1:
+                    problems.append(f"{name} quotient row does not sum to 1")
+                    break
+    elif exact is False:
+        if numerator == "0" or rows is not None or not isinstance(defect, dict):
+            problems.append(f"{name} inexact stage stores a quotient or a zero defect")
+    elif exact is None and allow_none:
+        if defect is not None or rows is not None:
+            problems.append(f"{name} undefined stage stores a defect or a row")
+    else:
+        problems.append(f"{name} exact flag is {exact}")
     return problems
 
 
@@ -349,6 +436,41 @@ def _report_atlas(plan: dict, store: Store) -> str:
     return "\n".join(lines) + "\n"
 
 
+def _report_successive(plan: dict, store: Store) -> str:
+    lines = [
+        f"# {plan['round_id']} report",
+        "",
+        "Generated from completed item files. A sequential stage is exact only when its quotient is defined.",
+        "Direct laws are maps of the carrier. An undefined sequential stage does not store a kernel.",
+        "",
+        "| Item | Maps | Prefix | Agreement | Direct exact | Sequential exact | Hash |",
+        "| --- | --- | --- | --- | --- | --- | --- |",
+    ]
+    for item in plan["items"]:
+        state = store.classify(item["id"])
+        if state != "complete":
+            lines.append(f"| {item['id']} | {', '.join(item.get('observations', []))} |  |  |  |  | {state} |")
+            continue
+        result = store.load_result(item["id"])
+        direct = ",".join("exact" if law["exact"] else "not exact" for law in result["direct"])
+        sequential = ",".join(
+            "exact" if stage["exact"] is True else ("not exact" if stage["exact"] is False else "undefined")
+            for stage in result["stages"]
+        )
+        lines.append(
+            "| {id} | {maps} | {prefix} | {agreement} | {direct} | {sequential} | `{digest}` |".format(
+                id=item["id"],
+                maps=", ".join(result["observations"]),
+                prefix=result["exact_prefix"],
+                agreement=result["agreement"],
+                direct=direct,
+                sequential=sequential,
+                digest=result["weight_sha256"][:12],
+            )
+        )
+    return "\n".join(lines) + "\n"
+
+
 def _report_composition(plan: dict, store: Store) -> str:
     lines = [
         f"# {plan['round_id']} report",
@@ -390,6 +512,14 @@ def command_report(args: argparse.Namespace) -> int:
         print(str(exc), file=sys.stderr)
         return 2
     kinds = {item["type"] for item in plan["items"]}
+    if kinds == {"successive_observation"}:
+        text = _report_successive(plan, store)
+        sys.stdout.write(text)
+        if args.write:
+            destination = Path(args.write)
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(text, encoding="utf-8")
+        return 0
     if kinds == {"composition_observation"}:
         text = _report_composition(plan, store)
         sys.stdout.write(text)

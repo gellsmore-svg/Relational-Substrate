@@ -40,7 +40,8 @@ from rrc.composition import (
     successive_observations,
 )
 from rrc.constraints import compile_weight_table
-from rrc.items import execute_composition_observation
+from rrc.composition import constant_labels
+from rrc.items import execute_composition_observation, execute_successive_observation
 
 
 PATH4 = [[0, 1], [1, 2], [2, 3], [3, 4]]
@@ -844,8 +845,9 @@ def test_block_family_report_separates_covers_from_partial_families():
     }
     assert ideas["IDEA-L20"]["status"] == "partial"
     assert "not a frozen cell" in ideas["IDEA-L20"]["methods"]
-    assert "successive_observations" in ideas["IDEA-L20"]["feasibility"]
+    assert "execute_successive_observation" in ideas["IDEA-L20"]["feasibility"]
     assert "not a frozen cell" in ideas["IDEA-L20"]["feasibility"]
+    assert "not an item type" not in ideas["IDEA-L20"]["feasibility"]
     assert ideas["IDEA-L21"]["status"] == "partial"
     assert "not a frozen cell" in ideas["IDEA-L21"]["methods"]
     assert ideas["IDEA-L22"]["status"] == "partial"
@@ -859,7 +861,7 @@ def test_block_family_report_separates_covers_from_partial_families():
         "COV-DYNAMICAL-PROPAGATION",
     ):
         assert coverage[coverage_id]["status"] == "open"
-    assert "successive_observations" in coverage["COV-SUCCESSIVE-QUOTIENT"]["method"]
+    assert "execute_successive_observation" in coverage["COV-SUCCESSIVE-QUOTIENT"]["method"]
     assert "not yet compared" not in coverage["COV-SUCCESSIVE-QUOTIENT"]["notes"]
     assert "EQ-026" in coverage["COV-SUCCESSIVE-QUOTIENT"]["notes"]
     for question_id in ("ATLAS-Q13", "ATLAS-Q14", "ATLAS-Q15"):
@@ -1083,4 +1085,96 @@ def test_realised_overlap_needs_a_present_shared_edge():
             "carrier": {"kind": "listed", "edges": TRIANGLE},
             "constraints": [],
             "observation": "realised_overlap_count",
+        })
+
+
+def test_a_constant_label_is_the_one_block_quotient():
+    import numpy as np
+    from pathlib import Path
+
+    from rrc.cli import _successive_problems
+
+    weights = compile_weight_table(4, {"kind": "listed", "edges": CYCLE4}, [])
+    law = observation_law(weights, constant_labels(CYCLE4))
+    assert law["exact"] is True
+    assert law["defect_l1"] == 0
+    assert law["n_blocks"] == 1
+    assert law["new_state"] is False
+    assert _fraction(law["quotient"]["rows"][0][0]) == 1
+    halted = np.ones((4, 2), dtype=int)
+    halted[0] = 0
+    halted_law = observation_law(halted, constant_labels([[0, 1], [2, 3]]))
+    assert halted_law["exact"] is True
+    assert halted_law["n_blocks"] == 1
+    assert _fraction(halted_law["quotient"]["rows"][0][0]) == 1
+    root = Path(__file__).resolve().parents[1]
+    equivalences = {
+        json.loads(line)["equivalence_id"]: json.loads(line)
+        for line in (root / "atlas" / "equivalences.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert equivalences["EQ-029"]["status"] == "method"
+    assert equivalences["EQ-029"]["equivalence_type"] == "strong_lumpability"
+    assert "new" in equivalences["EQ-029"]["not_claimed"]
+    assert "one block" in (root / "docs" / "composition-operators.md").read_text(encoding="utf-8")
+
+
+def test_successive_item_keeps_an_undefined_stage_empty():
+    import json as json_module
+
+    from rrc.cli import _successive_problems
+
+    carrier = {"kind": "listed", "edges": CYCLE4}
+    untyped = execute_successive_observation({
+        "id": "fixture-untyped",
+        "round_id": "fixture",
+        "type": "successive_observation",
+        "n": 4,
+        "carrier": carrier,
+        "constraints": [],
+        "observations": ["present_edge_count", "present_degree_sequence"],
+    })
+    assert untyped["new_state"] is False
+    assert untyped["stages"][0]["exact"] is True
+    assert untyped["stages"][1]["typed"] is False
+    assert untyped["stages"][1]["exact"] is None
+    assert untyped["stages"][1]["defect_l1"] is None
+    assert untyped["stages"][1]["quotient_rows"] is None
+    assert untyped["direct"][1]["exact"] is True
+    assert untyped["direct"][1]["quotient_rows"] is not None
+    assert untyped["agreement"] == "undefined"
+    assert untyped["kernels_agree"] is None
+    assert untyped["conditional_exactness"] == "not_computed"
+    assert untyped["history_dependent"] == "not_computed"
+    assert untyped["engine_version"] == "rrc-0.4.0"
+    json_module.dumps(untyped)
+    assert _successive_problems(
+        {"id": "fixture-untyped", "observations": untyped["observations"]},
+        untyped,
+    ) == []
+    constant = execute_successive_observation({
+        "id": "fixture-constant",
+        "round_id": "fixture",
+        "type": "successive_observation",
+        "n": 4,
+        "carrier": carrier,
+        "constraints": [],
+        "observations": ["present_edge_count", "constant_label"],
+    })
+    assert constant["exact_prefix"] == 2
+    assert constant["agreement"] == "exact"
+    assert constant["kernels_agree"] is True
+    assert constant["stages"][1]["n_distinct_labels"] == 1
+    assert _fraction(constant["stages"][1]["quotient_rows"][0][0]) == 1
+    assert _successive_problems(
+        {"id": "fixture-constant", "observations": constant["observations"]},
+        constant,
+    ) == []
+    with pytest.raises(ValueError, match="requires a cover"):
+        execute_successive_observation({
+            "id": "fixture-missing-cover",
+            "type": "successive_observation",
+            "n": 4,
+            "carrier": carrier,
+            "constraints": [],
+            "observations": ["realised_overlap_count", "present_edge_count"],
         })
