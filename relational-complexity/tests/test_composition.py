@@ -1211,3 +1211,41 @@ def test_four_cycle_orbit_and_degree_are_one_partition():
     assert equivalences["EQ-030"]["equivalence_type"] == "partition equality"
     assert "line graph" in equivalences["EQ-030"]["not_claimed"]
     assert "EQ-030" in (root / "docs" / "composition-operators.md").read_text(encoding="utf-8")
+
+
+def test_chain_cover_separates_potential_overlap_from_realised_overlap():
+    cover = [[[0, 1], [1, 2]], [[1, 2], [2, 3]]]
+    active, active_blocks = _compact(active_intersection_labels(CHAIN, cover))
+    realised, realised_blocks = _compact(realised_intersection_labels(CHAIN, cover))
+    labelled, labelled_blocks = _compact(labelled_realised_block_labels(CHAIN, cover))
+    counted, count_blocks = _compact(realised_overlap_count_labels(CHAIN, cover))
+    assert (active_blocks, realised_blocks, labelled_blocks, count_blocks) == (3, 4, 5, 2)
+    assert active != realised
+    # State 5 is the two end edges. The fixed blocks meet, and the shared edge is absent.
+    assert active_intersection_labels(CHAIN, cover)[5]["edges"] == [[0, 1]]
+    assert realised_intersection_labels(CHAIN, cover)[5]["edges"] == []
+    assert counted[5] == counted[0]
+    chain = compile_weight_table(4, {"kind": "listed", "edges": CHAIN}, [{
+        "action": "either",
+        "effect": "prohibit",
+        "event": [0, 1],
+        "when": {"edge": [1, 2], "polarity": "present"},
+    }])
+    triangle = compile_weight_table(3, {"kind": "complete"}, [{
+        "action": "either",
+        "effect": "prohibit",
+        "event": [0, 1],
+        "when": {"edge": [0, 2], "polarity": "present"},
+    }])
+    assert chain.shape == triangle.shape == (8, 3)
+    assert chain.tolist() == triangle.tolist()
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    equivalences = {
+        json.loads(line)["equivalence_id"]: json.loads(line)
+        for line in (root / "atlas" / "equivalences.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert equivalences["EQ-031"]["status"] == "method"
+    assert equivalences["EQ-031"]["equivalence_type"] == "weight_table"
+    assert "carrier" in equivalences["EQ-031"]["not_claimed"]

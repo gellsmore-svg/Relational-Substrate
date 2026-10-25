@@ -27,6 +27,7 @@ flowchart TD
     RRC_ATLAS_013["RRC-ATLAS-013: On this three-edge chain the present factor-3 multiply is the EQ-019 table. The absent ..."]
     RRC_ATLAS_014["RRC-ATLAS-014: On this three-edge star the empty list is the constant-1 three-edge weight table, with ..."]
     RRC_ATLAS_015["RRC-ATLAS-015: On this four-cycle the empty list is the constant-1 four-edge weight table. The carrier..."]
+    RRC_ATLAS_016["RRC-ATLAS-016: On this three-edge chain the empty list is the constant-1 three-edge weight table. The ..."]
   end
   subgraph INFERENCE [Inferences]
     RRC_001_HARD_ABSORBS["RRC-001-HARD-ABSORBS: Under the hard-wedge rule a present pair can always be deleted and the empty graph can ..."]
@@ -100,3 +101,5 @@ flowchart TD
   RRC_ATLAS_013 -->|contrasts_with| RRC_ATLAS_010
   RRC_ATLAS_014 -->|qualifies| RRC_ATLAS_008
   RRC_ATLAS_015 -->|qualifies| RRC_ATLAS_009
+  RRC_ATLAS_016 -->|qualifies| RRC_ATLAS_013
+  RRC_ATLAS_016 -->|qualifies| RRC_ATLAS_012

@@ -1191,6 +1191,79 @@ def test_atlas_012_execution_separates_arrangement_from_a_bit_relabeling():
     assert items.is_dir()
 
 
+def test_atlas_015_execution_separates_potential_overlap_from_realised_overlap():
+    assert main(["verify", "--round", "atlas-015", "--out", str(ROOT / "results" / "atlas-015")]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-015.json").read_text(encoding="utf-8"))
+    from fractions import Fraction
+
+    from rrc.store import digest
+
+    assert digest(plan) == "75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    items = ROOT / "results" / "atlas-015" / "items"
+
+    def load(name):
+        return json.loads((items / name / "result.json").read_text(encoding="utf-8"))
+
+    def fraction(payload):
+        return Fraction(int(payload["num"]), int(payload["den"]))
+
+    names = [item["id"] for item in plan["items"]]
+    stored = {name: load(name) for name in names}
+    structure = "e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc"
+    hashes = {
+        "base": "3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7",
+        "pro-shared": "fe1f4d4e5e5fcac700a7efc7ec32acb0dfcc1c21f5bb401f6b27738b527b2d7c",
+        "pro-own": "d65a9800e618e62c49e0199f0d5cac3ca201448067180dbbbe4139a641958007",
+        "mul-shared": "fa10bdcc43d20cf87f97823c9a8b9ec9aefc370aabebd884ec98038b6123e915",
+        "mul-ends": "92189689622ad7ebd818c01b8ab01236265258c1cacdf43adf9de5c3f124311c",
+    }
+    counts = {"active": 3, "realised": 4, "labelled": 5, "count": 2}
+    for name, result in stored.items():
+        law, observation = name.removeprefix("A15-").rsplit("-", 1)
+        assert result["engine_version"] == plan["engine_version"]
+        assert result["plan_hash"] == digest(plan)
+        assert result["weight_sha256"] == hashes[law]
+        assert result["kernel_sha256"] == result["weight_sha256"]
+        assert result["structure_sha256"] == structure
+        assert result["new_state"] is False
+        assert result["further_label"] == "undefined"
+        assert result["n_distinct_labels"] == counts[observation]
+        assert result["grammar_id"] == "opening-prohibit-multiply-v1"
+    assert stored["A15-base-count"]["exact"] is True
+    assert fraction(stored["A15-base-count"]["defect_l1"]) == 0
+    assert stored["A15-pro-own-count"]["exact"] is True
+    assert fraction(stored["A15-pro-own-count"]["defect_l1"]) == 0
+    assert fraction(stored["A15-pro-shared-count"]["defect_l1"]) == Fraction(1, 3)
+    assert stored["A15-pro-shared-count"]["witness"]["states"] == [0, 1]
+    assert fraction(stored["A15-mul-shared-count"]["defect_l1"]) == Fraction(4, 15)
+    assert fraction(stored["A15-mul-ends-count"]["defect_l1"]) == Fraction(2, 15)
+    assert stored["A15-mul-shared-realised"]["witness"]["states"] == [2, 7]
+    assert stored["A15-mul-shared-labelled"]["witness"]["states"] == [2, 6]
+    assert fraction(stored["A15-mul-shared-realised"]["defect_l1"]) == Fraction(9, 10)
+    assert fraction(stored["A15-mul-shared-labelled"]["defect_l1"]) == Fraction(9, 10)
+
+    def zero_cells(name):
+        weights = stored[name]["weights"]
+        return [
+            (row_index, column)
+            for row_index, row in enumerate(weights)
+            for column, weight in enumerate(row)
+            if weight == 0
+        ]
+
+    assert zero_cells("A15-pro-shared-count") == [(1, 1), (3, 1), (5, 1), (7, 1)]
+    assert zero_cells("A15-pro-own-count") == [(2, 0), (3, 0), (6, 0), (7, 0)]
+    assert zero_cells("A15-mul-shared-count") == []
+    assert zero_cells("A15-mul-ends-count") == []
+    assert {weight for row in stored["A15-base-count"]["weights"] for weight in row} == {1}
+    questions = {
+        json.loads(line)["question_id"]: json.loads(line)
+        for line in (ROOT / "atlas" / "questions.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert questions["ATLAS-Q14"]["status"] == "open"
+
+
 def test_atlas_015_plan_is_the_chain_overlap_sample():
     assert main(["plan", "--round", "atlas-015"]) == 0
     plan = json.loads((ROOT / "plans" / "atlas-015.json").read_text(encoding="utf-8"))
