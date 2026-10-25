@@ -2062,3 +2062,113 @@ def test_atlas_017_plan_is_the_declared_event_sample():
     }
     assert ideas["IDEA-L23"]["status"] == "open"
     assert ideas["IDEA-L23"]["status"] != "selected"
+
+
+def test_atlas_017_execution_separates_support_from_the_single_toggle_law():
+    assert main(["verify", "--round", "atlas-017", "--out", str(ROOT / "results" / "atlas-017")]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-017.json").read_text(encoding="utf-8"))
+    from fractions import Fraction
+
+    from rrc.state_families import single_toggle_successors
+    from rrc.store import digest
+
+    assert digest(plan) == "61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    items = ROOT / "results" / "atlas-017" / "items"
+    stored = {
+        item["id"]: json.loads((items / item["id"] / "result.json").read_text(encoding="utf-8"))
+        for item in plan["items"]
+    }
+
+    def fraction_row(result, state):
+        return [
+            Fraction(int(cell["num"]), int(cell["den"]))
+            for cell in result["probabilities"][state]
+        ]
+
+    def positive_steps(result):
+        steps = []
+        for source, row in enumerate(result["probabilities"]):
+            for target, cell in enumerate(row):
+                if Fraction(int(cell["num"]), int(cell["den"])) > 0 and source != target:
+                    steps.append((source, target))
+        return steps
+
+    for result in stored.values():
+        assert result["engine_version"] == plan["engine_version"]
+        assert result["plan_hash"] == digest(plan)
+        assert result["method"] == "event-kernel-0.1.0"
+        assert result["clock"] == "one_declared_event"
+        assert result["new_primitive"] is False
+        assert result["halt_self_loop_is_event"] is False
+        assert "occupation" not in result
+        assert "weight_sha256" not in result
+        assert "kernel_method" not in result
+        for row in result["probabilities"]:
+            assert sum(Fraction(int(cell["num"]), int(cell["den"])) for cell in row) == 1
+
+    g0 = stored["A17-g0"]
+    g1 = stored["A17-g1"]
+    identified = stored["A17-identified"]
+    coupled = stored["A17-coupled"]
+    halt = stored["A17-halt"]
+    noop = stored["A17-noop"]
+    assert fraction_row(g0, 0) == [Fraction(0), Fraction(1, 2), Fraction(1, 2), Fraction(0)]
+    assert fraction_row(g1, 0) == [Fraction(0), Fraction(1, 2), Fraction(0), Fraction(1, 2)]
+    assert fraction_row(identified, 0) == [Fraction(0), Fraction(1)]
+    assert fraction_row(identified, 1) == [Fraction(1), Fraction(0)]
+    assert fraction_row(coupled, 0) == [Fraction(0), Fraction(0), Fraction(0), Fraction(1)]
+    assert fraction_row(coupled, 3) == [Fraction(1), Fraction(0), Fraction(0), Fraction(0)]
+    assert coupled["completions"][1] == coupled["completions"][2] == "halt_self_loop"
+    assert coupled["enabled_event_counts"][1] == coupled["enabled_event_counts"][2] == 0
+    assert halt["probabilities"] == noop["probabilities"]
+    assert halt["completions"] == ["halt_self_loop"]
+    assert noop["completions"] == ["noop_event"]
+    assert halt["enabled_event_counts"] == [0]
+    assert noop["enabled_event_counts"] == [1]
+    assert all((source ^ target).bit_count() == 1 for source, target in positive_steps(g0))
+    assert all((source ^ target).bit_count() == 1 for source, target in positive_steps(identified))
+    g1_by_source = {}
+    for source, target in positive_steps(g1):
+        g1_by_source.setdefault(source, set()).add((source ^ target).bit_count())
+    assert g1_by_source == {0: {1, 2}, 1: {1, 2}, 2: {1, 2}, 3: {1, 2}}
+    assert [(source ^ target).bit_count() for source, target in positive_steps(coupled)] == [2, 2]
+    assert 3 not in single_toggle_successors(2, 0)
+    assert 3 in single_toggle_successors(2, 1)
+    image = {0: 0, 1: 3}
+    assert fraction_row(identified, 0)[1] == fraction_row(coupled, image[0])[image[1]]
+    assert fraction_row(identified, 1)[0] == fraction_row(coupled, image[1])[image[0]]
+    assert fraction_row(g0, 0)[3] == 0
+    assert 1 not in {0, 3} and 2 not in {0, 3}
+    questions = {
+        json.loads(line)["question_id"]: json.loads(line)
+        for line in (ROOT / "atlas" / "questions.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert questions["ATLAS-Q06"]["status"] == "open"
+    assert questions["ATLAS-Q15"]["status"] == "open"
+    findings = [
+        json.loads(line)
+        for line in (ROOT / "coherence" / "findings.jsonl").read_text(encoding="utf-8").splitlines()
+    ]
+    finding = findings[-1]
+    assert finding["finding_id"] == "RRC-ATLAS-018"
+    assert finding["created_commit"] == "070fc79"
+    assert finding["status"] == "active"
+    assert "ATLAS-Q06 stays open" in finding["statement"]
+    relations = [
+        json.loads(line)
+        for line in (ROOT / "coherence" / "relations.jsonl").read_text(encoding="utf-8").splitlines()
+    ]
+    relation = relations[-1]
+    assert relation["relation_id"] == "RRC-R054"
+    assert relation["from_finding"] == "RRC-ATLAS-018"
+    assert relation["to_finding"] == "RRC-M01-NO-NEW-AXIS"
+    assert "does not close ATLAS-Q06" in relation["rationale"]
+    coverage = {
+        json.loads(line)["coverage_id"]: json.loads(line)
+        for line in (ROOT / "atlas" / "coverage.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert coverage["COV-HIGHER-ORDER-STATE"]["status"] == "open"
+    assert "not a frozen round" in coverage["COV-HIGHER-ORDER-STATE"]["method"]
+    assert "atlas-017" in coverage["COV-HIGHER-ORDER-STATE"]["notes"]
+    assert "state-event-families.md" in coverage["COV-HIGHER-ORDER-STATE"]["notes"]
