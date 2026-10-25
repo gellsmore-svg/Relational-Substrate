@@ -116,4 +116,4 @@ No intervention operator is defined. The record in `intervention_report` stores 
 
 The gate in `docs/compilation-gate.md` is unchanged. A joint two-bit step and a history-dependent row at an unchanged current state still fail that gate. Neither failure is given an engine change. The duplicated coupled update fails the gate only under the 4-bit one-step single-toggle representation. The same change of the shared edge is one toggle in the identified representation. Expressivity claims stay inside the representation and the clock that were named.
 
-No atlas round is frozen. Atlas-014 and atlas-015 are not rerun. Their defects are not targets. No ledger row is added. No equivalence is added. Exact one-step probabilities for a declared event list are in `docs/event-kernel.md`. That note is not a frozen round.
+This note does not freeze a round. Atlas-014 and atlas-015 are not rerun. Their defects are not targets. This note adds no ledger row and no equivalence. Exact one-step probabilities for a declared event list are in `docs/event-kernel.md`. That note is not a frozen round.

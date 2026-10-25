@@ -34,6 +34,7 @@ from rrc.constraints import (
     support_report,
     weight_table_hash,
 )
+from rrc.event_kernel import kernel, single_toggle_catalogue
 from rrc.model import (
     build_weights,
     check_state_independent_identity,
@@ -577,6 +578,65 @@ def execute_successive_observation(spec: dict) -> dict:
     }
 
 
+def execute_event_kernel(spec: dict) -> dict:
+    """Normalise one declared event list. This does not compile a weight table.
+
+    The state is the integer named by the spec. The item adds no coordinate.
+    """
+    started = time.perf_counter()
+    family = spec.get("family")
+    if not isinstance(family, str) or family == "":
+        raise ValueError("an event kernel names a family")
+    catalogue = spec.get("catalogue")
+    events = spec.get("events")
+    if catalogue is not None and events is not None:
+        raise ValueError("an event kernel names a catalogue or an event list")
+    n_states = spec.get("n_states")
+    if "bit_width" in spec:
+        width = spec["bit_width"]
+        if isinstance(width, bool) or not isinstance(width, int) or width < 1:
+            raise ValueError("bit_width must be a positive integer")
+        if isinstance(n_states, bool) or n_states != (1 << width):
+            raise ValueError("n_states must be 2 to the bit width")
+    if catalogue == "single_toggle":
+        rows = spec.get("rows")
+        if not isinstance(rows, list) or n_states != len(rows):
+            raise ValueError("n_states must match the single-toggle catalogue")
+        events = single_toggle_catalogue(rows)
+    elif catalogue is not None:
+        raise ValueError("unknown catalogue")
+    elif not isinstance(events, list):
+        raise ValueError("an event kernel names a catalogue or an event list")
+    report = kernel(n_states, events)
+    payload = {
+        "status": "complete",
+        "engine_version": ENGINE_VERSION,
+        "item_id": spec["id"],
+        "round_id": spec.get("round_id"),
+        "type": "event_kernel",
+        "role": spec.get("role"),
+        "family": family,
+        "method": report["method"],
+        "clock": report["clock"],
+        "n_states": report["n_states"],
+        "halt_self_loop_is_event": False,
+        "new_primitive": False,
+        "catalogue": catalogue,
+        "event_count": len(events),
+        "aggregated_weights": report["aggregated_weights"],
+        "row_sums": report["row_sums"],
+        "enabled_event_counts": report["enabled_event_counts"],
+        "completions": report["completions"],
+        "probabilities": [
+            [fraction_payload(cell) for cell in row] for row in report["probabilities"]
+        ],
+        "elapsed_s": round(time.perf_counter() - started, 6),
+    }
+    if "bit_width" in spec:
+        payload["bit_width"] = spec["bit_width"]
+    return payload
+
+
 def execute_spec(spec: dict) -> dict:
     kind = spec["type"]
     if kind == "lumpability":
@@ -591,6 +651,8 @@ def execute_spec(spec: dict) -> dict:
         return execute_composition_observation(spec)
     if kind == "successive_observation":
         return execute_successive_observation(spec)
+    if kind == "event_kernel":
+        return execute_event_kernel(spec)
     raise ValueError(f"unknown item type {kind}")
 
 

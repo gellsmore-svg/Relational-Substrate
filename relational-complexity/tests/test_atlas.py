@@ -1933,3 +1933,132 @@ def test_atlas_016_execution_separates_support_from_rate():
     assert equivalences["EQ-032"]["status"] == "method"
     assert equivalences["EQ-032"]["equivalence_type"] == "weight_table"
     assert "carrier" in equivalences["EQ-032"]["not_claimed"]
+
+
+def test_atlas_017_plan_is_the_declared_event_sample():
+    assert main(["plan", "--round", "atlas-017"]) == 0
+    plan_text = (ROOT / "plans" / "atlas-017.json").read_text(encoding="utf-8")
+    plan = json.loads(plan_text)
+    from rrc.store import digest
+
+    assert digest(plan) == "61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    assert plan["definitions_commit"] == "e189bd2eff912fc49917b65b959896fbfd3b6b5c"
+    assert plan["grammar_id"] == "one-declared-event-v1"
+    assert plan["method_id"] == "event-kernel-0.1.0"
+    assert plan["grammar"]["clock"] == "one_declared_event"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.002
+    assert plan["questions"] == ["ATLAS-Q06"]
+    assert "ATLAS-Q02" in plan["questions_not_in_this_round"]
+    assert "ATLAS-Q15" in plan["questions_not_in_this_round"]
+    assert plan["coverage"]["six_is_not_a_target"] is True
+    assert plan["coverage"]["cells"] == 6
+    assert len(plan["items"]) == 6
+    for phrase in ("1/2", "1/3", "2/3", "13/8"):
+        assert phrase not in plan_text
+    preflight = (ROOT / "docs" / "atlas-017-preflight.md").read_text(encoding="utf-8")
+    assert "scientific` is false" in preflight
+    assert "Observables were not retained" in preflight
+    assert "ATLAS-Q06" in preflight
+    assert "event-kernel-0.1.0" in preflight
+    joint = []
+    for state, toggle_target, joint_target in ((0, 1, 3), (1, 0, 2), (2, 3, 1), (3, 2, 0)):
+        joint.append(
+            {
+                "name": f"bit0-{state}",
+                "kind": "toggle",
+                "source": state,
+                "target": toggle_target,
+                "weight": 1,
+            }
+        )
+        joint.append(
+            {
+                "name": f"both-{state}",
+                "kind": "joint",
+                "source": state,
+                "target": joint_target,
+                "weight": 1,
+            }
+        )
+    expected = {
+        "A17-g0": {
+            "family": "single_toggle",
+            "role": "control",
+            "n_states": 4,
+            "bit_width": 2,
+            "catalogue": "single_toggle",
+            "rows": [[1, 1], [1, 1], [1, 1], [1, 1]],
+        },
+        "A17-g1": {
+            "family": "joint_and_toggle",
+            "role": "comparison",
+            "n_states": 4,
+            "bit_width": 2,
+            "events": joint,
+        },
+        "A17-identified": {
+            "family": "identified_interface",
+            "role": "control",
+            "n_states": 2,
+            "bit_width": 1,
+            "events": [
+                {"name": "up", "kind": "toggle", "source": 0, "target": 1, "weight": 1},
+                {"name": "down", "kind": "toggle", "source": 1, "target": 0, "weight": 1},
+            ],
+        },
+        "A17-coupled": {
+            "family": "coupled_copies",
+            "role": "comparison",
+            "n_states": 4,
+            "bit_width": 2,
+            "events": [
+                {"name": "together-up", "kind": "joint", "source": 0, "target": 3, "weight": 1},
+                {"name": "together-down", "kind": "joint", "source": 3, "target": 0, "weight": 1},
+            ],
+        },
+        "A17-halt": {
+            "family": "empty_catalogue",
+            "role": "control",
+            "n_states": 1,
+            "events": [],
+        },
+        "A17-noop": {
+            "family": "noop_event",
+            "role": "comparison",
+            "n_states": 1,
+            "events": [
+                {"name": "stay", "kind": "noop", "source": 0, "target": 0, "weight": 1}
+            ],
+        },
+    }
+    assert [item["id"] for item in plan["items"]] == list(expected)
+    for item in plan["items"]:
+        assert item["type"] == "event_kernel"
+        assert item["round_id"] == "atlas-017"
+        assert "constraints" not in item
+        assert "carrier" not in item
+        assert "idea_ids" not in item
+        spec = expected[item["id"]]
+        for key, value in spec.items():
+            assert item[key] == value
+        if "events" in spec:
+            assert "catalogue" not in item
+            assert "rows" not in item
+        else:
+            assert "events" not in item
+        if item["id"] in {"A17-halt", "A17-noop"}:
+            assert "bit_width" not in item
+    questions = {
+        json.loads(line)["question_id"]: json.loads(line)
+        for line in (ROOT / "atlas" / "questions.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert questions["ATLAS-Q06"]["status"] == "open"
+    assert questions["ATLAS-Q15"]["status"] == "open"
+    ideas = {
+        json.loads(line)["idea_id"]: json.loads(line)
+        for line in (ROOT / "atlas" / "ideas.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert ideas["IDEA-L23"]["status"] == "open"
+    assert ideas["IDEA-L23"]["status"] != "selected"

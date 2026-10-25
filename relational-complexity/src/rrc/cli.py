@@ -159,6 +159,8 @@ def _problems(store: Store) -> list[str]:
             problems.extend(_composition_problems(item, result))
         if item["type"] == "successive_observation":
             problems.extend(_successive_problems(item, result))
+        if item["type"] == "event_kernel":
+            problems.extend(_event_kernel_problems(item, result))
     return problems
 
 
@@ -363,6 +365,112 @@ def _stored_table_problems(name: str, result: dict) -> list[str]:
     return problems
 
 
+_EVENT_COMPLETIONS = {
+    "halt_self_loop",
+    "noop_event",
+    "normalised_events",
+    "normalised_events_including_noop",
+}
+
+
+def _event_kernel_problems(item: dict, result: dict) -> list[str]:
+    """Record consistency for one declared event list. This does not rebuild it."""
+    problems = []
+    name = item["id"]
+    if result.get("type") != "event_kernel":
+        problems.append(f"{name} type drifted")
+    if result.get("method") != "event-kernel-0.1.0":
+        problems.append(f"{name} method drifted")
+    if result.get("clock") != "one_declared_event":
+        problems.append(f"{name} clock drifted")
+    if result.get("halt_self_loop_is_event") is not False:
+        problems.append(f"{name} treats a halt self-loop as an event")
+    if result.get("new_primitive") is not False:
+        problems.append(f"{name} reports a new primitive")
+    if result.get("family") != item.get("family"):
+        problems.append(f"{name} family drifted")
+    if result.get("catalogue") != item.get("catalogue"):
+        problems.append(f"{name} catalogue drifted")
+    if "occupation" in result or "weight_sha256" in result or "kernel_method" in result:
+        problems.append(f"{name} stores a carrier weight table")
+    n_states = item.get("n_states")
+    if result.get("n_states") != n_states or isinstance(n_states, bool) or not isinstance(n_states, int):
+        problems.append(f"{name} state count drifted")
+        return problems
+    if "bit_width" in item and result.get("bit_width") != item["bit_width"]:
+        problems.append(f"{name} bit width drifted")
+    if "bit_width" not in item and "bit_width" in result:
+        problems.append(f"{name} stores a bit width")
+    probabilities = result.get("probabilities")
+    aggregated = result.get("aggregated_weights")
+    completions = result.get("completions")
+    enabled = result.get("enabled_event_counts")
+    row_sums = result.get("row_sums")
+    rows = (probabilities, aggregated, completions, enabled, row_sums)
+    if not all(isinstance(value, list) and len(value) == n_states for value in rows):
+        problems.append(f"{name} row count drifted")
+        return problems
+    for state in range(n_states):
+        row = probabilities[state]
+        weights = aggregated[state]
+        if not isinstance(row, list) or len(row) != n_states or not isinstance(weights, list) or len(weights) != n_states:
+            problems.append(f"{name} row shape drifted")
+            return problems
+        completion = completions[state]
+        if completion not in _EVENT_COMPLETIONS:
+            problems.append(f"{name} completion is {completion}")
+            return problems
+        count = enabled[state]
+        if isinstance(count, bool) or not isinstance(count, int) or count < 0:
+            problems.append(f"{name} enabled count is not a nonnegative integer")
+            return problems
+        total_weight = 0
+        positive_cells = 0
+        for weight in weights:
+            if isinstance(weight, bool) or not isinstance(weight, int) or weight < 0:
+                problems.append(f"{name} aggregated weight is not a nonnegative integer")
+                return problems
+            total_weight += weight
+            if weight:
+                positive_cells += 1
+        if row_sums[state] != total_weight:
+            problems.append(f"{name} row sum disagrees with the aggregated weights")
+            return problems
+        if (count == 0) != (total_weight == 0):
+            problems.append(f"{name} enabled count disagrees with the row sum")
+            return problems
+        if count < positive_cells:
+            problems.append(f"{name} enabled count is below the positive cells")
+            return problems
+        total = Fraction(0)
+        for target, cell in enumerate(row):
+            if not isinstance(cell, dict) or "num" not in cell or "den" not in cell:
+                problems.append(f"{name} probability is not a fraction")
+                return problems
+            probability = Fraction(int(cell["num"]), int(cell["den"]))
+            total += probability
+            if total_weight == 0:
+                expected = Fraction(1 if target == state else 0)
+            else:
+                expected = Fraction(int(weights[target]), int(total_weight))
+            if probability != expected:
+                problems.append(f"{name} probability disagrees with the aggregated weights")
+                return problems
+        if total != 1:
+            problems.append(f"{name} probability row does not sum to 1")
+            return problems
+        diagonal = weights[state]
+        if completion == "halt_self_loop" and (total_weight != 0 or count != 0):
+            problems.append(f"{name} halt row has positive weight")
+        elif completion == "noop_event" and (total_weight == 0 or diagonal != total_weight):
+            problems.append(f"{name} noop row is not diagonal")
+        elif completion == "normalised_events" and (total_weight == 0 or diagonal != 0):
+            problems.append(f"{name} event row stores a self-loop weight")
+        elif completion == "normalised_events_including_noop" and (diagonal <= 0 or diagonal >= total_weight):
+            problems.append(f"{name} mixed row does not split the self-loop")
+    return problems
+
+
 def command_verify(args: argparse.Namespace) -> int:
     plan = load_plan(args.round)
     out = Path(args.out) if args.out else default_out(args.round)
@@ -528,6 +636,14 @@ def command_report(args: argparse.Namespace) -> int:
             destination.parent.mkdir(parents=True, exist_ok=True)
             destination.write_text(text, encoding="utf-8")
         return 0
+    if kinds == {"event_kernel"}:
+        text = _report_event_kernel(plan, store)
+        sys.stdout.write(text)
+        if args.write:
+            destination = Path(args.write)
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(text, encoding="utf-8")
+        return 0
     if kinds == {"atlas_core"}:
         text = _report_atlas(plan, store)
         sys.stdout.write(text)
@@ -570,6 +686,48 @@ def command_report(args: argparse.Namespace) -> int:
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text(text, encoding="utf-8")
     return 0
+
+
+def _fraction_text(cell: dict) -> str:
+    numerator = str(cell["num"])
+    denominator = str(cell["den"])
+    if denominator == "1":
+        return numerator
+    return f"{numerator}/{denominator}"
+
+
+def _report_event_kernel(plan: dict, store: Store) -> str:
+    lines = [
+        f"# {plan['round_id']} report",
+        "",
+        "Generated from completed item files. Probabilities are the stored numerator and denominator.",
+        "A halt self-loop is a completion. A no-op is an event. No occupation is stored.",
+        "",
+        "| Item | Family | States | Events | Completions |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    for item in plan["items"]:
+        state = store.classify(item["id"])
+        if state != "complete":
+            lines.append(f"| {item['id']} | {item.get('family', '')} |  |  | {state} |")
+            continue
+        result = store.load_result(item["id"])
+        completions = ", ".join(result["completions"])
+        lines.append(
+            f"| {result['item_id']} | {result['family']} | {result['n_states']} | {result['event_count']} | {completions} |"
+        )
+    lines.extend(["", "## Probabilities", ""])
+    for item in plan["items"]:
+        if store.classify(item["id"]) != "complete":
+            continue
+        result = store.load_result(item["id"])
+        lines.append(f"### {item['id']}")
+        lines.append("")
+        for index, row in enumerate(result["probabilities"]):
+            rendered = ", ".join(_fraction_text(cell) for cell in row)
+            lines.append(f"State {index}: {rendered}.")
+        lines.append("")
+    return "\n".join(lines).rstrip() + "\n"
 
 
 def command_preflight(args: argparse.Namespace) -> int:

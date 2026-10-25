@@ -200,3 +200,65 @@ def test_event_kernel_note_is_not_a_frozen_round():
     assert "compile_weight_table" not in source
     assert "ENGINE_VERSION" not in source
     assert ENGINE_VERSION == "rrc-0.4.0"
+
+
+def test_event_kernel_item_serialises_fractions_without_a_weight_table():
+    from rrc.cli import _event_kernel_problems
+    from rrc.items import execute_event_kernel
+
+    halt = execute_event_kernel(
+        {
+            "id": "halt",
+            "round_id": "fixture",
+            "type": "event_kernel",
+            "role": "control",
+            "family": "empty_catalogue",
+            "n_states": 1,
+            "events": [],
+        }
+    )
+    noop = execute_event_kernel(
+        {
+            "id": "noop",
+            "round_id": "fixture",
+            "type": "event_kernel",
+            "role": "comparison",
+            "family": "noop_event",
+            "n_states": 1,
+            "events": [{"name": "stay", "kind": "noop", "source": 0, "target": 0, "weight": 1}],
+        }
+    )
+    assert halt["engine_version"] == "rrc-0.4.0"
+    assert halt["method"] == "event-kernel-0.1.0"
+    assert halt["new_primitive"] is False
+    assert halt["halt_self_loop_is_event"] is False
+    assert halt["completions"] == ["halt_self_loop"]
+    assert noop["completions"] == ["noop_event"]
+    assert halt["probabilities"] == noop["probabilities"]
+    assert halt["probabilities"][0][0]["num"] == "1"
+    assert halt["probabilities"][0][0]["den"] == "1"
+    assert "weight_sha256" not in halt
+    assert "occupation" not in halt
+    assert "kernel_method" not in halt
+    assert _event_kernel_problems(
+        {"id": "halt", "family": "empty_catalogue", "n_states": 1, "events": []},
+        halt,
+    ) == []
+    mislabelled = dict(noop)
+    mislabelled["completions"] = ["halt_self_loop"]
+    assert _event_kernel_problems(
+        {"id": "noop", "family": "noop_event", "n_states": 1},
+        mislabelled,
+    )
+    with pytest.raises(ValueError, match="catalogue or an event list"):
+        execute_event_kernel(
+            {
+                "id": "both",
+                "type": "event_kernel",
+                "family": "single_toggle",
+                "n_states": 2,
+                "catalogue": "single_toggle",
+                "rows": [[1], [1]],
+                "events": [],
+            }
+        )
