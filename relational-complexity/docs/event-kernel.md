@@ -27,4 +27,4 @@ The identified carrier is one bit. Its toggle has probability `1`. The duplicate
 
 ## What this note leaves open
 
-Atlas-017 freezes a six-cell sample of these families. This note is not that record. No stationary distribution is stored here. This note adds no ledger row and no equivalence. Atlas-016 is not rerun, and its fractions are not targets. A joint event in this note is a support difference under the named clock. It is not a claim that every encoding reduces, and it is not a claim that none does. No intervention operator is defined.
+Atlas-017 freezes a six-cell sample of these families. This note is not that record. No stationary distribution is stored here. This note adds no ledger row and no equivalence. Atlas-016 is not rerun, and its fractions are not targets. A joint event in this note is a support difference under the named clock. It is not a claim that every encoding reduces, and it is not a claim that none does. No intervention operator is defined. Strict kind checks are a separate method, `event-kernel-0.2.0`, in `docs/event-semantics.md`. They do not change `event-kernel-0.1.0`.

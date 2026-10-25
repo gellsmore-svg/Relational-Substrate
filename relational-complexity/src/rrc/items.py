@@ -582,6 +582,8 @@ def execute_event_kernel(spec: dict) -> dict:
     """Normalise one declared event list. This does not compile a weight table.
 
     The state is the integer named by the spec. The item adds no coordinate.
+    The call is ``kernel``, so the stored method is event-kernel-0.1.0.
+    That method does not check Hamming distance.
     """
     started = time.perf_counter()
     family = spec.get("family")

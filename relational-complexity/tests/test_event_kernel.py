@@ -7,7 +7,7 @@ from fractions import Fraction
 import pytest
 
 from rrc import ENGINE_VERSION
-from rrc.event_kernel import kernel, single_toggle_catalogue
+from rrc.event_kernel import kernel, single_toggle_catalogue, strict_kernel
 from rrc.state_families import single_toggle_successors
 
 ROOT_NOTE = "docs/event-kernel.md"
@@ -200,6 +200,176 @@ def test_event_kernel_note_is_not_a_frozen_round():
     assert "compile_weight_table" not in source
     assert "ENGINE_VERSION" not in source
     assert ENGINE_VERSION == "rrc-0.4.0"
+
+
+def test_strict_kind_rejects_a_mislabeled_distance_and_keeps_the_old_method():
+    mislabeled = {"name": "two", "kind": "toggle", "source": 0, "target": 3, "weight": 1}
+    one_bit = {"name": "one", "kind": "joint", "source": 0, "target": 1, "weight": 1}
+    loose = kernel(4, [mislabeled])
+    assert loose["method"] == "event-kernel-0.1.0"
+    assert loose["probabilities"][0][3] == 1
+    assert kernel(4, [one_bit])["probabilities"][0][1] == 1
+    with pytest.raises(ValueError, match="exactly one bit"):
+        strict_kernel(4, [mislabeled], bit_width=2)
+    with pytest.raises(ValueError, match="at least two bits"):
+        strict_kernel(4, [one_bit], bit_width=2)
+    with pytest.raises(ValueError, match="declared bit width"):
+        strict_kernel(4, [mislabeled])
+    with pytest.raises(ValueError, match="toggle, joint, or noop"):
+        kernel(4, [{"name": "move", "kind": "transition", "source": 0, "target": 3, "weight": 1}])
+    silent = {"name": "quiet", "kind": "toggle", "source": 0, "target": 3, "weight": 0}
+    assert kernel(4, [silent])["completions"] == [
+        "halt_self_loop",
+        "halt_self_loop",
+        "halt_self_loop",
+        "halt_self_loop",
+    ]
+    with pytest.raises(ValueError, match="exactly one bit"):
+        strict_kernel(4, [silent], bit_width=2)
+
+
+def test_strict_kernel_checks_width_and_keeps_zero_weight_syntax():
+    with pytest.raises(ValueError, match="positive integer"):
+        strict_kernel(4, [], bit_width=True)
+    with pytest.raises(ValueError, match="positive integer"):
+        strict_kernel(4, [], bit_width=0)
+    with pytest.raises(ValueError, match="2 to the bit width"):
+        strict_kernel(4, [], bit_width=3)
+    with pytest.raises(ValueError, match="2 to the bit width"):
+        strict_kernel(3, [], bit_width=2)
+    with pytest.raises(ValueError, match="integer state"):
+        strict_kernel(
+            4,
+            [{"name": "far", "kind": "transition", "source": 0, "target": 4, "weight": 1}],
+            bit_width=2,
+        )
+    with pytest.raises(ValueError, match="stays in its source"):
+        strict_kernel(
+            4,
+            [{"name": "slip", "kind": "noop", "source": 0, "target": 1, "weight": 0}],
+            bit_width=2,
+        )
+    with pytest.raises(ValueError, match="changes the state"):
+        strict_kernel(3, [{"name": "stay", "kind": "transition", "source": 1, "target": 1, "weight": 0}])
+    with pytest.raises(ValueError, match="at least two bits"):
+        strict_kernel(
+            2,
+            [{"name": "wide", "kind": "joint", "source": 0, "target": 1, "weight": 1}],
+            bit_width=1,
+        )
+    quiet = strict_kernel(
+        4,
+        [{"name": "bit", "kind": "toggle", "source": 0, "target": 1, "weight": 0}],
+        bit_width=2,
+    )
+    assert quiet["events"][0]["kind"] == "toggle"
+    assert quiet["events"][0]["weight"] == 0
+    assert quiet["enabled_event_counts"][0] == 0
+    assert quiet["completions"][0] == "halt_self_loop"
+    full = strict_kernel(
+        8,
+        [{"name": "all", "kind": "joint", "source": 0, "target": 7, "weight": 1}],
+        bit_width=3,
+    )
+    assert (0 ^ 7).bit_count() == 3
+    assert full["probabilities"][0][7] == 1
+    assert full["events"][0]["kind"] == "joint"
+
+
+def test_same_kernel_can_hide_different_event_kinds():
+    joint = [{"name": "both", "kind": "joint", "source": 0, "target": 3, "weight": 1}]
+    neutral = [{"name": "move", "kind": "transition", "source": 0, "target": 3, "weight": 1}]
+    left = strict_kernel(4, joint, bit_width=2)
+    right = strict_kernel(4, neutral, bit_width=2)
+    assert left["probabilities"] == right["probabilities"]
+    assert left["probabilities"][0] == [Fraction(0), Fraction(0), Fraction(0), Fraction(1)]
+    assert left["completions"][1] == "halt_self_loop"
+    assert left["events"][0]["kind"] == "joint"
+    assert right["events"][0]["kind"] == "transition"
+    assert (0 ^ 3).bit_count() == 2
+    forward = [
+        {"name": "a", "kind": "joint", "source": 0, "target": 3, "weight": 1},
+        {"name": "b", "kind": "transition", "source": 0, "target": 3, "weight": 3},
+    ]
+    backward = list(reversed(forward))
+    first = strict_kernel(4, forward, bit_width=2)
+    second = strict_kernel(4, backward, bit_width=2)
+    assert first["probabilities"] == second["probabilities"]
+    assert first["aggregated_weights"][0][3] == 4
+    assert [event["kind"] for event in first["events"]] == ["joint", "transition"]
+    assert [event["kind"] for event in second["events"]] == ["transition", "joint"]
+    with pytest.raises(ValueError, match="duplicate event name"):
+        strict_kernel(4, forward + [{"name": "a", "kind": "toggle", "source": 1, "target": 0, "weight": 1}], bit_width=2)
+    enumerated = strict_kernel(
+        3,
+        [{"name": "hop", "kind": "transition", "source": 0, "target": 2, "weight": 1}],
+    )
+    assert enumerated["semantics"] == "enumerated"
+    assert enumerated["bit_width"] is None
+    assert enumerated["probabilities"][0] == [Fraction(0), Fraction(0), Fraction(1)]
+    halted = strict_kernel(1, [])
+    waiting = strict_kernel(
+        1,
+        [{"name": "stay", "kind": "noop", "source": 0, "target": 0, "weight": 1}],
+    )
+    assert halted["probabilities"] == waiting["probabilities"] == [[Fraction(1)]]
+    assert halted["completions"] == ["halt_self_loop"]
+    assert waiting["completions"] == ["noop_event"]
+    for row in first["probabilities"]:
+        assert sum(row) == 1
+
+
+def test_atlas_017_catalogues_meet_the_strict_kind_check():
+    import json
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    plan = json.loads((root / "plans" / "atlas-017.json").read_text(encoding="utf-8"))
+    assert plan["method_id"] == "event-kernel-0.1.0"
+    for item in plan["items"]:
+        if item.get("catalogue") == "single_toggle":
+            events = single_toggle_catalogue(item["rows"])
+        else:
+            events = item["events"]
+        width = item.get("bit_width")
+        loose = kernel(item["n_states"], events)
+        strict = strict_kernel(item["n_states"], events, bit_width=width)
+        assert loose["method"] == "event-kernel-0.1.0"
+        assert strict["method"] == "event-kernel-0.2.0"
+        assert loose["probabilities"] == strict["probabilities"]
+        assert loose["completions"] == strict["completions"]
+        if width is None:
+            assert strict["semantics"] == "enumerated"
+            assert all(event["kind"] in {"noop", "transition"} for event in strict["events"])
+        else:
+            assert strict["semantics"] == "bitmask"
+            for event in strict["events"]:
+                distance = (event["source"] ^ event["target"]).bit_count()
+                if event["kind"] == "toggle":
+                    assert distance == 1
+                elif event["kind"] == "joint":
+                    assert distance >= 2
+                elif event["kind"] == "noop":
+                    assert distance == 0
+        stored = json.loads(
+            (root / "results" / "atlas-017" / "items" / item["id"] / "result.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        assert stored["method"] == "event-kernel-0.1.0"
+    note = (root / "docs" / "event-semantics.md").read_text(encoding="utf-8")
+    for phrase in (
+        "not a frozen round",
+        "event-kernel-0.1.0",
+        "event-kernel-0.2.0",
+        "exactly one bit",
+        "at least two bits",
+        "does not infer a bit width",
+        "Atlas-017 was not rerun",
+        "not a new primitive",
+        "No intervention operator is defined",
+    ):
+        assert phrase in note
 
 
 def test_event_kernel_item_serialises_fractions_without_a_weight_table():
