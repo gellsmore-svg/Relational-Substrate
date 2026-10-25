@@ -1178,3 +1178,36 @@ def test_successive_item_keeps_an_undefined_stage_empty():
             "constraints": [],
             "observations": ["realised_overlap_count", "present_edge_count"],
         })
+
+
+def test_four_cycle_orbit_and_degree_are_one_partition():
+    cycle_orbit, cycle_blocks = _compact(present_carrier_orbit_labels(4, CYCLE4))
+    cycle_degree, degree_blocks = _compact(present_degree_labels(4, CYCLE4))
+    assert cycle_orbit == cycle_degree
+    assert cycle_blocks == 6
+    assert degree_blocks == 6
+    grouped = {}
+    for state, label in enumerate(cycle_orbit):
+        grouped.setdefault(label, []).append(state)
+    assert sorted(tuple(block) for block in grouped.values()) == [
+        (0,),
+        (1, 2, 4, 8),
+        (3, 6, 9, 12),
+        (5, 10),
+        (7, 11, 13, 14),
+        (15,),
+    ]
+    chain_orbit, _chain_orbit_blocks = _compact(present_carrier_orbit_labels(4, CHAIN))
+    chain_degree, _chain_degree_blocks = _compact(present_degree_labels(4, CHAIN))
+    assert chain_orbit != chain_degree
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    equivalences = {
+        json.loads(line)["equivalence_id"]: json.loads(line)
+        for line in (root / "atlas" / "equivalences.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert equivalences["EQ-030"]["status"] == "method"
+    assert equivalences["EQ-030"]["equivalence_type"] == "partition equality"
+    assert "line graph" in equivalences["EQ-030"]["not_claimed"]
+    assert "EQ-030" in (root / "docs" / "composition-operators.md").read_text(encoding="utf-8")

@@ -1236,6 +1236,105 @@ def test_atlas_014_plan_is_the_four_cycle_successive_sample():
     assert "cover" not in plan["items"][0]
 
 
+def test_atlas_014_execution_keeps_undefined_stages_empty():
+    assert main(["verify", "--round", "atlas-014", "--out", str(ROOT / "results" / "atlas-014")]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-014.json").read_text(encoding="utf-8"))
+    from fractions import Fraction
+
+    from rrc.store import digest
+
+    assert digest(plan) == "c8f63dc8054478c71467db630aee633b4f39f884b5f2331cc76ec180a5715790"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    items = ROOT / "results" / "atlas-014" / "items"
+    names = [item["id"] for item in plan["items"]]
+
+    def load(name):
+        return json.loads((items / name / "result.json").read_text(encoding="utf-8"))
+
+    def fraction(payload):
+        return Fraction(int(payload["num"]), int(payload["den"]))
+
+    stored = {name: load(name) for name in names}
+    structure = "5747f684d10b1fc3f48c38b0a9b4176e5c1aa137469d113d0caa3126c12f7a51"
+    baseline_hash = "5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3"
+    prohibit_hash = "b6ab427edcb7b603d898e81a3286efa03802664ccdd6b33152b8716d0ee35d79"
+    for name, result in stored.items():
+        assert result["engine_version"] == plan["engine_version"]
+        assert result["plan_hash"] == digest(plan)
+        assert result["kernel_sha256"] == result["weight_sha256"]
+        assert result["structure_sha256"] == structure
+        assert result["grammar_id"] == "opening-prohibit-multiply-v1"
+        assert result["new_state"] is False
+        assert result["conditional_exactness"] == "not_computed"
+        assert result["history_dependent"] == "not_computed"
+        assert result["n_states"] == 16
+    base = stored["A14-base-orbit-count"]
+    assert base["weight_sha256"] == baseline_hash
+    assert base["agreement"] == "exact"
+    assert base["kernels_agree"] is True
+    assert base["exact_prefix"] == 2
+    assert [stage["exact"] for stage in base["stages"]] == [True, True]
+    assert [fraction(stage["defect_l1"]) for stage in base["stages"]] == [0, 0]
+    assert base["label_counts"] == [6, 5]
+    assert base["stages"][1]["quotient_rows"] == base["direct"][1]["quotient_rows"]
+    assert base["stages"][1]["quotient_rows"] is not None
+    prohibit = [name for name in names if name != "A14-base-orbit-count"]
+    zeros = [(4, 0), (5, 0), (6, 0), (7, 0), (12, 0), (13, 0), (14, 0), (15, 0)]
+    for name in prohibit:
+        result = stored[name]
+        assert result["weight_sha256"] == prohibit_hash
+        assert result["agreement"] == "undefined"
+        assert result["kernels_agree"] is None
+        found = [
+            (row_index, column)
+            for row_index, row in enumerate(result["weights"])
+            for column, weight in enumerate(row)
+            if weight == 0
+        ]
+        assert found == zeros
+        assert {weight for row in result["weights"] for weight in row if weight} == {1}
+    assert stored["A14-pro-injective-degree"]["exact_prefix"] == 1
+    assert {stored[name]["exact_prefix"] for name in prohibit if name != "A14-pro-injective-degree"} == {0}
+    untyped = stored["A14-pro-count-degree"]
+    assert untyped["stages"][1]["factors_through_previous"] is False
+    assert untyped["stages"][1]["defect_l1"] is None
+    assert untyped["stages"][1]["quotient_rows"] is None
+    assert untyped["stages"][1]["exact"] is None
+    degree_count = stored["A14-pro-degree-count"]
+    assert degree_count["stages"][1]["factors_through_previous"] is True
+    assert degree_count["stages"][1]["defect_l1"] is None
+    assert degree_count["stages"][1]["quotient_rows"] is None
+    assert fraction(degree_count["direct"][0]["defect_l1"]) == Fraction(11, 24)
+    assert fraction(degree_count["direct"][1]["defect_l1"]) == Fraction(11, 24)
+    line = stored["A14-pro-line-count"]
+    assert fraction(line["direct"][0]["defect_l1"]) == Fraction(5, 8)
+    assert line["direct"][0]["n_distinct_labels"] == 8
+    assert line["stages"][1]["quotient_rows"] is None
+    constant = stored["A14-pro-orbit-constant"]
+    assert constant["direct"][1]["exact"] is True
+    assert fraction(constant["direct"][1]["defect_l1"]) == 0
+    assert constant["direct"][1]["n_distinct_labels"] == 1
+    assert constant["stages"][1]["quotient_rows"] is None
+    assert constant["stages"][1]["defect_l1"] is None
+    injective = stored["A14-pro-injective-degree"]
+    assert injective["stages"][0]["exact"] is True
+    assert injective["stages"][0]["n_distinct_labels"] == 16
+    assert injective["stages"][1]["exact"] is False
+    assert fraction(injective["stages"][1]["defect_l1"]) == Fraction(11, 24)
+    assert injective["stages"][1]["quotient_rows"] is None
+    overlap = stored["A14-pro-overlap-count"]
+    assert fraction(overlap["direct"][0]["defect_l1"]) == Fraction(1, 12)
+    assert overlap["direct"][0]["n_distinct_labels"] == 2
+    assert overlap["stages"][1]["factors_through_previous"] is False
+    assert overlap["stages"][1]["defect_l1"] is None
+    assert overlap["stages"][1]["quotient_rows"] is None
+    questions = {
+        json.loads(line)["question_id"]: json.loads(line)
+        for line in (ROOT / "atlas" / "questions.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert questions["ATLAS-Q13"]["status"] == "open"
+
+
 def test_atlas_013_plan_is_the_star_prohibit_slice():
     assert main(["plan", "--round", "atlas-013"]) == 0
     plan = json.loads((ROOT / "plans" / "atlas-013.json").read_text(encoding="utf-8"))
