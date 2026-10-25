@@ -111,7 +111,7 @@ Two operators. They do not share a state space.
 - **Recoverability.** An independent bit is not recoverable from the pair state. That is the reason it is new state.
 - **Grammar.** A presence bit that is not a listed carrier edge is outside the current pair grammar. The compilation gate requires a witness before an engine change: two situations with the same declared state and different next rows, or an event that is not a single toggle. Listing an activity bit as one more carrier edge keeps the single-toggle grammar. That listing is not this independent bit. No witness that this bit fails the gate is claimed.
 - **Established mathematics.** None is invoked, because the operator is not defined.
-- **Small-scale calculation.** Not available for this bit. A listed activity bit is calculated as ordinary pair state in `src/rrc/coordinate_examples.py`. It is not a cell of this note.
+- **Small-scale calculation.** Not available for this bit. A listed activity bit is calculated as ordinary pair state in `src/rrc/coordinate_examples.py`. It is not a cell of this note. The typed families are `docs/state-event-families.md`. They are not a cell of this note.
 - **Open.** IDEA-L16 and ATLAS-Q06. COV-HYPEREDGE stays open and is the independent-relation region, which is not this note's experiment.
 - **Library.** IDEA-L16, IDEA-C09 for history, which is a different extra coordinate.
 
@@ -128,7 +128,7 @@ An incidence graph of the carrier, with nodes on one side and carrier edges on t
 - **Recoverability.** The full product state determines each component. A projection need not determine the full state.
 - **Grammar.** Preserved on the full pair state. On a projection, the compilation gate already records the alternatives: the same event shape with possibly different weights, or no closed interface grammar.
 - **Established mathematics.** Disjoint union of graphs; strong lumpability of Markov chains.
-- **Small-scale calculation.** A small product can be compiled as an ordinary listed carrier. That compilation does not test the unnamed entity map, so it is not run here. RRC-001's two-subset cut is not reopened.
+- **Small-scale calculation.** A small product can be compiled as an ordinary listed carrier. That compilation does not test the unnamed entity map, so it is not run here. RRC-001's two-subset cut is not reopened. An identified three-edge carrier and a four-bit product with two copies of the shared edge are fixtures in `docs/state-event-families.md`. They are not the unnamed entity map.
 - **Open.** IDEA-L04, IDEA-L17, ATLAS-Q10, RRC-Q09. IDEA-L13 is partial and is not this family's cell.
 - **Library.** IDEA-L04, IDEA-L17, IDEA-R04.
 
@@ -143,7 +143,7 @@ An incidence graph of the carrier, with nodes on one side and carrier edges on t
 - **Recoverability.** The edge set does not determine which cover was written.
 - **Grammar.** Unchanged, because no operator acts on the chain.
 - **Established mathematics.** Set covers. The cover is not COV-HYPEREDGE: that row is an independent relation of order 3 as state.
-- **Small-scale calculation.** The underlying chain is the ordinary carrier. Atlas-011 later stored observations of fixed families outside this note. This note still has no cell. An omission list in that round is a partial family. The stored plans were not rewritten.
+- **Small-scale calculation.** The underlying chain is the ordinary carrier. Atlas-011 later stored observations of fixed families outside this note. This note still has no cell. An omission list in that round is a partial family. The stored plans were not rewritten. A block family stored as one extra listed bit is typed in `docs/state-event-families.md`. A fixed instrument still uses one family. Neither reading is a cell.
 - **Open.** IDEA-L08 and IDEA-L14 are partial. The implemented cover operators are not cells of this note.
 - **Library.** IDEA-L08, IDEA-L14.
 
