@@ -1191,6 +1191,83 @@ def test_atlas_012_execution_separates_arrangement_from_a_bit_relabeling():
     assert items.is_dir()
 
 
+def test_atlas_015_plan_is_the_chain_overlap_sample():
+    assert main(["plan", "--round", "atlas-015"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-015.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    assert plan["definitions_commit"] == "081d52aa6c5ac3b1a228b833a2777973aa631aea"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.002
+    assert plan["questions"] == ["ATLAS-Q14"]
+    assert "ATLAS-Q13" in plan["questions_not_in_this_round"]
+    assert "ATLAS-Q02" in plan["questions_not_in_this_round"]
+    assert len(plan["items"]) == 20
+    chain = [[0, 1], [1, 2], [2, 3]]
+    cover = [[[0, 1], [1, 2]], [[1, 2], [2, 3]]]
+    shared = {
+        "action": "either",
+        "effect": "prohibit",
+        "event": [1, 2],
+        "when": {"edge": [0, 1], "polarity": "present"},
+    }
+    own = {
+        "action": "either",
+        "effect": "prohibit",
+        "event": [0, 1],
+        "when": {"edge": [1, 2], "polarity": "present"},
+    }
+    mul_shared = {
+        "action": "either",
+        "effect": "multiply",
+        "factor": 3,
+        "event": [1, 2],
+        "when": {"edge": [2, 3], "polarity": "present"},
+    }
+    mul_ends = {
+        "action": "either",
+        "effect": "multiply",
+        "factor": 3,
+        "event": [2, 3],
+        "when": {"edge": [0, 1], "polarity": "present"},
+    }
+    laws = {
+        "base": [],
+        "pro-shared": [shared],
+        "pro-own": [own],
+        "mul-shared": [mul_shared],
+        "mul-ends": [mul_ends],
+    }
+    maps = {
+        "active": "active_intersection",
+        "realised": "realised_intersection",
+        "labelled": "labelled_realised_blocks",
+        "count": "realised_overlap_count",
+    }
+    expected = [
+        (f"A15-{law}-{map_name}", constraints, observation)
+        for law, constraints in laws.items()
+        for map_name, observation in maps.items()
+    ]
+    assert [(item["id"], item["constraints"], item["observation"]) for item in plan["items"]] == expected
+    for item in plan["items"]:
+        assert item["type"] == "composition_observation"
+        assert item["n"] == 4
+        assert item["carrier"]["edges"] == chain
+        assert item["cover"] == cover
+        assert item["baseline"] == 1
+        assert "parity" not in item["observation"]
+        for constraint in item["constraints"]:
+            assert constraint["action"] == "either"
+            assert constraint["when"]["polarity"] == "present"
+            if constraint["effect"] == "prohibit":
+                assert "factor" not in constraint
+            else:
+                assert constraint["factor"] == 3
+
+
 def test_atlas_014_plan_is_the_four_cycle_successive_sample():
     assert main(["plan", "--round", "atlas-014"]) == 0
     plan = json.loads((ROOT / "plans" / "atlas-014.json").read_text(encoding="utf-8"))
