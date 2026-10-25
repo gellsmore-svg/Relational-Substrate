@@ -54,6 +54,66 @@ coherence is high and earned; empirical correctness is low and capped.
   by the structure, not that a curve is matched.
 - The research method is in [research-methods/](research-methods/README.md).
 
+## Three intellectual activities
+
+This project is not simply a synthesis of existing literature. It develops
+and examines a proposed coherent arrangement of ideas, including applications
+and explanatory proposals that may not exist in that form elsewhere. The work
+has three connected activities:
+
+1. **Identify existing knowledge.** Find established ideas, evidence,
+   experiments, mathematical structures, and philosophical or theological
+   arguments. Understand what they actually establish, along with their
+   assumptions, limits, and disagreements.
+2. **Separate and reconstitute ideas.** Distinguish an idea's transferable
+   structure from the disciplinary assumptions in which it is usually
+   expressed. Examine whether elements from different fields can be applied
+   in new contexts and related within a globally coherent framework. The
+   proposed *relationships and organisation* may be part of the contribution,
+   even where individual components are well known.
+3. **Develop new explanatory ideas.** Where the existing literature does not
+   supply a necessary connection, formulate a new hypothesis or conceptual
+   relationship. Test its internal consistency, implications, alternatives,
+   and possible empirical consequences. Do not present an original proposal
+   as established merely because it is coherent or promising.
+
+These activities are iterative, but they are not interchangeable: retrieving
+a precedent is not the same as establishing a new application, and neither is
+the same as inventing and substantiating an explanation. Novelty, coherence,
+and empirical confirmation are distinct questions.
+
+### The role of AI and the author
+
+The author originates and governs the proposed ontology, including its
+conceptual organisation and substantive intellectual decisions. AI tools
+support that work in two principal ways: **research assistance**, by finding
+and examining existing ideas and their possible applications; and
+**critical dialogue**, by acting as a sounding board, logic checker, and
+adversarial reviewer. They may also implement *specifically agreed* editorial
+changes. They are not delegated authority to settle the ontology or to
+replace unfamiliar proposals with more conventional ones.
+
+Reviews should first reconstruct a proposition on its own terms, then test
+its logic, hidden assumptions, counterexamples, explanatory value, and
+relationships to the rest of the framework. A reviewer's objection is itself
+open to challenge. An idea's absence from familiar literature or a model's
+training is not evidence of incoherence; originality is equally not proof
+of truth.
+
+This gives three distinct outcomes for manuscript work:
+
+- **Established error:** agree the intellectual correction, then instruct an
+  editor or AI to implement it precisely and verify the result.
+- **Disputed criticism:** examine the objection before making substantive
+  changes; do not delegate the unresolved decision to an editing model.
+- **Open research question:** record the uncertainty, competing explanations,
+  and possible discriminating tests without forcing premature closure.
+
+The goal is an auditable cycle of discovery, synthesis, invention, criticism,
+and controlled revision—not an AI-generated consensus. See the
+[second-edition working record](books/v2/README.md) for the manuscript's
+research, reasoning, and review trail.
+
 ## Where to start
 
 | If you want… | Read |
