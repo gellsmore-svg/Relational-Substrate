@@ -844,6 +844,8 @@ def test_block_family_report_separates_covers_from_partial_families():
     }
     assert ideas["IDEA-L20"]["status"] == "partial"
     assert "not a frozen cell" in ideas["IDEA-L20"]["methods"]
+    assert "successive_observations" in ideas["IDEA-L20"]["feasibility"]
+    assert "not a frozen cell" in ideas["IDEA-L20"]["feasibility"]
     assert ideas["IDEA-L21"]["status"] == "partial"
     assert "not a frozen cell" in ideas["IDEA-L21"]["methods"]
     assert ideas["IDEA-L22"]["status"] == "partial"
@@ -857,6 +859,9 @@ def test_block_family_report_separates_covers_from_partial_families():
         "COV-DYNAMICAL-PROPAGATION",
     ):
         assert coverage[coverage_id]["status"] == "open"
+    assert "successive_observations" in coverage["COV-SUCCESSIVE-QUOTIENT"]["method"]
+    assert "not yet compared" not in coverage["COV-SUCCESSIVE-QUOTIENT"]["notes"]
+    assert "EQ-026" in coverage["COV-SUCCESSIVE-QUOTIENT"]["notes"]
     for question_id in ("ATLAS-Q13", "ATLAS-Q14", "ATLAS-Q15"):
         assert questions[question_id]["status"] == "open"
     representations = (root / "docs" / "representations.md").read_text(encoding="utf-8")
