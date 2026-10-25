@@ -1716,3 +1716,220 @@ def test_atlas_016_plan_is_the_incident_and_disjoint_sample():
     incident = plan["items"][1]["constraints"][0]
     assert incident["event"] == [1, 2]
     assert incident["when"]["edge"] == [0, 1]
+
+
+def test_atlas_016_execution_separates_support_from_rate():
+    assert main(["verify", "--round", "atlas-016", "--out", str(ROOT / "results" / "atlas-016")]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-016.json").read_text(encoding="utf-8"))
+    from fractions import Fraction
+
+    from rrc.composition import carrier_automorphisms
+    from rrc.store import digest
+
+    assert digest(plan) == "d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    items = ROOT / "results" / "atlas-016" / "items"
+    names = [item["id"] for item in plan["items"]]
+    stored = {
+        name: json.loads((items / name / "result.json").read_text(encoding="utf-8"))
+        for name in names
+    }
+    structure = "0963ca7e652f311e3382a80a52a2c8efe545700c1c793db7444f5140bb162fbd"
+    hashes = {
+        "A16-base": "3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7",
+        "A16-pro-incident": "fe1f4d4e5e5fcac700a7efc7ec32acb0dfcc1c21f5bb401f6b27738b527b2d7c",
+        "A16-mul-incident": "badcbc1cecba75dbdb76f74ea9cc1368c0dc49c55eb52346b9575889e02dd84b",
+        "A16-pro-across": "866005248da1269bc32a3c62e3d391cae91e841b57fa180d634f832f11e67fc6",
+        "A16-mul-across": "35818e425b302f38df5d28715a61ec5e21b1a765ab3ceee5f81ee55c40156e82",
+        "A16-pro-disjoint": "b54fee3ce4ed5f19f4843249d82b4217eb004fba882f25d8894b2b5d08fe7eb3",
+        "A16-mul-disjoint": "92189689622ad7ebd818c01b8ab01236265258c1cacdf43adf9de5c3f124311c",
+        "A16-mixed": "f83fd2d4e2aeb937143f26dceae8a06363691ad470e2570e5d16dc6c4b64219b",
+    }
+    assert len(set(hashes.values())) == 8
+
+    def fraction(payload):
+        return Fraction(int(payload["num"]), int(payload["den"]))
+
+    fractions = {
+        "A16-base": (Fraction(3, 2), Fraction(7, 2), [Fraction(1, 2), Fraction(1, 2), Fraction(1, 2)]),
+        "A16-pro-incident": (Fraction(7, 5), Fraction(18, 5), [Fraction(2, 5), Fraction(1, 2), Fraction(1, 2)]),
+        "A16-mul-incident": (Fraction(13, 8), Fraction(27, 8), [Fraction(5, 8), Fraction(1, 2), Fraction(1, 2)]),
+        "A16-pro-across": (Fraction(7, 5), Fraction(18, 5), [Fraction(1, 2), Fraction(1, 2), Fraction(2, 5)]),
+        "A16-mul-across": (Fraction(13, 8), Fraction(27, 8), [Fraction(1, 2), Fraction(1, 2), Fraction(5, 8)]),
+        "A16-pro-disjoint": (Fraction(7, 5), Fraction(18, 5), [Fraction(2, 5), Fraction(1, 2), Fraction(1, 2)]),
+        "A16-mul-disjoint": (Fraction(13, 8), Fraction(27, 8), [Fraction(5, 8), Fraction(1, 2), Fraction(1, 2)]),
+        "A16-mixed": (Fraction(11, 7), Fraction(24, 7), [Fraction(4, 7), Fraction(1, 2), Fraction(1, 2)]),
+    }
+    values = {
+        "A16-base": {1},
+        "A16-pro-incident": {0, 1},
+        "A16-mul-incident": {1, 3},
+        "A16-pro-across": {0, 1},
+        "A16-mul-across": {1, 3},
+        "A16-pro-disjoint": {0, 1},
+        "A16-mul-disjoint": {1, 3},
+        "A16-mixed": {0, 1, 3},
+    }
+    positive = {
+        "A16-base": True,
+        "A16-pro-incident": False,
+        "A16-mul-incident": True,
+        "A16-pro-across": False,
+        "A16-mul-across": True,
+        "A16-pro-disjoint": False,
+        "A16-mul-disjoint": True,
+        "A16-mixed": False,
+    }
+    effective = {
+        "A16-base": 0,
+        "A16-pro-incident": 1,
+        "A16-mul-incident": 1,
+        "A16-pro-across": 1,
+        "A16-mul-across": 1,
+        "A16-pro-disjoint": 1,
+        "A16-mul-disjoint": 1,
+        "A16-mixed": 2,
+    }
+    for name, result in stored.items():
+        occupation = result["occupation"]
+        assert result["engine_version"] == plan["engine_version"]
+        assert result["plan_hash"] == digest(plan)
+        assert result["weight_sha256"] == hashes[name]
+        assert result["kernel_sha256"] == result["weight_sha256"]
+        assert result["structure_sha256"] == structure
+        assert result["grammar_id"] == "opening-prohibit-multiply-v1"
+        assert result["compilation"]["new_primitive"] is False
+        assert result["compilation"]["all_weights_positive"] is positive[name]
+        assert result["bookkeeping"]["effective_cardinality"] == effective[name]
+        assert result["classes"]["recurrent_classes"] == 1
+        assert result["classes"]["deadlock_states"] == 0
+        assert result["carrier"]["components"] == 2
+        assert occupation["status"] == "unique"
+        assert occupation["method"] == "integer_pi_proportional_to_total_weight"
+        edges, components, marginals = fractions[name]
+        assert fraction(occupation["mean_present_edges"]) == edges
+        assert fraction(occupation["mean_components"]) == components
+        assert [fraction(cell) for cell in occupation["edge_presence"]] == marginals
+        assert edges + components == 5
+        assert {weight for row in result["weights"] for weight in row} == values[name]
+
+    def zero_cells(name):
+        weights = stored[name]["weights"]
+        return [
+            (row_index, column)
+            for row_index, row in enumerate(weights)
+            for column, weight in enumerate(row)
+            if weight == 0
+        ]
+
+    assert zero_cells("A16-base") == []
+    assert zero_cells("A16-pro-incident") == [(1, 1), (3, 1), (5, 1), (7, 1)]
+    assert zero_cells("A16-mul-incident") == []
+    assert zero_cells("A16-pro-across") == [(4, 0), (5, 0), (6, 0), (7, 0)]
+    assert zero_cells("A16-mul-across") == []
+    assert zero_cells("A16-pro-disjoint") == [(1, 2), (3, 2), (5, 2), (7, 2)]
+    assert zero_cells("A16-mul-disjoint") == []
+    assert zero_cells("A16-mixed") == [(1, 1), (3, 1), (5, 1), (7, 1)]
+
+    def permute(table, perm):
+        out = [[None] * 3 for _ in range(8)]
+        for state in range(8):
+            sigma = 0
+            for edge in range(3):
+                if (state >> edge) & 1:
+                    sigma |= 1 << perm[edge]
+            for edge in range(3):
+                out[sigma][perm[edge]] = table[state][edge]
+        return out
+
+    swap = (0, 2, 1)
+    assert permute(stored["A16-pro-incident"]["weights"], swap) == stored["A16-pro-disjoint"]["weights"]
+    assert permute(stored["A16-mul-incident"]["weights"], swap) == stored["A16-mul-disjoint"]["weights"]
+    product = [
+        [left * right for left, right in zip(pro_row, mul_row)]
+        for pro_row, mul_row in zip(
+            stored["A16-pro-incident"]["weights"],
+            stored["A16-mul-disjoint"]["weights"],
+        )
+    ]
+    assert product == stored["A16-mixed"]["weights"]
+
+    here = [(0, 1), (1, 2), (3, 4)]
+    automorphisms = carrier_automorphisms(5, here)
+    assert automorphisms == [
+        (0, 1, 2, 3, 4),
+        (0, 1, 2, 4, 3),
+        (2, 1, 0, 3, 4),
+        (2, 1, 0, 4, 3),
+    ]
+
+    def image(perm, edge):
+        left, right = perm[edge[0]], perm[edge[1]]
+        return (left, right) if left < right else (right, left)
+
+    for perm in automorphisms:
+        assert image(perm, here[1]) != here[2]
+
+    def forest_components(mask):
+        parent = list(range(5))
+
+        def find(vertex):
+            while parent[vertex] != vertex:
+                parent[vertex] = parent[parent[vertex]]
+                vertex = parent[vertex]
+            return vertex
+
+        present = 0
+        for bit, edge in enumerate(here):
+            if (mask >> bit) & 1:
+                present += 1
+                left, right = find(edge[0]), find(edge[1])
+                if left != right:
+                    parent[left] = right
+        return present + len({find(vertex) for vertex in range(5)})
+
+    assert [forest_components(mask) for mask in range(8)] == [5] * 8
+
+    chain_edges = [[0, 1], [1, 2], [2, 3]]
+    here_edges = [[0, 1], [1, 2], [3, 4]]
+    by_id = {item["id"]: item for item in plan["items"]}
+
+    def chain_rule(event, effect, condition, factor=None):
+        row = {
+            "action": "either",
+            "effect": effect,
+            "event": event,
+            "when": {"edge": condition, "polarity": "present"},
+        }
+        if factor is not None:
+            row["factor"] = factor
+        return [row]
+
+    comparisons = [
+        ("A16-pro-incident", chain_rule([1, 2], "prohibit", [0, 1])),
+        ("A16-mul-disjoint", chain_rule([2, 3], "multiply", [0, 1], 3)),
+        ("A16-mul-across", chain_rule([0, 1], "multiply", [2, 3], 3)),
+    ]
+    for item_id, chain_constraints in comparisons:
+        left = compile_weight_table(4, {"kind": "listed", "edges": chain_edges}, chain_constraints)
+        right = compile_weight_table(
+            5,
+            {"kind": "listed", "edges": here_edges},
+            by_id[item_id]["constraints"],
+        )
+        assert np.array_equal(left, right)
+        assert chain_edges != here_edges
+        assert right.tolist() == stored[item_id]["weights"]
+
+    questions = {
+        json.loads(line)["question_id"]: json.loads(line)
+        for line in (ROOT / "atlas" / "questions.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert questions["ATLAS-Q02"]["status"] == "open"
+    equivalences = {
+        json.loads(line)["equivalence_id"]: json.loads(line)
+        for line in (ROOT / "atlas" / "equivalences.jsonl").read_text(encoding="utf-8").splitlines()
+    }
+    assert equivalences["EQ-032"]["status"] == "method"
+    assert equivalences["EQ-032"]["equivalence_type"] == "weight_table"
+    assert "carrier" in equivalences["EQ-032"]["not_claimed"]
