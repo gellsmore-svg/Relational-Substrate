@@ -1,0 +1,508 @@
+{
+  "round_id": "atlas-016",
+  "engine_version": "rrc-0.4.0",
+  "grammar_id": "opening-prohibit-multiply-v1",
+  "definitions_commit": "72ee4e50d463aba4c3f6cd3e8e5a06aa944daa52",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q02"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q01",
+    "ATLAS-Q03",
+    "ATLAS-Q04",
+    "ATLAS-Q05",
+    "ATLAS-Q06",
+    "ATLAS-Q07",
+    "ATLAS-Q08",
+    "ATLAS-Q09",
+    "ATLAS-Q10",
+    "ATLAS-Q11",
+    "ATLAS-Q12",
+    "ATLAS-Q13",
+    "ATLAS-Q14",
+    "ATLAS-Q15"
+  ],
+  "selection": "One carrier on vertices 0, 1, 2, 3, and 4. The edges are (0,1), (1,2), and (3,4). The first two edges share vertex 1. The third edge shares no vertex with them. Eight cells, all on this carrier. The empty list. Three matched pairs, each a prohibit and a multiply by 3 of one event under one present condition: (1,2) when (0,1) is present; (0,1) when (3,4) is present; (3,4) when (0,1) is present. One mixed list uses the incident prohibit and the disjoint multiply together, so both events are conditioned on (0,1). Action is either. Polarity is present. Factor 3 is the factor named for this candidate. The incident prohibit reads the second listed edge when the first is present. That is not the EQ-031 bit position. ATLAS-Q02 stays open.",
+  "grammar": {
+    "ids": [
+      "opening-prohibit-multiply-v1"
+    ],
+    "note": "Designated prohibits and multiplies. Baseline 1. No incident-count predicate. No form or dissolve.",
+    "baseline": 1
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-016-preflight.md",
+    "heaviest_cell_s": 0.002,
+    "shape": "two-edge path plus a disjoint edge, empty list, 8 states",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "n": [
+      5
+    ],
+    "carriers": [
+      "path2-plus-disjoint-edge"
+    ],
+    "cells": 8,
+    "declared_sample": true,
+    "baseline_only": false,
+    "six_is_not_a_target": true,
+    "state_space": "8 states, exhaustive",
+    "excluded": [
+      "absent polarity",
+      "formation and dissolution",
+      "incident-count predicates",
+      "the three-edge star",
+      "the three-edge chain",
+      "two disjoint edges as the whole carrier",
+      "the four-edge path",
+      "factors other than 3",
+      "N=6",
+      "the EQ-031 bit-position prohibit",
+      "atlas-012 length-2 lists",
+      "atlas-015 overlap maps",
+      "successive quotients",
+      "rerun of results/atlas-006",
+      "rerun of results/atlas-009",
+      "rerun of results/atlas-012",
+      "rerun of results/atlas-013",
+      "rerun of results/atlas-015"
+    ]
+  },
+  "stopping": [
+    "Do not add, remove or edit items after this file is committed.",
+    "Do not widen tolerances after an item has run.",
+    "A failed, timed-out or unresolved item stays in that state.",
+    "Incomplete or invalid records may be recomputed only under the same spec.",
+    "Do not describe an unrun item as a result.",
+    "Do not treat this carrier as every graph on five nodes.",
+    "Do not add a polarity or a factor after reading the eight results.",
+    "Do not rerun atlas-006, atlas-009, atlas-012, atlas-013, or atlas-015."
+  ],
+  "items": [
+    {
+      "id": "A16-base",
+      "round_id": "atlas-016",
+      "type": "atlas_core",
+      "role": "baseline",
+      "label": "empty list",
+      "idea_ids": [
+        "IDEA-C00"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [],
+      "placement": "empty list",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A16-pro-incident",
+      "round_id": "atlas-016",
+      "type": "atlas_core",
+      "role": "prohibit",
+      "label": "prohibit (1,2) when (0,1) is present",
+      "idea_ids": [
+        "IDEA-C01",
+        "IDEA-R04"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "placement": "incident pair",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A16-mul-incident",
+      "round_id": "atlas-016",
+      "type": "atlas_core",
+      "role": "multiply",
+      "label": "multiply (1,2) by 3 when (0,1) is present",
+      "idea_ids": [
+        "IDEA-C02",
+        "IDEA-R04"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "placement": "incident pair",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A16-pro-across",
+      "round_id": "atlas-016",
+      "type": "atlas_core",
+      "role": "prohibit",
+      "label": "prohibit (0,1) when (3,4) is present",
+      "idea_ids": [
+        "IDEA-C01",
+        "IDEA-R04"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "placement": "event in the path, condition on the disjoint edge",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A16-mul-across",
+      "round_id": "atlas-016",
+      "type": "atlas_core",
+      "role": "multiply",
+      "label": "multiply (0,1) by 3 when (3,4) is present",
+      "idea_ids": [
+        "IDEA-C02",
+        "IDEA-R04"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "placement": "event in the path, condition on the disjoint edge",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A16-pro-disjoint",
+      "round_id": "atlas-016",
+      "type": "atlas_core",
+      "role": "prohibit",
+      "label": "prohibit (3,4) when (0,1) is present",
+      "idea_ids": [
+        "IDEA-C01",
+        "IDEA-R04"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "placement": "event on the disjoint edge",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A16-mul-disjoint",
+      "round_id": "atlas-016",
+      "type": "atlas_core",
+      "role": "multiply",
+      "label": "multiply (3,4) by 3 when (0,1) is present",
+      "idea_ids": [
+        "IDEA-C02",
+        "IDEA-R04"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "placement": "event on the disjoint edge",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A16-mixed",
+      "round_id": "atlas-016",
+      "type": "atlas_core",
+      "role": "mixed",
+      "label": "prohibit (1,2) when (0,1) is present, and multiply (3,4) by 3 when (0,1) is present",
+      "idea_ids": [
+        "IDEA-C01",
+        "IDEA-C02",
+        "IDEA-C06",
+        "IDEA-R04"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "placement": "two events, one shared condition",
+      "baseline": 1,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    }
+  ]
+}

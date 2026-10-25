@@ -1631,3 +1631,88 @@ def test_atlas_013_execution_separates_support_from_a_rescaled_rate():
         compile_weight_table(5, carrier, uniform("eq")),
         compile_weight_table(5, carrier, uniform("ge")),
     )
+
+
+def test_atlas_016_plan_is_the_incident_and_disjoint_sample():
+    assert main(["plan", "--round", "atlas-016"]) == 0
+    plan = json.loads((ROOT / "plans" / "atlas-016.json").read_text(encoding="utf-8"))
+    from rrc.store import digest
+
+    assert digest(plan) == "d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d"
+    assert plan["engine_version"] == "rrc-0.4.0"
+    assert plan["definitions_commit"] == "72ee4e50d463aba4c3f6cd3e8e5a06aa944daa52"
+    assert plan["grammar_id"] == "opening-prohibit-multiply-v1"
+    assert plan["preflight_summary"]["scientific"] is False
+    assert plan["preflight_summary"]["heaviest_cell_s"] == 0.002
+    assert plan["questions"] == ["ATLAS-Q02"]
+    assert "ATLAS-Q14" in plan["questions_not_in_this_round"]
+    assert "ATLAS-Q15" in plan["questions_not_in_this_round"]
+    assert plan["coverage"]["six_is_not_a_target"] is True
+    assert len(plan["items"]) == 8
+    edges = [[0, 1], [1, 2], [3, 4]]
+    pro_incident = {
+        "action": "either",
+        "effect": "prohibit",
+        "event": [1, 2],
+        "when": {"edge": [0, 1], "polarity": "present"},
+    }
+    mul_incident = {
+        "action": "either",
+        "effect": "multiply",
+        "factor": 3,
+        "event": [1, 2],
+        "when": {"edge": [0, 1], "polarity": "present"},
+    }
+    pro_across = {
+        "action": "either",
+        "effect": "prohibit",
+        "event": [0, 1],
+        "when": {"edge": [3, 4], "polarity": "present"},
+    }
+    mul_across = {
+        "action": "either",
+        "effect": "multiply",
+        "factor": 3,
+        "event": [0, 1],
+        "when": {"edge": [3, 4], "polarity": "present"},
+    }
+    pro_disjoint = {
+        "action": "either",
+        "effect": "prohibit",
+        "event": [3, 4],
+        "when": {"edge": [0, 1], "polarity": "present"},
+    }
+    mul_disjoint = {
+        "action": "either",
+        "effect": "multiply",
+        "factor": 3,
+        "event": [3, 4],
+        "when": {"edge": [0, 1], "polarity": "present"},
+    }
+    expected = [
+        ("A16-base", []),
+        ("A16-pro-incident", [pro_incident]),
+        ("A16-mul-incident", [mul_incident]),
+        ("A16-pro-across", [pro_across]),
+        ("A16-mul-across", [mul_across]),
+        ("A16-pro-disjoint", [pro_disjoint]),
+        ("A16-mul-disjoint", [mul_disjoint]),
+        ("A16-mixed", [pro_incident, mul_disjoint]),
+    ]
+    assert [(item["id"], item["constraints"]) for item in plan["items"]] == expected
+    for item in plan["items"]:
+        assert item["type"] == "atlas_core"
+        assert item["n"] == 5
+        assert item["carrier"]["edges"] == edges
+        assert item["baseline"] == 1
+        assert "incident_count" not in json.dumps(item["constraints"])
+        for constraint in item["constraints"]:
+            assert constraint["action"] == "either"
+            assert constraint["when"]["polarity"] == "present"
+            if constraint["effect"] == "prohibit":
+                assert "factor" not in constraint
+            else:
+                assert constraint["factor"] == 3
+    incident = plan["items"][1]["constraints"][0]
+    assert incident["event"] == [1, 2]
+    assert incident["when"]["edge"] == [0, 1]
