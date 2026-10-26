@@ -1145,3 +1145,121 @@ operator, general laws, exact counterexamples and representation/type limits.
 There is no unfinished selected experiment or scientific blocker. All broad
 questions remain open, the atlas stays 218 with 15 excluded failures, and the
 next research question must be selected independently.
+
+## Next structural-composition OTR selection — 26 October 2026
+
+Starting local HEAD was 47e9cbe; after fetching the new prompt, live research
+HEAD is `b1aacb73f68a1e59789eeb1d9e7883f3c3ee81c6`. Main is still 47e9cbe.
+All registered worktrees were checked; no unpublished new inquiry was found.
+All 247 baseline tests and live-HEAD CI pass, and protected output hashes match.
+
+`docs/2026-10-26-switching-link-selection.md` selects a binary attachment relation
+that switches actors between local and joint updates. The inquiry distinguishes
+an independent link coordinate from a derived description, asks whether a fixed
+label/controller protocol exactly compiles it, and studies the coarsest exact
+current-state refinement retaining the actor configuration. A same-clock
+support comparison is scoped separately from ordinary finite-state reduction.
+
+The analysis-only method will be `switching-link-analysis-0.1.0`; no new frozen
+experiment or result is claimed by selection. The atlas stays 218 with 15
+historical failures excluded. Atlas-019/020 and generated files remain untouched
+and unadopted. Automatic integration follows only after actual completion and
+passing applicable CI.
+
+## Switching-attachment inquiry complete — 26 October 2026
+
+The selected structural-composition inquiry has a completed analytical answer.
+Report: `reports/2026-10-26-switching-attachment.md`; definitions/proofs:
+`docs/switching-attachment.md`. It investigates a changing relation governing
+separate versus joint actor updates, rather than replaying the prior shared-port
+value construction. The independent binary link state is specified in the input.
+
+Finite off-diagonal nonnegative integer actor matrices, nonnegative mode-only
+switch weights and one final global-event normalization define the policy.
+It compiles exactly into three fixed-H components: two expanded actors and a
+guarded two-state controller with explicit unit passive participation. Raw
+labelled matrices and full-state kernels agree, including zero rows; no new
+state beyond the input link or intermediate time step is inserted. This is a
+behavioural reduction, not identity of literal graph/physical interpretation.
+
+For actor-only observation, the mode rows differ at every actor configuration
+where either actor can move, because local and joint off-diagonal updates have
+disjoint observed supports. The unique coarsest exact deterministic refinement
+retaining actor configuration splits every active mode pair and merges every
+inactive pair. Its size is the number of actor configurations plus the number
+of active ones. This is proved for all finite actors in this grammar, including
+zero switches; it is not minimality over arbitrary observations or histories.
+The inactive quotient need not preserve raw protocol behaviour for later contexts.
+
+A positive binary switching support contains the directed five-cycle
+000 -> 100 -> 110 -> 111 -> 001 -> 000. Hamming parity excludes an injective
+one-bit support encoding in any dimension at the same event clock. Fixed modes
+separately have one-bit encodings. The exact finite-state protocol compilation
+therefore does not claim a compiler into rrc-0.4.0 single-toggle support or a new
+fundamental primitive. No physical rate, intervention or ontology is derived.
+
+Analysis-only `switching-link-analysis-0.1.0` compares guarded matrices against
+independent n-ary event matching. The 729 binary networks yield 11664 exhaustive
+actor-view refinement checks, including 1224 exact masks; nine networks have an
+exact unrefined actor view. These are software-menu counts, not population
+frequencies or complexity targets. Hand rows, old sparse-product compatibility,
+a nonbinary actor, a later private context, support colouring, frozen modes,
+zero rows and invalid inputs provide independent controls.
+
+All 268 local RRC tests pass, including 21 added tests; baseline was 247.
+Deterministic evidence is `provenance/2026-10-26-switching-link-verification.json`,
+SHA-256 `ae9ed1657d04a6df9b306b8e817508cbe9eaef9d68017825aa9748edc4febfcc`.
+General statements follow from direct arguments and standard finite-state,
+lumpability and parity reasoning, not extrapolation from the bounded menu.
+
+New append-only records are RRC-I13 through RRC-I15, RRC-R076 through RRC-R080,
+EQ-044/EQ-045, PAT-021, IDEA-L28 and two analytical coverage rows. There are
+zero selected scientific worker invocations and zero new adopted atlas cells.
+The atlas remains 218 with 15 excluded historical failures, and all broad
+questions remain open. Old methods, frozen plans/results, generated evidence,
+deferred/unadopted Atlas-019/020 and all other programmes are preserved.
+
+No selected experiment is unfinished. Publish this verified increment, record
+the actual CI and handoff commits, then automatically merge after all configured
+integration jobs pass. Future relation graphs, self-loop grammars, ownership,
+history classes or clocks are possible independent inquiries, not a prescribed
+next finding.
+
+## Published switching-link checkpoint and automatic integration
+
+Starting local/main SHA: `47e9cbeb71034b6f2791a2c6fb7ec24538f365a3`.
+Starting live research SHA after fetch:
+`b1aacb73f68a1e59789eeb1d9e7883f3c3ee81c6`.
+No unpublished new inquiry was found in the registered worktrees. Protected
+artifact hashes remain as recorded in the selection and prior local audit.
+
+Selection: `a44aba107a231c0e2240a54d93cdb96da2751784`,
+`research: select switching attachment and fixed-protocol reduction`, pushed
+before the new checker domain ran. Its workflow 40397270240 passed in full.
+Substantive verified publication: `97bb536da35fe45649121d591d241c16ae40aaab`,
+`research: prove switching-link protocol reduction and minimal predictive refinement`,
+pushed as cello. Its
+[workflow 40398924923](https://github.com/gellsmore-svg/Relational-Substrate/actions/runs/40398924923)
+is queued at this checkpoint; this entry does not claim a finished CI outcome.
+The final restart/handoff commit is the PR head reported in the integration record.
+
+Local validation is 268 RRC tests plus 23 post-register ledger/frozen-plan checks,
+all passing. Exact evidence reproduces byte-for-byte with the SHA-256 above.
+The six registers, journal and crosswalk preserve starting prefixes; IDs,
+endpoints, evidence and commit references validate. Frozen science, old methods
+and other programmes are unchanged. Original generated and Atlas-019/020 files
+stay untracked/unadopted, with unchanged directory hashes and deferred status.
+
+The mathematical inquiry is complete and published. Under AGENTS.md, open the
+RRC-to-main PR after this handoff, wait for all actual application/reports,
+laboratory, RRC and book checks, then merge without another permission request.
+Verify the merged main commit and synchronize the continuing research branch.
+Record actual PR/CI URLs, merge SHA and synchronized SHA in the PR and final
+session handoff; a queued job or prompt upload is not completed integration.
+
+Restart at `reports/2026-10-26-switching-attachment.md`, then
+`docs/switching-attachment.md` and the selection. The exact fixed-protocol
+reduction, scoped coarsest refinement and support obstruction are separate
+claims. There is no unfinished selected experiment or scientific blocker.
+The atlas remains 218 with 15 excluded historical failures, all broad questions
+stay open, and future relation/observation/clock questions are optional.
