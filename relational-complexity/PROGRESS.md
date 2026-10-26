@@ -618,3 +618,65 @@ the recovery selection when valid records already exist. Atlas-019 and Atlas-020
 remain deferred with their local uncommitted outputs untouched. No atlas question
 or broad coverage region is closed by this selection. No new result is claimed
 in this section; verification, interpretation and the recovery commit follow.
+
+## Atlas-018 recovered and independently verified
+
+The selection was committed and pushed as
+`a2dfc5d1ee98c26cb249a15fe9e7828830917478`. The starting live HEAD remains the
+recorded `b8e5ac48a2ef26e3d8cb2727a5798d5980b49435`; this increment does not
+reset or rewrite the interrupted session's evidence.
+
+All three existing Atlas-018 results were verified and adopted unchanged under
+the original freeze `8923de6565937a99a185f817526816ba50690def`. Plan hash
+`2468bf59c1fce72fb909482dc94e1abeae30e627f0bd71e4536ed8b10b7a27e0`, definitions
+`81389d9`, engine `rrc-0.4.0`, method `event-kernel-0.2.0` and clock
+`one_declared_event` are unchanged. New scientific worker invocations: zero.
+Complete: 3; failed, timeout, unresolved, invalid and pending: zero. The adopted
+atlas now contains 218 complete cells; the 15 failed Atlas-007 cells remain
+excluded. This is recovery of a completed computation, not a claim of three
+new executions.
+
+The normal verifier printed `verified`. The independent standard-library audit
+checked every one of 576 probability entries, the semantic event kinds, input
+hashes, exact byte receipts, file inventory and the inclusion correspondence.
+The saved evidence is `provenance/atlas-018-independent-verification.json`;
+the runnable checker is `provenance/atlas-018-independent-check.py`. Its six
+adversarial tests passed, and the complete RRC suite passed 177 tests. The
+historical Atlas-017 ledger regression now locates its immutable finding and
+relation by ID, so appending new records does not change its meaning.
+
+Free copies are not invariant on the agreement image: each image state loses
+probability `1/2` in one step. Coupled copies preserve that image, and all eight
+restricted rows match the identified three-bit law. Post-execution analysis
+also proves the full coupled kernel is recoded by
+`(y0,a,b,y3) -> (y0,a,y3,a xor b)` into three toggles and a frozen disagreement
+bit. The exact quotient that drops that bit is checked. This recoding changes
+the original coordinate/event-kind interpretation; it is not a carrier
+automorphism, a universal joint-event reduction, autonomous higher-order state,
+or evidence for physical ontology. The interpretation and proof are
+`reports/atlas-018-observations.md`; the generated table is `reports/atlas-018.md`.
+The recovery chronology and its timestamp limitations are recorded in
+`provenance/atlas-018-execution.md`.
+
+New records are `RRC-ATLAS-019` (observation), `RRC-I01-INTERFACE-RECODING`
+(separate inference), relations `RRC-R055`–`RRC-R057`, `EQ-033`, `PAT-016`, and
+the partial `COV-INTERFACE-INVARIANCE-SAMPLE`. Old ledger and register rows are
+preserved byte-for-byte. All fifteen atlas questions and broad coverage regions
+remain open. No measured fraction schedules another round.
+
+Atlas-019 and Atlas-020 remain deferred/unadopted, not cancelled. Their existing
+local result directories are unchanged and are not committed by this increment.
+Directory-content SHA-256 checkpoints, using sorted relative paths followed by
+file bytes, are `c462b52c7e343247e32e45754305060629585264d976959ac97df2a03a26461d`
+for Atlas-019 and `9d97f9d29fc7adcb76e75a0fe8e03c8174c89c2dc5e60297a35e551936397b25`
+for Atlas-020. No old plan/preflight/result, engine source, independent programme,
+book or shared synthesis authority was modified. There is no current execution
+blocker. The original worker invocation transcript remains unavailable; it was
+not invented during recovery.
+
+The coherent stopping point is this adopted interface comparison and encoding
+analysis. Restart with this section and the latest handoff package. A useful
+next decision is whether state-dependent couplings break the recoding or exact
+projection, or whether a genuinely nontrivial successive quotient has greater
+information value. Select independently, and freeze any newly chosen experiment
+before its results. Do not automatically execute or adopt Atlas-019/020.

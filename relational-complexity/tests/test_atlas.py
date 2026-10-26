@@ -2150,7 +2150,7 @@ def test_atlas_017_execution_separates_support_from_the_single_toggle_law():
         json.loads(line)
         for line in (ROOT / "coherence" / "findings.jsonl").read_text(encoding="utf-8").splitlines()
     ]
-    finding = findings[-1]
+    finding = next(row for row in findings if row["finding_id"] == "RRC-ATLAS-018")
     assert finding["finding_id"] == "RRC-ATLAS-018"
     assert finding["created_commit"] == "070fc79"
     assert finding["status"] == "active"
@@ -2159,7 +2159,7 @@ def test_atlas_017_execution_separates_support_from_the_single_toggle_law():
         json.loads(line)
         for line in (ROOT / "coherence" / "relations.jsonl").read_text(encoding="utf-8").splitlines()
     ]
-    relation = relations[-1]
+    relation = next(row for row in relations if row["relation_id"] == "RRC-R054")
     assert relation["relation_id"] == "RRC-R054"
     assert relation["from_finding"] == "RRC-ATLAS-018"
     assert relation["to_finding"] == "RRC-M01-NO-NEW-AXIS"
