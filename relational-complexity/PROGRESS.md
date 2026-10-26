@@ -1105,3 +1105,43 @@ No selected experiment remains unfinished. Publish the result, record observed
 CI and commit provenance, and automatically integrate after all applicable PR
 checks pass. Future work may change port ownership, H/membership or abstraction
 contracts, but no next finding or experiment is prescribed.
+
+## Published adaptive-interface checkpoint and automatic integration
+
+Actual starting local HEAD was `fda7db44414173ea6308bbd0d8d70d9349e22ddd`.
+Starting live research HEAD after fetch was
+`253e0c4a5ef3937aaec77afdc7a0e68c1d6ea3c8`; main remained at fda7db4.
+No unpublished adaptive research was found; this was initiated under recovery
+path C, not recovery of old adaptive results.
+
+Selection/audit: `9a7cd24849c3cab24ecfd13b6e2db21781f0f517`,
+`research: audit adaptive work and select shared changing-port composition`,
+pushed before its new software domain ran. Its workflow 40389649202 succeeded.
+Substantive publication: `3bd952ce17f64722c43dc31b934b2301e5d98431`,
+`research: establish shared changing-port composition and its consistency limits`,
+pushed as cello. Its
+[workflow 40391571032](https://github.com/gellsmore-svg/Relational-Substrate/actions/runs/40391571032)
+is in progress at this checkpoint; no completed full-CI outcome is claimed here.
+The final handoff commit is identified by the PR head and session record.
+
+All 247 local RRC tests pass, including the ledger/frozen-plan checks and the
+24 added analysis tests. The exact verifier and SHA-256 are recorded above;
+reproduction is byte-for-byte. All new files are owned by cello. The six living
+registers, journal and crosswalk preserve their starting prefixes, references
+and IDs validate, and no frozen or other-programme tracked paths are modified.
+Original generated and Atlas-019/020 output hashes match the initial audit.
+Those local files stay untracked/unadopted; deferred status is unchanged.
+
+The mathematical inquiry is complete and published. Automatic integration is
+authorized by AGENTS.md; open the RRC-to-main PR after this handoff, require all
+four actual CI jobs to pass, merge without another confirmation, verify main
+and synchronize the continuing research branch. The PR and final session record
+must give the observed CI URL, merge SHA and synchronized SHA. A queued job or
+merging only guidance is not completion of that integration step.
+
+Restart at `reports/2026-10-26-shared-changing-port.md`, then
+`docs/shared-changing-port.md` and the selection. The report defines the new
+operator, general laws, exact counterexamples and representation/type limits.
+There is no unfinished selected experiment or scientific blocker. All broad
+questions remain open, the atlas stays 218 with 15 excluded failures, and the
+next research question must be selected independently.
