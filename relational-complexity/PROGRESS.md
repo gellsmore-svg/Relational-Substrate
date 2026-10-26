@@ -700,3 +700,20 @@ obtained with `git rev-parse HEAD` and is supplied in the session response.
 The only remaining untracked paths are the pre-existing Atlas-019 and Atlas-020
 outputs; they remain deferred/unadopted. Resume from the published interpretation
 and selection record, not from a presumption that those rounds must be run.
+
+## Next independent OTR selection — 26 October 2026
+
+The new prompt is `prompts/2026-10-26-next-otr-cycle/RESEARCH-PROMPT.md` at
+`0c5f8cf`. Starting live HEAD is `b4fda19a1f964e09e3080c816a49f8fba1629955`.
+The branch was fast-forwarded without changing the deferred local outputs.
+Baseline: 177 tests pass; the existing Atlas-018 independent audit passes;
+218 adopted complete cells and 15 excluded historical failures are unchanged.
+
+`docs/2026-10-26-xor-selection.md` selects an analytic inquiry into binary-linear
+recoding of XOR event masks and exact projection after discarding inactive
+coordinates, with canonical dependence circuits distinguishing stronger support
+obstructions. The selection compares alternatives and fixes the small software
+validation domains before their checks. This is not an experimental freeze and
+does not add scientific cells. Method identifier `xor-mask-analysis-0.1.0` is
+analysis-only; existing engine and event semantics stay unchanged. Atlas-019/020
+remain deferred/unadopted. Proof and verification follow in separate commits.
