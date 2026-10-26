@@ -680,3 +680,23 @@ next decision is whether state-dependent couplings break the recoding or exact
 projection, or whether a genuinely nontrivial successive quotient has greater
 information value. Select independently, and freeze any newly chosen experiment
 before its results. Do not automatically execute or adopt Atlas-019/020.
+
+## Published checkpoint and final restart
+
+Starting live branch SHA: `b8e5ac48a2ef26e3d8cb2727a5798d5980b49435`.
+Selection commit: `a2dfc5d1ee98c26cb249a15fe9e7828830917478` (selection document
+and initial recovery journal), pushed and CI successful in run `40282492124`.
+Ending substantive research SHA: `eb303919badddff9a021c651aa8212bd4ee119ba`,
+pushed with the three original result/receipt/status sets and manifest,
+independent checker and evidence JSON, six checker tests, observations and
+generated report, execution provenance, crosswalk, append-only registers and
+ledger, and the historical-test ID lookup correction. That commit's CI run is
+`40283213209`; it was in progress when this handoff was written. Local tests
+passed 177/177 and both selected-round verification paths passed.
+
+This final documentation checkpoint names its already published research parent
+rather than inventing its own self-referential hash. Its branch-tip SHA is
+obtained with `git rev-parse HEAD` and is supplied in the session response.
+The only remaining untracked paths are the pre-existing Atlas-019 and Atlas-020
+outputs; they remain deferred/unadopted. Resume from the published interpretation
+and selection record, not from a presumption that those rounds must be run.
