@@ -597,3 +597,24 @@ The research-governance decision is to **defer**, not undo, delete or scientific
 The new restart package is `prompts/2026-10-26-otr-handoff/README.md`, with `RESEARCH-PROMPT.md` and `FROZEN-PLAN-DISPOSITION.md`. It directs the incoming model to select research for information value under OTR, protect scientific freeze provenance, run and verify anything it newly chooses, and distinguish a completed methodological increment from a completed scientific experiment. All broad atlas questions remain open unless new independently verified evidence later changes them.
 
 **Latest handoff instruction:** Use the new restart package; supersede the previous `Next action` section only as to the obligation/priority of atlas-018–020, *not* as to the immutability of frozen experimental records or avoidance of redundant targets. Always check live HEAD, local workspace and newer results before resuming.
+
+## OTR recovery selection — 26 October 2026
+
+The starting live branch is `b8e5ac48a2ef26e3d8cb2727a5798d5980b49435`. The RRC
+worktree was fast-forwarded from `8923de6`; its untracked outputs were preserved.
+The latest prompt is `prompts/2026-10-26-otr-handoff/RESEARCH-PROMPT.md` at
+`333b194`. The selection and audit are `docs/2026-10-26-otr-selection.md`.
+
+The local audit found three existing Atlas-018 results, three Atlas-019 results
+and four Atlas-020 results, all uncommitted and predating this session. They are
+not newly executed scientific work. The committed atlas still has 215 complete
+cells and the 15 excluded Atlas-007 failures. The existing 171 RRC tests pass.
+
+Atlas-018 is independently reselected for recovery: compare the identified
+interface with free copies and coupled copies under the original inclusion,
+checking every row, evidence hash and invariant-image claim before adoption.
+The frozen plan and method remain unchanged; no worker rerun is authorized by
+the recovery selection when valid records already exist. Atlas-019 and Atlas-020
+remain deferred with their local uncommitted outputs untouched. No atlas question
+or broad coverage region is closed by this selection. No new result is claimed
+in this section; verification, interpretation and the recovery commit follow.
