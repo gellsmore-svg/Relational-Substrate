@@ -24,6 +24,7 @@ from rrc.composition import (
     present_edge_count_labels,
     present_labelled_line_graph_labels,
     present_line_graph_labels,
+    rational_lumpability,
     successive_observations,
 )
 from rrc.constraints import (
@@ -34,7 +35,8 @@ from rrc.constraints import (
     support_report,
     weight_table_hash,
 )
-from rrc.event_kernel import kernel, single_toggle_catalogue
+from rrc.coupled_models import correspondence
+from rrc.event_kernel import CLOCK, STRICT_METHOD_ID, kernel, single_toggle_catalogue, strict_kernel
 from rrc.model import (
     build_weights,
     check_state_independent_identity,
@@ -639,6 +641,192 @@ def execute_event_kernel(spec: dict) -> dict:
     return payload
 
 
+def _fraction_rows(rows):
+    if rows is None:
+        return None
+    return [[fraction_payload(cell) for cell in row] for row in rows]
+
+
+def _declared_events(spec: dict) -> tuple[int, list]:
+    """Resolve one catalogue or one event list. The two keys are not combined."""
+    catalogue = spec.get("catalogue")
+    events = spec.get("events")
+    if catalogue is not None and events is not None:
+        raise ValueError("an event list names a catalogue or an event list")
+    n_states = spec.get("n_states")
+    if isinstance(n_states, bool) or not isinstance(n_states, int):
+        raise ValueError("n_states must be a positive integer")
+    if catalogue == "single_toggle":
+        rows = spec.get("rows")
+        if not isinstance(rows, list) or n_states != len(rows):
+            raise ValueError("n_states must match the single-toggle catalogue")
+        events = single_toggle_catalogue(rows)
+    elif catalogue is not None:
+        raise ValueError("unknown catalogue")
+    elif not isinstance(events, list):
+        raise ValueError("an event list names a catalogue or an event list")
+    return n_states, events
+
+
+def _bit_width_of(spec: dict):
+    if "bit_width" not in spec:
+        return None
+    width = spec["bit_width"]
+    if isinstance(width, bool) or not isinstance(width, int) or width < 1:
+        raise ValueError("bit_width must be a positive integer")
+    return width
+
+
+def execute_strict_event_comparison(spec: dict) -> dict:
+    """One strict event law, and a declared image when the spec names one.
+
+    The reference law is inside this spec. This item does not read another
+    item. A missing image stores no correspondence. A leaking image stores
+    no restricted rows. No occupation is stored.
+    """
+    started = time.perf_counter()
+    family = spec.get("family")
+    if not isinstance(family, str) or family == "":
+        raise ValueError("a strict event comparison names a family")
+    n_states, events = _declared_events(spec)
+    width = _bit_width_of(spec)
+    report = strict_kernel(n_states, events, bit_width=width)
+    image_map = spec.get("image_map")
+    reference = spec.get("reference")
+    compared = None
+    if image_map is not None:
+        if not isinstance(reference, dict):
+            raise ValueError("an image map names a reference law")
+        if not isinstance(image_map, list) or not image_map:
+            raise ValueError("an image map lists the image of each reference state")
+        ref_states, ref_events = _declared_events(reference)
+        if len(image_map) != ref_states:
+            raise ValueError("an image map covers the reference state space")
+        ref_report = strict_kernel(ref_states, ref_events, bit_width=_bit_width_of(reference))
+        checked = correspondence(
+            ref_report["probabilities"],
+            report["probabilities"],
+            dict(enumerate(image_map)),
+        )
+        compared = {
+            "image": checked["image"],
+            "image_invariant": checked["image_invariant"],
+            "conjugate": checked["conjugate"],
+            "restricted_rows": _fraction_rows(checked["restricted_rows"]),
+        }
+    payload = {
+        "status": "complete",
+        "engine_version": ENGINE_VERSION,
+        "item_id": spec["id"],
+        "round_id": spec.get("round_id"),
+        "type": "strict_event_comparison",
+        "role": spec.get("role"),
+        "family": family,
+        "method": STRICT_METHOD_ID,
+        "clock": CLOCK,
+        "semantics": report["semantics"],
+        "n_states": report["n_states"],
+        "halt_self_loop_is_event": False,
+        "new_primitive": False,
+        "catalogue": spec.get("catalogue"),
+        "event_count": len(report["events"]),
+        "events": report["events"],
+        "aggregated_weights": report["aggregated_weights"],
+        "row_sums": report["row_sums"],
+        "enabled_event_counts": report["enabled_event_counts"],
+        "completions": report["completions"],
+        "probabilities": _fraction_rows(report["probabilities"]),
+        "correspondence": compared,
+        "elapsed_s": round(time.perf_counter() - started, 6),
+    }
+    if width is not None:
+        payload["bit_width"] = width
+    return payload
+
+
+def _step_distribution(probabilities, initial: int, horizon: int) -> list[Fraction]:
+    size = len(probabilities)
+    dist = [Fraction(0) for _ in range(size)]
+    dist[initial] = Fraction(1)
+    for _ in range(horizon):
+        nxt = [Fraction(0) for _ in range(size)]
+        for source, mass in enumerate(dist):
+            if mass == 0:
+                continue
+            for target, prob in enumerate(probabilities[source]):
+                nxt[target] += mass * prob
+        dist = nxt
+    return dist
+
+
+def execute_event_horizon(spec: dict) -> dict:
+    """A declared horizon of one strict event law, plus one label partition.
+
+    The horizon is a power of the one-step kernel. It is not an intervention.
+    A partition that is not strongly lumpable stores no quotient rows.
+    No stationary distribution is stored.
+    """
+    started = time.perf_counter()
+    family = spec.get("family")
+    if not isinstance(family, str) or family == "":
+        raise ValueError("an event horizon names a family")
+    horizon = spec.get("horizon")
+    if isinstance(horizon, bool) or not isinstance(horizon, int) or horizon < 1 or horizon > 4:
+        raise ValueError("horizon must be an integer from 1 to 4")
+    n_states, events = _declared_events(spec)
+    width = _bit_width_of(spec)
+    report = strict_kernel(n_states, events, bit_width=width)
+    initial = spec.get("initial_state")
+    if isinstance(initial, bool) or not isinstance(initial, int) or initial < 0 or initial >= n_states:
+        raise ValueError("initial_state must be an integer state")
+    labels = spec.get("labels")
+    if not isinstance(labels, list) or len(labels) != n_states:
+        raise ValueError("labels must cover every state")
+    subset = spec.get("subset")
+    if not isinstance(subset, list) or not subset or len(set(subset)) != len(subset):
+        raise ValueError("subset lists distinct states")
+    if any(isinstance(state, bool) or not isinstance(state, int) or state < 0 or state >= n_states for state in subset):
+        raise ValueError("subset lists states of this law")
+    lump = rational_lumpability(report["probabilities"], labels)
+    dist = _step_distribution(report["probabilities"], initial, horizon)
+    payload = {
+        "status": "complete",
+        "engine_version": ENGINE_VERSION,
+        "item_id": spec["id"],
+        "round_id": spec.get("round_id"),
+        "type": "event_horizon",
+        "role": spec.get("role"),
+        "family": family,
+        "method": STRICT_METHOD_ID,
+        "clock": CLOCK,
+        "semantics": report["semantics"],
+        "n_states": report["n_states"],
+        "halt_self_loop_is_event": False,
+        "new_primitive": False,
+        "intervention": None,
+        "horizon": horizon,
+        "initial_state": initial,
+        "catalogue": spec.get("catalogue"),
+        "event_count": len(report["events"]),
+        "completions": report["completions"],
+        "probabilities": _fraction_rows(report["probabilities"]),
+        "horizon_distribution": [fraction_payload(cell) for cell in dist],
+        "subset": list(subset),
+        "subset_probability": fraction_payload(sum((dist[state] for state in subset), Fraction(0))),
+        "lumpability": {
+            "exact": lump["exact"],
+            "defined": lump["defined"],
+            "defect_l1": fraction_payload(lump["defect_l1"]),
+            "rows": _fraction_rows(lump["rows"]),
+            "reason": lump["reason"],
+        },
+        "elapsed_s": round(time.perf_counter() - started, 6),
+    }
+    if width is not None:
+        payload["bit_width"] = width
+    return payload
+
+
 def execute_spec(spec: dict) -> dict:
     kind = spec["type"]
     if kind == "lumpability":
@@ -655,6 +843,10 @@ def execute_spec(spec: dict) -> dict:
         return execute_successive_observation(spec)
     if kind == "event_kernel":
         return execute_event_kernel(spec)
+    if kind == "strict_event_comparison":
+        return execute_strict_event_comparison(spec)
+    if kind == "event_horizon":
+        return execute_event_horizon(spec)
     raise ValueError(f"unknown item type {kind}")
 
 

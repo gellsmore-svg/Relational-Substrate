@@ -161,6 +161,10 @@ def _problems(store: Store) -> list[str]:
             problems.extend(_successive_problems(item, result))
         if item["type"] == "event_kernel":
             problems.extend(_event_kernel_problems(item, result))
+        if item["type"] == "strict_event_comparison":
+            problems.extend(_strict_event_problems(item, result))
+        if item["type"] == "event_horizon":
+            problems.extend(_event_horizon_problems(item, result))
     return problems
 
 
@@ -471,6 +475,136 @@ def _event_kernel_problems(item: dict, result: dict) -> list[str]:
     return problems
 
 
+def _probability_rows_sum(name: str, probabilities, n_states: int) -> list[str]:
+    problems = []
+    if not isinstance(probabilities, list) or len(probabilities) != n_states:
+        return [f"{name} row count drifted"]
+    for row in probabilities:
+        if not isinstance(row, list) or len(row) != n_states:
+            return [f"{name} row shape drifted"]
+        total = Fraction(0)
+        for cell in row:
+            if not isinstance(cell, dict) or "num" not in cell or "den" not in cell:
+                return [f"{name} probability is not a fraction"]
+            total += Fraction(int(cell["num"]), int(cell["den"]))
+        if total != 1:
+            problems.append(f"{name} probability row does not sum to 1")
+    return problems
+
+
+def _strict_event_problems(item: dict, result: dict) -> list[str]:
+    """Record consistency for one strict event law. This does not rebuild it."""
+    problems = []
+    name = item["id"]
+    if result.get("type") != "strict_event_comparison":
+        problems.append(f"{name} type drifted")
+    if result.get("method") != "event-kernel-0.2.0":
+        problems.append(f"{name} method drifted")
+    if result.get("clock") != "one_declared_event":
+        problems.append(f"{name} clock drifted")
+    if result.get("new_primitive") is not False:
+        problems.append(f"{name} reports a new primitive")
+    if result.get("halt_self_loop_is_event") is not False:
+        problems.append(f"{name} treats a halt self-loop as an event")
+    if "occupation" in result or "weight_sha256" in result or "stationary" in result:
+        problems.append(f"{name} stores a carrier weight table")
+    if result.get("family") != item.get("family"):
+        problems.append(f"{name} family drifted")
+    n_states = item.get("n_states")
+    if result.get("n_states") != n_states:
+        problems.append(f"{name} state count drifted")
+        return problems
+    if "bit_width" in item and result.get("bit_width") != item["bit_width"]:
+        problems.append(f"{name} bit width drifted")
+    problems.extend(_probability_rows_sum(name, result.get("probabilities"), n_states))
+    events = result.get("events")
+    if not isinstance(events, list) or len(events) != result.get("event_count"):
+        problems.append(f"{name} event count drifted")
+        return problems
+    width = item.get("bit_width")
+    for event in events:
+        kind = event.get("kind")
+        if width is None:
+            continue
+        distance = (int(event["source"]) ^ int(event["target"])).bit_count()
+        if kind == "toggle" and distance != 1:
+            problems.append(f"{name} toggle distance drifted")
+        elif kind == "joint" and distance < 2:
+            problems.append(f"{name} joint distance drifted")
+        elif kind == "noop" and distance != 0:
+            problems.append(f"{name} noop distance drifted")
+        elif kind == "transition" and distance == 0:
+            problems.append(f"{name} transition distance drifted")
+    compared = result.get("correspondence")
+    if item.get("image_map") is None:
+        if compared is not None:
+            problems.append(f"{name} stores a correspondence without a map")
+    else:
+        if not isinstance(compared, dict):
+            problems.append(f"{name} correspondence is missing")
+            return problems
+        invariant = compared.get("image_invariant")
+        if compared.get("conjugate") is True and invariant is not True:
+            problems.append(f"{name} conjugacy claims a leaking image")
+        if invariant is not True and compared.get("restricted_rows") is not None:
+            problems.append(f"{name} leaking image stores restricted rows")
+    return problems
+
+
+def _event_horizon_problems(item: dict, result: dict) -> list[str]:
+    """Record consistency for one horizon. This does not rebuild the power."""
+    problems = []
+    name = item["id"]
+    if result.get("type") != "event_horizon":
+        problems.append(f"{name} type drifted")
+    if result.get("method") != "event-kernel-0.2.0":
+        problems.append(f"{name} method drifted")
+    if result.get("clock") != "one_declared_event":
+        problems.append(f"{name} clock drifted")
+    if result.get("new_primitive") is not False:
+        problems.append(f"{name} reports a new primitive")
+    if result.get("intervention") is not None:
+        problems.append(f"{name} stores an intervention")
+    if "occupation" in result or "stationary" in result or "stationary_tv" in result:
+        problems.append(f"{name} stores a stationary law")
+    if result.get("horizon") != item.get("horizon"):
+        problems.append(f"{name} horizon drifted")
+    if result.get("initial_state") != item.get("initial_state"):
+        problems.append(f"{name} initial state drifted")
+    if result.get("subset") != item.get("subset"):
+        problems.append(f"{name} subset drifted")
+    n_states = item.get("n_states")
+    if result.get("n_states") != n_states:
+        problems.append(f"{name} state count drifted")
+        return problems
+    problems.extend(_probability_rows_sum(name, result.get("probabilities"), n_states))
+    distribution = result.get("horizon_distribution")
+    if not isinstance(distribution, list) or len(distribution) != n_states:
+        problems.append(f"{name} horizon distribution drifted")
+    else:
+        total = Fraction(0)
+        for cell in distribution:
+            if not isinstance(cell, dict) or "num" not in cell:
+                problems.append(f"{name} horizon cell is not a fraction")
+                return problems
+            total += Fraction(int(cell["num"]), int(cell["den"]))
+        if total != 1:
+            problems.append(f"{name} horizon distribution does not sum to 1")
+    lump = result.get("lumpability")
+    if not isinstance(lump, dict):
+        problems.append(f"{name} lumpability is missing")
+        return problems
+    exact = lump.get("exact")
+    numerator = (lump.get("defect_l1") or {}).get("num")
+    if exact != (numerator == "0"):
+        problems.append(f"{name} exact flag disagrees with the defect")
+    if exact is True and not isinstance(lump.get("rows"), list):
+        problems.append(f"{name} exact partition stores no rows")
+    if exact is not True and lump.get("rows") is not None:
+        problems.append(f"{name} inexact partition stores rows")
+    return problems
+
+
 def command_verify(args: argparse.Namespace) -> int:
     plan = load_plan(args.round)
     out = Path(args.out) if args.out else default_out(args.round)
@@ -610,6 +744,60 @@ def _report_composition(plan: dict, store: Store) -> str:
     return "\n".join(lines) + "\n"
 
 
+def _report_strict_event(plan: dict, store: Store) -> str:
+    lines = [
+        f"# {plan['round_id']} report",
+        "",
+        "Generated from completed item files. Probabilities are the stored numerator and denominator.",
+        "A correspondence is recorded only when the item names an image map.",
+        "A leaking image stores no restricted rows. No occupation is stored.",
+        "",
+        "| Item | Family | States | Events | Invariant | Conjugate |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for item in plan["items"]:
+        state = store.classify(item["id"])
+        if state != "complete":
+            lines.append(f"| {item['id']} | {item.get('family', '')} |  |  |  | {state} |")
+            continue
+        result = store.load_result(item["id"])
+        compared = result.get("correspondence") or {}
+        lines.append(
+            f"| {result['item_id']} | {result['family']} | {result['n_states']} | {result['event_count']} | {compared.get('image_invariant', '')} | {compared.get('conjugate', '')} |"
+        )
+    return "\n".join(lines) + "\n"
+
+
+def _report_event_horizon(plan: dict, store: Store) -> str:
+    lines = [
+        f"# {plan['round_id']} report",
+        "",
+        "Generated from completed item files. The horizon distribution is the stored power of the one-step kernel.",
+        "An inexact partition stores no quotient rows. No intervention operator is defined.",
+        "",
+        "| Item | Family | Horizon | Subset | Exact | Defect |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for item in plan["items"]:
+        state = store.classify(item["id"])
+        if state != "complete":
+            lines.append(f"| {item['id']} | {item.get('family', '')} |  |  |  | {state} |")
+            continue
+        result = store.load_result(item["id"])
+        lump = result["lumpability"]
+        lines.append(
+            "| {id} | {family} | {horizon} | {subset} | {exact} | {defect} |".format(
+                id=result["item_id"],
+                family=result["family"],
+                horizon=result["horizon"],
+                subset=_fraction_text(result["subset_probability"]),
+                exact=lump["exact"],
+                defect=_fraction_text(lump["defect_l1"]),
+            )
+        )
+    return "\n".join(lines) + "\n"
+
+
 def command_report(args: argparse.Namespace) -> int:
     plan = load_plan(args.round)
     out = Path(args.out) if args.out else default_out(args.round)
@@ -638,6 +826,22 @@ def command_report(args: argparse.Namespace) -> int:
         return 0
     if kinds == {"event_kernel"}:
         text = _report_event_kernel(plan, store)
+        sys.stdout.write(text)
+        if args.write:
+            destination = Path(args.write)
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(text, encoding="utf-8")
+        return 0
+    if kinds == {"strict_event_comparison"}:
+        text = _report_strict_event(plan, store)
+        sys.stdout.write(text)
+        if args.write:
+            destination = Path(args.write)
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(text, encoding="utf-8")
+        return 0
+    if kinds == {"event_horizon"}:
+        text = _report_event_horizon(plan, store)
         sys.stdout.write(text)
         if args.write:
             destination = Path(args.write)
