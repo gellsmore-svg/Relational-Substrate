@@ -1224,3 +1224,42 @@ the actual CI and handoff commits, then automatically merge after all configured
 integration jobs pass. Future relation graphs, self-loop grammars, ownership,
 history classes or clocks are possible independent inquiries, not a prescribed
 next finding.
+
+## Published switching-link checkpoint and automatic integration
+
+Starting local/main SHA: `47e9cbeb71034b6f2791a2c6fb7ec24538f365a3`.
+Starting live research SHA after fetch:
+`b1aacb73f68a1e59789eeb1d9e7883f3c3ee81c6`.
+No unpublished new inquiry was found in the registered worktrees. Protected
+artifact hashes remain as recorded in the selection and prior local audit.
+
+Selection: `a44aba107a231c0e2240a54d93cdb96da2751784`,
+`research: select switching attachment and fixed-protocol reduction`, pushed
+before the new checker domain ran. Its workflow 40397270240 passed in full.
+Substantive verified publication: `97bb536da35fe45649121d591d241c16ae40aaab`,
+`research: prove switching-link protocol reduction and minimal predictive refinement`,
+pushed as cello. Its
+[workflow 40398924923](https://github.com/gellsmore-svg/Relational-Substrate/actions/runs/40398924923)
+is queued at this checkpoint; this entry does not claim a finished CI outcome.
+The final restart/handoff commit is the PR head reported in the integration record.
+
+Local validation is 268 RRC tests plus 23 post-register ledger/frozen-plan checks,
+all passing. Exact evidence reproduces byte-for-byte with the SHA-256 above.
+The six registers, journal and crosswalk preserve starting prefixes; IDs,
+endpoints, evidence and commit references validate. Frozen science, old methods
+and other programmes are unchanged. Original generated and Atlas-019/020 files
+stay untracked/unadopted, with unchanged directory hashes and deferred status.
+
+The mathematical inquiry is complete and published. Under AGENTS.md, open the
+RRC-to-main PR after this handoff, wait for all actual application/reports,
+laboratory, RRC and book checks, then merge without another permission request.
+Verify the merged main commit and synchronize the continuing research branch.
+Record actual PR/CI URLs, merge SHA and synchronized SHA in the PR and final
+session handoff; a queued job or prompt upload is not completed integration.
+
+Restart at `reports/2026-10-26-switching-attachment.md`, then
+`docs/switching-attachment.md` and the selection. The exact fixed-protocol
+reduction, scoped coarsest refinement and support obstruction are separate
+claims. There is no unfinished selected experiment or scientific blocker.
+The atlas remains 218 with 15 excluded historical failures, all broad questions
+stay open, and future relation/observation/clock questions are optional.
