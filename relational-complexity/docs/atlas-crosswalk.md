@@ -107,3 +107,28 @@ Post-execution analysis recodes `(y0,a,b,y3)` as `(y0,a,y3,a xor b)`. The couple
 The analytic increment under `xor-mask-analysis-0.1.0` is `reports/2026-10-26-xor-recoding.md`, with full proofs in `docs/xor-mask-recoding.md`. EQ-034 classifies binary-linear recoding of distinct XOR directions by independence. EQ-035 gives the separate positive-ray/halt criterion for dropping inactive coordinates. Common scaling is a null control; relative rates can defeat closure without changing support. A three-mask triangle and a bipartite four-mask support with four common neighbors obstruct particular broader injective one-bit embeddings, not every alternative encoding. The ordinary cube controls satisfy neither obstruction.
 
 RRC-I02 through RRC-I04 keep these analytic claims separate from experimental observations. The checker cross-validates rank and subset-XOR on 2014 software direction cases and exact block rows on 81 weight-vector pairs. None is a new atlas cell: the adopted count remains 218, with the 15 failed Atlas-007 items excluded. IDEA-L24, PAT-017 and two analytical coverage rows make the distinction navigable. All broad questions remain open, and Atlas-019/020 remain deferred with unchanged unadopted outputs.
+
+## Labelled synchronization and contextual preservation
+
+The next analytical increment is `reports/2026-10-26-sync-composition.md`, with
+the typed product and matrix proofs in `docs/labelled-sync-composition.md`.
+EQ-036 records associativity and the shared-loop identity under a fixed
+handshake alphabet and final-only normalisation. EQ-037 records the sufficient
+labelwise weighted quotient condition: component reduction commutes with this
+composition, including evolving hidden state and halt rows. It is not necessary
+for every particular partner.
+
+RRC-I05 through RRC-I07 distinguish those proofs from the contextual
+counterexamples. Exact standalone projection can fail after a partner filters
+labels; a private event can expose a raw scale that standalone normalisation
+erases. The all-halt one-state system and the shared-loop identity have the same
+standalone kernel but differ as synchronization participants. The declared
+operator retains weighted labels so its output can participate in further
+dynamics. This is not state-interface identification or changing membership.
+
+IDEA-L25, PAT-018 and two analytical coverage rows point to the bounded software
+checks: 81 event/matrix pairs, 729 associativity triples, nine two-sided unit
+controls and 243 hidden-update contexts, plus typed boundary controls. None is a
+scientific cell. The atlas remains 218 adopted cells with 15 historical failures
+excluded; Atlas-019/020 remain deferred, untouched and unadopted. All broad
+questions remain open.

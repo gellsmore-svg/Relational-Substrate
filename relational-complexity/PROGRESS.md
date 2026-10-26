@@ -814,3 +814,46 @@ are explicit instruments. The analysis-only method is
 analytic inquiry with predeclared independent fixture domains, not a frozen
 experiment. The atlas remains 218 complete cells and 15 excluded failures;
 Atlas-019/020 remain deferred/unadopted. Proof and checks follow separately.
+
+## Synchronization analysis complete — 26 October 2026
+
+The selected inquiry is complete as an analytical increment, not an experimental
+round. `reports/2026-10-26-sync-composition.md` records the result and restart;
+`docs/labelled-sync-composition.md` supplies the typed contract and proofs.
+
+The fixed-handshake weighted-label product has a reapplicable dynamical output,
+is associative after Cartesian reassociation and has a shared-loop identity.
+Halt completion is not that identity. Exact aggregate standalone descriptions
+can fail after interaction because a partner distinguishes hidden labels or raw
+weight scale. The sufficient labelwise weighted block-sum condition makes
+quotient and composition commute, even with evolving hidden state. A particular
+partner need not require that full condition. These claims concern the declared
+product-weight/global-event clock, not all composition policies or ontology.
+
+Independent method `label-sync-analysis-0.1.0` checks sparse event enumeration
+against per-label matrices: 81 basis pairs, 729 associativity triples, nine
+two-sided unit controls and 243 quotient/context checks with hidden hold, flip
+and reset updates. Additional controls include three-state dynamics, duplicate
+aggregation, non-unit weights, both factors reduced, and hand-derived contextual
+counterexamples. The proofs establish the general scoped statements; these
+software domains are not scientific samples or replications.
+
+All 204 tests pass (193 baseline plus 11 added). Exact deterministic evidence is
+`provenance/2026-10-26-sync-verification.json`, SHA-256
+`0c659cd02373bac68beac198e3f56670731f8d3d406c99675d2d38eabffb49bb`.
+The checker imports no RRC engine calculation. No engine method or version is
+changed; `rrc-0.4.0`, all frozen plans, preflights, results and failed history
+remain intact. No other research programme is modified.
+
+Append-only records are RRC-I05 through RRC-I07, RRC-R062 through RRC-R065,
+EQ-036/EQ-037, PAT-018, IDEA-L25 and two analytical coverage rows. They keep
+analytic proofs separate from experimental observations and do not close any
+broad question. There are zero scientific worker invocations and zero new atlas
+cells. The adopted count stays 218, with 15 historical failures excluded.
+Atlas-019/020 remain deferred with their original untracked outputs preserved.
+
+A later inquiry can assess other synchronization/rate policies, genuine
+state-interface identification, changing membership or weaker contextual
+quotients. None is prescribed as a follow-up experiment. There is no unfinished
+selected experiment or current blocker. Published commit and CI evidence follow
+in the handoff checkpoint.
