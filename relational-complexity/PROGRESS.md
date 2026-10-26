@@ -952,3 +952,39 @@ No selected experiment is unfinished and no blocker remains. A later inquiry
 may change the partner class, interface, observer or policy, but none is
 scheduled. Publish this proof/check increment and record its exact commit/CI
 checkpoint before handing off.
+
+## Published context-analysis checkpoint — 26 October 2026
+
+Starting live SHA: `c9337285ec4553e3dab21530fa3b397507017d9b`.
+Selection: `37a84ae8250dff0c3400391b8044ff0a72d1c28f`,
+`research: select universal-context preservation and separating probes`, pushed
+before the validation domain ran; its workflow 40357691116 passed in full.
+Substantive research ending: `6bece5dc480bbf9e012e4fd4d841707d5cdf65ce`,
+`research: characterize uniform contextual preservation with finite probes`,
+pushed as cello on `research/recursive-relational-complexity`.
+The final documentation-only checkpoint is the branch tip in the session handoff.
+
+The substantive commit contains the proof, report, independent checker,
+deterministic JSON, 19 tests, journal/crosswalk and append-only records.
+All 223 local tests and the 23 focused ledger/frozen-plan checks passed.
+[Workflow 40358851910](https://github.com/gellsmore-svg/Relational-Substrate/actions/runs/40358851910)
+has passed its relational-complexity and books jobs; constraint-lab is still
+running at this checkpoint. This records observed job outcomes, not completed
+success of the full workflow or of the later documentation commit.
+
+The starting bytes of all six registers, PROGRESS.md and the crosswalk are
+preserved. New IDs are unique, evidence paths and relationship endpoints exist,
+and cited commit IDs resolve. Frozen plans/preflights/results, previous
+analytical methods, engine source and all other programmes are unchanged.
+The only untracked paths are the original Atlas-019/020 directories, whose
+content hashes still match the selection audit. They remain deferred and
+unadopted, not failed, cancelled or reexecuted. The atlas remains 218 adopted
+cells and 15 excluded historical failures.
+
+Restart at `reports/2026-10-26-contextual-preservation.md`, then
+`docs/contextual-preservation.md`. The selected question is answered for its
+exact context class; no unfinished experiment or blocker remains. Keep the
+finite separating-family theorem distinct from finite sampling, all-policy
+claims, emitted-label observation and changing H. Future inquiry should choose
+an informative new context/interface/policy distinction afresh. All broad
+questions stay open; no follow-up experiment is imposed.
