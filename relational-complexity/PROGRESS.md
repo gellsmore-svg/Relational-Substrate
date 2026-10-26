@@ -988,3 +988,19 @@ finite separating-family theorem distinct from finite sampling, all-policy
 claims, emitted-label observation and changing H. Future inquiry should choose
 an informative new context/interface/policy distinction afresh. All broad
 questions stay open; no follow-up experiment is imposed.
+
+## Standing automatic integration authority — 26 October 2026
+
+The user instructed: "merge, and do so automatically going forward".
+Completed and validated RRC increments are now authorized for automatic merge
+to the default branch without another permission request. The durable instruction
+is `AGENTS.md`. Merge authority does not alter frozen evidence, scientific
+review status, broad open questions or the deferred Atlas-019/020 disposition.
+
+The current merge will include accepted RRC work through the contextual-
+preservation increment and the subsequently committed adaptive-interface
+continuation prompt (`960a60c`, indexed at `954450d`). That new prompt is pending
+research; merging its text does not execute it. Integration must preserve the
+default branch's current application, books, synthesis and other existing work.
+RRC's shared laboratory coherence dependency must remain available. Merge
+provenance and validation will be recorded in the integration pull request.
