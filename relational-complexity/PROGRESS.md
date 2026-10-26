@@ -885,3 +885,19 @@ their own contracts; no next experiment is scheduled. There is no unfinished
 selected inquiry. Frozen history and engine source are unchanged, all broad
 questions remain open, and the only untracked paths are the preserved deferred
 Atlas-019/020 outputs. The atlas count is 218, not 218 plus software fixtures.
+
+## Context/interface OTR selection — 26 October 2026
+
+Starting live HEAD is `c9337285ec4553e3dab21530fa3b397507017d9b`, after
+fast-forwarding the new context/interface prompt. Starting CI and all 204 tests
+pass. `docs/2026-10-26-context-selection.md` compares evolving interfaces,
+alternate policies, deferred recovery and contextual distinguishability; it
+selects the last for the quantifier gap between one and every allowed partner.
+
+The analysis-only method will be `context-probe-analysis-0.1.0`. Its question
+fixes the existing product and asks what a label-blind product-state observer
+must preserve for every finite same-H partner, with private competing events
+allowed. Small calibrated probes and a proposed shared-label/private-aggregate
+signature will be independently challenged. No result is claimed by this
+selection alone. Existing methods, frozen history and the scientific count of
+218 are unchanged. Atlas-019/020 remain deferred with their original hashes.
