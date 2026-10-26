@@ -190,3 +190,30 @@ seven two-sided units and 147 internal-state lifts, plus named boundary controls
 These are software checks, not scientific cells. The atlas remains 218 adopted
 cells with 15 historical failures excluded; all broad questions remain open.
 Atlas-019/020 and the original generated artifacts remain unchanged/unadopted.
+
+## Switching attachment and actor-view refinement
+
+The next structural-composition result is
+`reports/2026-10-26-switching-attachment.md`, with definitions and proofs in
+`docs/switching-attachment.md`. It changes whether actors update separately or
+together, using a binary link that was independently specified in the input.
+RRC-I13 and EQ-044 give an exact full-state/raw-label compilation to fixed
+shared labels, expanded actor catalogues and a guarded controller. Passive
+participation is explicit; no additional clock step or implicit-halt event is
+inserted. The declared attachment graph and its fixed-protocol encoding are not
+claimed literally identical physical structures.
+
+RRC-I14 and EQ-045 give the unique coarsest strongly lumpable deterministic
+refinement retaining actor configuration: split the modes at each active
+configuration and merge them at each inactive one. This is a scoped current-
+state result, not minimality over all observations, histories or later contexts.
+RRC-I15 records the separate positive binary five-cycle obstruction to
+same-clock injective one-bit encodings. Each frozen mode has an appropriate
+one-bit encoding, and the fixed finite protocol reduction remains exact.
+
+IDEA-L28, PAT-021, RRC-R076 through RRC-R080 and two analytical coverage rows
+record these distinctions. The 729 compiler cases and 11664 refinement checks
+are software validation of proofs, not scientific observations or complexity
+targets. All broad questions remain open. The atlas remains 218 adopted cells
+with 15 historical failures excluded; Atlas-019/020 and the old generated
+artifacts retain their original bytes and dispositions.
