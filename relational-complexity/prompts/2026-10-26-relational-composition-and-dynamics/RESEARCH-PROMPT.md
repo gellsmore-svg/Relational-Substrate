@@ -2,10 +2,10 @@
 **Created:** 26 October 2026
 **Audience:** Research-capable CLI model or agent
 **Status:** New independently selectable research cycle, **not** a frozen plan, result, theorem claim, or mandatory experimental schedule.
-**Repository:** \`gellsmore-svg/Relational-Substrate\`
-**Branch:** \`research/recursive-relational-complexity\`
-**Working area:** \`relational-complexity/\`
-**Research method:** \`research-methods/open-thetical-research.md\`
+**Repository:** `gellsmore-svg/Relational-Substrate`
+**Branch:** `research/recursive-relational-complexity`
+**Working area:** `relational-complexity/`
+**Research method:** `research-methods/open-thetical-research.md`
 
 ## Purpose
 
@@ -22,26 +22,26 @@ You are authorised to choose a **small, rigorous, coherent research increment**;
 ## 1. Begin with the live research state
 
 At prompt creation, checked HEAD was
-\`a06a02c6ca86f7ab73fc8a21ca1911e56b95dce7\` —
-\`research: record the published XOR-analysis handoff\`.
+`a06a02c6ca86f7ab73fc8a21ca1911e56b95dce7` —
+`research: record the published XOR-analysis handoff`.
 
 **Treat this as a checkpoint, not a branch reset target.** Resolve actual remote HEAD, worktree, unpublished results, local changes, branch and CI before taking action. Do not discard an existing agent's work. First determine whether the intended inquiry has already been carried out on a later commit.
 
 Read at least:
 
-- \`PROGRESS.md\`, \`charter.md\`, \`README.md\`, \`docs/atlas-charter.md\`, \`docs/atlas-crosswalk.md\` and OTR.
-- Living \`atlas/\` and \`coherence/\` idea, coverage, question, equivalence, relation, pattern and finding registers.
-- \`reports/2026-10-26-xor-recoding.md\`, \`docs/xor-mask-recoding.md\`, \`docs/2026-10-26-xor-selection.md\`, \`provenance/2026-10-26-xor-verification.json\` and its independent checker.
-- \`reports/atlas-018-observations.md\`, its independent verification and execution provenance.
-- \`docs/state-event-families.md\`, \`docs/coupled-models.md\`, \`docs/event-semantics.md\`, \`docs/event-kernel.md\`, \`docs/composition-taxonomy.md\`, \`docs/composition-operators.md\`, \`docs/representations.md\`, \`docs/cover-observations.md\`, and \`docs/compilation-gate.md\`.
-- \`src/rrc/event_kernel.py\`, \`src/rrc/coupled_models.py\`, \`src/rrc/composition.py\`, \`src/rrc/items.py\`, runner and tests.
-- \`prompts/2026-10-26-otr-handoff/FROZEN-PLAN-DISPOSITION.md\` and the latest \`PROGRESS.md\` for deferred-plan governance.
+- `PROGRESS.md`, `charter.md`, `README.md`, `docs/atlas-charter.md`, `docs/atlas-crosswalk.md` and OTR.
+- Living `atlas/` and `coherence/` idea, coverage, question, equivalence, relation, pattern and finding registers.
+- `reports/2026-10-26-xor-recoding.md`, `docs/xor-mask-recoding.md`, `docs/2026-10-26-xor-selection.md`, `provenance/2026-10-26-xor-verification.json` and its independent checker.
+- `reports/atlas-018-observations.md`, its independent verification and execution provenance.
+- `docs/state-event-families.md`, `docs/coupled-models.md`, `docs/event-semantics.md`, `docs/event-kernel.md`, `docs/composition-taxonomy.md`, `docs/composition-operators.md`, `docs/representations.md`, `docs/cover-observations.md`, and `docs/compilation-gate.md`.
+- `src/rrc/event_kernel.py`, `src/rrc/coupled_models.py`, `src/rrc/composition.py`, `src/rrc/items.py`, runner and tests.
+- `prompts/2026-10-26-otr-handoff/FROZEN-PLAN-DISPOSITION.md` and the latest `PROGRESS.md` for deferred-plan governance.
 
 At the creation checkpoint:
 
 - **Atlas-018** is accepted: three recovered and independently verified scientific cells; the cumulative committed atlas has **218 verified cells**, excluding the 15 historical failed Atlas-007 cells.
 - The latest accepted **analytical** increment adds zero atlas cells, but includes mathematically justified claims and bounded independent checking. The full test suite was reported **193 passed**, and the substantive GitHub CI run completed successfully.
-- The analytical method is \`xor-mask-analysis-0.1.0\`; frozen \`event-kernel-0.1.0\`, strict \`event-kernel-0.2.0\` and the older \`rrc-0.4.0\` engine retain their declared interpretations.
+- The analytical method is `xor-mask-analysis-0.1.0`; frozen `event-kernel-0.1.0`, strict `event-kernel-0.2.0` and the older `rrc-0.4.0` engine retain their declared interpretations.
 - **Atlas-019 and Atlas-020** remain frozen, deferred and unadopted. Their earlier local output bytes may still exist outside Git. Preserve them and their provenance; **do not automatically execute, adopt, delete or replace them**, and do not treat them as owed work.
 - All broad atlas questions remain open. Analytical coverage is partial to named classes.
 
@@ -174,9 +174,9 @@ For every selected mathematical claim:
 4. Execute short independently recoverable items; ordinary watchdog 120 seconds, hard ceiling 300 seconds per indivisible task, prefer shorter item budgets.
 5. Check every item under its original frozen specification. Preserve failures/timeouts/unresolved and never change items after seeing outcomes.
 6. Verify and independently challenge numerical results, then publish the scientific records and interpretive analysis in a separate commit.
-7. Update \`PROGRESS.md\`, living registers and crosswalk; do not close broad coverage because one fixture matches a theorem.
+7. Update `PROGRESS.md`, living registers and crosswalk; do not close broad coverage because one fixture matches a theorem.
 
-Do not modify frozen Atlas-001–020 plans/results or the historic Atlas-007 failures. Do not alter the interpretation of the old \`rrc-0.4.0\` engine or event-kernel method IDs. Introduce new versioned methods only when semantics change, with a recorded backward-compatibility boundary.
+Do not modify frozen Atlas-001–020 plans/results or the historic Atlas-007 failures. Do not alter the interpretation of the old `rrc-0.4.0` engine or event-kernel method IDs. Introduce new versioned methods only when semantics change, with a recorded backward-compatibility boundary.
 
 **Uncommitted historical outputs:** Local Atlas-019/020 files may predate this session. If those experiments become the independent best selection, check existing freeze, input/spec/receipt bytes, plan hashes, mathematical content and execution chronology before adopting. Do not rerun valid evidence just to produce a new invocation. If they remain unselected, preserve their bytes and the deferred disposition, without inventing a cancellation rationale or silently committing them.
 
