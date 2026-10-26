@@ -1027,3 +1027,21 @@ rejecting later authorized main-branch book revisions. It now checks books at
 laboratory and ledger-prefix checks. No production or frozen scientific bytes
 are changed. Committed-evidence checks require the integration commit to exist
 before the final suite runs.
+
+## Adaptive-interface recovery audit and fresh selection — 26 October 2026
+
+Live research HEAD is `253e0c4a5ef3937aaec77afdc7a0e68c1d6ea3c8`; main remains
+at `fda7db4`. The recovery prompt adds guidance only. All registered worktrees,
+local branches and relevant ignored/untracked artifacts were audited in
+`provenance/2026-10-26-adaptive-local-audit.md`. No unpublished adaptive proof or
+result was found. Path C applies: initiate the original inquiry, not recover
+or rerun a supposedly completed adaptive result. Baseline is 223 passing tests
+and successful live-HEAD CI. Existing generated and deferred output bytes remain.
+
+`docs/2026-10-26-shared-port-selection.md` selects identified changing port state,
+its reapplicable weighted product and the consistency needed to match Cartesian
+copies. The analysis-only method will be `shared-port-analysis-0.1.0`. This is
+not an experimental freeze or a result claimed from selection. The atlas remains
+218 adopted cells and 15 excluded historical failures; Atlas-019/020 remain
+deferred/unadopted. Automatic merge authority applies after actual completion,
+independent verification and passing integration checks.
