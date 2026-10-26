@@ -717,3 +717,58 @@ validation domains before their checks. This is not an experimental freeze and
 does not add scientific cells. Method identifier `xor-mask-analysis-0.1.0` is
 analysis-only; existing engine and event semantics stay unchanged. Atlas-019/020
 remain deferred/unadopted. Proof and verification follow in separate commits.
+
+## XOR recoding and predictive closure — analytic increment complete
+
+The selection was pushed as `7061e7e8e8a5a2a4140c91024b8a60aef86b2aed` from
+starting live HEAD `b4fda19a1f964e09e3080c816a49f8fba1629955`. The proof is
+`docs/xor-mask-recoding.md`; the finished research account is
+`reports/2026-10-26-xor-recoding.md`. Analysis method `xor-mask-analysis-0.1.0`
+is separate from the unchanged RRC engine and historical event-kernel methods.
+
+Two precise questions are answered within their declared class. Distinct XOR
+directions admit a binary-linear coordinate-axis recoding iff they are linearly
+independent. Given such a recoding, dropping inactive coordinates is strongly
+lumpable iff each fixed observed-state block is entirely halted or has nonzero
+weight vectors on one positive ray. These are applications of basis extension
+and exact block-row equality, not claims of new general mathematics. A raw
+common scale can cancel; relative-rate dependence and a halt mismatch can remain
+predictively consequential even when the support still admits coordinate moves.
+
+Two canonical support circuits give separately proved stronger obstructions:
+`{1,2,3}` has a triangle; `{1,2,4,7}` is bipartite but has four common neighbors
+for two distinct states. Those particular supports cannot inject into one-bit
+hypercube steps at the same clock. This is not a complete nonlinear-encoding
+classification, an exclusion of different clocks or latent-state representations,
+or a physical/ontological conclusion. The independent support-extension control
+also shows that losing Atlas-018's particular frozen disagreement coordinate
+does not establish that every recoding fails.
+
+The standard-library checker `provenance/xor-mask-analysis-check.py` compares
+pivot rank with independent subset-XOR tests on 2014 direction cases, verifies
+1447 constructed bijections and 78622 directed edges, and checks all 81 pairs
+of two-direction weight vectors over `{0,1,2}` against separate exact Fraction
+block aggregation. The finite weight domain gives 15 exact and 66 nonexact
+fixtures; this is not a population statistic about research possibilities.
+Named positive, negative, common-scaling, support and halt controls are included.
+All 16 new tests and the complete 193-test RRC suite pass.
+
+Saved evidence: `provenance/2026-10-26-xor-verification.json`, SHA-256
+`001ffc3d975628e9c8e3a0ad055098863dafbe7d23bb336dc2a3f07cc4acfb78`.
+General claims follow from the proofs; software enumeration checks implementations,
+not empirical validity of an ontology. There is no new frozen experiment,
+plan hash, adopted scientific cell or scientific worker invocation. The atlas
+stays at 218 verified cells and 15 excluded historical failures.
+
+Analytic findings `RRC-I02`–`RRC-I04`, relations `RRC-R058`–`RRC-R061`,
+`EQ-034`, `EQ-035`, `PAT-017`, `IDEA-L24`, and two narrowly analytical coverage
+rows are appended. Broad questions remain open. Atlas-019 and Atlas-020 remain
+deferred/unadopted; their local result bytes and original freezes are untouched.
+Historical ledger prefixes, plans, preflights and results remain unchanged.
+
+This is a completed analytic research increment, not just method preparation and
+not programme completion. Restart with the new report and proofs. Potential
+next inquiries are nonlinear recodings beyond the two obstructions, evolving
+omitted coordinates, or event-labelled versus kernel-level equivalence. Choose
+again for information value; none is mandatory and no fixture fraction is a
+new scientific target. Commit and CI provenance follows once published.
