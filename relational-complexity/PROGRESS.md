@@ -772,3 +772,29 @@ next inquiries are nonlinear recodings beyond the two obstructions, evolving
 omitted coordinates, or event-labelled versus kernel-level equivalence. Choose
 again for information value; none is mandatory and no fixture fraction is a
 new scientific target. Commit and CI provenance follows once published.
+
+## Published XOR-analysis checkpoint and restart
+
+Starting live HEAD: `b4fda19a1f964e09e3080c816a49f8fba1629955`.
+Selection: `7061e7e8e8a5a2a4140c91024b8a60aef86b2aed`, pushed; CI run
+`40291820622` completed successfully.
+Ending substantive research commit: `710d06d419f92caf04dab2f9f27e6dd4849bd409`,
+`research: prove XOR support recoding and projected rate closure`, pushed.
+Its CI run is `40292927886` and was in progress when this journal entry was
+written. Local full-suite validation is 193 passed; the 23 focused schema,
+identity and frozen-plan checks also passed after the register additions.
+
+The substantive commit contains the methods proof, research report, independent
+checker, exact verification JSON and tests, plus journal/crosswalk and append-only
+ideas, coverage, equivalences, patterns and coherence records. The preceding
+selection commit contains the selection rationale and starting audit. No frozen
+scientific record or existing engine source changed. The final documentation
+checkpoint is identified by the branch tip in the session handoff.
+
+Restart at `reports/2026-10-26-xor-recoding.md` and
+`docs/xor-mask-recoding.md`, then reassess nonlinear support embeddings,
+evolving omitted state or labelled-event equivalence on information value.
+There is no current blocker and no unfinished selected experiment. Atlas-019
+and Atlas-020 remain deferred, unchanged and unadopted; their untracked local
+outputs are intentionally preserved. The scientific atlas remains at 218 cells,
+not 218 plus the software fixture counts.
