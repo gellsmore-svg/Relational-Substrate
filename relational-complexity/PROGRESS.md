@@ -1027,3 +1027,121 @@ rejecting later authorized main-branch book revisions. It now checks books at
 laboratory and ledger-prefix checks. No production or frozen scientific bytes
 are changed. Committed-evidence checks require the integration commit to exist
 before the final suite runs.
+
+## Adaptive-interface recovery audit and fresh selection — 26 October 2026
+
+Live research HEAD is `253e0c4a5ef3937aaec77afdc7a0e68c1d6ea3c8`; main remains
+at `fda7db4`. The recovery prompt adds guidance only. All registered worktrees,
+local branches and relevant ignored/untracked artifacts were audited in
+`provenance/2026-10-26-adaptive-local-audit.md`. No unpublished adaptive proof or
+result was found. Path C applies: initiate the original inquiry, not recover
+or rerun a supposedly completed adaptive result. Baseline is 223 passing tests
+and successful live-HEAD CI. Existing generated and deferred output bytes remain.
+
+`docs/2026-10-26-shared-port-selection.md` selects identified changing port state,
+its reapplicable weighted product and the consistency needed to match Cartesian
+copies. The analysis-only method will be `shared-port-analysis-0.1.0`. This is
+not an experimental freeze or a result claimed from selection. The atlas remains
+218 adopted cells and 15 excluded historical failures; Atlas-019/020 remain
+deferred/unadopted. Automatic merge authority applies after actual completion,
+independent verification and passing integration checks.
+
+## Adaptive shared-port inquiry complete — 26 October 2026
+
+The selected original adaptive-interface inquiry has an actual completed
+analytical result, not only merged guidance. Report:
+`reports/2026-10-26-shared-changing-port.md`; proof:
+`docs/shared-changing-port.md`. Recovery path C was chosen after finding no
+unpublished adaptive work. The audit preserves the distinction between old
+Atlas-018/preflight files, deferred outputs and this newly initiated analysis.
+
+The identified changing-port product uses finite onto boundaries to fixed P,
+fixed H, positive private port preservation and shared target compatibility.
+The output inherits its boundary and admits further composition. Compatible
+triple weights prove associativity; the port-relay component is a two-sided
+unit. Normalisation is final-only and an empty admitted row halts. This is one
+specified operator, not a canonical gluing law or evolving membership model.
+
+Agreement in unconstrained Cartesian copies is invariant exactly when every
+positive paired shared event from agreeing sources has agreeing target ports.
+Only then is the identified kernel the restriction to an invariant image.
+Otherwise admitted positive rows are one-step agreement conditionals; all-
+rejected positive rows have no such conditional. Identified halt is a declared
+completion, not a fabricated original row. Equal component port marginals can
+still leak 4/9, and identification can change [1/3,2/3] into [1/5,4/5]. The
+rejected-attempts-as-holds control has a separately declared clock.
+
+An eight-state (x,p,y) model has a shared p that changes and controls the private
+x weight. Its law reduces exactly to three ordinary current-state bit flips;
+it is not a new primitive. Dropping p is nonexact with feedback and exact in
+the no-feedback null. Yet the closed null observation lacks an inherited map
+to P. Such a map exists iff the original port is constant on observation blocks;
+this type criterion is separate from predictive closure. No previous Cartesian
+context theorem is exported to this different compatibility class.
+
+Analysis-only `shared-port-analysis-0.1.0` checks sparse event pairing against
+dense Cartesian matrices restricted through the agreement image, exact Fraction
+leakage against the support criterion, and a separate bit-table reduction.
+The predeclared domain has seven base components, 49 pairs, 343 triples, seven
+two-sided unit controls and 147 lifted pairs with hold/flip/reset internal state.
+Nonbinary, malformed, duplicate/zero-weight, clock and representation controls
+are included. These are verification fixtures, not scientific samples.
+
+All 247 local RRC tests pass: 223 baseline plus 24 added. Deterministic evidence
+is `provenance/2026-10-26-shared-port-verification.json`, SHA-256
+`3838d8f939662327b4c816ccb2b6d7009c38b3eb6c9b867e23152f46dc367974`.
+General claims follow from direct proofs; elementary fibre products, weighted
+events, invariance, conditioning and factorization are not rebranded as new
+universal mathematics. No physical time, intervention or ontology is established.
+
+Append-only additions are RRC-I10 through RRC-I12, RRC-R071 through RRC-R075,
+EQ-040 through EQ-043, PAT-020, IDEA-L27 and two analytical coverage rows.
+There are zero scientific workers and zero new adopted cells. The atlas remains
+218, excluding 15 historical failures. All broad questions stay open, old
+methods and frozen history remain unchanged, and Atlas-019/020 stay deferred.
+Their original files and the old generated artifacts are preserved byte-for-byte.
+
+No selected experiment remains unfinished. Publish the result, record observed
+CI and commit provenance, and automatically integrate after all applicable PR
+checks pass. Future work may change port ownership, H/membership or abstraction
+contracts, but no next finding or experiment is prescribed.
+
+## Published adaptive-interface checkpoint and automatic integration
+
+Actual starting local HEAD was `fda7db44414173ea6308bbd0d8d70d9349e22ddd`.
+Starting live research HEAD after fetch was
+`253e0c4a5ef3937aaec77afdc7a0e68c1d6ea3c8`; main remained at fda7db4.
+No unpublished adaptive research was found; this was initiated under recovery
+path C, not recovery of old adaptive results.
+
+Selection/audit: `9a7cd24849c3cab24ecfd13b6e2db21781f0f517`,
+`research: audit adaptive work and select shared changing-port composition`,
+pushed before its new software domain ran. Its workflow 40389649202 succeeded.
+Substantive publication: `3bd952ce17f64722c43dc31b934b2301e5d98431`,
+`research: establish shared changing-port composition and its consistency limits`,
+pushed as cello. Its
+[workflow 40391571032](https://github.com/gellsmore-svg/Relational-Substrate/actions/runs/40391571032)
+is in progress at this checkpoint; no completed full-CI outcome is claimed here.
+The final handoff commit is identified by the PR head and session record.
+
+All 247 local RRC tests pass, including the ledger/frozen-plan checks and the
+24 added analysis tests. The exact verifier and SHA-256 are recorded above;
+reproduction is byte-for-byte. All new files are owned by cello. The six living
+registers, journal and crosswalk preserve their starting prefixes, references
+and IDs validate, and no frozen or other-programme tracked paths are modified.
+Original generated and Atlas-019/020 output hashes match the initial audit.
+Those local files stay untracked/unadopted; deferred status is unchanged.
+
+The mathematical inquiry is complete and published. Automatic integration is
+authorized by AGENTS.md; open the RRC-to-main PR after this handoff, require all
+four actual CI jobs to pass, merge without another confirmation, verify main
+and synchronize the continuing research branch. The PR and final session record
+must give the observed CI URL, merge SHA and synchronized SHA. A queued job or
+merging only guidance is not completion of that integration step.
+
+Restart at `reports/2026-10-26-shared-changing-port.md`, then
+`docs/shared-changing-port.md` and the selection. The report defines the new
+operator, general laws, exact counterexamples and representation/type limits.
+There is no unfinished selected experiment or scientific blocker. All broad
+questions remain open, the atlas stays 218 with 15 excluded failures, and the
+next research question must be selected independently.

@@ -1,0 +1,255 @@
+{
+  "method": "shared-port-analysis-0.1.0",
+  "evidence_type": "analytic proof and independent software validation",
+  "scientific_worker_invocations": 0,
+  "new_atlas_cells": 0,
+  "basis_components": 7,
+  "pair_oracle_checks": 49,
+  "associativity_triples": 343,
+  "two_sided_unit_controls": 7,
+  "lifted_pair_oracle_checks": 147,
+  "extra_three_port_and_internal_iteration": "verified",
+  "eight_state_identification_and_bit_reduction": {
+    "no_feedback": {
+      "observation": {
+        "exact": true,
+        "rows": [
+          [
+            "1/3",
+            "1/3",
+            "1/3",
+            "0/1"
+          ],
+          [
+            "1/3",
+            "1/3",
+            "0/1",
+            "1/3"
+          ],
+          [
+            "1/3",
+            "0/1",
+            "1/3",
+            "1/3"
+          ],
+          [
+            "0/1",
+            "1/3",
+            "1/3",
+            "1/3"
+          ]
+        ],
+        "witness": null
+      },
+      "boundary": {
+        "defined": false,
+        "port_map": null,
+        "witness": [
+          0,
+          2
+        ]
+      }
+    },
+    "feedback": {
+      "observation": {
+        "exact": false,
+        "rows": null,
+        "witness": {
+          "states": [
+            0,
+            2
+          ],
+          "first_row": [
+            "1/3",
+            "1/3",
+            "1/3",
+            "0/1"
+          ],
+          "second_row": [
+            "1/4",
+            "1/4",
+            "1/2",
+            "0/1"
+          ]
+        }
+      },
+      "boundary": {
+        "defined": false,
+        "port_map": null,
+        "witness": [
+          0,
+          2
+        ]
+      }
+    }
+  },
+  "equal_marginals_copy_comparison": {
+    "invariant": false,
+    "leakage": [
+      "4/9",
+      "4/9"
+    ],
+    "agreement_image": [
+      0,
+      3
+    ],
+    "restricted_rows": null,
+    "conditional_rows": [
+      [
+        "1/5",
+        "4/5"
+      ],
+      [
+        "1/5",
+        "4/5"
+      ]
+    ],
+    "rejected_attempts_hold_control": [
+      [
+        "5/9",
+        "4/9"
+      ],
+      [
+        "1/9",
+        "8/9"
+      ]
+    ],
+    "identified_rows": [
+      [
+        "1/5",
+        "4/5"
+      ],
+      [
+        "1/5",
+        "4/5"
+      ]
+    ],
+    "support": {
+      "invariant": false,
+      "witness": {
+        "label": "h",
+        "source_pair": [
+          0,
+          0
+        ],
+        "target_pair": [
+          0,
+          1
+        ],
+        "positive_product_weight": 2
+      }
+    }
+  },
+  "mismatched_targets_with_private_competitor": {
+    "invariant": false,
+    "leakage": [
+      "6/7",
+      "0/1"
+    ],
+    "agreement_image": [
+      0,
+      3
+    ],
+    "restricted_rows": null,
+    "conditional_rows": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "rejected_attempts_hold_control": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "identified_rows": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "support": {
+      "invariant": false,
+      "witness": {
+        "label": "h",
+        "source_pair": [
+          0,
+          0
+        ],
+        "target_pair": [
+          1,
+          0
+        ],
+        "positive_product_weight": 6
+      }
+    }
+  },
+  "all_shared_targets_rejected": {
+    "invariant": false,
+    "leakage": [
+      "1/1",
+      "0/1"
+    ],
+    "agreement_image": [
+      0,
+      3
+    ],
+    "restricted_rows": null,
+    "conditional_rows": [
+      null,
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "rejected_attempts_hold_control": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "identified_rows": [
+      [
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1"
+      ]
+    ],
+    "support": {
+      "invariant": false,
+      "witness": {
+        "label": "h",
+        "source_pair": [
+          0,
+          0
+        ],
+        "target_pair": [
+          1,
+          0
+        ],
+        "positive_product_weight": 6
+      }
+    }
+  },
+  "status": "verified"
+}
