@@ -22,4 +22,4 @@ A weight of 0 is still parsed. A zero-weight toggle whose distance is not 1 is r
 
 Two events with the same source and target add their positive weights. Their kinds stay on the event list. The probability row does not recover the kinds. A joint and a transition can share one probability matrix and remain different records. Duplicate names are rejected. Listing the events in another order leaves the sums unchanged.
 
-The six Atlas-017 catalogues meet these checks. The stored results still say `event-kernel-0.1.0`. The worker item calls `kernel`, not `strict_kernel`. This note adds no ledger row and no equivalence.
+The six Atlas-017 catalogues meet these checks. The stored results still say `event-kernel-0.1.0`. The worker item calls `kernel`, not `strict_kernel`. This note adds no ledger row and no equivalence. Typed couplings that call `strict_kernel` are in `docs/coupled-models.md`. They are not a frozen round.
