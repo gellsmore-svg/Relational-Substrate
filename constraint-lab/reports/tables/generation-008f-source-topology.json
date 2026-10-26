@@ -1,0 +1,32 @@
+[
+  {
+    "action_pair": 0,
+    "action_pair_name": "0-1",
+    "action_present": true,
+    "action_topology_category": "star_spoke",
+    "dissolve_admissible": true,
+    "form_admissible": false,
+    "pair_mask": 7,
+    "source": "star"
+  },
+  {
+    "action_pair": 0,
+    "action_pair_name": "0-1",
+    "action_present": true,
+    "action_topology_category": "triangle_edge",
+    "dissolve_admissible": true,
+    "form_admissible": false,
+    "pair_mask": 11,
+    "source": "triangle"
+  },
+  {
+    "action_pair": 0,
+    "action_pair_name": "0-1",
+    "action_present": true,
+    "action_topology_category": "path_middle_edge",
+    "dissolve_admissible": true,
+    "form_admissible": false,
+    "pair_mask": 13,
+    "source": "path"
+  }
+]

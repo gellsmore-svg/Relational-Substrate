@@ -1,0 +1,49 @@
+{
+  "alphabet": "W4",
+  "constraint_set_id": "071339240fc80482",
+  "engine_version": "0.1.0",
+  "events": [
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => prohibit",
+              "factor": "0"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "0"
+        }
+      ],
+      "draw": null,
+      "halt": true,
+      "normaliser": "0",
+      "selected_edge": null,
+      "state_after": 1,
+      "state_before": 1,
+      "t": 0
+    }
+  ],
+  "expressions": [
+    "form(0-1) => prohibit",
+    "dissolve(0-1) => prohibit"
+  ],
+  "final_state": 1,
+  "horizon": 16,
+  "initial_name": "complete",
+  "initial_state": 1,
+  "label": "family",
+  "n": 2,
+  "prng": "python-random-MT19937",
+  "run_id": "17f0f3a76d067e5e",
+  "seed": 0,
+  "selection": "integer-weights-randrange",
+  "spec_hash": "ccf70e8c8cefde0e7039479a65e899b0cdeb6003cbc3cdf49738083bb8f97d26"
+}

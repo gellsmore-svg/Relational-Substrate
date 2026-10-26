@@ -1,0 +1,273 @@
+{
+  "round_id": "atlas-017",
+  "engine_version": "rrc-0.4.0",
+  "grammar_id": "one-declared-event-v1",
+  "method_id": "event-kernel-0.1.0",
+  "definitions_commit": "e189bd2eff912fc49917b65b959896fbfd3b6b5c",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q06"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q01",
+    "ATLAS-Q02",
+    "ATLAS-Q03",
+    "ATLAS-Q04",
+    "ATLAS-Q05",
+    "ATLAS-Q07",
+    "ATLAS-Q08",
+    "ATLAS-Q09",
+    "ATLAS-Q10",
+    "ATLAS-Q11",
+    "ATLAS-Q12",
+    "ATLAS-Q13",
+    "ATLAS-Q14",
+    "ATLAS-Q15"
+  ],
+  "selection": "Six event-kernel cells on declared catalogues. The method is event-kernel-0.1.0. The clock is one declared event. The engine string is rrc-0.4.0. The question is ATLAS-Q06: which of these catalogues fail the one-step single-toggle compilation gate, and what coordinate they would add. None of the six items adds a coordinate. The state is the integer mask named by n_states. The round does not close ATLAS-Q06. ATLAS-Q15 is not the question of this round. The control is the two-bit catalogue with every toggle weight equal to 1. That catalogue is the ordinary single-toggle law. It is also the free product of two copy toggles, so that reading is not a second cell. The joint cell uses the same four states and the same clock. From each state it names a toggle of bit 0 with weight 1 and a joint step by xor 3 with weight 1. The identified cell is one bit, toggled in both directions with weight 1. The coupled cell names only the joint step between state 0 and state 3. States 1 and 2 of that cell are given no event. The declared image sends identified state 0 to duplicated state 0 and identified state 1 to duplicated state 3. Agreement on the duplicated states is 0 and 3. The halt cell is one state and an empty event list. The noop cell is that same state with one noop of weight 1. A gate failure is a stored positive probability whose source and target differ by more than one bit under the item's bit width. A reduction to the single-toggle grammar is a stored law in which every positive off-diagonal target differs by one bit. The halt row and the noop row are the completion control: the same diagonal probability can still be two records. No stationary distribution is requested. No intervention operator is defined. No carrier weight table is compiled.",
+  "grammar": {
+    "ids": [
+      "one-declared-event-v1"
+    ],
+    "method_id": "event-kernel-0.1.0",
+    "clock": "one_declared_event",
+    "note": "Declared events. Nonnegative integer weights. Rational row normalisation. A zero row is halt_self_loop and is not an event. A noop is an event. No carrier weight table. No occupation."
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-017-preflight.md",
+    "heaviest_cell_s": 0.002,
+    "shape": "six declared catalogues, at most 4 states",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "cells": 6,
+    "declared_sample": true,
+    "families": [
+      "single_toggle",
+      "joint_and_toggle",
+      "identified_interface",
+      "coupled_copies",
+      "empty_catalogue",
+      "noop_event"
+    ],
+    "clock": "one_declared_event",
+    "state_spaces": [
+      "1 state",
+      "2 states",
+      "4 states"
+    ],
+    "six_is_not_a_target": true,
+    "baseline_only": false,
+    "excluded": [
+      "a second cell for the free product",
+      "the three-state summed-target witness",
+      "carrier weight tables",
+      "occupation",
+      "stationary means",
+      "atlas-016 carriers",
+      "the atlas-016 bit swap",
+      "EQ-027",
+      "a changing block family",
+      "successive quotients",
+      "an intervention operator",
+      "N=6",
+      "prohibit and multiply constraints",
+      "rerun of results/atlas-012",
+      "rerun of results/atlas-015",
+      "rerun of results/atlas-016"
+    ]
+  },
+  "stopping": [
+    "Do not add, remove or edit items after this file is committed.",
+    "Do not widen tolerances after an item has run.",
+    "A failed, timed-out or unresolved item stays in that state.",
+    "Incomplete or invalid records may be recomputed only under the same spec.",
+    "Do not describe an unrun item as a result.",
+    "Do not add a coordinate after reading the six results.",
+    "Do not add a cell in order to pursue a fixture probability.",
+    "Do not rerun atlas-012, atlas-015, or atlas-016.",
+    "Do not store a stationary distribution for these cells."
+  ],
+  "items": [
+    {
+      "id": "A17-g0",
+      "round_id": "atlas-017",
+      "type": "event_kernel",
+      "role": "control",
+      "family": "single_toggle",
+      "label": "two-bit all-ones toggles, also the free product of two copies",
+      "n_states": 4,
+      "bit_width": 2,
+      "catalogue": "single_toggle",
+      "rows": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "A17-g1",
+      "round_id": "atlas-017",
+      "type": "event_kernel",
+      "role": "comparison",
+      "family": "joint_and_toggle",
+      "label": "bit-0 toggle and joint xor 3 on the same four states",
+      "n_states": 4,
+      "bit_width": 2,
+      "events": [
+        {
+          "name": "bit0-0",
+          "kind": "toggle",
+          "source": 0,
+          "target": 1,
+          "weight": 1
+        },
+        {
+          "name": "both-0",
+          "kind": "joint",
+          "source": 0,
+          "target": 3,
+          "weight": 1
+        },
+        {
+          "name": "bit0-1",
+          "kind": "toggle",
+          "source": 1,
+          "target": 0,
+          "weight": 1
+        },
+        {
+          "name": "both-1",
+          "kind": "joint",
+          "source": 1,
+          "target": 2,
+          "weight": 1
+        },
+        {
+          "name": "bit0-2",
+          "kind": "toggle",
+          "source": 2,
+          "target": 3,
+          "weight": 1
+        },
+        {
+          "name": "both-2",
+          "kind": "joint",
+          "source": 2,
+          "target": 1,
+          "weight": 1
+        },
+        {
+          "name": "bit0-3",
+          "kind": "toggle",
+          "source": 3,
+          "target": 2,
+          "weight": 1
+        },
+        {
+          "name": "both-3",
+          "kind": "joint",
+          "source": 3,
+          "target": 0,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "A17-identified",
+      "round_id": "atlas-017",
+      "type": "event_kernel",
+      "role": "control",
+      "family": "identified_interface",
+      "label": "one identified bit, both directions",
+      "n_states": 2,
+      "bit_width": 1,
+      "events": [
+        {
+          "name": "up",
+          "kind": "toggle",
+          "source": 0,
+          "target": 1,
+          "weight": 1
+        },
+        {
+          "name": "down",
+          "kind": "toggle",
+          "source": 1,
+          "target": 0,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "A17-coupled",
+      "round_id": "atlas-017",
+      "type": "event_kernel",
+      "role": "comparison",
+      "family": "coupled_copies",
+      "label": "joint update between states 0 and 3; states 1 and 2 have no event",
+      "n_states": 4,
+      "bit_width": 2,
+      "events": [
+        {
+          "name": "together-up",
+          "kind": "joint",
+          "source": 0,
+          "target": 3,
+          "weight": 1
+        },
+        {
+          "name": "together-down",
+          "kind": "joint",
+          "source": 3,
+          "target": 0,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "A17-halt",
+      "round_id": "atlas-017",
+      "type": "event_kernel",
+      "role": "control",
+      "family": "empty_catalogue",
+      "label": "one state, empty event list",
+      "n_states": 1,
+      "events": []
+    },
+    {
+      "id": "A17-noop",
+      "round_id": "atlas-017",
+      "type": "event_kernel",
+      "role": "comparison",
+      "family": "noop_event",
+      "label": "one state, one noop of weight 1",
+      "n_states": 1,
+      "events": [
+        {
+          "name": "stay",
+          "kind": "noop",
+          "source": 0,
+          "target": 0,
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

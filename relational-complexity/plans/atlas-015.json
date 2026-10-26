@@ -1,0 +1,1408 @@
+{
+  "round_id": "atlas-015",
+  "engine_version": "rrc-0.4.0",
+  "grammar_id": "opening-prohibit-multiply-v1",
+  "definitions_commit": "081d52aa6c5ac3b1a228b833a2777973aa631aea",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q14"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q01",
+    "ATLAS-Q02",
+    "ATLAS-Q03",
+    "ATLAS-Q04",
+    "ATLAS-Q05",
+    "ATLAS-Q06",
+    "ATLAS-Q07",
+    "ATLAS-Q08",
+    "ATLAS-Q09",
+    "ATLAS-Q10",
+    "ATLAS-Q11",
+    "ATLAS-Q12",
+    "ATLAS-Q13",
+    "ATLAS-Q15"
+  ],
+  "selection": "One three-edge chain, edges (0,1), (1,2), (2,3). The block family is [(0,1),(1,2)] and [(1,2),(2,3)]. The blocks share (1,2), and every carrier edge sits in a block, so the family is an overlapping cover and not a partition. Five laws: the empty list; a prohibit of the shared edge (1,2) when (0,1) is present; a prohibit of (0,1) when (1,2) is present; a multiply by 3 of (1,2) when (2,3) is present; and a multiply by 3 of (2,3) when (0,1) is present. Those last two edges lie in different blocks. None of the four lists is an atlas-012 multiply. Each law is observed by four maps: the bare intersection graph of active blocks, the bare realised-overlap graph, the labelled realised blocks, and the count of present shared edges. The maps were named before execution. The family does not change over time.",
+  "grammar": {
+    "ids": [
+      "opening-prohibit-multiply-v1"
+    ],
+    "note": "Prohibits and multiplies are designated constraints on listed edges. No map adds a coordinate.",
+    "baseline": 1
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-015-preflight.md",
+    "heaviest_cell_s": 0.002,
+    "shape": "three-edge chain, bare active intersection, empty list, 8 states",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "n": [
+      4
+    ],
+    "carriers": [
+      "chain3"
+    ],
+    "cells": 20,
+    "laws": [
+      "empty",
+      "prohibit shared edge when (0,1) is present",
+      "prohibit (0,1) when the shared edge is present",
+      "multiply shared edge by 3 when (2,3) is present",
+      "multiply (2,3) by 3 when (0,1) is present"
+    ],
+    "observations": [
+      "active_intersection",
+      "realised_intersection",
+      "labelled_realised_blocks",
+      "realised_overlap_count"
+    ],
+    "declared_sample": true,
+    "baseline_only": false,
+    "six_is_not_a_target": true,
+    "state_space": "8 states, exhaustive",
+    "excluded": [
+      "the atlas-012 multiply list",
+      "the atlas-014 four-cycle overlap item",
+      "the path and triangle realised-overlap fixtures",
+      "a third block",
+      "a block family that changes over time",
+      "parity of the present-edge count",
+      "incident-count thresholds",
+      "the three-edge star",
+      "N=6",
+      "rerun of results/atlas-012",
+      "rerun of results/atlas-014"
+    ]
+  },
+  "items": [
+    {
+      "id": "A15-base-active",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "empty list; bare intersection graph of active blocks",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "active_intersection",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-base-realised",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "empty list; bare graph of realised overlap",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "realised_intersection",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-base-labelled",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "empty list; labelled realised blocks",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "labelled_realised_blocks",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-base-count",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "empty list; count of present shared edges",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "realised_overlap_count",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-pro-shared-active",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "prohibit the shared edge when an unshared edge is present; bare intersection graph of active blocks",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "active_intersection",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-pro-shared-realised",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "prohibit the shared edge when an unshared edge is present; bare graph of realised overlap",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "realised_intersection",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-pro-shared-labelled",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "prohibit the shared edge when an unshared edge is present; labelled realised blocks",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "labelled_realised_blocks",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-pro-shared-count",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "prohibit the shared edge when an unshared edge is present; count of present shared edges",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "realised_overlap_count",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-pro-own-active",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "prohibit an unshared edge when the shared edge is present; bare intersection graph of active blocks",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "active_intersection",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-pro-own-realised",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "prohibit an unshared edge when the shared edge is present; bare graph of realised overlap",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "realised_intersection",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-pro-own-labelled",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "prohibit an unshared edge when the shared edge is present; labelled realised blocks",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "labelled_realised_blocks",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-pro-own-count",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "prohibit an unshared edge when the shared edge is present; count of present shared edges",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "realised_overlap_count",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-mul-shared-active",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "multiply the shared edge when the other unshared edge is present; bare intersection graph of active blocks",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "active_intersection",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-mul-shared-realised",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "multiply the shared edge when the other unshared edge is present; bare graph of realised overlap",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "realised_intersection",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-mul-shared-labelled",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "multiply the shared edge when the other unshared edge is present; labelled realised blocks",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "labelled_realised_blocks",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-mul-shared-count",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "multiply the shared edge when the other unshared edge is present; count of present shared edges",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "realised_overlap_count",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-mul-ends-active",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "multiply one unshared edge when the other unshared edge is present; bare intersection graph of active blocks",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "active_intersection",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-mul-ends-realised",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "multiply one unshared edge when the other unshared edge is present; bare graph of realised overlap",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "realised_intersection",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-mul-ends-labelled",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "multiply one unshared edge when the other unshared edge is present; labelled realised blocks",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "labelled_realised_blocks",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "A15-mul-ends-count",
+      "round_id": "atlas-015",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "multiply one unshared edge when the other unshared edge is present; count of present shared edges",
+      "idea_ids": [
+        "IDEA-L21"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "factor": 3,
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "observation": "realised_overlap_count",
+      "cover": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    }
+  ]
+}

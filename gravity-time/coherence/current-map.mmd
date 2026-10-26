@@ -1,0 +1,320 @@
+%% Generated from findings.jsonl and relations.jsonl.
+%% Historical nodes appear when a later finding supersedes their interpretation.
+flowchart TD
+  subgraph OBSERVATION [Observed dynamics]
+    GT_F01_DENS_NULL["GT-F01-DENS-NULL: The density template DENS leaves the density-controlled attachment fraction exactly at ..."]
+    GT_F02_INCIDENCE_SELECTIVITY["GT-F02-INCIDENCE-SELECTIVITY: ADJ, CLOSE and HOLD raise the density-controlled attachment fraction above null under b..."]
+    GT_F04_RETENTION_NOT_APPROACH["GT-F04-RETENTION-NOT-APPROACH: Under the continuous clock HOLD's frontier drift equals NULL's exactly at N=5; its jump..."]
+    GT_F05_RELATIONAL_POTENTIAL["GT-F05-RELATIONAL-POTENTIAL: For every template the continuous-time stationary law is m^S/Z with S the edge count (D..."]
+    GT_F06_LOCK_ARREST["GT-F06-LOCK-ARREST: LOCK is certainly absorbed into the complete graph, where no event is admissible, after..."]
+    GT_F07_SHARED_BASIN_DIFFERENT_CLOCKS["GT-F07-SHARED-BASIN-DIFFERENT-CLOCKS: CLOSE(m) and HOLD(1/m) have identical continuous-time shell masses (gap 0) and differen..."]
+    GT_F08_NEAR_SOURCE_SLOWING["GT-F08-NEAR-SOURCE-SLOWING: The near/far activity ratio is below 1 in 16 of 16 non-null cells under the jump clock ..."]
+    GT_F13_NONGRADIENT_ARROW["GT-F13-NONGRADIENT-ARROW: Unsaturated two-witness PATH cells (PATHF weak_suppress, PATHH weak_favour) carry a sta..."]
+    GT_F14_SATURATION_HIDES_ARROW["GT-F14-SATURATION-HIDES-ARROW: Frozen expectation X4 failed in 4/16 PATH cells: favour-sign PATH at N=6 saturates to t..."]
+    GT_F15_SOURCE_CIRCULATION["GT-F15-SOURCE-CIRCULATION: In HELD, the non-gradient arrow is a source-relative circulation on (free edges, attach..."]
+    GT_F16_ARROW_PROJECTION_LOSS["GT-F16-ARROW-PROJECTION-LOSS: In FREE mode the same non-gradient arrow is nearly invisible to class-free event order:..."]
+    GT_F17_EQUAL_RATIO_DIVERGENT_OCCUPANCY["GT-F17-EQUAL-RATIO-DIVERGENT-OCCUPANCY: Non-gradient cells with identical local rate ratios (PATHF weak_suppress, PATHH weak_fa..."]
+    GT_F18_ARROW_WITH_REPULSION["GT-F18-ARROW-WITH-REPULSION: Every unsaturated arrow cell in E0A is an anti-basin: probe detached 53-55% (null 4-7%)..."]
+    GT_F19_ACTIVITY_WITHOUT_BASIN["GT-F19-ACTIVITY-WITHOUT-BASIN: COMPETE (closure-supported formation and dissolution both favoured) has a stationary la..."]
+    GT_F20_TRIAD_CLOCK_REVERSAL["GT-F20-TRIAD-CLOCK-REVERSAL: At one shared law, CLOSE, SPLIT and HOLD relax in opposite orders under the two clocks:..."]
+    GT_F21_REPULSION_MIRROR["GT-F21-REPULSION-MIRROR: Closure suppression repels probes from the held source and hard exclusion repels more: ..."]
+    GT_F22_NO_EMERGENT_CENTRE["GT-F22-NO-EMERGENT-CENTRE: No E0A cell produced degree heterogeneity above NULL in FREE mode; FRUST (wedges reward..."]
+    GT_F23_LOCAL_PERSISTENCE_SPARSE["GT-F23-LOCAL-PERSISTENCE-SPARSE: The localisation persistence index tau(degree)/tau(edges) exceeds 1 only in sparse, tri..."]
+    GT_F26_SELECTIVE_BASIN_WITH_ARROW["GT-F26-SELECTIVE-BASIN-WITH-ARROW: Strong closure plus dissolution-acting non-gradient support (CSPH) gives attachment sel..."]
+    GT_F27_KINETICS_SETS_BASIN_DEPTH["GT-F27-KINETICS-SETS-BASIN-DEPTH: In every equal-ratio composite pair the dissolution-acting non-gradient version is more..."]
+    GT_F28_HUB_FRAME_LEGIBILITY["GT-F28-HUB-FRAME-LEGIBILITY: An emergent hub frame (slot touches a maximum-degree vertex of the edge-present state) ..."]
+    GT_F29_HANDOVER_ORIENTATION_INVARIANT["GT-F29-HANDOVER-ORIENTATION-INVARIANT: The handover orientation is the same in every arrow-bearing cell, with or without a bas..."]
+    GT_F30_ARROW_BELONGS_TO_RATIO["GT-F30-ARROW-BELONGS-TO-RATIO: PCOMP (path formation and path dissolution both favoured, non-gradient rules with ratio..."]
+    GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY["GT-F34-CSPH-MARGIN-CLOCK-AND-DENSITY: CSPH's attachment margin over the slot-ratio null is clock- and density-dependent: in t..."]
+    GT_F36_CSPH_COEXISTENCE_LOST_N7["GT-F36-CSPH-COEXISTENCE-LOST-N7: At HELD N=7 with the E0B W4 grades, CSPH's attachment margin over the size-specific nul..."]
+    GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH["GT-F37-HANDOVER-INVARIANT-ACROSS-SIZE-AND-STRENGTH: The handover orientation (probe-probe forms -> attachment forms -> probe-probe dissolve..."]
+    GT_F38_ENGAGED_LOAD_SIZE_STABLE["GT-F38-ENGAGED-LOAD-SIZE-STABLE: From N=6 to N=7 the mean engaged log-weight of every non-gradient rule component on exe..."]
+    GT_F39_SIZE_IS_NOT_STRENGTH["GT-F39-SIZE-IS-NOT-STRENGTH: Uniform strengthening at fixed N is a poor quantitative proxy for growing N in this gra..."]
+    GT_F40_STRENGTH_SPLITS_CLOCKS["GT-F40-STRENGTH-SPLITS-CLOCKS: In CSPH, strengthening at fixed N moves the two clocks' attachment margins in opposite ..."]
+    GT_F41_GRADIENT_CONTROL_GATHERING_GROWS["GT-F41-GRADIENT-CONTROL-GATHERING-GROWS: The reversible gradient control CLOSEW weak_favour is the only rule in E1 whose null-de..."]
+    GT_F42_REPULSION_AND_PERSISTENCE_WITH_SIZE["GT-F42-REPULSION-AND-PERSISTENCE-WITH-SIZE: In every non-gradient family, probe detachment is size-stable (0.52-0.55 at N=6, 0.55-0..."]
+    GT_F46_ORIENTATION_FOLLOWS_SIGMA["GT-F46-ORIENTATION-FOLLOWS-SIGMA: The aggregated orientation (partner-frame index; HELD handover index) has the sign of s..."]
+    GT_F47_REVERSED_HANDOVER["GT-F47-REVERSED-HANDOVER: When sigma < 0 the handover reverses. Unsaturated, the reversal is plainly visible and,..."]
+    GT_F48_COUNTER_CIRCULATION["GT-F48-COUNTER-CIRCULATION: Local affinity does not fix local current: 6-36% of adjacent-square circulation runs co..."]
+    GT_F49_SOFT_RELEASE_IS_OPPORTUNITY["GT-F49-SOFT-RELEASE-IS-OPPORTUNITY: In soft rules the handover's release step is an opportunity (denominator) effect, not e..."]
+    GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT["GT-F50-STRICT-ENABLING-NEITHER-NECESSARY-NOR-SUFFICIENT: Strict enabling by dissolution occurs only with a hard component and is neither necessa..."]
+    GT_F51_ONE_WAY_RELEASE_MODE["GT-F51-ONE-WAY-RELEASE-MODE: Hard path-form exclusion produces a directed mode of succession without cycle affinity:..."]
+    GT_F54_HARD_BAN_END_OF_SOFT_LADDER["GT-F54-HARD-BAN-END-OF-SOFT-LADDER: Along path-formation factors 1/2, 1/4, 1/9, 1/16 and 0 (existing W4/W3/W16 grades and p..."]
+    GT_F55_PERSISTENT_ABSENCE_TWO_MECHANISMS["GT-F55-PERSISTENT-ABSENCE-TWO-MECHANISMS: A relation released while path-witnessed stays absent longer than one released unwitnes..."]
+    GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING["GT-F57-SCAFFOLD-CONFOUNDED-NON-GATHERING: With the source-witness floor divided out of attachment rates (a counterfactual instrum..."]
+    GT_F58_Q12_SCAN_NO_COUNTEREXAMPLE["GT-F58-Q12-SCAN-NO-COUNTEREXAMPLE: On frozen 9x9 grids of synthetic path-formation and path-dissolution factors (2^k, k in..."]
+    GT_F59_ONE_WAY_PART_CAN_OPPOSE["GT-F59-ONE-WAY-PART-CAN-OPPOSE: Under hard path-formation exclusion with the strongest available opposing dissolution (..."]
+    GT_F60_FLOOR_GUIDED_SORTING["GT-F60-FLOOR-GUIDED-SORTING: Within a held reference, new relations concentrate on its lowest-permanent-floor sites ..."]
+    GT_F61_NATIVE_K2_RAW_GATHERING["GT-F61-NATIVE-K2-RAW-GATHERING: Under a held single edge (K2, the only floor-free connected reference), every sigma>0 p..."]
+    GT_F62_NATIVE_GATHERING_IS_DENSITY_COMPOSITION["GT-F62-NATIVE-GATHERING-IS-DENSITY-COMPOSITION: Null-density-standardised against each reference's own NULL profile, native raw gatheri..."]
+    GT_F63_TOTAL_FLOOR_NOT_PREDICTIVE["GT-F63-TOTAL-FLOOR-NOT-PREDICTIVE: At equal source size, held-edge count and null (k=4, K=3, N=6, r0=8/12), the star (tota..."]
+    GT_F64_CHORD_SWITCHES_SITE_OFF["GT-F64-CHORD-SWITCHES-SITE-OFF: The free P3 closing chord raises the middle's internal witnesses from 0 to 2; when it i..."]
+    GT_F65_HANDOVER_ACROSS_REFERENCES["GT-F65-HANDOVER-ACROSS-REFERENCES: The handover keeps the E0 orientation in every sigma>0 cell under all five held referen..."]
+    GT_F71_SORTING_DECOMPOSITION_POSTHOC["GT-F71-SORTING-DECOMPOSITION-POSTHOC: Post hoc on exposed E4 tables: the exact floor term is 71-100% of the continuous log-od..."]
+    GT_F74_INTACT_MOTIFS_NO_CT_PERSISTENCE["GT-F74-INTACT-MOTIFS-NO-CT-PERSISTENCE: Intact motifs (I_TRI, I_STAR, I_2PATH) outlive the density-matched comparator ND in con..."]
+    GT_F76_FLEXIBLE_ORGANISATION_OUTLIVES_ND_QUALIFIED["GT-F76-FLEXIBLE-ORGANISATION-OUTLIVES-ND-QUALIFIED: Flexible anchored organisations (F_TRI, F_STAR, F_2PATH) outlive ND in both clocks in 1..."]
+    GT_F77_PATHF_CENTRES_PERSIST_AGAINST_MATCHED_ND["GT-F77-PATHF-CENTRES-PERSIST-AGAINST-MATCHED-ND: Against PATHF's ND, which matches density in both clocks, mean rate (c=1), edge lifetim..."]
+    GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW["GT-F78-LIFETIME-NOT-SET-BY-STATIONARY-LAW: PCOMP and NULL share the stationary law (checked within 1e-9) and PCOMP's ND equals NUL..."]
+    GT_F80_CLOSEW_CLOSURE_RECOVERY["GT-F80-CLOSEW-CLOSURE-RECOVERY: Under CLOSEW flexible organisations outlive ND in both clocks, growing from N=5 to 6 (F..."]
+    GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY["GT-F81-HUB-SELECTION-MEMORY-BY-FAMILY: A once-selected maximum-degree vertex's advantage decays toward zero in every law; it d..."]
+    GT_F83_PCOMP_PERSISTENCE_IS_BETWEEN_LAYER_TRAFFIC["GT-F83-PCOMP-PERSISTENCE-IS-BETWEEN-LAYER-TRAFFIC: PCOMP's apparent flexible persistence (F_2PATH x25.2 vs ND at N=6) vanishes against NK,..."]
+    GT_F84_PATHF_CENTRES_SURVIVE_NK_AND_LOCAL_COUNT["GT-F84-PATHF-CENTRES-SURVIVE-NK-AND-LOCAL-COUNT: For PATHF, NK equals ND exactly. Anchored centres exceed it at both sizes in all three ..."]
+    GT_F85_CLOSEW_EFFECT_MOSTLY_PREVALENCE_AND_TRAFFIC["GT-F85-CLOSEW-EFFECT-MOSTLY-PREVALENCE-AND-TRAFFIC: CLOSEW's E5A advantage over ND (x1.1-x2.8) shrinks to x1.02-x1.07 against NK at N=5 and..."]
+    GT_F86_PATHH_CSPH_NK_SURVIVORS_QUALIFIED["GT-F86-PATHH-CSPH-NK-SURVIVORS-QUALIFIED: PATHH F_TRI and F_STAR exceed NK at both sizes in all three counts, F_STAR with less im..."]
+    GT_F89_COMPARATOR_MATTERS_MORE_THAN_CLOCK["GT-F89-COMPARATOR-MATTERS-MORE-THAN-CLOCK: 28 of 90 lifetime classifications (CT, JT, anchor-local x 30 rows) change between ND an..."]
+    GT_F91_RENEWAL_IS_TRANSIENT["GT-F91-RENEWAL-IS-TRANSIENT: In every law, conditional survival after first complete renewal decays within a few anc..."]
+    GT_F92_CSPH_TRIANGLE_RENEWAL_IS_FLICKER_ASSISTED["GT-F92-CSPH-TRIANGLE-RENEWAL-IS-FLICKER-ASSISTED: CSPH F_TRI reaches renewal x2.2-2.6 more often than NK and U_h is x1.9-3.0, but conditi..."]
+    GT_F93_PATHH_TRIANGLE_DURABLE_BEYOND_NK["GT-F93-PATHH-TRIANGLE-DURABLE-BEYOND-NK: PATHH F_TRI survives after renewal better than NK at both sizes and in both size-1 and ..."]
+    GT_F94_PATHF_RENEWAL_ADVANTAGE_SHORT_LIVED["GT-F94-PATHF-RENEWAL-ADVANTAGE-SHORT-LIVED: PATHF F_2PATH at N=6 renews more often than NK (R0 x1.32; U_h x1.31-1.67) and survives ..."]
+    GT_F95_PCOMP_WITHIN_CLASS_DURABILITY["GT-F95-PCOMP-WITHIN-CLASS-DURABILITY: PCOMP F_TRI entries with two or more completers survive four anchor events better than ..."]
+    GT_F99_PROJECTED_CIRCULATION_PATH_CSPH["GT-F99-PROJECTED-CIRCULATION-PATH-CSPH: PATHF, PATHH and CSPH carry net projected currents on the (l,r) grid of 0.43-0.98 of th..."]
+    GT_F100_PATHH_TRIANGLE_DURABILITY_BEYOND_NL["GT-F100-PATHH-TRIANGLE-DURABILITY-BEYOND-NL: PATHH F_TRI survives renewal better than NL at both sizes and in both entry classes, gr..."]
+    GT_F101_PATHF_CENTRE_EFFECT_IS_LOCAL_REMOTE_TRAFFIC["GT-F101-PATHF-CENTRE-EFFECT-IS-LOCAL-REMOTE-TRAFFIC: PATHF F_2PATH at N=6: the renewal and first-step survival excess over NK (R0 x1.32, C_1..."]
+    GT_F102_PCOMP_WITHIN_CLASS_RESIDUAL_BEYOND_NL["GT-F102-PCOMP-WITHIN-CLASS-RESIDUAL-BEYOND-NL: PCOMP F_TRI entries with >= 2 completers survive four anchor events about x2.2-2.4 bett..."]
+    GT_F103_CSPH_FLICKER_PERSISTS_UNDER_NL["GT-F103-CSPH-FLICKER-PERSISTS-UNDER-NL: CSPH F_TRI: NL removes part of the renewal excess (R0 x2.24/x2.62 vs NK -> x1.97/x2.12 ..."]
+  end
+  subgraph INFERENCE [Inferences]
+    GT_F09_POTENTIAL_AS_MECHANISM["GT-F09-POTENTIAL-AS-MECHANISM: In the existing grammar a basin around a held relational structure arises from minimal ..."]
+    GT_F10_KINETICS_NOT_POTENTIAL["GT-F10-KINETICS-NOT-POTENTIAL: Near-source slowing of local activity accompanies every basin tested, density included,..."]
+    GT_F12_SINGLE_WITNESS_REVERSIBLE["GT-F12-SINGLE-WITNESS-REVERSIBLE: Every label-covariant single-witness template composition on the O=2 pair grammar (form..."]
+    GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY["GT-F25-KINETICS-SETS-OCCUPANCY-UNDER-IRREVERSIBILITY: G1's decomposition (local ratio fixes the basin; the formation/dissolution split fixes ..."]
+    GT_F33_DISSOLUTION_CHANNEL_INFERENCE["GT-F33-DISSOLUTION-CHANNEL-INFERENCE: In this grammar, a source-relative stationary arrow arises only from non-gradient suppo..."]
+    GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED["GT-F43-SUCCESSION-AND-GATHERING-DECOUPLED: In this grammar a stationary order of succession (the handover) and a time-weighted pre..."]
+    GT_F45_SQUARE_AFFINITY_IDENTITY["GT-F45-SQUARE-AFFINITY-IDENTITY: Theorem (formal note section 2): in the ordinary pair-DSL template grammar with positiv..."]
+    GT_F52_HARD_ADJACENCY_SILENCES_PATHS["GT-F52-HARD-ADJACENCY-SILENCES-PATHS: Theorem (formal note 5.3): under hard adjacency exclusion every reachable state is a ma..."]
+    GT_F53_HELD_SOURCE_AS_WITNESS["GT-F53-HELD-SOURCE-AS-WITNESS: Theorem (formal note 5.4): in HELD the source triangle supplies a two-path to every att..."]
+    GT_F56_SOURCE_WITNESS_FLOOR["GT-F56-SOURCE-WITNESS-FLOOR: Theorem (formal note 7.4-7.5, derived after E3A, verified in all 18 E3B cells): in HELD..."]
+    GT_F66_WITNESS_FLOOR_THEOREMS["GT-F66-WITNESS-FLOOR-THEOREMS: Theorems (docs/e4-formal-witness-floors.md): the permanent path-witness floor at source..."]
+    GT_F67_FLOOR_IS_AN_EXACT_ODDS_LEVER["GT-F67-FLOOR-IS-AN-EXACT-ODDS-LEVER: Theorems S1-S3: in any finite irreducible single-toggle chain whose rates do not read t..."]
+    GT_F68_FIRST_ORDER_SORTING_INDEX["GT-F68-FIRST-ORDER-SORTING-INDEX: Theorem S4/S4b/S4c: at first order around the uniform law, d log odds/d eps = -E_0[w] f..."]
+    GT_F69_CLOCK_SEPARATED_SORTING["GT-F69-CLOCK-SEPARATED-SORTING: Theorems S2b, S5, S6: PCOMP's continuous-time law is uniform at any strength (no contin..."]
+    GT_F70_MARGIN_NOT_FIRST_ORDER["GT-F70-MARGIN-NOT-FIRST-ORDER: Theorem S7/S7b: the raw-margin slope at eps=0 is (1/2M)[sum_A kappa - r0 sum_F kappa]; ..."]
+    GT_F72_NO_LABELLED_CENTRE_AT_FINITE_N["GT-F72-NO-LABELLED-CENTRE-AT-FINITE-N: Propositions R1-R3: in FREE label-covariant irreducible models the stationary law is in..."]
+    GT_F75_INTACT_LIFETIME_IS_DISSOLUTION_KINETICS["GT-F75-INTACT-LIFETIME-IS-DISSOLUTION-KINETICS: Post hoc theorem: under a formation-only family (PATHF, CLOSEW) every present edge diss..."]
+    GT_F79_ND_MATCHES_EDGE_LIFETIME["GT-F79-ND-MATCHES-EDGE-LIFETIME: Post hoc identity: by exchangeability E_pi[q] = 2M J_edge, so at matched density the ND..."]
+    GT_F87_RENEWAL_FEASIBILITY_AND_SIZE_ONE_EQUIVALENCE["GT-F87-RENEWAL-FEASIBILITY-AND-SIZE-ONE-EQUIVALENCE: T10: complete renewal from an entry set of size s needs K-s >= threshold (K candidates)..."]
+    GT_F96_POST_RENEWAL_FEASIBILITY_T14["GT-F96-POST-RENEWAL-FEASIBILITY-T14: T14: for a vertex predicate (threshold k, K candidates, entry size s), survival after r..."]
+  end
+  subgraph METHODOLOGICAL [Methodological corrections]
+    GT_F03_DRIFT_CRITERION_CONFOUNDED["GT-F03-DRIFT-CRITERION-CONFOUNDED: The frozen G0 inward-drift criterion does not separate attraction from density: DENS pa..."]
+    GT_F24_GIBBS_PROJECTION_NONCONVERGENCE["GT-F24-GIBBS-PROJECTION-NONCONVERGENCE: The moment-matched triple-Gibbs KL did not converge for the six saturated gradient FREE..."]
+    GT_F31_E0A_REPLICATION["GT-F31-E0A-REPLICATION: NULL, PATHF weak_suppress and PATHH weak_favour recomputed in E0B reproduce their E0A c..."]
+    GT_F32_E0C_NOT_RUN["GT-F32-E0C-NOT-RUN: No E0C round was run. The only consequential remaining ambiguity, whether basin-arrow c..."]
+    GT_F35_E0_NUMERICAL_QUALIFICATIONS["GT-F35-E0-NUMERICAL-QUALIFICATIONS: Three numerical fragilities qualify published E0 values; no published finding, report s..."]
+    GT_F73_ORBIT_CONTRAST_QUALIFICATIONS["GT-F73-ORBIT-CONTRAST-QUALIFICATIONS: Within-cell orbit contrasts (GT-F60) are matched observations, not interventions on the..."]
+    GT_F82_E5A_COMPARATOR_AND_NUMERICAL_QUALIFICATIONS["GT-F82-E5A-COMPARATOR-AND-NUMERICAL-QUALIFICATIONS: E5A executed 12/12 items, 32/34 frozen checks hold; two CT lag-propagator checks failed..."]
+    GT_F88_NK_LAYER_TRAFFIC_COMPARATOR["GT-F88-NK-LAYER-TRAFFIC-COMPARATOR: T11: NK (b_k = J[k,k+1]/((M-k)p_k), d_{k+1} = J[k,k+1]/((k+1)p_{k+1})) is label-covaria..."]
+    GT_F90_E5A_INTACT_COUNT_IS_2_OF_30["GT-F90-E5A-INTACT-COUNT-IS-2-OF-30: Append-only qualification of GT-F74: from the unrounded E5A tables, intact motifs outli..."]
+    GT_F97_FIRST_HIT_SAMPLING_MATTERS["GT-F97-FIRST-HIT-SAMPLING-MATTERS: The first-renewal state law differs from the stationary law restricted to the renewed s..."]
+    GT_F98_NL_LOCAL_REMOTE_TRAFFIC_COMPARATOR["GT-F98-NL-LOCAL-REMOTE-TRAFFIC-COMPARATOR: T16-T19: NL lifts the target's ordered stationary (l,r) macro fluxes (local = slots at ..."]
+  end
+  subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
+    GT_F11_RS_POTENTIAL_AND_CLOCK["GT-F11-RS-POTENTIAL-AND-CLOCK: Inside this model, relational primacy yields basins as potentials without a primitive c..."]
+    GT_F44_RS_SUCCESSION_VS_GATHERING["GT-F44-RS-SUCCESSION-VS-GATHERING: RS reading (not a physical claim): the relational picture should keep succession (order..."]
+  end
+  subgraph OPEN_QUESTION [Open questions]
+    GT_Q01_KINETIC_CONVENTION["GT-Q01-KINETIC-CONVENTION: Is there a principled kinetic convention under which local recurrence rate is a functio..."]
+    GT_Q02_RADIAL["GT-Q02-RADIAL: Does attachment or activity have a stable dependence on relational distance across seve..."]
+    GT_Q03_SOURCE_DEPENDENCE["GT-Q03-SOURCE-DEPENDENCE: Does basin depth depend on the held structure's motif content (triangle, 4-clique, path)?"]
+    GT_Q04_ARREST_AND_SUCCESSION["GT-Q04-ARREST-AND-SUCCESSION: Does total admissibility arrest bear on the open candidate of a limit on primitive even..."]
+    GT_Q05_ARROW_AND_BASIN["GT-Q05-ARROW-AND-BASIN: Can a basin (attachment above null) and a stationary arrow coexist in the existing gram..."]
+    GT_Q06_LOCAL_PERSISTENCE_MECHANISM["GT-Q06-LOCAL-PERSISTENCE-MECHANISM: Why does local degree memory outlast global edge-count memory in sparse, triangle-poor ..."]
+    GT_Q07_COEXISTENCE_SCALING["GT-Q07-COEXISTENCE-SCALING: Does selective basin-with-arrow coexistence (GT-F26) survive at N>=7, vanish, or invert?"]
+    GT_Q08_HANDOVER_THEOREM["GT-Q08-HANDOVER-THEOREM: Is the handover orientation fixed by the path templates for every grade sign and streng..."]
+    GT_Q09_CLOCK_SPLIT_MECHANISM["GT-Q09-CLOCK-SPLIT-MECHANISM: Why does strengthening raise CSPH's per-event attachment preference while lowering its ..."]
+    GT_Q10_GRADIENT_GATHERING_SCALING["GT-Q10-GRADIENT-GATHERING-SCALING: Does the gradient control's growing standardised attachment preference continue beyond ..."]
+    GT_Q11_ONE_WAY_ORIENTATION["GT-Q11-ONE-WAY-ORIENTATION: Why does one-way release under hard path-form exclusion orient toward keeping relations..."]
+    GT_Q12_AGGREGATE_ORIENTATION_THEOREM["GT-Q12-AGGREGATE-ORIENTATION-THEOREM: Must the stationary aggregate orientation take the sign of sigma for every positive-fac..."]
+    GT_Q13_PRECEDENCE_VERSUS_ENABLING["GT-Q13-PRECEDENCE-VERSUS-ENABLING: Why are strictly enabled events under-represented immediately after the enabling dissol..."]
+    GT_Q14_COVARIANT_SOURCE_STRUCTURE_TEST["GT-Q14-COVARIANT-SOURCE-STRUCTURE-TEST: Do the sigma>0 path families gather toward a held structure without internal two-paths ..."]
+    GT_Q15_DISPLACEMENT_DEFINITION_GAP["GT-Q15-DISPLACEMENT-DEFINITION-GAP: What non-circular identity for a moving thing and what separation observable would make..."]
+    GT_Q16_SORTING_DERIVATION["GT-Q16-SORTING-DERIVATION: Can floor-guided sorting (GT-F60) be derived: a closed form or bounds for per-orbit att..."]
+    GT_Q17_REFERENCE_ARCHITECTURE["GT-Q17-REFERENCE-ARCHITECTURE: Given that every imposed held reference biases results through its own structure, shoul..."]
+    GT_Q18_REVERSAL_AT_W4["GT-Q18-REVERSAL-AT-W4: Do the first-order floor reversals (GT-F68, e.g. held graph {01,02,03,12,14} at N=6) su..."]
+    GT_Q19_METASTABLE_FREE_REFERENCE["GT-Q19-METASTABLE-FREE-REFERENCE: Does any GT family maintain a grammar-generated motif (triangle, star, two-path) beyond..."]
+    GT_Q20_RESIDUE_MECHANISM["GT-Q20-RESIDUE-MECHANISM: Why does the exact residue reinforce the floor at W4 while it offsets it at first order..."]
+    GT_Q21_KINETICS_AWARE_COMPARATOR["GT-Q21-KINETICS-AWARE-COMPARATOR: Which declared comparator controls the arrangement of activity (anchor-local clock, rat..."]
+    GT_Q22_IDENTITY_THROUGH_REPLACEMENT["GT-Q22-IDENTITY-THROUGH-REPLACEMENT: Does any anchored flexible organisation ever complete replacement of all its entry part..."]
+    GT_Q23_DURABLE_RENEWAL["GT-Q23-DURABLE-RENEWAL: Do the effects that survive NK (PATHF centres; PATHH F_TRI/F_STAR; CSPH F_TRI) reflect ..."]
+    GT_Q24_WITHIN_LAYER_ARRANGEMENT_CONTROL["GT-Q24-WITHIN-LAYER-ARRANGEMENT-CONTROL: Which part of the residual PATHF/PATHH effects is anchor-neighbourhood kinetics that NK..."]
+    GT_Q25_ANCHOR_LOCAL_KINETIC_COMPARATOR["GT-Q25-ANCHOR-LOCAL-KINETIC-COMPARATOR: Are the residual durable effects (PATHH F_TRI; PCOMP F_TRI size>=2) anchor-local kineti..."]
+    GT_Q26_COMPLETER_RESOLVED_PROJECTION["GT-Q26-COMPLETER-RESOLVED-PROJECTION: Does the PATHH triangle (and PCOMP size>=2) residual collapse under a projection that a..."]
+  end
+  GT_F02_INCIDENCE_SELECTIVITY -->|contrasts_with| GT_F01_DENS_NULL
+  GT_F03_DRIFT_CRITERION_CONFOUNDED -->|qualifies| GT_F02_INCIDENCE_SELECTIVITY
+  GT_F05_RELATIONAL_POTENTIAL -->|explains| GT_F02_INCIDENCE_SELECTIVITY
+  GT_F05_RELATIONAL_POTENTIAL -->|explains| GT_F04_RETENTION_NOT_APPROACH
+  GT_F09_POTENTIAL_AS_MECHANISM -->|derived_from| GT_F05_RELATIONAL_POTENTIAL
+  GT_F07_SHARED_BASIN_DIFFERENT_CLOCKS -->|refines| GT_F05_RELATIONAL_POTENTIAL
+  GT_F10_KINETICS_NOT_POTENTIAL -->|derived_from| GT_F07_SHARED_BASIN_DIFFERENT_CLOCKS
+  GT_F10_KINETICS_NOT_POTENTIAL -->|derived_from| GT_F08_NEAR_SOURCE_SLOWING
+  GT_F11_RS_POTENTIAL_AND_CLOCK -->|derived_from| GT_F10_KINETICS_NOT_POTENTIAL
+  GT_F10_KINETICS_NOT_POTENTIAL -->|raises_question| GT_Q01_KINETIC_CONVENTION
+  GT_F09_POTENTIAL_AS_MECHANISM -->|raises_question| GT_Q02_RADIAL
+  GT_F09_POTENTIAL_AS_MECHANISM -->|raises_question| GT_Q03_SOURCE_DEPENDENCE
+  GT_F06_LOCK_ARREST -->|raises_question| GT_Q04_ARREST_AND_SUCCESSION
+  GT_F06_LOCK_ARREST -->|contrasts_with| GT_F04_RETENTION_NOT_APPROACH
+  GT_F12_SINGLE_WITNESS_REVERSIBLE -->|explains| GT_F05_RELATIONAL_POTENTIAL
+  GT_F12_SINGLE_WITNESS_REVERSIBLE -->|contrasts_with| GT_F13_NONGRADIENT_ARROW
+  GT_F14_SATURATION_HIDES_ARROW -->|bounds| GT_F13_NONGRADIENT_ARROW
+  GT_F15_SOURCE_CIRCULATION -->|refines| GT_F13_NONGRADIENT_ARROW
+  GT_F16_ARROW_PROJECTION_LOSS -->|qualifies| GT_F15_SOURCE_CIRCULATION
+  GT_F17_EQUAL_RATIO_DIVERGENT_OCCUPANCY -->|qualifies| GT_F07_SHARED_BASIN_DIFFERENT_CLOCKS
+  GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY -->|derived_from| GT_F17_EQUAL_RATIO_DIVERGENT_OCCUPANCY
+  GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY -->|derived_from| GT_F12_SINGLE_WITNESS_REVERSIBLE
+  GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY -->|qualifies| GT_F10_KINETICS_NOT_POTENTIAL
+  GT_F18_ARROW_WITH_REPULSION -->|qualifies| GT_F13_NONGRADIENT_ARROW
+  GT_F18_ARROW_WITH_REPULSION -->|raises_question| GT_Q05_ARROW_AND_BASIN
+  GT_F19_ACTIVITY_WITHOUT_BASIN -->|contrasts_with| GT_F08_NEAR_SOURCE_SLOWING
+  GT_F19_ACTIVITY_WITHOUT_BASIN -->|qualifies| GT_F10_KINETICS_NOT_POTENTIAL
+  GT_F20_TRIAD_CLOCK_REVERSAL -->|refines| GT_F07_SHARED_BASIN_DIFFERENT_CLOCKS
+  GT_F21_REPULSION_MIRROR -->|contrasts_with| GT_F02_INCIDENCE_SELECTIVITY
+  GT_F21_REPULSION_MIRROR -->|contrasts_with| GT_F06_LOCK_ARREST
+  GT_F22_NO_EMERGENT_CENTRE -->|contrasts_with| GT_F02_INCIDENCE_SELECTIVITY
+  GT_F23_LOCAL_PERSISTENCE_SPARSE -->|raises_question| GT_Q06_LOCAL_PERSISTENCE_MECHANISM
+  GT_F24_GIBBS_PROJECTION_NONCONVERGENCE -->|qualifies| GT_F17_EQUAL_RATIO_DIVERGENT_OCCUPANCY
+  GT_F26_SELECTIVE_BASIN_WITH_ARROW -->|partially_answered_by| GT_Q05_ARROW_AND_BASIN
+  GT_Q05_ARROW_AND_BASIN -->|partially_answered_by| GT_F26_SELECTIVE_BASIN_WITH_ARROW
+  GT_F26_SELECTIVE_BASIN_WITH_ARROW -->|qualifies| GT_F18_ARROW_WITH_REPULSION
+  GT_F26_SELECTIVE_BASIN_WITH_ARROW -->|raises_question| GT_Q07_COEXISTENCE_SCALING
+  GT_F27_KINETICS_SETS_BASIN_DEPTH -->|refines| GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY
+  GT_F27_KINETICS_SETS_BASIN_DEPTH -->|supports| GT_F17_EQUAL_RATIO_DIVERGENT_OCCUPANCY
+  GT_F28_HUB_FRAME_LEGIBILITY -->|qualifies| GT_F16_ARROW_PROJECTION_LOSS
+  GT_F29_HANDOVER_ORIENTATION_INVARIANT -->|refines| GT_F15_SOURCE_CIRCULATION
+  GT_F30_ARROW_BELONGS_TO_RATIO -->|supports| GT_F12_SINGLE_WITNESS_REVERSIBLE
+  GT_F30_ARROW_BELONGS_TO_RATIO -->|refines| GT_F19_ACTIVITY_WITHOUT_BASIN
+  GT_F31_E0A_REPLICATION -->|supports| GT_F13_NONGRADIENT_ARROW
+  GT_F32_E0C_NOT_RUN -->|motivated_by| GT_Q07_COEXISTENCE_SCALING
+  GT_F33_DISSOLUTION_CHANNEL_INFERENCE -->|derived_from| GT_F27_KINETICS_SETS_BASIN_DEPTH
+  GT_F33_DISSOLUTION_CHANNEL_INFERENCE -->|derived_from| GT_F29_HANDOVER_ORIENTATION_INVARIANT
+  GT_F33_DISSOLUTION_CHANNEL_INFERENCE -->|derived_from| GT_F26_SELECTIVE_BASIN_WITH_ARROW
+  GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY -->|qualifies| GT_F26_SELECTIVE_BASIN_WITH_ARROW
+  GT_F35_E0_NUMERICAL_QUALIFICATIONS -->|qualifies| GT_F14_SATURATION_HIDES_ARROW
+  GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY -->|refines| GT_Q07_COEXISTENCE_SCALING
+  GT_Q07_COEXISTENCE_SCALING -->|partially_answered_by| GT_F36_CSPH_COEXISTENCE_LOST_N7
+  GT_F36_CSPH_COEXISTENCE_LOST_N7 -->|qualifies| GT_F26_SELECTIVE_BASIN_WITH_ARROW
+  GT_F36_CSPH_COEXISTENCE_LOST_N7 -->|refines| GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY
+  GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH -->|supports| GT_F29_HANDOVER_ORIENTATION_INVARIANT
+  GT_F38_ENGAGED_LOAD_SIZE_STABLE -->|bounds| GT_F36_CSPH_COEXISTENCE_LOST_N7
+  GT_F39_SIZE_IS_NOT_STRENGTH -->|derived_from| GT_F38_ENGAGED_LOAD_SIZE_STABLE
+  GT_F40_STRENGTH_SPLITS_CLOCKS -->|refines| GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY
+  GT_F41_GRADIENT_CONTROL_GATHERING_GROWS -->|contrasts_with| GT_F36_CSPH_COEXISTENCE_LOST_N7
+  GT_F42_REPULSION_AND_PERSISTENCE_WITH_SIZE -->|supports| GT_F18_ARROW_WITH_REPULSION
+  GT_F42_REPULSION_AND_PERSISTENCE_WITH_SIZE -->|supports| GT_F27_KINETICS_SETS_BASIN_DEPTH
+  GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED -->|derived_from| GT_F36_CSPH_COEXISTENCE_LOST_N7
+  GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED -->|derived_from| GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH
+  GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED -->|refines| GT_F33_DISSOLUTION_CHANNEL_INFERENCE
+  GT_F44_RS_SUCCESSION_VS_GATHERING -->|derived_from| GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED
+  GT_Q08_HANDOVER_THEOREM -->|raised_by| GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH
+  GT_Q09_CLOCK_SPLIT_MECHANISM -->|raised_by| GT_F40_STRENGTH_SPLITS_CLOCKS
+  GT_Q10_GRADIENT_GATHERING_SCALING -->|raised_by| GT_F41_GRADIENT_CONTROL_GATHERING_GROWS
+  GT_Q08_HANDOVER_THEOREM -->|partially_answered_by| GT_F45_SQUARE_AFFINITY_IDENTITY
+  GT_F45_SQUARE_AFFINITY_IDENTITY -->|explains| GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH
+  GT_F46_ORIENTATION_FOLLOWS_SIGMA -->|qualifies| GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH
+  GT_F46_ORIENTATION_FOLLOWS_SIGMA -->|derived_from| GT_F45_SQUARE_AFFINITY_IDENTITY
+  GT_F47_REVERSED_HANDOVER -->|contrasts_with| GT_F29_HANDOVER_ORIENTATION_INVARIANT
+  GT_F47_REVERSED_HANDOVER -->|qualifies| GT_F14_SATURATION_HIDES_ARROW
+  GT_F48_COUNTER_CIRCULATION -->|bounds| GT_F46_ORIENTATION_FOLLOWS_SIGMA
+  GT_F49_SOFT_RELEASE_IS_OPPORTUNITY -->|qualifies| GT_F33_DISSOLUTION_CHANNEL_INFERENCE
+  GT_F49_SOFT_RELEASE_IS_OPPORTUNITY -->|contrasts_with| GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT
+  GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT -->|refines| GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED
+  GT_F51_ONE_WAY_RELEASE_MODE -->|undermines| GT_F46_ORIENTATION_FOLLOWS_SIGMA
+  GT_F51_ONE_WAY_RELEASE_MODE -->|raises_question| GT_Q11_ONE_WAY_ORIENTATION
+  GT_F52_HARD_ADJACENCY_SILENCES_PATHS -->|bounds| GT_F45_SQUARE_AFFINITY_IDENTITY
+  GT_F53_HELD_SOURCE_AS_WITNESS -->|qualifies| GT_F15_SOURCE_CIRCULATION
+  GT_Q12_AGGREGATE_ORIENTATION_THEOREM -->|raised_by| GT_F48_COUNTER_CIRCULATION
+  GT_Q13_PRECEDENCE_VERSUS_ENABLING -->|raised_by| GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT
+  GT_F44_RS_SUCCESSION_VS_GATHERING -->|compatible_with| GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT
+  GT_F54_HARD_BAN_END_OF_SOFT_LADDER -->|supersedes_interpretation| GT_F51_ONE_WAY_RELEASE_MODE
+  GT_Q11_ONE_WAY_ORIENTATION -->|partially_answered_by| GT_F54_HARD_BAN_END_OF_SOFT_LADDER
+  GT_F54_HARD_BAN_END_OF_SOFT_LADDER -->|supports| GT_F46_ORIENTATION_FOLLOWS_SIGMA
+  GT_F55_PERSISTENT_ABSENCE_TWO_MECHANISMS -->|refines| GT_F50_STRICT_ENABLING_NEITHER_NECESSARY_NOR_SUFFICIENT
+  GT_F56_SOURCE_WITNESS_FLOOR -->|explains| GT_F18_ARROW_WITH_REPULSION
+  GT_F56_SOURCE_WITNESS_FLOOR -->|refines| GT_F53_HELD_SOURCE_AS_WITNESS
+  GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING -->|qualifies| GT_F36_CSPH_COEXISTENCE_LOST_N7
+  GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING -->|undermines| GT_F43_SUCCESSION_AND_GATHERING_DECOUPLED
+  GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING -->|derived_from| GT_F56_SOURCE_WITNESS_FLOOR
+  GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING -->|raises_question| GT_Q14_COVARIANT_SOURCE_STRUCTURE_TEST
+  GT_F58_Q12_SCAN_NO_COUNTEREXAMPLE -->|supports| GT_F46_ORIENTATION_FOLLOWS_SIGMA
+  GT_Q12_AGGREGATE_ORIENTATION_THEOREM -->|partially_answered_by| GT_F58_Q12_SCAN_NO_COUNTEREXAMPLE
+  GT_F59_ONE_WAY_PART_CAN_OPPOSE -->|qualifies| GT_F54_HARD_BAN_END_OF_SOFT_LADDER
+  GT_Q15_DISPLACEMENT_DEFINITION_GAP -->|raised_by| GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING
+  GT_F60_FLOOR_GUIDED_SORTING -->|supports| GT_F56_SOURCE_WITNESS_FLOOR
+  GT_F61_NATIVE_K2_RAW_GATHERING -->|supports| GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING
+  GT_F62_NATIVE_GATHERING_IS_DENSITY_COMPOSITION -->|qualifies| GT_F57_SCAFFOLD_CONFOUNDED_NON_GATHERING
+  GT_F62_NATIVE_GATHERING_IS_DENSITY_COMPOSITION -->|refines| GT_F34_CSPH_MARGIN_CLOCK_AND_DENSITY
+  GT_F63_TOTAL_FLOOR_NOT_PREDICTIVE -->|qualifies| GT_F60_FLOOR_GUIDED_SORTING
+  GT_F64_CHORD_SWITCHES_SITE_OFF -->|refines| GT_F60_FLOOR_GUIDED_SORTING
+  GT_F65_HANDOVER_ACROSS_REFERENCES -->|supports| GT_F37_HANDOVER_INVARIANT_ACROSS_SIZE_AND_STRENGTH
+  GT_F66_WITNESS_FLOOR_THEOREMS -->|refines| GT_F56_SOURCE_WITNESS_FLOOR
+  GT_Q14_COVARIANT_SOURCE_STRUCTURE_TEST -->|partially_answered_by| GT_F61_NATIVE_K2_RAW_GATHERING
+  GT_Q16_SORTING_DERIVATION -->|raised_by| GT_F60_FLOOR_GUIDED_SORTING
+  GT_Q17_REFERENCE_ARCHITECTURE -->|raised_by| GT_F63_TOTAL_FLOOR_NOT_PREDICTIVE
+  GT_F67_FLOOR_IS_AN_EXACT_ODDS_LEVER -->|formalises| GT_F60_FLOOR_GUIDED_SORTING
+  GT_F67_FLOOR_IS_AN_EXACT_ODDS_LEVER -->|bounds| GT_Q16_SORTING_DERIVATION
+  GT_F68_FIRST_ORDER_SORTING_INDEX -->|qualifies| GT_F60_FLOOR_GUIDED_SORTING
+  GT_F68_FIRST_ORDER_SORTING_INDEX -->|explains| GT_F63_TOTAL_FLOOR_NOT_PREDICTIVE
+  GT_Q16_SORTING_DERIVATION -->|partially_answered_by| GT_F68_FIRST_ORDER_SORTING_INDEX
+  GT_F69_CLOCK_SEPARATED_SORTING -->|explains| GT_F17_EQUAL_RATIO_DIVERGENT_OCCUPANCY
+  GT_F70_MARGIN_NOT_FIRST_ORDER -->|qualifies| GT_F56_SOURCE_WITNESS_FLOOR
+  GT_F70_MARGIN_NOT_FIRST_ORDER -->|supports| GT_F62_NATIVE_GATHERING_IS_DENSITY_COMPOSITION
+  GT_F71_SORTING_DECOMPOSITION_POSTHOC -->|refines| GT_F60_FLOOR_GUIDED_SORTING
+  GT_F73_ORBIT_CONTRAST_QUALIFICATIONS -->|qualifies| GT_F64_CHORD_SWITCHES_SITE_OFF
+  GT_F73_ORBIT_CONTRAST_QUALIFICATIONS -->|qualifies| GT_F60_FLOOR_GUIDED_SORTING
+  GT_F72_NO_LABELLED_CENTRE_AT_FINITE_N -->|explains| GT_F22_NO_EMERGENT_CENTRE
+  GT_Q17_REFERENCE_ARCHITECTURE -->|partially_answered_by| GT_F72_NO_LABELLED_CENTRE_AT_FINITE_N
+  GT_Q18_REVERSAL_AT_W4 -->|raised_by| GT_F68_FIRST_ORDER_SORTING_INDEX
+  GT_Q19_METASTABLE_FREE_REFERENCE -->|raised_by| GT_F72_NO_LABELLED_CENTRE_AT_FINITE_N
+  GT_Q20_RESIDUE_MECHANISM -->|raised_by| GT_F71_SORTING_DECOMPOSITION_POSTHOC
+  GT_Q15_DISPLACEMENT_DEFINITION_GAP -->|partially_answered_by| GT_F72_NO_LABELLED_CENTRE_AT_FINITE_N
+  GT_F74_INTACT_MOTIFS_NO_CT_PERSISTENCE -->|partially_answered_by| GT_Q19_METASTABLE_FREE_REFERENCE
+  GT_Q19_METASTABLE_FREE_REFERENCE -->|partially_answered_by| GT_F76_FLEXIBLE_ORGANISATION_OUTLIVES_ND_QUALIFIED
+  GT_Q19_METASTABLE_FREE_REFERENCE -->|partially_answered_by| GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY
+  GT_F75_INTACT_LIFETIME_IS_DISSOLUTION_KINETICS -->|explains| GT_F74_INTACT_MOTIFS_NO_CT_PERSISTENCE
+  GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW -->|qualifies| GT_F76_FLEXIBLE_ORGANISATION_OUTLIVES_ND_QUALIFIED
+  GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW -->|qualifies| GT_F80_CLOSEW_CLOSURE_RECOVERY
+  GT_F79_ND_MATCHES_EDGE_LIFETIME -->|explains| GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW
+  GT_F77_PATHF_CENTRES_PERSIST_AGAINST_MATCHED_ND -->|refines| GT_F76_FLEXIBLE_ORGANISATION_OUTLIVES_ND_QUALIFIED
+  GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW -->|raises_question| GT_Q21_KINETICS_AWARE_COMPARATOR
+  GT_F76_FLEXIBLE_ORGANISATION_OUTLIVES_ND_QUALIFIED -->|raises_question| GT_Q22_IDENTITY_THROUGH_REPLACEMENT
+  GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY -->|compatible_with| GT_F23_LOCAL_PERSISTENCE_SPARSE
+  GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY -->|compatible_with| GT_F72_NO_LABELLED_CENTRE_AT_FINITE_N
+  GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW -->|refines| GT_F25_KINETICS_SETS_OCCUPANCY_UNDER_IRREVERSIBILITY
+  GT_F80_CLOSEW_CLOSURE_RECOVERY -->|compatible_with| GT_F05_RELATIONAL_POTENTIAL
+  GT_F82_E5A_COMPARATOR_AND_NUMERICAL_QUALIFICATIONS -->|qualifies| GT_F81_HUB_SELECTION_MEMORY_BY_FAMILY
+  GT_F83_PCOMP_PERSISTENCE_IS_BETWEEN_LAYER_TRAFFIC -->|refines| GT_F78_LIFETIME_NOT_SET_BY_STATIONARY_LAW
+  GT_F83_PCOMP_PERSISTENCE_IS_BETWEEN_LAYER_TRAFFIC -->|qualifies| GT_F76_FLEXIBLE_ORGANISATION_OUTLIVES_ND_QUALIFIED
+  GT_F84_PATHF_CENTRES_SURVIVE_NK_AND_LOCAL_COUNT -->|supports| GT_F77_PATHF_CENTRES_PERSIST_AGAINST_MATCHED_ND
+  GT_F85_CLOSEW_EFFECT_MOSTLY_PREVALENCE_AND_TRAFFIC -->|qualifies| GT_F80_CLOSEW_CLOSURE_RECOVERY
+  GT_F88_NK_LAYER_TRAFFIC_COMPARATOR -->|enables| GT_F83_PCOMP_PERSISTENCE_IS_BETWEEN_LAYER_TRAFFIC
+  GT_Q21_KINETICS_AWARE_COMPARATOR -->|partially_answered_by| GT_F89_COMPARATOR_MATTERS_MORE_THAN_CLOCK
+  GT_Q21_KINETICS_AWARE_COMPARATOR -->|partially_answered_by| GT_F83_PCOMP_PERSISTENCE_IS_BETWEEN_LAYER_TRAFFIC
+  GT_Q22_IDENTITY_THROUGH_REPLACEMENT -->|partially_answered_by| GT_F87_RENEWAL_FEASIBILITY_AND_SIZE_ONE_EQUIVALENCE
+  GT_Q22_IDENTITY_THROUGH_REPLACEMENT -->|partially_answered_by| GT_F84_PATHF_CENTRES_SURVIVE_NK_AND_LOCAL_COUNT
+  GT_F90_E5A_INTACT_COUNT_IS_2_OF_30 -->|corrects| GT_F74_INTACT_MOTIFS_NO_CT_PERSISTENCE
+  GT_Q23_DURABLE_RENEWAL -->|raised_by| GT_F87_RENEWAL_FEASIBILITY_AND_SIZE_ONE_EQUIVALENCE
+  GT_Q24_WITHIN_LAYER_ARRANGEMENT_CONTROL -->|raised_by| GT_F84_PATHF_CENTRES_SURVIVE_NK_AND_LOCAL_COUNT
+  GT_F86_PATHH_CSPH_NK_SURVIVORS_QUALIFIED -->|raises_question| GT_Q23_DURABLE_RENEWAL
+  GT_Q23_DURABLE_RENEWAL -->|partially_answered_by| GT_F91_RENEWAL_IS_TRANSIENT
+  GT_Q23_DURABLE_RENEWAL -->|partially_answered_by| GT_F92_CSPH_TRIANGLE_RENEWAL_IS_FLICKER_ASSISTED
+  GT_Q23_DURABLE_RENEWAL -->|partially_answered_by| GT_F93_PATHH_TRIANGLE_DURABLE_BEYOND_NK
+  GT_F92_CSPH_TRIANGLE_RENEWAL_IS_FLICKER_ASSISTED -->|qualifies| GT_F86_PATHH_CSPH_NK_SURVIVORS_QUALIFIED
+  GT_F93_PATHH_TRIANGLE_DURABLE_BEYOND_NK -->|supports| GT_F86_PATHH_CSPH_NK_SURVIVORS_QUALIFIED
+  GT_F94_PATHF_RENEWAL_ADVANTAGE_SHORT_LIVED -->|qualifies| GT_F84_PATHF_CENTRES_SURVIVE_NK_AND_LOCAL_COUNT
+  GT_F96_POST_RENEWAL_FEASIBILITY_T14 -->|refines| GT_F87_RENEWAL_FEASIBILITY_AND_SIZE_ONE_EQUIVALENCE
+  GT_F97_FIRST_HIT_SAMPLING_MATTERS -->|enables| GT_F91_RENEWAL_IS_TRANSIENT
+  GT_Q24_WITHIN_LAYER_ARRANGEMENT_CONTROL -->|partially_answered_by| GT_F95_PCOMP_WITHIN_CLASS_DURABILITY
+  GT_Q25_ANCHOR_LOCAL_KINETIC_COMPARATOR -->|raised_by| GT_F93_PATHH_TRIANGLE_DURABLE_BEYOND_NK
+  GT_Q25_ANCHOR_LOCAL_KINETIC_COMPARATOR -->|raised_by| GT_F95_PCOMP_WITHIN_CLASS_DURABILITY
+  GT_Q25_ANCHOR_LOCAL_KINETIC_COMPARATOR -->|partially_answered_by| GT_F100_PATHH_TRIANGLE_DURABILITY_BEYOND_NL
+  GT_Q25_ANCHOR_LOCAL_KINETIC_COMPARATOR -->|partially_answered_by| GT_F101_PATHF_CENTRE_EFFECT_IS_LOCAL_REMOTE_TRAFFIC
+  GT_Q25_ANCHOR_LOCAL_KINETIC_COMPARATOR -->|partially_answered_by| GT_F102_PCOMP_WITHIN_CLASS_RESIDUAL_BEYOND_NL
+  GT_F100_PATHH_TRIANGLE_DURABILITY_BEYOND_NL -->|supports| GT_F93_PATHH_TRIANGLE_DURABLE_BEYOND_NK
+  GT_F101_PATHF_CENTRE_EFFECT_IS_LOCAL_REMOTE_TRAFFIC -->|qualifies| GT_F84_PATHF_CENTRES_SURVIVE_NK_AND_LOCAL_COUNT
+  GT_F101_PATHF_CENTRE_EFFECT_IS_LOCAL_REMOTE_TRAFFIC -->|qualifies| GT_F94_PATHF_RENEWAL_ADVANTAGE_SHORT_LIVED
+  GT_F102_PCOMP_WITHIN_CLASS_RESIDUAL_BEYOND_NL -->|supports| GT_F95_PCOMP_WITHIN_CLASS_DURABILITY
+  GT_F103_CSPH_FLICKER_PERSISTS_UNDER_NL -->|supports| GT_F92_CSPH_TRIANGLE_RENEWAL_IS_FLICKER_ASSISTED
+  GT_F98_NL_LOCAL_REMOTE_TRAFFIC_COMPARATOR -->|refines| GT_F88_NK_LAYER_TRAFFIC_COMPARATOR
+  GT_F98_NL_LOCAL_REMOTE_TRAFFIC_COMPARATOR -->|enables| GT_F100_PATHH_TRIANGLE_DURABILITY_BEYOND_NL
+  GT_F99_PROJECTED_CIRCULATION_PATH_CSPH -->|contrasts_with| GT_F102_PCOMP_WITHIN_CLASS_RESIDUAL_BEYOND_NL
+  GT_Q26_COMPLETER_RESOLVED_PROJECTION -->|raised_by| GT_F100_PATHH_TRIANGLE_DURABILITY_BEYOND_NL

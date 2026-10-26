@@ -1,0 +1,571 @@
+{
+  "round_id": "atlas-008",
+  "engine_version": "rrc-0.4.0",
+  "grammar_id": "opening-prohibit-multiply-v1",
+  "definitions_commit": "6778da87f25c7ec13f875960ed04ba99a5a0ef11",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q10"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q01",
+    "ATLAS-Q02",
+    "ATLAS-Q03",
+    "ATLAS-Q04",
+    "ATLAS-Q05",
+    "ATLAS-Q06",
+    "ATLAS-Q07",
+    "ATLAS-Q08",
+    "ATLAS-Q09",
+    "ATLAS-Q11",
+    "ATLAS-Q12"
+  ],
+  "selection": "The same fifteen baseline label maps as atlas-007. Atlas-007 stored no law: its items omitted round_id. Each item here carries round_id. Empty constraint lists. Not a static line-graph cell. Not a cover cell. Not a rerun of results/atlas-007. Not scheduled to explain chain-versus-branch separation, PAT-010, PAT-011, EQ-020, or the four-cycle degree defect.",
+  "grammar": {
+    "ids": [
+      "opening-prohibit-multiply-v1"
+    ],
+    "note": "Every list is empty. The baseline table is constant 1. The observation is not a constraint and not a new coordinate.",
+    "baseline": 1
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-008-preflight.md",
+    "heaviest_cell_s": 0.001,
+    "shape": "four-edge path, degree sequence, 16 states",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "n": [
+      3,
+      4,
+      5
+    ],
+    "carriers": [
+      "triangle",
+      "chain",
+      "star",
+      "path4",
+      "cycle4"
+    ],
+    "cells": 15,
+    "observations": [
+      "present_line_graph",
+      "present_edge_count",
+      "present_degree_sequence"
+    ],
+    "declared_sample": true,
+    "baseline_only": true,
+    "six_is_not_a_target": true,
+    "excluded": [
+      "constrained weight tables",
+      "static line-graph iteration as a cell",
+      "intersection graphs as a cell",
+      "nerves as a cell",
+      "a second label map",
+      "common-neighbour counts",
+      "history",
+      "independent hyperedges",
+      "N=6",
+      "rerun of results/atlas-007"
+    ]
+  },
+  "items": [
+    {
+      "id": "A8-triangle-line",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "bare line graph of the present edges",
+      "idea_ids": [
+        "IDEA-L16",
+        "IDEA-L13"
+      ],
+      "n": 3,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_line_graph"
+    },
+    {
+      "id": "A8-triangle-count",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "number of present edges",
+      "idea_ids": [
+        "IDEA-L13"
+      ],
+      "n": 3,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_edge_count"
+    },
+    {
+      "id": "A8-triangle-degree",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "degree sequence of the present graph",
+      "idea_ids": [
+        "IDEA-L13"
+      ],
+      "n": 3,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_degree_sequence"
+    },
+    {
+      "id": "A8-chain-line",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "bare line graph of the present edges",
+      "idea_ids": [
+        "IDEA-L16",
+        "IDEA-L13"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_line_graph"
+    },
+    {
+      "id": "A8-chain-count",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "number of present edges",
+      "idea_ids": [
+        "IDEA-L13"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_edge_count"
+    },
+    {
+      "id": "A8-chain-degree",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "degree sequence of the present graph",
+      "idea_ids": [
+        "IDEA-L13"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_degree_sequence"
+    },
+    {
+      "id": "A8-star-line",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "bare line graph of the present edges",
+      "idea_ids": [
+        "IDEA-L16",
+        "IDEA-L13"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_line_graph"
+    },
+    {
+      "id": "A8-star-count",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "number of present edges",
+      "idea_ids": [
+        "IDEA-L13"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_edge_count"
+    },
+    {
+      "id": "A8-star-degree",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "degree sequence of the present graph",
+      "idea_ids": [
+        "IDEA-L13"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_degree_sequence"
+    },
+    {
+      "id": "A8-path4-line",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "bare line graph of the present edges",
+      "idea_ids": [
+        "IDEA-L16",
+        "IDEA-L13"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_line_graph"
+    },
+    {
+      "id": "A8-path4-count",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "number of present edges",
+      "idea_ids": [
+        "IDEA-L13"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_edge_count"
+    },
+    {
+      "id": "A8-path4-degree",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "degree sequence of the present graph",
+      "idea_ids": [
+        "IDEA-L13"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_degree_sequence"
+    },
+    {
+      "id": "A8-cycle4-line",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "bare line graph of the present edges",
+      "idea_ids": [
+        "IDEA-L16",
+        "IDEA-L13"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_line_graph"
+    },
+    {
+      "id": "A8-cycle4-count",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "number of present edges",
+      "idea_ids": [
+        "IDEA-L13"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_edge_count"
+    },
+    {
+      "id": "A8-cycle4-degree",
+      "round_id": "atlas-008",
+      "type": "composition_observation",
+      "role": "observation",
+      "label": "degree sequence of the present graph",
+      "idea_ids": [
+        "IDEA-L13"
+      ],
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "observation": "present_degree_sequence"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "rs-constraint-lab.experiment/v1",
+  "experiment_id": "generation-003b-k3-singletons",
+  "generation": 3,
+  "semantics": "hypergraph",
+  "G": 0,
+  "S": 0,
+  "H": 0,
+  "L": 0,
+  "O": 3,
+  "alphabet": "W4",
+  "composition": "structural-simple",
+  "analysis": "heavy-every-canonical",
+  "predicates": ["pair", "triad"],
+  "sensitivity_alphabets": ["W3", "W16"],
+  "weights": ["prohibit", "strong_suppress", "weak_suppress", "weak_favour", "strong_favour"],
+  "cells": [
+    {"N": 3, "K_max": 3, "A_max": 3, "cardinalities": [1]}
+  ],
+  "trajectory": {"horizon": 16, "seeds": [0]},
+  "rise_release_horizon": 4,
+  "reference_expressions": [
+    "form(0-1-2) | present(0-1) & absent(0-2) => strong_favour",
+    "form(0-1) | present(0-1-2) & present(0-2) => strong_favour"
+  ],
+  "predeclared_screens": {
+    "max_abs_dissolve_shift_notable": 0.1,
+    "closing_bias_abs_notable": 0.1,
+    "rise_release_excess_notable": 0.05
+  },
+  "unsearched": [
+    "cardinality 2 at K<=3",
+    "cardinality 3",
+    "N other than 3",
+    "stacked-weight composition",
+    "count predicates",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0"
+  ]
+}

@@ -1,0 +1,4053 @@
+{
+  "alphabet": "W4",
+  "constraint_set_id": "dd960e8ed7074d12",
+  "engine_version": "0.1.0",
+  "events": [
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 24,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 6,
+      "state_after": 959,
+      "state_before": 1023,
+      "t": 0
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 26,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 7,
+      "state_after": 831,
+      "state_before": 959,
+      "t": 1
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 2,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 1,
+      "state_after": 829,
+      "state_before": 831,
+      "t": 2
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 16,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 4,
+      "state_after": 813,
+      "state_before": 829,
+      "t": 3
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 32,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 8,
+      "state_after": 557,
+      "state_before": 813,
+      "t": 4
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 31,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 8,
+      "state_after": 813,
+      "state_before": 557,
+      "t": 5
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 25,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 7,
+      "state_after": 941,
+      "state_before": 813,
+      "t": 6
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 19,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 5,
+      "state_after": 909,
+      "state_before": 941,
+      "t": 7
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 30,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 8,
+      "state_after": 653,
+      "state_before": 909,
+      "t": 8
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 22,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 6,
+      "state_after": 717,
+      "state_before": 653,
+      "t": 9
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 13,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 4,
+      "state_after": 733,
+      "state_before": 717,
+      "t": 10
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 32,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 8,
+      "state_after": 989,
+      "state_before": 733,
+      "t": 11
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 8,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 2,
+      "state_after": 985,
+      "state_before": 989,
+      "t": 12
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 18,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 5,
+      "state_after": 1017,
+      "state_before": 985,
+      "t": 13
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 8,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 2,
+      "state_after": 1021,
+      "state_before": 1017,
+      "t": 14
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 6,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 2,
+      "state_after": 1017,
+      "state_before": 1021,
+      "t": 15
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 16,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 4,
+      "state_after": 1001,
+      "state_before": 1017,
+      "t": 16
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 34,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 9,
+      "state_after": 489,
+      "state_before": 1001,
+      "t": 17
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 9,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 3,
+      "state_after": 481,
+      "state_before": 489,
+      "t": 18
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 19,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 5,
+      "state_after": 449,
+      "state_before": 481,
+      "t": 19
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 6,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 2,
+      "state_after": 453,
+      "state_before": 449,
+      "t": 20
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 4,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 1,
+      "state_after": 455,
+      "state_before": 453,
+      "t": 21
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 21,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 6,
+      "state_after": 391,
+      "state_before": 455,
+      "t": 22
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 30,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 8,
+      "state_after": 135,
+      "state_before": 391,
+      "t": 23
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 35,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 9,
+      "state_after": 647,
+      "state_before": 135,
+      "t": 24
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 6,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 2,
+      "state_after": 643,
+      "state_before": 647,
+      "t": 25
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 22,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 6,
+      "state_after": 707,
+      "state_before": 643,
+      "t": 26
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 27,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 7,
+      "state_after": 579,
+      "state_before": 707,
+      "t": 27
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 20,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 5,
+      "state_after": 611,
+      "state_before": 579,
+      "t": 28
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 13,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 4,
+      "state_after": 627,
+      "state_before": 611,
+      "t": 29
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 35,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 9,
+      "state_after": 115,
+      "state_before": 627,
+      "t": 30
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "dissolve(0-1) => strong_suppress",
+              "factor": "1/4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1/4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            3
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            4
+          ],
+          "edge_index": 3,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 4,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            3
+          ],
+          "edge_index": 5,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 6,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            3
+          ],
+          "edge_index": 7,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            2,
+            4
+          ],
+          "edge_index": 8,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            3,
+            4
+          ],
+          "edge_index": 9,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 30,
+      "halt": false,
+      "normaliser": "37",
+      "selected_edge": 8,
+      "state_after": 371,
+      "state_before": 115,
+      "t": 31
+    }
+  ],
+  "expressions": [
+    "dissolve(0-1) => strong_suppress"
+  ],
+  "final_state": 371,
+  "horizon": 32,
+  "initial_name": "complete",
+  "initial_state": 1023,
+  "label": "family",
+  "n": 5,
+  "prng": "python-random-MT19937",
+  "run_id": "1ce7437625f681ea",
+  "seed": 0,
+  "selection": "integer-weights-randrange",
+  "spec_hash": "620c776a6d13d7ad0bc9e0c5b8e6bc4c683694f19a1dfc41172bc52d58058dbe"
+}

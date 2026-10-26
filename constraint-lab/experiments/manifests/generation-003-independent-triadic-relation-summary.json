@@ -1,0 +1,1854 @@
+{
+  "cells": [
+    {
+      "accounting": {
+        "edge": {
+          "labelled_constraints": 280,
+          "labelled_states": 16,
+          "outside_a_bound": 0,
+          "outside_k_bound": 0,
+          "raw_structural_templates": 56,
+          "relation_slots": 4,
+          "removed_redundant_normalisation": 0,
+          "removed_syntax_invalid": 0,
+          "structural_by_class": {
+            "P->P": 30,
+            "P->T": 12,
+            "T->P": 12,
+            "T->T": 2,
+            "mixed": 0
+          },
+          "structural_normal_forms": 56,
+          "weight_alphabet_size": 5
+        },
+        "grammar": {
+          "count_candidates": 0,
+          "count_outside_a": 0,
+          "count_outside_k": 0,
+          "count_structural": 0,
+          "count_tautology": 0,
+          "count_unsatisfiable": 0,
+          "edge_outside_a": 0,
+          "edge_structural": 56,
+          "labelled_constraints": 280,
+          "outside_k_bound": 0,
+          "structural_by_class": {
+            "P->P": 30,
+            "P->T": 12,
+            "T->P": 12,
+            "T->T": 2,
+            "mixed": 0
+          },
+          "structural_normal_forms": 56,
+          "weight_alphabet_size": 5
+        }
+      },
+      "baseline": {
+        "heavy": {
+          "disjoint_pair_mass": null,
+          "disjoint_pair_mass_exact": null,
+          "edge_count_occupancy": [
+            0.125,
+            0.375,
+            0.375,
+            0.125
+          ],
+          "edge_count_occupancy_exact": [
+            "1/8",
+            "3/8",
+            "3/8",
+            "1/8"
+          ],
+          "entropy_rate_bits": 1.9999999999999998,
+          "entropy_rate_nats": 1.3862943611198904,
+          "halt_mass": 0.0,
+          "halt_mass_exact": "0/1",
+          "mean_component_count": 1.625,
+          "mean_edge_density": 0.5,
+          "mean_edge_density_exact": "1/2",
+          "n_recurrent": 1,
+          "pair_density_triad_absent_exact": "1/2",
+          "pair_density_triad_present_exact": "1/2",
+          "periods": [
+            2
+          ],
+          "reachable_count": 16,
+          "reversibility_defect": 0.0,
+          "reversibility_defect_exact": "0/1",
+          "rise_then_release": 0.3984375,
+          "rise_then_release_exact": "51/128",
+          "stationary_arithmetic": "rational",
+          "stationary_residual": 0.0,
+          "triad_dissolution_flux_exact": "1/8",
+          "triad_formation_flux_exact": "1/8",
+          "triad_graph_class_mi_bits": 0.0,
+          "triad_occupancy_exact": "1/2",
+          "triad_present_sojourn_exact": "4/1",
+          "triangle_mass": 0.125,
+          "triangle_mass_exact": "1/8",
+          "tv_from_uniform": 0.0,
+          "tv_from_uniform_exact": "0/1"
+        },
+        "light": {
+          "closing_bias": 0.0,
+          "closing_bias_exact": "0/1",
+          "deadlock_states": [],
+          "max_abs_dissolve_shift": 0.0,
+          "max_abs_dissolve_shift_exact": "0/1",
+          "mean_abs_dissolve_shift": 0.0,
+          "mean_abs_dissolve_shift_exact": "0/1",
+          "modal_family": "115cdbb7791513bb",
+          "n_deadlock": 0,
+          "n_recurrent": 1,
+          "n_recurrent_reachable_from_empty": 1,
+          "periods": [
+            2
+          ],
+          "reachable_from_empty": 16,
+          "support_family": "d0ea2ede397499c8",
+          "support_matches_baseline": true
+        }
+      },
+      "baseline_equivalent_families": 0,
+      "cancellations": {
+        "genuine_global": 0,
+        "genuine_global_examples": [],
+        "inherited_baseline": 0,
+        "inherited_baseline_examples": [],
+        "local": 112,
+        "local_examples": [
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-1-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | present(0-1-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | present(0-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_suppress",
+            "dissolve(0-1) | absent(0-1-2) => strong_favour"
+          ],
+          [
+            "dissolve(0-1) => strong_suppress",
+            "dissolve(0-1) | absent(0-2) => strong_favour"
+          ],
+          [
+            "dissolve(0-1) => strong_suppress",
+            "dissolve(0-1) | present(0-1-2) => strong_favour"
+          ],
+          [
+            "dissolve(0-1) => strong_suppress",
+            "dissolve(0-1) | present(0-2) => strong_favour"
+          ]
+        ]
+      },
+      "canonical_states": 8,
+      "cardinalities": {
+        "1": {
+          "analysed": 80,
+          "canonical": 80,
+          "canonical_including_stacked": 80,
+          "labelled_combinations": 280,
+          "labelled_simple": 280,
+          "labelled_stacked": 0,
+          "removed_by_symmetry": 200,
+          "stacked_canonical": 0
+        },
+        "2": {
+          "analysed": 7305,
+          "canonical": 7305,
+          "canonical_including_stacked": 7465,
+          "labelled_combinations": 39060,
+          "labelled_simple": 38500,
+          "labelled_stacked": 560,
+          "removed_by_symmetry": 31595,
+          "stacked_canonical": 160
+        }
+      },
+      "coordinate": {
+        "A_max": 3,
+        "G": 0,
+        "H": 0,
+        "K_max": 2,
+        "L": 0,
+        "N": 3,
+        "O": 3,
+        "S": 0,
+        "alphabet": "W4",
+        "composition": "structural-simple",
+        "predicates": [
+          "pair",
+          "triad"
+        ],
+        "semantics": "hypergraph"
+      },
+      "exemplars": [
+        {
+          "expressions": [],
+          "initial": "empty",
+          "label": "baseline",
+          "run_id": "078a9e0d9d9f4963",
+          "seed": 0
+        },
+        {
+          "expressions": [],
+          "initial": "complete",
+          "label": "baseline",
+          "run_id": "6d65c1669dc4916d",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "b6c992c7ccae4d78",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "33f8e1342749a614",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "564f39c700e69461",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "8a430609e0a9927a",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "2327ea916fffe211",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "4cc452a15c5bcd77",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "baf16f89fa406d37",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "d3bc157240663870",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "742071b700b3a811",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "c80a1220bdefb2d3",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "58626d248f123306",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "3ef223272af6e3df",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "e747f99acce265eb",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "8ce2847e61619a38",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "d0c58acfb40d50ae",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "d9278ade9e865a9f",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "646c05be994614b6",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "32b103c82bc101ae",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "c2a5068258a3e27f",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "861433fe5239e476",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "96e944e782f20bee",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "3548997ce6737b05",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "b472e5e5cad878f4",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "1e5376ce81ad693d",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "2d17c82d5e83d56f",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "24dce1e6dc838b32",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "a679744d2ff09c2e",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "4cd77d271c378dba",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "a15de66d07746e02",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "108698213d1d79b3",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "94220eeb6e24de55",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "6a8da010f9ab624f",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "c43bfa351bc0548c",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "ebd4a4cbcea3ba54",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "f1eff73c6ba9f7d4",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "84015e49741b127c",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "16c6bf0ebd7ebdf8",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "4c95874c38c03a17",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "2f7515cc372bc349",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "78b0baa0fa8c7915",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1-2) | present(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "1a2957a656b73e81",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1-2) | present(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "a45b72a113693599",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1-2) | present(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "736ab3672de94eff",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "dissolve(0-1-2) | present(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "5fc8c6b5bc6b5658",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "dissolve(0-1-2) | present(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "6c4be8681058760c",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "dissolve(0-1-2) | present(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "115c7cb82afb6864",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "dissolve(0-1-2) | present(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "e20ba01f8c154799",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "dissolve(0-1-2) | present(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "ffc12dd1a77f7366",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "dissolve(0-1-2) | present(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "d61c929fcea9d38f",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1-2) | present(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "703e6d5ee41716b6",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "e93c86246fe157ca",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "6424d66349e5c518",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "c72b5cc99c1b7cbd",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "99eb36f998f323e2",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "679b3345253d9cc3",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "5e60d82d44d059cf",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "cfe62050874ed2c9",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "bf4aca4138f083a5",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "0112bf647e982177",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "18690e8b97e2f900",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "6acb34436c925ee8",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "7fbe6e3c335ee328",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "ffa6d4101d506648",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "1a2e41b1742d9b19",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "836d6cc695dda113",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "7b5dd9b71e7351aa",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | absent(0-1-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "02b7eaf265112ded",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | absent(0-1-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "25826b3300a0a4fa",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-1-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "cancellation",
+          "run_id": "5c50248c700bdcc8",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-1-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "cancellation",
+          "run_id": "85f5f0ef925a48a6",
+          "seed": 0
+        }
+      ],
+      "extremes": {
+        "closing_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => prohibit"
+          ],
+          "kernel": "32ad8a3a9894c09e4cec57ba24995e3924a4e20dcb9f12140bb89fbadc8685d3",
+          "kind": "fraction",
+          "value": "1/3"
+        },
+        "closing_min": {
+          "expressions": [
+            "dissolve(0-1) => strong_favour",
+            "form(0-1) => prohibit"
+          ],
+          "kernel": "1885cb293e324cad345d192d670cd833acbf1f20c081d6f0b39aba3a81741aaa",
+          "kind": "fraction",
+          "value": "-2/9"
+        },
+        "emergent_memory_tv_max": {
+          "expressions": [
+            "dissolve(0-1-2) => strong_favour",
+            "form(0-1-2) => strong_suppress"
+          ],
+          "kernel": "148e823fc7a8e66890de5c143d563e69779277a3e6091cb652b280d370064b9a",
+          "kind": "fraction",
+          "value": "2025/10738"
+        },
+        "entropy_max": {
+          "expressions": [
+            "form(0-1-2) => weak_suppress",
+            "form(0-1-2) | absent(0-1) => weak_favour"
+          ],
+          "kernel": "cc0a574bfd6fcdd41f0f3f9f0f6c2bb91f120002745610159009811d7626fa82",
+          "kind": "float",
+          "value": 1.9860593781761309
+        },
+        "entropy_min": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-1-2) => prohibit"
+          ],
+          "kernel": "e1e71c8afef1d6e4bc6613f9e7d8b5d51597c3aecc49ceda8bde4d36d8f0d88a",
+          "kind": "float",
+          "value": 1.0
+        },
+        "rise_excess_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "form(0-1-2) => prohibit"
+          ],
+          "kernel": "ea5f9263df24bed4f959196a2a667e44720dd6a59d005a50707a390782e70889",
+          "kind": "fraction",
+          "value": "437/1152"
+        },
+        "rise_excess_min": {
+          "expressions": [
+            "form(0-1) => prohibit",
+            "form(0-2) => prohibit"
+          ],
+          "kernel": "4881d32aa2b29db94dc5c6741106504ce1ddb38045ec2861d02daab0ca9b9e61",
+          "kind": "fraction",
+          "value": "-51/128"
+        },
+        "shift_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => prohibit"
+          ],
+          "kernel": "32ad8a3a9894c09e4cec57ba24995e3924a4e20dcb9f12140bb89fbadc8685d3",
+          "kind": "fraction",
+          "value": "2/3"
+        },
+        "triad_occupancy_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-1-2) => prohibit"
+          ],
+          "kernel": "e1e71c8afef1d6e4bc6613f9e7d8b5d51597c3aecc49ceda8bde4d36d8f0d88a",
+          "kind": "fraction",
+          "value": "1/1"
+        },
+        "triad_occupancy_min": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "form(0-1-2) => prohibit"
+          ],
+          "kernel": "ea5f9263df24bed4f959196a2a667e44720dd6a59d005a50707a390782e70889",
+          "kind": "fraction",
+          "value": "0/1"
+        }
+      },
+      "families": 2789,
+      "family_histogram": {
+        "closing_max": {
+          "0": -0.2222222222222222,
+          "0.25": -0.027777777777777776,
+          "0.5": 0.0,
+          "0.75": 0.05555555555555555,
+          "0.9": 0.1111111111111111,
+          "0.99": 0.18518518518518517,
+          "1": 0.3333333333333333
+        },
+        "families": 2789,
+        "n_deadlock": {
+          "0": 2789
+        },
+        "periods": {
+          "2": 2789
+        },
+        "rise_then_release_excess": {
+          "0": -0.3984375,
+          "0.25": -0.06198724489795918,
+          "0.5": -0.006327947845804989,
+          "0.75": 0.056979166666666664,
+          "0.9": 0.11210545011131463,
+          "0.99": 0.2682291666666667,
+          "1": 0.3793402777777778
+        },
+        "shift_max": {
+          "0": 0.0,
+          "0.25": 0.16666666666666666,
+          "0.5": 0.3333333333333333,
+          "0.75": 0.3333333333333333,
+          "0.9": 0.33333333333333326,
+          "0.99": 0.5688888888888768,
+          "1": 0.6666666666666666
+        },
+        "support_matches_baseline": 1382
+      },
+      "family_index_bytes": 11588531,
+      "family_index_commit_limit_bytes": 2000000,
+      "family_index_sha256": "bee9bde0c78b72f9ec1ee1c5b637d8070f0835b59827a84f9c53134acb81637c",
+      "higher_order": {
+        "comparison_domain": "Generation 1b N=3 K<=3 cardinalities {1,2,3} structural-simple pairwise-edge grammar, kernel ids in kernel-ids-n3-k3.txt, plus the unconstrained O=2 baseline under the same S_3 canonicalisation. Count predicates, stacked weights, N other than 3, and K>3 are outside this domain. Raw 16-state hashes are not compared with 8-state hashes.",
+        "emergent_memory_max_tv": "2025/10738",
+        "emergent_memory_sets": 5250,
+        "examples": {
+          "FULLY_REDUCIBLE": [
+            [
+              "dissolve(0-1) => prohibit"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | absent(0-1-2) => prohibit"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | absent(0-1-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | absent(0-1-2) => strong_suppress"
+            ]
+          ],
+          "IRREDUCIBLE_DYNAMIC_COUPLING": [
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) | absent(0-1-2) => prohibit"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) | absent(0-1-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) | absent(0-1-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) | absent(0-1-2) => weak_favour"
+            ]
+          ],
+          "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": [],
+          "PAIRWISE_PROJECTION_REDUCIBLE": [
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1-2) | absent(0-1) => prohibit"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1-2) | absent(0-1) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1-2) | absent(0-1) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1-2) | absent(0-1) => weak_favour"
+            ]
+          ],
+          "UNRESOLVED": [],
+          "emergent_memory": [
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1-2) => weak_favour"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1-2) => weak_suppress"
+            ]
+          ],
+          "formation_then_loss": [
+            [
+              "dissolve(0-1) => prohibit"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | absent(0-1-2) => prohibit"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | absent(0-1-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | absent(0-1-2) => strong_suppress"
+            ]
+          ]
+        },
+        "id_digest": {
+          "kernel_ids_sha256": "05db8c83d50ad70fafbf65700f90bc6b888605282ebc8f4ab5fc56974d254b05",
+          "qualitative_ids_sha256": "ca19e623c7ea20ba320680618fc9d8625fc7e441c3ed6031d9690145b5759370"
+        },
+        "jump_qualitative_outside_index": 0,
+        "jump_support_known": 7385,
+        "jump_support_outside_index": 0,
+        "kernel_ids_by_class": {
+          "P->P": 1800,
+          "P->T": 376,
+          "T->P": 380,
+          "T->T": 35,
+          "mixed": 4624
+        },
+        "kernel_index_present": true,
+        "n3_limitation": "At N=3 a pairwise graph class is the edge count. A relabelled wedge is the same class. Same-cardinality non-isomorphic reconfiguration is impossible here, so an edge-count change is not a new organisation.",
+        "pair_predicts_triad_sets": 6989,
+        "qualitative_family_count": 2789,
+        "qualitative_ids_by_class": {
+          "P->P": 688,
+          "P->T": 158,
+          "T->P": 152,
+          "T->T": 15,
+          "mixed": 1840
+        },
+        "qualitative_index_present": true,
+        "rate_competition_and_pair_predicts_triad": 2041,
+        "rate_competition_sets": 4421,
+        "reducibility": {
+          "FULLY_REDUCIBLE": 2295,
+          "IRREDUCIBLE_DYNAMIC_COUPLING": 2940,
+          "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+          "PAIRWISE_PROJECTION_REDUCIBLE": 2150,
+          "UNRESOLVED": 0
+        },
+        "reducibility_by_class": {
+          "P->P": {
+            "FULLY_REDUCIBLE": 1890,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          },
+          "P->T": {
+            "FULLY_REDUCIBLE": 10,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 370,
+            "UNRESOLVED": 0
+          },
+          "T->P": {
+            "FULLY_REDUCIBLE": 20,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 360,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          },
+          "T->T": {
+            "FULLY_REDUCIBLE": 35,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          },
+          "mixed": {
+            "FULLY_REDUCIBLE": 340,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 2580,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 1780,
+            "UNRESOLVED": 0
+          }
+        },
+        "sensitivity": {
+          "1/2": {
+            "coupling_changed": 0,
+            "emergent_memory_changed": 0,
+            "kernel_changed": 7384,
+            "modal_changed": 7365,
+            "qualitative_changed": 7365,
+            "qualitative_family_count": 2612,
+            "reducibility_changed": 0,
+            "support_changed": 0
+          },
+          "2": {
+            "coupling_changed": 0,
+            "emergent_memory_changed": 0,
+            "kernel_changed": 7384,
+            "modal_changed": 7368,
+            "qualitative_changed": 7368,
+            "qualitative_family_count": 2418,
+            "reducibility_changed": 0,
+            "support_changed": 0
+          }
+        },
+        "sets_by_class": {
+          "P->P": 1890,
+          "P->T": 380,
+          "T->P": 380,
+          "T->T": 35,
+          "mixed": 4700
+        },
+        "support_ids_by_class": {
+          "P->P": 81,
+          "P->T": 21,
+          "T->P": 21,
+          "T->T": 4,
+          "mixed": 197
+        },
+        "support_index_present": true,
+        "trajectory": {
+          "cross_order_sequence": 7384,
+          "edge_count_differs": 7384,
+          "formation_then_loss_edge_count_differs": 7308,
+          "isomorphic_only": 0,
+          "same_cardinality_nonisomorphic": 0
+        },
+        "triad_predicts_pair_sets": 5250
+      },
+      "higher_order_science": {
+        "comparison_domain": "Generation 1b N=3 K<=3 cardinalities {1,2,3} structural-simple pairwise-edge grammar, kernel ids in kernel-ids-n3-k3.txt, plus the unconstrained O=2 baseline under the same S_3 canonicalisation. Count predicates, stacked weights, N other than 3, and K>3 are outside this domain. Raw 16-state hashes are not compared with 8-state hashes.",
+        "emergent_memory_max_tv": "2025/10738",
+        "emergent_memory_sets": 5250,
+        "jump_qualitative_outside_index": 0,
+        "jump_support_outside_index": 0,
+        "kernel_ids_sha256": "05db8c83d50ad70fafbf65700f90bc6b888605282ebc8f4ab5fc56974d254b05",
+        "kernel_index_present": true,
+        "n3_limitation": "At N=3 a pairwise graph class is the edge count. A relabelled wedge is the same class. Same-cardinality non-isomorphic reconfiguration is impossible here, so an edge-count change is not a new organisation.",
+        "pair_predicts_triad_sets": 6989,
+        "qualitative_family_count": 2789,
+        "qualitative_ids_sha256": "ca19e623c7ea20ba320680618fc9d8625fc7e441c3ed6031d9690145b5759370",
+        "qualitative_index_present": true,
+        "rate_competition_and_pair_predicts_triad": 2041,
+        "rate_competition_sets": 4421,
+        "reducibility": {
+          "FULLY_REDUCIBLE": 2295,
+          "IRREDUCIBLE_DYNAMIC_COUPLING": 2940,
+          "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+          "PAIRWISE_PROJECTION_REDUCIBLE": 2150,
+          "UNRESOLVED": 0
+        },
+        "reducibility_by_class": {
+          "P->P": {
+            "FULLY_REDUCIBLE": 1890,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          },
+          "P->T": {
+            "FULLY_REDUCIBLE": 10,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 370,
+            "UNRESOLVED": 0
+          },
+          "T->P": {
+            "FULLY_REDUCIBLE": 20,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 360,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          },
+          "T->T": {
+            "FULLY_REDUCIBLE": 35,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          },
+          "mixed": {
+            "FULLY_REDUCIBLE": 340,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 2580,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 1780,
+            "UNRESOLVED": 0
+          }
+        },
+        "sensitivity": {
+          "1/2": {
+            "coupling_changed": 0,
+            "emergent_memory_changed": 0,
+            "kernel_changed": 7384,
+            "modal_changed": 7365,
+            "qualitative_changed": 7365,
+            "qualitative_families_equal_primary": false,
+            "qualitative_family_count": 2612,
+            "reducibility_changed": 0,
+            "support_changed": 0
+          },
+          "2": {
+            "coupling_changed": 0,
+            "emergent_memory_changed": 0,
+            "kernel_changed": 7384,
+            "modal_changed": 7368,
+            "qualitative_changed": 7368,
+            "qualitative_families_equal_primary": false,
+            "qualitative_family_count": 2418,
+            "reducibility_changed": 0,
+            "support_changed": 0
+          }
+        },
+        "sets_by_class": {
+          "P->P": 1890,
+          "P->T": 380,
+          "T->P": 380,
+          "T->T": 35,
+          "mixed": 4700
+        },
+        "support_index_present": true,
+        "trajectory": {
+          "cross_order_sequence": 7384,
+          "edge_count_differs": 7384,
+          "formation_then_loss_edge_count_differs": 7308,
+          "isomorphic_only": 0,
+          "same_cardinality_nonisomorphic": 0
+        },
+        "triad_predicts_pair_sets": 5250
+      },
+      "kernel_index_count": 7103,
+      "kernel_index_sha256": "d5006fc0ed47ecfe8b4cc9edc9344bc04e16d3f679897ac0bf4e7d8f1726ad9f",
+      "labelled_states": 16,
+      "measure_scope": {
+        "exact_kernel": "full rational kernel reduced under S_N before hashing",
+        "heavy": "every analysed set, including exact rational observables when the state count is at most 16",
+        "light": "every analysed set",
+        "observable_signature": "labelling-invariant scalars; not a kernel identity",
+        "qualitative_family": "S_N-canonical support token and modal token",
+        "rise_then_release": "from the empty state when the labelled state count is at most 64",
+        "search": "every canonical set at the requested cardinalities; structural-simple drops stacked weights before analysis",
+        "sensitivity": "every analysed cardinality-1 set, on the declared geometric alphabets",
+        "shards": "half-open lexicographic combination ranges, atomic result plus receipt",
+        "stationary": "Fraction end to end at <=16 states; float64 beyond. Entropy is always float"
+      },
+      "motif_ids": [
+        "7de81e9a335956f6bb56f4206e4dae37277e526ffa33829f8ebdfd33b9b2f738",
+        "5152d085961c90e2054ce67b5bc2487fcd87c468c3d381396c0d17c455b46499",
+        "e8fbf950af5c39431be9767aaf4dbf93c9eb03b553afb1d59027f467805bb617",
+        "f99e5a22dd2fdc9dba0d055805121cfd4197897a9b004d7a0d01ed67bded79f2",
+        "af2e93e38d16ad60ce142e8426a7638f56aae4018050467bb427e4beeff7eefb",
+        "eaa16c36a69e4250c9b7dd355f7825f275371948334e330587fd1e52f70aed24",
+        "0a2e4312ec4d09d40f0fd340a68e2e93a490194ad9f6444ac8fe74cba9bb7711",
+        "39003dfa5a536dff97d34df7af8a3a2b027a479c11a9ebf7c1abc5972edebb7b",
+        "6fb9ef6d807c81daf666b075ee713b740172e0e2f851d1deffca4347348f5553",
+        "329bd31569e0759fa16b46747dd0af35d779e65bfe92e0d45fb3dbf24991f220",
+        "7e3da3fe5ae56a339d4f75c1a59ffbeb72f00c5a83a1cc40ad474396ba8408d6",
+        "4cc02665e8c0e257a2444b8b7543bb395344c008c9975e01251b04dfa071b2d2",
+        "a5e1fff8b9cc235e5693c54aee8528ef7bc28d9ae7ecf4c5c5a5aaf30f3a8ccb",
+        "9c0b401f4addf7edb057e82617cfffe5224d725f3d43153aee6bc8933eeec377",
+        "a502896d1bb22b88f66812c0ae9d512f981d45b2131a650237b5e18b3045a6a2",
+        "a1aaf2579ce972cef0e770044cd27534558aeabcdebccfa777030333865051cf",
+        "04802f2f82646f511a9c59cb58567da3627d9c492244fdc43a8d81570a9838ee",
+        "0c59b9108d545ff159d7f026ecf421af64831d55f7805885078be7392d7588f2",
+        "1ee4d86710ef1d0a432c527725fb73093fe5e89b1679bd937c9cf3332bec5152",
+        "3c170df4f55f3d6a98487d0f06ead0209167d27f68f2e780cafed409f2fce0ff",
+        "72fa9cb3d547f91692167c7091d85807b14d2407c6b712f48e4e5188e68740d5",
+        "d2a47d4d7cfad84fe3d1cb2d7207203bfc7820115869765aa29f601ea2a784a4",
+        "017500d1bad4061693949a84064b3702b82eed4cb85159264443ce5c90eedb78",
+        "d31c6b5711931ab63c54a480e1e8098d3be14c3b7e0414c29ef4bb89e906a189",
+        "db44170b658b3e0997cc647fbec7b2878abef385f6b7560b2f0a1d6d5c0a52fd",
+        "0037cc84de5ad22f1ad3652023c3e1713522f236ee61067aa3f40b68cfbf8c1f",
+        "3fb80589ff283c737d5fbb4a6769d920d69721583577737f20e295e7375f0005",
+        "260a83c5a1820332a1ad9dcdfc51d69264f4d5a186d70eafe0b015103ba50918",
+        "3b82e2b61e814671363a1f7e5a15bacc185a4bc1c8d788a1d04ff9149de872e0",
+        "44e3035c1840d56e8c04c77f1086fa9b93c88ef0943d04243dee996eb18998ff",
+        "4a3fc32959cc1acd8b4b1fd47ff8143dad78570c40c8636d07f8ce8a74a9b5bd"
+      ],
+      "not_searched": [
+        "cardinality 3 at N=3 was not searched",
+        "multisets that repeat one constraint were not searched; repetition is a weight change"
+      ],
+      "observable_index_sha256": "3c15e70ac1404c8abfe1c898921ca4661b2099e46cd864041a3f24bd9de4a1ae",
+      "observable_signature_count": 7053,
+      "qualitative_index_sha256": "5ecb7ad6544cb688830bee8da5f54038f8bd80c310e80b6637bcc573bd37ec18",
+      "references": [
+        {
+          "canonical_expression": "form(0-1-2) => strong_favour",
+          "expression": "form(0-1-2) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": true,
+          "single": {
+            "closing_bias_exact": "0/1",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "d7a1a318f1fab277d9d5dee6633dcaf83b893de5a3ab23481eee0d6dca9ff5f7",
+            "expressions": [
+              "form(0-1-2) => strong_favour"
+            ],
+            "family_id": "9663b290f8e9529babeb5c07e1294e2809b12c8420b434585f9f92dc4c3474aa",
+            "max_abs_dissolve_shift_exact": "0/1",
+            "mean_edge_density_exact": "1/2",
+            "modal_family": "f7658b09586f0d9ed646f4df8dc835d06ebb98c1579dc607e2acf26e7de3ce7b",
+            "set_id": "07cbcabff427a0a6",
+            "triangle_mass_exact": "1/8"
+          }
+        },
+        {
+          "canonical_expression": "form(0-1-2) | present(0-1) => strong_favour",
+          "expression": "form(0-1-2) | present(0-1) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": true,
+          "single": {
+            "closing_bias_exact": "0/1",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "3e5052b2f2cfd771d3550267ce2ca8208f6bcd11ec6a4dbc71964ccab940b790",
+            "expressions": [
+              "form(0-1-2) | present(0-1) => strong_favour"
+            ],
+            "family_id": "76c798a3419741fd24ec05e587acfcd6bf2c2eae51838f06cffa9e205ee1237c",
+            "max_abs_dissolve_shift_exact": "0/1",
+            "mean_edge_density_exact": "19/37",
+            "modal_family": "8e86f6316fa9f41773a244dc6c659170122fa588bda87677b4ab5d1aff70c3c1",
+            "set_id": "905907ad19f5e4c7",
+            "triangle_mass_exact": "5/37"
+          }
+        },
+        {
+          "canonical_expression": "dissolve(0-1) | present(0-1-2) => strong_favour",
+          "expression": "dissolve(0-1) | present(0-1-2) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": true,
+          "single": {
+            "closing_bias_exact": "-1/18",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "3a77feae76db6c50b045a0fde8ed1a7d258ca96968078e5c2fb079da6221af77",
+            "expressions": [
+              "dissolve(0-1) | present(0-1-2) => strong_favour"
+            ],
+            "family_id": "db6be5f778d0c6cd299dfb0eab55f1cd1106de78b6c5714032d26d906e46c2f0",
+            "max_abs_dissolve_shift_exact": "1/3",
+            "mean_edge_density_exact": "17/37",
+            "modal_family": "5c970e9caf7b9eab4838565f13ed4bc4c4ca39d0de82890d07cfbcc874ae7605",
+            "set_id": "953406ef36c362d0",
+            "triangle_mass_exact": "7/74"
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-1-2) => strong_favour",
+          "expression": "form(0-1) | present(0-1-2) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": true,
+          "single": {
+            "closing_bias_exact": "1/18",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "808d88cd9ebcdcd0553c79ce9673badfe3e06f706b0403f63e509bd85a535341",
+            "expressions": [
+              "form(0-1) | present(0-1-2) => strong_favour"
+            ],
+            "family_id": "518900be046730c0603c15198f64d86c5da86965d1acb3537319464c6aa57c6c",
+            "max_abs_dissolve_shift_exact": "1/3",
+            "mean_edge_density_exact": "20/37",
+            "modal_family": "35fb8e8720025a49cc04da1fb42cb51292a4bad10f18434e805e4fc2470b84d3",
+            "set_id": "44d8774dfa87519f",
+            "triangle_mass_exact": "23/148"
+          }
+        },
+        {
+          "canonical_expression": "dissolve(0-1-2) | present(0-1) => prohibit",
+          "expression": "dissolve(0-1-2) | present(0-1) => prohibit",
+          "in_grammar": true,
+          "same_labelling": true,
+          "single": {
+            "closing_bias_exact": "0/1",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "f4643112c50e73bd2649c1e72f5a5a1f1fa27ca9a71f27562ca8155475782d28",
+            "expressions": [
+              "dissolve(0-1-2) | present(0-1) => prohibit"
+            ],
+            "family_id": "6bfa8772be8dc2c93f3af49fc49679998d403c532dd5c579b3fbed07dff72a2e",
+            "max_abs_dissolve_shift_exact": "0/1",
+            "mean_edge_density_exact": "13/27",
+            "modal_family": "ec3a95bb2b3da46f0f9fc6b44a3d431bee72974c4f0c73d45252b6e5f50f12b1",
+            "set_id": "d58da6ec39446ef3",
+            "triangle_mass_exact": "1/9"
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) => strong_favour",
+          "expression": "form(0-1) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": true,
+          "single": {
+            "closing_bias_exact": "1/9",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "de545a79ff9dac2e0ce386e30416934f6c1805c9880763b4ab65ab91b0c83c77",
+            "expressions": [
+              "form(0-1) => strong_favour"
+            ],
+            "family_id": "260a83c5a1820332a1ad9dcdfc51d69264f4d5a186d70eafe0b015103ba50918",
+            "max_abs_dissolve_shift_exact": "1/3",
+            "mean_edge_density_exact": "13/23",
+            "modal_family": "68d79f43e8b8dd2c65493f6203de9a92882e0f79ee636a48610ab63a431e5ea8",
+            "set_id": "2f070fb2d57a7beb",
+            "triangle_mass_exact": "4/23"
+          }
+        }
+      ],
+      "relation_slots": 4,
+      "runtime_seconds": 293.271575,
+      "screened_families": 2727,
+      "sensitivity": {
+        "alphabets": [
+          "W3",
+          "W16"
+        ],
+        "checks": 160,
+        "modal_unchanged": 160,
+        "support_unchanged": 160
+      },
+      "singles_sha256": "7a2d20b23553dd7469a8fd4972f90d293cd3c8dbc0ed93fb2fa1f279d244c386",
+      "structural_families": 1407
+    }
+  ],
+  "composition": "structural-simple",
+  "engine_version": "0.3.0",
+  "execution": {
+    "max_attempts": 3,
+    "multiprocessing": "spawn",
+    "principle": "Prefer bounded, independently reproducible, idempotent units of work with durable checkpoints, so completed progress is monotonic and interruption is cheap.",
+    "profile_note": "Measured 2026-10-03 on this development machine, one worker, OMP/OPENBLAS/MKL threads 1. Binding window: N=4, K<=2, cardinality 2, combination ranks 4000:8000, 3262 canonical-simple float64 kernels, 66.7s. N=3, K<=3, cardinality 3, ranks 180000:190000 analysed 9399 rational kernels in 13.6s. The N=3 opening prefix is cheap (ranks 0:1000 analysed nothing) because weights are innermost, so early combinations stack grades on the first structures. 4000 items keeps the measured worst window inside 60-90s and under 120s.",
+    "shard_count": 11,
+    "shard_items": 4000,
+    "worker_history": [
+      {
+        "at": "2026-10-03T14:45:54+00:00",
+        "workers": 2
+      },
+      {
+        "at": "2026-10-03T14:46:03+00:00",
+        "workers": 2
+      }
+    ],
+    "workers_last": 2
+  },
+  "experiment_id": "generation-003-independent-triadic-relation",
+  "generation": 3,
+  "git_commit": "ca679de546a50ad75928101d43920b2cd50ba4e0",
+  "grammar_version": "independent-hypergraph-v1",
+  "normalisation_version": "structural-unique-v1",
+  "numpy": "2.5.3",
+  "platform": "linux",
+  "predicates": [
+    "pair",
+    "triad"
+  ],
+  "python": "3.12.3",
+  "receipt_fingerprint": "02937cec50bf004a8a57da3c8da9213870e847bb1e3d48d59456a4e380834294",
+  "runtime_seconds": 162.10208012899966,
+  "science": {
+    "cells": [
+      {
+        "K_max": 2,
+        "N": 3,
+        "baseline_equivalent_families": 0,
+        "cancellations": {
+          "genuine_global": 0,
+          "genuine_global_examples": [],
+          "inherited_baseline": 0,
+          "inherited_baseline_examples": [],
+          "local": 112,
+          "local_examples": [
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | absent(0-1-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | absent(0-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | present(0-1-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | present(0-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress",
+              "dissolve(0-1) | absent(0-1-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress",
+              "dissolve(0-1) | absent(0-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress",
+              "dissolve(0-1) | present(0-1-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress",
+              "dissolve(0-1) | present(0-2) => strong_favour"
+            ]
+          ]
+        },
+        "cardinalities": {
+          "1": {
+            "analysed": 80,
+            "canonical": 80,
+            "canonical_including_stacked": 80,
+            "labelled_combinations": 280,
+            "labelled_simple": 280,
+            "labelled_stacked": 0,
+            "removed_by_symmetry": 200,
+            "stacked_canonical": 0
+          },
+          "2": {
+            "analysed": 7305,
+            "canonical": 7305,
+            "canonical_including_stacked": 7465,
+            "labelled_combinations": 39060,
+            "labelled_simple": 38500,
+            "labelled_stacked": 560,
+            "removed_by_symmetry": 31595,
+            "stacked_canonical": 160
+          }
+        },
+        "extremes": {
+          "closing_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => prohibit"
+            ],
+            "kernel": "32ad8a3a9894c09e4cec57ba24995e3924a4e20dcb9f12140bb89fbadc8685d3",
+            "kind": "fraction",
+            "value": "1/3"
+          },
+          "closing_min": {
+            "expressions": [
+              "dissolve(0-1) => strong_favour",
+              "form(0-1) => prohibit"
+            ],
+            "kernel": "1885cb293e324cad345d192d670cd833acbf1f20c081d6f0b39aba3a81741aaa",
+            "kind": "fraction",
+            "value": "-2/9"
+          },
+          "emergent_memory_tv_max": {
+            "expressions": [
+              "dissolve(0-1-2) => strong_favour",
+              "form(0-1-2) => strong_suppress"
+            ],
+            "kernel": "148e823fc7a8e66890de5c143d563e69779277a3e6091cb652b280d370064b9a",
+            "kind": "fraction",
+            "value": "2025/10738"
+          },
+          "entropy_max": {
+            "expressions": [
+              "form(0-1-2) => weak_suppress",
+              "form(0-1-2) | absent(0-1) => weak_favour"
+            ],
+            "kernel": "cc0a574bfd6fcdd41f0f3f9f0f6c2bb91f120002745610159009811d7626fa82",
+            "kind": "float",
+            "value": 1.9860593781761309
+          },
+          "entropy_min": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1-2) => prohibit"
+            ],
+            "kernel": "e1e71c8afef1d6e4bc6613f9e7d8b5d51597c3aecc49ceda8bde4d36d8f0d88a",
+            "kind": "float",
+            "value": 1.0
+          },
+          "rise_excess_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "form(0-1-2) => prohibit"
+            ],
+            "kernel": "ea5f9263df24bed4f959196a2a667e44720dd6a59d005a50707a390782e70889",
+            "kind": "fraction",
+            "value": "437/1152"
+          },
+          "rise_excess_min": {
+            "expressions": [
+              "form(0-1) => prohibit",
+              "form(0-2) => prohibit"
+            ],
+            "kernel": "4881d32aa2b29db94dc5c6741106504ce1ddb38045ec2861d02daab0ca9b9e61",
+            "kind": "fraction",
+            "value": "-51/128"
+          },
+          "shift_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => prohibit"
+            ],
+            "kernel": "32ad8a3a9894c09e4cec57ba24995e3924a4e20dcb9f12140bb89fbadc8685d3",
+            "kind": "fraction",
+            "value": "2/3"
+          },
+          "triad_occupancy_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1-2) => prohibit"
+            ],
+            "kernel": "e1e71c8afef1d6e4bc6613f9e7d8b5d51597c3aecc49ceda8bde4d36d8f0d88a",
+            "kind": "fraction",
+            "value": "1/1"
+          },
+          "triad_occupancy_min": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "form(0-1-2) => prohibit"
+            ],
+            "kernel": "ea5f9263df24bed4f959196a2a667e44720dd6a59d005a50707a390782e70889",
+            "kind": "fraction",
+            "value": "0/1"
+          }
+        },
+        "families": 2789,
+        "family_index_sha256": "bee9bde0c78b72f9ec1ee1c5b637d8070f0835b59827a84f9c53134acb81637c",
+        "higher_order": {
+          "comparison_domain": "Generation 1b N=3 K<=3 cardinalities {1,2,3} structural-simple pairwise-edge grammar, kernel ids in kernel-ids-n3-k3.txt, plus the unconstrained O=2 baseline under the same S_3 canonicalisation. Count predicates, stacked weights, N other than 3, and K>3 are outside this domain. Raw 16-state hashes are not compared with 8-state hashes.",
+          "emergent_memory_max_tv": "2025/10738",
+          "emergent_memory_sets": 5250,
+          "jump_qualitative_outside_index": 0,
+          "jump_support_outside_index": 0,
+          "kernel_ids_sha256": "05db8c83d50ad70fafbf65700f90bc6b888605282ebc8f4ab5fc56974d254b05",
+          "kernel_index_present": true,
+          "n3_limitation": "At N=3 a pairwise graph class is the edge count. A relabelled wedge is the same class. Same-cardinality non-isomorphic reconfiguration is impossible here, so an edge-count change is not a new organisation.",
+          "pair_predicts_triad_sets": 6989,
+          "qualitative_family_count": 2789,
+          "qualitative_ids_sha256": "ca19e623c7ea20ba320680618fc9d8625fc7e441c3ed6031d9690145b5759370",
+          "qualitative_index_present": true,
+          "rate_competition_and_pair_predicts_triad": 2041,
+          "rate_competition_sets": 4421,
+          "reducibility": {
+            "FULLY_REDUCIBLE": 2295,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 2940,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 2150,
+            "UNRESOLVED": 0
+          },
+          "reducibility_by_class": {
+            "P->P": {
+              "FULLY_REDUCIBLE": 1890,
+              "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+              "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+              "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+              "UNRESOLVED": 0
+            },
+            "P->T": {
+              "FULLY_REDUCIBLE": 10,
+              "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+              "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+              "PAIRWISE_PROJECTION_REDUCIBLE": 370,
+              "UNRESOLVED": 0
+            },
+            "T->P": {
+              "FULLY_REDUCIBLE": 20,
+              "IRREDUCIBLE_DYNAMIC_COUPLING": 360,
+              "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+              "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+              "UNRESOLVED": 0
+            },
+            "T->T": {
+              "FULLY_REDUCIBLE": 35,
+              "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+              "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+              "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+              "UNRESOLVED": 0
+            },
+            "mixed": {
+              "FULLY_REDUCIBLE": 340,
+              "IRREDUCIBLE_DYNAMIC_COUPLING": 2580,
+              "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+              "PAIRWISE_PROJECTION_REDUCIBLE": 1780,
+              "UNRESOLVED": 0
+            }
+          },
+          "sensitivity": {
+            "1/2": {
+              "coupling_changed": 0,
+              "emergent_memory_changed": 0,
+              "kernel_changed": 7384,
+              "modal_changed": 7365,
+              "qualitative_changed": 7365,
+              "qualitative_families_equal_primary": false,
+              "qualitative_family_count": 2612,
+              "reducibility_changed": 0,
+              "support_changed": 0
+            },
+            "2": {
+              "coupling_changed": 0,
+              "emergent_memory_changed": 0,
+              "kernel_changed": 7384,
+              "modal_changed": 7368,
+              "qualitative_changed": 7368,
+              "qualitative_families_equal_primary": false,
+              "qualitative_family_count": 2418,
+              "reducibility_changed": 0,
+              "support_changed": 0
+            }
+          },
+          "sets_by_class": {
+            "P->P": 1890,
+            "P->T": 380,
+            "T->P": 380,
+            "T->T": 35,
+            "mixed": 4700
+          },
+          "support_index_present": true,
+          "trajectory": {
+            "cross_order_sequence": 7384,
+            "edge_count_differs": 7384,
+            "formation_then_loss_edge_count_differs": 7308,
+            "isomorphic_only": 0,
+            "same_cardinality_nonisomorphic": 0
+          },
+          "triad_predicts_pair_sets": 5250
+        },
+        "histogram": {
+          "closing_max": {
+            "0": -0.2222222222222222,
+            "0.25": -0.027777777777777776,
+            "0.5": 0.0,
+            "0.75": 0.05555555555555555,
+            "0.9": 0.1111111111111111,
+            "0.99": 0.18518518518518517,
+            "1": 0.3333333333333333
+          },
+          "families": 2789,
+          "n_deadlock": {
+            "0": 2789
+          },
+          "periods": {
+            "2": 2789
+          },
+          "rise_then_release_excess": {
+            "0": -0.3984375,
+            "0.25": -0.06198724489795918,
+            "0.5": -0.006327947845804989,
+            "0.75": 0.056979166666666664,
+            "0.9": 0.11210545011131463,
+            "0.99": 0.2682291666666667,
+            "1": 0.3793402777777778
+          },
+          "shift_max": {
+            "0": 0.0,
+            "0.25": 0.16666666666666666,
+            "0.5": 0.3333333333333333,
+            "0.75": 0.3333333333333333,
+            "0.9": 0.33333333333333326,
+            "0.99": 0.5688888888888768,
+            "1": 0.6666666666666666
+          },
+          "support_matches_baseline": 1382
+        },
+        "kernel_index_count": 7103,
+        "kernel_index_sha256": "d5006fc0ed47ecfe8b4cc9edc9344bc04e16d3f679897ac0bf4e7d8f1726ad9f",
+        "observable_index_sha256": "3c15e70ac1404c8abfe1c898921ca4661b2099e46cd864041a3f24bd9de4a1ae",
+        "qualitative_index_sha256": "5ecb7ad6544cb688830bee8da5f54038f8bd80c310e80b6637bcc573bd37ec18",
+        "screened_families": 2727,
+        "singles_sha256": "7a2d20b23553dd7469a8fd4972f90d293cd3c8dbc0ed93fb2fa1f279d244c386",
+        "structural_families": 1407,
+        "territory": null
+      }
+    ],
+    "composition": "structural-simple",
+    "predicates": [
+      "pair",
+      "triad"
+    ],
+    "semantic_version": "0.3.0",
+    "spec_hash": "26bc5fcafd9dd868171659f20f132bb27965e63c0bf26659414d42fd228ada17",
+    "status": "COMPLETE"
+  },
+  "semantic_version": "0.3.0",
+  "shard_work_seconds": 293.271575,
+  "spec_hash": "26bc5fcafd9dd868171659f20f132bb27965e63c0bf26659414d42fd228ada17",
+  "status": "COMPLETE",
+  "territory": null,
+  "unsearched_declared": [
+    "K>2",
+    "cardinality 3",
+    "N other than 3",
+    "stacked-weight composition",
+    "count predicates",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0",
+    "rho3 other than 1 as a separate census"
+  ]
+}

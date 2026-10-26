@@ -1,0 +1,105 @@
+{
+  "method": "xor-mask-analysis-0.1.0",
+  "evidence_type": "analytic-proof software validation",
+  "scientific_worker_invocations": 0,
+  "new_atlas_cells": 0,
+  "direction_subset_domain": "all subsets of nonzero masks of cardinality <= width, widths 1..4",
+  "direction_sets_checked": 2014,
+  "independent_sets": 1447,
+  "dependent_sets": 567,
+  "directed_edges_checked": 78622,
+  "three_mask_triangle": [
+    0,
+    1,
+    2
+  ],
+  "four_mask_common_neighbors": {
+    "states": [
+      0,
+      3
+    ],
+    "common_neighbors": [
+      1,
+      2,
+      4,
+      7
+    ]
+  },
+  "weight_vector_pairs_checked": 81,
+  "exact_weight_vector_pairs": 15,
+  "nonexact_weight_vector_pairs": 66,
+  "weight_domain": "two directions, one hidden bit, vector entries in {0,1,2}; validation fixtures only",
+  "controls": {
+    "common_scale": {
+      "first_weights": [
+        1,
+        2
+      ],
+      "second_weights": [
+        2,
+        4
+      ],
+      "strongly_lumpable": true
+    },
+    "relative_rates": {
+      "first_weights": [
+        1,
+        1
+      ],
+      "second_weights": [
+        1,
+        2
+      ],
+      "strongly_lumpable": false
+    },
+    "support_switch": {
+      "first_weights": [
+        1,
+        0
+      ],
+      "second_weights": [
+        0,
+        1
+      ],
+      "strongly_lumpable": false
+    },
+    "halt_mismatch": {
+      "first_weights": [
+        0,
+        0
+      ],
+      "second_weights": [
+        1,
+        0
+      ],
+      "strongly_lumpable": false
+    },
+    "all_halt": {
+      "first_weights": [
+        0,
+        0
+      ],
+      "second_weights": [
+        0,
+        0
+      ],
+      "strongly_lumpable": true
+    }
+  },
+  "interface_reencoding": {
+    "atlas_masks": [
+      1,
+      6,
+      8
+    ],
+    "rank": 3,
+    "extended_masks": [
+      1,
+      2,
+      6,
+      8
+    ],
+    "extended_rank": 4
+  },
+  "status": "verified"
+}

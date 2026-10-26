@@ -1,0 +1,1249 @@
+{
+  "round_id": "atlas-006",
+  "engine_version": "rrc-0.4.0",
+  "grammar_id": "incident-count-v1+opening-prohibit-multiply-v1",
+  "definitions_commit": "ba8661b95da2863094438626d33b28a36d9072cb",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q09"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q01",
+    "ATLAS-Q02",
+    "ATLAS-Q03",
+    "ATLAS-Q04",
+    "ATLAS-Q05",
+    "ATLAS-Q06",
+    "ATLAS-Q07",
+    "ATLAS-Q08",
+    "ATLAS-Q10",
+    "ATLAS-Q11",
+    "ATLAS-Q12"
+  ],
+  "selection": "Uniform eq-1 and ge-2 multiply templates on five listed carriers, plus one designated-bit multiply on each carrier. ge 1 is not rerun. Not scheduled to explain chain-versus-branch separation, PAT-008, PAT-009, or the 4-edge baseline identity.",
+  "tolerances": {
+    "stationary_successive_l1": 1e-12,
+    "cross_check_l1": 1e-08,
+    "max_iter": 10000,
+    "dense_max_states": 1024
+  },
+  "grammar": {
+    "ids": [
+      "incident-count-v1",
+      "opening-prohibit-multiply-v1"
+    ],
+    "note": "docs/atlas-0.4.md. The bit instrument uses a designated edge. The templates use incident_count. Factor 3. Action either. Thresholds 1 with eq, and 2 with ge.",
+    "baseline": 1,
+    "factor": 3
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-006-preflight.md",
+    "heaviest_cell_s": 0.007,
+    "shape": "5-node cycle, five uniform eq-1 multiplies, 32 states",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "n": [
+      4,
+      5
+    ],
+    "carriers": [
+      "chain",
+      "branch",
+      "disconnected",
+      "path5",
+      "cycle5"
+    ],
+    "cells": 15,
+    "grammars": [
+      "designated-bit multiply",
+      "uniform eq 1 multiply",
+      "uniform ge 2 multiply"
+    ],
+    "declared_sample": true,
+    "not_every_threshold": true,
+    "not_every_graph": true,
+    "six_is_not_a_target": true,
+    "ge_1_not_rerun": true,
+    "excluded": [
+      "ge 1",
+      "eq 0",
+      "other thresholds",
+      "prohibit counts",
+      "form and dissolve",
+      "factors other than 3",
+      "common-neighbour counts",
+      "complete carriers",
+      "N=6",
+      "history",
+      "independent hyperedges",
+      "composition depth >= 1",
+      "state sampling"
+    ]
+  },
+  "stopping": [
+    "Do not add, remove or edit items after this file is committed.",
+    "Do not widen tolerances after an item has run.",
+    "A failed, timed-out or unresolved item stays in that state.",
+    "Incomplete or invalid records may be recomputed only under the same spec.",
+    "Do not describe an unrun item as a result.",
+    "Do not treat these five carriers as every graph on four or five nodes.",
+    "Do not add a cell after comparing chain and branch.",
+    "Do not rerun ge 1. EQ-017 already identifies it with incident present."
+  ],
+  "items": [
+    {
+      "id": "A6-chain-bit",
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "role": "instrument",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-C02"
+      ],
+      "label": "designated first listed edge, conditioned on the second; not claimed covariant",
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-chain-eq1",
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        }
+      ],
+      "role": "template",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "label": "uniform eq 1 multiply by 3 on every carrier edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-chain-ge2",
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        }
+      ],
+      "role": "template",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "label": "uniform ge 2 multiply by 3 on every carrier edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-branch-bit",
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "role": "instrument",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C02"
+      ],
+      "label": "designated first listed edge, conditioned on the second; not claimed covariant",
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-branch-eq1",
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            3
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        }
+      ],
+      "role": "template",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "label": "uniform eq 1 multiply by 3 on every carrier edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-branch-ge2",
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            3
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        }
+      ],
+      "role": "template",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "label": "uniform ge 2 multiply by 3 on every carrier edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-disc-bit",
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "role": "instrument",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R04",
+        "IDEA-C02"
+      ],
+      "label": "designated first listed edge, conditioned on the second; not claimed covariant",
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-disc-eq1",
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        }
+      ],
+      "role": "template",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R04",
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "label": "uniform eq 1 multiply by 3 on every carrier edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-disc-ge2",
+      "n": 4,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        }
+      ],
+      "role": "template",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R04",
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "label": "uniform ge 2 multiply by 3 on every carrier edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-path5-bit",
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "role": "instrument",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-C02"
+      ],
+      "label": "designated first listed edge, conditioned on the second; not claimed covariant",
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-path5-eq1",
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        }
+      ],
+      "role": "template",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "label": "uniform eq 1 multiply by 3 on every carrier edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-path5-ge2",
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        }
+      ],
+      "role": "template",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "label": "uniform ge 2 multiply by 3 on every carrier edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-cycle5-bit",
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "role": "instrument",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C02"
+      ],
+      "label": "designated first listed edge, conditioned on the second; not claimed covariant",
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-cycle5-eq1",
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            4
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "eq",
+            "threshold": 1
+          }
+        }
+      ],
+      "role": "template",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "label": "uniform eq 1 multiply by 3 on every carrier edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "id": "A6-cycle5-ge2",
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        },
+        {
+          "effect": "multiply",
+          "factor": 3,
+          "action": "either",
+          "event": [
+            0,
+            4
+          ],
+          "when": {
+            "kind": "incident_count",
+            "relation": "ge",
+            "threshold": 2
+          }
+        }
+      ],
+      "role": "template",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-I04",
+        "IDEA-C08"
+      ],
+      "label": "uniform ge 2 multiply by 3 on every carrier edge",
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "round_id": "atlas-006",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    }
+  ]
+}

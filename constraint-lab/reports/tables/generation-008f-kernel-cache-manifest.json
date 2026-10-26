@@ -1,0 +1,210 @@
+[
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "e679aa5780f6f3e32484d1523dd9c2880da9fc71e2fed0b12cae5206fc61fbb1",
+    "canonical_law_id": "00afcb9f33a32b6f2dfd640447eb74bfc4585d36c6ef499cf0a643f8c8e38dc5",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "d50455777aaed6e20942fa94fc441e49ee70793be9363b6994cadf4dfabc63b9",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "21fe83727ab6225cc0a30a53d5b156f05a03a640335fd69ea0d81aac2e37b00e",
+    "canonical_law_id": "0e6b96b7a3c6495daea910414900e60e3efcd1b669aa482509e395580b4ab10f",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "0bb36f68f22646840b773cf2c8d64680c0835668be560c6bedf9f878100468e7",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "5e6af28bcbe06866a69ddf43680e71718baa444330f514bf0e9561252a8ccf18",
+    "canonical_law_id": "149a58ec76206c2b39966598c7dc679f0233da60cb970b2f3459ffa4b685f467",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "6387a602059c431dfd74610e841b272f03fcb30acfb593debeb33a1abceb2fbf",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "c890fe326b004fa844ab841b2f09998d7728d59cdd2ac495324b88f3bd50d230",
+    "canonical_law_id": "20163651cb8fdbd268c0abd17b0a11aaed1dcee9d358f12947f2c7465682d581",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "9640e6ae1f228b6f6daf1efdf94f3f51260414e75e038614865f4a440cb765ba",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "deed3905ae099fd6dd8b5df0186e7667f538e2dfa85ba00bb70da198db557344",
+    "canonical_law_id": "24584a6647eff025938210253bcb62adc1f806b824383f41b1fc0dd177a556db",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "0d35093beaa4e938c0725b41e8a40d371d617f8acbe8698d7027aa84baad906d",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "aa26816a1399d3dd2b20227bf0c04d2ed80a0b24628658949f32b34ba9385b40",
+    "canonical_law_id": "498c53302e759ed82e26a2ca9275d9edb934cf928c73785cdb06bf5a199fb6af",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "b1fc55295a02166432e54cae9e17bb999ccb5b5ee678ccd6b82cfb788ba0bb5b",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "12331cdc449c499fbe17f6b22714700034f7d786b1c9f29d904068d2f380b6aa",
+    "canonical_law_id": "626fd388028ab1847fa5c0bb54222893246e5d92c06619991d5a45fd92689d07",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "75fd37a81dea6a36d5424013a7c39be775f3c0bd682359ff6eb989bd3ddb38ad",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "0ba6413f78cb92fbd5654259f9f306679ffea0f44b0d464c6a975c050323f8be",
+    "canonical_law_id": "702dc0106935785d5ae5c9a8b80f9613039fe472e628e2fd6c0d5223f2cc7416",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "35332b22623de02bd06d9c7a65d22685afa04ac189d9ae42c346b67d8ba2f903",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "7e8b5042ecc3fc07e819bda81389ac46b6ffa38a763c16bf65b215d8b51ab78d",
+    "canonical_law_id": "706529359a7501191c214df2aeac146eb1b3afbde9dc854773a2cdaedbe5f102",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "c13a0b1e84b8706f5783062ea20d4f2ef249afb51ab7703184e3f969bcf30839",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "05c228df514c149fc0b7be41984c6e69cfd49694208b8d409b66b69967773479",
+    "canonical_law_id": "7fc8a20ea5055c671a97e7f389bf2c7f9e067782e8749cb0607eb6c3a9e645c0",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "c15014938b996a773dc0b5d5d2b2f102f35d76abba81c5d772b04fae83a7468b",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "806c722da40ccf0a9eecd55f6b3a02d1e6ca2934511f03ebc4a2e8286074b2ec",
+    "canonical_law_id": "9bdfe66765afb4d4d7b1d0e8bd7d1d18b6655e92d2ae300fb14a4bf88b548a81",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "46a48ccd834c022b78e3dbb2b354058ffcf1931cc21e93119d69215e12007bd9",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "8a7b7604693bec9eeafcf3d1f049cacca7939a5418e2e4bb7ff8b2bbb176e96b",
+    "canonical_law_id": "9ca31836583a57d294024e3bf87efd1eb9c2c12ec99499280c9198871b8888f6",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "09f5757e892882512774a34744a6a161ff546d079ea07676ed2cd3ee5be48df7",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "f4411244f66d2209bcfb6723726d0213c2f13bd980eb66fe163d700d5a182a9f",
+    "canonical_law_id": "ba8f8c64a910b2f4ce66a4d469b9489cfcf3f20ce1889159db65f69c4f0a019d",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "8349533ba5a4dc254d6d7093953f5c80d5f3b8223fdf1dae7a56739e965ef9a9",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "433cea0bda93e6b4b5027df37cf78c15ccc942a7117bb1d63c2a1d6c250e63ed",
+    "canonical_law_id": "be9686e8112f73273738f1626d9bfe6ad209897c3ddf537eb273753d3317b1ce",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "31d7370316bfe2745287f58fcc389ae5fdde9ec66a469cccd16b50b2b2b3a9e8",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "4164d534ff44af4fe2c22e70d56e2939ab22ec1051cf8e5359460502e3375413",
+    "canonical_law_id": "cb86b0c2de92719cbbc7e3046c6ac986c26f6986af1ecf875c8c0aebe1d759d0",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "b243450c6a1e7de66f7cd18dee11c5bd9039008ac3c26a83cf6fa3c30b9edb6f",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  },
+  {
+    "analysis_version": "generation-008f-bridge/v2",
+    "cache_key": "9c6322afd962a1fc6cfd951eaf230216a466f51c8748c05f43db2bb1c748ef75",
+    "canonical_law_id": "e2b8a43075d83981e35f61431e76d88c7b5312070eb90b864058d39d611f9107",
+    "matrix_contents": [
+      "full",
+      "epoch",
+      "stationary",
+      "stationary_full"
+    ],
+    "matrix_sha256": "babddd09676434a93de77a7f1ae1c20f81560b57cf89e2b0d7d9b8dee105129b",
+    "precision": "80 decimal digits for continuous weights; float64 matrices"
+  }
+]

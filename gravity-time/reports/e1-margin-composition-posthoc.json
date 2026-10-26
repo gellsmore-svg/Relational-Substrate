@@ -1,0 +1,222 @@
+{
+ "label": "post hoc decomposition, computed after E1 results (not a frozen comparison): margin = sum_k q(k) x(k), q(k)=k p(k)/E[k], x(k)=E[a|k]/k - r0 (own N); change = sum (q_b-q_a) x_a [occupancy] + sum q_b (x_b-x_a) [preference]; for k absent at the smaller size x_a is taken equal to x_b (unmatched_k carries any remainder)",
+ "rows": {
+  "CSPF size N5->N6 cont": {
+   "occupancy": 0.0103,
+   "preference": -0.1318,
+   "total": -0.1215,
+   "unmatched_k": -0.0
+  },
+  "CSPF size N5->N6 jump": {
+   "occupancy": 0.0053,
+   "preference": -0.1436,
+   "total": -0.1383,
+   "unmatched_k": -0.0
+  },
+  "CSPF size N6->N7 cont": {
+   "occupancy": 0.0048,
+   "preference": -0.0997,
+   "total": -0.0949,
+   "unmatched_k": -0.0
+  },
+  "CSPF size N6->N7 jump": {
+   "occupancy": 0.0169,
+   "preference": -0.1042,
+   "total": -0.0874,
+   "unmatched_k": 0.0
+  },
+  "CSPF strength N6 W4->W16 cont": {
+   "occupancy": -0.0203,
+   "preference": -0.469,
+   "total": -0.4893,
+   "unmatched_k": -0.0
+  },
+  "CSPF strength N6 W4->W16 jump": {
+   "occupancy": -0.0107,
+   "preference": -0.481,
+   "total": -0.4917,
+   "unmatched_k": 0.0
+  },
+  "CSPH size N5->N6 cont": {
+   "occupancy": 0.0031,
+   "preference": -0.0408,
+   "total": -0.0376,
+   "unmatched_k": -0.0
+  },
+  "CSPH size N5->N6 jump": {
+   "occupancy": -0.0132,
+   "preference": 0.0052,
+   "total": -0.008,
+   "unmatched_k": -0.0
+  },
+  "CSPH size N6->N7 cont": {
+   "occupancy": -0.0249,
+   "preference": -0.0504,
+   "total": -0.0753,
+   "unmatched_k": 0.0
+  },
+  "CSPH size N6->N7 jump": {
+   "occupancy": -0.0271,
+   "preference": -0.0363,
+   "total": -0.0634,
+   "unmatched_k": -0.0
+  },
+  "CSPH strength N6 W4->W16 cont": {
+   "occupancy": 0.0066,
+   "preference": -0.3122,
+   "total": -0.3056,
+   "unmatched_k": 0.0
+  },
+  "CSPH strength N6 W4->W16 jump": {
+   "occupancy": 0.0199,
+   "preference": 0.0071,
+   "total": 0.027,
+   "unmatched_k": 0.0
+  },
+  "CWPF size N5->N6 cont": {
+   "occupancy": 0.0131,
+   "preference": -0.1248,
+   "total": -0.1117,
+   "unmatched_k": -0.0
+  },
+  "CWPF size N5->N6 jump": {
+   "occupancy": 0.0152,
+   "preference": -0.1413,
+   "total": -0.1261,
+   "unmatched_k": -0.0
+  },
+  "CWPF size N6->N7 cont": {
+   "occupancy": -0.0021,
+   "preference": -0.0647,
+   "total": -0.0669,
+   "unmatched_k": 0.0
+  },
+  "CWPF size N6->N7 jump": {
+   "occupancy": 0.0137,
+   "preference": -0.0701,
+   "total": -0.0564,
+   "unmatched_k": -0.0
+  },
+  "CWPF strength N6 W4->W16 cont": {
+   "occupancy": -0.0016,
+   "preference": -0.4001,
+   "total": -0.4017,
+   "unmatched_k": -0.0
+  },
+  "CWPF strength N6 W4->W16 jump": {
+   "occupancy": -0.005,
+   "preference": -0.4099,
+   "total": -0.415,
+   "unmatched_k": 0.0
+  },
+  "CWPH size N5->N6 cont": {
+   "occupancy": 0.0018,
+   "preference": -0.0625,
+   "total": -0.0607,
+   "unmatched_k": -0.0
+  },
+  "CWPH size N5->N6 jump": {
+   "occupancy": -0.0089,
+   "preference": -0.0299,
+   "total": -0.0388,
+   "unmatched_k": -0.0
+  },
+  "CWPH size N6->N7 cont": {
+   "occupancy": -0.0308,
+   "preference": -0.0346,
+   "total": -0.0654,
+   "unmatched_k": -0.0
+  },
+  "CWPH size N6->N7 jump": {
+   "occupancy": -0.025,
+   "preference": -0.0394,
+   "total": -0.0644,
+   "unmatched_k": 0.0
+  },
+  "CWPH strength N6 W4->W16 cont": {
+   "occupancy": 0.0178,
+   "preference": -0.3357,
+   "total": -0.3179,
+   "unmatched_k": 0.0
+  },
+  "CWPH strength N6 W4->W16 jump": {
+   "occupancy": 0.0184,
+   "preference": -0.1504,
+   "total": -0.132,
+   "unmatched_k": 0.0
+  },
+  "PATHF size N5->N6 cont": {
+   "occupancy": 0.011,
+   "preference": -0.1099,
+   "total": -0.099,
+   "unmatched_k": -0.0
+  },
+  "PATHF size N5->N6 jump": {
+   "occupancy": 0.0204,
+   "preference": -0.1267,
+   "total": -0.1064,
+   "unmatched_k": -0.0
+  },
+  "PATHF size N6->N7 cont": {
+   "occupancy": -0.0052,
+   "preference": -0.0466,
+   "total": -0.0518,
+   "unmatched_k": -0.0
+  },
+  "PATHF size N6->N7 jump": {
+   "occupancy": 0.0112,
+   "preference": -0.0516,
+   "total": -0.0404,
+   "unmatched_k": 0.0
+  },
+  "PATHF strength N6 W4->W16 cont": {
+   "occupancy": 0.0098,
+   "preference": -0.3415,
+   "total": -0.3317,
+   "unmatched_k": 0.0
+  },
+  "PATHF strength N6 W4->W16 jump": {
+   "occupancy": -0.0024,
+   "preference": -0.336,
+   "total": -0.3384,
+   "unmatched_k": 0.0
+  },
+  "PATHH size N5->N6 cont": {
+   "occupancy": -0.0033,
+   "preference": -0.0647,
+   "total": -0.068,
+   "unmatched_k": -0.0
+  },
+  "PATHH size N5->N6 jump": {
+   "occupancy": -0.0077,
+   "preference": -0.0454,
+   "total": -0.0531,
+   "unmatched_k": -0.0
+  },
+  "PATHH size N6->N7 cont": {
+   "occupancy": -0.0318,
+   "preference": -0.0232,
+   "total": -0.0551,
+   "unmatched_k": 0.0
+  },
+  "PATHH size N6->N7 jump": {
+   "occupancy": -0.0241,
+   "preference": -0.0321,
+   "total": -0.0562,
+   "unmatched_k": 0.0
+  },
+  "PATHH strength N6 W4->W16 cont": {
+   "occupancy": 0.0286,
+   "preference": -0.2962,
+   "total": -0.2676,
+   "unmatched_k": 0.0
+  },
+  "PATHH strength N6 W4->W16 jump": {
+   "occupancy": 0.0209,
+   "preference": -0.1579,
+   "total": -0.137,
+   "unmatched_k": 0.0
+  }
+ },
+ "source": "gravity-time/reports/round-e1-tables.json"
+}

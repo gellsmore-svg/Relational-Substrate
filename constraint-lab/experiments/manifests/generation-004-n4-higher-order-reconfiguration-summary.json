@@ -1,0 +1,338 @@
+{
+  "analysis": "n4-singleton",
+  "cells": [
+    {
+      "accounting": {
+        "edge": {
+          "labelled_constraints": 1900,
+          "labelled_states": 1024,
+          "outside_a_bound": 0,
+          "outside_k_bound": 0,
+          "raw_structural_templates": 380,
+          "relation_slots": 10,
+          "removed_redundant_normalisation": 0,
+          "removed_syntax_invalid": 0,
+          "structural_by_class": {
+            "P->P": 132,
+            "P->T": 96,
+            "T->P": 96,
+            "T->T": 56,
+            "mixed": 0
+          },
+          "structural_normal_forms": 380,
+          "weight_alphabet_size": 5
+        },
+        "grammar": {
+          "count_candidates": 0,
+          "count_outside_a": 0,
+          "count_outside_k": 0,
+          "count_structural": 0,
+          "count_tautology": 0,
+          "count_unsatisfiable": 0,
+          "edge_outside_a": 0,
+          "edge_structural": 380,
+          "labelled_constraints": 1900,
+          "outside_k_bound": 0,
+          "structural_by_class": {
+            "P->P": 132,
+            "P->T": 96,
+            "T->P": 96,
+            "T->T": 56,
+            "mixed": 0
+          },
+          "structural_normal_forms": 380,
+          "weight_alphabet_size": 5
+        }
+      },
+      "baseline_equivalent_families": 0,
+      "cancellations": {},
+      "canonical_states": null,
+      "cardinalities": {
+        "1": {
+          "analysed": 160,
+          "canonical": 160,
+          "canonical_including_stacked": 160,
+          "labelled_combinations": 1900,
+          "labelled_simple": 1900,
+          "labelled_stacked": 0,
+          "removed_by_symmetry": 1740,
+          "stacked_canonical": 0
+        }
+      },
+      "clock_census": null,
+      "coordinate": {
+        "A_max": 4,
+        "G": 0,
+        "H": 0,
+        "K_max": 2,
+        "L": 0,
+        "N": 4,
+        "O": 3,
+        "S": 0,
+        "alphabet": "W4",
+        "analysis": "n4-singleton",
+        "composition": "structural-simple",
+        "predicates": [
+          "pair",
+          "triad"
+        ],
+        "semantics": "hypergraph"
+      },
+      "extremes": {},
+      "families": 0,
+      "family_histogram": {},
+      "family_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_index_count": 0,
+      "kernel_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "labelled_states": 1024,
+      "n4_census": {
+        "analysed": 160,
+        "axis_e": {
+          "P->P:inside": 50,
+          "P->T:inside": 40,
+          "T->P:inside": 40,
+          "T->T:inside": 30
+        },
+        "by_class": {
+          "P->P": 50,
+          "P->T": 40,
+          "T->P": 40,
+          "T->T": 30
+        },
+        "by_k": {
+          "1": 20,
+          "2": 140
+        },
+        "full_event": {
+          "P->P:zero": 50,
+          "P->T:positive": 40,
+          "T->P:positive": 40,
+          "T->T:positive": 28,
+          "T->T:zero": 2
+        },
+        "grammar": {
+          "canonical_structural_orbits": 32,
+          "canonical_weighted_singletons": 160,
+          "cardinality_2_canonical_simple": 85175,
+          "cardinality_2_executed": false,
+          "cardinality_2_labelled_combinations": 1804050,
+          "cardinality_2_labelled_simple": 1800250,
+          "labelled_constraints": 1900,
+          "structural_by_class": {
+            "P->P": 132,
+            "P->T": 96,
+            "T->P": 96,
+            "T->T": 56,
+            "mixed": 0
+          },
+          "structural_normal_forms": 380,
+          "structural_orbits_by_class": {
+            "P->P": 10,
+            "P->T": 8,
+            "T->P": 8,
+            "T->T": 6
+          },
+          "structural_orbits_by_k": {
+            "1": 4,
+            "2": 28
+          }
+        },
+        "horizon": 16,
+        "measure": "max_abs_stationary_pair_event_class_flux_delta",
+        "pair_event_epoch": {
+          "P->P:zero": 50,
+          "P->T:zero": 40,
+          "T->P:positive": 40,
+          "T->T:zero": 30
+        },
+        "pair_jump": {
+          "P->P:NO": 50,
+          "P->T:NO": 40,
+          "T->P:YES": 40,
+          "T->T:NO": 30
+        },
+        "projection_b_restores_markov": 0,
+        "reconfig_effects": 0,
+        "reconfig_top": []
+      },
+      "observable_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pairwise_index": {
+        "baseline_was_added": true,
+        "domain": "Generation 1b N=4 K<=2 cardinalities {1,2} structural-simple pairwise-edge exact kernel ids, plus the unconstrained O=2 baseline",
+        "sha256": "59ccc85b0293ff41f68cc64a1268e1bd2209f5dca03eecfc56e38b740a2581a0"
+      },
+      "qualitative_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation_slots": 10,
+      "runtime_seconds": 313.6310040000001,
+      "screened_families": 0,
+      "singles_sha256": "12ff748721ca076ba922c0c1330ed75ce291157771dcfc7b340378cc81bb4c49",
+      "structural_families": 0
+    }
+  ],
+  "composition": "structural-simple",
+  "engine_version": "0.4.0",
+  "execution": {
+    "max_attempts": 3,
+    "multiprocessing": "spawn",
+    "principle": "Prefer bounded, independently reproducible, idempotent units of work with durable checkpoints, so completed progress is monotonic and interruption is cheap.",
+    "profile_note": "Measured 2026-10-03 on this development machine, one worker, OMP/OPENBLAS/MKL threads 1. Binding window: N=4, K<=2, cardinality 2, combination ranks 4000:8000, 3262 canonical-simple float64 kernels, 66.7s. N=3, K<=3, cardinality 3, ranks 180000:190000 analysed 9399 rational kernels in 13.6s. The N=3 opening prefix is cheap (ranks 0:1000 analysed nothing) because weights are innermost, so early combinations stack grades on the first structures. 4000 items keeps the measured worst window inside 60-90s and under 120s.",
+    "shard_count": 19,
+    "shard_items": 100,
+    "worker_history": [
+      {
+        "at": "2026-10-03T17:44:49+00:00",
+        "workers": 2
+      },
+      {
+        "at": "2026-10-03T17:47:36+00:00",
+        "workers": 2
+      }
+    ],
+    "workers_last": 2
+  },
+  "experiment_id": "generation-004-n4-higher-order-reconfiguration",
+  "generation": 4,
+  "git_commit": "90ad68fc0e55333335412dfa3af5c7081b60c918",
+  "grammar_version": "independent-hypergraph-v1",
+  "normalisation_version": "structural-unique-v1",
+  "numpy": "2.5.3",
+  "platform": "linux",
+  "predicates": [
+    "pair",
+    "triad"
+  ],
+  "python": "3.12.3",
+  "receipt_fingerprint": "103559f847a1afe1274d4a82afb208fc5b74cfeef1423f7ec89f26cb7183217e",
+  "reconfiguration_horizon": 16,
+  "reconfiguration_measure": "max_abs_stationary_pair_event_class_flux_delta",
+  "runtime_seconds": 217.68637163197855,
+  "science": {
+    "cells": [
+      {
+        "K_max": 2,
+        "N": 4,
+        "baseline_equivalent_families": 0,
+        "cancellations": {},
+        "cardinalities": {
+          "1": {
+            "analysed": 160,
+            "canonical": 160,
+            "canonical_including_stacked": 160,
+            "labelled_combinations": 1900,
+            "labelled_simple": 1900,
+            "labelled_stacked": 0,
+            "removed_by_symmetry": 1740,
+            "stacked_canonical": 0
+          }
+        },
+        "extremes": {},
+        "families": 0,
+        "family_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "histogram": {},
+        "kernel_index_count": 0,
+        "kernel_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "n4_census": {
+          "analysed": 160,
+          "axis_e": {
+            "P->P:inside": 50,
+            "P->T:inside": 40,
+            "T->P:inside": 40,
+            "T->T:inside": 30
+          },
+          "by_class": {
+            "P->P": 50,
+            "P->T": 40,
+            "T->P": 40,
+            "T->T": 30
+          },
+          "by_k": {
+            "1": 20,
+            "2": 140
+          },
+          "full_event": {
+            "P->P:zero": 50,
+            "P->T:positive": 40,
+            "T->P:positive": 40,
+            "T->T:positive": 28,
+            "T->T:zero": 2
+          },
+          "grammar": {
+            "canonical_structural_orbits": 32,
+            "canonical_weighted_singletons": 160,
+            "cardinality_2_canonical_simple": 85175,
+            "cardinality_2_executed": false,
+            "cardinality_2_labelled_combinations": 1804050,
+            "cardinality_2_labelled_simple": 1800250,
+            "labelled_constraints": 1900,
+            "structural_by_class": {
+              "P->P": 132,
+              "P->T": 96,
+              "T->P": 96,
+              "T->T": 56,
+              "mixed": 0
+            },
+            "structural_normal_forms": 380,
+            "structural_orbits_by_class": {
+              "P->P": 10,
+              "P->T": 8,
+              "T->P": 8,
+              "T->T": 6
+            },
+            "structural_orbits_by_k": {
+              "1": 4,
+              "2": 28
+            }
+          },
+          "horizon": 16,
+          "measure": "max_abs_stationary_pair_event_class_flux_delta",
+          "pair_event_epoch": {
+            "P->P:zero": 50,
+            "P->T:zero": 40,
+            "T->P:positive": 40,
+            "T->T:zero": 30
+          },
+          "pair_jump": {
+            "P->P:NO": 50,
+            "P->T:NO": 40,
+            "T->P:YES": 40,
+            "T->T:NO": 30
+          },
+          "projection_b_restores_markov": 0,
+          "reconfig_effects": 0,
+          "reconfig_top": []
+        },
+        "observable_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "qualitative_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "screened_families": 0,
+        "singles_sha256": "12ff748721ca076ba922c0c1330ed75ce291157771dcfc7b340378cc81bb4c49",
+        "structural_families": 0,
+        "territory": null
+      }
+    ],
+    "composition": "structural-simple",
+    "predicates": [
+      "pair",
+      "triad"
+    ],
+    "semantic_version": "0.4.0",
+    "spec_hash": "d64a9cccc12ec4a58a886227a52ba3b2b35a9506978a521b3766835de8f4a7f9",
+    "status": "COMPLETE"
+  },
+  "semantic_version": "0.4.0",
+  "shard_work_seconds": 313.6310040000001,
+  "spec_hash": "d64a9cccc12ec4a58a886227a52ba3b2b35a9506978a521b3766835de8f4a7f9",
+  "status": "COMPLETE",
+  "territory": null,
+  "unsearched_declared": [
+    "cardinality 2 and 3",
+    "K>2",
+    "stacked-weight composition",
+    "count predicates",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0",
+    "N other than 4"
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "analysis": "memory-clock-reanalysis",
+  "cells": [
+    {
+      "accounting": {
+        "edge": {
+          "labelled_constraints": 280,
+          "labelled_states": 16,
+          "outside_a_bound": 0,
+          "outside_k_bound": 0,
+          "raw_structural_templates": 56,
+          "relation_slots": 4,
+          "removed_redundant_normalisation": 0,
+          "removed_syntax_invalid": 0,
+          "structural_by_class": {
+            "P->P": 30,
+            "P->T": 12,
+            "T->P": 12,
+            "T->T": 2,
+            "mixed": 0
+          },
+          "structural_normal_forms": 56,
+          "weight_alphabet_size": 5
+        },
+        "grammar": {
+          "count_candidates": 0,
+          "count_outside_a": 0,
+          "count_outside_k": 0,
+          "count_structural": 0,
+          "count_tautology": 0,
+          "count_unsatisfiable": 0,
+          "edge_outside_a": 0,
+          "edge_structural": 56,
+          "labelled_constraints": 280,
+          "outside_k_bound": 0,
+          "structural_by_class": {
+            "P->P": 30,
+            "P->T": 12,
+            "T->P": 12,
+            "T->T": 2,
+            "mixed": 0
+          },
+          "structural_normal_forms": 56,
+          "weight_alphabet_size": 5
+        }
+      },
+      "baseline_equivalent_families": 0,
+      "cancellations": {},
+      "canonical_states": 8,
+      "cardinalities": {
+        "1": {
+          "analysed": 80,
+          "canonical": 80,
+          "canonical_including_stacked": 80,
+          "labelled_combinations": 280,
+          "labelled_simple": 280,
+          "labelled_stacked": 0,
+          "removed_by_symmetry": 200,
+          "stacked_canonical": 0
+        },
+        "2": {
+          "analysed": 7305,
+          "canonical": 7305,
+          "canonical_including_stacked": 7465,
+          "labelled_combinations": 39060,
+          "labelled_simple": 38500,
+          "labelled_stacked": 560,
+          "removed_by_symmetry": 31595,
+          "stacked_canonical": 160
+        }
+      },
+      "clock_census": {
+        "analysed": 7385,
+        "both_positive": 2886,
+        "class_counts": {
+          "P->P": 1890,
+          "P->T": 380,
+          "T->P": 380,
+          "T->T": 35,
+          "mixed": 4700
+        },
+        "cross_tab": [
+          {
+            "count": 28,
+            "full_event": "positive",
+            "pair_event_epoch": "zero",
+            "pair_jump": "NO",
+            "triad_rate": "NO"
+          },
+          {
+            "count": 2336,
+            "full_event": "positive",
+            "pair_event_epoch": "zero",
+            "pair_jump": "NO",
+            "triad_rate": "YES"
+          },
+          {
+            "count": 46,
+            "full_event": "zero",
+            "pair_event_epoch": "zero",
+            "pair_jump": "NO",
+            "triad_rate": "NO"
+          },
+          {
+            "count": 2025,
+            "full_event": "zero",
+            "pair_event_epoch": "zero",
+            "pair_jump": "NO",
+            "triad_rate": "YES"
+          },
+          {
+            "count": 18,
+            "full_event": "positive",
+            "pair_event_epoch": "positive",
+            "pair_jump": "YES",
+            "triad_rate": "NO"
+          },
+          {
+            "count": 2868,
+            "full_event": "positive",
+            "pair_event_epoch": "positive",
+            "pair_jump": "YES",
+            "triad_rate": "YES"
+          },
+          {
+            "count": 20,
+            "full_event": "zero",
+            "pair_event_epoch": "zero",
+            "pair_jump": "YES",
+            "triad_rate": "NO"
+          },
+          {
+            "count": 44,
+            "full_event": "zero",
+            "pair_event_epoch": "zero",
+            "pair_jump": "YES",
+            "triad_rate": "YES"
+          }
+        ],
+        "epoch_positive": 2886,
+        "full_event_positive": 5250,
+        "full_positive_epoch_undefined": 0,
+        "full_positive_epoch_zero": 2364,
+        "historical_reducibility": {
+          "FULLY_REDUCIBLE": 2295,
+          "IRREDUCIBLE_DYNAMIC_COUPLING": 2940,
+          "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+          "PAIRWISE_PROJECTION_REDUCIBLE": 2150,
+          "UNRESOLVED": 0
+        },
+        "jump_no_epoch_positive": 0,
+        "jump_yes_epoch_zero": 64,
+        "largest_epoch": {
+          "cross_order_class": "mixed",
+          "epoch_tv": "464/4305",
+          "expressions": [
+            "form(0-1) | absent(0-1-2) => prohibit",
+            "form(0-1-2) | absent(0-1) => strong_suppress"
+          ],
+          "pair_jump": true,
+          "triad_rate": true
+        },
+        "pure": {
+          "P->P": {
+            "epoch_positive": 0,
+            "epoch_undefined": 0,
+            "epoch_zero": 1890,
+            "full_positive": 0,
+            "full_zero": 1890,
+            "n": 1890
+          },
+          "P->T": {
+            "epoch_positive": 0,
+            "epoch_undefined": 0,
+            "epoch_zero": 380,
+            "full_positive": 368,
+            "full_zero": 12,
+            "n": 380
+          },
+          "T->P": {
+            "epoch_positive": 370,
+            "epoch_undefined": 0,
+            "epoch_zero": 10,
+            "full_positive": 370,
+            "full_zero": 10,
+            "n": 380
+          },
+          "T->T": {
+            "epoch_positive": 0,
+            "epoch_undefined": 0,
+            "epoch_zero": 35,
+            "full_positive": 20,
+            "full_zero": 15,
+            "n": 35
+          },
+          "mixed": {
+            "epoch_positive": 2516,
+            "epoch_undefined": 0,
+            "epoch_zero": 2184,
+            "full_positive": 4492,
+            "full_zero": 208,
+            "n": 4700
+          }
+        },
+        "rho_status_changes": {
+          "1/2:epoch_status": 6,
+          "2:epoch_status": 6
+        }
+      },
+      "coordinate": {
+        "A_max": 3,
+        "G": 0,
+        "H": 0,
+        "K_max": 2,
+        "L": 0,
+        "N": 3,
+        "O": 3,
+        "S": 0,
+        "alphabet": "W4",
+        "analysis": "memory-clock-reanalysis",
+        "composition": "structural-simple",
+        "predicates": [
+          "pair",
+          "triad"
+        ],
+        "semantics": "hypergraph"
+      },
+      "extremes": {},
+      "families": 0,
+      "family_histogram": {},
+      "family_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kernel_index_count": 0,
+      "kernel_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "labelled_states": 16,
+      "n4_census": null,
+      "observable_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pairwise_index": null,
+      "qualitative_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation_slots": 4,
+      "runtime_seconds": 248.26833799999997,
+      "screened_families": 0,
+      "singles_sha256": "bb5a535b4291e53d07ead37c6a3016e63035c0e66141ffbfd9201ea13ee177a8",
+      "structural_families": 0
+    }
+  ],
+  "composition": "structural-simple",
+  "engine_version": "0.3.0",
+  "execution": {
+    "max_attempts": 3,
+    "multiprocessing": "spawn",
+    "principle": "Prefer bounded, independently reproducible, idempotent units of work with durable checkpoints, so completed progress is monotonic and interruption is cheap.",
+    "profile_note": "Measured 2026-10-03 on this development machine, one worker, OMP/OPENBLAS/MKL threads 1. Binding window: N=4, K<=2, cardinality 2, combination ranks 4000:8000, 3262 canonical-simple float64 kernels, 66.7s. N=3, K<=3, cardinality 3, ranks 180000:190000 analysed 9399 rational kernels in 13.6s. The N=3 opening prefix is cheap (ranks 0:1000 analysed nothing) because weights are innermost, so early combinations stack grades on the first structures. 4000 items keeps the measured worst window inside 60-90s and under 120s.",
+    "shard_count": 11,
+    "shard_items": 4000,
+    "worker_history": [
+      {
+        "at": "2026-10-03T17:41:05+00:00",
+        "workers": 2
+      },
+      {
+        "at": "2026-10-03T17:43:29+00:00",
+        "workers": 2
+      }
+    ],
+    "workers_last": 2
+  },
+  "experiment_id": "generation-003c-memory-clock-refinement",
+  "generation": 3,
+  "git_commit": "90ad68fc0e55333335412dfa3af5c7081b60c918",
+  "grammar_version": "independent-hypergraph-v1",
+  "normalisation_version": "structural-unique-v1",
+  "numpy": "2.5.3",
+  "platform": "linux",
+  "predicates": [
+    "pair",
+    "triad"
+  ],
+  "python": "3.12.3",
+  "receipt_fingerprint": "1ec510e6d963abd1820959ad49689c0949cb04eb4a58d261c851ae01c421c6d8",
+  "reconfiguration_horizon": null,
+  "reconfiguration_measure": null,
+  "runtime_seconds": 0.2096834289841354,
+  "science": {
+    "cells": [
+      {
+        "K_max": 2,
+        "N": 3,
+        "baseline_equivalent_families": 0,
+        "cancellations": {},
+        "cardinalities": {
+          "1": {
+            "analysed": 80,
+            "canonical": 80,
+            "canonical_including_stacked": 80,
+            "labelled_combinations": 280,
+            "labelled_simple": 280,
+            "labelled_stacked": 0,
+            "removed_by_symmetry": 200,
+            "stacked_canonical": 0
+          },
+          "2": {
+            "analysed": 7305,
+            "canonical": 7305,
+            "canonical_including_stacked": 7465,
+            "labelled_combinations": 39060,
+            "labelled_simple": 38500,
+            "labelled_stacked": 560,
+            "removed_by_symmetry": 31595,
+            "stacked_canonical": 160
+          }
+        },
+        "clock_census": {
+          "analysed": 7385,
+          "both_positive": 2886,
+          "class_counts": {
+            "P->P": 1890,
+            "P->T": 380,
+            "T->P": 380,
+            "T->T": 35,
+            "mixed": 4700
+          },
+          "cross_tab": [
+            {
+              "count": 28,
+              "full_event": "positive",
+              "pair_event_epoch": "zero",
+              "pair_jump": "NO",
+              "triad_rate": "NO"
+            },
+            {
+              "count": 2336,
+              "full_event": "positive",
+              "pair_event_epoch": "zero",
+              "pair_jump": "NO",
+              "triad_rate": "YES"
+            },
+            {
+              "count": 46,
+              "full_event": "zero",
+              "pair_event_epoch": "zero",
+              "pair_jump": "NO",
+              "triad_rate": "NO"
+            },
+            {
+              "count": 2025,
+              "full_event": "zero",
+              "pair_event_epoch": "zero",
+              "pair_jump": "NO",
+              "triad_rate": "YES"
+            },
+            {
+              "count": 18,
+              "full_event": "positive",
+              "pair_event_epoch": "positive",
+              "pair_jump": "YES",
+              "triad_rate": "NO"
+            },
+            {
+              "count": 2868,
+              "full_event": "positive",
+              "pair_event_epoch": "positive",
+              "pair_jump": "YES",
+              "triad_rate": "YES"
+            },
+            {
+              "count": 20,
+              "full_event": "zero",
+              "pair_event_epoch": "zero",
+              "pair_jump": "YES",
+              "triad_rate": "NO"
+            },
+            {
+              "count": 44,
+              "full_event": "zero",
+              "pair_event_epoch": "zero",
+              "pair_jump": "YES",
+              "triad_rate": "YES"
+            }
+          ],
+          "epoch_positive": 2886,
+          "full_event_positive": 5250,
+          "full_positive_epoch_undefined": 0,
+          "full_positive_epoch_zero": 2364,
+          "historical_reducibility": {
+            "FULLY_REDUCIBLE": 2295,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 2940,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 2150,
+            "UNRESOLVED": 0
+          },
+          "jump_no_epoch_positive": 0,
+          "jump_yes_epoch_zero": 64,
+          "largest_epoch": {
+            "cross_order_class": "mixed",
+            "epoch_tv": "464/4305",
+            "expressions": [
+              "form(0-1) | absent(0-1-2) => prohibit",
+              "form(0-1-2) | absent(0-1) => strong_suppress"
+            ],
+            "pair_jump": true,
+            "triad_rate": true
+          },
+          "pure": {
+            "P->P": {
+              "epoch_positive": 0,
+              "epoch_undefined": 0,
+              "epoch_zero": 1890,
+              "full_positive": 0,
+              "full_zero": 1890,
+              "n": 1890
+            },
+            "P->T": {
+              "epoch_positive": 0,
+              "epoch_undefined": 0,
+              "epoch_zero": 380,
+              "full_positive": 368,
+              "full_zero": 12,
+              "n": 380
+            },
+            "T->P": {
+              "epoch_positive": 370,
+              "epoch_undefined": 0,
+              "epoch_zero": 10,
+              "full_positive": 370,
+              "full_zero": 10,
+              "n": 380
+            },
+            "T->T": {
+              "epoch_positive": 0,
+              "epoch_undefined": 0,
+              "epoch_zero": 35,
+              "full_positive": 20,
+              "full_zero": 15,
+              "n": 35
+            },
+            "mixed": {
+              "epoch_positive": 2516,
+              "epoch_undefined": 0,
+              "epoch_zero": 2184,
+              "full_positive": 4492,
+              "full_zero": 208,
+              "n": 4700
+            }
+          },
+          "rho_status_changes": {
+            "1/2:epoch_status": 6,
+            "2:epoch_status": 6
+          }
+        },
+        "extremes": {},
+        "families": 0,
+        "family_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "histogram": {},
+        "kernel_index_count": 0,
+        "kernel_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "observable_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "qualitative_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "screened_families": 0,
+        "singles_sha256": "bb5a535b4291e53d07ead37c6a3016e63035c0e66141ffbfd9201ea13ee177a8",
+        "structural_families": 0,
+        "territory": null
+      }
+    ],
+    "composition": "structural-simple",
+    "predicates": [
+      "pair",
+      "triad"
+    ],
+    "semantic_version": "0.3.0",
+    "spec_hash": "b3940305e0c8ed69e9a80faa39d98964893f52563a2f13645c8f338ee22e4020",
+    "status": "COMPLETE"
+  },
+  "semantic_version": "0.3.0",
+  "shard_work_seconds": 248.26833799999997,
+  "spec_hash": "b3940305e0c8ed69e9a80faa39d98964893f52563a2f13645c8f338ee22e4020",
+  "status": "COMPLETE",
+  "territory": null,
+  "unsearched_declared": [
+    "alphabet sensitivity W3 and W16",
+    "K>2",
+    "cardinality 3",
+    "N other than 3",
+    "stacked-weight composition",
+    "count predicates",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0"
+  ]
+}

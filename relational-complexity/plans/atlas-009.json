@@ -1,0 +1,1004 @@
+{
+  "round_id": "atlas-009",
+  "engine_version": "rrc-0.4.0",
+  "grammar_id": "opening-prohibit-multiply-v1",
+  "definitions_commit": "405e804dc1136b6fa54454cdc524e0dbdc2e48cb",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q01"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q02",
+    "ATLAS-Q03",
+    "ATLAS-Q04",
+    "ATLAS-Q05",
+    "ATLAS-Q06",
+    "ATLAS-Q07",
+    "ATLAS-Q08",
+    "ATLAS-Q09",
+    "ATLAS-Q10",
+    "ATLAS-Q11",
+    "ATLAS-Q12"
+  ],
+  "selection": "Two selection methods on one four-edge path. The grammar grid is every designated multiply of factor 2, action either, polarity present, with the condition different from the event, at cardinality 1. The second method is three declared dependency instruments at cardinality 2: a path, a mutual pair, and two disjoint arcs. The instruments are imposed rule text. They are not an observed cascade. The atlas-005 modular menu is not used. Not scheduled to explain PAT-010, PAT-011, EQ-020, the atlas-008 defects, or chain-versus-branch separation. A difference between a cardinality-1 cell and a cardinality-2 cell is joint.",
+  "grammar": {
+    "ids": [
+      "opening-prohibit-multiply-v1"
+    ],
+    "note": "Designated-edge multiply only. Factor 2. Action either. Polarity present. Baseline 1.",
+    "baseline": 1,
+    "search_space": {
+      "grammar_cells": 12,
+      "grammar_note": "4 events times 3 conditions. Exhaustive for this slice.",
+      "dependency_cells": 3,
+      "dependency_note": "Declared instruments. Not a draw.",
+      "baseline_cells": 1
+    }
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-009-preflight.md",
+    "heaviest_cell_s": 0.001,
+    "shape": "four-edge path, two constraints, 16 states",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "n": [
+      5
+    ],
+    "carriers": [
+      "path4"
+    ],
+    "cells": 16,
+    "declared_sample": true,
+    "grammar_exhaustive_for_slice": true,
+    "six_is_not_a_target": true,
+    "excluded": [
+      "the atlas-005 modular menu",
+      "factors other than 2",
+      "actions other than either",
+      "polarities other than present",
+      "prohibit",
+      "incident predicates",
+      "common-neighbour counts",
+      "other carriers",
+      "N=6",
+      "composition operators",
+      "a matched two-constraints-on-one-event cell"
+    ]
+  },
+  "items": [
+    {
+      "id": "A9-base",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "baseline",
+      "label": "empty list",
+      "idea_ids": [
+        "IDEA-C00"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [],
+      "baseline": 1,
+      "placement": "empty list",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-g-e0-c1",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "grammar",
+      "label": "grammar grid: one multiply on edge 0 when edge 1 is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "grammar grid: one multiply on edge 0 when edge 1 is present",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-g-e0-c2",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "grammar",
+      "label": "grammar grid: one multiply on edge 0 when edge 2 is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "grammar grid: one multiply on edge 0 when edge 2 is present",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-g-e0-c3",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "grammar",
+      "label": "grammar grid: one multiply on edge 0 when edge 3 is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "grammar grid: one multiply on edge 0 when edge 3 is present",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-g-e1-c0",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "grammar",
+      "label": "grammar grid: one multiply on edge 1 when edge 0 is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "grammar grid: one multiply on edge 1 when edge 0 is present",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-g-e1-c2",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "grammar",
+      "label": "grammar grid: one multiply on edge 1 when edge 2 is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "grammar grid: one multiply on edge 1 when edge 2 is present",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-g-e1-c3",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "grammar",
+      "label": "grammar grid: one multiply on edge 1 when edge 3 is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "grammar grid: one multiply on edge 1 when edge 3 is present",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-g-e2-c0",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "grammar",
+      "label": "grammar grid: one multiply on edge 2 when edge 0 is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "grammar grid: one multiply on edge 2 when edge 0 is present",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-g-e2-c1",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "grammar",
+      "label": "grammar grid: one multiply on edge 2 when edge 1 is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "grammar grid: one multiply on edge 2 when edge 1 is present",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-g-e2-c3",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "grammar",
+      "label": "grammar grid: one multiply on edge 2 when edge 3 is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "grammar grid: one multiply on edge 2 when edge 3 is present",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-g-e3-c0",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "grammar",
+      "label": "grammar grid: one multiply on edge 3 when edge 0 is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            3,
+            4
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "grammar grid: one multiply on edge 3 when edge 0 is present",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-g-e3-c1",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "grammar",
+      "label": "grammar grid: one multiply on edge 3 when edge 1 is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            3,
+            4
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "grammar grid: one multiply on edge 3 when edge 1 is present",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-g-e3-c2",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "grammar",
+      "label": "grammar grid: one multiply on edge 3 when edge 2 is present",
+      "idea_ids": [
+        "IDEA-C02"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            3,
+            4
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "grammar grid: one multiply on edge 3 when edge 2 is present",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-dep-path",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "instrument",
+      "label": "imposed dependency path: edge 0 conditions edge 1, and edge 1 conditions edge 2. An instrument, not an observed cascade.",
+      "idea_ids": [
+        "IDEA-C06",
+        "IDEA-C07"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "imposed dependency path: edge 0 conditions edge 1, and edge 1 conditions edge 2. An instrument, not an observed cascade.",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-dep-mutual",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "instrument",
+      "label": "imposed mutual dependency: edge 1 conditions edge 0, and edge 0 conditions edge 1. An instrument, not an observed cascade.",
+      "idea_ids": [
+        "IDEA-C06",
+        "IDEA-C07"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "imposed mutual dependency: edge 1 conditions edge 0, and edge 0 conditions edge 1. An instrument, not an observed cascade.",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    },
+    {
+      "id": "A9-dep-disjoint",
+      "round_id": "atlas-009",
+      "type": "atlas_core",
+      "role": "instrument",
+      "label": "imposed disjoint arcs: edge 1 conditions edge 0, and edge 3 conditions edge 2. An instrument, not an observed cascade.",
+      "idea_ids": [
+        "IDEA-C06",
+        "IDEA-C07"
+      ],
+      "n": 5,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "factor": 2,
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "baseline": 1,
+      "placement": "imposed disjoint arcs: edge 1 conditions edge 0, and edge 3 conditions edge 2. An instrument, not an observed cascade.",
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024
+    }
+  ]
+}

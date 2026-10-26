@@ -1,0 +1,3262 @@
+{
+  "cells": [
+    {
+      "accounting": {
+        "edge": {
+          "labelled_constraints": 10,
+          "labelled_states": 2,
+          "outside_a_bound": 0,
+          "outside_k_bound": 0,
+          "raw_structural_templates": 6,
+          "relation_slots": 1,
+          "removed_redundant_normalisation": 2,
+          "removed_syntax_invalid": 2,
+          "structural_normal_forms": 2,
+          "weight_alphabet_size": 5
+        },
+        "grammar": {
+          "count_candidates": 0,
+          "count_outside_a": 0,
+          "count_outside_k": 0,
+          "count_structural": 0,
+          "count_tautology": 0,
+          "count_unsatisfiable": 0,
+          "edge_outside_a": 0,
+          "edge_structural": 2,
+          "labelled_constraints": 10,
+          "structural_normal_forms": 2,
+          "weight_alphabet_size": 5
+        }
+      },
+      "baseline": {
+        "heavy": {
+          "disjoint_pair_mass": null,
+          "disjoint_pair_mass_exact": null,
+          "edge_count_occupancy": [
+            0.5,
+            0.5
+          ],
+          "edge_count_occupancy_exact": [
+            "1/2",
+            "1/2"
+          ],
+          "entropy_rate_bits": 0.0,
+          "entropy_rate_nats": 0.0,
+          "halt_mass": 0.0,
+          "halt_mass_exact": "0/1",
+          "mean_component_count": 1.5,
+          "mean_edge_density": 0.5,
+          "mean_edge_density_exact": "1/2",
+          "n_recurrent": 1,
+          "periods": [
+            2
+          ],
+          "reachable_count": 2,
+          "reversibility_defect": 0.0,
+          "reversibility_defect_exact": "0/1",
+          "rise_then_release": 0.0,
+          "rise_then_release_exact": "0/1",
+          "stationary_arithmetic": "rational",
+          "stationary_residual": 0.0,
+          "triangle_mass": null,
+          "triangle_mass_exact": null,
+          "tv_from_uniform": 0.0,
+          "tv_from_uniform_exact": "0/1"
+        },
+        "light": {
+          "closing_bias": null,
+          "closing_bias_exact": null,
+          "deadlock_states": [],
+          "max_abs_dissolve_shift": 0.0,
+          "max_abs_dissolve_shift_exact": "0/1",
+          "mean_abs_dissolve_shift": 0.0,
+          "mean_abs_dissolve_shift_exact": "0/1",
+          "modal_family": "03cd11f71feb136f",
+          "n_deadlock": 0,
+          "n_recurrent": 1,
+          "n_recurrent_reachable_from_empty": 1,
+          "periods": [
+            2
+          ],
+          "reachable_from_empty": 2,
+          "support_family": "d2464698dd43debb",
+          "support_matches_baseline": true
+        }
+      },
+      "baseline_equivalent_families": 1,
+      "cancellations": {
+        "genuine_global": 0,
+        "genuine_global_examples": [],
+        "inherited_baseline": 16,
+        "inherited_baseline_examples": [
+          [
+            "dissolve(0-1) => strong_favour",
+            "form(0-1) => strong_favour"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "form(0-1) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "form(0-1) => weak_favour"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "form(0-1) => weak_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_suppress",
+            "form(0-1) => strong_favour"
+          ],
+          [
+            "dissolve(0-1) => strong_suppress",
+            "form(0-1) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_suppress",
+            "form(0-1) => weak_favour"
+          ],
+          [
+            "dissolve(0-1) => strong_suppress",
+            "form(0-1) => weak_suppress"
+          ]
+        ],
+        "local": 0,
+        "local_examples": []
+      },
+      "canonical_states": 2,
+      "cardinalities": {
+        "1": {
+          "analysed": 10,
+          "canonical": 10,
+          "canonical_including_stacked": 10,
+          "labelled_combinations": 10,
+          "labelled_simple": 10,
+          "labelled_stacked": 0,
+          "removed_by_symmetry": 0,
+          "stacked_canonical": 0
+        },
+        "2": {
+          "analysed": 25,
+          "canonical": 25,
+          "canonical_including_stacked": 45,
+          "labelled_combinations": 45,
+          "labelled_simple": 25,
+          "labelled_stacked": 20,
+          "removed_by_symmetry": 0,
+          "stacked_canonical": 20
+        },
+        "3": {
+          "analysed": 0,
+          "canonical": 0,
+          "canonical_including_stacked": 120,
+          "labelled_combinations": 120,
+          "labelled_simple": 0,
+          "labelled_stacked": 120,
+          "removed_by_symmetry": 0,
+          "stacked_canonical": 120
+        }
+      },
+      "coordinate": {
+        "A_max": 2,
+        "G": 0,
+        "H": 0,
+        "K_max": 3,
+        "L": 0,
+        "N": 2,
+        "O": 2,
+        "S": 0,
+        "alphabet": "W4",
+        "composition": "structural-simple",
+        "predicates": [
+          "edge"
+        ],
+        "semantics": "graph"
+      },
+      "exemplars": [
+        {
+          "expressions": [],
+          "initial": "empty",
+          "label": "baseline",
+          "run_id": "43a090313b010b71",
+          "seed": 0
+        },
+        {
+          "expressions": [],
+          "initial": "complete",
+          "label": "baseline",
+          "run_id": "5bada5f07038f3ca",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "e9e70b3b449a004e",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "96e54ecbe8bcab6e",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "465b31ba11f69487",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "c2dd038540bdf5f4",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "form(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "fb157147bdb7fce6",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "form(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "12e4c4cad6d067a9",
+          "seed": 0
+        }
+      ],
+      "extremes": {
+        "entropy_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "kernel": "afda82e6074906b47191fad1c7560d0ed800e09decedc51a6d4d6259cafc4a60",
+          "kind": "float",
+          "value": 0.0
+        },
+        "entropy_min": {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "kernel": "afda82e6074906b47191fad1c7560d0ed800e09decedc51a6d4d6259cafc4a60",
+          "kind": "float",
+          "value": 0.0
+        },
+        "rise_excess_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "kernel": "afda82e6074906b47191fad1c7560d0ed800e09decedc51a6d4d6259cafc4a60",
+          "kind": "fraction",
+          "value": "0/1"
+        },
+        "rise_excess_min": {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "kernel": "afda82e6074906b47191fad1c7560d0ed800e09decedc51a6d4d6259cafc4a60",
+          "kind": "fraction",
+          "value": "0/1"
+        },
+        "shift_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "kernel": "afda82e6074906b47191fad1c7560d0ed800e09decedc51a6d4d6259cafc4a60",
+          "kind": "fraction",
+          "value": "0/1"
+        }
+      },
+      "families": 4,
+      "family_histogram": {
+        "closing_max": {},
+        "families": 4,
+        "n_deadlock": {
+          "0": 1,
+          "1": 2,
+          "2": 1
+        },
+        "periods": {
+          "1": 3,
+          "2": 1
+        },
+        "rise_then_release_excess": {
+          "0": 0.0,
+          "0.25": 0.0,
+          "0.5": 0.0,
+          "0.75": 0.0,
+          "0.9": 0.0,
+          "0.99": 0.0,
+          "1": 0.0
+        },
+        "shift_max": {
+          "0": 0.0,
+          "0.25": 0.0,
+          "0.5": 0.0,
+          "0.75": 0.0,
+          "0.9": 0.0,
+          "0.99": 0.0,
+          "1": 0.0
+        },
+        "support_matches_baseline": 1
+      },
+      "family_index_bytes": 11568,
+      "family_index_commit_limit_bytes": 2000000,
+      "family_index_sha256": "8f227bc4c0ce063b3f78901afe686cc2bfbf1144127f7844ec9d423c12822e9c",
+      "kernel_index_count": 4,
+      "kernel_index_sha256": "20d108c9cde1ae24d2d07bf7cf81b5e5290ba3f6a4d79cc85c8b282f8d854ce2",
+      "labelled_states": 2,
+      "measure_scope": {
+        "exact_kernel": "full rational kernel reduced under S_N before hashing",
+        "heavy": "every analysed set, including exact rational observables when the state count is at most 16",
+        "light": "every analysed set",
+        "observable_signature": "labelling-invariant scalars; not a kernel identity",
+        "qualitative_family": "S_N-canonical support token and modal token",
+        "rise_then_release": "from the empty state when the labelled state count is at most 64",
+        "search": "every canonical set at the requested cardinalities; structural-simple drops stacked weights before analysis",
+        "sensitivity": "every analysed cardinality-1 set, on the declared geometric alphabets",
+        "shards": "half-open lexicographic combination ranges, atomic result plus receipt",
+        "stationary": "Fraction end to end at <=16 states; float64 beyond. Entropy is always float"
+      },
+      "motif_ids": [
+        "a94ad3853c07a95f65c38770dabd6530f4eaf37b03b55e06a76ea659b91488d4",
+        "a5b3121c27dd1b3b72cf1f14fd72b5795b86941d5af4fbf05864d34308346735",
+        "79cdcb4eb80a652889db486897147528b56062a02af3f84d2935cc349d3a9ba8",
+        "1db24fc9db9e2c38dcb80029f4dc6f73d235a89877bcaa6c198719362ea9f003"
+      ],
+      "not_searched": [
+        "multisets that repeat one constraint were not searched; repetition is a weight change"
+      ],
+      "observable_index_sha256": "f34bae8e0bd2050f3e94c3cb0d86d6e0aa30ba4cb3afdbc408430df1d583a56b",
+      "observable_signature_count": 4,
+      "qualitative_index_sha256": "1b9adbd14b5bbf214f0201d44013313adde5224484aca0826472df6d87e15f25",
+      "references": [
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_favour",
+          "in_grammar": false,
+          "reason": "edge (0, 2) is not an edge on N=2"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_suppress",
+          "in_grammar": false,
+          "reason": "edge (0, 2) is not an edge on N=2"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => prohibit",
+          "in_grammar": false,
+          "reason": "edge (0, 2) is not an edge on N=2"
+        },
+        {
+          "expression": "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour",
+          "in_grammar": false,
+          "reason": "edge (0, 2) is not an edge on N=2"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) => strong_suppress",
+          "in_grammar": false,
+          "reason": "edge (0, 2) is not an edge on N=2"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) => strong_favour",
+          "in_grammar": false,
+          "reason": "edge (0, 2) is not an edge on N=2"
+        }
+      ],
+      "relation_slots": 1,
+      "runtime_seconds": 0.013753,
+      "screened_families": 0,
+      "sensitivity": {
+        "alphabets": [
+          "W3",
+          "W16"
+        ],
+        "checks": 20,
+        "modal_unchanged": 20,
+        "support_unchanged": 20
+      },
+      "singles_sha256": "e8257e3ed8d4f9762a33e9033e94fab1df5ac93e81bd9842a02ad1d6ecfd387e",
+      "structural_families": 3
+    },
+    {
+      "accounting": {
+        "edge": {
+          "labelled_constraints": 270,
+          "labelled_states": 8,
+          "outside_a_bound": 0,
+          "outside_k_bound": 0,
+          "raw_structural_templates": 162,
+          "relation_slots": 3,
+          "removed_redundant_normalisation": 54,
+          "removed_syntax_invalid": 54,
+          "structural_normal_forms": 54,
+          "weight_alphabet_size": 5
+        },
+        "grammar": {
+          "count_candidates": 0,
+          "count_outside_a": 0,
+          "count_outside_k": 0,
+          "count_structural": 0,
+          "count_tautology": 0,
+          "count_unsatisfiable": 0,
+          "edge_outside_a": 0,
+          "edge_structural": 54,
+          "labelled_constraints": 270,
+          "structural_normal_forms": 54,
+          "weight_alphabet_size": 5
+        }
+      },
+      "baseline": {
+        "heavy": {
+          "disjoint_pair_mass": null,
+          "disjoint_pair_mass_exact": null,
+          "edge_count_occupancy": [
+            0.125,
+            0.375,
+            0.375,
+            0.125
+          ],
+          "edge_count_occupancy_exact": [
+            "1/8",
+            "3/8",
+            "3/8",
+            "1/8"
+          ],
+          "entropy_rate_bits": 1.584962500721156,
+          "entropy_rate_nats": 1.0986122886681096,
+          "halt_mass": 0.0,
+          "halt_mass_exact": "0/1",
+          "mean_component_count": 1.625,
+          "mean_edge_density": 0.5,
+          "mean_edge_density_exact": "1/2",
+          "n_recurrent": 1,
+          "periods": [
+            2
+          ],
+          "reachable_count": 8,
+          "reversibility_defect": 0.0,
+          "reversibility_defect_exact": "0/1",
+          "rise_then_release": 0.6666666666666666,
+          "rise_then_release_exact": "2/3",
+          "stationary_arithmetic": "rational",
+          "stationary_residual": 0.0,
+          "triangle_mass": 0.125,
+          "triangle_mass_exact": "1/8",
+          "tv_from_uniform": 0.0,
+          "tv_from_uniform_exact": "0/1"
+        },
+        "light": {
+          "closing_bias": 0.0,
+          "closing_bias_exact": "0/1",
+          "deadlock_states": [],
+          "max_abs_dissolve_shift": 0.0,
+          "max_abs_dissolve_shift_exact": "0/1",
+          "mean_abs_dissolve_shift": 0.0,
+          "mean_abs_dissolve_shift_exact": "0/1",
+          "modal_family": "c61a3c7b2250444b",
+          "n_deadlock": 0,
+          "n_recurrent": 1,
+          "n_recurrent_reachable_from_empty": 1,
+          "periods": [
+            2
+          ],
+          "reachable_from_empty": 8,
+          "support_family": "c726c559413d730e",
+          "support_matches_baseline": true
+        }
+      },
+      "baseline_equivalent_families": 1,
+      "cancellations": {
+        "genuine_global": 40,
+        "genuine_global_examples": [
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-2) => strong_suppress",
+            "dissolve(0-1) | present(0-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_suppress",
+            "dissolve(0-1) | absent(0-2) => strong_favour",
+            "dissolve(0-1) | present(0-2) => strong_favour"
+          ],
+          [
+            "dissolve(0-1) => weak_favour",
+            "dissolve(0-1) | absent(0-2) => weak_suppress",
+            "dissolve(0-1) | present(0-2) => weak_suppress"
+          ],
+          [
+            "dissolve(0-1) => weak_suppress",
+            "dissolve(0-1) | absent(0-2) => weak_favour",
+            "dissolve(0-1) | present(0-2) => weak_favour"
+          ],
+          [
+            "dissolve(0-1) | absent(0-2) & absent(1-2) => strong_favour",
+            "dissolve(0-1) | absent(0-2) & present(1-2) => strong_favour",
+            "dissolve(0-1) | absent(0-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) | absent(0-2) & absent(1-2) => strong_suppress",
+            "dissolve(0-1) | absent(0-2) & present(1-2) => strong_suppress",
+            "dissolve(0-1) | absent(0-2) => strong_favour"
+          ],
+          [
+            "dissolve(0-1) | absent(0-2) & absent(1-2) => weak_favour",
+            "dissolve(0-1) | absent(0-2) & present(1-2) => weak_favour",
+            "dissolve(0-1) | absent(0-2) => weak_suppress"
+          ],
+          [
+            "dissolve(0-1) | absent(0-2) & absent(1-2) => weak_suppress",
+            "dissolve(0-1) | absent(0-2) & present(1-2) => weak_suppress",
+            "dissolve(0-1) | absent(0-2) => weak_favour"
+          ]
+        ],
+        "inherited_baseline": 0,
+        "inherited_baseline_examples": [],
+        "local": 20352,
+        "local_examples": [
+          [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => strong_favour",
+            "dissolve(0-2) | absent(0-1) & absent(1-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => strong_favour",
+            "dissolve(0-2) | absent(0-1) & present(1-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => strong_favour",
+            "dissolve(0-2) | absent(0-1) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => strong_favour",
+            "dissolve(0-2) | absent(1-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => strong_favour",
+            "dissolve(0-2) | present(0-1) & absent(1-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => strong_favour",
+            "dissolve(0-2) | present(0-1) & present(1-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => strong_favour",
+            "dissolve(0-2) | present(0-1) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => strong_favour",
+            "dissolve(0-2) | present(1-2) => strong_suppress"
+          ]
+        ]
+      },
+      "canonical_states": 4,
+      "cardinalities": {
+        "1": {
+          "analysed": 60,
+          "canonical": 60,
+          "canonical_including_stacked": 60,
+          "labelled_combinations": 270,
+          "labelled_simple": 270,
+          "labelled_stacked": 0,
+          "removed_by_symmetry": 210,
+          "stacked_canonical": 0
+        },
+        "2": {
+          "analysed": 6210,
+          "canonical": 6210,
+          "canonical_including_stacked": 6330,
+          "labelled_combinations": 36315,
+          "labelled_simple": 35775,
+          "labelled_stacked": 540,
+          "removed_by_symmetry": 29985,
+          "stacked_canonical": 120
+        },
+        "3": {
+          "analysed": 519830,
+          "canonical": 519830,
+          "canonical_including_stacked": 544550,
+          "labelled_combinations": 3244140,
+          "labelled_simple": 3100500,
+          "labelled_stacked": 143640,
+          "removed_by_symmetry": 2699590,
+          "stacked_canonical": 24720
+        }
+      },
+      "coordinate": {
+        "A_max": 3,
+        "G": 0,
+        "H": 0,
+        "K_max": 3,
+        "L": 0,
+        "N": 3,
+        "O": 2,
+        "S": 0,
+        "alphabet": "W4",
+        "composition": "structural-simple",
+        "predicates": [
+          "edge"
+        ],
+        "semantics": "graph"
+      },
+      "exemplars": [
+        {
+          "expressions": [],
+          "initial": "empty",
+          "label": "baseline",
+          "run_id": "43a090313b010b71",
+          "seed": 0
+        },
+        {
+          "expressions": [],
+          "initial": "complete",
+          "label": "baseline",
+          "run_id": "93b174c57e15cfda",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "edd5c43b04ba8b44",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "1bb0c5fae095f606",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "3ce6ee5126203d03",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "cc37e22760dab88d",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "804f604c89db21fa",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "ef1ff82fbc2e9f7a",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "195a2c532c1ed109",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "4a84b140c065bf88",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "8de972bacdfa189b",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "c910fc1ea648c11a",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "bb2e86928f9578fc",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "da50de87f15f12ef",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "0825cc29051b0bda",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "f3a81ba1fcbd3ee1",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "822c102c1b88d9ac",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "185f88873c714121",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "7fec46b1a7620fb4",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "62bb9f034eb5b478",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "874acf97e47d7deb",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "3f2538c6aa3b32e5",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "3751c57ea12f5365",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "3dfb2b69d7023469",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "17944a7e53ce7de6",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "0086bc344e4730c3",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "c783f7fd71c93f8b",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "eb3affa65992fbc3",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "e44ccfbfda34d95d",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "d899278be0730b19",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "18d8835bd2e2e1aa",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) & present(1-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "de9ba4d2f59ab2d5",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "183351c84feb96a6",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "395d83e85c4292e1",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "84ee28ce6cf10e87",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "867bd1529e0d8018",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "17844d8217bc2fbf",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "05bb4b0a3a720a4c",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "a53ce497486bc942",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "c534889ac742913a",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "6f9b3b72b1458aab",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "bd4ae7cd53f9d458",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "bb0cf633a6b677d3",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "fbaaa01f892cc432",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "0233c2c97b90c947",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "2eae9180c3bcfdcd",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "64c7472f7fbb6998",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "3971dd92076570a6",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "cf4c805da5d8ccd6",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "4e2225be4e144564",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "3e262045c47cc706",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "fca7daba41e1be8d",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "678e545907622527",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "1400895d99ac7ef8",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "4c905839d0231e0d",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "db1d433bbb31fe00",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "6d38bbb794d3f814",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "f486269cbb52e41c",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "e2196913e625f15c",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "ada501b3b1fd22c1",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "b1b0daa13cf2aba8",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "38ab22f245ed1992",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "e9e70b3b449a004e",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "509e1b884007e363",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "5d7c6a0fa8b200b4",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "6b305c6a7094b3a0",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "60db3c5ceb9b9ac5",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "94c658eba32e57cb",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | absent(0-2) & absent(1-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "5d1848a1598e284a",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | absent(0-2) & absent(1-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "52503fe5a377d41b",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-2) => strong_suppress",
+            "dissolve(0-1) | present(0-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "cancellation",
+          "run_id": "5624b044e0de5c69",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-2) => strong_suppress",
+            "dissolve(0-1) | present(0-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "cancellation",
+          "run_id": "6dfda369f8d3c4f6",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => strong_favour",
+            "dissolve(0-2) | absent(0-1) & absent(1-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "cancellation",
+          "run_id": "08ee39677dfa8821",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => strong_favour",
+            "dissolve(0-2) | absent(0-1) & absent(1-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "cancellation",
+          "run_id": "7f59f3129b134512",
+          "seed": 0
+        }
+      ],
+      "extremes": {
+        "closing_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => prohibit",
+            "dissolve(1-2) => prohibit"
+          ],
+          "kernel": "6eafa9235ed641a5ecef03c156473164923cf9938a6727a3e2343d1749875b94",
+          "kind": "fraction",
+          "value": "2/3"
+        },
+        "closing_min": {
+          "expressions": [
+            "form(0-1) => prohibit",
+            "form(0-2) => prohibit",
+            "form(1-2) => prohibit"
+          ],
+          "kernel": "480bc8f7fbee8b5c68813f63a24fe9f6c5affbd7e3b94af2d3056074d334e091",
+          "kind": "fraction",
+          "value": "-1/3"
+        },
+        "entropy_max": {
+          "expressions": [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-2) => strong_suppress",
+            "dissolve(0-1) | present(0-2) => strong_suppress"
+          ],
+          "kernel": "305575f09f9ce0779426f9f447ca5145ce20bc0e9ca8b449af629209ad9473fa",
+          "kind": "float",
+          "value": 1.584962500721156
+        },
+        "entropy_min": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-1) | absent(0-2) & absent(1-2) => prohibit",
+            "dissolve(0-2) => prohibit"
+          ],
+          "kernel": "ada3ac088c155beb053c08c9104dbf673acc826cf902cd2dd7d89ba9103cf79f",
+          "kind": "float",
+          "value": 0.0
+        },
+        "rise_excess_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => prohibit",
+            "dissolve(1-2) | absent(0-1) & absent(0-2) => prohibit"
+          ],
+          "kernel": "7bbab9599bb7dad708a1eca5d543c528847438fcf00d8a2a5af0651257c6e3f2",
+          "kind": "fraction",
+          "value": "1/3"
+        },
+        "rise_excess_min": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => prohibit",
+            "dissolve(1-2) => prohibit"
+          ],
+          "kernel": "6eafa9235ed641a5ecef03c156473164923cf9938a6727a3e2343d1749875b94",
+          "kind": "fraction",
+          "value": "-2/3"
+        },
+        "shift_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-1) | absent(0-2) & absent(1-2) => prohibit",
+            "dissolve(0-2) => prohibit"
+          ],
+          "kernel": "ada3ac088c155beb053c08c9104dbf673acc826cf902cd2dd7d89ba9103cf79f",
+          "kind": "fraction",
+          "value": "2/3"
+        }
+      },
+      "families": 61929,
+      "family_histogram": {
+        "closing_max": {
+          "0": -0.3333333333333333,
+          "0.25": -0.044444444444444446,
+          "0.5": 0.009259259259259259,
+          "0.75": 0.07407407407407407,
+          "0.9": 0.14814814814814814,
+          "0.99": 0.26666666666666666,
+          "1": 0.6666666666666666
+        },
+        "families": 61929,
+        "n_deadlock": {
+          "0": 61825,
+          "1": 104
+        },
+        "periods": {
+          "1": 104,
+          "2": 61825
+        },
+        "rise_then_release_excess": {
+          "0": -0.6666666666666666,
+          "0.25": -0.08333333333333333,
+          "0.5": 0.0,
+          "0.75": 0.0761904761904762,
+          "0.9": 0.1455026455026455,
+          "0.99": 0.25,
+          "1": 0.3333333333333333
+        },
+        "shift_max": {
+          "0": 0.0,
+          "0.25": 0.2222222222222222,
+          "0.5": 0.3333333333333333,
+          "0.75": 0.3333333333333333,
+          "0.9": 0.4666666666666667,
+          "0.99": 0.6666666666666666,
+          "1": 0.6666666666666666
+        },
+        "support_matches_baseline": 14587
+      },
+      "family_index_bytes": 258748539,
+      "family_index_commit_limit_bytes": 2000000,
+      "family_index_sha256": "7936d5eda702d49f3caf44ac4417c112d52b9fdde52d52d5a68056888c4a0eb5",
+      "kernel_index_count": 391991,
+      "kernel_index_sha256": "32aec715270d0076b79d6e8d64e178e3928076ccde354a9a3dcc5ecd0c6eb109",
+      "labelled_states": 8,
+      "measure_scope": {
+        "exact_kernel": "full rational kernel reduced under S_N before hashing",
+        "heavy": "every analysed set, including exact rational observables when the state count is at most 16",
+        "light": "every analysed set",
+        "observable_signature": "labelling-invariant scalars; not a kernel identity",
+        "qualitative_family": "S_N-canonical support token and modal token",
+        "rise_then_release": "from the empty state when the labelled state count is at most 64",
+        "search": "every canonical set at the requested cardinalities; structural-simple drops stacked weights before analysis",
+        "sensitivity": "every analysed cardinality-1 set, on the declared geometric alphabets",
+        "shards": "half-open lexicographic combination ranges, atomic result plus receipt",
+        "stationary": "Fraction end to end at <=16 states; float64 beyond. Entropy is always float"
+      },
+      "motif_ids": [
+        "bfffb52740e15d93a3e99695a687968f78c7ff61091ad495fc66bd2fa495da49",
+        "037facb9f3d363380fd7ad59ec1e61f7e3d030b227c6c7db0790a5e862e331b3",
+        "f6c465a109b3f351212a661b87647d7e5f60037df0e6e9e78f48def75fbd3e7a",
+        "804e70bdf3c72b9fe84038950e0eb342ae4f907c87c35f68e5bfe6059b6c182b",
+        "7c06c94d163c5c1804329ed0af478a8d9c74e73e45e70eb5a4bbe6c11da6eb15",
+        "c415003eae1aca27f77bd89f64c2610223c2272a6ec3920277ad27cdf4181319",
+        "b4342682704c427a986ade0c37e06d83313c25dd65e5e4d2e84324fb4e9cee96",
+        "65d8a54ea255ed48bb42431e4960e65fe20c44f11ec3e3e3a1a681ecf2efa723",
+        "5f579e26cd921b0a5ed723f16c63a8bb2aa6c258f4e97b78a894aa2a94a10f81",
+        "0ab54c6bbb814e549cec3d54d8385a4422544d0a3ccaa952eb1b75d2fb9b772d",
+        "be7bad6400b0d6c0fe6c68951adb0fdf989fd7a58e4a0198b00d397741fd79ca",
+        "4e2a9a88df2c461af9527700d7a29544088b129c4ca957008da1ff0046897576",
+        "5ed673ca5037913824f6e0a698b6ddf59234f120a64bb2001c7fa2e33954c369",
+        "2d7a184aef6857fc96f3e39568248352cdff5a2f3dd0177d205fbec4c0118a96",
+        "9735e1cac0925c1cc89652c022c331036124e6878dd86333f349754b2ca72391",
+        "5b9abccfb1201a493dadd17a405e167d4ebbf34c4703705cbdb44a294bad281c",
+        "c5b6c54224ebc77886a8189a31d6b468be2f47397097a36e9e05b9b8e3c7b4a2",
+        "deebc85845e870272d87d49db1648fae0ebc7ae624d0534a189b4ed914c62a69",
+        "04023d260da00c77bbadfcc02c481097e8126cca51545074e058d40986dda517",
+        "0f32a4b37ab913f62450e25bb0dfd9d945a1562e72101dbe73a676e76a001318",
+        "192b08dad27b77b0650cc6f1c10a42fd4fd4e78c8ae814829c8b12cad8c9b89a",
+        "0084459016986e25a090d184e5ea19c30b65b55f017d4c7b5b16713b812c12e1",
+        "0298d77a062c0d430cbc08694b43dec45f96cc48b20baf16c486a64b42920f97",
+        "02cc7fecfcbdeb950d4455eb040c62db7fc855b0a48a69725b7019b5c2a873c2",
+        "032b5ca9961c4eb2bce2fa53c27aabedad71092d7313b66ddb9c3b13b3de4a01",
+        "03c561d8df0d70a1992dc6c2fc231acf6e24f5ef2356fd47831d938e94015f99",
+        "04001f13700b6b4e6e415f9428008b24e932f020a54faf2323e4ce7d379ee040",
+        "042631e287380b6665c14a91e7255bd1337f4d2b966f3feb40cdc49e63251469",
+        "04f1a62c3e9e23f696839978251d4ef2c2ca7e6cbeb88ed250a9d42e0ae448c3",
+        "53799ae8c4222e1e4761a330f9c22c66bdd3ffd9ea1a609fe4f99e32c4ed8ba4",
+        "73d2c2e27dd863dff18a4055bf32128ce9ddb8f1aaa97433c6c0d0bf4490cb71",
+        "7f77abcbd06f70ab0cd55343cf03110a66fbba9b825388872041639370ec8d57",
+        "dbde9775ad6764f68442e85f962f98048200781e09531d04e0f58017d7e4016b"
+      ],
+      "not_searched": [
+        "multisets that repeat one constraint were not searched; repetition is a weight change"
+      ],
+      "observable_index_sha256": "3daaac050a624902fda0c60e8f17638ebdf3d270596a5b7c7992398976034b6e",
+      "observable_signature_count": 379177,
+      "qualitative_index_sha256": "88d398f7416476c8a5b5a0e7ad445bf65eaa01486ee859b25f2f33a2b8cbc261",
+      "references": [
+        {
+          "canonical_expression": "form(0-1) | present(0-2) & present(1-2) => strong_favour",
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "closing_bias_exact": "1/9",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "191cea0e1e952fc2683bf8545516e0ea3b470006a4ee42740a1808b0ef88fde1",
+            "expressions": [
+              "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+            ],
+            "family_id": "5a9ba0b23e1e1c13f94789ab337e5e1a15e47f9b93bf1d9f72c47541ba4b1e0b",
+            "max_abs_dissolve_shift_exact": "1/3",
+            "mean_edge_density_exact": "13/24",
+            "modal_family": "4981660c5ba9adac2649a704cd4234b747be5e865a50cf7738b1d32bf74a2922",
+            "set_id": "b693b0feefe861d7",
+            "triangle_mass_exact": "11/64"
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) & present(1-2) => strong_suppress",
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_suppress",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "closing_bias_exact": "-2/27",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "b6b9981f162a6c52cbae5452fc9fc70521807b01bcb27634fcf3f0eb108a6e1a",
+            "expressions": [
+              "form(0-1) | present(0-2) & present(1-2) => strong_suppress"
+            ],
+            "family_id": "e42dc6e167d04911dce655473030e6fde4e1ed69c5e2e60e94aed54d9f942fc8",
+            "max_abs_dissolve_shift_exact": "2/9",
+            "mean_edge_density_exact": "17/36",
+            "modal_family": "1f452a7062883f5391c3d69da76a1fe34b842f42d778e93a1b61984397ce8568",
+            "set_id": "430bbe98efe72d80",
+            "triangle_mass_exact": "3/32"
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) & present(1-2) => prohibit",
+          "expression": "form(0-2) | present(0-1) & present(1-2) => prohibit",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "closing_bias_exact": "-1/9",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "aa1238306babe4bab9da25a4420ac22bb61e91972f335e848485051d649d72c1",
+            "expressions": [
+              "form(0-1) | present(0-2) & present(1-2) => prohibit"
+            ],
+            "family_id": "c415003eae1aca27f77bd89f64c2610223c2272a6ec3920277ad27cdf4181319",
+            "max_abs_dissolve_shift_exact": "1/3",
+            "mean_edge_density_exact": "11/24",
+            "modal_family": "1f452a7062883f5391c3d69da76a1fe34b842f42d778e93a1b61984397ce8568",
+            "set_id": "80e17328e9a28605",
+            "triangle_mass_exact": "5/64"
+          }
+        },
+        {
+          "canonical_expression": "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour",
+          "expression": "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": true,
+          "single": {
+            "closing_bias_exact": "0/1",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "e7e2ebca676dc182a929d548251fa5241784a06f976a80b3ca7b7f1061114aae",
+            "expressions": [
+              "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+            ],
+            "family_id": "f1ef2d10e3a3f81c665e37b3339e9335d3b715ac76c67c762173eeccce15e157",
+            "max_abs_dissolve_shift_exact": "0/1",
+            "mean_edge_density_exact": "1/2",
+            "modal_family": "02a9bd99ebb9b610945f0b27f8fd77ebaf11e667af98ebce97589173ab14f05e",
+            "set_id": "2544e20e3cefefb6",
+            "triangle_mass_exact": "1/8"
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) => strong_suppress",
+          "expression": "form(0-2) | present(0-1) => strong_suppress",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "closing_bias_exact": "-2/27",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "46cd619bc2e7008e3343de50d9dd4d5eab6698d4e6b8c8d191facdda4db37f1f",
+            "expressions": [
+              "form(0-1) | present(0-2) => strong_suppress"
+            ],
+            "family_id": "e479b5483c5bbc5e57852a6a3023f00efac133f5b740c2e6f2bbfac93bfce974",
+            "max_abs_dissolve_shift_exact": "2/9",
+            "mean_edge_density_exact": "19/42",
+            "modal_family": "f7b211ca9e5e11a86063ea582fa33ca924d389222fafcc98b3cb0b2bd8a2366d",
+            "set_id": "082bcc6bf6b3505d",
+            "triangle_mass_exact": "1/12"
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) => strong_favour",
+          "expression": "form(0-2) | present(0-1) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "closing_bias_exact": "1/9",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "18291cfdfd571382166789b39b9160000b8f1e8ed72ff5f79ec6684830fb965e",
+            "expressions": [
+              "form(0-1) | present(0-2) => strong_favour"
+            ],
+            "family_id": "2f0e9c1debb428f1e76b96b3e210b22ef473c78b29b32873a25c5e6586c9ada2",
+            "max_abs_dissolve_shift_exact": "1/3",
+            "mean_edge_density_exact": "21/38",
+            "modal_family": "11b3a3c98b25119429b1145a03e59178e9fe3ef9a36a18f9958f452f00bbd015",
+            "set_id": "6db0090e614349de",
+            "triangle_mass_exact": "13/76"
+          }
+        }
+      ],
+      "relation_slots": 3,
+      "runtime_seconds": 874.9448440000004,
+      "screened_families": 61757,
+      "sensitivity": {
+        "alphabets": [
+          "W3",
+          "W16"
+        ],
+        "checks": 120,
+        "modal_unchanged": 120,
+        "support_unchanged": 120
+      },
+      "singles_sha256": "0be8b6d7464e4c7915760fdb35014d9354e8d1d0a7eb312c0ce8e539417d2859",
+      "structural_families": 47342
+    },
+    {
+      "accounting": {
+        "edge": {
+          "labelled_constraints": 660,
+          "labelled_states": 64,
+          "outside_a_bound": 0,
+          "outside_k_bound": 2784,
+          "raw_structural_templates": 8748,
+          "relation_slots": 6,
+          "removed_redundant_normalisation": 2916,
+          "removed_syntax_invalid": 2916,
+          "structural_normal_forms": 132,
+          "weight_alphabet_size": 5
+        },
+        "grammar": {
+          "count_candidates": 0,
+          "count_outside_a": 0,
+          "count_outside_k": 0,
+          "count_structural": 0,
+          "count_tautology": 0,
+          "count_unsatisfiable": 0,
+          "edge_outside_a": 0,
+          "edge_structural": 132,
+          "labelled_constraints": 660,
+          "structural_normal_forms": 132,
+          "weight_alphabet_size": 5
+        }
+      },
+      "baseline": {
+        "heavy": {
+          "disjoint_pair_mass": 0.04687500000000003,
+          "disjoint_pair_mass_exact": null,
+          "edge_count_occupancy": [
+            0.01562500000000004,
+            0.09375000000000025,
+            0.23437500000000008,
+            0.31249999999999983,
+            0.23437499999999986,
+            0.09374999999999994,
+            0.015625000000000003
+          ],
+          "edge_count_occupancy_exact": null,
+          "entropy_rate_bits": 2.584962500721157,
+          "entropy_rate_nats": 1.7917594692280554,
+          "halt_mass": 0.0,
+          "halt_mass_exact": null,
+          "mean_component_count": 1.5312500000000007,
+          "mean_edge_density": 0.5000000000000001,
+          "mean_edge_density_exact": null,
+          "n_recurrent": 1,
+          "periods": [
+            2
+          ],
+          "reachable_count": 64,
+          "reversibility_defect": 7.068998164605489e-17,
+          "reversibility_defect_exact": null,
+          "rise_then_release": 0.5555555555555556,
+          "rise_then_release_exact": "5/9",
+          "stationary_arithmetic": "float64",
+          "stationary_residual": 3.8163916471489756e-16,
+          "triangle_mass": null,
+          "triangle_mass_exact": null,
+          "tv_from_uniform": 1.0911410663894117e-15,
+          "tv_from_uniform_exact": null
+        },
+        "light": {
+          "closing_bias": null,
+          "closing_bias_exact": null,
+          "deadlock_states": [],
+          "max_abs_dissolve_shift": 0.0,
+          "max_abs_dissolve_shift_exact": "0/1",
+          "mean_abs_dissolve_shift": 0.0,
+          "mean_abs_dissolve_shift_exact": "0/1",
+          "modal_family": "08a5a393399a96a9",
+          "n_deadlock": 0,
+          "n_recurrent": 1,
+          "n_recurrent_reachable_from_empty": 1,
+          "periods": [
+            2
+          ],
+          "reachable_from_empty": 64,
+          "support_family": "4c20ce9f6037a3e2",
+          "support_matches_baseline": true
+        }
+      },
+      "baseline_equivalent_families": 0,
+      "cancellations": {
+        "genuine_global": 0,
+        "genuine_global_examples": [],
+        "inherited_baseline": 0,
+        "inherited_baseline_examples": [],
+        "local": 112,
+        "local_examples": [
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(2-3) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | present(0-2) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | present(2-3) => strong_suppress"
+          ],
+          [
+            "dissolve(0-1) => strong_suppress",
+            "dissolve(0-1) | absent(0-2) => strong_favour"
+          ],
+          [
+            "dissolve(0-1) => strong_suppress",
+            "dissolve(0-1) | absent(2-3) => strong_favour"
+          ],
+          [
+            "dissolve(0-1) => strong_suppress",
+            "dissolve(0-1) | present(0-2) => strong_favour"
+          ],
+          [
+            "dissolve(0-1) => strong_suppress",
+            "dissolve(0-1) | present(2-3) => strong_favour"
+          ]
+        ]
+      },
+      "canonical_states": 11,
+      "cardinalities": {
+        "1": {
+          "analysed": 50,
+          "canonical": 50,
+          "canonical_including_stacked": 50,
+          "labelled_combinations": 660,
+          "labelled_simple": 660,
+          "labelled_stacked": 0,
+          "removed_by_symmetry": 610,
+          "stacked_canonical": 0
+        },
+        "2": {
+          "analysed": 9745,
+          "canonical": 9745,
+          "canonical_including_stacked": 9845,
+          "labelled_combinations": 217470,
+          "labelled_simple": 216150,
+          "labelled_stacked": 1320,
+          "removed_by_symmetry": 207625,
+          "stacked_canonical": 100
+        }
+      },
+      "coordinate": {
+        "A_max": 4,
+        "G": 0,
+        "H": 0,
+        "K_max": 2,
+        "L": 0,
+        "N": 4,
+        "O": 2,
+        "S": 0,
+        "alphabet": "W4",
+        "composition": "structural-simple",
+        "predicates": [
+          "edge"
+        ],
+        "semantics": "graph"
+      },
+      "exemplars": [
+        {
+          "expressions": [],
+          "initial": "empty",
+          "label": "baseline",
+          "run_id": "43a090313b010b71",
+          "seed": 0
+        },
+        {
+          "expressions": [],
+          "initial": "complete",
+          "label": "baseline",
+          "run_id": "ad890513547aa9af",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "bb0cf633a6b677d3",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "372f73030155482a",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "678e545907622527",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "0f0a52882531cfe5",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "e9e70b3b449a004e",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "8dcc003a20e98e86",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "5d7c6a0fa8b200b4",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "3c593869f03bf93b",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "60db3c5ceb9b9ac5",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "63f4287508313d07",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | absent(0-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "fb6727f3a96e7810",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | absent(0-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "5312ba55aa54625f",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "cancellation",
+          "run_id": "5d300522fe3ad50b",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "cancellation",
+          "run_id": "2345bcc29ded470c",
+          "seed": 0
+        }
+      ],
+      "extremes": {
+        "entropy_max": {
+          "expressions": [
+            "form(0-1) => weak_suppress",
+            "form(0-1) | absent(2-3) => weak_favour"
+          ],
+          "kernel": "db5d4192729807de57c43d61857d581fefe37279bdfda7cdd4dbfd88131f8da4",
+          "kind": "float",
+          "value": 2.5749404032758316
+        },
+        "entropy_min": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => prohibit"
+          ],
+          "kernel": "63765f7c0010e57ae9a74a4d93a5f9e4d3fc93f7a5e76ea7d1e2845cae6389a2",
+          "kind": "float",
+          "value": 2.000000000000001
+        },
+        "rise_excess_max": {
+          "expressions": [
+            "form(0-1) => prohibit",
+            "form(0-2) => prohibit"
+          ],
+          "kernel": "f61507ac613c750e1a514cd188985500556d0b04e068f5183ce97164bfb8c67e",
+          "kind": "fraction",
+          "value": "29/288"
+        },
+        "rise_excess_min": {
+          "expressions": [
+            "dissolve(0-1) => prohibit",
+            "dissolve(0-2) => prohibit"
+          ],
+          "kernel": "63765f7c0010e57ae9a74a4d93a5f9e4d3fc93f7a5e76ea7d1e2845cae6389a2",
+          "kind": "fraction",
+          "value": "-397/4500"
+        },
+        "shift_max": {
+          "expressions": [
+            "dissolve(0-1) => strong_favour",
+            "dissolve(0-1) | absent(0-2) => strong_favour"
+          ],
+          "kernel": "f24d82ff716bbecedf03c817680bc79de7c745c20292fd9e987bbd4ba10303bd",
+          "kind": "fraction",
+          "value": "25/42"
+        }
+      },
+      "families": 3929,
+      "family_histogram": {
+        "closing_max": {},
+        "families": 3929,
+        "n_deadlock": {
+          "0": 3929
+        },
+        "periods": {
+          "2": 3929
+        },
+        "rise_then_release_excess": {
+          "0": -0.08822222222222222,
+          "0.25": -0.014868341894580962,
+          "0.5": 0.008180017585265398,
+          "0.75": 0.02235578205263855,
+          "0.9": 0.03772165832823429,
+          "0.99": 0.05958474910493978,
+          "1": 0.10069444444444445
+        },
+        "shift_max": {
+          "0": 0.07142857142857142,
+          "0.25": 0.16666666666666666,
+          "0.5": 0.2222222222222222,
+          "0.75": 0.2777777777777778,
+          "0.9": 0.2916666666666667,
+          "0.99": 0.3333333333333333,
+          "1": 0.5952380952380952
+        },
+        "support_matches_baseline": 2042
+      },
+      "family_index_bytes": 15033729,
+      "family_index_commit_limit_bytes": 2000000,
+      "family_index_sha256": "e5ded9d492ad18d973bfa4939c8a4c8c47bc0d3c83c2f61bf529e8c985e9f4f0",
+      "kernel_index_count": 9595,
+      "kernel_index_sha256": "59ccc85b0293ff41f68cc64a1268e1bd2209f5dca03eecfc56e38b740a2581a0",
+      "labelled_states": 64,
+      "measure_scope": {
+        "exact_kernel": "full rational kernel reduced under S_N before hashing",
+        "heavy": "every analysed set, including exact rational observables when the state count is at most 16",
+        "light": "every analysed set",
+        "observable_signature": "labelling-invariant scalars; not a kernel identity",
+        "qualitative_family": "S_N-canonical support token and modal token",
+        "rise_then_release": "from the empty state when the labelled state count is at most 64",
+        "search": "every canonical set at the requested cardinalities; structural-simple drops stacked weights before analysis",
+        "sensitivity": "every analysed cardinality-1 set, on the declared geometric alphabets",
+        "shards": "half-open lexicographic combination ranges, atomic result plus receipt",
+        "stationary": "Fraction end to end at <=16 states; float64 beyond. Entropy is always float"
+      },
+      "motif_ids": [
+        "50c623349b6c732495d97f8a9de0e515a87e0da2a040c8ad40f7d56f06d19830",
+        "5717dec024fc1717eebe9d6cea323e269eb10d66d18fee9e81f41c4fe9eb7dfc",
+        "ec2d61c3fa9ef3ffc43cf22089ae88d506079b08f724c5f70650e1d4ab53c18d",
+        "d24b3ed7ab52b48214daf357aa551d9d60fb7aa577bd8a78b55a7ff46fe82ed3",
+        "294e3ecac8791750f1da79e2db713e1a54ad30d745460317d554e32ad3d2afc5",
+        "916fb23f12b3060a4ac5b1329458b30cd435c75c7f4ac75f1d02d61e65747557",
+        "3d55a91c8366c5688f0a8ac6dbe431687b6e23d785ec36e35c471082ce64894c",
+        "633d92061eba0fa6650e6c0552081fa5121bdf24f0a3f6f7efd23a8c75b57c59",
+        "84f8cf0cd246ca9706aa3008e5242b82212adb9f18a178f3d0e6bbe5e3d97e1f",
+        "d6d0f08abffc9db5237513dbf38565dde337bf5bf8f5e8fbbae746640118f375",
+        "7d051d7f0f0245560191ed6d5e0abdcef37805c3e379488d3d9d0da1b0a8d16f",
+        "d155f3e2dc46d2bc848141d8eaab7f3e75583fa1dc093d60ef890055975e11ad",
+        "0035ae02b296db5b275f06ac296f85d34f64f0ce4e29f1da71faeef50f1f82f9",
+        "003afb3391945915e0e6b613ab40b6f43a4882ef0a734c9b4728f401d7f5095e",
+        "00472fb7fa59969d3d7a7b87ea9e89ab698511aff1ef75e9c334dce4bd0626b7",
+        "0050fe3888ba0c2acbf2f416dc902c9a91ef2a9acae1d63e14f74c54fe4ff839",
+        "005c7b7e25d26c57618425bbfabe9d6a41117371adb7226b45126d528c43d6fd",
+        "007f52676d74580374ededb2737b256c12472370623153b945fae08be2898013",
+        "00c22f992b2c97eb709c27b1cd41be0dcd01214bbe4ac5f715e730df306a6e49",
+        "00c3a09a8000acdd94f028b5a06d9a56af9b5e73b67fd04cffb099fd0f8505d4",
+        "37dfd6e6dd7a68867b7afb349e23364043bb14ff5b161ccd7862082a5397b7e3",
+        "aba5629df83a9409fa77d87c8716dbbaa38f53193095ebd770fb505ab9e6e6c5",
+        "af7259843c479d5a5183bb70cb1aedb59fcedd9ff98d315c6fb4119b90c27e3c",
+        "da25dd4e1ada01182ddb02316ca119a9ec7b7bc42791f692059f3073692169df",
+        "debdce74f06e2405f9394d89c07a1a2caa5ae9bd48ea72d40cca1a36f2686f13",
+        "e2b588701eb7be6731a6ae72a5d84b018cd327f8d41c71b3d023bdc2587ccb80",
+        "4ca089596d9711f8b98b218a24109aa875b77e5f1f38f6ad06b561150ab909dd",
+        "144a680453397ac430d2c3b4836587265180f80e241391deec538c119aa0aec8",
+        "5f3c1d8a8849c41114e82be68dde4af007b5fa167eb5d96c864415f80db9204f",
+        "6a16d95fd523890d17024b441545c4042617bf5581a67b0951ca80a009f88ac8",
+        "77510179580b413015306d55f11b4036a0eae44ab20325f21fc093fda08a0426"
+      ],
+      "not_searched": [
+        "cardinality 3 at N=4 was not searched",
+        "2784 structural templates at N=4 have K>2 and were not searched",
+        "multisets that repeat one constraint were not searched; repetition is a weight change"
+      ],
+      "observable_index_sha256": "ab679d1dfda47c6bb09ea0e24ae6bc6d49e266b8505938eacd8dee8df7e1f5f2",
+      "observable_signature_count": 7019,
+      "qualitative_index_sha256": "4faf8544c1e8166272259d03eda0c19a9275883425979f8bfbc35609a01a9036",
+      "references": [
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_favour",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_suppress",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => prohibit",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "expression": "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) => strong_suppress",
+          "expression": "form(0-2) | present(0-1) => strong_suppress",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "closing_bias_exact": null,
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "562bf1663627f4b7868fca00cf912436e6f3d8aada439c1d174cb649b0ab388c",
+            "expressions": [
+              "form(0-1) | present(0-2) => strong_suppress"
+            ],
+            "family_id": "7e723d7c3992a0707f431d5d9da86473ca4ff4753b634b07f9f0ab1daec655c2",
+            "max_abs_dissolve_shift_exact": "5/42",
+            "mean_edge_density_exact": null,
+            "modal_family": "426bd33af2c30b31167cfb0460eb5fe6de1c78f910083cbe5f0e97cf3c73117f",
+            "set_id": "082bcc6bf6b3505d",
+            "triangle_mass_exact": null
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) => strong_favour",
+          "expression": "form(0-2) | present(0-1) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "closing_bias_exact": null,
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "1406c3b982735a585330d0b58891ed9d03fd5e873aaa0a99acc3b2709b04ded7",
+            "expressions": [
+              "form(0-1) | present(0-2) => strong_favour"
+            ],
+            "family_id": "88ff1026fb962e584f4fc8af2760b989e4b80d738305fee74a69261ec1f916a6",
+            "max_abs_dissolve_shift_exact": "5/18",
+            "mean_edge_density_exact": null,
+            "modal_family": "04775f5e42724d0ec62e6b9334d2bf06b117866dd2d2f0a1b97792f4dd95f088",
+            "set_id": "6db0090e614349de",
+            "triangle_mass_exact": null
+          }
+        }
+      ],
+      "relation_slots": 6,
+      "runtime_seconds": 210.46463500000004,
+      "screened_families": 3858,
+      "sensitivity": {
+        "alphabets": [
+          "W3",
+          "W16"
+        ],
+        "checks": 100,
+        "modal_unchanged": 100,
+        "support_unchanged": 100
+      },
+      "singles_sha256": "4d760fb0d8fd1779a1dcabf4da474102f1e00309a2076403df76b4ca65ec8d8f",
+      "structural_families": 1887
+    },
+    {
+      "accounting": {
+        "edge": {
+          "labelled_constraints": 1900,
+          "labelled_states": 1024,
+          "outside_a_bound": 0,
+          "outside_k_bound": 393280,
+          "raw_structural_templates": 1180980,
+          "relation_slots": 10,
+          "removed_redundant_normalisation": 393660,
+          "removed_syntax_invalid": 393660,
+          "structural_normal_forms": 380,
+          "weight_alphabet_size": 5
+        },
+        "grammar": {
+          "count_candidates": 0,
+          "count_outside_a": 0,
+          "count_outside_k": 0,
+          "count_structural": 0,
+          "count_tautology": 0,
+          "count_unsatisfiable": 0,
+          "edge_outside_a": 0,
+          "edge_structural": 380,
+          "labelled_constraints": 1900,
+          "structural_normal_forms": 380,
+          "weight_alphabet_size": 5
+        }
+      },
+      "baseline": {
+        "heavy": {
+          "disjoint_pair_mass": null,
+          "disjoint_pair_mass_exact": null,
+          "edge_count_occupancy": [
+            0.0009765624999999889,
+            0.009765624999999889,
+            0.04394531250000003,
+            0.11718750000000018,
+            0.20507812500000003,
+            0.24609374999999983,
+            0.20507812499999992,
+            0.11718750000000001,
+            0.043945312500000014,
+            0.009765625000000007,
+            0.000976562499999992
+          ],
+          "edge_count_occupancy_exact": null,
+          "entropy_rate_bits": 3.321928094886982,
+          "entropy_rate_nats": 2.302585092993782,
+          "halt_mass": 0.0,
+          "halt_mass_exact": null,
+          "mean_component_count": 1.3652343750000002,
+          "mean_edge_density": 0.5,
+          "mean_edge_density_exact": null,
+          "n_recurrent": 1,
+          "periods": [
+            2
+          ],
+          "reachable_count": 1024,
+          "reversibility_defect": 1.645276796746753e-17,
+          "reversibility_defect_exact": null,
+          "rise_then_release": null,
+          "rise_then_release_exact": null,
+          "stationary_arithmetic": "float64",
+          "stationary_residual": 1.5417354892743873e-16,
+          "triangle_mass": null,
+          "triangle_mass_exact": null,
+          "tv_from_uniform": 1.5222740602782725e-15,
+          "tv_from_uniform_exact": null
+        },
+        "light": {
+          "closing_bias": null,
+          "closing_bias_exact": null,
+          "deadlock_states": [],
+          "max_abs_dissolve_shift": 0.0,
+          "max_abs_dissolve_shift_exact": "0/1",
+          "mean_abs_dissolve_shift": 0.0,
+          "mean_abs_dissolve_shift_exact": "0/1",
+          "modal_family": "e4e3c80a6d094dfa",
+          "n_deadlock": 0,
+          "n_recurrent": 1,
+          "n_recurrent_reachable_from_empty": 1,
+          "periods": [
+            2
+          ],
+          "reachable_from_empty": 1024,
+          "support_family": "7bf88656b7a9ad70",
+          "support_matches_baseline": true
+        }
+      },
+      "baseline_equivalent_families": 0,
+      "cancellations": {
+        "genuine_global": 0,
+        "genuine_global_examples": [],
+        "inherited_baseline": 0,
+        "inherited_baseline_examples": [],
+        "local": 0,
+        "local_examples": []
+      },
+      "canonical_states": 34,
+      "cardinalities": {
+        "1": {
+          "analysed": 50,
+          "canonical": 50,
+          "canonical_including_stacked": 50,
+          "labelled_combinations": 1900,
+          "labelled_simple": 1900,
+          "labelled_stacked": 0,
+          "removed_by_symmetry": 1850,
+          "stacked_canonical": 0
+        }
+      },
+      "coordinate": {
+        "A_max": 4,
+        "G": 0,
+        "H": 0,
+        "K_max": 2,
+        "L": 0,
+        "N": 5,
+        "O": 2,
+        "S": 0,
+        "alphabet": "W4",
+        "composition": "structural-simple",
+        "predicates": [
+          "edge"
+        ],
+        "semantics": "graph"
+      },
+      "exemplars": [
+        {
+          "expressions": [],
+          "initial": "empty",
+          "label": "baseline",
+          "run_id": "43a090313b010b71",
+          "seed": 0
+        },
+        {
+          "expressions": [],
+          "initial": "complete",
+          "label": "baseline",
+          "run_id": "b012d1e7f32be252",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "bb0cf633a6b677d3",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "57a5fdbf9d5b42c1",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "678e545907622527",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-2) | present(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "1e1855247c504ecc",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "e9e70b3b449a004e",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "f5a972ae6534cec5",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "5d7c6a0fa8b200b4",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "e392b12ff8b3a036",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "60db3c5ceb9b9ac5",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "72bbd5c47fc9ca64",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | absent(0-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "fb6727f3a96e7810",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | absent(0-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "68d197846bf2849b",
+          "seed": 0
+        }
+      ],
+      "extremes": {
+        "entropy_max": {
+          "expressions": [
+            "dissolve(0-1) | absent(2-3) => weak_suppress"
+          ],
+          "kernel": "1a99e736f1b38dc24e677db8cccea3d80a697b4972907bc601523198ffd000bc",
+          "kind": "float",
+          "value": 3.315584172271262
+        },
+        "entropy_min": {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "kernel": "143a816a0644433e80d37858904546bda710f0114e1d8cb4b366b71b10a213d2",
+          "kind": "float",
+          "value": 3.1699250014425298
+        },
+        "shift_max": {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "kernel": "8008aef3df49a2c2cf60868494a0927d2dec1c97ec25d77073938d4081f9a4fe",
+          "kind": "fraction",
+          "value": "27/130"
+        }
+      },
+      "families": 30,
+      "family_histogram": {
+        "closing_max": {},
+        "families": 30,
+        "n_deadlock": {
+          "0": 30
+        },
+        "periods": {
+          "2": 30
+        },
+        "rise_then_release_excess": {},
+        "shift_max": {
+          "0": 0.06486486486486487,
+          "0.25": 0.07297297297297298,
+          "0.5": 0.1,
+          "0.75": 0.18461538461538463,
+          "0.9": 0.2076923076923077,
+          "0.99": 0.2076923076923077,
+          "1": 0.2076923076923077
+        },
+        "support_matches_baseline": 20
+      },
+      "family_index_bytes": 87431,
+      "family_index_commit_limit_bytes": 2000000,
+      "family_index_sha256": "52dc33c52e720961d6e898ff47107cdaa87b4e96df6e465f77d4bed9c384dc11",
+      "kernel_index_count": 50,
+      "kernel_index_sha256": "0d0cfa67864fe7014fe1255f46851cd36a1ac7c4ff71ddb30576b9382c1692a0",
+      "labelled_states": 1024,
+      "measure_scope": {
+        "exact_kernel": "full rational kernel reduced under S_N before hashing",
+        "heavy": "every analysed set, including exact rational observables when the state count is at most 16",
+        "light": "every analysed set",
+        "observable_signature": "labelling-invariant scalars; not a kernel identity",
+        "qualitative_family": "S_N-canonical support token and modal token",
+        "rise_then_release": "from the empty state when the labelled state count is at most 64",
+        "search": "every canonical set at the requested cardinalities; structural-simple drops stacked weights before analysis",
+        "sensitivity": "every analysed cardinality-1 set, on the declared geometric alphabets",
+        "shards": "half-open lexicographic combination ranges, atomic result plus receipt",
+        "stationary": "Fraction end to end at <=16 states; float64 beyond. Entropy is always float"
+      },
+      "motif_ids": [
+        "d0a8ace57e112e22b51bfc1fb231282d03668c10138351ae3868ea0445674d7e",
+        "85e3d2aadefb009ed14f0d08c10e6e6dad3b45ba1eec21d8e8d45c7aec8eff76",
+        "439677983ba138c4bb653b305f2bc54e20f3f5ef24e9969b6c1ea902105d78d5",
+        "da1ad8283cd8681157e1a1d252a0b820a5aa967079844ccee6248e8784815d9d",
+        "a8d34f4b9bee9d191c7673292a1e937407b729bf021fb3848305be87d40b2373",
+        "4ae8cca3e03bbe764669674d97f1da49592ee37ab30b326f062c596030087293",
+        "52444bf7c23ea9be7ecbc4f559b832a2470c7a184103847fb028bbf5cd6a6562",
+        "f5bf001d308d7d6c2073db86b6f351b1574c5a0fcadf555a12073493924e452c",
+        "ea47fc9d91e07ee9ae18cf24e4330ecb142aaaf07fdfe5b98a89b6a76fcf222e",
+        "5db4ec218bb9899fff20e5c3f0cb9fd593b5b1eeadbeff0d0410da5ce69a2ec0",
+        "13b29d367662bbe06053e1bf2274c2f451c81e2156df88a6d8152c234b70f430",
+        "158912b932e5c3649cdb6ff805db1c3404c39116cae52fae7218eff2e93a1ff6",
+        "39f205dbed41323c815edede0b9582c742164469f6249633d4a43f69fe5f2a01",
+        "3e63e5ce95ecd4d7747f732e52bfa4f2375c327e322ecf150d218dce99aab5b8",
+        "5144d6c05ae7afb8d05ee64d124eeb681f76631af63d5a83a224a4d8ed74e2cc",
+        "60e0e57d60987d0be77aee14845871b9eda4f8873d7c579db3d190dd96f1a404"
+      ],
+      "not_searched": [
+        "cardinality 2 at N=5 was not searched",
+        "cardinality 3 at N=5 was not searched",
+        "393280 structural templates at N=5 have K>2 and were not searched",
+        "multisets that repeat one constraint were not searched; repetition is a weight change"
+      ],
+      "observable_index_sha256": "2b622f73f1de9dcce9e4f2fd2874dd9e5e139a3486281c24061f66b3d60bb7fe",
+      "observable_signature_count": 30,
+      "qualitative_index_sha256": "555d33c2297b847e37f7095c973fb2ae1d8eb8fa4a2e3a7664f3aeb753a6592d",
+      "references": [
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_favour",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_suppress",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => prohibit",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "expression": "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) => strong_suppress",
+          "expression": "form(0-2) | present(0-1) => strong_suppress",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "closing_bias_exact": null,
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "40c2ec81f4828a7858e0afb437718617ce6f99fa78b4de4448e7bcb515e66e9b",
+            "expressions": [
+              "form(0-1) | present(0-2) => strong_suppress"
+            ],
+            "family_id": "bab94f1963d1f3837e0e39d90fe5bef9fe222e384539eb57502642f74d435678",
+            "max_abs_dissolve_shift_exact": "27/370",
+            "mean_edge_density_exact": null,
+            "modal_family": "d5f4940db4428fb510a81ac70be1aeab5e929a716f07587f2e2d06e426ddfc2f",
+            "set_id": "082bcc6bf6b3505d",
+            "triangle_mass_exact": null
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) => strong_favour",
+          "expression": "form(0-2) | present(0-1) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "closing_bias_exact": null,
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "fa232e95943c78252315c29a00f4bb6ad30c2fa2cd37c71599fb68d717fbb5e1",
+            "expressions": [
+              "form(0-1) | present(0-2) => strong_favour"
+            ],
+            "family_id": "defaf3f7ee30991973628bb094c7cef5d21f09ede195a75b6edaa9e867c1447c",
+            "max_abs_dissolve_shift_exact": "27/130",
+            "mean_edge_density_exact": null,
+            "modal_family": "9eb9ec60b48cdc34536a1a2b121dfc5bc1a3b7b0fb6e86b7b826813a3e8cffd4",
+            "set_id": "6db0090e614349de",
+            "triangle_mass_exact": null
+          }
+        }
+      ],
+      "relation_slots": 10,
+      "runtime_seconds": 437.361967,
+      "screened_families": 16,
+      "sensitivity": {
+        "alphabets": [
+          "W3",
+          "W16"
+        ],
+        "checks": 100,
+        "modal_unchanged": 100,
+        "support_unchanged": 100
+      },
+      "singles_sha256": "718338ebd54aa4532d918a90678bec719fc4af728780cc235ef92543716e4e7f",
+      "structural_families": 10
+    }
+  ],
+  "composition": "structural-simple",
+  "engine_version": "0.2.0",
+  "execution": {
+    "max_attempts": 3,
+    "multiprocessing": "spawn",
+    "principle": "Prefer bounded, independently reproducible, idempotent units of work with durable checkpoints, so completed progress is monotonic and interruption is cheap.",
+    "profile_note": "Measured 2026-10-03 on this development machine, one worker, OMP/OPENBLAS/MKL threads 1. Binding window: N=4, K<=2, cardinality 2, combination ranks 4000:8000, 3262 canonical-simple float64 kernels, 66.7s. N=3, K<=3, cardinality 3, ranks 180000:190000 analysed 9399 rational kernels in 13.6s. The N=3 opening prefix is cheap (ranks 0:1000 analysed nothing) because weights are innermost, so early combinations stack grades on the first structures. 4000 items keeps the measured worst window inside 60-90s and under 120s.",
+    "shard_count": 883,
+    "shard_items": 4000,
+    "worker_history": [
+      {
+        "at": "2026-10-03T11:47:23+00:00",
+        "workers": 2
+      }
+    ],
+    "workers_last": 2
+  },
+  "experiment_id": "generation-001b-structurally-normalised",
+  "generation": "001b",
+  "git_commit": "112b6b11d0f5b901a755b6ba5c9e740032006536",
+  "grammar_version": "pairwise-edge-v1",
+  "normalisation_version": "structural-unique-v1",
+  "numpy": "2.5.3",
+  "platform": "linux",
+  "predicates": [
+    "edge"
+  ],
+  "python": "3.12.3",
+  "receipt_fingerprint": "37d6dff366a889fa3ae012a8fcc32ade5bf75b509353526fa134d54c8777a6f1",
+  "runtime_seconds": 1117.1027044910006,
+  "science": {
+    "cells": [
+      {
+        "K_max": 3,
+        "N": 2,
+        "baseline_equivalent_families": 1,
+        "cancellations": {
+          "genuine_global": 0,
+          "genuine_global_examples": [],
+          "inherited_baseline": 16,
+          "inherited_baseline_examples": [
+            [
+              "dissolve(0-1) => strong_favour",
+              "form(0-1) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "form(0-1) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "form(0-1) => weak_favour"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "form(0-1) => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress",
+              "form(0-1) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress",
+              "form(0-1) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress",
+              "form(0-1) => weak_favour"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress",
+              "form(0-1) => weak_suppress"
+            ]
+          ],
+          "local": 0,
+          "local_examples": []
+        },
+        "cardinalities": {
+          "1": {
+            "analysed": 10,
+            "canonical": 10,
+            "canonical_including_stacked": 10,
+            "labelled_combinations": 10,
+            "labelled_simple": 10,
+            "labelled_stacked": 0,
+            "removed_by_symmetry": 0,
+            "stacked_canonical": 0
+          },
+          "2": {
+            "analysed": 25,
+            "canonical": 25,
+            "canonical_including_stacked": 45,
+            "labelled_combinations": 45,
+            "labelled_simple": 25,
+            "labelled_stacked": 20,
+            "removed_by_symmetry": 0,
+            "stacked_canonical": 20
+          },
+          "3": {
+            "analysed": 0,
+            "canonical": 0,
+            "canonical_including_stacked": 120,
+            "labelled_combinations": 120,
+            "labelled_simple": 0,
+            "labelled_stacked": 120,
+            "removed_by_symmetry": 0,
+            "stacked_canonical": 120
+          }
+        },
+        "extremes": {
+          "entropy_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit"
+            ],
+            "kernel": "afda82e6074906b47191fad1c7560d0ed800e09decedc51a6d4d6259cafc4a60",
+            "kind": "float",
+            "value": 0.0
+          },
+          "entropy_min": {
+            "expressions": [
+              "dissolve(0-1) => prohibit"
+            ],
+            "kernel": "afda82e6074906b47191fad1c7560d0ed800e09decedc51a6d4d6259cafc4a60",
+            "kind": "float",
+            "value": 0.0
+          },
+          "rise_excess_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit"
+            ],
+            "kernel": "afda82e6074906b47191fad1c7560d0ed800e09decedc51a6d4d6259cafc4a60",
+            "kind": "fraction",
+            "value": "0/1"
+          },
+          "rise_excess_min": {
+            "expressions": [
+              "dissolve(0-1) => prohibit"
+            ],
+            "kernel": "afda82e6074906b47191fad1c7560d0ed800e09decedc51a6d4d6259cafc4a60",
+            "kind": "fraction",
+            "value": "0/1"
+          },
+          "shift_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit"
+            ],
+            "kernel": "afda82e6074906b47191fad1c7560d0ed800e09decedc51a6d4d6259cafc4a60",
+            "kind": "fraction",
+            "value": "0/1"
+          }
+        },
+        "families": 4,
+        "family_index_sha256": "8f227bc4c0ce063b3f78901afe686cc2bfbf1144127f7844ec9d423c12822e9c",
+        "histogram": {
+          "closing_max": {},
+          "families": 4,
+          "n_deadlock": {
+            "0": 1,
+            "1": 2,
+            "2": 1
+          },
+          "periods": {
+            "1": 3,
+            "2": 1
+          },
+          "rise_then_release_excess": {
+            "0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "0.9": 0.0,
+            "0.99": 0.0,
+            "1": 0.0
+          },
+          "shift_max": {
+            "0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "0.9": 0.0,
+            "0.99": 0.0,
+            "1": 0.0
+          },
+          "support_matches_baseline": 1
+        },
+        "kernel_index_count": 4,
+        "kernel_index_sha256": "20d108c9cde1ae24d2d07bf7cf81b5e5290ba3f6a4d79cc85c8b282f8d854ce2",
+        "observable_index_sha256": "f34bae8e0bd2050f3e94c3cb0d86d6e0aa30ba4cb3afdbc408430df1d583a56b",
+        "qualitative_index_sha256": "1b9adbd14b5bbf214f0201d44013313adde5224484aca0826472df6d87e15f25",
+        "screened_families": 0,
+        "singles_sha256": "e8257e3ed8d4f9762a33e9033e94fab1df5ac93e81bd9842a02ad1d6ecfd387e",
+        "structural_families": 3,
+        "territory": null
+      },
+      {
+        "K_max": 3,
+        "N": 3,
+        "baseline_equivalent_families": 1,
+        "cancellations": {
+          "genuine_global": 40,
+          "genuine_global_examples": [
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | absent(0-2) => strong_suppress",
+              "dissolve(0-1) | present(0-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress",
+              "dissolve(0-1) | absent(0-2) => strong_favour",
+              "dissolve(0-1) | present(0-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => weak_favour",
+              "dissolve(0-1) | absent(0-2) => weak_suppress",
+              "dissolve(0-1) | present(0-2) => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) => weak_suppress",
+              "dissolve(0-1) | absent(0-2) => weak_favour",
+              "dissolve(0-1) | present(0-2) => weak_favour"
+            ],
+            [
+              "dissolve(0-1) | absent(0-2) & absent(1-2) => strong_favour",
+              "dissolve(0-1) | absent(0-2) & present(1-2) => strong_favour",
+              "dissolve(0-1) | absent(0-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | absent(0-2) & absent(1-2) => strong_suppress",
+              "dissolve(0-1) | absent(0-2) & present(1-2) => strong_suppress",
+              "dissolve(0-1) | absent(0-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | absent(0-2) & absent(1-2) => weak_favour",
+              "dissolve(0-1) | absent(0-2) & present(1-2) => weak_favour",
+              "dissolve(0-1) | absent(0-2) => weak_suppress"
+            ],
+            [
+              "dissolve(0-1) | absent(0-2) & absent(1-2) => weak_suppress",
+              "dissolve(0-1) | absent(0-2) & present(1-2) => weak_suppress",
+              "dissolve(0-1) | absent(0-2) => weak_favour"
+            ]
+          ],
+          "inherited_baseline": 0,
+          "inherited_baseline_examples": [],
+          "local": 20352,
+          "local_examples": [
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => strong_favour",
+              "dissolve(0-2) | absent(0-1) & absent(1-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => strong_favour",
+              "dissolve(0-2) | absent(0-1) & present(1-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => strong_favour",
+              "dissolve(0-2) | absent(0-1) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => strong_favour",
+              "dissolve(0-2) | absent(1-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => strong_favour",
+              "dissolve(0-2) | present(0-1) & absent(1-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => strong_favour",
+              "dissolve(0-2) | present(0-1) & present(1-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => strong_favour",
+              "dissolve(0-2) | present(0-1) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => strong_favour",
+              "dissolve(0-2) | present(1-2) => strong_suppress"
+            ]
+          ]
+        },
+        "cardinalities": {
+          "1": {
+            "analysed": 60,
+            "canonical": 60,
+            "canonical_including_stacked": 60,
+            "labelled_combinations": 270,
+            "labelled_simple": 270,
+            "labelled_stacked": 0,
+            "removed_by_symmetry": 210,
+            "stacked_canonical": 0
+          },
+          "2": {
+            "analysed": 6210,
+            "canonical": 6210,
+            "canonical_including_stacked": 6330,
+            "labelled_combinations": 36315,
+            "labelled_simple": 35775,
+            "labelled_stacked": 540,
+            "removed_by_symmetry": 29985,
+            "stacked_canonical": 120
+          },
+          "3": {
+            "analysed": 519830,
+            "canonical": 519830,
+            "canonical_including_stacked": 544550,
+            "labelled_combinations": 3244140,
+            "labelled_simple": 3100500,
+            "labelled_stacked": 143640,
+            "removed_by_symmetry": 2699590,
+            "stacked_canonical": 24720
+          }
+        },
+        "extremes": {
+          "closing_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => prohibit",
+              "dissolve(1-2) => prohibit"
+            ],
+            "kernel": "6eafa9235ed641a5ecef03c156473164923cf9938a6727a3e2343d1749875b94",
+            "kind": "fraction",
+            "value": "2/3"
+          },
+          "closing_min": {
+            "expressions": [
+              "form(0-1) => prohibit",
+              "form(0-2) => prohibit",
+              "form(1-2) => prohibit"
+            ],
+            "kernel": "480bc8f7fbee8b5c68813f63a24fe9f6c5affbd7e3b94af2d3056074d334e091",
+            "kind": "fraction",
+            "value": "-1/3"
+          },
+          "entropy_max": {
+            "expressions": [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | absent(0-2) => strong_suppress",
+              "dissolve(0-1) | present(0-2) => strong_suppress"
+            ],
+            "kernel": "305575f09f9ce0779426f9f447ca5145ce20bc0e9ca8b449af629209ad9473fa",
+            "kind": "float",
+            "value": 1.584962500721156
+          },
+          "entropy_min": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | absent(0-2) & absent(1-2) => prohibit",
+              "dissolve(0-2) => prohibit"
+            ],
+            "kernel": "ada3ac088c155beb053c08c9104dbf673acc826cf902cd2dd7d89ba9103cf79f",
+            "kind": "float",
+            "value": 0.0
+          },
+          "rise_excess_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => prohibit",
+              "dissolve(1-2) | absent(0-1) & absent(0-2) => prohibit"
+            ],
+            "kernel": "7bbab9599bb7dad708a1eca5d543c528847438fcf00d8a2a5af0651257c6e3f2",
+            "kind": "fraction",
+            "value": "1/3"
+          },
+          "rise_excess_min": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => prohibit",
+              "dissolve(1-2) => prohibit"
+            ],
+            "kernel": "6eafa9235ed641a5ecef03c156473164923cf9938a6727a3e2343d1749875b94",
+            "kind": "fraction",
+            "value": "-2/3"
+          },
+          "shift_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-1) | absent(0-2) & absent(1-2) => prohibit",
+              "dissolve(0-2) => prohibit"
+            ],
+            "kernel": "ada3ac088c155beb053c08c9104dbf673acc826cf902cd2dd7d89ba9103cf79f",
+            "kind": "fraction",
+            "value": "2/3"
+          }
+        },
+        "families": 61929,
+        "family_index_sha256": "7936d5eda702d49f3caf44ac4417c112d52b9fdde52d52d5a68056888c4a0eb5",
+        "histogram": {
+          "closing_max": {
+            "0": -0.3333333333333333,
+            "0.25": -0.044444444444444446,
+            "0.5": 0.009259259259259259,
+            "0.75": 0.07407407407407407,
+            "0.9": 0.14814814814814814,
+            "0.99": 0.26666666666666666,
+            "1": 0.6666666666666666
+          },
+          "families": 61929,
+          "n_deadlock": {
+            "0": 61825,
+            "1": 104
+          },
+          "periods": {
+            "1": 104,
+            "2": 61825
+          },
+          "rise_then_release_excess": {
+            "0": -0.6666666666666666,
+            "0.25": -0.08333333333333333,
+            "0.5": 0.0,
+            "0.75": 0.0761904761904762,
+            "0.9": 0.1455026455026455,
+            "0.99": 0.25,
+            "1": 0.3333333333333333
+          },
+          "shift_max": {
+            "0": 0.0,
+            "0.25": 0.2222222222222222,
+            "0.5": 0.3333333333333333,
+            "0.75": 0.3333333333333333,
+            "0.9": 0.4666666666666667,
+            "0.99": 0.6666666666666666,
+            "1": 0.6666666666666666
+          },
+          "support_matches_baseline": 14587
+        },
+        "kernel_index_count": 391991,
+        "kernel_index_sha256": "32aec715270d0076b79d6e8d64e178e3928076ccde354a9a3dcc5ecd0c6eb109",
+        "observable_index_sha256": "3daaac050a624902fda0c60e8f17638ebdf3d270596a5b7c7992398976034b6e",
+        "qualitative_index_sha256": "88d398f7416476c8a5b5a0e7ad445bf65eaa01486ee859b25f2f33a2b8cbc261",
+        "screened_families": 61757,
+        "singles_sha256": "0be8b6d7464e4c7915760fdb35014d9354e8d1d0a7eb312c0ce8e539417d2859",
+        "structural_families": 47342,
+        "territory": null
+      },
+      {
+        "K_max": 2,
+        "N": 4,
+        "baseline_equivalent_families": 0,
+        "cancellations": {
+          "genuine_global": 0,
+          "genuine_global_examples": [],
+          "inherited_baseline": 0,
+          "inherited_baseline_examples": [],
+          "local": 112,
+          "local_examples": [
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | absent(0-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | absent(2-3) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | present(0-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | present(2-3) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress",
+              "dissolve(0-1) | absent(0-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress",
+              "dissolve(0-1) | absent(2-3) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress",
+              "dissolve(0-1) | present(0-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress",
+              "dissolve(0-1) | present(2-3) => strong_favour"
+            ]
+          ]
+        },
+        "cardinalities": {
+          "1": {
+            "analysed": 50,
+            "canonical": 50,
+            "canonical_including_stacked": 50,
+            "labelled_combinations": 660,
+            "labelled_simple": 660,
+            "labelled_stacked": 0,
+            "removed_by_symmetry": 610,
+            "stacked_canonical": 0
+          },
+          "2": {
+            "analysed": 9745,
+            "canonical": 9745,
+            "canonical_including_stacked": 9845,
+            "labelled_combinations": 217470,
+            "labelled_simple": 216150,
+            "labelled_stacked": 1320,
+            "removed_by_symmetry": 207625,
+            "stacked_canonical": 100
+          }
+        },
+        "extremes": {
+          "entropy_max": {
+            "expressions": [
+              "form(0-1) => weak_suppress",
+              "form(0-1) | absent(2-3) => weak_favour"
+            ],
+            "kernel": "db5d4192729807de57c43d61857d581fefe37279bdfda7cdd4dbfd88131f8da4",
+            "kind": "float",
+            "value": 2.5749404032758316
+          },
+          "entropy_min": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => prohibit"
+            ],
+            "kernel": "63765f7c0010e57ae9a74a4d93a5f9e4d3fc93f7a5e76ea7d1e2845cae6389a2",
+            "kind": "float",
+            "value": 2.000000000000001
+          },
+          "rise_excess_max": {
+            "expressions": [
+              "form(0-1) => prohibit",
+              "form(0-2) => prohibit"
+            ],
+            "kernel": "f61507ac613c750e1a514cd188985500556d0b04e068f5183ce97164bfb8c67e",
+            "kind": "fraction",
+            "value": "29/288"
+          },
+          "rise_excess_min": {
+            "expressions": [
+              "dissolve(0-1) => prohibit",
+              "dissolve(0-2) => prohibit"
+            ],
+            "kernel": "63765f7c0010e57ae9a74a4d93a5f9e4d3fc93f7a5e76ea7d1e2845cae6389a2",
+            "kind": "fraction",
+            "value": "-397/4500"
+          },
+          "shift_max": {
+            "expressions": [
+              "dissolve(0-1) => strong_favour",
+              "dissolve(0-1) | absent(0-2) => strong_favour"
+            ],
+            "kernel": "f24d82ff716bbecedf03c817680bc79de7c745c20292fd9e987bbd4ba10303bd",
+            "kind": "fraction",
+            "value": "25/42"
+          }
+        },
+        "families": 3929,
+        "family_index_sha256": "e5ded9d492ad18d973bfa4939c8a4c8c47bc0d3c83c2f61bf529e8c985e9f4f0",
+        "histogram": {
+          "closing_max": {},
+          "families": 3929,
+          "n_deadlock": {
+            "0": 3929
+          },
+          "periods": {
+            "2": 3929
+          },
+          "rise_then_release_excess": {
+            "0": -0.08822222222222222,
+            "0.25": -0.014868341894580962,
+            "0.5": 0.008180017585265398,
+            "0.75": 0.02235578205263855,
+            "0.9": 0.03772165832823429,
+            "0.99": 0.05958474910493978,
+            "1": 0.10069444444444445
+          },
+          "shift_max": {
+            "0": 0.07142857142857142,
+            "0.25": 0.16666666666666666,
+            "0.5": 0.2222222222222222,
+            "0.75": 0.2777777777777778,
+            "0.9": 0.2916666666666667,
+            "0.99": 0.3333333333333333,
+            "1": 0.5952380952380952
+          },
+          "support_matches_baseline": 2042
+        },
+        "kernel_index_count": 9595,
+        "kernel_index_sha256": "59ccc85b0293ff41f68cc64a1268e1bd2209f5dca03eecfc56e38b740a2581a0",
+        "observable_index_sha256": "ab679d1dfda47c6bb09ea0e24ae6bc6d49e266b8505938eacd8dee8df7e1f5f2",
+        "qualitative_index_sha256": "4faf8544c1e8166272259d03eda0c19a9275883425979f8bfbc35609a01a9036",
+        "screened_families": 3858,
+        "singles_sha256": "4d760fb0d8fd1779a1dcabf4da474102f1e00309a2076403df76b4ca65ec8d8f",
+        "structural_families": 1887,
+        "territory": null
+      },
+      {
+        "K_max": 2,
+        "N": 5,
+        "baseline_equivalent_families": 0,
+        "cancellations": {
+          "genuine_global": 0,
+          "genuine_global_examples": [],
+          "inherited_baseline": 0,
+          "inherited_baseline_examples": [],
+          "local": 0,
+          "local_examples": []
+        },
+        "cardinalities": {
+          "1": {
+            "analysed": 50,
+            "canonical": 50,
+            "canonical_including_stacked": 50,
+            "labelled_combinations": 1900,
+            "labelled_simple": 1900,
+            "labelled_stacked": 0,
+            "removed_by_symmetry": 1850,
+            "stacked_canonical": 0
+          }
+        },
+        "extremes": {
+          "entropy_max": {
+            "expressions": [
+              "dissolve(0-1) | absent(2-3) => weak_suppress"
+            ],
+            "kernel": "1a99e736f1b38dc24e677db8cccea3d80a697b4972907bc601523198ffd000bc",
+            "kind": "float",
+            "value": 3.315584172271262
+          },
+          "entropy_min": {
+            "expressions": [
+              "dissolve(0-1) => prohibit"
+            ],
+            "kernel": "143a816a0644433e80d37858904546bda710f0114e1d8cb4b366b71b10a213d2",
+            "kind": "float",
+            "value": 3.1699250014425298
+          },
+          "shift_max": {
+            "expressions": [
+              "dissolve(0-1) => strong_favour"
+            ],
+            "kernel": "8008aef3df49a2c2cf60868494a0927d2dec1c97ec25d77073938d4081f9a4fe",
+            "kind": "fraction",
+            "value": "27/130"
+          }
+        },
+        "families": 30,
+        "family_index_sha256": "52dc33c52e720961d6e898ff47107cdaa87b4e96df6e465f77d4bed9c384dc11",
+        "histogram": {
+          "closing_max": {},
+          "families": 30,
+          "n_deadlock": {
+            "0": 30
+          },
+          "periods": {
+            "2": 30
+          },
+          "rise_then_release_excess": {},
+          "shift_max": {
+            "0": 0.06486486486486487,
+            "0.25": 0.07297297297297298,
+            "0.5": 0.1,
+            "0.75": 0.18461538461538463,
+            "0.9": 0.2076923076923077,
+            "0.99": 0.2076923076923077,
+            "1": 0.2076923076923077
+          },
+          "support_matches_baseline": 20
+        },
+        "kernel_index_count": 50,
+        "kernel_index_sha256": "0d0cfa67864fe7014fe1255f46851cd36a1ac7c4ff71ddb30576b9382c1692a0",
+        "observable_index_sha256": "2b622f73f1de9dcce9e4f2fd2874dd9e5e139a3486281c24061f66b3d60bb7fe",
+        "qualitative_index_sha256": "555d33c2297b847e37f7095c973fb2ae1d8eb8fa4a2e3a7664f3aeb753a6592d",
+        "screened_families": 16,
+        "singles_sha256": "718338ebd54aa4532d918a90678bec719fc4af728780cc235ef92543716e4e7f",
+        "structural_families": 10,
+        "territory": null
+      }
+    ],
+    "composition": "structural-simple",
+    "predicates": [
+      "edge"
+    ],
+    "semantic_version": "0.2.0",
+    "spec_hash": "c6ee7765142472162a6d210c45d54f3ab1e8398cdec571b05c553ed68ac5cc74",
+    "status": "COMPLETE"
+  },
+  "semantic_version": "0.2.0",
+  "shard_work_seconds": 1522.7851990000004,
+  "spec_hash": "c6ee7765142472162a6d210c45d54f3ab1e8398cdec571b05c553ed68ac5cc74",
+  "status": "COMPLETE",
+  "territory": null,
+  "unsearched_declared": [
+    "stacked-weight composition",
+    "occupation-count predicates",
+    "N=4 cardinality 3",
+    "N=5 cardinality 2",
+    "N=5 cardinality 3",
+    "N>5",
+    "K above the per-cell K_max",
+    "hypergraph semantics",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0",
+    "O>2",
+    "non-multiplicative composition of weights"
+  ]
+}

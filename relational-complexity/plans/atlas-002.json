@@ -1,0 +1,837 @@
+{
+  "round_id": "atlas-002",
+  "engine_version": "rrc-0.2.0",
+  "grammar_id": "opening-prohibit-multiply-v1",
+  "definitions_commit": "c4e404a01f24d278659832103c6c53b8bd3f5bdb",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q05"
+  ],
+  "selection": "Uncovered carrier row. Not a transplant of the atlas-001 lists. Not scheduled to explain PAT-001, PAT-002, or PAT-003.",
+  "placement_rule": "On each listed carrier the event is the first edge and the condition is the second edge. That choice is an instrument of the listing.",
+  "tolerances": {
+    "stationary_successive_l1": 1e-12,
+    "cross_check_l1": 1e-08,
+    "max_iter": 10000,
+    "dense_max_states": 1024
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-002-preflight.md",
+    "heaviest_cell_s": 0.003,
+    "shape": "N=4 listed 4-cycle, one formation prohibit, common core",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "n": 4,
+    "carriers": [
+      "chain",
+      "branch",
+      "cycle",
+      "disconnected"
+    ],
+    "grammars": [
+      "baseline",
+      "one prohibit",
+      "one multiply",
+      "one formation prohibit"
+    ],
+    "cells": 16,
+    "complete_carrier_not_repeated": true,
+    "six_is_not_a_target": true,
+    "excluded": [
+      "complete carrier",
+      "N=5",
+      "both-polarity prohibits",
+      "duplicate text",
+      "count predicates",
+      "history",
+      "independent hyperedges",
+      "composition depth >= 1",
+      "sampling"
+    ]
+  },
+  "stopping": [
+    "Do not add, remove or edit items after this file is committed.",
+    "Do not widen tolerances after an item has run.",
+    "A failed, timed-out or unresolved item stays in that state.",
+    "Do not describe an unrun item as a result.",
+    "Do not treat these four carriers as every graph on four nodes."
+  ],
+  "items": [
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [],
+      "id": "A2-chain-base",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-C00"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "baseline"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "id": "A2-chain-pro",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-C01"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "single_prohibit"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "id": "A2-chain-mul",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-C02"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "single_multiply"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "id": "A2-chain-form",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-C04"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "direction_form"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [],
+      "id": "A2-branch-base",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C00"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "baseline"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "id": "A2-branch-pro",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C01"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "single_prohibit"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "id": "A2-branch-mul",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C02"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "single_multiply"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "id": "A2-branch-form",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C04"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "direction_form"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [],
+      "id": "A2-cycle-base",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C00"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "baseline"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "id": "A2-cycle-pro",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C01"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "single_prohibit"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "id": "A2-cycle-mul",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C02"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "single_multiply"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "id": "A2-cycle-form",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C04"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "direction_form"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [],
+      "id": "A2-disconnected-base",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R04",
+        "IDEA-C00"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "baseline"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "id": "A2-disconnected-pro",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R04",
+        "IDEA-C01"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "single_prohibit"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "id": "A2-disconnected-mul",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R04",
+        "IDEA-C02"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "single_multiply"
+    },
+    {
+      "baseline": 1,
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "max_iter": 10000,
+      "n": 4,
+      "round_id": "atlas-002",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "id": "A2-disconnected-form",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R04",
+        "IDEA-C04"
+      ],
+      "placement": "event is the first listed edge; condition is the second listed edge",
+      "role": "direction_form"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+flowchart TD
+  O["O: relation-slot order"] --> X["Current relational bit space"]
+  K["K: per-rule token complexity"] --> F["Available literal features"]
+  J["J: number of simultaneous rules"] --> SUM["Log-weight feature sum"]
+  F --> SUM
+  X --> F
+  SUM --> D["Derived: effective gates / interaction order / law rows / essential coordinates"]
+  H["H: history dependence"] -. "different represented state" .-> X
+  L["L: dynamical constraint state"] -. "different rule interpretation" .-> SUM
+  W["W: multiplier alphabet"] --> SUM

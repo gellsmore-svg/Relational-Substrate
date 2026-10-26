@@ -1,0 +1,1124 @@
+{
+  "round_id": "atlas-001",
+  "engine_version": "rrc-0.2.0",
+  "grammar_id": "opening-prohibit-multiply-v1",
+  "definitions_commit": "c4e404a01f24d278659832103c6c53b8bd3f5bdb",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q01",
+    "ATLAS-Q02",
+    "ATLAS-Q03",
+    "ATLAS-Q04"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q05",
+    "ATLAS-Q06"
+  ],
+  "tolerances": {
+    "stationary_successive_l1": 1e-12,
+    "cross_check_l1": 1e-08,
+    "max_iter": 10000,
+    "dense_max_states": 1024
+  },
+  "grammar": {
+    "id": "opening-prohibit-multiply-v1",
+    "note": "docs/atlas-grammar.md. Effects are prohibit and multiply. The composer is order-independent.",
+    "baseline": 1,
+    "factor": 4,
+    "carrier": "complete"
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-001-preflight.md",
+    "heaviest_cell_s": 0.013,
+    "shape": "N=4 complete carrier, three constraints, common core",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "sizes": [
+      3,
+      4
+    ],
+    "grammars": 12,
+    "cells": 24,
+    "not_exhaustive_literal_placement": true,
+    "six_is_not_a_target": true,
+    "excluded": [
+      "N=5 complete carrier",
+      "N=6",
+      "N>=7 exhaustive kernels",
+      "listed carriers",
+      "count predicates",
+      "history",
+      "independent hyperedges",
+      "composition depth >= 1",
+      "sampling",
+      "lumpability",
+      "path index"
+    ]
+  },
+  "stopping": [
+    "Do not add, remove or edit items after this file is committed.",
+    "Do not widen tolerances after an item has run.",
+    "A failed, timed-out or unresolved item stays in that state.",
+    "Incomplete or invalid records may be recomputed only under the same spec.",
+    "Do not describe an unrun item as a result.",
+    "Do not treat this batch as every literal placement on these nodes."
+  ],
+  "items": [
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N3-01-base",
+      "idea_ids": [
+        "IDEA-C00"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "baseline",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N3-02-pro-present",
+      "idea_ids": [
+        "IDEA-C01",
+        "IDEA-L05"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "single_prohibit",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N3-03-mul-present",
+      "idea_ids": [
+        "IDEA-C02",
+        "IDEA-L05"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "single_multiply",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "absent"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N3-04-mul-absent",
+      "idea_ids": [
+        "IDEA-C03"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "polarity_contrast",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N3-05-pro-form",
+      "idea_ids": [
+        "IDEA-C04"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "direction_form",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "dissolve",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N3-06-pro-dissolve",
+      "idea_ids": [
+        "IDEA-C04"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "direction_dissolve",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N3-07-two-mul-same",
+      "idea_ids": [
+        "IDEA-C05",
+        "IDEA-C07",
+        "IDEA-L02"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "same_event",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N3-08-pro-and-mul-same",
+      "idea_ids": [
+        "IDEA-C05",
+        "IDEA-C07"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "same_event",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N3-09-two-events",
+      "idea_ids": [
+        "IDEA-C06",
+        "IDEA-L02",
+        "IDEA-L07"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "two_events",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N3-10-three-mix",
+      "idea_ids": [
+        "IDEA-C06",
+        "IDEA-L03",
+        "IDEA-L07"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "three_constraints",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N3-11-duplicate-pro",
+      "idea_ids": [
+        "IDEA-C05",
+        "IDEA-C07"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "duplicate_text",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "absent"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N3-12-pro-both-polarities",
+      "idea_ids": [
+        "IDEA-C01"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "both_polarities",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N4-01-base",
+      "idea_ids": [
+        "IDEA-C00"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "baseline",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N4-02-pro-present",
+      "idea_ids": [
+        "IDEA-C01",
+        "IDEA-L05"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "single_prohibit",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N4-03-mul-present",
+      "idea_ids": [
+        "IDEA-C02",
+        "IDEA-L05"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "single_multiply",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "absent"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N4-04-mul-absent",
+      "idea_ids": [
+        "IDEA-C03"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "polarity_contrast",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N4-05-pro-form",
+      "idea_ids": [
+        "IDEA-C04"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "direction_form",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "dissolve",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N4-06-pro-dissolve",
+      "idea_ids": [
+        "IDEA-C04"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "direction_dissolve",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N4-07-two-mul-same",
+      "idea_ids": [
+        "IDEA-C05",
+        "IDEA-C07",
+        "IDEA-L02"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "same_event",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N4-08-pro-and-mul-same",
+      "idea_ids": [
+        "IDEA-C05",
+        "IDEA-C07"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "same_event",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N4-09-two-events",
+      "idea_ids": [
+        "IDEA-C06",
+        "IDEA-L02",
+        "IDEA-L07"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "two_events",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "factor": 4,
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N4-10-three-mix",
+      "idea_ids": [
+        "IDEA-C06",
+        "IDEA-L03",
+        "IDEA-L07"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "three_constraints",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N4-11-duplicate-pro",
+      "idea_ids": [
+        "IDEA-C05",
+        "IDEA-C07"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "duplicate_text",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "absent"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A-N4-12-pro-both-polarities",
+      "idea_ids": [
+        "IDEA-C01"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "both_polarities",
+      "round_id": "atlas-001",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    }
+  ]
+}

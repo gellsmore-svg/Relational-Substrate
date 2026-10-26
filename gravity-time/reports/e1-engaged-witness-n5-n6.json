@@ -1,0 +1,446 @@
+[
+ {
+  "mode": "HELD",
+  "n": 5,
+  "family": "CSPH",
+  "grade": "strong_favour+weak_favour",
+  "census": {
+   "close_form:strong_favour": {
+    "event_share": 0.49999999999999956,
+    "mean_witnesses": 0.9859593978429345,
+    "mean_log_weight": 1.366829953522823
+   },
+   "path_dissolve:weak_favour": {
+    "event_share": 0.5000000000000003,
+    "mean_witnesses": 3.750129978746024,
+    "mean_log_weight": 2.599392021501134
+   }
+  }
+ },
+ {
+  "mode": "HELD",
+  "n": 5,
+  "family": "CSPF",
+  "grade": "strong_favour+weak_suppress",
+  "census": {
+   "close_form:strong_favour": {
+    "event_share": 0.5000000000000007,
+    "mean_witnesses": 0.632715623047331,
+    "mean_log_weight": 0.8771301004229732
+   },
+   "path_form:weak_suppress": {
+    "event_share": 0.5000000000000007,
+    "mean_witnesses": 2.6025997073572027,
+    "mean_log_weight": -1.8039846492807838
+   }
+  }
+ },
+ {
+  "mode": "HELD",
+  "n": 5,
+  "family": "CWPH",
+  "grade": "weak_favour+weak_favour",
+  "census": {
+   "close_form:weak_favour": {
+    "event_share": 0.49999999999999956,
+    "mean_witnesses": 0.5483604593803615,
+    "mean_log_weight": 0.380094506350054
+   },
+   "path_dissolve:weak_favour": {
+    "event_share": 0.5000000000000006,
+    "mean_witnesses": 3.133849664235893,
+    "mean_log_weight": 2.1722190590638406
+   }
+  }
+ },
+ {
+  "mode": "HELD",
+  "n": 5,
+  "family": "CWPF",
+  "grade": "weak_favour+weak_suppress",
+  "census": {
+   "close_form:weak_favour": {
+    "event_share": 0.5000000000000006,
+    "mean_witnesses": 0.3163040202834961,
+    "mean_log_weight": 0.21924523985928104
+   },
+   "path_form:weak_suppress": {
+    "event_share": 0.5000000000000006,
+    "mean_witnesses": 2.1686243628845294,
+    "mean_log_weight": -1.5031758628270193
+   }
+  }
+ },
+ {
+  "mode": "HELD",
+  "n": 5,
+  "family": "PATHF",
+  "grade": "weak_suppress",
+  "census": {
+   "path_form:weak_suppress": {
+    "event_share": 0.5000000000000003,
+    "mean_witnesses": 1.959250635818425,
+    "mean_log_weight": -1.3580490542278214
+   }
+  }
+ },
+ {
+  "mode": "HELD",
+  "n": 5,
+  "family": "PATHH",
+  "grade": "weak_favour",
+  "census": {
+   "path_dissolve:weak_favour": {
+    "event_share": 0.49999999999999956,
+    "mean_witnesses": 2.7545505362093876,
+    "mean_log_weight": 1.9093089378834225
+   }
+  }
+ },
+ {
+  "mode": "HELD",
+  "n": 5,
+  "family": "CLOSEW",
+  "grade": "weak_favour",
+  "census": {
+   "close_form:weak_favour": {
+    "event_share": 0.5000000000000014,
+    "mean_witnesses": 2.357366045596566,
+    "mean_log_weight": 1.6340016280530072
+   }
+  }
+ },
+ {
+  "mode": "HELD",
+  "n": 6,
+  "family": "CSPH",
+  "grade": "strong_favour+weak_favour",
+  "census": {
+   "close_form:strong_favour": {
+    "event_share": 0.5000000000000008,
+    "mean_witnesses": 0.835745406654968,
+    "mean_log_weight": 1.158589144577632
+   },
+   "path_dissolve:weak_favour": {
+    "event_share": 0.4999999999999992,
+    "mean_witnesses": 4.097058952397675,
+    "mean_log_weight": 2.8398648614423316
+   }
+  }
+ },
+ {
+  "mode": "HELD",
+  "n": 6,
+  "family": "CSPF",
+  "grade": "strong_favour+weak_suppress",
+  "census": {
+   "close_form:strong_favour": {
+    "event_share": 0.5000000000000002,
+    "mean_witnesses": 0.5289596845615416,
+    "mean_log_weight": 0.7332938279674212
+   },
+   "path_form:weak_suppress": {
+    "event_share": 0.5000000000000002,
+    "mean_witnesses": 2.191953825870934,
+    "mean_log_weight": -1.5193466143200232
+   }
+  }
+ },
+ {
+  "mode": "HELD",
+  "n": 6,
+  "family": "CWPH",
+  "grade": "weak_favour+weak_favour",
+  "census": {
+   "close_form:weak_favour": {
+    "event_share": 0.5000000000000007,
+    "mean_witnesses": 0.46588123857981323,
+    "mean_log_weight": 0.32292426699737276
+   },
+   "path_dissolve:weak_favour": {
+    "event_share": 0.4999999999999992,
+    "mean_witnesses": 3.4381479363643823,
+    "mean_log_weight": 2.3831425484389657
+   }
+  }
+ },
+ {
+  "mode": "HELD",
+  "n": 6,
+  "family": "CWPF",
+  "grade": "weak_favour+weak_suppress",
+  "census": {
+   "close_form:weak_favour": {
+    "event_share": 0.5000000000000002,
+    "mean_witnesses": 0.29788043925194296,
+    "mean_log_weight": 0.2064749866114423
+   },
+   "path_form:weak_suppress": {
+    "event_share": 0.5000000000000002,
+    "mean_witnesses": 1.875462823210265,
+    "mean_log_weight": -1.2999717681531904
+   }
+  }
+ },
+ {
+  "mode": "HELD",
+  "n": 6,
+  "family": "PATHF",
+  "grade": "weak_suppress",
+  "census": {
+   "path_form:weak_suppress": {
+    "event_share": 0.5000000000000003,
+    "mean_witnesses": 1.7313537075554295,
+    "mean_log_weight": -1.200082940944054
+   }
+  }
+ },
+ {
+  "mode": "HELD",
+  "n": 6,
+  "family": "PATHH",
+  "grade": "weak_favour",
+  "census": {
+   "path_dissolve:weak_favour": {
+    "event_share": 0.49999999999999933,
+    "mean_witnesses": 3.034310354954464,
+    "mean_log_weight": 2.103223667480534
+   }
+  }
+ },
+ {
+  "mode": "HELD",
+  "n": 6,
+  "family": "CLOSEW",
+  "grade": "weak_favour",
+  "census": {
+   "close_form:weak_favour": {
+    "event_share": 0.5000000000000018,
+    "mean_witnesses": 3.461000510059364,
+    "mean_log_weight": 2.3989827454641808
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 5,
+  "family": "CSPH",
+  "grade": "strong_favour+weak_favour",
+  "census": {
+   "close_form:strong_favour": {
+    "event_share": 0.4999999999999992,
+    "mean_witnesses": 0.8021963658142597,
+    "mean_log_weight": 1.112080298439177
+   },
+   "path_dissolve:weak_favour": {
+    "event_share": 0.5000000000000007,
+    "mean_witnesses": 2.7282456439473752,
+    "mean_log_weight": 1.8910757759770755
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 5,
+  "family": "CSPF",
+  "grade": "strong_favour+weak_suppress",
+  "census": {
+   "close_form:strong_favour": {
+    "event_share": 0.4999999999999993,
+    "mean_witnesses": 0.6268819947106407,
+    "mean_log_weight": 0.8690429743549503
+   },
+   "path_form:weak_suppress": {
+    "event_share": 0.4999999999999993,
+    "mean_witnesses": 1.0593265707719475,
+    "mean_log_weight": -0.7342692258228107
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 5,
+  "family": "CWPH",
+  "grade": "weak_favour+weak_favour",
+  "census": {
+   "close_form:weak_favour": {
+    "event_share": 0.4999999999999998,
+    "mean_witnesses": 0.5131916013730549,
+    "mean_log_weight": 0.35571731157877634
+   },
+   "path_dissolve:weak_favour": {
+    "event_share": 0.5000000000000003,
+    "mean_witnesses": 2.0096800946281936,
+    "mean_log_weight": 1.3930040914189765
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 5,
+  "family": "CWPF",
+  "grade": "weak_favour+weak_suppress",
+  "census": {
+   "close_form:weak_favour": {
+    "event_share": 0.5000000000000003,
+    "mean_witnesses": 0.4376262637997173,
+    "mean_log_weight": 0.3033394108917569
+   },
+   "path_form:weak_suppress": {
+    "event_share": 0.5000000000000003,
+    "mean_witnesses": 0.774709231989456,
+    "mean_log_weight": -0.536987519907252
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 5,
+  "family": "PATHF",
+  "grade": "weak_suppress",
+  "census": {
+   "path_form:weak_suppress": {
+    "event_share": 0.5000000000000009,
+    "mean_witnesses": 0.6369221627365022,
+    "mean_log_weight": -0.4414808013369491
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 5,
+  "family": "PATHH",
+  "grade": "weak_favour",
+  "census": {
+   "path_dissolve:weak_favour": {
+    "event_share": 0.5000000000000002,
+    "mean_witnesses": 1.5535399847504485,
+    "mean_log_weight": 1.0768318603169138
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 5,
+  "family": "CLOSEW",
+  "grade": "weak_favour",
+  "census": {
+   "close_form:weak_favour": {
+    "event_share": 0.500000000000002,
+    "mean_witnesses": 1.9420413381632113,
+    "mean_log_weight": 1.3461204780786933
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 6,
+  "family": "CSPH",
+  "grade": "strong_favour+weak_favour",
+  "census": {
+   "close_form:strong_favour": {
+    "event_share": 0.49999999999999983,
+    "mean_witnesses": 0.7345975232870717,
+    "mean_log_weight": 1.018368404225505
+   },
+   "path_dissolve:weak_favour": {
+    "event_share": 0.5,
+    "mean_witnesses": 3.28651764895677,
+    "mean_log_weight": 2.278040442234885
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 6,
+  "family": "CSPF",
+  "grade": "strong_favour+weak_suppress",
+  "census": {
+   "close_form:strong_favour": {
+    "event_share": 0.5000000000000006,
+    "mean_witnesses": 0.5763916343039085,
+    "mean_log_weight": 0.7990484724321865
+   },
+   "path_form:weak_suppress": {
+    "event_share": 0.5000000000000006,
+    "mean_witnesses": 1.2678434090653585,
+    "mean_log_weight": -0.8788020843851626
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 6,
+  "family": "CWPH",
+  "grade": "weak_favour+weak_favour",
+  "census": {
+   "close_form:weak_favour": {
+    "event_share": 0.4999999999999999,
+    "mean_witnesses": 0.47553067202606203,
+    "mean_log_weight": 0.32961274458464096
+   },
+   "path_dissolve:weak_favour": {
+    "event_share": 0.4999999999999999,
+    "mean_witnesses": 2.5585711166886855,
+    "mean_log_weight": 1.773466355794873
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 6,
+  "family": "CWPF",
+  "grade": "weak_favour+weak_suppress",
+  "census": {
+   "close_form:weak_favour": {
+    "event_share": 0.49999999999999944,
+    "mean_witnesses": 0.4023529729560836,
+    "mean_log_weight": 0.27888982879442126
+   },
+   "path_form:weak_suppress": {
+    "event_share": 0.49999999999999944,
+    "mean_witnesses": 1.0133820331045578,
+    "mean_log_weight": -0.7024228990765293
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 6,
+  "family": "PATHF",
+  "grade": "weak_suppress",
+  "census": {
+   "path_form:weak_suppress": {
+    "event_share": 0.499999999999999,
+    "mean_witnesses": 0.8857603955054973,
+    "mean_log_weight": -0.6139623207962975
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 6,
+  "family": "PATHH",
+  "grade": "weak_favour",
+  "census": {
+   "path_dissolve:weak_favour": {
+    "event_share": 0.4999999999999999,
+    "mean_witnesses": 2.0681991030784546,
+    "mean_log_weight": 1.4335663771354383
+   }
+  }
+ },
+ {
+  "mode": "FREE",
+  "n": 6,
+  "family": "CLOSEW",
+  "grade": "weak_favour",
+  "census": {
+   "close_form:weak_favour": {
+    "event_share": 0.5000000000000024,
+    "mean_witnesses": 3.2466872078400146,
+    "mean_log_weight": 2.250432084274347
+   }
+  }
+ }
+]

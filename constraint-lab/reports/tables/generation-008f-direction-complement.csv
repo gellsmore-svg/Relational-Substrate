@@ -1,0 +1,9 @@
+epoch_kernel_gap,full_kernel_gap,grade,model,same_labelled_source_mapped,state_map
+0.0,0.0,strong_suppress,K3,False,s xor 63
+0.0,0.0,strong_suppress,ENDPOINT,False,s xor 63
+0.0,0.0,strong_suppress,PROJECTION,False,s xor 63
+0.0,0.0,strong_suppress,DRIFT,False,s xor 63
+0.0,0.0,strong_favour,K3,False,s xor 63
+0.0,0.0,strong_favour,ENDPOINT,False,s xor 63
+0.0,0.0,strong_favour,PROJECTION,False,s xor 63
+0.0,0.0,strong_favour,DRIFT,False,s xor 63
