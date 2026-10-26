@@ -1145,3 +1145,23 @@ operator, general laws, exact counterexamples and representation/type limits.
 There is no unfinished selected experiment or scientific blocker. All broad
 questions remain open, the atlas stays 218 with 15 excluded failures, and the
 next research question must be selected independently.
+
+## Next structural-composition OTR selection — 26 October 2026
+
+Starting local HEAD was 47e9cbe; after fetching the new prompt, live research
+HEAD is `b1aacb73f68a1e59789eeb1d9e7883f3c3ee81c6`. Main is still 47e9cbe.
+All registered worktrees were checked; no unpublished new inquiry was found.
+All 247 baseline tests and live-HEAD CI pass, and protected output hashes match.
+
+`docs/2026-10-26-switching-link-selection.md` selects a binary attachment relation
+that switches actors between local and joint updates. The inquiry distinguishes
+an independent link coordinate from a derived description, asks whether a fixed
+label/controller protocol exactly compiles it, and studies the coarsest exact
+current-state refinement retaining the actor configuration. A same-clock
+support comparison is scoped separately from ordinary finite-state reduction.
+
+The analysis-only method will be `switching-link-analysis-0.1.0`; no new frozen
+experiment or result is claimed by selection. The atlas stays 218 with 15
+historical failures excluded. Atlas-019/020 and generated files remain untouched
+and unadopted. Automatic integration follows only after actual completion and
+passing applicable CI.
