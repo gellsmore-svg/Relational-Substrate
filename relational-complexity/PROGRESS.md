@@ -798,3 +798,19 @@ There is no current blocker and no unfinished selected experiment. Atlas-019
 and Atlas-020 remain deferred, unchanged and unadopted; their untracked local
 outputs are intentionally preserved. The scientific atlas remains at 218 cells,
 not 218 plus the software fixture counts.
+
+## Relational-composition OTR selection — 26 October 2026
+
+The newest prompt is `prompts/2026-10-26-relational-composition-and-dynamics/RESEARCH-PROMPT.md`
+at `c2f71ca`, format-corrected at `ec6888c`. Starting live HEAD is
+`2bda78f45d3032a2d3f923863390bba4f2eb3d89`; the worktree was fast-forwarded
+without changing deferred outputs. Starting CI and all 193 baseline tests pass.
+
+`docs/2026-10-26-sync-selection.md` selects typed composition by labelled-event
+synchronisation, its iteration, and preservation or loss of exact component
+descriptions. The product-of-weights handshake and final-only normalisation
+are explicit instruments. The analysis-only method is
+`label-sync-analysis-0.1.0`; no existing scientific method changes. This is an
+analytic inquiry with predeclared independent fixture domains, not a frozen
+experiment. The atlas remains 218 complete cells and 15 excluded failures;
+Atlas-019/020 remain deferred/unadopted. Proof and checks follow separately.
