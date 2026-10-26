@@ -132,3 +132,30 @@ controls and 243 hidden-update contexts, plus typed boundary controls. None is a
 scientific cell. The atlas remains 218 adopted cells with 15 historical failures
 excluded; Atlas-019/020 remain deferred, untouched and unadopted. All broad
 questions remain open.
+
+## Uniform contexts and finite separating partners
+
+The next analytical increment is `reports/2026-10-26-contextual-preservation.md`,
+with exact quantifiers and proofs in `docs/contextual-preservation.md`.
+EQ-038 and RRC-I08 characterize uniform preservation for every finite same-H
+partner that may offer private competing events, when the observer sees the
+component observation and full partner state but no labels. The contract keeps
+each shared label's raw block weights and one aggregate private block vector.
+One private-only two-state probe and one three-state probe per shared label
+suffice: calibration-branch ratios recover every necessary raw weight.
+
+EQ-039 and RRC-I09 give private-label collapse as a weighted-product congruence.
+The old full-label condition is not necessary even across all these contexts:
+hidden p/q private allocation can differ harmlessly. This conclusion depends
+on fixed H and the label-blind observer. Making p/q shared or seeing emitted
+labels changes the result. Private internal-block weight still matters: a
+partner move distinguishes one private self-loop from halt even when the
+component observation is constant. A shared-only partner can hide raw scale;
+the necessity theorem is not asserted for that restricted context class.
+
+IDEA-L26, PAT-019, RRC-R066 through RRC-R070 and two analytical coverage rows
+keep these scope distinctions navigable. The 1452 software systems give 4356
+probe laws and 5808 exact signature reconstructions; they are independent
+validation of proofs, not scientific cells. The count stays 218 adopted cells,
+excluding 15 historical failures. All broad questions remain open and the
+deferred Atlas-019/020 outputs and decisions remain unchanged.

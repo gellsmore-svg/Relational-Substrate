@@ -901,3 +901,54 @@ allowed. Small calibrated probes and a proposed shared-label/private-aggregate
 signature will be independently challenged. No result is claimed by this
 selection alone. Existing methods, frozen history and the scientific count of
 218 are unchanged. Atlas-019/020 remain deferred with their original hashes.
+
+## Uniform-context inquiry complete — 26 October 2026
+
+The selected mathematical inquiry is complete. Full proof and boundary cases
+are `docs/contextual-preservation.md`; the report and restart point are
+`reports/2026-10-26-contextual-preservation.md`. This is an analytical increment,
+not an experimental round or a prepared method awaiting scientific execution.
+
+For the existing fixed-H product, pi times partner identity is strongly lumpable
+for every finite allowed partner with private competing events exactly when
+each shared label's raw block weights and the aggregate private block weights
+are constant within source blocks. This equivalently holds for a finite family
+of 1+|H| probes of at most three states. The necessity proof uses observed
+calibration-branch ratios; the sufficiency proof gives the general block-row
+formula and handles halt. No finite menu is used to infer all-context validity.
+
+Collapsing private labels commutes with this weighted product. Thus the previous
+full-label sufficient condition is not necessary even for every partner in
+this state-only class. Private p/q allocation can be forgotten; private raw
+weight, including internal-block events, cannot generally be erased. Fixed H,
+full partner-state observation and allowed private calibration are essential
+quantifiers. Emitted-label observation, changed H and shared-only partner
+classes are separate boundaries. This is not weak/silent-transition erasure,
+new membership state, a causal intervention or a physical timescale claim.
+
+Method `context-probe-analysis-0.1.0` independently compares raw event signatures
+with dense matrix composition and Fraction block aggregation. The predeclared
+22 templates give 484 ordered hidden-row pairs and, across hold/flip/reset,
+1452 validation systems, 4356 probe laws and 5808 reconstructed state signatures.
+There are 66 stable and 1386 unstable cases in this software menu; those counts
+are not scientific frequencies. Sparse-event compatibility, private-collapse
+raw matrices and hand-derived fractions provide additional checks.
+
+All 223 local tests pass (204 baseline plus 19 new). Saved deterministic evidence
+is `provenance/2026-10-26-context-verification.json`, SHA-256
+`31a3a9713ba32dd7c8a9445de9605bc36b5d414d6a41855a71e678ffc92d9663`.
+No existing engine, event-kernel or analysis method is modified. The established
+weighted-bisimulation criterion is used after explicit relabelling; this is not
+claimed as a new universal process-algebra theorem.
+
+New append-only records: RRC-I08/RRC-I09, RRC-R066 through RRC-R070,
+EQ-038/EQ-039, PAT-019, IDEA-L26 and two analytical coverage rows. All broad
+questions stay open. There are zero scientific worker invocations and zero new
+adopted cells. The atlas remains 218, with 15 failed historical items excluded.
+Atlas-019/020 remain deferred and unadopted with their original local bytes;
+frozen history and all other programmes remain unchanged.
+
+No selected experiment is unfinished and no blocker remains. A later inquiry
+may change the partner class, interface, observer or policy, but none is
+scheduled. Publish this proof/check increment and record its exact commit/CI
+checkpoint before handing off.
