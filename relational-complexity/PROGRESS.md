@@ -857,3 +857,31 @@ state-interface identification, changing membership or weaker contextual
 quotients. None is prescribed as a follow-up experiment. There is no unfinished
 selected experiment or current blocker. Published commit and CI evidence follow
 in the handoff checkpoint.
+
+## Published synchronization-analysis checkpoint — 26 October 2026
+
+Starting live HEAD: `2bda78f45d3032a2d3f923863390bba4f2eb3d89`.
+Published selection: `df0ccb6c34d07153567299eb3e3d3b2f88205383`,
+`research: select synchronising composition and quotient-preservation inquiry`.
+Published substantive research ending: `fea15cf1cd6474dff38eee039157c981a013910c`,
+`research: establish synchronising composition and quotient-preservation limits`.
+Both were executed and pushed as user cello to
+`research/recursive-relational-complexity`. The final documentation-only
+checkpoint is the branch tip reported in the session handoff.
+
+The substantive commit contains methods/proofs, report, independent checker,
+exact JSON evidence, 11 tests, crosswalk, append-only registers and the journal.
+All 204 local tests passed. GitHub Actions
+[run 40341762616](https://github.com/gellsmore-svg/Relational-Substrate/actions/runs/40341762616)
+has passed its relational-complexity and books jobs; constraint-lab is still
+running at this checkpoint. That is the observed job status, not a claim that
+the full workflow has completed. The earlier selection workflow passed in full.
+
+Restart at `reports/2026-10-26-sync-composition.md` and
+`docs/labelled-sync-composition.md`. Keep labelwise weighted preservation
+separate from standalone kernel equivalence and from necessity for a particular
+partner. Further policy comparisons or state-interface constructions require
+their own contracts; no next experiment is scheduled. There is no unfinished
+selected inquiry. Frozen history and engine source are unchanged, all broad
+questions remain open, and the only untracked paths are the preserved deferred
+Atlas-019/020 outputs. The atlas count is 218, not 218 plus software fixtures.
