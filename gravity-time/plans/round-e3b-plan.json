@@ -1,0 +1,338 @@
+{
+  "adaptive_choice_note": "E3B was chosen because of E3A finding 6 and the post hoc derivation T7/T8 (gt-e3a-reflection.md sections 2 and 4, commit 1e5ebc3); it is not independent confirmation and E3A is unchanged",
+  "analysis_only": true,
+  "analysis_version": "gt-e3b/v1",
+  "chosen_because": "gravity-time/reports/gt-e3a-reflection.md section 4",
+  "clocks": "as E3A; attachment margins in both clocks",
+  "comparisons": {
+    "F1_margin_shift": "for each cell and N, the change (neutralised minus original) of the raw, ceiling-normalised and null-density-standardised attachment margins and the detached fraction, both clocks; whether any sigma>0 family's margin becomes positive once the floor is removed",
+    "F2_orientation": "change of handover index, partner index and irreversible flux (T8 fixes the affinities, not the aggregate)",
+    "F3_sign_structure": "whether the floor's effect on attachment has the sign opposite to sigma in every path family (from T7/T8: against attachment for sigma>0)",
+    "no_aggregate_score": "no ranking"
+  },
+  "controls_and_identities": {
+    "C1": "CLOSEW and NULL (no path component): every channel unchanged (<= 1e-12)",
+    "C2": "PCOMP (floor on formation and dissolution, equal): every channel unchanged (<= 1e-9)",
+    "K": "the neutralised kernel equals the original on every non-attachment slot (ratio deviation <= 1e-15)",
+    "T7": "every attachment slot has exactly two wholly-internal source witnesses in every reachable state; every probe-probe slot has none",
+    "T8": "max |A_neutralised - A_original| <= 1e-12 over every intact elementary square; the neutralised kernel also satisfies the square identity",
+    "Z5": "per kernel: stationary resolved and residual, GTH referee, long-double residual, symmetry; kernel sample check (rule strings) on the original",
+    "separation_note": "T7, T8, K, C1 and C2 are identities; nothing predicts the size or sign of any margin, index or flux change"
+  },
+  "deliberate_omissions": {
+    "n7_free": "not run",
+    "other_source_structures": "held out (would need a configurable scaffold)",
+    "trajectories": "not generated"
+  },
+  "estimands": "original and neutralised channels (margins in three forms and both clocks, detached fractions, flux, expected relations, handover and partner indices) and their differences; T7/T8 checks",
+  "experiment_id": "gt-round-e3b-source-witness-floor",
+  "families": {
+    "CLOSEW": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "close_form"
+          }
+        ],
+        "sigma": 0.0
+      }
+    },
+    "CSPH": {
+      "strong_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "strong_favour",
+            "kind": "close_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "sigma": 0.6931471805599453
+      }
+    },
+    "CWPH": {
+      "weak_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "close_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "sigma": 0.6931471805599453
+      }
+    },
+    "NULL": {
+      "none": {
+        "components": [],
+        "sigma": 0.0
+      }
+    },
+    "PATHF": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_form"
+          }
+        ],
+        "sigma": -0.6931471805599453
+      },
+      "weak_suppress": {
+        "components": [
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          }
+        ],
+        "sigma": 0.6931471805599453
+      }
+    },
+    "PATHH": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "sigma": 0.6931471805599453
+      },
+      "weak_suppress": {
+        "components": [
+          {
+            "grade": "weak_suppress",
+            "kind": "path_dissolve"
+          }
+        ],
+        "sigma": -0.6931471805599453
+      }
+    },
+    "PCOMP": {
+      "weak_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "sigma": 0.0
+      }
+    }
+  },
+  "history": false,
+  "initial_conditions": "HELD start state (source triangle); reachable class",
+  "instrument_note": "the neutralised kernel divides each attachment rate by prod over path components of m^(internal witnesses) (= m^2), on formations for path_form and dissolutions for path_dissolve. It is not a grammar rule and not label-covariant; it is a counterfactual instrument to measure the share of an effect produced by the held triangle's own witnesses",
+  "items": [
+    {
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N5-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-PATHF-weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N5-PATHH-weak_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "HELD-N5-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "CWPH",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N5-CWPH-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N5-PCOMP-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "HELD-N5-NULL-none",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N6-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-PATHF-weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N6-PATHH-weak_suppress",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "HELD-N6-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "CWPH",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N6-CWPH-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N6-PCOMP-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "HELD-N6-NULL-none",
+      "mode": "HELD",
+      "n": 6
+    }
+  ],
+  "meta_constraints": false,
+  "method": {
+    "name": "Open-Thetical Research",
+    "path": "research-methods/open-thetical-research.md",
+    "version": "1.0"
+  },
+  "mode": "B",
+  "new_primitives": false,
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      5,
+      6
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL"
+  },
+  "open_questions_without_prediction": [
+    "How much of each path family's attachment deficit (relative to the size-specific null) does the source-witness floor account for?",
+    "Does any sigma>0 family (path_form suppress, path_dissolve favour, CSPH, CWPH) gather once the floor is removed, in any form or clock?",
+    "Do the handover index, partner index and flux change, given that the affinities do not?",
+    "Anything not anticipated above."
+  ],
+  "parameter_fit": false,
+  "plan_hash": "a74455659abc0ebf58cce3c6e7ae52420682adbecf6b703bb9c5128437094178",
+  "pre_freeze_exposure": {
+    "e3a": "all E3A results read (they motivate E3B)",
+    "published": "the original kernels of HELD N=5/6 PATHF and PATHH weak grades, CSPH, CWPH, PCOMP, CLOSEW and NULL are published (E0A/E0B/E1/E2A); their standard channels are known. No neutralised kernel was computed before freezing; plumbing tests use HELD N=4 only",
+    "reference_hashes": {
+      "gravity-time/docs/e3-formal-support-and-recovery.md": "300a6090039a76038c4a63f1def10327c8af6e0bd8207d5a8178befb8dbe9ead",
+      "gravity-time/plans/round-e3a-plan.json": "b4425150a9d1535204af0c3de49a3db7cba0f5cad33f316fe4327f9edd4a2714",
+      "gravity-time/provenance/prompts/GT-P006-agent-input.md": "59dd5c5b668b8c04674ae59b1a099b681b75c971d5b0b5834c5633281042aa23",
+      "gravity-time/reports/gt-e3a-reflection.md": "34532cd1ac2e51ee38fd2b030771e9606c56a752a218aae788447512b9a6d95e",
+      "gravity-time/reports/round-e0b-tables.json": "e02aa5a50cf8f095e7e46bf9bbd44cd9fa41f5d2f5ba629374db14ec4436c518",
+      "gravity-time/reports/round-e2a-tables.json": "2538405278a1d33ce2615ad60b372cccb64a9d2629a4c123397e345166fdb52b",
+      "gravity-time/reports/round-e3a-tables.json": "f654ff3a4f086a6e0389a0dcdb599ad534d0d5e9fb20b2a5f2e7739123ae6006"
+    }
+  },
+  "programme": "GT",
+  "prompt_id": "GT-P006",
+  "question": "Is the repulsion of the sigma>0 path families from the held source produced by the source triangle's own path witnesses (a constant, orientation-neutral floor), and does removing it change gathering?",
+  "round_id": "round-e3b",
+  "sampling": "18 cells x 2 kernels",
+  "schema": "rs-gt.e3b-plan/v1",
+  "software": {
+    "analysis_module": "rs_constraint_lab.gte3b",
+    "numpy": "2.5.3",
+    "observables": "gt-e1-observables/v1",
+    "python": "3.12.3"
+  },
+  "stochastic_trajectories": "none",
+  "stop_conditions": {
+    "amendment": "cell or estimand changes stop the round",
+    "item": "watchdog {5: 900, 6: 900} seconds",
+    "round": "all items or 3600 s; then stop",
+    "unresolved": "recorded; no retuning"
+  },
+  "tolerances": {
+    "c1": 1e-12,
+    "c2": 1e-09,
+    "kernel_ratio": 1e-15,
+    "numerical": "as E1 (gte1)",
+    "t8": 1e-12
+  },
+  "work_count": {
+    "estimate_note": "two HELD N=6 kernels with GTH: about 2 minutes per N=6 cell",
+    "items": 18,
+    "largest_state_space": 4096,
+    "round_wall_cap_seconds": 3600,
+    "workers": 4
+  }
+}

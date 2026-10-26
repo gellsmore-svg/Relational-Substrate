@@ -1,0 +1,1057 @@
+{
+  "analysis_only": true,
+  "analysis_version": "generation-008d-composition/v1",
+  "canonicalisation": {
+    "bit_complement": false,
+    "rule_order": "unordered",
+    "vertex_permutations": 24,
+    "weight_reciprocity": false,
+    "weight_tie_break": "lexicographic weight name, not grade order"
+  },
+  "estimands": [
+    "labelled one-gate rules and allowed unordered pairs",
+    "S4 structural orbits and W4 weighted canonical systems",
+    "minimal raw coordinates of the six-slot law",
+    "effective gate dimension in {0, 1, 2}",
+    "truth table of literal activation and the normalised six-slot law",
+    "log-weight additivity and the logit interaction on two literals",
+    "probability-space normalisation for shared and distinct action slots",
+    "local-law reducibility against the one-rule comparison grammar",
+    "balanced I(current triad; next pair slot | full pair mask)",
+    "ablation of each rule",
+    "one-gate balanced information and edge drift at the four W4 grades"
+  ],
+  "execution": {
+    "atomic_item": "one structural orbit, or the one-gate weak-grade surface",
+    "commands": [
+      "execute-item",
+      "run-d0",
+      "assemble"
+    ],
+    "heartbeat": "status.json rewritten after each completed or skipped item",
+    "resume": "an item file that already exists is not recomputed",
+    "stochastic_trajectories": false,
+    "supervisor": "not used; a measured orbit is a few seconds and stays under the watchdog",
+    "watchdog_seconds": 120,
+    "workers": 1
+  },
+  "experiment_id": "generation-008d-two-gate-composition",
+  "history": false,
+  "items": [
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0000"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0001"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0002"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0003"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0004"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0005"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0006"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0007"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0008"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0009"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0010"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0011"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0012"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0013"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0014"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0015"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0016"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0017"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0018"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0019"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0020"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0021"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0022"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0023"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0024"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0025"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0026"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0027"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0028"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0029"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0030"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0031"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0032"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0033"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0034"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0035"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0036"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0037"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0038"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0039"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0040"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0041"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0042"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0043"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0044"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0045"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0046"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0047"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0048"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0049"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0050"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0051"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0052"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0053"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0054"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0055"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0056"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0057"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0058"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0059"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0060"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0061"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0062"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0063"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0064"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0065"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0066"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0067"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0068"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0069"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0070"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0071"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0072"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0073"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0074"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0075"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0076"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0077"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0078"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0079"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0080"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0081"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0082"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0083"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0084"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0085"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0086"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0087"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0088"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0089"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0090"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0091"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0092"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0093"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0094"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0095"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0096"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0097"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0098"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0099"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0100"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0101"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0102"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0103"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0104"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0105"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0106"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0107"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0108"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0109"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0110"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0111"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0112"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0113"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0114"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0115"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0116"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0117"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0118"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0119"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0120"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0121"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0122"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0123"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0124"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0125"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0126"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0127"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0128"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0129"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0130"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0131"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0132"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0133"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0134"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0135"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0136"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0137"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0138"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0139"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0140"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0141"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0142"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0143"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0144"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0145"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0146"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0147"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0148"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0149"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0150"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0151"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0152"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0153"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0154"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0155"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0156"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0157"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0158"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0159"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0160"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0161"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0162"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0163"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0164"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0165"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0166"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0167"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0168"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0169"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0170"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0171"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0172"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0173"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0174"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0175"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0176"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0177"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0178"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0179"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0180"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0181"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0182"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0183"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0184"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0185"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0186"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0187"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0188"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0189"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0190"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0191"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0192"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0193"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0194"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0195"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0196"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0197"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0198"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0199"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0200"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0201"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0202"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0203"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0204"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0205"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0206"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0207"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0208"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0209"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0210"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0211"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0212"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0213"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0214"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0215"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0216"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0217"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0218"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0219"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0220"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0221"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0222"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0223"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0224"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0225"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0226"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0227"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0228"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0229"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0230"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0231"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0232"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0233"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0234"
+    },
+    {
+      "kind": "orbit",
+      "orbit_id": "ORB-0235"
+    },
+    {
+      "kind": "surface",
+      "orbit_id": null
+    }
+  ],
+  "mode": "B",
+  "new_controls": false,
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": 4,
+    "O": 3,
+    "S": 0,
+    "hypergraph": "independent"
+  },
+  "parameter_fit": false,
+  "plan_hash": "10a3114bcf7a1a914e9eff19e08f77a9fbcf71852bc4a22f14f04d723912ce07",
+  "question": "When two higher-order relational gates coexist in the same memoryless relational system, what exact algebra of composition appears?",
+  "round_id": "round-d0",
+  "schema": "rs-constraint-lab.composition-plan/v1",
+  "stochastic_trajectories": false,
+  "timing_sample": {
+    "max_item_seconds": 5.551,
+    "measured_orbit_pass_seconds": 719.543,
+    "note": "A complete orbit pass on this implementation finished in 719.543 seconds. The slowest orbit took 5.551 seconds. The wall-time figure is a bound above that pass, not a fitted parameter.",
+    "sample_seconds": 7.472,
+    "sample_systems": 52
+  },
+  "tolerances": {
+    "canonicalisation": "exact",
+    "cmi_equality": 1e-12,
+    "fraction_equality": "exact",
+    "kernel_equality": 1e-12,
+    "logit_additivity": 1e-12,
+    "probability_gap": 1e-12,
+    "reducibility": 1e-12
+  },
+  "universe": {
+    "duplicate_structural_rules_allowed": false,
+    "labelled_pair_count": 4560,
+    "labelled_rule_count": 96,
+    "sha256": "f37f082783559d6cba94a20337424256e398e6ba5a6cf469ef43169dc4d14dc1",
+    "structural_orbit_count": 236,
+    "weighted_canonical_count": 3584
+  },
+  "weight_alphabet": {
+    "factors": {
+      "strong_favour": "4/1",
+      "strong_suppress": "1/4",
+      "weak_favour": "2/1",
+      "weak_suppress": "1/2"
+    },
+    "grades": [
+      "strong_suppress",
+      "weak_suppress",
+      "weak_favour",
+      "strong_favour"
+    ],
+    "name": "W4",
+    "neutral_excluded": true
+  },
+  "work_count": {
+    "disk_estimate_bytes": 80000000,
+    "full_state_evaluations": 3670016,
+    "items": 237,
+    "kernel_agreement_evaluations": 3670016,
+    "s4_law_images": 86016,
+    "structural_orbit_items": 236,
+    "surface_items": 1,
+    "wall_time_estimate_seconds": 1200
+  }
+}

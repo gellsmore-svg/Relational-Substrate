@@ -1,0 +1,2091 @@
+{
+  "cells": [
+    {
+      "accounting": {
+        "labelled_constraints": 10,
+        "labelled_states": 2,
+        "outside_k_bound": 0,
+        "raw_structural_templates": 6,
+        "relation_slots": 1,
+        "removed_redundant_normalisation": 2,
+        "removed_syntax_invalid": 2,
+        "structural_normal_forms": 2,
+        "weight_alphabet_size": 5
+      },
+      "baseline": {
+        "heavy": {
+          "disjoint_pair_mass": null,
+          "edge_count_occupancy": [
+            0.5,
+            0.5
+          ],
+          "entropy_rate_bits": 0.0,
+          "entropy_rate_nats": 0.0,
+          "halt_mass": 0.0,
+          "mean_component_count": 1.5,
+          "mean_edge_density": 0.5,
+          "mean_edge_density_exact": "1/2",
+          "n_recurrent": 1,
+          "periods": [
+            2
+          ],
+          "reachable_count": 2,
+          "reversibility_defect": 0.0,
+          "rise_then_release": 0.0,
+          "stationary_arithmetic": "rational",
+          "stationary_residual": 0.0,
+          "triangle_mass": null,
+          "tv_from_uniform": 0.0
+        },
+        "light": {
+          "closing_bias": null,
+          "deadlock_states": [],
+          "max_abs_dissolve_shift": 0.0,
+          "mean_abs_dissolve_shift": 0.0,
+          "modal_family": "03cd11f71feb136f",
+          "n_deadlock": 0,
+          "n_recurrent": 1,
+          "n_recurrent_reachable_from_empty": 1,
+          "periods": [
+            2
+          ],
+          "reachable_from_empty": 2,
+          "support_family": "d2464698dd43debb",
+          "support_matches_baseline": true
+        }
+      },
+      "baseline_equivalent_families": 1,
+      "canonical_states": 2,
+      "cardinalities": {
+        "1": {
+          "canonical": 10,
+          "labelled_combinations": 10,
+          "removed_by_symmetry": 0
+        },
+        "2": {
+          "canonical": 45,
+          "labelled_combinations": 45,
+          "removed_by_symmetry": 0
+        },
+        "3": {
+          "canonical": 120,
+          "labelled_combinations": 120,
+          "removed_by_symmetry": 0
+        }
+      },
+      "coordinate": {
+        "A_max": 2,
+        "G": 0,
+        "H": 0,
+        "K_max": 3,
+        "L": 0,
+        "N": 2,
+        "O": 2,
+        "S": 0,
+        "alphabet": "W4",
+        "semantics": "graph"
+      },
+      "exemplars": [
+        {
+          "expressions": [],
+          "initial": "empty",
+          "label": "baseline",
+          "path": "generated/generation-001/exemplars/360c3dc6cf9b849c.json",
+          "run_id": "360c3dc6cf9b849c",
+          "seed": 0
+        },
+        {
+          "expressions": [],
+          "initial": "complete",
+          "label": "baseline",
+          "path": "generated/generation-001/exemplars/aa4e8d08d15c5655.json",
+          "run_id": "aa4e8d08d15c5655",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/6dc25a80b199765a.json",
+          "run_id": "6dc25a80b199765a",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/4e749ebc0857dc63.json",
+          "run_id": "4e749ebc0857dc63",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/b01bc57beec6233b.json",
+          "run_id": "b01bc57beec6233b",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/92fc03199f729489.json",
+          "run_id": "92fc03199f729489",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => prohibit",
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/88ac44d8781f4082.json",
+          "run_id": "88ac44d8781f4082",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => prohibit",
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/96a7ab367b130001.json",
+          "run_id": "96a7ab367b130001",
+          "seed": 0
+        }
+      ],
+      "families": 4,
+      "family_histogram": {
+        "closing_max": {},
+        "families": 4,
+        "n_deadlock": {
+          "0": 1,
+          "1": 2,
+          "2": 1
+        },
+        "periods": {
+          "1": 3,
+          "2": 1
+        },
+        "rise_then_release_excess": {
+          "0": 0.0,
+          "0.25": 0.0,
+          "0.5": 0.0,
+          "0.75": 0.0,
+          "0.9": 0.0,
+          "0.99": 0.0,
+          "1": 0.0
+        },
+        "shift_max": {
+          "0": 0.0,
+          "0.25": 0.0,
+          "0.5": 0.0,
+          "0.75": 0.0,
+          "0.9": 0.0,
+          "0.99": 0.0,
+          "1": 0.0
+        },
+        "support_matches_baseline": 1
+      },
+      "family_index_bytes": 4042,
+      "family_index_commit_limit_bytes": 2000000,
+      "labelled_states": 2,
+      "measure_scope": {
+        "heavy": "every cardinality-1 set, and the first-seen member of each modal-and-support family",
+        "light": "every canonical set: support, communicating classes, period, deadlock, dissolve shift, closing bias",
+        "rise_then_release": "inside every heavy call, from the empty state, only when the labelled state count is at most 64",
+        "screen_rise_excess": "the family exemplar only; dissolve shift and closing bias use the family range",
+        "search": "every canonical constraint set at the requested cardinalities",
+        "sensitivity": "every cardinality-1 set, on the declared geometric alphabets",
+        "stationary": "rational when the labelled state count is at most 16; otherwise float64 with a recorded residual, Cesaro if the solve is unstable"
+      },
+      "motif_ids": [
+        "4c6662103a3a3c53",
+        "3123f72c952d59c6",
+        "c94820aa93795aaf",
+        "54e7627310c96de1"
+      ],
+      "not_searched": [
+        "multisets that repeat one constraint were not searched; repetition is a weight change"
+      ],
+      "references": [
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_favour",
+          "in_grammar": false,
+          "reason": "edge (0, 2) is not an edge on N=2"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_suppress",
+          "in_grammar": false,
+          "reason": "edge (0, 2) is not an edge on N=2"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => prohibit",
+          "in_grammar": false,
+          "reason": "edge (0, 2) is not an edge on N=2"
+        },
+        {
+          "expression": "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour",
+          "in_grammar": false,
+          "reason": "edge (0, 2) is not an edge on N=2"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) => strong_suppress",
+          "in_grammar": false,
+          "reason": "edge (0, 2) is not an edge on N=2"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) => strong_favour",
+          "in_grammar": false,
+          "reason": "edge (0, 2) is not an edge on N=2"
+        }
+      ],
+      "relation_slots": 1,
+      "runtime_seconds": 0.017557832994498312,
+      "screened_families": 0,
+      "sensitivity": {
+        "alphabets": [
+          "W3",
+          "W16"
+        ],
+        "checks": 20,
+        "modal_unchanged": 20,
+        "support_unchanged": 20
+      },
+      "structural_families": 3
+    },
+    {
+      "accounting": {
+        "labelled_constraints": 270,
+        "labelled_states": 8,
+        "outside_k_bound": 0,
+        "raw_structural_templates": 162,
+        "relation_slots": 3,
+        "removed_redundant_normalisation": 54,
+        "removed_syntax_invalid": 54,
+        "structural_normal_forms": 54,
+        "weight_alphabet_size": 5
+      },
+      "baseline": {
+        "heavy": {
+          "disjoint_pair_mass": null,
+          "edge_count_occupancy": [
+            0.125,
+            0.375,
+            0.375,
+            0.125
+          ],
+          "entropy_rate_bits": 1.584962500721156,
+          "entropy_rate_nats": 1.0986122886681096,
+          "halt_mass": 0.0,
+          "mean_component_count": 1.625,
+          "mean_edge_density": 0.5,
+          "mean_edge_density_exact": "3/2",
+          "n_recurrent": 1,
+          "periods": [
+            2
+          ],
+          "reachable_count": 8,
+          "reversibility_defect": 0.0,
+          "rise_then_release": 0.6666666666666666,
+          "stationary_arithmetic": "rational",
+          "stationary_residual": 0.0,
+          "triangle_mass": 0.125,
+          "tv_from_uniform": 0.0
+        },
+        "light": {
+          "closing_bias": 0.0,
+          "deadlock_states": [],
+          "max_abs_dissolve_shift": 0.0,
+          "mean_abs_dissolve_shift": 0.0,
+          "modal_family": "c61a3c7b2250444b",
+          "n_deadlock": 0,
+          "n_recurrent": 1,
+          "n_recurrent_reachable_from_empty": 1,
+          "periods": [
+            2
+          ],
+          "reachable_from_empty": 8,
+          "support_family": "c726c559413d730e",
+          "support_matches_baseline": true
+        }
+      },
+      "baseline_equivalent_families": 1,
+      "canonical_states": 4,
+      "cardinalities": {
+        "1": {
+          "canonical": 60,
+          "labelled_combinations": 270,
+          "removed_by_symmetry": 210
+        },
+        "2": {
+          "canonical": 6330,
+          "labelled_combinations": 36315,
+          "removed_by_symmetry": 29985
+        },
+        "3": {
+          "canonical": 544550,
+          "labelled_combinations": 3244140,
+          "removed_by_symmetry": 2699590
+        }
+      },
+      "coordinate": {
+        "A_max": 3,
+        "G": 0,
+        "H": 0,
+        "K_max": 3,
+        "L": 0,
+        "N": 3,
+        "O": 2,
+        "S": 0,
+        "alphabet": "W4",
+        "semantics": "graph"
+      },
+      "exemplars": [
+        {
+          "expressions": [],
+          "initial": "empty",
+          "label": "baseline",
+          "path": "generated/generation-001/exemplars/360c3dc6cf9b849c.json",
+          "run_id": "360c3dc6cf9b849c",
+          "seed": 0
+        },
+        {
+          "expressions": [],
+          "initial": "complete",
+          "label": "baseline",
+          "path": "generated/generation-001/exemplars/20599ce43cf8f9a1.json",
+          "run_id": "20599ce43cf8f9a1",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/b4fc50d69da3c69e.json",
+          "run_id": "b4fc50d69da3c69e",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/c3b840ad5dbcab77.json",
+          "run_id": "c3b840ad5dbcab77",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/fd96a767c441f31b.json",
+          "run_id": "fd96a767c441f31b",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/41f806fba8af2874.json",
+          "run_id": "41f806fba8af2874",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/53d4ef234373da26.json",
+          "run_id": "53d4ef234373da26",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/ca329bd5d654ab3a.json",
+          "run_id": "ca329bd5d654ab3a",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/3170c32f39090ab2.json",
+          "run_id": "3170c32f39090ab2",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/27573ceb9f72da95.json",
+          "run_id": "27573ceb9f72da95",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/df8b67d16f332b93.json",
+          "run_id": "df8b67d16f332b93",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/38fb192ea016a61c.json",
+          "run_id": "38fb192ea016a61c",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/5656c34fc193e729.json",
+          "run_id": "5656c34fc193e729",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/8c1b5a82aaffae47.json",
+          "run_id": "8c1b5a82aaffae47",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/73802c2d1fab92b5.json",
+          "run_id": "73802c2d1fab92b5",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/041282f2345dc822.json",
+          "run_id": "041282f2345dc822",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/10a8a56277527a72.json",
+          "run_id": "10a8a56277527a72",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/a3c04bfe072ba5d4.json",
+          "run_id": "a3c04bfe072ba5d4",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/d29f4032cd0ee560.json",
+          "run_id": "d29f4032cd0ee560",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/0b3c298e6730fb84.json",
+          "run_id": "0b3c298e6730fb84",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/36729c6575648d47.json",
+          "run_id": "36729c6575648d47",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/a329fa41f238af16.json",
+          "run_id": "a329fa41f238af16",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/81bc75e30730db38.json",
+          "run_id": "81bc75e30730db38",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/1a62b73e87261f19.json",
+          "run_id": "1a62b73e87261f19",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/da320779552bc7c2.json",
+          "run_id": "da320779552bc7c2",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/de87a484fdf4704b.json",
+          "run_id": "de87a484fdf4704b",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/77c5080fbc43b289.json",
+          "run_id": "77c5080fbc43b289",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/7c39913b06728f5a.json",
+          "run_id": "7c39913b06728f5a",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/ac6c23d8ef7a5a49.json",
+          "run_id": "ac6c23d8ef7a5a49",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/0aa7e5933f14ee31.json",
+          "run_id": "0aa7e5933f14ee31",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/dd05a10044371ef1.json",
+          "run_id": "dd05a10044371ef1",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(1-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/6323a52ac3292aad.json",
+          "run_id": "6323a52ac3292aad",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/bc8b4c346f4700bd.json",
+          "run_id": "bc8b4c346f4700bd",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/44347f9fc03971e2.json",
+          "run_id": "44347f9fc03971e2",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/ef4ff844cddd18a5.json",
+          "run_id": "ef4ff844cddd18a5",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/11959b1d117802c3.json",
+          "run_id": "11959b1d117802c3",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/353d136058dd47fe.json",
+          "run_id": "353d136058dd47fe",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/3ed1b237691d2e6d.json",
+          "run_id": "3ed1b237691d2e6d",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/542172c839a81ae5.json",
+          "run_id": "542172c839a81ae5",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/826f4e1d4641d9c1.json",
+          "run_id": "826f4e1d4641d9c1",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/f6fb730ee93d3950.json",
+          "run_id": "f6fb730ee93d3950",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/d16df0b11c2906b3.json",
+          "run_id": "d16df0b11c2906b3",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/1cffdf55c33c714a.json",
+          "run_id": "1cffdf55c33c714a",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/0eea6f5547326019.json",
+          "run_id": "0eea6f5547326019",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/51c35eacb15fa85f.json",
+          "run_id": "51c35eacb15fa85f",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/3a9a3f77fa3d8d70.json",
+          "run_id": "3a9a3f77fa3d8d70",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/da4025770212fd24.json",
+          "run_id": "da4025770212fd24",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/94659e63c7e54805.json",
+          "run_id": "94659e63c7e54805",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/d87f5dd97e88e6c6.json",
+          "run_id": "d87f5dd97e88e6c6",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/dd36e2fbb4ee98fc.json",
+          "run_id": "dd36e2fbb4ee98fc",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/848f091ea1ae81a2.json",
+          "run_id": "848f091ea1ae81a2",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/0c3d2f9a900e8760.json",
+          "run_id": "0c3d2f9a900e8760",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/f361ecdf7319e23f.json",
+          "run_id": "f361ecdf7319e23f",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/ddd6bd4e46bfb525.json",
+          "run_id": "ddd6bd4e46bfb525",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/5988cc210a8da052.json",
+          "run_id": "5988cc210a8da052",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/623ccc7561c8670f.json",
+          "run_id": "623ccc7561c8670f",
+          "seed": 1
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/cc41cd3de5dab719.json",
+          "run_id": "cc41cd3de5dab719",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/53a33914945223de.json",
+          "run_id": "53a33914945223de",
+          "seed": 2
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/9dd5e2f133db5e67.json",
+          "run_id": "9dd5e2f133db5e67",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/2021b82578b127c5.json",
+          "run_id": "2021b82578b127c5",
+          "seed": 3
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/659fd2a7146c4364.json",
+          "run_id": "659fd2a7146c4364",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "path": "generated/generation-001/exemplars/4bcdef8bb3f05570.json",
+          "run_id": "4bcdef8bb3f05570",
+          "seed": 4
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/6dc25a80b199765a.json",
+          "run_id": "6dc25a80b199765a",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/0e6758e322dabdfc.json",
+          "run_id": "0e6758e322dabdfc",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/b5e960cb5bf665e1.json",
+          "run_id": "b5e960cb5bf665e1",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/8dd124a40c2479af.json",
+          "run_id": "8dd124a40c2479af",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => weak_favour"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/cf4579421b8cc2b8.json",
+          "run_id": "cf4579421b8cc2b8",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => weak_favour"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/da7921c9bd1a702c.json",
+          "run_id": "da7921c9bd1a702c",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/b01bc57beec6233b.json",
+          "run_id": "b01bc57beec6233b",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/86d0ff08b27715de.json",
+          "run_id": "86d0ff08b27715de",
+          "seed": 0
+        }
+      ],
+      "families": 80155,
+      "family_histogram": {
+        "closing_max": {
+          "0": -0.3333333333333333,
+          "0.25": -0.0444444444444444,
+          "0.5": 0.009259259259259245,
+          "0.75": 0.07407407407407407,
+          "0.9": 0.14814814814814814,
+          "0.99": 0.26666666666666666,
+          "1": 0.6666666666666667
+        },
+        "families": 80155,
+        "n_deadlock": {
+          "0": 80051,
+          "1": 104
+        },
+        "periods": {
+          "1": 104,
+          "2": 80051
+        },
+        "rise_then_release_excess": {
+          "0": -0.6666666666666666,
+          "0.25": -0.0679012345679012,
+          "0.5": 0.0,
+          "0.75": 0.05555555555555558,
+          "0.9": 0.11111111111111116,
+          "0.99": 0.2222222222222222,
+          "1": 0.33333333333333337
+        },
+        "shift_max": {
+          "0": 0.0,
+          "0.25": 0.2222222222222222,
+          "0.5": 0.3333333333333333,
+          "0.75": 0.33333333333333337,
+          "0.9": 0.4666666666666667,
+          "0.99": 0.6666666666666667,
+          "1": 0.6666666666666667
+        },
+        "support_matches_baseline": 22355
+      },
+      "family_index_bytes": 108324385,
+      "family_index_commit_limit_bytes": 2000000,
+      "labelled_states": 8,
+      "measure_scope": {
+        "heavy": "every cardinality-1 set, and the first-seen member of each modal-and-support family",
+        "light": "every canonical set: support, communicating classes, period, deadlock, dissolve shift, closing bias",
+        "rise_then_release": "inside every heavy call, from the empty state, only when the labelled state count is at most 64",
+        "screen_rise_excess": "the family exemplar only; dissolve shift and closing bias use the family range",
+        "search": "every canonical constraint set at the requested cardinalities",
+        "sensitivity": "every cardinality-1 set, on the declared geometric alphabets",
+        "stationary": "rational when the labelled state count is at most 16; otherwise float64 with a recorded residual, Cesaro if the solve is unstable"
+      },
+      "motif_ids": [
+        "39bbc7fe70a9ded3",
+        "da18b284e929c5d4",
+        "c0894c1c54d7b42a",
+        "6a3349e57f0e89fe",
+        "8066adb53db8efa0",
+        "2519c452edfbe683",
+        "796d64c4ccebc592",
+        "3e94ab948e3a36fd",
+        "395526c7c27ff64e",
+        "e385a1187d344033",
+        "5d9b526ea6d461c7",
+        "6bd52750dd773dc8",
+        "e7e9bff879c0f7a1",
+        "bd1a0bfa6c25b495",
+        "0aaacbd991353477",
+        "f4b2351e4e1ff084",
+        "c66f43071188a977",
+        "dcce70c037486ba9",
+        "42c1d58a3e8c419a",
+        "8d189f344b0f7052",
+        "e329417b8096e6c7",
+        "7a100295b9d1729b",
+        "4323d5bc77e8d3c6",
+        "4bdeb7a70b9708a8",
+        "6ac15efeeaaace18",
+        "ea5fb8a00ec10b45",
+        "b7ca862bf12f4ceb",
+        "15321f4b7ae9a0e3",
+        "823ca64427e980b4",
+        "065d95090a6d7848",
+        "b166e33177b298b4",
+        "9dec11b420f36ba3",
+        "09d32f5d4d13637e"
+      ],
+      "not_searched": [
+        "multisets that repeat one constraint were not searched; repetition is a weight change"
+      ],
+      "references": [
+        {
+          "canonical_expression": "form(0-1) | present(0-2) & present(1-2) => strong_favour",
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "A": 3,
+            "K": 3,
+            "N": 3,
+            "alphabet": "W4",
+            "closing_bias": 0.1111111111111111,
+            "disjoint_pair_mass": null,
+            "entropy_rate_bits": 1.5432958340544896,
+            "equivalent_to_baseline": false,
+            "expressions": "form(0-1) | present(0-2) & present(1-2) => strong_favour",
+            "family_id": "075e55aaad9f376b",
+            "halt_mass": 0.0,
+            "max_abs_dissolve_shift": 0.3333333333333333,
+            "mean_edge_density": 0.5416666666666666,
+            "n_deadlock": 0,
+            "n_recurrent": 1,
+            "periods": "2",
+            "reversibility_defect": 0.026041666666666664,
+            "rise_then_release": 0.6666666666666666,
+            "rise_then_release_excess": 0.0,
+            "set_id": "b693b0feefe861d7",
+            "stationary_arithmetic": "rational",
+            "stationary_residual": 0.0,
+            "support_matches_baseline": true,
+            "triangle_mass": 0.171875,
+            "tv_from_uniform": 0.0625
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) & present(1-2) => strong_suppress",
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_suppress",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "A": 3,
+            "K": 3,
+            "N": 3,
+            "alphabet": "W4",
+            "closing_bias": -0.07407407407407407,
+            "disjoint_pair_mass": null,
+            "entropy_rate_bits": 1.5608605910890787,
+            "equivalent_to_baseline": false,
+            "expressions": "form(0-1) | present(0-2) & present(1-2) => strong_suppress",
+            "family_id": "979d4a56ff706002",
+            "halt_mass": 0.0,
+            "max_abs_dissolve_shift": 0.2222222222222222,
+            "mean_edge_density": 0.47222222222222227,
+            "n_deadlock": 0,
+            "n_recurrent": 1,
+            "periods": "2",
+            "reversibility_defect": 0.017361111111111112,
+            "rise_then_release": 0.6666666666666666,
+            "rise_then_release_excess": 0.0,
+            "set_id": "430bbe98efe72d80",
+            "stationary_arithmetic": "rational",
+            "stationary_residual": 0.0,
+            "support_matches_baseline": true,
+            "triangle_mass": 0.09375,
+            "tv_from_uniform": 0.04166666666666666
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) & present(1-2) => prohibit",
+          "expression": "form(0-2) | present(0-1) & present(1-2) => prohibit",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "A": 3,
+            "K": 3,
+            "N": 3,
+            "alphabet": "W4",
+            "closing_bias": -0.1111111111111111,
+            "disjoint_pair_mass": null,
+            "entropy_rate_bits": 1.5118421881310116,
+            "equivalent_to_baseline": false,
+            "expressions": "form(0-1) | present(0-2) & present(1-2) => prohibit",
+            "family_id": "c0894c1c54d7b42a",
+            "halt_mass": 0.0,
+            "max_abs_dissolve_shift": 0.33333333333333337,
+            "mean_edge_density": 0.4583333333333333,
+            "n_deadlock": 0,
+            "n_recurrent": 1,
+            "periods": "2",
+            "reversibility_defect": 0.026041666666666664,
+            "rise_then_release": 0.6666666666666666,
+            "rise_then_release_excess": 0.0,
+            "set_id": "80e17328e9a28605",
+            "stationary_arithmetic": "rational",
+            "stationary_residual": 0.0,
+            "support_matches_baseline": false,
+            "triangle_mass": 0.078125,
+            "tv_from_uniform": 0.0625
+          }
+        },
+        {
+          "canonical_expression": "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour",
+          "expression": "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": true,
+          "single": {
+            "A": 3,
+            "K": 3,
+            "N": 3,
+            "alphabet": "W4",
+            "closing_bias": 0.0,
+            "disjoint_pair_mass": null,
+            "entropy_rate_bits": 1.5432958340544896,
+            "equivalent_to_baseline": false,
+            "expressions": "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour",
+            "family_id": "d242afa154eaa37e",
+            "halt_mass": 0.0,
+            "max_abs_dissolve_shift": 1.1102230246251565e-16,
+            "mean_edge_density": 0.5,
+            "n_deadlock": 0,
+            "n_recurrent": 1,
+            "periods": "2",
+            "reversibility_defect": 0.026041666666666664,
+            "rise_then_release": 0.6666666666666666,
+            "rise_then_release_excess": 0.0,
+            "set_id": "2544e20e3cefefb6",
+            "stationary_arithmetic": "rational",
+            "stationary_residual": 0.0,
+            "support_matches_baseline": true,
+            "triangle_mass": 0.125,
+            "tv_from_uniform": 0.0625
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) => strong_suppress",
+          "expression": "form(0-2) | present(0-1) => strong_suppress",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "A": 3,
+            "K": 2,
+            "N": 3,
+            "alphabet": "W4",
+            "closing_bias": -0.07407407407407407,
+            "disjoint_pair_mass": null,
+            "entropy_rate_bits": 1.5298724215621218,
+            "equivalent_to_baseline": false,
+            "expressions": "form(0-1) | present(0-2) => strong_suppress",
+            "family_id": "0f1526ba8b9a84c6",
+            "halt_mass": 0.0,
+            "max_abs_dissolve_shift": 0.2222222222222222,
+            "mean_edge_density": 0.45238095238095233,
+            "n_deadlock": 0,
+            "n_recurrent": 1,
+            "periods": "2",
+            "reversibility_defect": 0.011904761904761904,
+            "rise_then_release": 0.6296296296296297,
+            "rise_then_release_excess": -0.03703703703703698,
+            "set_id": "082bcc6bf6b3505d",
+            "stationary_arithmetic": "rational",
+            "stationary_residual": 0.0,
+            "support_matches_baseline": true,
+            "triangle_mass": 0.08333333333333333,
+            "tv_from_uniform": 0.09523809523809525
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) => strong_favour",
+          "expression": "form(0-2) | present(0-1) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "A": 3,
+            "K": 2,
+            "N": 3,
+            "alphabet": "W4",
+            "closing_bias": 0.1111111111111111,
+            "disjoint_pair_mass": null,
+            "entropy_rate_bits": 1.514787062124665,
+            "equivalent_to_baseline": false,
+            "expressions": "form(0-1) | present(0-2) => strong_favour",
+            "family_id": "0c47e4cc54e48618",
+            "halt_mass": 0.0,
+            "max_abs_dissolve_shift": 0.3333333333333333,
+            "mean_edge_density": 0.5526315789473684,
+            "n_deadlock": 0,
+            "n_recurrent": 1,
+            "periods": "2",
+            "reversibility_defect": 0.013157894736842105,
+            "rise_then_release": 0.7222222222222222,
+            "rise_then_release_excess": 0.05555555555555558,
+            "set_id": "6db0090e614349de",
+            "stationary_arithmetic": "rational",
+            "stationary_residual": 0.0,
+            "support_matches_baseline": true,
+            "triangle_mass": 0.17105263157894737,
+            "tv_from_uniform": 0.10526315789473685
+          }
+        }
+      ],
+      "relation_slots": 3,
+      "runtime_seconds": 169.7926756379893,
+      "screened_families": 79731,
+      "sensitivity": {
+        "alphabets": [
+          "W3",
+          "W16"
+        ],
+        "checks": 120,
+        "modal_unchanged": 120,
+        "support_unchanged": 120
+      },
+      "structural_families": 57800
+    },
+    {
+      "accounting": {
+        "labelled_constraints": 660,
+        "labelled_states": 64,
+        "outside_k_bound": 2784,
+        "raw_structural_templates": 8748,
+        "relation_slots": 6,
+        "removed_redundant_normalisation": 2916,
+        "removed_syntax_invalid": 2916,
+        "structural_normal_forms": 132,
+        "weight_alphabet_size": 5
+      },
+      "baseline": {
+        "heavy": {
+          "disjoint_pair_mass": 0.04687500000000003,
+          "edge_count_occupancy": [
+            0.01562500000000004,
+            0.09375000000000025,
+            0.23437500000000008,
+            0.31249999999999983,
+            0.23437499999999986,
+            0.09374999999999994,
+            0.015625000000000003
+          ],
+          "entropy_rate_bits": 2.584962500721157,
+          "entropy_rate_nats": 1.7917594692280554,
+          "halt_mass": 0.0,
+          "mean_component_count": 1.5312500000000007,
+          "mean_edge_density": 0.5000000000000001,
+          "mean_edge_density_exact": null,
+          "n_recurrent": 1,
+          "periods": [
+            2
+          ],
+          "reachable_count": 64,
+          "reversibility_defect": 7.068998164605489e-17,
+          "rise_then_release": 0.5555555555555556,
+          "stationary_arithmetic": "float64",
+          "stationary_residual": 3.8163916471489756e-16,
+          "triangle_mass": null,
+          "tv_from_uniform": 1.0911410663894117e-15
+        },
+        "light": {
+          "closing_bias": null,
+          "deadlock_states": [],
+          "max_abs_dissolve_shift": 1.1102230246251565e-16,
+          "mean_abs_dissolve_shift": 1.214306433183765e-17,
+          "modal_family": "08a5a393399a96a9",
+          "n_deadlock": 0,
+          "n_recurrent": 1,
+          "n_recurrent_reachable_from_empty": 1,
+          "periods": [
+            2
+          ],
+          "reachable_from_empty": 64,
+          "support_family": "4c20ce9f6037a3e2",
+          "support_matches_baseline": true
+        }
+      },
+      "baseline_equivalent_families": 1,
+      "canonical_states": 11,
+      "cardinalities": {
+        "1": {
+          "canonical": 50,
+          "labelled_combinations": 660,
+          "removed_by_symmetry": 610
+        },
+        "2": {
+          "canonical": 9845,
+          "labelled_combinations": 217470,
+          "removed_by_symmetry": 207625
+        }
+      },
+      "coordinate": {
+        "A_max": 4,
+        "G": 0,
+        "H": 0,
+        "K_max": 2,
+        "L": 0,
+        "N": 4,
+        "O": 2,
+        "S": 0,
+        "alphabet": "W4",
+        "semantics": "graph"
+      },
+      "exemplars": [
+        {
+          "expressions": [],
+          "initial": "empty",
+          "label": "baseline",
+          "path": "generated/generation-001/exemplars/360c3dc6cf9b849c.json",
+          "run_id": "360c3dc6cf9b849c",
+          "seed": 0
+        },
+        {
+          "expressions": [],
+          "initial": "complete",
+          "label": "baseline",
+          "path": "generated/generation-001/exemplars/f204029fb689a282.json",
+          "run_id": "f204029fb689a282",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/6dc25a80b199765a.json",
+          "run_id": "6dc25a80b199765a",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/5328eb438a605e99.json",
+          "run_id": "5328eb438a605e99",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/b5e960cb5bf665e1.json",
+          "run_id": "b5e960cb5bf665e1",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/c8dca155b60f5f8c.json",
+          "run_id": "c8dca155b60f5f8c",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => weak_favour"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/cf4579421b8cc2b8.json",
+          "run_id": "cf4579421b8cc2b8",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => weak_favour"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/4390877f1a0079a2.json",
+          "run_id": "4390877f1a0079a2",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/b01bc57beec6233b.json",
+          "run_id": "b01bc57beec6233b",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/b95c70e935ee9745.json",
+          "run_id": "b95c70e935ee9745",
+          "seed": 0
+        }
+      ],
+      "families": 4018,
+      "family_histogram": {
+        "closing_max": {},
+        "families": 4018,
+        "n_deadlock": {
+          "0": 4018
+        },
+        "periods": {
+          "2": 4018
+        },
+        "rise_then_release_excess": {
+          "0": -0.08822222222222226,
+          "0.25": -0.013011141905321821,
+          "0.5": 0.004418011013929357,
+          "0.75": 0.01767781942709057,
+          "0.9": 0.03227938824895582,
+          "0.99": 0.05788888888888888,
+          "1": 0.10069444444444442
+        },
+        "shift_max": {
+          "0": 1.1102230246251565e-16,
+          "0.25": 0.16666666666666666,
+          "0.5": 0.22222222222222227,
+          "0.75": 0.2777777777777778,
+          "0.9": 0.29166666666666663,
+          "0.99": 0.33333333333333337,
+          "1": 0.5952380952380953
+        },
+        "support_matches_baseline": 2103
+      },
+      "family_index_bytes": 4911258,
+      "family_index_commit_limit_bytes": 2000000,
+      "labelled_states": 64,
+      "measure_scope": {
+        "heavy": "every cardinality-1 set, and the first-seen member of each modal-and-support family",
+        "light": "every canonical set: support, communicating classes, period, deadlock, dissolve shift, closing bias",
+        "rise_then_release": "inside every heavy call, from the empty state, only when the labelled state count is at most 64",
+        "screen_rise_excess": "the family exemplar only; dissolve shift and closing bias use the family range",
+        "search": "every canonical constraint set at the requested cardinalities",
+        "sensitivity": "every cardinality-1 set, on the declared geometric alphabets",
+        "stationary": "rational when the labelled state count is at most 16; otherwise float64 with a recorded residual, Cesaro if the solve is unstable"
+      },
+      "motif_ids": [
+        "597e4913566f7c26",
+        "81a6382e7ab3ac5e",
+        "da96e5e2611f0a60",
+        "6ee1b59c66af926b",
+        "a96b89819b653822",
+        "d3cadf0517a88d19",
+        "1125fea004eed13c",
+        "dbb460971513ac5e",
+        "8d975a46b915d374",
+        "46dd7d3378db9e88",
+        "91bae7f0383ce35c",
+        "3a162a6ed9c58a1d",
+        "ec6e3a5f5985aa8e",
+        "9632c32e05cb5066",
+        "6df43b1f3ff39180",
+        "9d1106b279204dcc",
+        "a42713e49a51554a",
+        "9d53752912422b46",
+        "5d00f30f4b866b11",
+        "0b914238876ae389",
+        "02fa5621e553f1e1",
+        "871ec4edd803d611",
+        "814fb901cf485395",
+        "8da0a73ecf9096da",
+        "49bb0f5a8df07272",
+        "cd3e1317ecf834bc",
+        "1f4308bcbde6810a",
+        "2753c3ddfc464ef4",
+        "276ca6fda96d18c4"
+      ],
+      "not_searched": [
+        "cardinality 3 at N=4 was not searched",
+        "2784 structural templates at N=4 have K>2 and were not searched",
+        "multisets that repeat one constraint were not searched; repetition is a weight change"
+      ],
+      "references": [
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_favour",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_suppress",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => prohibit",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "expression": "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) => strong_suppress",
+          "expression": "form(0-2) | present(0-1) => strong_suppress",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "A": 3,
+            "K": 2,
+            "N": 4,
+            "alphabet": "W4",
+            "closing_bias": null,
+            "disjoint_pair_mass": 0.05255681818181821,
+            "entropy_rate_bits": 2.553969369860696,
+            "equivalent_to_baseline": false,
+            "expressions": "form(0-1) | present(0-2) => strong_suppress",
+            "family_id": "9d53752912422b46",
+            "halt_mass": 0.0,
+            "max_abs_dissolve_shift": 0.11904761904761896,
+            "mean_edge_density": 0.4772727272727273,
+            "n_deadlock": 0,
+            "n_recurrent": 1,
+            "periods": "2",
+            "reversibility_defect": 0.000710227272727292,
+            "rise_then_release": 0.5722654141021488,
+            "rise_then_release_excess": 0.016709858546593237,
+            "set_id": "082bcc6bf6b3505d",
+            "stationary_arithmetic": "float64",
+            "stationary_residual": 1.0755285551056204e-16,
+            "support_matches_baseline": true,
+            "triangle_mass": null,
+            "tv_from_uniform": 0.11363636363636351
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) => strong_favour",
+          "expression": "form(0-2) | present(0-1) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "A": 3,
+            "K": 2,
+            "N": 4,
+            "alphabet": "W4",
+            "closing_bias": null,
+            "disjoint_pair_mass": 0.03993055555555555,
+            "entropy_rate_bits": 2.5343081026932017,
+            "equivalent_to_baseline": false,
+            "expressions": "form(0-1) | present(0-2) => strong_favour",
+            "family_id": "22eea0c4d0bb1361",
+            "halt_mass": 0.0,
+            "max_abs_dissolve_shift": 0.2777777777777778,
+            "mean_edge_density": 0.5277777777777778,
+            "n_deadlock": 0,
+            "n_recurrent": 1,
+            "periods": "2",
+            "reversibility_defect": 0.0008680555555555939,
+            "rise_then_release": 0.5318930041152263,
+            "rise_then_release_excess": -0.02366255144032925,
+            "set_id": "6db0090e614349de",
+            "stationary_arithmetic": "float64",
+            "stationary_residual": 2.2724877535296173e-16,
+            "support_matches_baseline": true,
+            "triangle_mass": null,
+            "tv_from_uniform": 0.13888888888888837
+          }
+        }
+      ],
+      "relation_slots": 6,
+      "runtime_seconds": 35.02065563299402,
+      "screened_families": 3942,
+      "sensitivity": {
+        "alphabets": [
+          "W3",
+          "W16"
+        ],
+        "checks": 100,
+        "modal_unchanged": 100,
+        "support_unchanged": 100
+      },
+      "structural_families": 1915
+    },
+    {
+      "accounting": {
+        "labelled_constraints": 1900,
+        "labelled_states": 1024,
+        "outside_k_bound": 393280,
+        "raw_structural_templates": 1180980,
+        "relation_slots": 10,
+        "removed_redundant_normalisation": 393660,
+        "removed_syntax_invalid": 393660,
+        "structural_normal_forms": 380,
+        "weight_alphabet_size": 5
+      },
+      "baseline": {
+        "heavy": {
+          "disjoint_pair_mass": null,
+          "edge_count_occupancy": [
+            0.0009765625000000252,
+            0.00976562500000025,
+            0.04394531250000033,
+            0.11718749999999988,
+            0.2050781249999998,
+            0.24609374999999967,
+            0.20507812499999986,
+            0.1171875,
+            0.043945312500000014,
+            0.009765625,
+            0.0009765624999999914
+          ],
+          "entropy_rate_bits": 3.3219280948869816,
+          "entropy_rate_nats": 2.3025850929937817,
+          "halt_mass": 0.0,
+          "mean_component_count": 1.3652343750000013,
+          "mean_edge_density": 0.49999999999999967,
+          "mean_edge_density_exact": null,
+          "n_recurrent": 1,
+          "periods": [
+            2
+          ],
+          "reachable_count": 1024,
+          "reversibility_defect": 3.1157259931802184e-17,
+          "rise_then_release": null,
+          "stationary_arithmetic": "float64",
+          "stationary_residual": 2.7462841029057827e-16,
+          "triangle_mass": null,
+          "tv_from_uniform": 1.9881557337952938e-15
+        },
+        "light": {
+          "closing_bias": null,
+          "deadlock_states": [],
+          "max_abs_dissolve_shift": 1.1102230246251565e-16,
+          "mean_abs_dissolve_shift": 1.2576745200831851e-17,
+          "modal_family": "e4e3c80a6d094dfa",
+          "n_deadlock": 0,
+          "n_recurrent": 1,
+          "n_recurrent_reachable_from_empty": 1,
+          "periods": [
+            2
+          ],
+          "reachable_from_empty": 1024,
+          "support_family": "7bf88656b7a9ad70",
+          "support_matches_baseline": true
+        }
+      },
+      "baseline_equivalent_families": 0,
+      "canonical_states": 34,
+      "cardinalities": {
+        "1": {
+          "canonical": 50,
+          "labelled_combinations": 1900,
+          "removed_by_symmetry": 1850
+        }
+      },
+      "coordinate": {
+        "A_max": 4,
+        "G": 0,
+        "H": 0,
+        "K_max": 2,
+        "L": 0,
+        "N": 5,
+        "O": 2,
+        "S": 0,
+        "alphabet": "W4",
+        "semantics": "graph"
+      },
+      "exemplars": [
+        {
+          "expressions": [],
+          "initial": "empty",
+          "label": "baseline",
+          "path": "generated/generation-001/exemplars/360c3dc6cf9b849c.json",
+          "run_id": "360c3dc6cf9b849c",
+          "seed": 0
+        },
+        {
+          "expressions": [],
+          "initial": "complete",
+          "label": "baseline",
+          "path": "generated/generation-001/exemplars/867adcdb3345da92.json",
+          "run_id": "867adcdb3345da92",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/6dc25a80b199765a.json",
+          "run_id": "6dc25a80b199765a",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/0b10434356215338.json",
+          "run_id": "0b10434356215338",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/b5e960cb5bf665e1.json",
+          "run_id": "b5e960cb5bf665e1",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/1ce7437625f681ea.json",
+          "run_id": "1ce7437625f681ea",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => weak_favour"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/cf4579421b8cc2b8.json",
+          "run_id": "cf4579421b8cc2b8",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => weak_favour"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/88ce7fa38c7d93cb.json",
+          "run_id": "88ce7fa38c7d93cb",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/b01bc57beec6233b.json",
+          "run_id": "b01bc57beec6233b",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "path": "generated/generation-001/exemplars/b9acecc2bae9398e.json",
+          "run_id": "b9acecc2bae9398e",
+          "seed": 0
+        }
+      ],
+      "families": 30,
+      "family_histogram": {
+        "closing_max": {},
+        "families": 30,
+        "n_deadlock": {
+          "0": 30
+        },
+        "periods": {
+          "2": 30
+        },
+        "rise_then_release_excess": {},
+        "shift_max": {
+          "0": 0.06486486486486487,
+          "0.25": 0.072972972972973,
+          "0.5": 0.1,
+          "0.75": 0.18461538461538463,
+          "0.9": 0.2076923076923077,
+          "0.99": 0.20769230769230773,
+          "1": 0.20769230769230773
+        },
+        "support_matches_baseline": 20
+      },
+      "family_index_bytes": 33679,
+      "family_index_commit_limit_bytes": 2000000,
+      "labelled_states": 1024,
+      "measure_scope": {
+        "heavy": "every cardinality-1 set, and the first-seen member of each modal-and-support family",
+        "light": "every canonical set: support, communicating classes, period, deadlock, dissolve shift, closing bias",
+        "rise_then_release": "inside every heavy call, from the empty state, only when the labelled state count is at most 64",
+        "screen_rise_excess": "the family exemplar only; dissolve shift and closing bias use the family range",
+        "search": "every canonical constraint set at the requested cardinalities",
+        "sensitivity": "every cardinality-1 set, on the declared geometric alphabets",
+        "stationary": "rational when the labelled state count is at most 16; otherwise float64 with a recorded residual, Cesaro if the solve is unstable"
+      },
+      "motif_ids": [
+        "6ac97e247fed480f",
+        "d8fdd4d27c20968a",
+        "18da8098dd4e3c13",
+        "3239bbff1c89103f",
+        "a778b0d6053d8064",
+        "f8db60646d5e54cf",
+        "c0e247f84bf5bd2a",
+        "ad9bec7b4a63c840",
+        "8926bda3690d196d",
+        "29c0963eb72ec864",
+        "5f7b3be9d2fad7e6",
+        "faedf2ea39b6f975",
+        "3462ec3aa6a06612",
+        "2f8c41a640d1c681",
+        "3f0c7fd7047dd04b",
+        "2a3203894cabe349",
+        "477080a8746163d1",
+        "8cf25c21ce10f1b9"
+      ],
+      "not_searched": [
+        "cardinality 2 at N=5 was not searched",
+        "cardinality 3 at N=5 was not searched",
+        "393280 structural templates at N=5 have K>2 and were not searched",
+        "multisets that repeat one constraint were not searched; repetition is a weight change"
+      ],
+      "references": [
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_favour",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => strong_suppress",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "expression": "form(0-2) | present(0-1) & present(1-2) => prohibit",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "expression": "dissolve(0-1) | present(0-2) & present(1-2) => strong_favour",
+          "in_grammar": false,
+          "reason": "outside this cell's K bound or weight list"
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) => strong_suppress",
+          "expression": "form(0-2) | present(0-1) => strong_suppress",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "A": 3,
+            "K": 2,
+            "N": 5,
+            "alphabet": "W4",
+            "closing_bias": null,
+            "disjoint_pair_mass": null,
+            "entropy_rate_bits": 3.3026284075430157,
+            "equivalent_to_baseline": false,
+            "expressions": "form(0-1) | present(0-2) => strong_suppress",
+            "family_id": "3f0c7fd7047dd04b",
+            "halt_mass": 0.0,
+            "max_abs_dissolve_shift": 0.072972972972973,
+            "mean_edge_density": 0.4866071428571429,
+            "n_deadlock": 0,
+            "n_recurrent": 1,
+            "periods": "2",
+            "reversibility_defect": 2.6157924107203656e-05,
+            "rise_then_release": null,
+            "rise_then_release_excess": null,
+            "set_id": "082bcc6bf6b3505d",
+            "stationary_arithmetic": "float64",
+            "stationary_residual": 5.993469609499869e-16,
+            "support_matches_baseline": true,
+            "triangle_mass": null,
+            "tv_from_uniform": 0.1205357142857154
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) => strong_favour",
+          "expression": "form(0-2) | present(0-1) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "A": 3,
+            "K": 2,
+            "N": 5,
+            "alphabet": "W4",
+            "closing_bias": null,
+            "disjoint_pair_mass": null,
+            "entropy_rate_bits": 3.2869354937771846,
+            "equivalent_to_baseline": false,
+            "expressions": "form(0-1) | present(0-2) => strong_favour",
+            "family_id": "2a3203894cabe349",
+            "halt_mass": 0.0,
+            "max_abs_dissolve_shift": 0.20769230769230773,
+            "mean_edge_density": 0.517045454545453,
+            "n_deadlock": 0,
+            "n_recurrent": 1,
+            "periods": "2",
+            "reversibility_defect": 3.3291903409319104e-05,
+            "rise_then_release": null,
+            "rise_then_release_excess": null,
+            "set_id": "6db0090e614349de",
+            "stationary_arithmetic": "float64",
+            "stationary_residual": 2.262404673325502e-15,
+            "support_matches_baseline": true,
+            "triangle_mass": null,
+            "tv_from_uniform": 0.15340909090908839
+          }
+        }
+      ],
+      "relation_slots": 10,
+      "runtime_seconds": 15.216102103993762,
+      "screened_families": 16,
+      "sensitivity": {
+        "alphabets": [
+          "W3",
+          "W16"
+        ],
+        "checks": 100,
+        "modal_unchanged": 100,
+        "support_unchanged": 100
+      },
+      "structural_families": 10
+    }
+  ],
+  "engine_version": "0.1.0",
+  "experiment_id": "generation-001-pregeometric-pairwise",
+  "generation": 1,
+  "git_commit": "fd7758d0be29877b6a306455fd81ca3eca49df8b",
+  "numpy": "2.5.3",
+  "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "runtime_seconds": 220.39876815299795,
+  "spec_hash": "620c776a6d13d7ad0bc9e0c5b8e6bc4c683694f19a1dfc41172bc52d58058dbe",
+  "unsearched_declared": [
+    "N=4 cardinality 3",
+    "N=5 cardinality 2",
+    "N=5 cardinality 3",
+    "N>5",
+    "K above the per-cell K_max",
+    "repeated copies of one constraint",
+    "hypergraph semantics",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0",
+    "O>2",
+    "non-multiplicative composition of weights",
+    "additive log-score implementations distinct from the multiplicative monoid"
+  ]
+}

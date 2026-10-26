@@ -1,0 +1,110 @@
+%% Generated from findings.jsonl and relations.jsonl.
+%% Historical nodes appear when a later finding supersedes their interpretation.
+flowchart TD
+  subgraph OBSERVATION [Observed dynamics]
+    RRC_001_R0_EXACT["RRC-001-R0-EXACT: On every frozen RRC-001 interface, unconstrained single-toggle weights are strongly lum..."]
+    RRC_001_HIDDEN_DEPENDENCE["RRC-001-HIDDEN-DEPENDENCE: Hard-wedge and soft-wedge weights make every frozen interface fail strong lumpability. ..."]
+    RRC_001_WEDGE_REFINEMENT["RRC-001-WEDGE-REFINEMENT: Refining an exactly lumpable unconstrained interface by the interface wedge-count profi..."]
+    RRC_001_REPAIR_STATISTICS["RRC-001-REPAIR-STATISTICS: With one hidden pair, edge count and parity restore exactness because each is that pair..."]
+    RRC_001_SOFT_FULL_STATE["RRC-001-SOFT-FULL-STATE: For the soft wedge, the lumpable closure of every frozen interface is the full set of g..."]
+    RRC_001_HARD_GAP["RRC-001-HARD-GAP: The hard wedge leaves a thin exact remainder: the closure omits 1, 1, 7, 11, 79, 35 and..."]
+    RRC_001_NO_SIX["RRC-001-NO-SIX: Six nodes repeats the qualitative verdicts of three, four and five. The hard-wedge defe..."]
+    RRC_001_ORBITS["RRC-001-ORBITS: Under the node-0 boost, stationary toggle rates take one value on the star of node 0 an..."]
+    RRC_001_OCCUPATION["RRC-001-OCCUPATION: Soft-wedge stationary presence is the same for every pair and lies above one half: 9/14..."]
+    RRC_001_COMPOSITION["RRC-001-COMPOSITION: The constructed two-triangle cut at N=6 follows the same qualitative split as a single ..."]
+    RRC_001_ENUMERATION["RRC-001-ENUMERATION: All 29 frozen items finished under the 120-second watchdog by exact enumeration. N=6 us..."]
+    RRC_ATLAS_001["RRC-ATLAS-001: At N=3, and separately at N=4, a single prohibit, the same prohibit written twice, and ..."]
+    RRC_ATLAS_002["RRC-ATLAS-002: Prohibiting one event under both polarities of another edge deletes that event's toggle..."]
+    RRC_ATLAS_003["RRC-ATLAS-003: On each of the four atlas-002 grammars, the N=4 chain and the N=4 branch have one weigh..."]
+    RRC_ATLAS_004["RRC-ATLAS-004: Five atlas-003 controls reproduce the atlas-001 N=3 integer tables. Factors 2, 3 and 4 ..."]
+    RRC_ATLAS_005["RRC-ATLAS-005: The bit-prohibit controls reproduce the atlas-002 tables, including the chain-branch id..."]
+    RRC_ATLAS_007["RRC-ATLAS-007: On this generator, length 12 has effective cardinality 9 on the 3-edge carrier and 12 o..."]
+    RRC_ATLAS_008["RRC-ATLAS-008: On these five carriers the uniform eq-1 and ge-2 multiplies were calculated beside one ..."]
+    RRC_ATLAS_009["RRC-ATLAS-009: On these five baseline carriers, present edge count is strongly lumpable. The degree se..."]
+    RRC_ATLAS_010["RRC-ATLAS-010: On this path, the twelve cardinality-1 multiplies have twelve weight hashes and mean ed..."]
+    RRC_ATLAS_011["RRC-ATLAS-011: On this sample the three label maps are functions of the present edges. The triangle us..."]
+    RRC_ATLAS_012["RRC-ATLAS-012: On this triangle the count of three singleton blocks is the discrete partition and stay..."]
+    RRC_ATLAS_013["RRC-ATLAS-013: On this three-edge chain the present factor-3 multiply is the EQ-019 table. The absent ..."]
+    RRC_ATLAS_014["RRC-ATLAS-014: On this three-edge star the empty list is the constant-1 three-edge weight table, with ..."]
+    RRC_ATLAS_015["RRC-ATLAS-015: On this four-cycle the empty list is the constant-1 four-edge weight table. The carrier..."]
+    RRC_ATLAS_016["RRC-ATLAS-016: On this three-edge chain the empty list is the constant-1 three-edge weight table. The ..."]
+    RRC_ATLAS_017["RRC-ATLAS-017: On edges (0,1), (1,2), and (3,4) the empty list is the constant-1 three-edge weight tab..."]
+    RRC_ATLAS_018["RRC-ATLAS-018: Under method event-kernel-0.1.0 and clock one_declared_event, six cells were stored. Th..."]
+  end
+  subgraph INFERENCE [Inferences]
+    RRC_001_HARD_ABSORBS["RRC-001-HARD-ABSORBS: Under the hard-wedge rule a present pair can always be deleted and the empty graph can ..."]
+    RRC_001_BALANCE["RRC-001-BALANCE: When the weight of toggling a pair does not depend on whether that pair is present, the..."]
+  end
+  subgraph METHODOLOGICAL [Methodological corrections]
+    RRC_M01_NO_NEW_AXIS["RRC-M01-NO-NEW-AXIS: RRC-001 does not add a dynamical primitive. Its rules are current-state weights on the ..."]
+    RRC_001_NO_ONTOLOGY["RRC-001-NO-ONTOLOGY: RRC-001 records no Relational Substrate ontological reading. The cells describe one cur..."]
+    RRC_ATLAS_M01["RRC-ATLAS-M01: The continuation after RRC-001 builds a coverage atlas of elementary current-state cons..."]
+    RRC_ATLAS_006["RRC-ATLAS-006: Under that one rule, a state is a deadlock exactly when the present edges are a total d..."]
+  end
+  subgraph OPEN_QUESTION [Open questions]
+    RRC_Q01["RRC-Q01: What determines how many relational entities a class of behaviour needs, and which beha..."]
+    RRC_Q02["RRC-Q02: Does any class in this grammar have a finite bound on the local information consequenti..."]
+    RRC_Q03["RRC-Q03: Is six nodes distinguishable from neighbouring sizes in any exact property of these mod..."]
+    RRC_Q04["RRC-Q04: When can a designated structure be replaced by its external pairs without changing the ..."]
+    RRC_Q05["RRC-Q05: When an interface reduction is exact, does the reduced chain keep the original toggle g..."]
+    RRC_Q06["RRC-Q06: How does a local weight change affect stationary occupation and toggle rate along a dec..."]
+    RRC_Q07["RRC-Q07: Can two internal graphs share an external signature and induce different next-step laws..."]
+    RRC_Q08["RRC-Q08: Which of these questions can be settled by exact calculation inside the frozen item bud..."]
+    RRC_Q09["RRC-Q09: Which properties of a single designated structure, if any, remain exact when two such s..."]
+    RRC_Q10["RRC-Q10: Which structural or dynamical behaviour became visible that the opening questions did n..."]
+    RRC_001_OPEN_ANALYTIC["RRC-001-OPEN-ANALYTIC: Why do the hidden-triangle defects 51/40 and 486/935 repeat at neighbouring sizes, and ..."]
+  end
+  RRC_M01_NO_NEW_AXIS -->|raises_question| RRC_Q04
+  RRC_Q04 -->|motivates| RRC_Q02
+  RRC_Q04 -->|motivates| RRC_Q05
+  RRC_Q04 -->|motivates| RRC_Q07
+  RRC_Q01 -->|motivates| RRC_Q03
+  RRC_Q04 -->|motivates| RRC_Q09
+  RRC_M01_NO_NEW_AXIS -->|raises_question| RRC_Q08
+  RRC_Q01 -->|motivates| RRC_Q06
+  RRC_Q02 -->|raises_question| RRC_Q10
+  RRC_Q04 -->|partially_answered_by| RRC_001_R0_EXACT
+  RRC_Q04 -->|partially_answered_by| RRC_001_HIDDEN_DEPENDENCE
+  RRC_001_HIDDEN_DEPENDENCE -->|contrasts_with| RRC_001_R0_EXACT
+  RRC_Q07 -->|partially_answered_by| RRC_001_WEDGE_REFINEMENT
+  RRC_Q07 -->|partially_answered_by| RRC_001_REPAIR_STATISTICS
+  RRC_Q07 -->|partially_answered_by| RRC_001_SOFT_FULL_STATE
+  RRC_001_HARD_ABSORBS -->|explains| RRC_001_HARD_GAP
+  RRC_Q03 -->|partially_answered_by| RRC_001_NO_SIX
+  RRC_001_BALANCE -->|explains| RRC_001_ORBITS
+  RRC_Q06 -->|partially_answered_by| RRC_001_ORBITS
+  RRC_Q06 -->|partially_answered_by| RRC_001_OCCUPATION
+  RRC_Q05 -->|partially_answered_by| RRC_001_R0_EXACT
+  RRC_Q05 -->|partially_answered_by| RRC_001_HIDDEN_DEPENDENCE
+  RRC_Q09 -->|partially_answered_by| RRC_001_COMPOSITION
+  RRC_Q02 -->|partially_answered_by| RRC_001_SOFT_FULL_STATE
+  RRC_Q02 -->|qualifies| RRC_001_HARD_GAP
+  RRC_Q01 -->|partially_answered_by| RRC_001_NO_SIX
+  RRC_Q08 -->|partially_answered_by| RRC_001_ENUMERATION
+  RRC_Q10 -->|partially_answered_by| RRC_001_WEDGE_REFINEMENT
+  RRC_Q10 -->|partially_answered_by| RRC_001_OCCUPATION
+  RRC_001_OPEN_ANALYTIC -->|raised_by| RRC_001_NO_SIX
+  RRC_001_OPEN_ANALYTIC -->|raised_by| RRC_001_OCCUPATION
+  RRC_001_NO_ONTOLOGY -->|qualifies| RRC_001_HIDDEN_DEPENDENCE
+  RRC_Q05 -->|partially_answered_by| RRC_001_COMPOSITION
+  RRC_ATLAS_M01 -->|qualifies| RRC_001_OPEN_ANALYTIC
+  RRC_ATLAS_001 -->|derived_from| RRC_ATLAS_M01
+  RRC_ATLAS_002 -->|derived_from| RRC_ATLAS_M01
+  RRC_ATLAS_003 -->|derived_from| RRC_ATLAS_M01
+  RRC_ATLAS_004 -->|derived_from| RRC_ATLAS_M01
+  RRC_ATLAS_005 -->|contrasts_with| RRC_ATLAS_003
+  RRC_ATLAS_006 -->|formalises| RRC_ATLAS_005
+  RRC_ATLAS_007 -->|contrasts_with| RRC_ATLAS_004
+  RRC_ATLAS_008 -->|contrasts_with| RRC_ATLAS_005
+  RRC_ATLAS_009 -->|contrasts_with| RRC_ATLAS_003
+  RRC_ATLAS_010 -->|contrasts_with| RRC_ATLAS_007
+  RRC_ATLAS_011 -->|qualifies| RRC_ATLAS_009
+  RRC_ATLAS_012 -->|qualifies| RRC_ATLAS_011
+  RRC_ATLAS_013 -->|contrasts_with| RRC_ATLAS_010
+  RRC_ATLAS_014 -->|qualifies| RRC_ATLAS_008
+  RRC_ATLAS_015 -->|qualifies| RRC_ATLAS_009
+  RRC_ATLAS_016 -->|qualifies| RRC_ATLAS_013
+  RRC_ATLAS_016 -->|qualifies| RRC_ATLAS_012
+  RRC_ATLAS_017 -->|qualifies| RRC_ATLAS_016
+  RRC_ATLAS_017 -->|qualifies| RRC_ATLAS_013
+  RRC_ATLAS_018 -->|qualifies| RRC_M01_NO_NEW_AXIS

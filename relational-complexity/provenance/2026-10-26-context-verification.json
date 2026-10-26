@@ -1,0 +1,110 @@
+{
+  "method": "context-probe-analysis-0.1.0",
+  "evidence_type": "analytic proof and independent software validation",
+  "scientific_worker_invocations": 0,
+  "new_atlas_cells": 0,
+  "template_count": 22,
+  "hidden_update_modes": [
+    "hold",
+    "flip",
+    "reset"
+  ],
+  "validation": {
+    "systems": 1452,
+    "stable": 66,
+    "unstable": 1386,
+    "probe_laws": 4356,
+    "reconstructed_signatures": 5808
+  },
+  "full_label_condition_not_necessary_for_all_declared_contexts": true,
+  "private_redistribution_signatures": [
+    {
+      "shared": {
+        "a": [
+          "0/1",
+          "0/1"
+        ],
+        "b": [
+          "0/1",
+          "0/1"
+        ]
+      },
+      "private": [
+        "0/1",
+        "1/1"
+      ]
+    },
+    {
+      "shared": {
+        "a": [
+          "0/1",
+          "0/1"
+        ],
+        "b": [
+          "0/1",
+          "0/1"
+        ]
+      },
+      "private": [
+        "0/1",
+        "1/1"
+      ]
+    },
+    {
+      "shared": {
+        "a": [
+          "0/1",
+          "0/1"
+        ],
+        "b": [
+          "0/1",
+          "0/1"
+        ]
+      },
+      "private": [
+        "1/1",
+        "0/1"
+      ]
+    },
+    {
+      "shared": {
+        "a": [
+          "0/1",
+          "0/1"
+        ],
+        "b": [
+          "0/1",
+          "0/1"
+        ]
+      },
+      "private": [
+        "1/1",
+        "0/1"
+      ]
+    }
+  ],
+  "changed_handshake_fails": true,
+  "internal_loop_vs_halt_calibration": {
+    "exact": false,
+    "rows": null,
+    "witness": {
+      "states": [
+        0,
+        2
+      ],
+      "source_block": 0,
+      "first_row": [
+        "1/2",
+        "1/2"
+      ],
+      "second_row": [
+        "0/1",
+        "1/1"
+      ]
+    }
+  },
+  "scaling_exact_in_shared_only_context": true,
+  "scaling_not_uniformly_preserved": true,
+  "empty_handshake_and_duplicate_nonunit_controls": "verified",
+  "status": "verified"
+}

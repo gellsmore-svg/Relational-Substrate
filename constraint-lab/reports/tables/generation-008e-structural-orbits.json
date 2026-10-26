@@ -1,0 +1,282 @@
+[
+  {
+    "action_direction": "dissolve",
+    "canonical_rule": "dissolve(0-1) | absent(0-1-2) & absent(0-1-3)",
+    "condition_polarities": [
+      "absent",
+      "absent"
+    ],
+    "incidence_class": "face_of_both",
+    "literal_pattern": "absent_absent",
+    "literal_polarity_relation": "same",
+    "orbit_id": "K3-00",
+    "orbit_size": 6,
+    "shared_pair_relation": "action_is_shared_pair"
+  },
+  {
+    "action_direction": "dissolve",
+    "canonical_rule": "dissolve(0-1) | absent(0-1-2) & present(0-1-3)",
+    "condition_polarities": [
+      "absent",
+      "present"
+    ],
+    "incidence_class": "face_of_both",
+    "literal_pattern": "present_absent",
+    "literal_polarity_relation": "mixed",
+    "orbit_id": "K3-01",
+    "orbit_size": 12,
+    "shared_pair_relation": "action_is_shared_pair"
+  },
+  {
+    "action_direction": "dissolve",
+    "canonical_rule": "dissolve(0-1) | absent(0-1-2) & absent(0-2-3)",
+    "condition_polarities": [
+      "absent",
+      "absent"
+    ],
+    "incidence_class": "face_of_exactly_one",
+    "literal_pattern": "absent_absent",
+    "literal_polarity_relation": "same",
+    "orbit_id": "K3-02",
+    "orbit_size": 24,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  },
+  {
+    "action_direction": "dissolve",
+    "canonical_rule": "dissolve(0-1) | absent(0-1-2) & present(0-2-3)",
+    "condition_polarities": [
+      "absent",
+      "present"
+    ],
+    "incidence_class": "face_of_exactly_one",
+    "literal_pattern": "face_absent_other_present",
+    "literal_polarity_relation": "mixed",
+    "orbit_id": "K3-03",
+    "orbit_size": 24,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  },
+  {
+    "action_direction": "dissolve",
+    "canonical_rule": "dissolve(0-1) | present(0-1-2) & present(0-1-3)",
+    "condition_polarities": [
+      "present",
+      "present"
+    ],
+    "incidence_class": "face_of_both",
+    "literal_pattern": "present_present",
+    "literal_polarity_relation": "same",
+    "orbit_id": "K3-04",
+    "orbit_size": 6,
+    "shared_pair_relation": "action_is_shared_pair"
+  },
+  {
+    "action_direction": "dissolve",
+    "canonical_rule": "dissolve(0-1) | present(0-1-2) & absent(0-2-3)",
+    "condition_polarities": [
+      "present",
+      "absent"
+    ],
+    "incidence_class": "face_of_exactly_one",
+    "literal_pattern": "face_present_other_absent",
+    "literal_polarity_relation": "mixed",
+    "orbit_id": "K3-05",
+    "orbit_size": 24,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  },
+  {
+    "action_direction": "dissolve",
+    "canonical_rule": "dissolve(0-1) | present(0-1-2) & present(0-2-3)",
+    "condition_polarities": [
+      "present",
+      "present"
+    ],
+    "incidence_class": "face_of_exactly_one",
+    "literal_pattern": "present_present",
+    "literal_polarity_relation": "same",
+    "orbit_id": "K3-06",
+    "orbit_size": 24,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  },
+  {
+    "action_direction": "dissolve",
+    "canonical_rule": "dissolve(0-1) | absent(0-2-3) & absent(1-2-3)",
+    "condition_polarities": [
+      "absent",
+      "absent"
+    ],
+    "incidence_class": "face_of_neither",
+    "literal_pattern": "absent_absent",
+    "literal_polarity_relation": "same",
+    "orbit_id": "K3-07",
+    "orbit_size": 6,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  },
+  {
+    "action_direction": "dissolve",
+    "canonical_rule": "dissolve(0-1) | absent(0-2-3) & present(1-2-3)",
+    "condition_polarities": [
+      "absent",
+      "present"
+    ],
+    "incidence_class": "face_of_neither",
+    "literal_pattern": "present_absent",
+    "literal_polarity_relation": "mixed",
+    "orbit_id": "K3-08",
+    "orbit_size": 12,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  },
+  {
+    "action_direction": "dissolve",
+    "canonical_rule": "dissolve(0-1) | present(0-2-3) & present(1-2-3)",
+    "condition_polarities": [
+      "present",
+      "present"
+    ],
+    "incidence_class": "face_of_neither",
+    "literal_pattern": "present_present",
+    "literal_polarity_relation": "same",
+    "orbit_id": "K3-09",
+    "orbit_size": 6,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  },
+  {
+    "action_direction": "form",
+    "canonical_rule": "form(0-1) | absent(0-1-2) & absent(0-1-3)",
+    "condition_polarities": [
+      "absent",
+      "absent"
+    ],
+    "incidence_class": "face_of_both",
+    "literal_pattern": "absent_absent",
+    "literal_polarity_relation": "same",
+    "orbit_id": "K3-10",
+    "orbit_size": 6,
+    "shared_pair_relation": "action_is_shared_pair"
+  },
+  {
+    "action_direction": "form",
+    "canonical_rule": "form(0-1) | absent(0-1-2) & present(0-1-3)",
+    "condition_polarities": [
+      "absent",
+      "present"
+    ],
+    "incidence_class": "face_of_both",
+    "literal_pattern": "present_absent",
+    "literal_polarity_relation": "mixed",
+    "orbit_id": "K3-11",
+    "orbit_size": 12,
+    "shared_pair_relation": "action_is_shared_pair"
+  },
+  {
+    "action_direction": "form",
+    "canonical_rule": "form(0-1) | absent(0-1-2) & absent(0-2-3)",
+    "condition_polarities": [
+      "absent",
+      "absent"
+    ],
+    "incidence_class": "face_of_exactly_one",
+    "literal_pattern": "absent_absent",
+    "literal_polarity_relation": "same",
+    "orbit_id": "K3-12",
+    "orbit_size": 24,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  },
+  {
+    "action_direction": "form",
+    "canonical_rule": "form(0-1) | absent(0-1-2) & present(0-2-3)",
+    "condition_polarities": [
+      "absent",
+      "present"
+    ],
+    "incidence_class": "face_of_exactly_one",
+    "literal_pattern": "face_absent_other_present",
+    "literal_polarity_relation": "mixed",
+    "orbit_id": "K3-13",
+    "orbit_size": 24,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  },
+  {
+    "action_direction": "form",
+    "canonical_rule": "form(0-1) | present(0-1-2) & present(0-1-3)",
+    "condition_polarities": [
+      "present",
+      "present"
+    ],
+    "incidence_class": "face_of_both",
+    "literal_pattern": "present_present",
+    "literal_polarity_relation": "same",
+    "orbit_id": "K3-14",
+    "orbit_size": 6,
+    "shared_pair_relation": "action_is_shared_pair"
+  },
+  {
+    "action_direction": "form",
+    "canonical_rule": "form(0-1) | present(0-1-2) & absent(0-2-3)",
+    "condition_polarities": [
+      "present",
+      "absent"
+    ],
+    "incidence_class": "face_of_exactly_one",
+    "literal_pattern": "face_present_other_absent",
+    "literal_polarity_relation": "mixed",
+    "orbit_id": "K3-15",
+    "orbit_size": 24,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  },
+  {
+    "action_direction": "form",
+    "canonical_rule": "form(0-1) | present(0-1-2) & present(0-2-3)",
+    "condition_polarities": [
+      "present",
+      "present"
+    ],
+    "incidence_class": "face_of_exactly_one",
+    "literal_pattern": "present_present",
+    "literal_polarity_relation": "same",
+    "orbit_id": "K3-16",
+    "orbit_size": 24,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  },
+  {
+    "action_direction": "form",
+    "canonical_rule": "form(0-1) | absent(0-2-3) & absent(1-2-3)",
+    "condition_polarities": [
+      "absent",
+      "absent"
+    ],
+    "incidence_class": "face_of_neither",
+    "literal_pattern": "absent_absent",
+    "literal_polarity_relation": "same",
+    "orbit_id": "K3-17",
+    "orbit_size": 6,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  },
+  {
+    "action_direction": "form",
+    "canonical_rule": "form(0-1) | absent(0-2-3) & present(1-2-3)",
+    "condition_polarities": [
+      "absent",
+      "present"
+    ],
+    "incidence_class": "face_of_neither",
+    "literal_pattern": "present_absent",
+    "literal_polarity_relation": "mixed",
+    "orbit_id": "K3-18",
+    "orbit_size": 12,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  },
+  {
+    "action_direction": "form",
+    "canonical_rule": "form(0-1) | present(0-2-3) & present(1-2-3)",
+    "condition_polarities": [
+      "present",
+      "present"
+    ],
+    "incidence_class": "face_of_neither",
+    "literal_pattern": "present_present",
+    "literal_polarity_relation": "same",
+    "orbit_id": "K3-19",
+    "orbit_size": 6,
+    "shared_pair_relation": "action_is_not_shared_pair"
+  }
+]

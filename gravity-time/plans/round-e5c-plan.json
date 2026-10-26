@@ -1,0 +1,446 @@
+{
+  "analysis_only": true,
+  "analysis_version": "gt-e5c/v1",
+  "chosen_because": "GT-P010 reflection section 8 option A (durable renewal), authorised by GT-P011 as the only scientific round",
+  "clock": "anchor-local event count (slots incident on an anchor vertex), within one jump trajectory; remote events are integrated through the local-event kernel, never discarded",
+  "comparators": {
+    "N0": "NULL item at the same N",
+    "ND": "E5A T6 unchanged (gtpersist.nd_chain)",
+    "NK": "E5B T11 unchanged (gtrenew.nk_chain)",
+    "not_implemented": [
+      "any local/within-layer comparator (a future round)",
+      "CL matched-source control (not mapped)"
+    ]
+  },
+  "consulted_hub": {
+    "commit": "38c2501bbab22ca1eb2288ea76a962ac0170d5e6",
+    "method": "git show (read-only)",
+    "note": "later hub movement does not re-motivate this frozen round",
+    "ref": "origin/main",
+    "shared_questions": [
+      "XQ::01",
+      "XQ::04",
+      "XQ::07",
+      "XQ::03"
+    ]
+  },
+  "estimands": {
+    "C_h": "U_h / R0 (conditional post-renewal survival)",
+    "R0": "P_Palm(first renewal before exit); replicates E5B renewal_unconditional (check, not evidence)",
+    "U_h": "P_Palm(first renewal before exit AND the next h anchor-local events each leave the state in R(S0)); U_0 = R0",
+    "causes": "after first renewal: P(an original partner returns before exit) and P(exit before return); exclusive, exhaustive (T15)",
+    "diagnostics": "L1 distance between the first-renewal law and the stationary law restricted to R (first-hit versus stationary); local share of events at first renewal",
+    "immediate": "P(next anchor-local event returns an original partner | renewal), P(next local event exits | renewal)",
+    "strata": "entry-set size distribution under Palm entry; every quantity per size class; F_TRI pooled over |S0| >= 2 reported separately from |S0| = 1"
+  },
+  "experiment_id": "gt-round-e5c-free-durable-renewal",
+  "families": {
+    "CLOSEW": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "close_form"
+          }
+        ]
+      }
+    },
+    "CSPH": {
+      "strong_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "strong_favour",
+            "kind": "close_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    },
+    "NULL": {
+      "none": {
+        "components": []
+      }
+    },
+    "PATHF": {
+      "weak_suppress": {
+        "components": [
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          }
+        ]
+      }
+    },
+    "PATHH": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    },
+    "PCOMP": {
+      "weak_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    }
+  },
+  "frozen_checks": {
+    "NULL": "target, ND and NK identical on NULL items (1e-10)",
+    "PCOMP": "CT law uniform (1e-9)",
+    "T13": "no remote transition from R leaves R (exact count 0)",
+    "causes": "return + exit = 1 and next-local split sums to 1 (1e-9)",
+    "consistency": "U_h = R0 C_h per class (1e-12)",
+    "monotonicity": "U_0 >= U_1 >= U_2 >= U_4 >= U_8",
+    "relabelling": "relabelled anchors agree within 1e-9 relative (or 1e-15 absolute)",
+    "replication": "R0 of target, ND and NK equals the published E5B renewal_unconditional within max(1e-10, 1e-8 |value|)",
+    "solver": "BiCGSTAB relative residual 1e-12 (resolved at 10x); dense versus iterative <= 1e-9 where dense is run (<= 4096 states); unresolved solves recorded UNRESOLVED"
+  },
+  "gt_baseline_commit": "4aaf04c0601b4232fc9fa24f6aa5d5ce6390c7e2",
+  "history": false,
+  "horizons": [
+    0,
+    1,
+    2,
+    4,
+    8
+  ],
+  "hypotheses_without_prediction": [
+    "D1 durable reconstruction",
+    "D2 flicker-assisted renewal",
+    "D3 density-layer traffic",
+    "D4 within-layer/local kinetics",
+    "D5 occupancy and entrance composition",
+    "D6 clock/readout dependence",
+    "D7 null, structural impossibility or unanticipated"
+  ],
+  "items": [
+    {
+      "components": [],
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "FREE-N5-NULL-none",
+      "n": 5,
+      "prior_cell": "round-e5b FREE-N5-NULL-none",
+      "role": "null_control_N0"
+    },
+    {
+      "components": [
+        [
+          "path_form",
+          "weak_suppress"
+        ]
+      ],
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N5-PATHF-weak_suppress",
+      "n": 5,
+      "prior_cell": "round-e5b FREE-N5-PATHF-weak_suppress",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-PATHH-weak_favour",
+      "n": 5,
+      "prior_cell": "round-e5b FREE-N5-PATHH-weak_favour",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "close_form",
+          "strong_favour"
+        ],
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "FREE-N5-CSPH-strong_favour+weak_favour",
+      "n": 5,
+      "prior_cell": "round-e5b FREE-N5-CSPH-strong_favour+weak_favour",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "close_form",
+          "weak_favour"
+        ]
+      ],
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-CLOSEW-weak_favour",
+      "n": 5,
+      "prior_cell": "round-e5b FREE-N5-CLOSEW-weak_favour",
+      "role": "control_reversible_closure"
+    },
+    {
+      "components": [
+        [
+          "path_form",
+          "weak_favour"
+        ],
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "FREE-N5-PCOMP-weak_favour+weak_favour",
+      "n": 5,
+      "prior_cell": "round-e5b FREE-N5-PCOMP-weak_favour+weak_favour",
+      "role": "control_equal_ratio"
+    },
+    {
+      "components": [],
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "FREE-N6-NULL-none",
+      "n": 6,
+      "prior_cell": "round-e5b FREE-N6-NULL-none",
+      "role": "null_control_N0"
+    },
+    {
+      "components": [
+        [
+          "path_form",
+          "weak_suppress"
+        ]
+      ],
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N6-PATHF-weak_suppress",
+      "n": 6,
+      "prior_cell": "round-e5b FREE-N6-PATHF-weak_suppress",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "FREE-N6-PATHH-weak_favour",
+      "n": 6,
+      "prior_cell": "round-e5b FREE-N6-PATHH-weak_favour",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "close_form",
+          "strong_favour"
+        ],
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "FREE-N6-CSPH-strong_favour+weak_favour",
+      "n": 6,
+      "prior_cell": "round-e5b FREE-N6-CSPH-strong_favour+weak_favour",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "close_form",
+          "weak_favour"
+        ]
+      ],
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "FREE-N6-CLOSEW-weak_favour",
+      "n": 6,
+      "prior_cell": "round-e5b FREE-N6-CLOSEW-weak_favour",
+      "role": "control_reversible_closure"
+    },
+    {
+      "components": [
+        [
+          "path_form",
+          "weak_favour"
+        ],
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "FREE-N6-PCOMP-weak_favour+weak_favour",
+      "n": 6,
+      "prior_cell": "round-e5b FREE-N6-PCOMP-weak_favour+weak_favour",
+      "role": "control_equal_ratio"
+    }
+  ],
+  "meta_constraints": false,
+  "method": {
+    "name": "Open-Thetical Research",
+    "path": "research-methods/open-thetical-research.md",
+    "version": "1.0"
+  },
+  "new_primitives": false,
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      5,
+      6
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL"
+  },
+  "parameter_fit": false,
+  "plan_hash": "bab7a59d5faf0ce31a20f5b9fe1bb42ff2f308d94df84bfa34a602c7e7416e47",
+  "pre_freeze_exposure": {
+    "engineering": "proof fixtures on N<=4 kernels and synthetic neighbourhood rules at N=5,6 (not GT families); timing on the synthetic N=6 rule only (about 21 s per law for both predicates and both anchors; 346 MB); no E5C quantity of any N=5 or N=6 scientific cell computed before freezing",
+    "published": "E5A and E5B values for the same 12 laws (including E5B renewal R0, which E5C replicates)",
+    "reference_hashes": {
+      "constraint-lab/docs/scientific-plan-discipline.md": "4101d64f8b4d228dd1cb6ca46d77848e14e79f768041aff839f962da6fecd974",
+      "constraint-lab/src/rs_constraint_lab/gtdurable.py": "d657fe6010f728fd4511ecda79cfe9ba6bc94d305ca2498ff4b6461083dca0fb",
+      "constraint-lab/src/rs_constraint_lab/gte5c.py": "06bca7a70f57162b9ed4c88a1511e65c0731154ac57df3b909f5169ea901f5ce",
+      "constraint-lab/src/rs_constraint_lab/gtpersist.py": "86f083ee48be5e96d1d2d6692e715595b8509ef3ccdb3e6afdcb7545389ecdb2",
+      "constraint-lab/src/rs_constraint_lab/gtrenew.py": "56e85a62f64d680122bd8cacd9bab8abb8771f81a3458d346ab4daf0e55ec72f",
+      "constraint-lab/tests/test_gtdurable.py": "63e388fba18fe98a12405e7f3817812872e760d99c5b9bc602690e0dd5be5482",
+      "gravity-time/docs/e5-definitions-and-null-construction.md": "be3d11a6e5c56eb1846ea8b6228458c16b0e6f75186518d743d97a34716273ba",
+      "gravity-time/docs/e5b-definitions-controls-and-feasibility.md": "a4655feb5780e12b260d13bba547f06013c9ae6d1487f67a07fadda034cdffb7",
+      "gravity-time/docs/e5c-durable-renewal-definitions.md": "73c35401fbd065998def60f334a9d7f056bd7252c0e439ce078f7c6e5e08307b",
+      "gravity-time/docs/gt-p011-starting-audit.md": "3eb6f630e1733ec4cefad86d526e4abfd6016b05fcc7b9b5a6296cd523e3c125",
+      "gravity-time/plans/round-e5b-plan.json": "f75265d762ed522706364f9a770ba19861557d0499a1735d6cf40ab2c26d26d1",
+      "gravity-time/provenance/prompts/GT-P011-agent-input.md": "a47689992b4767f1905e127fde5e0b50e0c1099701ea7f999cbec3eb2d76f404",
+      "gravity-time/reports/round-e5b-tables.json": "e9a7f6193375bce1c2f146cfbadde2f377d0c3caef0aee8482fa060939979e7d",
+      "research-methods/open-thetical-research.md": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd"
+    },
+    "structural_discovery": "T14 (F_2PATH at N=5 cannot survive any local event after renewal) was found on the synthetic N=5 rule; it is combinatorial and law-independent"
+  },
+  "predicate_ids": [
+    "FREE-N5-NULL-none:F_2PATH",
+    "FREE-N5-NULL-none:F_TRI",
+    "FREE-N5-PATHF-weak_suppress:F_2PATH",
+    "FREE-N5-PATHF-weak_suppress:F_TRI",
+    "FREE-N5-PATHH-weak_favour:F_2PATH",
+    "FREE-N5-PATHH-weak_favour:F_TRI",
+    "FREE-N5-CSPH-strong_favour+weak_favour:F_2PATH",
+    "FREE-N5-CSPH-strong_favour+weak_favour:F_TRI",
+    "FREE-N5-CLOSEW-weak_favour:F_2PATH",
+    "FREE-N5-CLOSEW-weak_favour:F_TRI",
+    "FREE-N5-PCOMP-weak_favour+weak_favour:F_2PATH",
+    "FREE-N5-PCOMP-weak_favour+weak_favour:F_TRI",
+    "FREE-N6-NULL-none:F_2PATH",
+    "FREE-N6-NULL-none:F_TRI",
+    "FREE-N6-PATHF-weak_suppress:F_2PATH",
+    "FREE-N6-PATHF-weak_suppress:F_TRI",
+    "FREE-N6-PATHH-weak_favour:F_2PATH",
+    "FREE-N6-PATHH-weak_favour:F_TRI",
+    "FREE-N6-CSPH-strong_favour+weak_favour:F_2PATH",
+    "FREE-N6-CSPH-strong_favour+weak_favour:F_TRI",
+    "FREE-N6-CLOSEW-weak_favour:F_2PATH",
+    "FREE-N6-CLOSEW-weak_favour:F_TRI",
+    "FREE-N6-PCOMP-weak_favour+weak_favour:F_2PATH",
+    "FREE-N6-PCOMP-weak_favour+weak_favour:F_TRI"
+  ],
+  "predicates": {
+    "F_2PATH": "deg(0) >= 2; entry set S0 = the two neighbours after entry",
+    "F_TRI": "edge {0,1} present with >= 1 completer; S0 = completers after entry; stratified by |S0|",
+    "excluded": "F_STAR (complete renewal impossible at N<=6; partial-renewal durability not defined in this round)",
+    "relabelled": "image under v -> N-1-v"
+  },
+  "programme": "GT",
+  "prompt_id": "GT-P011",
+  "question": "Once a flexible relational property has reached a fully renewed partner set, how often does it remain continuously true with the original partners absent over several subsequent anchor-local changes, relative to N0, ND and NK?",
+  "round_id": "round-e5c",
+  "rule_reading": "no rule reads an anchor, S0, renewal state or local-event count; all are analysis-defined observers",
+  "schema": "rs-gt.e5c-plan/v1",
+  "software": {
+    "analysis_module": "rs_constraint_lab.gte5c",
+    "durable": "gt-durable/v1",
+    "kernel": "gt-vectorised-kernel/v1",
+    "numpy": "2.5.3",
+    "persistence": "gt-persist/v1",
+    "python": "3.12.3",
+    "renewal": "gt-renew/v1",
+    "scipy": "not used"
+  },
+  "solver": {
+    "cap_iterations": 20000,
+    "cap_seconds": 600.0,
+    "dense_cross_check_max_size": 4096,
+    "method": "row (forward) BiCGSTAB on killed sub-chains in canonical frames",
+    "tolerance": 1e-12
+  },
+  "source_commit": "9508f0015e3b9d2f894b8782840867a4eca63447",
+  "stochastic_trajectories": "none",
+  "stop_conditions": {
+    "after_round": "no E5D",
+    "amendment": "any cell, predicate, horizon or estimand change stops the round",
+    "item": "watchdog {5: 900, 6: 2400} s by N",
+    "round": "all items or 10800 s",
+    "unresolved": "recorded as UNRESOLVED or FAILED_FROZEN_CHECK; no retuning, no substitute cell"
+  },
+  "structural_statuses": {
+    "STRUCTURALLY_IMPOSSIBLE": "no feasible entry class (T10)",
+    "STRUCTURALLY_ZERO_FOR_H_GE_1": "no local transition from R back to R exists (T14; e.g. F_2PATH at N=5)",
+    "renewal_probability_zero": "feasible but R not reached (none expected with positive rates)"
+  },
+  "tolerances": {
+    "identity": 1e-09,
+    "replication": [
+      1e-10,
+      1e-08
+    ],
+    "solve": [
+      1e-12,
+      20000,
+      600.0
+    ],
+    "tie_relative": 1e-09
+  },
+  "work_count": {
+    "estimate_note": "about 1-2 min per N=6 item from the synthetic timing (3 laws x ~21 s); a few minutes in total expected, not promised",
+    "items": 12,
+    "kernels": 12,
+    "largest_state_space": 32768,
+    "laws_per_item": "target, ND, NK; primary and relabelled anchors",
+    "memory_ceiling_per_worker_bytes": 2000000000,
+    "predicate_analyses": 24,
+    "round_wall_cap_seconds": 10800,
+    "watchdog_seconds": {
+      "5": 900,
+      "6": 2400
+    },
+    "workers": 4
+  }
+}

@@ -1,0 +1,161 @@
+# Cross-atlas index
+
+A reading of records that already exist. Not a conclusion. Not a queue.
+
+Rounds in view: RRC-001 (`rrc-0.1.0`), atlas-001 and atlas-002 (`rrc-0.2.0`), atlas-003, atlas-004, and atlas-005 (`rrc-0.3.0`), atlas-006 (`rrc-0.4.0`). Hashes are compared only when the integer tables have the same shape and the same declared edge order, or when a row states the bit rule that makes two shapes match. RRC-001 items are not `atlas_core` weight tables. Their lumpability numbers are not compared with these hashes.
+
+## Weight tables
+
+EQ-001 to EQ-003 are identities of the opening composer. They predate the type field.
+
+EQ-004 and EQ-005 are atlas-001 cells whose lists differ and whose tables do not. EQ-006 and EQ-007 are the chain, the branch, and the N=3 bit rule. EQ-009 and EQ-011 are the same opening lists under `rrc-0.3.0`. EQ-010 is a dissolve prohibit sitting inside an either-prohibit. EQ-012 is an empty incident neighbourhood. EQ-013 is a one-neighbour incident rule that reads a single bit.
+
+Equal hashes are equal integer tables in the declared order. They are not equal node sets. EQ-007 and EQ-013 record component means that differ because N differs.
+
+## Kernels
+
+EQ-008 is the method identity: baseline 1 and baseline 2, same kernel, different integers, under `halt_self_loop`. It is not a cell.
+
+In atlas-003 and atlas-004, no two items shared a kernel without also sharing the integer table. Weight ablation and kernel ablation agreed on every cell of both rounds. A kernel hash that differs from its own weight hash means some positive row has gcd greater than 1. That is not an equivalence between two specifications.
+
+ATLAS-Q08 stays open. No continuous-time rate was computed. Agreement under `halt_self_loop` is not agreement under every clock.
+
+## Incident count
+
+EQ-017 is a method identity of `rrc-0.4.0`. `ge 1` matches `incident_neighbour` present, and `eq 0` matches absent, including an empty neighbourhood. `eq 1` and `ge 2` differ from `ge 1` when a neighbourhood has two or more edges. The check is `tests/test_count.py`. Atlas-006 later used uniform `eq 1` and `ge 2` multiplies. Other count relations, and a common-neighbour count, have no cell. A common-neighbour count is not this predicate.
+
+EQ-020 is the uniform `ge 2` cardinality identity. One multiply on every edge, factor at least 2, no other constraint. Weight-effective cardinality equals the number of edges with at least two incident carrier edges. Kernel-effective cardinality equals that number for `either` and for `form`. For `dissolve` it does too, except on a triangle and on a three-edge star, where the kernel is the baseline kernel and the integer table is not. A duplicate multiply, and a prohibit on the same guard, leave the family. The argument is `docs/incident-count-cardinality.md`. Atlas-006 was not rerun. The identity is not the next round.
+
+## Relabelling
+
+No frozen cell declares a node permutation. Hash equality without that mapping is not relabelling equivalence. IDEA-E03 and `COV-RELABEL` stay open.
+
+The path-reversal check in `tests/test_kernel.py` is a compiler identity for one uniform template. The atlas-004 endpoint and middle-edge cells are designated instruments. They differ. That is not a covariance theorem.
+
+## Contrasts
+
+PAT-001 through PAT-007 are recorded. `schedules_follow_up` is false on each.
+
+The designated-bit rules do not separate the atlas-002 chain from the atlas-002 branch. The incident-neighbour templates do. PAT-007. The structure hash stored on `rrc-0.3.0` results also differs for those carriers. Atlas-002 results were not rewritten to insert it. ATLAS-Q07 stays open.
+
+An imposed syntax cycle occurs with one recurrent class and with more than one. PAT-006, and the same split on the incident templates. The flag is rule text.
+
+In atlas-003 the two-event cell and the factor-4 cell share mean edges 5/3 and mean components 3/2 and do not share a hash. Those means do not identify the table.
+
+## Line-graph total domination
+
+For one rule, the uniform present-polarity incident prohibit on every edge, a state is a deadlock exactly when the present edges are a total dominating set of the carrier's line graph. The argument and the counterconditions are in `docs/line-graph-domination.md`. EQ-014. The atlas-004 deadlock counts agree. Recurrent classes on the three-edge chain outnumber those deadlocks. The identity is not a reason to centre the next round on domination.
+
+## atlas-005
+
+One generator, twelve lists, three carriers. State spaces have 8, 16 and 32 states, so weight hashes are compared only inside a shared shape.
+
+EQ-015: `A5-N3-base` reproduces the 3-edge baseline hash `3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7`. Mean edges 3/2. Mean components 13/8.
+
+EQ-016: `A5-P5-base`, the 5-node chain, matches the 4-cycle baseline hash `5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3`. Both are the constant-1 table on four edges. Mean edges 2/1 on both. Mean components are 3/1 on the chain and 33/16 on the cycle. The structure hashes differ.
+
+PAT-008: length 12 of this generator has effective cardinality 9 on three edges and 12 on four edges and on five edges. PAT-009: length 9 has two recurrent classes on the chain and one on the cycle. `schedules_follow_up` is false on both. No two lists in the round share a weight hash or a kernel hash. Weight ablation and kernel ablation agreed on all 12 cells. ATLAS-Q01, ATLAS-Q05 and ATLAS-Q08 stay open.
+
+## atlas-006
+
+Fifteen cells. Five carriers, one designated-bit multiply by 3, and uniform `eq 1` and `ge 2` multiplies by 3. `ge 1` was not rerun.
+
+EQ-018: `A6-disc-eq1` and `A6-disc-ge2` match the disconnected baseline hash `7d68b5c4119211a50d84f89b7f843e9ae6da04183d69ba4b542b04aeb2280273`. Mean edges 1/1. Mean components 3/1. Each neighbourhood is empty. The bit instrument on that carrier has a different hash.
+
+EQ-019: `A6-chain-bit` and `A6-branch-bit` match `A4-chain-end-mul` and `A3-03-mul-present-3`, hash `7b4f2c8ef26032e36f92000c69cc7c0fcf032e4f1353009ff490efa1f4b37be9`. Mean edges 13/8. Mean components 19/8 on the chain and the branch, and 49/32 on the N=3 cell. The structure hashes differ.
+
+PAT-010: the `eq 1` template and the `ge 2` template each give different hashes on the three-edge chain and the three-edge branch. The bit instruments share a hash. PAT-011: on the five `ge 2` lists, effective cardinality equals the number of edges with at least two incident neighbours. `schedules_follow_up` is false on both. All 15 cells have one recurrent class and no deadlock. Four cells have a kernel hash different from their weight hash. Weight ablation and kernel ablation agreed on all 15. ATLAS-Q09 and ATLAS-Q08 stay open. EQ-014 does not apply.
+
+## Regions not in the comparison
+
+Complete N=5. Cardinalities other than the atlas-005 lengths, and every list the generator did not write. Absent-polarity incident rules. Count thresholds other than the atlas-006 `eq 1` and `ge 2` templates. Common-neighbour counts. History. Independent hyperedges. A search over graph isomorphism. Any clock other than `halt_self_loop`. A composition cell.
+
+## Composition
+
+`docs/composition-taxonomy.md` formulates C1 through C8 and keeps dependency, reach, composition, and recursion as four readings. `IDEA-L01`, `IDEA-L04`, `IDEA-L06`, `IDEA-L09`, `IDEA-L11`, `IDEA-L15`, and `IDEA-L17` stay `open`. `IDEA-L08`, `IDEA-L13`, `IDEA-L14`, and `IDEA-L16` are `partial`. The line graph, the intersection graph, and the nerve are implemented, and those operators are not frozen cells. `COV-COMPOSITION` and `COV-COMPOSITION-LIBRARY` stay `open`. Atlas-007 froze fifteen baseline label maps. Every item failed before a weight table was stored. That failure is not a lumpability result. Overlap is not stored as a tree. RRC-001's two-subset cut is not reopened as the definition of composition. The static line-graph operator is a unary operation on simple graphs. Its specification is `docs/composition-operators.md`. EQ-014 is not rerun and is not that operator's dynamics.
+
+Atlas-008 stored the fifteen maps. Verify printed `verified`. The three-edge weight hash is the EQ-015 baseline `3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7`. The four-edge weight hash is the EQ-016 baseline `5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3`. On each carrier the kernel hash equals the weight hash, and the structure hash matches the earlier baseline cell with the same edge list. Those shared tables do not share the observation laws. Present edge count is exact on all five carriers. EQ-021 is the reason: under an empty list and a constant positive baseline, the next count depends only on the current count. On the triangle and the three-edge star the other two maps induce the same partition as the count, so they are exact there too. On the three-edge chain the line graph and the degree sequence share a partition that is not the count, with defect `4/9` and five labels. On the four-edge path the three partitions differ. The degree sequence and the line graph both have defect `1/3`, with seven and eight labels. On the four-cycle the degree sequence is exact, with six labels, and the line graph has defect `1/2`, with eight labels. No map is injective. No map adds state. A further label is undefined. The equal path defects are not an identity of the two maps. The chain partition agreement is that carrier. The four-cycle split is not scheduled. ATLAS-Q10 stays open. The detail is `reports/atlas-008-observations.md`.
+
+ATLAS-Q01 through ATLAS-Q12 stay open. ATLAS-Q12 asks which named operators accept their own output. It is not scheduled. ATLAS-Q13, ATLAS-Q14, and ATLAS-Q15 are open. They are not scheduled. A fixture checks one exact parity quotient of the baseline count chain, one position-indexed label that is not strongly lumpable while the edge count of the same table is, and one pair of maps that does not factor. Another fixture separates potential overlap from realised overlap. On disjoint blocks the two graphs agree. On the triangle overlap they do not. A third fixture compares a derived pair count with one activity bit. The bit is another listed edge, and the pair bits alone do not determine its rows. None of these fixtures is a frozen round.
+
+Atlas-009 verified 16 of 16 on one four-edge path. The baseline hash is the EQ-016 table. The twelve factor-2 present multiplies have twelve weight hashes and one mean, `37/18`. Cells with the same condition edge share the four edge marginals and not the weight hash. The three cardinality-2 instruments have three further hashes. The path and mutual instruments share marginals `11/20`, `11/20`, `1/2`, `1/2` and not the weight hash. Their `has_cycle` flags are the imposed rule text. A comparison of cardinality 1 with cardinality 2 is joint. The detail is `reports/atlas-009-observations.md`. ATLAS-Q01 stays open. PAT-012 has `schedules_follow_up` false.
+
+The line-graph label in the atlas-008 paragraph is the position-indexed bare line graph. `docs/representations.md` separates that map from the canonical unlabelled line graph and from the carrier-orbit label. Atlas-010 verified 15 of 15. The label is a function of the present edges. On the triangle the canonical line graph, the carrier orbit, and the position-indexed line graph are one partition. It is exact under the empty list and has defect `4/9` under one multiply by 3. On the three-edge chain the position-indexed map and the canonical map are one partition, and the orbit is another. The empty-list orbit is exact. The multiply orbit is not. On the four-cycle the canonical map and the orbit are one exact partition of six labels under the empty list. `A8-cycle4-line` remains the position-indexed cell on that hash, eight labels, defect `1/2`. The triangle and the chain share the EQ-015 empty list and share the multiply hash `7b4f2c8ef26032e36f92000c69cc7c0fcf032e4f1353009ff490efa1f4b37be9`, which is the `A6-chain-bit` table. They do not share the observation laws. A carrier comparison is joint with the designated pair `(0,1)` conditioned on `(1,2)`. No map adds state. The detail is `reports/atlas-010-observations.md`. ATLAS-Q10 stays open. PAT-013 has `schedules_follow_up` false. EQ-022 and EQ-023 stay method identities.
+
+Atlas-011 verified 17 of 17. The count of three singleton blocks is the discrete partition and is exact under the empty list and under the multiply. The bare intersection of those blocks is the edge-count partition. On the triangle that partition is the atlas-010 line-graph partition, so the constrained bare cell repeats that law. Three partial families, each omitting one edge, are exact under the empty list and are three partitions. A family that misses a carrier edge is not a cover of that carrier. The stored item wording is unchanged. Under the multiply, omitting `(1,2)` has defect `4/15`, and omitting `(0,1)` or `(0,2)` stays exact. The overlapping count and the labelled active blocks are different partitions. Neither is exact. The opposite-edge count on the four-cycle is exact under the empty list and has defect `5/12` under the multiply. Its labelled map is a different partition. No cover adds state. The path fixture was not rerun. The detail is `reports/atlas-011-observations.md`. ATLAS-Q10 stays open. PAT-014 has `schedules_follow_up` false.
+
+Atlas-012 verified 7 of 7 on one three-edge chain. The empty list is the EQ-015 table. The present cell is the EQ-019 table, hash `7b4f2c8ef26032e36f92000c69cc7c0fcf032e4f1353009ff490efa1f4b37be9`, the atlas-010 three-edge multiply. The absent cell is that table with carrier bit 1 complemented. The condition marginals are `5/8` and `3/8`. The multiply on the other end-edge is the path reversal of the present cell. The multiply of `(0,1)` when `(2,3)` is present matches the present cell after swapping bits 1 and 2. That swap exchanges the middle edge with an end edge. Those three singles share mean edges `13/8` and have three hashes. Two guards on `(0,1)` and two events sharing `(1,2)` are different tables. Each has effective cardinality 2. No automorphism of the 3-bit toggle graph carries one onto the other. Kernel hashes equal weight hashes. The atlas-009 factor-2 path was not rerun. The detail is `reports/atlas-012-observations.md`. ATLAS-Q03 stays open. PAT-015 has `schedules_follow_up` false. EQ-024 and EQ-025 are the two stored matrix identities.
+
+Atlas-013 verified 5 of 5 on one three-edge star. The lists are incident-count prohibits, not factor-3 multiplies. The empty list is the EQ-015 weight table, and its structure hash is the atlas-008 star hash. Mean components are `5/2`. Uniform `eq 2` and `ge 2` are one table. Each star edge has two incident edges, so those two guards match the same states. That table has one zero row. The uniform `eq 1` list has two recurrent classes and no zero row. The single `eq 2` prohibit has one recurrent class and mean edges `31/22`. Comparing that single list with a uniform list changes the declared cardinality and is joint. Kernel hashes equal weight hashes. The detail is `reports/atlas-013-observations.md`. ATLAS-Q02 stays open. EQ-028 is that one star. A neighbourhood larger than 2 is not claimed.
+
+Atlas-014 verified 8 of 8 successive observations on one four-cycle. The empty list is the EQ-016 weight table. Its structure hash is the atlas-008 four-cycle hash. The carrier orbit then the edge count is exact at both stages, and the sequential count kernel agrees with the direct count quotient. That agreement is strong-lumpability compatibility under EQ-023 and EQ-021. One prohibit of `(0,1)` when `(2,3)` is present writes eight zero weights and leaves every positive weight at 1. Under that table the orbit, the degree sequence, the edge count, the position-indexed line graph, and one realised-overlap count are not strongly lumpable. The one-block label stays exact by EQ-029, and its sequential stage stays undefined because the orbit is not strongly lumpable. The relationship-labelled line graph stays exact by EQ-022, and the degree sequence composed with it is not. Where a stage does not factor or the previous stage is not exact, the sequential rows are absent. On this listing the orbit and the degree sequence are one partition. EQ-030 records that equality. It is not the line graph and not a weight table. The detail is `reports/atlas-014-observations.md`. ATLAS-Q13 stays open. The defects `11/24`, `5/8`, and `1/12` are not scheduled. Atlas-008 was not rerun.
+
+Atlas-015 verified 20 of 20 on one three-edge chain. The block family is an overlapping cover, `[(0,1),(1,2)]` and `[(1,2),(2,3)]`. The empty list is the EQ-015 table, and the structure hash is the atlas-008 chain hash. The bare active intersection, the bare realised-overlap graph, the labelled realised blocks, and the shared-edge count are four partitions, with 3, 4, 5, and 2 labels. State 5 is joined by potential overlap and separated by realised overlap. The shared-edge count is exact under the empty list and under the prohibit of `(0,1)` when `(1,2)` is present. It has defects `1/3`, `4/15`, and `2/15` under the other three laws. The two prohibits write zero weights. The two multiplies write a factor of 3 and leave every cell positive. The prohibit of `(0,1)` when `(1,2)` is present has the same matrix as atlas-001 `A-N3-02-pro-present`. EQ-031 records that both rules prohibit the first listed edge when the second is present. The carriers differ. Kernel hashes equal weight hashes. No map adds state. A further label is undefined. The detail is `reports/atlas-015-observations.md`. ATLAS-Q14 stays open. The atlas-012 multiply list was not rerun.
+
+Atlas-016 verified 8 of 8 on edges `(0,1)`, `(1,2)`, and `(3,4)`. The first two edges share a vertex. The third edge is disjoint. The carrier has two components. The empty list is the EQ-015 table, and the structure hash is `0963ca7e652f311e3382a80a52a2c8efe545700c1c793db7444f5140bb162fbd`. Mean components on the empty list are `7/2`. Every subset of these edges is a forest, so mean edges plus mean components is 5. The three prohibits write four zero weights and leave every positive weight at 1. The three multiplies by 3 leave every cell positive. The mixed list does both. Kernel hashes equal weight hashes. The incident prohibit matches the atlas-015 shared-edge prohibit. The disjoint multiply matches the atlas-015 end multiply. The across multiply matches the atlas-012 far cell. Those three rules leave the unread edge at weight 1. EQ-032 records that bit-position identity. The carriers differ. Swapping bits 1 and 2 carries each incident table onto the matching disjoint table, and that swap is a different map from a carrier automorphism. The three prohibits share mean edges `7/5` and have three hashes. The three multiplies share mean edges `13/8` and have three hashes. The detail is `reports/atlas-016-observations.md`. ATLAS-Q02 stays open. Atlas-012 and atlas-015 were not rerun.
+
+Atlas-017 verified 6 of 6 declared event lists. The method is `event-kernel-0.1.0`. The clock is one declared event. The engine string stays `rrc-0.4.0`. The two-bit all-ones toggle catalogue sends state 0 to state 1 or state 2, each with probability `1/2`, and sends probability `0` to state 3. Every positive off-diagonal target of that cell differs by one bit. The joint cell on the same four states sends state 0 to state 1 or state 3, each with probability `1/2`. State 3 has Hamming distance 2. The identified one-bit toggle has probability `1` in each direction. The coupled joint step has probability `1` between states 0 and 3, and states 1 and 2 are halt self-loops. On the declared image those coupled probabilities match the identified probabilities. The free-product reading of the all-ones catalogue leaves the agreement set. The empty one-state list and the one-state noop both put probability `1` on the diagonal, and the completions are `halt_self_loop` and `noop_event`. No cell adds a coordinate. No occupation is stored. The detail is `reports/atlas-017-observations.md`. ATLAS-Q06 stays open. Atlas-016 was not rerun.
+
+## Atlas-018 recovery and interface invariance
+
+Three existing local Atlas-018 records were recovered and independently verified on 26 October 2026, not rerun. The original freeze is `8923de6`, method `event-kernel-0.2.0`, clock `one_declared_event`. The inclusion duplicates the middle bit of a three-bit identified state into two copies in a four-bit state. Free copies leave the agreement image; coupled copies preserve it and reproduce the identified rows there. The independent audit checks all 576 probability entries, input hashes, receipts and image claims. The sample is `COV-INTERFACE-INVARIANCE-SAMPLE`, status partial. RRC-ATLAS-019 records the frozen observation.
+
+Post-execution analysis recodes `(y0,a,b,y3)` as `(y0,a,y3,a xor b)`. The coupled kernel then has three ordinary toggles and an invariant disagreement bit. EQ-033 records this kernel-level identity; RRC-I01-INTERFACE-RECODING is its separate inference record. The map changes the event-kind and original-coordinate interpretation, so it is neither a carrier automorphism nor a claim that every joint law compiles. PAT-016 does not schedule a follow-up. The detail is `reports/atlas-018-observations.md`. The adopted atlas has 218 complete cells, excluding 15 historical failures. Atlas-019 and Atlas-020 remain deferred with unadopted local outputs. All broad questions remain open.
+
+## XOR support recoding and predictive closure
+
+The analytic increment under `xor-mask-analysis-0.1.0` is `reports/2026-10-26-xor-recoding.md`, with full proofs in `docs/xor-mask-recoding.md`. EQ-034 classifies binary-linear recoding of distinct XOR directions by independence. EQ-035 gives the separate positive-ray/halt criterion for dropping inactive coordinates. Common scaling is a null control; relative rates can defeat closure without changing support. A three-mask triangle and a bipartite four-mask support with four common neighbors obstruct particular broader injective one-bit embeddings, not every alternative encoding. The ordinary cube controls satisfy neither obstruction.
+
+RRC-I02 through RRC-I04 keep these analytic claims separate from experimental observations. The checker cross-validates rank and subset-XOR on 2014 software direction cases and exact block rows on 81 weight-vector pairs. None is a new atlas cell: the adopted count remains 218, with the 15 failed Atlas-007 items excluded. IDEA-L24, PAT-017 and two analytical coverage rows make the distinction navigable. All broad questions remain open, and Atlas-019/020 remain deferred with unchanged unadopted outputs.
+
+## Labelled synchronization and contextual preservation
+
+The next analytical increment is `reports/2026-10-26-sync-composition.md`, with
+the typed product and matrix proofs in `docs/labelled-sync-composition.md`.
+EQ-036 records associativity and the shared-loop identity under a fixed
+handshake alphabet and final-only normalisation. EQ-037 records the sufficient
+labelwise weighted quotient condition: component reduction commutes with this
+composition, including evolving hidden state and halt rows. It is not necessary
+for every particular partner.
+
+RRC-I05 through RRC-I07 distinguish those proofs from the contextual
+counterexamples. Exact standalone projection can fail after a partner filters
+labels; a private event can expose a raw scale that standalone normalisation
+erases. The all-halt one-state system and the shared-loop identity have the same
+standalone kernel but differ as synchronization participants. The declared
+operator retains weighted labels so its output can participate in further
+dynamics. This is not state-interface identification or changing membership.
+
+IDEA-L25, PAT-018 and two analytical coverage rows point to the bounded software
+checks: 81 event/matrix pairs, 729 associativity triples, nine two-sided unit
+controls and 243 hidden-update contexts, plus typed boundary controls. None is a
+scientific cell. The atlas remains 218 adopted cells with 15 historical failures
+excluded; Atlas-019/020 remain deferred, untouched and unadopted. All broad
+questions remain open.
+
+## Uniform contexts and finite separating partners
+
+The next analytical increment is `reports/2026-10-26-contextual-preservation.md`,
+with exact quantifiers and proofs in `docs/contextual-preservation.md`.
+EQ-038 and RRC-I08 characterize uniform preservation for every finite same-H
+partner that may offer private competing events, when the observer sees the
+component observation and full partner state but no labels. The contract keeps
+each shared label's raw block weights and one aggregate private block vector.
+One private-only two-state probe and one three-state probe per shared label
+suffice: calibration-branch ratios recover every necessary raw weight.
+
+EQ-039 and RRC-I09 give private-label collapse as a weighted-product congruence.
+The old full-label condition is not necessary even across all these contexts:
+hidden p/q private allocation can differ harmlessly. This conclusion depends
+on fixed H and the label-blind observer. Making p/q shared or seeing emitted
+labels changes the result. Private internal-block weight still matters: a
+partner move distinguishes one private self-loop from halt even when the
+component observation is constant. A shared-only partner can hide raw scale;
+the necessity theorem is not asserted for that restricted context class.
+
+IDEA-L26, PAT-019, RRC-R066 through RRC-R070 and two analytical coverage rows
+keep these scope distinctions navigable. The 1452 software systems give 4356
+probe laws and 5808 exact signature reconstructions; they are independent
+validation of proofs, not scientific cells. The count stays 218 adopted cells,
+excluding 15 historical failures. All broad questions remain open and the
+deferred Atlas-019/020 outputs and decisions remain unchanged.

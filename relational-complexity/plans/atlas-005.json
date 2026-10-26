@@ -1,0 +1,1775 @@
+{
+  "round_id": "atlas-005",
+  "engine_version": "rrc-0.3.0",
+  "grammar_id": "opening-prohibit-multiply-v1",
+  "definitions_commit": "26bf891ddf064ee4b90097dadf343bb7672720a0",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q01",
+    "ATLAS-Q05"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q02",
+    "ATLAS-Q03",
+    "ATLAS-Q04",
+    "ATLAS-Q06",
+    "ATLAS-Q07",
+    "ATLAS-Q08",
+    "ATLAS-Q09",
+    "ATLAS-Q10",
+    "ATLAS-Q11",
+    "ATLAS-Q12"
+  ],
+  "selection": "Declared sample of one opening-grammar generator on three carriers: the N=3 complete graph (3 edges), a 5-node chain (4 edges), and a 5-node cycle (5 edges). Lengths are 0, 5, 9 and 12, plus length 10 on the chain only. Not an exhaustive grammar grid. Not a grid in which every long list sits on three edges. Not scheduled to explain PAT-005, PAT-006, PAT-007, or the line-graph identity. The incident predicate is not in this round. Composition operators are not in this round.",
+  "construction": "The menu has eight templates, in order: prohibit either when the condition is present; multiply by 2 either when present; multiply by 3 either when absent; prohibit form when present; multiply by 5 either when present; prohibit dissolve when absent; multiply by 4 either when absent; prohibit either when absent. Template i mod 8 is applied at position i. The event is carrier edge i mod m. The condition is edge (i mod m + 1 + i // m) mod m, or the next edge when that index is the event. Baseline is 1. Length 0 is the empty list. Cardinality counts constraints. It is not a node-count target.",
+  "tolerances": {
+    "stationary_successive_l1": 1e-12,
+    "cross_check_l1": 1e-08,
+    "max_iter": 10000,
+    "dense_max_states": 1024
+  },
+  "grammar": {
+    "id": "opening-prohibit-multiply-v1",
+    "note": "docs/atlas-grammar.md. Effects are prohibit and multiply. The composer is order-independent. No incident predicate.",
+    "baseline": 1,
+    "factors": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "carriers": [
+      "complete N=3",
+      "5-node chain",
+      "5-node cycle"
+    ]
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-005-preflight.md",
+    "heaviest_cell_s": 0.857,
+    "shape": "5-node cycle, five edges, 32 states, 12 constraints, common core",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "n": [
+      3,
+      5
+    ],
+    "carriers": {
+      "complete_n3_edges": 3,
+      "chain_n5_edges": 4,
+      "cycle_n5_edges": 5
+    },
+    "cells": 12,
+    "declared_cardinalities": [
+      0,
+      5,
+      9,
+      10,
+      12
+    ],
+    "cardinality_10": "chain only",
+    "factors": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "declared_sample": true,
+    "not_exhaustive_lists": true,
+    "state_enumeration": "exhaustive within each cell",
+    "grammar_enumeration": "one generator, not every list",
+    "portion": "12 lists from one menu of 8 templates on 3 carriers. Not every list of these lengths. Not every carrier on 5 nodes.",
+    "six_is_not_a_target": true,
+    "excluded": [
+      "complete N=4",
+      "complete N=5",
+      "N=6",
+      "incident predicates",
+      "count predicates",
+      "history",
+      "independent hyperedges",
+      "composition depth >= 1",
+      "state sampling",
+      "cardinality 10 on the complete carrier and on the cycle",
+      "cardinalities other than 0, 5, 9, 10 and 12"
+    ]
+  },
+  "stopping": [
+    "Do not add, remove or edit items after this file is committed.",
+    "Do not widen tolerances after an item has run.",
+    "A failed, timed-out or unresolved item stays in that state.",
+    "Incomplete or invalid records may be recomputed only under the same spec.",
+    "Do not describe an unrun item as a result.",
+    "Do not treat these 12 lists as every list of these cardinalities.",
+    "Do not add an incident predicate or a composition operator after seeing these cells."
+  ],
+  "items": [
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A5-N3-base",
+      "idea_ids": [
+        "IDEA-C00"
+      ],
+      "label": "complete edge order is the engine edge list; covariance is not claimed",
+      "max_iter": 10000,
+      "n": 3,
+      "role": "baseline",
+      "round_id": "atlas-005",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "absent"
+          },
+          "factor": 3
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          },
+          "factor": 5
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A5-N3-card5",
+      "idea_ids": [
+        "IDEA-C10",
+        "IDEA-C05"
+      ],
+      "label": "complete edge order is the engine edge list; covariance is not claimed",
+      "max_iter": 10000,
+      "n": 3,
+      "role": "concentrated",
+      "round_id": "atlas-005",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "absent"
+          },
+          "factor": 3
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          },
+          "factor": 5
+        },
+        {
+          "action": "dissolve",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "absent"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "absent"
+          },
+          "factor": 4
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "absent"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "absent"
+          },
+          "factor": 3
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A5-N3-card12",
+      "idea_ids": [
+        "IDEA-C10",
+        "IDEA-C05"
+      ],
+      "label": "complete edge order is the engine edge list; covariance is not claimed",
+      "max_iter": 10000,
+      "n": 3,
+      "role": "concentrated",
+      "round_id": "atlas-005",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A5-P5-base",
+      "idea_ids": [
+        "IDEA-C00",
+        "IDEA-R02"
+      ],
+      "label": "listed edge order is the bit order; covariance is not claimed",
+      "max_iter": 10000,
+      "n": 5,
+      "role": "baseline",
+      "round_id": "atlas-005",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "absent"
+          },
+          "factor": 3
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          },
+          "factor": 5
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A5-P5-card5",
+      "idea_ids": [
+        "IDEA-C10",
+        "IDEA-R02"
+      ],
+      "label": "listed edge order is the bit order; covariance is not claimed",
+      "max_iter": 10000,
+      "n": 5,
+      "role": "spread",
+      "round_id": "atlas-005",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "absent"
+          },
+          "factor": 3
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          },
+          "factor": 5
+        },
+        {
+          "action": "dissolve",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "absent"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "absent"
+          },
+          "factor": 4
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "absent"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A5-P5-card9",
+      "idea_ids": [
+        "IDEA-C10",
+        "IDEA-R02"
+      ],
+      "label": "listed edge order is the bit order; covariance is not claimed",
+      "max_iter": 10000,
+      "n": 5,
+      "role": "spread",
+      "round_id": "atlas-005",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "absent"
+          },
+          "factor": 3
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          },
+          "factor": 5
+        },
+        {
+          "action": "dissolve",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "absent"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "absent"
+          },
+          "factor": 4
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "absent"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A5-P5-card10",
+      "idea_ids": [
+        "IDEA-C10",
+        "IDEA-R02"
+      ],
+      "label": "listed edge order is the bit order; covariance is not claimed",
+      "max_iter": 10000,
+      "n": 5,
+      "role": "spread",
+      "round_id": "atlas-005",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "absent"
+          },
+          "factor": 3
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          },
+          "factor": 5
+        },
+        {
+          "action": "dissolve",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "absent"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "absent"
+          },
+          "factor": 4
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "absent"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "absent"
+          },
+          "factor": 3
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A5-P5-card12",
+      "idea_ids": [
+        "IDEA-C10",
+        "IDEA-R02"
+      ],
+      "label": "listed edge order is the bit order; covariance is not claimed",
+      "max_iter": 10000,
+      "n": 5,
+      "role": "spread",
+      "round_id": "atlas-005",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "constraints": [],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A5-C5-base",
+      "idea_ids": [
+        "IDEA-C00",
+        "IDEA-R03"
+      ],
+      "label": "listed edge order is the bit order; covariance is not claimed",
+      "max_iter": 10000,
+      "n": 5,
+      "role": "baseline",
+      "round_id": "atlas-005",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "absent"
+          },
+          "factor": 3
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              4
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          },
+          "factor": 5
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A5-C5-card5",
+      "idea_ids": [
+        "IDEA-C10",
+        "IDEA-R03"
+      ],
+      "label": "listed edge order is the bit order; covariance is not claimed",
+      "max_iter": 10000,
+      "n": 5,
+      "role": "spread",
+      "round_id": "atlas-005",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "absent"
+          },
+          "factor": 3
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              4
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          },
+          "factor": 5
+        },
+        {
+          "action": "dissolve",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "absent"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "absent"
+          },
+          "factor": 4
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              0,
+              4
+            ],
+            "polarity": "absent"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A5-C5-card9",
+      "idea_ids": [
+        "IDEA-C10",
+        "IDEA-R03"
+      ],
+      "label": "listed edge order is the bit order; covariance is not claimed",
+      "max_iter": 10000,
+      "n": 5,
+      "role": "spread",
+      "round_id": "atlas-005",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "listed",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "absent"
+          },
+          "factor": 3
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              4
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          },
+          "factor": 5
+        },
+        {
+          "action": "dissolve",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "absent"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "absent"
+          },
+          "factor": 4
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "edge": [
+              0,
+              4
+            ],
+            "polarity": "absent"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            3,
+            4
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            4
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              3,
+              4
+            ],
+            "polarity": "absent"
+          },
+          "factor": 3
+        },
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              4
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A5-C5-card12",
+      "idea_ids": [
+        "IDEA-C10",
+        "IDEA-R03"
+      ],
+      "label": "listed edge order is the bit order; covariance is not claimed",
+      "max_iter": 10000,
+      "n": 5,
+      "role": "spread",
+      "round_id": "atlas-005",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    }
+  ]
+}

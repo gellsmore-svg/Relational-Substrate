@@ -1,0 +1,417 @@
+{
+  "analysis_only": true,
+  "analysis_version": "gt-e5d/v1",
+  "chosen_because": "GT-P011 reflection option A (anchor-local comparator; GT-Q25), authorised by GT-P012 as the only scientific round",
+  "comparators": {
+    "N0": "NULL item at the same N",
+    "ND": "E5A T6 unchanged",
+    "NK": "E5B T11 unchanged",
+    "NL": "anchor-relative local/remote traffic lift: LOCAL = slots incident on an anchor vertex (F_TRI: 0 or 1, 2N-3 slots; F_2PATH: vertex 0, N-1 slots), REMOTE = the rest; z = (l, r) present counts; p_z and ORDERED macro fluxes J_{z->z'} from the target's stationary generator (positive sums); per-slot rates J/(p_z x eligible slots) by pool and direction; no symmetrisation; analytic law p_z / (C(L,l) C(R,r)) (T16); built separately for the primary and relabelled anchors; zero cell or zero admissible flux -> UNRESOLVED; nothing smoothed",
+    "not_implemented": [
+      "source-standardised diagnostics (not defined)",
+      "within-cell arrangement control (a future round)"
+    ]
+  },
+  "consulted_hub": {
+    "commit": "38c2501bbab22ca1eb2288ea76a962ac0170d5e6",
+    "method": "git show (read-only)",
+    "ref": "origin/main",
+    "shared_questions": [
+      "XQ::01",
+      "XQ::03",
+      "XQ::04",
+      "XQ::07"
+    ]
+  },
+  "estimands": {
+    "diagnostics": "target macro-flux conservation; net currents on the (l,r) grid (max relative, abs sum over total flux); rare and zero cells; within-cell local-rate sd and CV; NL reversibility (detailed balance), min/max rate, identity gaps, iterative cross-check",
+    "durability": "E5C objects unchanged (R0, U_h, C_h at h = 0,1,2,4,8, return/exit, immediate return, entry-size classes, size>=2 pooled) on target, N0, ND, NK and NL, each with its own entrance and first-renewal law"
+  },
+  "experiment_id": "gt-round-e5d-anchor-local-traffic",
+  "families": {
+    "CLOSEW": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "close_form"
+          }
+        ]
+      }
+    },
+    "CSPH": {
+      "strong_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "strong_favour",
+            "kind": "close_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    },
+    "NULL": {
+      "none": {
+        "components": []
+      }
+    },
+    "PATHF": {
+      "weak_suppress": {
+        "components": [
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          }
+        ]
+      }
+    },
+    "PATHH": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    },
+    "PCOMP": {
+      "weak_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ]
+      }
+    }
+  },
+  "frozen_checks": {
+    "NL": "global balance of pi_NL <= 1e-10; p_z and every ordered macro flux matched within 1e-9 relative; all rates positive; analytic law vs iterative solve (cap 20,000) L1 <= 1e-8 when the iterative solve resolves",
+    "NULL": "target, ND, NK and NL identical on NULL items (1e-10)",
+    "durability": "E5C checks: monotone U_h; T13 zero violations; return + exit = 1; next-local split sums to 1 (1e-9); dense vs iterative <= 1e-9; relabelled anchors agree within 1e-9 relative",
+    "replication": "target, ND and NK U_h equal the published E5C values within max(1e-10, 1e-8 |value|) (statuses equal)",
+    "target_macro": "macro-flux conservation within 1e-9 (premise of T16)"
+  },
+  "gt_baseline_commit": "a81c505a08ac5c4c83359234915bec65bb1f60c3",
+  "history": false,
+  "horizons": [
+    0,
+    1,
+    2,
+    4,
+    8
+  ],
+  "hypotheses_without_prediction": [
+    "D1 structural residual beyond NL",
+    "D2 anchor-relative traffic (residual collapses against NL)",
+    "D3 within-cell configuration",
+    "D4 flicker/entry composition",
+    "D5 null or sign reversal",
+    "D6 projection circulation"
+  ],
+  "items": [
+    {
+      "components": [],
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "FREE-N5-NULL-none",
+      "n": 5,
+      "prior_cell": "round-e5c FREE-N5-NULL-none",
+      "role": "null_control_N0"
+    },
+    {
+      "components": [
+        [
+          "path_form",
+          "weak_suppress"
+        ]
+      ],
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N5-PATHF-weak_suppress",
+      "n": 5,
+      "prior_cell": "round-e5c FREE-N5-PATHF-weak_suppress",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-PATHH-weak_favour",
+      "n": 5,
+      "prior_cell": "round-e5c FREE-N5-PATHH-weak_favour",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "close_form",
+          "strong_favour"
+        ],
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "FREE-N5-CSPH-strong_favour+weak_favour",
+      "n": 5,
+      "prior_cell": "round-e5c FREE-N5-CSPH-strong_favour+weak_favour",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "close_form",
+          "weak_favour"
+        ]
+      ],
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-CLOSEW-weak_favour",
+      "n": 5,
+      "prior_cell": "round-e5c FREE-N5-CLOSEW-weak_favour",
+      "role": "control_reversible_closure"
+    },
+    {
+      "components": [
+        [
+          "path_form",
+          "weak_favour"
+        ],
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "FREE-N5-PCOMP-weak_favour+weak_favour",
+      "n": 5,
+      "prior_cell": "round-e5c FREE-N5-PCOMP-weak_favour+weak_favour",
+      "role": "control_equal_ratio"
+    },
+    {
+      "components": [],
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "FREE-N6-NULL-none",
+      "n": 6,
+      "prior_cell": "round-e5c FREE-N6-NULL-none",
+      "role": "null_control_N0"
+    },
+    {
+      "components": [
+        [
+          "path_form",
+          "weak_suppress"
+        ]
+      ],
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N6-PATHF-weak_suppress",
+      "n": 6,
+      "prior_cell": "round-e5c FREE-N6-PATHF-weak_suppress",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "FREE-N6-PATHH-weak_favour",
+      "n": 6,
+      "prior_cell": "round-e5c FREE-N6-PATHH-weak_favour",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "close_form",
+          "strong_favour"
+        ],
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "FREE-N6-CSPH-strong_favour+weak_favour",
+      "n": 6,
+      "prior_cell": "round-e5c FREE-N6-CSPH-strong_favour+weak_favour",
+      "role": "open_scientific"
+    },
+    {
+      "components": [
+        [
+          "close_form",
+          "weak_favour"
+        ]
+      ],
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "FREE-N6-CLOSEW-weak_favour",
+      "n": 6,
+      "prior_cell": "round-e5c FREE-N6-CLOSEW-weak_favour",
+      "role": "control_reversible_closure"
+    },
+    {
+      "components": [
+        [
+          "path_form",
+          "weak_favour"
+        ],
+        [
+          "path_dissolve",
+          "weak_favour"
+        ]
+      ],
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "FREE-N6-PCOMP-weak_favour+weak_favour",
+      "n": 6,
+      "prior_cell": "round-e5c FREE-N6-PCOMP-weak_favour+weak_favour",
+      "role": "control_equal_ratio"
+    }
+  ],
+  "matrix": {
+    "F_2PATH": "the six N=6 laws only (N=5 structurally zero after renewal, T14)",
+    "F_TRI": "all 12 laws (N=5,6)",
+    "analyses": 18
+  },
+  "meta_constraints": false,
+  "method": {
+    "name": "Open-Thetical Research",
+    "path": "research-methods/open-thetical-research.md",
+    "version": "1.0"
+  },
+  "new_primitives": false,
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      5,
+      6
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL"
+  },
+  "parameter_fit": false,
+  "plan_hash": "6a83dbb788ace935a83ed1c1769a1b4cdd1a6dd3a0dad7b2b94acff1bef21fe7",
+  "pre_freeze_exposure": {
+    "engineering": "NL fixtures on N<=4 kernels and synthetic N=4 chains (including a non-reversible circulating chain); timing on a synthetic N=6 rule only; no NL value or new E5D readout of any N=5 or N=6 scientific cell computed before freezing",
+    "published": "E5A-E5C values for the same laws (E5C durability for target/ND/NK, which E5D replicates)",
+    "reference_hashes": {
+      "constraint-lab/docs/scientific-plan-discipline.md": "4101d64f8b4d228dd1cb6ca46d77848e14e79f768041aff839f962da6fecd974",
+      "constraint-lab/src/rs_constraint_lab/gtdurable.py": "d657fe6010f728fd4511ecda79cfe9ba6bc94d305ca2498ff4b6461083dca0fb",
+      "constraint-lab/src/rs_constraint_lab/gte5d.py": "84371c7e67c432b384f2fa401867ae64c755f2a318d0913eb5c65ac66c542e61",
+      "constraint-lab/src/rs_constraint_lab/gtlocalcontrol.py": "3a781a8258e3494fb4815f1c83d5fda121db5415181c47d04aea39afb046ea59",
+      "constraint-lab/src/rs_constraint_lab/gtrenew.py": "56e85a62f64d680122bd8cacd9bab8abb8771f81a3458d346ab4daf0e55ec72f",
+      "constraint-lab/tests/test_gtlocalcontrol.py": "42727f3a968e126bfd2263bef3373de45e761e84ed06ba0dce0b4b8fb9e892e4",
+      "gravity-time/docs/e5b-definitions-controls-and-feasibility.md": "a4655feb5780e12b260d13bba547f06013c9ae6d1487f67a07fadda034cdffb7",
+      "gravity-time/docs/e5c-durable-renewal-definitions.md": "73c35401fbd065998def60f334a9d7f056bd7252c0e439ce078f7c6e5e08307b",
+      "gravity-time/docs/e5d-local-traffic-comparator.md": "0d635e7a639dc91b0e969f093873cd07169287f5c1195c0de50f96ed8f9b5c08",
+      "gravity-time/docs/gt-p012-starting-audit.md": "41f9f7a3d0a5eafb41132931f4d3550691cc56e1984c94361f2cdc0bc84d72a8",
+      "gravity-time/plans/round-e5c-plan.json": "83d2ae4d9ddf05220ee0014ae8e88cc5e4873c4950247540dbc3b0751dd5ae98",
+      "gravity-time/provenance/prompts/GT-P012-agent-input.md": "336f19c560071cfbb581c1c3db782db6494ec238d430c720ec5deed8fff79384",
+      "gravity-time/reports/round-e5c-tables.json": "44449d917080ae804b9ee7bc02b9416e6402a6218fbb141aba96c772c403763b",
+      "research-methods/open-thetical-research.md": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd"
+    }
+  },
+  "predicate_ids": [
+    "FREE-N5-NULL-none:F_TRI",
+    "FREE-N5-PATHF-weak_suppress:F_TRI",
+    "FREE-N5-PATHH-weak_favour:F_TRI",
+    "FREE-N5-CSPH-strong_favour+weak_favour:F_TRI",
+    "FREE-N5-CLOSEW-weak_favour:F_TRI",
+    "FREE-N5-PCOMP-weak_favour+weak_favour:F_TRI",
+    "FREE-N6-NULL-none:F_TRI",
+    "FREE-N6-NULL-none:F_2PATH",
+    "FREE-N6-PATHF-weak_suppress:F_TRI",
+    "FREE-N6-PATHF-weak_suppress:F_2PATH",
+    "FREE-N6-PATHH-weak_favour:F_TRI",
+    "FREE-N6-PATHH-weak_favour:F_2PATH",
+    "FREE-N6-CSPH-strong_favour+weak_favour:F_TRI",
+    "FREE-N6-CSPH-strong_favour+weak_favour:F_2PATH",
+    "FREE-N6-CLOSEW-weak_favour:F_TRI",
+    "FREE-N6-CLOSEW-weak_favour:F_2PATH",
+    "FREE-N6-PCOMP-weak_favour+weak_favour:F_TRI",
+    "FREE-N6-PCOMP-weak_favour+weak_favour:F_2PATH"
+  ],
+  "programme": "GT",
+  "prompt_id": "GT-P012",
+  "question": "Are the residual PATHH triangle and PCOMP within-entry-class durability effects explained by where transition traffic is situated around the analyst's anchor (local versus remote edge counts), or do residual organisation-sensitive properties remain after that is controlled?",
+  "round_id": "round-e5d",
+  "rule_reading": "no rule reads an anchor, S0, renewal state, local count or pool partition; NL is a comparison process, not a constraint family",
+  "schema": "rs-gt.e5d-plan/v1",
+  "software": {
+    "analysis_module": "rs_constraint_lab.gte5d",
+    "durable": "gt-durable/v1",
+    "kernel": "gt-vectorised-kernel/v1",
+    "localcontrol": "gt-localcontrol/v1",
+    "numpy": "2.5.3",
+    "python": "3.12.3",
+    "scipy": "not used"
+  },
+  "solver": {
+    "cap_iterations": 20000,
+    "cap_seconds": 600.0,
+    "dense_cross_check_max_size": 4096,
+    "method": "E5C row solves in canonical frames (gtdurable)",
+    "tolerance": 1e-12
+  },
+  "source_commit": "3746ef1f881e590ef8ef0031c7caf29712218990",
+  "stochastic_trajectories": "none",
+  "stop_conditions": {
+    "after_round": "no E5E",
+    "amendment": "any cell, predicate, horizon, comparator or estimand change stops the round",
+    "item": "watchdog {5: 900, 6: 2400} s by N",
+    "round": "all items or 10800 s",
+    "unresolved": "recorded as UNRESOLVED or FAILED_FROZEN_CHECK; no retuning"
+  },
+  "tolerances": {
+    "identity": 1e-09,
+    "nl_match": 1e-09,
+    "rare_mass": 1e-12,
+    "replication": [
+      1e-10,
+      1e-08
+    ],
+    "tie_relative": 1e-09
+  },
+  "work_count": {
+    "analyses": 18,
+    "estimate_note": "about 2 min per N=6 item from synthetic timing; under 30 min in total expected, not promised",
+    "items": 12,
+    "largest_state_space": 32768,
+    "laws_per_analysis": "target, ND, NK, NL (NL per anchor); primary and relabelled anchors",
+    "memory_ceiling_per_worker_bytes": 2000000000,
+    "round_wall_cap_seconds": 10800,
+    "watchdog_seconds": {
+      "5": 900,
+      "6": 2400
+    },
+    "workers": 4
+  }
+}

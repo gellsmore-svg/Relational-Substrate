@@ -1,0 +1,1143 @@
+{
+  "round_id": "atlas-004",
+  "engine_version": "rrc-0.3.0",
+  "grammar_id": "opening-prohibit-multiply-v1+incident-neighbour-v1",
+  "definitions_commit": "26bf891ddf064ee4b90097dadf343bb7672720a0",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q09",
+    "ATLAS-Q11"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q01",
+    "ATLAS-Q02",
+    "ATLAS-Q03",
+    "ATLAS-Q04",
+    "ATLAS-Q05",
+    "ATLAS-Q06",
+    "ATLAS-Q07",
+    "ATLAS-Q08",
+    "ATLAS-Q10"
+  ],
+  "selection": "Incident-neighbour templates on the four atlas-002 carriers, the atlas-002 bit-prohibit placement as a replication control, and two named-edge instruments on the chain. Not scheduled to explain PAT-004. Not a factor sweep.",
+  "tolerances": {
+    "stationary_successive_l1": 1e-12,
+    "cross_check_l1": 1e-08,
+    "max_iter": 10000,
+    "dense_max_states": 1024
+  },
+  "grammar": {
+    "ids": [
+      "opening-prohibit-multiply-v1",
+      "incident-neighbour-v1"
+    ],
+    "note": "docs/atlas-grammar.md and docs/atlas-0.3.md. The bit control uses a designated edge. The templates and instruments use incident_neighbour. Factor 3. Polarity present. Action either.",
+    "baseline": 1,
+    "factor": 3
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-004-preflight.md",
+    "heaviest_cell_s": 0.003,
+    "shape": "N=4 listed 4-cycle, four incident multiplies, common core",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "n": 4,
+    "carriers": [
+      "chain",
+      "branch",
+      "cycle",
+      "disconnected"
+    ],
+    "cells": 18,
+    "grammars": [
+      "baseline",
+      "bit prohibit",
+      "incident multiply template",
+      "incident prohibit template",
+      "two named-edge instruments"
+    ],
+    "declared_sample": true,
+    "not_every_graph": true,
+    "six_is_not_a_target": true,
+    "excluded": [
+      "complete carrier",
+      "N=5",
+      "factor sweeps",
+      "both-polarity prohibits",
+      "count predicates",
+      "history",
+      "independent hyperedges",
+      "composition depth >= 1",
+      "state sampling"
+    ]
+  },
+  "stopping": [
+    "Do not add, remove or edit items after this file is committed.",
+    "Do not widen tolerances after an item has run.",
+    "A failed, timed-out or unresolved item stays in that state.",
+    "Incomplete or invalid records may be recomputed only under the same spec.",
+    "Do not describe an unrun item as a result.",
+    "Do not treat these four carriers as every graph on four nodes.",
+    "Do not add a cell after comparing chain and branch."
+  ],
+  "items": [
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-chain-base",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-C00"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "baseline",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-chain-bit-pro",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-C01"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "control",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "placement": "event is the first listed edge; condition is the second listed edge"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-chain-inc-mul",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-I01",
+        "IDEA-I03"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "template",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "template": "one incident multiply on every carrier edge"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-chain-inc-pro",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-I01",
+        "IDEA-I03"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "template",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "template": "one incident prohibit on every carrier edge"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-branch-base",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C00"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "baseline",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-branch-bit-pro",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C01"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "control",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "placement": "event is the first listed edge; condition is the second listed edge"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            3
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-branch-inc-mul",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-I01",
+        "IDEA-I03"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "template",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "template": "one incident multiply on every carrier edge"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            3
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-branch-inc-pro",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-I01",
+        "IDEA-I03"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "template",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "template": "one incident prohibit on every carrier edge"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-cycle-base",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C00"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "baseline",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-cycle-bit-pro",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-C01"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "control",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "placement": "event is the first listed edge; condition is the second listed edge"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            3
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-cycle-inc-mul",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-I01",
+        "IDEA-I03"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "template",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "template": "one incident multiply on every carrier edge"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            3
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-cycle-inc-pro",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R03",
+        "IDEA-I01",
+        "IDEA-I03"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "template",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "template": "one incident prohibit on every carrier edge"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-disconnected-base",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R04",
+        "IDEA-C00"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "baseline",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              2,
+              3
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-disconnected-bit-pro",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R04",
+        "IDEA-C01"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "control",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "placement": "event is the first listed edge; condition is the second listed edge"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-disconnected-inc-mul",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R04",
+        "IDEA-I01",
+        "IDEA-I03"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "template",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "template": "one incident multiply on every carrier edge"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            2,
+            3
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-disconnected-inc-pro",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R04",
+        "IDEA-I01",
+        "IDEA-I03"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "template",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "template": "one incident prohibit on every carrier edge"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-chain-end-mul",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-I01",
+        "IDEA-I03"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "instrument",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "label": "designated edge (0,1); not claimed covariant"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "kind": "listed"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "kind": "incident_neighbour",
+            "polarity": "present"
+          },
+          "factor": 3
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A4-chain-mid-mul",
+      "idea_ids": [
+        "IDEA-R01",
+        "IDEA-R02",
+        "IDEA-I01",
+        "IDEA-I03"
+      ],
+      "max_iter": 10000,
+      "n": 4,
+      "role": "instrument",
+      "round_id": "atlas-004",
+      "tolerance": 1e-12,
+      "type": "atlas_core",
+      "label": "designated edge (1,2); not claimed covariant"
+    }
+  ]
+}

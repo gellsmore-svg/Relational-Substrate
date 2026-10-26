@@ -1,0 +1,24 @@
+{"mode": "FREE", "family": "NULL", "reachable_states": 2097152, "total_seconds": 1512.2510729599999, "peak_rss_mb": 3160.3203125, "predicted_law_l1_gap": 3.3306690738754696e-16}
+	Command being timed: "constraint-lab/.venv/bin/python -m rs_constraint_lab.gtobs_fixtures FREE NULL none --out /tmp/claude-1000/-home-cello/465d2d7d-0722-4c28-b530-d89a03ab2781/scratchpad/fx-free-null.json"
+	User time (seconds): 2005.32
+	System time (seconds): 197.56
+	Percent of CPU this job got: 147%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 24:50.30
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3236168
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 14474177
+	Voluntary context switches: 8298
+	Involuntary context switches: 91984
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,267 @@
+%% Generated from findings.jsonl and relations.jsonl.
+%% Historical nodes appear when a later finding supersedes their interpretation.
+flowchart TD
+  subgraph OBSERVATION [Observed dynamics]
+    F001_PAIRWISE_RISE["F001-PAIRWISE-RISE: In the searched memoryless pairwise cells, reweighting moves stationary triangle mass a..."]
+    F003_CLOCK_SPLIT["F003-CLOCK-SPLIT: Separating the full-event clock from the pair-event epoch shows that some apparent pair..."]
+    F004_PASSAGE_AFTER_OCCUPANCY["F004-PASSAGE-AFTER-OCCUPANCY: After source occupancy is separated from future dynamics, N=4 higher-order state still ..."]
+    F005_COMPOSITION_NOT_SUM["F005-COMPOSITION-NOT-SUM: One higher-order-conditioned pairwise rule and one ordinary pairwise rule do not add on..."]
+    F006_SCALAR_AGGREGATE["F006-SCALAR-AGGREGATE: An unconditional scalar pair control can be matched to aggregate passage in a way that ..."]
+    F007_SELECTIVITY_SURVIVES["F007-SELECTIVITY-SURVIVES: After a two-level pair-face control has matched the two aggregate passage numbers, the ..."]
+    F009_TWO_LEVEL_COLLAPSE["F009-TWO-LEVEL-COLLAPSE: The two-parameter pair-face representation that matches aggregate passage uses its two ..."]
+    F010_OCCUPANCY_AXIS["F010-OCCUPANCY-AXIS: Mode B exploration finds a large finite-grade sparse/dense occupancy axis. On the S01 e..."]
+    F012_RAW_CONTEXT_AXIS["F012-RAW-CONTEXT-AXIS: Exhaustive raw-context starts preserve the edge-count axis. Copied dense-minus-sparse v..."]
+    F008A_PLUGIN_INITIAL_MI["F008A-PLUGIN-INITIAL-MI: Under the uniform raw prior, the plug-in mutual information about the first other 3-edg..."]
+    F014_EXACT_FIRST_DESTINATION["F014-EXACT-FIRST-DESTINATION: Exact first-destination mutual information is at the 1e-10 floor for R00, R03, and R07,..."]
+    F015_TRANSIENT_CLASS_MEMORY["F015-TRANSIENT-CLASS-MEMORY: Exact initial-context graph-class information is transient. The largest value is R06 pa..."]
+    F016_CURRENT_SLOT_INFORMATION["F016-CURRENT-SLOT-INFORMATION: The current triad carries exact local next-slot information only where the rule reads t..."]
+    F017_CLASS_PROJECTION_LOSS["F017-CLASS-PROJECTION-LOSS: Replacing the full labelled pair mask by graph isomorphism class retains 0.661 of the s..."]
+    F008_EDGE_VERSUS_SHAPE["F008-EDGE-VERSUS-SHAPE: At checkpoint 1, star and triangle carry only edge-count information: class information..."]
+    F008B_FINITE_HORIZON_RANGE["F008B-FINITE-HORIZON-RANGE: Exact dense-minus-sparse context ranges over 512 pair epochs are at the floor for R00, ..."]
+    F8C_TWO_COORDINATES["F8C-TWO-COORDINATES: On each single conditional pair rule in the A0 palette, the six-slot pair-event law is ..."]
+    F8C_CLOSED_FORM_CMI["F8C-CLOSED-FORM-CMI: An inactive single pair rule gives probability 1/6 on each of the six slots. An active ..."]
+    F8C_GRADE_ASYMMETRY["F8C-GRADE-ASYMMETRY: At m=1/4 the action slot has probability 1/21 and each other slot has probability 4/21...."]
+    F8C_LOCAL_EQUIVALENCE["F8C-LOCAL-EQUIVALENCE: R01, R02, and R04 have the same balanced full-mask slot information. Each reweights one..."]
+    F8C_R05_DENOMINATOR["F8C-R05-DENOMINATOR: R05's balanced slot information is 0.010413087564075357 nats. It equals (1/4) JS(unifor..."]
+    F8C_TOPOLOGY_ATLAS["F8C-TOPOLOGY-ATLAS: From the canonical star, and from the canonical triangle, every one-edge toggle with th..."]
+    F8C_CHECKPOINT_EPOCH["F8C-CHECKPOINT-EPOCH: Checkpoint 1 is the law of the first pair event after zero or more triad-only toggles. ..."]
+    F8C_GATE_REFRESH["F8C-GATE-REFRESH: On R01 and on R06, exact propagation gives I(initial full triad; current pair mask) equ..."]
+    F8C_PROJECTION_GEOMETRY["F8C-PROJECTION-GEOMETRY: Under stationary pair-event weighting, conditioning on graph isomorphism class retains ..."]
+    F8C_EDGE_DRIFT["F8C-EDGE-DRIFT: On an active strong-suppress dissolution the rule-induced expected edge change is (6-k)..."]
+    F8D_LOG_ADDITIVITY["F8D-LOG-ADDITIVITY: On every one of the 3584 weighted two-rule systems, the implementation kernel weights e..."]
+    F8D_NORMALISATION_INTERACTION["F8D-NORMALISATION-INTERACTION: When two rules on different slots are both active the pair law is m1/(m1+m2+4), m2/(m1+..."]
+    F8D_COMPLEMENTARY_ELIMINATION["F8D-COMPLEMENTARY-ELIMINATION: A | G => m together with A | NOT G => m has the same full ten-slot weight table as the ..."]
+    F8D_DIRECTION_ELIMINATION["F8D-DIRECTION-ELIMINATION: A formation and a dissolution of one slot, on the same triad literal with equal weights..."]
+    F8D_NO_GATE_PRODUCT["F8D-NO-GATE-PRODUCT: On one action slot with two distinct gates, L11 - L10 - L01 + L00 = 0 on all 272 system..."]
+    F8D_RECIPROCAL_TWINS["F8D-RECIPROCAL-TWINS: On one slot the local law determines the affine log multiplier c + beta1 G1 + beta2 G2,..."]
+    F8D_GATE_DIMENSION["F8D-GATE-DIMENSION: Effective gate dimension is 0 on 16 systems, 1 on 960, and 2 on 2608. The local reducib..."]
+    F8D_SWITCHED_DIMENSION["F8D-SWITCHED-DIMENSION: 256 of the 2608 dimension-two systems never activate both rules in one state. They are ..."]
+    F8D_SLOT_GATE_XOR["F8D-SLOT-GATE-XOR: A dissolution on one triad literal and a formation of the same slot on the opposite lit..."]
+    F8D_NO_REDUNDANT_RULE["F8D-NO-REDUNDANT-RULE: In no weighted two-rule system does removing either rule leave the local law unchanged...."]
+    F8D_INFORMATION_BLINDNESS["F8D-INFORMATION-BLINDNESS: The balanced current-triad slot information is constant on 80 groups defined by family,..."]
+    F8D_INFORMATION_NOT_DIMENSION["F8D-INFORMATION-NOT-DIMENSION: The largest balanced information in the census, 0.059365300578680294 nats, belongs to a..."]
+    F8D_WEAK_GRADE_SURFACE["F8D-WEAK-GRADE-SURFACE: For one conditional rule, balanced slot information is 0.009748566529643857, 0.00323867..."]
+    F8E_K3_CONJUNCTION_INTERACTION["F8E-K3-CONJUNCTION-INTERACTION: On every one of the 80 single K=3 rules, the action log multiplier in literal coordinat..."]
+    F8E_RAW_SIGN["F8E-RAW-SIGN: In raw triad-bit coordinates the second difference of a K=3 conjunction is +ln(m) when ..."]
+    F8E_K2_K3_NONREPRESENTABILITY["F8E-K2-K3-NONREPRESENTABILITY: Over the four literal corners, the one-literal additive features 1, U1, U2 have rank 3 ..."]
+    F8E_NO_8D_MATCH["F8E-NO-8D-MATCH: None of the 80 K3 laws matches any of the 3584 Generation 8D weighted two-rule laws, la..."]
+    F8E_K3_INFORMATION_SURFACE["F8E-K3-INFORMATION-SURFACE: Balanced current-triad slot information of one K=3 conjunction is (1/2) JS_(1/4,3/4)(q_..."]
+    F8E_K3_DRIFT_SURFACE["F8E-K3-DRIFT-SURFACE: The rule-induced balanced edge drift of one K=3 conjunction is 5(1-m)/[48(m+5)] for dis..."]
+    F8E_BOOLEAN_LOGIT_BASIS["F8E-BOOLEAN-LOGIT-BASIS: Every four-corner action-logit table has the unique raw expansion c + a G1 + b G2 + d G..."]
+    F8E_CORNER_BASIS["F8E-CORNER-BASIS: The four K=3 corner indicators are a second basis of the same space, related to (1, G1,..."]
+    F8E_W4_COVERAGE["F8E-W4-COVERAGE: With at most one W4 rule per basis element, the corner basis reaches 625 four-corner ta..."]
+    F8E_XOR_XNOR_FROM_K3["F8E-XOR-XNOR-FROM-K3: Two K=3 rules, A | G1 & NOT G2 => m and A | NOT G1 & G2 => m, give an exact XOR-gated a..."]
+    F8E_GENERAL_K_INTERACTION["F8E-GENERAL-K-INTERACTION: On one placement, for r = 1 to 4 triad literals (K = 2 to 5) and every literal pattern,..."]
+    F8F_PROJECTION_PERSISTS["F8F-PROJECTION-PERSISTS: The K3-versus-PROJECTION centered second-order logit difference remains visible at chec..."]
+    F8F_FIRST_PATH_SHAPE["F8F-FIRST-PATH-SHAPE: At the first pair event for dissolution, path K3-versus-PROJECTION shape-given-edge inf..."]
+    F8F_PATH_NOT_UNIVERSAL["F8F-PATH-NOT-UNIVERSAL: The path is not the largest shape converter at every horizon. For formation K3-versus-P..."]
+    F8F_SHAPE_WASHES_OUT["F8F-SHAPE-WASHES-OUT: Every stationary comparison has shape-given-edge information below the 1e-12 floor, wit..."]
+    F8F_DRIFT_MATCHED_RESIDUAL["F8F-DRIFT-MATCHED-RESIDUAL: DRIFT matches K3 balanced local action probability and edge drift with published float ..."]
+    F8F_INCIDENCE_SILENT["F8F-INCIDENCE-SILENT: BOTH, ONE and NEITHER produce identical checkpoint and stationary bridge outputs. All 4..."]
+    F8F_COMPLEMENT_PERIOD["F8F-COMPLEMENT-PERIOD: Form and dissolve full and epoch kernels are conjugate with gap 0 under s xor 63 for ev..."]
+    F8F_LOCAL_GLOBAL_DECOUPLING["F8F-LOCAL-GLOBAL-DECOUPLING: Stationary current-context slot CMI does not monotonically rank K3-versus-PROJECTION vi..."]
+    F8G_FORMAL_ADDITIVE_LOGIT_GRAMMAR["F8G-FORMAL-ADDITIVE-LOGIT-GRAMMAR: Fixed positive rules compose by multiplication of event weights and addition of event l..."]
+    F8G_FORMAL_K_INTERACTION_HIERARCHY["F8G-FORMAL-K-INTERACTION-HIERARCHY: A non-neutral admissible conjunction over r distinct jointly satisfiable literals has n..."]
+    F8G_FORMAL_RULE_CARDINALITY_DISTINCTION["F8G-FORMAL-RULE-CARDINALITY-DISTINCTION: Rule count J, maximum per-rule K, relation order O and derived gate dimension are indep..."]
+    F8G_FORMAL_BOOLEAN_BASIS["F8G-FORMAL-BOOLEAN-BASIS: Unique multilinear Mobius coefficients and complete literal corner indicators supply eq..."]
+    F8G_FORMAL_CURRENT_STATE_EXPRESSIVITY["F8G-FORMAL-CURRENT-STATE-EXPRESSIVITY: The unbounded O2/O3 literal parser/backend can represent every positive event-weight ta..."]
+    F8G_FORMAL_COUNT_SCOPE["F8G-FORMAL-COUNT-SCOPE: The K-1 gate-degree bound is literal-only: an O2 K2 count>=1 predicate on two non-actio..."]
+    F8G_FORMAL_STATIONARY_FACTORISATION["F8G-FORMAL-STATIONARY-FACTORISATION: If an action rate depends only on its own pair bit and hidden bits, with all other pair..."]
+    F8G_FORMAL_SHAPE_INVARIANCE["F8G-FORMAL-SHAPE-INVARIANCE: Under autonomous single-action factorisation, graph class conditional on edge count is ..."]
+  end
+  subgraph INFERENCE [Inferences]
+    F008_COMPOSITION_REPRESENTATION["F008-COMPOSITION-REPRESENTATION: The magnitude of a two-rule interaction residual depends on the representation and the ..."]
+    F018_LOCAL_VERSUS_INITIAL["F018-LOCAL-VERSUS-INITIAL: Local higher-order dependence and long-lived initial-condition memory are distinct. The..."]
+    F8C_PATH_CONVERTS_SLOT["F8C-PATH-CONVERTS-SLOT: On the canonical path the action slot of R01 and of R06 is the middle edge. Reweighting..."]
+    F8C_CURRENT_SURVIVES["F8C-CURRENT-SURVIVES: The balanced current-context slot information remains the closed-form value, 0.00974856..."]
+    F8C_DRIFT_DIRECTION["F8C-DRIFT-DIRECTION: Suppressing a dissolution raises expected edge count, favouring a dissolution lowers it..."]
+    F8D_ADDITIVE_FEATURE_GRAMMAR["F8D-ADDITIVE-FEATURE-GRAMMAR: In the current multiplicative-weight DSL, constraints compose as additive features in e..."]
+    F8D_SYNTAX_CAN_VANISH["F8D-SYNTAX-CAN-VANISH: Contextual syntax can be dynamically redundant. Complementary conditions with one weigh..."]
+    F8E_CARDINALITY_VS_K["F8E-CARDINALITY-VS-K: Within this DSL, rule cardinality and expression complexity are different operations on..."]
+    F8E_ORDINARY_K_SUPPLIES_INTERACTION["F8E-ORDINARY-K-SUPPLIES-INTERACTION: Ordinary expression complexity already introduces gate-by-gate interaction and two-gate..."]
+    F8F_INTERACTION_ROUTING["F8F-INTERACTION-ROUTING: Within this single-action grammar, pair topology routes a centered gate interaction int..."]
+  end
+  subgraph METHODOLOGICAL [Methodological corrections]
+    F011_QUOTIENT_INVALID["F011-QUOTIENT-INVALID: Graph-only hidden-context quotienting is formally invalid for labelled rules. The wrong..."]
+    F013_PLUGIN_OVERSTATES["F013-PLUGIN-OVERSTATES: Plug-in mutual information from these finite tables substantially overstates hidden-con..."]
+    F8C_METHOD_GEOMETRY["F8C-METHOD-GEOMETRY: After exploratory statistics identify a stable non-zero structure, search for a minimal..."]
+    F8C_METHOD_DIMENSIONS["F8C-METHOD-DIMENSIONS: A finding has several dimensions. Magnitude, robustness, persistence, explanatory reach..."]
+    F8D_CORRECT_GRADE_ASYMMETRY["F8D-CORRECT-GRADE-ASYMMETRY: The favour/suppress total-variation ratio is (5/18)/(5/42) = 7/3, and the one-gate edge..."]
+    F8D_DRIFT_MAGNITUDE_SCOPE["F8D-DRIFT-MAGNITUDE-SCOPE: The large magnitude belongs to F010-OCCUPANCY-AXIS. F8C-DRIFT-DIRECTION explains the si..."]
+    F8E_K2_SCOPE_CORRECTION["F8E-K2-SCOPE-CORRECTION: The 8D no-gate-product result bounds the two-rule one-literal K=2 feature grammar. It d..."]
+    F8E_PARSER_SAME_TRIAD["F8E-PARSER-SAME-TRIAD: The order-3 parser rejects a repeated literal, a condition on the action slot and a cou..."]
+    F8F_GENERAL_K_SCOPE["F8F-GENERAL-K-SCOPE: The general interaction-order statement applies to non-neutral rules over distinct, joi..."]
+    F8F_PREFREEZE_SCIENCE_GATE["F8F-PREFREEZE-SCIENCE-GATE: Before a scientific plan is frozen, execution tests may validate plumbing, synthetic fi..."]
+    F8G_FORMAL_EQUIVALENCE_HIERARCHY["F8G-FORMAL-EQUIVALENCE-HIERARCHY: Canonical syntax, weights, full local law, full kernel, conjugacy, projected process an..."]
+    F8G_FORMAL_INCIDENCE_SCOPE["F8G-FORMAL-INCIDENCE-SCOPE: Independent hidden-bit permutations can conjugate single-action gate laws while fixing ..."]
+    F8G_FORMAL_H_L_DISTINCTION["F8G-FORMAL-H-L-DISTINCTION: H asks for different reachable histories at identical complete ordinary material state;..."]
+    F8G_FORMAL_COMPILATION_TEST["F8G-FORMAL-COMPILATION-TEST: Before claiming a new ontology axis, test compilation into fixed ordinary rules while d..."]
+  end
+  subgraph RS_GLOBAL_COHERENCE_INTERPRETATION [RS and global-coherence interpretations]
+    F_RS_SEPARATION["F-RS-SEPARATION: A small exact local dependence of a lower-order event on a current higher-order bit, to..."]
+    F8D_RS_COMPOSITIONAL_BOUND["F8D-RS-COMPOSITIONAL-BOUND: Inside this model a small constraint grammar is compositional in event-logit space and ..."]
+    F8E_RS_COMPOSITIONAL_HIERARCHY["F8E-RS-COMPOSITIONAL-HIERARCHY: Inside this model a small constraint grammar has an ordinary compositional hierarchy: i..."]
+    F8F_RS_BRIDGE_INTERPRETATION["F8F-RS-BRIDGE-INTERPRETATION: The local expressive hierarchy needs a dynamical scope: a new coefficient may become tr..."]
+    F8G_FORMAL_INTEGRATION_RS["F8G-FORMAL-INTEGRATION-RS: The laboratory has a scoped compositional current-relation language and a precise histo..."]
+  end
+  subgraph OPEN_QUESTION [Open questions]
+    Q_PATH_SHAPE["Q-PATH-SHAPE: Why does path topology convert early triadic context into shape information at the firs..."]
+    Q_LOCAL_SLOT["Q-LOCAL-SLOT: What minimal state coordinates and normalisation produce the balanced full-mask slot in..."]
+    Q_CLASS_REMAINDER["Q-CLASS-REMAINDER: Which labelled alignments inside a graph class carry the slot information that isomorph..."]
+    Q_H_POSITIVE["Q-H-POSITIVE: What changes when relational history itself becomes part of the constraint state? Rapid..."]
+    Q_SCALE_N["Q-SCALE-N: How does the local gate, the normalisation, and the occupancy axis scale when N moves p..."]
+    Q_THREE_EDGE_LAYER["Q-THREE-EDGE-LAYER: What keeps the 3-edge occupancy layer near 0.314 across the Generation 8 palette?"]
+    Q_WEAK_GRADE["Q-WEAK-GRADE: How do the local slot information and the rule-induced edge drift move when the multipl..."]
+    Q_GATE_COMPOSITION["Q-GATE-COMPOSITION: How do two higher-order gates compose in the local coordinates? A second gate can add a..."]
+    Q_META_CONSTRAINT["Q-META-CONSTRAINT: What new local expressivity appears when one constraint can modulate another constraint..."]
+    Q_K3_CONJUNCTION["Q-K3-CONJUNCTION: What new local expressivity appears when one ordinary constraint reads two higher-order..."]
+  end
+  F014_EXACT_FIRST_DESTINATION -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
+  F015_TRANSIENT_CLASS_MEMORY -->|supersedes_interpretation| F008A_PLUGIN_INITIAL_MI
+  F013_PLUGIN_OVERSTATES -->|explains| F008A_PLUGIN_INITIAL_MI
+  F016_CURRENT_SLOT_INFORMATION -->|contrasts_with| F015_TRANSIENT_CLASS_MEMORY
+  F018_LOCAL_VERSUS_INITIAL -->|derived_from| F016_CURRENT_SLOT_INFORMATION
+  F018_LOCAL_VERSUS_INITIAL -->|derived_from| F015_TRANSIENT_CLASS_MEMORY
+  F003_CLOCK_SPLIT -->|motivates| F016_CURRENT_SLOT_INFORMATION
+  F011_QUOTIENT_INVALID -->|motivates| F012_RAW_CONTEXT_AXIS
+  F012_RAW_CONTEXT_AXIS -->|refines| F010_OCCUPANCY_AXIS
+  F004_PASSAGE_AFTER_OCCUPANCY -->|bounds| F010_OCCUPANCY_AXIS
+  F007_SELECTIVITY_SURVIVES -->|supports| F016_CURRENT_SLOT_INFORMATION
+  F009_TWO_LEVEL_COLLAPSE -->|explains| F006_SCALAR_AGGREGATE
+  F017_CLASS_PROJECTION_LOSS -->|is_coarse_graining_of| F016_CURRENT_SLOT_INFORMATION
+  F008_EDGE_VERSUS_SHAPE -->|raises_question| Q_PATH_SHAPE
+  F016_CURRENT_SLOT_INFORMATION -->|raises_question| Q_LOCAL_SLOT
+  F017_CLASS_PROJECTION_LOSS -->|raises_question| Q_CLASS_REMAINDER
+  F015_TRANSIENT_CLASS_MEMORY -->|raises_question| Q_H_POSITIVE
+  F010_OCCUPANCY_AXIS -->|raises_question| Q_SCALE_N
+  F010_OCCUPANCY_AXIS -->|raises_question| Q_THREE_EDGE_LAYER
+  F_RS_SEPARATION -->|derived_from| F018_LOCAL_VERSUS_INITIAL
+  F008_COMPOSITION_REPRESENTATION -->|qualifies| F005_COMPOSITION_NOT_SUM
+  F008B_FINITE_HORIZON_RANGE -->|bounds| F012_RAW_CONTEXT_AXIS
+  F8C_CLOSED_FORM_CMI -->|derived_from| F8C_TWO_COORDINATES
+  F8C_CLOSED_FORM_CMI -->|explains| F016_CURRENT_SLOT_INFORMATION
+  F8C_GRADE_ASYMMETRY -->|derived_from| F8C_CLOSED_FORM_CMI
+  F8C_LOCAL_EQUIVALENCE -->|derived_from| F8C_CLOSED_FORM_CMI
+  F8C_R05_DENOMINATOR -->|contrasts_with| F8C_CLOSED_FORM_CMI
+  F8C_PATH_CONVERTS_SLOT -->|derived_from| F8C_TOPOLOGY_ATLAS
+  F8C_PATH_CONVERTS_SLOT -->|explains| F008_EDGE_VERSUS_SHAPE
+  F8C_CHECKPOINT_EPOCH -->|explains| F008_EDGE_VERSUS_SHAPE
+  F8C_GATE_REFRESH -->|explains| F015_TRANSIENT_CLASS_MEMORY
+  F8C_CURRENT_SURVIVES -->|derived_from| F8C_GATE_REFRESH
+  F8C_CURRENT_SURVIVES -->|derived_from| F8C_CLOSED_FORM_CMI
+  F8C_CURRENT_SURVIVES -->|refines| F018_LOCAL_VERSUS_INITIAL
+  F8C_PROJECTION_GEOMETRY -->|explains| F017_CLASS_PROJECTION_LOSS
+  F8C_DRIFT_DIRECTION -->|derived_from| F8C_EDGE_DRIFT
+  F8C_DRIFT_DIRECTION -->|qualifies| F010_OCCUPANCY_AXIS
+  Q_LOCAL_SLOT -->|partially_answered_by| F8C_CLOSED_FORM_CMI
+  Q_PATH_SHAPE -->|partially_answered_by| F8C_PATH_CONVERTS_SLOT
+  Q_CLASS_REMAINDER -->|partially_answered_by| F8C_PROJECTION_GEOMETRY
+  F8C_CLOSED_FORM_CMI -->|raises_question| Q_WEAK_GRADE
+  F8C_R05_DENOMINATOR -->|raises_question| Q_GATE_COMPOSITION
+  F8C_GATE_REFRESH -->|motivates| Q_H_POSITIVE
+  F8C_CLOSED_FORM_CMI -->|motivates| F8C_METHOD_GEOMETRY
+  F8D_CORRECT_GRADE_ASYMMETRY -->|corrects| F8C_GRADE_ASYMMETRY
+  F8D_DRIFT_MAGNITUDE_SCOPE -->|qualifies| F8C_DRIFT_DIRECTION
+  F8D_COMPLEMENTARY_ELIMINATION -->|compatible_with| F009_TWO_LEVEL_COLLAPSE
+  F8D_NORMALISATION_INTERACTION -->|refines| F8C_R05_DENOMINATOR
+  F8D_INFORMATION_BLINDNESS -->|refines| F8C_LOCAL_EQUIVALENCE
+  F8D_INFORMATION_BLINDNESS -->|derived_from| F8C_CLOSED_FORM_CMI
+  F8D_NO_GATE_PRODUCT -->|raises_question| Q_META_CONSTRAINT
+  F8D_SLOT_GATE_XOR -->|contrasts_with| F8D_NO_GATE_PRODUCT
+  F8D_SWITCHED_DIMENSION -->|refines| F8D_GATE_DIMENSION
+  F8D_NO_REDUNDANT_RULE -->|qualifies| F8D_COMPLEMENTARY_ELIMINATION
+  F8D_INFORMATION_NOT_DIMENSION -->|supports| F8C_METHOD_DIMENSIONS
+  F8D_WEAK_GRADE_SURFACE -->|supports| F8D_CORRECT_GRADE_ASYMMETRY
+  Q_WEAK_GRADE -->|partially_answered_by| F8D_WEAK_GRADE_SURFACE
+  Q_GATE_COMPOSITION -->|partially_answered_by| F8D_ADDITIVE_FEATURE_GRAMMAR
+  Q_GATE_COMPOSITION -->|partially_answered_by| F8D_GATE_DIMENSION
+  F8D_ADDITIVE_FEATURE_GRAMMAR -->|derived_from| F8D_LOG_ADDITIVITY
+  F8D_ADDITIVE_FEATURE_GRAMMAR -->|derived_from| F8D_NORMALISATION_INTERACTION
+  F8D_ADDITIVE_FEATURE_GRAMMAR -->|derived_from| F8D_NO_GATE_PRODUCT
+  F8D_ADDITIVE_FEATURE_GRAMMAR -->|compatible_with| F005_COMPOSITION_NOT_SUM
+  F8D_SYNTAX_CAN_VANISH -->|derived_from| F8D_COMPLEMENTARY_ELIMINATION
+  F8D_SYNTAX_CAN_VANISH -->|derived_from| F8D_DIRECTION_ELIMINATION
+  F8D_SYNTAX_CAN_VANISH -->|derived_from| F8D_RECIPROCAL_TWINS
+  F8D_RS_COMPOSITIONAL_BOUND -->|derived_from| F8D_ADDITIVE_FEATURE_GRAMMAR
+  F8D_RS_COMPOSITIONAL_BOUND -->|compatible_with| F_RS_SEPARATION
+  F8E_K2_SCOPE_CORRECTION -->|qualifies| F8D_NO_GATE_PRODUCT
+  F8E_K2_SCOPE_CORRECTION -->|qualifies| F8D_ADDITIVE_FEATURE_GRAMMAR
+  F8E_K2_SCOPE_CORRECTION -->|qualifies| F8D_RS_COMPOSITIONAL_BOUND
+  F8E_K2_SCOPE_CORRECTION -->|qualifies| Q_META_CONSTRAINT
+  F8E_K2_SCOPE_CORRECTION -->|raises_question| Q_K3_CONJUNCTION
+  Q_K3_CONJUNCTION -->|partially_answered_by| F8E_K3_CONJUNCTION_INTERACTION
+  Q_K3_CONJUNCTION -->|partially_answered_by| F8E_BOOLEAN_LOGIT_BASIS
+  F8E_K3_CONJUNCTION_INTERACTION -->|contrasts_with| F8D_NO_GATE_PRODUCT
+  F8E_K2_K3_NONREPRESENTABILITY -->|refines| F8D_NO_GATE_PRODUCT
+  F8E_NO_8D_MATCH -->|supports| F8E_K2_K3_NONREPRESENTABILITY
+  F8E_RAW_SIGN -->|derived_from| F8E_K3_CONJUNCTION_INTERACTION
+  F8E_RAW_SIGN -->|compatible_with| F8D_RECIPROCAL_TWINS
+  F8E_K3_INFORMATION_SURFACE -->|supports| F8D_INFORMATION_BLINDNESS
+  F8E_K3_INFORMATION_SURFACE -->|supports| F8C_METHOD_DIMENSIONS
+  F8E_K3_DRIFT_SURFACE -->|supports| F8D_CORRECT_GRADE_ASYMMETRY
+  F8E_K3_DRIFT_SURFACE -->|refines| F8D_WEAK_GRADE_SURFACE
+  F8E_CORNER_BASIS -->|is_equivalent_to| F8E_BOOLEAN_LOGIT_BASIS
+  F8E_W4_COVERAGE -->|qualifies| F8E_BOOLEAN_LOGIT_BASIS
+  F8E_XOR_XNOR_FROM_K3 -->|qualifies| F8D_NO_GATE_PRODUCT
+  F8E_XOR_XNOR_FROM_K3 -->|contrasts_with| F8D_SLOT_GATE_XOR
+  F8E_GENERAL_K_INTERACTION -->|refines| F8E_K3_CONJUNCTION_INTERACTION
+  F8E_CARDINALITY_VS_K -->|derived_from| F8E_K3_CONJUNCTION_INTERACTION
+  F8E_CARDINALITY_VS_K -->|derived_from| F8E_CORNER_BASIS
+  F8E_CARDINALITY_VS_K -->|refines| F8D_ADDITIVE_FEATURE_GRAMMAR
+  F8E_ORDINARY_K_SUPPLIES_INTERACTION -->|derived_from| F8E_XOR_XNOR_FROM_K3
+  F8E_ORDINARY_K_SUPPLIES_INTERACTION -->|qualifies| Q_META_CONSTRAINT
+  F8E_RS_COMPOSITIONAL_HIERARCHY -->|derived_from| F8E_CARDINALITY_VS_K
+  F8E_RS_COMPOSITIONAL_HIERARCHY -->|qualifies| F8D_RS_COMPOSITIONAL_BOUND
+  F8F_GENERAL_K_SCOPE -->|qualifies| F8E_GENERAL_K_INTERACTION
+  F8F_PREFREEZE_SCIENCE_GATE -->|refines| F8C_METHOD_GEOMETRY
+  F8F_PREFREEZE_SCIENCE_GATE -->|supports| F8C_METHOD_DIMENSIONS
+  F8F_PROJECTION_PERSISTS -->|supports| F8E_K3_CONJUNCTION_INTERACTION
+  F8F_PROJECTION_PERSISTS -->|refines| F8E_K2_K3_NONREPRESENTABILITY
+  F8F_FIRST_PATH_SHAPE -->|supports| F8C_PATH_CONVERTS_SLOT
+  F8F_PATH_NOT_UNIVERSAL -->|bounds| F8F_FIRST_PATH_SHAPE
+  F8F_SHAPE_WASHES_OUT -->|qualifies| F8F_FIRST_PATH_SHAPE
+  F8F_DRIFT_MATCHED_RESIDUAL -->|refines| F8E_K3_DRIFT_SURFACE
+  F8F_INCIDENCE_SILENT -->|bounds| F8E_RS_COMPOSITIONAL_HIERARCHY
+  F8F_INCIDENCE_SILENT -->|contrasts_with| F8F_FIRST_PATH_SHAPE
+  F8F_COMPLEMENT_PERIOD -->|explains| F8F_PROJECTION_PERSISTS
+  F8F_LOCAL_GLOBAL_DECOUPLING -->|supports| F8C_METHOD_DIMENSIONS
+  F8F_LOCAL_GLOBAL_DECOUPLING -->|refines| F8C_CURRENT_SURVIVES
+  F8F_INTERACTION_ROUTING -->|explains| F8F_FIRST_PATH_SHAPE
+  F8F_INTERACTION_ROUTING -->|explains| F8F_SHAPE_WASHES_OUT
+  F8F_INTERACTION_ROUTING -->|explains| F8F_DRIFT_MATCHED_RESIDUAL
+  F8F_RS_BRIDGE_INTERPRETATION -->|derived_from| F8F_INTERACTION_ROUTING
+  F8F_RS_BRIDGE_INTERPRETATION -->|refines| F8E_RS_COMPOSITIONAL_HIERARCHY
+  F8F_SHAPE_WASHES_OUT -->|raises_question| Q_H_POSITIVE
+  F8F_RS_BRIDGE_INTERPRETATION -->|compatible_with| Q_META_CONSTRAINT
+  F8F_SHAPE_WASHES_OUT -->|raises_question| Q_SCALE_N
+  F8G_FORMAL_ADDITIVE_LOGIT_GRAMMAR -->|proves_local_identity_for| F8D_LOG_ADDITIVITY
+  F8G_FORMAL_ADDITIVE_LOGIT_GRAMMAR -->|formalises| F8D_ADDITIVE_FEATURE_GRAMMAR
+  F8G_FORMAL_K_INTERACTION_HIERARCHY -->|proves_local_identity_for| F8E_K3_CONJUNCTION_INTERACTION
+  F8G_FORMAL_K_INTERACTION_HIERARCHY -->|qualifies| F8E_GENERAL_K_INTERACTION
+  F8G_FORMAL_K_INTERACTION_HIERARCHY -->|explains| F8E_K2_K3_NONREPRESENTABILITY
+  F8G_FORMAL_RULE_CARDINALITY_DISTINCTION -->|formalises| F8E_CARDINALITY_VS_K
+  F8G_FORMAL_RULE_CARDINALITY_DISTINCTION -->|explains| F8D_GATE_DIMENSION
+  F8G_FORMAL_BOOLEAN_BASIS -->|proves_local_identity_for| F8E_BOOLEAN_LOGIT_BASIS
+  F8G_FORMAL_BOOLEAN_BASIS -->|proves_local_identity_for| F8E_CORNER_BASIS
+  F8G_FORMAL_BOOLEAN_BASIS -->|bounds| F8E_W4_COVERAGE
+  F8G_FORMAL_CURRENT_STATE_EXPRESSIVITY -->|depends_on| F8G_FORMAL_BOOLEAN_BASIS
+  F8G_FORMAL_CURRENT_STATE_EXPRESSIVITY -->|bounds| Q_H_POSITIVE
+  F8G_FORMAL_CURRENT_STATE_EXPRESSIVITY -->|bounds| Q_META_CONSTRAINT
+  F8G_FORMAL_COUNT_SCOPE -->|qualifies| F8E_CARDINALITY_VS_K
+  F8G_FORMAL_COUNT_SCOPE -->|qualifies| F8D_NO_GATE_PRODUCT
+  F8G_FORMAL_COUNT_SCOPE -->|refines| F8F_GENERAL_K_SCOPE
+  F8G_FORMAL_EQUIVALENCE_HIERARCHY -->|formalises| F011_QUOTIENT_INVALID
+  F8G_FORMAL_EQUIVALENCE_HIERARCHY -->|bounds| F009_TWO_LEVEL_COLLAPSE
+  F8G_FORMAL_INCIDENCE_SCOPE -->|explains| F8F_INCIDENCE_SILENT
+  F8G_FORMAL_STATIONARY_FACTORISATION -->|proves_local_identity_for| F8F_INTERACTION_ROUTING
+  F8G_FORMAL_STATIONARY_FACTORISATION -->|explains| F8F_SHAPE_WASHES_OUT
+  F8G_FORMAL_SHAPE_INVARIANCE -->|depends_on| F8G_FORMAL_STATIONARY_FACTORISATION
+  F8G_FORMAL_SHAPE_INVARIANCE -->|explains| F8F_SHAPE_WASHES_OUT
+  F8G_FORMAL_SHAPE_INVARIANCE -->|bounds| Q_SCALE_N
+  F8G_FORMAL_H_L_DISTINCTION -->|refines| Q_H_POSITIVE
+  F8G_FORMAL_H_L_DISTINCTION -->|refines| Q_META_CONSTRAINT
+  F8G_FORMAL_COMPILATION_TEST -->|formalises| F8E_ORDINARY_K_SUPPLIES_INTERACTION
+  F8G_FORMAL_COMPILATION_TEST -->|compatible_with| F8F_PREFREEZE_SCIENCE_GATE
+  F8G_FORMAL_INTEGRATION_RS -->|bounds| F8E_RS_COMPOSITIONAL_HIERARCHY
+  F8G_FORMAL_INTEGRATION_RS -->|refines| F8F_RS_BRIDGE_INTERPRETATION
+  F8G_FORMAL_EQUIVALENCE_HIERARCHY -->|compatible_with| F8C_PATH_CONVERTS_SLOT

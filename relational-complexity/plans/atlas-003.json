@@ -1,0 +1,812 @@
+{
+  "round_id": "atlas-003",
+  "engine_version": "rrc-0.3.0",
+  "grammar_id": "opening-prohibit-multiply-v1",
+  "definitions_commit": "26bf891ddf064ee4b90097dadf343bb7672720a0",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q08"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q01",
+    "ATLAS-Q02",
+    "ATLAS-Q03",
+    "ATLAS-Q04",
+    "ATLAS-Q05",
+    "ATLAS-Q06",
+    "ATLAS-Q07",
+    "ATLAS-Q09",
+    "ATLAS-Q10",
+    "ATLAS-Q11"
+  ],
+  "selection": "Declared sample of opening-grammar lists on the N=3 complete carrier. Not an exhaustive grammar grid. Not scheduled to explain PAT-001, PAT-002, PAT-003, or PAT-004. The incident predicate is not in this round.",
+  "construction": "Single constraints use event (0,1) and condition (0,2). The two-factor cell adds a second multiply of the same event when (1,2) is present. The two-event cell puts a factor-5 multiply on (1,2) when (0,1) is present. The length-6 list follows complete-edge order (0,1), (0,2), (1,2): for each edge i, a prohibit when edge i+1 (mod 3) is present, then a multiply by 2, 3, or 5 when edge i+2 (mod 3) is present. Length 4 is the prefix. Length 8 appends a factor-4 multiply of (0,1) when (0,2) is absent, then a dissolve prohibit of (0,2) when (1,2) is present. Cardinality 6 counts constraints. It is not a six-node target.",
+  "tolerances": {
+    "stationary_successive_l1": 1e-12,
+    "cross_check_l1": 1e-08,
+    "max_iter": 10000,
+    "dense_max_states": 1024
+  },
+  "grammar": {
+    "id": "opening-prohibit-multiply-v1",
+    "note": "docs/atlas-grammar.md. Effects are prohibit and multiply. The composer is order-independent. No incident predicate.",
+    "baseline": 1,
+    "factors": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "carrier": "complete"
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-003-preflight.md",
+    "heaviest_cell_s": 0.013,
+    "shape": "N=3 complete carrier, eight constraints, common core",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "n": 3,
+    "carrier": "complete",
+    "cells": 13,
+    "declared_cardinalities": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      8
+    ],
+    "factors": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "declared_sample": true,
+    "not_exhaustive_lists": true,
+    "state_enumeration": "exhaustive within each cell",
+    "grammar_enumeration": "declared sample",
+    "six_is_not_a_target": true,
+    "excluded": [
+      "N=4",
+      "N=5",
+      "incident predicates",
+      "both-polarity prohibit pairs",
+      "count predicates",
+      "history",
+      "independent hyperedges",
+      "composition depth >= 1",
+      "state sampling"
+    ]
+  },
+  "stopping": [
+    "Do not add, remove or edit items after this file is committed.",
+    "Do not widen tolerances after an item has run.",
+    "A failed, timed-out or unresolved item stays in that state.",
+    "Incomplete or invalid records may be recomputed only under the same spec.",
+    "Do not describe an unrun item as a result.",
+    "Do not treat these 13 lists as every list of these cardinalities.",
+    "Do not add an incident predicate after seeing these cells."
+  ],
+  "items": [
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A3-01-base",
+      "idea_ids": [
+        "IDEA-C00"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "baseline",
+      "round_id": "atlas-003",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A3-02-mul-present-2",
+      "idea_ids": [
+        "IDEA-C02",
+        "IDEA-C11"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "factor",
+      "round_id": "atlas-003",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 3
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A3-03-mul-present-3",
+      "idea_ids": [
+        "IDEA-C11"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "factor",
+      "round_id": "atlas-003",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 4
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A3-04-mul-present-4",
+      "idea_ids": [
+        "IDEA-C02",
+        "IDEA-C11"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "control",
+      "round_id": "atlas-003",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "absent"
+          },
+          "factor": 2
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A3-05-mul-absent-2",
+      "idea_ids": [
+        "IDEA-C03",
+        "IDEA-C11"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "polarity",
+      "round_id": "atlas-003",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A3-06-pro-present",
+      "idea_ids": [
+        "IDEA-C01"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "control",
+      "round_id": "atlas-003",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "form",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A3-07-pro-form",
+      "idea_ids": [
+        "IDEA-C04"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "action",
+      "round_id": "atlas-003",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "dissolve",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A3-08-pro-dissolve",
+      "idea_ids": [
+        "IDEA-C04"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "action",
+      "round_id": "atlas-003",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 3
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A3-09-two-factors",
+      "idea_ids": [
+        "IDEA-C05",
+        "IDEA-C11"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "interaction",
+      "round_id": "atlas-003",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          },
+          "factor": 5
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A3-10-two-events",
+      "idea_ids": [
+        "IDEA-C06",
+        "IDEA-C11"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "interaction",
+      "round_id": "atlas-003",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          },
+          "factor": 3
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A3-11-card4",
+      "idea_ids": [
+        "IDEA-C10"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "cardinality",
+      "round_id": "atlas-003",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          },
+          "factor": 3
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 5
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A3-12-card6",
+      "idea_ids": [
+        "IDEA-C10"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "cardinality",
+      "round_id": "atlas-003",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    },
+    {
+      "baseline": 1,
+      "carrier": {
+        "kind": "complete"
+      },
+      "constraints": [
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 2
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          },
+          "factor": 3
+        },
+        {
+          "action": "either",
+          "effect": "prohibit",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              1
+            ],
+            "polarity": "present"
+          }
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            1,
+            2
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "present"
+          },
+          "factor": 5
+        },
+        {
+          "action": "either",
+          "effect": "multiply",
+          "event": [
+            0,
+            1
+          ],
+          "when": {
+            "edge": [
+              0,
+              2
+            ],
+            "polarity": "absent"
+          },
+          "factor": 4
+        },
+        {
+          "action": "dissolve",
+          "effect": "prohibit",
+          "event": [
+            0,
+            2
+          ],
+          "when": {
+            "edge": [
+              1,
+              2
+            ],
+            "polarity": "present"
+          }
+        }
+      ],
+      "cross_tolerance": 1e-08,
+      "dense_max_states": 1024,
+      "id": "A3-13-card8",
+      "idea_ids": [
+        "IDEA-C10"
+      ],
+      "max_iter": 10000,
+      "n": 3,
+      "role": "cardinality",
+      "round_id": "atlas-003",
+      "tolerance": 1e-12,
+      "type": "atlas_core"
+    }
+  ]
+}

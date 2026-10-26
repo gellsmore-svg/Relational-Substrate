@@ -1,0 +1,110 @@
+{
+  "method": "label-sync-analysis-0.1.0",
+  "evidence_type": "analytic proof and independent software validation",
+  "scientific_worker_invocations": 0,
+  "new_atlas_cells": 0,
+  "basis_component_count": 9,
+  "pair_oracle_checks": 81,
+  "associative_triples_checked": 729,
+  "unit_controls_checked": 9,
+  "weighted_quotient_contexts_checked": 243,
+  "hidden_update_modes": [
+    "hold",
+    "flip",
+    "reset"
+  ],
+  "nonbinary_and_two_factor_controls": "verified",
+  "unit_and_halt_same_standalone_kernel": true,
+  "unit_and_halt_different_composed_kernel": true,
+  "hidden_label_standalone_exact": {
+    "exact": true,
+    "rows": [
+      [
+        "0/1",
+        "1/1"
+      ],
+      [
+        "1/1",
+        "0/1"
+      ]
+    ],
+    "witness": null
+  },
+  "hidden_label_composed_nonexact": {
+    "exact": false,
+    "rows": null,
+    "witness": {
+      "states": [
+        0,
+        2
+      ],
+      "source_block": 0,
+      "first_row": [
+        "0/1",
+        "0/1",
+        "0/1",
+        "1/1"
+      ],
+      "second_row": [
+        "1/1",
+        "0/1",
+        "0/1",
+        "0/1"
+      ]
+    }
+  },
+  "scaling_shared_only_exact": {
+    "exact": true,
+    "rows": [
+      [
+        "0/1",
+        "0/1",
+        "0/1",
+        "1/1"
+      ],
+      [
+        "0/1",
+        "0/1",
+        "1/1",
+        "0/1"
+      ],
+      [
+        "0/1",
+        "1/1",
+        "0/1",
+        "0/1"
+      ],
+      [
+        "1/1",
+        "0/1",
+        "0/1",
+        "0/1"
+      ]
+    ],
+    "witness": null
+  },
+  "scaling_with_private_clock_nonexact": {
+    "exact": false,
+    "rows": null,
+    "witness": {
+      "states": [
+        0,
+        2
+      ],
+      "source_block": 0,
+      "first_row": [
+        "1/2",
+        "0/1",
+        "0/1",
+        "1/2"
+      ],
+      "second_row": [
+        "1/3",
+        "0/1",
+        "0/1",
+        "2/3"
+      ]
+    }
+  },
+  "status": "verified"
+}

@@ -1,0 +1,119 @@
+{
+  "canonical_constraint_set": [
+    "dissolve(0-1) | absent(0-2) => weak_favour",
+    "dissolve(1-2) | present(2-3) => strong_favour"
+  ],
+  "coordinate": {
+    "A": 4,
+    "G": 0,
+    "H": 0,
+    "K": 2,
+    "L": 0,
+    "N": 4,
+    "O": 2,
+    "S": 0,
+    "alphabet": "W4",
+    "cardinality": 2,
+    "semantics": "graph"
+  },
+  "count_in_family": 1,
+  "evaluation_vector": {
+    "coverage": "exhaustive inside the cell coordinate",
+    "cross_substrate_recurrence": "not tested in this generation",
+    "global_coherence_relevance": "open; not scored",
+    "interpretability": "the observed sentence is structural; naming is left to the report",
+    "parameter_robustness": "geometric bases preserve the modal map and the support; magnitudes change",
+    "reproducibility": "exact kernel; stochastic runs are seeded replays",
+    "symmetry_robustness": "orbit representative under the full symmetric group",
+    "trajectory_distinctiveness": "rise_then_release_excess and reversibility_defect, where computed"
+  },
+  "known_equivalent_grammars": 1,
+  "motif_id": "0035ae02b296db5b275f06ac296f85d34f64f0ce4e29f1da71faeef50f1f82f9",
+  "notes": {
+    "inferred": "not stored on the motif; inferences are written in the generation report",
+    "observed": "every state has at least one admissible toggle; 1 recurrent class(es) with periods [2]; the admissible transition graph is the full toggle hypercube; the largest one-step dissolution-probability deviation from m/M is 0.222222.",
+    "speculative": "not stored on the motif"
+  },
+  "observed": "every state has at least one admissible toggle; 1 recurrent class(es) with periods [2]; the admissible transition graph is the full toggle hypercube; the largest one-step dissolution-probability deviation from m/M is 0.222222.",
+  "parameter_regime": "W4",
+  "robustness_region": {
+    "closing_max": null,
+    "closing_min": null,
+    "shift_max": 0.2222222222222222,
+    "shift_min": 0.2222222222222222
+  },
+  "symmetry_class": "lexicographically least labelling under S_N",
+  "tags": [
+    "screened",
+    "measure"
+  ],
+  "trajectory_signature": {
+    "entropy_rate_bits": 2.5251793234413924,
+    "halt_mass": 0.0,
+    "mean_edge_density": 0.4664484451718493,
+    "rise_then_release": 0.5834260159090091,
+    "rise_then_release_excess": 0.02787046035345355
+  },
+  "within_family": {
+    "count_literal_members": 0,
+    "equivalent_members": 0,
+    "exact_kernel_count": 1,
+    "observable_signature_count": 1,
+    "ranges": {
+      "disjoint_pair_mass": {
+        "max": 0.052066284779050766,
+        "max_exact": null,
+        "min": 0.052066284779050766,
+        "min_exact": null
+      },
+      "entropy_rate_bits": {
+        "max": 2.5251793234413924,
+        "max_exact": null,
+        "min": 2.5251793234413924,
+        "min_exact": null
+      },
+      "halt_mass": {
+        "max": 0.0,
+        "max_exact": null,
+        "min": 0.0,
+        "min_exact": null
+      },
+      "max_abs_dissolve_shift": {
+        "max": 0.2222222222222222,
+        "max_exact": "2/9",
+        "min": 0.2222222222222222,
+        "min_exact": "2/9"
+      },
+      "mean_edge_density": {
+        "max": 0.4664484451718493,
+        "max_exact": null,
+        "min": 0.4664484451718493,
+        "min_exact": null
+      },
+      "reversibility_defect": {
+        "max": 0.0010740589198036266,
+        "max_exact": null,
+        "min": 0.0010740589198036266,
+        "min_exact": null
+      },
+      "rise_then_release": {
+        "max": 0.5834260159090091,
+        "max_exact": "648373/1111320",
+        "min": 0.5834260159090091,
+        "min_exact": "648373/1111320"
+      },
+      "rise_then_release_excess": {
+        "max": 0.02787046035345355,
+        "max_exact": "30973/1111320",
+        "min": 0.02787046035345355,
+        "min_exact": "30973/1111320"
+      },
+      "tv_from_uniform": {
+        "max": 0.14627659574468085,
+        "max_exact": null,
+        "min": 0.14627659574468085,
+        "min_exact": null
+      }
+    }
+  }
+}

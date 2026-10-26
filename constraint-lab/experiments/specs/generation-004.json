@@ -1,0 +1,38 @@
+{
+  "schema": "rs-constraint-lab.experiment/v1",
+  "experiment_id": "generation-004-n4-higher-order-reconfiguration",
+  "generation": 4,
+  "semantics": "hypergraph",
+  "G": 0,
+  "S": 0,
+  "H": 0,
+  "L": 0,
+  "O": 3,
+  "alphabet": "W4",
+  "composition": "structural-simple",
+  "analysis": "n4-singleton",
+  "predicates": ["pair", "triad"],
+  "sensitivity_alphabets": ["W3", "W16"],
+  "weights": ["prohibit", "strong_suppress", "weak_suppress", "weak_favour", "strong_favour"],
+  "cells": [
+    {"N": 4, "K_max": 2, "A_max": 4, "cardinalities": [1]}
+  ],
+  "reconfiguration_measure": "max_abs_stationary_pair_event_class_flux_delta",
+  "reconfiguration_horizon": 16,
+  "focused_transition": ["e2-deg2110-tri0-comp2", "e2-deg1111-tri0-comp2"],
+  "rho3_sensitivity": ["1/2", "1", "2"],
+  "stationary_arithmetic": "float64",
+  "unsearched": [
+    "cardinality 2 and 3",
+    "K>2",
+    "stacked-weight composition",
+    "count predicates",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0",
+    "N other than 4"
+  ],
+  "note": "K<=1 singletons are the K=1 subset of this cardinality-1 census. Cardinality 2 is counted and not executed."
+}

@@ -1,0 +1,417 @@
+{
+  "adaptive_choice_note": "E2B was chosen because of E2A results (gt-e2a-reflection.md section 5); it is not independent confirmation of E2A and E2A is not changed",
+  "analysis_only": true,
+  "analysis_version": "gt-e2b/v1",
+  "chosen_because": "gravity-time/reports/gt-e2a-reflection.md section 5 (commit b90c3ac): strict enabling occurs only with hard components and relates to direction in three ways; the one-way mode is unexplained",
+  "cited_comparators_from_e2a": {
+    "HCF+PDwf": "E2A cells HELD/FREE-N5-EXPH-prohibit+weak_favour (tables round-e2a-tables.json, result commit 32ac7f6)",
+    "HCF+PFws": "E2A cells HELD/FREE-N5-EXPF-prohibit+weak_suppress (tables round-e2a-tables.json, result commit 32ac7f6)",
+    "HCF+none": "E2A cells HELD/FREE-N5-EXCL-prohibit (tables round-e2a-tables.json, result commit 32ac7f6)",
+    "HPF+none": "E2A cells HELD/FREE-N5-PATHF-prohibit (tables round-e2a-tables.json, result commit 32ac7f6)",
+    "NOHARD+PDwf": "E2A cells HELD/FREE-N5-PATHH-weak_favour (tables round-e2a-tables.json, result commit 32ac7f6)",
+    "NOHARD+PDws": "E2A cells HELD/FREE-N5-PATHH-weak_suppress (tables round-e2a-tables.json, result commit 32ac7f6)",
+    "NOHARD+PFwf": "E2A cells HELD/FREE-N5-PATHF-weak_favour (tables round-e2a-tables.json, result commit 32ac7f6)",
+    "NOHARD+PFws": "E2A cells HELD/FREE-N5-PATHF-weak_suppress (tables round-e2a-tables.json, result commit 32ac7f6)"
+  },
+  "clocks": "as E2A",
+  "comparisons": {
+    "D1_sigma_with_hard": "for each irreversible cell, sign of the soft sigma against the sign of the partner index (and HELD handover index), beside the same soft term without a hard component (E2A)",
+    "D2_one_way_mode": "one-way flux share and its split by action and class; partner index of cells with sigma = 0 and one-way transitions",
+    "D3_enabling_and_direction": "strict enabling shares (matched dissolution) against irreversible flux, per cell",
+    "D4_race": "race committor from x- over strictly enabled instances against all instances and against the matched x with g present",
+    "D5_scaffold": "HELD versus FREE for each hard component (the source triangle as a witness)",
+    "no_aggregate_score": "no ranking"
+  },
+  "controls_and_identities": {
+    "I1_I2": "as E2A: the square identity on intact squares, zero on disjoint squares",
+    "I6_hard_gradient_alone": "adj_form prohibit alone (HAF-none), HELD and FREE: a gradient restriction; flux <= 1e-9 and no one-way transitions (forward and reverse rates vanish together within the class)",
+    "Z5_numerical": "as E2A, plus the race committor converging (max change < 1e-14) before 20,000 iterations",
+    "separation_note": "no expectation on the sign or size of any index, flux, enabling share or race probability"
+  },
+  "deliberate_omissions": {
+    "HPF+PFwf": "as above",
+    "HPF+PFws": "path_form soft terms can never act under path_form prohibit (a witness forbids formation outright)",
+    "n6_free_strong_grades_hard_dissolution": "held out for a possible future confirmatory test (gt-e2a-reflection.md section 5)",
+    "n7": "not run"
+  },
+  "estimands": "every E2A channel plus one-way flux and the race committor, for each cell; D1-D5",
+  "experiment_id": "gt-round-e2b-hard-soft-interface",
+  "families": {
+    "HAF-PDwf": {
+      "prohibit+weak_favour": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "adj_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "sigma_soft": 0.6931471805599453
+      }
+    },
+    "HAF-PDws": {
+      "prohibit+weak_suppress": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "adj_form"
+          },
+          {
+            "grade": "weak_suppress",
+            "kind": "path_dissolve"
+          }
+        ],
+        "sigma_soft": -0.6931471805599453
+      }
+    },
+    "HAF-PFwf": {
+      "prohibit+weak_favour": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "adj_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_form"
+          }
+        ],
+        "sigma_soft": -0.6931471805599453
+      }
+    },
+    "HAF-PFws": {
+      "prohibit+weak_suppress": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "adj_form"
+          },
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          }
+        ],
+        "sigma_soft": 0.6931471805599453
+      }
+    },
+    "HAF-none": {
+      "prohibit": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "adj_form"
+          }
+        ],
+        "sigma_soft": 0.0
+      }
+    },
+    "HCF-PDws": {
+      "prohibit+weak_suppress": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "close_form"
+          },
+          {
+            "grade": "weak_suppress",
+            "kind": "path_dissolve"
+          }
+        ],
+        "sigma_soft": -0.6931471805599453
+      }
+    },
+    "HCF-PFwf": {
+      "prohibit+weak_favour": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "close_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_form"
+          }
+        ],
+        "sigma_soft": -0.6931471805599453
+      }
+    },
+    "HPF-PDwf": {
+      "prohibit+weak_favour": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "path_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "sigma_soft": 0.6931471805599453
+      }
+    },
+    "HPF-PDws": {
+      "prohibit+weak_suppress": {
+        "components": [
+          {
+            "grade": "prohibit",
+            "kind": "path_form"
+          },
+          {
+            "grade": "weak_suppress",
+            "kind": "path_dissolve"
+          }
+        ],
+        "sigma_soft": -0.6931471805599453
+      }
+    }
+  },
+  "history": false,
+  "initial_conditions": "as E2A",
+  "items": [
+    {
+      "family": "HPF-PDwf",
+      "grade": "prohibit+weak_favour",
+      "hard": "HPF",
+      "item_id": "HELD-N5-HPF-PDwf-prohibit+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "soft": "PDwf"
+    },
+    {
+      "family": "HPF-PDwf",
+      "grade": "prohibit+weak_favour",
+      "hard": "HPF",
+      "item_id": "FREE-N5-HPF-PDwf-prohibit+weak_favour",
+      "mode": "FREE",
+      "n": 5,
+      "soft": "PDwf"
+    },
+    {
+      "family": "HPF-PDws",
+      "grade": "prohibit+weak_suppress",
+      "hard": "HPF",
+      "item_id": "HELD-N5-HPF-PDws-prohibit+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "soft": "PDws"
+    },
+    {
+      "family": "HPF-PDws",
+      "grade": "prohibit+weak_suppress",
+      "hard": "HPF",
+      "item_id": "FREE-N5-HPF-PDws-prohibit+weak_suppress",
+      "mode": "FREE",
+      "n": 5,
+      "soft": "PDws"
+    },
+    {
+      "family": "HCF-PDws",
+      "grade": "prohibit+weak_suppress",
+      "hard": "HCF",
+      "item_id": "HELD-N5-HCF-PDws-prohibit+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "soft": "PDws"
+    },
+    {
+      "family": "HCF-PDws",
+      "grade": "prohibit+weak_suppress",
+      "hard": "HCF",
+      "item_id": "FREE-N5-HCF-PDws-prohibit+weak_suppress",
+      "mode": "FREE",
+      "n": 5,
+      "soft": "PDws"
+    },
+    {
+      "family": "HCF-PFwf",
+      "grade": "prohibit+weak_favour",
+      "hard": "HCF",
+      "item_id": "HELD-N5-HCF-PFwf-prohibit+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "soft": "PFwf"
+    },
+    {
+      "family": "HCF-PFwf",
+      "grade": "prohibit+weak_favour",
+      "hard": "HCF",
+      "item_id": "FREE-N5-HCF-PFwf-prohibit+weak_favour",
+      "mode": "FREE",
+      "n": 5,
+      "soft": "PFwf"
+    },
+    {
+      "family": "HAF-none",
+      "grade": "prohibit",
+      "hard": "HAF",
+      "item_id": "HELD-N5-HAF-none-prohibit",
+      "mode": "HELD",
+      "n": 5,
+      "soft": "none"
+    },
+    {
+      "family": "HAF-none",
+      "grade": "prohibit",
+      "hard": "HAF",
+      "item_id": "FREE-N5-HAF-none-prohibit",
+      "mode": "FREE",
+      "n": 5,
+      "soft": "none"
+    },
+    {
+      "family": "HAF-PDwf",
+      "grade": "prohibit+weak_favour",
+      "hard": "HAF",
+      "item_id": "HELD-N5-HAF-PDwf-prohibit+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "soft": "PDwf"
+    },
+    {
+      "family": "HAF-PDwf",
+      "grade": "prohibit+weak_favour",
+      "hard": "HAF",
+      "item_id": "FREE-N5-HAF-PDwf-prohibit+weak_favour",
+      "mode": "FREE",
+      "n": 5,
+      "soft": "PDwf"
+    },
+    {
+      "family": "HAF-PDws",
+      "grade": "prohibit+weak_suppress",
+      "hard": "HAF",
+      "item_id": "HELD-N5-HAF-PDws-prohibit+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "soft": "PDws"
+    },
+    {
+      "family": "HAF-PDws",
+      "grade": "prohibit+weak_suppress",
+      "hard": "HAF",
+      "item_id": "FREE-N5-HAF-PDws-prohibit+weak_suppress",
+      "mode": "FREE",
+      "n": 5,
+      "soft": "PDws"
+    },
+    {
+      "family": "HAF-PFws",
+      "grade": "prohibit+weak_suppress",
+      "hard": "HAF",
+      "item_id": "HELD-N5-HAF-PFws-prohibit+weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "soft": "PFws"
+    },
+    {
+      "family": "HAF-PFws",
+      "grade": "prohibit+weak_suppress",
+      "hard": "HAF",
+      "item_id": "FREE-N5-HAF-PFws-prohibit+weak_suppress",
+      "mode": "FREE",
+      "n": 5,
+      "soft": "PFws"
+    },
+    {
+      "family": "HAF-PFwf",
+      "grade": "prohibit+weak_favour",
+      "hard": "HAF",
+      "item_id": "HELD-N5-HAF-PFwf-prohibit+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "soft": "PFwf"
+    },
+    {
+      "family": "HAF-PFwf",
+      "grade": "prohibit+weak_favour",
+      "hard": "HAF",
+      "item_id": "FREE-N5-HAF-PFwf-prohibit+weak_favour",
+      "mode": "FREE",
+      "n": 5,
+      "soft": "PFwf"
+    }
+  ],
+  "meta_constraints": false,
+  "method": {
+    "name": "Open-Thetical Research",
+    "path": "research-methods/open-thetical-research.md",
+    "version": "1.0"
+  },
+  "mode": "B",
+  "new_primitives": false,
+  "numerical_policy": "as E2A (gte2a numerical checks with round_id round-e2b), race committor by value iteration to max change < 1e-14, cap 20,000",
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      5
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL"
+  },
+  "open_questions_without_prediction": [
+    "Is the one-way mode (hard path-form exclusion) oriented in the partner frame regardless of an added soft sigma of either sign, or does the soft sigma decide?",
+    "Does sigma predict the partner-index sign when a hard closure or adjacency exclusion is present?",
+    "What share of flux do one-way transitions carry, and is it formation or dissolution that cannot be reversed?",
+    "Do strictly enabled events win the race against restoration more often than other events, and more than from the matched state with the support present?",
+    "Does strict enabling ever come without any irreversibility apart from the hard-gradient controls?",
+    "How does the held source act as a witness under each hard component?",
+    "Anything not anticipated above."
+  ],
+  "parameter_fit": false,
+  "plan_hash": "72d266bcfa7f4bcaeb6b840e9cfa5194dde10680e67d5e4ca2b78d6d7b18577b",
+  "pre_freeze_exposure": {
+    "e2a": "all E2A results were read in full (they motivate E2B); the cited comparators are E2A cells",
+    "e2b_cells": "no E2B cell (hard component crossed with a soft term, or adj_form prohibit) was computed before freezing; plumbing tests use synthetic N=4 cells",
+    "reference_hashes": {
+      "gravity-time/docs/e2-coverage-audit.md": "960e5c3cc8a2feddac964bdf859821af26fd20cfc7e8059a6b5cf2c07fcdc584",
+      "gravity-time/docs/e2-formal-mechanism.md": "4c20dbb52cf31dbd1d77c1531bf8632dce1e901f3bf1d1d8fc1d65967e0aee82",
+      "gravity-time/plans/round-e2a-plan.json": "6f636ecbbfcb16765fced02fe09a3915d663e72fce4248728b101a0e099a6e86",
+      "gravity-time/provenance/prompts/GT-P005-agent-input.md": "ca324d371294b1e04482d38db9faeea97b30ad23ab182ce6bbb204d5ad0f742e",
+      "gravity-time/reports/gt-e2a-reflection.md": "2f1c5a903326d4c44e422ae620a090a5832aab319baa90d704f5903d37cba63c",
+      "gravity-time/reports/round-e2a-tables.json": "2538405278a1d33ce2615ad60b372cccb64a9d2629a4c123397e345166fdb52b"
+    }
+  },
+  "programme": "GT",
+  "prompt_id": "GT-P005",
+  "question": "Where admissibility rather than rate structures succession: when does strict enabling by dissolution come with direction, is the one-way mode oriented by its own rule, and does sigma still predict orientation under a hard component?",
+  "round_id": "round-e2b",
+  "sampling": "exact census of 18 declared cells at N=5, HELD and FREE",
+  "schema": "rs-gt.e2b-plan/v1",
+  "selection_rule": "the three existing hard formation exclusions (path_form, close_form, adj_form prohibit) crossed with no soft term and the four weak path terms (path_dissolve weak_favour/weak_suppress, path_form weak_suppress/weak_favour); combinations run in E2A are cited, path_form soft terms are omitted under path_form prohibit",
+  "software": {
+    "analysis_module": "rs_constraint_lab.gte2b",
+    "numpy": "2.5.3",
+    "observables": "gt-e1-observables/v1",
+    "python": "3.12.3"
+  },
+  "stochastic_trajectories": "illustrative_only",
+  "stop_conditions": {
+    "amendment": "cell or estimand changes stop the round",
+    "item": "watchdog {5: 900} seconds",
+    "round": "all items or 3600 s; then stop",
+    "unresolved": "recorded; no retuning"
+  },
+  "tolerances": {
+    "formula": 1e-12,
+    "identity": 1e-09,
+    "race": 1e-14,
+    "references": 1e-12
+  },
+  "work_count": {
+    "estimate_note": "E2A N=5 cells took seconds; the race committor adds up to 90 value iterations of <= 1,024 states per cell: estimated under 2 minutes per cell",
+    "items": 18,
+    "largest_state_space": 1024,
+    "round_wall_cap_seconds": 3600,
+    "watchdog_seconds": {
+      "5": 900
+    },
+    "workers": 4
+  }
+}

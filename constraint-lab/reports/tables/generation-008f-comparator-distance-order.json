@@ -1,0 +1,7562 @@
+[
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "DRIFT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 1,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "DRIFT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "DRIFT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 64,
+    "source": "star",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 1,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 64,
+    "source": "path",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "ENDPOINT",
+      "DRIFT"
+    ],
+    "checkpoint": 64,
+    "source": "triangle",
+    "target_id": "F0-BOTH-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "ENDPOINT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "ENDPOINT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "ENDPOINT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "ENDPOINT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "star",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 64,
+    "source": "path",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 64,
+    "source": "triangle",
+    "target_id": "F0-BOTH-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "DRIFT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 1,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "DRIFT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "DRIFT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 64,
+    "source": "star",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 1,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 64,
+    "source": "path",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "ENDPOINT",
+      "DRIFT"
+    ],
+    "checkpoint": 64,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "ENDPOINT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "ENDPOINT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "ENDPOINT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "ENDPOINT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "star",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 64,
+    "source": "path",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 64,
+    "source": "triangle",
+    "target_id": "F0-NEITHER-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "DRIFT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 1,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "DRIFT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "DRIFT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 64,
+    "source": "star",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 1,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 64,
+    "source": "path",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "ENDPOINT",
+      "DRIFT"
+    ],
+    "checkpoint": 64,
+    "source": "triangle",
+    "target_id": "F0-ONE-dissolve-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "ENDPOINT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "ENDPOINT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "ENDPOINT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_favour"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "ENDPOINT",
+      "PROJECTION"
+    ],
+    "checkpoint": 64,
+    "source": "star",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "PROJECTION",
+      "DRIFT",
+      "ENDPOINT"
+    ],
+    "checkpoint": 64,
+    "source": "path",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_graph_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_label_given_class": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_pairmask": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "ENDPOINT",
+      "PROJECTION",
+      "DRIFT"
+    ],
+    "checkpoint": 1,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 2,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 4,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 8,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 16,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 32,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_suppress"
+  },
+  {
+    "I_model_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_graph_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_label_given_class": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_pairmask": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "I_model_shape_given_edgecount": [
+      "DRIFT",
+      "PROJECTION",
+      "ENDPOINT"
+    ],
+    "checkpoint": 64,
+    "source": "triangle",
+    "target_id": "F0-ONE-form-strong_suppress"
+  }
+]

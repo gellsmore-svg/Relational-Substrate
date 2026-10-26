@@ -1,0 +1,853 @@
+{
+  "round_id": "atlas-019",
+  "engine_version": "rrc-0.4.0",
+  "grammar_id": "strict-event-horizon-v1",
+  "method_id": "event-kernel-0.2.0",
+  "definitions_commit": "81389d9d50eafe53ccd0e6eee339602989f13886",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "ATLAS-Q13"
+  ],
+  "questions_not_in_this_round": [
+    "ATLAS-Q01",
+    "ATLAS-Q02",
+    "ATLAS-Q03",
+    "ATLAS-Q04",
+    "ATLAS-Q05",
+    "ATLAS-Q06",
+    "ATLAS-Q07",
+    "ATLAS-Q08",
+    "ATLAS-Q09",
+    "ATLAS-Q10",
+    "ATLAS-Q11",
+    "ATLAS-Q12",
+    "ATLAS-Q14",
+    "ATLAS-Q15"
+  ],
+  "selection": "Three strict event laws on the same sixteen states. Horizon 2. Initial state 0. The label is 1 when bit 1 equals bit 2 and 0 otherwise. The subset is the states with label 1. The free law toggles each of the four bits with weight 1. The coupled law toggles bit 0 and bit 3 and jointly flips bits 1 and 2. The frozen-copy law toggles only bit 0 and bit 3. Each named weight is 1. The stored fields are the horizon distribution, the subset probability, and strong lumpability of the label. An inexact partition stores no quotient rows. The clock is one declared event, applied twice. This is not an intervention. The laws are restated in this plan. The question is ATLAS-Q13 and stays open. One partition does not settle a two-stage quotient. No occupation is requested.",
+  "grammar": {
+    "ids": [
+      "strict-event-horizon-v1"
+    ],
+    "clock": "one_declared_event",
+    "note": "Declared events. Horizon at most 4. No intervention operator."
+  },
+  "preflight_summary": {
+    "source": "docs/atlas-019-preflight.md",
+    "heaviest_cell_s": 0.002,
+    "shape": "three laws, 16 states, horizon 2",
+    "scientific": false,
+    "watchdog_s": 120
+  },
+  "coverage": {
+    "cells": 3,
+    "declared_sample": true,
+    "six_is_not_a_target": true,
+    "excluded": [
+      "reading results/atlas-018",
+      "weights other than 1",
+      "a horizon other than 2",
+      "occupation",
+      "a stationary distribution",
+      "an intervention operator",
+      "a second label map",
+      "N=6",
+      "rerun of results/atlas-017"
+    ]
+  },
+  "stopping": [
+    "Do not add, remove or edit items after this file is committed.",
+    "A failed, timed-out or unresolved item stays in that state.",
+    "Incomplete or invalid records may be recomputed only under the same spec.",
+    "Do not describe an unrun item as a result.",
+    "Do not rerun atlas-016 or atlas-017.",
+    "Do not add a weight after reading the results."
+  ],
+  "items": [
+    {
+      "id": "A19-free",
+      "round_id": "atlas-019",
+      "type": "event_horizon",
+      "role": "comparison",
+      "family": "duplicated_free",
+      "label": "four bits, one toggle of each bit, weight 1",
+      "n_states": 16,
+      "bit_width": 4,
+      "horizon": 2,
+      "initial_state": 0,
+      "labels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "subset": [
+        0,
+        1,
+        6,
+        7,
+        8,
+        9,
+        14,
+        15
+      ],
+      "catalogue": "single_toggle",
+      "rows": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "A19-coupled",
+      "round_id": "atlas-019",
+      "type": "event_horizon",
+      "role": "comparison",
+      "family": "duplicated_coupled",
+      "label": "toggle bits 0 and 3; joint flip of bits 1 and 2; weight 1",
+      "n_states": 16,
+      "bit_width": 4,
+      "horizon": 2,
+      "initial_state": 0,
+      "labels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "subset": [
+        0,
+        1,
+        6,
+        7,
+        8,
+        9,
+        14,
+        15
+      ],
+      "events": [
+        {
+          "name": "outer0-0",
+          "kind": "toggle",
+          "source": 0,
+          "target": 1,
+          "weight": 1
+        },
+        {
+          "name": "outer3-0",
+          "kind": "toggle",
+          "source": 0,
+          "target": 8,
+          "weight": 1
+        },
+        {
+          "name": "copies-0",
+          "kind": "joint",
+          "source": 0,
+          "target": 6,
+          "weight": 1
+        },
+        {
+          "name": "outer0-1",
+          "kind": "toggle",
+          "source": 1,
+          "target": 0,
+          "weight": 1
+        },
+        {
+          "name": "outer3-1",
+          "kind": "toggle",
+          "source": 1,
+          "target": 9,
+          "weight": 1
+        },
+        {
+          "name": "copies-1",
+          "kind": "joint",
+          "source": 1,
+          "target": 7,
+          "weight": 1
+        },
+        {
+          "name": "outer0-2",
+          "kind": "toggle",
+          "source": 2,
+          "target": 3,
+          "weight": 1
+        },
+        {
+          "name": "outer3-2",
+          "kind": "toggle",
+          "source": 2,
+          "target": 10,
+          "weight": 1
+        },
+        {
+          "name": "copies-2",
+          "kind": "joint",
+          "source": 2,
+          "target": 4,
+          "weight": 1
+        },
+        {
+          "name": "outer0-3",
+          "kind": "toggle",
+          "source": 3,
+          "target": 2,
+          "weight": 1
+        },
+        {
+          "name": "outer3-3",
+          "kind": "toggle",
+          "source": 3,
+          "target": 11,
+          "weight": 1
+        },
+        {
+          "name": "copies-3",
+          "kind": "joint",
+          "source": 3,
+          "target": 5,
+          "weight": 1
+        },
+        {
+          "name": "outer0-4",
+          "kind": "toggle",
+          "source": 4,
+          "target": 5,
+          "weight": 1
+        },
+        {
+          "name": "outer3-4",
+          "kind": "toggle",
+          "source": 4,
+          "target": 12,
+          "weight": 1
+        },
+        {
+          "name": "copies-4",
+          "kind": "joint",
+          "source": 4,
+          "target": 2,
+          "weight": 1
+        },
+        {
+          "name": "outer0-5",
+          "kind": "toggle",
+          "source": 5,
+          "target": 4,
+          "weight": 1
+        },
+        {
+          "name": "outer3-5",
+          "kind": "toggle",
+          "source": 5,
+          "target": 13,
+          "weight": 1
+        },
+        {
+          "name": "copies-5",
+          "kind": "joint",
+          "source": 5,
+          "target": 3,
+          "weight": 1
+        },
+        {
+          "name": "outer0-6",
+          "kind": "toggle",
+          "source": 6,
+          "target": 7,
+          "weight": 1
+        },
+        {
+          "name": "outer3-6",
+          "kind": "toggle",
+          "source": 6,
+          "target": 14,
+          "weight": 1
+        },
+        {
+          "name": "copies-6",
+          "kind": "joint",
+          "source": 6,
+          "target": 0,
+          "weight": 1
+        },
+        {
+          "name": "outer0-7",
+          "kind": "toggle",
+          "source": 7,
+          "target": 6,
+          "weight": 1
+        },
+        {
+          "name": "outer3-7",
+          "kind": "toggle",
+          "source": 7,
+          "target": 15,
+          "weight": 1
+        },
+        {
+          "name": "copies-7",
+          "kind": "joint",
+          "source": 7,
+          "target": 1,
+          "weight": 1
+        },
+        {
+          "name": "outer0-8",
+          "kind": "toggle",
+          "source": 8,
+          "target": 9,
+          "weight": 1
+        },
+        {
+          "name": "outer3-8",
+          "kind": "toggle",
+          "source": 8,
+          "target": 0,
+          "weight": 1
+        },
+        {
+          "name": "copies-8",
+          "kind": "joint",
+          "source": 8,
+          "target": 14,
+          "weight": 1
+        },
+        {
+          "name": "outer0-9",
+          "kind": "toggle",
+          "source": 9,
+          "target": 8,
+          "weight": 1
+        },
+        {
+          "name": "outer3-9",
+          "kind": "toggle",
+          "source": 9,
+          "target": 1,
+          "weight": 1
+        },
+        {
+          "name": "copies-9",
+          "kind": "joint",
+          "source": 9,
+          "target": 15,
+          "weight": 1
+        },
+        {
+          "name": "outer0-10",
+          "kind": "toggle",
+          "source": 10,
+          "target": 11,
+          "weight": 1
+        },
+        {
+          "name": "outer3-10",
+          "kind": "toggle",
+          "source": 10,
+          "target": 2,
+          "weight": 1
+        },
+        {
+          "name": "copies-10",
+          "kind": "joint",
+          "source": 10,
+          "target": 12,
+          "weight": 1
+        },
+        {
+          "name": "outer0-11",
+          "kind": "toggle",
+          "source": 11,
+          "target": 10,
+          "weight": 1
+        },
+        {
+          "name": "outer3-11",
+          "kind": "toggle",
+          "source": 11,
+          "target": 3,
+          "weight": 1
+        },
+        {
+          "name": "copies-11",
+          "kind": "joint",
+          "source": 11,
+          "target": 13,
+          "weight": 1
+        },
+        {
+          "name": "outer0-12",
+          "kind": "toggle",
+          "source": 12,
+          "target": 13,
+          "weight": 1
+        },
+        {
+          "name": "outer3-12",
+          "kind": "toggle",
+          "source": 12,
+          "target": 4,
+          "weight": 1
+        },
+        {
+          "name": "copies-12",
+          "kind": "joint",
+          "source": 12,
+          "target": 10,
+          "weight": 1
+        },
+        {
+          "name": "outer0-13",
+          "kind": "toggle",
+          "source": 13,
+          "target": 12,
+          "weight": 1
+        },
+        {
+          "name": "outer3-13",
+          "kind": "toggle",
+          "source": 13,
+          "target": 5,
+          "weight": 1
+        },
+        {
+          "name": "copies-13",
+          "kind": "joint",
+          "source": 13,
+          "target": 11,
+          "weight": 1
+        },
+        {
+          "name": "outer0-14",
+          "kind": "toggle",
+          "source": 14,
+          "target": 15,
+          "weight": 1
+        },
+        {
+          "name": "outer3-14",
+          "kind": "toggle",
+          "source": 14,
+          "target": 6,
+          "weight": 1
+        },
+        {
+          "name": "copies-14",
+          "kind": "joint",
+          "source": 14,
+          "target": 8,
+          "weight": 1
+        },
+        {
+          "name": "outer0-15",
+          "kind": "toggle",
+          "source": 15,
+          "target": 14,
+          "weight": 1
+        },
+        {
+          "name": "outer3-15",
+          "kind": "toggle",
+          "source": 15,
+          "target": 7,
+          "weight": 1
+        },
+        {
+          "name": "copies-15",
+          "kind": "joint",
+          "source": 15,
+          "target": 9,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "A19-frozen",
+      "round_id": "atlas-019",
+      "type": "event_horizon",
+      "role": "control",
+      "family": "frozen_copies",
+      "label": "toggle bits 0 and 3 only, weight 1",
+      "n_states": 16,
+      "bit_width": 4,
+      "horizon": 2,
+      "initial_state": 0,
+      "labels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "subset": [
+        0,
+        1,
+        6,
+        7,
+        8,
+        9,
+        14,
+        15
+      ],
+      "events": [
+        {
+          "name": "outer0-0",
+          "kind": "toggle",
+          "source": 0,
+          "target": 1,
+          "weight": 1
+        },
+        {
+          "name": "outer3-0",
+          "kind": "toggle",
+          "source": 0,
+          "target": 8,
+          "weight": 1
+        },
+        {
+          "name": "outer0-1",
+          "kind": "toggle",
+          "source": 1,
+          "target": 0,
+          "weight": 1
+        },
+        {
+          "name": "outer3-1",
+          "kind": "toggle",
+          "source": 1,
+          "target": 9,
+          "weight": 1
+        },
+        {
+          "name": "outer0-2",
+          "kind": "toggle",
+          "source": 2,
+          "target": 3,
+          "weight": 1
+        },
+        {
+          "name": "outer3-2",
+          "kind": "toggle",
+          "source": 2,
+          "target": 10,
+          "weight": 1
+        },
+        {
+          "name": "outer0-3",
+          "kind": "toggle",
+          "source": 3,
+          "target": 2,
+          "weight": 1
+        },
+        {
+          "name": "outer3-3",
+          "kind": "toggle",
+          "source": 3,
+          "target": 11,
+          "weight": 1
+        },
+        {
+          "name": "outer0-4",
+          "kind": "toggle",
+          "source": 4,
+          "target": 5,
+          "weight": 1
+        },
+        {
+          "name": "outer3-4",
+          "kind": "toggle",
+          "source": 4,
+          "target": 12,
+          "weight": 1
+        },
+        {
+          "name": "outer0-5",
+          "kind": "toggle",
+          "source": 5,
+          "target": 4,
+          "weight": 1
+        },
+        {
+          "name": "outer3-5",
+          "kind": "toggle",
+          "source": 5,
+          "target": 13,
+          "weight": 1
+        },
+        {
+          "name": "outer0-6",
+          "kind": "toggle",
+          "source": 6,
+          "target": 7,
+          "weight": 1
+        },
+        {
+          "name": "outer3-6",
+          "kind": "toggle",
+          "source": 6,
+          "target": 14,
+          "weight": 1
+        },
+        {
+          "name": "outer0-7",
+          "kind": "toggle",
+          "source": 7,
+          "target": 6,
+          "weight": 1
+        },
+        {
+          "name": "outer3-7",
+          "kind": "toggle",
+          "source": 7,
+          "target": 15,
+          "weight": 1
+        },
+        {
+          "name": "outer0-8",
+          "kind": "toggle",
+          "source": 8,
+          "target": 9,
+          "weight": 1
+        },
+        {
+          "name": "outer3-8",
+          "kind": "toggle",
+          "source": 8,
+          "target": 0,
+          "weight": 1
+        },
+        {
+          "name": "outer0-9",
+          "kind": "toggle",
+          "source": 9,
+          "target": 8,
+          "weight": 1
+        },
+        {
+          "name": "outer3-9",
+          "kind": "toggle",
+          "source": 9,
+          "target": 1,
+          "weight": 1
+        },
+        {
+          "name": "outer0-10",
+          "kind": "toggle",
+          "source": 10,
+          "target": 11,
+          "weight": 1
+        },
+        {
+          "name": "outer3-10",
+          "kind": "toggle",
+          "source": 10,
+          "target": 2,
+          "weight": 1
+        },
+        {
+          "name": "outer0-11",
+          "kind": "toggle",
+          "source": 11,
+          "target": 10,
+          "weight": 1
+        },
+        {
+          "name": "outer3-11",
+          "kind": "toggle",
+          "source": 11,
+          "target": 3,
+          "weight": 1
+        },
+        {
+          "name": "outer0-12",
+          "kind": "toggle",
+          "source": 12,
+          "target": 13,
+          "weight": 1
+        },
+        {
+          "name": "outer3-12",
+          "kind": "toggle",
+          "source": 12,
+          "target": 4,
+          "weight": 1
+        },
+        {
+          "name": "outer0-13",
+          "kind": "toggle",
+          "source": 13,
+          "target": 12,
+          "weight": 1
+        },
+        {
+          "name": "outer3-13",
+          "kind": "toggle",
+          "source": 13,
+          "target": 5,
+          "weight": 1
+        },
+        {
+          "name": "outer0-14",
+          "kind": "toggle",
+          "source": 14,
+          "target": 15,
+          "weight": 1
+        },
+        {
+          "name": "outer3-14",
+          "kind": "toggle",
+          "source": 14,
+          "target": 6,
+          "weight": 1
+        },
+        {
+          "name": "outer0-15",
+          "kind": "toggle",
+          "source": 15,
+          "target": 14,
+          "weight": 1
+        },
+        {
+          "name": "outer3-15",
+          "kind": "toggle",
+          "source": 15,
+          "target": 7,
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

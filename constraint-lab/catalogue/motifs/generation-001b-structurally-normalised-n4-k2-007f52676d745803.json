@@ -1,0 +1,119 @@
+{
+  "canonical_constraint_set": [
+    "dissolve(2-3) => strong_favour",
+    "form(0-1) | absent(0-2) => prohibit"
+  ],
+  "coordinate": {
+    "A": 4,
+    "G": 0,
+    "H": 0,
+    "K": 2,
+    "L": 0,
+    "N": 4,
+    "O": 2,
+    "S": 0,
+    "alphabet": "W4",
+    "cardinality": 2,
+    "semantics": "graph"
+  },
+  "count_in_family": 2,
+  "evaluation_vector": {
+    "coverage": "exhaustive inside the cell coordinate",
+    "cross_substrate_recurrence": "not tested in this generation",
+    "global_coherence_relevance": "open; not scored",
+    "interpretability": "the observed sentence is structural; naming is left to the report",
+    "parameter_robustness": "geometric bases preserve the modal map and the support; magnitudes change",
+    "reproducibility": "exact kernel; stochastic runs are seeded replays",
+    "symmetry_robustness": "orbit representative under the full symmetric group",
+    "trajectory_distinctiveness": "rise_then_release_excess and reversibility_defect, where computed"
+  },
+  "known_equivalent_grammars": 2,
+  "motif_id": "007f52676d74580374ededb2737b256c12472370623153b945fae08be2898013",
+  "notes": {
+    "inferred": "not stored on the motif; inferences are written in the generation report",
+    "observed": "every state has at least one admissible toggle; 1 recurrent class(es) with periods [2]; the admissible transition graph is a proper subgraph of the toggle hypercube; the largest one-step dissolution-probability deviation from m/M is 0.333333.",
+    "speculative": "not stored on the motif"
+  },
+  "observed": "every state has at least one admissible toggle; 1 recurrent class(es) with periods [2]; the admissible transition graph is a proper subgraph of the toggle hypercube; the largest one-step dissolution-probability deviation from m/M is 0.333333.",
+  "parameter_regime": "W4",
+  "robustness_region": {
+    "closing_max": null,
+    "closing_min": null,
+    "shift_max": 0.3333333333333333,
+    "shift_min": 0.16666666666666666
+  },
+  "symmetry_class": "lexicographically least labelling under S_N",
+  "tags": [
+    "structural",
+    "screened"
+  ],
+  "trajectory_signature": {
+    "entropy_rate_bits": 2.465968711186207,
+    "halt_mass": 0.0,
+    "mean_edge_density": 0.45411985018726564,
+    "rise_then_release": 0.5851047839506173,
+    "rise_then_release_excess": 0.029549228395061727
+  },
+  "within_family": {
+    "count_literal_members": 0,
+    "equivalent_members": 0,
+    "exact_kernel_count": 2,
+    "observable_signature_count": 2,
+    "ranges": {
+      "disjoint_pair_mass": {
+        "max": 0.06491935483870967,
+        "max_exact": null,
+        "min": 0.05828651685393257,
+        "min_exact": null
+      },
+      "entropy_rate_bits": {
+        "max": 2.465968711186207,
+        "max_exact": null,
+        "min": 2.4037574121700707,
+        "min_exact": null
+      },
+      "halt_mass": {
+        "max": 0.0,
+        "max_exact": null,
+        "min": 0.0,
+        "min_exact": null
+      },
+      "max_abs_dissolve_shift": {
+        "max": 0.3333333333333333,
+        "max_exact": "1/3",
+        "min": 0.16666666666666666,
+        "min_exact": "1/6"
+      },
+      "mean_edge_density": {
+        "max": 0.45411985018726564,
+        "max_exact": null,
+        "min": 0.4381720430107525,
+        "min_exact": null
+      },
+      "reversibility_defect": {
+        "max": 0.0016129032258065151,
+        "max_exact": null,
+        "min": 0.001404494382022504,
+        "min_exact": null
+      },
+      "rise_then_release": {
+        "max": 0.5851047839506173,
+        "max_exact": "3791479/6480000",
+        "min": 0.5828861678004535,
+        "min_exact": "160658/275625"
+      },
+      "rise_then_release_excess": {
+        "max": 0.029549228395061727,
+        "max_exact": "191479/6480000",
+        "min": 0.02733061224489796,
+        "min_exact": "837/30625"
+      },
+      "tv_from_uniform": {
+        "max": 0.270161290322581,
+        "max_exact": null,
+        "min": 0.19662921348314671,
+        "min_exact": null
+      }
+    }
+  }
+}

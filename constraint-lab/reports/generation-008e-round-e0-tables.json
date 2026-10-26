@@ -1,0 +1,1108 @@
+{
+  "algebra": {
+    "basis": {
+      "corner_polynomial_determinant": "1/1",
+      "corner_polynomials": {
+        "00": [
+          1,
+          -1,
+          -1,
+          1
+        ],
+        "01": [
+          0,
+          0,
+          1,
+          -1
+        ],
+        "10": [
+          0,
+          1,
+          0,
+          -1
+        ],
+        "11": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "examples": [
+        {
+          "corner_coefficients": {
+            "00": "0/1",
+            "01": "0/1",
+            "10": "0/1",
+            "11": "1/1"
+          },
+          "corner_to_polynomial": [
+            "0/1",
+            "0/1",
+            "0/1",
+            "1/1"
+          ],
+          "interaction_order": 2,
+          "mobius_coefficients": {
+            "a": "0/1",
+            "b": "0/1",
+            "c": "0/1",
+            "d": "1/1"
+          },
+          "name": "conjunction",
+          "polynomial_to_corner_gap": "0/1",
+          "reconstruction_gap": "0/1",
+          "truth_table": {
+            "00": "0/1",
+            "01": "0/1",
+            "10": "0/1",
+            "11": "1/1"
+          }
+        },
+        {
+          "corner_coefficients": {
+            "00": "0/1",
+            "01": "1/1",
+            "10": "1/1",
+            "11": "0/1"
+          },
+          "corner_to_polynomial": [
+            "0/1",
+            "1/1",
+            "1/1",
+            "-2/1"
+          ],
+          "interaction_order": 2,
+          "mobius_coefficients": {
+            "a": "1/1",
+            "b": "1/1",
+            "c": "0/1",
+            "d": "-2/1"
+          },
+          "name": "xor",
+          "polynomial_to_corner_gap": "0/1",
+          "reconstruction_gap": "0/1",
+          "truth_table": {
+            "00": "0/1",
+            "01": "1/1",
+            "10": "1/1",
+            "11": "0/1"
+          }
+        },
+        {
+          "corner_coefficients": {
+            "00": "1/1",
+            "01": "0/1",
+            "10": "0/1",
+            "11": "1/1"
+          },
+          "corner_to_polynomial": [
+            "1/1",
+            "-1/1",
+            "-1/1",
+            "2/1"
+          ],
+          "interaction_order": 2,
+          "mobius_coefficients": {
+            "a": "-1/1",
+            "b": "-1/1",
+            "c": "1/1",
+            "d": "2/1"
+          },
+          "name": "xnor",
+          "polynomial_to_corner_gap": "0/1",
+          "reconstruction_gap": "0/1",
+          "truth_table": {
+            "00": "1/1",
+            "01": "0/1",
+            "10": "0/1",
+            "11": "1/1"
+          }
+        },
+        {
+          "corner_coefficients": {
+            "00": "1/3",
+            "01": "-2/3",
+            "10": "5/6",
+            "11": "-1/6"
+          },
+          "corner_to_polynomial": [
+            "1/3",
+            "1/2",
+            "-1/1",
+            "0/1"
+          ],
+          "interaction_order": 1,
+          "mobius_coefficients": {
+            "a": "1/2",
+            "b": "-1/1",
+            "c": "1/3",
+            "d": "0/1"
+          },
+          "name": "additive",
+          "polynomial_to_corner_gap": "0/1",
+          "reconstruction_gap": "0/1",
+          "truth_table": {
+            "00": "1/3",
+            "01": "-2/3",
+            "10": "5/6",
+            "11": "-1/6"
+          }
+        },
+        {
+          "corner_coefficients": {
+            "00": "2/1",
+            "01": "3/11",
+            "10": "-7/5",
+            "11": "19/4"
+          },
+          "corner_to_polynomial": [
+            "2/1",
+            "-17/5",
+            "-19/11",
+            "1733/220"
+          ],
+          "interaction_order": 2,
+          "mobius_coefficients": {
+            "a": "-17/5",
+            "b": "-19/11",
+            "c": "2/1",
+            "d": "1733/220"
+          },
+          "name": "generic",
+          "polynomial_to_corner_gap": "0/1",
+          "reconstruction_gap": "0/1",
+          "truth_table": {
+            "00": "2/1",
+            "01": "3/11",
+            "10": "-7/5",
+            "11": "19/4"
+          }
+        }
+      ]
+    },
+    "boolean": {
+      "constructions": [
+        {
+          "action_direction": "form",
+          "construction": "xor",
+          "gate_table": {
+            "00": "1/1",
+            "01": "1/4",
+            "10": "1/4",
+            "11": "1/1"
+          },
+          "grade": "strong_suppress",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": -1.3862943611198906,
+            "b": -1.3862943611198906,
+            "c": 0.0,
+            "d": 2.772588722239781
+          },
+          "rules": [
+            "form(0-1) | present(0-1-2) & absent(0-1-3) => strong_suppress",
+            "form(0-1) | absent(0-1-2) & present(0-1-3) => strong_suppress"
+          ]
+        },
+        {
+          "action_direction": "form",
+          "construction": "xnor",
+          "gate_table": {
+            "00": "1/4",
+            "01": "1/1",
+            "10": "1/1",
+            "11": "1/4"
+          },
+          "grade": "strong_suppress",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": 1.3862943611198906,
+            "b": 1.3862943611198906,
+            "c": -1.3862943611198906,
+            "d": -2.772588722239781
+          },
+          "rules": [
+            "form(0-1) | present(0-1-2) & present(0-1-3) => strong_suppress",
+            "form(0-1) | absent(0-1-2) & absent(0-1-3) => strong_suppress"
+          ]
+        },
+        {
+          "action_direction": "form",
+          "construction": "xor",
+          "gate_table": {
+            "00": "1/1",
+            "01": "1/2",
+            "10": "1/2",
+            "11": "1/1"
+          },
+          "grade": "weak_suppress",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": -0.6931471805599453,
+            "b": -0.6931471805599453,
+            "c": 0.0,
+            "d": 1.3862943611198906
+          },
+          "rules": [
+            "form(0-1) | present(0-1-2) & absent(0-1-3) => weak_suppress",
+            "form(0-1) | absent(0-1-2) & present(0-1-3) => weak_suppress"
+          ]
+        },
+        {
+          "action_direction": "form",
+          "construction": "xnor",
+          "gate_table": {
+            "00": "1/2",
+            "01": "1/1",
+            "10": "1/1",
+            "11": "1/2"
+          },
+          "grade": "weak_suppress",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": 0.6931471805599453,
+            "b": 0.6931471805599453,
+            "c": -0.6931471805599453,
+            "d": -1.3862943611198906
+          },
+          "rules": [
+            "form(0-1) | present(0-1-2) & present(0-1-3) => weak_suppress",
+            "form(0-1) | absent(0-1-2) & absent(0-1-3) => weak_suppress"
+          ]
+        },
+        {
+          "action_direction": "form",
+          "construction": "xor",
+          "gate_table": {
+            "00": "1/1",
+            "01": "2/1",
+            "10": "2/1",
+            "11": "1/1"
+          },
+          "grade": "weak_favour",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": 0.6931471805599453,
+            "b": 0.6931471805599453,
+            "c": 0.0,
+            "d": -1.3862943611198906
+          },
+          "rules": [
+            "form(0-1) | present(0-1-2) & absent(0-1-3) => weak_favour",
+            "form(0-1) | absent(0-1-2) & present(0-1-3) => weak_favour"
+          ]
+        },
+        {
+          "action_direction": "form",
+          "construction": "xnor",
+          "gate_table": {
+            "00": "2/1",
+            "01": "1/1",
+            "10": "1/1",
+            "11": "2/1"
+          },
+          "grade": "weak_favour",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": -0.6931471805599453,
+            "b": -0.6931471805599453,
+            "c": 0.6931471805599453,
+            "d": 1.3862943611198906
+          },
+          "rules": [
+            "form(0-1) | present(0-1-2) & present(0-1-3) => weak_favour",
+            "form(0-1) | absent(0-1-2) & absent(0-1-3) => weak_favour"
+          ]
+        },
+        {
+          "action_direction": "form",
+          "construction": "xor",
+          "gate_table": {
+            "00": "1/1",
+            "01": "4/1",
+            "10": "4/1",
+            "11": "1/1"
+          },
+          "grade": "strong_favour",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": 1.3862943611198906,
+            "b": 1.3862943611198906,
+            "c": 0.0,
+            "d": -2.772588722239781
+          },
+          "rules": [
+            "form(0-1) | present(0-1-2) & absent(0-1-3) => strong_favour",
+            "form(0-1) | absent(0-1-2) & present(0-1-3) => strong_favour"
+          ]
+        },
+        {
+          "action_direction": "form",
+          "construction": "xnor",
+          "gate_table": {
+            "00": "4/1",
+            "01": "1/1",
+            "10": "1/1",
+            "11": "4/1"
+          },
+          "grade": "strong_favour",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": -1.3862943611198906,
+            "b": -1.3862943611198906,
+            "c": 1.3862943611198906,
+            "d": 2.772588722239781
+          },
+          "rules": [
+            "form(0-1) | present(0-1-2) & present(0-1-3) => strong_favour",
+            "form(0-1) | absent(0-1-2) & absent(0-1-3) => strong_favour"
+          ]
+        },
+        {
+          "action_direction": "dissolve",
+          "construction": "xor",
+          "gate_table": {
+            "00": "1/1",
+            "01": "1/4",
+            "10": "1/4",
+            "11": "1/1"
+          },
+          "grade": "strong_suppress",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": -1.3862943611198906,
+            "b": -1.3862943611198906,
+            "c": 0.0,
+            "d": 2.772588722239781
+          },
+          "rules": [
+            "dissolve(0-1) | present(0-1-2) & absent(0-1-3) => strong_suppress",
+            "dissolve(0-1) | absent(0-1-2) & present(0-1-3) => strong_suppress"
+          ]
+        },
+        {
+          "action_direction": "dissolve",
+          "construction": "xnor",
+          "gate_table": {
+            "00": "1/4",
+            "01": "1/1",
+            "10": "1/1",
+            "11": "1/4"
+          },
+          "grade": "strong_suppress",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": 1.3862943611198906,
+            "b": 1.3862943611198906,
+            "c": -1.3862943611198906,
+            "d": -2.772588722239781
+          },
+          "rules": [
+            "dissolve(0-1) | present(0-1-2) & present(0-1-3) => strong_suppress",
+            "dissolve(0-1) | absent(0-1-2) & absent(0-1-3) => strong_suppress"
+          ]
+        },
+        {
+          "action_direction": "dissolve",
+          "construction": "xor",
+          "gate_table": {
+            "00": "1/1",
+            "01": "1/2",
+            "10": "1/2",
+            "11": "1/1"
+          },
+          "grade": "weak_suppress",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": -0.6931471805599453,
+            "b": -0.6931471805599453,
+            "c": 0.0,
+            "d": 1.3862943611198906
+          },
+          "rules": [
+            "dissolve(0-1) | present(0-1-2) & absent(0-1-3) => weak_suppress",
+            "dissolve(0-1) | absent(0-1-2) & present(0-1-3) => weak_suppress"
+          ]
+        },
+        {
+          "action_direction": "dissolve",
+          "construction": "xnor",
+          "gate_table": {
+            "00": "1/2",
+            "01": "1/1",
+            "10": "1/1",
+            "11": "1/2"
+          },
+          "grade": "weak_suppress",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": 0.6931471805599453,
+            "b": 0.6931471805599453,
+            "c": -0.6931471805599453,
+            "d": -1.3862943611198906
+          },
+          "rules": [
+            "dissolve(0-1) | present(0-1-2) & present(0-1-3) => weak_suppress",
+            "dissolve(0-1) | absent(0-1-2) & absent(0-1-3) => weak_suppress"
+          ]
+        },
+        {
+          "action_direction": "dissolve",
+          "construction": "xor",
+          "gate_table": {
+            "00": "1/1",
+            "01": "2/1",
+            "10": "2/1",
+            "11": "1/1"
+          },
+          "grade": "weak_favour",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": 0.6931471805599453,
+            "b": 0.6931471805599453,
+            "c": 0.0,
+            "d": -1.3862943611198906
+          },
+          "rules": [
+            "dissolve(0-1) | present(0-1-2) & absent(0-1-3) => weak_favour",
+            "dissolve(0-1) | absent(0-1-2) & present(0-1-3) => weak_favour"
+          ]
+        },
+        {
+          "action_direction": "dissolve",
+          "construction": "xnor",
+          "gate_table": {
+            "00": "2/1",
+            "01": "1/1",
+            "10": "1/1",
+            "11": "2/1"
+          },
+          "grade": "weak_favour",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": -0.6931471805599453,
+            "b": -0.6931471805599453,
+            "c": 0.6931471805599453,
+            "d": 1.3862943611198906
+          },
+          "rules": [
+            "dissolve(0-1) | present(0-1-2) & present(0-1-3) => weak_favour",
+            "dissolve(0-1) | absent(0-1-2) & absent(0-1-3) => weak_favour"
+          ]
+        },
+        {
+          "action_direction": "dissolve",
+          "construction": "xor",
+          "gate_table": {
+            "00": "1/1",
+            "01": "4/1",
+            "10": "4/1",
+            "11": "1/1"
+          },
+          "grade": "strong_favour",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": 1.3862943611198906,
+            "b": 1.3862943611198906,
+            "c": 0.0,
+            "d": -2.772588722239781
+          },
+          "rules": [
+            "dissolve(0-1) | present(0-1-2) & absent(0-1-3) => strong_favour",
+            "dissolve(0-1) | absent(0-1-2) & present(0-1-3) => strong_favour"
+          ]
+        },
+        {
+          "action_direction": "dissolve",
+          "construction": "xnor",
+          "gate_table": {
+            "00": "4/1",
+            "01": "1/1",
+            "10": "1/1",
+            "11": "4/1"
+          },
+          "grade": "strong_favour",
+          "interaction_order": 2,
+          "kernel_gap": 0.0,
+          "raw_mobius": {
+            "a": -1.3862943611198906,
+            "b": -1.3862943611198906,
+            "c": 1.3862943611198906,
+            "d": 2.772588722239781
+          },
+          "rules": [
+            "dissolve(0-1) | present(0-1-2) & present(0-1-3) => strong_favour",
+            "dissolve(0-1) | absent(0-1-2) & absent(0-1-3) => strong_favour"
+          ]
+        }
+      ],
+      "four_corner": {
+        "gate_table": {
+          "00": "1/4",
+          "01": "1/2",
+          "10": "2/1",
+          "11": "4/1"
+        },
+        "kernel_gap": 0.0,
+        "rules": [
+          "dissolve(0-1) | absent(0-1-2) & absent(0-1-3) => strong_suppress",
+          "dissolve(0-1) | absent(0-1-2) & present(0-1-3) => weak_suppress",
+          "dissolve(0-1) | present(0-1-2) & absent(0-1-3) => weak_favour",
+          "dissolve(0-1) | present(0-1-2) & present(0-1-3) => strong_favour"
+        ]
+      },
+      "placement": {
+        "action": "0-1",
+        "gates": [
+          "0-1-2",
+          "0-1-3"
+        ]
+      }
+    },
+    "general-r": {
+      "grade": "strong_favour",
+      "rows": [
+        {
+          "K": 2,
+          "gap": 0.0,
+          "literals": [
+            "absent"
+          ],
+          "r": 1,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 2,
+          "gap": 0.0,
+          "literals": [
+            "present"
+          ],
+          "r": 1,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 3,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "absent"
+          ],
+          "r": 2,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 3,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "present"
+          ],
+          "r": 2,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 3,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "absent"
+          ],
+          "r": 2,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 3,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "present"
+          ],
+          "r": 2,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 4,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "absent",
+            "absent"
+          ],
+          "r": 3,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 4,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "absent",
+            "present"
+          ],
+          "r": 3,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 4,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "present",
+            "absent"
+          ],
+          "r": 3,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 4,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "present",
+            "present"
+          ],
+          "r": 3,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 4,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "absent",
+            "absent"
+          ],
+          "r": 3,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 4,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "absent",
+            "present"
+          ],
+          "r": 3,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 4,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "present",
+            "absent"
+          ],
+          "r": 3,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 4,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "present",
+            "present"
+          ],
+          "r": 3,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "absent",
+            "absent",
+            "absent"
+          ],
+          "r": 4,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "absent",
+            "absent",
+            "present"
+          ],
+          "r": 4,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "absent",
+            "present",
+            "absent"
+          ],
+          "r": 4,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "absent",
+            "present",
+            "present"
+          ],
+          "r": 4,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "present",
+            "absent",
+            "absent"
+          ],
+          "r": 4,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "present",
+            "absent",
+            "present"
+          ],
+          "r": 4,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "present",
+            "present",
+            "absent"
+          ],
+          "r": 4,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "absent",
+            "present",
+            "present",
+            "present"
+          ],
+          "r": 4,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "absent",
+            "absent",
+            "absent"
+          ],
+          "r": 4,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "absent",
+            "absent",
+            "present"
+          ],
+          "r": 4,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "absent",
+            "present",
+            "absent"
+          ],
+          "r": 4,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "absent",
+            "present",
+            "present"
+          ],
+          "r": 4,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "present",
+            "absent",
+            "absent"
+          ],
+          "r": 4,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "present",
+            "absent",
+            "present"
+          ],
+          "r": 4,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "present",
+            "present",
+            "absent"
+          ],
+          "r": 4,
+          "top_coefficient": -1.3862943611198906,
+          "top_coefficient_expected": -1.3862943611198906
+        },
+        {
+          "K": 5,
+          "gap": 0.0,
+          "literals": [
+            "present",
+            "present",
+            "present",
+            "present"
+          ],
+          "r": 4,
+          "top_coefficient": 1.3862943611198906,
+          "top_coefficient_expected": 1.3862943611198906
+        }
+      ]
+    },
+    "parser": {
+      "action_slot_condition_rejected": true,
+      "conditions": [
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "conditions_sorted": true,
+      "contradictory_same_triad_accepted": true,
+      "contradictory_same_triad_matches": 0,
+      "count_predicate_rejected": true,
+      "counts": [],
+      "k": 3,
+      "repeated_literal_rejected": true
+    },
+    "surface": {
+      "rows": [
+        {
+          "grade": "strong_suppress",
+          "k2_balanced_cmi": 0.009748566529643857,
+          "k2_dissolve_drift": "5/168",
+          "k3_balanced_cmi": 0.00676138441373586,
+          "k3_dissolve_drift": "5/336",
+          "k3_form_drift": "-5/336",
+          "k3_over_k2_cmi": 0.6935772960235286,
+          "k3_over_k2_drift": "1/2",
+          "multiplier": "1/4",
+          "review_prediction_cmi": 0.006761384413735834,
+          "review_prediction_gap": 2.6020852139652106e-17
+        },
+        {
+          "grade": "weak_suppress",
+          "k2_balanced_cmi": 0.003238674092597321,
+          "k2_dissolve_drift": "5/264",
+          "k3_balanced_cmi": 0.002333270369315632,
+          "k3_dissolve_drift": "5/528",
+          "k3_form_drift": "-5/528",
+          "k3_over_k2_cmi": 0.7204400018664484,
+          "k3_over_k2_drift": "1/2",
+          "multiplier": "1/2",
+          "review_prediction_cmi": 0.002333270369315642,
+          "review_prediction_gap": 9.974659986866641e-18
+        },
+        {
+          "grade": "weak_favour",
+          "k2_balanced_cmi": 0.005108359895797386,
+          "k2_dissolve_drift": "-5/168",
+          "k3_balanced_cmi": 0.0039615145369955584,
+          "k3_dissolve_drift": "-5/336",
+          "k3_form_drift": "5/336",
+          "k3_over_k2_cmi": 0.775496366310187,
+          "k3_over_k2_drift": "1/2",
+          "multiplier": "2/1",
+          "review_prediction_cmi": 0.003961514536995468,
+          "review_prediction_gap": 9.020562075079397e-17
+        },
+        {
+          "grade": "strong_favour",
+          "k2_balanced_cmi": 0.02336844477204944,
+          "k2_dissolve_drift": "-5/72",
+          "k3_balanced_cmi": 0.01844718663112599,
+          "k3_dissolve_drift": "-5/144",
+          "k3_form_drift": "5/144",
+          "k3_over_k2_cmi": 0.7894058338529367,
+          "k3_over_k2_drift": "1/2",
+          "multiplier": "4/1",
+          "review_prediction_cmi": 0.0184471866311259,
+          "review_prediction_gap": 9.020562075079397e-17
+        }
+      ]
+    },
+    "symbolic": {
+      "additive_with_constant_plus_conjunction_rank": 4,
+      "additive_with_constant_rank": 3,
+      "additive_without_constant_plus_conjunction_rank": 3,
+      "additive_without_constant_rank": 2,
+      "delta12_of_additive_features": [
+        "0/1",
+        "0/1",
+        "0/1"
+      ],
+      "delta12_of_conjunction": "1/1",
+      "statement": "c U1 U2 = c0 + a U1 + b U2 on all four literal corners implies c = 0"
+    },
+    "w4-coverage": {
+      "corner_basis_tables": 625,
+      "corner_only_tables": 346,
+      "intersection_tables": 279,
+      "note": "Each basis element carries no rule or one W4 rule. Values are log2 action multipliers at corners (00, 10, 01, 11).",
+      "polynomial_basis_tables": 625,
+      "polynomial_max_abs_log2_corner": 8,
+      "polynomial_only_tables": 346
+    }
+  },
+  "analysis_version": "generation-008e-conjunction/v1",
+  "detail_sha256": {
+    "basis": "491eb4a6e942aa9ac43480edb1b7fd22a34added6b921fef9ea1090b06021f62",
+    "comparison_8d": "91bdee9d6e63b42ad1e2f1b0dab7dc73dd1025e4234288342c1985c15f7a5047",
+    "interaction": "376ee81bb2923ac58c66228d13304366cb4fa062150259ff18a009077486b26a",
+    "structural_orbits": "276af3806c36f2eef13e3e853ad6519c65d1b7ddb76fb02cebfecd2bda006736",
+    "truth_tables": "58c28b2155a02429c62a92fd971f33de3d45759e94a0a5a655190cafb0cf3bdf",
+    "weighted_systems": "f22398412b2584f000c35aa3be097df93db4989eabb46365506e93fe2658365a"
+  },
+  "experiment_id": "generation-008e-conjunctive-gates",
+  "frozen_analysis_plan_commit": "5303388815a3695ac6bf4eb4176c0102b9ca460c",
+  "payload_sha256": "231b4a1b6413d4f332272e161802265cbf115f224d11c2da1d3d6838ecb65b46",
+  "plan_hash": "ec515306c2d3fa669f15ce31a86cdaac78f5fcab0d01ea7ad82533fde71c9be6",
+  "round_id": "round-e0",
+  "schema": "rs-constraint-lab.conjunction-tables/v1",
+  "stochastic_trajectories": false,
+  "summary": {
+    "active_state_counts": {
+      "128": 80
+    },
+    "d8_labelled_matches": 0,
+    "d8_s4_matches": 0,
+    "distinct_cmi_values_by_grade": {
+      "strong_favour": 1,
+      "strong_suppress": 1,
+      "weak_favour": 1,
+      "weak_suppress": 1
+    },
+    "distinct_local_law_rows": {
+      "2": 80
+    },
+    "drift_formula_matches": true,
+    "effective_gate_dimension": {
+      "2": 80
+    },
+    "gate_interaction_order": {
+      "2": 80
+    },
+    "labelled_law_classes": 80,
+    "local_law_classes": 80,
+    "max_balanced_cmi_gap": 1.5126788710517758e-15,
+    "max_kernel_gap": 0.0,
+    "max_literal_delta12_gap": 0.0,
+    "max_raw_delta12_gap": 0.0,
+    "minimal_coordinate_count": {
+      "3": 80
+    },
+    "one_rule_matches": 0,
+    "placement_groups": 24,
+    "placement_groups_with_one_cmi": 24,
+    "symbolic_additive_representable": 0,
+    "system_count": 80
+  },
+  "validation": {
+    "ok": true,
+    "problems": []
+  },
+  "wall_seconds_max": 3.435679549998895
+}

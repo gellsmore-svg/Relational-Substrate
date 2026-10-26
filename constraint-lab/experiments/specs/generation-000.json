@@ -1,0 +1,37 @@
+{
+  "schema": "rs-constraint-lab.experiment/v1",
+  "experiment_id": "generation-000-correctness",
+  "generation": 0,
+  "semantics": "graph",
+  "G": 0,
+  "S": 0,
+  "H": 0,
+  "L": 0,
+  "O": 2,
+  "alphabet": "W4",
+  "sensitivity_alphabets": ["W3", "W16"],
+  "weights": ["prohibit", "strong_suppress", "weak_suppress", "weak_favour", "strong_favour"],
+  "cells": [
+    {"N": 2, "K_max": 3, "A_max": 2, "cardinalities": [1, 2, 3]},
+    {"N": 3, "K_max": 2, "A_max": 3, "cardinalities": [1, 2]}
+  ],
+  "trajectory": {"horizon": 16, "seeds": [0, 1]},
+  "rise_release_horizon": 4,
+  "predeclared_screens": {
+    "max_abs_dissolve_shift_notable": 0.1,
+    "closing_bias_abs_notable": 0.1,
+    "rise_release_excess_notable": 0.05
+  },
+  "unsearched": [
+    "N>3",
+    "N=3 cardinality 3",
+    "N=3 templates with K>2",
+    "hypergraph semantics",
+    "simplicial semantics",
+    "H>0",
+    "L>0",
+    "G>0",
+    "S>0",
+    "O>2"
+  ]
+}

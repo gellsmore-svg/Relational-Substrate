@@ -1,0 +1,67 @@
+{
+  "status": "verified",
+  "round_id": "atlas-018",
+  "plan_hash": "2468bf59c1fce72fb909482dc94e1abeae30e627f0bd71e4536ed8b10b7a27e0",
+  "scientific_worker_invocations": 0,
+  "verified_items": 3,
+  "probability_cells_checked": 576,
+  "items": [
+    {
+      "item_id": "A18-identified",
+      "states": 8,
+      "probability_cells_checked": 64,
+      "image_invariant": null,
+      "conjugate": null,
+      "result_sha256": "f4c2f9ea8e3d337396605b5af995b973a9300c2b9d814137f122f56fc895c653"
+    },
+    {
+      "item_id": "A18-free",
+      "states": 16,
+      "probability_cells_checked": 256,
+      "image_invariant": false,
+      "conjugate": false,
+      "result_sha256": "c2afb75fc903cee3d3f9488f24463f6c3c506978665ceb1ecaab06b10893a202"
+    },
+    {
+      "item_id": "A18-coupled",
+      "states": 16,
+      "probability_cells_checked": 256,
+      "image_invariant": true,
+      "conjugate": true,
+      "result_sha256": "317e876aa206bf0098e2ade7e8679c2105fb829baeb0d4abcff076ee874b2c03"
+    }
+  ],
+  "free_image_leakage": [
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2"
+  ],
+  "post_execution_analysis": {
+    "state_map": [
+      0,
+      1,
+      10,
+      11,
+      8,
+      9,
+      2,
+      3,
+      4,
+      5,
+      14,
+      15,
+      12,
+      13,
+      6,
+      7
+    ],
+    "recoded_kernel_exact": true,
+    "dropped_disagreement_quotient_exact": true,
+    "scope": "post-execution kernel recoding; original joint-event kinds are not preserved"
+  }
+}

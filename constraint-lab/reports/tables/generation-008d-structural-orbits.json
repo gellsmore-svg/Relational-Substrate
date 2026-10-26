@@ -1,0 +1,7554 @@
+[
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-1) | present(0-1-2)"
+    ],
+    "composition_family": "complementary_gate",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0000",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-1) | absent(0-1-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0001",
+    "orbit_size": 6,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-1) | present(0-1-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0002",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-1) | absent(0-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0003",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-1) | present(0-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0004",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-2) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0005",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-2) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0006",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-2) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0007",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0008",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-2) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0009",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0010",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-2) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0011",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0012",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0013",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0014",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-3) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0015",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-3) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0016",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0017",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-3) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0018",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(0-3) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0019",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(2-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0020",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(2-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0021",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(2-3) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0022",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(2-3) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0023",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(2-3) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0024",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "dissolve(2-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0025",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-1) | absent(0-1-2)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0026",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-1) | present(0-1-2)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0027",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-1) | absent(0-1-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0028",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-1) | present(0-1-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0029",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-1) | absent(0-2-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0030",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-1) | present(0-2-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0031",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-2) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0032",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-2) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0033",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-2) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0034",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0035",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-2) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0036",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0037",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-2) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0038",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0039",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0040",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0041",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-3) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0042",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-3) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0043",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-3) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0044",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0045",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-3) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0046",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(0-3) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0047",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(2-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0048",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(2-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0049",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(2-3) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0050",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(2-3) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0051",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(2-3) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0052",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-1-2)",
+      "form(2-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0053",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-1) | present(0-1-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0054",
+    "orbit_size": 6,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-1) | absent(0-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0055",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-1) | present(0-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0056",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-2) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0057",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-2) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0058",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0059",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0060",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-2) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0061",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0062",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0063",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0064",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0065",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-3) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0066",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(0-3) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0067",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(2-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0068",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(2-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0069",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(2-3) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0070",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(2-3) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0071",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "dissolve(2-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0072",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-1) | absent(0-1-2)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0073",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-1) | present(0-1-2)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0074",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-1) | absent(0-1-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0075",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-1) | present(0-1-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0076",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-1) | absent(0-2-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0077",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-1) | present(0-2-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0078",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-2) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0079",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-2) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0080",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-2) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0081",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0082",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-2) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0083",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0084",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-2) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0085",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0086",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0087",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0088",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-3) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0089",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-3) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0090",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-3) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0091",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0092",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-3) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0093",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(0-3) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0094",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(2-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0095",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(2-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0096",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(2-3) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0097",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(2-3) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0098",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(2-3) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0099",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-1-2)",
+      "form(2-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0100",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "dissolve(0-1) | present(0-2-3)"
+    ],
+    "composition_family": "complementary_gate",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0101",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "dissolve(0-1) | absent(1-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0102",
+    "orbit_size": 6,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "dissolve(0-1) | present(1-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0103",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "dissolve(0-2) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0104",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "dissolve(0-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0105",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "dissolve(0-2) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0106",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "dissolve(0-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0107",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "dissolve(1-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0108",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "dissolve(1-2) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0109",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "dissolve(1-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0110",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "dissolve(2-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0111",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "dissolve(2-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0112",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-1) | absent(0-1-2)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0113",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-1) | present(0-1-2)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0114",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-1) | absent(0-2-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0115",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-1) | present(0-2-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0116",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-1) | absent(1-2-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0117",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-1) | present(1-2-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0118",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-2) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0119",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-2) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0120",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-2) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0121",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0122",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-2) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0123",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0124",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-2) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0125",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(0-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0126",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(1-2) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0127",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(1-2) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0128",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(1-2) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0129",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(1-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0130",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(1-2) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0131",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(1-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0132",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(1-2) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0133",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(1-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0134",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(2-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0135",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(2-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0136",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(2-3) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0137",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(2-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0138",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(2-3) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0139",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | absent(0-2-3)",
+      "form(2-3) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0140",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "dissolve(0-1) | present(1-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0141",
+    "orbit_size": 6,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "dissolve(0-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0142",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "dissolve(0-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0143",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "dissolve(1-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0144",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "dissolve(2-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0145",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-1) | absent(0-1-2)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0146",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-1) | present(0-1-2)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0147",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-1) | absent(0-2-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0148",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-1) | present(0-2-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0149",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-1) | absent(1-2-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0150",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-1) | present(1-2-3)"
+    ],
+    "composition_family": "same_slot_opposite_directions",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0151",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-2) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0152",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-2) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0153",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-2) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0154",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0155",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-2) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0156",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0157",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-2) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0158",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(0-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0159",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(1-2) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0160",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(1-2) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0161",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(1-2) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0162",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(1-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0163",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(1-2) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0164",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(1-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0165",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(1-2) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0166",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(1-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0167",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(2-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0168",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(2-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0169",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(2-3) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0170",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(2-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0171",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(2-3) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0172",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "dissolve(0-1) | present(0-2-3)",
+      "form(2-3) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "opposite_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0173",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-1) | present(0-1-2)"
+    ],
+    "composition_family": "complementary_gate",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0174",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-1) | absent(0-1-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0175",
+    "orbit_size": 6,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-1) | present(0-1-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0176",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-1) | absent(0-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0177",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-1) | present(0-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0178",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-2) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0179",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-2) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0180",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-2) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0181",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0182",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-2) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0183",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0184",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-2) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0185",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0186",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0187",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0188",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-3) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0189",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-3) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0190",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0191",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-3) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0192",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(0-3) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0193",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(2-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0194",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(2-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0195",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(2-3) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0196",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(2-3) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0197",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(2-3) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0198",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-1-2)",
+      "form(2-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0199",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-1) | present(0-1-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0200",
+    "orbit_size": 6,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-1) | absent(0-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0201",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-1) | present(0-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0202",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-2) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0203",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-2) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0204",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0205",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0206",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-2) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0207",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0208",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0209",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0210",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0211",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-3) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0212",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(0-3) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0213",
+    "orbit_size": 24,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(2-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0214",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(2-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0215",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(2-3) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0216",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(2-3) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0217",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-1-2)",
+      "form(2-3) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ],
+    "orbit_id": "ORB-0218",
+    "orbit_size": 12,
+    "own_incidence": [
+      true,
+      true
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "form(0-1) | absent(0-2-3)",
+      "form(0-1) | present(0-2-3)"
+    ],
+    "composition_family": "complementary_gate",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0219",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "form(0-1) | absent(0-2-3)",
+      "form(0-1) | absent(1-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0220",
+    "orbit_size": 6,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "form(0-1) | absent(0-2-3)",
+      "form(0-1) | present(1-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0221",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-2-3)",
+      "form(0-2) | absent(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0222",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-2-3)",
+      "form(0-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0223",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-2-3)",
+      "form(0-2) | absent(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0224",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-2-3)",
+      "form(0-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0225",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-2-3)",
+      "form(1-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0226",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-2-3)",
+      "form(1-2) | absent(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0227",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-2-3)",
+      "form(1-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0228",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "opposite_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-2-3)",
+      "form(2-3) | absent(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0229",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | absent(0-2-3)",
+      "form(2-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0230",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "mixed_literal_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "same_pair",
+    "canonical_rules": [
+      "form(0-1) | present(0-2-3)",
+      "form(0-1) | present(1-2-3)"
+    ],
+    "composition_family": "same_action_different_gates",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0231",
+    "orbit_size": 6,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-2-3)",
+      "form(0-2) | present(0-1-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0232",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-2-3)",
+      "form(0-2) | present(1-2-3)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      false,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0233",
+    "orbit_size": 24,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 16
+  },
+  {
+    "action_relation": "adjacent_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-2-3)",
+      "form(1-2) | present(0-2-3)"
+    ],
+    "composition_family": "different_actions_same_gate",
+    "cross_incidence": [
+      false,
+      false
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "same_triad",
+    "incidence_matrix": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0234",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  },
+  {
+    "action_relation": "disjoint_pairs",
+    "canonical_rules": [
+      "form(0-1) | present(0-2-3)",
+      "form(2-3) | present(0-1-2)"
+    ],
+    "composition_family": "different_actions_different_gates",
+    "cross_incidence": [
+      true,
+      true
+    ],
+    "direction_relation": "same_direction",
+    "gate_relation": "different_triads",
+    "incidence_matrix": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ]
+    ],
+    "orbit_id": "ORB-0235",
+    "orbit_size": 12,
+    "own_incidence": [
+      false,
+      false
+    ],
+    "polarity_relation": "same_polarity",
+    "weighted_system_count": 10
+  }
+]

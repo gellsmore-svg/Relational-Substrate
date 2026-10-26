@@ -1,0 +1,1118 @@
+{
+  "cells": [
+    {
+      "accounting": {
+        "edge": {
+          "labelled_constraints": 760,
+          "labelled_states": 16,
+          "outside_a_bound": 0,
+          "outside_k_bound": 0,
+          "raw_structural_templates": 152,
+          "relation_slots": 4,
+          "removed_redundant_normalisation": 0,
+          "removed_syntax_invalid": 0,
+          "structural_by_class": {
+            "P->P": 54,
+            "P->T": 36,
+            "T->P": 12,
+            "T->T": 2,
+            "mixed": 48
+          },
+          "structural_normal_forms": 152,
+          "weight_alphabet_size": 5
+        },
+        "grammar": {
+          "count_candidates": 0,
+          "count_outside_a": 0,
+          "count_outside_k": 0,
+          "count_structural": 0,
+          "count_tautology": 0,
+          "count_unsatisfiable": 0,
+          "edge_outside_a": 0,
+          "edge_structural": 152,
+          "labelled_constraints": 760,
+          "outside_k_bound": 0,
+          "structural_by_class": {
+            "P->P": 54,
+            "P->T": 36,
+            "T->P": 12,
+            "T->T": 2,
+            "mixed": 48
+          },
+          "structural_normal_forms": 152,
+          "weight_alphabet_size": 5
+        }
+      },
+      "baseline": {
+        "heavy": {
+          "disjoint_pair_mass": null,
+          "disjoint_pair_mass_exact": null,
+          "edge_count_occupancy": [
+            0.125,
+            0.375,
+            0.375,
+            0.125
+          ],
+          "edge_count_occupancy_exact": [
+            "1/8",
+            "3/8",
+            "3/8",
+            "1/8"
+          ],
+          "entropy_rate_bits": 1.9999999999999998,
+          "entropy_rate_nats": 1.3862943611198904,
+          "halt_mass": 0.0,
+          "halt_mass_exact": "0/1",
+          "mean_component_count": 1.625,
+          "mean_edge_density": 0.5,
+          "mean_edge_density_exact": "1/2",
+          "n_recurrent": 1,
+          "pair_density_triad_absent_exact": "1/2",
+          "pair_density_triad_present_exact": "1/2",
+          "periods": [
+            2
+          ],
+          "reachable_count": 16,
+          "reversibility_defect": 0.0,
+          "reversibility_defect_exact": "0/1",
+          "rise_then_release": 0.3984375,
+          "rise_then_release_exact": "51/128",
+          "stationary_arithmetic": "rational",
+          "stationary_residual": 0.0,
+          "triad_dissolution_flux_exact": "1/8",
+          "triad_formation_flux_exact": "1/8",
+          "triad_graph_class_mi_bits": 0.0,
+          "triad_occupancy_exact": "1/2",
+          "triad_present_sojourn_exact": "4/1",
+          "triangle_mass": 0.125,
+          "triangle_mass_exact": "1/8",
+          "tv_from_uniform": 0.0,
+          "tv_from_uniform_exact": "0/1"
+        },
+        "light": {
+          "closing_bias": 0.0,
+          "closing_bias_exact": "0/1",
+          "deadlock_states": [],
+          "max_abs_dissolve_shift": 0.0,
+          "max_abs_dissolve_shift_exact": "0/1",
+          "mean_abs_dissolve_shift": 0.0,
+          "mean_abs_dissolve_shift_exact": "0/1",
+          "modal_family": "115cdbb7791513bb",
+          "n_deadlock": 0,
+          "n_recurrent": 1,
+          "n_recurrent_reachable_from_empty": 1,
+          "periods": [
+            2
+          ],
+          "reachable_from_empty": 16,
+          "support_family": "d0ea2ede397499c8",
+          "support_matches_baseline": true
+        }
+      },
+      "baseline_equivalent_families": 0,
+      "cancellations": {
+        "genuine_global": 0,
+        "genuine_global_examples": [],
+        "inherited_baseline": 0,
+        "inherited_baseline_examples": [],
+        "local": 0,
+        "local_examples": []
+      },
+      "canonical_states": 8,
+      "cardinalities": {
+        "1": {
+          "analysed": 180,
+          "canonical": 180,
+          "canonical_including_stacked": 180,
+          "labelled_combinations": 760,
+          "labelled_simple": 760,
+          "labelled_stacked": 0,
+          "removed_by_symmetry": 580,
+          "stacked_canonical": 0
+        }
+      },
+      "coordinate": {
+        "A_max": 3,
+        "G": 0,
+        "H": 0,
+        "K_max": 3,
+        "L": 0,
+        "N": 3,
+        "O": 3,
+        "S": 0,
+        "alphabet": "W4",
+        "composition": "structural-simple",
+        "predicates": [
+          "pair",
+          "triad"
+        ],
+        "semantics": "hypergraph"
+      },
+      "exemplars": [
+        {
+          "expressions": [],
+          "initial": "empty",
+          "label": "baseline",
+          "run_id": "f6979ba57f960458",
+          "seed": 0
+        },
+        {
+          "expressions": [],
+          "initial": "complete",
+          "label": "baseline",
+          "run_id": "8d7a8ff4922745cd",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1-2) | present(0-1) & absent(0-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "d63f2a001438cbdd",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1-2) | present(0-1) & absent(0-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "e607bc2f5942ef55",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(0-1-2) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "reference",
+          "run_id": "798224e4c20a1b9b",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "form(0-1) | present(0-2) & present(0-1-2) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "reference",
+          "run_id": "3eee96f0519dca6f",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "4991e01d653db882",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "8271356787feea48",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "4a8fdf581e728ade",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "fd13ef3e82216a47",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "a58c1837cb25309d",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) => strong_suppress"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "957a2d7edfc2130d",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | absent(0-1-2) => prohibit"
+          ],
+          "initial": "empty",
+          "label": "family",
+          "run_id": "c472839cfdd36f97",
+          "seed": 0
+        },
+        {
+          "expressions": [
+            "dissolve(0-1) | absent(0-1-2) => prohibit"
+          ],
+          "initial": "complete",
+          "label": "family",
+          "run_id": "5f1f53a27f7e2083",
+          "seed": 0
+        }
+      ],
+      "extremes": {
+        "closing_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "kernel": "1bd3c52f2ab84245bc2243bcb2a55cef5909d4e01be733bbd471f564fd4772ed",
+          "kind": "fraction",
+          "value": "1/9"
+        },
+        "closing_min": {
+          "expressions": [
+            "dissolve(0-1) => strong_favour"
+          ],
+          "kernel": "68083dfc25411243bccba24c472e49c748dc50ed62471684f98137433cbfe465",
+          "kind": "fraction",
+          "value": "-1/9"
+        },
+        "emergent_memory_tv_max": {
+          "expressions": [
+            "dissolve(0-1-2) | absent(0-1) & absent(0-2) => prohibit"
+          ],
+          "kernel": "e5afa5054c97bcc5bec4d1a9d79df157048595081cf91cfa5a16363190c268a6",
+          "kind": "fraction",
+          "value": "5/56"
+        },
+        "entropy_max": {
+          "expressions": [
+            "form(0-1) | present(0-2) & absent(0-1-2) => weak_suppress"
+          ],
+          "kernel": "381db23c85db267e21d224f43d08322de909a9bee1b77f72519e685dfa2f426b",
+          "kind": "float",
+          "value": 1.9935059215106206
+        },
+        "entropy_min": {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "kernel": "1bd3c52f2ab84245bc2243bcb2a55cef5909d4e01be733bbd471f564fd4772ed",
+          "kind": "float",
+          "value": 1.584962500721156
+        },
+        "rise_excess_max": {
+          "expressions": [
+            "form(0-1-2) => prohibit"
+          ],
+          "kernel": "3917153dbb9e1af2d2250c957e82547364e39d1af346d995987ae2be6f2f7400",
+          "kind": "fraction",
+          "value": "103/384"
+        },
+        "rise_excess_min": {
+          "expressions": [
+            "form(0-1-2) => strong_favour"
+          ],
+          "kernel": "d7a1a318f1fab277d9d5dee6633dcaf83b893de5a3ab23481eee0d6dca9ff5f7",
+          "kind": "fraction",
+          "value": "-46899/307328"
+        },
+        "shift_max": {
+          "expressions": [
+            "dissolve(0-1) => prohibit"
+          ],
+          "kernel": "1bd3c52f2ab84245bc2243bcb2a55cef5909d4e01be733bbd471f564fd4772ed",
+          "kind": "fraction",
+          "value": "1/3"
+        },
+        "triad_occupancy_max": {
+          "expressions": [
+            "dissolve(0-1-2) => prohibit"
+          ],
+          "kernel": "4ea1b7b91ff5f1ee893bc07b32f81ac7eb23c81f35c3e9a8924040c894056351",
+          "kind": "fraction",
+          "value": "1/1"
+        },
+        "triad_occupancy_min": {
+          "expressions": [
+            "form(0-1-2) => prohibit"
+          ],
+          "kernel": "3917153dbb9e1af2d2250c957e82547364e39d1af346d995987ae2be6f2f7400",
+          "kind": "fraction",
+          "value": "0/1"
+        }
+      },
+      "families": 108,
+      "family_histogram": {
+        "closing_max": {
+          "0": -0.1111111111111111,
+          "0.25": 0.0,
+          "0.5": 0.0,
+          "0.75": 0.004629629629629629,
+          "0.9": 0.05555555555555555,
+          "0.99": 0.1111111111111111,
+          "1": 0.1111111111111111
+        },
+        "families": 108,
+        "n_deadlock": {
+          "0": 108
+        },
+        "periods": {
+          "2": 108
+        },
+        "rise_then_release_excess": {
+          "0": -0.1526024312786339,
+          "0.25": -0.026174571622287965,
+          "0.5": -0.004132200217365052,
+          "0.75": 0.03008852625739645,
+          "0.9": 0.06220294351303966,
+          "0.99": 0.16478212892613192,
+          "1": 0.2682291666666667
+        },
+        "shift_max": {
+          "0": 0.0,
+          "0.25": 0.0,
+          "0.5": 0.16666666666666666,
+          "0.75": 0.3333333333333333,
+          "0.9": 0.3333333333333333,
+          "0.99": 0.3333333333333333,
+          "1": 0.3333333333333333
+        },
+        "support_matches_baseline": 72
+      },
+      "family_index_bytes": 429460,
+      "family_index_commit_limit_bytes": 2000000,
+      "family_index_sha256": "4ff1edc2dab795ce3595b9cbdaf22b7df77c0195f0022911e2dddff9634f9bb7",
+      "higher_order": {
+        "comparison_domain": "Generation 1b N=3 K<=3 cardinalities {1,2,3} structural-simple pairwise-edge grammar, kernel ids in kernel-ids-n3-k3.txt, plus the unconstrained O=2 baseline under the same S_3 canonicalisation. Count predicates, stacked weights, N other than 3, and K>3 are outside this domain. Raw 16-state hashes are not compared with 8-state hashes.",
+        "emergent_memory_max_tv": "5/56",
+        "emergent_memory_sets": 118,
+        "examples": {
+          "FULLY_REDUCIBLE": [
+            [
+              "dissolve(0-1) => prohibit"
+            ],
+            [
+              "dissolve(0-1) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => weak_favour"
+            ]
+          ],
+          "IRREDUCIBLE_DYNAMIC_COUPLING": [
+            [
+              "dissolve(0-1) | absent(0-1-2) => prohibit"
+            ],
+            [
+              "dissolve(0-1) | absent(0-1-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | absent(0-1-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | absent(0-1-2) => weak_favour"
+            ]
+          ],
+          "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": [],
+          "PAIRWISE_PROJECTION_REDUCIBLE": [
+            [
+              "dissolve(0-1-2) | absent(0-1) & absent(0-2) => prohibit"
+            ],
+            [
+              "dissolve(0-1-2) | absent(0-1) & absent(0-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1-2) | absent(0-1) & absent(0-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1-2) | absent(0-1) & absent(0-2) => weak_favour"
+            ]
+          ],
+          "UNRESOLVED": [],
+          "emergent_memory": [
+            [
+              "dissolve(0-1) | absent(0-1-2) => prohibit"
+            ],
+            [
+              "dissolve(0-1) | absent(0-1-2) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) | absent(0-1-2) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) | absent(0-1-2) => weak_favour"
+            ]
+          ],
+          "formation_then_loss": [
+            [
+              "dissolve(0-1) => prohibit"
+            ],
+            [
+              "dissolve(0-1) => strong_favour"
+            ],
+            [
+              "dissolve(0-1) => strong_suppress"
+            ],
+            [
+              "dissolve(0-1) => weak_favour"
+            ]
+          ]
+        },
+        "id_digest": {
+          "kernel_ids_sha256": "e845367259eead6434609aa84ff4869babad334f396cc83264bed44ebf33c53c",
+          "qualitative_ids_sha256": "e9e22a4be52067ed09de87992496c2a9fbb14379c747b626ed85a1d71dc5dd25"
+        },
+        "jump_qualitative_outside_index": 0,
+        "jump_support_known": 180,
+        "jump_support_outside_index": 0,
+        "kernel_ids_by_class": {
+          "P->P": 60,
+          "P->T": 50,
+          "T->P": 20,
+          "T->T": 10,
+          "mixed": 40
+        },
+        "kernel_index_present": true,
+        "n3_limitation": "At N=3 a pairwise graph class is the edge count. A relabelled wedge is the same class. Same-cardinality non-isomorphic reconfiguration is impossible here, so an edge-count change is not a new organisation.",
+        "pair_predicts_triad_sets": 168,
+        "qualitative_family_count": 108,
+        "qualitative_ids_by_class": {
+          "P->P": 36,
+          "P->T": 30,
+          "T->P": 12,
+          "T->T": 6,
+          "mixed": 24
+        },
+        "qualitative_index_present": true,
+        "rate_competition_and_pair_predicts_triad": 58,
+        "rate_competition_sets": 130,
+        "reducibility": {
+          "FULLY_REDUCIBLE": 70,
+          "IRREDUCIBLE_DYNAMIC_COUPLING": 60,
+          "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+          "PAIRWISE_PROJECTION_REDUCIBLE": 50,
+          "UNRESOLVED": 0
+        },
+        "reducibility_by_class": {
+          "P->P": {
+            "FULLY_REDUCIBLE": 60,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          },
+          "P->T": {
+            "FULLY_REDUCIBLE": 0,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 50,
+            "UNRESOLVED": 0
+          },
+          "T->P": {
+            "FULLY_REDUCIBLE": 0,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 20,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          },
+          "T->T": {
+            "FULLY_REDUCIBLE": 10,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          },
+          "mixed": {
+            "FULLY_REDUCIBLE": 0,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 40,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          }
+        },
+        "sensitivity": {
+          "1/2": {
+            "coupling_changed": 0,
+            "emergent_memory_changed": 0,
+            "kernel_changed": 180,
+            "modal_changed": 180,
+            "qualitative_changed": 180,
+            "qualitative_family_count": 109,
+            "reducibility_changed": 0,
+            "support_changed": 0
+          },
+          "2": {
+            "coupling_changed": 0,
+            "emergent_memory_changed": 0,
+            "kernel_changed": 180,
+            "modal_changed": 180,
+            "qualitative_changed": 180,
+            "qualitative_family_count": 109,
+            "reducibility_changed": 0,
+            "support_changed": 0
+          }
+        },
+        "sets_by_class": {
+          "P->P": 60,
+          "P->T": 50,
+          "T->P": 20,
+          "T->T": 10,
+          "mixed": 40
+        },
+        "support_ids_by_class": {
+          "P->P": 13,
+          "P->T": 11,
+          "T->P": 5,
+          "T->T": 3,
+          "mixed": 9
+        },
+        "support_index_present": true,
+        "trajectory": {
+          "cross_order_sequence": 180,
+          "edge_count_differs": 180,
+          "formation_then_loss_edge_count_differs": 179,
+          "isomorphic_only": 0,
+          "same_cardinality_nonisomorphic": 0
+        },
+        "triad_predicts_pair_sets": 118
+      },
+      "higher_order_science": {
+        "comparison_domain": "Generation 1b N=3 K<=3 cardinalities {1,2,3} structural-simple pairwise-edge grammar, kernel ids in kernel-ids-n3-k3.txt, plus the unconstrained O=2 baseline under the same S_3 canonicalisation. Count predicates, stacked weights, N other than 3, and K>3 are outside this domain. Raw 16-state hashes are not compared with 8-state hashes.",
+        "emergent_memory_max_tv": "5/56",
+        "emergent_memory_sets": 118,
+        "jump_qualitative_outside_index": 0,
+        "jump_support_outside_index": 0,
+        "kernel_ids_sha256": "e845367259eead6434609aa84ff4869babad334f396cc83264bed44ebf33c53c",
+        "kernel_index_present": true,
+        "n3_limitation": "At N=3 a pairwise graph class is the edge count. A relabelled wedge is the same class. Same-cardinality non-isomorphic reconfiguration is impossible here, so an edge-count change is not a new organisation.",
+        "pair_predicts_triad_sets": 168,
+        "qualitative_family_count": 108,
+        "qualitative_ids_sha256": "e9e22a4be52067ed09de87992496c2a9fbb14379c747b626ed85a1d71dc5dd25",
+        "qualitative_index_present": true,
+        "rate_competition_and_pair_predicts_triad": 58,
+        "rate_competition_sets": 130,
+        "reducibility": {
+          "FULLY_REDUCIBLE": 70,
+          "IRREDUCIBLE_DYNAMIC_COUPLING": 60,
+          "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+          "PAIRWISE_PROJECTION_REDUCIBLE": 50,
+          "UNRESOLVED": 0
+        },
+        "reducibility_by_class": {
+          "P->P": {
+            "FULLY_REDUCIBLE": 60,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          },
+          "P->T": {
+            "FULLY_REDUCIBLE": 0,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 50,
+            "UNRESOLVED": 0
+          },
+          "T->P": {
+            "FULLY_REDUCIBLE": 0,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 20,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          },
+          "T->T": {
+            "FULLY_REDUCIBLE": 10,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          },
+          "mixed": {
+            "FULLY_REDUCIBLE": 0,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 40,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+            "UNRESOLVED": 0
+          }
+        },
+        "sensitivity": {
+          "1/2": {
+            "coupling_changed": 0,
+            "emergent_memory_changed": 0,
+            "kernel_changed": 180,
+            "modal_changed": 180,
+            "qualitative_changed": 180,
+            "qualitative_families_equal_primary": false,
+            "qualitative_family_count": 109,
+            "reducibility_changed": 0,
+            "support_changed": 0
+          },
+          "2": {
+            "coupling_changed": 0,
+            "emergent_memory_changed": 0,
+            "kernel_changed": 180,
+            "modal_changed": 180,
+            "qualitative_changed": 180,
+            "qualitative_families_equal_primary": false,
+            "qualitative_family_count": 109,
+            "reducibility_changed": 0,
+            "support_changed": 0
+          }
+        },
+        "sets_by_class": {
+          "P->P": 60,
+          "P->T": 50,
+          "T->P": 20,
+          "T->T": 10,
+          "mixed": 40
+        },
+        "support_index_present": true,
+        "trajectory": {
+          "cross_order_sequence": 180,
+          "edge_count_differs": 180,
+          "formation_then_loss_edge_count_differs": 179,
+          "isomorphic_only": 0,
+          "same_cardinality_nonisomorphic": 0
+        },
+        "triad_predicts_pair_sets": 118
+      },
+      "kernel_index_count": 180,
+      "kernel_index_sha256": "92ffb3645f60fd06d7072fecc0a52ac1c9a462f349c179815695b44175c5e5d1",
+      "labelled_states": 16,
+      "measure_scope": {
+        "exact_kernel": "full rational kernel reduced under S_N before hashing",
+        "heavy": "every analysed set, including exact rational observables when the state count is at most 16",
+        "light": "every analysed set",
+        "observable_signature": "labelling-invariant scalars; not a kernel identity",
+        "qualitative_family": "S_N-canonical support token and modal token",
+        "rise_then_release": "from the empty state when the labelled state count is at most 64",
+        "search": "every canonical set at the requested cardinalities; structural-simple drops stacked weights before analysis",
+        "sensitivity": "every analysed cardinality-1 set, on the declared geometric alphabets",
+        "shards": "half-open lexicographic combination ranges, atomic result plus receipt",
+        "stationary": "Fraction end to end at <=16 states; float64 beyond. Entropy is always float"
+      },
+      "motif_ids": [
+        "7de81e9a335956f6bb56f4206e4dae37277e526ffa33829f8ebdfd33b9b2f738",
+        "5152d085961c90e2054ce67b5bc2487fcd87c468c3d381396c0d17c455b46499",
+        "872469b11edb76cbef44ba857208721661f76ea09b2af5120a8cbeb70834d018",
+        "118c5dfa80138812975d20f1583fe1eab9ae4455508aba118deffca70099e04d",
+        "4cd7dbec1436eee8f380e6682a8ef05224d118a5b14b0e41cfb235aaf4b67230",
+        "e8fbf950af5c39431be9767aaf4dbf93c9eb03b553afb1d59027f467805bb617",
+        "f99e5a22dd2fdc9dba0d055805121cfd4197897a9b004d7a0d01ed67bded79f2",
+        "af2e93e38d16ad60ce142e8426a7638f56aae4018050467bb427e4beeff7eefb",
+        "eaa16c36a69e4250c9b7dd355f7825f275371948334e330587fd1e52f70aed24",
+        "0a2e4312ec4d09d40f0fd340a68e2e93a490194ad9f6444ac8fe74cba9bb7711",
+        "402f44052b5837ff57b751e8d6430c09c3f26aa7d86edfb8a288ad9c2373a41b",
+        "a08bfbe6c248d091e699e0467fc5b1889a876acc5bd0f6a5a08d3a8b553e018e",
+        "260a83c5a1820332a1ad9dcdfc51d69264f4d5a186d70eafe0b015103ba50918",
+        "3070820c9d4fbb815b575980241f5d1e27465f713088b66e973a9402e4d444cb",
+        "39003dfa5a536dff97d34df7af8a3a2b027a479c11a9ebf7c1abc5972edebb7b",
+        "57b2dc763f8c5583f3e068854294301568cb71c234b696911e70c9cf2906e583",
+        "d72c763480226486639004683b6cc8bfafa4a49592cb0d4fd2b44fad202280c4",
+        "b4614eac39a11233b0d27e628458e559e31dd1cd7b2d72ee7e49ee1ad1c3d981",
+        "5c01800e4fba773562b6703a665b41aa6cb694b5565c642dc53366e86acf3675",
+        "b5c68026d42b4d61c6bfabcd6e0b34330126e908d765457ecffdda22643092e9",
+        "9663b290f8e9529babeb5c07e1294e2809b12c8420b434585f9f92dc4c3474aa",
+        "00061132f5885f5014b60b5cf2a1a8f44a0268260f2b5cf99f767b0ebf810e15",
+        "9210cabaebbf689370f01251e1008738a2c4a0dae2bfbbd7b46abc646905a11b",
+        "7e3da3fe5ae56a339d4f75c1a59ffbeb72f00c5a83a1cc40ad474396ba8408d6",
+        "774538ace938ac36b75cefd246bb675a96b75038f29b1ad650e533f165ec6495",
+        "2eb7cc94efb4ead2f1845eb1d0c59b956b98c5cf53bce271f4154faf241b85c8",
+        "3ca8f4de85dac1b7dd4a35cc17fdce07ef3eeb401a1ce85cc24bbf807c17572b"
+      ],
+      "not_searched": [
+        "cardinality 2 at N=3 was not searched",
+        "cardinality 3 at N=3 was not searched",
+        "multisets that repeat one constraint were not searched; repetition is a weight change"
+      ],
+      "observable_index_sha256": "d55c8abe0f3176038c947d313189a5638a45c241c7423d80c920226c1b35d4d1",
+      "observable_signature_count": 180,
+      "qualitative_index_sha256": "16035aff6a6dccef21e8581a4d24c1a1075ed20014bb7143b9cfb3cd94cb96e4",
+      "references": [
+        {
+          "canonical_expression": "form(0-1-2) | absent(0-1) & present(0-2) => strong_favour",
+          "expression": "form(0-1-2) | present(0-1) & absent(0-2) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "closing_bias_exact": "0/1",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "c95cb4baba55098de5c0cfc89b57951cc14a63772e45d3d2d18ddfd791cbefb6",
+            "expressions": [
+              "form(0-1-2) | absent(0-1) & present(0-2) => strong_favour"
+            ],
+            "family_id": "2afefc9bfb4f667e5b7b623ad4ebe0fce6267e30ca1fab05b0f8083e30ac0071",
+            "max_abs_dissolve_shift_exact": "0/1",
+            "mean_edge_density_exact": "1/2",
+            "modal_family": "2973e6bee38e74c625f3365b20839af8eba1c3e01a2c32228556d5790ddcf7ef",
+            "set_id": "ae34eb71e3980cf7",
+            "triangle_mass_exact": "5/42"
+          }
+        },
+        {
+          "canonical_expression": "form(0-1) | present(0-2) & present(0-1-2) => strong_favour",
+          "expression": "form(0-1) | present(0-1-2) & present(0-2) => strong_favour",
+          "in_grammar": true,
+          "same_labelling": false,
+          "single": {
+            "closing_bias_exact": "1/18",
+            "equivalent_to_baseline": false,
+            "exact_kernel_family": "4a3cf8956462f1067e608d19d392476321f84533ccd229eba32eb86cda87a9fd",
+            "expressions": [
+              "form(0-1) | present(0-2) & present(0-1-2) => strong_favour"
+            ],
+            "family_id": "fe4744b016ff45b10a416bdb0ff7be875f4f6d96e50f483496bc705c1112fb45",
+            "max_abs_dissolve_shift_exact": "1/3",
+            "mean_edge_density_exact": "67/126",
+            "modal_family": "179306068fff9ff67429f94e15f02d556826c6da848fe478e4c68650ba679964",
+            "set_id": "4fd4d5b95ae26abd",
+            "triangle_mass_exact": "13/84"
+          }
+        }
+      ],
+      "relation_slots": 4,
+      "runtime_seconds": 7.683245,
+      "screened_families": 83,
+      "sensitivity": {
+        "alphabets": [
+          "W3",
+          "W16"
+        ],
+        "checks": 360,
+        "modal_unchanged": 360,
+        "support_unchanged": 360
+      },
+      "singles_sha256": "f89c10af3099dca3fccdba036b018267035e43715b2514f93dd5ccd7ba29e3c3",
+      "structural_families": 36
+    }
+  ],
+  "composition": "structural-simple",
+  "engine_version": "0.3.0",
+  "execution": {
+    "max_attempts": 3,
+    "multiprocessing": "spawn",
+    "principle": "Prefer bounded, independently reproducible, idempotent units of work with durable checkpoints, so completed progress is monotonic and interruption is cheap.",
+    "profile_note": "Measured 2026-10-03 on this development machine, one worker, OMP/OPENBLAS/MKL threads 1. Binding window: N=4, K<=2, cardinality 2, combination ranks 4000:8000, 3262 canonical-simple float64 kernels, 66.7s. N=3, K<=3, cardinality 3, ranks 180000:190000 analysed 9399 rational kernels in 13.6s. The N=3 opening prefix is cheap (ranks 0:1000 analysed nothing) because weights are innermost, so early combinations stack grades on the first structures. 4000 items keeps the measured worst window inside 60-90s and under 120s.",
+    "shard_count": 1,
+    "shard_items": 4000,
+    "worker_history": [
+      {
+        "at": "2026-10-03T14:52:20+00:00",
+        "workers": 2
+      }
+    ],
+    "workers_last": 2
+  },
+  "experiment_id": "generation-003b-k3-singletons",
+  "generation": 3,
+  "git_commit": "ca679de546a50ad75928101d43920b2cd50ba4e0",
+  "grammar_version": "independent-hypergraph-v1",
+  "normalisation_version": "structural-unique-v1",
+  "numpy": "2.5.3",
+  "platform": "linux",
+  "predicates": [
+    "pair",
+    "triad"
+  ],
+  "python": "3.12.3",
+  "receipt_fingerprint": "6f4eb96e54cecbf81324973fea584843d08b8ec5d3ba8c5b2a78c59279b54fa9",
+  "runtime_seconds": 8.2036735189904,
+  "science": {
+    "cells": [
+      {
+        "K_max": 3,
+        "N": 3,
+        "baseline_equivalent_families": 0,
+        "cancellations": {
+          "genuine_global": 0,
+          "genuine_global_examples": [],
+          "inherited_baseline": 0,
+          "inherited_baseline_examples": [],
+          "local": 0,
+          "local_examples": []
+        },
+        "cardinalities": {
+          "1": {
+            "analysed": 180,
+            "canonical": 180,
+            "canonical_including_stacked": 180,
+            "labelled_combinations": 760,
+            "labelled_simple": 760,
+            "labelled_stacked": 0,
+            "removed_by_symmetry": 580,
+            "stacked_canonical": 0
+          }
+        },
+        "extremes": {
+          "closing_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit"
+            ],
+            "kernel": "1bd3c52f2ab84245bc2243bcb2a55cef5909d4e01be733bbd471f564fd4772ed",
+            "kind": "fraction",
+            "value": "1/9"
+          },
+          "closing_min": {
+            "expressions": [
+              "dissolve(0-1) => strong_favour"
+            ],
+            "kernel": "68083dfc25411243bccba24c472e49c748dc50ed62471684f98137433cbfe465",
+            "kind": "fraction",
+            "value": "-1/9"
+          },
+          "emergent_memory_tv_max": {
+            "expressions": [
+              "dissolve(0-1-2) | absent(0-1) & absent(0-2) => prohibit"
+            ],
+            "kernel": "e5afa5054c97bcc5bec4d1a9d79df157048595081cf91cfa5a16363190c268a6",
+            "kind": "fraction",
+            "value": "5/56"
+          },
+          "entropy_max": {
+            "expressions": [
+              "form(0-1) | present(0-2) & absent(0-1-2) => weak_suppress"
+            ],
+            "kernel": "381db23c85db267e21d224f43d08322de909a9bee1b77f72519e685dfa2f426b",
+            "kind": "float",
+            "value": 1.9935059215106206
+          },
+          "entropy_min": {
+            "expressions": [
+              "dissolve(0-1) => prohibit"
+            ],
+            "kernel": "1bd3c52f2ab84245bc2243bcb2a55cef5909d4e01be733bbd471f564fd4772ed",
+            "kind": "float",
+            "value": 1.584962500721156
+          },
+          "rise_excess_max": {
+            "expressions": [
+              "form(0-1-2) => prohibit"
+            ],
+            "kernel": "3917153dbb9e1af2d2250c957e82547364e39d1af346d995987ae2be6f2f7400",
+            "kind": "fraction",
+            "value": "103/384"
+          },
+          "rise_excess_min": {
+            "expressions": [
+              "form(0-1-2) => strong_favour"
+            ],
+            "kernel": "d7a1a318f1fab277d9d5dee6633dcaf83b893de5a3ab23481eee0d6dca9ff5f7",
+            "kind": "fraction",
+            "value": "-46899/307328"
+          },
+          "shift_max": {
+            "expressions": [
+              "dissolve(0-1) => prohibit"
+            ],
+            "kernel": "1bd3c52f2ab84245bc2243bcb2a55cef5909d4e01be733bbd471f564fd4772ed",
+            "kind": "fraction",
+            "value": "1/3"
+          },
+          "triad_occupancy_max": {
+            "expressions": [
+              "dissolve(0-1-2) => prohibit"
+            ],
+            "kernel": "4ea1b7b91ff5f1ee893bc07b32f81ac7eb23c81f35c3e9a8924040c894056351",
+            "kind": "fraction",
+            "value": "1/1"
+          },
+          "triad_occupancy_min": {
+            "expressions": [
+              "form(0-1-2) => prohibit"
+            ],
+            "kernel": "3917153dbb9e1af2d2250c957e82547364e39d1af346d995987ae2be6f2f7400",
+            "kind": "fraction",
+            "value": "0/1"
+          }
+        },
+        "families": 108,
+        "family_index_sha256": "4ff1edc2dab795ce3595b9cbdaf22b7df77c0195f0022911e2dddff9634f9bb7",
+        "higher_order": {
+          "comparison_domain": "Generation 1b N=3 K<=3 cardinalities {1,2,3} structural-simple pairwise-edge grammar, kernel ids in kernel-ids-n3-k3.txt, plus the unconstrained O=2 baseline under the same S_3 canonicalisation. Count predicates, stacked weights, N other than 3, and K>3 are outside this domain. Raw 16-state hashes are not compared with 8-state hashes.",
+          "emergent_memory_max_tv": "5/56",
+          "emergent_memory_sets": 118,
+          "jump_qualitative_outside_index": 0,
+          "jump_support_outside_index": 0,
+          "kernel_ids_sha256": "e845367259eead6434609aa84ff4869babad334f396cc83264bed44ebf33c53c",
+          "kernel_index_present": true,
+          "n3_limitation": "At N=3 a pairwise graph class is the edge count. A relabelled wedge is the same class. Same-cardinality non-isomorphic reconfiguration is impossible here, so an edge-count change is not a new organisation.",
+          "pair_predicts_triad_sets": 168,
+          "qualitative_family_count": 108,
+          "qualitative_ids_sha256": "e9e22a4be52067ed09de87992496c2a9fbb14379c747b626ed85a1d71dc5dd25",
+          "qualitative_index_present": true,
+          "rate_competition_and_pair_predicts_triad": 58,
+          "rate_competition_sets": 130,
+          "reducibility": {
+            "FULLY_REDUCIBLE": 70,
+            "IRREDUCIBLE_DYNAMIC_COUPLING": 60,
+            "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+            "PAIRWISE_PROJECTION_REDUCIBLE": 50,
+            "UNRESOLVED": 0
+          },
+          "reducibility_by_class": {
+            "P->P": {
+              "FULLY_REDUCIBLE": 60,
+              "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+              "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+              "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+              "UNRESOLVED": 0
+            },
+            "P->T": {
+              "FULLY_REDUCIBLE": 0,
+              "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+              "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+              "PAIRWISE_PROJECTION_REDUCIBLE": 50,
+              "UNRESOLVED": 0
+            },
+            "T->P": {
+              "FULLY_REDUCIBLE": 0,
+              "IRREDUCIBLE_DYNAMIC_COUPLING": 20,
+              "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+              "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+              "UNRESOLVED": 0
+            },
+            "T->T": {
+              "FULLY_REDUCIBLE": 10,
+              "IRREDUCIBLE_DYNAMIC_COUPLING": 0,
+              "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+              "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+              "UNRESOLVED": 0
+            },
+            "mixed": {
+              "FULLY_REDUCIBLE": 0,
+              "IRREDUCIBLE_DYNAMIC_COUPLING": 40,
+              "OUTSIDE_SEARCHED_PAIRWISE_GRAMMAR": 0,
+              "PAIRWISE_PROJECTION_REDUCIBLE": 0,
+              "UNRESOLVED": 0
+            }
+          },
+          "sensitivity": {
+            "1/2": {
+              "coupling_changed": 0,
+              "emergent_memory_changed": 0,
+              "kernel_changed": 180,
+              "modal_changed": 180,
+              "qualitative_changed": 180,
+              "qualitative_families_equal_primary": false,
+              "qualitative_family_count": 109,
+              "reducibility_changed": 0,
+              "support_changed": 0
+            },
+            "2": {
+              "coupling_changed": 0,
+              "emergent_memory_changed": 0,
+              "kernel_changed": 180,
+              "modal_changed": 180,
+              "qualitative_changed": 180,
+              "qualitative_families_equal_primary": false,
+              "qualitative_family_count": 109,
+              "reducibility_changed": 0,
+              "support_changed": 0
+            }
+          },
+          "sets_by_class": {
+            "P->P": 60,
+            "P->T": 50,
+            "T->P": 20,
+            "T->T": 10,
+            "mixed": 40
+          },
+          "support_index_present": true,
+          "trajectory": {
+            "cross_order_sequence": 180,
+            "edge_count_differs": 180,
+            "formation_then_loss_edge_count_differs": 179,
+            "isomorphic_only": 0,
+            "same_cardinality_nonisomorphic": 0
+          },
+          "triad_predicts_pair_sets": 118
+        },
+        "histogram": {
+          "closing_max": {
+            "0": -0.1111111111111111,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.004629629629629629,
+            "0.9": 0.05555555555555555,
+            "0.99": 0.1111111111111111,
+            "1": 0.1111111111111111
+          },
+          "families": 108,
+          "n_deadlock": {
+            "0": 108
+          },
+          "periods": {
+            "2": 108
+          },
+          "rise_then_release_excess": {
+            "0": -0.1526024312786339,
+            "0.25": -0.026174571622287965,
+            "0.5": -0.004132200217365052,
+            "0.75": 0.03008852625739645,
+            "0.9": 0.06220294351303966,
+            "0.99": 0.16478212892613192,
+            "1": 0.2682291666666667
+          },
+          "shift_max": {
+            "0": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.16666666666666666,
+            "0.75": 0.3333333333333333,
+            "0.9": 0.3333333333333333,
+            "0.99": 0.3333333333333333,
+            "1": 0.3333333333333333
+          },
+          "support_matches_baseline": 72
+        },
+        "kernel_index_count": 180,
+        "kernel_index_sha256": "92ffb3645f60fd06d7072fecc0a52ac1c9a462f349c179815695b44175c5e5d1",
+        "observable_index_sha256": "d55c8abe0f3176038c947d313189a5638a45c241c7423d80c920226c1b35d4d1",
+        "qualitative_index_sha256": "16035aff6a6dccef21e8581a4d24c1a1075ed20014bb7143b9cfb3cd94cb96e4",
+        "screened_families": 83,
+        "singles_sha256": "f89c10af3099dca3fccdba036b018267035e43715b2514f93dd5ccd7ba29e3c3",
+        "structural_families": 36,
+        "territory": null
+      }
+    ],
+    "composition": "structural-simple",
+    "predicates": [
+      "pair",
+      "triad"
+    ],
+    "semantic_version": "0.3.0",
+    "spec_hash": "3107a2f57cf8c56f8ca56cc40da8e451dfd9bd97407874305e3a7cc7c3f5da99",
+    "status": "COMPLETE"
+  },
+  "semantic_version": "0.3.0",
+  "shard_work_seconds": 7.683245,
+  "spec_hash": "3107a2f57cf8c56f8ca56cc40da8e451dfd9bd97407874305e3a7cc7c3f5da99",
+  "status": "COMPLETE",
+  "territory": null,
+  "unsearched_declared": [
+    "cardinality 2 at K<=3",
+    "cardinality 3",
+    "N other than 3",
+    "stacked-weight composition",
+    "count predicates",
+    "simplicial semantics",
+    "G>0",
+    "S>0",
+    "H>0",
+    "L>0"
+  ]
+}

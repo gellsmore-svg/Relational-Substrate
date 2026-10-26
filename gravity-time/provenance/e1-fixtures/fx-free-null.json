@@ -1,0 +1,46 @@
+{
+ "autocorrelation_diagnostics": {
+  "cap_reached": false,
+  "decay_ratio": 0.9523809523808208,
+  "iterations": 542,
+  "last_relative_term": 9.684007487650536e-14
+ },
+ "build_and_reach_seconds": 4.235081482998794,
+ "family": "NULL",
+ "gibbs_projection_converged": true,
+ "grade": "none",
+ "kernel_timing": {
+  "build_seconds": 1.0496796299994458,
+  "reach_seconds": 3.1821253710004385
+ },
+ "mode": "FREE",
+ "n": 7,
+ "observables_version": "gt-e1-observables/v1",
+ "peak_rss_mb": 3160.3203125,
+ "predicted_law_l1_gap": 3.3306690738754696e-16,
+ "reachable_states": 2097152,
+ "regime": "recurrent",
+ "stationary": {
+  "cross_check_iterations": 673,
+  "cross_check_l1": 2.321935239413454e-14,
+  "cross_check_max_relative": 1.3011813848606832e-13,
+  "decay_ratio": null,
+  "iterations": 1,
+  "last_max_relative_change": 2.2204460492503126e-16,
+  "remaining_l1_estimate": null,
+  "residual": 2.220446049250313e-16,
+  "resolved": true,
+  "seconds": 330.5934116419994
+ },
+ "symmetry_max_abs_difference": 0.0,
+ "timings": {
+  "autocorrelation": 855.1751281590005,
+  "classes": 178.2470237410016,
+  "event_order": 16.749051504000818,
+  "gibbs_projection": 0.2885011489997851,
+  "hub_frame": 56.34084066200012,
+  "reversibility": 61.913102532002085,
+  "stationary": 332.3674220380017
+ },
+ "total_seconds": 1512.2510729599999
+}

@@ -1,0 +1,1444 @@
+{
+  "alphabet": "W4",
+  "constraint_set_id": "e61b6d0b66847c31",
+  "engine_version": "0.2.0",
+  "events": [
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 1,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 1,
+      "state_after": 2,
+      "state_before": 0,
+      "t": 0
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 1,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 1,
+      "state_after": 0,
+      "state_before": 2,
+      "t": 1
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 0,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 0,
+      "state_after": 1,
+      "state_before": 0,
+      "t": 2
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 1,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 1,
+      "state_after": 3,
+      "state_before": 1,
+      "t": 3
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 2,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 2,
+      "state_after": 7,
+      "state_before": 3,
+      "t": 4
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 1,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 1,
+      "state_after": 5,
+      "state_before": 7,
+      "t": 5
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 1,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 1,
+      "state_after": 7,
+      "state_before": 5,
+      "t": 6
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 1,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 1,
+      "state_after": 5,
+      "state_before": 7,
+      "t": 7
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 1,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 1,
+      "state_after": 7,
+      "state_before": 5,
+      "t": 8
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 1,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 1,
+      "state_after": 5,
+      "state_before": 7,
+      "t": 9
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 2,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 2,
+      "state_after": 1,
+      "state_before": 5,
+      "t": 10
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 0,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 0,
+      "state_after": 0,
+      "state_before": 1,
+      "t": 11
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 2,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 2,
+      "state_after": 4,
+      "state_before": 0,
+      "t": 12
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 0,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 0,
+      "state_after": 5,
+      "state_before": 4,
+      "t": 13
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 1,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 1,
+      "state_after": 7,
+      "state_before": 5,
+      "t": 14
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 0,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 0,
+      "state_after": 6,
+      "state_before": 7,
+      "t": 15
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "form(0-1) | count>=2 => strong_favour",
+              "factor": "4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "form",
+          "weight": "4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 0,
+      "halt": false,
+      "normaliser": "6",
+      "selected_edge": 0,
+      "state_after": 7,
+      "state_before": 6,
+      "t": 16
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 2,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 2,
+      "state_after": 3,
+      "state_before": 7,
+      "t": 17
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 1,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 1,
+      "state_after": 1,
+      "state_before": 3,
+      "t": 18
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 2,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 2,
+      "state_after": 5,
+      "state_before": 1,
+      "t": 19
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 2,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 2,
+      "state_after": 1,
+      "state_before": 5,
+      "t": 20
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 2,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 2,
+      "state_after": 5,
+      "state_before": 1,
+      "t": 21
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 0,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 0,
+      "state_after": 4,
+      "state_before": 5,
+      "t": 22
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 1,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 1,
+      "state_after": 6,
+      "state_before": 4,
+      "t": 23
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "form(0-1) | count>=2 => strong_favour",
+              "factor": "4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "form",
+          "weight": "4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 0,
+      "halt": false,
+      "normaliser": "6",
+      "selected_edge": 0,
+      "state_after": 7,
+      "state_before": 6,
+      "t": 24
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 2,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 2,
+      "state_after": 3,
+      "state_before": 7,
+      "t": 25
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 0,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 0,
+      "state_after": 2,
+      "state_before": 3,
+      "t": 26
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 2,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 2,
+      "state_after": 6,
+      "state_before": 2,
+      "t": 27
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [
+            {
+              "expression": "form(0-1) | count>=2 => strong_favour",
+              "factor": "4"
+            }
+          ],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "form",
+          "weight": "4"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 2,
+      "halt": false,
+      "normaliser": "6",
+      "selected_edge": 0,
+      "state_after": 7,
+      "state_before": 6,
+      "t": 28
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 1,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 1,
+      "state_after": 5,
+      "state_before": 7,
+      "t": 29
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "dissolve",
+          "weight": "1"
+        }
+      ],
+      "draw": 2,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 2,
+      "state_after": 1,
+      "state_before": 5,
+      "t": 30
+    },
+    {
+      "candidates": [
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "polarity": "dissolve",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1,
+          "polarity": "form",
+          "weight": "1"
+        },
+        {
+          "baseline_weight": "1",
+          "constraint_factors": [],
+          "edge": [
+            1,
+            2
+          ],
+          "edge_index": 2,
+          "polarity": "form",
+          "weight": "1"
+        }
+      ],
+      "draw": 0,
+      "halt": false,
+      "normaliser": "3",
+      "selected_edge": 0,
+      "state_after": 0,
+      "state_before": 1,
+      "t": 31
+    }
+  ],
+  "expressions": [
+    "form(0-1) | count>=2 => strong_favour"
+  ],
+  "final_state": 0,
+  "horizon": 32,
+  "initial_name": "empty",
+  "initial_state": 0,
+  "label": "reference",
+  "n": 3,
+  "prng": "python-random-MT19937",
+  "run_id": "49b266804ddefc2e",
+  "seed": 0,
+  "selection": "integer-weights-randrange",
+  "spec_hash": "04c477360e7227f9af4ea26fe86530b148f8407ad6983d48e75cee8941659a8a"
+}

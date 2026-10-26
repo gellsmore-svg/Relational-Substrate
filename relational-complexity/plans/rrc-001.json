@@ -1,0 +1,813 @@
+{
+  "round_id": "rrc-001",
+  "engine_version": "rrc-0.1.0",
+  "definitions_commit": "2053b8bddc94b3a9b1d5db712f4c91c6518a681b",
+  "watchdog_seconds": 120,
+  "hard_ceiling_seconds": 300,
+  "no_sampling": true,
+  "questions": [
+    "RRC-Q01",
+    "RRC-Q02",
+    "RRC-Q03",
+    "RRC-Q04",
+    "RRC-Q05",
+    "RRC-Q06",
+    "RRC-Q07",
+    "RRC-Q08",
+    "RRC-Q09"
+  ],
+  "tolerances": {
+    "lumpability": "exact if and only if the rational defect has numerator 0",
+    "stationary_successive_l1": 1e-12,
+    "cross_check_l1": 1e-08,
+    "max_iter": 10000,
+    "dense_max_states": 1024
+  },
+  "rules": {
+    "R0": "unconstrained weight 1. Identity replication, not an unopened question.",
+    "R1": "hard wedge: forming a pair with no common neighbour has weight 0; every other toggle has weight 1.",
+    "R2": "soft wedge: weight 4 when the toggled pair has a common neighbour, weight 1 otherwise.",
+    "R0_boost": "state-independent rates, pairs incident to node 0 have weight 5, every other pair weight 1.",
+    "R2_boost": "R2 multiplied by 5 on pairs incident to node 0."
+  },
+  "preobserved": {
+    "executed_in_tests_before_this_plan": [
+      "L-N4-hide3-R0",
+      "P-N3-R0"
+    ],
+    "note": "Those two items are replications of tests/test_identities.py. Every other R0 item is the same proved identity at a size the test suite did not execute. R1, R2 and P-N*-R2 are unopened."
+  },
+  "coverage": {
+    "sizes": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "six_is_a_neighbour_not_a_target": true,
+    "excluded": [
+      "N>=7 exhaustive kernels",
+      "sampling",
+      "history channels",
+      "independent hyperedges",
+      "weak lumpability",
+      "hard-wedge stationary propagation",
+      "structure definitions other than the designated subsets"
+    ],
+    "composition": "N6-triads is a constructed two-subset cut, not a discovered hierarchy."
+  },
+  "preflight_summary": {
+    "source": "docs/rrc-001-preflight.md",
+    "heaviest_calibration_bundle_s": 10.522,
+    "shape": "N=6 hide {0,1,2}, three augmentations, closure",
+    "watchdog_s": 120
+  },
+  "stopping": [
+    "Do not add, remove or edit items after this file is committed.",
+    "Do not widen tolerances after an item has run.",
+    "A failed, timed-out or unresolved item stays in that state.",
+    "Incomplete or invalid records may be recomputed only under the same spec.",
+    "Do not describe an unrun item as a result."
+  ],
+  "items": [
+    {
+      "id": "L-N3-hide2-R0",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 3,
+      "role": "identity_check",
+      "identity_check": true,
+      "rule": {
+        "family": "unconstrained"
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N3-hide2-R1",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 3,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "hard_wedge_formation"
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N3-hide2-R2",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 3,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "soft_wedge",
+        "common_weight": 4,
+        "base_weight": 1
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N4-hide2-R0",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 4,
+      "role": "identity_check",
+      "identity_check": true,
+      "rule": {
+        "family": "unconstrained"
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N4-hide2-R1",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 4,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "hard_wedge_formation"
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N4-hide2-R2",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 4,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "soft_wedge",
+        "common_weight": 4,
+        "base_weight": 1
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N4-hide3-R0",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 4,
+      "role": "identity_check",
+      "identity_check": true,
+      "rule": {
+        "family": "unconstrained"
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1,
+          2
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N4-hide3-R1",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 4,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "hard_wedge_formation"
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1,
+          2
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N4-hide3-R2",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 4,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "soft_wedge",
+        "common_weight": 4,
+        "base_weight": 1
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1,
+          2
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N5-hide3-R0",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 5,
+      "role": "identity_check",
+      "identity_check": true,
+      "rule": {
+        "family": "unconstrained"
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1,
+          2
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N5-hide3-R1",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 5,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "hard_wedge_formation"
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1,
+          2
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N5-hide3-R2",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 5,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "soft_wedge",
+        "common_weight": 4,
+        "base_weight": 1
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1,
+          2
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N5-hide4-R0",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 5,
+      "role": "identity_check",
+      "identity_check": true,
+      "rule": {
+        "family": "unconstrained"
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N5-hide4-R1",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 5,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "hard_wedge_formation"
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N5-hide4-R2",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 5,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "soft_wedge",
+        "common_weight": 4,
+        "base_weight": 1
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N6-hide3-R0",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 6,
+      "role": "identity_check",
+      "identity_check": true,
+      "rule": {
+        "family": "unconstrained"
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1,
+          2
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N6-hide3-R1",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 6,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "hard_wedge_formation"
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1,
+          2
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N6-hide3-R2",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 6,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "soft_wedge",
+        "common_weight": 4,
+        "base_weight": 1
+      },
+      "partition": {
+        "kind": "hide_subset",
+        "members": [
+          0,
+          1,
+          2
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N6-triads-R0",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 6,
+      "role": "identity_check",
+      "identity_check": true,
+      "rule": {
+        "family": "unconstrained"
+      },
+      "partition": {
+        "kind": "hide_two_subsets",
+        "left": [
+          0,
+          1,
+          2
+        ],
+        "right": [
+          3,
+          4,
+          5
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N6-triads-R1",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 6,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "hard_wedge_formation"
+      },
+      "partition": {
+        "kind": "hide_two_subsets",
+        "left": [
+          0,
+          1,
+          2
+        ],
+        "right": [
+          3,
+          4,
+          5
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "L-N6-triads-R2",
+      "type": "lumpability",
+      "round_id": "rrc-001",
+      "n": 6,
+      "role": "unopened",
+      "identity_check": false,
+      "rule": {
+        "family": "soft_wedge",
+        "common_weight": 4,
+        "base_weight": 1
+      },
+      "partition": {
+        "kind": "hide_two_subsets",
+        "left": [
+          0,
+          1,
+          2
+        ],
+        "right": [
+          3,
+          4,
+          5
+        ]
+      },
+      "augmentations": [
+        "edge_count",
+        "parity",
+        "interface_wedge_counts"
+      ],
+      "closure": true
+    },
+    {
+      "id": "P-N3-R0",
+      "type": "propagation",
+      "round_id": "rrc-001",
+      "n": 3,
+      "role": "identity_check",
+      "identity_check": true,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024,
+      "scaffold": "path_index_min_endpoint",
+      "base_rule": {
+        "family": "unconstrained"
+      },
+      "perturbed_rule": {
+        "family": "state_independent_rates",
+        "incident_node": 0,
+        "incident_weight": 5,
+        "other_weight": 1
+      }
+    },
+    {
+      "id": "P-N3-R2",
+      "type": "propagation",
+      "round_id": "rrc-001",
+      "n": 3,
+      "role": "unopened",
+      "identity_check": false,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024,
+      "scaffold": "path_index_min_endpoint",
+      "base_rule": {
+        "family": "soft_wedge",
+        "common_weight": 4,
+        "base_weight": 1
+      },
+      "perturbed_rule": {
+        "family": "soft_wedge_local_boost",
+        "common_weight": 4,
+        "base_weight": 1,
+        "boost": 5,
+        "boost_node": 0
+      }
+    },
+    {
+      "id": "P-N4-R0",
+      "type": "propagation",
+      "round_id": "rrc-001",
+      "n": 4,
+      "role": "identity_check",
+      "identity_check": true,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024,
+      "scaffold": "path_index_min_endpoint",
+      "base_rule": {
+        "family": "unconstrained"
+      },
+      "perturbed_rule": {
+        "family": "state_independent_rates",
+        "incident_node": 0,
+        "incident_weight": 5,
+        "other_weight": 1
+      }
+    },
+    {
+      "id": "P-N4-R2",
+      "type": "propagation",
+      "round_id": "rrc-001",
+      "n": 4,
+      "role": "unopened",
+      "identity_check": false,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024,
+      "scaffold": "path_index_min_endpoint",
+      "base_rule": {
+        "family": "soft_wedge",
+        "common_weight": 4,
+        "base_weight": 1
+      },
+      "perturbed_rule": {
+        "family": "soft_wedge_local_boost",
+        "common_weight": 4,
+        "base_weight": 1,
+        "boost": 5,
+        "boost_node": 0
+      }
+    },
+    {
+      "id": "P-N5-R0",
+      "type": "propagation",
+      "round_id": "rrc-001",
+      "n": 5,
+      "role": "identity_check",
+      "identity_check": true,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024,
+      "scaffold": "path_index_min_endpoint",
+      "base_rule": {
+        "family": "unconstrained"
+      },
+      "perturbed_rule": {
+        "family": "state_independent_rates",
+        "incident_node": 0,
+        "incident_weight": 5,
+        "other_weight": 1
+      }
+    },
+    {
+      "id": "P-N5-R2",
+      "type": "propagation",
+      "round_id": "rrc-001",
+      "n": 5,
+      "role": "unopened",
+      "identity_check": false,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024,
+      "scaffold": "path_index_min_endpoint",
+      "base_rule": {
+        "family": "soft_wedge",
+        "common_weight": 4,
+        "base_weight": 1
+      },
+      "perturbed_rule": {
+        "family": "soft_wedge_local_boost",
+        "common_weight": 4,
+        "base_weight": 1,
+        "boost": 5,
+        "boost_node": 0
+      }
+    },
+    {
+      "id": "P-N6-R0",
+      "type": "propagation",
+      "round_id": "rrc-001",
+      "n": 6,
+      "role": "identity_check",
+      "identity_check": true,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024,
+      "scaffold": "path_index_min_endpoint",
+      "base_rule": {
+        "family": "unconstrained"
+      },
+      "perturbed_rule": {
+        "family": "state_independent_rates",
+        "incident_node": 0,
+        "incident_weight": 5,
+        "other_weight": 1
+      }
+    },
+    {
+      "id": "P-N6-R2",
+      "type": "propagation",
+      "round_id": "rrc-001",
+      "n": 6,
+      "role": "unopened",
+      "identity_check": false,
+      "tolerance": 1e-12,
+      "cross_tolerance": 1e-08,
+      "max_iter": 10000,
+      "dense_max_states": 1024,
+      "scaffold": "path_index_min_endpoint",
+      "base_rule": {
+        "family": "soft_wedge",
+        "common_weight": 4,
+        "base_weight": 1
+      },
+      "perturbed_rule": {
+        "family": "soft_wedge_local_boost",
+        "common_weight": 4,
+        "base_weight": 1,
+        "boost": 5,
+        "boost_node": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+{
+  "analysis_only": true,
+  "analysis_version": "gt-e0b/v1",
+  "chosen_because": "gravity-time/reports/gt-e0a-reflection.md section 6 (E0A result commit c31ef92aaf6e5299b9cb15bd7b5c10e768d65f43); live explanations (a) arrow and basin exclusive, (b) grade artefact, (c) projection, (d) kinetics sets basin depth",
+  "clocks": "as E0A (rs_constraint_lab.gte0a plan): jump, continuous with event weights as rates, event order on the stationary jump chain",
+  "comparisons": {
+    "composite_against_gradient_part": {
+      "CWPF": "CLOSEW-weak_favour",
+      "CWPH": "CLOSEW-weak_favour"
+    },
+    "equal_ratio_pairs": [
+      [
+        "CWPF-weak_favour+weak_suppress",
+        "CWPH-weak_favour+weak_favour"
+      ],
+      [
+        "CSPF-strong_favour+weak_suppress",
+        "CSPH-strong_favour+weak_favour"
+      ],
+      [
+        "PATHF-weak_suppress",
+        "PATHH-weak_favour"
+      ]
+    ],
+    "notes": "class-level L1 between stationary laws; attachment fraction, detachment, rho, irreversible flux, pattern asymmetries in the source and hub frames, projected currents side by side"
+  },
+  "e0a_reference": {
+    "plan_commit": "2e5c97e3fdb1f5b2ed18ae652ab6af9f391efdf7",
+    "result_commit": "c31ef92aaf6e5299b9cb15bd7b5c10e768d65f43",
+    "tables": "gravity-time/reports/round-e0a-tables.json"
+  },
+  "experiment_id": "gt-round-e0b-open-thetical",
+  "families": {
+    "CLOSEW": {
+      "weak_favour": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "weak_favour",
+            "kind": "close_form",
+            "template_example": "form(0-1) | present(0-2) & present(1-2) => weak_favour"
+          }
+        ],
+        "gradient": true,
+        "predicted_potential": {
+          "restricted_support": false,
+          "theta": {
+            "E": 0.0,
+            "T": 0.6931471805599453,
+            "W": 0.0
+          }
+        }
+      }
+    },
+    "CSPF": {
+      "strong_favour+weak_suppress": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "strong_favour",
+            "kind": "close_form",
+            "template_example": "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          },
+          {
+            "K": 3,
+            "grade": "weak_suppress",
+            "kind": "path_form",
+            "template_example": "form(0-1) | present(0-2) & present(2-3) => weak_suppress"
+          }
+        ],
+        "gradient": false,
+        "predicted_potential": null
+      }
+    },
+    "CSPH": {
+      "strong_favour+weak_favour": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "strong_favour",
+            "kind": "close_form",
+            "template_example": "form(0-1) | present(0-2) & present(1-2) => strong_favour"
+          },
+          {
+            "K": 3,
+            "grade": "weak_favour",
+            "kind": "path_dissolve",
+            "template_example": "dissolve(0-1) | present(0-2) & present(2-3) => weak_favour"
+          }
+        ],
+        "gradient": false,
+        "predicted_potential": null
+      }
+    },
+    "CWPF": {
+      "weak_favour+weak_suppress": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "weak_favour",
+            "kind": "close_form",
+            "template_example": "form(0-1) | present(0-2) & present(1-2) => weak_favour"
+          },
+          {
+            "K": 3,
+            "grade": "weak_suppress",
+            "kind": "path_form",
+            "template_example": "form(0-1) | present(0-2) & present(2-3) => weak_suppress"
+          }
+        ],
+        "gradient": false,
+        "predicted_potential": null
+      }
+    },
+    "CWPH": {
+      "weak_favour+weak_favour": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "weak_favour",
+            "kind": "close_form",
+            "template_example": "form(0-1) | present(0-2) & present(1-2) => weak_favour"
+          },
+          {
+            "K": 3,
+            "grade": "weak_favour",
+            "kind": "path_dissolve",
+            "template_example": "dissolve(0-1) | present(0-2) & present(2-3) => weak_favour"
+          }
+        ],
+        "gradient": false,
+        "predicted_potential": null
+      }
+    },
+    "NULL": {
+      "none": {
+        "components": [],
+        "gradient": true,
+        "predicted_potential": {
+          "restricted_support": false,
+          "theta": {
+            "E": 0.0,
+            "T": 0.0,
+            "W": 0.0
+          }
+        }
+      }
+    },
+    "PATHF": {
+      "weak_suppress": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "weak_suppress",
+            "kind": "path_form",
+            "template_example": "form(0-1) | present(0-2) & present(2-3) => weak_suppress"
+          }
+        ],
+        "gradient": false,
+        "predicted_potential": null
+      }
+    },
+    "PATHH": {
+      "weak_favour": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "weak_favour",
+            "kind": "path_dissolve",
+            "template_example": "dissolve(0-1) | present(0-2) & present(2-3) => weak_favour"
+          }
+        ],
+        "gradient": false,
+        "predicted_potential": null
+      }
+    },
+    "PCOMP": {
+      "weak_favour+weak_favour": {
+        "components": [
+          {
+            "K": 3,
+            "grade": "weak_favour",
+            "kind": "path_form",
+            "template_example": "form(0-1) | present(0-2) & present(2-3) => weak_favour"
+          },
+          {
+            "K": 3,
+            "grade": "weak_favour",
+            "kind": "path_dissolve",
+            "template_example": "dissolve(0-1) | present(0-2) & present(2-3) => weak_favour"
+          }
+        ],
+        "gradient": false,
+        "predicted_potential": null
+      }
+    }
+  },
+  "frozen_expectations": {
+    "Y1_pcomp_reversible_uniform": "PCOMP has form and dissolve factors equal on every pair and state (both read only other relations), so rates are symmetric: irreversible flux <= 1e-09, real spectrum, and pi_ct uniform on the reachable class (L1 to uniform <= 1e-09) in every mode and N",
+    "Y2_replication": "NULL, PATHF weak_suppress and PATHH weak_favour reproduce their E0A class tables (class-level L1 <= 1e-12) and E0A irreversible flux fractions within 1e-12",
+    "Y3_closew_gradient": "CLOSEW follows the predicted triple-Gibbs law (L1 <= 1e-09) and is reversible",
+    "Y4_composite_rates_non_gradient": "every CWPF, CWPH, CSPF, CSPH cell has maximum square affinity > 1e-06. Stationary irreversibility (flux) is not predicted: E0A showed rates and flux can separate under saturation",
+    "Y5_hub_frame_reversible_null": "every reversible cell (NULL, CLOSEW, PCOMP) has hub-frame pattern asymmetry <= 1e-09 and zero hub-frame projected current within 1e-09 (the frame is transition-symmetric)"
+  },
+  "history": false,
+  "initial_conditions": "as E0A",
+  "items": [
+    {
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "HELD-N5-NULL-none",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N5-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "HELD-N5-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N5-PCOMP-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "CWPF",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "HELD-N5-CWPF-weak_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "CWPH",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N5-CWPH-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "CSPF",
+      "grade": "strong_favour+weak_suppress",
+      "item_id": "HELD-N5-CSPF-strong_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "HELD-N5-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5
+    },
+    {
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "FREE-N5-NULL-none",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N5-PATHF-weak_suppress",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-PATHH-weak_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "FREE-N5-CLOSEW-weak_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "FREE-N5-PCOMP-weak_favour+weak_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "CWPF",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "FREE-N5-CWPF-weak_favour+weak_suppress",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "CWPH",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "FREE-N5-CWPH-weak_favour+weak_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "CSPF",
+      "grade": "strong_favour+weak_suppress",
+      "item_id": "FREE-N5-CSPF-strong_favour+weak_suppress",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "FREE-N5-CSPH-strong_favour+weak_favour",
+      "mode": "FREE",
+      "n": 5
+    },
+    {
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "HELD-N6-NULL-none",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "HELD-N6-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "HELD-N6-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N6-PCOMP-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "CWPF",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "HELD-N6-CWPF-weak_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "CWPH",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "HELD-N6-CWPH-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "CSPF",
+      "grade": "strong_favour+weak_suppress",
+      "item_id": "HELD-N6-CSPF-strong_favour+weak_suppress",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "HELD-N6-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6
+    },
+    {
+      "family": "NULL",
+      "grade": "none",
+      "item_id": "FREE-N6-NULL-none",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "item_id": "FREE-N6-PATHF-weak_suppress",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "item_id": "FREE-N6-PATHH-weak_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "item_id": "FREE-N6-CLOSEW-weak_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "FREE-N6-PCOMP-weak_favour+weak_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "CWPF",
+      "grade": "weak_favour+weak_suppress",
+      "item_id": "FREE-N6-CWPF-weak_favour+weak_suppress",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "CWPH",
+      "grade": "weak_favour+weak_favour",
+      "item_id": "FREE-N6-CWPH-weak_favour+weak_favour",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "CSPF",
+      "grade": "strong_favour+weak_suppress",
+      "item_id": "FREE-N6-CSPF-strong_favour+weak_suppress",
+      "mode": "FREE",
+      "n": 6
+    },
+    {
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "item_id": "FREE-N6-CSPH-strong_favour+weak_favour",
+      "mode": "FREE",
+      "n": 6
+    }
+  ],
+  "meta_constraints": false,
+  "method": {
+    "name": "Open-Thetical Research",
+    "path": "research-methods/open-thetical-research.md",
+    "version": "1.0"
+  },
+  "mode": "B",
+  "new_primitives": false,
+  "observables": {
+    "e0a_pipeline": "every E0A observable, unchanged (rs_constraint_lab.gte0a.analyse_item)",
+    "hub_frame": "event-pair pattern asymmetry with slot class hub-incident (touches a maximum-degree vertex of the edge-present state) or not; projected net current on (edge count, maximum degree); top patterns and currents",
+    "trajectories": "as E0A, seeds sha256('round-e0b:<item_id>:<k>')[:16]"
+  },
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      5,
+      6
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL"
+  },
+  "open_questions_without_prediction": [
+    "Does any composite raise the attachment fraction above null while carrying irreversible stationary flux (basin and arrow together)?",
+    "If so, does the source-relative circulation keep the E0A orientation or reverse?",
+    "Do the equal-ratio composite pairs (formation-acting against dissolution-acting non-gradient term) give different basin depths?",
+    "Is the FREE-mode arrow legible in the emergent hub frame, and how does hub-frame asymmetry compare with the source frame in HELD?",
+    "Does the composite saturate at the strong closure grade?",
+    "Anything not anticipated above."
+  ],
+  "parameter_fit": false,
+  "plan_hash": "ad28c5b13836f05990fa351e9f9ac24acb3da5235a5bcc6e1bed5366f2d22c32",
+  "pre_freeze_exposure": {
+    "note": "E0A tables were read in full (they motivate E0B). Before freezing, the hub-frame channel was exercised only on the synthetic cycle fixture and N=4 fixtures of NULL and CLOSE; one E0A item (HELD-N5-PATHF-weak_suppress) was recomputed after a backward-compatible families parameter was added to gte0a, to confirm the E0A pipeline is unchanged (largest difference 2.8e-10 in a conditional attachment on a 1e-9 mass; otherwise <= 1e-15; tied top-k entries may reorder). No composite, PCOMP or CLOSEW cell at N=5 or N=6 was computed."
+  },
+  "programme": "GT",
+  "prompt_id": "GT-P002",
+  "question": "Can an attractive gradient constraint and a non-gradient constraint together produce a basin with a stationary arrow; does kinetics set basin depth under irreversibility; is direction legible without the held scaffold?",
+  "round_id": "round-e0b",
+  "sampling": "exact census of 36 declared cells",
+  "schema": "rs-gt.e0b-plan/v1",
+  "software": {
+    "analysis_module": "rs_constraint_lab.gte0b",
+    "numpy": "2.5.3",
+    "python": "3.12.3",
+    "reproducibility_note": "multi-threaded BLAS makes results reproducible to about 1e-15, not bitwise"
+  },
+  "stochastic_trajectories": "illustrative_only",
+  "stop_conditions": {
+    "item": "an item past the 900-second watchdog stops the round",
+    "round": "all items written, or the 10800-second wall cap",
+    "unresolved": "as E0A: unresolved stationary laws are recorded without stationary observables; no post-freeze retuning"
+  },
+  "tolerances": {
+    "e0a": "as E0A plan",
+    "frame_reversible": 1e-09,
+    "identity": 1e-09,
+    "non_reversible_floor": 1e-06,
+    "replication": 1e-12
+  },
+  "work_count": {
+    "disk_budget_bytes": 50000000,
+    "items": 36,
+    "largest_state_space": 32768,
+    "memory_budget_bytes": 4000000000,
+    "round_wall_cap_seconds": 10800,
+    "wall_time_estimate_seconds": 600,
+    "watchdog_seconds": 900,
+    "workers": 1
+  }
+}

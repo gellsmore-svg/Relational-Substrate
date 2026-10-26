@@ -1,0 +1,1068 @@
+{
+  "analysis_only": true,
+  "analysis_version": "gt-e4a/v1",
+  "analytic_floor": {
+    "K2-N5": {
+      "0": 0,
+      "1": 0
+    },
+    "K2-N6": {
+      "0": 0,
+      "1": 0
+    },
+    "K3-N5": {
+      "0": 2,
+      "1": 2,
+      "2": 2
+    },
+    "K3-N6": {
+      "0": 2,
+      "1": 2,
+      "2": 2
+    },
+    "P3-N5": {
+      "0": 1,
+      "1": 0,
+      "2": 1
+    },
+    "P3-N6": {
+      "0": 1,
+      "1": 0,
+      "2": 1
+    }
+  },
+  "chosen_because": "GT-E3 synthesis section 6 (covariant source-structure control) and GT-P007; coverage audit gravity-time/docs/e4-coverage-and-selection.md",
+  "clocks": {
+    "continuous": "pi_ct = pi_jump / R; per-unit-time observables",
+    "jump": "pi_jump; per-event observables and event order"
+  },
+  "comparisons": {
+    "Q1_k2_gathering": "does K2 give a raw, normalised or null-density-standardised margin above its own NULL (r0 = 2(N-2)/M) for PATHF weak_suppress, PATHH weak_favour or CSPH, in either clock, without any rule reading source membership?",
+    "Q2_p3": "does P3 sit between K2 and K3, or differ qualitatively; do its endpoint and middle orbits follow the witness census (endpoint floor 1, middle 0; 2 everywhere once the chord is present), and how does the chord's occupancy condition attachment?",
+    "Q3_p3_to_k3": "at three source vertices, does K3 versus P3 follow the permanent-witness floor or do density, support and kinetic changes dominate?",
+    "Q4_clock_and_density": "is any gathering consistent across clocks, margin forms and non-rare density regions (standardised-margin overlap diagnostics, rare-mass flags)?",
+    "Q5_joint_regime": "does any family show source-selective occupancy and an oriented handover together natively; does one change without the other across scaffolds?",
+    "Q6_sign_versus_magnitude": "does removing the triangle floor explain the sign but not the magnitude of differences (native K2 law is not expected to equal E3B's neutralised K3 law: sources, free slots and witnesses differ)?",
+    "Q7_controls": "NULL, PCOMP and CLOSEW behave as their mathematics requires (identities N, R, U, G); a failed control is investigated before target cells are interpreted",
+    "Q8_artefacts": "separate structural change from null-geometry normalisation, density, source participation and observer frame (per-slot orbit measures, own-NULL margins)",
+    "e3b_reference": "E3B neutralised K3 margins (round-e3b-tables.json) are cited beside native results, never pooled",
+    "no_aggregate_score": "profiles per channel; no ranking"
+  },
+  "controls_and_identities": {
+    "G_closew": "CLOSEW: predicted triple-Gibbs law, L1 gap <= 1e-9",
+    "K3_replication": "K3 cells reproduce the published E0B cells on attachment fractions (both clocks), flux, expected edges and event-order asymmetry within max(1e-10, 1e-8 x |published|)",
+    "N_null": "NULL under each scaffold: uniform law; raw and standardised margins |.| <= 1e-9 in both clocks (raw ct and jump), flux <= 1e-9; r0 equals k(N-k)/M",
+    "R_reversible": "PCOMP and CLOSEW: flux, |handover index| and |partner index| <= 1e-9",
+    "U_pcomp": "PCOMP: continuous-time raw margin |.| <= 1e-9 (rate-symmetric, uniform continuous law); jump-clock channels are not expected to vanish",
+    "W_floor": "at every reachable state the held-only path-witness count on each attachment slot equals the analytic floor (K2: 0; P3: endpoints 1, middle 0; K3: 2) and is 0 on probe-probe slots",
+    "Z5_numerical": "stationary resolved (two starts within 1e-10, residual <= 1e-12), symmetry under the scaffold's automorphism group <= 1e-10, autocorrelation within cap, kernel sample from rule strings (scaffold prohibitions included), long-double residual, GTH referee for classes <= 4,096 states and a third start above, witness floor census, square identity",
+    "separation_note": "no expectation on any target margin, index or flux"
+  },
+  "deliberate_omissions": {
+    "disconnected_references": "not included",
+    "n7": "not authorised",
+    "other_scaffolds": "candidates for E4B only",
+    "spectrum": "unavailable",
+    "trajectories": "not generated"
+  },
+  "estimands": "every gtobs channel, the E4 channels and identities of each cell; Q1-Q8",
+  "experiment_id": "gt-round-e4a-native-held-reference",
+  "families": {
+    "CLOSEW": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "close_form"
+          }
+        ],
+        "sigma": 0.0
+      }
+    },
+    "CSPH": {
+      "strong_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "strong_favour",
+            "kind": "close_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "sigma": 0.6931471805599453
+      }
+    },
+    "NULL": {
+      "none": {
+        "components": [],
+        "sigma": 0.0
+      }
+    },
+    "PATHF": {
+      "weak_suppress": {
+        "components": [
+          {
+            "grade": "weak_suppress",
+            "kind": "path_form"
+          }
+        ],
+        "sigma": 0.6931471805599453
+      }
+    },
+    "PATHH": {
+      "weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "sigma": 0.6931471805599453
+      }
+    },
+    "PCOMP": {
+      "weak_favour+weak_favour": {
+        "components": [
+          {
+            "grade": "weak_favour",
+            "kind": "path_form"
+          },
+          {
+            "grade": "weak_favour",
+            "kind": "path_dissolve"
+          }
+        ],
+        "sigma": 0.0
+      }
+    }
+  },
+  "geometry": {
+    "K2-N5": {
+      "attachment_slots": 6,
+      "free_slots": 9,
+      "held_edges": 1,
+      "nonheld_source_internal_slots": 0,
+      "pair_slots": 10,
+      "probe_probe_slots": 3,
+      "probes": 3,
+      "r0": 0.6666666666666666,
+      "source_vertices": 2
+    },
+    "K2-N6": {
+      "attachment_slots": 8,
+      "free_slots": 14,
+      "held_edges": 1,
+      "nonheld_source_internal_slots": 0,
+      "pair_slots": 15,
+      "probe_probe_slots": 6,
+      "probes": 4,
+      "r0": 0.5714285714285714,
+      "source_vertices": 2
+    },
+    "K3-N5": {
+      "attachment_slots": 6,
+      "free_slots": 7,
+      "held_edges": 3,
+      "nonheld_source_internal_slots": 0,
+      "pair_slots": 10,
+      "probe_probe_slots": 1,
+      "probes": 2,
+      "r0": 0.8571428571428571,
+      "source_vertices": 3
+    },
+    "K3-N6": {
+      "attachment_slots": 9,
+      "free_slots": 12,
+      "held_edges": 3,
+      "nonheld_source_internal_slots": 0,
+      "pair_slots": 15,
+      "probe_probe_slots": 3,
+      "probes": 3,
+      "r0": 0.75,
+      "source_vertices": 3
+    },
+    "P3-N5": {
+      "attachment_slots": 6,
+      "free_slots": 8,
+      "held_edges": 2,
+      "nonheld_source_internal_slots": 1,
+      "pair_slots": 10,
+      "probe_probe_slots": 1,
+      "probes": 2,
+      "r0": 0.75,
+      "source_vertices": 3
+    },
+    "P3-N6": {
+      "attachment_slots": 9,
+      "free_slots": 13,
+      "held_edges": 2,
+      "nonheld_source_internal_slots": 1,
+      "pair_slots": 15,
+      "probe_probe_slots": 3,
+      "probes": 3,
+      "r0": 0.6923076923076923,
+      "source_vertices": 3
+    }
+  },
+  "history": false,
+  "initial_conditions": "HELD start state = the scaffold's held relations present, every other relation absent; the reachable class from it (every non-held slot toggles freely under NULL, so it is the full space of 2^M states)",
+  "items": [
+    {
+      "alphabet": "W4",
+      "family": "NULL",
+      "grade": "none",
+      "held": [
+        [
+          0,
+          1
+        ]
+      ],
+      "item_id": "HELD-K2-N5-NULL-none",
+      "mode": "HELD",
+      "n": 5,
+      "role": "geometry_null",
+      "scaffold": "K2"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "held": [
+        [
+          0,
+          1
+        ]
+      ],
+      "item_id": "HELD-K2-N5-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific",
+      "scaffold": "K2"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ]
+      ],
+      "item_id": "HELD-K2-N5-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific",
+      "scaffold": "K2"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ]
+      ],
+      "item_id": "HELD-K2-N5-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific",
+      "scaffold": "K2"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ]
+      ],
+      "item_id": "HELD-K2-N5-PCOMP-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "control",
+      "scaffold": "K2"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ]
+      ],
+      "item_id": "HELD-K2-N5-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "control",
+      "scaffold": "K2"
+    },
+    {
+      "alphabet": "W4",
+      "family": "NULL",
+      "grade": "none",
+      "held": [
+        [
+          0,
+          1
+        ]
+      ],
+      "item_id": "HELD-K2-N6-NULL-none",
+      "mode": "HELD",
+      "n": 6,
+      "role": "geometry_null",
+      "scaffold": "K2"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "held": [
+        [
+          0,
+          1
+        ]
+      ],
+      "item_id": "HELD-K2-N6-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific",
+      "scaffold": "K2"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ]
+      ],
+      "item_id": "HELD-K2-N6-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific",
+      "scaffold": "K2"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ]
+      ],
+      "item_id": "HELD-K2-N6-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific",
+      "scaffold": "K2"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ]
+      ],
+      "item_id": "HELD-K2-N6-PCOMP-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "control",
+      "scaffold": "K2"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ]
+      ],
+      "item_id": "HELD-K2-N6-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "control",
+      "scaffold": "K2"
+    },
+    {
+      "alphabet": "W4",
+      "family": "NULL",
+      "grade": "none",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-P3-N5-NULL-none",
+      "mode": "HELD",
+      "n": 5,
+      "role": "geometry_null",
+      "scaffold": "P3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-P3-N5-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific",
+      "scaffold": "P3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-P3-N5-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific",
+      "scaffold": "P3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-P3-N5-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "open_scientific",
+      "scaffold": "P3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-P3-N5-PCOMP-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "control",
+      "scaffold": "P3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-P3-N5-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "control",
+      "scaffold": "P3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "NULL",
+      "grade": "none",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-P3-N6-NULL-none",
+      "mode": "HELD",
+      "n": 6,
+      "role": "geometry_null",
+      "scaffold": "P3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-P3-N6-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific",
+      "scaffold": "P3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-P3-N6-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific",
+      "scaffold": "P3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-P3-N6-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "open_scientific",
+      "scaffold": "P3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-P3-N6-PCOMP-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "control",
+      "scaffold": "P3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-P3-N6-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "control",
+      "scaffold": "P3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "NULL",
+      "grade": "none",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-K3-N5-NULL-none",
+      "mode": "HELD",
+      "n": 5,
+      "role": "replication_published_triangle",
+      "scaffold": "K3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-K3-N5-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 5,
+      "role": "replication_published_triangle",
+      "scaffold": "K3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-K3-N5-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "replication_published_triangle",
+      "scaffold": "K3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-K3-N5-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "replication_published_triangle",
+      "scaffold": "K3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-K3-N5-PCOMP-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "replication_published_triangle",
+      "scaffold": "K3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-K3-N5-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 5,
+      "role": "replication_published_triangle",
+      "scaffold": "K3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "NULL",
+      "grade": "none",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-K3-N6-NULL-none",
+      "mode": "HELD",
+      "n": 6,
+      "role": "replication_published_triangle",
+      "scaffold": "K3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHF",
+      "grade": "weak_suppress",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-K3-N6-PATHF-weak_suppress",
+      "mode": "HELD",
+      "n": 6,
+      "role": "replication_published_triangle",
+      "scaffold": "K3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PATHH",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-K3-N6-PATHH-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "replication_published_triangle",
+      "scaffold": "K3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CSPH",
+      "grade": "strong_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-K3-N6-CSPH-strong_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "replication_published_triangle",
+      "scaffold": "K3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "PCOMP",
+      "grade": "weak_favour+weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-K3-N6-PCOMP-weak_favour+weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "replication_published_triangle",
+      "scaffold": "K3"
+    },
+    {
+      "alphabet": "W4",
+      "family": "CLOSEW",
+      "grade": "weak_favour",
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "item_id": "HELD-K3-N6-CLOSEW-weak_favour",
+      "mode": "HELD",
+      "n": 6,
+      "role": "replication_published_triangle",
+      "scaffold": "K3"
+    }
+  ],
+  "meta_constraints": false,
+  "method": {
+    "name": "Open-Thetical Research",
+    "path": "research-methods/open-thetical-research.md",
+    "version": "1.0"
+  },
+  "mode": "B",
+  "new_primitives": false,
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": [
+      5,
+      6
+    ],
+    "O": 2,
+    "S": 0,
+    "grammar": "ordinary pair DSL"
+  },
+  "open_questions_without_prediction": [
+    "Q1-Q8 above",
+    "Anything not anticipated"
+  ],
+  "p3_chord": "the P3 closing chord (0,2) is an ordinary free relation, class C in event order and slot classes; it is never held",
+  "parameter_fit": false,
+  "plan_hash": "61e3bef23d102e94fe46a62797d072d949dd910e1ec2ec858c403c8243a4b137",
+  "pre_freeze_exposure": {
+    "engineering": "scaffold tests used N=4 and N=5 kernels of K2 and P3 for rule-string equality, relabelling covariance, symmetry and NULL geometry, and held-observable equality for P3 N=5 PATHF weak_suppress (attachment fraction compared between two implementations; the value was not inspected or recorded). NULL margins at N=5, 6 under K2/P3 are theorem-fixed. No other K2 or P3 law was computed before freezing",
+    "published_k3": "all 12 K3 cells are published E0B cells (standard channels known); they are labelled replications",
+    "reference_hashes": {
+      "constraint-lab/docs/scientific-plan-discipline.md": "4101d64f8b4d228dd1cb6ca46d77848e14e79f768041aff839f962da6fecd974",
+      "gravity-time/docs/e3-formal-support-and-recovery.md": "0e51f82732c34d9094a325b5e0f6e49ab87da865f102b9d5710d910579ca56af",
+      "gravity-time/docs/e4-configurable-scaffold.md": "38e3fa2a23b8e78990249de0f9a247f8c434d6364794be88d035347e78c2feab",
+      "gravity-time/docs/e4-coverage-and-selection.md": "892a1d66085f5e5a5b6bd1e3087f664a4f6f344287d3d76a3deee2ccc7ce236e",
+      "gravity-time/docs/foundational-bridge-map.md": "db8737d92b806470ce24cb57ff79256944079102c1144fd42cf410ab37e98b91",
+      "gravity-time/plans/round-e3b-plan.json": "91b47cf478ef68e7fca5567e1f3582fb41965ed6372e283dab9f008275134122",
+      "gravity-time/provenance/prompts/GT-P007-agent-input.md": "f58b607118279e1716bf61fd514ebc4a00a500123f266e49d3b3f12890027d0e",
+      "gravity-time/reports/round-e0b-tables.json": "e02aa5a50cf8f095e7e46bf9bbd44cd9fa41f5d2f5ba629374db14ec4436c518",
+      "gravity-time/reports/round-e3b-tables.json": "2262c3a2cd88c29fc80aabdc338694ae2ff3931520bc9f0b53e2689441e7afc8",
+      "research-methods/open-thetical-research.md": "2d9023955ddfaf269131033589c547cea7090c72caf2577ab28f7138dfb388dd"
+    },
+    "timing": "costs measured on synthetic-factor K2/P3 N=6 fixtures (execution record); no science observable read"
+  },
+  "programme": "GT",
+  "prompt_id": "GT-P007",
+  "question": "What aspects of source-probe gathering, directional succession, local activity and persistence follow from the held reference's internal relational structure, and what aspects belong to the unmodified rules?",
+  "rare_state_rule": "conditionals on mass < 1e-12 are flagged rare and not interpreted; < 1e-06 low; the standardised margin is reported with the NULL weight on rare and low free-edge counts and the supported range",
+  "round_id": "round-e4a",
+  "sampling": "exact census of 36 cells (12 published K3 replications, 24 K2/P3 cells)",
+  "scaffolds": {
+    "K2": {
+      "held": [
+        [
+          0,
+          1
+        ]
+      ],
+      "source": [
+        0,
+        1
+      ]
+    },
+    "K3": {
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "source": [
+        0,
+        1,
+        2
+      ]
+    },
+    "P3": {
+      "held": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "source": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "schema": "rs-gt.e4a-plan/v1",
+  "software": {
+    "analysis_module": "rs_constraint_lab.gte4a",
+    "kernel": "gt-vectorised-kernel/v1",
+    "numpy": "2.5.3",
+    "observables": "gt-e1-observables/v1",
+    "python": "3.12.3"
+  },
+  "stochastic_trajectories": "none",
+  "stop_conditions": {
+    "amendment": "cell or estimand changes stop the round",
+    "item": "watchdog {5: 900, 6: 1800} seconds by N",
+    "round": "all items or 10800 s; then stop",
+    "unresolved": "recorded; no retuning"
+  },
+  "tolerances": {
+    "floor": "exact",
+    "identity": 1e-09,
+    "numerical": "as E1 (gte1)",
+    "square": 1e-12
+  },
+  "work_count": {
+    "estimate_note": "see execution record (measured on synthetic fixtures before freezing)",
+    "items": 36,
+    "largest_state_space": 16384,
+    "memory_ceiling_per_worker_bytes": 2500000000,
+    "round_wall_cap_seconds": 10800,
+    "watchdog_seconds": {
+      "5": 900,
+      "6": 1800
+    },
+    "workers": 4
+  }
+}

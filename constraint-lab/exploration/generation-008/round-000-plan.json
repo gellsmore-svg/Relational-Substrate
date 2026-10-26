@@ -1,0 +1,595 @@
+{
+  "alphabet": "W4",
+  "anchor": {
+    "grade": "strong_suppress",
+    "pair_id": "07f18bb89362ae4ea6606830",
+    "path_to_matching_I": "0.06637327774634985",
+    "pp_expression": "dissolve(0-1) => strong_suppress",
+    "pp_source_expression": "dissolve(0-1) => prohibit",
+    "selection_rule": "disjoint action, both source weights prohibit, path_to_matching.I_interaction within 1e-8 of the maximum, lexicographically smallest pair_id",
+    "tie_pair_ids": [
+      "07f18bb89362ae4ea6606830",
+      "600141626a884b274e29285f",
+      "83e30a0d85355dd29a222456",
+      "c611dd214ae35aa8cf9e5cb8"
+    ],
+    "tp_expression": "dissolve(2-3) | present(0-1-2) => strong_suppress",
+    "tp_source_expression": "dissolve(2-3) | present(0-1-2) => prohibit"
+  },
+  "batch_item_count": 120,
+  "batch_note": "episodes are shorter than the 30s batch floor; item count is capped at 120 so one watchdog still isolates a small set",
+  "checkpoints": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "contexts": [
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 0,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o00",
+      "members": [
+        0
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "star",
+      "start_state": 7
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 1,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o01",
+      "members": [
+        1,
+        2,
+        4
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "star",
+      "start_state": 71
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 3,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o02",
+      "members": [
+        3,
+        5,
+        6
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "star",
+      "start_state": 199
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 7,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o03",
+      "members": [
+        7
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "star",
+      "start_state": 455
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 8,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o04",
+      "members": [
+        8
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "star",
+      "start_state": 519
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 9,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o05",
+      "members": [
+        9,
+        10,
+        12
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "star",
+      "start_state": 583
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 11,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o06",
+      "members": [
+        11,
+        13,
+        14
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "star",
+      "start_state": 711
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "canonical_triad": 15,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "hidden_context_orbit_id": "star-o07",
+      "members": [
+        15
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "star",
+      "start_state": 967
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 0,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o00",
+      "members": [
+        0
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "path",
+      "start_state": 13
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 1,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o01",
+      "members": [
+        1,
+        2
+      ],
+      "orbit_size": 2,
+      "source_graph_class": "path",
+      "start_state": 77
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 3,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o02",
+      "members": [
+        3
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "path",
+      "start_state": 205
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 4,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o03",
+      "members": [
+        4,
+        8
+      ],
+      "orbit_size": 2,
+      "source_graph_class": "path",
+      "start_state": 269
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 5,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o04",
+      "members": [
+        5,
+        10
+      ],
+      "orbit_size": 2,
+      "source_graph_class": "path",
+      "start_state": 333
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 6,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o05",
+      "members": [
+        6,
+        9
+      ],
+      "orbit_size": 2,
+      "source_graph_class": "path",
+      "start_state": 397
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 7,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o06",
+      "members": [
+        7,
+        11
+      ],
+      "orbit_size": 2,
+      "source_graph_class": "path",
+      "start_state": 461
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 12,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o07",
+      "members": [
+        12
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "path",
+      "start_state": 781
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 13,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o08",
+      "members": [
+        13,
+        14
+      ],
+      "orbit_size": 2,
+      "source_graph_class": "path",
+      "start_state": 845
+    },
+    {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "canonical_triad": 15,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "hidden_context_orbit_id": "path-o09",
+      "members": [
+        15
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "path",
+      "start_state": 973
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 0,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o00",
+      "members": [
+        0
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "triangle",
+      "start_state": 11
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 1,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o01",
+      "members": [
+        1
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "triangle",
+      "start_state": 75
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 2,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o02",
+      "members": [
+        2,
+        4,
+        8
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "triangle",
+      "start_state": 139
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 3,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o03",
+      "members": [
+        3,
+        5,
+        9
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "triangle",
+      "start_state": 203
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 6,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o04",
+      "members": [
+        6,
+        10,
+        12
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "triangle",
+      "start_state": 395
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 7,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o05",
+      "members": [
+        7,
+        11,
+        13
+      ],
+      "orbit_size": 3,
+      "source_graph_class": "triangle",
+      "start_state": 459
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 14,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o06",
+      "members": [
+        14
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "triangle",
+      "start_state": 907
+    },
+    {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "canonical_triad": 15,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "hidden_context_orbit_id": "triangle-o07",
+      "members": [
+        15
+      ],
+      "orbit_size": 1,
+      "source_graph_class": "triangle",
+      "start_state": 971
+    }
+  ],
+  "experiment_id": "generation-008-open-relational-exploration",
+  "full_event_cap": 16384,
+  "grade": "strong_suppress",
+  "mode": "B",
+  "observables": [
+    "pair_class_sequence",
+    "edge_count_sequence",
+    "triad_count_sequence",
+    "visitation",
+    "transition_counts",
+    "residence",
+    "first_entry",
+    "source_returns",
+    "entropy",
+    "triad_only_fraction",
+    "routing",
+    "motifs_length_2_3_4",
+    "context_divergence",
+    "context_information",
+    "context_persistence"
+  ],
+  "ontology": {
+    "G": 0,
+    "H": 0,
+    "L": 0,
+    "N": 4,
+    "O": 3,
+    "S": 0,
+    "grammar": "independent-hypergraph"
+  },
+  "operators": [
+    "weight_shift",
+    "condition_polarity_flip",
+    "structural_tp_neighbour",
+    "add_pp_companion",
+    "remove_rule"
+  ],
+  "pair_horizon": 512,
+  "plan_hash": "fec52960f5e16706e12e9baf0a45169f49c2414b6e7e3ecc80b1b9d0f97c3b86",
+  "pp_archetype_count": 10,
+  "prohibit_in_round": false,
+  "replay_fraction": 0.1,
+  "replicates": 16,
+  "round_id": "round-000",
+  "round_limits": {
+    "max_rounds": 4,
+    "max_rules": 2,
+    "max_systems_per_adaptive_round": 4
+  },
+  "schema": "rs-constraint-lab.exploration-plan/v1",
+  "seed_fields": [
+    "experiment_id",
+    "round_id",
+    "system_id",
+    "source_graph_class",
+    "hidden_context_orbit_id",
+    "replicate_index"
+  ],
+  "seed_function": "sha256-u64-v1",
+  "source_graph_class_count": 3,
+  "source_summaries": {
+    "path": {
+      "automorphism_group_size": 2,
+      "canonical_pair_mask": 13,
+      "class_name": "e3-deg2211-tri0-comp1",
+      "orbit_count": 10
+    },
+    "star": {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 7,
+      "class_name": "e3-deg3111-tri0-comp1",
+      "orbit_count": 8
+    },
+    "triangle": {
+      "automorphism_group_size": 6,
+      "canonical_pair_mask": 11,
+      "class_name": "e3-deg2220-tri1-comp2",
+      "orbit_count": 8
+    }
+  },
+  "systems": [
+    {
+      "expressions": [],
+      "role": "baseline relational dynamics",
+      "source": "unconstrained toggle kernel",
+      "system_id": "S00"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) | absent(0-1-2) => strong_suppress"
+      ],
+      "role": "tp_structural_archetype",
+      "source": "generation-004 T->P structural orbit",
+      "structural_expression": "dissolve(0-1) | absent(0-1-2)",
+      "system_id": "S01"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) | absent(0-2-3) => strong_suppress"
+      ],
+      "role": "tp_structural_archetype",
+      "source": "generation-004 T->P structural orbit",
+      "structural_expression": "dissolve(0-1) | absent(0-2-3)",
+      "system_id": "S02"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) | present(0-1-2) => strong_suppress"
+      ],
+      "role": "tp_structural_archetype",
+      "source": "generation-004 T->P structural orbit",
+      "structural_expression": "dissolve(0-1) | present(0-1-2)",
+      "system_id": "S03"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) | present(0-2-3) => strong_suppress"
+      ],
+      "role": "tp_structural_archetype",
+      "source": "generation-004 T->P structural orbit",
+      "structural_expression": "dissolve(0-1) | present(0-2-3)",
+      "system_id": "S04"
+    },
+    {
+      "expressions": [
+        "form(0-1) | absent(0-1-2) => strong_suppress"
+      ],
+      "role": "tp_structural_archetype",
+      "source": "generation-004 T->P structural orbit",
+      "structural_expression": "form(0-1) | absent(0-1-2)",
+      "system_id": "S05"
+    },
+    {
+      "expressions": [
+        "form(0-1) | absent(0-2-3) => strong_suppress"
+      ],
+      "role": "tp_structural_archetype",
+      "source": "generation-004 T->P structural orbit",
+      "structural_expression": "form(0-1) | absent(0-2-3)",
+      "system_id": "S06"
+    },
+    {
+      "expressions": [
+        "form(0-1) | present(0-1-2) => strong_suppress"
+      ],
+      "role": "tp_structural_archetype",
+      "source": "generation-004 T->P structural orbit",
+      "structural_expression": "form(0-1) | present(0-1-2)",
+      "system_id": "S07"
+    },
+    {
+      "expressions": [
+        "form(0-1) | present(0-2-3) => strong_suppress"
+      ],
+      "role": "tp_structural_archetype",
+      "source": "generation-004 T->P structural orbit",
+      "structural_expression": "form(0-1) | present(0-2-3)",
+      "system_id": "S08"
+    },
+    {
+      "expressions": [
+        "dissolve(0-1) => strong_suppress",
+        "dissolve(2-3) | present(0-1-2) => strong_suppress"
+      ],
+      "pair_id": "07f18bb89362ae4ea6606830",
+      "role": "composite_anchor",
+      "source": "generation-005 disjoint prohibit motif, regraded to strong_suppress",
+      "system_id": "S09",
+      "tie_pair_ids": [
+        "07f18bb89362ae4ea6606830",
+        "600141626a884b274e29285f",
+        "83e30a0d85355dd29a222456",
+        "c611dd214ae35aa8cf9e5cb8"
+      ]
+    }
+  ],
+  "tp_structural_count": 8,
+  "work_count": {
+    "batch_item_count": 120,
+    "benchmark_episode_microseconds": 66279,
+    "benchmark_replay_microseconds": 59554,
+    "compressed_bytes_per_benchmark_episode": 28670,
+    "episode_pair_horizon": 512,
+    "estimated_compressed_bytes": 119267200,
+    "estimated_event_records": 3664960,
+    "estimated_raw_bytes": 1894950720,
+    "estimated_wall_seconds": 138,
+    "hidden_context_orbits": {
+      "path": 10,
+      "star": 8,
+      "triangle": 8
+    },
+    "raw_bytes_per_benchmark_episode": 455517,
+    "replicates_per_start": 16,
+    "source_graph_classes": 3,
+    "starter_systems": 10,
+    "total_hidden_context_starts": 26,
+    "total_round_episodes": 4160,
+    "worst_case_full_events": 68157440
+  }
+}
