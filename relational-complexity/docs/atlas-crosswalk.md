@@ -159,3 +159,34 @@ probe laws and 5808 exact signature reconstructions; they are independent
 validation of proofs, not scientific cells. The count stays 218 adopted cells,
 excluding 15 historical failures. All broad questions remain open and the
 deferred Atlas-019/020 outputs and decisions remain unchanged.
+
+## Identified changing ports and later participation
+
+The adaptive-interface increment is
+`reports/2026-10-26-shared-changing-port.md`; definitions and proofs are
+`docs/shared-changing-port.md`. The local recovery audit found no unpublished
+adaptive result, so this is initiated analytical work, not recovered science.
+
+RRC-I10 and EQ-040 define a reapplicable compatible-state weighted product over
+an onto common boundary. Positive private events preserve the port; shared
+events may change it but their target ports must agree. Raw composition is
+associative and has a port-relay unit. RRC-I11 and EQ-041 characterize when
+the unfiltered Cartesian copies already preserve agreement. Equal marginals
+alone do not: product matching can leak, and imposing agreement then filters
+and renormalises. All-rejected rows have undefined agreement conditionals,
+while the new operator halts by its explicit convention. Rejected-attempt holds
+are recorded as an alternate clock, not the same law.
+
+RRC-I12 and EQ-042 separate a closed observation from an inherited port map:
+the port must factor through the observation. A no-feedback (x,y) quotient is
+exact but loses that boundary. Feedback through dynamic p makes the same
+observation nonexact. EQ-043 records the specific eight-state model's reduction
+to ordinary three-bit current-state flips. The interface is counted once;
+no new independent coordinate or primitive is inferred.
+
+IDEA-L27, PAT-020, RRC-R071 through RRC-R075 and two analytical coverage rows
+provide navigation. Independent validation checks 49 basis pairs, 343 triples,
+seven two-sided units and 147 internal-state lifts, plus named boundary controls.
+These are software checks, not scientific cells. The atlas remains 218 adopted
+cells with 15 historical failures excluded; all broad questions remain open.
+Atlas-019/020 and the original generated artifacts remain unchanged/unadopted.
