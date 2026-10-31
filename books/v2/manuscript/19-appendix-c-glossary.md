@@ -10,6 +10,10 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Attractor.** In the mathematics of changing systems, a state or set of states toward which a system tends from a wide range of starting points and to which it returns when disturbed. A reliable outcome is not by itself evidence of one. (Ch 9)
 
+**Beauty.** The apprehensible expression of the relational patterns of goodness, spiritual in origin, within created material or logical organisation. True beauty depends on goodness. Not reducible to symmetry or to preference. (Ch 16)
+
+**Cadence.** The ordered pattern or relative spacing of opportunities or events, regular or not. The *opportunity cadence* (when actualisation could occur) and the *actualisation cadence* (when it does) can differ. Measured time compares one cadence with a reference cadence. (Ch 6)
+
 **Carrier.** Whatever bears the dependency that preserves a distinction at a given stage: in manifest cases a wave, a current, a fire, a record, a chain of local interactions. Carriers may be substituted without loss, provided the relevant distinction is preserved. At the most primitive level the relation itself may be the carrier. (Ch 7)
 
 **Cause (working account).** A distinction in one relational condition modifying the admissible actualisation, or consequential state, of another through a distinction-preserving dependency: by excluding, admitting or weighting states, constraining correlations, preserving an invariant, or changing later accessibility. A working hypothesis. (Ch 7)
@@ -20,7 +24,13 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Coherence.** Non-contradiction is necessary but not sufficient. Coherence also requires real connection between the parts of an account, valid interfaces where domains meet, meaning kept through explanatory layers and round trips, stability when one domain is repaired, accountable distinctions between kinds of knowing, and preservation of real distinctions. *Local*: a model explains a bounded phenomenon. *Regional*: neighbouring domains integrate. *Global*: the whole account of reality passes these tests together. Global coherence runs both ways: it tests the metaphysics that commonly travels with physics as well as the book's own proposal. Coherence is not the same as truth. (Ch 2, Ch 10)
 
+**Coherence factor.** A relation admitted for reuse in further reasoning because it has sufficient warrant, with its scope, provenance, uncertainties and revision triggers kept visible. A candidate in a finite inquiry, never a constituent of God's knowledge. (Ch 2)
+
+**Competitive clearance.** One sense of "enabling": a change that removes competing alternatives, so that another event becomes the likelier next one without its own rate or possibility changing. The project's model reports call this "opportunity". (Ch 7)
+
 **Constrained stochastic actualisation.** The Relational Substrate hypothesis that what becomes actual is stochastic in the ontic sense: genuinely open among admissible options until it occurs, weighted by tendency and shaped by constraint. (Ch 5)
+
+**Constraint, explicitly and implicitly intrinsic.** *Explicitly intrinsic* constraints belong to the primitive created order, fixed for creaturely operation. *Implicitly intrinsic* constraints follow necessarily from a configuration once it is actual, even if it arose by chance. (Ch 4)
 
 **Currently reachable.** What can actually happen next, given the present state and the history it carries. Distinct from total admissibility, everything created order could ever bear. (Ch 4)
 
@@ -28,7 +38,11 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Corruption.** Distortion of good order: wrongdoing, which is wrong in itself, together with its entrenchment as misalignment persists and spreads without being restored. Parasitic, with no being of its own. (Ch 14)
 
-**Created runtime order.** Creation as operating, the domain of ordinary physical process, distinguished from creation's origin in God's act. The term is borrowed from computing, but creation is not a computer. (Ch 3)
+**Created runtime order.** Creation as operating: the non-conscious created relational order that expresses itself materially, distinguished from creation's origin in God's act. It is not all that exists; souls and spiritual creatures are created but are not part of it. The term is borrowed from computing, but creation is not a computer. (Ch 3)
+
+**Determinism.** Given a complete preceding configuration and the governing relations that apply to it, exactly one subsequent configuration follows. Necessary constraint is not determinism. See also *effective* and *mathematical determinism*. (Ch 5, Ch 9)
+
+**Disciplined confidence.** Commitment proportionate to warrant: confidence must not outrun the warrant, and justified insight must not be discounted for want of exhaustive knowledge. (Ch 2, Ch 16)
 
 **Distinction (source distinction).** A distinguishable state or relation that could make a difference to something other than itself. (Ch 7)
 
@@ -50,11 +64,17 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Identity organiser.** A relational organisation or process that establishes, structures or constrains distinctions so that they can take part in a coherent, consequential identity. A functional role, chiefly on the transmitting side of T-C-R; not a substance. (Ch 7)
 
+**Independent relational convergence.** Agreement among lines of inquiry whose premises, evidence and reasoning are substantially independent. It strengthens warrant only as far as the independence is real. (Ch 10)
+
 **Individual continuity.** Being the same continuing individual, and not merely an equivalent replacement. It requires continuity of lineage and history in addition to equivalence. What carries it in physical things is an open question. (Ch 6)
+
+**Inferential logic.** In the author's words, "the recursive refinement of partial understanding towards true logic through the discovery and application of relational coherence within the boundaries of created runtime order". (Ch 2)
 
 **Invariant.** A quantity or feature left unchanged by a set of transformations. One carrier or certificate of identity, not necessarily all of it. (Ch 6)
 
 **Joint process.** How chance events are related to one another, as distinct from the chance of each event alone (its *marginal* probability). Equal marginals do not imply the same joint process or the same behaviour of the whole. (Ch 9)
+
+**Logic; reasoning; relational inference.** Logic is the necessary relational structure of consistency, implication, exclusion and possibility. Reasoning is its application, which can be done well or badly. At higher orders, reasoning about represented relationships is relational inference. (Ch 2, Ch 12)
 
 **Manifestation.** Created order presenting itself to other things: detectable and encounterable. A physical matter, distinct from anyone's awareness of it. (Ch 6)
 
@@ -72,11 +92,15 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Ontology.** An account of what must be there for described behaviour to be possible. Distinct from description. (Ch 2)
 
+**Opportunity.** A distinguishable occasion at which present conditions make one or more admissible actualisations available. An opportunity can pass with nothing happening. Distinct from possibility, admissibility and actualisation. (Ch 4)
+
 **Persistence.** Continued re-actualisation within the same relevant equivalence class, against some kind of disturbance, over some length of time; for a continuing individual, along an unbroken history. (Ch 6)
 
 **Person.** A centre of awareness, relation, agency, address and responsibility. Personhood is deeper than embodiment; human persons are persons in an embodied, creaturely mode. (Ch 12)
 
 **Possibility, constrained.** The book's working reading of T0: what created order is capable of, meaning the configurations and transitions that can occur at all, together with how they are weighted. A way of speaking, not a realm. (Ch 4)
+
+**Proof.** Sufficient warrant, under declared premises, scope and constraints, for an inferred relation to serve as a coherence factor in further reasoning. Formal proof is conclusive relative to its axioms. Proof is never possession of the whole truth. (Ch 2)
 
 **Projection (coarse-graining).** A description that maps several distinct underlying states onto one visible state. It can hide distinctions that later matter. (Ch 6, Ch 9)
 
@@ -90,17 +114,25 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Relation.** A real standing-between in which each relatum is conditioned by the other. *Interactional* relation holds between things already fully what they are. *Constitutive* relation partly makes things what they are. The Relational Substrate proposal concerns the second. (Ch 3)
 
+**Relational error.** An incorrect asserted relation within a structure whose other elements may remain sound, as in 2 + 2 = 5. Not the same as moral evil. (Ch 10)
+
 **Relational identity compatibility.** The working principle that a distinguishable identity remains coherent across changes of instantiation when the relationships needed for its consequential recognition or operation are preserved through compatible T-C-R processes. (Ch 8)
 
 **Relational substrate.** The proposed created relational order within which physical things are constituted and act. It is not matter, not ether, not a field under another name, not a mind, not a soul and not God. Whether it is itself spatial is open. (Ch 3)
 
+**Representation.** A created form that, by design, shows something of the spiritual order (Romans 1:20). One of four relations across categories: structural analogy, representation, causal connection within embodied personhood, and ontological identity (rejected). (Ch 1)
+
+**Rhythm.** Recurrence with a cadence: recurring opportunities or events in relative spacing or phase, possibly irregular or compound. (Ch 6)
+
 **Stochastic.** Described by probabilities over defined possibilities. The word itself does not say whether the probabilities are *epistemic* (ignorance of hidden details) or *ontic* (genuine openness). Not lawless, not arbitrary, not chaotic. (Ch 5)
 
-**Succession.** A settled, directed order of change. In the project's models it needs a non-gradient tendency or a one-way rule. Distinct from *gathering*. The book's reading of time as the ordering of actualisation concerns order; succession concerns direction. (Ch 6)
+**Succession.** The directed relational order of actual consequence: this, then that, because of this. On the author's premise it is fundamental and prior to any measurement of it. Distinct from *gathering*. (In the project's models, a model exhibits direction only with a non-gradient tendency or a one-way rule; that is a fact about models.) (Ch 6)
 
 **T0.** The book's label for whatever conditions actualisation. That much is a firm commitment. What kind of thing T0 is remains open; "constrained possibility" is the working reading (Appendix E). (Ch 4)
 
 **Structural analogy.** A likeness of form between realities of different kinds. Distinct from *ontological identity*, sameness of kind. (Ch 1)
+
+**Time; time as moral opportunity.** *Time* is the ordering of actualisation, directed by consequence; measured time compares cadences. *Time as moral opportunity* is time's significance for persons, relative to their capacity, conditions and history. Connected levels of one account, not two kinds of time. (Ch 6, Ch 13)
 
 **Tendency.** The relative likelihood of an admissible transition compared with the others. A weighting, not a permission, and not a probability that anyone assigns. (Ch 4)
 
@@ -108,4 +140,10 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Transmit–Carry–Receive (T-C-R).** The grammar of consequential manifestation: distinction → preserved dependency → consequence. It presupposes no travel, metric space, intermediate object or exactly-once reception. The book's working hypothesis is that it is the form of consequential relation itself, and recursive. (Ch 7)
 
+**True logic.** Ultimate global coherence, perfectly comprehended and perfectly applicable, inseparable in the personal nature of God. No creature possesses it exhaustively. (Ch 2)
+
+**True randomness.** Occurrence with no governing admissibility relation or pattern. Rejected by the book as incompatible with a coherent created order. Distinct from stochasticity. (Ch 5)
+
 **Universal interoperability.** The observed fact that independently located physical things share one grammar of interaction: they can affect one another, have compatible receptivity and commensurable quantities, and compose into stable structures. Every ontology must account for it. (Ch 3)
+
+**Wonder.** A creaturely response to coherence that is intelligible and yet exceeds present comprehension. It invites inquiry rather than ending it. (Ch 16)

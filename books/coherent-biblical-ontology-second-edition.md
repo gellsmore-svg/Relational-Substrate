@@ -2098,6 +2098,10 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Attractor.** In the mathematics of changing systems, a state or set of states toward which a system tends from a wide range of starting points and to which it returns when disturbed. A reliable outcome is not by itself evidence of one. (Ch 9)
 
+**Beauty.** The apprehensible expression of the relational patterns of goodness, spiritual in origin, within created material or logical organisation. True beauty depends on goodness. Not reducible to symmetry or to preference. (Ch 16)
+
+**Cadence.** The ordered pattern or relative spacing of opportunities or events, regular or not. The *opportunity cadence* (when actualisation could occur) and the *actualisation cadence* (when it does) can differ. Measured time compares one cadence with a reference cadence. (Ch 6)
+
 **Carrier.** Whatever bears the dependency that preserves a distinction at a given stage: in manifest cases a wave, a current, a fire, a record, a chain of local interactions. Carriers may be substituted without loss, provided the relevant distinction is preserved. At the most primitive level the relation itself may be the carrier. (Ch 7)
 
 **Cause (working account).** A distinction in one relational condition modifying the admissible actualisation, or consequential state, of another through a distinction-preserving dependency: by excluding, admitting or weighting states, constraining correlations, preserving an invariant, or changing later accessibility. A working hypothesis. (Ch 7)
@@ -2108,7 +2112,13 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Coherence.** Non-contradiction is necessary but not sufficient. Coherence also requires real connection between the parts of an account, valid interfaces where domains meet, meaning kept through explanatory layers and round trips, stability when one domain is repaired, accountable distinctions between kinds of knowing, and preservation of real distinctions. *Local*: a model explains a bounded phenomenon. *Regional*: neighbouring domains integrate. *Global*: the whole account of reality passes these tests together. Global coherence runs both ways: it tests the metaphysics that commonly travels with physics as well as the book's own proposal. Coherence is not the same as truth. (Ch 2, Ch 10)
 
+**Coherence factor.** A relation admitted for reuse in further reasoning because it has sufficient warrant, with its scope, provenance, uncertainties and revision triggers kept visible. A candidate in a finite inquiry, never a constituent of God's knowledge. (Ch 2)
+
+**Competitive clearance.** One sense of "enabling": a change that removes competing alternatives, so that another event becomes the likelier next one without its own rate or possibility changing. The project's model reports call this "opportunity". (Ch 7)
+
 **Constrained stochastic actualisation.** The Relational Substrate hypothesis that what becomes actual is stochastic in the ontic sense: genuinely open among admissible options until it occurs, weighted by tendency and shaped by constraint. (Ch 5)
+
+**Constraint, explicitly and implicitly intrinsic.** *Explicitly intrinsic* constraints belong to the primitive created order, fixed for creaturely operation. *Implicitly intrinsic* constraints follow necessarily from a configuration once it is actual, even if it arose by chance. (Ch 4)
 
 **Currently reachable.** What can actually happen next, given the present state and the history it carries. Distinct from total admissibility, everything created order could ever bear. (Ch 4)
 
@@ -2116,7 +2126,11 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Corruption.** Distortion of good order: wrongdoing, which is wrong in itself, together with its entrenchment as misalignment persists and spreads without being restored. Parasitic, with no being of its own. (Ch 14)
 
-**Created runtime order.** Creation as operating, the domain of ordinary physical process, distinguished from creation's origin in God's act. The term is borrowed from computing, but creation is not a computer. (Ch 3)
+**Created runtime order.** Creation as operating: the non-conscious created relational order that expresses itself materially, distinguished from creation's origin in God's act. It is not all that exists; souls and spiritual creatures are created but are not part of it. The term is borrowed from computing, but creation is not a computer. (Ch 3)
+
+**Determinism.** Given a complete preceding configuration and the governing relations that apply to it, exactly one subsequent configuration follows. Necessary constraint is not determinism. See also *effective* and *mathematical determinism*. (Ch 5, Ch 9)
+
+**Disciplined confidence.** Commitment proportionate to warrant: confidence must not outrun the warrant, and justified insight must not be discounted for want of exhaustive knowledge. (Ch 2, Ch 16)
 
 **Distinction (source distinction).** A distinguishable state or relation that could make a difference to something other than itself. (Ch 7)
 
@@ -2138,11 +2152,17 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Identity organiser.** A relational organisation or process that establishes, structures or constrains distinctions so that they can take part in a coherent, consequential identity. A functional role, chiefly on the transmitting side of T-C-R; not a substance. (Ch 7)
 
+**Independent relational convergence.** Agreement among lines of inquiry whose premises, evidence and reasoning are substantially independent. It strengthens warrant only as far as the independence is real. (Ch 10)
+
 **Individual continuity.** Being the same continuing individual, and not merely an equivalent replacement. It requires continuity of lineage and history in addition to equivalence. What carries it in physical things is an open question. (Ch 6)
+
+**Inferential logic.** In the author's words, "the recursive refinement of partial understanding towards true logic through the discovery and application of relational coherence within the boundaries of created runtime order". (Ch 2)
 
 **Invariant.** A quantity or feature left unchanged by a set of transformations. One carrier or certificate of identity, not necessarily all of it. (Ch 6)
 
 **Joint process.** How chance events are related to one another, as distinct from the chance of each event alone (its *marginal* probability). Equal marginals do not imply the same joint process or the same behaviour of the whole. (Ch 9)
+
+**Logic; reasoning; relational inference.** Logic is the necessary relational structure of consistency, implication, exclusion and possibility. Reasoning is its application, which can be done well or badly. At higher orders, reasoning about represented relationships is relational inference. (Ch 2, Ch 12)
 
 **Manifestation.** Created order presenting itself to other things: detectable and encounterable. A physical matter, distinct from anyone's awareness of it. (Ch 6)
 
@@ -2160,11 +2180,15 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Ontology.** An account of what must be there for described behaviour to be possible. Distinct from description. (Ch 2)
 
+**Opportunity.** A distinguishable occasion at which present conditions make one or more admissible actualisations available. An opportunity can pass with nothing happening. Distinct from possibility, admissibility and actualisation. (Ch 4)
+
 **Persistence.** Continued re-actualisation within the same relevant equivalence class, against some kind of disturbance, over some length of time; for a continuing individual, along an unbroken history. (Ch 6)
 
 **Person.** A centre of awareness, relation, agency, address and responsibility. Personhood is deeper than embodiment; human persons are persons in an embodied, creaturely mode. (Ch 12)
 
 **Possibility, constrained.** The book's working reading of T0: what created order is capable of, meaning the configurations and transitions that can occur at all, together with how they are weighted. A way of speaking, not a realm. (Ch 4)
+
+**Proof.** Sufficient warrant, under declared premises, scope and constraints, for an inferred relation to serve as a coherence factor in further reasoning. Formal proof is conclusive relative to its axioms. Proof is never possession of the whole truth. (Ch 2)
 
 **Projection (coarse-graining).** A description that maps several distinct underlying states onto one visible state. It can hide distinctions that later matter. (Ch 6, Ch 9)
 
@@ -2178,17 +2202,25 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Relation.** A real standing-between in which each relatum is conditioned by the other. *Interactional* relation holds between things already fully what they are. *Constitutive* relation partly makes things what they are. The Relational Substrate proposal concerns the second. (Ch 3)
 
+**Relational error.** An incorrect asserted relation within a structure whose other elements may remain sound, as in 2 + 2 = 5. Not the same as moral evil. (Ch 10)
+
 **Relational identity compatibility.** The working principle that a distinguishable identity remains coherent across changes of instantiation when the relationships needed for its consequential recognition or operation are preserved through compatible T-C-R processes. (Ch 8)
 
 **Relational substrate.** The proposed created relational order within which physical things are constituted and act. It is not matter, not ether, not a field under another name, not a mind, not a soul and not God. Whether it is itself spatial is open. (Ch 3)
 
+**Representation.** A created form that, by design, shows something of the spiritual order (Romans 1:20). One of four relations across categories: structural analogy, representation, causal connection within embodied personhood, and ontological identity (rejected). (Ch 1)
+
+**Rhythm.** Recurrence with a cadence: recurring opportunities or events in relative spacing or phase, possibly irregular or compound. (Ch 6)
+
 **Stochastic.** Described by probabilities over defined possibilities. The word itself does not say whether the probabilities are *epistemic* (ignorance of hidden details) or *ontic* (genuine openness). Not lawless, not arbitrary, not chaotic. (Ch 5)
 
-**Succession.** A settled, directed order of change. In the project's models it needs a non-gradient tendency or a one-way rule. Distinct from *gathering*. The book's reading of time as the ordering of actualisation concerns order; succession concerns direction. (Ch 6)
+**Succession.** The directed relational order of actual consequence: this, then that, because of this. On the author's premise it is fundamental and prior to any measurement of it. Distinct from *gathering*. (In the project's models, a model exhibits direction only with a non-gradient tendency or a one-way rule; that is a fact about models.) (Ch 6)
 
 **T0.** The book's label for whatever conditions actualisation. That much is a firm commitment. What kind of thing T0 is remains open; "constrained possibility" is the working reading (Appendix E). (Ch 4)
 
 **Structural analogy.** A likeness of form between realities of different kinds. Distinct from *ontological identity*, sameness of kind. (Ch 1)
+
+**Time; time as moral opportunity.** *Time* is the ordering of actualisation, directed by consequence; measured time compares cadences. *Time as moral opportunity* is time's significance for persons, relative to their capacity, conditions and history. Connected levels of one account, not two kinds of time. (Ch 6, Ch 13)
 
 **Tendency.** The relative likelihood of an admissible transition compared with the others. A weighting, not a permission, and not a probability that anyone assigns. (Ch 4)
 
@@ -2196,7 +2228,13 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Transmit–Carry–Receive (T-C-R).** The grammar of consequential manifestation: distinction → preserved dependency → consequence. It presupposes no travel, metric space, intermediate object or exactly-once reception. The book's working hypothesis is that it is the form of consequential relation itself, and recursive. (Ch 7)
 
+**True logic.** Ultimate global coherence, perfectly comprehended and perfectly applicable, inseparable in the personal nature of God. No creature possesses it exhaustively. (Ch 2)
+
+**True randomness.** Occurrence with no governing admissibility relation or pattern. Rejected by the book as incompatible with a coherent created order. Distinct from stochasticity. (Ch 5)
+
 **Universal interoperability.** The observed fact that independently located physical things share one grammar of interaction: they can affect one another, have compatible receptivity and commensurable quantities, and compose into stable structures. Every ontology must account for it. (Ch 3)
+
+**Wonder.** A creaturely response to coherence that is intelligible and yet exceeds present comprehension. It invites inquiry rather than ending it. (Ch 16)
 
 ---
 
@@ -2357,7 +2395,7 @@ CREATION / CREATED ORDER                                   ......... reality
 └── restoration, resurrection, consummation                 ......... God's act (theological reality)
 ```
 
-Three cautions govern the map. Relation runs through every category, but relation across categories does not erase category. The arrows from substrate to manifest world are relations of consequence, not a claim that one is transformed into the other. And nothing below the Creator is divine: the substrate, T0, T1, T-C-R, chance, mathematics, information and physical order are all created.
+Four cautions govern the map. Relation runs through every category, but relation across categories does not erase category. The arrows from substrate to manifest world are relations of consequence, not a claim that one is transformed into the other. Nothing below the Creator is divine: the substrate, T0, T1, T-C-R, chance, mathematics, information and physical order are all created. And the spiritual and moral order is prior in being and purpose to the material order, which depends on it and represents it (E.10). Dependence is not constitution. The substrate is not spiritual, souls are not configurations of it, and the created runtime order shown here is not all that exists.
 
 ## E.2 Status register
 
@@ -2372,7 +2410,7 @@ The status vocabulary is small and fixed:
 - **Open question**: unresolved.
 - **Rejected reification or category error**: a reading the book refuses.
 
-A definition is not a claim, so it takes no status. Where the register lists one, it is marked as a **working definition**: fixed for the argument, open to refinement, and not to be widened to save a case.
+A definition is not a claim, so it takes no status. Where the register lists one, it is marked as a **working definition**: fixed for the argument, open to refinement, and not to be widened to save a case. A rule for inquiry is not a claim about reality either; where the register lists one, it is marked as a **methodological principle**, as in E.8.
 
 | Proposition | Status |
 | --- | --- |
@@ -2402,8 +2440,9 @@ A definition is not a claim, so it takes no status. Where the register lists one
 | Material organisation (an organised pattern or process of material carriers, such as a sound wave) is real without being an additional material entity | Ontological inference (E.9) |
 | Handling (relocating an identified entity) differs from perturbation (changing a condition or configuration) | Ontological inference; a useful distinction, not a universal classification (E.9) |
 | Emergence within matter: higher-order identities arise from organised matter | Empirical observation |
-| Emergence of matter: material individuality is constituted within a created order that is not itself material (Proposition B) | RS working hypothesis (the central thesis, stated for matter; E.9) |
-| Material fundamentality (A); co-fundamental material and relational orders (C) | Competing propositions, assessed in E.9; neither refuted |
+| *That* material existence derives from a non-material foundation | Scriptural/theological constraint (the author's theological premise, revision 2.7; cf. Hebrews 11:3; E.10) |
+| *How* material individuality is constituted within a created relational order that is not itself material (Proposition B) | RS working hypothesis (the central thesis, stated for matter; E.9) |
+| Material fundamentality (A); co-fundamental material and relational orders (C) | Excluded at the level of the theological premise (E.10). Not refuted by the comparative argument of E.9, which stands as independent support |
 | Every ontology is charged for the common structure that explains interoperability; composite interoperability follows from base compatibility in any compositional ontology | Ontological inference (E.9) |
 | A successful description of observable consequences does not by itself establish the ontological nature of their cause | Ontological inference |
 | Metaphysical elasticity: assigning unpriced properties to an explanatory entity whenever an interpretation needs them | Rejected reification or category error (E.9) |
@@ -2434,7 +2473,49 @@ A definition is not a claim, so it takes no status. Where the register lists one
 | "Attraction" as participation in a relational pattern | Mechanism candidate, model-scoped (E.8) |
 | What ties clock rates to relational structure | Open question; the models' rules do not supply it (E.8) |
 | The vorton (a stable knotted field structure), closure knots, five operations, torsional light | Mechanism candidate (technical volume and modelling programme; not relied on) |
-| A coherent account is thereby true | Rejected (coherence is not proof) |
+| A coherent account is thereby true | Rejected (coherence is not truth) |
+| **Revision 2.7 entries** (E.10) | |
+| The spiritual and moral order is prior in being and purpose; the created runtime order depends on it and, by design, represents it | Scriptural/theological constraint (the author's premise) |
+| The created runtime order is designed as a medium of moral actualisation, provenance, consequence and restoration | Scriptural/theological constraint (the author's premise about design) |
+| **Created runtime order**: the operating, non-conscious created relational order that expresses itself materially; not all that exists | Working definition |
+| **True logic**: ultimate global coherence, perfectly comprehended and perfectly applicable, inseparable in the personal nature of God | Scriptural/theological constraint (the author's premise) |
+| **Inferential logic**: "the recursive refinement of partial understanding towards true logic through the discovery and application of relational coherence within the boundaries of created runtime order" | Working definition (the author's wording) |
+| **Logic** (necessary relational structure); **reasoning** (its application); **relational inference** (reasoning at higher orders) | Working definitions |
+| **Proof**: sufficient warrant, under declared premises, scope and constraints, for an inferred relation to serve as a coherence factor | Working definition |
+| **Coherence factor**: a relation admitted for reuse with its scope, provenance, uncertainties and revision triggers kept visible | Working definition |
+| Formal proof is conclusive relative to its axioms and rules; empirical, philosophical and theological warrant differ in kind | Ontological inference |
+| Inquiry aims at inferential precision, not possession of exhaustive true logic | Methodological principle |
+| Disciplined confidence: confidence must not outrun warrant, and justified insight must not be discounted for want of exhaustive knowledge | Methodological principle |
+| Independent relational convergence strengthens warrant only as far as the independence is real; separate AI systems are not independent by default | Methodological principle |
+| Intelligible error depends on genuine coherence; an error is a misassigned relation within a structure whose other elements may be sound | Ontological inference |
+| Four respects of accessibility: mechanistically explainable; relationally understandable without a complete mechanism; beyond present means; possibly beyond exhaustive creaturely comprehension | Ontological inference (refines the epistemic boundary, E.9) |
+| An indefinitely deferred chain of dependent grounds cannot constitute ultimate grounding | Ontological inference (the author holds it internally contradictory under the foundational-grounding requirement; not a claim about mathematical infinities) |
+| The primitive created order is fixed for creaturely operation and not immutable to its Creator | Scriptural/theological constraint (inference) |
+| **Explicitly intrinsic** constraints (of the primitive order); **implicitly intrinsic** constraints (following necessarily from an actual configuration) | Working definitions |
+| A stochastically actualised configuration can carry necessary constraints | Ontological inference |
+| Necessary constraint is not determination of the next state | Ontological inference |
+| **Determinism**: given a complete preceding configuration and the applicable governing relations, exactly one subsequent configuration follows | Working definition |
+| **True randomness** (occurrence with no governing admissibility relation or pattern) | Rejected (incompatible with a globally coherent created order) |
+| **Opportunity**: a distinguishable occasion at which present conditions make one or more admissible actualisations available; possibility, opportunity, admissibility and actualisation are distinct | Working definition |
+| How an opportunity that passes without actualisation is individuated | Open question |
+| **Succession**: the directed relational order of actual consequence, fundamental and prior to its measurement | Scriptural/theological constraint and ontological inference (the author's premise) |
+| **Opportunity cadence**, **actualisation cadence** (which can differ), **rhythm** (recurrence with a cadence) | Working definitions |
+| Measured time is a relative quantification of cadence against a reference cadence | Ontological inference |
+| **Time as moral opportunity**: time's significance for persons, relative to capacity, conditions and history | Scriptural/theological constraint (the author's interpretation) |
+| Oscillation as an intrinsic reference cadence | Mechanism candidate (favoured by the author; it would measure succession, not produce it) |
+| Four relations across categories: structural analogy; designed representation; causal connection within embodied personhood; ontological identity (rejected) | Ontological inference |
+| An embodied human act and its moral reality are causally connected, not identical | Scriptural/theological constraint (the author's interpretation); the mechanism is open |
+| Knowing and choosing are actualisations in persons | Ontological inference |
+| History is carried in present relations; there is no separate ledger, and consequence can persist where provenance is unrecoverable | RS working hypothesis (extends memory, E.6) |
+| God knows the whole moral provenance of every act; judgement does not depend on recoverable created traces | Scriptural/theological constraint |
+| God subjected creation after the Fall (Genesis 3:17-19; Romans 8:20) | Scriptural/theological constraint |
+| The subjection is a deliberate divine realignment of the primitive conditions of created runtime order, so that creation remains a truthful instructor | Scriptural/theological constraint (the author's interpretation) |
+| Whether the realignment altered the primitive, changed parameters within it, or actualised a new state under it | Open question (research fork) |
+| Animal mortality was introduced by the post-Fall realignment | Scriptural/theological constraint (the author's interpretation, 31 October 2026; the reading of Genesis 3:21 is interpretive) |
+| How a post-Fall origin of animal mortality relates to the fossil record and its conventional chronology | Open question (cross-domain interface; E.10) |
+| **Beauty**: the apprehensible expression of the relational patterns of goodness, spiritual in origin, within created organisation | Working definition (the author's) |
+| **Wonder**: a creaturely response to coherence that is intelligible and yet exceeds present comprehension | Working definition |
+| Restoration does not erase history | Scriptural/theological constraint |
 
 ## E.3 T0
 
@@ -2505,7 +2586,7 @@ There may be others. Scripture's language of heavens stretched out provokes ques
 ## E.7 What the ontology does not currently claim
 
 - Spacetime is not established as a substance, and space is not assumed to be a container.
-- Time is not a flowing thing; it is read as the ordering of actualisation.
+- Time is not a flowing thing; it is read as the ordering of actualisation, directed by consequence (succession). Its measurement is not its source, and time as moral opportunity is not a clock unit.
 - Mathematical description is not ontology by default.
 - A successful physical model does not uniquely fix metaphysics.
 - Fields, particles, energy and information are descriptions or candidate structures, not assumed furniture.
@@ -2530,7 +2611,13 @@ There may be others. Scripture's language of heavens stretched out provokes ques
 - A qualitative comparison of plausibility is not a hidden number, and the absence of a number is not the absence of a comparison.
 - The emergence of higher-order identities within matter is not evidence that matter itself emerges. It supplies analogies, constraints and research questions.
 - A stage in the grammar of emergence is not a layer of reality. T2 is not revived.
-- Coherence does not prove the Relational Substrate.
+- Coherence is not truth. The book's case for the Relational Substrate has the warrant of a global coherence argument, not of demonstration. Proof, in the book's sense, establishes a warranted commitment within stated conditions; it is never possession of the whole truth.
+- The created runtime order is not all that exists, and it is not conscious. Representation of the spiritual order is not identity with it.
+- An indefinitely deferred chain of grounds is not an ultimate ground.
+- True randomness is not admitted. Constrained stochasticity is not lawlessness, and necessity is not determination.
+- Oscillation is not the source of succession. If it is the created reference cadence, it measures succession.
+- History is not kept in a separate ledger, and the created record of consequence is not moral judgement.
+- The theological premise of a non-material origin for matter does not make Proposition B's mechanism an axiom.
 
 ## E.8 Gravity, time and persistence in the simplest models (adopted in revision 2.5)
 
@@ -2575,7 +2662,7 @@ Revision 2.6 adopts the entries below. Their source is an ontological brief supp
 | Definitional integrity under pressure | strained: particle creation and quantum indistinguishability invite calling fields "material", which changes A | stable, provided the substrate gains no unpriced properties | stable |
 | Demonstrated mechanism | ordinary physics within matter | none yet for the emergence of matter (the main debt) | none for the fit between orders |
 | Cross-domain integration | relation is secondary all the way up | relation is primary all the way up, with categories kept | relation is primary for interaction, secondary for being |
-| Theological coherence | compatible | compatible | compatible |
+| Theological coherence | compatible with creation; excluded by the author's premise of non-material origin (E.10) | compatible; its *that* is the author's premise (E.10) | compatible with creation; excluded by the same premise |
 | Research fertility | mature | open; adjacent transitions are investigable | limited unless the interface is specified |
 
 Assessment, with its assumptions visible:
@@ -2587,7 +2674,7 @@ Assessment, with its assumptions visible:
 - *Conditional comparison:* *if* the base capacities of A were specified independently, their exact matching (for example, the equality of proton and electron charge to about one part in 10²¹) would be a coincidence. Physics does not treat it as one. It looks for a common structure that requires it. That is the kind of structure B places at the foundation and C adds alongside matter.
 - *Design* applies to all three and does not choose among them. Stochastic actualisation does not imply an absence of design.
 
-Overall: B is preferred on economy and integration, conditional on its unpaid debt of mechanism. C is not excluded. Plain A carries the heaviest burden. No numerical scores are given or implied.
+Overall: B is preferred on economy and integration, conditional on its unpaid debt of mechanism. On this comparative argument alone C is not excluded. Revision 2.7 adds a theological premise that excludes A and C at that level (E.10); the comparison is kept as independent support for the same conclusion, reached by a different route. Plain A carries the heaviest burden. No numerical scores are given or implied.
 
 **Qualitative probability (Chapter 2).** Three judgments are distinct: *logical possibility* (no identified contradiction), *qualitative plausibility* (comparatively more or less plausible given observations, constraints, assumptions and alternatives) and *quantitative probability* (a number under a specified model). The absence of the third does not invalidate the second. Each comparison is classed as robust (it survives every reasonable variation of its assumptions), conditional (it holds under stated assumptions) or unavailable (no defensible ordering). Global coherence concerns not only what is logically possible but how naturally an account explains observed relationships without unnecessary independent assumptions. This refines the v2.4 rule that the interoperability argument is "not a pseudo-probability". Numbers are still excluded; reasoned qualitative comparison is admitted.
 
@@ -2599,4 +2686,52 @@ Overall: B is preferred on economy and integration, conditional on its unpaid de
 
 **Mathematical connections (Appendix B).** Synergetics (order parameters, the slaving principle); spectral geometry; coupled and nonlinear oscillation, solitons and oscillons; computational mechanics (causal states); information preservation (redundancy, error correction, lossy coding, provenance); indivisible stochastic processes; quantum field theory. Each supplies constraints, analogies or experimental frameworks. None establishes the substrate.
 
-**Not adopted.** Any claim that music, or any other emergence within matter, demonstrates Proposition B. Oscillation as a primitive of the substrate. The indivisible-stochastic interpretation of quantum theory. Numerical plausibility scores. A new layer of reality or a revived T2. Any inference from a receiver's part in constituting an identity to the view that things exist only when perceived.
+**Not adopted.** Any claim that music, or any other emergence within matter, demonstrates Proposition B. Oscillation as a primitive assumption of the substrate (as a reference cadence it is a mechanism candidate: E.10). The indivisible-stochastic interpretation of quantum theory. Numerical plausibility scores. A new layer of reality or a revived T2. Any inference from a receiver's part in constituting an identity to the view that things exist only when perceived.
+
+## E.10 Knowing, succession and the subjection of creation (adopted in revision 2.7)
+
+Revision 2.7 adopts the entries below. Their source is the author's research conversations of 31 October 2026, reached through assistant-prepared briefs and settled by the author's recorded decisions (`analysis/v2.7-author-questions.md`). The full transcripts are not in the repository, and no entry here is presented as a transcript quotation except the definition of inferential logic, which the author confirmed word for word. The integration is examined in `analysis/v2.7-integration-plan.md` and `analysis/v2.7-correction-and-conflict-register.md`.
+
+**Priority and dependence (Chapters 1, 3, 12).** The spiritual and moral order is prior in being and purpose, and its ultimate coherence is inseparable from God's personal nature. The created runtime order depends on it and, by design, represents it. *That* material existence derives from a non-material foundation is the author's theological premise. *How* the created relational substrate constitutes material individuals is Proposition B, which remains an RS working hypothesis. The premise excludes Propositions A and C at its own level. The comparative argument of E.9 is retained as independent support. Dependence is not constitution: the substrate is non-conscious, not God, not a soul and not itself a spiritual ontology, and no soul is a configuration of it.
+
+**Created runtime order (Chapter 3).** *Working definition:* the operating, non-conscious created relational order that expresses itself materially. It is not all that exists. Souls, spiritual personhood and spiritual creatures are created, but they are not members of this order. Creaturely personhood is where it and the spiritual capacity for relation to God meet.
+
+**Knowing and inquiry (Chapters 2, 10, 16).**
+
+- *True logic* is ultimate global coherence, perfectly comprehended and perfectly applicable, inseparable in the personal nature of God. The order of reality is what true logic comprehends, not a rival definition. No creature possesses it exhaustively.
+- *Inferential logic* is, in the author's words, "the recursive refinement of partial understanding towards true logic through the discovery and application of relational coherence within the boundaries of created runtime order".
+- *Logic* is necessary relational structure; *reasoning* is its application, which can be done well or badly; at higher orders reasoning is *relational inference*.
+- *Proof* is sufficient warrant, under declared premises, scope and constraints, for an inferred relation to serve as a *coherence factor* in further reasoning. Formal proof is conclusive relative to its axioms and rules. Empirical, philosophical and theological warrant are different in kind. A coherence factor keeps its scope, provenance, uncertainties and revision triggers visible. The aim of inquiry is inferential precision.
+- *Disciplined confidence* is two-sided: confidence must not outrun warrant, and justified insight must not be discounted for want of exhaustive knowledge.
+- *Independent relational convergence* strengthens warrant only as far as the independence of premises, sources and reasoning is real. Separate AI systems are not independent by default.
+- Intelligible error depends on genuine coherence. A failed claim is analysed by finding the relation that failed, keeping what remains sound and recording what the failure excludes. This is not an account of moral evil.
+- Questions differ in accessibility in four respects: mechanistically explainable; relationally understandable without a complete mechanism; beyond present means; possibly beyond exhaustive creaturely comprehension. These are respects, not kinds of reality.
+- *Grounding.* An indefinitely deferred chain of dependent grounds cannot constitute ultimate grounding: offered as a complete ground, it requires the foundation it never supplies. The author holds this internally contradictory under the book's foundational-grounding requirement. It is not a claim that mathematical infinities are inconsistent.
+
+**Constraint, chance and determination (Chapters 4, 5, 9).** Explicitly intrinsic constraints belong to the primitive created order, which is fixed for creaturely operation and not immutable to its Creator. Implicitly intrinsic constraints follow necessarily from a configuration once it is actual, even when the configuration arose by chance. Necessary constraint is not determination: *determinism* holds only where a complete preceding configuration, under its governing relations, admits exactly one successor, and the governing relations are not properties hidden inside the state. *Constrained stochasticity* is variability within an operative admissible set without unique determination. *True randomness*, occurrence with no governing admissibility relation or pattern, is rejected as incompatible with a coherent created order. *Opportunity* is a distinguishable occasion at which present conditions make admissible actualisations available. The sense of "opportunity" in the project's model reports (removal of competing alternatives) is called *competitive clearance* in this book.
+
+**Succession, cadence and time (Chapters 6, 8, 13).** *Succession* is the directed relational order of actual consequence. It is fundamental, grounded in the spiritual and moral order, and prior to any measurement of it (the author's premise, theological and philosophical). Not every abstract implication is an event in time. *Cadence* is the ordered pattern or relative spacing of opportunities or events, not necessarily periodic. *Opportunity cadence* and *actualisation cadence* can differ. *Rhythm* is recurrence with a cadence, possibly irregular or compound. Measured time is a relative quantification of cadence against a reference cadence. Oscillation is the author's favoured mechanism candidate for an intrinsic reference cadence: it would make comparison and quantification possible, and it would not generate the existence or direction of consequence. *Time as moral opportunity* is time's significance for persons, relative to capacity, conditions and history. These are connected levels of one account, not rival substances. The model result of E.8, that a model needs a non-gradient tendency or a one-way rule to exhibit direction, is a fact about models.
+
+**Bridges across categories (Chapters 1, 7, 12, 14).** Four relations are kept distinct: structural analogy; designed representation (creation as a non-conscious instructor, Romans 1:20); causal and consequential connection within embodied personhood; and ontological identity, which is rejected. An embodied human act and its moral reality are causally connected, not identical. The cross-domain mechanism is open, and T-C-R is a structural research bridge, not an explanation of it. Every claimed correspondence is labelled at the level intended.
+
+**Persons and history (Chapters 6, 12, 14, 15).** Knowing and choosing are actualisations in persons. The created order is designed as a medium of moral actualisation, provenance, consequence and restoration (the author's premise). Consequential history is carried in the actual relations themselves, with no separate ledger. Consequence can persist where provenance is unrecoverable. God's complete knowledge of every act's provenance, motives and consequences is distinct from any recoverable created trace, and judgement does not depend on such traces. Restoration does not erase history.
+
+**The subjection of creation (Chapters 14, 15).** Scripture states that God cursed the ground after human disobedience and subjected creation to vanity in hope (Genesis 3:17-19; Romans 8:20). The author's interpretation is that this was a deliberate, coherent divine realignment of the primitive conditions of created runtime order, so that creation remains a truthful instructor about consequence and restoration. The thesis concerns what changed in creation, not the manner of divine action. Whether the realignment altered the primitive itself, changed parameters within it, or actualised a new state under it, is open. The author's thesis is the first, and the others remain research alternatives, not substitutes. The author holds that animal mortality was introduced by the post-Fall realignment. The author connects this with Genesis 3:21: God made "coats of skins" and clothed Adam and Eve. That the skins express death, cover shame and anticipate sacrificial atonement is the author's interpretation; the verse does not name a lamb, a rite or the first animal death. Earlier revisions left the history of animal mortality open (Chapter 15).
+
+**Beauty and wonder (Chapters 13, 16).** *Beauty* is the apprehensible expression of the relational patterns of goodness, spiritual in origin, within created material or logical organisation. True beauty depends on goodness, and goodness is beautiful. A beautiful thing need not be perfect in every part. Beauty is not reducible to symmetry or preference. *Wonder* is a creaturely response to coherence that is intelligible and yet exceeds present comprehension.
+
+**Open questions added in revision 2.7.**
+
+- How an opportunity that passes without actualisation is individuated; whether opportunities carry probabilities or propensities.
+- Whether opportunity cadence rests on actualisations at a deeper order.
+- Which minimal primitives suffice for a reference cadence; whether oscillation is necessary, sufficient, one candidate or neither.
+- Whether direction can be read from asymmetric propagation of consequence, and irreversibility from persistent consequence.
+- Whether derived constraints are wholly reconstructible from the primitive order and actual history.
+- The Fall mechanism (above).
+- *The interface between a post-Fall origin of animal mortality and the fossil record.* The record shows animal death in strata conventionally dated long before humans. The book's bidirectional coherence standard (Chapter 2) requires this interface to be addressed, not ignored. How the book addresses it is undecided.
+- How spiritual-to-created correspondences are classed and tested; what distinguishes conscious from computational reception; what change makes intentional choice possible.
+- How coherence factors are admitted. The standard is a multidimensional judgement of warrant, coherence, provenance, discrimination, scope and dependencies, with explicit rationale and review triggers, and no universal numerical threshold (OTR v1.1).
+- Whether true logic is best described as structure, act, or both; whether logic governs contingent relations as well as necessary ones.
+- Whether other kinds of consciousness fit the architecture.
+
+**Not adopted.** Any claim that Genesis describes the microphysics of the realignment. Any identification of moral opportunity with a unit of measured time. Any reading of a coherence factor as a constituent of divine knowledge. Any use of the audit's vector scores as evidence of truth. Any claim that the reconstructed definitions of true randomness and rhythm are transcript quotations.
