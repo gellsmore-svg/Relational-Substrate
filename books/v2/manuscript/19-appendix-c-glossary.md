@@ -28,7 +28,7 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Competitive clearance.** One sense of "enabling": a change that removes competing alternatives, so that another event becomes the likelier next one without its own rate or possibility changing. The project's model reports call this "opportunity". (Ch 7)
 
-**Constrained stochastic actualisation.** The Relational Substrate hypothesis that what becomes actual is stochastic in the ontic sense: genuinely open among admissible options until it occurs, weighted by tendency and shaped by constraint. (Ch 5)
+**Constrained stochastic actualisation.** The Relational Substrate hypothesis that what becomes actual is stochastic in the ontic sense: which admissible option occurs is not uniquely determined by the preceding created configuration and its governing relations, though it is weighted by tendency and shaped by constraint. The openness is relative to created determination and does not imply that God lacks knowledge of the outcome. (Ch 5)
 
 **Constraint, explicitly and implicitly intrinsic.** *Explicitly intrinsic* constraints belong to the primitive created order, fixed for creaturely operation. *Implicitly intrinsic* constraints follow necessarily from a configuration once it is actual, even if it arose by chance. (Ch 4)
 
