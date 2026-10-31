@@ -71,7 +71,7 @@ Agency is exercised in time, and Scripture speaks of time in a way the physicist
 > `So teach us to number our days, that we may apply our hearts unto wisdom.`
 > *Psalm 90:12*
 
-The days are counted here not as a duration but as an opportunity, given and limited, for wisdom. The book calls this **time as moral opportunity**. It is not a second kind of time, and it is not a clock unit. It is what the succession of Chapter 6 means for a person who must act within it.
+The days are counted here as an opportunity, given and limited, for wisdom. The book calls this **time as moral opportunity**. It is not a second kind of time, and it is not a clock unit. It is what the succession of Chapter 6 means for a person who must act within it.
 
 Opportunity in this sense is relative to the person. A nanosecond is no occasion for a human decision, and an hour can be decisive, but duration is not the measure. An athlete's two minutes of competition rest on months of preparation, and what she can do in them is the fruit of what she did before. Earlier choices change capacity, disposition and which options are even visible when the moment comes. They condition what follows without deciding it: a moral life is a trajectory in which much is open and nothing begins from nowhere. In this chapter's terms, preparation changes operational admissibility, what is within a person's power. Responsibility follows the same shape:
 

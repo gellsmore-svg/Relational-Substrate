@@ -151,7 +151,7 @@ A definition is not a claim, so it takes no status. Where the register lists one
 | An embodied human act and its moral reality are causally connected, not identical | Scriptural/theological constraint (the author's interpretation); the mechanism is open |
 | Knowing and choosing are actualisations in persons | Ontological inference |
 | History is carried in present relations; there is no separate ledger, and consequence can persist where provenance is unrecoverable | RS working hypothesis (extends memory, E.6) |
-| God knows the whole moral provenance of every act; judgement does not depend on recoverable created traces | Scriptural/theological constraint |
+| God knows the whole moral provenance of every act; judgment does not depend on recoverable created traces | Scriptural/theological constraint |
 | God subjected creation after the Fall (Genesis 3:17-19; Romans 8:20) | Scriptural/theological constraint |
 | The subjection is a deliberate divine realignment of the primitive conditions of created runtime order, so that creation remains a truthful instructor | Scriptural/theological constraint (the author's interpretation) |
 | Whether the realignment altered the primitive, changed parameters within it, or actualised a new state under it | Open question (research fork) |
@@ -260,7 +260,7 @@ There may be others. Scripture's language of heavens stretched out provokes ques
 - An indefinitely deferred chain of grounds is not an ultimate ground.
 - True randomness is not admitted. Constrained stochasticity is not lawlessness, and necessity is not determination.
 - Oscillation is not the source of succession. If it is the created reference cadence, it measures succession.
-- History is not kept in a separate ledger, and the created record of consequence is not moral judgement.
+- History is not kept in a separate ledger, and the created record of consequence is not moral judgment.
 - The theological premise of a non-material origin for matter does not make Proposition B's mechanism an axiom.
 
 ## E.8 Gravity, time and persistence in the simplest models (adopted in revision 2.5)
@@ -358,7 +358,7 @@ Revision 2.7 adopts the entries below. Their source is the author's research con
 
 **Bridges across categories (Chapters 1, 7, 12, 14).** Four relations are kept distinct: structural analogy; designed representation (creation as a non-conscious instructor, Romans 1:20); causal and consequential connection within embodied personhood; and ontological identity, which is rejected. An embodied human act and its moral reality are causally connected, not identical. The cross-domain mechanism is open, and T-C-R is a structural research bridge, not an explanation of it. Every claimed correspondence is labelled at the level intended.
 
-**Persons and history (Chapters 6, 12, 14, 15).** Knowing and choosing are actualisations in persons. The created order is designed as a medium of moral actualisation, provenance, consequence and restoration (the author's premise). Consequential history is carried in the actual relations themselves, with no separate ledger. Consequence can persist where provenance is unrecoverable. God's complete knowledge of every act's provenance, motives and consequences is distinct from any recoverable created trace, and judgement does not depend on such traces. Restoration does not erase history.
+**Persons and history (Chapters 6, 12, 14, 15).** Knowing and choosing are actualisations in persons. The created order is designed as a medium of moral actualisation, provenance, consequence and restoration (the author's premise). Consequential history is carried in the actual relations themselves, with no separate ledger. Consequence can persist where provenance is unrecoverable. God's complete knowledge of every act's provenance, motives and consequences is distinct from any recoverable created trace, and judgment does not depend on such traces. Restoration does not erase history.
 
 **The subjection of creation (Chapters 14, 15).** Scripture states that God cursed the ground after human disobedience and subjected creation to vanity in hope (Genesis 3:17-19; Romans 8:20). The author's interpretation is that this was a deliberate, coherent divine realignment of the primitive conditions of created runtime order, so that creation remains a truthful instructor about consequence and restoration. The thesis concerns what changed in creation, not the manner of divine action. Whether the realignment altered the primitive itself, changed parameters within it, or actualised a new state under it, is open. The author's thesis is the first, and the others remain research alternatives, not substitutes. The author holds that animal mortality was introduced by the post-Fall realignment. The author connects this with Genesis 3:21: God made "coats of skins" and clothed Adam and Eve. That the skins express death, cover shame and anticipate sacrificial atonement is the author's interpretation; the verse does not name a lamb, a rite or the first animal death. Earlier revisions left the history of animal mortality open (Chapter 15).
 
@@ -374,7 +374,7 @@ Revision 2.7 adopts the entries below. Their source is the author's research con
 - The Fall mechanism (above).
 - *The interface between a post-Fall origin of animal mortality and the fossil record.* The record shows animal death in strata conventionally dated long before humans. The book's bidirectional coherence standard (Chapter 2) requires this interface to be addressed, not ignored. By the author's decision (31 October 2026), the book states the author's position, names the conflict with the conventional chronology as an open problem, and does not resolve it (Chapters 14 and 15).
 - How spiritual-to-created correspondences are classed and tested; what distinguishes conscious from computational reception; what change makes intentional choice possible.
-- How coherence factors are admitted. The standard is a multidimensional judgement of warrant, coherence, provenance, discrimination, scope and dependencies, with explicit rationale and review triggers, and no universal numerical threshold (OTR v1.1).
+- How coherence factors are admitted. The standard is a multidimensional judgment of warrant, coherence, provenance, discrimination, scope and dependencies, with explicit rationale and review triggers, and no universal numerical threshold (OTR v1.1).
 - Whether true logic is best described as structure, act, or both; whether logic governs contingent relations as well as necessary ones.
 - Whether other kinds of consciousness fit the architecture.
 
