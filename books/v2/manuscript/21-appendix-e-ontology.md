@@ -372,7 +372,7 @@ Revision 2.7 adopts the entries below. Their source is the author's research con
 - Whether direction can be read from asymmetric propagation of consequence, and irreversibility from persistent consequence.
 - Whether derived constraints are wholly reconstructible from the primitive order and actual history.
 - The Fall mechanism (above).
-- *The interface between a post-Fall origin of animal mortality and the fossil record.* The record shows animal death in strata conventionally dated long before humans. The book's bidirectional coherence standard (Chapter 2) requires this interface to be addressed, not ignored. How the book addresses it is undecided.
+- *The interface between a post-Fall origin of animal mortality and the fossil record.* The record shows animal death in strata conventionally dated long before humans. The book's bidirectional coherence standard (Chapter 2) requires this interface to be addressed, not ignored. By the author's decision (31 October 2026), the book states the author's position, names the conflict with the conventional chronology as an open problem, and does not resolve it (Chapters 14 and 15).
 - How spiritual-to-created correspondences are classed and tested; what distinguishes conscious from computational reception; what change makes intentional choice possible.
 - How coherence factors are admitted. The standard is a multidimensional judgement of warrant, coherence, provenance, discrimination, scope and dependencies, with explicit rationale and review triggers, and no universal numerical threshold (OTR v1.1).
 - Whether true logic is best described as structure, act, or both; whether logic governs contingent relations as well as necessary ones.

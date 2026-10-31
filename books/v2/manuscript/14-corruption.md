@@ -16,6 +16,37 @@ These texts rule out two opposite mistakes. One treats disorder as ultimate, so 
 
 The way these fit together has been understood in Christian thought since Augustine. Corruption is not a rival substance standing beside the good, and it is not a second creator. It is **parasitic**: a distortion of what is good, which has no being of its own and exists only by deforming something that God made. Evil cannot create; it can only spoil. That is why the book speaks of corruption as *distortion*, *misalignment* and *rupture*, words that presuppose an order being distorted, misaligned or ruptured.
 
+## The subjection of creation
+
+Scripture traces the disorder of the world to an event. After the man and the woman had eaten, God's word reached past them into the ground itself:
+
+> `And unto Adam he said, Because thou hast hearkened unto the voice of thy wife, and hast eaten of the tree, of which I commanded thee, saying, Thou shalt not eat of it: cursed is the ground for thy sake; in sorrow shalt thou eat of it all the days of thy life; Thorns also and thistles shall it bring forth to thee; and thou shalt eat the herb of the field; In the sweat of thy face shalt thou eat bread, till thou return unto the ground; for out of it wast thou taken: for dust thou art, and unto dust shalt thou return.`
+> *Genesis 3:17-19*
+
+Three things need to be kept apart here.
+
+*What the text says.* The ground is cursed because of human disobedience. Work becomes toil, the earth yields thorns, and the man will return to dust. Paul adds that the creation "was made subject to vanity, not willingly, but by reason of him who hath subjected the same in hope" (Romans 8:20). The subjection is God's act.
+
+*The author's interpretation.* The curse is a deliberate divine realignment of the created runtime order to the consequences of spiritual disobedience. Its purpose is that creation should go on telling the truth. A world in which the breach between humanity and God had no visible consequence would teach falsely about what had happened. On this reading creation remains an instructor after the Fall, and what it now teaches includes decay, toil and loss. The thesis concerns what changed in creation, not the manner of God's action (Chapter 4). **Status:** theological interpretation.
+
+*The mechanism, which is open.* The author's thesis is that God realigned the primitives themselves, the explicitly intrinsic constraints of Chapter 4: the conditions of the primitive order, fixed for every creature but not for its Creator. Two other readings belong in view. God may have changed settings within a primitive order that otherwise stayed as it was. Or he may have brought about a new state of creation under its original constraints, so that the new conditions follow as implicitly intrinsic constraints. These are different claims, and they would explain different things. Genesis describes none of them. Appendix E records them as a research question.
+
+The author also holds that the realignment brought animal death into the world, which was not part of creation's original conditions. Genesis 3:21 is part of the reasoning:
+
+> `Unto Adam also and to his wife did the LORD God make coats of skins, and clothed them.`
+> *Genesis 3:21*
+
+The verse says that God made coats of skins and clothed the man and the woman. That the skins mark the first death, cover shame and anticipate sacrifice is the author's theological reading; the text names no lamb, no rite and no first death. And the position meets a real difficulty. The fossil record shows animal death in rock strata that the conventional chronology dates long before humans. The book's own standard (Chapter 2) does not allow that interface to be ignored. It states the author's position, names the conflict with the conventional chronology as an open problem, and does not resolve it here.
+
+One consequence holds on every reading of the mechanism. The subjection of creation is God's act, and God's acts are not corrupt. Corruption, as the previous section described it, is parasitic: a distortion with no being of its own. The futility to which creation was subjected is a judgement, coherent and purposed, and given "in hope". Corruption suffered in the higher orders of creation does not mean that its primitive order has become incoherent.
+
+Nor does every suffering follow from the sufferer's own sin. Asked whose sin had made a man blind, Jesus answered:
+
+> `Neither hath this man sinned, nor his parents: but that the works of God should be made manifest in him.`
+> *John 9:3*
+
+Creation's subjection is the condition of all. It is not a ledger of each.
+
 ## Corruption as persisting misalignment
 
 Chapter 13 described alignment as fitting the order one is made for. Misalignment, a departure from that order, is not by itself the whole of corruption. Every growing creature departs from its mature form, and every learner makes mistakes. A wrong act is wrong in itself, whether or not it is ever repeated: a single lie, swiftly repented of, was still a lie, and a single act of cruelty is still cruel. Its wrongness lies in what it is and whom it wrongs, judged by the moral order of Chapter 13, not in how long it lasts. What persistence explains is something else: how wrongdoing **entrenches**. Misalignment that is not restored persists and spreads, hardening into habit, narrowing what a person can see and choose, and reaching into others. Corruption, in the full sense this chapter describes, includes both the wrong and its entrenchment.
@@ -33,13 +64,13 @@ Scripture describes sin in exactly these terms: not as a series of isolated laps
 
 Lust conceives and brings forth sin. Sin, finished, brings forth death. Sin hardens and enslaves. Misalignment that is not restored does not stay where it is. It propagates, entrenches and steadily narrows the very capacity that might have turned it back.
 
-Here a structural analogy from Chapter 6 becomes useful, held carefully as analogy. Chapter 6 proposed, as a hypothesis, that the past can live on in present configuration, changing what is likely or possible next. The bent paper clip carries its bending in its crystal structure. Something with the same form is visible in human character: a habit of deceit makes the next deceit easier and honesty harder, and a grievance nursed reshapes what a person is able to see. Scripture's "hardened" is a strikingly physical word for this. The book does not claim that sin *is* a configuration of the substrate. Sin belongs to persons, in their relation to God, and is not a physical state. But the form of corruption, a persisting past that narrows the future, is the same form that runs through history-bearing physical order. In that sense corruption works with the grain of a relational world, against the purpose for which that world was made.
+Chapter 6 helps here, in two of the senses Chapter 1 distinguished. It proposed, as a hypothesis, that the past can live on in present configuration, changing what is likely or possible next. The bent paper clip carries its bending in its crystal structure. Something with the same form is visible in human character: a habit of deceit makes the next deceit easier and honesty harder, and a grievance nursed reshapes what a person is able to see. Scripture's "hardened" is a strikingly physical word for this. Sin itself belongs to persons, in their relation to God, and is not a configuration of the substrate. But its embodied consequences are real configurations, causally connected to it: the habit is carried in a person's dispositions, body and relations, not merely likened to a bent paper clip. And the form of corruption, a persisting past that narrows the future, is the same form that runs through history-bearing physical order. In that sense corruption works with the grain of a relational world, against the purpose for which that world was made.
 
 ## Corruption in transmission
 
 The grammar of Chapter 7 gives a second lens, again used only where it clarifies.
 
-Much human wrongdoing is wrongdoing in what is *transmitted*. A lie sends out a false distinction: a claim that the world is otherwise than it is, offered to be received and acted on. Slander sends out a false distinction about a person. A broken promise breaks a carriage that was relied on: a commitment that should have persisted from the day it was made to the day it was due, and did not. Gossip distorts in carriage, so that what arrives is no longer what was released. Scripture's long catalogue of sins of the tongue reflects how much of human corruption runs through what people send to one another:
+Much human wrongdoing is wrongdoing in what is *transmitted*. A lie sends out a false distinction: a claim that the world is otherwise than it is, offered to be received and acted on. Slander sends out a false distinction about a person. A broken promise breaks a carriage that was relied on: a commitment that should have persisted from the day it was made to the day it was due, and did not. Gossip distorts in carriage, so that what arrives is no longer what was released. And a deception shows how far consequence can reach. A lie believed changes what someone does; what they do changes others; within a few steps the effects have passed into decisions, relationships and circumstances that will never be traced back to it. That history is real, carried in all those changed relations, which is the only record created order keeps (Chapter 6). Nothing guarantees that a creature can recover it. Consequence persists where provenance is lost. Scripture's long catalogue of sins of the tongue reflects how much of human corruption runs through what people send to one another:
 
 > `Death and life are in the power of the tongue: and they that love it shall eat the fruit thereof.`
 > *Proverbs 18:21*
@@ -51,7 +82,7 @@ Corruption can also be a failure of *reception*. Chapter 7 distinguished arrival
 
 To hear and not heed, to be warned and not change, to be loved and not respond: these are failures of reception, in which a difference that should have become a consequence in someone was refused. The image will matter in the next chapter, because restoration includes the restoring of reception: ears opened, hearts softened, a word that comes "not … unto you in word only, but also in power" (1 Thessalonians 1:5).
 
-These lenses must not become a theory of everything. Not all corruption is usefully described as transmission, and a vocabulary that tried to describe every sin in the same technical phrase would trivialise sin. They are offered because they sometimes help us see a pattern Scripture already describes, not because they explain it.
+These lenses are offered because they sometimes help us see a pattern Scripture already describes, not because they explain it. A vocabulary that tried to describe every sin in the same technical phrase would trivialise sin.
 
 ## Five patterns of corruption
 

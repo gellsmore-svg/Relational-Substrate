@@ -28,6 +28,8 @@ The biblical account resists a temptation that has run through much religious an
 
 This is why Christian hope is the resurrection of the body (Chapter 15), and not the soul's escape from it. It is also why bodily life carries real moral weight. Limitation, vulnerability, time, place, dependence on others, the capacity to give oneself and the capacity to be wounded all belong to embodied existence. They are the conditions under which creaturely persons can love, keep faith and sacrifice. A human person is a person *by being embodied*.
 
+It follows that a human moral act is not a spiritual event with a bodily sign attached. When a person lies, the words, the body that speaks them and the changes they make in others belong to the act itself. Its moral reality, a wrong before God and against a neighbour, is not the same thing as those events, and it is not separate from them either. Within one person the two are causally connected, not identical (Chapter 1). This is the sense in which created order is, in the author's phrase, the theatre and the language of moral consequence (Chapter 10).
+
 ## Personhood is deeper than embodiment
 
 Yet Scripture also requires a careful distinction here, one that reasoning from ordinary experience alone would not discover. Every person we meet is embodied, and so it is natural to assume that being a person simply *is* being a certain kind of body. Christian faith confesses something that rules this out.
@@ -72,13 +74,19 @@ Here the book must apply its own guard with full force. The soul is **not** a co
 
 ## Consciousness
 
-What, then, of consciousness, the felt awareness of seeing the stone, of its greyness, of its cold weight in the hand? Here the book must be more modest still.
+What, then, of consciousness, the felt awareness of seeing the stone, of its greyness, of its cold weight in the hand? Here the distinctions of Chapter 2 matter most.
 
 Consciousness clearly participates in physical order. It depends on the body, on the brain, on the chain of transmissions that brings the world to us. Damage the brain, and consciousness is changed or lost. Alter its chemistry, and experience alters. A Christian account has every reason to take this seriously. We are dust, and our awareness is embodied.
 
-But how physical processes relate to felt awareness, why there is anything it is like to see grey at all, is one of the hardest open questions in philosophy. Philosophers call it the hard problem of consciousness, and no account of physics, mainstream or relational, has solved it. **The Relational Substrate does not explain consciousness.** It claims something far smaller: a relational physical world is a more fitting setting for conscious persons than a world of sealed objects, because it is already a world in which differences become consequences for something else. But the step from consequence to awareness, from a changed molecule in the retina to the experience of seeing, is not taken by the substrate. The book does not pretend otherwise.
+Consciousness is known from within and through its relations: everyone knows what it is to see. How physical processes relate to felt awareness, why there is anything it is like to see grey at all, lies beyond present inquiry. Philosophers call it the hard problem of consciousness, and no account of physics, mainstream or relational, has solved it. It may exceed what any creature can fully comprehend. None of this makes consciousness less real or less knowable in the ways it is known. **The Relational Substrate does not explain consciousness.** It claims something far smaller: a relational physical world is a more fitting setting for conscious persons than a world of sealed objects, because it is already a world in which differences become consequences for something else. The step from consequence to awareness, from a changed molecule in the retina to the experience of seeing, is not taken by the substrate.
 
 The book's position here is scriptural. The one who finally receives the seeing of the stone is a person, and persons are not one more stage in a physical chain. Physical transmission brings the world to the person. The person's knowing of it belongs to another category.
+
+## Knowing and choosing as events
+
+Yet the knowing is itself something that happens. When you recognise the stone, a distinction received from the world is related to what you already know, and you know something you did not. In the terms of Chapter 7, observation supplies a distinction and inference receives it. The recognition is an actual event in a person, not a commentary standing outside the world, and much of it happens without deliberate attention: you recognise a friend's voice before you think about it. Persons can also hold in view what is not yet actual and choose among alternatives. A choice actualises one configuration rather than another, and its consequences pass into the world like any others: you pick up the stone, and it is somewhere it would not otherwise have been. So knowing and choosing are not on a higher floor of reality than physical change. In the person, what is known is real, and so is the knowing. Reasoning about represented relationships of this kind the book calls **relational inference**.
+
+None of this makes created order a knower. It is not conscious, and it did not become capable of consciousness by growing complex. Creaturely personhood is where two kinds of reality meet by design: a non-conscious created order, coherent and fitted to bear consequence, and a conscious capacity for relation to God, given with the breath of Genesis 2:7.
 
 ## Image, calling and relation
 

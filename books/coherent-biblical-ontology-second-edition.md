@@ -1444,6 +1444,8 @@ The biblical account resists a temptation that has run through much religious an
 
 This is why Christian hope is the resurrection of the body (Chapter 15), and not the soul's escape from it. It is also why bodily life carries real moral weight. Limitation, vulnerability, time, place, dependence on others, the capacity to give oneself and the capacity to be wounded all belong to embodied existence. They are the conditions under which creaturely persons can love, keep faith and sacrifice. A human person is a person *by being embodied*.
 
+It follows that a human moral act is not a spiritual event with a bodily sign attached. When a person lies, the words, the body that speaks them and the changes they make in others belong to the act itself. Its moral reality, a wrong before God and against a neighbour, is not the same thing as those events, and it is not separate from them either. Within one person the two are causally connected, not identical (Chapter 1). This is the sense in which created order is, in the author's phrase, the theatre and the language of moral consequence (Chapter 10).
+
 ## Personhood is deeper than embodiment
 
 Yet Scripture also requires a careful distinction here, one that reasoning from ordinary experience alone would not discover. Every person we meet is embodied, and so it is natural to assume that being a person simply *is* being a certain kind of body. Christian faith confesses something that rules this out.
@@ -1488,13 +1490,19 @@ Here the book must apply its own guard with full force. The soul is **not** a co
 
 ## Consciousness
 
-What, then, of consciousness, the felt awareness of seeing the stone, of its greyness, of its cold weight in the hand? Here the book must be more modest still.
+What, then, of consciousness, the felt awareness of seeing the stone, of its greyness, of its cold weight in the hand? Here the distinctions of Chapter 2 matter most.
 
 Consciousness clearly participates in physical order. It depends on the body, on the brain, on the chain of transmissions that brings the world to us. Damage the brain, and consciousness is changed or lost. Alter its chemistry, and experience alters. A Christian account has every reason to take this seriously. We are dust, and our awareness is embodied.
 
-But how physical processes relate to felt awareness, why there is anything it is like to see grey at all, is one of the hardest open questions in philosophy. Philosophers call it the hard problem of consciousness, and no account of physics, mainstream or relational, has solved it. **The Relational Substrate does not explain consciousness.** It claims something far smaller: a relational physical world is a more fitting setting for conscious persons than a world of sealed objects, because it is already a world in which differences become consequences for something else. But the step from consequence to awareness, from a changed molecule in the retina to the experience of seeing, is not taken by the substrate. The book does not pretend otherwise.
+Consciousness is known from within and through its relations: everyone knows what it is to see. How physical processes relate to felt awareness, why there is anything it is like to see grey at all, lies beyond present inquiry. Philosophers call it the hard problem of consciousness, and no account of physics, mainstream or relational, has solved it. It may exceed what any creature can fully comprehend. None of this makes consciousness less real or less knowable in the ways it is known. **The Relational Substrate does not explain consciousness.** It claims something far smaller: a relational physical world is a more fitting setting for conscious persons than a world of sealed objects, because it is already a world in which differences become consequences for something else. The step from consequence to awareness, from a changed molecule in the retina to the experience of seeing, is not taken by the substrate.
 
 The book's position here is scriptural. The one who finally receives the seeing of the stone is a person, and persons are not one more stage in a physical chain. Physical transmission brings the world to the person. The person's knowing of it belongs to another category.
+
+## Knowing and choosing as events
+
+Yet the knowing is itself something that happens. When you recognise the stone, a distinction received from the world is related to what you already know, and you know something you did not. In the terms of Chapter 7, observation supplies a distinction and inference receives it. The recognition is an actual event in a person, not a commentary standing outside the world, and much of it happens without deliberate attention: you recognise a friend's voice before you think about it. Persons can also hold in view what is not yet actual and choose among alternatives. A choice actualises one configuration rather than another, and its consequences pass into the world like any others: you pick up the stone, and it is somewhere it would not otherwise have been. So knowing and choosing are not on a higher floor of reality than physical change. In the person, what is known is real, and so is the knowing. Reasoning about represented relationships of this kind the book calls **relational inference**.
+
+None of this makes created order a knower. It is not conscious, and it did not become capable of consciousness by growing complex. Creaturely personhood is where two kinds of reality meet by design: a non-conscious created order, coherent and fitted to bear consequence, and a conscious capacity for relation to God, given with the breath of Genesis 2:7.
 
 ## Image, calling and relation
 
@@ -1537,6 +1545,13 @@ Chapter 4 introduced **admissibility** as whether a transition is physically pos
 
 The three questions are independent, and the most serious confusions about human action come from running them together. Lying is physically possible: speech can carry false statements as easily as true ones. It is within ordinary human power: anyone who can speak can lie. And it is wrong. Sustaining creation in being is physically admissible in the sense that it occurs, but it is within no creature's power; it belongs to God alone. Creating something beautiful is possible, within power and good. The scalpel and the knife are equally possible and equally within the power of their wielders; what divides them is the moral question.
 
+Scripture's first account of human wrongdoing turns on exactly this distinction:
+
+> `And when the woman saw that the tree was good for food, and that it was pleasant to the eyes, and a tree to be desired to make one wise, she took of the fruit thereof, and did eat, and gave also unto her husband with her; and he did eat.`
+> *Genesis 3:6*
+
+The fruit was within reach, and eating it was within their power. What was forbidden was the means: wisdom sought by taking what God had withheld. The act was admissible in the first two senses and not in the third.
+
 The first edition of this book named three characteristic mistakes that follow from collapsing these layers, and they are worth repeating because they are so common.
 
 - **The naturalist mistake** collapses the moral into the physical: if it is possible, and nature produces it, it cannot really be wrong.
@@ -1578,7 +1593,23 @@ Scripture presents human beings as genuinely able to choose, and as held respons
 > `I call heaven and earth to record this day against you, that I have set before you life and death, blessing and cursing: therefore choose life, that both thou and thy seed may live.`
 > *Deuteronomy 30:19*
 
-How human freedom relates to God's sovereignty is among the oldest questions in Christian theology, and different traditions answer it differently. This book does not resolve it. It does observe one thing within its own subject, and it is a limited observation. A world of constrained possibility, in which actualisation is not fixed in advance at every level (Chapter 5), does not settle the question of human freedom in either direction. Constrained chance is not freedom. A coin toss is not a choice, and the book makes no claim that human agency is a matter of molecular chance. Physics cannot prove free will, and the relational ontology does not try to. Agency belongs to persons, in their own category.
+One observation falls within this book's own subject. A world of constrained possibility, in which actualisation is not fixed in advance at every level (Chapter 5), does not settle the question of human freedom in either direction. Constrained chance is not freedom. A coin toss is not a choice, and the book makes no claim that human agency is a matter of molecular chance. Physics cannot settle whether the will is free, and the relational ontology does not try to. Agency belongs to persons, in their own category.
+
+## Time as moral opportunity
+
+Agency is exercised in time, and Scripture speaks of time in a way the physicist does not:
+
+> `So teach us to number our days, that we may apply our hearts unto wisdom.`
+> *Psalm 90:12*
+
+The days are counted here not as a duration but as an opportunity, given and limited, for wisdom. The book calls this **time as moral opportunity**. It is not a second kind of time, and it is not a clock unit. It is what the succession of Chapter 6 means for a person who must act within it.
+
+Opportunity in this sense is relative to the person. A nanosecond is no occasion for a human decision, and an hour can be decisive, but duration is not the measure. An athlete's two minutes of competition rest on months of preparation, and what she can do in them is the fruit of what she did before. Earlier choices change capacity, disposition and which options are even visible when the moment comes. They condition what follows without deciding it: a moral life is a trajectory in which much is open and nothing begins from nowhere. In this chapter's terms, preparation changes operational admissibility, what is within a person's power. Responsibility follows the same shape:
+
+> `For unto whomsoever much is given, of him shall be much required: and to whom men have committed much, of him they will ask the more.`
+> *Luke 12:48*
+
+More is asked of those given more, in gifts, opportunities and formation. That is a difference of responsibility, not of worth.
 
 ## Boundaries that free
 
@@ -1595,7 +1626,7 @@ It is common today to think of every moral boundary as a restriction on freedom,
 
 Law, testimony, statute and commandment are each a constraint, and each is described as giving life, wisdom, joy and light. Liberty is found *in* seeking God's precepts, not in escaping them. This is not a paradox once the structure is seen. A boundary rightly placed does not shrink the space of good action. It is what gives the space its shape, so that a person can grow within it into what they are made to be.
 
-Here a structural analogy is again at work, and again it must be held as analogy. The constraint that shapes a crystal and the commandment that shapes a life share a form: a boundary that makes possible rather than merely forbidding. They do not share a nature. The commandment is spoken by a Person to persons and is received in conscience, trust and obedience. The crystal's constraint is given in the order of matter and received by nothing. The likeness is real, and it is one of the ways creation bears witness to its Maker. But a commandment is not a law of physics, and a law of physics is not a commandment.
+Here a structural analogy, in the sense of Chapter 1, is at work. The constraint that shapes a crystal and the commandment that shapes a life share a form: a boundary that makes possible rather than merely forbidding. They do not share a nature. The commandment is spoken by a Person to persons and is received in conscience, trust and obedience. The crystal's constraint is given in the order of matter and received by nothing. The likeness is real, and it is one of the ways creation bears witness to its Maker. But a commandment is not a law of physics, and a law of physics is not a commandment.
 
 ## The question that follows
 
@@ -1621,6 +1652,37 @@ These texts rule out two opposite mistakes. One treats disorder as ultimate, so 
 
 The way these fit together has been understood in Christian thought since Augustine. Corruption is not a rival substance standing beside the good, and it is not a second creator. It is **parasitic**: a distortion of what is good, which has no being of its own and exists only by deforming something that God made. Evil cannot create; it can only spoil. That is why the book speaks of corruption as *distortion*, *misalignment* and *rupture*, words that presuppose an order being distorted, misaligned or ruptured.
 
+## The subjection of creation
+
+Scripture traces the disorder of the world to an event. After the man and the woman had eaten, God's word reached past them into the ground itself:
+
+> `And unto Adam he said, Because thou hast hearkened unto the voice of thy wife, and hast eaten of the tree, of which I commanded thee, saying, Thou shalt not eat of it: cursed is the ground for thy sake; in sorrow shalt thou eat of it all the days of thy life; Thorns also and thistles shall it bring forth to thee; and thou shalt eat the herb of the field; In the sweat of thy face shalt thou eat bread, till thou return unto the ground; for out of it wast thou taken: for dust thou art, and unto dust shalt thou return.`
+> *Genesis 3:17-19*
+
+Three things need to be kept apart here.
+
+*What the text says.* The ground is cursed because of human disobedience. Work becomes toil, the earth yields thorns, and the man will return to dust. Paul adds that the creation "was made subject to vanity, not willingly, but by reason of him who hath subjected the same in hope" (Romans 8:20). The subjection is God's act.
+
+*The author's interpretation.* The curse is a deliberate divine realignment of the created runtime order to the consequences of spiritual disobedience. Its purpose is that creation should go on telling the truth. A world in which the breach between humanity and God had no visible consequence would teach falsely about what had happened. On this reading creation remains an instructor after the Fall, and what it now teaches includes decay, toil and loss. The thesis concerns what changed in creation, not the manner of God's action (Chapter 4). **Status:** theological interpretation.
+
+*The mechanism, which is open.* The author's thesis is that God realigned the primitives themselves, the explicitly intrinsic constraints of Chapter 4: the conditions of the primitive order, fixed for every creature but not for its Creator. Two other readings belong in view. God may have changed settings within a primitive order that otherwise stayed as it was. Or he may have brought about a new state of creation under its original constraints, so that the new conditions follow as implicitly intrinsic constraints. These are different claims, and they would explain different things. Genesis describes none of them. Appendix E records them as a research question.
+
+The author also holds that the realignment brought animal death into the world, which was not part of creation's original conditions. Genesis 3:21 is part of the reasoning:
+
+> `Unto Adam also and to his wife did the LORD God make coats of skins, and clothed them.`
+> *Genesis 3:21*
+
+The verse says that God made coats of skins and clothed the man and the woman. That the skins mark the first death, cover shame and anticipate sacrifice is the author's theological reading; the text names no lamb, no rite and no first death. And the position meets a real difficulty. The fossil record shows animal death in rock strata that the conventional chronology dates long before humans. The book's own standard (Chapter 2) does not allow that interface to be ignored. It states the author's position, names the conflict with the conventional chronology as an open problem, and does not resolve it here.
+
+One consequence holds on every reading of the mechanism. The subjection of creation is God's act, and God's acts are not corrupt. Corruption, as the previous section described it, is parasitic: a distortion with no being of its own. The futility to which creation was subjected is a judgement, coherent and purposed, and given "in hope". Corruption suffered in the higher orders of creation does not mean that its primitive order has become incoherent.
+
+Nor does every suffering follow from the sufferer's own sin. Asked whose sin had made a man blind, Jesus answered:
+
+> `Neither hath this man sinned, nor his parents: but that the works of God should be made manifest in him.`
+> *John 9:3*
+
+Creation's subjection is the condition of all. It is not a ledger of each.
+
 ## Corruption as persisting misalignment
 
 Chapter 13 described alignment as fitting the order one is made for. Misalignment, a departure from that order, is not by itself the whole of corruption. Every growing creature departs from its mature form, and every learner makes mistakes. A wrong act is wrong in itself, whether or not it is ever repeated: a single lie, swiftly repented of, was still a lie, and a single act of cruelty is still cruel. Its wrongness lies in what it is and whom it wrongs, judged by the moral order of Chapter 13, not in how long it lasts. What persistence explains is something else: how wrongdoing **entrenches**. Misalignment that is not restored persists and spreads, hardening into habit, narrowing what a person can see and choose, and reaching into others. Corruption, in the full sense this chapter describes, includes both the wrong and its entrenchment.
@@ -1638,13 +1700,13 @@ Scripture describes sin in exactly these terms: not as a series of isolated laps
 
 Lust conceives and brings forth sin. Sin, finished, brings forth death. Sin hardens and enslaves. Misalignment that is not restored does not stay where it is. It propagates, entrenches and steadily narrows the very capacity that might have turned it back.
 
-Here a structural analogy from Chapter 6 becomes useful, held carefully as analogy. Chapter 6 proposed, as a hypothesis, that the past can live on in present configuration, changing what is likely or possible next. The bent paper clip carries its bending in its crystal structure. Something with the same form is visible in human character: a habit of deceit makes the next deceit easier and honesty harder, and a grievance nursed reshapes what a person is able to see. Scripture's "hardened" is a strikingly physical word for this. The book does not claim that sin *is* a configuration of the substrate. Sin belongs to persons, in their relation to God, and is not a physical state. But the form of corruption, a persisting past that narrows the future, is the same form that runs through history-bearing physical order. In that sense corruption works with the grain of a relational world, against the purpose for which that world was made.
+Chapter 6 helps here, in two of the senses Chapter 1 distinguished. It proposed, as a hypothesis, that the past can live on in present configuration, changing what is likely or possible next. The bent paper clip carries its bending in its crystal structure. Something with the same form is visible in human character: a habit of deceit makes the next deceit easier and honesty harder, and a grievance nursed reshapes what a person is able to see. Scripture's "hardened" is a strikingly physical word for this. Sin itself belongs to persons, in their relation to God, and is not a configuration of the substrate. But its embodied consequences are real configurations, causally connected to it: the habit is carried in a person's dispositions, body and relations, not merely likened to a bent paper clip. And the form of corruption, a persisting past that narrows the future, is the same form that runs through history-bearing physical order. In that sense corruption works with the grain of a relational world, against the purpose for which that world was made.
 
 ## Corruption in transmission
 
 The grammar of Chapter 7 gives a second lens, again used only where it clarifies.
 
-Much human wrongdoing is wrongdoing in what is *transmitted*. A lie sends out a false distinction: a claim that the world is otherwise than it is, offered to be received and acted on. Slander sends out a false distinction about a person. A broken promise breaks a carriage that was relied on: a commitment that should have persisted from the day it was made to the day it was due, and did not. Gossip distorts in carriage, so that what arrives is no longer what was released. Scripture's long catalogue of sins of the tongue reflects how much of human corruption runs through what people send to one another:
+Much human wrongdoing is wrongdoing in what is *transmitted*. A lie sends out a false distinction: a claim that the world is otherwise than it is, offered to be received and acted on. Slander sends out a false distinction about a person. A broken promise breaks a carriage that was relied on: a commitment that should have persisted from the day it was made to the day it was due, and did not. Gossip distorts in carriage, so that what arrives is no longer what was released. And a deception shows how far consequence can reach. A lie believed changes what someone does; what they do changes others; within a few steps the effects have passed into decisions, relationships and circumstances that will never be traced back to it. That history is real, carried in all those changed relations, which is the only record created order keeps (Chapter 6). Nothing guarantees that a creature can recover it. Consequence persists where provenance is lost. Scripture's long catalogue of sins of the tongue reflects how much of human corruption runs through what people send to one another:
 
 > `Death and life are in the power of the tongue: and they that love it shall eat the fruit thereof.`
 > *Proverbs 18:21*
@@ -1656,7 +1718,7 @@ Corruption can also be a failure of *reception*. Chapter 7 distinguished arrival
 
 To hear and not heed, to be warned and not change, to be loved and not respond: these are failures of reception, in which a difference that should have become a consequence in someone was refused. The image will matter in the next chapter, because restoration includes the restoring of reception: ears opened, hearts softened, a word that comes "not … unto you in word only, but also in power" (1 Thessalonians 1:5).
 
-These lenses must not become a theory of everything. Not all corruption is usefully described as transmission, and a vocabulary that tried to describe every sin in the same technical phrase would trivialise sin. They are offered because they sometimes help us see a pattern Scripture already describes, not because they explain it.
+These lenses are offered because they sometimes help us see a pattern Scripture already describes, not because they explain it. A vocabulary that tried to describe every sin in the same technical phrase would trivialise sin.
 
 ## Five patterns of corruption
 
@@ -1744,7 +1806,7 @@ So the healing of creation cannot be expected from creation's own resources. If 
 
 The One through whom all things were made (Colossians 1:16) and in whom all things consist (1:17) is the One through whom all things are reconciled. Redemption is not alien to creation. It is the Creator's answer to the wounding of his own work. But it is *his* answer. It is not a process inside the substrate, a self-correction of physical order, or the outworking of some law of nature.
 
-This is why Chapter 4 insisted that God is not one more cause among the causes of the world, and that the book offers no account of how God acts in miracles, providence or redemption. The relational ontology describes created runtime order: how things ordinarily persist, transmit and change. God's redeeming work is not ordinary runtime process. The resurrection of Christ was not an unusually improbable configuration of the substrate. It was an act of the Creator. When Scripture records miracles, the book receives them as Scripture records them. It does not explain them as hidden physics, and it does not explain them away.
+This is why Chapter 4 insisted that God is not one more cause among the causes of the world, and that the book offers no account of the manner of God's action in miracles, providence or redemption. The relational ontology describes created runtime order: how things ordinarily persist, transmit and change. God's redeeming work is not ordinary runtime process. The resurrection of Christ was not an unusually improbable configuration of the substrate. It was an act of the Creator. When Scripture records miracles, the book receives them as Scripture records them. It does not explain them as hidden physics, and it does not explain them away.
 
 ## Hope must be real
 
@@ -1782,7 +1844,7 @@ Chapter 14 described corruption as, among other things, a failure of reception: 
 > `For our gospel came not unto you in word only, but also in power, and in the Holy Ghost, and in much assurance.`
 > *1 Thessalonians 1:5*
 
-A heart of stone does not receive; a heart of flesh does. The gospel that comes "in word only" has arrived. The gospel that comes "in power, and in the Holy Ghost" has been received. This is a structural analogy, and the book holds it as one. The Spirit's work in giving a new heart is not a physical process, and faith is not a change of state in a receptor. Nor is hearing the gospel a transaction that must be recorded once, like a payment; Scripture speaks of a word received, rehearsed, remembered and received again. What the analogy shares is only the outline: something sent, carried and heard, and finally received as a change in the one who hears. That outline runs through the whole of creation. It is fitting that the God whose word "shall not return unto me void" (Isaiah 55:11) should, in redemption, make his creatures able to receive it.
+A heart of stone does not receive; a heart of flesh does. The gospel that comes "in word only" has arrived. The gospel that comes "in power, and in the Holy Ghost" has been received. This is a structural analogy, in the sense of Chapter 1. The Spirit's work in giving a new heart is not a physical process, and faith is not a change of state in a receptor. Nor is hearing the gospel a transaction that must be recorded once, like a payment; Scripture speaks of a word received, rehearsed, remembered and received again. What the analogy shares is only the outline: something sent, carried and heard, and finally received as a change in the one who hears. That outline runs through the whole of creation. It is fitting that the God whose word "shall not return unto me void" (Isaiah 55:11) should, in redemption, make his creatures able to receive it.
 
 ## The same person, raised
 
@@ -1805,7 +1867,7 @@ Put together, these give an honest answer. Resurrection is not the substrate pre
 
 ## Human death and the Cross
 
-Scripture presents human death as bound up with sin (Romans 5:12) and as an enemy to be destroyed (1 Corinthians 15:26). Human death is not humanity's intended created end. Christians who share this book's commitments read the wider history of the natural world, including animal mortality, in different ways, and the book does not settle that question. It holds the narrower scriptural claim: the death of persons is not what God made them for.
+Scripture presents human death as bound up with sin (Romans 5:12) and as an enemy to be destroyed (1 Corinthians 15:26). Human death is not humanity's intended created end. The author holds further that animal death too entered with the Fall (Chapter 14). That is a theological interpretation, and it carries an open problem the book names rather than resolves: its relation to the conventional chronology of the fossil record. The narrower scriptural claim stands on any reading: the death of persons is not what God made them for.
 
 The death of Christ is presented in a striking way within that account. In the ordinary case, death is corruption prevailing over a creature that cannot resist it. The Gospels present Christ's death as yielded:
 
@@ -1826,7 +1888,7 @@ The ordinary sequence, death and then the decay that death lets loose, was inter
 
 One of the first edition's most valuable reflections concerned what restoration produces, and it deserves to be kept in condensed form. It is offered as theological and pastoral reflection, drawn from Scripture and from Christian experience, not as a doctrine binding on every reader and not as a claim that evil was necessary. A restored life is not merely returned to where it was before the damage. It can become something richer.
 
-Innocence that has never been tested is real goodness, but it is unowned. Its loyalties are untried and its weaknesses hidden, because nothing has exposed them. When disorder comes, it exposes what was hidden. If it is then truthfully faced, repented of and repaired, the result can be an alignment that is conscious, tested, freely chosen and humbler than before. A marriage repaired after a serious rupture, a faith that has come through honest doubt, and a community rebuilt after a wound can each hold a kind of coherence that could not exist without the wound and the repair together. Scripture describes this pattern repeatedly:
+Innocence that has never been tested is real goodness, but it is unowned. Its loyalties are untried and its weaknesses hidden, because nothing has exposed them. When disorder comes, it exposes what was hidden. If it is then truthfully faced, repented of and repaired, the result can be an alignment that is conscious, tested, freely chosen and humbler than before. A marriage repaired after a serious rupture, a faith that has come through honest doubt, and a community rebuilt after a wound can each hold a kind of coherence that could not exist without the wound and the repair together. Restoration does not erase history. Forgiveness changes what can follow from a wrong without undoing every effect the wrong has had, and the wound and the repair both remain part of the story. Scripture describes this pattern repeatedly:
 
 > `Now no chastening for the present seemeth to be joyous, but grievous: nevertheless afterward it yieldeth the peaceable fruit of righteousness unto them which are exercised thereby.`
 > *Hebrews 12:11*
@@ -1846,8 +1908,10 @@ Second, restoration is costly. At the scale of a single life it costs repentance
 > `For when we were yet without strength, in due time Christ died for the ungodly.`
 > *Romans 5:6*
 
-> `Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold… But with the precious blood of Christ, as of a lamb without blemish and without spot.`
-> *1 Peter 1:18-19*
+> `Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold… But with the precious blood of Christ, as of a lamb without blemish and without spot: Who verily was foreordained before the foundation of the world, but was manifest in these last times for you,`
+> *1 Peter 1:18-20*
+
+The cost was known and accepted before it was paid. Scripture states the foreordination. The author reads it as a real and irrevocable commitment made before creation, concerning an event within its history: a decision, not a forecast. And because God knows every wrong completely, what was paid for was known exactly. That is a way of speaking about the completeness of his knowledge, not a price that could be counted.
 
 Third, the freedom that makes owned alignment possible is a freedom to love and trust God, not a licence to corrupt. Faith must be a genuine, willing response of the person, however the traditions describe the freedom that involves, and the possibility of turning away is not thereby a good one. Faith is the creature's willing trust in a God it does not yet see in full, extended across the very gap that testing opens:
 
@@ -1874,6 +1938,8 @@ Scripture's hope is therefore not simply the restoration of Eden. It is consumma
 > *1 Corinthians 15:54*
 
 Judgment belongs to this hope, not against it. If corruption is real, hope cannot consist merely in soothing those who suffer while leaving evil uninterpreted. It includes the exposure of lies, the defeat of wickedness and the vindication of truth. Scripture is sober about the outcome for those who refuse: "these shall go away into everlasting punishment: but the righteous into life eternal" (Matthew 25:46). Without judgment, redemption would be sentimental. With it, redemption is morally serious.
+
+Such judgment does not depend on what a damaged or partial record can establish. Created order carries the consequences of every act, but not every act's provenance, and much is lost to any creaturely inquiry (Chapter 14). God's knowledge is not so limited. He knows the whole history of each act: its intention, its circumstances, its effects, and who is responsible for them. That is why his judgment can be just where every human court would fail. Greater material damage is not by itself greater guilt; intention, knowledge and capacity weigh too.
 
 ## A foretaste in the gathered people of God
 
@@ -1907,9 +1973,9 @@ Gathered together, the book's account runs like this.
 
 God creates reality. Created physical order is real, and it is not self-grounding: it holds together because it is held. The deepest physical ontology the Relational Substrate proposes is relational rather than object-first. Actualisation is conditioned before anything happens, both by what is forbidden and by what is favoured. The book calls those conditions T0 and reads them as constrained possibility, while leaving open what kind of thing they finally are. What has already happened shapes what is currently reachable. Actualisation is, on the book's working hypothesis, fundamentally stochastic: consistent with quantum theory, though not established by it. Persistence, identity and regularity arise through structured relational continuity. A thing remains the same *kind* of thing by preserving its relevant equivalence class, judged by what reachable futures could tell apart, with invariants as its certificates and provenance as part of it where it still matters. Whether it is the same *individual* is a further question, of continuity and lineage, which remains open. Regularity is the stable behaviour of many chance events, constrained and coordinated in the right way. Transmit, carry and receive name the grammar by which any distinction becomes consequential to another state: a distinction capable of constraining beyond itself, a dependency that preserves it, and a consequence that depends on it. The book proposes that this is the form of consequential relation itself, and that cause, in a chancy world, is a distinction modifying what another state can become. Stable global behaviour does not require every underlying transition to be determined in advance. Mathematics describes that stable behaviour, often with astonishing precision, without thereby becoming the reality it describes. Material things are one achievement of this order: configurations that have acquired persistent, individuated identity that can be handled, as distinct from material organisation, such as a sound, that passes through them. Whether materiality itself emerges from an order that is not material is the book's central question, held as a hypothesis. Organised identities persist across changes of carrier when the relations that constitute them are preserved and a compatible receiver recovers them. And identities gather recursively, from distinction through relationship and organisation to higher-order wholes that act within the next order.
 
-Because material reality is relational from its foundation, the physical world does not begin as a scatter of metaphysically isolated objects that must somehow acquire relation later. That matters for global coherence. Life, personhood, morality, consequence, corruption and restoration need not be bolted onto a physical world of a different kind. Yet material, biological, personal and spiritual categories remain genuinely distinct. Relation runs through all of them, and relation across categories does not erase category. The substrate is not the soul. Transmission is not revelation. A law of physics is not a commandment. Creation is not God.
+Because material reality is relational from its foundation, the physical world does not begin as a scatter of metaphysically isolated objects that must somehow acquire relation later. That matters for global coherence. Life, personhood, morality, consequence, corruption and restoration need not be bolted onto a physical world of a different kind. Yet material, biological, personal and spiritual categories remain genuinely distinct. Relation runs through all of them, and relation across categories does not erase category. The substrate is not the soul. Physical transmission is not divine speech. A law of physics is not a commandment. Creation is not God.
 
-Observation, measurement and successful mathematics strongly constrain what can responsibly be claimed about the physical world. Empirical description alone does not exhaust ontology, and the metaphysical pictures that travel with it are proposals to be tested like any other. Scripture provides the governing frame within which this book seeks coherence. The whole project is not an empirical proof of ultimate ontology. It is an attempt to construct the most globally coherent account available, while remaining honest about observation, mathematics, experiment, metaphysics, uncertainty and revelation.
+Observation, measurement and successful mathematics strongly constrain what can responsibly be claimed about the physical world. Empirical description alone does not exhaust ontology, and the metaphysical pictures that travel with it are proposals to be tested like any other. Scripture provides the governing frame within which this book seeks coherence. The whole project is an attempt to construct the most globally coherent account available, while remaining honest about observation, mathematics, experiment, metaphysics, uncertainty and revelation.
 
 ## What kind of confidence this deserves
 
@@ -1935,9 +2001,18 @@ There is a deeper reason for that discipline, and Scripture gives it.
 > `For now we see through a glass, darkly; but then face to face: now I know in part; but then shall I know even as also I am known.`
 > *1 Corinthians 13:12*
 
-Human beings know from inside creation. They cannot step outside it and see its foundations from the vantage point of its Maker. Whatever the deepest order of the world is, we meet it through its effects, through instruments and inference, through a glass. Like the caller of a private function in Chapter 2, we can learn its behaviour well without its inner nature being fixed by what we learn. That is not a defect to be overcome by enough research. It is part of being a creature. It is also why this book has insisted that its ontology is a coherence argument, not a proof, and why Scripture, which comes to us from the One who laid the foundations, is the frame within which the argument is made.
+Human beings know from inside creation. They cannot step outside it and see its foundations from the vantage point of its Maker. Whatever the deepest order of the world is, we meet it through its effects, through instruments and inference, through a glass. Like the caller of a private function in Chapter 2, we can learn its behaviour well without its inner nature being fixed by what we learn. That is not a defect to be overcome by enough research. It is part of being a creature. It is also why the warrant this book claims for its ontology is that of a coherence argument, held with disciplined confidence, and why Scripture, which comes to us from the One who laid the foundations, is the frame within which the argument is made.
 
 But Job's question is not a rebuke to inquiry. The same book that asks "where wast thou?" catalogues the wonders of creation in loving detail, and the God who asks it invites Job to look. "It is the glory of God to conceal a thing: but the honour of kings is to search out a matter" (Proverbs 25:2). Partial knowledge is still knowledge. To search out the order of creation, while knowing that we see in part, is one of the honours God gives to creatures made in his image.
+
+Inquiry of this kind is a way, and Scripture's deepest word for it is Christ's own:
+
+> `Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.`
+> *John 14:6*
+
+The author reads the three words together: the way as a road actually walked, the truth as what grounds it, the life as participation in it, with the Father as the destination, who is one with the Son ("I and my Father are one", John 10:30). That is a theological reading, offered as one. It fits what this book has described: partial understanding refined, step by step, toward a coherence that only God knows perfectly. Truth is what is so. The way toward it is walked by creatures, and it is not the same as the truth it seeks.
+
+The fitting response to such a world is **wonder**: the response of a creature to coherence that is intelligible and yet exceeds what it can now comprehend. Wonder does not end inquiry. It invites it. On the author's account, creation was made to be read this way. Its order represents something of the spiritual order that is prior to it (Chapter 1). And its beauty, the apprehensible expression of the patterns of goodness, which is spiritual in origin, can be met in created things without being exhausted by them, even where what is beautiful is not perfect in every part.
 
 ## Living in a relational world
 
@@ -2750,7 +2825,7 @@ Revision 2.7 adopts the entries below. Their source is the author's research con
 - Whether direction can be read from asymmetric propagation of consequence, and irreversibility from persistent consequence.
 - Whether derived constraints are wholly reconstructible from the primitive order and actual history.
 - The Fall mechanism (above).
-- *The interface between a post-Fall origin of animal mortality and the fossil record.* The record shows animal death in strata conventionally dated long before humans. The book's bidirectional coherence standard (Chapter 2) requires this interface to be addressed, not ignored. How the book addresses it is undecided.
+- *The interface between a post-Fall origin of animal mortality and the fossil record.* The record shows animal death in strata conventionally dated long before humans. The book's bidirectional coherence standard (Chapter 2) requires this interface to be addressed, not ignored. By the author's decision (31 October 2026), the book states the author's position, names the conflict with the conventional chronology as an open problem, and does not resolve it (Chapters 14 and 15).
 - How spiritual-to-created correspondences are classed and tested; what distinguishes conscious from computational reception; what change makes intentional choice possible.
 - How coherence factors are admitted. The standard is a multidimensional judgement of warrant, coherence, provenance, discrimination, scope and dependencies, with explicit rationale and review triggers, and no universal numerical threshold (OTR v1.1).
 - Whether true logic is best described as structure, act, or both; whether logic governs contingent relations as well as necessary ones.

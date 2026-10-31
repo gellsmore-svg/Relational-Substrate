@@ -15,7 +15,7 @@ So the healing of creation cannot be expected from creation's own resources. If 
 
 The One through whom all things were made (Colossians 1:16) and in whom all things consist (1:17) is the One through whom all things are reconciled. Redemption is not alien to creation. It is the Creator's answer to the wounding of his own work. But it is *his* answer. It is not a process inside the substrate, a self-correction of physical order, or the outworking of some law of nature.
 
-This is why Chapter 4 insisted that God is not one more cause among the causes of the world, and that the book offers no account of how God acts in miracles, providence or redemption. The relational ontology describes created runtime order: how things ordinarily persist, transmit and change. God's redeeming work is not ordinary runtime process. The resurrection of Christ was not an unusually improbable configuration of the substrate. It was an act of the Creator. When Scripture records miracles, the book receives them as Scripture records them. It does not explain them as hidden physics, and it does not explain them away.
+This is why Chapter 4 insisted that God is not one more cause among the causes of the world, and that the book offers no account of the manner of God's action in miracles, providence or redemption. The relational ontology describes created runtime order: how things ordinarily persist, transmit and change. God's redeeming work is not ordinary runtime process. The resurrection of Christ was not an unusually improbable configuration of the substrate. It was an act of the Creator. When Scripture records miracles, the book receives them as Scripture records them. It does not explain them as hidden physics, and it does not explain them away.
 
 ## Hope must be real
 
@@ -53,7 +53,7 @@ Chapter 14 described corruption as, among other things, a failure of reception: 
 > `For our gospel came not unto you in word only, but also in power, and in the Holy Ghost, and in much assurance.`
 > *1 Thessalonians 1:5*
 
-A heart of stone does not receive; a heart of flesh does. The gospel that comes "in word only" has arrived. The gospel that comes "in power, and in the Holy Ghost" has been received. This is a structural analogy, and the book holds it as one. The Spirit's work in giving a new heart is not a physical process, and faith is not a change of state in a receptor. Nor is hearing the gospel a transaction that must be recorded once, like a payment; Scripture speaks of a word received, rehearsed, remembered and received again. What the analogy shares is only the outline: something sent, carried and heard, and finally received as a change in the one who hears. That outline runs through the whole of creation. It is fitting that the God whose word "shall not return unto me void" (Isaiah 55:11) should, in redemption, make his creatures able to receive it.
+A heart of stone does not receive; a heart of flesh does. The gospel that comes "in word only" has arrived. The gospel that comes "in power, and in the Holy Ghost" has been received. This is a structural analogy, in the sense of Chapter 1. The Spirit's work in giving a new heart is not a physical process, and faith is not a change of state in a receptor. Nor is hearing the gospel a transaction that must be recorded once, like a payment; Scripture speaks of a word received, rehearsed, remembered and received again. What the analogy shares is only the outline: something sent, carried and heard, and finally received as a change in the one who hears. That outline runs through the whole of creation. It is fitting that the God whose word "shall not return unto me void" (Isaiah 55:11) should, in redemption, make his creatures able to receive it.
 
 ## The same person, raised
 
@@ -76,7 +76,7 @@ Put together, these give an honest answer. Resurrection is not the substrate pre
 
 ## Human death and the Cross
 
-Scripture presents human death as bound up with sin (Romans 5:12) and as an enemy to be destroyed (1 Corinthians 15:26). Human death is not humanity's intended created end. Christians who share this book's commitments read the wider history of the natural world, including animal mortality, in different ways, and the book does not settle that question. It holds the narrower scriptural claim: the death of persons is not what God made them for.
+Scripture presents human death as bound up with sin (Romans 5:12) and as an enemy to be destroyed (1 Corinthians 15:26). Human death is not humanity's intended created end. The author holds further that animal death too entered with the Fall (Chapter 14). That is a theological interpretation, and it carries an open problem the book names rather than resolves: its relation to the conventional chronology of the fossil record. The narrower scriptural claim stands on any reading: the death of persons is not what God made them for.
 
 The death of Christ is presented in a striking way within that account. In the ordinary case, death is corruption prevailing over a creature that cannot resist it. The Gospels present Christ's death as yielded:
 
@@ -97,7 +97,7 @@ The ordinary sequence, death and then the decay that death lets loose, was inter
 
 One of the first edition's most valuable reflections concerned what restoration produces, and it deserves to be kept in condensed form. It is offered as theological and pastoral reflection, drawn from Scripture and from Christian experience, not as a doctrine binding on every reader and not as a claim that evil was necessary. A restored life is not merely returned to where it was before the damage. It can become something richer.
 
-Innocence that has never been tested is real goodness, but it is unowned. Its loyalties are untried and its weaknesses hidden, because nothing has exposed them. When disorder comes, it exposes what was hidden. If it is then truthfully faced, repented of and repaired, the result can be an alignment that is conscious, tested, freely chosen and humbler than before. A marriage repaired after a serious rupture, a faith that has come through honest doubt, and a community rebuilt after a wound can each hold a kind of coherence that could not exist without the wound and the repair together. Scripture describes this pattern repeatedly:
+Innocence that has never been tested is real goodness, but it is unowned. Its loyalties are untried and its weaknesses hidden, because nothing has exposed them. When disorder comes, it exposes what was hidden. If it is then truthfully faced, repented of and repaired, the result can be an alignment that is conscious, tested, freely chosen and humbler than before. A marriage repaired after a serious rupture, a faith that has come through honest doubt, and a community rebuilt after a wound can each hold a kind of coherence that could not exist without the wound and the repair together. Restoration does not erase history. Forgiveness changes what can follow from a wrong without undoing every effect the wrong has had, and the wound and the repair both remain part of the story. Scripture describes this pattern repeatedly:
 
 > `Now no chastening for the present seemeth to be joyous, but grievous: nevertheless afterward it yieldeth the peaceable fruit of righteousness unto them which are exercised thereby.`
 > *Hebrews 12:11*
@@ -117,8 +117,10 @@ Second, restoration is costly. At the scale of a single life it costs repentance
 > `For when we were yet without strength, in due time Christ died for the ungodly.`
 > *Romans 5:6*
 
-> `Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold… But with the precious blood of Christ, as of a lamb without blemish and without spot.`
-> *1 Peter 1:18-19*
+> `Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold… But with the precious blood of Christ, as of a lamb without blemish and without spot: Who verily was foreordained before the foundation of the world, but was manifest in these last times for you,`
+> *1 Peter 1:18-20*
+
+The cost was known and accepted before it was paid. Scripture states the foreordination. The author reads it as a real and irrevocable commitment made before creation, concerning an event within its history: a decision, not a forecast. And because God knows every wrong completely, what was paid for was known exactly. That is a way of speaking about the completeness of his knowledge, not a price that could be counted.
 
 Third, the freedom that makes owned alignment possible is a freedom to love and trust God, not a licence to corrupt. Faith must be a genuine, willing response of the person, however the traditions describe the freedom that involves, and the possibility of turning away is not thereby a good one. Faith is the creature's willing trust in a God it does not yet see in full, extended across the very gap that testing opens:
 
@@ -145,6 +147,8 @@ Scripture's hope is therefore not simply the restoration of Eden. It is consumma
 > *1 Corinthians 15:54*
 
 Judgment belongs to this hope, not against it. If corruption is real, hope cannot consist merely in soothing those who suffer while leaving evil uninterpreted. It includes the exposure of lies, the defeat of wickedness and the vindication of truth. Scripture is sober about the outcome for those who refuse: "these shall go away into everlasting punishment: but the righteous into life eternal" (Matthew 25:46). Without judgment, redemption would be sentimental. With it, redemption is morally serious.
+
+Such judgment does not depend on what a damaged or partial record can establish. Created order carries the consequences of every act, but not every act's provenance, and much is lost to any creaturely inquiry (Chapter 14). God's knowledge is not so limited. He knows the whole history of each act: its intention, its circumstances, its effects, and who is responsible for them. That is why his judgment can be just where every human court would fail. Greater material damage is not by itself greater guilt; intention, knowledge and capacity weigh too.
 
 ## A foretaste in the gathered people of God
 
