@@ -12,6 +12,8 @@ This directory contains the book-length manuscripts of the Relational Substrate 
   Revised the same day as **v2.1** after an independent review against the wider research corpus. Identity (relational equivalence and provenance), T-C-R (decoupled from the calculator protocol), coordination and global coherence were corrected, and Constraint Laboratory Generations 1b and 2 were integrated. Conclusions from conversational research that is not yet in the repository are labelled as exploratory (`v2/analysis/conversational-research-import-v2.md`).
   The chapters are edited in `v2/manuscript/` and assembled into this file with `python3 books/v2/tools/assemble_manuscript.py`.
 
+- **coherent-biblical-ontology-beginner.md**, **-intermediate.md**, **-a-level.md** — *Coherent Biblical Ontology*, tiered editions (October 2026), each derived from revision 2.7 for one reader: Beginner (about 9,800 words, from about age 12), Intermediate (about 17,600 words, replacing the earlier GCSE edition) and A-level (about 22,800 words, with a status table). Revision 2.7 itself serves as the bachelor's level. They replace the May 2026 tier drafts, which were built on the first-edition framework. Chapters are edited in `v2/tiers/<tier>/` and assembled with `python3 books/v2/tools/assemble_tiers.py`; see [`v2/tiers/README.md`](v2/tiers/README.md).
+
 - **coherent-biblical-ontology-bachelors.md** — *Coherent Biblical Ontology*, first edition (master draft v3, August 2026). *Preserved as the historical baseline.*
   Its theological chapters remain largely sound and much of their substance is carried into the second edition. Its physical chapters present mechanisms (closure knots, a closed five-operation set, torsional light) that later research did not support, and it predates the stochastic and T-C-R work. See `v2/analysis/research-baseline.md` for what changed and why.
 
@@ -33,10 +35,11 @@ The reasoning behind the second edition is kept so the work can be inspected and
 Validated EPUB 2 editions are published in [`epub/`](epub/):
 
 - `coherent-biblical-ontology-second-edition.epub` (with front cover, figures and back cover)
+- `coherent-biblical-ontology-beginner.epub`, `-intermediate.epub`, `-a-level.epub` (tiered editions, with front covers)
 - `coherent-biblical-ontology.epub` (first edition)
 - `relational-substrate.epub`
 
-Rebuild and validate all three with `npm run books:epub`, or only the second edition with `npm run books:epub:v2`. `pandoc` and `epubcheck` are required. The second-edition build refuses to run if the assembled manuscript is out of date.
+Rebuild and validate all of them with `npm run books:epub`, only the second edition with `npm run books:epub:v2`, or only the tiered editions with `npm run books:epub:tiers`. `pandoc` and `epubcheck` are required. The second-edition and tiered builds refuse to run if their assembled manuscripts are out of date.
 
 Companion volumes exist in draft form elsewhere in the workspace (the general volume *A Coherent World*, and the devotional *How to Hug the Right Tree*) and may be added here in the future.
 
