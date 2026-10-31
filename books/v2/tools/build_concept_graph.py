@@ -57,7 +57,7 @@ N = {
  "connectivity": ("Connectivity", "Domains genuinely connected by intelligible transitions, not merely placed side by side.", "methodological (author-supplied)", "working", 3, 4, False, False, "connection as mere juxtaposition", "physics to chemistry to life"),
  "boundary-validity": ("Boundary validity", "A concept crossing a domain boundary keeps what is relevant without collapsing categories.", "methodological (author-supplied)", "working", 4, 4, False, True, "translation as relabelling", "physical consequence to moral responsibility"),
  "propagation-cycle": ("Propagation stability and cycle consistency", "A claim keeps its meaning through explanatory layers, and returns materially the same when translated round a cycle of domains.", "methodological (author-supplied)", "working", 4, 5, False, True, "that plausible paragraphs add up to coherence", "identity: physical → organism → person → body"),
- "not-proof": ("Not an empirical proof", "The deep ontology behind observation is not directly measurable; RS is a coherence exercise constrained by observation, not a proof.", "methodological", "settled", 3, 4, False, True, "that unprovable means unconstrained", "no instrument displays 'relation as such'"),
+ "not-proof": ("Proof as bounded warrant", "From revision 2.7, proof is sufficient warrant under declared premises for an inferred relation to serve as a coherence factor; formal proof is conclusive relative to its axioms; RS is supported by a global coherence argument, not by experiment.", "methodological (author-defined)", "working", 3, 4, False, True, "that proof means possessing the whole truth; that unproven means unconstrained", "a mathematical theorem versus an experimental result versus a coherence factor"),
  "analogy-vs-identity": ("Structural analogy is not ontological identity", "Shared relational form across domains does not make the domains the same kind of thing.", "philosophical claim", "settled", 3, 4, False, True, "that a shared grammar means a shared substance", "a letter and a nerve impulse both transmit; neither is the other"),
  "category": ("Ontological categories", "Material, biological, personal, spiritual and divine realities are genuinely distinct kinds.", "philosophical/theological claim", "settled", 3, 4, True, True, "that relation erases category", "a body and a person"),
  # ---- physical ontology
@@ -104,7 +104,7 @@ N = {
  "local-global": ("Local and global constraint", "What a local rule permits differs from what whole-system orchestration achieves; both must be stated.", "RS experimental result (model)", "working", 3, 4, False, False, "local rules always suffice", "local cancellation exact but slower"),
  "regularity": ("Emergent regularity / effective determinism", "Stable, law-like aggregate behaviour arising from constrained stochastic processes.", "scientific consensus + RS interpretation", "working", 3, 4, True, True, "that regularity proves determinism", "gas laws from molecular chaos"),
  "mathematics": ("Mathematics describes regularity", "Mathematics captures stable relations and invariants with great success without thereby being the reality.", "philosophical claim", "settled", 3, 4, False, True, "that this demotes mathematics", "Navier–Stokes as an effective description of fluids"),
- "time": ("Time as ordering of actualisation", "Time is the ordering of change, not an independent container.", "ontological interpretation", "working", 4, 5, False, False, "that this denies relativity", "clocks as processes"),
+ "time": ("Time as ordering of actualisation", "Time is the ordering of change, directed by consequence (succession, revision 2.7), measured by comparing cadences; not an independent container.", "ontological interpretation", "working", 3, 4, False, True, "that clocks create time; that time is a container", "a pendulum compared with the turning Earth"),
  "matter": ("Matter as stable form", "Matter is real, stable relational form, not primitive substance.", "ontological interpretation", "working", 3, 4, False, True, "that matter is unreal", "a whirlpool or a knot"),
  "manifestation": ("Manifestation", "Created order presenting itself to other things — detectable, encounterable; distinct from conscious awareness of it.", "ontological interpretation", "working", 3, 3, False, False, "manifestation as an explanation of consciousness", "the stone visible in daylight"),
  "purpose-upstream": ("Purpose shapes possibility", "Divine purpose constrains what is possible; possibility constrains actualisation; the substrate itself intends nothing.", "theological inference", "working", 4, 5, False, True, "that the substrate is a mind", "a composer's intention fixing the instrument's range"),
@@ -141,6 +141,23 @@ N = {
  "relational-identity-compat": ("Relational identity compatibility", "An identity stays coherent across changes of instantiation when the relations needed for its recognition or operation are preserved through compatible T-C-R.", "RS working hypothesis", "working", 4, 4, False, True, "that a soul is a melody played on a body", "a phrase on cello, guitar and disc"),
  "emergence-grammar": ("Grammar of emergence", "Distinction → relationship → organisation → higher-order identity, recursively; a higher-order identity is a distinction at the next order and a constraint on what sustains it.", "RS working hypothesis", "frontier", 4, 5, True, True, "that stages are layers of reality; that every pattern is a new order", "notes, chords, phrase, suite"),
  "order-parameter": ("Downward constraint (order parameter)", "A higher-order organisation produced by its components that then governs them (circular causality), as in the laser.", "scientific consensus", "settled", 3, 4, False, False, "that it establishes RS", "a laser above threshold; a musical key"),
+ # ---- revision 2.7
+ "true-logic": ("True logic", "Ultimate global coherence, perfectly comprehended and applicable, inseparable in the personal nature of God; no creature possesses it exhaustively.", "theological premise", "settled", 3, 5, False, True, "that it is an impersonal order of reality; that a human model is it", "God's knowledge versus a doctor's diagnosis"),
+ "inferential-logic": ("Inferential logic", "The author's definition: the recursive refinement of partial understanding towards true logic through relational coherence within created runtime order.", "working definition (author)", "working", 3, 4, False, True, "that revising a model revises reality", "a diagnosis revised by a new test"),
+ "coherence-factor": ("Coherence factor", "A relation admitted for reuse with its scope, provenance, uncertainties and revision triggers visible.", "methodological (author-defined)", "working", 3, 4, False, True, "that admission makes it infallible", "a law used within its tested regime"),
+ "convergence": ("Independent relational convergence", "Agreement among genuinely independent lines of inquiry strengthens warrant only as far as the independence is real; separate AI systems are not independent by default.", "methodological", "working", 3, 4, False, True, "that many agreeing voices are many sources", "the dodo known from accounts, bones, a head and a genome"),
+ "relational-error": ("Relational error", "Intelligible error depends on genuine coherence; an error is a misassigned relation within a structure whose other parts may be sound.", "philosophical claim", "working", 2, 3, False, False, "that every falsehood hides a truth; that error is moral evil", "2 + 2 = 5"),
+ "bridge-relations": ("Four relations across categories", "Structural analogy, designed representation, causal connection within embodied personhood, and ontological identity (rejected).", "ontological inference", "working", 3, 4, True, True, "that representation is identity; that analogy is all there is", "light and Christ; Romans 1:20; a spoken lie"),
+ "grounding": ("Foundational grounding", "An indefinitely deferred chain of dependent grounds cannot constitute ultimate grounding; the primitive created order is the foundation, fixed for creatures, not for the Creator.", "philosophical claim", "working", 3, 4, False, False, "that every mathematical infinity is inconsistent", "an explanation always postponed is never given"),
+ "constraint-levels": ("Explicitly and implicitly intrinsic constraints", "Constraints of the primitive order, and constraints following necessarily from an actual configuration even when it arose by chance.", "working definition", "working", 3, 3, False, True, "that implicit means weak; that necessity means determination", "a cracked stone splits along the crack"),
+ "opportunity": ("Opportunity", "A distinguishable occasion at which admissible actualisations are available; it can pass with nothing happening.", "working definition", "working", 2, 3, False, True, "that it is the same as possibility or admissibility", "the seed that could have germinated this spring"),
+ "succession": ("Succession", "The directed relational order of actual consequence, fundamental and prior to its measurement.", "theological and philosophical premise", "working", 3, 4, False, True, "that a model's one-way rule creates it; that clocks create it", "the bell sounds because it was struck"),
+ "cadence": ("Cadence", "The ordered pattern of opportunities (opportunity cadence) or of what occurs (actualisation cadence), not necessarily periodic; rhythm is recurrence with a cadence.", "working definition", "working", 3, 3, False, False, "that cadence means periodicity", "a ferry calling twelve times, boarded four times"),
+ "moral-opportunity": ("Time as moral opportunity", "Time's significance for persons, relative to capacity, conditions and history.", "theological interpretation", "working", 2, 3, False, False, "that it is a clock unit; that it measures worth", "an athlete's two minutes resting on months of preparation"),
+ "embodied-act": ("Embodied act and moral reality", "An embodied human act and its moral reality are causally connected, not identical; created order is the theatre and language of moral consequence.", "theological interpretation", "working", 3, 4, False, True, "that the moral is physical; that the body is a mere sign", "a lie spoken with a tongue is also a wrong"),
+ "history-record": ("History as its own record", "Consequential history is carried in present relations with no separate ledger; consequence can persist where provenance is lost; God knows the whole.", "RS working hypothesis (with theological premise)", "working", 3, 4, False, False, "that persistence means recoverability", "a deception's effects untraceable to the lie"),
+ "subjection": ("The subjection of creation", "God subjected creation after the Fall; the author reads it as a deliberate realignment of primitive conditions so creation remains a truthful instructor; the mechanism is open.", "theological interpretation", "frontier", 4, 4, True, True, "that Genesis describes microphysics; that every suffering is personal sin", "Genesis 3:17-19; Romans 8:20"),
+ "wonder": ("Wonder and beauty", "Wonder responds to coherence intelligible yet exceeding comprehension; beauty is the apprehensible expression of the patterns of goodness.", "working definitions", "working", 2, 3, False, False, "that beauty is symmetry or preference", "John 14:6 read as way, truth and life"),
 }
 
 # Evidence and Scripture nodes (sources, not reader concepts)
@@ -178,6 +195,8 @@ S = {
  "S-heb13": "Hebrews 1:3", "S-prov252": "Proverbs 25:2", "S-1thes523": "1 Thessalonians 5:23",
  "S-isa55": "Isaiah 55:10–11", "S-rom10": "Romans 10:14–17",
  "S-gen216": "Genesis 2:16–17; 1:31", "S-isa4022": "Isaiah 40:22",
+ "S-gen3": "Genesis 3:6, 17–21", "S-john146": "John 14:6; 10:30", "S-1pet120": "1 Peter 1:18–20",
+ "S-ps9012": "Psalm 90:12; Luke 12:48", "S-gen114": "Genesis 1:14",
 }
 
 R = "REQUIRES"
@@ -321,6 +340,21 @@ EDGES = [
  ("restoration", "SCRIPTURALLY_BOUNDED_BY", "S-rev21"), ("resurrection", "SCRIPTURALLY_BOUNDED_BY", "S-1cor15"),
  ("tcr", "SCRIPTURALLY_BOUNDED_BY", "S-isa55"), ("tcr", "SCRIPTURALLY_BOUNDED_BY", "S-rom10"),
  ("divine-action", "SCRIPTURALLY_BOUNDED_BY", "S-col1"),
+ # revision 2.7
+ ("true-logic", R, "creator-creature"), ("inferential-logic", R, "true-logic"), ("inferential-logic", R, "knowing-coherence"),
+ ("not-proof", R, "inferential-logic"), ("coherence-factor", R, "not-proof"), ("convergence", R, "coherence-not-fidelity"),
+ ("convergence", R, "coherence-factor"), ("relational-error", R, "coherence-not-fidelity"), ("bridge-relations", R, "analogy-vs-identity"),
+ ("grounding", R, "runtime"), ("constraint-levels", R, "admissibility"), ("constraint-levels", R, "actualisation"),
+ ("opportunity", R, "admissibility"), ("opportunity", R, "actualisation"), ("succession", R, "time"),
+ ("cadence", R, "opportunity"), ("cadence", R, "succession"), ("moral-opportunity", R, "cadence"), ("moral-opportunity", R, "personhood"),
+ ("embodied-act", R, "bridge-relations"), ("embodied-act", R, "embodiment"), ("history-record", R, "provenance"),
+ ("subjection", R, "constraint-levels"), ("subjection", R, "corruption"), ("wonder", R, "true-logic"),
+ ("relational-error", "NOT_IDENTICAL_TO", "corruption"), ("bridge-relations", "CONSTRAINS", "tcr"),
+ ("true-logic", "NOT_IDENTICAL_TO", "inferential-logic"), ("constraint-levels", "DISTINGUISHES", "constrained-stochasticity"),
+ ("convergence", "EVIDENCED_BY", "E-multipath"), ("subjection", "SCRIPTURALLY_BOUNDED_BY", "S-gen3"),
+ ("subjection", "SCRIPTURALLY_BOUNDED_BY", "S-rom8"), ("wonder", "SCRIPTURALLY_BOUNDED_BY", "S-john146"),
+ ("history-record", "SCRIPTURALLY_BOUNDED_BY", "S-1pet120"), ("moral-opportunity", "SCRIPTURALLY_BOUNDED_BY", "S-ps9012"),
+ ("cadence", "SCRIPTURALLY_BOUNDED_BY", "S-gen114"), ("bridge-relations", "SCRIPTURALLY_BOUNDED_BY", "S-rom120"),
 ]
 
 # Chapter of first introduction under the selected architecture (see architecture-candidates.md).
@@ -523,7 +557,10 @@ def main():
                  "regional-coherence": "regional coherence", "admissibility": "admissibility", "tendency": "tendency",
                  "stochasticity": "stochasticity", "relation": "relation", "personhood": "personhood",
                  "corruption": "corruption", "alignment": "alignment", "restoration": "restoration",
-                 "analogy-vs-identity": "structural analogy", "category": "category"}.get(k)
+                 "analogy-vs-identity": "structural analogy", "category": "category",
+                 "true-logic": "true logic", "inferential-logic": "inferential logic", "coherence-factor": "coherence factor",
+                 "opportunity": "opportunity", "succession": "succession", "cadence": "cadence",
+                 "convergence": "independent relational convergence", "constraint-levels": "intrinsic constraint"}.get(k)
         if short:
             terms.append({"id": k, "term": short, "aliases": alias.get(k, []),
                           "requires": [p for p in sorted(req[k]) if p in {
@@ -531,7 +568,9 @@ def main():
                               "constrained-stochasticity", "regularity", "carry", "transmit", "receive", "difference",
                               "persistence", "coordination", "global-coherence", "local-coherence", "regional-coherence",
                               "admissibility", "tendency", "stochasticity", "relation", "personhood", "corruption",
-                              "alignment", "restoration", "analogy-vs-identity", "category"}]})
+                              "alignment", "restoration", "analogy-vs-identity", "category",
+                              "true-logic", "inferential-logic", "coherence-factor", "opportunity", "succession", "cadence",
+                              "convergence", "constraint-levels"}]})
     (OUT / "terms-edition2.json").write_text(json.dumps({"terms": terms}, indent=1, ensure_ascii=False) + "\n")
     print("top load-bearing:", ", ".join(N[k][0] for k in ranked[:15]))
 

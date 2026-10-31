@@ -221,3 +221,32 @@ Source: the author's ontological brief, examined in `v2.6-ontological-revision-r
 | OS1 | Coupled oscillation, mode relations and localised patterns as what constitutes material individuality | speculative (mechanism candidate) | S | Ch 8, App B | — |
 | BA1 | Indivisible stochastic processes as a reading of quantum theory | scientifically-contested (connection, not adopted) | — | Ch 5, App B | — |
 | QFT1 | QFT's predictive success does not by itself establish fundamental fields as material substances, nor the substrate | philosophical | H | Ch 9 | — |
+
+## v2.7 revisions (2026-10-31)
+
+Source: the author's research conversations of 31 October 2026, reached through assistant-prepared briefs and settled by the author's recorded decisions (`v2.7-author-questions.md`). Appendix E.10 is the governing statement. Categories and confidence keep their meanings above.
+
+| # | Claim | Category | Conf. | Location | Supersedes |
+| --- | --- | --- | --- | --- | --- |
+| PR1 | The spiritual and moral order is prior in being and purpose; the created runtime order depends on and represents it | theological premise | — | Ch 1, Ch 3, App E.10 | — |
+| PR2 | *That* matter derives from a non-material foundation | theological premise | — | Ch 3, Ch 6, App E.2 | B held only as a hypothesis (v2.6) |
+| PR3 | A and C excluded at premise level; comparative argument kept as independent support | philosophical (comparative) + theological premise | M | Ch 3, App E.9 | "C remains open" (v2.6) |
+| KN1 | True logic; inferential logic (author's wording) | theological premise; working definition | — | Ch 2 | — |
+| KN2 | Proof as warrant admitting a coherence factor; formal proof conclusive relative to axioms | philosophical | H | Ch 2 | conventional "not proven" disclaimers |
+| KN3 | Independent relational convergence strengthens warrant only as far as independence is real | philosophical (methodological) | H | Ch 10, App B | — |
+| KN4 | Intelligible error depends on genuine coherence; error is a misassigned relation | philosophical | H | Ch 10 | "coherence is not truth" restatement in Ch 10 |
+| GR1 | An indefinitely deferred chain of grounds cannot be ultimate grounding | philosophical (author holds it internally contradictory) | M | Ch 3 | — |
+| CO1 | A stochastically actualised configuration can carry necessary constraints; necessity is not determination | philosophical | H | Ch 4, Ch 5 | — |
+| CO2 | True randomness rejected | philosophical/theological | M | Ch 5 | — |
+| TI1 | Succession is fundamental and prior to measurement | theological and philosophical premise | — | Ch 6 | "ordering is not yet direction" (v2.6) |
+| TI2 | Oscillation as intrinsic reference cadence | speculative (mechanism candidate, author-favoured) | S | Ch 6, Ch 8 | "not adopted" without qualification (v2.6) |
+| TI3 | Time as moral opportunity | theological interpretation | — | Ch 13 | — |
+| BR1 | Four relations across categories; representation by design | philosophical; theological premise (representation) | M | Ch 1, Ch 7 | "likeness is the most that can be claimed" (v2.6) |
+| BR2 | Embodied act causally connected to its moral reality, not identical | theological interpretation; mechanism open | M | Ch 12, Ch 14 | analogy-only framing of habit and sin |
+| HI1 | History is its own record; consequence persists where provenance is lost | RS-working-hypothesis | M | Ch 6, Ch 14 | — |
+| HI2 | God knows the whole moral provenance; judgement does not rest on recoverable traces | theological | — | Ch 15 | — |
+| FA1 | Subjection of creation as deliberate realignment of primitive conditions | theological interpretation; mechanism open (three readings) | — | Ch 14, App E.10 | — |
+| FA2 | Animal mortality introduced by the post-Fall realignment | theological interpretation (author, 31 Oct 2026) | — | Ch 14, Ch 15 | Ch 15 neutrality (v2.6) |
+| FA3 | Relation of FA2 to the fossil record's conventional chronology | open question (named, not resolved, by author's decision) | — | Ch 14, App E.10 | — |
+| BE1 | Beauty as expression of the patterns of goodness; wonder | theological premise; working definitions | — | Ch 16 | — |
+

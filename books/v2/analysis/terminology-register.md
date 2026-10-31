@@ -54,5 +54,26 @@ Drafting rule: every term below is used **only** in the stated sense. Where ordi
 | higher-order identity | a configuration that persists beyond its constituents (matched comparison), is consequential as a unit, and is multiply realisable | any noticeable pattern; a layer of reality | Ch 8 |
 | grammar of emergence | distinction → relationship → organisation → higher-order identity, recursively | the first edition's T1A–T1D2 tiers; a ladder of substances | Ch 8 |
 | order parameter / downward constraint | a higher-order organisation produced by its components that then governs them (Haken) | evidence for RS | Ch 8 |
+| true logic | ultimate global coherence, perfectly comprehended and applicable, inseparable in the personal nature of God | the order of reality without a knower; any creaturely reasoning | Ch 2 |
+| inferential logic | the author's wording: recursive refinement of partial understanding towards true logic within created runtime order | true logic; formal logic as such | Ch 2 |
+| logic / reasoning / relational inference | necessary relational structure / its application (well or badly) / reasoning about represented relationships at higher orders | synonyms of one another | Ch 2, Ch 12 |
+| proof | sufficient warrant under declared premises, scope and constraints for an inferred relation to serve as a coherence factor | possession of the whole truth; demonstration only (formal proof is the strongest case) | Ch 2 |
+| coherence factor | a relation admitted for reuse with scope, provenance, uncertainties and revision triggers visible | a constituent of divine knowledge; an established fact beyond revision | Ch 2 |
+| inferential precision | how well inference discriminates candidates, traces warrant and keeps uncertainty correctable | a numerical score | Ch 2 |
+| disciplined confidence | commitment proportionate to warrant, erring neither by over- nor under-claiming | a second doctrine called "epistemic proportionality" (that phrase is only a gloss) | Ch 2, Ch 16 |
+| independent relational convergence | agreement among genuinely independent lines of inquiry, strengthening warrant only as far as the independence is real | agreement among AI systems or summaries as such | Ch 10 |
+| relational error | an incorrect asserted relation within a structure whose other elements may be sound | moral evil | Ch 10 |
+| structural analogy / representation / causal connection / ontological identity | the four relations across categories (identity rejected) | interchangeable labels | Ch 1 |
+| created runtime order | the operating, non-conscious created order that expresses itself materially; not all that exists | "universe"; creation as a whole including souls and spiritual creatures | Ch 3 |
+| explicitly / implicitly intrinsic constraint | constraint of the primitive order / constraint following necessarily from an actual configuration | weak or optional constraint (implicit ≠ weak) | Ch 4 |
+| opportunity | a distinguishable occasion at which admissible actualisations are available | the model sense of removing competitors (now *competitive clearance*); possibility; admissibility | Ch 4 |
+| competitive clearance | removal of competing alternatives making another event the likelier next one | opportunity | Ch 7 |
+| determinism | exactly one successor given a complete configuration and its governing relations | necessary constraint; effective determinism | Ch 5 |
+| true randomness | occurrence with no governing admissibility relation or pattern (rejected) | stochasticity; unpredictability | Ch 5 |
+| succession | the directed relational order of actual consequence, prior to its measurement | a model's one-way rule; a clock reading | Ch 6 |
+| cadence / opportunity cadence / actualisation cadence / rhythm | ordered pattern of occasions or events (not necessarily periodic) / of opportunities / of what occurs / recurrence with a cadence | periodicity as definition; measured time | Ch 6 |
+| time / time as moral opportunity | ordering of actualisation directed by consequence, measured by comparing cadences / time's significance for persons relative to capacity, conditions and history | two kinds of time; a clock unit of moral opportunity | Ch 6, Ch 13 |
+| beauty | apprehensible expression of the relational patterns of goodness, spiritual in origin | symmetry; preference | Ch 16 |
+| wonder | creaturely response to coherence intelligible yet exceeding present comprehension | ignorance; the end of inquiry | Ch 16 |
 
 **Avoided first-edition terms:** closure knot (the technical volume only); five operations A–E; T1A–T1D2; dialect; Model B; exponential reduction (used once, lower-case, in Ch 2); containment note.

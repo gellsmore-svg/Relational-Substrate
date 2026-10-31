@@ -279,6 +279,67 @@
    "requires": [
     "corruption"
    ]
+  },
+  {
+   "id": "true-logic",
+   "term": "true logic",
+   "aliases": [],
+   "requires": []
+  },
+  {
+   "id": "inferential-logic",
+   "term": "inferential logic",
+   "aliases": [],
+   "requires": [
+    "true-logic"
+   ]
+  },
+  {
+   "id": "coherence-factor",
+   "term": "coherence factor",
+   "aliases": [],
+   "requires": []
+  },
+  {
+   "id": "convergence",
+   "term": "independent relational convergence",
+   "aliases": [],
+   "requires": [
+    "coherence-factor"
+   ]
+  },
+  {
+   "id": "constraint-levels",
+   "term": "intrinsic constraint",
+   "aliases": [],
+   "requires": [
+    "actualisation",
+    "admissibility"
+   ]
+  },
+  {
+   "id": "opportunity",
+   "term": "opportunity",
+   "aliases": [],
+   "requires": [
+    "actualisation",
+    "admissibility"
+   ]
+  },
+  {
+   "id": "succession",
+   "term": "succession",
+   "aliases": [],
+   "requires": []
+  },
+  {
+   "id": "cadence",
+   "term": "cadence",
+   "aliases": [],
+   "requires": [
+    "opportunity",
+    "succession"
+   ]
   }
  ]
 }
