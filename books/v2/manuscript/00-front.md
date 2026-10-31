@@ -4,7 +4,7 @@
 
 *A Scripture-first account of a relational creation: how physical order, life, persons, corruption and restoration belong to one world without collapsing into one kind of thing.*
 
-Second edition, revision 2.6, October 2026. Companion volumes: *The Relational Substrate* (technical), *A Coherent World* (general), *How to Hug the Right Tree* (devotional).
+Second edition, revision 2.7, October 2026. Companion volumes: *The Relational Substrate* (technical), *A Coherent World* (general), *How to Hug the Right Tree* (devotional).
 
 ---
 
@@ -14,7 +14,7 @@ A discipline can be exact in its own domain and still leave the deepest question
 
 This book exists to ask them together. Its question is not whether modern science works. It does. The question is what kind of created reality can make everything we know, physical, living, personal, moral and revealed, belong coherently to one world.
 
-The book's answer is that created physical reality is *relational* from its foundation. Things are not first made as sealed, self-contained objects that are later connected. They are constituted within an order of relation that God made and upholds. The project calls that order the Relational Substrate. Matter, on this proposal, is fully real but not foundational, and the book's central question is whether materiality is the acquisition of persistent, manipulable individuality by a configuration of something that is not itself material. Two further proposals give the answer its working shape:
+The book's answer is that created physical reality is *relational* from its foundation. Things are not first made as sealed, self-contained objects that are later connected. They are constituted within an order of relation that God made and upholds. The project calls that order the Relational Substrate. Matter, on this proposal, is fully real but not foundational. That it derives from a foundation that is not itself material is held as a theological premise, and the book's central question is how materiality, the acquisition of persistent, manipulable individuality, arises within such an order. Two further proposals give the answer its working shape:
 
 - what actually happens is drawn, with real chance, from what the created order makes possible and favours;
 - a difference anywhere becomes consequential somewhere else through one recurring grammar: something distinguishes, the distinction is carried by a dependency that preserves it, and another state is changed because of it.
@@ -29,12 +29,12 @@ The standard is *global coherence*. A proposal about what exists must hold toget
 
 The book makes several kinds of claim and labels them. Some things are stated because Scripture states them. Some are observed and measured. Some are inferences. Some are working hypotheses of this project, and some questions are simply open. Chapter 2 sets out these levels. Appendix E gathers the book's current ontology in one place, with the status of each claim. A reader who rejects one claim can see exactly which others depend on it.
 
-The book does not prove the Relational Substrate. No set of measurements could display the deepest structure of created reality directly. What the book does is state a hypothesis clearly enough to be wrong, show why it is believed, show what supports it and what would count against it, and follow its consequences to the end.
+No set of measurements could display the deepest structure of created reality directly, so the book's warrant for the Relational Substrate is that of a global coherence argument, not of experiment. It states a hypothesis clearly enough to be wrong, shows why it is believed, shows what supports it and what would count against it, and follows its consequences to the end. The way of reasoning it uses, inference that tests itself against the whole and revises itself where it fails, is part of what it offers.
 
 ## About this edition
 
 The book is written for an intelligent reader with no specialist training in physics, philosophy or theology who is willing to think carefully. Each technical term is explained where it is first needed. The opening chapter introduces one ordinary scene, seeing a stone in daylight, which returns throughout as a common reference point.
 
-This is revision 2.6 of the second edition. The first edition rested on specific mechanisms that later work did not support. The second rebuilds the book on more foundational ideas, and Appendix B records what changed and why. The research behind the book is the work of one author, carried out with extensive computational and AI-assisted exploration. Its records are public, and Appendix B notes what they do and do not show.
+This is revision 2.7 of the second edition. The first edition rested on specific mechanisms that later work did not support. The second rebuilds the book on more foundational ideas, and Appendix B records what changed and why. The research behind the book is the work of one author, carried out with extensive computational and AI-assisted exploration. Its records are public, and Appendix B notes what they do and do not show.
 
 A free electronic edition of this book is available, offered as an open intellectual contribution to encourage reading, sharing and honest discussion. Updated versions and related materials can be found through the project website at <https://relational-substrate.blogspot.com/> and the public research repository at <https://github.com/gellsmore-svg/Relational-Substrate>.

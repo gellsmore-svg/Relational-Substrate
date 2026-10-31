@@ -1,7 +1,7 @@
 # Open-Thetical Research (OTR)
 
 **Status:** Working methodological definition, authored for reuse across the Relational Substrate research programmes.  
-**Version:** 1.0 — 14 October 2026  
+**Version:** 1.1 — 31 October 2026 (additive; v1.0 of 14 October 2026 is unchanged in §§1–8, and §9 records the additions)  
 **Scope:** General research method; not a physical theory, experimental result, or change to the canonical RS ontology.
 
 ## 1. Definition
@@ -79,3 +79,51 @@ Suggested canonical repository file: `research-methods/open-thetical-research.md
 ## 8. Concise memory-ready statement
 
 > **Open-Thetical Research (OTR):** My preferred research method is coherence-guided, recursively adaptive exploration. Begin with a meaningful inquiry direction and multiple incomplete ideas rather than a single prediction. Select bounded, complementary constraints and experiments for their potential to clarify several possibilities, not to confirm a chosen answer. Observe broadly—including weak, null, unexpected and fragile behaviour—then assess mechanisms, artefacts and global coherence. Update a connected evidence/coherence map and adapt the next predeclared experiment according to what was learned. The aim is convergence in understanding, not necessarily confirmation. Apply this shared method to both the Constraint Laboratory and the Gravity–Temporality research programme, preserving their independent results and provenance.
+
+## 9. Version 1.1 additions (31 October 2026)
+
+Authorised by the author on 31 October 2026 (`books/v2/analysis/v2.7-author-questions.md`, Q15). These additions extend §§4–6. They remove nothing, and they do not relabel any earlier round of the Constraint Laboratory, Gravity–Temporality or Recursive Relational Complexity programmes as retested under v1.1. Each programme adopts v1.1 from its next frozen round, recording the version in that round's plan.
+
+### 9.1 Methodological plurality
+
+Investigate with whatever method the question requires: logical analysis, computation and experiment, mathematical modelling, historical evidence, theological reasoning, or disciplined reflection on experience. Do not require every question to submit to one method. Record which method supplied which warrant, because warrant differs in kind (formal, empirical, historical, philosophical, theological) and must not be silently converted from one kind to another.
+
+### 9.2 Relational error anatomy (extends §4 step 5)
+
+When a candidate fails, do not record only "rejected". Record:
+
+- which asserted relation failed, and at which inferential step;
+- which component relations remain valid and reusable;
+- which previously assumed relations are now excluded or constrained;
+- whether the failure corrects the question or its assumptions as well as the answer.
+
+Intelligible error depends on genuine coherence, so a failed candidate usually contains sound parts. This does not license treating a false relation as true because its surroundings are intelligible.
+
+### 9.3 Independent-convergence test (extends §4 step 6)
+
+Before counting agreement among lines of inquiry as support, test their independence:
+
+- independence of originating premises;
+- independence of evidential sources;
+- independence of inferential routes;
+- shared assumptions or methodological dependencies;
+- whether the agreement survives an alternative representation;
+- whether it could have been produced by feedback, summarisation or common training.
+
+Separate AI models, sessions or agents are **not** independent evidence by default: they share training material and may have seen one another's output. Agreement produced by repeated merging of summaries is the "false attractor" pattern and is recorded as such.
+
+### 9.4 Admission of coherence factors (new step between §4 steps 6 and 7)
+
+A relationship may be admitted for reuse in later reasoning, as a **coherence factor**, only with the following recorded:
+
+- its statement and scope (where it is warranted to apply, and where not);
+- its provenance (rounds, sources, methods) and the kind of warrant it has;
+- its dependencies on other factors and assumptions;
+- its known uncertainties and live alternatives;
+- its review and retraction triggers.
+
+Admission is judged on a **multidimensional vector**: warrant, coherence, provenance, discrimination, scope and dependencies, each assessed separately, with an explicit written rationale. **No universal numerical threshold or single scalar score is set**, and none should be inferred from a vector's values. A factor is reusable only within the scope its evidence and assumptions warrant. Scores produced by AI analysis are triage aids, not evidence of truth.
+
+### 9.5 Memory-ready addendum
+
+> **OTR 1.1:** Use the method the question needs; analyse failures into the relation that failed and the parts that survive; test agreement for real independence before counting it (separate AIs are not independent by default); and admit a coherence factor only with its scope, provenance, dependencies, uncertainties and review triggers recorded, judged on several dimensions together, with no universal numerical threshold.

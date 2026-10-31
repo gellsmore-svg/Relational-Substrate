@@ -14,6 +14,13 @@ Chapter 4 introduced **admissibility** as whether a transition is physically pos
 
 The three questions are independent, and the most serious confusions about human action come from running them together. Lying is physically possible: speech can carry false statements as easily as true ones. It is within ordinary human power: anyone who can speak can lie. And it is wrong. Sustaining creation in being is physically admissible in the sense that it occurs, but it is within no creature's power; it belongs to God alone. Creating something beautiful is possible, within power and good. The scalpel and the knife are equally possible and equally within the power of their wielders; what divides them is the moral question.
 
+Scripture's first account of human wrongdoing turns on exactly this distinction:
+
+> `And when the woman saw that the tree was good for food, and that it was pleasant to the eyes, and a tree to be desired to make one wise, she took of the fruit thereof, and did eat, and gave also unto her husband with her; and he did eat.`
+> *Genesis 3:6*
+
+The fruit was within reach, and eating it was within their power. What was forbidden was the means: wisdom sought by taking what God had withheld. The act was admissible in the first two senses and not in the third.
+
 The first edition of this book named three characteristic mistakes that follow from collapsing these layers, and they are worth repeating because they are so common.
 
 - **The naturalist mistake** collapses the moral into the physical: if it is possible, and nature produces it, it cannot really be wrong.
@@ -55,7 +62,23 @@ Scripture presents human beings as genuinely able to choose, and as held respons
 > `I call heaven and earth to record this day against you, that I have set before you life and death, blessing and cursing: therefore choose life, that both thou and thy seed may live.`
 > *Deuteronomy 30:19*
 
-How human freedom relates to God's sovereignty is among the oldest questions in Christian theology, and different traditions answer it differently. This book does not resolve it. It does observe one thing within its own subject, and it is a limited observation. A world of constrained possibility, in which actualisation is not fixed in advance at every level (Chapter 5), does not settle the question of human freedom in either direction. Constrained chance is not freedom. A coin toss is not a choice, and the book makes no claim that human agency is a matter of molecular chance. Physics cannot prove free will, and the relational ontology does not try to. Agency belongs to persons, in their own category.
+One observation falls within this book's own subject. A world of constrained possibility, in which actualisation is not fixed in advance at every level (Chapter 5), does not settle the question of human freedom in either direction. Constrained chance is not freedom. A coin toss is not a choice, and the book makes no claim that human agency is a matter of molecular chance. Physics cannot settle whether the will is free, and the relational ontology does not try to. Agency belongs to persons, in their own category.
+
+## Time as moral opportunity
+
+Agency is exercised in time, and Scripture speaks of time in a way the physicist does not:
+
+> `So teach us to number our days, that we may apply our hearts unto wisdom.`
+> *Psalm 90:12*
+
+The days are counted here as an opportunity, given and limited, for wisdom. The book calls this **time as moral opportunity**. It is not a second kind of time, and it is not a clock unit. It is what the succession of Chapter 6 means for a person who must act within it.
+
+Opportunity in this sense is relative to the person. A nanosecond is no occasion for a human decision, and an hour can be decisive, but duration is not the measure. An athlete's two minutes of competition rest on months of preparation, and what she can do in them is the fruit of what she did before. Earlier choices change capacity, disposition and which options are even visible when the moment comes. They condition what follows without deciding it: a moral life is a trajectory in which much is open and nothing begins from nowhere. In this chapter's terms, preparation changes operational admissibility, what is within a person's power. Responsibility follows the same shape:
+
+> `For unto whomsoever much is given, of him shall be much required: and to whom men have committed much, of him they will ask the more.`
+> *Luke 12:48*
+
+More is asked of those given more, in gifts, opportunities and formation. That is a difference of responsibility, not of worth.
 
 ## Boundaries that free
 
@@ -72,7 +95,7 @@ It is common today to think of every moral boundary as a restriction on freedom,
 
 Law, testimony, statute and commandment are each a constraint, and each is described as giving life, wisdom, joy and light. Liberty is found *in* seeking God's precepts, not in escaping them. This is not a paradox once the structure is seen. A boundary rightly placed does not shrink the space of good action. It is what gives the space its shape, so that a person can grow within it into what they are made to be.
 
-Here a structural analogy is again at work, and again it must be held as analogy. The constraint that shapes a crystal and the commandment that shapes a life share a form: a boundary that makes possible rather than merely forbidding. They do not share a nature. The commandment is spoken by a Person to persons and is received in conscience, trust and obedience. The crystal's constraint is given in the order of matter and received by nothing. The likeness is real, and it is one of the ways creation bears witness to its Maker. But a commandment is not a law of physics, and a law of physics is not a commandment.
+Here a structural analogy, in the sense of Chapter 1, is at work. The constraint that shapes a crystal and the commandment that shapes a life share a form: a boundary that makes possible rather than merely forbidding. They do not share a nature. The commandment is spoken by a Person to persons and is received in conscience, trust and obedience. The crystal's constraint is given in the order of matter and received by nothing. The likeness is real, and it is one of the ways creation bears witness to its Maker. But a commandment is not a law of physics, and a law of physics is not a commandment.
 
 ## The question that follows
 

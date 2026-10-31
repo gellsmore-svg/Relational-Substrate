@@ -105,6 +105,8 @@ The same word is used for created light, for Christ and for God. It would be abs
 
 This is the distinction the whole book depends on, and it deserves a name. A **structural analogy** is a likeness of form between things of different kinds. **Ontological identity** would mean they are the same kind of thing. Scripture is full of structural analogies, such as light, bread, water, seed, word and body, and they are real. Creation was made by the Word, and it bears likenesses of its Maker and of the spiritual realities it serves. But likeness of form across categories never erases the categories. When this book later shows the same relational pattern in a beam of light, in a living cell, in a conversation and in the history of redemption, it will be pointing to analogies of form, not claiming that redemption is a physical process. The reader is entitled to hold the book to that promise.
 
+Likeness of form is not the only way different kinds of reality are joined, though, and the book needs to say which joining it means. Four relations are kept apart. A **structural analogy** is a likeness of form between different kinds, as between created light and Christ's making-manifest. A **representation** is a created form that, by design, shows something of the spiritual order. Paul says that the invisible things of God "are clearly seen, being understood by the things that are made" (Romans 1:20). That is more than resemblance: creation was made to disclose, and it instructs without being conscious of doing so. A **causal connection** holds within one human person, between an embodied act and its moral reality. A lie is spoken with a tongue, and it is also a wrong. The two are connected, and they are not the same thing. **Ontological identity**, sameness of kind across categories, the book rejects. Whenever a later chapter links one category to another, it says which of these it means.
+
 ## What Scripture leaves open, and what it rules out
 
 Scripture's boundaries are real, and they exclude a good deal. If God created the world, the world is not eternal and did not make itself. If the world is not God, it is not divine in whole or in part. If creation is good, matter is not evil or illusory. If darkness is a created condition, it is not a co-eternal rival to light. Historically, each of these exclusions answers a serious position that thoughtful people have held. They are gathered in Appendix A for readers who want to see the points of divergence. The chapters that follow do not dwell on them, because their purpose is to build rather than to refute.
@@ -119,9 +121,9 @@ Some of Scripture's language provokes questions without answering them. The prop
 > `that stretcheth out the heavens as a curtain, and spreadeth them out as a tent to dwell in.`
 > *Isaiah 40:22*
 
-Language like this sits uneasily with the habit of imagining space as an empty container that simply exists, and it invites the question of what extension itself is. It does not supply a geometry for the deep order of creation, and this book does not extract one from it. Scripture constrains and provokes. It is not a hidden physics textbook.
+Language like this sits uneasily with the habit of imagining space as an empty container that simply exists, and it invites the question of what extension itself is. It does not supply a geometry for the deep order of creation, and this book does not extract one from it. Scripture constrains and provokes.
 
-Nor is beginning here a cage on inquiry. An inquiry that treats every conceivable account of origins as equally likely has no way to focus; beginning from one Creator and one created order narrows the field to what can actually be investigated.
+Beginning here also gives inquiry its focus. An inquiry that treats every conceivable account of origins as equally likely has nowhere to start; beginning from one Creator and one created order narrows the field to what can actually be investigated.
 
 ## The questions the book will answer
 

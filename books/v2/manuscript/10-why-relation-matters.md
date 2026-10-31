@@ -57,16 +57,13 @@ The argument does not claim that other ontologies make promises impossible or re
 
 If the argument is sound, it shows why the physics of this book is not an optional technical appendix to a theological book. *How* the material world is real bears on whether the rest of reality hangs together.
 
-## What the relational picture does not provide
-
-It is as important to say what the argument does not claim, because it is easily inflated.
+## Continuity, not reduction
 
 The common relational grounding of material things is a kind of glue. It allows physical causation, biological organisation, embodied action, consequence in the environment, communication and social dependence to belong to one created order. But it is continuity across the boundaries, not reduction across them:
 
 - Moral obligation is not a field, and a promise is not a force.
 - Love is not covariance.
 - Sin is not entropy.
-- Hearing and receiving the word of God is not receptor chemistry.
 - The soul is not a carrier.
 - Resurrection is not the substrate repairing itself.
 - Divine action is not a wider set of physical permissions.
@@ -79,7 +76,7 @@ The most serious reply runs like this. Nobody claims that promises exist among p
 
 The book accepts emergence fully. Chapter 11 will argue that living organisation is genuinely new and genuinely explanatory at its own level. The disagreement is narrower. In familiar cases, what emerges is a new and higher expression of capacities the base already has. Wetness expresses the attraction molecules already have for one another. Life expresses chemistry that already includes catalysis, templating and self-assembly. The question is not whether new properties appear. It is whether the base already contains the *relational resources* that make the emergent structures intelligible.
 
-If the base contains entities individuated independently of their relations, whose relations are always something added or exercised, then constitutive relation emerges from a base where nothing is constituted by its relations. That can be asserted, but it is precisely the kind of discontinuity step 2 names. A powers ontology narrows the gap, because powers are already other-directed, and the book counts that as convergence. It does not count it as refutation. The relational picture's claim is a claim of *continuity of structural capacity*: what emerges in living, personal and moral life is new in kind, and it emerges from a base that already has its form. It is not a claim to derive moral truth from physics. That is a more coherent position, though not one that can be proved.
+If the base contains entities individuated independently of their relations, whose relations are always something added or exercised, then constitutive relation emerges from a base where nothing is constituted by its relations. That can be asserted, but it is precisely the kind of discontinuity step 2 names. A powers ontology narrows the gap, because powers are already other-directed, and the book counts that as convergence. It does not count it as refutation. The relational picture's claim is a claim of *continuity of structural capacity*: what emerges in living, personal and moral life is new in kind, and it emerges from a base that already has its form. It is not a claim to derive moral truth from physics. That is a more coherent position, and its warrant is comparative: it rests on global coherence.
 
 ## A second case: the poisoned river
 
@@ -97,19 +94,25 @@ Scripture speaks of exactly this reach, in which human wrongdoing is received by
 
 Hosea's land mourns because of the people's lying and killing. Paul's whole creation groans. Scripture consistently presents human moral life and the created world as bound together, so that wrong done by persons is received in the land, and the redemption of persons concerns the whole creation. The book does not claim that a relational physics *explains* these texts. Their explanation is theological. The claim is that a relational account of the material world sits naturally with the world they describe, while an account of sealed and indifferent objects makes them sound like poetry about a reality that is not really like that.
 
+The author goes further. On the author's account the created order is designed to bear moral consequence: it is the theatre in which embodied persons act and the language in which their acts take effect, are carried and are answered. **Status:** theological premise about creation's purpose. It is not derived from the physics. It names what the physics, on the relational reading, is fitted to serve.
+
 ## Why this is a Christian question
 
-This argument is not a covert attempt to derive Christianity from physics. A reader who accepted every word of it would not thereby believe in God. But it bears on Christian faith in a particular way.
+This argument bears on Christian faith in a particular way.
 
 Scripture describes a world in which relation is fundamental at every level. God makes humanity in his image and declares that it is not good for the man to be alone (Genesis 2:18). He binds himself to his people by covenant. He calls them to love, to keep faith and to bear one another's burdens. In Christ he reconciles "all things unto himself… whether they be things in earth, or things in heaven" (Colossians 1:20). If the physical world were, at bottom, a world in which nothing is constituted by its relations, this scriptural world would rest on a creation of a different kind, and the transition would need explaining. If the physical world is relational from its foundation, created by the God in whom "all things consist", then the relational life Scripture describes is the fulfilment, at its own level, of the grain of the whole creation. That does not prove the gospel. It removes one reason for thinking the gospel must be about a world other than the one we physically inhabit.
 
-## Coherence is not the same as truth
+## Coherence, error and convergence
 
-A book that argues for coherence must face its limits here.
+Chapter 2 said that coherence is not truth. The danger has a subtler form: an argument can become *more* coherent as it proceeds while moving *further* from the truth, if every step builds on an early mistake nobody questions. The research behind this project met this directly, though in exploratory work rather than in formally recorded experiments. While developing an AI-assisted method of reasoning that runs several independent lines of thought on one problem, the author observed that when the lines were repeatedly merged into a shared summary and fed back, agreement rose steadily, and an error present in one early line could harden into a confident consensus. The project calls this a *false attractor*. The lesson, which this book adopts, is that coherence is not the same as fidelity to the truth. Agreement can be produced by a shared hidden premise as easily as by a shared grasp of reality.
 
-A coherent account can be wrong. A detective story can be perfectly coherent and accuse the wrong suspect. More subtly, an argument can become *more* coherent as it proceeds while moving *further* from the truth, if every step builds on an early mistake nobody questions. The research behind this project met this directly, though in exploratory work rather than in formally recorded experiments. While developing an AI-assisted method of reasoning that runs several independent lines of thought on one problem, the author observed that when the lines were repeatedly merged into a shared summary and fed back, agreement rose steadily, and an error present in one early line could harden into a confident consensus. The project calls this a *false attractor*. The lesson, which this book adopts, is that coherence is not the same as fidelity to the truth. Agreement can be produced by a shared hidden premise as easily as by a shared grasp of reality.
+The remedy is to ask where agreement came from. When lines of inquiry that are genuinely independent, starting from different premises, drawing on different evidence and reasoning by different routes, arrive at relationships that fit together, their agreement carries weight no single line could. The book calls this **independent relational convergence**. The dodo of Chapter 8 is an example: sailors' accounts, bones, a preserved head and a genome, each with its own provenance, constrain the same bird. Its strength depends on the independence being real. Many voices repeating one source are one source. Several AI systems trained on overlapping material and fed one another's summaries are not independent witnesses merely because they are separate programs, which is how the false attractor formed.
 
-That applies to this book. Its argument is coherent, but that does not make it true, and its own coherence could be a false attractor. The safeguards are those already described. The argument stays accountable to observation wherever observation can reach (Chapter 9 named where it cannot). It keeps its levels of claim distinct. It keeps alternatives in view (Appendix A). And it submits its conclusions to Scripture, which is not one more input to the coherence but the frame within which coherence is sought.
+Error has its own anatomy, and it tells more than a verdict of "false". Take 2 + 2 = 5. Almost everything in it is sound. The numbers mean what they always mean. Addition is a well-defined operation. The question, what two and two make, has a definite answer, and five is an intelligible candidate. The error lies in one place: the asserted relation between the operation and its result. A statement that could not be understood could not even be wrong, so intelligible error depends on genuine coherence. That does not mean every falsehood hides a true conclusion, or that a false relation becomes true because its surroundings are intelligible. It means that when a claim fails, the right response is to find the relationship that failed, keep what remains sound, and notice what the failure has excluded. A failed hypothesis can correct the question as well as the answer. Stories show the same separation from the other side. A novel can be coherent throughout and never have happened: whether an account holds together, and whether it reports what occurred, are two questions.
+
+This is not an account of moral evil, which Chapter 14 gives. A mistaken representation is an error of relation. Wrongdoing is a person's turning against the good. They can coincide, but one is not the other.
+
+All this applies to the book itself. Its own coherence could be a false attractor. The safeguards are those already described. The argument stays accountable to observation wherever observation can reach (Chapter 9 named where it cannot). It keeps its levels of claim distinct. It keeps alternatives in view (Appendix A). And it submits its conclusions to Scripture, which is not one more input to the coherence but the frame within which coherence is sought.
 
 There is also a reason this matters for global coherence in particular. Global coherence is the most demanding test there is, because it must hold across every domain at once, and because errors hidden in one domain tend to surface as drift on the round trip through the others. A false attractor in one place is likely, sooner or later, to produce a contradiction or a silent change of meaning somewhere else. That is exactly why global coherence is a stronger test than local success, and why the book is willing to be judged by it.
 

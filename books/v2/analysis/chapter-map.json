@@ -1,5 +1,5 @@
 {
- "chapters": "see architecture-vector-scores.md (D\u2032)",
+ "chapters": "see architecture-vector-scores.md (D′)",
  "first_introduction": {
   "scripture": {
    "first": "Ch 1",
@@ -648,6 +648,97 @@
   },
   "order-parameter": {
    "first": "Ch 8",
+   "reactivate": []
+  },
+  "true-logic": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 16"
+   ]
+  },
+  "inferential-logic": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 16"
+   ]
+  },
+  "coherence-factor": {
+   "first": "Ch 2",
+   "reactivate": [
+    "Ch 10"
+   ]
+  },
+  "convergence": {
+   "first": "Ch 10",
+   "reactivate": []
+  },
+  "relational-error": {
+   "first": "Ch 10",
+   "reactivate": []
+  },
+  "bridge-relations": {
+   "first": "Ch 1",
+   "reactivate": [
+    "Ch 7",
+    "Ch 12",
+    "Ch 14",
+    "Ch 16"
+   ]
+  },
+  "grounding": {
+   "first": "Ch 3",
+   "reactivate": []
+  },
+  "constraint-levels": {
+   "first": "Ch 4",
+   "reactivate": [
+    "Ch 14"
+   ]
+  },
+  "opportunity": {
+   "first": "Ch 4",
+   "reactivate": [
+    "Ch 6",
+    "Ch 13"
+   ]
+  },
+  "succession": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 13"
+   ]
+  },
+  "cadence": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 8"
+   ]
+  },
+  "moral-opportunity": {
+   "first": "Ch 13",
+   "reactivate": []
+  },
+  "embodied-act": {
+   "first": "Ch 12",
+   "reactivate": [
+    "Ch 14"
+   ]
+  },
+  "history-record": {
+   "first": "Ch 6",
+   "reactivate": [
+    "Ch 14",
+    "Ch 15"
+   ]
+  },
+  "subjection": {
+   "first": "Ch 14",
+   "reactivate": [
+    "Ch 15"
+   ]
+  },
+  "wonder": {
+   "first": "Ch 16",
    "reactivate": []
   }
  }

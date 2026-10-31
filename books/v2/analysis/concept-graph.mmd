@@ -19,7 +19,7 @@ flowchart TB
   connectivity["Connectivity"]
   boundary_validity["Boundary validity"]
   propagation_cycle["Propagation stability and cycle consistency"]
-  not_proof["Not an empirical proof"]
+  not_proof["Proof as bounded warrant"]
   analogy_vs_identity["Structural analogy is not ontological identity"]
   category["Ontological categories"]
   bidirectional["Bidirectional coherence"]
@@ -100,6 +100,22 @@ flowchart TB
   relational_identity_compat["Relational identity compatibility"]
   emergence_grammar["Grammar of emergence"]
   order_parameter["Downward constraint (order parameter)"]
+  true_logic["True logic"]
+  inferential_logic["Inferential logic"]
+  coherence_factor["Coherence factor"]
+  convergence["Independent relational convergence"]
+  relational_error["Relational error"]
+  bridge_relations["Four relations across categories"]
+  grounding["Foundational grounding"]
+  constraint_levels["Explicitly and implicitly intrinsic constraints"]
+  opportunity["Opportunity"]
+  succession["Succession"]
+  cadence["Cadence"]
+  moral_opportunity["Time as moral opportunity"]
+  embodied_act["Embodied act and moral reality"]
+  history_record["History as its own record"]
+  subjection["The subjection of creation"]
+  wonder["Wonder and beauty"]
   scripture --> creator_creature
   scripture --> creation_real
   creation_real --> darkness
@@ -275,6 +291,33 @@ flowchart TB
   consciousness -. not identical .- matter
   divine_action -. not identical .- actualisation
   purpose_upstream -. not identical .- non_agentic
+  creator_creature --> true_logic
+  true_logic --> inferential_logic
+  knowing_coherence --> inferential_logic
+  inferential_logic --> not_proof
+  not_proof --> coherence_factor
+  coherence_not_fidelity --> convergence
+  coherence_factor --> convergence
+  coherence_not_fidelity --> relational_error
+  analogy_vs_identity --> bridge_relations
+  runtime --> grounding
+  admissibility --> constraint_levels
+  actualisation --> constraint_levels
+  admissibility --> opportunity
+  actualisation --> opportunity
+  time --> succession
+  opportunity --> cadence
+  succession --> cadence
+  cadence --> moral_opportunity
+  personhood --> moral_opportunity
+  bridge_relations --> embodied_act
+  embodiment --> embodied_act
+  provenance --> history_record
+  constraint_levels --> subjection
+  corruption --> subjection
+  true_logic --> wonder
+  relational_error -. not identical .- corruption
+  true_logic -. not identical .- inferential_logic
   subgraph Method["Method"]
     analogy_vs_identity & assumptions & bidirectional & boundary_validity & category & coherence & coherence_not_fidelity & connectivity & creation_real & creator_creature & darkness & desc_not_ont & description & empirical_constraint & epistemic_levels & global_coherence & knowing_coherence & local_coherence & not_proof & ontology & propagation_cycle & regional_coherence & scripture
   end
@@ -282,5 +325,5 @@ flowchart TB
     actualisation & admissibility & aggregation & carry & causation & compatibility & constrained_stochasticity & constraint_generative & coordination & difference & discriminability & endogenous_carrier & equivalence & identity_invariant & individual_continuity & information_loss & interoperability & joint_process & layered_stability & local_global & manifestation & mathematics & matter & mediation & memory_configuration & nested_tcr & non_agentic & object_first & persistence & possibility & projection & provenance & purpose_upstream & reachable & receive & recovery_kinds & regularity & relation & runtime & stochasticity & substitutability & substrate & t0_open & tcr & tcr_recursive & tendency & time & transmit
   end
   subgraph Life["Life, persons, theology"]
-    alignment & bridge & consciousness & corruption & divine_action & elasticity & embodiment & emergence_grammar & epistemic_boundary & handling_perturbation & higher_order & identity_coherer & identity_organiser & image & life & limitation & material & material_organisation & order_parameter & personhood & propositions_abc & qualitative_plausibility & receiver_constitution & relational_identity_compat & restoration & resurrection & soul_spirit & three_admissibility & two_emergences
+    alignment & bridge & bridge_relations & cadence & coherence_factor & consciousness & constraint_levels & convergence & corruption & divine_action & elasticity & embodied_act & embodiment & emergence_grammar & epistemic_boundary & grounding & handling_perturbation & higher_order & history_record & identity_coherer & identity_organiser & image & inferential_logic & life & limitation & material & material_organisation & moral_opportunity & opportunity & order_parameter & personhood & propositions_abc & qualitative_plausibility & receiver_constitution & relational_error & relational_identity_compat & restoration & resurrection & soul_spirit & subjection & succession & three_admissibility & true_logic & two_emergences & wonder
   end

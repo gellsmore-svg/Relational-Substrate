@@ -4,7 +4,7 @@
 
 *A Scripture-first account of a relational creation: how physical order, life, persons, corruption and restoration belong to one world without collapsing into one kind of thing.*
 
-Second edition, revision 2.6, October 2026. Companion volumes: *The Relational Substrate* (technical), *A Coherent World* (general), *How to Hug the Right Tree* (devotional).
+Second edition, revision 2.7, October 2026. Companion volumes: *The Relational Substrate* (technical), *A Coherent World* (general), *How to Hug the Right Tree* (devotional).
 
 ---
 
@@ -14,7 +14,7 @@ A discipline can be exact in its own domain and still leave the deepest question
 
 This book exists to ask them together. Its question is not whether modern science works. It does. The question is what kind of created reality can make everything we know, physical, living, personal, moral and revealed, belong coherently to one world.
 
-The book's answer is that created physical reality is *relational* from its foundation. Things are not first made as sealed, self-contained objects that are later connected. They are constituted within an order of relation that God made and upholds. The project calls that order the Relational Substrate. Matter, on this proposal, is fully real but not foundational, and the book's central question is whether materiality is the acquisition of persistent, manipulable individuality by a configuration of something that is not itself material. Two further proposals give the answer its working shape:
+The book's answer is that created physical reality is *relational* from its foundation. Things are not first made as sealed, self-contained objects that are later connected. They are constituted within an order of relation that God made and upholds. The project calls that order the Relational Substrate. Matter, on this proposal, is fully real but not foundational. That it derives from a foundation that is not itself material is held as a theological premise, and the book's central question is how materiality, the acquisition of persistent, manipulable individuality, arises within such an order. Two further proposals give the answer its working shape:
 
 - what actually happens is drawn, with real chance, from what the created order makes possible and favours;
 - a difference anywhere becomes consequential somewhere else through one recurring grammar: something distinguishes, the distinction is carried by a dependency that preserves it, and another state is changed because of it.
@@ -29,13 +29,13 @@ The standard is *global coherence*. A proposal about what exists must hold toget
 
 The book makes several kinds of claim and labels them. Some things are stated because Scripture states them. Some are observed and measured. Some are inferences. Some are working hypotheses of this project, and some questions are simply open. Chapter 2 sets out these levels. Appendix E gathers the book's current ontology in one place, with the status of each claim. A reader who rejects one claim can see exactly which others depend on it.
 
-The book does not prove the Relational Substrate. No set of measurements could display the deepest structure of created reality directly. What the book does is state a hypothesis clearly enough to be wrong, show why it is believed, show what supports it and what would count against it, and follow its consequences to the end.
+No set of measurements could display the deepest structure of created reality directly, so the book's warrant for the Relational Substrate is that of a global coherence argument, not of experiment. It states a hypothesis clearly enough to be wrong, shows why it is believed, shows what supports it and what would count against it, and follows its consequences to the end. The way of reasoning it uses, inference that tests itself against the whole and revises itself where it fails, is part of what it offers.
 
 ## About this edition
 
 The book is written for an intelligent reader with no specialist training in physics, philosophy or theology who is willing to think carefully. Each technical term is explained where it is first needed. The opening chapter introduces one ordinary scene, seeing a stone in daylight, which returns throughout as a common reference point.
 
-This is revision 2.6 of the second edition. The first edition rested on specific mechanisms that later work did not support. The second rebuilds the book on more foundational ideas, and Appendix B records what changed and why. The research behind the book is the work of one author, carried out with extensive computational and AI-assisted exploration. Its records are public, and Appendix B notes what they do and do not show.
+This is revision 2.7 of the second edition. The first edition rested on specific mechanisms that later work did not support. The second rebuilds the book on more foundational ideas, and Appendix B records what changed and why. The research behind the book is the work of one author, carried out with extensive computational and AI-assisted exploration. Its records are public, and Appendix B notes what they do and do not show.
 
 A free electronic edition of this book is available, offered as an open intellectual contribution to encourage reading, sharing and honest discussion. Updated versions and related materials can be found through the project website at <https://relational-substrate.blogspot.com/> and the public research repository at <https://github.com/gellsmore-svg/Relational-Substrate>.
 
@@ -148,6 +148,8 @@ The same word is used for created light, for Christ and for God. It would be abs
 
 This is the distinction the whole book depends on, and it deserves a name. A **structural analogy** is a likeness of form between things of different kinds. **Ontological identity** would mean they are the same kind of thing. Scripture is full of structural analogies, such as light, bread, water, seed, word and body, and they are real. Creation was made by the Word, and it bears likenesses of its Maker and of the spiritual realities it serves. But likeness of form across categories never erases the categories. When this book later shows the same relational pattern in a beam of light, in a living cell, in a conversation and in the history of redemption, it will be pointing to analogies of form, not claiming that redemption is a physical process. The reader is entitled to hold the book to that promise.
 
+Likeness of form is not the only way different kinds of reality are joined, though, and the book needs to say which joining it means. Four relations are kept apart. A **structural analogy** is a likeness of form between different kinds, as between created light and Christ's making-manifest. A **representation** is a created form that, by design, shows something of the spiritual order. Paul says that the invisible things of God "are clearly seen, being understood by the things that are made" (Romans 1:20). That is more than resemblance: creation was made to disclose, and it instructs without being conscious of doing so. A **causal connection** holds within one human person, between an embodied act and its moral reality. A lie is spoken with a tongue, and it is also a wrong. The two are connected, and they are not the same thing. **Ontological identity**, sameness of kind across categories, the book rejects. Whenever a later chapter links one category to another, it says which of these it means.
+
 ## What Scripture leaves open, and what it rules out
 
 Scripture's boundaries are real, and they exclude a good deal. If God created the world, the world is not eternal and did not make itself. If the world is not God, it is not divine in whole or in part. If creation is good, matter is not evil or illusory. If darkness is a created condition, it is not a co-eternal rival to light. Historically, each of these exclusions answers a serious position that thoughtful people have held. They are gathered in Appendix A for readers who want to see the points of divergence. The chapters that follow do not dwell on them, because their purpose is to build rather than to refute.
@@ -162,9 +164,9 @@ Some of Scripture's language provokes questions without answering them. The prop
 > `that stretcheth out the heavens as a curtain, and spreadeth them out as a tent to dwell in.`
 > *Isaiah 40:22*
 
-Language like this sits uneasily with the habit of imagining space as an empty container that simply exists, and it invites the question of what extension itself is. It does not supply a geometry for the deep order of creation, and this book does not extract one from it. Scripture constrains and provokes. It is not a hidden physics textbook.
+Language like this sits uneasily with the habit of imagining space as an empty container that simply exists, and it invites the question of what extension itself is. It does not supply a geometry for the deep order of creation, and this book does not extract one from it. Scripture constrains and provokes.
 
-Nor is beginning here a cage on inquiry. An inquiry that treats every conceivable account of origins as equally likely has no way to focus; beginning from one Creator and one created order narrows the field to what can actually be investigated.
+Beginning here also gives inquiry its focus. An inquiry that treats every conceivable account of origins as equally likely has nowhere to start; beginning from one Creator and one created order narrows the field to what can actually be investigated.
 
 ## The questions the book will answer
 
@@ -197,7 +199,7 @@ Each layer depends on the ones before it, but the later layers are not guarantee
 
 Quantum theory makes the point sharper. Its mathematical machinery is among the most precisely confirmed in science. Yet the same mathematics is read in strikingly different ways. On some readings the world is fundamentally a matter of chance at the smallest scales. On others it is entirely deterministic, with hidden variables or branching worlds. These readings disagree about what reality is while agreeing about every measurement made so far. (A further family of theories modifies the quantum dynamics itself and predicts slight differences, which experiments are now testing.) A successful description can be joined to more than one ontology.
 
-This is simply what descriptions are. A description tells us how things behave. An ontology asks what kind of thing has to be there for that behaviour to be possible. Mathematics can describe regularity without being identical to the reality it describes, and a model can predict without settling what fundamentally exists. Confusing the layers causes trouble in both directions. When descriptive success is treated as though it had settled ontology, metaphysical assumptions enter unexamined. When the gap is used as an excuse to ignore description, the result is fantasy.
+This is simply what descriptions are. A description tells us how things behave. An ontology asks what kind of thing has to be there for that behaviour to be possible. Confusing the layers causes trouble in both directions. When descriptive success is treated as though it had settled ontology, metaphysical assumptions enter unexamined. When the gap is used as an excuse to ignore description, the result is fantasy.
 
 ## What the outside of a thing can tell you
 
@@ -205,7 +207,7 @@ Computing offers an exact picture of the gap. Programmers often work with a *pri
 
 So knowledge of **consequential behaviour**, meaning what something does and under what conditions, is genuine knowledge. It is not knowledge of **intrinsic ontology**, meaning what that something is, and the second does not follow automatically from the first. Mathematics has a precise case. In 1966 Mark Kac asked whether one can "hear the shape of a drum": whether the notes an ideal drumskin can sound fix its shape. Some things can be heard; the notes reveal the drum's area, for example. But in 1992 Carolyn Gordon, David Webb and Scott Wolpert produced two differently shaped drums that sound exactly the same notes. The sound tells you much about the drum, and not everything.
 
-The created world meets us in a similar way, and four situations need to be kept apart. Some things are unobservable *at present*. Of these, some may be reached by better instruments: atoms were inferred for generations before they could be imaged, and single atoms can now be seen and moved one at a time. Others may be unobservable *in principle*; quantum theory itself implies that the full state of a single unknown system cannot be read off that one system. Things in either class can often still be *inferred from their consequences*, as atoms were. Two errors are to be avoided. One declares something permanently inaccessible without reason. The other assumes that every underlying reality will eventually be observed as one more object, and that assumption is itself a metaphysical claim. Creaturely knowledge, as Scripture describes it, is genuine and partial at once (Romans 1:20; 1 Corinthians 13:12), and Chapter 16 returns to that. The principle can be stated without apology: **a successful description of observable consequences does not, by itself, establish the ultimate ontological nature of their cause.** It applies to every account, this one included.
+The created world meets us in a similar way, and four situations need to be kept apart. Some things are unobservable *at present*. Of these, some may be reached by better instruments: atoms were inferred for generations before they could be imaged, and single atoms can now be seen and moved one at a time. Others may be unobservable *in principle*; quantum theory itself implies that the full state of a single unknown system cannot be read off that one system. Things in either class can often still be *inferred from their consequences*, as atoms were. Some things are understood genuinely through what they are related to and what follows from them, though no complete mechanism is known: what trust is, or why a promise binds. And some may exceed what any creature can comprehend completely, without its following that nothing true can be known of them. Two errors are to be avoided. One declares something permanently inaccessible without reason. The other assumes that every underlying reality will eventually be observed as one more object, and that assumption is itself a metaphysical claim. Creaturely knowledge, as Scripture describes it, is genuine and partial at once (Romans 1:20; 1 Corinthians 13:12), and Chapter 16 returns to that. The principle is this: **a successful description of observable consequences does not, by itself, establish the ultimate ontological nature of their cause.**
 
 ## Every account starts somewhere
 
@@ -259,7 +261,7 @@ What makes global coherence demanding is not only that nothing may contradict an
 - **Meaning kept through the layers.** A claim carried through several explanatory levels should still be recognisably itself at the end. If a word like "identity" or "cause" changes meaning a little at each step, the account can sound plausible paragraph by paragraph and still fail as a whole.
 - **Stability under repair.** Solving a problem in one domain must not break what already held together in another.
 - **The round trip.** Take a claim from one domain through others and back again, for example from bodily identity to the identity of an organism to the identity of a person and back to the body. It should return substantially the same. Hidden drift shows up most clearly on the way home.
-- **Accountable kinds of knowing.** Observation, mathematics, philosophical inference and revelation are different kinds of knowing. They must be kept distinct, and none may silently overrule the others.
+- **Accountable kinds of knowing.** Observation, measurement, mathematics, philosophical inference, personal encounter and revelation are different kinds of knowing. Each contributes to inference in its own way. They must be kept distinct, and none may silently overrule the others.
 
 And through all of these, the real distinctions must survive: Creator and creature, the material and the spiritual, description and ontology, probability and arbitrariness, analogy and identity, what is possible and what is right, a person and a configuration. Connection is not reduction. An account that achieves smooth connection by erasing these is not more coherent. It has simply lost something real.
 
@@ -271,9 +273,7 @@ This is a philosophical thesis, and Chapter 10 argues for it. Most working scien
 
 The test applies in both directions. The Relational Substrate must not contradict what has been observed and measured, or what successful mathematics predicts. Any proposal that does is finished, however elegant it is.
 
-But the picture of reality that commonly travels with physics is also a proposal. Space is a container. The world is a collection of independent objects. Fields and particles are the furniture of reality. Laws are rules things obey. These belong to layers four to six above, not to layers one to three. They are often well motivated, and some may be right. They gain no evidential weight from being familiar, mainstream, widely published or taught in every school. Consensus is a fact about people, not a measurement of the world. So the conventional metaphysics of physics is held to the same standard of global coherence as the proposal of this book, and it receives no exemption for being physics.
-
-This is not a rejection of modern physics. It is a refusal to confuse what was measured with a picture of what was measured.
+But the picture of reality that commonly travels with physics is also a proposal. Space is a container. The world is a collection of independent objects. Fields and particles are the furniture of reality. Laws are rules things obey. These belong to layers four to six above, not to layers one to three. They are often well motivated, and some may be right. They gain no evidential weight from being familiar, mainstream, widely published or taught in every school. Consensus is a fact about people, not a measurement of the world. So the conventional metaphysics of physics is held to the same standard of global coherence as the proposal of this book, and it receives no exemption for being physics. That is a refusal to confuse what was measured with a picture of what was measured.
 
 ## Comparing without numbers
 
@@ -297,13 +297,21 @@ Consider a doctor diagnosing an illness. She has a set of symptoms, some test re
 
 If that is how ordinary knowing works, then asking for the most globally coherent account of reality is not an eccentric substitute for evidence. It is the same activity, carried out at the largest scale.
 
+Behind this ordinary practice lies a distinction the book will need. **Logic** is the necessary structure of consistency, implication, exclusion and possibility. **Reasoning** is its application, which can be done well or badly. There is, first, the complete coherence of all that is, perfectly comprehended and perfectly applicable by the One who made it. The author calls this **true logic**. It belongs inseparably to God's own nature, and no creature possesses it exhaustively. And there is the way finite minds move toward it. The author's definition is exact: "Inferential logic is the recursive refinement of partial understanding towards true logic through the discovery and application of relational coherence within the boundaries of created runtime order." *Created runtime order* is the operating created world, which Chapter 3 describes. **Status:** theological premise (true logic); working definition (inferential logic).
+
+Two words in that definition carry the weight. *Partial*: the doctor's diagnosis is genuine knowledge, and it is not everything. *Recursive*: a later finding can revise a conclusion, the assumptions behind it, and sometimes the question itself. Observation, measurement, experiment, mathematics, philosophical argument and the reading of Scripture are not routes running beside inference. They are what inference works with. And because revision can reach even the book's own foundational commitments, one distinction stays fixed: revising an account of coherence is never revising the coherence of what God has made.
+
 ## What observation decides, and what it cannot
 
-Coherence is not proof of truth. A worldview can be internally coherent and false; a detailed and consistent story about a flat Earth is still wrong. The book says this once, here, and takes it as read from now on. Observation constrains ontology powerfully, and in three ways.
+Coherence is not truth. A worldview can be internally coherent and false; a detailed and consistent story about a flat Earth is still wrong. The book says this once, here, and takes it as read from now on. Observation constrains ontology powerfully, and in three ways.
 
 Robust observation rules out accounts that contradict it, however elegant they are. It reveals regularities that any account must respect, even before it can explain them. And it tests specific proposals: several of the Relational Substrate project's have been tested, some survived, some failed, and the failures are recorded in the project's public research history.
 
-What observation cannot do is display the deepest structure of created reality as one more visible object. It narrows the field and rarely, if ever, picks out a single winner. So the book does not offer an empirical proof of the Relational Substrate. It offers a **global coherence argument**, and holds itself to a plain standard: what it proposes, why, what supports it, what would count against it, and what remains unknown. A hypothesis stated clearly enough to be wrong can be improved. One hedged until it says nothing cannot. Chapter 9 names observations that would count against particular claims.
+What observation cannot do is display the deepest structure of created reality as one more visible object. It narrows the field and rarely, if ever, picks out a single winner. So the warrant this book offers for the Relational Substrate is not that of experiment. It is a **global coherence argument**, and it holds itself to a plain standard: what it proposes, why, what supports it, what would count against it, and what remains unknown. A hypothesis stated clearly enough to be wrong can be improved. One hedged until it says nothing cannot. Chapter 9 names observations that would count against particular claims.
+
+What, then, is proof? In this book the word has a bounded sense. **Proof** is the achievement of enough warrant, under stated premises, scope and constraints, for an inferred relationship to be relied on in further reasoning: to become what the book calls a **coherence factor**. A mathematical proof has this character in its strongest form: within its axioms and rules its conclusion is settled. An experimental result has it within what its procedures can show. Philosophical and theological arguments have warrant of their own kinds. A coherence factor keeps its scope, its source, its uncertainties and its dependencies in view, so that it can be revised if later work requires. Proof in this sense is real, and it is never the possession of the whole truth of what it concerns. The aim of inquiry is accordingly **inferential precision**: discriminating well between candidate relationships, tracing the warrant for each, and keeping what remains uncertain open to correction.
+
+The posture this asks for is what the first edition called *disciplined confidence*, and it cuts both ways. Confidence must not outrun its warrant. Nor should justified understanding be discounted because it falls short of exhaustive knowledge. Overclaiming and underclaiming are both failures of the same discipline.
 
 With these tools in hand, the book can return to the stone and ask the first ontological question. The stone appears to be a separate thing, sitting on the path, distinct from the light, the air and you. Is that what it fundamentally is?
 
@@ -371,7 +379,7 @@ The argument is sharper with the positions set side by side and the definition o
 - **B. A non-material foundation, with matter emergent.** A more fundamental created relational reality, not itself material, constitutes and sustains material individuality. Matter is genuinely real, but its materiality is emergent rather than self-standing.
 - **C. Two fundamental orders.** Material entities and a distinct non-material relational order are both fundamental. The relational order supplies the capacities through which material entities interact, so their behaviour depends on it, but they are not constituted by it. This is the "non-material glue" view.
 
-All three are compatible with creation: whichever is true was designed and is upheld by God. But design does not end the inquiry. One can still ask what was designed and how it operates, and design alone favours none of the three.
+All three are compatible with the bare claim that the world was created: whichever is true was designed and is upheld by God, and design alone favours none of them. The author's theological premise goes further. *That* material existence derives from a foundation that is not itself material is held as a premise, in keeping with Hebrews 11:3's "things which are seen were not made of things which do appear" (Chapter 1). On that premise A and C are excluded. The comparison that follows is kept for two reasons: it reaches the same conclusion by a second, independent route, from what is observed, and it shows what B still owes.
 
 **A** must give every fundamental kind of material thing intrinsic capacities that match every other kind's exactly. Pressed to explain the matching, it has three routes. It can say that a thing's capacities are intrinsically directed at its partners, so that a charge is, in its nature, a capacity to act on other charges. That is a serious position, and it is faithful to A, but it makes relation part of what things are. The disagreement with B then narrows to whether relational natures belong to separately fundamental things, or things to a relational order. It can add a governing order, laws or fields standing over the entities. That supplies the matching, but it is C without the name. Or it can say that the matching simply holds, which leaves it unexplained. None of this shows that A is incoherent. It shows that A, when pressed, relies on something it does not state.
 
@@ -379,9 +387,9 @@ A also meets pressure from physics. Material individuals are created and destroy
 
 **C** avoids A's difficulty by positing the relational order openly. Like B, it explains the matching by a common order. It pays with two fundamental orders instead of one, and it must still say why independently existing material entities fit that order so exactly. Until it does, part of the coincidence has only been moved.
 
-**B** posits one order, and interoperability is what being constituted within it means. Its cost is different, and real. B owes an account of how stable material individuals arise within an order that is not itself material, and no such account has yet been demonstrated. That is the largest open debt in this book.
+**B** posits one order, and interoperability is what being constituted within it means. Its cost is different, and real. B owes an account of how stable material individuals arise within an order that is not itself material, and no such account has yet been demonstrated. The debt is one of mechanism: the premise says *that* matter is so founded, and *how* remains to be shown (Chapter 9).
 
-The comparison is clear without being final. B does best on economy and on integration across domains, provided its debt can be paid. C remains open. A in its plain form carries the heaviest burden. One caution keeps this honest. B is a family, not only this book's view. A realist reading of quantum fields, on which particles are excitations of a field that is not itself a material object, belongs to it too. The considerations from physics favour the family. They do not single out its relational member, which has to be argued for on its own grounds.
+The comparison is clear without being final. B does best on economy and on integration across domains, provided its debt can be paid. On this comparison alone, C remains open. A in its plain form carries the heaviest burden. One caution keeps this honest. B is a family, not only this book's view. A realist reading of quantum fields, on which particles are excitations of a field that is not itself a material object, belongs to it too. The considerations from physics favour the family. They do not single out its relational member, which has to be argued for on its own grounds.
 
 ## The claim: relation is foundational
 
@@ -389,7 +397,7 @@ The Relational Substrate project makes a definite proposal in response. It can b
 
 In the terms just set out, this is Proposition B in its relational form. It is an **ontological thesis**, the book's central one. It is not an observation, since relation as such cannot be put on a laboratory bench, and it is not a theorem. It is a claim about what kind of reality best accounts for everything else we know. It is supported by the strain in the object picture, by the underdetermination of physical description and by universal interoperability. It would be weakened by an object-first account that explained interoperability, life and personhood with equal economy and fewer unexplained interfaces. The following chapters develop it and test it.
 
-Three clarifications prevent common misunderstandings.
+Three clarifications fix what *relation-first* means.
 
 First, relation-first does not deny that things are real or distinct. The stone is really there, and it really is not the path. Distinctness is real. It is simply *derivative*: the stone's distinctness is carried by a stable pattern of relations, not by some separating gap between it and everything else. A knot in a rope is a useful picture here. The knot is real: it can be pointed to, counted and untied. Yet it is not a separate object added to the rope. It is a configuration of the rope itself. The picture breaks down in one place. A rope is made of fibres that exist before any knot is tied, whereas the relational proposal imagines no pre-existing material into which relations are then tied. The picture shows only how a real, distinct thing can be a configuration rather than an addition.
 
@@ -403,14 +411,9 @@ If relation is foundational, it is natural to ask what bears it. Relations of wh
 
 The project's answer is the **relational substrate**: the created relational order within which physical things are constituted and through which they act. The word *substrate* means "what lies beneath". It names the deepest created level of physical order: what must already be there for stable things, change, influence and persistence to be real.
 
-Because the word can mislead, it helps to say plainly what the substrate is not.
+The substrate is the deep order of this world, not a further thing behind it. It is not matter: matter, as Chapter 6 will argue, is a stable form *within* it. Nor is it a field of physics under another name, an ether filling empty space, or information detached from anything physical. A field is a mathematical representation, and the substrate is a proposal about the relational order such representations describe, not a rival to the mathematics. Three further points matter more.
 
-- It is not matter. Matter, as Chapter 6 will argue, is a stable form *within* the substrate, not the substrate itself.
-- It is not a field of physics under another name. A field is a mathematical representation that assigns values to points. Whatever such representations describe, the substrate is a proposal about that relational order, not a rival to the mathematics.
-- It is not the old luminiferous ether, a medium filling an otherwise empty space. The relational proposal does not begin with a space to be filled.
-- It is not assumed to be spatial, nor assumed not to be. Its structure might correspond closely to the space we experience; space might arise from an order that is not itself spatial; or the substrate might have adjacency and ordering from which measurable space emerges. The book leaves this open.
-- It is not information or code, detached from anything physical.
-- It is not a hidden second world behind the visible one. It is the deep order of this world.
+- Whether it is spatial is open. Its structure might correspond closely to the space we experience; space might arise from an order that is not itself spatial; or the substrate might have adjacency and ordering from which measurable space emerges.
 - It is not a mind. It thinks nothing and intends nothing.
 - Above all, it is not God, and it is not a soul.
 
@@ -424,7 +427,7 @@ Physics has moved in a consonant direction, away from instantaneous action at a 
 
 ## Created order as operating
 
-One more term is needed. The book speaks of **created runtime order**, borrowing a word from computing, where a program can be considered as written or as running. Creation can likewise be considered in its origin, the creative act by which it exists at all, or in its ongoing operation, the ordinary unfolding of physical process. *Runtime* names the second. How the stone falls is a question about runtime order. Why there is a world in which stones fall is a question about creation. The borrowing has a sharp limit. Creation is not a computer, the world is not code, and God is not a programmer who wrote software and stepped away. A better image might be a piece of music, its composition distinguished from its performance, except that here the Composer also upholds every note as it sounds.
+One more term is needed. The book speaks of **created runtime order**, borrowing a word from computing, where a program can be considered as written or as running. Creation can likewise be considered in its origin, the creative act by which it exists at all, or in its ongoing operation, the ordinary unfolding of physical process. *Runtime* names the second. The created runtime order is the operating, non-conscious created order that expresses itself materially. It is not everything that exists. God is not part of it, and souls and spiritual creatures, though created, are not members of it; what lies beyond it may lie beyond creaturely observation (Chapter 2). How the stone falls is a question about runtime order. Why there is a world in which stones fall is a question about creation. The borrowing has a sharp limit. Creation is not a computer, the world is not code, and God is not a programmer who wrote software and stepped away. A better image might be a piece of music, its composition distinguished from its performance, except that here the Composer also upholds every note as it sounds.
 
 ## What Scripture requires here
 
@@ -437,6 +440,8 @@ Scripture does not mention a relational substrate. What it does is set requireme
 > *Colossians 1:17*
 
 These texts teach that created order holds together because it is upheld by Christ. They do not say how. But they rule out any account in which the deepest physical order is self-sufficient, self-explaining or divine. The relational proposal accepts that boundary without reservation. If there is a relational substrate, it is a creature. Its coherence is received, not generated. Placing relation, rather than self-standing substance, at the base of created order fits a world whose every part depends on its Creator. Scripture does not teach this ontology. The ontology is consistent with what Scripture teaches about dependence, and bounded by it.
+
+The same texts bear on an older question. Could the deepest order of creation be explained by something beneath it, and that by something beneath that, without end? Each step in such a chain might be intelligible. But offered as the complete ground of creation, the chain is at odds with itself. It is meant to supply the foundation on which everything rests, and at every step it hands that task to the next, so the foundation it requires is never supplied. The author regards a grounding made only of such deferral as internally contradictory, given what a ground has to do. This is a claim about grounding, not about mathematics: an endless sequence of numbers is perfectly consistent, and what fails is the claim of an endless deferral to be an ultimate ground. The relational proposal therefore has a foundation: a primitive created order, specified by its Creator and upheld by him, beneath which there is no further created ground. **Status:** ontological inference, within the book's requirement of foundational grounding and from the scriptural premise.
 
 ## From relation to possibility
 
@@ -506,6 +511,10 @@ The project calls this **actualisation**, and uses the shorthand **T1** for actu
 
 Those traces matter for the relation between T0 and T1, which is not a one-way pipeline from a hidden store of possibilities to a finished output. Distinguish two things. There is **total admissibility**: everything the created order could ever bear. And there is what is **currently reachable**: what can actually happen next, given the present state and the history it carries. A stone that has cracked can now split along that crack. A seed that has germinated can no longer stay dormant. Actual history changes what is presently reachable without changing whatever T0 ultimately is. In that sense actuality takes part in the conditions of its own next actualisation. This is a working hypothesis of the book, and model systems show the pattern: what a system has done can change which of its futures remain open.
 
+Two further distinctions sharpen this. The first concerns constraint. Some constraints belong to the primitive configuration of created order itself, the conditions under which anything can happen at all. The book calls these **explicitly intrinsic** constraints, and total admissibility rests on them. Others arise only once a configuration has actually come about, and then follow from it necessarily: once the stone has cracked, it will split along the crack and not across it. These are **implicitly intrinsic** constraints. The two differ in level and express one order. And one point about them matters for the next chapter. A configuration that came about by chance can carry constraints that are necessary. Nothing fixed where the crack would run, but given the crack, the split follows.
+
+The second concerns occasion. Possibility, opportunity, admissibility and actualisation are four different things. What is possible is what the constraints allow at all. What is admissible now is what the present state allows next. An **opportunity** is a distinguishable occasion at which some admissible actualisation is actually available, and an opportunity can pass with nothing happening: the seed that could have germinated this spring, and did not. How such an unused occasion is to be counted is an open question (Appendix E).
+
 An analogy helps here, and it must be used with its limits stated. Think of chess. The rules of chess define which moves are legal from any position. They are the admissibility of the game, and they are strict: a bishop cannot move like a knight. Among legal moves, some are commonly preferred and some rarely played, and that is something like tendency. And there is the game actually played: this sequence of moves, on this evening, ending in this position. That is actualisation.
 
 The analogy captures three things well. Possibility is structured but not determining, since the rules never tell you which legal move will be made. The actual is always drawn from the admissible. And the same rules allow an endless variety of actual games. But the analogy fails at one point, and the failure is the most important part of it. In chess, the moves are chosen by *players*: minds with intentions, who want to win. In the relational substrate there are no players. Nothing inside created physical order is choosing which admissible transition to make, and nothing inside it wants anything. If the analogy is pressed to supply a player, it turns the substrate into a mind. That is precisely the error Scripture forbids.
@@ -539,11 +548,11 @@ This arrangement protects two truths at once. It protects purpose: the world is 
 
 Two older mistakes are avoided. One is the view that God acts in every event as a fresh, bespoke intervention, so that created things have no real operations of their own; this makes nonsense of the stable regularity Scripture promises. The other is the view that God made the world and withdrew; this contradicts the continuous upholding of Colossians 1:17 and Hebrews 1:3. The position here is the mainstream Christian one: created order operates lawfully and really, under God's continual upholding, within a range of possibility that his purpose has shaped. The book calls this **non-agentic runtime**. The physical order is purposed without being purposeful in itself.
 
-One more caution belongs here, and Chapter 15 will develop it. To say that physical order runs without the substrate intending anything is not to say that God's action is confined to the substrate's possibilities. God is not one more cause among the causes of the world. He is the Creator of all its possibilities. The book makes no claim to describe how God acts in miracles, in providence or in redemption. It describes the ordinary operation of what he has made.
+One more caution belongs here, and Chapter 15 will develop it. To say that physical order runs without the substrate intending anything is not to say that God's action is confined to the substrate's possibilities. God is not one more cause among the causes of the world. He is the Creator of all its possibilities. The primitive order of creation is fixed for every creature that operates within it. It is not fixed for its Creator. The book makes no claim to describe the manner of God's action in miracles, in providence or in redemption. It describes the ordinary operation of what he has made.
 
 ## The stone, again
 
-The stone on the path, then, is a configuration drawn from a structured space of possibility: the crystal forms its elements admit, the ways its grains could settle, the shapes erosion could leave. That space was shaped by its Creator's purpose. Within it, the stone's actual history unfolded through admissible transitions, none of which the substrate chose. Some transitions were weighted more than others, and one history among the admissible ones became actual, with no hidden chooser selecting it. How that can be is the subject of the next chapter, which turns to a word that is very easily misunderstood: chance.
+The stone on the path, then, is a configuration drawn from a structured space of possibility: the crystal forms its elements admit, the ways its grains could settle, the shapes erosion could leave. That space was shaped by its Creator's purpose. Within it, the stone's actual history unfolded through admissible transitions. Some were weighted more than others, and one history among the admissible ones became actual. How that can be is the subject of the next chapter, which turns to a word that is very easily misunderstood: chance.
 
 ---
 
@@ -577,7 +586,9 @@ One recent piece of mathematics makes the chance-based reading more concrete wit
 
 Recall the question left by the previous chapter: if nothing inside the substrate chooses which admissible transition becomes actual, what makes one rather than another actual? This book proposes that **actualisation is fundamentally stochastic**, in the ontic sense. Among the transitions currently reachable, which one occurs is genuinely open until it occurs, a matter of chance weighted by tendency. The future is really open within its conditions. That openness is the book's claim, not part of the meaning of the word "stochastic".
 
-The word *constrained* carries most of the weight in that sentence. **Unconstrained** stochasticity, where every conceivable outcome is equally open, would produce a world without stable form: a static of meaningless flicker. **Constrained** stochasticity is chance operating inside the shape of the possible. Admissibility rules out whole regions of possibility entirely. Tendency weights what remains. And, as the next chapters will show, what has already happened can change what is admissible or likely next. Chance, on this proposal, never acts on an open field. It acts within a structure that was there before it.
+The word *constrained* carries most of the weight in that sentence. **Unconstrained** stochasticity, where every conceivable outcome is equally open, would produce a world without stable form: a static of meaningless flicker. **Constrained** stochasticity is chance operating inside the shape of the possible. Admissibility rules out whole regions of possibility entirely. Tendency weights what remains. And, as the next chapters will show, what has already happened can change what is admissible or likely next. Chance, on this proposal, never acts on an open field. It acts within a structure that was there before it. That is also why the book does not admit **true randomness**, occurrence governed by no admissibility relation or pattern at all. It would be incompatible with a coherent created order.
+
+One confusion runs the other way and needs heading off. If the constraints are necessary, is the outcome determined after all? No. A constraint can be absolutely binding and still leave several outcomes open: the rules of chess are never broken, and they never say which legal move will be made. Necessity governs what must and must not hold. **Determinism** would require something far stronger: that the present configuration, under the relations that govern it, admits exactly one successor. And those governing relations are not to be hidden inside the state itself, as though a configuration carried its own future. The proposal of this chapter is that created order is necessary in its constraints and open in its actualisations.
 
 **Status:** an RS working hypothesis. It fits the probabilistic character of quantum theory without following from it, since deterministic interpretations remain viable and agree with every measurement so far. A demonstration that the probabilities are wholly epistemic, reflecting only ignorance of a deterministic process beneath, would count against it. Its positive support is coherence. It explains how a non-agentic creation can actualise without a hidden chooser, and it fits the observed pattern of openness in the particular with exactness in the aggregate. Stable, exact behaviour does not require that every underlying event be determined in advance. The carbon-14 atoms show this in nature. A simple model shows it vividly.
 
@@ -673,7 +684,7 @@ The first three can each happen without the fourth. What carries individual cont
 
 There is a further consequence. Sometimes what distinguishes two present states is how they came to be. A coin and its counterfeit may differ in nothing but their making. A bent and straightened paper clip looks like a new one but is weaker, because its bending is still present in its crystal structure. A healed bone looks whole but carries the remodelling of its fracture.
 
-The name for this is **provenance**: past distinctions that survive in present relational structure. Provenance is not a separate record kept somewhere else, a ledger attached to the thing. It is embodied in the thing's present configuration: in residual stresses and orientations, in correlations among its parts, in what is accessible to it now and what is not. And it belongs to the thing's identity exactly where it remains consequential, where some future interaction could draw on it. Where nothing could, it can be set aside.
+The name for this is **provenance**: past distinctions that survive in present relational structure. Provenance is not a separate record kept somewhere else, a ledger attached to the thing. It is embodied in the thing's present configuration: in residual stresses and orientations, in correlations among its parts, in what is accessible to it now and what is not. And it belongs to the thing's identity exactly where it remains consequential, where some future interaction could draw on it. Where nothing could, it can be set aside for the purposes of identity. That does not make it unreal. What happened is carried in present relations whether or not anything can now trace it back. There is no separate ledger. The changed relations are the record, and consequence can persist where its provenance can no longer be recovered.
 
 This matters for how the book understands what is actual. Chapter 4 called the actual order of things **actuality** (T1): what has come to be from among what was possible. Actuality is not a succession of memoryless snapshots, each owing nothing to the last. A present state can carry the relational consequences of its own past: its provenance, its accumulated constraints, what has become accessible to it and what has been closed off. What happens next depends on all of that, not merely on how things look at this instant.
 
@@ -697,7 +708,7 @@ Provenance also gives the clearest sense of what memory is at the physical level
 
 Three further pieces of support, of different strengths, point the same way. In published metal-fatigue data the *order* of loads matters: gentle cycles first leave a part more durable than the reverse at equal totals, though the simplest standard model says order makes no difference. The same direction appears in three unrelated domains, but the project's model predicted the size of the effect badly, so this is a directional finding only. In a small relational model, hiding a genuinely three-way relation made the visible links behave as though they remembered their recent past, although nothing in the rules recorded history (Chapter 9). And in later models one visible arrangement of links faced different futures depending on how it came about, until the carried history was counted as part of the present state. These are model results, not a law of memory in nature.
 
-The book's proposal unites these. **Memory, at the physical level, is past distinctions embodied in present relations so that they alter what is currently reachable, how likely it is, or how a thing responds.** No separate memory substance is needed. The bent paper clip remembers its bending in its bent crystal structure and nowhere else. **Status:** RS working hypothesis. It will be useful later, when the book speaks of habits, of character, and of the slow hardening Scripture describes (Hebrews 3:13), always as a structural analogy and never as an explanation of moral life.
+The book's proposal unites these. **Memory, at the physical level, is past distinctions embodied in present relations so that they alter what is currently reachable, how likely it is, or how a thing responds.** No separate memory substance is needed. The bent paper clip remembers its bending in its bent crystal structure and nowhere else. **Status:** RS working hypothesis. It will be useful later, when the book speaks of habits, of character, and of the slow hardening Scripture describes (Hebrews 3:13). There it bears on the embodied consequences of moral acts (Chapter 12). It never explains what makes an act right or wrong.
 
 ## Handling and perturbation
 
@@ -731,11 +742,11 @@ We can now say what the project proposes the stone *is*. On the relational propo
 
 This does not make matter less real. It makes its reality a matter of form held stable rather than of brute stuff. Mainstream physics already undermines the picture of mass as simply the sum of tiny lumps. Most of the mass of ordinary matter arises from the energy of the interactions that bind quarks inside protons and neutrons, not from the masses of the quarks themselves. Inertial mass is measured as resistance to acceleration. The Relational Substrate reading is that what we measure as matter's properties are, all the way down, properties of stable relational form. **Status:** ontological interpretation.
 
-Two kinds of emergence must be kept apart here. **Emergence within matter**, in which higher-order identities arise from the organisation of existing matter, is observed everywhere: crystals, flames, solitary waves, cells. **The emergence of matter**, in which material individuality itself is constituted within a created reality that is not material, is the book's working hypothesis, Proposition B of Chapter 3. Demonstrations of the first are not proofs of the second. They supply analogies, constraints and questions. The skyrmion is the closest analogy: a pattern within matter that has acquired persistent, individuated, movable identity. On Proposition B, a material individual would stand to the substrate somewhat as a skyrmion stands to a magnet, except that the substrate is not material. The comparison sharpens the hypothesis and proves nothing, since everything about the skyrmion happens within matter.
+Two kinds of emergence must be kept apart here. **Emergence within matter**, in which higher-order identities arise from the organisation of existing matter, is observed everywhere: crystals, flames, solitary waves, cells. **The emergence of matter**, in which material individuality itself is constituted within a created reality that is not material, is Proposition B of Chapter 3. *That* matter is so founded is the author's premise. *How* it is constituted is the book's working hypothesis. The first kind of emergence supplies analogies, constraints and questions for the second, not demonstrations of it. The skyrmion is the closest analogy: a pattern within matter that has acquired persistent, individuated, movable identity. On Proposition B, a material individual would stand to the substrate somewhat as a skyrmion stands to a magnet, except that the substrate is not material, while everything about the skyrmion happens within matter.
 
 The author's remark that "matter begets matter" belongs with the first kind. It names a regularity everyone observes: material things come from, and are composed of, other material things. It does not assert that matter must ultimately come from prior matter. Physics has an instructive edge case. When energetic radiation passes close to an atomic nucleus, it can produce an electron and its antiparticle where there was no matter before. Material individuals arise from radiation, which physics itself distinguishes from matter. That fits Proposition B, and it does not establish it, because an ontology of fundamental fields describes it equally well.
 
-The book's central ontological question can now be put exactly. **Could materiality be the acquisition of persistent, manipulable individuality by a configuration of something that is not itself material?** The book does not claim that this has been shown. It claims that the question is coherent, that it fits what is observed, and that it can be investigated. Chapter 8 asks how such individuality could arise.
+The book's central ontological question can now be put exactly. **How does a configuration of something that is not itself material acquire persistent, manipulable individuality?** That materiality is such an acquisition is the author's premise. How it happens has not been shown. The question is coherent, it fits what is observed, and it can be investigated. Chapter 8 asks how such individuality could arise.
 
 Scripture speaks of creaturely form as given and shaped:
 
@@ -754,15 +765,23 @@ The psalms also guard against a confusion. Scripture speaks of another kind of s
 > `They shall perish, but thou shalt endure: yea, all of them shall wax old like a garment; as a vesture shalt thou change them, and they shall be changed: But thou art the same, and thy years shall have no end.`
 > *Psalm 102:26-27*
 
-Created things persist by remaining within an equivalence class through change, and they can wear out like a garment. God does not persist in this way at all. His sameness is not the preservation of anything through admissible transitions, because God is not a configuration, does not undergo transitions, and has no admissibility imposed on him from beyond. The word "same" is used of both, truly, but across the deepest category boundary there is. Creaturely identity is received and sustained. God's is underived.
+Created things persist by remaining within an equivalence class through change, and they can wear out like a garment. God does not persist in this way at all. His sameness is not the preservation of anything through admissible transitions, because God is not a configuration and has no admissibility imposed on him from beyond. The word "same" is used of both, truly, but across the deepest category boundary there is. Creaturely identity is received and sustained. God's is underived.
 
 The same caution applies, at a different boundary, to human persons. Persons have bodies, and bodies persist in the way described here. But whether a *person's* identity is simply an equivalence class of physical configuration is a different question, and the book's answer, given in Chapters 12 and 15, is no. Personal identity resembles both kinds of sameness described here, and the resemblance helps. It is not the same thing.
 
-## A word about time
+## Succession, cadence and time
 
-If change is the actualisation of admissible transitions, then time, on the relational proposal, is the **ordering of actualisation**: the before-and-after of change itself, rather than an independent container that would still be ticking if nothing happened. This is an old view, held in different forms by Leibniz and others, and it is an ontological interpretation. It must sit with what is measured: clocks run at different rates at different heights and speeds, exactly as general relativity predicts. General relativity's mathematics treats time geometrically, as part of spacetime. Whether spacetime is a substance or an ordering of relations among events is a question of interpretation, not of measurement. The book's reading is that clocks are physical processes, and the time they keep is the ordering of the changes they undergo.
+If change is the actualisation of admissible transitions, then time, on the relational proposal, is the **ordering of actualisation**: the before-and-after of change itself, rather than an independent container that would still be ticking if nothing happened. This is an old view, held in different forms by Leibniz and others. It must sit with what is measured: clocks run at different rates at different heights and speeds, exactly as general relativity predicts. General relativity's mathematics treats time geometrically, as part of spacetime. Whether spacetime is a substance or an ordering of relations among events is a question of interpretation, not of measurement.
 
-Ordering is not yet *direction*. The book calls a settled, directed order of change **succession**: this, then that, and not the reverse. In the project's simplest models succession does not come free. Rules that merely make some states more likely give preferred states but no direction. Direction needs a tendency that favours going round a cycle of changes one way, or a rule that makes some change one-way. Its characteristic pattern is a handover: a link forms, and the link that supported it dissolves. This is not a claim about the arrow of time in nature, and no model claim about time is free of the modeller's clock: counting steps and measuring continuous time can disagree (Appendix E.8).
+The order has a direction, and the direction comes from consequence. When one thing happens because of another, the dependence runs one way: the bell sounds because it was struck, and not the reverse. The book calls this directed order of actual consequence **succession**. On the author's account it is not produced by anything more basic. It belongs to consequence itself, in an order made by a God of order, and it is prior to every measurement of it. That is not to say that every logical implication is an event in time. Succession concerns what actually happens and what follows from it. Nor does it contradict the fact that most of physics' fundamental equations work equally well run backwards. Those equations describe which histories are admissible; succession concerns which actually occurred and what followed from them, the difference between description and ontology that Chapter 2 drew. **Status:** theological and philosophical premise.
+
+Three other things are easily confused with succession. The first is **cadence**, the ordered pattern of occasions and events. Picture a ferry that calls at a jetty twelve times a day. Each call is an occasion on which a passenger could cross, an *opportunity* in the sense of Chapter 4, and the pattern of calls is the **opportunity cadence**. On a given day a passenger crosses four times. That pattern, of what actually happened, is the **actualisation cadence**. The two differ, and neither excludes the other: the calls go on whether or not anyone boards, and every crossing happened at a call. (The passenger chooses. In physical order nothing chooses, but the two patterns differ in the same way.) A cadence need not be regular. A **rhythm** is a recurrence with a cadence, and it may be irregular or made of several cadences at once.
+
+The second is **measurement**. To say how long something took is to compare one cadence with another taken as a reference: the swing of a pendulum, the turning of the Earth, the vibration of a caesium atom. Clocks are physical processes, and seconds are a convention. The succession they count is not.
+
+The third is a **reference cadence** belonging to created order itself: something recurring steadily enough for comparison to be possible at all. The author's favoured candidate is oscillation (Chapter 8), an economical way for a relational order to furnish comparable intervals without an outside clock. It is a mechanism candidate. It would make succession measurable; it would not produce it. Scripture gives the lights of heaven "for signs, and for seasons, and for days, and years" (Genesis 1:14), created regularity given as a measure. That is the text's statement of purpose. It names no mechanism.
+
+The project's simplest models show why the premise has to be stated rather than assumed. In them direction does not come free. Rules that merely make some states more likely give preferred states but no direction. Direction appears only with a tendency that favours going round a cycle of changes one way, or with a rule that makes some change one-way, and its characteristic pattern is a handover: a link forms, and the link that supported it dissolves. A model has to be given direction. That is a fact about models, and no model claim about time is free of the modeller's clock (Appendix E.8). What remains open is mechanism: how clocks are tied to relational structure, which gravity makes pressing (Chapter 9); whether persistent consequence is what makes the past irrecoverable; and how an opportunity that passes unused is to be counted. Chapter 13 takes up a further sense of time, its significance for persons as moral opportunity.
 
 ## The stone, made manifest
 
@@ -892,7 +911,7 @@ The book's working formulation is this:
 
 The formulation was checked against the project's simplest relational models before being adopted. In them, a three-way condition changes the likelihood of the next two-way event: a present distinction modifies what happens next by weighting it, without determining it. The initial value of that same condition is soon forgotten: within a short run, nothing in the visible state depends on it any longer. On the formulation, the initial distinction has stopped being causal for that state, because no dependency preserves it, while the condition's *current* value goes on mattering. That is the T-C-R test at work. Rules that forbid a change alter what can be reached at all, and rules that merely favour it alter only how likely it is. Those are two distinct ways of being causal. **Status:** working hypothesis. It fits the models. Whether it is the right account of causation in nature is a question of coherence, not of those models.
 
-The account also disciplines a common word. To say that one change "enabled" another can mean four different things: that it came first (*precedence*); that it removed competitors, so the other became the likelier next event (*opportunity*); that it changed the other's own tendency (*rate*); or that it made the other possible at all (*support*). Only the last two are changes of admissibility or tendency, and only support is the work of a forbidding rule. In the project's later models the senses came apart cleanly. Most soft "enabling" turned out to be opportunity.
+The account also disciplines a common word. To say that one change "enabled" another can mean four different things: that it came first (*precedence*); that it removed competitors, so the other became the likelier next event (*competitive clearance*; the project's model reports call this "opportunity", a word this book keeps for the occasion of Chapter 4); that it changed the other's own tendency (*rate*); or that it made the other possible at all (*support*). Only the last two are changes of admissibility or tendency, and only support is the work of a forbidding rule. In the project's later models the senses came apart cleanly. Most soft "enabling" turned out to be competitive clearance.
 
 ## Manifestation
 
@@ -908,7 +927,7 @@ Together these show that a relational world is not a frozen lattice in which eve
 
 **Status.** Emission, propagation and absorption are established physics, and T-C-R organises that physics without replacing it. It has not been shown to predict anything the physics does not. That T-C-R is the form of consequential relation itself, reaches to the substrate, is recursive and supplies the right account of cause are working hypotheses. Two things are open. In every model the project has built, the dependencies that carry distinctions were designed, and whether created order generates its own carriers from minimal relations is not known. Nor is the architecture of manifestation.
 
-## What T-C-R does not mean
+## T-C-R across categories
 
 The same three-part form appears in physics, in biology, in human conversation and in Scripture. Scripture presents God's word as going out and accomplishing its purpose in those who receive it:
 
@@ -918,9 +937,9 @@ The same three-part form appears in physics, in biology, in human conversation a
 > `How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and how shall they hear without a preacher?… So then faith cometh by hearing, and hearing by the word of God.`
 > *Romans 10:14, 17*
 
-Isaiah's image is physical (rain that waters the earth), and its subject is God's word that accomplishes his purpose. Paul traces a sequence of sending, preaching, hearing and believing. The form is unmistakably that of something made available, carried and received. In a creation made by the Word, that likeness is not surprising. But Chapter 1 has already given the governing principle: shared form across categories does not mean shared nature. God's word is not a physical signal, and faith is not the absorption of light. The soul is not a pattern carried by a disturbance. Information transfer is not consciousness. The physical case does not explain the spiritual one, and the spiritual one is not secretly physical.
+Isaiah's image is physical (rain that waters the earth), and its subject is God's word that accomplishes his purpose. Paul traces a sequence of sending, preaching, hearing and believing. The form is unmistakably that of something made available, carried and received. In a creation made by the Word, that likeness is not surprising. Chapter 1's four relations say how far it reaches. It is at least a structural analogy. Whether created consequence was also made to represent something of how God's word works is a question about creation's purpose, which Chapter 16 takes up. It is not identity: God's word is not a physical signal, and faith is not the absorption of light. The physical case does not explain the spiritual one, and the spiritual one is not secretly physical.
 
-If anything, the direction of illumination runs the other way. A world made by a God who speaks, and whose word goes out and accomplishes what he purposes, is a world in which it is fitting that even light and sound should be consequential in this way. Physical T-C-R may be one of the ways created order bears the likeness of its Maker. But likeness is the most that can be claimed.
+If anything, the direction of illumination runs the other way. A world made by a God who speaks, and whose word goes out and accomplishes what he purposes, is a world in which it is fitting that even light and sound should be consequential in this way. Physical T-C-R may be one of the ways created order bears the likeness of its Maker.
 
 ## The question that remains
 
@@ -1035,9 +1054,9 @@ This also clarifies how constraint and consequence relate. A **constraint** affe
 
 None of this derives gravity, electromagnetism or quantum mechanics from the simplest relational condition, and the book does not ask it to. There may be many orders between the simplest relations and the particles of physics. The author puts the method in an image: we do not need to build a bridge across the Atlantic. We can investigate the construction of one pier and establish what it can support. The project's models are piers of this kind, each an adjacent transition examined exactly, such as the difference between forbidding and favouring (Chapter 4). Negative results are piers too. The hoped-for step from dissolution to new organisation did not appear in the simplest systems (Chapter 9), which shows what that structure will not bear.
 
-One candidate for the transition to material individuality comes from the physics of oscillation. Interacting vibrations can lock their phases, as pendulum clocks on a shared beam fall into step. Coupled modes can trade energy, and cellists know one result as the wolf tone: a note, often near the F or F sharp below middle C, where a string and a strong resonance of the instrument's body couple so tightly that the sound stutters. Nonlinear media can sustain persistent localised patterns: the solitary wave of Chapter 6, and the *oscillons* seen in 1996 in a shaken layer of fine grains, stable peaks that behave like particles and can bind to one another. The question is not whether matter consists of familiar vibrations. It is whether interacting activity can produce persistent, consequential distinctions, and whether identity might reside in *relations among modes*, as a melody's resides in its intervals. The first edition spoke of phase and coupling, and the technical volume's knotted structures remain candidates. **Status:** mechanism candidate. Oscillation is not assumed to be a primitive of the substrate.
+One candidate for the transition to material individuality comes from the physics of oscillation. Interacting vibrations can lock their phases, as pendulum clocks on a shared beam fall into step. Coupled modes can trade energy, and cellists know one result as the wolf tone: a note, often near the F or F sharp below middle C, where a string and a strong resonance of the instrument's body couple so tightly that the sound stutters. Nonlinear media can sustain persistent localised patterns: the solitary wave of Chapter 6, and the *oscillons* seen in 1996 in a shaken layer of fine grains, stable peaks that behave like particles and can bind to one another. The question is not whether matter consists of familiar vibrations. It is whether interacting activity can produce persistent, consequential distinctions, and whether identity might reside in *relations among modes*, as a melody's resides in its intervals. The first edition spoke of phase and coupling, and the technical volume's knotted structures remain candidates. **Status:** mechanism candidate. Oscillation is not assumed to be a primitive of the substrate. It is a candidate the author favours, and in a second role as well: as an intrinsic reference cadence by which succession in created order could be compared and measured (Chapter 6). The two roles are separate, and neither makes oscillation the source of succession.
 
-Music shows that higher-order identity emerges within matter. It does not show that matter emerges. The difference is the one Chapter 6 drew between emergence within matter and the emergence of matter, and it is not to be blurred because the analogy is beautiful. Nor does the persistence of a melody across instruments say anything about the soul. A soul is not a melody played on a body, and persons, as Chapter 12 will show, are a category of their own.
+Music shows that higher-order identity emerges within matter. It does not show how matter emerges, and the beauty of the analogy is no reason to blur the two (Chapter 6). Nor is a soul a melody played on a body: persons, as Chapter 12 will show, are a category of their own.
 
 ## The question that remains
 
@@ -1106,7 +1125,7 @@ Consider the equations that describe moving fluids, such as air over a wing or w
 
 This shows two things. First, deterministic mathematics at one scale does not imply that reality is deterministic at every scale. Second, a smooth field description need not be the ontology of what it describes. Water is not made of the continuous field the equations describe, and the equations are still true at their scale.
 
-The Relational Substrate project takes from this a research question rather than a result. The project has not derived the Navier–Stokes equations, or any law of physics, from the relational substrate. The question it asks is this: *what kinds of relational constraint and coordination preserve the right invariants, correlations and continuity for stable effective laws to emerge at all?* That is a real question, because, as the coin rooms showed, not every arrangement of chance produces stable laws. It is also an open one.
+The Relational Substrate project takes from this a research question rather than a result. The question it asks is this: *what kinds of relational constraint and coordination preserve the right invariants, correlations and continuity for stable effective laws to emerge at all?* That is a real question, because, as the coin rooms showed, not every arrangement of chance produces stable laws. It is also an open one.
 
 ## Hidden structure beneath a description
 
@@ -1141,7 +1160,7 @@ Quantum field theory, the framework in which the particles of physics are descri
 
 ## Gravity and time in the simplest models
 
-Chapter 2 opened with a question the book has not answered: what *is* gravity? The project does not know, and has not derived gravity from the relational substrate. Its Gravity/Time programme asked something narrower, and its answers are exact results on systems of at most seven points, adopted at that scope (Appendix E.8).
+Chapter 2 opened with a question the book has not answered: what *is* gravity? The project does not know. Its Gravity/Time programme asked something narrower, and its answers are exact results on systems of at most seven points, adopted at that scope (Appendix E.8).
 
 A rule that favours some pattern of links defines a *relational potential*: a count of that pattern, weighted by the rule. The system spends more time where the count is high. "Attraction" toward a structure is then participation in the favoured pattern, with no named centre and no force reaching across. **Status:** mechanism candidate, in models only. **Gathering**, a lasting preference for relation to a reference structure, is not **succession** (Chapter 6). As the models grew from six points to seven, the directed handover kept its direction in every case, while the only gathering seen alongside it fell to the level of the comparison. Much apparent gathering is density alone, so a claim of gathering must survive adjustment for density. And a reference made of relations is not a neutral frame: its own links take part through the same rules.
 
@@ -1156,7 +1175,7 @@ A proposal that cannot be wrong in any identifiable way tells us little. So it i
 - **Entanglement and mediation.** The proposal that influence is always mediated (Chapters 3 and 7) faces real pressure from quantum entanglement. Measurements on two distant entangled particles show correlations that, by Bell's theorem, no theory satisfying certain locality assumptions can reproduce, and experiments have confirmed those correlations. They cannot be used to send a signal, which is why relativity is not violated, and several interpretations, including relational ones, give accounts of them. Bell's theorem rules out a specific class of local explanations, not every conceivable notion of mediation. But entanglement remains the hardest test case for an account of mediated relation, and it is not a solved problem for this one.
 - **Gravity's clocks.** The project has no relational account of gravitational time dilation, and its simplest models show that one would need a principle they do not contain (above). That is an open gap, not yet a refutation, and it marks where a relational account of gravity is most exposed.
 - **The stochastic hypothesis is currently hard to test.** The standard interpretations of quantum theory agree on every measurement made so far, so present evidence cannot decide between a fundamentally chancy world and a deterministic one at that level. (Theories that modify quantum dynamics with spontaneous collapse do make slightly different predictions, which experiments are now testing.) That protects the hypothesis from easy refutation, and it is also a reason to hold it no more firmly than a coherent hypothesis.
-- **Matter's emergence stays unexplained.** Proposition B (Chapter 3) owes an account of how stable material individuals arise within an order that is not itself material. It would be weakened if Proposition A or C came to explain universal interoperability with equal economy, or if investigation of adjacent transitions (Chapter 8) kept failing to produce persistent, individuated organisation from simpler relations. At present the debt is unpaid, not defaulted.
+- **Matter's emergence stays unexplained.** Proposition B (Chapter 3) owes an account of how stable material individuals arise within an order that is not itself material. Its mechanism would be weakened if investigation of adjacent transitions (Chapter 8) kept failing to produce persistent, individuated organisation from simpler relations. The book's independent, comparative argument for B would be weakened if Proposition A or C came to explain universal interoperability with equal economy; the author's theological premise of a non-material origin rests on other grounds. At present the debt is unpaid, not defaulted.
 - **The models do not single out RS.** The project's models demonstrate possibilities. Ordinary computer science and probability account for every result they produced. The laboratory's most recent generation also recorded a negative result: a pattern of "dissolution leading to new organisation" that the project hoped to find in its simplest systems did not appear (Appendix B). Results of this kind narrow what the ideas can claim. They show that the ideas are coherent and workable, not that nature uses them.
 
 These limits do not empty the proposals of value. They locate it. The value lies in coherence: in whether a relation-first account of physical order, with constrained chance, relational identity and consequential transmission, helps the whole of what we know hang together better than its alternatives. That is the test to which the next chapter turns.
@@ -1165,7 +1184,7 @@ These limits do not empty the proposals of value. They locate it. The value lies
 
 The physical arc of the book is now complete. The stone is a stable, history-bearing configuration within a created order of relation, seen through a chain of preserved dependency, and regular enough to be written in exact mathematics because many constrained and coordinated chance events add up to a reliable whole.
 
-The problem underneath this whole chapter, then, is not merely how randomness averages out. Mainstream science already understands that well. It is what relational organisation makes stable identity, stable consequence and stable effective law possible across scales, while preserving the distinctions that still matter. Averaging, coordination, effective equations and hidden structure are four different parts of that one question. The Relational Substrate project has not answered it. It has learned to ask it more precisely.
+The problem underneath this whole chapter, then, is not merely how randomness averages out. Mainstream science already understands that well. It is what relational organisation makes stable identity, stable consequence and stable effective law possible across scales, while preserving the distinctions that still matter. Averaging, coordination, effective equations and hidden structure are four different parts of that one question. The Relational Substrate project has learned to ask it more precisely.
 
 So far this is an account of stones and light. The book's claim, however, is that it matters for far more than stones and light, and that a relation-first physical world changes how the rest of reality, including you, can be understood. Chapter 10 makes that case.
 
@@ -1230,16 +1249,13 @@ The argument does not claim that other ontologies make promises impossible or re
 
 If the argument is sound, it shows why the physics of this book is not an optional technical appendix to a theological book. *How* the material world is real bears on whether the rest of reality hangs together.
 
-## What the relational picture does not provide
-
-It is as important to say what the argument does not claim, because it is easily inflated.
+## Continuity, not reduction
 
 The common relational grounding of material things is a kind of glue. It allows physical causation, biological organisation, embodied action, consequence in the environment, communication and social dependence to belong to one created order. But it is continuity across the boundaries, not reduction across them:
 
 - Moral obligation is not a field, and a promise is not a force.
 - Love is not covariance.
 - Sin is not entropy.
-- Hearing and receiving the word of God is not receptor chemistry.
 - The soul is not a carrier.
 - Resurrection is not the substrate repairing itself.
 - Divine action is not a wider set of physical permissions.
@@ -1252,7 +1268,7 @@ The most serious reply runs like this. Nobody claims that promises exist among p
 
 The book accepts emergence fully. Chapter 11 will argue that living organisation is genuinely new and genuinely explanatory at its own level. The disagreement is narrower. In familiar cases, what emerges is a new and higher expression of capacities the base already has. Wetness expresses the attraction molecules already have for one another. Life expresses chemistry that already includes catalysis, templating and self-assembly. The question is not whether new properties appear. It is whether the base already contains the *relational resources* that make the emergent structures intelligible.
 
-If the base contains entities individuated independently of their relations, whose relations are always something added or exercised, then constitutive relation emerges from a base where nothing is constituted by its relations. That can be asserted, but it is precisely the kind of discontinuity step 2 names. A powers ontology narrows the gap, because powers are already other-directed, and the book counts that as convergence. It does not count it as refutation. The relational picture's claim is a claim of *continuity of structural capacity*: what emerges in living, personal and moral life is new in kind, and it emerges from a base that already has its form. It is not a claim to derive moral truth from physics. That is a more coherent position, though not one that can be proved.
+If the base contains entities individuated independently of their relations, whose relations are always something added or exercised, then constitutive relation emerges from a base where nothing is constituted by its relations. That can be asserted, but it is precisely the kind of discontinuity step 2 names. A powers ontology narrows the gap, because powers are already other-directed, and the book counts that as convergence. It does not count it as refutation. The relational picture's claim is a claim of *continuity of structural capacity*: what emerges in living, personal and moral life is new in kind, and it emerges from a base that already has its form. It is not a claim to derive moral truth from physics. That is a more coherent position, and its warrant is comparative: it rests on global coherence.
 
 ## A second case: the poisoned river
 
@@ -1270,19 +1286,25 @@ Scripture speaks of exactly this reach, in which human wrongdoing is received by
 
 Hosea's land mourns because of the people's lying and killing. Paul's whole creation groans. Scripture consistently presents human moral life and the created world as bound together, so that wrong done by persons is received in the land, and the redemption of persons concerns the whole creation. The book does not claim that a relational physics *explains* these texts. Their explanation is theological. The claim is that a relational account of the material world sits naturally with the world they describe, while an account of sealed and indifferent objects makes them sound like poetry about a reality that is not really like that.
 
+The author goes further. On the author's account the created order is designed to bear moral consequence: it is the theatre in which embodied persons act and the language in which their acts take effect, are carried and are answered. **Status:** theological premise about creation's purpose. It is not derived from the physics. It names what the physics, on the relational reading, is fitted to serve.
+
 ## Why this is a Christian question
 
-This argument is not a covert attempt to derive Christianity from physics. A reader who accepted every word of it would not thereby believe in God. But it bears on Christian faith in a particular way.
+This argument bears on Christian faith in a particular way.
 
 Scripture describes a world in which relation is fundamental at every level. God makes humanity in his image and declares that it is not good for the man to be alone (Genesis 2:18). He binds himself to his people by covenant. He calls them to love, to keep faith and to bear one another's burdens. In Christ he reconciles "all things unto himself… whether they be things in earth, or things in heaven" (Colossians 1:20). If the physical world were, at bottom, a world in which nothing is constituted by its relations, this scriptural world would rest on a creation of a different kind, and the transition would need explaining. If the physical world is relational from its foundation, created by the God in whom "all things consist", then the relational life Scripture describes is the fulfilment, at its own level, of the grain of the whole creation. That does not prove the gospel. It removes one reason for thinking the gospel must be about a world other than the one we physically inhabit.
 
-## Coherence is not the same as truth
+## Coherence, error and convergence
 
-A book that argues for coherence must face its limits here.
+Chapter 2 said that coherence is not truth. The danger has a subtler form: an argument can become *more* coherent as it proceeds while moving *further* from the truth, if every step builds on an early mistake nobody questions. The research behind this project met this directly, though in exploratory work rather than in formally recorded experiments. While developing an AI-assisted method of reasoning that runs several independent lines of thought on one problem, the author observed that when the lines were repeatedly merged into a shared summary and fed back, agreement rose steadily, and an error present in one early line could harden into a confident consensus. The project calls this a *false attractor*. The lesson, which this book adopts, is that coherence is not the same as fidelity to the truth. Agreement can be produced by a shared hidden premise as easily as by a shared grasp of reality.
 
-A coherent account can be wrong. A detective story can be perfectly coherent and accuse the wrong suspect. More subtly, an argument can become *more* coherent as it proceeds while moving *further* from the truth, if every step builds on an early mistake nobody questions. The research behind this project met this directly, though in exploratory work rather than in formally recorded experiments. While developing an AI-assisted method of reasoning that runs several independent lines of thought on one problem, the author observed that when the lines were repeatedly merged into a shared summary and fed back, agreement rose steadily, and an error present in one early line could harden into a confident consensus. The project calls this a *false attractor*. The lesson, which this book adopts, is that coherence is not the same as fidelity to the truth. Agreement can be produced by a shared hidden premise as easily as by a shared grasp of reality.
+The remedy is to ask where agreement came from. When lines of inquiry that are genuinely independent, starting from different premises, drawing on different evidence and reasoning by different routes, arrive at relationships that fit together, their agreement carries weight no single line could. The book calls this **independent relational convergence**. The dodo of Chapter 8 is an example: sailors' accounts, bones, a preserved head and a genome, each with its own provenance, constrain the same bird. Its strength depends on the independence being real. Many voices repeating one source are one source. Several AI systems trained on overlapping material and fed one another's summaries are not independent witnesses merely because they are separate programs, which is how the false attractor formed.
 
-That applies to this book. Its argument is coherent, but that does not make it true, and its own coherence could be a false attractor. The safeguards are those already described. The argument stays accountable to observation wherever observation can reach (Chapter 9 named where it cannot). It keeps its levels of claim distinct. It keeps alternatives in view (Appendix A). And it submits its conclusions to Scripture, which is not one more input to the coherence but the frame within which coherence is sought.
+Error has its own anatomy, and it tells more than a verdict of "false". Take 2 + 2 = 5. Almost everything in it is sound. The numbers mean what they always mean. Addition is a well-defined operation. The question, what two and two make, has a definite answer, and five is an intelligible candidate. The error lies in one place: the asserted relation between the operation and its result. A statement that could not be understood could not even be wrong, so intelligible error depends on genuine coherence. That does not mean every falsehood hides a true conclusion, or that a false relation becomes true because its surroundings are intelligible. It means that when a claim fails, the right response is to find the relationship that failed, keep what remains sound, and notice what the failure has excluded. A failed hypothesis can correct the question as well as the answer. Stories show the same separation from the other side. A novel can be coherent throughout and never have happened: whether an account holds together, and whether it reports what occurred, are two questions.
+
+This is not an account of moral evil, which Chapter 14 gives. A mistaken representation is an error of relation. Wrongdoing is a person's turning against the good. They can coincide, but one is not the other.
+
+All this applies to the book itself. Its own coherence could be a false attractor. The safeguards are those already described. The argument stays accountable to observation wherever observation can reach (Chapter 9 named where it cannot). It keeps its levels of claim distinct. It keeps alternatives in view (Appendix A). And it submits its conclusions to Scripture, which is not one more input to the coherence but the frame within which coherence is sought.
 
 There is also a reason this matters for global coherence in particular. Global coherence is the most demanding test there is, because it must hold across every domain at once, and because errors hidden in one domain tend to surface as drift on the round trip through the others. A false attractor in one place is likely, sooner or later, to produce a contradiction or a silent change of meaning somewhere else. That is exactly why global coherence is a stronger test than local success, and why the book is willing to be judged by it.
 
@@ -1422,6 +1444,8 @@ The biblical account resists a temptation that has run through much religious an
 
 This is why Christian hope is the resurrection of the body (Chapter 15), and not the soul's escape from it. It is also why bodily life carries real moral weight. Limitation, vulnerability, time, place, dependence on others, the capacity to give oneself and the capacity to be wounded all belong to embodied existence. They are the conditions under which creaturely persons can love, keep faith and sacrifice. A human person is a person *by being embodied*.
 
+It follows that a human moral act is not a spiritual event with a bodily sign attached. When a person lies, the words, the body that speaks them and the changes they make in others belong to the act itself. Its moral reality, a wrong before God and against a neighbour, is not the same thing as those events, and it is not separate from them either. Within one person the two are causally connected, not identical (Chapter 1). This is the sense in which created order is, in the author's phrase, the theatre and the language of moral consequence (Chapter 10).
+
 ## Personhood is deeper than embodiment
 
 Yet Scripture also requires a careful distinction here, one that reasoning from ordinary experience alone would not discover. Every person we meet is embodied, and so it is natural to assume that being a person simply *is* being a certain kind of body. Christian faith confesses something that rules this out.
@@ -1466,13 +1490,19 @@ Here the book must apply its own guard with full force. The soul is **not** a co
 
 ## Consciousness
 
-What, then, of consciousness, the felt awareness of seeing the stone, of its greyness, of its cold weight in the hand? Here the book must be more modest still.
+What, then, of consciousness, the felt awareness of seeing the stone, of its greyness, of its cold weight in the hand? Here the distinctions of Chapter 2 matter most.
 
 Consciousness clearly participates in physical order. It depends on the body, on the brain, on the chain of transmissions that brings the world to us. Damage the brain, and consciousness is changed or lost. Alter its chemistry, and experience alters. A Christian account has every reason to take this seriously. We are dust, and our awareness is embodied.
 
-But how physical processes relate to felt awareness, why there is anything it is like to see grey at all, is one of the hardest open questions in philosophy. Philosophers call it the hard problem of consciousness, and no account of physics, mainstream or relational, has solved it. **The Relational Substrate does not explain consciousness.** It claims something far smaller: a relational physical world is a more fitting setting for conscious persons than a world of sealed objects, because it is already a world in which differences become consequences for something else. But the step from consequence to awareness, from a changed molecule in the retina to the experience of seeing, is not taken by the substrate. The book does not pretend otherwise.
+Consciousness is known from within and through its relations: everyone knows what it is to see. How physical processes relate to felt awareness, why there is anything it is like to see grey at all, lies beyond present inquiry. Philosophers call it the hard problem of consciousness, and no account of physics, mainstream or relational, has solved it. It may exceed what any creature can fully comprehend. None of this makes consciousness less real or less knowable in the ways it is known. **The Relational Substrate does not explain consciousness.** It claims something far smaller: a relational physical world is a more fitting setting for conscious persons than a world of sealed objects, because it is already a world in which differences become consequences for something else. The step from consequence to awareness, from a changed molecule in the retina to the experience of seeing, is not taken by the substrate.
 
 The book's position here is scriptural. The one who finally receives the seeing of the stone is a person, and persons are not one more stage in a physical chain. Physical transmission brings the world to the person. The person's knowing of it belongs to another category.
+
+## Knowing and choosing as events
+
+Yet the knowing is itself something that happens. When you recognise the stone, a distinction received from the world is related to what you already know, and you know something you did not. In the terms of Chapter 7, observation supplies a distinction and inference receives it. The recognition is an actual event in a person, not a commentary standing outside the world, and much of it happens without deliberate attention: you recognise a friend's voice before you think about it. Persons can also hold in view what is not yet actual and choose among alternatives. A choice actualises one configuration rather than another, and its consequences pass into the world like any others: you pick up the stone, and it is somewhere it would not otherwise have been. So knowing and choosing are not on a higher floor of reality than physical change. In the person, what is known is real, and so is the knowing. Reasoning about represented relationships of this kind the book calls **relational inference**.
+
+None of this makes created order a knower. It is not conscious, and it did not become capable of consciousness by growing complex. Creaturely personhood is where two kinds of reality meet by design: a non-conscious created order, coherent and fitted to bear consequence, and a conscious capacity for relation to God, given with the breath of Genesis 2:7.
 
 ## Image, calling and relation
 
@@ -1515,6 +1545,13 @@ Chapter 4 introduced **admissibility** as whether a transition is physically pos
 
 The three questions are independent, and the most serious confusions about human action come from running them together. Lying is physically possible: speech can carry false statements as easily as true ones. It is within ordinary human power: anyone who can speak can lie. And it is wrong. Sustaining creation in being is physically admissible in the sense that it occurs, but it is within no creature's power; it belongs to God alone. Creating something beautiful is possible, within power and good. The scalpel and the knife are equally possible and equally within the power of their wielders; what divides them is the moral question.
 
+Scripture's first account of human wrongdoing turns on exactly this distinction:
+
+> `And when the woman saw that the tree was good for food, and that it was pleasant to the eyes, and a tree to be desired to make one wise, she took of the fruit thereof, and did eat, and gave also unto her husband with her; and he did eat.`
+> *Genesis 3:6*
+
+The fruit was within reach, and eating it was within their power. What was forbidden was the means: wisdom sought by taking what God had withheld. The act was admissible in the first two senses and not in the third.
+
 The first edition of this book named three characteristic mistakes that follow from collapsing these layers, and they are worth repeating because they are so common.
 
 - **The naturalist mistake** collapses the moral into the physical: if it is possible, and nature produces it, it cannot really be wrong.
@@ -1556,7 +1593,23 @@ Scripture presents human beings as genuinely able to choose, and as held respons
 > `I call heaven and earth to record this day against you, that I have set before you life and death, blessing and cursing: therefore choose life, that both thou and thy seed may live.`
 > *Deuteronomy 30:19*
 
-How human freedom relates to God's sovereignty is among the oldest questions in Christian theology, and different traditions answer it differently. This book does not resolve it. It does observe one thing within its own subject, and it is a limited observation. A world of constrained possibility, in which actualisation is not fixed in advance at every level (Chapter 5), does not settle the question of human freedom in either direction. Constrained chance is not freedom. A coin toss is not a choice, and the book makes no claim that human agency is a matter of molecular chance. Physics cannot prove free will, and the relational ontology does not try to. Agency belongs to persons, in their own category.
+One observation falls within this book's own subject. A world of constrained possibility, in which actualisation is not fixed in advance at every level (Chapter 5), does not settle the question of human freedom in either direction. Constrained chance is not freedom. A coin toss is not a choice, and the book makes no claim that human agency is a matter of molecular chance. Physics cannot settle whether the will is free, and the relational ontology does not try to. Agency belongs to persons, in their own category.
+
+## Time as moral opportunity
+
+Agency is exercised in time, and Scripture speaks of time in a way the physicist does not:
+
+> `So teach us to number our days, that we may apply our hearts unto wisdom.`
+> *Psalm 90:12*
+
+The days are counted here as an opportunity, given and limited, for wisdom. The book calls this **time as moral opportunity**. It is not a second kind of time, and it is not a clock unit. It is what the succession of Chapter 6 means for a person who must act within it.
+
+Opportunity in this sense is relative to the person. A nanosecond is no occasion for a human decision, and an hour can be decisive, but duration is not the measure. An athlete's two minutes of competition rest on months of preparation, and what she can do in them is the fruit of what she did before. Earlier choices change capacity, disposition and which options are even visible when the moment comes. They condition what follows without deciding it: a moral life is a trajectory in which much is open and nothing begins from nowhere. In this chapter's terms, preparation changes operational admissibility, what is within a person's power. Responsibility follows the same shape:
+
+> `For unto whomsoever much is given, of him shall be much required: and to whom men have committed much, of him they will ask the more.`
+> *Luke 12:48*
+
+More is asked of those given more, in gifts, opportunities and formation. That is a difference of responsibility, not of worth.
 
 ## Boundaries that free
 
@@ -1573,7 +1626,7 @@ It is common today to think of every moral boundary as a restriction on freedom,
 
 Law, testimony, statute and commandment are each a constraint, and each is described as giving life, wisdom, joy and light. Liberty is found *in* seeking God's precepts, not in escaping them. This is not a paradox once the structure is seen. A boundary rightly placed does not shrink the space of good action. It is what gives the space its shape, so that a person can grow within it into what they are made to be.
 
-Here a structural analogy is again at work, and again it must be held as analogy. The constraint that shapes a crystal and the commandment that shapes a life share a form: a boundary that makes possible rather than merely forbidding. They do not share a nature. The commandment is spoken by a Person to persons and is received in conscience, trust and obedience. The crystal's constraint is given in the order of matter and received by nothing. The likeness is real, and it is one of the ways creation bears witness to its Maker. But a commandment is not a law of physics, and a law of physics is not a commandment.
+Here a structural analogy, in the sense of Chapter 1, is at work. The constraint that shapes a crystal and the commandment that shapes a life share a form: a boundary that makes possible rather than merely forbidding. They do not share a nature. The commandment is spoken by a Person to persons and is received in conscience, trust and obedience. The crystal's constraint is given in the order of matter and received by nothing. The likeness is real, and it is one of the ways creation bears witness to its Maker. But a commandment is not a law of physics, and a law of physics is not a commandment.
 
 ## The question that follows
 
@@ -1599,6 +1652,37 @@ These texts rule out two opposite mistakes. One treats disorder as ultimate, so 
 
 The way these fit together has been understood in Christian thought since Augustine. Corruption is not a rival substance standing beside the good, and it is not a second creator. It is **parasitic**: a distortion of what is good, which has no being of its own and exists only by deforming something that God made. Evil cannot create; it can only spoil. That is why the book speaks of corruption as *distortion*, *misalignment* and *rupture*, words that presuppose an order being distorted, misaligned or ruptured.
 
+## The subjection of creation
+
+Scripture traces the disorder of the world to an event. After the man and the woman had eaten, God's word reached past them into the ground itself:
+
+> `And unto Adam he said, Because thou hast hearkened unto the voice of thy wife, and hast eaten of the tree, of which I commanded thee, saying, Thou shalt not eat of it: cursed is the ground for thy sake; in sorrow shalt thou eat of it all the days of thy life; Thorns also and thistles shall it bring forth to thee; and thou shalt eat the herb of the field; In the sweat of thy face shalt thou eat bread, till thou return unto the ground; for out of it wast thou taken: for dust thou art, and unto dust shalt thou return.`
+> *Genesis 3:17-19*
+
+Three things need to be kept apart here.
+
+*What the text says.* The ground is cursed because of human disobedience. Work becomes toil, the earth yields thorns, and the man will return to dust. Paul adds that the creation "was made subject to vanity, not willingly, but by reason of him who hath subjected the same in hope" (Romans 8:20). The subjection is God's act.
+
+*The author's interpretation.* The curse is a deliberate divine realignment of the created runtime order to the consequences of spiritual disobedience. Its purpose is that creation should go on telling the truth. A world in which the breach between humanity and God had no visible consequence would teach falsely about what had happened. On this reading creation remains an instructor after the Fall, and what it now teaches includes decay, toil and loss. The thesis concerns what changed in creation, not the manner of God's action (Chapter 4). **Status:** theological interpretation.
+
+*The mechanism, which is open.* The author's thesis is that God realigned the primitives themselves, the explicitly intrinsic constraints of Chapter 4: the conditions of the primitive order, fixed for every creature but not for its Creator. Two other readings belong in view. God may have changed settings within a primitive order that otherwise stayed as it was. Or he may have brought about a new state of creation under its original constraints, so that the new conditions follow as implicitly intrinsic constraints. These are different claims, and they would explain different things. Genesis describes none of them. Appendix E records them as a research question.
+
+The author also holds that the realignment brought animal death into the world, which was not part of creation's original conditions. Genesis 3:21 is part of the reasoning:
+
+> `Unto Adam also and to his wife did the LORD God make coats of skins, and clothed them.`
+> *Genesis 3:21*
+
+The verse says that God made coats of skins and clothed the man and the woman. That the skins mark the first death, cover shame and anticipate sacrifice is the author's theological reading; the text names no lamb, no rite and no first death. And the position meets a real difficulty. The fossil record shows animal death in rock strata that the conventional chronology dates long before humans. The book's own standard (Chapter 2) does not allow that interface to be ignored. It states the author's position, names the conflict with the conventional chronology as an open problem, and does not resolve it here.
+
+One consequence holds on every reading of the mechanism. The subjection of creation is God's act, and God's acts are not corrupt. Corruption, as the previous section described it, is parasitic: a distortion with no being of its own. The futility to which creation was subjected is a judgment, coherent and purposed, and given "in hope". Corruption suffered in the higher orders of creation does not mean that its primitive order has become incoherent.
+
+Nor does every suffering follow from the sufferer's own sin. Asked whose sin had made a man blind, Jesus answered:
+
+> `Neither hath this man sinned, nor his parents: but that the works of God should be made manifest in him.`
+> *John 9:3*
+
+Creation's subjection is the condition of all. It is not a ledger of each.
+
 ## Corruption as persisting misalignment
 
 Chapter 13 described alignment as fitting the order one is made for. Misalignment, a departure from that order, is not by itself the whole of corruption. Every growing creature departs from its mature form, and every learner makes mistakes. A wrong act is wrong in itself, whether or not it is ever repeated: a single lie, swiftly repented of, was still a lie, and a single act of cruelty is still cruel. Its wrongness lies in what it is and whom it wrongs, judged by the moral order of Chapter 13, not in how long it lasts. What persistence explains is something else: how wrongdoing **entrenches**. Misalignment that is not restored persists and spreads, hardening into habit, narrowing what a person can see and choose, and reaching into others. Corruption, in the full sense this chapter describes, includes both the wrong and its entrenchment.
@@ -1616,13 +1700,13 @@ Scripture describes sin in exactly these terms: not as a series of isolated laps
 
 Lust conceives and brings forth sin. Sin, finished, brings forth death. Sin hardens and enslaves. Misalignment that is not restored does not stay where it is. It propagates, entrenches and steadily narrows the very capacity that might have turned it back.
 
-Here a structural analogy from Chapter 6 becomes useful, held carefully as analogy. Chapter 6 proposed, as a hypothesis, that the past can live on in present configuration, changing what is likely or possible next. The bent paper clip carries its bending in its crystal structure. Something with the same form is visible in human character: a habit of deceit makes the next deceit easier and honesty harder, and a grievance nursed reshapes what a person is able to see. Scripture's "hardened" is a strikingly physical word for this. The book does not claim that sin *is* a configuration of the substrate. Sin belongs to persons, in their relation to God, and is not a physical state. But the form of corruption, a persisting past that narrows the future, is the same form that runs through history-bearing physical order. In that sense corruption works with the grain of a relational world, against the purpose for which that world was made.
+Chapter 6 helps here, in two of the senses Chapter 1 distinguished. It proposed, as a hypothesis, that the past can live on in present configuration, changing what is likely or possible next. The bent paper clip carries its bending in its crystal structure. Something with the same form is visible in human character: a habit of deceit makes the next deceit easier and honesty harder, and a grievance nursed reshapes what a person is able to see. Scripture's "hardened" is a strikingly physical word for this. Sin itself belongs to persons, in their relation to God, and is no configuration of the substrate. Its embodied consequences are real configurations, causally connected to it: the habit is actually carried in a person's dispositions, body and relations. And the form of corruption, a persisting past that narrows the future, is the same form that runs through history-bearing physical order. In that sense corruption works with the grain of a relational world, against the purpose for which that world was made.
 
 ## Corruption in transmission
 
 The grammar of Chapter 7 gives a second lens, again used only where it clarifies.
 
-Much human wrongdoing is wrongdoing in what is *transmitted*. A lie sends out a false distinction: a claim that the world is otherwise than it is, offered to be received and acted on. Slander sends out a false distinction about a person. A broken promise breaks a carriage that was relied on: a commitment that should have persisted from the day it was made to the day it was due, and did not. Gossip distorts in carriage, so that what arrives is no longer what was released. Scripture's long catalogue of sins of the tongue reflects how much of human corruption runs through what people send to one another:
+Much human wrongdoing is wrongdoing in what is *transmitted*. A lie sends out a false distinction: a claim that the world is otherwise than it is, offered to be received and acted on. Slander sends out a false distinction about a person. A broken promise breaks a carriage that was relied on: a commitment that should have persisted from the day it was made to the day it was due, and did not. Gossip distorts in carriage, so that what arrives is no longer what was released. And a deception shows how far consequence can reach. A lie believed changes what someone does; what they do changes others; within a few steps the effects have passed into decisions, relationships and circumstances that will never be traced back to it. That history is real, carried in all those changed relations, which is the only record created order keeps (Chapter 6). Nothing guarantees that a creature can recover it. Consequence persists where provenance is lost. Scripture's long catalogue of sins of the tongue reflects how much of human corruption runs through what people send to one another:
 
 > `Death and life are in the power of the tongue: and they that love it shall eat the fruit thereof.`
 > *Proverbs 18:21*
@@ -1634,7 +1718,7 @@ Corruption can also be a failure of *reception*. Chapter 7 distinguished arrival
 
 To hear and not heed, to be warned and not change, to be loved and not respond: these are failures of reception, in which a difference that should have become a consequence in someone was refused. The image will matter in the next chapter, because restoration includes the restoring of reception: ears opened, hearts softened, a word that comes "not … unto you in word only, but also in power" (1 Thessalonians 1:5).
 
-These lenses must not become a theory of everything. Not all corruption is usefully described as transmission, and a vocabulary that tried to describe every sin in the same technical phrase would trivialise sin. They are offered because they sometimes help us see a pattern Scripture already describes, not because they explain it.
+These lenses are offered because they sometimes help us see a pattern Scripture already describes, not because they explain it. A vocabulary that tried to describe every sin in the same technical phrase would trivialise sin.
 
 ## Five patterns of corruption
 
@@ -1722,7 +1806,7 @@ So the healing of creation cannot be expected from creation's own resources. If 
 
 The One through whom all things were made (Colossians 1:16) and in whom all things consist (1:17) is the One through whom all things are reconciled. Redemption is not alien to creation. It is the Creator's answer to the wounding of his own work. But it is *his* answer. It is not a process inside the substrate, a self-correction of physical order, or the outworking of some law of nature.
 
-This is why Chapter 4 insisted that God is not one more cause among the causes of the world, and that the book offers no account of how God acts in miracles, providence or redemption. The relational ontology describes created runtime order: how things ordinarily persist, transmit and change. God's redeeming work is not ordinary runtime process. The resurrection of Christ was not an unusually improbable configuration of the substrate. It was an act of the Creator. When Scripture records miracles, the book receives them as Scripture records them. It does not explain them as hidden physics, and it does not explain them away.
+This is why Chapter 4 insisted that God is not one more cause among the causes of the world, and that the book offers no account of the manner of God's action in miracles, providence or redemption. The relational ontology describes created runtime order: how things ordinarily persist, transmit and change. God's redeeming work is not ordinary runtime process. The resurrection of Christ was not an unusually improbable configuration of the substrate. It was an act of the Creator. When Scripture records miracles, the book receives them as Scripture records them. It does not explain them as hidden physics, and it does not explain them away.
 
 ## Hope must be real
 
@@ -1760,7 +1844,7 @@ Chapter 14 described corruption as, among other things, a failure of reception: 
 > `For our gospel came not unto you in word only, but also in power, and in the Holy Ghost, and in much assurance.`
 > *1 Thessalonians 1:5*
 
-A heart of stone does not receive; a heart of flesh does. The gospel that comes "in word only" has arrived. The gospel that comes "in power, and in the Holy Ghost" has been received. This is a structural analogy, and the book holds it as one. The Spirit's work in giving a new heart is not a physical process, and faith is not a change of state in a receptor. Nor is hearing the gospel a transaction that must be recorded once, like a payment; Scripture speaks of a word received, rehearsed, remembered and received again. What the analogy shares is only the outline: something sent, carried and heard, and finally received as a change in the one who hears. That outline runs through the whole of creation. It is fitting that the God whose word "shall not return unto me void" (Isaiah 55:11) should, in redemption, make his creatures able to receive it.
+A heart of stone does not receive; a heart of flesh does. The gospel that comes "in word only" has arrived. The gospel that comes "in power, and in the Holy Ghost" has been received. This is a structural analogy, in the sense of Chapter 1. The Spirit's work in giving a new heart is not a physical process, and faith is not a change of state in a receptor. Nor is hearing the gospel a transaction that must be recorded once, like a payment; Scripture speaks of a word received, rehearsed, remembered and received again. What the analogy shares is only the outline: something sent, carried and heard, and finally received as a change in the one who hears. That outline runs through the whole of creation. It is fitting that the God whose word "shall not return unto me void" (Isaiah 55:11) should, in redemption, make his creatures able to receive it.
 
 ## The same person, raised
 
@@ -1783,7 +1867,7 @@ Put together, these give an honest answer. Resurrection is not the substrate pre
 
 ## Human death and the Cross
 
-Scripture presents human death as bound up with sin (Romans 5:12) and as an enemy to be destroyed (1 Corinthians 15:26). Human death is not humanity's intended created end. Christians who share this book's commitments read the wider history of the natural world, including animal mortality, in different ways, and the book does not settle that question. It holds the narrower scriptural claim: the death of persons is not what God made them for.
+Scripture presents human death as bound up with sin (Romans 5:12) and as an enemy to be destroyed (1 Corinthians 15:26). Human death is not humanity's intended created end. The author holds further that animal death too entered with the Fall (Chapter 14). That is a theological interpretation, and it carries an open problem the book names rather than resolves: its relation to the conventional chronology of the fossil record. The narrower scriptural claim stands on any reading: the death of persons is not what God made them for.
 
 The death of Christ is presented in a striking way within that account. In the ordinary case, death is corruption prevailing over a creature that cannot resist it. The Gospels present Christ's death as yielded:
 
@@ -1804,7 +1888,7 @@ The ordinary sequence, death and then the decay that death lets loose, was inter
 
 One of the first edition's most valuable reflections concerned what restoration produces, and it deserves to be kept in condensed form. It is offered as theological and pastoral reflection, drawn from Scripture and from Christian experience, not as a doctrine binding on every reader and not as a claim that evil was necessary. A restored life is not merely returned to where it was before the damage. It can become something richer.
 
-Innocence that has never been tested is real goodness, but it is unowned. Its loyalties are untried and its weaknesses hidden, because nothing has exposed them. When disorder comes, it exposes what was hidden. If it is then truthfully faced, repented of and repaired, the result can be an alignment that is conscious, tested, freely chosen and humbler than before. A marriage repaired after a serious rupture, a faith that has come through honest doubt, and a community rebuilt after a wound can each hold a kind of coherence that could not exist without the wound and the repair together. Scripture describes this pattern repeatedly:
+Innocence that has never been tested is real goodness, but it is unowned. Its loyalties are untried and its weaknesses hidden, because nothing has exposed them. When disorder comes, it exposes what was hidden. If it is then truthfully faced, repented of and repaired, the result can be an alignment that is conscious, tested, freely chosen and humbler than before. A marriage repaired after a serious rupture, a faith that has come through honest doubt, and a community rebuilt after a wound can each hold a kind of coherence that could not exist without the wound and the repair together. Restoration does not erase history. Forgiveness changes what can follow from a wrong without undoing every effect the wrong has had, and the wound and the repair both remain part of the story. Scripture describes this pattern repeatedly:
 
 > `Now no chastening for the present seemeth to be joyous, but grievous: nevertheless afterward it yieldeth the peaceable fruit of righteousness unto them which are exercised thereby.`
 > *Hebrews 12:11*
@@ -1824,8 +1908,10 @@ Second, restoration is costly. At the scale of a single life it costs repentance
 > `For when we were yet without strength, in due time Christ died for the ungodly.`
 > *Romans 5:6*
 
-> `Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold… But with the precious blood of Christ, as of a lamb without blemish and without spot.`
-> *1 Peter 1:18-19*
+> `Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold… But with the precious blood of Christ, as of a lamb without blemish and without spot: Who verily was foreordained before the foundation of the world, but was manifest in these last times for you,`
+> *1 Peter 1:18-20*
+
+The cost was known and accepted before it was paid. Scripture states the foreordination. The author reads it as a real and irrevocable commitment made before creation, concerning an event within its history: a decision, not a forecast. And because God knows every wrong completely, what was paid for was known exactly. That is a way of speaking about the completeness of his knowledge, not a price that could be counted.
 
 Third, the freedom that makes owned alignment possible is a freedom to love and trust God, not a licence to corrupt. Faith must be a genuine, willing response of the person, however the traditions describe the freedom that involves, and the possibility of turning away is not thereby a good one. Faith is the creature's willing trust in a God it does not yet see in full, extended across the very gap that testing opens:
 
@@ -1852,6 +1938,8 @@ Scripture's hope is therefore not simply the restoration of Eden. It is consumma
 > *1 Corinthians 15:54*
 
 Judgment belongs to this hope, not against it. If corruption is real, hope cannot consist merely in soothing those who suffer while leaving evil uninterpreted. It includes the exposure of lies, the defeat of wickedness and the vindication of truth. Scripture is sober about the outcome for those who refuse: "these shall go away into everlasting punishment: but the righteous into life eternal" (Matthew 25:46). Without judgment, redemption would be sentimental. With it, redemption is morally serious.
+
+Such judgment does not depend on what a damaged or partial record can establish. Created order carries the consequences of every act, but not every act's provenance, and much is lost to any creaturely inquiry (Chapter 14). God's knowledge is not so limited. He knows the whole history of each act: its intention, its circumstances, its effects, and who is responsible for them. That is why his judgment can be just where every human court would fail. Greater material damage is not by itself greater guilt; intention, knowledge and capacity weigh too.
 
 ## A foretaste in the gathered people of God
 
@@ -1885,9 +1973,9 @@ Gathered together, the book's account runs like this.
 
 God creates reality. Created physical order is real, and it is not self-grounding: it holds together because it is held. The deepest physical ontology the Relational Substrate proposes is relational rather than object-first. Actualisation is conditioned before anything happens, both by what is forbidden and by what is favoured. The book calls those conditions T0 and reads them as constrained possibility, while leaving open what kind of thing they finally are. What has already happened shapes what is currently reachable. Actualisation is, on the book's working hypothesis, fundamentally stochastic: consistent with quantum theory, though not established by it. Persistence, identity and regularity arise through structured relational continuity. A thing remains the same *kind* of thing by preserving its relevant equivalence class, judged by what reachable futures could tell apart, with invariants as its certificates and provenance as part of it where it still matters. Whether it is the same *individual* is a further question, of continuity and lineage, which remains open. Regularity is the stable behaviour of many chance events, constrained and coordinated in the right way. Transmit, carry and receive name the grammar by which any distinction becomes consequential to another state: a distinction capable of constraining beyond itself, a dependency that preserves it, and a consequence that depends on it. The book proposes that this is the form of consequential relation itself, and that cause, in a chancy world, is a distinction modifying what another state can become. Stable global behaviour does not require every underlying transition to be determined in advance. Mathematics describes that stable behaviour, often with astonishing precision, without thereby becoming the reality it describes. Material things are one achievement of this order: configurations that have acquired persistent, individuated identity that can be handled, as distinct from material organisation, such as a sound, that passes through them. Whether materiality itself emerges from an order that is not material is the book's central question, held as a hypothesis. Organised identities persist across changes of carrier when the relations that constitute them are preserved and a compatible receiver recovers them. And identities gather recursively, from distinction through relationship and organisation to higher-order wholes that act within the next order.
 
-Because material reality is relational from its foundation, the physical world does not begin as a scatter of metaphysically isolated objects that must somehow acquire relation later. That matters for global coherence. Life, personhood, morality, consequence, corruption and restoration need not be bolted onto a physical world of a different kind. Yet material, biological, personal and spiritual categories remain genuinely distinct. Relation runs through all of them, and relation across categories does not erase category. The substrate is not the soul. Transmission is not revelation. A law of physics is not a commandment. Creation is not God.
+Because material reality is relational from its foundation, the physical world does not begin as a scatter of metaphysically isolated objects that must somehow acquire relation later. That matters for global coherence. Life, personhood, morality, consequence, corruption and restoration need not be bolted onto a physical world of a different kind. Yet material, biological, personal and spiritual categories remain genuinely distinct. Relation runs through all of them, and relation across categories does not erase category. The substrate is not the soul. Physical transmission is not divine speech. A law of physics is not a commandment. Creation is not God.
 
-Observation, measurement and successful mathematics strongly constrain what can responsibly be claimed about the physical world. Empirical description alone does not exhaust ontology, and the metaphysical pictures that travel with it are proposals to be tested like any other. Scripture provides the governing frame within which this book seeks coherence. The whole project is not an empirical proof of ultimate ontology. It is an attempt to construct the most globally coherent account available, while remaining honest about observation, mathematics, experiment, metaphysics, uncertainty and revelation.
+Observation, measurement and successful mathematics strongly constrain what can responsibly be claimed about the physical world. Empirical description alone does not exhaust ontology, and the metaphysical pictures that travel with it are proposals to be tested like any other. Scripture provides the governing frame within which this book seeks coherence. The whole project is an attempt to construct the most globally coherent account available, while remaining honest about observation, mathematics, experiment, metaphysics, uncertainty and revelation.
 
 ## What kind of confidence this deserves
 
@@ -1913,9 +2001,18 @@ There is a deeper reason for that discipline, and Scripture gives it.
 > `For now we see through a glass, darkly; but then face to face: now I know in part; but then shall I know even as also I am known.`
 > *1 Corinthians 13:12*
 
-Human beings know from inside creation. They cannot step outside it and see its foundations from the vantage point of its Maker. Whatever the deepest order of the world is, we meet it through its effects, through instruments and inference, through a glass. Like the caller of a private function in Chapter 2, we can learn its behaviour well without its inner nature being fixed by what we learn. That is not a defect to be overcome by enough research. It is part of being a creature. It is also why this book has insisted that its ontology is a coherence argument, not a proof, and why Scripture, which comes to us from the One who laid the foundations, is the frame within which the argument is made.
+Human beings know from inside creation. They cannot step outside it and see its foundations from the vantage point of its Maker. Whatever the deepest order of the world is, we meet it through its effects, through instruments and inference, through a glass. Like the caller of a private function in Chapter 2, we can learn its behaviour well without its inner nature being fixed by what we learn. That is not a defect to be overcome by enough research. It is part of being a creature. It is also why the warrant this book claims for its ontology is that of a coherence argument, held with disciplined confidence, and why Scripture, which comes to us from the One who laid the foundations, is the frame within which the argument is made.
 
 But Job's question is not a rebuke to inquiry. The same book that asks "where wast thou?" catalogues the wonders of creation in loving detail, and the God who asks it invites Job to look. "It is the glory of God to conceal a thing: but the honour of kings is to search out a matter" (Proverbs 25:2). Partial knowledge is still knowledge. To search out the order of creation, while knowing that we see in part, is one of the honours God gives to creatures made in his image.
+
+Inquiry of this kind is a way, and Scripture's deepest word for it is Christ's own:
+
+> `Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.`
+> *John 14:6*
+
+The author reads the three words together: the way as a road actually walked, the truth as what grounds it, the life as participation in it, with the Father as the destination, who is one with the Son ("I and my Father are one", John 10:30). That is a theological reading, offered as one. It fits what this book has described: partial understanding refined, step by step, toward a coherence that only God knows perfectly. Truth is what is so. The way toward it is walked by creatures, and it is not the same as the truth it seeks.
+
+The fitting response to such a world is **wonder**: the response of a creature to coherence that is intelligible and yet exceeds what it can now comprehend. Wonder does not end inquiry. It invites it. On the author's account, creation was made to be read this way. Its order represents something of the spiritual order that is prior to it (Chapter 1). And its beauty, the apprehensible expression of the patterns of goodness, which is spiritual in origin, can be met in created things without being exhausted by them, even where what is beautiful is not perfect in every part.
 
 ## Living in a relational world
 
@@ -1995,7 +2092,7 @@ This appendix is for readers who want to know what lies behind the physical chap
 
 ## The research process
 
-The research behind this book is the work of one author. It has made extensive use of computational modelling and of AI-assisted analysis, using several AI systems, for exploration, calculation and review. Where the book speaks of "the project", it means this body of work, not an institution or a team. The research history recorded here is provenance. The book's argument does not depend on the order in which ideas were found, and the main chapters state the current claims directly.
+The research behind this book is the work of one author. It has made extensive use of computational modelling and of AI-assisted analysis, using several AI systems, for exploration, calculation and review. Agreement among those systems is not treated as independent corroboration, since they share training material and can share one another's summaries (Chapter 10). Where the book speaks of "the project", it means this body of work, not an institution or a team. The research history recorded here is provenance. The book's argument does not depend on the order in which ideas were found, and the main chapters state the current claims directly.
 
 ## Recorded research behind this edition
 
@@ -2046,9 +2143,9 @@ The project has built models in which distinctions, provenance and equivalence a
 
 ## Revisions of this edition
 
-The first edition rested on specific proposed mechanisms (knotted closures in a continuous medium, a closed list of five kinds of change, particular accounts of light and magnetism) that later work did not support; the section below records where each went. The second edition (October 2026) rebuilt the book on more foundational ideas. Revisions 2.1 to 2.3 corrected it against further research and review. Revision 2.4 followed a full human reading: it made global coherence run in both directions, reopened T0, restated T-C-R as the grammar of consequential manifestation, and added Appendix E. Revision 2.5 reduced the reader's load in the Preface and Chapters 1 to 9, gave the book one vocabulary of claim status, adopted the Gravity/Time ontology proposals at model scope (Appendix E.8), and brought this appendix up to date. Revision 2.6 developed an ontological brief written by the author. It fixed a working definition of *material* and distinguished material organisation from material individuals (Chapters 3 and 6). It compared three propositions about matter's foundation (Chapter 3). It admitted qualitative comparison of plausibility, named metaphysical elasticity, and stated the boundary between knowing behaviour and knowing ontology (Chapter 2). It introduced the identity organiser and identity coherer (Chapter 7). It added a chapter on organised identity and the recursive grammar of emergence (Chapter 8), and it assessed the mathematics below. The working record of each revision is kept with the manuscript in the project repository.
+The first edition rested on specific proposed mechanisms (knotted closures in a continuous medium, a closed list of five kinds of change, particular accounts of light and magnetism) that later work did not support; the section below records where each went. The second edition (October 2026) rebuilt the book on more foundational ideas. Revisions 2.1 to 2.3 corrected it against further research and review. Revision 2.4 followed a full human reading: it made global coherence run in both directions, reopened T0, restated T-C-R as the grammar of consequential manifestation, and added Appendix E. Revision 2.5 reduced the reader's load in the Preface and Chapters 1 to 9, gave the book one vocabulary of claim status, adopted the Gravity/Time ontology proposals at model scope (Appendix E.8), and brought this appendix up to date. Revision 2.6 developed an ontological brief written by the author. It fixed a working definition of *material* and distinguished material organisation from material individuals (Chapters 3 and 6). It compared three propositions about matter's foundation (Chapter 3). It admitted qualitative comparison of plausibility, named metaphysical elasticity, and stated the boundary between knowing behaviour and knowing ontology (Chapter 2). It introduced the identity organiser and identity coherer (Chapter 7). It added a chapter on organised identity and the recursive grammar of emergence (Chapter 8), and it assessed the mathematics below. Revision 2.7 integrated the author's research conversations of 31 October 2026, settled by the author's recorded decisions. It stated the book's account of knowing: true and inferential logic, proof as warrant, coherence factors, the anatomy of error and independent convergence (Chapters 2 and 10). It made the non-material origin of matter a theological premise while keeping Proposition B's mechanism a hypothesis (Chapter 3). It added succession, cadence and time (Chapter 6), time as moral opportunity (Chapter 13) and the subjection of creation (Chapter 14). It named four relations across categories (Chapter 1), and it removed restated claims and reflexive disclaimers throughout (Appendix E.10). The working record of each revision is kept with the manuscript in the project repository.
 
-Since October 2026 the project's research rounds have followed a stated method the author calls *open-thetical research*: each round is frozen before it runs, weak, null and failed results are recorded alongside positive ones, and the next round is chosen because of what was observed, not to confirm a prediction.
+Since October 2026 the project's research rounds have followed a stated method the author calls *open-thetical research*: each round is frozen before it runs, weak, null and failed results are recorded alongside positive ones, and the next round is chosen because of what was observed, not to confirm a prediction. Version 1.1 of the method (revision 2.7) adds four things: investigation by whatever method suits the question, not experiment alone; the analysis of a failed candidate into the relation that failed and the elements that remain sound; a test of whether agreeing lines of inquiry are really independent; and the admission of a coherence factor only with its scope, provenance and review triggers recorded, judged on several dimensions together, with no single numerical threshold.
 
 ## First-edition material now held here
 
@@ -2098,6 +2195,10 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Attractor.** In the mathematics of changing systems, a state or set of states toward which a system tends from a wide range of starting points and to which it returns when disturbed. A reliable outcome is not by itself evidence of one. (Ch 9)
 
+**Beauty.** The apprehensible expression of the relational patterns of goodness, spiritual in origin, within created material or logical organisation. True beauty depends on goodness. Not reducible to symmetry or to preference. (Ch 16)
+
+**Cadence.** The ordered pattern or relative spacing of opportunities or events, regular or not. The *opportunity cadence* (when actualisation could occur) and the *actualisation cadence* (when it does) can differ. Measured time compares one cadence with a reference cadence. (Ch 6)
+
 **Carrier.** Whatever bears the dependency that preserves a distinction at a given stage: in manifest cases a wave, a current, a fire, a record, a chain of local interactions. Carriers may be substituted without loss, provided the relevant distinction is preserved. At the most primitive level the relation itself may be the carrier. (Ch 7)
 
 **Cause (working account).** A distinction in one relational condition modifying the admissible actualisation, or consequential state, of another through a distinction-preserving dependency: by excluding, admitting or weighting states, constraining correlations, preserving an invariant, or changing later accessibility. A working hypothesis. (Ch 7)
@@ -2108,7 +2209,13 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Coherence.** Non-contradiction is necessary but not sufficient. Coherence also requires real connection between the parts of an account, valid interfaces where domains meet, meaning kept through explanatory layers and round trips, stability when one domain is repaired, accountable distinctions between kinds of knowing, and preservation of real distinctions. *Local*: a model explains a bounded phenomenon. *Regional*: neighbouring domains integrate. *Global*: the whole account of reality passes these tests together. Global coherence runs both ways: it tests the metaphysics that commonly travels with physics as well as the book's own proposal. Coherence is not the same as truth. (Ch 2, Ch 10)
 
+**Coherence factor.** A relation admitted for reuse in further reasoning because it has sufficient warrant, with its scope, provenance, uncertainties and revision triggers kept visible. A candidate in a finite inquiry, never a constituent of God's knowledge. (Ch 2)
+
+**Competitive clearance.** One sense of "enabling": a change that removes competing alternatives, so that another event becomes the likelier next one without its own rate or possibility changing. The project's model reports call this "opportunity". (Ch 7)
+
 **Constrained stochastic actualisation.** The Relational Substrate hypothesis that what becomes actual is stochastic in the ontic sense: genuinely open among admissible options until it occurs, weighted by tendency and shaped by constraint. (Ch 5)
+
+**Constraint, explicitly and implicitly intrinsic.** *Explicitly intrinsic* constraints belong to the primitive created order, fixed for creaturely operation. *Implicitly intrinsic* constraints follow necessarily from a configuration once it is actual, even if it arose by chance. (Ch 4)
 
 **Currently reachable.** What can actually happen next, given the present state and the history it carries. Distinct from total admissibility, everything created order could ever bear. (Ch 4)
 
@@ -2116,7 +2223,11 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Corruption.** Distortion of good order: wrongdoing, which is wrong in itself, together with its entrenchment as misalignment persists and spreads without being restored. Parasitic, with no being of its own. (Ch 14)
 
-**Created runtime order.** Creation as operating, the domain of ordinary physical process, distinguished from creation's origin in God's act. The term is borrowed from computing, but creation is not a computer. (Ch 3)
+**Created runtime order.** Creation as operating: the non-conscious created relational order that expresses itself materially, distinguished from creation's origin in God's act. It is not all that exists; souls and spiritual creatures are created but are not part of it. The term is borrowed from computing, but creation is not a computer. (Ch 3)
+
+**Determinism.** Given a complete preceding configuration and the governing relations that apply to it, exactly one subsequent configuration follows. Necessary constraint is not determinism. See also *effective* and *mathematical determinism*. (Ch 5, Ch 9)
+
+**Disciplined confidence.** Commitment proportionate to warrant: confidence must not outrun the warrant, and justified insight must not be discounted for want of exhaustive knowledge. (Ch 2, Ch 16)
 
 **Distinction (source distinction).** A distinguishable state or relation that could make a difference to something other than itself. (Ch 7)
 
@@ -2138,11 +2249,17 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Identity organiser.** A relational organisation or process that establishes, structures or constrains distinctions so that they can take part in a coherent, consequential identity. A functional role, chiefly on the transmitting side of T-C-R; not a substance. (Ch 7)
 
+**Independent relational convergence.** Agreement among lines of inquiry whose premises, evidence and reasoning are substantially independent. It strengthens warrant only as far as the independence is real. (Ch 10)
+
 **Individual continuity.** Being the same continuing individual, and not merely an equivalent replacement. It requires continuity of lineage and history in addition to equivalence. What carries it in physical things is an open question. (Ch 6)
+
+**Inferential logic.** In the author's words, "the recursive refinement of partial understanding towards true logic through the discovery and application of relational coherence within the boundaries of created runtime order". (Ch 2)
 
 **Invariant.** A quantity or feature left unchanged by a set of transformations. One carrier or certificate of identity, not necessarily all of it. (Ch 6)
 
 **Joint process.** How chance events are related to one another, as distinct from the chance of each event alone (its *marginal* probability). Equal marginals do not imply the same joint process or the same behaviour of the whole. (Ch 9)
+
+**Logic; reasoning; relational inference.** Logic is the necessary relational structure of consistency, implication, exclusion and possibility. Reasoning is its application, which can be done well or badly. At higher orders, reasoning about represented relationships is relational inference. (Ch 2, Ch 12)
 
 **Manifestation.** Created order presenting itself to other things: detectable and encounterable. A physical matter, distinct from anyone's awareness of it. (Ch 6)
 
@@ -2160,11 +2277,15 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Ontology.** An account of what must be there for described behaviour to be possible. Distinct from description. (Ch 2)
 
+**Opportunity.** A distinguishable occasion at which present conditions make one or more admissible actualisations available. An opportunity can pass with nothing happening. Distinct from possibility, admissibility and actualisation. (Ch 4)
+
 **Persistence.** Continued re-actualisation within the same relevant equivalence class, against some kind of disturbance, over some length of time; for a continuing individual, along an unbroken history. (Ch 6)
 
 **Person.** A centre of awareness, relation, agency, address and responsibility. Personhood is deeper than embodiment; human persons are persons in an embodied, creaturely mode. (Ch 12)
 
 **Possibility, constrained.** The book's working reading of T0: what created order is capable of, meaning the configurations and transitions that can occur at all, together with how they are weighted. A way of speaking, not a realm. (Ch 4)
+
+**Proof.** Sufficient warrant, under declared premises, scope and constraints, for an inferred relation to serve as a coherence factor in further reasoning. Formal proof is conclusive relative to its axioms. Proof is never possession of the whole truth. (Ch 2)
 
 **Projection (coarse-graining).** A description that maps several distinct underlying states onto one visible state. It can hide distinctions that later matter. (Ch 6, Ch 9)
 
@@ -2178,17 +2299,25 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Relation.** A real standing-between in which each relatum is conditioned by the other. *Interactional* relation holds between things already fully what they are. *Constitutive* relation partly makes things what they are. The Relational Substrate proposal concerns the second. (Ch 3)
 
+**Relational error.** An incorrect asserted relation within a structure whose other elements may remain sound, as in 2 + 2 = 5. Not the same as moral evil. (Ch 10)
+
 **Relational identity compatibility.** The working principle that a distinguishable identity remains coherent across changes of instantiation when the relationships needed for its consequential recognition or operation are preserved through compatible T-C-R processes. (Ch 8)
 
 **Relational substrate.** The proposed created relational order within which physical things are constituted and act. It is not matter, not ether, not a field under another name, not a mind, not a soul and not God. Whether it is itself spatial is open. (Ch 3)
 
+**Representation.** A created form that, by design, shows something of the spiritual order (Romans 1:20). One of four relations across categories: structural analogy, representation, causal connection within embodied personhood, and ontological identity (rejected). (Ch 1)
+
+**Rhythm.** Recurrence with a cadence: recurring opportunities or events in relative spacing or phase, possibly irregular or compound. (Ch 6)
+
 **Stochastic.** Described by probabilities over defined possibilities. The word itself does not say whether the probabilities are *epistemic* (ignorance of hidden details) or *ontic* (genuine openness). Not lawless, not arbitrary, not chaotic. (Ch 5)
 
-**Succession.** A settled, directed order of change. In the project's models it needs a non-gradient tendency or a one-way rule. Distinct from *gathering*. The book's reading of time as the ordering of actualisation concerns order; succession concerns direction. (Ch 6)
+**Succession.** The directed relational order of actual consequence: this, then that, because of this. On the author's premise it is fundamental and prior to any measurement of it. Distinct from *gathering*. (In the project's models, a model exhibits direction only with a non-gradient tendency or a one-way rule; that is a fact about models.) (Ch 6)
 
 **T0.** The book's label for whatever conditions actualisation. That much is a firm commitment. What kind of thing T0 is remains open; "constrained possibility" is the working reading (Appendix E). (Ch 4)
 
 **Structural analogy.** A likeness of form between realities of different kinds. Distinct from *ontological identity*, sameness of kind. (Ch 1)
+
+**Time; time as moral opportunity.** *Time* is the ordering of actualisation, directed by consequence; measured time compares cadences. *Time as moral opportunity* is time's significance for persons, relative to their capacity, conditions and history. Connected levels of one account, not two kinds of time. (Ch 6, Ch 13)
 
 **Tendency.** The relative likelihood of an admissible transition compared with the others. A weighting, not a permission, and not a probability that anyone assigns. (Ch 4)
 
@@ -2196,7 +2325,13 @@ Each term is used in this book in the single sense given here. The chapter in br
 
 **Transmit–Carry–Receive (T-C-R).** The grammar of consequential manifestation: distinction → preserved dependency → consequence. It presupposes no travel, metric space, intermediate object or exactly-once reception. The book's working hypothesis is that it is the form of consequential relation itself, and recursive. (Ch 7)
 
+**True logic.** Ultimate global coherence, perfectly comprehended and perfectly applicable, inseparable in the personal nature of God. No creature possesses it exhaustively. (Ch 2)
+
+**True randomness.** Occurrence with no governing admissibility relation or pattern. Rejected by the book as incompatible with a coherent created order. Distinct from stochasticity. (Ch 5)
+
 **Universal interoperability.** The observed fact that independently located physical things share one grammar of interaction: they can affect one another, have compatible receptivity and commensurable quantities, and compose into stable structures. Every ontology must account for it. (Ch 3)
+
+**Wonder.** A creaturely response to coherence that is intelligible and yet exceeds present comprehension. It invites inquiry rather than ending it. (Ch 16)
 
 ---
 
@@ -2310,7 +2445,7 @@ These are offered as contributions within the tradition, not departures from it.
 
 ## A note on method
 
-This framework was developed with substantial help from AI systems, including ChatGPT and Codex (OpenAI), Claude (Anthropic) and Grok (xAI). They were used for surveying literature across physics, philosophy, biology and theology, for building and running the computational experiments, for testing the framework's internal coherence, and in drafting. The second edition was restructured with the help of an explicit concept-dependency analysis and a readability review, revision 2.4 followed a full human reading of the finished book, and revision 2.6 developed an ontological brief written by the author. The records are kept with the manuscript in the project repository. There is one human author. The AI systems were tools of analysis and drafting, not members of a research team.
+This framework was developed with substantial help from AI systems, including ChatGPT and Codex (OpenAI), Claude (Anthropic) and Grok (xAI). They were used for surveying literature across physics, philosophy, biology and theology, for building and running the computational experiments, for testing the framework's internal coherence, and in drafting. The second edition was restructured with the help of an explicit concept-dependency analysis and a readability review, revision 2.4 followed a full human reading of the finished book, revision 2.6 developed an ontological brief written by the author, and revision 2.7 integrated the author's research conversations of 31 October 2026. Those conversations reached the book through assistant-prepared summaries; their content was settled by the author's own recorded decisions, and the full transcripts are not in the repository. Agreement among the AI systems was never counted as independent evidence, since they share training material and were sometimes shown one another's output. The records are kept with the manuscript in the project repository. There is one human author. The AI systems were tools of analysis and drafting, not members of a research team.
 
 What was not delegated is judgement. The positions retained in the book were evaluated, challenged and selected by the author. Where AI assistance produced a claim, it was checked against sources and against the research record, not accepted on trust. Several first-edition claims were withdrawn in this edition precisely because that checking found them unsupported. The honest description of the process is a collaboration between human reasoning and machine-assisted research and synthesis, with responsibility for coherence, theological containment and final judgement kept in human hands.
 
@@ -2357,7 +2492,7 @@ CREATION / CREATED ORDER                                   ......... reality
 └── restoration, resurrection, consummation                 ......... God's act (theological reality)
 ```
 
-Three cautions govern the map. Relation runs through every category, but relation across categories does not erase category. The arrows from substrate to manifest world are relations of consequence, not a claim that one is transformed into the other. And nothing below the Creator is divine: the substrate, T0, T1, T-C-R, chance, mathematics, information and physical order are all created.
+Four cautions govern the map. Relation runs through every category, but relation across categories does not erase category. The arrows from substrate to manifest world are relations of consequence, not a claim that one is transformed into the other. Nothing below the Creator is divine: the substrate, T0, T1, T-C-R, chance, mathematics, information and physical order are all created. And the spiritual and moral order is prior in being and purpose to the material order, which depends on it and represents it (E.10). Dependence is not constitution. The substrate is not spiritual, souls are not configurations of it, and the created runtime order shown here is not all that exists.
 
 ## E.2 Status register
 
@@ -2372,7 +2507,7 @@ The status vocabulary is small and fixed:
 - **Open question**: unresolved.
 - **Rejected reification or category error**: a reading the book refuses.
 
-A definition is not a claim, so it takes no status. Where the register lists one, it is marked as a **working definition**: fixed for the argument, open to refinement, and not to be widened to save a case.
+A definition is not a claim, so it takes no status. Where the register lists one, it is marked as a **working definition**: fixed for the argument, open to refinement, and not to be widened to save a case. A rule for inquiry is not a claim about reality either; where the register lists one, it is marked as a **methodological principle**, as in E.8.
 
 | Proposition | Status |
 | --- | --- |
@@ -2402,8 +2537,9 @@ A definition is not a claim, so it takes no status. Where the register lists one
 | Material organisation (an organised pattern or process of material carriers, such as a sound wave) is real without being an additional material entity | Ontological inference (E.9) |
 | Handling (relocating an identified entity) differs from perturbation (changing a condition or configuration) | Ontological inference; a useful distinction, not a universal classification (E.9) |
 | Emergence within matter: higher-order identities arise from organised matter | Empirical observation |
-| Emergence of matter: material individuality is constituted within a created order that is not itself material (Proposition B) | RS working hypothesis (the central thesis, stated for matter; E.9) |
-| Material fundamentality (A); co-fundamental material and relational orders (C) | Competing propositions, assessed in E.9; neither refuted |
+| *That* material existence derives from a non-material foundation | Scriptural/theological constraint (the author's theological premise, revision 2.7; cf. Hebrews 11:3; E.10) |
+| *How* material individuality is constituted within a created relational order that is not itself material (Proposition B) | RS working hypothesis (the central thesis, stated for matter; E.9) |
+| Material fundamentality (A); co-fundamental material and relational orders (C) | Excluded at the level of the theological premise (E.10). Not refuted by the comparative argument of E.9, which stands as independent support |
 | Every ontology is charged for the common structure that explains interoperability; composite interoperability follows from base compatibility in any compositional ontology | Ontological inference (E.9) |
 | A successful description of observable consequences does not by itself establish the ontological nature of their cause | Ontological inference |
 | Metaphysical elasticity: assigning unpriced properties to an explanatory entity whenever an interpretation needs them | Rejected reification or category error (E.9) |
@@ -2434,7 +2570,49 @@ A definition is not a claim, so it takes no status. Where the register lists one
 | "Attraction" as participation in a relational pattern | Mechanism candidate, model-scoped (E.8) |
 | What ties clock rates to relational structure | Open question; the models' rules do not supply it (E.8) |
 | The vorton (a stable knotted field structure), closure knots, five operations, torsional light | Mechanism candidate (technical volume and modelling programme; not relied on) |
-| A coherent account is thereby true | Rejected (coherence is not proof) |
+| A coherent account is thereby true | Rejected (coherence is not truth) |
+| **Revision 2.7 entries** (E.10) | |
+| The spiritual and moral order is prior in being and purpose; the created runtime order depends on it and, by design, represents it | Scriptural/theological constraint (the author's premise) |
+| The created runtime order is designed as a medium of moral actualisation, provenance, consequence and restoration | Scriptural/theological constraint (the author's premise about design) |
+| **Created runtime order**: the operating, non-conscious created relational order that expresses itself materially; not all that exists | Working definition |
+| **True logic**: ultimate global coherence, perfectly comprehended and perfectly applicable, inseparable in the personal nature of God | Scriptural/theological constraint (the author's premise) |
+| **Inferential logic**: "the recursive refinement of partial understanding towards true logic through the discovery and application of relational coherence within the boundaries of created runtime order" | Working definition (the author's wording) |
+| **Logic** (necessary relational structure); **reasoning** (its application); **relational inference** (reasoning at higher orders) | Working definitions |
+| **Proof**: sufficient warrant, under declared premises, scope and constraints, for an inferred relation to serve as a coherence factor | Working definition |
+| **Coherence factor**: a relation admitted for reuse with its scope, provenance, uncertainties and revision triggers kept visible | Working definition |
+| Formal proof is conclusive relative to its axioms and rules; empirical, philosophical and theological warrant differ in kind | Ontological inference |
+| Inquiry aims at inferential precision, not possession of exhaustive true logic | Methodological principle |
+| Disciplined confidence: confidence must not outrun warrant, and justified insight must not be discounted for want of exhaustive knowledge | Methodological principle |
+| Independent relational convergence strengthens warrant only as far as the independence is real; separate AI systems are not independent by default | Methodological principle |
+| Intelligible error depends on genuine coherence; an error is a misassigned relation within a structure whose other elements may be sound | Ontological inference |
+| Four respects of accessibility: mechanistically explainable; relationally understandable without a complete mechanism; beyond present means; possibly beyond exhaustive creaturely comprehension | Ontological inference (refines the epistemic boundary, E.9) |
+| An indefinitely deferred chain of dependent grounds cannot constitute ultimate grounding | Ontological inference (the author holds it internally contradictory under the foundational-grounding requirement; not a claim about mathematical infinities) |
+| The primitive created order is fixed for creaturely operation and not immutable to its Creator | Scriptural/theological constraint (inference) |
+| **Explicitly intrinsic** constraints (of the primitive order); **implicitly intrinsic** constraints (following necessarily from an actual configuration) | Working definitions |
+| A stochastically actualised configuration can carry necessary constraints | Ontological inference |
+| Necessary constraint is not determination of the next state | Ontological inference |
+| **Determinism**: given a complete preceding configuration and the applicable governing relations, exactly one subsequent configuration follows | Working definition |
+| **True randomness** (occurrence with no governing admissibility relation or pattern) | Rejected (incompatible with a globally coherent created order) |
+| **Opportunity**: a distinguishable occasion at which present conditions make one or more admissible actualisations available; possibility, opportunity, admissibility and actualisation are distinct | Working definition |
+| How an opportunity that passes without actualisation is individuated | Open question |
+| **Succession**: the directed relational order of actual consequence, fundamental and prior to its measurement | Scriptural/theological constraint and ontological inference (the author's premise) |
+| **Opportunity cadence**, **actualisation cadence** (which can differ), **rhythm** (recurrence with a cadence) | Working definitions |
+| Measured time is a relative quantification of cadence against a reference cadence | Ontological inference |
+| **Time as moral opportunity**: time's significance for persons, relative to capacity, conditions and history | Scriptural/theological constraint (the author's interpretation) |
+| Oscillation as an intrinsic reference cadence | Mechanism candidate (favoured by the author; it would measure succession, not produce it) |
+| Four relations across categories: structural analogy; designed representation; causal connection within embodied personhood; ontological identity (rejected) | Ontological inference |
+| An embodied human act and its moral reality are causally connected, not identical | Scriptural/theological constraint (the author's interpretation); the mechanism is open |
+| Knowing and choosing are actualisations in persons | Ontological inference |
+| History is carried in present relations; there is no separate ledger, and consequence can persist where provenance is unrecoverable | RS working hypothesis (extends memory, E.6) |
+| God knows the whole moral provenance of every act; judgment does not depend on recoverable created traces | Scriptural/theological constraint |
+| God subjected creation after the Fall (Genesis 3:17-19; Romans 8:20) | Scriptural/theological constraint |
+| The subjection is a deliberate divine realignment of the primitive conditions of created runtime order, so that creation remains a truthful instructor | Scriptural/theological constraint (the author's interpretation) |
+| Whether the realignment altered the primitive, changed parameters within it, or actualised a new state under it | Open question (research fork) |
+| Animal mortality was introduced by the post-Fall realignment | Scriptural/theological constraint (the author's interpretation, 31 October 2026; the reading of Genesis 3:21 is interpretive) |
+| How a post-Fall origin of animal mortality relates to the fossil record and its conventional chronology | Open question (cross-domain interface; E.10) |
+| **Beauty**: the apprehensible expression of the relational patterns of goodness, spiritual in origin, within created organisation | Working definition (the author's) |
+| **Wonder**: a creaturely response to coherence that is intelligible and yet exceeds present comprehension | Working definition |
+| Restoration does not erase history | Scriptural/theological constraint |
 
 ## E.3 T0
 
@@ -2505,7 +2683,7 @@ There may be others. Scripture's language of heavens stretched out provokes ques
 ## E.7 What the ontology does not currently claim
 
 - Spacetime is not established as a substance, and space is not assumed to be a container.
-- Time is not a flowing thing; it is read as the ordering of actualisation.
+- Time is not a flowing thing; it is read as the ordering of actualisation, directed by consequence (succession). Its measurement is not its source, and time as moral opportunity is not a clock unit.
 - Mathematical description is not ontology by default.
 - A successful physical model does not uniquely fix metaphysics.
 - Fields, particles, energy and information are descriptions or candidate structures, not assumed furniture.
@@ -2530,7 +2708,13 @@ There may be others. Scripture's language of heavens stretched out provokes ques
 - A qualitative comparison of plausibility is not a hidden number, and the absence of a number is not the absence of a comparison.
 - The emergence of higher-order identities within matter is not evidence that matter itself emerges. It supplies analogies, constraints and research questions.
 - A stage in the grammar of emergence is not a layer of reality. T2 is not revived.
-- Coherence does not prove the Relational Substrate.
+- Coherence is not truth. The book's case for the Relational Substrate has the warrant of a global coherence argument, not of demonstration. Proof, in the book's sense, establishes a warranted commitment within stated conditions; it is never possession of the whole truth.
+- The created runtime order is not all that exists, and it is not conscious. Representation of the spiritual order is not identity with it.
+- An indefinitely deferred chain of grounds is not an ultimate ground.
+- True randomness is not admitted. Constrained stochasticity is not lawlessness, and necessity is not determination.
+- Oscillation is not the source of succession. If it is the created reference cadence, it measures succession.
+- History is not kept in a separate ledger, and the created record of consequence is not moral judgment.
+- The theological premise of a non-material origin for matter does not make Proposition B's mechanism an axiom.
 
 ## E.8 Gravity, time and persistence in the simplest models (adopted in revision 2.5)
 
@@ -2575,7 +2759,7 @@ Revision 2.6 adopts the entries below. Their source is an ontological brief supp
 | Definitional integrity under pressure | strained: particle creation and quantum indistinguishability invite calling fields "material", which changes A | stable, provided the substrate gains no unpriced properties | stable |
 | Demonstrated mechanism | ordinary physics within matter | none yet for the emergence of matter (the main debt) | none for the fit between orders |
 | Cross-domain integration | relation is secondary all the way up | relation is primary all the way up, with categories kept | relation is primary for interaction, secondary for being |
-| Theological coherence | compatible | compatible | compatible |
+| Theological coherence | compatible with creation; excluded by the author's premise of non-material origin (E.10) | compatible; its *that* is the author's premise (E.10) | compatible with creation; excluded by the same premise |
 | Research fertility | mature | open; adjacent transitions are investigable | limited unless the interface is specified |
 
 Assessment, with its assumptions visible:
@@ -2587,7 +2771,7 @@ Assessment, with its assumptions visible:
 - *Conditional comparison:* *if* the base capacities of A were specified independently, their exact matching (for example, the equality of proton and electron charge to about one part in 10²¹) would be a coincidence. Physics does not treat it as one. It looks for a common structure that requires it. That is the kind of structure B places at the foundation and C adds alongside matter.
 - *Design* applies to all three and does not choose among them. Stochastic actualisation does not imply an absence of design.
 
-Overall: B is preferred on economy and integration, conditional on its unpaid debt of mechanism. C is not excluded. Plain A carries the heaviest burden. No numerical scores are given or implied.
+Overall: B is preferred on economy and integration, conditional on its unpaid debt of mechanism. On this comparative argument alone C is not excluded. Revision 2.7 adds a theological premise that excludes A and C at that level (E.10); the comparison is kept as independent support for the same conclusion, reached by a different route. Plain A carries the heaviest burden. No numerical scores are given or implied.
 
 **Qualitative probability (Chapter 2).** Three judgments are distinct: *logical possibility* (no identified contradiction), *qualitative plausibility* (comparatively more or less plausible given observations, constraints, assumptions and alternatives) and *quantitative probability* (a number under a specified model). The absence of the third does not invalidate the second. Each comparison is classed as robust (it survives every reasonable variation of its assumptions), conditional (it holds under stated assumptions) or unavailable (no defensible ordering). Global coherence concerns not only what is logically possible but how naturally an account explains observed relationships without unnecessary independent assumptions. This refines the v2.4 rule that the interoperability argument is "not a pseudo-probability". Numbers are still excluded; reasoned qualitative comparison is admitted.
 
@@ -2599,4 +2783,52 @@ Overall: B is preferred on economy and integration, conditional on its unpaid de
 
 **Mathematical connections (Appendix B).** Synergetics (order parameters, the slaving principle); spectral geometry; coupled and nonlinear oscillation, solitons and oscillons; computational mechanics (causal states); information preservation (redundancy, error correction, lossy coding, provenance); indivisible stochastic processes; quantum field theory. Each supplies constraints, analogies or experimental frameworks. None establishes the substrate.
 
-**Not adopted.** Any claim that music, or any other emergence within matter, demonstrates Proposition B. Oscillation as a primitive of the substrate. The indivisible-stochastic interpretation of quantum theory. Numerical plausibility scores. A new layer of reality or a revived T2. Any inference from a receiver's part in constituting an identity to the view that things exist only when perceived.
+**Not adopted.** Any claim that music, or any other emergence within matter, demonstrates Proposition B. Oscillation as a primitive assumption of the substrate (as a reference cadence it is a mechanism candidate: E.10). The indivisible-stochastic interpretation of quantum theory. Numerical plausibility scores. A new layer of reality or a revived T2. Any inference from a receiver's part in constituting an identity to the view that things exist only when perceived.
+
+## E.10 Knowing, succession and the subjection of creation (adopted in revision 2.7)
+
+Revision 2.7 adopts the entries below. Their source is the author's research conversations of 31 October 2026, reached through assistant-prepared briefs and settled by the author's recorded decisions (`analysis/v2.7-author-questions.md`). The full transcripts are not in the repository, and no entry here is presented as a transcript quotation except the definition of inferential logic, which the author confirmed word for word. The integration is examined in `analysis/v2.7-integration-plan.md` and `analysis/v2.7-correction-and-conflict-register.md`.
+
+**Priority and dependence (Chapters 1, 3, 12).** The spiritual and moral order is prior in being and purpose, and its ultimate coherence is inseparable from God's personal nature. The created runtime order depends on it and, by design, represents it. *That* material existence derives from a non-material foundation is the author's theological premise. *How* the created relational substrate constitutes material individuals is Proposition B, which remains an RS working hypothesis. The premise excludes Propositions A and C at its own level. The comparative argument of E.9 is retained as independent support. Dependence is not constitution: the substrate is non-conscious, not God, not a soul and not itself a spiritual ontology, and no soul is a configuration of it.
+
+**Created runtime order (Chapter 3).** *Working definition:* the operating, non-conscious created relational order that expresses itself materially. It is not all that exists. Souls, spiritual personhood and spiritual creatures are created, but they are not members of this order. Creaturely personhood is where it and the spiritual capacity for relation to God meet.
+
+**Knowing and inquiry (Chapters 2, 10, 16).**
+
+- *True logic* is ultimate global coherence, perfectly comprehended and perfectly applicable, inseparable in the personal nature of God. The order of reality is what true logic comprehends, not a rival definition. No creature possesses it exhaustively.
+- *Inferential logic* is, in the author's words, "the recursive refinement of partial understanding towards true logic through the discovery and application of relational coherence within the boundaries of created runtime order".
+- *Logic* is necessary relational structure; *reasoning* is its application, which can be done well or badly; at higher orders reasoning is *relational inference*.
+- *Proof* is sufficient warrant, under declared premises, scope and constraints, for an inferred relation to serve as a *coherence factor* in further reasoning. Formal proof is conclusive relative to its axioms and rules. Empirical, philosophical and theological warrant are different in kind. A coherence factor keeps its scope, provenance, uncertainties and revision triggers visible. The aim of inquiry is inferential precision.
+- *Disciplined confidence* is two-sided: confidence must not outrun warrant, and justified insight must not be discounted for want of exhaustive knowledge.
+- *Independent relational convergence* strengthens warrant only as far as the independence of premises, sources and reasoning is real. Separate AI systems are not independent by default.
+- Intelligible error depends on genuine coherence. A failed claim is analysed by finding the relation that failed, keeping what remains sound and recording what the failure excludes. This is not an account of moral evil.
+- Questions differ in accessibility in four respects: mechanistically explainable; relationally understandable without a complete mechanism; beyond present means; possibly beyond exhaustive creaturely comprehension. These are respects, not kinds of reality.
+- *Grounding.* An indefinitely deferred chain of dependent grounds cannot constitute ultimate grounding: offered as a complete ground, it requires the foundation it never supplies. The author holds this internally contradictory under the book's foundational-grounding requirement. It is not a claim that mathematical infinities are inconsistent.
+
+**Constraint, chance and determination (Chapters 4, 5, 9).** Explicitly intrinsic constraints belong to the primitive created order, which is fixed for creaturely operation and not immutable to its Creator. Implicitly intrinsic constraints follow necessarily from a configuration once it is actual, even when the configuration arose by chance. Necessary constraint is not determination: *determinism* holds only where a complete preceding configuration, under its governing relations, admits exactly one successor, and the governing relations are not properties hidden inside the state. *Constrained stochasticity* is variability within an operative admissible set without unique determination. *True randomness*, occurrence with no governing admissibility relation or pattern, is rejected as incompatible with a coherent created order. *Opportunity* is a distinguishable occasion at which present conditions make admissible actualisations available. The sense of "opportunity" in the project's model reports (removal of competing alternatives) is called *competitive clearance* in this book.
+
+**Succession, cadence and time (Chapters 6, 8, 13).** *Succession* is the directed relational order of actual consequence. It is fundamental, grounded in the spiritual and moral order, and prior to any measurement of it (the author's premise, theological and philosophical). Not every abstract implication is an event in time. *Cadence* is the ordered pattern or relative spacing of opportunities or events, not necessarily periodic. *Opportunity cadence* and *actualisation cadence* can differ. *Rhythm* is recurrence with a cadence, possibly irregular or compound. Measured time is a relative quantification of cadence against a reference cadence. Oscillation is the author's favoured mechanism candidate for an intrinsic reference cadence: it would make comparison and quantification possible, and it would not generate the existence or direction of consequence. *Time as moral opportunity* is time's significance for persons, relative to capacity, conditions and history. These are connected levels of one account, not rival substances. The model result of E.8, that a model needs a non-gradient tendency or a one-way rule to exhibit direction, is a fact about models.
+
+**Bridges across categories (Chapters 1, 7, 12, 14).** Four relations are kept distinct: structural analogy; designed representation (creation as a non-conscious instructor, Romans 1:20); causal and consequential connection within embodied personhood; and ontological identity, which is rejected. An embodied human act and its moral reality are causally connected, not identical. The cross-domain mechanism is open, and T-C-R is a structural research bridge, not an explanation of it. Every claimed correspondence is labelled at the level intended.
+
+**Persons and history (Chapters 6, 12, 14, 15).** Knowing and choosing are actualisations in persons. The created order is designed as a medium of moral actualisation, provenance, consequence and restoration (the author's premise). Consequential history is carried in the actual relations themselves, with no separate ledger. Consequence can persist where provenance is unrecoverable. God's complete knowledge of every act's provenance, motives and consequences is distinct from any recoverable created trace, and judgment does not depend on such traces. Restoration does not erase history.
+
+**The subjection of creation (Chapters 14, 15).** Scripture states that God cursed the ground after human disobedience and subjected creation to vanity in hope (Genesis 3:17-19; Romans 8:20). The author's interpretation is that this was a deliberate, coherent divine realignment of the primitive conditions of created runtime order, so that creation remains a truthful instructor about consequence and restoration. The thesis concerns what changed in creation, not the manner of divine action. Whether the realignment altered the primitive itself, changed parameters within it, or actualised a new state under it, is open. The author's thesis is the first, and the others remain research alternatives, not substitutes. The author holds that animal mortality was introduced by the post-Fall realignment. The author connects this with Genesis 3:21: God made "coats of skins" and clothed Adam and Eve. That the skins express death, cover shame and anticipate sacrificial atonement is the author's interpretation; the verse does not name a lamb, a rite or the first animal death. Earlier revisions left the history of animal mortality open (Chapter 15).
+
+**Beauty and wonder (Chapters 13, 16).** *Beauty* is the apprehensible expression of the relational patterns of goodness, spiritual in origin, within created material or logical organisation. True beauty depends on goodness, and goodness is beautiful. A beautiful thing need not be perfect in every part. Beauty is not reducible to symmetry or preference. *Wonder* is a creaturely response to coherence that is intelligible and yet exceeds present comprehension.
+
+**Open questions added in revision 2.7.**
+
+- How an opportunity that passes without actualisation is individuated; whether opportunities carry probabilities or propensities.
+- Whether opportunity cadence rests on actualisations at a deeper order.
+- Which minimal primitives suffice for a reference cadence; whether oscillation is necessary, sufficient, one candidate or neither.
+- Whether direction can be read from asymmetric propagation of consequence, and irreversibility from persistent consequence.
+- Whether derived constraints are wholly reconstructible from the primitive order and actual history.
+- The Fall mechanism (above).
+- *The interface between a post-Fall origin of animal mortality and the fossil record.* The record shows animal death in strata conventionally dated long before humans. The book's bidirectional coherence standard (Chapter 2) requires this interface to be addressed, not ignored. By the author's decision (31 October 2026), the book states the author's position, names the conflict with the conventional chronology as an open problem, and does not resolve it (Chapters 14 and 15).
+- How spiritual-to-created correspondences are classed and tested; what distinguishes conscious from computational reception; what change makes intentional choice possible.
+- How coherence factors are admitted. The standard is a multidimensional judgment of warrant, coherence, provenance, discrimination, scope and dependencies, with explicit rationale and review triggers, and no universal numerical threshold (OTR v1.1).
+- Whether true logic is best described as structure, act, or both; whether logic governs contingent relations as well as necessary ones.
+- Whether other kinds of consciousness fit the architecture.
+
+**Not adopted.** Any claim that Genesis describes the microphysics of the realignment. Any identification of moral opportunity with a unit of measured time. Any reading of a coherence factor as a constituent of divine knowledge. Any use of the audit's vector scores as evidence of truth. Any claim that the reconstructed definitions of true randomness and rhythm are transcript quotations.

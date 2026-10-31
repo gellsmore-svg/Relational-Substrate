@@ -60,7 +60,7 @@ The argument is sharper with the positions set side by side and the definition o
 - **B. A non-material foundation, with matter emergent.** A more fundamental created relational reality, not itself material, constitutes and sustains material individuality. Matter is genuinely real, but its materiality is emergent rather than self-standing.
 - **C. Two fundamental orders.** Material entities and a distinct non-material relational order are both fundamental. The relational order supplies the capacities through which material entities interact, so their behaviour depends on it, but they are not constituted by it. This is the "non-material glue" view.
 
-All three are compatible with creation: whichever is true was designed and is upheld by God. But design does not end the inquiry. One can still ask what was designed and how it operates, and design alone favours none of the three.
+All three are compatible with the bare claim that the world was created: whichever is true was designed and is upheld by God, and design alone favours none of them. The author's theological premise goes further. *That* material existence derives from a foundation that is not itself material is held as a premise, in keeping with Hebrews 11:3's "things which are seen were not made of things which do appear" (Chapter 1). On that premise A and C are excluded. The comparison that follows is kept for two reasons: it reaches the same conclusion by a second, independent route, from what is observed, and it shows what B still owes.
 
 **A** must give every fundamental kind of material thing intrinsic capacities that match every other kind's exactly. Pressed to explain the matching, it has three routes. It can say that a thing's capacities are intrinsically directed at its partners, so that a charge is, in its nature, a capacity to act on other charges. That is a serious position, and it is faithful to A, but it makes relation part of what things are. The disagreement with B then narrows to whether relational natures belong to separately fundamental things, or things to a relational order. It can add a governing order, laws or fields standing over the entities. That supplies the matching, but it is C without the name. Or it can say that the matching simply holds, which leaves it unexplained. None of this shows that A is incoherent. It shows that A, when pressed, relies on something it does not state.
 
@@ -68,9 +68,9 @@ A also meets pressure from physics. Material individuals are created and destroy
 
 **C** avoids A's difficulty by positing the relational order openly. Like B, it explains the matching by a common order. It pays with two fundamental orders instead of one, and it must still say why independently existing material entities fit that order so exactly. Until it does, part of the coincidence has only been moved.
 
-**B** posits one order, and interoperability is what being constituted within it means. Its cost is different, and real. B owes an account of how stable material individuals arise within an order that is not itself material, and no such account has yet been demonstrated. That is the largest open debt in this book.
+**B** posits one order, and interoperability is what being constituted within it means. Its cost is different, and real. B owes an account of how stable material individuals arise within an order that is not itself material, and no such account has yet been demonstrated. The debt is one of mechanism: the premise says *that* matter is so founded, and *how* remains to be shown (Chapter 9).
 
-The comparison is clear without being final. B does best on economy and on integration across domains, provided its debt can be paid. C remains open. A in its plain form carries the heaviest burden. One caution keeps this honest. B is a family, not only this book's view. A realist reading of quantum fields, on which particles are excitations of a field that is not itself a material object, belongs to it too. The considerations from physics favour the family. They do not single out its relational member, which has to be argued for on its own grounds.
+The comparison is clear without being final. B does best on economy and on integration across domains, provided its debt can be paid. On this comparison alone, C remains open. A in its plain form carries the heaviest burden. One caution keeps this honest. B is a family, not only this book's view. A realist reading of quantum fields, on which particles are excitations of a field that is not itself a material object, belongs to it too. The considerations from physics favour the family. They do not single out its relational member, which has to be argued for on its own grounds.
 
 ## The claim: relation is foundational
 
@@ -78,7 +78,7 @@ The Relational Substrate project makes a definite proposal in response. It can b
 
 In the terms just set out, this is Proposition B in its relational form. It is an **ontological thesis**, the book's central one. It is not an observation, since relation as such cannot be put on a laboratory bench, and it is not a theorem. It is a claim about what kind of reality best accounts for everything else we know. It is supported by the strain in the object picture, by the underdetermination of physical description and by universal interoperability. It would be weakened by an object-first account that explained interoperability, life and personhood with equal economy and fewer unexplained interfaces. The following chapters develop it and test it.
 
-Three clarifications prevent common misunderstandings.
+Three clarifications fix what *relation-first* means.
 
 First, relation-first does not deny that things are real or distinct. The stone is really there, and it really is not the path. Distinctness is real. It is simply *derivative*: the stone's distinctness is carried by a stable pattern of relations, not by some separating gap between it and everything else. A knot in a rope is a useful picture here. The knot is real: it can be pointed to, counted and untied. Yet it is not a separate object added to the rope. It is a configuration of the rope itself. The picture breaks down in one place. A rope is made of fibres that exist before any knot is tied, whereas the relational proposal imagines no pre-existing material into which relations are then tied. The picture shows only how a real, distinct thing can be a configuration rather than an addition.
 
@@ -92,14 +92,9 @@ If relation is foundational, it is natural to ask what bears it. Relations of wh
 
 The project's answer is the **relational substrate**: the created relational order within which physical things are constituted and through which they act. The word *substrate* means "what lies beneath". It names the deepest created level of physical order: what must already be there for stable things, change, influence and persistence to be real.
 
-Because the word can mislead, it helps to say plainly what the substrate is not.
+The substrate is the deep order of this world, not a further thing behind it. It is not matter: matter, as Chapter 6 will argue, is a stable form *within* it. Nor is it a field of physics under another name, an ether filling empty space, or information detached from anything physical. A field is a mathematical representation, and the substrate is a proposal about the relational order such representations describe, not a rival to the mathematics. Three further points matter more.
 
-- It is not matter. Matter, as Chapter 6 will argue, is a stable form *within* the substrate, not the substrate itself.
-- It is not a field of physics under another name. A field is a mathematical representation that assigns values to points. Whatever such representations describe, the substrate is a proposal about that relational order, not a rival to the mathematics.
-- It is not the old luminiferous ether, a medium filling an otherwise empty space. The relational proposal does not begin with a space to be filled.
-- It is not assumed to be spatial, nor assumed not to be. Its structure might correspond closely to the space we experience; space might arise from an order that is not itself spatial; or the substrate might have adjacency and ordering from which measurable space emerges. The book leaves this open.
-- It is not information or code, detached from anything physical.
-- It is not a hidden second world behind the visible one. It is the deep order of this world.
+- Whether it is spatial is open. Its structure might correspond closely to the space we experience; space might arise from an order that is not itself spatial; or the substrate might have adjacency and ordering from which measurable space emerges.
 - It is not a mind. It thinks nothing and intends nothing.
 - Above all, it is not God, and it is not a soul.
 
@@ -113,7 +108,7 @@ Physics has moved in a consonant direction, away from instantaneous action at a 
 
 ## Created order as operating
 
-One more term is needed. The book speaks of **created runtime order**, borrowing a word from computing, where a program can be considered as written or as running. Creation can likewise be considered in its origin, the creative act by which it exists at all, or in its ongoing operation, the ordinary unfolding of physical process. *Runtime* names the second. How the stone falls is a question about runtime order. Why there is a world in which stones fall is a question about creation. The borrowing has a sharp limit. Creation is not a computer, the world is not code, and God is not a programmer who wrote software and stepped away. A better image might be a piece of music, its composition distinguished from its performance, except that here the Composer also upholds every note as it sounds.
+One more term is needed. The book speaks of **created runtime order**, borrowing a word from computing, where a program can be considered as written or as running. Creation can likewise be considered in its origin, the creative act by which it exists at all, or in its ongoing operation, the ordinary unfolding of physical process. *Runtime* names the second. The created runtime order is the operating, non-conscious created order that expresses itself materially. It is not everything that exists. God is not part of it, and souls and spiritual creatures, though created, are not members of it; what lies beyond it may lie beyond creaturely observation (Chapter 2). How the stone falls is a question about runtime order. Why there is a world in which stones fall is a question about creation. The borrowing has a sharp limit. Creation is not a computer, the world is not code, and God is not a programmer who wrote software and stepped away. A better image might be a piece of music, its composition distinguished from its performance, except that here the Composer also upholds every note as it sounds.
 
 ## What Scripture requires here
 
@@ -126,6 +121,8 @@ Scripture does not mention a relational substrate. What it does is set requireme
 > *Colossians 1:17*
 
 These texts teach that created order holds together because it is upheld by Christ. They do not say how. But they rule out any account in which the deepest physical order is self-sufficient, self-explaining or divine. The relational proposal accepts that boundary without reservation. If there is a relational substrate, it is a creature. Its coherence is received, not generated. Placing relation, rather than self-standing substance, at the base of created order fits a world whose every part depends on its Creator. Scripture does not teach this ontology. The ontology is consistent with what Scripture teaches about dependence, and bounded by it.
+
+The same texts bear on an older question. Could the deepest order of creation be explained by something beneath it, and that by something beneath that, without end? Each step in such a chain might be intelligible. But offered as the complete ground of creation, the chain is at odds with itself. It is meant to supply the foundation on which everything rests, and at every step it hands that task to the next, so the foundation it requires is never supplied. The author regards a grounding made only of such deferral as internally contradictory, given what a ground has to do. This is a claim about grounding, not about mathematics: an endless sequence of numbers is perfectly consistent, and what fails is the claim of an endless deferral to be an ultimate ground. The relational proposal therefore has a foundation: a primitive created order, specified by its Creator and upheld by him, beneath which there is no further created ground. **Status:** ontological inference, within the book's requirement of foundational grounding and from the scriptural premise.
 
 ## From relation to possibility
 
