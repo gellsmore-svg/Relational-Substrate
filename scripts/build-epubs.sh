@@ -80,8 +80,52 @@ build_second_edition() {
   epubcheck "$output"
 }
 
+build_tier() {
+  local tier="$1"
+  local label="$2"
+  local description="$3"
+  local output="$output_dir/coherent-biblical-ontology-$tier.epub"
+
+  pandoc "books/coherent-biblical-ontology-$tier.md" \
+    --to=epub2 \
+    --toc \
+    --toc-depth=1 \
+    --split-level=1 \
+    --resource-path=books \
+    --epub-cover-image="books/v2/tiers/covers/$tier-front.png" \
+    --css=books/v2/epub.css \
+    --lua-filter scripts/epub-v2.lua \
+    --metadata 'title=Coherent Biblical Ontology' \
+    --metadata "subtitle=$label" \
+    --metadata "author=$author" \
+    --metadata 'lang=en-GB' \
+    --metadata "rights=$rights" \
+    --metadata "identifier=https://github.com/gellsmore-svg/Relational-Substrate#coherent-biblical-ontology-$tier" \
+    --metadata 'date=2026-10' \
+    --metadata "description=$description" \
+    --output "$output"
+
+  epubcheck "$output"
+}
+
+build_tiers() {
+  python3 books/v2/tools/assemble_tiers.py --check || {
+    printf '%s\n' 'The tiered manuscripts are out of date: run python3 books/v2/tools/assemble_tiers.py' >&2
+    exit 1
+  }
+
+  build_tier beginner "Beginner's Edition" 'The world God made, and what it really is: the second edition of Coherent Biblical Ontology for beginning readers.'
+  build_tier intermediate 'Intermediate Edition' 'A Scripture-first account of a relational creation, for students and careful readers new to the subject.'
+  build_tier a-level 'A-Level Edition' 'A Scripture-first account of a relational creation, set out as structured argument with the status of each claim.'
+}
+
 if [[ "${1:-all}" == 'v2' ]]; then
   build_second_edition
+  exit 0
+fi
+
+if [[ "${1:-all}" == 'tiers' ]]; then
+  build_tiers
   exit 0
 fi
 
@@ -102,3 +146,5 @@ build_book \
   false
 
 build_second_edition
+
+build_tiers
