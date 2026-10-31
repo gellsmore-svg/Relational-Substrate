@@ -120,7 +120,7 @@ The book's working formulation is this:
 
 The formulation was checked against the project's simplest relational models before being adopted. In them, a three-way condition changes the likelihood of the next two-way event: a present distinction modifies what happens next by weighting it, without determining it. The initial value of that same condition is soon forgotten: within a short run, nothing in the visible state depends on it any longer. On the formulation, the initial distinction has stopped being causal for that state, because no dependency preserves it, while the condition's *current* value goes on mattering. That is the T-C-R test at work. Rules that forbid a change alter what can be reached at all, and rules that merely favour it alter only how likely it is. Those are two distinct ways of being causal. **Status:** working hypothesis. It fits the models. Whether it is the right account of causation in nature is a question of coherence, not of those models.
 
-The account also disciplines a common word. To say that one change "enabled" another can mean four different things: that it came first (*precedence*); that it removed competitors, so the other became the likelier next event (*opportunity*); that it changed the other's own tendency (*rate*); or that it made the other possible at all (*support*). Only the last two are changes of admissibility or tendency, and only support is the work of a forbidding rule. In the project's later models the senses came apart cleanly. Most soft "enabling" turned out to be opportunity.
+The account also disciplines a common word. To say that one change "enabled" another can mean four different things: that it came first (*precedence*); that it removed competitors, so the other became the likelier next event (*competitive clearance*; the project's model reports call this "opportunity", a word this book keeps for the occasion of Chapter 4); that it changed the other's own tendency (*rate*); or that it made the other possible at all (*support*). Only the last two are changes of admissibility or tendency, and only support is the work of a forbidding rule. In the project's later models the senses came apart cleanly. Most soft "enabling" turned out to be competitive clearance.
 
 ## Manifestation
 
@@ -136,7 +136,7 @@ Together these show that a relational world is not a frozen lattice in which eve
 
 **Status.** Emission, propagation and absorption are established physics, and T-C-R organises that physics without replacing it. It has not been shown to predict anything the physics does not. That T-C-R is the form of consequential relation itself, reaches to the substrate, is recursive and supplies the right account of cause are working hypotheses. Two things are open. In every model the project has built, the dependencies that carry distinctions were designed, and whether created order generates its own carriers from minimal relations is not known. Nor is the architecture of manifestation.
 
-## What T-C-R does not mean
+## T-C-R across categories
 
 The same three-part form appears in physics, in biology, in human conversation and in Scripture. Scripture presents God's word as going out and accomplishing its purpose in those who receive it:
 
@@ -146,9 +146,9 @@ The same three-part form appears in physics, in biology, in human conversation a
 > `How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and how shall they hear without a preacher?… So then faith cometh by hearing, and hearing by the word of God.`
 > *Romans 10:14, 17*
 
-Isaiah's image is physical (rain that waters the earth), and its subject is God's word that accomplishes his purpose. Paul traces a sequence of sending, preaching, hearing and believing. The form is unmistakably that of something made available, carried and received. In a creation made by the Word, that likeness is not surprising. But Chapter 1 has already given the governing principle: shared form across categories does not mean shared nature. God's word is not a physical signal, and faith is not the absorption of light. The soul is not a pattern carried by a disturbance. Information transfer is not consciousness. The physical case does not explain the spiritual one, and the spiritual one is not secretly physical.
+Isaiah's image is physical (rain that waters the earth), and its subject is God's word that accomplishes his purpose. Paul traces a sequence of sending, preaching, hearing and believing. The form is unmistakably that of something made available, carried and received. In a creation made by the Word, that likeness is not surprising. Chapter 1's four relations say how far it reaches. It is at least a structural analogy. Whether created consequence was also made to represent something of how God's word works is a question about creation's purpose, which Chapter 16 takes up. It is not identity: God's word is not a physical signal, and faith is not the absorption of light. The physical case does not explain the spiritual one, and the spiritual one is not secretly physical.
 
-If anything, the direction of illumination runs the other way. A world made by a God who speaks, and whose word goes out and accomplishes what he purposes, is a world in which it is fitting that even light and sound should be consequential in this way. Physical T-C-R may be one of the ways created order bears the likeness of its Maker. But likeness is the most that can be claimed.
+If anything, the direction of illumination runs the other way. A world made by a God who speaks, and whose word goes out and accomplishes what he purposes, is a world in which it is fitting that even light and sound should be consequential in this way. Physical T-C-R may be one of the ways created order bears the likeness of its Maker.
 
 ## The question that remains
 
