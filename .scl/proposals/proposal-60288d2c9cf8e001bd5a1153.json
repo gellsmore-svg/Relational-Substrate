@@ -1,0 +1,910 @@
+{
+  "title": "Capture product documents whole (30/37)",
+  "changes": [
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-2e8ed934",
+        "path": "relational-complexity/results/atlas-015/items/A15-base-count/receipt.json",
+        "ref": "sha256:13a0bcb9f5566614465110a76ed5cbd6c71e4caeb02569f7dde773ef47523b4e"
+      },
+      "content": "{\"item_id\": \"A15-base-count\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"2427583eee479eb25f54a43c69b554e6de043ff301efe59b889c785dacc3516a\", \"spec_hash\": \"a940562b57c95b09671b72377c2a246217ae685dec82de287de70de2a86ef1e4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-e956d393",
+        "path": "relational-complexity/results/atlas-015/items/A15-base-count/result.json",
+        "ref": "sha256:2427583eee479eb25f54a43c69b554e6de043ff301efe59b889c785dacc3516a"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000837,\"engine_version\":\"rrc-0.4.0\",\"exact\":true,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-base-count\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"n\":4,\"n_blocks\":2,\"n_distinct_labels\":2,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"realised_overlap_count\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1],\"defined\":true,\"reason\":\"strong lumpability\",\"rows\":[[{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},{\"den\":\"3\",\"float\":0.3333333333333333,\"num\":\"1\"}],[{\"den\":\"3\",\"float\":0.3333333333333333,\"num\":\"1\"},{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"}]]},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"a940562b57c95b09671b72377c2a246217ae685dec82de287de70de2a86ef1e4\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]],\"witness\":null}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-738e397a",
+        "path": "relational-complexity/results/atlas-015/items/A15-base-count/status.json",
+        "ref": "sha256:a014eef3b644b0ba6126701cdbfc423e766b36dec1fbf7b4c2290c78e71839d3"
+      },
+      "content": "{\"item_id\": \"A15-base-count\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-948b5da7",
+        "path": "relational-complexity/results/atlas-015/items/A15-base-labelled/receipt.json",
+        "ref": "sha256:bc24b48ee341a84f8ce1e64ec2ac1a0786f07987438d6048be2bea44e712a2f2"
+      },
+      "content": "{\"item_id\": \"A15-base-labelled\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"4160b1eb66122f44f6872ad99926f29743ab470df45a3ec5a662cb11ee8e86df\", \"spec_hash\": \"2f9b80cf5d45a76b70faf386064ded31d490fc917fa1711ebd2f099fd82f9dff\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-ee681ee3",
+        "path": "relational-complexity/results/atlas-015/items/A15-base-labelled/result.json",
+        "ref": "sha256:4160b1eb66122f44f6872ad99926f29743ab470df45a3ec5a662cb11ee8e86df"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000988,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-base-labelled\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"n\":4,\"n_blocks\":5,\"n_distinct_labels\":5,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"labelled_realised_blocks\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2,3,4],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"2f9b80cf5d45a76b70faf386064ded31d490fc917fa1711ebd2f099fd82f9dff\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},\"states\":[2,3]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-8096847d",
+        "path": "relational-complexity/results/atlas-015/items/A15-base-labelled/status.json",
+        "ref": "sha256:731a8dc8669f82b450c93948aaf92218bbc8a0a9ccb66be72969f5afbd6a1f19"
+      },
+      "content": "{\"item_id\": \"A15-base-labelled\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-0714c54d",
+        "path": "relational-complexity/results/atlas-015/items/A15-base-realised/receipt.json",
+        "ref": "sha256:6ddfe7994819194de3db36bfd6cd8f937be7d07cbba3667b17443073ce755122"
+      },
+      "content": "{\"item_id\": \"A15-base-realised\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"dd9b0e1c601afc0bbdc7aa4a9574844928e5272105fd9b6a14b8e3a7b8eac02a\", \"spec_hash\": \"c0241af1c3ad9ccd9c1633e5865009404ab0d97f82515a1d2fbc61ec500941dd\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-e97aa409",
+        "path": "relational-complexity/results/atlas-015/items/A15-base-realised/result.json",
+        "ref": "sha256:dd9b0e1c601afc0bbdc7aa4a9574844928e5272105fd9b6a14b8e3a7b8eac02a"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000942,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-base-realised\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"n\":4,\"n_blocks\":4,\"n_distinct_labels\":4,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"realised_intersection\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2,3],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"c0241af1c3ad9ccd9c1633e5865009404ab0d97f82515a1d2fbc61ec500941dd\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},\"states\":[2,3]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-c19cd09e",
+        "path": "relational-complexity/results/atlas-015/items/A15-base-realised/status.json",
+        "ref": "sha256:22119a7feaaed6b10684327726d2c8561c4d08b0bc58a68f5fab419ee29e22ec"
+      },
+      "content": "{\"item_id\": \"A15-base-realised\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-382b08f2",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-ends-active/receipt.json",
+        "ref": "sha256:88d33b0fc96871a167e5d1a4370881e77d5634bd3543cfdfd7091028e7096df2"
+      },
+      "content": "{\"item_id\": \"A15-mul-ends-active\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"14eecc99fcfbf70258ba7c87870775e2cece8b2967b7e436b07c1fe57d0b2538\", \"spec_hash\": \"f788e2138af80ab112ea44b7e8cdbabca49066b67c624aa0cbba3a87136100c6\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-272cdbbb",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-ends-active/result.json",
+        "ref": "sha256:14eecc99fcfbf70258ba7c87870775e2cece8b2967b7e436b07c1fe57d0b2538"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"15\",\"float\":1.0666666666666667,\"num\":\"16\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001208,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-mul-ends-active\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"92189689622ad7ebd818c01b8ab01236265258c1cacdf43adf9de5c3f124311c\",\"n\":4,\"n_blocks\":3,\"n_distinct_labels\":3,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"active_intersection\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"f788e2138af80ab112ea44b7e8cdbabca49066b67c624aa0cbba3a87136100c6\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"92189689622ad7ebd818c01b8ab01236265258c1cacdf43adf9de5c3f124311c\",\"weights\":[[1,1,1],[1,1,3],[1,1,1],[1,1,3],[1,1,1],[1,1,3],[1,1,1],[1,1,3]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"5\",\"float\":1.6,\"num\":\"8\"},\"states\":[2,5]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-6b5ec848",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-ends-active/status.json",
+        "ref": "sha256:1bb9ecce95663eb6a3f5c7a78e3568316120f6136b5e1338f43b3820b541ffaf"
+      },
+      "content": "{\"item_id\": \"A15-mul-ends-active\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-ac24d6e8",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-ends-count/receipt.json",
+        "ref": "sha256:985723da135d307feeaf500c430429ef4430d439ad91f52e3c2d62a31a4f4b1f"
+      },
+      "content": "{\"item_id\": \"A15-mul-ends-count\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"b3f0c2d940b8b99bd60232126c8745346eca82999e900ab8aeb77d3345b6000e\", \"spec_hash\": \"dbbca16fc653e93ad9b5813a741f33f76cde492f27019142faee5a38f01ea72a\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-b37172d4",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-ends-count/result.json",
+        "ref": "sha256:b3f0c2d940b8b99bd60232126c8745346eca82999e900ab8aeb77d3345b6000e"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"15\",\"float\":0.13333333333333333,\"num\":\"2\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-mul-ends-count\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"92189689622ad7ebd818c01b8ab01236265258c1cacdf43adf9de5c3f124311c\",\"n\":4,\"n_blocks\":2,\"n_distinct_labels\":2,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"realised_overlap_count\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"dbbca16fc653e93ad9b5813a741f33f76cde492f27019142faee5a38f01ea72a\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"92189689622ad7ebd818c01b8ab01236265258c1cacdf43adf9de5c3f124311c\",\"weights\":[[1,1,1],[1,1,3],[1,1,1],[1,1,3],[1,1,1],[1,1,3],[1,1,1],[1,1,3]],\"witness\":{\"block\":0,\"pairwise_l1\":{\"den\":\"15\",\"float\":0.26666666666666666,\"num\":\"4\"},\"states\":[0,1]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-2178d15c",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-ends-count/status.json",
+        "ref": "sha256:60cf7d59e57344f5e4b6114619d7f9c5047b492ad3bbfccee920e9a47b353ff9"
+      },
+      "content": "{\"item_id\": \"A15-mul-ends-count\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-03f37d93",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-ends-labelled/receipt.json",
+        "ref": "sha256:602bb26c9de5ffc2b436b0d530c363ef335aa695373b1b633b1868be98fc35e8"
+      },
+      "content": "{\"item_id\": \"A15-mul-ends-labelled\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"e8a06f45607c6c55e0cc43b21189adff20828d504ff71adbac6daae96fc8bde2\", \"spec_hash\": \"ff14cc063af05aee1f5382f4ec24dade6800c416d68a05fb7058155243d234b3\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-6da43ae6",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-ends-labelled/result.json",
+        "ref": "sha256:e8a06f45607c6c55e0cc43b21189adff20828d504ff71adbac6daae96fc8bde2"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001105,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-mul-ends-labelled\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"92189689622ad7ebd818c01b8ab01236265258c1cacdf43adf9de5c3f124311c\",\"n\":4,\"n_blocks\":5,\"n_distinct_labels\":5,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"labelled_realised_blocks\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2,3,4],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"ff14cc063af05aee1f5382f4ec24dade6800c416d68a05fb7058155243d234b3\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"92189689622ad7ebd818c01b8ab01236265258c1cacdf43adf9de5c3f124311c\",\"weights\":[[1,1,1],[1,1,3],[1,1,1],[1,1,3],[1,1,1],[1,1,3],[1,1,1],[1,1,3]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},\"states\":[2,3]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-86c3782a",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-ends-labelled/status.json",
+        "ref": "sha256:0c70e96e015ed5620585e69734c9043608f4351b8491e0322406a2352bc1166b"
+      },
+      "content": "{\"item_id\": \"A15-mul-ends-labelled\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-6a0b7c9a",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-ends-realised/receipt.json",
+        "ref": "sha256:49802eca40742978622dcf61c59bd7b2df7920ecbc860ba5e4efd367311da257"
+      },
+      "content": "{\"item_id\": \"A15-mul-ends-realised\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"90b361745de982eae4413c3631e9cb22462367b3b827918432cb3e62ef5a29ec\", \"spec_hash\": \"e3adf5103a63f05284475fd3eeeb620d0568df4635493b37b232a626f3b4e317\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-0471ca08",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-ends-realised/result.json",
+        "ref": "sha256:90b361745de982eae4413c3631e9cb22462367b3b827918432cb3e62ef5a29ec"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001147,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-mul-ends-realised\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"92189689622ad7ebd818c01b8ab01236265258c1cacdf43adf9de5c3f124311c\",\"n\":4,\"n_blocks\":4,\"n_distinct_labels\":4,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"realised_intersection\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2,3],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"e3adf5103a63f05284475fd3eeeb620d0568df4635493b37b232a626f3b4e317\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"92189689622ad7ebd818c01b8ab01236265258c1cacdf43adf9de5c3f124311c\",\"weights\":[[1,1,1],[1,1,3],[1,1,1],[1,1,3],[1,1,1],[1,1,3],[1,1,1],[1,1,3]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},\"states\":[2,3]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-49e5e9b4",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-ends-realised/status.json",
+        "ref": "sha256:deb7f93ac7011f8d3c47889ad227ceda822510150e60c72463c069f813067bb7"
+      },
+      "content": "{\"item_id\": \"A15-mul-ends-realised\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-1ef6ba35",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-shared-active/receipt.json",
+        "ref": "sha256:c7930449e0fd2307347182e80aeed5e73bfa08321569e24e817113fcbd832d88"
+      },
+      "content": "{\"item_id\": \"A15-mul-shared-active\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"a8011aabfd8e8ed28b5c529c7cf139b78fad44900f14fd66c01a83e6ef19ebfc\", \"spec_hash\": \"724694c33ee3e5961124b1b940a7b14ef8651d5af8aa9763367d463d4753193d\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-b307ac6a",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-shared-active/result.json",
+        "ref": "sha256:a8011aabfd8e8ed28b5c529c7cf139b78fad44900f14fd66c01a83e6ef19ebfc"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001101,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-mul-shared-active\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"fa10bdcc43d20cf87f97823c9a8b9ec9aefc370aabebd884ec98038b6123e915\",\"n\":4,\"n_blocks\":3,\"n_distinct_labels\":3,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"active_intersection\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"724694c33ee3e5961124b1b940a7b14ef8651d5af8aa9763367d463d4753193d\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"fa10bdcc43d20cf87f97823c9a8b9ec9aefc370aabebd884ec98038b6123e915\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,3,1],[1,3,1],[1,3,1],[1,3,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"5\",\"float\":1.2,\"num\":\"6\"},\"states\":[2,6]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-69ce566f",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-shared-active/status.json",
+        "ref": "sha256:130c584d396b27a981db34f004c26b996215bee4e00d844982f2917a9f545cf0"
+      },
+      "content": "{\"item_id\": \"A15-mul-shared-active\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-e36131de",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-shared-count/receipt.json",
+        "ref": "sha256:6574bf2c736d6802ef8032318aeaa226ec7acdaa75ae2da3a3f8dd4cb1d3743b"
+      },
+      "content": "{\"item_id\": \"A15-mul-shared-count\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"7db21c5325b861e621d1526918e213be0b90b3b61646ee0e0a3200fd453e4a22\", \"spec_hash\": \"dd01d8423f9193d35ccc62eadcd96ef4bccd04cb34bf391f7da1aa7e23f78fb1\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-11c0f34c",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-shared-count/result.json",
+        "ref": "sha256:7db21c5325b861e621d1526918e213be0b90b3b61646ee0e0a3200fd453e4a22"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"15\",\"float\":0.26666666666666666,\"num\":\"4\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001468,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-mul-shared-count\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"fa10bdcc43d20cf87f97823c9a8b9ec9aefc370aabebd884ec98038b6123e915\",\"n\":4,\"n_blocks\":2,\"n_distinct_labels\":2,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"realised_overlap_count\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"dd01d8423f9193d35ccc62eadcd96ef4bccd04cb34bf391f7da1aa7e23f78fb1\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"fa10bdcc43d20cf87f97823c9a8b9ec9aefc370aabebd884ec98038b6123e915\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,3,1],[1,3,1],[1,3,1],[1,3,1]],\"witness\":{\"block\":0,\"pairwise_l1\":{\"den\":\"15\",\"float\":0.5333333333333333,\"num\":\"8\"},\"states\":[0,4]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-daee5761",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-shared-count/status.json",
+        "ref": "sha256:a445a0c62a55f4534f5c8b5643a722f305de902bc88e041b55585923e9f83a35"
+      },
+      "content": "{\"item_id\": \"A15-mul-shared-count\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-818713e5",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-shared-labelled/receipt.json",
+        "ref": "sha256:4049db8c5c03f57d444cef25208c939633a8e20935d8cdd93b1ff4555abc828a"
+      },
+      "content": "{\"item_id\": \"A15-mul-shared-labelled\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"cd1ba61d262d938c56d4684f90a3898aad3841d9b992586e8606c9a010fbfd4d\", \"spec_hash\": \"2c3c96663a843f9214144a903264d6e560ac66dbd0dad4978d3f99563de9d79f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-06da3c07",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-shared-labelled/result.json",
+        "ref": "sha256:cd1ba61d262d938c56d4684f90a3898aad3841d9b992586e8606c9a010fbfd4d"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"10\",\"float\":0.9,\"num\":\"9\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001196,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-mul-shared-labelled\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"fa10bdcc43d20cf87f97823c9a8b9ec9aefc370aabebd884ec98038b6123e915\",\"n\":4,\"n_blocks\":5,\"n_distinct_labels\":5,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"labelled_realised_blocks\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2,3,4],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"2c3c96663a843f9214144a903264d6e560ac66dbd0dad4978d3f99563de9d79f\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"fa10bdcc43d20cf87f97823c9a8b9ec9aefc370aabebd884ec98038b6123e915\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,3,1],[1,3,1],[1,3,1],[1,3,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"5\",\"float\":1.2,\"num\":\"6\"},\"states\":[2,6]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-916d30c2",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-shared-labelled/status.json",
+        "ref": "sha256:ef4534d08b2271382a0357ce5b1d6280b5b43b13832efeeb8d50b978f1993826"
+      },
+      "content": "{\"item_id\": \"A15-mul-shared-labelled\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-3009ab50",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-shared-realised/receipt.json",
+        "ref": "sha256:5dc90193ccb89283bb8c3ad0a118210c0692d2302f3437f95861ae387e5bc03f"
+      },
+      "content": "{\"item_id\": \"A15-mul-shared-realised\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"cbc9891b73143449f0f491227fd03849fb5a615d4305b9a2d6a86670ba9dacab\", \"spec_hash\": \"76f33c0e001ed6e2e8db4f48659b3a2689a8e2c546c40216520e8fbab26d7040\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-1bfeee3d",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-shared-realised/result.json",
+        "ref": "sha256:cbc9891b73143449f0f491227fd03849fb5a615d4305b9a2d6a86670ba9dacab"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"10\",\"float\":0.9,\"num\":\"9\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001126,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-mul-shared-realised\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"fa10bdcc43d20cf87f97823c9a8b9ec9aefc370aabebd884ec98038b6123e915\",\"n\":4,\"n_blocks\":4,\"n_distinct_labels\":4,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"realised_intersection\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2,3],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"76f33c0e001ed6e2e8db4f48659b3a2689a8e2c546c40216520e8fbab26d7040\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"fa10bdcc43d20cf87f97823c9a8b9ec9aefc370aabebd884ec98038b6123e915\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,3,1],[1,3,1],[1,3,1],[1,3,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"5\",\"float\":1.2,\"num\":\"6\"},\"states\":[2,7]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-6bf0f502",
+        "path": "relational-complexity/results/atlas-015/items/A15-mul-shared-realised/status.json",
+        "ref": "sha256:23a821a47dc86513361c78f651a54b16e4b9a9858bcec07ddc93d24c33dac3b3"
+      },
+      "content": "{\"item_id\": \"A15-mul-shared-realised\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-68771f1a",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-own-active/receipt.json",
+        "ref": "sha256:3f24d296244fc0896e069d6c82c6da717b09f62dc7c454fba76af5bd215cf228"
+      },
+      "content": "{\"item_id\": \"A15-pro-own-active\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"b4803c5eb4344af7fc4a8ca8f3daecdd1eef11eaf491bf71fd0afcbdd5940e03\", \"spec_hash\": \"61e288b17ae20cf0d4881a496de61c5c9fce47629ad5a789573525c51f28da45\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-8720b3f2",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-own-active/result.json",
+        "ref": "sha256:b4803c5eb4344af7fc4a8ca8f3daecdd1eef11eaf491bf71fd0afcbdd5940e03"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"15\",\"float\":0.8666666666666667,\"num\":\"13\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001065,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-pro-own-active\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"d65a9800e618e62c49e0199f0d5cac3ca201448067180dbbbe4139a641958007\",\"n\":4,\"n_blocks\":3,\"n_distinct_labels\":3,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"active_intersection\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"61e288b17ae20cf0d4881a496de61c5c9fce47629ad5a789573525c51f28da45\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"d65a9800e618e62c49e0199f0d5cac3ca201448067180dbbbe4139a641958007\",\"weights\":[[1,1,1],[1,1,1],[0,1,1],[0,1,1],[1,1,1],[1,1,1],[0,1,1],[0,1,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"},\"states\":[2,7]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-615555bb",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-own-active/status.json",
+        "ref": "sha256:a96aeb58b86084a4cba7dc4f47be219b7fa1d31cb45fa940c5fa7f551b924b77"
+      },
+      "content": "{\"item_id\": \"A15-pro-own-active\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-62608673",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-own-count/receipt.json",
+        "ref": "sha256:330647b8e3f94daef2562f1f6cb387120171bac580230a5269e7b9471bb4ea0b"
+      },
+      "content": "{\"item_id\": \"A15-pro-own-count\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"2b893006ea66d995eedbb463ff0ab0553c0734a1114c0670b0c9c799756cdc13\", \"spec_hash\": \"572288a4e75dbaaf5fa8fdf715e30a1a33649d337cf08b5c1ba2ab6728752000\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-a566cec7",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-own-count/result.json",
+        "ref": "sha256:2b893006ea66d995eedbb463ff0ab0553c0734a1114c0670b0c9c799756cdc13"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000924,\"engine_version\":\"rrc-0.4.0\",\"exact\":true,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-pro-own-count\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"d65a9800e618e62c49e0199f0d5cac3ca201448067180dbbbe4139a641958007\",\"n\":4,\"n_blocks\":2,\"n_distinct_labels\":2,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"realised_overlap_count\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1],\"defined\":true,\"reason\":\"strong lumpability\",\"rows\":[[{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},{\"den\":\"3\",\"float\":0.3333333333333333,\"num\":\"1\"}],[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}]]},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"572288a4e75dbaaf5fa8fdf715e30a1a33649d337cf08b5c1ba2ab6728752000\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"d65a9800e618e62c49e0199f0d5cac3ca201448067180dbbbe4139a641958007\",\"weights\":[[1,1,1],[1,1,1],[0,1,1],[0,1,1],[1,1,1],[1,1,1],[0,1,1],[0,1,1]],\"witness\":null}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-97e2043f",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-own-count/status.json",
+        "ref": "sha256:6b271d2ef499612194171a9ddbea987f2665a7f9619cba0ec5fc5e2c9f091c7f"
+      },
+      "content": "{\"item_id\": \"A15-pro-own-count\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-11b51ace",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-own-labelled/receipt.json",
+        "ref": "sha256:b6ad71fa6741d4ed793e224a0bf29788425e1dc611159725cdf035087db672fd"
+      },
+      "content": "{\"item_id\": \"A15-pro-own-labelled\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"a92dd2600bcef27ad84baf39c6a180ece1bb74e01171047a3e03dbd38a61dfa5\", \"spec_hash\": \"de8db6f02eaad8e0495f2850fdfe23e8a79821d91de5899781037fe1a7e4ca15\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-aa4c85b7",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-own-labelled/result.json",
+        "ref": "sha256:a92dd2600bcef27ad84baf39c6a180ece1bb74e01171047a3e03dbd38a61dfa5"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"4\",\"float\":0.75,\"num\":\"3\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.00115,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-pro-own-labelled\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"d65a9800e618e62c49e0199f0d5cac3ca201448067180dbbbe4139a641958007\",\"n\":4,\"n_blocks\":5,\"n_distinct_labels\":5,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"labelled_realised_blocks\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2,3,4],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"de8db6f02eaad8e0495f2850fdfe23e8a79821d91de5899781037fe1a7e4ca15\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"d65a9800e618e62c49e0199f0d5cac3ca201448067180dbbbe4139a641958007\",\"weights\":[[1,1,1],[1,1,1],[0,1,1],[0,1,1],[1,1,1],[1,1,1],[0,1,1],[0,1,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"},\"states\":[2,3]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-d218258c",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-own-labelled/status.json",
+        "ref": "sha256:50f06ea962c910fd16b6f68c255f3974f2d9346e63f9779ab098d9cff3b462aa"
+      },
+      "content": "{\"item_id\": \"A15-pro-own-labelled\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-dda70285",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-own-realised/receipt.json",
+        "ref": "sha256:32d1932d307db4f40fb2ea146e6f92d8501339a00aa363857a8549e453bb8418"
+      },
+      "content": "{\"item_id\": \"A15-pro-own-realised\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"aaff351c2bce76bd93c621b7aa4859c4a13cef981688ce0c106670f7cf7c1517\", \"spec_hash\": \"0007e35ab51211aadf3d751daa75a97fd1bc7d1d52b69a26d8a50ada006861a1\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-d05a5792",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-own-realised/result.json",
+        "ref": "sha256:aaff351c2bce76bd93c621b7aa4859c4a13cef981688ce0c106670f7cf7c1517"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"4\",\"float\":0.75,\"num\":\"3\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001173,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-pro-own-realised\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"d65a9800e618e62c49e0199f0d5cac3ca201448067180dbbbe4139a641958007\",\"n\":4,\"n_blocks\":4,\"n_distinct_labels\":4,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"realised_intersection\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2,3],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"0007e35ab51211aadf3d751daa75a97fd1bc7d1d52b69a26d8a50ada006861a1\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"d65a9800e618e62c49e0199f0d5cac3ca201448067180dbbbe4139a641958007\",\"weights\":[[1,1,1],[1,1,1],[0,1,1],[0,1,1],[1,1,1],[1,1,1],[0,1,1],[0,1,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"},\"states\":[2,3]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-34454cd5",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-own-realised/status.json",
+        "ref": "sha256:2944ca80a11d07613beaf5e833750d507344eebd3f84d4e793b33efb6f46d4d7"
+      },
+      "content": "{\"item_id\": \"A15-pro-own-realised\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-9cc18775",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-shared-active/receipt.json",
+        "ref": "sha256:bcf56ac3ccaf087096af604e8b8ba0d2d57cf90ca3ed96f3ccf0eb2f8d2fc899"
+      },
+      "content": "{\"item_id\": \"A15-pro-shared-active\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"e3ae9349eba7b7be67c8f1ad1924d5101e2431848e214831ec2938f3dc7e1bf4\", \"spec_hash\": \"6a9037adb7b6647d1cc12f845677d4e4cd8be05ab6a2a9246056382186ad2698\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-9e08bcaa",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-shared-active/result.json",
+        "ref": "sha256:e3ae9349eba7b7be67c8f1ad1924d5101e2431848e214831ec2938f3dc7e1bf4"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"15\",\"float\":1.4666666666666666,\"num\":\"22\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001096,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-pro-shared-active\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"fe1f4d4e5e5fcac700a7efc7ec32acb0dfcc1c21f5bb401f6b27738b527b2d7c\",\"n\":4,\"n_blocks\":3,\"n_distinct_labels\":3,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"active_intersection\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"6a9037adb7b6647d1cc12f845677d4e4cd8be05ab6a2a9246056382186ad2698\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"fe1f4d4e5e5fcac700a7efc7ec32acb0dfcc1c21f5bb401f6b27738b527b2d7c\",\"weights\":[[1,1,1],[1,0,1],[1,1,1],[1,0,1],[1,1,1],[1,0,1],[1,1,1],[1,0,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"1\",\"float\":2.0,\"num\":\"2\"},\"states\":[2,5]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-13a22afa",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-shared-active/status.json",
+        "ref": "sha256:3f04efa4efe14504be56f8670ae0edce234b24e8cdb5f98fa1706d7c0913892f"
+      },
+      "content": "{\"item_id\": \"A15-pro-shared-active\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-87ea28c3",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-shared-count/receipt.json",
+        "ref": "sha256:a36920f43aaee0c53d961b18189a354718e81c19fa2bff31a85840c6429dd4ba"
+      },
+      "content": "{\"item_id\": \"A15-pro-shared-count\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"12afcb30e340dc7232b9bcf9276fb8918740b308820c45e7f646b2dd0dd3da9a\", \"spec_hash\": \"12fb0ce321d00ecc806d55847c737fa02b4954624f656ed21f83a152a6331edc\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-c65e8542",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-shared-count/result.json",
+        "ref": "sha256:12afcb30e340dc7232b9bcf9276fb8918740b308820c45e7f646b2dd0dd3da9a"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"3\",\"float\":0.3333333333333333,\"num\":\"1\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000945,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-pro-shared-count\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"fe1f4d4e5e5fcac700a7efc7ec32acb0dfcc1c21f5bb401f6b27738b527b2d7c\",\"n\":4,\"n_blocks\":2,\"n_distinct_labels\":2,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"realised_overlap_count\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"12fb0ce321d00ecc806d55847c737fa02b4954624f656ed21f83a152a6331edc\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"fe1f4d4e5e5fcac700a7efc7ec32acb0dfcc1c21f5bb401f6b27738b527b2d7c\",\"weights\":[[1,1,1],[1,0,1],[1,1,1],[1,0,1],[1,1,1],[1,0,1],[1,1,1],[1,0,1]],\"witness\":{\"block\":0,\"pairwise_l1\":{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},\"states\":[0,1]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-93f78a09",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-shared-count/status.json",
+        "ref": "sha256:63e389776e218028b7d58e5fc781ee645921235be60aa1d8db4338053a7c7447"
+      },
+      "content": "{\"item_id\": \"A15-pro-shared-count\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-c72a64ac",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-shared-labelled/receipt.json",
+        "ref": "sha256:3eadb2fe0f6975b8bc89834e558b87ae0cd1c84a242c345beb6139aeea388d9e"
+      },
+      "content": "{\"item_id\": \"A15-pro-shared-labelled\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"7af933640030239e7d4c46da71308fe15dc75744f9b53139ee024a2198c521c8\", \"spec_hash\": \"b275c74091f60e4edf1387dc4713d91b34ce507898fdd11b89aa11ee25805c44\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-3c86e007",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-shared-labelled/result.json",
+        "ref": "sha256:7af933640030239e7d4c46da71308fe15dc75744f9b53139ee024a2198c521c8"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001092,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-pro-shared-labelled\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"fe1f4d4e5e5fcac700a7efc7ec32acb0dfcc1c21f5bb401f6b27738b527b2d7c\",\"n\":4,\"n_blocks\":5,\"n_distinct_labels\":5,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"labelled_realised_blocks\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2,3,4],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"b275c74091f60e4edf1387dc4713d91b34ce507898fdd11b89aa11ee25805c44\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"fe1f4d4e5e5fcac700a7efc7ec32acb0dfcc1c21f5bb401f6b27738b527b2d7c\",\"weights\":[[1,1,1],[1,0,1],[1,1,1],[1,0,1],[1,1,1],[1,0,1],[1,1,1],[1,0,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},\"states\":[2,3]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-4561b906",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-shared-labelled/status.json",
+        "ref": "sha256:a3f433ac4679f9659df2dfa05ac25a5b9c8e539f7341fcfd8514dbc147c479c2"
+      },
+      "content": "{\"item_id\": \"A15-pro-shared-labelled\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-4337ee38",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-shared-realised/receipt.json",
+        "ref": "sha256:628e89c3e401c94b5fb76f8d209187847c4d32dcd0ac4b6c3bdf78317c6c3e68"
+      },
+      "content": "{\"item_id\": \"A15-pro-shared-realised\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"result_sha256\": \"bd41eeeab636dce05866c531f1b0650aa96158a8c1abd5ce0f1f9c741d0b0105\", \"spec_hash\": \"d8921070d18a7288b652a131d9aca39d2bf98c81c34c84cb8c46513ddea93168\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-573a9099",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-shared-realised/result.json",
+        "ref": "sha256:bd41eeeab636dce05866c531f1b0650aa96158a8c1abd5ce0f1f9c741d0b0105"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"cover\":[[[0,1],[1,2]],[[1,2],[2,3]]],\"defect_l1\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001052,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L21\"],\"injective\":false,\"item_id\":\"A15-pro-shared-realised\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"fe1f4d4e5e5fcac700a7efc7ec32acb0dfcc1c21f5bb401f6b27738b527b2d7c\",\"n\":4,\"n_blocks\":4,\"n_distinct_labels\":4,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"realised_intersection\",\"plan_hash\":\"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\",\"quotient\":{\"blocks\":[0,1,2,3],\"defined\":false,\"reason\":\"not strongly lumpable\",\"rows\":null},\"role\":\"observation\",\"round_id\":\"atlas-015\",\"spec_hash\":\"d8921070d18a7288b652a131d9aca39d2bf98c81c34c84cb8c46513ddea93168\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"fe1f4d4e5e5fcac700a7efc7ec32acb0dfcc1c21f5bb401f6b27738b527b2d7c\",\"weights\":[[1,1,1],[1,0,1],[1,1,1],[1,0,1],[1,1,1],[1,0,1],[1,1,1],[1,0,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},\"states\":[2,3]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-items-a1-39997e04",
+        "path": "relational-complexity/results/atlas-015/items/A15-pro-shared-realised/status.json",
+        "ref": "sha256:33930a1a07a44f520b3938fcd407b58d33321045bead20f5e406a05361a36e0f"
+      },
+      "content": "{\"item_id\": \"A15-pro-shared-realised\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-015-manifest-6251a2c3",
+        "path": "relational-complexity/results/atlas-015/manifest.json",
+        "ref": "sha256:8b6ae84118fa8a47c6090865615297dd7d600133acc3acdf1ed9e30f21b448bf"
+      },
+      "content": "{\"engine_version\": \"rrc-0.4.0\", \"plan_hash\": \"75f36e40fc647bb953c64d7d91e65820db40e8bd459bfea6bf0c07b7392e1b0b\", \"round_id\": \"atlas-015\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-d6ddcbe5",
+        "path": "relational-complexity/results/atlas-016/items/A16-base/receipt.json",
+        "ref": "sha256:87778c3a0ae7ae26c93c6902879d1cb6962766d5bdfdca303b30cda651205aca"
+      },
+      "content": "{\"item_id\": \"A16-base\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"result_sha256\": \"5c2e6cd456ec8e222517d6ac3f0946e7b60b98261a626b572cbc5c41a28dcf16\", \"spec_hash\": \"ab449a158b2551f75ba84374867f179bbedb9fb1eee8c401503913057472fefe\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-6849fdb0",
+        "path": "relational-complexity/results/atlas-016/items/A16-base/result.json",
+        "ref": "sha256:5c2e6cd456ec8e222517d6ac3f0946e7b60b98261a626b572cbc5c41a28dcf16"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":0,\"distinct_events\":0,\"effective_cardinality\":0,\"effective_method\":\"minimum_equivalent_subset\",\"expansion_j_total\":0,\"features\":[],\"j_positive\":0,\"j_prohibit\":0,\"kernel_ablation_method\":\"minimum_equivalent_subset\",\"kernel_effective_cardinality\":0,\"kernel_removal_sensitive_count\":0,\"max_active_in_state\":0,\"max_constraints_on_one_event\":0,\"max_expansion_k\":0,\"max_incident_edges\":0,\"max_positive_k\":0,\"max_prohibit_literals\":0,\"removal_sensitive_count\":0,\"states_with_zero_active\":8,\"zero_active_fraction\":{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"}},\"carrier\":{\"components\":2,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[3,4]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false,\"new_primitive\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000865,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.4.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C00\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":0,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A16-base\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"method\":\"exact_weight_table\",\"n\":5,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"2\",\"float\":3.5,\"num\":\"7\"},\"mean_present_edges\":{\"den\":\"2\",\"float\":1.5,\"num\":\"3\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,3,3,3,3,3,3,3]},\"plan_hash\":\"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\",\"positive_transitions\":24,\"role\":\"baseline\",\"round_id\":\"atlas-016\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"ab449a158b2551f75ba84374867f179bbedb9fb1eee8c401503913057472fefe\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"0963ca7e652f311e3382a80a52a2c8efe545700c1c793db7444f5140bb162fbd\",\"type\":\"atlas_core\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]],\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-8feaadf9",
+        "path": "relational-complexity/results/atlas-016/items/A16-base/status.json",
+        "ref": "sha256:0bf0a016dc01eaa461464fe71d9fee1c9a0b090399b1b883bcb965c8b7df991b"
+      },
+      "content": "{\"item_id\": \"A16-base\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-e717a503",
+        "path": "relational-complexity/results/atlas-016/items/A16-mixed/receipt.json",
+        "ref": "sha256:f7e2afbdb8a0a3ccac8d0760924bf4ea198c2b57f08c6c2eba416efabaf2205a"
+      },
+      "content": "{\"item_id\": \"A16-mixed\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"result_sha256\": \"6c43068794c84b21791a878e6e0014488b1e8657ed9b1eb1bfcef3eb3d0e8549\", \"spec_hash\": \"cfc67e0a9154cce8fc84086a282390dd1cad2f3d4963960d3030fe81ce123f99\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-d4172f1a",
+        "path": "relational-complexity/results/atlas-016/items/A16-mixed/result.json",
+        "ref": "sha256:6c43068794c84b21791a878e6e0014488b1e8657ed9b1eb1bfcef3eb3d0e8549"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":2,\"effective_cardinality\":2,\"effective_method\":\"minimum_equivalent_subset\",\"expansion_j_total\":0,\"features\":[{\"action\":\"either\",\"condition\":[0,1],\"condition_kind\":\"designated_edge\",\"effect\":\"prohibit\",\"event\":[1,2],\"literals\":1,\"polarity\":\"present\"},{\"action\":\"either\",\"condition\":[0,1],\"condition_kind\":\"designated_edge\",\"effect\":\"multiply\",\"event\":[3,4],\"factor\":3,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":1,\"kernel_ablation_method\":\"minimum_equivalent_subset\",\"kernel_effective_cardinality\":2,\"kernel_removal_sensitive_count\":2,\"max_active_in_state\":2,\"max_constraints_on_one_event\":1,\"max_expansion_k\":0,\"max_incident_edges\":0,\"max_positive_k\":2,\"max_prohibit_literals\":1,\"removal_sensitive_count\":2,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":2,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[3,4]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false,\"new_primitive\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000851,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.4.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C01\",\"IDEA-C02\",\"IDEA-C06\",\"IDEA-R04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A16-mixed\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"f83fd2d4e2aeb937143f26dceae8a06363691ad470e2570e5d16dc6c4b64219b\",\"method\":\"exact_weight_table\",\"n\":5,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"7\",\"float\":0.5714285714285714,\"num\":\"4\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"7\",\"float\":3.4285714285714284,\"num\":\"24\"},\"mean_present_edges\":{\"den\":\"7\",\"float\":1.5714285714285714,\"num\":\"11\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,4,3,4,3,4,3,4]},\"plan_hash\":\"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\",\"positive_transitions\":20,\"role\":\"mixed\",\"round_id\":\"atlas-016\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"cfc67e0a9154cce8fc84086a282390dd1cad2f3d4963960d3030fe81ce123f99\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"0963ca7e652f311e3382a80a52a2c8efe545700c1c793db7444f5140bb162fbd\",\"type\":\"atlas_core\",\"weight_sha256\":\"f83fd2d4e2aeb937143f26dceae8a06363691ad470e2570e5d16dc6c4b64219b\",\"weights\":[[1,1,1],[1,0,3],[1,1,1],[1,0,3],[1,1,1],[1,0,3],[1,1,1],[1,0,3]],\"zero_cells\":4}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-2d6ca547",
+        "path": "relational-complexity/results/atlas-016/items/A16-mixed/status.json",
+        "ref": "sha256:687ad2bd5327d826a3e8f1651784a377653bb23df04a53d4cc99cf5414972512"
+      },
+      "content": "{\"item_id\": \"A16-mixed\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-0c31c1a8",
+        "path": "relational-complexity/results/atlas-016/items/A16-mul-across/receipt.json",
+        "ref": "sha256:21d0b86e7517fcaecd11a6261eb3fddfc5ce2fedccf36680e4c4ecdd0322545b"
+      },
+      "content": "{\"item_id\": \"A16-mul-across\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"result_sha256\": \"4d4a02bacd88124db2c71003e5ea10a6c41bf4c64dc97004432a4fc531714f6b\", \"spec_hash\": \"91bedee815a8db4a825df923f24e2705e5befd82a763bed8b4f6e3be27fc9963\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-bfaebf2e",
+        "path": "relational-complexity/results/atlas-016/items/A16-mul-across/result.json",
+        "ref": "sha256:4d4a02bacd88124db2c71003e5ea10a6c41bf4c64dc97004432a4fc531714f6b"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"expansion_j_total\":0,\"features\":[{\"action\":\"either\",\"condition\":[3,4],\"condition_kind\":\"designated_edge\",\"effect\":\"multiply\",\"event\":[0,1],\"factor\":3,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":0,\"kernel_ablation_method\":\"minimum_equivalent_subset\",\"kernel_effective_cardinality\":1,\"kernel_removal_sensitive_count\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_expansion_k\":0,\"max_incident_edges\":0,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":1,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":2,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[3,4]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false,\"new_primitive\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000788,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.4.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C02\",\"IDEA-R04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A16-mul-across\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"35818e425b302f38df5d28715a61ec5e21b1a765ab3ceee5f81ee55c40156e82\",\"method\":\"exact_weight_table\",\"n\":5,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"8\",\"float\":0.625,\"num\":\"5\"}],\"mean_components\":{\"den\":\"8\",\"float\":3.375,\"num\":\"27\"},\"mean_present_edges\":{\"den\":\"8\",\"float\":1.625,\"num\":\"13\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,3,3,3,5,5,5,5]},\"plan_hash\":\"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\",\"positive_transitions\":24,\"role\":\"multiply\",\"round_id\":\"atlas-016\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"91bedee815a8db4a825df923f24e2705e5befd82a763bed8b4f6e3be27fc9963\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"0963ca7e652f311e3382a80a52a2c8efe545700c1c793db7444f5140bb162fbd\",\"type\":\"atlas_core\",\"weight_sha256\":\"35818e425b302f38df5d28715a61ec5e21b1a765ab3ceee5f81ee55c40156e82\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[3,1,1],[3,1,1],[3,1,1],[3,1,1]],\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-e60c4cab",
+        "path": "relational-complexity/results/atlas-016/items/A16-mul-across/status.json",
+        "ref": "sha256:184faff10e86a92301453e71ab48ebbeb33dace40ea79bc5d9be26cb506fc83a"
+      },
+      "content": "{\"item_id\": \"A16-mul-across\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-fc5f6171",
+        "path": "relational-complexity/results/atlas-016/items/A16-mul-disjoint/receipt.json",
+        "ref": "sha256:adb588717fc03753ffe5ed4516fc23840ca7dd2ba8940c3ad93c7f09eb9ecd69"
+      },
+      "content": "{\"item_id\": \"A16-mul-disjoint\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"result_sha256\": \"0f4684b471be7792ec780eb5e0db9ddfdf25a6e7a7f4d4ffd2d946a41e4ac409\", \"spec_hash\": \"83edf50d2989a9f7d5e9b23d4eb34e8544fd666a52e08534e2694f460e5ce94c\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-dfa35cec",
+        "path": "relational-complexity/results/atlas-016/items/A16-mul-disjoint/result.json",
+        "ref": "sha256:0f4684b471be7792ec780eb5e0db9ddfdf25a6e7a7f4d4ffd2d946a41e4ac409"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"expansion_j_total\":0,\"features\":[{\"action\":\"either\",\"condition\":[0,1],\"condition_kind\":\"designated_edge\",\"effect\":\"multiply\",\"event\":[3,4],\"factor\":3,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":0,\"kernel_ablation_method\":\"minimum_equivalent_subset\",\"kernel_effective_cardinality\":1,\"kernel_removal_sensitive_count\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_expansion_k\":0,\"max_incident_edges\":0,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":1,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":2,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[3,4]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false,\"new_primitive\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000715,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.4.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C02\",\"IDEA-R04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A16-mul-disjoint\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"92189689622ad7ebd818c01b8ab01236265258c1cacdf43adf9de5c3f124311c\",\"method\":\"exact_weight_table\",\"n\":5,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"8\",\"float\":0.625,\"num\":\"5\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"8\",\"float\":3.375,\"num\":\"27\"},\"mean_present_edges\":{\"den\":\"8\",\"float\":1.625,\"num\":\"13\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,5,3,5,3,5,3,5]},\"plan_hash\":\"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\",\"positive_transitions\":24,\"role\":\"multiply\",\"round_id\":\"atlas-016\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"83edf50d2989a9f7d5e9b23d4eb34e8544fd666a52e08534e2694f460e5ce94c\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"0963ca7e652f311e3382a80a52a2c8efe545700c1c793db7444f5140bb162fbd\",\"type\":\"atlas_core\",\"weight_sha256\":\"92189689622ad7ebd818c01b8ab01236265258c1cacdf43adf9de5c3f124311c\",\"weights\":[[1,1,1],[1,1,3],[1,1,1],[1,1,3],[1,1,1],[1,1,3],[1,1,1],[1,1,3]],\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-0da6f203",
+        "path": "relational-complexity/results/atlas-016/items/A16-mul-disjoint/status.json",
+        "ref": "sha256:1d31aa34434cc6656203a78b784d38d0766886d2f2004b62269efb5c3d7571ad"
+      },
+      "content": "{\"item_id\": \"A16-mul-disjoint\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-0a944a08",
+        "path": "relational-complexity/results/atlas-016/items/A16-mul-incident/receipt.json",
+        "ref": "sha256:a9ebda9a4f17e3dd3d13c8bad458e510a914fbbfa446b5470aab5b15c93ced1e"
+      },
+      "content": "{\"item_id\": \"A16-mul-incident\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"result_sha256\": \"312697d7499920e320133686677ff75672b62ea303db3961b5b81a332a47dfa1\", \"spec_hash\": \"7ce277c9739aacf0f01c0da386b45e32c481444120353f0f6a60a610cea6dffa\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-05ab21fa",
+        "path": "relational-complexity/results/atlas-016/items/A16-mul-incident/result.json",
+        "ref": "sha256:312697d7499920e320133686677ff75672b62ea303db3961b5b81a332a47dfa1"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"expansion_j_total\":0,\"features\":[{\"action\":\"either\",\"condition\":[0,1],\"condition_kind\":\"designated_edge\",\"effect\":\"multiply\",\"event\":[1,2],\"factor\":3,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":0,\"kernel_ablation_method\":\"minimum_equivalent_subset\",\"kernel_effective_cardinality\":1,\"kernel_removal_sensitive_count\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_expansion_k\":0,\"max_incident_edges\":0,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":1,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":2,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[3,4]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false,\"new_primitive\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000772,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.4.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C02\",\"IDEA-R04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A16-mul-incident\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"badcbc1cecba75dbdb76f74ea9cc1368c0dc49c55eb52346b9575889e02dd84b\",\"method\":\"exact_weight_table\",\"n\":5,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"8\",\"float\":0.625,\"num\":\"5\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"8\",\"float\":3.375,\"num\":\"27\"},\"mean_present_edges\":{\"den\":\"8\",\"float\":1.625,\"num\":\"13\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,5,3,5,3,5,3,5]},\"plan_hash\":\"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\",\"positive_transitions\":24,\"role\":\"multiply\",\"round_id\":\"atlas-016\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"7ce277c9739aacf0f01c0da386b45e32c481444120353f0f6a60a610cea6dffa\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"0963ca7e652f311e3382a80a52a2c8efe545700c1c793db7444f5140bb162fbd\",\"type\":\"atlas_core\",\"weight_sha256\":\"badcbc1cecba75dbdb76f74ea9cc1368c0dc49c55eb52346b9575889e02dd84b\",\"weights\":[[1,1,1],[1,3,1],[1,1,1],[1,3,1],[1,1,1],[1,3,1],[1,1,1],[1,3,1]],\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-4b2e3984",
+        "path": "relational-complexity/results/atlas-016/items/A16-mul-incident/status.json",
+        "ref": "sha256:1471ae220b35031429e1996c42277066f88176c25658d31e3b04fd8082600f75"
+      },
+      "content": "{\"item_id\": \"A16-mul-incident\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-918a8fdf",
+        "path": "relational-complexity/results/atlas-016/items/A16-pro-across/receipt.json",
+        "ref": "sha256:48e06b13e26e05cc12ddd18cc0933dcf7814f1369e591986a816faafd59d4a4f"
+      },
+      "content": "{\"item_id\": \"A16-pro-across\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"result_sha256\": \"6393cd05fc76a1c6a4b0b2891ed0d59096319951a0a66977a942ca2ffcba7b49\", \"spec_hash\": \"d8704036557927293d60fe6a6b74170c655e264274bdcedb42e1bdf5b17dcaa3\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-8b4394f9",
+        "path": "relational-complexity/results/atlas-016/items/A16-pro-across/result.json",
+        "ref": "sha256:6393cd05fc76a1c6a4b0b2891ed0d59096319951a0a66977a942ca2ffcba7b49"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"expansion_j_total\":0,\"features\":[{\"action\":\"either\",\"condition\":[3,4],\"condition_kind\":\"designated_edge\",\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":1,\"kernel_ablation_method\":\"minimum_equivalent_subset\",\"kernel_effective_cardinality\":1,\"kernel_removal_sensitive_count\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_expansion_k\":0,\"max_incident_edges\":0,\"max_positive_k\":0,\"max_prohibit_literals\":1,\"removal_sensitive_count\":1,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":2,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[3,4]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false,\"new_primitive\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000871,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.4.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C01\",\"IDEA-R04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A16-pro-across\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"866005248da1269bc32a3c62e3d391cae91e841b57fa180d634f832f11e67fc6\",\"method\":\"exact_weight_table\",\"n\":5,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"5\",\"float\":0.4,\"num\":\"2\"}],\"mean_components\":{\"den\":\"5\",\"float\":3.6,\"num\":\"18\"},\"mean_present_edges\":{\"den\":\"5\",\"float\":1.4,\"num\":\"7\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,3,3,3,2,2,2,2]},\"plan_hash\":\"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\",\"positive_transitions\":20,\"role\":\"prohibit\",\"round_id\":\"atlas-016\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"d8704036557927293d60fe6a6b74170c655e264274bdcedb42e1bdf5b17dcaa3\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"0963ca7e652f311e3382a80a52a2c8efe545700c1c793db7444f5140bb162fbd\",\"type\":\"atlas_core\",\"weight_sha256\":\"866005248da1269bc32a3c62e3d391cae91e841b57fa180d634f832f11e67fc6\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[0,1,1],[0,1,1],[0,1,1],[0,1,1]],\"zero_cells\":4}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-e827f92e",
+        "path": "relational-complexity/results/atlas-016/items/A16-pro-across/status.json",
+        "ref": "sha256:cbaca12f3339d8ff65d242acf28d8f9a13f205db5d0d9ada568c630bce7bd879"
+      },
+      "content": "{\"item_id\": \"A16-pro-across\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-24a2e291",
+        "path": "relational-complexity/results/atlas-016/items/A16-pro-disjoint/receipt.json",
+        "ref": "sha256:37ed9e7d855cbb49d94336f9b136aaa90ba88633246d644d595200c0b0fc7f96"
+      },
+      "content": "{\"item_id\": \"A16-pro-disjoint\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"result_sha256\": \"ad0fc2f0d40204debe5cae556fa972d0b05334f3fee060b16611e37ee4cd2a73\", \"spec_hash\": \"3c5dc3f26b0931fbccecd802860efbdb6fe6e6a741269251dac554a0e976367d\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-d1d01b1a",
+        "path": "relational-complexity/results/atlas-016/items/A16-pro-disjoint/result.json",
+        "ref": "sha256:ad0fc2f0d40204debe5cae556fa972d0b05334f3fee060b16611e37ee4cd2a73"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"expansion_j_total\":0,\"features\":[{\"action\":\"either\",\"condition\":[0,1],\"condition_kind\":\"designated_edge\",\"effect\":\"prohibit\",\"event\":[3,4],\"literals\":1,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":1,\"kernel_ablation_method\":\"minimum_equivalent_subset\",\"kernel_effective_cardinality\":1,\"kernel_removal_sensitive_count\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_expansion_k\":0,\"max_incident_edges\":0,\"max_positive_k\":0,\"max_prohibit_literals\":1,\"removal_sensitive_count\":1,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":2,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[3,4]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false,\"new_primitive\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000687,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.4.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C01\",\"IDEA-R04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A16-pro-disjoint\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"b54fee3ce4ed5f19f4843249d82b4217eb004fba882f25d8894b2b5d08fe7eb3\",\"method\":\"exact_weight_table\",\"n\":5,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"5\",\"float\":0.4,\"num\":\"2\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"5\",\"float\":3.6,\"num\":\"18\"},\"mean_present_edges\":{\"den\":\"5\",\"float\":1.4,\"num\":\"7\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,2,3,2,3,2,3,2]},\"plan_hash\":\"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\",\"positive_transitions\":20,\"role\":\"prohibit\",\"round_id\":\"atlas-016\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"3c5dc3f26b0931fbccecd802860efbdb6fe6e6a741269251dac554a0e976367d\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"0963ca7e652f311e3382a80a52a2c8efe545700c1c793db7444f5140bb162fbd\",\"type\":\"atlas_core\",\"weight_sha256\":\"b54fee3ce4ed5f19f4843249d82b4217eb004fba882f25d8894b2b5d08fe7eb3\",\"weights\":[[1,1,1],[1,1,0],[1,1,1],[1,1,0],[1,1,1],[1,1,0],[1,1,1],[1,1,0]],\"zero_cells\":4}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-835b3a5f",
+        "path": "relational-complexity/results/atlas-016/items/A16-pro-disjoint/status.json",
+        "ref": "sha256:f637e8e11b758819bc7e81e1825e9112dcbf65684b940dcd90c527f118d6f322"
+      },
+      "content": "{\"item_id\": \"A16-pro-disjoint\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-679342b4",
+        "path": "relational-complexity/results/atlas-016/items/A16-pro-incident/receipt.json",
+        "ref": "sha256:3d5bec3e9d79c676ea27bb59992b474fcdf7b3f408bc568afc3b4cb32a592b5f"
+      },
+      "content": "{\"item_id\": \"A16-pro-incident\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"result_sha256\": \"f527f08bdf367b8badf8fd166bd03615a2cf980aed0d07e6dbc02b4cc15c4f3f\", \"spec_hash\": \"8810b536aa1cead7939d68bbb221f5cd1ed1e62819858379e87346faadc279f7\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-da5945ea",
+        "path": "relational-complexity/results/atlas-016/items/A16-pro-incident/result.json",
+        "ref": "sha256:f527f08bdf367b8badf8fd166bd03615a2cf980aed0d07e6dbc02b4cc15c4f3f"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"expansion_j_total\":0,\"features\":[{\"action\":\"either\",\"condition\":[0,1],\"condition_kind\":\"designated_edge\",\"effect\":\"prohibit\",\"event\":[1,2],\"literals\":1,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":1,\"kernel_ablation_method\":\"minimum_equivalent_subset\",\"kernel_effective_cardinality\":1,\"kernel_removal_sensitive_count\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_expansion_k\":0,\"max_incident_edges\":0,\"max_positive_k\":0,\"max_prohibit_literals\":1,\"removal_sensitive_count\":1,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":2,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[3,4]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false,\"new_primitive\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000716,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.4.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C01\",\"IDEA-R04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A16-pro-incident\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"fe1f4d4e5e5fcac700a7efc7ec32acb0dfcc1c21f5bb401f6b27738b527b2d7c\",\"method\":\"exact_weight_table\",\"n\":5,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"5\",\"float\":0.4,\"num\":\"2\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"5\",\"float\":3.6,\"num\":\"18\"},\"mean_present_edges\":{\"den\":\"5\",\"float\":1.4,\"num\":\"7\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,2,3,2,3,2,3,2]},\"plan_hash\":\"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\",\"positive_transitions\":20,\"role\":\"prohibit\",\"round_id\":\"atlas-016\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"8810b536aa1cead7939d68bbb221f5cd1ed1e62819858379e87346faadc279f7\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"0963ca7e652f311e3382a80a52a2c8efe545700c1c793db7444f5140bb162fbd\",\"type\":\"atlas_core\",\"weight_sha256\":\"fe1f4d4e5e5fcac700a7efc7ec32acb0dfcc1c21f5bb401f6b27738b527b2d7c\",\"weights\":[[1,1,1],[1,0,1],[1,1,1],[1,0,1],[1,1,1],[1,0,1],[1,1,1],[1,0,1]],\"zero_cells\":4}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-items-a1-5597d20b",
+        "path": "relational-complexity/results/atlas-016/items/A16-pro-incident/status.json",
+        "ref": "sha256:a73e92190c2d037c9745589a5f71e1fa75e4401cd76cd22c26928561aa065c5a"
+      },
+      "content": "{\"item_id\": \"A16-pro-incident\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-016-manifest-f944fada",
+        "path": "relational-complexity/results/atlas-016/manifest.json",
+        "ref": "sha256:313e5cd534a7a06fbeef14fd3b8f6c452032106184b17571adb30d98e3ced602"
+      },
+      "content": "{\"engine_version\": \"rrc-0.4.0\", \"plan_hash\": \"d933e17efe85ea998c3a81229e4bd3436d02a7cd42ccdb7d6d73d20e40688c1d\", \"round_id\": \"atlas-016\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-5ca5567a",
+        "path": "relational-complexity/results/atlas-017/items/A17-coupled/receipt.json",
+        "ref": "sha256:637e2d5e4a9dca11649d6551343ad1841e3f86438741a4bf2017edb5702e7b49"
+      },
+      "content": "{\"item_id\": \"A17-coupled\", \"plan_hash\": \"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\", \"result_sha256\": \"fa6ec7032560d8568809bf72d2b2aea6e6aa620f17cc4f9f4e896371c50465fe\", \"spec_hash\": \"dbec11613b337415af4a0d370d3a39b919edf4b4f37d6bb1ad40fd9f27f2c2f2\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-d0a1d3eb",
+        "path": "relational-complexity/results/atlas-017/items/A17-coupled/result.json",
+        "ref": "sha256:fa6ec7032560d8568809bf72d2b2aea6e6aa620f17cc4f9f4e896371c50465fe"
+      },
+      "content": "{\"aggregated_weights\":[[0,0,0,1],[0,0,0,0],[0,0,0,0],[1,0,0,0]],\"bit_width\":2,\"catalogue\":null,\"clock\":\"one_declared_event\",\"completions\":[\"normalised_events\",\"halt_self_loop\",\"halt_self_loop\",\"normalised_events\"],\"elapsed_s\":5.9e-05,\"enabled_event_counts\":[1,0,0,1],\"engine_version\":\"rrc-0.4.0\",\"event_count\":2,\"family\":\"coupled_copies\",\"halt_self_loop_is_event\":false,\"item_id\":\"A17-coupled\",\"method\":\"event-kernel-0.1.0\",\"n_states\":4,\"new_primitive\":false,\"plan_hash\":\"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\",\"probabilities\":[[{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"}],[{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"}],[{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"}],[{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"}]],\"role\":\"comparison\",\"round_id\":\"atlas-017\",\"row_sums\":[1,0,0,1],\"spec_hash\":\"dbec11613b337415af4a0d370d3a39b919edf4b4f37d6bb1ad40fd9f27f2c2f2\",\"status\":\"complete\",\"type\":\"event_kernel\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-7ea3d275",
+        "path": "relational-complexity/results/atlas-017/items/A17-coupled/status.json",
+        "ref": "sha256:a55e60103078c296f08fe7af6ad6e6094ee1743faf90df63d8a3def1b00b8141"
+      },
+      "content": "{\"item_id\": \"A17-coupled\", \"plan_hash\": \"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-0b6504df",
+        "path": "relational-complexity/results/atlas-017/items/A17-g0/receipt.json",
+        "ref": "sha256:c4e2e6f7b3cf29d729b10b1549eec55b3b419e7abf40ac78bbdc0fd3c08b58f8"
+      },
+      "content": "{\"item_id\": \"A17-g0\", \"plan_hash\": \"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\", \"result_sha256\": \"2b827b6b3c44379d07f4780d15d68e6385d1cc1ff7815a831298c59d9bb157f0\", \"spec_hash\": \"86b550aa339520da6d4a6f6ab7ea36611d8eb5b63a2d9c219c436316c1d36532\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-b986bfcf",
+        "path": "relational-complexity/results/atlas-017/items/A17-g0/result.json",
+        "ref": "sha256:2b827b6b3c44379d07f4780d15d68e6385d1cc1ff7815a831298c59d9bb157f0"
+      },
+      "content": "{\"aggregated_weights\":[[0,1,1,0],[1,0,0,1],[1,0,0,1],[0,1,1,0]],\"bit_width\":2,\"catalogue\":\"single_toggle\",\"clock\":\"one_declared_event\",\"completions\":[\"normalised_events\",\"normalised_events\",\"normalised_events\",\"normalised_events\"],\"elapsed_s\":7e-05,\"enabled_event_counts\":[2,2,2,2],\"engine_version\":\"rrc-0.4.0\",\"event_count\":8,\"family\":\"single_toggle\",\"halt_self_loop_is_event\":false,\"item_id\":\"A17-g0\",\"method\":\"event-kernel-0.1.0\",\"n_states\":4,\"new_primitive\":false,\"plan_hash\":\"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\",\"probabilities\":[[{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"}],[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],[{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"}]],\"role\":\"control\",\"round_id\":\"atlas-017\",\"row_sums\":[2,2,2,2],\"spec_hash\":\"86b550aa339520da6d4a6f6ab7ea36611d8eb5b63a2d9c219c436316c1d36532\",\"status\":\"complete\",\"type\":\"event_kernel\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-f80314f9",
+        "path": "relational-complexity/results/atlas-017/items/A17-g0/status.json",
+        "ref": "sha256:2c691a4634fb10699c2fe8486f9f9fc32c7a970b54c7769eeeec230302f25c28"
+      },
+      "content": "{\"item_id\": \"A17-g0\", \"plan_hash\": \"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-766122b2",
+        "path": "relational-complexity/results/atlas-017/items/A17-g1/receipt.json",
+        "ref": "sha256:d072fd0dfbb40328b802b8a1a1e048a8d65c91e6541b64aac4f74ea9f15e771f"
+      },
+      "content": "{\"item_id\": \"A17-g1\", \"plan_hash\": \"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\", \"result_sha256\": \"54c1f63ec7607dc854b84c586f1d758b0274d4bdc539800b4cfe8656a97224c4\", \"spec_hash\": \"50e2737a3e69dbf9e764464bac8f3378c6cd8f02bd5b1ee13552e09bb83f8fd1\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-6923f80c",
+        "path": "relational-complexity/results/atlas-017/items/A17-g1/result.json",
+        "ref": "sha256:54c1f63ec7607dc854b84c586f1d758b0274d4bdc539800b4cfe8656a97224c4"
+      },
+      "content": "{\"aggregated_weights\":[[0,1,0,1],[1,0,1,0],[0,1,0,1],[1,0,1,0]],\"bit_width\":2,\"catalogue\":null,\"clock\":\"one_declared_event\",\"completions\":[\"normalised_events\",\"normalised_events\",\"normalised_events\",\"normalised_events\"],\"elapsed_s\":6e-05,\"enabled_event_counts\":[2,2,2,2],\"engine_version\":\"rrc-0.4.0\",\"event_count\":8,\"family\":\"joint_and_toggle\",\"halt_self_loop_is_event\":false,\"item_id\":\"A17-g1\",\"method\":\"event-kernel-0.1.0\",\"n_states\":4,\"new_primitive\":false,\"plan_hash\":\"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\",\"probabilities\":[[{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"}],[{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"}]],\"role\":\"comparison\",\"round_id\":\"atlas-017\",\"row_sums\":[2,2,2,2],\"spec_hash\":\"50e2737a3e69dbf9e764464bac8f3378c6cd8f02bd5b1ee13552e09bb83f8fd1\",\"status\":\"complete\",\"type\":\"event_kernel\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-b797aefd",
+        "path": "relational-complexity/results/atlas-017/items/A17-g1/status.json",
+        "ref": "sha256:415ed96556204ab783d76ea7d2cb5e18addeb4178da288ff84a35ce1d8311393"
+      },
+      "content": "{\"item_id\": \"A17-g1\", \"plan_hash\": \"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-876bf4c8",
+        "path": "relational-complexity/results/atlas-017/items/A17-halt/receipt.json",
+        "ref": "sha256:0c76fcf1bee2531efc147d4e8baf36afa63a4e03630da60ce0940170ecc7fdf7"
+      },
+      "content": "{\"item_id\": \"A17-halt\", \"plan_hash\": \"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\", \"result_sha256\": \"4115281ceabf923ca1b038b799a3f4fef45595c9ce98374e0ead098dc2a97fbc\", \"spec_hash\": \"a5ab55fa500991e10a76d4fa63a0263badc8547f8ef9cf2cf2e416c212e30cb3\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-029e1593",
+        "path": "relational-complexity/results/atlas-017/items/A17-halt/result.json",
+        "ref": "sha256:4115281ceabf923ca1b038b799a3f4fef45595c9ce98374e0ead098dc2a97fbc"
+      },
+      "content": "{\"aggregated_weights\":[[0]],\"catalogue\":null,\"clock\":\"one_declared_event\",\"completions\":[\"halt_self_loop\"],\"elapsed_s\":2.1e-05,\"enabled_event_counts\":[0],\"engine_version\":\"rrc-0.4.0\",\"event_count\":0,\"family\":\"empty_catalogue\",\"halt_self_loop_is_event\":false,\"item_id\":\"A17-halt\",\"method\":\"event-kernel-0.1.0\",\"n_states\":1,\"new_primitive\":false,\"plan_hash\":\"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\",\"probabilities\":[[{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"}]],\"role\":\"control\",\"round_id\":\"atlas-017\",\"row_sums\":[0],\"spec_hash\":\"a5ab55fa500991e10a76d4fa63a0263badc8547f8ef9cf2cf2e416c212e30cb3\",\"status\":\"complete\",\"type\":\"event_kernel\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-20a8153f",
+        "path": "relational-complexity/results/atlas-017/items/A17-halt/status.json",
+        "ref": "sha256:4db723c481e67a299406bd874d8985748ae441883600d3c52e7068ae6575a296"
+      },
+      "content": "{\"item_id\": \"A17-halt\", \"plan_hash\": \"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-4175219c",
+        "path": "relational-complexity/results/atlas-017/items/A17-identified/receipt.json",
+        "ref": "sha256:107b0936673f99e98e82b232b7e36ed1ea349053657a0e51acc1ef313b244bbb"
+      },
+      "content": "{\"item_id\": \"A17-identified\", \"plan_hash\": \"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\", \"result_sha256\": \"eed67467f4102b6c466b1ac1786005de0154d942da26a9b7cd53a04d38b12db9\", \"spec_hash\": \"9c80a2bcd923de637d07264fba15ca39ccc941afa7bbbf67ff213b0c9af53fcb\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-1d3be4d1",
+        "path": "relational-complexity/results/atlas-017/items/A17-identified/result.json",
+        "ref": "sha256:eed67467f4102b6c466b1ac1786005de0154d942da26a9b7cd53a04d38b12db9"
+      },
+      "content": "{\"aggregated_weights\":[[0,1],[1,0]],\"bit_width\":1,\"catalogue\":null,\"clock\":\"one_declared_event\",\"completions\":[\"normalised_events\",\"normalised_events\"],\"elapsed_s\":3.9e-05,\"enabled_event_counts\":[1,1],\"engine_version\":\"rrc-0.4.0\",\"event_count\":2,\"family\":\"identified_interface\",\"halt_self_loop_is_event\":false,\"item_id\":\"A17-identified\",\"method\":\"event-kernel-0.1.0\",\"n_states\":2,\"new_primitive\":false,\"plan_hash\":\"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\",\"probabilities\":[[{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"}],[{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"},{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"}]],\"role\":\"control\",\"round_id\":\"atlas-017\",\"row_sums\":[1,1],\"spec_hash\":\"9c80a2bcd923de637d07264fba15ca39ccc941afa7bbbf67ff213b0c9af53fcb\",\"status\":\"complete\",\"type\":\"event_kernel\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-e8262e63",
+        "path": "relational-complexity/results/atlas-017/items/A17-identified/status.json",
+        "ref": "sha256:7dc52d8fb647d439bcef97b40eeb2117771836fea99c52e20eb4a27221c1807c"
+      },
+      "content": "{\"item_id\": \"A17-identified\", \"plan_hash\": \"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-5f56f444",
+        "path": "relational-complexity/results/atlas-017/items/A17-noop/receipt.json",
+        "ref": "sha256:384670f1a36ffc7c3e60674365a5521ccbe72eac222de680d27d3c932d4a8e17"
+      },
+      "content": "{\"item_id\": \"A17-noop\", \"plan_hash\": \"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\", \"result_sha256\": \"5071403484a1f36883ca000fb735a23905a714954061088bf677f330332a3627\", \"spec_hash\": \"53cce0c3703a5c735f8bd800f105849a48b1ddf27f4adbdf8848796ad1f178a5\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-017-items-a1-42a9dfc1",
+        "path": "relational-complexity/results/atlas-017/items/A17-noop/result.json",
+        "ref": "sha256:5071403484a1f36883ca000fb735a23905a714954061088bf677f330332a3627"
+      },
+      "content": "{\"aggregated_weights\":[[1]],\"catalogue\":null,\"clock\":\"one_declared_event\",\"completions\":[\"noop_event\"],\"elapsed_s\":2.3e-05,\"enabled_event_counts\":[1],\"engine_version\":\"rrc-0.4.0\",\"event_count\":1,\"family\":\"noop_event\",\"halt_self_loop_is_event\":false,\"item_id\":\"A17-noop\",\"method\":\"event-kernel-0.1.0\",\"n_states\":1,\"new_primitive\":false,\"plan_hash\":\"61b502a25bf1689d9e7f7c6bac461fffed24983cde804c7ec6ba785c8b4ce143\",\"probabilities\":[[{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"}]],\"role\":\"comparison\",\"round_id\":\"atlas-017\",\"row_sums\":[1],\"spec_hash\":\"53cce0c3703a5c735f8bd800f105849a48b1ddf27f4adbdf8848796ad1f178a5\",\"status\":\"complete\",\"type\":\"event_kernel\"}\n"
+    }
+  ],
+  "base_revision": "05219008f0bea9be22c9c38d03de0c122773d6654752d1801d9d1275820edd6f",
+  "origin": "ai-inferred",
+  "author": "agent",
+  "state": "proposed",
+  "id": "proposal-60288d2c9cf8e001bd5a1153"
+}
