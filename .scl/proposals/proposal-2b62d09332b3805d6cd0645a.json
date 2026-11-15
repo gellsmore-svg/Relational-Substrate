@@ -1,0 +1,910 @@
+{
+  "title": "Capture product documents whole (24/37)",
+  "changes": [
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-d9593c57",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-02-pro-present/status.json",
+        "ref": "sha256:12d0d3db78c6e68e9e7f4527abe944c3a2f0f7cf16d69f62e4be334822734f3b"
+      },
+      "content": "{\"item_id\": \"A-N3-02-pro-present\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-9f808f8c",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-03-mul-present/receipt.json",
+        "ref": "sha256:52da72527a3e3eba9fe0035e721e7bea6f99a9b1165acc5370d16dcf025b3a55"
+      },
+      "content": "{\"item_id\": \"A-N3-03-mul-present\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"c2f440e55a44c7e4f4604488ae8742a401c22cd5f9321a7adaa1b87254bfeeec\", \"spec_hash\": \"a4babc82cbc013e0d36834d0a215b3bc9c8e5321a473571400a555726e2f482e\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-82fb259b",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-03-mul-present/result.json",
+        "ref": "sha256:c2f440e55a44c7e4f4604488ae8742a401c22cd5f9321a7adaa1b87254bfeeec"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"multiply\",\"event\":[0,1],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":0,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":1,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[1,2]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000631,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C02\",\"IDEA-L05\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N3-03-mul-present\",\"method\":\"exact_weight_table\",\"n\":3,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"2\",\"float\":1.5,\"num\":\"3\"},\"mean_present_edges\":{\"den\":\"3\",\"float\":1.6666666666666667,\"num\":\"5\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,3,6,6,3,3,6,6]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":24,\"role\":\"single_multiply\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"a4babc82cbc013e0d36834d0a215b3bc9c8e5321a473571400a555726e2f482e\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"a14bf1210fb719fbab5c6af3b0db7c597a24bf2419dc3e3caddd439686adcdde\",\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-8475ffb0",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-03-mul-present/status.json",
+        "ref": "sha256:586fa411bb1910e49b3184048b6b4c9ec2e261f37215ff1da095d672865ff0ab"
+      },
+      "content": "{\"item_id\": \"A-N3-03-mul-present\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-ee1abbf0",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-04-mul-absent/receipt.json",
+        "ref": "sha256:b334267dff8fd7512fa6c56b9e2e2d94baa3a56e59b7c00205b8a41eba781901"
+      },
+      "content": "{\"item_id\": \"A-N3-04-mul-absent\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"55628da9539a0599fc9d592e52acf120a5b8d03a9da3a638920d073e4e3b97ae\", \"spec_hash\": \"59b094dd8895ee50f614c078efe403532d46b81f89517de5c2b0431968d6a9d3\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-ae45a078",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-04-mul-absent/result.json",
+        "ref": "sha256:55628da9539a0599fc9d592e52acf120a5b8d03a9da3a638920d073e4e3b97ae"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"multiply\",\"event\":[0,1],\"factor\":4,\"literals\":1,\"polarity\":\"absent\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":0,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":1,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[1,2]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.00056,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C03\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N3-04-mul-absent\",\"method\":\"exact_weight_table\",\"n\":3,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"3\",\"float\":0.3333333333333333,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"4\",\"float\":1.75,\"num\":\"7\"},\"mean_present_edges\":{\"den\":\"3\",\"float\":1.3333333333333333,\"num\":\"4\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[6,6,3,3,6,6,3,3]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":24,\"role\":\"polarity_contrast\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"59b094dd8895ee50f614c078efe403532d46b81f89517de5c2b0431968d6a9d3\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"e0b4ddcfa08e04a3aef230c3531a043fd5840cb96ff14c0a05dd5594bea8b8ce\",\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-6bf1daf9",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-04-mul-absent/status.json",
+        "ref": "sha256:34cfd3b1791768fe4d25f1d0bef7f53e0c270cea399f130bfc024bcdefe19095"
+      },
+      "content": "{\"item_id\": \"A-N3-04-mul-absent\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-bca86323",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-05-pro-form/receipt.json",
+        "ref": "sha256:6cf3e5c53f4b2dd25ab40ae035a7910fc882f8aa76b911d275cacdf2fe77dbbc"
+      },
+      "content": "{\"item_id\": \"A-N3-05-pro-form\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"a9e37442ceec832a248a679ec308202c8a364cd9fd2c30131facaa1555af64f2\", \"spec_hash\": \"1e8ecf0546679a8ca710da7da0c1e94fabe1e326d30b0adfeead6b1cdc93cccb\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-9dd9e05c",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-05-pro-form/result.json",
+        "ref": "sha256:a9e37442ceec832a248a679ec308202c8a364cd9fd2c30131facaa1555af64f2"
+      },
+      "content": "{\"action_bit_independent\":false,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"form\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":2,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":0,\"max_prohibit_literals\":2,\"removal_sensitive_count\":1,\"states_with_zero_active\":6,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.75,\"num\":\"3\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[1,2]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001821,\"empirical_bit_independent\":false,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N3-05-pro-form\",\"method\":\"exact_weight_table\",\"n\":3,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"cross_check\":\"second_start_and_dense_solve_when_states_fit\",\"dense_l1\":3.40470707183016e-13,\"distribution\":[0.17307692307686184,0.11538461538463404,0.15384615384612993,0.057692307692374156,0.17307692307686184,0.11538461538463404,0.15384615384612993,0.057692307692374156],\"edge_presence\":[0.3461538461540164,0.42307692307700817,0.5],\"empty_iterations\":33,\"empty_residual\":8.009773400097231e-13,\"mean_components\":1.7884615384613494,\"mean_present_edges\":1.2692307692310247,\"method\":\"stationary_balanced\",\"numerical_limitation\":\"float64 stationary_balanced, cross-checked\",\"reason\":\"state_dependent_weights_unique_class\",\"start_l1\":2.562949852347174e-13,\"status\":\"unique\",\"uniform_iterations\":33,\"uniform_residual\":4.570788192381769e-13},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":22,\"role\":\"direction_form\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":true},\"spec_hash\":\"1e8ecf0546679a8ca710da7da0c1e94fabe1e326d30b0adfeead6b1cdc93cccb\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"7931c712431e7da64ae3579542285a2196ad260992d59f4fe4265b94ca0433d8\",\"zero_cells\":2}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-7008cb9a",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-05-pro-form/status.json",
+        "ref": "sha256:d66606ad6de0f770ac9b1425c29b24b2a01efea7708c4385fef7a5024e063a99"
+      },
+      "content": "{\"item_id\": \"A-N3-05-pro-form\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-b75d2053",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-06-pro-dissolve/receipt.json",
+        "ref": "sha256:215a7ad1bc0539e0f059326c282007a47a9561c64de8dbb705ddf2507f13b1fa"
+      },
+      "content": "{\"item_id\": \"A-N3-06-pro-dissolve\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"c00ef9d786121ebc81290e76542d954a4fae803a03edffd0f555c970c0f8af19\", \"spec_hash\": \"6eebcf0e9df7a983392301ff987037e4fe2f5ec42fd1c0e798197160f26e6b0e\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-30a1c5d6",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-06-pro-dissolve/result.json",
+        "ref": "sha256:c00ef9d786121ebc81290e76542d954a4fae803a03edffd0f555c970c0f8af19"
+      },
+      "content": "{\"action_bit_independent\":false,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"dissolve\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":2,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":0,\"max_prohibit_literals\":2,\"removal_sensitive_count\":1,\"states_with_zero_active\":6,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.75,\"num\":\"3\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[1,2]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.00192,\"empirical_bit_independent\":false,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N3-06-pro-dissolve\",\"method\":\"exact_weight_table\",\"n\":3,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"cross_check\":\"second_start_and_dense_solve_when_states_fit\",\"dense_l1\":3.4052621833424723e-13,\"distribution\":[0.11538461538463404,0.17307692307686184,0.057692307692374156,0.15384615384612993,0.11538461538463404,0.17307692307686184,0.057692307692374156,0.15384615384612993],\"edge_presence\":[0.6538461538459835,0.42307692307700817,0.5],\"empty_iterations\":36,\"empty_residual\":4.4429737666717983e-13,\"mean_components\":1.5769230769231382,\"mean_present_edges\":1.5769230769229918,\"method\":\"stationary_balanced\",\"numerical_limitation\":\"float64 stationary_balanced, cross-checked\",\"reason\":\"state_dependent_weights_unique_class\",\"start_l1\":1.329422683049586e-13,\"status\":\"unique\",\"uniform_iterations\":33,\"uniform_residual\":4.570788192381769e-13},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":22,\"role\":\"direction_dissolve\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":true},\"spec_hash\":\"6eebcf0e9df7a983392301ff987037e4fe2f5ec42fd1c0e798197160f26e6b0e\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"e855bbd4fb6c12fd5ad974991496df8a76e016006389c881ba1825fe900e8dc3\",\"zero_cells\":2}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-ef05b1cc",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-06-pro-dissolve/status.json",
+        "ref": "sha256:063bfdf6f462bacdf7982e10ac35e09a00c5cd5bad8109a8d3c8533826c990f3"
+      },
+      "content": "{\"item_id\": \"A-N3-06-pro-dissolve\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-9ea8470f",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-07-two-mul-same/receipt.json",
+        "ref": "sha256:6cde180925a2c15195c3d480e01f57741fb0d6bfca5a165f85df486ae354e9e8"
+      },
+      "content": "{\"item_id\": \"A-N3-07-two-mul-same\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"924ce0ec11a0ea91c896259d30396cffde08f421fc5c4d1bad5e75c8c09802a6\", \"spec_hash\": \"f91c334b386ce36f7a276e20466f65b5fb6c43f26caff70b6a3c3814141dfb1d\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-4ca0e7ce",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-07-two-mul-same/result.json",
+        "ref": "sha256:924ce0ec11a0ea91c896259d30396cffde08f421fc5c4d1bad5e75c8c09802a6"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":1,\"effective_cardinality\":2,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"multiply\",\"event\":[0,1],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2},{\"action\":\"either\",\"condition\":[1,2],\"effect\":\"multiply\",\"event\":[0,1],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":2,\"j_prohibit\":0,\"max_active_in_state\":2,\"max_constraints_on_one_event\":2,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":2,\"states_with_zero_active\":2,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.25,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[1,2]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000659,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C05\",\"IDEA-C07\",\"IDEA-L02\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N3-07-two-mul-same\",\"method\":\"exact_weight_table\",\"n\":3,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"11\",\"float\":0.7272727272727273,\"num\":\"8\"},{\"den\":\"11\",\"float\":0.7272727272727273,\"num\":\"8\"}],\"mean_components\":{\"den\":\"22\",\"float\":1.3181818181818181,\"num\":\"29\"},\"mean_present_edges\":{\"den\":\"22\",\"float\":1.9545454545454546,\"num\":\"43\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,3,6,6,6,6,18,18]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":24,\"role\":\"same_event\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"f91c334b386ce36f7a276e20466f65b5fb6c43f26caff70b6a3c3814141dfb1d\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"d8cc723393376a4d5440935198ee76aa87d0c9861ef93ec8e39478a519ee9772\",\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-47d9151e",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-07-two-mul-same/status.json",
+        "ref": "sha256:2ed980f232c52032894bfa0bb8aebd943a93ddf692bef5cf659b3501d0d85cd7"
+      },
+      "content": "{\"item_id\": \"A-N3-07-two-mul-same\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-565d9a62",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-08-pro-and-mul-same/receipt.json",
+        "ref": "sha256:799cc0922b2e43bf7f730548131550a62ad4957df2dbaab2f4f5ba7164e0b712"
+      },
+      "content": "{\"item_id\": \"A-N3-08-pro-and-mul-same\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"1bef36ff0c6d319bdb83bf747a849818ff2b59bbe08146b12ee77df77a054eb5\", \"spec_hash\": \"a216b5232303dd03094aa756aebd375984eb9c48fd916b7ca06f0899ffed2fc3\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-52fcd014",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-08-pro-and-mul-same/result.json",
+        "ref": "sha256:1bef36ff0c6d319bdb83bf747a849818ff2b59bbe08146b12ee77df77a054eb5"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"},{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"multiply\",\"event\":[0,1],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":1,\"max_active_in_state\":2,\"max_constraints_on_one_event\":2,\"max_positive_k\":2,\"max_prohibit_literals\":1,\"removal_sensitive_count\":1,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[1,2]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000573,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C05\",\"IDEA-C07\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N3-08-pro-and-mul-same\",\"method\":\"exact_weight_table\",\"n\":3,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"5\",\"float\":0.4,\"num\":\"2\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"10\",\"float\":1.7,\"num\":\"17\"},\"mean_present_edges\":{\"den\":\"5\",\"float\":1.4,\"num\":\"7\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,3,2,2,3,3,2,2]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":20,\"role\":\"same_event\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"a216b5232303dd03094aa756aebd375984eb9c48fd916b7ca06f0899ffed2fc3\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"d65a9800e618e62c49e0199f0d5cac3ca201448067180dbbbe4139a641958007\",\"zero_cells\":4}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-539a66b2",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-08-pro-and-mul-same/status.json",
+        "ref": "sha256:b757eaf4692e53ec7537eb3785c2519d29a877391c65f1d9d5ad1bd8597e8020"
+      },
+      "content": "{\"item_id\": \"A-N3-08-pro-and-mul-same\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-48ddbba9",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-09-two-events/receipt.json",
+        "ref": "sha256:85b170bd659a0d85e63f05e819b85c1fb672e14e0989e032d70be74517c3c658"
+      },
+      "content": "{\"item_id\": \"A-N3-09-two-events\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"8507961485f408eefc52c21968fd17de00f82f1e81b04510af430fbe3db373ea\", \"spec_hash\": \"64e326d6bb72ad8d7ace61befeaa72bbbfc18befa8c97b5fe5a17f457ab82969\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-3d598eeb",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-09-two-events/result.json",
+        "ref": "sha256:8507961485f408eefc52c21968fd17de00f82f1e81b04510af430fbe3db373ea"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":2,\"effective_cardinality\":2,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"},{\"action\":\"either\",\"condition\":[0,1],\"effect\":\"multiply\",\"event\":[1,2],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":1,\"max_active_in_state\":2,\"max_constraints_on_one_event\":1,\"max_positive_k\":2,\"max_prohibit_literals\":1,\"removal_sensitive_count\":2,\"states_with_zero_active\":2,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.25,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[1,2]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000739,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C06\",\"IDEA-L02\",\"IDEA-L07\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":2,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N3-09-two-events\",\"method\":\"exact_weight_table\",\"n\":3,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"16\",\"float\":0.6875,\"num\":\"11\"},{\"den\":\"16\",\"float\":0.4375,\"num\":\"7\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"32\",\"float\":1.53125,\"num\":\"49\"},\"mean_present_edges\":{\"den\":\"8\",\"float\":1.625,\"num\":\"13\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,6,2,5,3,6,2,5]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":20,\"role\":\"two_events\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"64e326d6bb72ad8d7ace61befeaa72bbbfc18befa8c97b5fe5a17f457ab82969\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"e8091e8e3b82a16f7ebf2b5cc20f96aeacc7fa8f33f27d12efac4c75a8636962\",\"zero_cells\":4}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-d15221ab",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-09-two-events/status.json",
+        "ref": "sha256:cd8c7ccd0730ccf862fc36ffba85f915a5bb11707d9e997c87c242e976e9c497"
+      },
+      "content": "{\"item_id\": \"A-N3-09-two-events\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-67fd3c7b",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-10-three-mix/receipt.json",
+        "ref": "sha256:64baf1debf3f4ff167862883226b03e9a129ab564c2a7bbf1898bb633a2d42ba"
+      },
+      "content": "{\"item_id\": \"A-N3-10-three-mix\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"a5acc2de22fdb367a8544678c8ba0a901d108b44aae4dcf5f670d9d60d5a4d10\", \"spec_hash\": \"66efe424d00122f39c78218363131a5dfb1355bc8d4258493282057509247f19\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-29d13f6e",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-10-three-mix/result.json",
+        "ref": "sha256:a5acc2de22fdb367a8544678c8ba0a901d108b44aae4dcf5f670d9d60d5a4d10"
+      },
+      "content": "{\"action_bit_independent\":false,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":3,\"distinct_events\":3,\"effective_cardinality\":3,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"},{\"action\":\"either\",\"condition\":[0,1],\"effect\":\"multiply\",\"event\":[1,2],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2},{\"action\":\"form\",\"condition\":[1,2],\"effect\":\"prohibit\",\"event\":[0,2],\"literals\":2,\"polarity\":\"present\"}],\"j_positive\":1,\"j_prohibit\":2,\"max_active_in_state\":2,\"max_constraints_on_one_event\":1,\"max_positive_k\":2,\"max_prohibit_literals\":2,\"removal_sensitive_count\":3,\"states_with_zero_active\":1,\"zero_active_fraction\":{\"den\":\"8\",\"float\":0.125,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[1,2]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.004144,\"empirical_bit_independent\":false,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C06\",\"IDEA-L03\",\"IDEA-L07\"],\"imposed_rule_dependency\":{\"has_cycle\":true,\"longest_simple_path_edges\":2,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N3-10-three-mix\",\"method\":\"exact_weight_table\",\"n\":3,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"cross_check\":\"second_start_and_dense_solve_when_states_fit\",\"dense_l1\":3.2489046175587788e-12,\"distribution\":[0.11873092019236782,0.2531617967729064,0.05276929786338559,0.1172045355421312,0.1003052769301419,0.23767989533375422,0.026384648931746697,0.09376362843356612],\"edge_presence\":[0.7018098560823579,0.2901221107708296,0.45813344962920893],\"empty_iterations\":110,\"empty_residual\":8.460732114912162e-13,\"mean_components\":1.6436982119511696,\"mean_present_edges\":1.4500654164823965,\"method\":\"stationary_balanced\",\"numerical_limitation\":\"float64 stationary_balanced, cross-checked\",\"reason\":\"state_dependent_weights_unique_class\",\"start_l1\":4.5322079422760453e-13,\"status\":\"unique\",\"uniform_iterations\":103,\"uniform_residual\":8.789288741262169e-13},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":18,\"role\":\"three_constraints\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":true},\"spec_hash\":\"66efe424d00122f39c78218363131a5dfb1355bc8d4258493282057509247f19\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"2124de9a7d11c08fc3c58abc2e1981c7b60344dd06bad17e6b39499ea738dfc5\",\"zero_cells\":6}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-79238fe5",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-10-three-mix/status.json",
+        "ref": "sha256:2ba6e89644c1cdfae33fda394f888720c1082752d841e4d6e921617ed696ce82"
+      },
+      "content": "{\"item_id\": \"A-N3-10-three-mix\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-6a3af949",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-11-duplicate-pro/receipt.json",
+        "ref": "sha256:7f35b6dcea8a9b2135b2725dd0dfc75fbc401bdc11aa55fbb1a3dfea69dd880e"
+      },
+      "content": "{\"item_id\": \"A-N3-11-duplicate-pro\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"aa83e7ffd5520b0d92c0325f99735341c184c0b1b0a8ad90e626bf63fa7dba59\", \"spec_hash\": \"be96c42d4fdc38ceb5d1af0a09c383467d2a6173b1a33735e57e47d805729010\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-d3f77cea",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-11-duplicate-pro/result.json",
+        "ref": "sha256:aa83e7ffd5520b0d92c0325f99735341c184c0b1b0a8ad90e626bf63fa7dba59"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"},{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":2,\"max_active_in_state\":2,\"max_constraints_on_one_event\":2,\"max_positive_k\":0,\"max_prohibit_literals\":1,\"removal_sensitive_count\":0,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[1,2]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000651,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C05\",\"IDEA-C07\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N3-11-duplicate-pro\",\"method\":\"exact_weight_table\",\"n\":3,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"5\",\"float\":0.4,\"num\":\"2\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"10\",\"float\":1.7,\"num\":\"17\"},\"mean_present_edges\":{\"den\":\"5\",\"float\":1.4,\"num\":\"7\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,3,2,2,3,3,2,2]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":20,\"role\":\"duplicate_text\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"be96c42d4fdc38ceb5d1af0a09c383467d2a6173b1a33735e57e47d805729010\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"d65a9800e618e62c49e0199f0d5cac3ca201448067180dbbbe4139a641958007\",\"zero_cells\":4}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-7bbde8ad",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-11-duplicate-pro/status.json",
+        "ref": "sha256:421aaefc2a25d811c39658e2e72a4c8b04c05671c3dbc1c27be7f510805b7238"
+      },
+      "content": "{\"item_id\": \"A-N3-11-duplicate-pro\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-ae0dada0",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-12-pro-both-polarities/receipt.json",
+        "ref": "sha256:c648916350b98d6ec6e399d01ba41b517111c0893a7d55404bbd70c43aa6b943"
+      },
+      "content": "{\"item_id\": \"A-N3-12-pro-both-polarities\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"48b97e84d0374a2063e170a1413fc5b01e606953e37084d154a72bf08451c17f\", \"spec_hash\": \"bb70da2603e7a3e572966cf216171707612d5cb097ebc1a6a8af3556c1931f2b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-b5e092fb",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-12-pro-both-polarities/result.json",
+        "ref": "sha256:48b97e84d0374a2063e170a1413fc5b01e606953e37084d154a72bf08451c17f"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":1,\"effective_cardinality\":2,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"},{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"absent\"}],\"j_positive\":0,\"j_prohibit\":2,\"max_active_in_state\":1,\"max_constraints_on_one_event\":2,\"max_positive_k\":0,\"max_prohibit_literals\":1,\"removal_sensitive_count\":2,\"states_with_zero_active\":0,\"zero_active_fraction\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[1,2]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":2},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000669,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C01\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N3-12-pro-both-polarities\",\"method\":\"exact_weight_table\",\"n\":3,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"method\":null,\"reason\":\"recurrent_classes\",\"recurrent_classes\":2,\"status\":\"not_unique\"},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":16,\"role\":\"both_polarities\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"bb70da2603e7a3e572966cf216171707612d5cb097ebc1a6a8af3556c1931f2b\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"3d7fffebb23251bf31340aa8c2d5c4d5c92e4c0de41813a90f4a51f064a6620f\",\"zero_cells\":8}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-3fe6202a",
+        "path": "relational-complexity/results/atlas-001/items/A-N3-12-pro-both-polarities/status.json",
+        "ref": "sha256:012e5859ecf571d6305ed4a3034f834bd96200eafd0e03de8b71459893ae57e2"
+      },
+      "content": "{\"item_id\": \"A-N3-12-pro-both-polarities\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-cfe64753",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-01-base/receipt.json",
+        "ref": "sha256:00c5df51a6e8b7f17ed6de7763a0ccf4bcf9700ecd41eda40288b8763968aec7"
+      },
+      "content": "{\"item_id\": \"A-N4-01-base\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"81f3b93808d56b6b40dfd404abbcbd48de414402df222fef6d46263f5100b43c\", \"spec_hash\": \"d0027432487b869248f72603ed24cf580445b4c401f7368a86e39157a0afc989\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-b9ff7963",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-01-base/result.json",
+        "ref": "sha256:81f3b93808d56b6b40dfd404abbcbd48de414402df222fef6d46263f5100b43c"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":0,\"distinct_events\":0,\"effective_cardinality\":0,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[],\"j_positive\":0,\"j_prohibit\":0,\"max_active_in_state\":0,\"max_constraints_on_one_event\":0,\"max_positive_k\":0,\"max_prohibit_literals\":0,\"removal_sensitive_count\":0,\"states_with_zero_active\":64,\"zero_active_fraction\":{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001242,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C00\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":0,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N4-01-base\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":6,\"n_states\":64,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"32\",\"float\":1.53125,\"num\":\"49\"},\"mean_present_edges\":{\"den\":\"1\",\"float\":3.0,\"num\":\"3\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":384,\"role\":\"baseline\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"d0027432487b869248f72603ed24cf580445b4c401f7368a86e39157a0afc989\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"f3f3edefec64b621b5cddb27c53311a5b04617b7ce262e1fb1c47dd855c98d79\",\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-96ad7a7d",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-01-base/status.json",
+        "ref": "sha256:a8044c7d8e56e80bd3566de220c803e6db1193f32de2f268f8dae9db6dc894a5"
+      },
+      "content": "{\"item_id\": \"A-N4-01-base\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-5a929e8e",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-02-pro-present/receipt.json",
+        "ref": "sha256:4050556e9abdbd206d0b6dc9db0468f2e9a0c72c7eb8d6692f4703d590f1b085"
+      },
+      "content": "{\"item_id\": \"A-N4-02-pro-present\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"5ddd6977ee19cae2a1723f18dc8ca5e870a139dc9ebb132536276d0ea2c13115\", \"spec_hash\": \"572a69246134869bab08e9f824f4d15fc7d2d001a516c8d5c521db16d2cc085b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-b2210150",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-02-pro-present/result.json",
+        "ref": "sha256:5ddd6977ee19cae2a1723f18dc8ca5e870a139dc9ebb132536276d0ea2c13115"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":0,\"max_prohibit_literals\":1,\"removal_sensitive_count\":1,\"states_with_zero_active\":32,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001543,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C01\",\"IDEA-L05\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N4-02-pro-present\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":6,\"n_states\":64,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"11\",\"float\":0.45454545454545453,\"num\":\"5\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"352\",\"float\":1.5539772727272727,\"num\":\"547\"},\"mean_present_edges\":{\"den\":\"22\",\"float\":2.9545454545454546,\"num\":\"65\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":352,\"role\":\"single_prohibit\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"572a69246134869bab08e9f824f4d15fc7d2d001a516c8d5c521db16d2cc085b\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"3af2663c70e85ce96afbb465764d22199368d42ef5d2c5e3eabf71abc814f002\",\"zero_cells\":32}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-9dc68946",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-02-pro-present/status.json",
+        "ref": "sha256:bd345fd857595d95c5ae87999510240a86cc0536e453efef88312b87c0ffee4a"
+      },
+      "content": "{\"item_id\": \"A-N4-02-pro-present\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-84a0e18c",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-03-mul-present/receipt.json",
+        "ref": "sha256:f07237f80bdac1881a05020cc6b8341a78ecf85c933c0a1b3e122e4e57c36efa"
+      },
+      "content": "{\"item_id\": \"A-N4-03-mul-present\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"2dc3c8062cedc29e286301841055a9e37233703381d0ebce549647151f6093de\", \"spec_hash\": \"c64538aa2644b48736883b967ac85b442347fcfdb8708807c5af9c40bfde748d\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-0eead4a3",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-03-mul-present/result.json",
+        "ref": "sha256:2dc3c8062cedc29e286301841055a9e37233703381d0ebce549647151f6093de"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"multiply\",\"event\":[0,1],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":0,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":1,\"states_with_zero_active\":32,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001441,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C02\",\"IDEA-L05\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N4-03-mul-present\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":6,\"n_states\":64,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"5\",\"float\":0.6,\"num\":\"3\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"160\",\"float\":1.48125,\"num\":\"237\"},\"mean_present_edges\":{\"den\":\"10\",\"float\":3.1,\"num\":\"31\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":384,\"role\":\"single_multiply\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"c64538aa2644b48736883b967ac85b442347fcfdb8708807c5af9c40bfde748d\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"890bb91c7a1c2ba805ed42832e68e85faaf6a92374ddbd080cb0d470307a6edf\",\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-6e6e0363",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-03-mul-present/status.json",
+        "ref": "sha256:6c49b8f1477397e630cebc1d127a6cf0499702b20931c46ffc5a76600c3ad9f3"
+      },
+      "content": "{\"item_id\": \"A-N4-03-mul-present\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-d3c7d470",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-04-mul-absent/receipt.json",
+        "ref": "sha256:61d28cf5cfae22dda487765dc460e2e23c3e2d2aff95b9f216d63be5a1791ba4"
+      },
+      "content": "{\"item_id\": \"A-N4-04-mul-absent\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"f88ea404b3047a14407238eec56d8d3c23ece666df3740a33a0276f317dfb463\", \"spec_hash\": \"741bbb76a52d2bd038625e1f2b20fc276ce9809978ae031823812764a282b91c\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-b6446fd8",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-04-mul-absent/result.json",
+        "ref": "sha256:f88ea404b3047a14407238eec56d8d3c23ece666df3740a33a0276f317dfb463"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"multiply\",\"event\":[0,1],\"factor\":4,\"literals\":1,\"polarity\":\"absent\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":0,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":1,\"states_with_zero_active\":32,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001422,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C03\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N4-04-mul-absent\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":6,\"n_states\":64,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"5\",\"float\":0.4,\"num\":\"2\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"160\",\"float\":1.58125,\"num\":\"253\"},\"mean_present_edges\":{\"den\":\"10\",\"float\":2.9,\"num\":\"29\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6,9,9,6,6]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":384,\"role\":\"polarity_contrast\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"741bbb76a52d2bd038625e1f2b20fc276ce9809978ae031823812764a282b91c\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"fb1d7160a888081c47292163941f3d6e65caa9e13c6ef8e4039c1d85bb5df208\",\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-2701001a",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-04-mul-absent/status.json",
+        "ref": "sha256:ed1ae9c62ebd6e543eb3d2ce8091cdb6b1dc47ea7da509ca251327f17be0c1d1"
+      },
+      "content": "{\"item_id\": \"A-N4-04-mul-absent\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-dd6ce5f5",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-05-pro-form/receipt.json",
+        "ref": "sha256:444d8c4eb0d5bb5a049c3f32a908947187f8a347817b39c8a41abf1211cc0ad5"
+      },
+      "content": "{\"item_id\": \"A-N4-05-pro-form\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"d3a60c63a754532df8b97270b90b9e2bee8ed526a4d8ac5bbe6762711c8d316f\", \"spec_hash\": \"95f531a7358a030a3d90092fcdb1128c1836cc5d2d437ab58dcc71dcc3ff67f6\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-03bf7eda",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-05-pro-form/result.json",
+        "ref": "sha256:d3a60c63a754532df8b97270b90b9e2bee8ed526a4d8ac5bbe6762711c8d316f"
+      },
+      "content": "{\"action_bit_independent\":false,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"form\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":2,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":0,\"max_prohibit_literals\":2,\"removal_sensitive_count\":1,\"states_with_zero_active\":48,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.75,\"num\":\"3\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.006263,\"empirical_bit_independent\":false,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N4-05-pro-form\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":6,\"n_states\":64,\"occupation\":{\"cross_check\":\"second_start_and_dense_solve_when_states_fit\",\"dense_l1\":2.851956518168386e-12,\"distribution\":[0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891,0.020089285714239125,0.013392857142885916,0.02232142857138607,0.006696428571488891],\"edge_presence\":[0.3214285714299969,0.4642857142859994,0.5,0.5,0.5,0.5],\"empty_iterations\":90,\"empty_residual\":8.719414079649823e-13,\"mean_components\":1.6249999999991858,\"mean_present_edges\":2.785714285715996,\"method\":\"stationary_balanced\",\"numerical_limitation\":\"float64 stationary_balanced, cross-checked\",\"reason\":\"state_dependent_weights_unique_class\",\"start_l1\":3.725951838728925e-13,\"status\":\"unique\",\"uniform_iterations\":88,\"uniform_residual\":9.699602232515758e-13},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":368,\"role\":\"direction_form\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":true},\"spec_hash\":\"95f531a7358a030a3d90092fcdb1128c1836cc5d2d437ab58dcc71dcc3ff67f6\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"9c32effcaab786abd399f58233a170e163b014145d3b97ba89cce55df2a3fa78\",\"zero_cells\":16}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-b8c74d53",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-05-pro-form/status.json",
+        "ref": "sha256:cdc2b82b5f07b0fc676a5c30ee4aa4c07c11f313b0eb18cdaa49dea87c655f74"
+      },
+      "content": "{\"item_id\": \"A-N4-05-pro-form\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-444d919b",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-06-pro-dissolve/receipt.json",
+        "ref": "sha256:4caf5bc40eb2d15a62e4f47f63e02e940020019e1493c4fbf2a54bc7bca6e629"
+      },
+      "content": "{\"item_id\": \"A-N4-06-pro-dissolve\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"083018fead3f0655a753d5f763484ff56d4b70df138d84ede1a8d095ed550194\", \"spec_hash\": \"41b5e3fb51695a4894b296676a2138407e5502357f884b44399b652bec62ff98\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-02def70b",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-06-pro-dissolve/result.json",
+        "ref": "sha256:083018fead3f0655a753d5f763484ff56d4b70df138d84ede1a8d095ed550194"
+      },
+      "content": "{\"action_bit_independent\":false,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"dissolve\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":2,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":0,\"max_prohibit_literals\":2,\"removal_sensitive_count\":1,\"states_with_zero_active\":48,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.75,\"num\":\"3\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.006296,\"empirical_bit_independent\":false,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N4-06-pro-dissolve\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":6,\"n_states\":64,\"occupation\":{\"cross_check\":\"second_start_and_dense_solve_when_states_fit\",\"dense_l1\":2.851505490064632e-12,\"distribution\":[0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607,0.013392857142885916,0.020089285714239125,0.006696428571488891,0.02232142857138607],\"edge_presence\":[0.6785714285700031,0.4642857142859994,0.5,0.5,0.5,0.5],\"empty_iterations\":95,\"empty_residual\":8.455805500240388e-13,\"mean_components\":1.4732142857148147,\"mean_present_edges\":3.1428571428560024,\"method\":\"stationary_balanced\",\"numerical_limitation\":\"float64 stationary_balanced, cross-checked\",\"reason\":\"state_dependent_weights_unique_class\",\"start_l1\":3.652841917833882e-13,\"status\":\"unique\",\"uniform_iterations\":88,\"uniform_residual\":9.699602232515758e-13},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":368,\"role\":\"direction_dissolve\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":true},\"spec_hash\":\"41b5e3fb51695a4894b296676a2138407e5502357f884b44399b652bec62ff98\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"abff493b9b73d9275d7d78e43279f7182ee065059649ae5d4329a98563945d8d\",\"zero_cells\":16}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-95faf3f2",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-06-pro-dissolve/status.json",
+        "ref": "sha256:e2d52b6d632b2cccce51932b181aab4232b5c9f51ada14b005e3e9f5155627cb"
+      },
+      "content": "{\"item_id\": \"A-N4-06-pro-dissolve\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-599a2702",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-07-two-mul-same/receipt.json",
+        "ref": "sha256:da691a9aef9520c9779997aff2288c2b92fc4d5bcc99e57cce1b5143b982abf2"
+      },
+      "content": "{\"item_id\": \"A-N4-07-two-mul-same\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"6d537006d8574560b43a0344f6363b4163ba0dad8161710116ca5b85a0e3f24f\", \"spec_hash\": \"4e07fcc41b51aebfbf3dd257e379b1c8b849d985ad178a88008dd7e048ecb166\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-043e1f44",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-07-two-mul-same/result.json",
+        "ref": "sha256:6d537006d8574560b43a0344f6363b4163ba0dad8161710116ca5b85a0e3f24f"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":1,\"effective_cardinality\":2,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"multiply\",\"event\":[0,1],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2},{\"action\":\"either\",\"condition\":[1,2],\"effect\":\"multiply\",\"event\":[0,1],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":2,\"j_prohibit\":0,\"max_active_in_state\":2,\"max_constraints_on_one_event\":2,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":2,\"states_with_zero_active\":16,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.25,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.00209,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C05\",\"IDEA-C07\",\"IDEA-L02\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N4-07-two-mul-same\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":6,\"n_states\":64,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"60\",\"float\":1.3833333333333333,\"num\":\"83\"},\"mean_present_edges\":{\"den\":\"3\",\"float\":3.3333333333333335,\"num\":\"10\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[6,6,9,9,6,6,9,9,9,9,21,21,9,9,21,21,6,6,9,9,6,6,9,9,9,9,21,21,9,9,21,21,6,6,9,9,6,6,9,9,9,9,21,21,9,9,21,21,6,6,9,9,6,6,9,9,9,9,21,21,9,9,21,21]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":384,\"role\":\"same_event\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"4e07fcc41b51aebfbf3dd257e379b1c8b849d985ad178a88008dd7e048ecb166\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"4afcd894697141cb1813663a0c58226a8ebcb5e7d762743c43ecd83c4d0c4b71\",\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-6234f2e8",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-07-two-mul-same/status.json",
+        "ref": "sha256:44c68e879f354454818a3b727d5ea314309bd75d3637a7efc31137d3c21d4cd9"
+      },
+      "content": "{\"item_id\": \"A-N4-07-two-mul-same\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-dd675339",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-08-pro-and-mul-same/receipt.json",
+        "ref": "sha256:f8031ed7cb8250afedfcd9f032f82a9be965ee648a82552f34e327aafaab88a0"
+      },
+      "content": "{\"item_id\": \"A-N4-08-pro-and-mul-same\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"5fdb619a66dc952ee31dcb667dcb63f5208e0ea1b7f2d21fb7e1e8197c3ad092\", \"spec_hash\": \"8116745f16001e3a74c7509d79e0be5ead7f25c3ee85140718fbaefb7c48b1df\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-52f55c6f",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-08-pro-and-mul-same/result.json",
+        "ref": "sha256:5fdb619a66dc952ee31dcb667dcb63f5208e0ea1b7f2d21fb7e1e8197c3ad092"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"},{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"multiply\",\"event\":[0,1],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":1,\"max_active_in_state\":2,\"max_constraints_on_one_event\":2,\"max_positive_k\":2,\"max_prohibit_literals\":1,\"removal_sensitive_count\":1,\"states_with_zero_active\":32,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001653,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C05\",\"IDEA-C07\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N4-08-pro-and-mul-same\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":6,\"n_states\":64,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"11\",\"float\":0.45454545454545453,\"num\":\"5\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"352\",\"float\":1.5539772727272727,\"num\":\"547\"},\"mean_present_edges\":{\"den\":\"22\",\"float\":2.9545454545454546,\"num\":\"65\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":352,\"role\":\"same_event\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"8116745f16001e3a74c7509d79e0be5ead7f25c3ee85140718fbaefb7c48b1df\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"3af2663c70e85ce96afbb465764d22199368d42ef5d2c5e3eabf71abc814f002\",\"zero_cells\":32}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-16539cc3",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-08-pro-and-mul-same/status.json",
+        "ref": "sha256:4188e00346fe017c2d9ceaadfe7f09ac43515686ac643fa8da4879dcc87c8415"
+      },
+      "content": "{\"item_id\": \"A-N4-08-pro-and-mul-same\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-ad17d646",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-09-two-events/receipt.json",
+        "ref": "sha256:5fa9bc358a3da1b9eebc7ebd441217cc596dfc693c3fd5ee835cbb3bd7464fda"
+      },
+      "content": "{\"item_id\": \"A-N4-09-two-events\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"e60d8d28f58eb2c9caf5d91fb9f64e898eb1841fd33b68a04883c11bdf46f720\", \"spec_hash\": \"a87e1b77bad37faa88f19eb09907e6b51f15cbc35f27a7f1d121b1a296d98faa\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-d2c3aa90",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-09-two-events/result.json",
+        "ref": "sha256:e60d8d28f58eb2c9caf5d91fb9f64e898eb1841fd33b68a04883c11bdf46f720"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":2,\"effective_cardinality\":2,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"},{\"action\":\"either\",\"condition\":[0,1],\"effect\":\"multiply\",\"event\":[1,2],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":1,\"max_active_in_state\":2,\"max_constraints_on_one_event\":1,\"max_positive_k\":2,\"max_prohibit_literals\":1,\"removal_sensitive_count\":2,\"states_with_zero_active\":16,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.25,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001982,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C06\",\"IDEA-L02\",\"IDEA-L07\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":2,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N4-09-two-events\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":6,\"n_states\":64,\"occupation\":{\"edge_presence\":[{\"den\":\"28\",\"float\":0.6071428571428571,\"num\":\"17\"},{\"den\":\"28\",\"float\":0.4642857142857143,\"num\":\"13\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"224\",\"float\":1.4955357142857142,\"num\":\"335\"},\"mean_present_edges\":{\"den\":\"14\",\"float\":3.0714285714285716,\"num\":\"43\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[6,9,5,8,6,9,5,8,6,9,5,8,6,9,5,8,6,9,5,8,6,9,5,8,6,9,5,8,6,9,5,8,6,9,5,8,6,9,5,8,6,9,5,8,6,9,5,8,6,9,5,8,6,9,5,8,6,9,5,8,6,9,5,8]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":352,\"role\":\"two_events\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"a87e1b77bad37faa88f19eb09907e6b51f15cbc35f27a7f1d121b1a296d98faa\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"acef71e6051298cc9b7b17d56422746e7fa232fa3b17301d95984a87e5e94c47\",\"zero_cells\":32}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-6f256c4a",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-09-two-events/status.json",
+        "ref": "sha256:f1006eb24b78738c43e1e8a944c41aa510b26dd0258fff8732a5d2521a2f25f0"
+      },
+      "content": "{\"item_id\": \"A-N4-09-two-events\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-859409c7",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-10-three-mix/receipt.json",
+        "ref": "sha256:568562e2423df6372e2d1a7634daa69332628fb64d82a8fe8f6f28dfe1d9917d"
+      },
+      "content": "{\"item_id\": \"A-N4-10-three-mix\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"c30e0df12c9001c5ec6dba92e65b377fbcebb7c4a5c68c085b4dd297f134a81b\", \"spec_hash\": \"4c87edbd19338b1328115724938f4f3d5af3fc006572b7559d1fa5a80de82564\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-c9360ea7",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-10-three-mix/result.json",
+        "ref": "sha256:c30e0df12c9001c5ec6dba92e65b377fbcebb7c4a5c68c085b4dd297f134a81b"
+      },
+      "content": "{\"action_bit_independent\":false,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":3,\"distinct_events\":3,\"effective_cardinality\":3,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"},{\"action\":\"either\",\"condition\":[0,1],\"effect\":\"multiply\",\"event\":[1,2],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2},{\"action\":\"form\",\"condition\":[1,2],\"effect\":\"prohibit\",\"event\":[0,2],\"literals\":2,\"polarity\":\"present\"}],\"j_positive\":1,\"j_prohibit\":2,\"max_active_in_state\":2,\"max_constraints_on_one_event\":1,\"max_positive_k\":2,\"max_prohibit_literals\":2,\"removal_sensitive_count\":3,\"states_with_zero_active\":8,\"zero_active_fraction\":{\"den\":\"8\",\"float\":0.125,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.012927,\"empirical_bit_independent\":false,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C06\",\"IDEA-L03\",\"IDEA-L07\"],\"imposed_rule_dependency\":{\"has_cycle\":true,\"longest_simple_path_edges\":2,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N4-10-three-mix\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":6,\"n_states\":64,\"occupation\":{\"cross_check\":\"second_start_and_dense_solve_when_states_fit\",\"dense_l1\":7.728478447488474e-12,\"distribution\":[0.016641198044133117,0.026612163814137994,0.009245110024589318,0.013141809290750053,0.016641198044133117,0.026612163814137994,0.009245110024589318,0.013141809290750053,0.017573349633374813,0.026650366748128484,0.004622555012322158,0.01051344743256406,0.017573349633374813,0.026650366748128484,0.004622555012322158,0.01051344743256406,0.016641198044133117,0.026612163814137994,0.009245110024589318,0.013141809290750053,0.016641198044133117,0.026612163814137994,0.009245110024589318,0.013141809290750053,0.017573349633374813,0.026650366748128484,0.004622555012322158,0.01051344743256406,0.017573349633374813,0.026650366748128484,0.004622555012322158,0.01051344743256406,0.016641198044133117,0.026612163814137994,0.009245110024589318,0.013141809290750053,0.016641198044133117,0.026612163814137994,0.009245110024589318,0.013141809290750053,0.017573349633374813,0.026650366748128484,0.004622555012322158,0.01051344743256406,0.017573349633374813,0.026650366748128484,0.004622555012322158,0.01051344743256406,0.016641198044133117,0.026612163814137994,0.009245110024589318,0.013141809290750053,0.016641198044133117,0.026612163814137994,0.009245110024589318,0.013141809290750053,0.017573349633374813,0.026650366748128484,0.004622555012322158,0.01051344743256406,0.017573349633374813,0.026650366748128484,0.004622555012322158,0.01051344743256406],\"edge_presence\":[0.6153422982846448,0.30018337408180473,0.5,0.47487775061111615,0.5,0.5],\"empty_iterations\":211,\"empty_residual\":9.181370941302447e-13,\"mean_components\":1.575206295845975,\"mean_present_edges\":2.8904034229775655,\"method\":\"stationary_balanced\",\"numerical_limitation\":\"float64 stationary_balanced, cross-checked\",\"reason\":\"state_dependent_weights_unique_class\",\"start_l1\":5.31047428253828e-13,\"status\":\"unique\",\"uniform_iterations\":195,\"uniform_residual\":9.858364125037156e-13},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":336,\"role\":\"three_constraints\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":true},\"spec_hash\":\"4c87edbd19338b1328115724938f4f3d5af3fc006572b7559d1fa5a80de82564\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"4f1d828fa6db5fe6a54af7339970331d8bea2411434aa8f89392cc51b33af5ac\",\"zero_cells\":48}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-bb78f476",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-10-three-mix/status.json",
+        "ref": "sha256:b95206c78ddf5e76cee76667e07ce3efbf5b004f9498fab202ba0d600ab9d416"
+      },
+      "content": "{\"item_id\": \"A-N4-10-three-mix\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-78e10a42",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-11-duplicate-pro/receipt.json",
+        "ref": "sha256:708f66e46cac54dc21c3453db8bdcc52bd0ec0b12ac126df856a6002220cc7ba"
+      },
+      "content": "{\"item_id\": \"A-N4-11-duplicate-pro\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"a0afb879fbb3ddd6054fc02a02ab69daa529c1d4b1c45f2223bc88a2750b5287\", \"spec_hash\": \"ad64ebbe3cc51bd7960da8e91191f7ddb3b49392be3af97dc154364366a68357\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-ebffd038",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-11-duplicate-pro/result.json",
+        "ref": "sha256:a0afb879fbb3ddd6054fc02a02ab69daa529c1d4b1c45f2223bc88a2750b5287"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"},{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":2,\"max_active_in_state\":2,\"max_constraints_on_one_event\":2,\"max_positive_k\":0,\"max_prohibit_literals\":1,\"removal_sensitive_count\":0,\"states_with_zero_active\":32,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001598,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C05\",\"IDEA-C07\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N4-11-duplicate-pro\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":6,\"n_states\":64,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"11\",\"float\":0.45454545454545453,\"num\":\"5\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"352\",\"float\":1.5539772727272727,\"num\":\"547\"},\"mean_present_edges\":{\"den\":\"22\",\"float\":2.9545454545454546,\"num\":\"65\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5,6,6,5,5]},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":352,\"role\":\"duplicate_text\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"ad64ebbe3cc51bd7960da8e91191f7ddb3b49392be3af97dc154364366a68357\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"3af2663c70e85ce96afbb465764d22199368d42ef5d2c5e3eabf71abc814f002\",\"zero_cells\":32}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-75eff3fa",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-11-duplicate-pro/status.json",
+        "ref": "sha256:5d491b5d70e23621dc779a9ec5bdf97e312145ac40d1a121cb887bd731316bd5"
+      },
+      "content": "{\"item_id\": \"A-N4-11-duplicate-pro\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-51e45064",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-12-pro-both-polarities/receipt.json",
+        "ref": "sha256:1fc115d3ef3d01c9a0c440c9e34ed91547a776f09fdc6ff13d5a817d765a90d3"
+      },
+      "content": "{\"item_id\": \"A-N4-12-pro-both-polarities\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"result_sha256\": \"86696954aabe70cdaa5d55c9c5cc9fc27739b7f1c33173b2f431849e7ecf0c29\", \"spec_hash\": \"25c14efddc3dcb53d324c6e29fc32e6cdaecb882d44e3c9ec20824fdf1638963\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-dc34cd3f",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-12-pro-both-polarities/result.json",
+        "ref": "sha256:86696954aabe70cdaa5d55c9c5cc9fc27739b7f1c33173b2f431849e7ecf0c29"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":1,\"effective_cardinality\":2,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"},{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"absent\"}],\"j_positive\":0,\"j_prohibit\":2,\"max_active_in_state\":1,\"max_constraints_on_one_event\":2,\"max_positive_k\":0,\"max_prohibit_literals\":1,\"removal_sensitive_count\":2,\"states_with_zero_active\":0,\"zero_active_fraction\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]],\"kind\":\"complete\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":2},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001737,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C01\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A-N4-12-pro-both-polarities\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":6,\"n_states\":64,\"occupation\":{\"method\":null,\"reason\":\"recurrent_classes\",\"recurrent_classes\":2,\"status\":\"not_unique\"},\"plan_hash\":\"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\",\"positive_transitions\":320,\"role\":\"both_polarities\",\"round_id\":\"atlas-001\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"25c14efddc3dcb53d324c6e29fc32e6cdaecb882d44e3c9ec20824fdf1638963\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"d7c5dc646f939b4a58dbf910e558740f175cd6478129de284719d480312fe3b8\",\"zero_cells\":64}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-items-a-4e6a84fb",
+        "path": "relational-complexity/results/atlas-001/items/A-N4-12-pro-both-polarities/status.json",
+        "ref": "sha256:cae3589492aa059205ed4a9d6081ebd4d51c9a679d07750043a67de7edfc9f50"
+      },
+      "content": "{\"item_id\": \"A-N4-12-pro-both-polarities\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-001-manifest-c55dbf95",
+        "path": "relational-complexity/results/atlas-001/manifest.json",
+        "ref": "sha256:776ca2041631ae129d953d42b3267193620384191e3167bb95a1c338f746f31f"
+      },
+      "content": "{\"engine_version\": \"rrc-0.2.0\", \"plan_hash\": \"646aa4fd2e3f45ac1dc4e1dbd11db5aff108da77e4818199cd5432b3c00bea7f\", \"round_id\": \"atlas-001\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-edcfe476",
+        "path": "relational-complexity/results/atlas-002/items/A2-branch-base/receipt.json",
+        "ref": "sha256:0bcde1ef322fad8be29c0c8cc4d0a8914c713d05631bb0da3a1f60781851cdbb"
+      },
+      "content": "{\"item_id\": \"A2-branch-base\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"result_sha256\": \"c37ead4105618ad6e2e16819c5e768cafe1f878ea67a1ff3bc033dbbc2e5ac5a\", \"spec_hash\": \"0d3c9ac07c14e4fd1df0dff61aa4304f3d4db9d0c09cee3f75f1aff77b57631b\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-1ebc0d13",
+        "path": "relational-complexity/results/atlas-002/items/A2-branch-base/result.json",
+        "ref": "sha256:c37ead4105618ad6e2e16819c5e768cafe1f878ea67a1ff3bc033dbbc2e5ac5a"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":0,\"distinct_events\":0,\"effective_cardinality\":0,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[],\"j_positive\":0,\"j_prohibit\":0,\"max_active_in_state\":0,\"max_constraints_on_one_event\":0,\"max_positive_k\":0,\"max_prohibit_literals\":0,\"removal_sensitive_count\":0,\"states_with_zero_active\":8,\"zero_active_fraction\":{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.00046,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-R01\",\"IDEA-R03\",\"IDEA-C00\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":0,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A2-branch-base\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"2\",\"float\":2.5,\"num\":\"5\"},\"mean_present_edges\":{\"den\":\"2\",\"float\":1.5,\"num\":\"3\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,3,3,3,3,3,3,3]},\"plan_hash\":\"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\",\"positive_transitions\":24,\"role\":\"baseline\",\"round_id\":\"atlas-002\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"0d3c9ac07c14e4fd1df0dff61aa4304f3d4db9d0c09cee3f75f1aff77b57631b\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-c362a6eb",
+        "path": "relational-complexity/results/atlas-002/items/A2-branch-base/status.json",
+        "ref": "sha256:83eb02427b1f4c4ec9e6d8299639f38d2fc4d4bdbea6cf499f16842e8dbd3863"
+      },
+      "content": "{\"item_id\": \"A2-branch-base\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-1c346171",
+        "path": "relational-complexity/results/atlas-002/items/A2-branch-form/receipt.json",
+        "ref": "sha256:9fd325ab2a2c85d700448b9dd5a3eb6b06421ff183ef6f362749c2689491698d"
+      },
+      "content": "{\"item_id\": \"A2-branch-form\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"result_sha256\": \"9c1e4411fff5fa10d77bba7e33b00a8716f1b4bab83b0c33aabfe6b79881f07b\", \"spec_hash\": \"31cee7275c3edb1c3bb6d0a3a159e0d5131fa4fab0b478751fcc077498edfb08\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-7518464d",
+        "path": "relational-complexity/results/atlas-002/items/A2-branch-form/result.json",
+        "ref": "sha256:9c1e4411fff5fa10d77bba7e33b00a8716f1b4bab83b0c33aabfe6b79881f07b"
+      },
+      "content": "{\"action_bit_independent\":false,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"form\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":2,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":0,\"max_prohibit_literals\":2,\"removal_sensitive_count\":1,\"states_with_zero_active\":6,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.75,\"num\":\"3\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001857,\"empirical_bit_independent\":false,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-R01\",\"IDEA-R03\",\"IDEA-C04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A2-branch-form\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"cross_check\":\"second_start_and_dense_solve_when_states_fit\",\"dense_l1\":3.40470707183016e-13,\"distribution\":[0.17307692307686184,0.11538461538463404,0.15384615384612993,0.057692307692374156,0.17307692307686184,0.11538461538463404,0.15384615384612993,0.057692307692374156],\"edge_presence\":[0.3461538461540164,0.42307692307700817,0.5],\"empty_iterations\":33,\"empty_residual\":8.009773400097231e-13,\"mean_components\":2.7307692307689755,\"mean_present_edges\":1.2692307692310247,\"method\":\"stationary_balanced\",\"numerical_limitation\":\"float64 stationary_balanced, cross-checked\",\"reason\":\"state_dependent_weights_unique_class\",\"start_l1\":2.562949852347174e-13,\"status\":\"unique\",\"uniform_iterations\":33,\"uniform_residual\":4.570788192381769e-13},\"plan_hash\":\"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\",\"positive_transitions\":22,\"role\":\"direction_form\",\"round_id\":\"atlas-002\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":true},\"spec_hash\":\"31cee7275c3edb1c3bb6d0a3a159e0d5131fa4fab0b478751fcc077498edfb08\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"7931c712431e7da64ae3579542285a2196ad260992d59f4fe4265b94ca0433d8\",\"zero_cells\":2}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-8ffaec3f",
+        "path": "relational-complexity/results/atlas-002/items/A2-branch-form/status.json",
+        "ref": "sha256:56ad13119430c50fa95dd681a2e063cbf4e41da16db67d0ecec44e55be3a941f"
+      },
+      "content": "{\"item_id\": \"A2-branch-form\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-b13c6496",
+        "path": "relational-complexity/results/atlas-002/items/A2-branch-mul/receipt.json",
+        "ref": "sha256:5c3bd3698952d20862c2c16624149269011c917e9f9ae7eb2ac2d5f12bee2515"
+      },
+      "content": "{\"item_id\": \"A2-branch-mul\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"result_sha256\": \"b61adeef1bb1dd4027d1d48a11dd51f1489a0e1a21840798d1590c29084f44fd\", \"spec_hash\": \"f188b357a22756b3d13be7afaf55bdc36c7efe441d87789d323e00c8cd2c892f\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-8e1deebb",
+        "path": "relational-complexity/results/atlas-002/items/A2-branch-mul/result.json",
+        "ref": "sha256:b61adeef1bb1dd4027d1d48a11dd51f1489a0e1a21840798d1590c29084f44fd"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"multiply\",\"event\":[0,1],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":0,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":1,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000574,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-R01\",\"IDEA-R03\",\"IDEA-C02\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A2-branch-mul\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"3\",\"float\":2.3333333333333335,\"num\":\"7\"},\"mean_present_edges\":{\"den\":\"3\",\"float\":1.6666666666666667,\"num\":\"5\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,3,6,6,3,3,6,6]},\"plan_hash\":\"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\",\"positive_transitions\":24,\"role\":\"single_multiply\",\"round_id\":\"atlas-002\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"f188b357a22756b3d13be7afaf55bdc36c7efe441d87789d323e00c8cd2c892f\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"a14bf1210fb719fbab5c6af3b0db7c597a24bf2419dc3e3caddd439686adcdde\",\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-ac727a8c",
+        "path": "relational-complexity/results/atlas-002/items/A2-branch-mul/status.json",
+        "ref": "sha256:8bb821afa534f05ce3ca4c11c2b6bde24b671ade60911fbd8740f677304f3dcb"
+      },
+      "content": "{\"item_id\": \"A2-branch-mul\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-7cfad796",
+        "path": "relational-complexity/results/atlas-002/items/A2-branch-pro/receipt.json",
+        "ref": "sha256:01b95103c45d529460fd994bbe49a829b75e8cf2e7ee18d60d0a7dd752b6e5f8"
+      },
+      "content": "{\"item_id\": \"A2-branch-pro\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"result_sha256\": \"15b9bb9cde406071a3ff04c756a933ef50effd1c3d6a98740db7d23e5b600a49\", \"spec_hash\": \"c8d20841188f2d2bd374d00db269e9f1834776237edd7c03df3af7edf4e1d9a1\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-3e233bfb",
+        "path": "relational-complexity/results/atlas-002/items/A2-branch-pro/result.json",
+        "ref": "sha256:15b9bb9cde406071a3ff04c756a933ef50effd1c3d6a98740db7d23e5b600a49"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[0,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":0,\"max_prohibit_literals\":1,\"removal_sensitive_count\":1,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[0,2],[0,3]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.00055,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-R01\",\"IDEA-R03\",\"IDEA-C01\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A2-branch-pro\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"5\",\"float\":0.4,\"num\":\"2\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"5\",\"float\":2.6,\"num\":\"13\"},\"mean_present_edges\":{\"den\":\"5\",\"float\":1.4,\"num\":\"7\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,3,2,2,3,3,2,2]},\"plan_hash\":\"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\",\"positive_transitions\":20,\"role\":\"single_prohibit\",\"round_id\":\"atlas-002\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"c8d20841188f2d2bd374d00db269e9f1834776237edd7c03df3af7edf4e1d9a1\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"d65a9800e618e62c49e0199f0d5cac3ca201448067180dbbbe4139a641958007\",\"zero_cells\":4}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-99f3a94e",
+        "path": "relational-complexity/results/atlas-002/items/A2-branch-pro/status.json",
+        "ref": "sha256:5b537472bb5e54b37884c62217c106116191fe1e26ef47092e73f9b594e637f4"
+      },
+      "content": "{\"item_id\": \"A2-branch-pro\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-5b9ca3c7",
+        "path": "relational-complexity/results/atlas-002/items/A2-chain-base/receipt.json",
+        "ref": "sha256:1117a49f12edf2ad46bd55bc6e9706e174b82a03fe8a93f11f7ad8f992909c6c"
+      },
+      "content": "{\"item_id\": \"A2-chain-base\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"result_sha256\": \"fdbc3ff56821e4e1e510d0e618c7a07b582271c6d1b1a2a31d074076796f8c6d\", \"spec_hash\": \"bae5dcdfa96d29d8395fa8268d2605c938c4b748e3b75e218c0cc0252863d481\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-10b0f57f",
+        "path": "relational-complexity/results/atlas-002/items/A2-chain-base/result.json",
+        "ref": "sha256:fdbc3ff56821e4e1e510d0e618c7a07b582271c6d1b1a2a31d074076796f8c6d"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":0,\"distinct_events\":0,\"effective_cardinality\":0,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[],\"j_positive\":0,\"j_prohibit\":0,\"max_active_in_state\":0,\"max_constraints_on_one_event\":0,\"max_positive_k\":0,\"max_prohibit_literals\":0,\"removal_sensitive_count\":0,\"states_with_zero_active\":8,\"zero_active_fraction\":{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000508,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-R01\",\"IDEA-R02\",\"IDEA-C00\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":0,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A2-chain-base\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"2\",\"float\":2.5,\"num\":\"5\"},\"mean_present_edges\":{\"den\":\"2\",\"float\":1.5,\"num\":\"3\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,3,3,3,3,3,3,3]},\"plan_hash\":\"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\",\"positive_transitions\":24,\"role\":\"baseline\",\"round_id\":\"atlas-002\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"bae5dcdfa96d29d8395fa8268d2605c938c4b748e3b75e218c0cc0252863d481\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-09ae4707",
+        "path": "relational-complexity/results/atlas-002/items/A2-chain-base/status.json",
+        "ref": "sha256:d047b13177499577b8aa8bae504c0707b635a4c1f8692674dc3d339605379f12"
+      },
+      "content": "{\"item_id\": \"A2-chain-base\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-dcd060eb",
+        "path": "relational-complexity/results/atlas-002/items/A2-chain-form/receipt.json",
+        "ref": "sha256:1e8e4c2e27e895a71de30a5e679fefd0e1a5863d43d746468d144f7121f183bf"
+      },
+      "content": "{\"item_id\": \"A2-chain-form\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"result_sha256\": \"253945da813ea7a82c4f23ddc9037b43e4e949b187a34ede4cfc6113ead3ac90\", \"spec_hash\": \"33f0aa60b5b5bdb9503cc18db7ea8b8106bf144f3445fb28c1833e292a003d46\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-0e149f20",
+        "path": "relational-complexity/results/atlas-002/items/A2-chain-form/result.json",
+        "ref": "sha256:253945da813ea7a82c4f23ddc9037b43e4e949b187a34ede4cfc6113ead3ac90"
+      },
+      "content": "{\"action_bit_independent\":false,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"form\",\"condition\":[1,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":2,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":0,\"max_prohibit_literals\":2,\"removal_sensitive_count\":1,\"states_with_zero_active\":6,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.75,\"num\":\"3\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001898,\"empirical_bit_independent\":false,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-R01\",\"IDEA-R02\",\"IDEA-C04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A2-chain-form\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"cross_check\":\"second_start_and_dense_solve_when_states_fit\",\"dense_l1\":3.40470707183016e-13,\"distribution\":[0.17307692307686184,0.11538461538463404,0.15384615384612993,0.057692307692374156,0.17307692307686184,0.11538461538463404,0.15384615384612993,0.057692307692374156],\"edge_presence\":[0.3461538461540164,0.42307692307700817,0.5],\"empty_iterations\":33,\"empty_residual\":8.009773400097231e-13,\"mean_components\":2.7307692307689755,\"mean_present_edges\":1.2692307692310247,\"method\":\"stationary_balanced\",\"numerical_limitation\":\"float64 stationary_balanced, cross-checked\",\"reason\":\"state_dependent_weights_unique_class\",\"start_l1\":2.562949852347174e-13,\"status\":\"unique\",\"uniform_iterations\":33,\"uniform_residual\":4.570788192381769e-13},\"plan_hash\":\"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\",\"positive_transitions\":22,\"role\":\"direction_form\",\"round_id\":\"atlas-002\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":true},\"spec_hash\":\"33f0aa60b5b5bdb9503cc18db7ea8b8106bf144f3445fb28c1833e292a003d46\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"7931c712431e7da64ae3579542285a2196ad260992d59f4fe4265b94ca0433d8\",\"zero_cells\":2}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-cb9115ba",
+        "path": "relational-complexity/results/atlas-002/items/A2-chain-form/status.json",
+        "ref": "sha256:e55009cc6f50737ab7be248dfb4cae628f64bab83866dd3a3371f0325b11d653"
+      },
+      "content": "{\"item_id\": \"A2-chain-form\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-3899829b",
+        "path": "relational-complexity/results/atlas-002/items/A2-chain-mul/receipt.json",
+        "ref": "sha256:f52eec6de58db7c050d2d9baa802a99fa00022427c6ad98599e0550cab9212ac"
+      },
+      "content": "{\"item_id\": \"A2-chain-mul\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"result_sha256\": \"6643fb8df424a276a2d50857a71fb811b8c5d18841a2e316f6ea04bedea5e880\", \"spec_hash\": \"7f4a9b3774cb3251548f5895f6b98ea54ee233022a4664f71c4bcce7b2a39c54\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-0f4a2610",
+        "path": "relational-complexity/results/atlas-002/items/A2-chain-mul/result.json",
+        "ref": "sha256:6643fb8df424a276a2d50857a71fb811b8c5d18841a2e316f6ea04bedea5e880"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[1,2],\"effect\":\"multiply\",\"event\":[0,1],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":0,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":1,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000484,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-R01\",\"IDEA-R02\",\"IDEA-C02\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A2-chain-mul\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"3\",\"float\":2.3333333333333335,\"num\":\"7\"},\"mean_present_edges\":{\"den\":\"3\",\"float\":1.6666666666666667,\"num\":\"5\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,3,6,6,3,3,6,6]},\"plan_hash\":\"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\",\"positive_transitions\":24,\"role\":\"single_multiply\",\"round_id\":\"atlas-002\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"7f4a9b3774cb3251548f5895f6b98ea54ee233022a4664f71c4bcce7b2a39c54\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"a14bf1210fb719fbab5c6af3b0db7c597a24bf2419dc3e3caddd439686adcdde\",\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-d32e5d20",
+        "path": "relational-complexity/results/atlas-002/items/A2-chain-mul/status.json",
+        "ref": "sha256:b03ae1b7208f8c8676f6334d5af7379345aabdf25ada771f37fd269738134294"
+      },
+      "content": "{\"item_id\": \"A2-chain-mul\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-c29507ac",
+        "path": "relational-complexity/results/atlas-002/items/A2-chain-pro/receipt.json",
+        "ref": "sha256:3a9e616fde4f98ca8e134107609b6578da24f4bc2ca165c94d6f62628b2247d8"
+      },
+      "content": "{\"item_id\": \"A2-chain-pro\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"result_sha256\": \"45326e431233dd1e026ce59391e21fb1ad099c2db4c4958cc5d618573fe9ebe5\", \"spec_hash\": \"f7f12a8685a61a646cbf243ebe696abe69137d9f94bc17ce453756e4243a71c5\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-a8e9372a",
+        "path": "relational-complexity/results/atlas-002/items/A2-chain-pro/result.json",
+        "ref": "sha256:45326e431233dd1e026ce59391e21fb1ad099c2db4c4958cc5d618573fe9ebe5"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[1,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":1,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":0,\"max_prohibit_literals\":1,\"removal_sensitive_count\":1,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000598,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-R01\",\"IDEA-R02\",\"IDEA-C01\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A2-chain-pro\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":3,\"n_states\":8,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"5\",\"float\":0.4,\"num\":\"2\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"5\",\"float\":2.6,\"num\":\"13\"},\"mean_present_edges\":{\"den\":\"5\",\"float\":1.4,\"num\":\"7\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[3,3,2,2,3,3,2,2]},\"plan_hash\":\"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\",\"positive_transitions\":20,\"role\":\"single_prohibit\",\"round_id\":\"atlas-002\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"f7f12a8685a61a646cbf243ebe696abe69137d9f94bc17ce453756e4243a71c5\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"d65a9800e618e62c49e0199f0d5cac3ca201448067180dbbbe4139a641958007\",\"zero_cells\":4}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-d39a75bc",
+        "path": "relational-complexity/results/atlas-002/items/A2-chain-pro/status.json",
+        "ref": "sha256:dbb4a94c314573689c64ca372c30341e4e6f31847986668d097e4831ea14486f"
+      },
+      "content": "{\"item_id\": \"A2-chain-pro\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-abd8223e",
+        "path": "relational-complexity/results/atlas-002/items/A2-cycle-base/receipt.json",
+        "ref": "sha256:561d3a8e3d56998591de3fafa45d9792277b3eac18165e707ed8f8e225a7a2f1"
+      },
+      "content": "{\"item_id\": \"A2-cycle-base\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"result_sha256\": \"6ea7a76f632fa0c41da563126bc905162b4649bd281ae8ab15183bb1c81735b1\", \"spec_hash\": \"3a0a73b138cc1a4db7d4e9cb001caef34a2bc08584a28bd6dc35b293c5965392\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-a229eb56",
+        "path": "relational-complexity/results/atlas-002/items/A2-cycle-base/result.json",
+        "ref": "sha256:6ea7a76f632fa0c41da563126bc905162b4649bd281ae8ab15183bb1c81735b1"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":0,\"distinct_events\":0,\"effective_cardinality\":0,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[],\"j_positive\":0,\"j_prohibit\":0,\"max_active_in_state\":0,\"max_constraints_on_one_event\":0,\"max_positive_k\":0,\"max_prohibit_literals\":0,\"removal_sensitive_count\":0,\"states_with_zero_active\":16,\"zero_active_fraction\":{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[2,3],[0,3]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000744,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-R01\",\"IDEA-R03\",\"IDEA-C00\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":0,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A2-cycle-base\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":4,\"n_states\":16,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"16\",\"float\":2.0625,\"num\":\"33\"},\"mean_present_edges\":{\"den\":\"1\",\"float\":2.0,\"num\":\"2\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]},\"plan_hash\":\"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\",\"positive_transitions\":64,\"role\":\"baseline\",\"round_id\":\"atlas-002\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"3a0a73b138cc1a4db7d4e9cb001caef34a2bc08584a28bd6dc35b293c5965392\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-b6be7652",
+        "path": "relational-complexity/results/atlas-002/items/A2-cycle-base/status.json",
+        "ref": "sha256:c8f3f8a8d92bbc812113814be937762795b6ed4d0824d99b2b0a1eabfce98312"
+      },
+      "content": "{\"item_id\": \"A2-cycle-base\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-7239eb41",
+        "path": "relational-complexity/results/atlas-002/items/A2-cycle-form/receipt.json",
+        "ref": "sha256:77f16ed5519c45b1723ed478fb873dbb7471fa326b53eab56f98cbae84790381"
+      },
+      "content": "{\"item_id\": \"A2-cycle-form\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"result_sha256\": \"61c4d5645fa37daf0bdce27ff4afdd7ffed4fe4130069ddc96bc917569ec7ae0\", \"spec_hash\": \"0ba1d400346758ca661d52aad0f90fff8c12cc2452f6802f9598598c669a5cef\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-3f63c87f",
+        "path": "relational-complexity/results/atlas-002/items/A2-cycle-form/result.json",
+        "ref": "sha256:61c4d5645fa37daf0bdce27ff4afdd7ffed4fe4130069ddc96bc917569ec7ae0"
+      },
+      "content": "{\"action_bit_independent\":false,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"form\",\"condition\":[1,2],\"effect\":\"prohibit\",\"event\":[0,1],\"literals\":2,\"polarity\":\"present\"}],\"j_positive\":0,\"j_prohibit\":1,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":0,\"max_prohibit_literals\":2,\"removal_sensitive_count\":1,\"states_with_zero_active\":12,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.75,\"num\":\"3\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[2,3],[0,3]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":false,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.002771,\"empirical_bit_independent\":false,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-R01\",\"IDEA-R03\",\"IDEA-C04\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A2-cycle-form\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":4,\"n_states\":16,\"occupation\":{\"cross_check\":\"second_start_and_dense_solve_when_states_fit\",\"dense_l1\":1.0400118266584713e-12,\"distribution\":[0.08333333333325368,0.055555555555591864,0.08333333333328297,0.02777777777787149,0.08333333333325368,0.055555555555591864,0.08333333333328297,0.02777777777787149,0.08333333333325368,0.055555555555591864,0.08333333333328297,0.02777777777787149,0.08333333333325368,0.055555555555591864,0.08333333333328297,0.02777777777787149],\"edge_presence\":[0.3333333333338534,0.44444444444461784,0.5,0.5],\"empty_iterations\":53,\"empty_residual\":7.023617798473936e-13,\"mean_components\":2.2499999999994005,\"mean_present_edges\":1.7777777777784713,\"method\":\"stationary_balanced\",\"numerical_limitation\":\"float64 stationary_balanced, cross-checked\",\"reason\":\"state_dependent_weights_unique_class\",\"start_l1\":2.625261119604261e-13,\"status\":\"unique\",\"uniform_iterations\":52,\"uniform_residual\":7.025630077706069e-13},\"plan_hash\":\"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\",\"positive_transitions\":60,\"role\":\"direction_form\",\"round_id\":\"atlas-002\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":true},\"spec_hash\":\"0ba1d400346758ca661d52aad0f90fff8c12cc2452f6802f9598598c669a5cef\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"fef1ef6d465719753428db71395137f31337de3267b41bf0cd8263b98cf84d8d\",\"zero_cells\":4}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-f7216205",
+        "path": "relational-complexity/results/atlas-002/items/A2-cycle-form/status.json",
+        "ref": "sha256:6f06c1bdc539bfa221f5978a69e8f5b36c8b4820ae071eee99c24d80b8219596"
+      },
+      "content": "{\"item_id\": \"A2-cycle-form\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-c6e99bc7",
+        "path": "relational-complexity/results/atlas-002/items/A2-cycle-mul/receipt.json",
+        "ref": "sha256:7d1ec424dc92623bd6d3fca94c08bf6d2ebab2eec157a19336894dfca750c8c4"
+      },
+      "content": "{\"item_id\": \"A2-cycle-mul\", \"plan_hash\": \"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\", \"result_sha256\": \"2f39102af83609353b899cdd3ca6e8abccf381715c6b39821a71971ea9227079\", \"spec_hash\": \"aa2fadba18249421a72dd8ff6ce3a0e554b13fbedd2efb2abb9aa6e247cd987a\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-002-items-a2-6ae5e780",
+        "path": "relational-complexity/results/atlas-002/items/A2-cycle-mul/result.json",
+        "ref": "sha256:2f39102af83609353b899cdd3ca6e8abccf381715c6b39821a71971ea9227079"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":1,\"distinct_events\":1,\"effective_cardinality\":1,\"effective_method\":\"minimum_equivalent_subset\",\"features\":[{\"action\":\"either\",\"condition\":[1,2],\"effect\":\"multiply\",\"event\":[0,1],\"factor\":4,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":1,\"j_prohibit\":0,\"max_active_in_state\":1,\"max_constraints_on_one_event\":1,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":1,\"states_with_zero_active\":8,\"zero_active_fraction\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[2,3],[0,3]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000926,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.2.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-R01\",\"IDEA-R03\",\"IDEA-C02\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A2-cycle-mul\",\"method\":\"exact_weight_table\",\"n\":4,\"n_edges\":4,\"n_states\":16,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"11\",\"float\":0.6363636363636364,\"num\":\"7\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"88\",\"float\":1.9431818181818181,\"num\":\"171\"},\"mean_present_edges\":{\"den\":\"22\",\"float\":2.1363636363636362,\"num\":\"47\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[4,4,7,7,4,4,7,7,4,4,7,7,4,4,7,7]},\"plan_hash\":\"937573af07c6d5b40e43802b4f32bac76b32c66eefbca7a68aaab8d15a8bb26e\",\"positive_transitions\":64,\"role\":\"single_multiply\",\"round_id\":\"atlas-002\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"aa2fadba18249421a72dd8ff6ce3a0e554b13fbedd2efb2abb9aa6e247cd987a\",\"status\":\"complete\",\"type\":\"atlas_core\",\"weight_sha256\":\"85c4aacce2e3b78cad4ec4737a435ca63a6a9f51751d5056dbd2d03901f44a0f\",\"zero_cells\":0}\n"
+    }
+  ],
+  "base_revision": "05219008f0bea9be22c9c38d03de0c122773d6654752d1801d9d1275820edd6f",
+  "origin": "ai-inferred",
+  "author": "agent",
+  "state": "proposed",
+  "id": "proposal-2b62d09332b3805d6cd0645a"
+}

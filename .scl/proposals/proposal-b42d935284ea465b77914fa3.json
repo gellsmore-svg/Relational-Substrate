@@ -1,0 +1,910 @@
+{
+  "title": "Capture product documents whole (27/37)",
+  "changes": [
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-7da11910",
+        "path": "relational-complexity/results/atlas-007/items/A7-chain-degree/status.json",
+        "ref": "sha256:079f6f92ebf87215a730a2df4d7258f18a51432889c45bc67dca765299ccfe95"
+      },
+      "content": "{\"item_id\": \"A7-chain-degree\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-5559b077",
+        "path": "relational-complexity/results/atlas-007/items/A7-chain-line/receipt.json",
+        "ref": "sha256:9e0536324c49c035ea1eaf349642c6a8281ae9b872cf46d0726b75c2a7da6b85"
+      },
+      "content": "{\"item_id\": \"A7-chain-line\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"result_sha256\": \"fa5b5bb025188a52308c9b99893cda91ea7465738d8bd0ed197f075c364cfe04\", \"spec_hash\": \"a64ec7dd4a7604dff55fcbefed724d6a1b97671e272d5fc8d2068375c1d0f878\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-49a4f36c",
+        "path": "relational-complexity/results/atlas-007/items/A7-chain-line/result.json",
+        "ref": "sha256:fa5b5bb025188a52308c9b99893cda91ea7465738d8bd0ed197f075c364cfe04"
+      },
+      "content": "{\"engine_version\":\"rrc-0.4.0\",\"error\":\"Traceback (most recent call last):\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 446, in execute_spec_catching\\n    return execute_spec(spec)\\n           ^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 440, in execute_spec\\n    return execute_composition_observation(spec)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 391, in execute_composition_observation\\n    \\\"round_id\\\": spec[\\\"round_id\\\"],\\n                ~~~~^^^^^^^^^^^^\\nKeyError: 'round_id'\\n\",\"item_id\":\"A7-chain-line\",\"plan_hash\":\"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\",\"round_id\":\"atlas-007\",\"spec_hash\":\"a64ec7dd4a7604dff55fcbefed724d6a1b97671e272d5fc8d2068375c1d0f878\",\"status\":\"failed\",\"type\":\"composition_observation\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-fe5891d1",
+        "path": "relational-complexity/results/atlas-007/items/A7-chain-line/status.json",
+        "ref": "sha256:2508b4b847fd3f81c6f755ba4e052c92394cd1276e835556c5f41df38c744139"
+      },
+      "content": "{\"item_id\": \"A7-chain-line\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-a493aefd",
+        "path": "relational-complexity/results/atlas-007/items/A7-cycle4-count/receipt.json",
+        "ref": "sha256:51045a14c876a0003856886ebb9477acbd57aa4d8749b61c9b4664ca32e2510e"
+      },
+      "content": "{\"item_id\": \"A7-cycle4-count\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"result_sha256\": \"ab99791b135bcf6d032924f2419222d543ae8131f3c815cdc847e5bd8b4f8657\", \"spec_hash\": \"fbc9baf99ae42ea0de8ce08b137e47153173de4824a8767d741ebc842f9cae79\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-b29820fd",
+        "path": "relational-complexity/results/atlas-007/items/A7-cycle4-count/result.json",
+        "ref": "sha256:ab99791b135bcf6d032924f2419222d543ae8131f3c815cdc847e5bd8b4f8657"
+      },
+      "content": "{\"engine_version\":\"rrc-0.4.0\",\"error\":\"Traceback (most recent call last):\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 446, in execute_spec_catching\\n    return execute_spec(spec)\\n           ^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 440, in execute_spec\\n    return execute_composition_observation(spec)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 391, in execute_composition_observation\\n    \\\"round_id\\\": spec[\\\"round_id\\\"],\\n                ~~~~^^^^^^^^^^^^\\nKeyError: 'round_id'\\n\",\"item_id\":\"A7-cycle4-count\",\"plan_hash\":\"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\",\"round_id\":\"atlas-007\",\"spec_hash\":\"fbc9baf99ae42ea0de8ce08b137e47153173de4824a8767d741ebc842f9cae79\",\"status\":\"failed\",\"type\":\"composition_observation\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-627f8ece",
+        "path": "relational-complexity/results/atlas-007/items/A7-cycle4-count/status.json",
+        "ref": "sha256:bc6b483da7fc7b5b5d536860b73e780fd8aedf5efea93f713dec3456ba56204c"
+      },
+      "content": "{\"item_id\": \"A7-cycle4-count\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-423c9beb",
+        "path": "relational-complexity/results/atlas-007/items/A7-cycle4-degree/receipt.json",
+        "ref": "sha256:35c42986a037d06e1dc0813e59d79571f6b1b0dff9c7c4306bb9e0514b367c79"
+      },
+      "content": "{\"item_id\": \"A7-cycle4-degree\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"result_sha256\": \"c9128738fb7b7f69a7487d11b0253d02562db3159d086b514b4fc9d64f0bcfe6\", \"spec_hash\": \"6566261c8e492f28cce141e5d0dc636db10d74767bb5396c14d01326bd66d577\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-08b61313",
+        "path": "relational-complexity/results/atlas-007/items/A7-cycle4-degree/result.json",
+        "ref": "sha256:c9128738fb7b7f69a7487d11b0253d02562db3159d086b514b4fc9d64f0bcfe6"
+      },
+      "content": "{\"engine_version\":\"rrc-0.4.0\",\"error\":\"Traceback (most recent call last):\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 446, in execute_spec_catching\\n    return execute_spec(spec)\\n           ^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 440, in execute_spec\\n    return execute_composition_observation(spec)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 391, in execute_composition_observation\\n    \\\"round_id\\\": spec[\\\"round_id\\\"],\\n                ~~~~^^^^^^^^^^^^\\nKeyError: 'round_id'\\n\",\"item_id\":\"A7-cycle4-degree\",\"plan_hash\":\"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\",\"round_id\":\"atlas-007\",\"spec_hash\":\"6566261c8e492f28cce141e5d0dc636db10d74767bb5396c14d01326bd66d577\",\"status\":\"failed\",\"type\":\"composition_observation\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-d8616163",
+        "path": "relational-complexity/results/atlas-007/items/A7-cycle4-degree/status.json",
+        "ref": "sha256:ecfeb36297e29f7783c653a7e43a0ba0b23f60b5765dc4f5100690ae43de02c6"
+      },
+      "content": "{\"item_id\": \"A7-cycle4-degree\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-9e36409f",
+        "path": "relational-complexity/results/atlas-007/items/A7-cycle4-line/receipt.json",
+        "ref": "sha256:98f04cc2d715d4621e501c1dc45bfdd28506ab55bc77e3b34ea40e737eedf77a"
+      },
+      "content": "{\"item_id\": \"A7-cycle4-line\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"result_sha256\": \"0c954c544ad7487822755a205662167a2afb5fb00b3194586a6ab715a8ccf322\", \"spec_hash\": \"e73e9f04ace0b347561f5f766dee5eb56106a67fedae6e7addf4fe2a3cdc5f78\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-22959d07",
+        "path": "relational-complexity/results/atlas-007/items/A7-cycle4-line/result.json",
+        "ref": "sha256:0c954c544ad7487822755a205662167a2afb5fb00b3194586a6ab715a8ccf322"
+      },
+      "content": "{\"engine_version\":\"rrc-0.4.0\",\"error\":\"Traceback (most recent call last):\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 446, in execute_spec_catching\\n    return execute_spec(spec)\\n           ^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 440, in execute_spec\\n    return execute_composition_observation(spec)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 391, in execute_composition_observation\\n    \\\"round_id\\\": spec[\\\"round_id\\\"],\\n                ~~~~^^^^^^^^^^^^\\nKeyError: 'round_id'\\n\",\"item_id\":\"A7-cycle4-line\",\"plan_hash\":\"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\",\"round_id\":\"atlas-007\",\"spec_hash\":\"e73e9f04ace0b347561f5f766dee5eb56106a67fedae6e7addf4fe2a3cdc5f78\",\"status\":\"failed\",\"type\":\"composition_observation\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-7bf4a07d",
+        "path": "relational-complexity/results/atlas-007/items/A7-cycle4-line/status.json",
+        "ref": "sha256:a3a98ea8468c47c6c235fcef969a4d6614c1e33c4f5af3dc6b8101f9a7d09cc2"
+      },
+      "content": "{\"item_id\": \"A7-cycle4-line\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-dcc540a9",
+        "path": "relational-complexity/results/atlas-007/items/A7-path4-count/receipt.json",
+        "ref": "sha256:83d4fb0edd6fc3b36cef8d7f6c2294fae1c74e4e79919894562d7aa5912644b2"
+      },
+      "content": "{\"item_id\": \"A7-path4-count\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"result_sha256\": \"922c26ea91a1aee7f7a84747b04fc200e8d1dd6ef54c074d057b0c77bd099acd\", \"spec_hash\": \"d1e3213cf8b0668a383ba91396ebf0937a2f44d6f1887ede14e26b1166d6d08c\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-a8e748ed",
+        "path": "relational-complexity/results/atlas-007/items/A7-path4-count/result.json",
+        "ref": "sha256:922c26ea91a1aee7f7a84747b04fc200e8d1dd6ef54c074d057b0c77bd099acd"
+      },
+      "content": "{\"engine_version\":\"rrc-0.4.0\",\"error\":\"Traceback (most recent call last):\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 446, in execute_spec_catching\\n    return execute_spec(spec)\\n           ^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 440, in execute_spec\\n    return execute_composition_observation(spec)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 391, in execute_composition_observation\\n    \\\"round_id\\\": spec[\\\"round_id\\\"],\\n                ~~~~^^^^^^^^^^^^\\nKeyError: 'round_id'\\n\",\"item_id\":\"A7-path4-count\",\"plan_hash\":\"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\",\"round_id\":\"atlas-007\",\"spec_hash\":\"d1e3213cf8b0668a383ba91396ebf0937a2f44d6f1887ede14e26b1166d6d08c\",\"status\":\"failed\",\"type\":\"composition_observation\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-764240ee",
+        "path": "relational-complexity/results/atlas-007/items/A7-path4-count/status.json",
+        "ref": "sha256:9c2c63cb232285f996466b1e1bae2510ddfff26fea97479ca733a3dcb6f96f18"
+      },
+      "content": "{\"item_id\": \"A7-path4-count\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-eaee26c5",
+        "path": "relational-complexity/results/atlas-007/items/A7-path4-degree/receipt.json",
+        "ref": "sha256:df63dcc41d9680f707b52cc74d7bc3c64ab56082ca224b78d281598ae35bfcfa"
+      },
+      "content": "{\"item_id\": \"A7-path4-degree\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"result_sha256\": \"982a828845b3d682eb791f9582b2e02b6b9ae91318fb4e932a4b3d3b21c224d2\", \"spec_hash\": \"ba223e30e9bc96d259425e7ff0f28b152422dc6b9b0db82c3934ef3da1ec5e07\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-46b9dd34",
+        "path": "relational-complexity/results/atlas-007/items/A7-path4-degree/result.json",
+        "ref": "sha256:982a828845b3d682eb791f9582b2e02b6b9ae91318fb4e932a4b3d3b21c224d2"
+      },
+      "content": "{\"engine_version\":\"rrc-0.4.0\",\"error\":\"Traceback (most recent call last):\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 446, in execute_spec_catching\\n    return execute_spec(spec)\\n           ^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 440, in execute_spec\\n    return execute_composition_observation(spec)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 391, in execute_composition_observation\\n    \\\"round_id\\\": spec[\\\"round_id\\\"],\\n                ~~~~^^^^^^^^^^^^\\nKeyError: 'round_id'\\n\",\"item_id\":\"A7-path4-degree\",\"plan_hash\":\"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\",\"round_id\":\"atlas-007\",\"spec_hash\":\"ba223e30e9bc96d259425e7ff0f28b152422dc6b9b0db82c3934ef3da1ec5e07\",\"status\":\"failed\",\"type\":\"composition_observation\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-12fc292c",
+        "path": "relational-complexity/results/atlas-007/items/A7-path4-degree/status.json",
+        "ref": "sha256:355157f229e6337590eed519086340cce7af07f32c7fef2b5ed5b2113358f25b"
+      },
+      "content": "{\"item_id\": \"A7-path4-degree\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-546c262f",
+        "path": "relational-complexity/results/atlas-007/items/A7-path4-line/receipt.json",
+        "ref": "sha256:a515c930a0641198afacf3051108f3e6d102764f23e2d654591b0104ff8e222b"
+      },
+      "content": "{\"item_id\": \"A7-path4-line\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"result_sha256\": \"2eb40c556d8c367cda09d156a053bac284730efc92573009870e2785753de313\", \"spec_hash\": \"ffb5932465b486face377620e393d693d1db3c3f956f7308a6536983f042bd7d\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-09802e8a",
+        "path": "relational-complexity/results/atlas-007/items/A7-path4-line/result.json",
+        "ref": "sha256:2eb40c556d8c367cda09d156a053bac284730efc92573009870e2785753de313"
+      },
+      "content": "{\"engine_version\":\"rrc-0.4.0\",\"error\":\"Traceback (most recent call last):\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 446, in execute_spec_catching\\n    return execute_spec(spec)\\n           ^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 440, in execute_spec\\n    return execute_composition_observation(spec)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 391, in execute_composition_observation\\n    \\\"round_id\\\": spec[\\\"round_id\\\"],\\n                ~~~~^^^^^^^^^^^^\\nKeyError: 'round_id'\\n\",\"item_id\":\"A7-path4-line\",\"plan_hash\":\"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\",\"round_id\":\"atlas-007\",\"spec_hash\":\"ffb5932465b486face377620e393d693d1db3c3f956f7308a6536983f042bd7d\",\"status\":\"failed\",\"type\":\"composition_observation\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-43f3d96b",
+        "path": "relational-complexity/results/atlas-007/items/A7-path4-line/status.json",
+        "ref": "sha256:535be684d3bfe0acb5576adc380a981ace238d6e3ab9d66273654e9711cdcd27"
+      },
+      "content": "{\"item_id\": \"A7-path4-line\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-f4734fe6",
+        "path": "relational-complexity/results/atlas-007/items/A7-star-count/receipt.json",
+        "ref": "sha256:012d2618b2b307d613f340b66396f645b5513e0f545c6a87a0fb0e71a558fd25"
+      },
+      "content": "{\"item_id\": \"A7-star-count\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"result_sha256\": \"a4c997f0b396691986c5901669d17fefe55276cea28dd31d29bf32ed6e6588f1\", \"spec_hash\": \"adbddbcd8aad33562858f3a76f6fa3d2f88b6e0f7d2e1d1eb0de5a8c8f94f3c4\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-139ed492",
+        "path": "relational-complexity/results/atlas-007/items/A7-star-count/result.json",
+        "ref": "sha256:a4c997f0b396691986c5901669d17fefe55276cea28dd31d29bf32ed6e6588f1"
+      },
+      "content": "{\"engine_version\":\"rrc-0.4.0\",\"error\":\"Traceback (most recent call last):\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 446, in execute_spec_catching\\n    return execute_spec(spec)\\n           ^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 440, in execute_spec\\n    return execute_composition_observation(spec)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 391, in execute_composition_observation\\n    \\\"round_id\\\": spec[\\\"round_id\\\"],\\n                ~~~~^^^^^^^^^^^^\\nKeyError: 'round_id'\\n\",\"item_id\":\"A7-star-count\",\"plan_hash\":\"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\",\"round_id\":\"atlas-007\",\"spec_hash\":\"adbddbcd8aad33562858f3a76f6fa3d2f88b6e0f7d2e1d1eb0de5a8c8f94f3c4\",\"status\":\"failed\",\"type\":\"composition_observation\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-a77ea1a1",
+        "path": "relational-complexity/results/atlas-007/items/A7-star-count/status.json",
+        "ref": "sha256:4e5f0afc8fe338e80737b9c855cfe5ac7501027d41f8f51db819f5e7dad30691"
+      },
+      "content": "{\"item_id\": \"A7-star-count\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-efa24e5c",
+        "path": "relational-complexity/results/atlas-007/items/A7-star-degree/receipt.json",
+        "ref": "sha256:dce580ed2fe60bb56162ad4738b6cb3c7a062a4f83e253548e58953eb8d3c8cf"
+      },
+      "content": "{\"item_id\": \"A7-star-degree\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"result_sha256\": \"57c4ed05f7c335f34ce98d8e78da712cd71b3c88e99b6050204c6053d74b4102\", \"spec_hash\": \"7c0727b93f3ee06a30159850d37a0b05e567f0319d92763b83faba93c9a05f3b\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-d716219b",
+        "path": "relational-complexity/results/atlas-007/items/A7-star-degree/result.json",
+        "ref": "sha256:57c4ed05f7c335f34ce98d8e78da712cd71b3c88e99b6050204c6053d74b4102"
+      },
+      "content": "{\"engine_version\":\"rrc-0.4.0\",\"error\":\"Traceback (most recent call last):\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 446, in execute_spec_catching\\n    return execute_spec(spec)\\n           ^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 440, in execute_spec\\n    return execute_composition_observation(spec)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 391, in execute_composition_observation\\n    \\\"round_id\\\": spec[\\\"round_id\\\"],\\n                ~~~~^^^^^^^^^^^^\\nKeyError: 'round_id'\\n\",\"item_id\":\"A7-star-degree\",\"plan_hash\":\"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\",\"round_id\":\"atlas-007\",\"spec_hash\":\"7c0727b93f3ee06a30159850d37a0b05e567f0319d92763b83faba93c9a05f3b\",\"status\":\"failed\",\"type\":\"composition_observation\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-83d9aeb9",
+        "path": "relational-complexity/results/atlas-007/items/A7-star-degree/status.json",
+        "ref": "sha256:5d33e682e4aff159d391d1848d7f3aafb66756da27349cddce697fcac7f00358"
+      },
+      "content": "{\"item_id\": \"A7-star-degree\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-19c67bb4",
+        "path": "relational-complexity/results/atlas-007/items/A7-star-line/receipt.json",
+        "ref": "sha256:b74b2298b6b41ae779ee64e3a055c6ffd637162f9f855ee8e530a32d3d499f27"
+      },
+      "content": "{\"item_id\": \"A7-star-line\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"result_sha256\": \"cb22598be17b504cd2210c13a8ea5d622c7cc3d03704f48e250a041af8c0bc89\", \"spec_hash\": \"bb23e1e96a6a2780028191664baf868da570f8163862247742e7bf6c58b0c35d\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-d27e1e22",
+        "path": "relational-complexity/results/atlas-007/items/A7-star-line/result.json",
+        "ref": "sha256:cb22598be17b504cd2210c13a8ea5d622c7cc3d03704f48e250a041af8c0bc89"
+      },
+      "content": "{\"engine_version\":\"rrc-0.4.0\",\"error\":\"Traceback (most recent call last):\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 446, in execute_spec_catching\\n    return execute_spec(spec)\\n           ^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 440, in execute_spec\\n    return execute_composition_observation(spec)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 391, in execute_composition_observation\\n    \\\"round_id\\\": spec[\\\"round_id\\\"],\\n                ~~~~^^^^^^^^^^^^\\nKeyError: 'round_id'\\n\",\"item_id\":\"A7-star-line\",\"plan_hash\":\"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\",\"round_id\":\"atlas-007\",\"spec_hash\":\"bb23e1e96a6a2780028191664baf868da570f8163862247742e7bf6c58b0c35d\",\"status\":\"failed\",\"type\":\"composition_observation\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-55611c3a",
+        "path": "relational-complexity/results/atlas-007/items/A7-star-line/status.json",
+        "ref": "sha256:5abcc7b3406dfdedeb9886f75d49db5b9e7459f2af8a553ce8528deba789646c"
+      },
+      "content": "{\"item_id\": \"A7-star-line\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-721ddd27",
+        "path": "relational-complexity/results/atlas-007/items/A7-triangle-count/receipt.json",
+        "ref": "sha256:938cac539e7ed82f2e746a7ba5e08c7284db2dcae4670146f52fa81b1dc05ddb"
+      },
+      "content": "{\"item_id\": \"A7-triangle-count\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"result_sha256\": \"58700decf18e767248c2fb2d11c036a9dd97bd1957d473db1f666dd2b4de5a40\", \"spec_hash\": \"eec356cfd2967418a4d6b810ce9d62793d561f975f85b0fe3a38923c4be9ad0e\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-df71222b",
+        "path": "relational-complexity/results/atlas-007/items/A7-triangle-count/result.json",
+        "ref": "sha256:58700decf18e767248c2fb2d11c036a9dd97bd1957d473db1f666dd2b4de5a40"
+      },
+      "content": "{\"engine_version\":\"rrc-0.4.0\",\"error\":\"Traceback (most recent call last):\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 446, in execute_spec_catching\\n    return execute_spec(spec)\\n           ^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 440, in execute_spec\\n    return execute_composition_observation(spec)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 391, in execute_composition_observation\\n    \\\"round_id\\\": spec[\\\"round_id\\\"],\\n                ~~~~^^^^^^^^^^^^\\nKeyError: 'round_id'\\n\",\"item_id\":\"A7-triangle-count\",\"plan_hash\":\"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\",\"round_id\":\"atlas-007\",\"spec_hash\":\"eec356cfd2967418a4d6b810ce9d62793d561f975f85b0fe3a38923c4be9ad0e\",\"status\":\"failed\",\"type\":\"composition_observation\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-ce5bb7ff",
+        "path": "relational-complexity/results/atlas-007/items/A7-triangle-count/status.json",
+        "ref": "sha256:af0306c6db2633b2acbe51e252011b66f182e46a3d49b672c06b0fd676b5de5a"
+      },
+      "content": "{\"item_id\": \"A7-triangle-count\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-a5d2168b",
+        "path": "relational-complexity/results/atlas-007/items/A7-triangle-degree/receipt.json",
+        "ref": "sha256:8717dec54e88b6a6e57a6c7eb12af43376a2945a9d03324b1775a96be1195bfa"
+      },
+      "content": "{\"item_id\": \"A7-triangle-degree\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"result_sha256\": \"8df61e5b19cd6b03e0d06b9b51e59983bbbeef6187d5dd725a23314644b54839\", \"spec_hash\": \"cecf78630f1ffdc1e77ebe1839c0a112b5d4949df789aa93c44b3b031bcca80a\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-3cc6913a",
+        "path": "relational-complexity/results/atlas-007/items/A7-triangle-degree/result.json",
+        "ref": "sha256:8df61e5b19cd6b03e0d06b9b51e59983bbbeef6187d5dd725a23314644b54839"
+      },
+      "content": "{\"engine_version\":\"rrc-0.4.0\",\"error\":\"Traceback (most recent call last):\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 446, in execute_spec_catching\\n    return execute_spec(spec)\\n           ^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 440, in execute_spec\\n    return execute_composition_observation(spec)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 391, in execute_composition_observation\\n    \\\"round_id\\\": spec[\\\"round_id\\\"],\\n                ~~~~^^^^^^^^^^^^\\nKeyError: 'round_id'\\n\",\"item_id\":\"A7-triangle-degree\",\"plan_hash\":\"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\",\"round_id\":\"atlas-007\",\"spec_hash\":\"cecf78630f1ffdc1e77ebe1839c0a112b5d4949df789aa93c44b3b031bcca80a\",\"status\":\"failed\",\"type\":\"composition_observation\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-7e4fb4fa",
+        "path": "relational-complexity/results/atlas-007/items/A7-triangle-degree/status.json",
+        "ref": "sha256:318c0b312068ab79e69d03d599db965942979952f24efa7b4b9d16fe31a231f9"
+      },
+      "content": "{\"item_id\": \"A7-triangle-degree\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-93457e55",
+        "path": "relational-complexity/results/atlas-007/items/A7-triangle-line/receipt.json",
+        "ref": "sha256:6ddc846df3ca2f53d56267824127daf0151b0ad1e73dd66857053897467bd1e2"
+      },
+      "content": "{\"item_id\": \"A7-triangle-line\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"result_sha256\": \"2823523f987ecf405327d6ccb12b8606d9d74c321ea3a3f8e8a385907b96fe3b\", \"spec_hash\": \"124dade538f1b8340e44b6489cd62d18efbb604d7e49f186eb571516de77e3de\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-b22e2ba5",
+        "path": "relational-complexity/results/atlas-007/items/A7-triangle-line/result.json",
+        "ref": "sha256:2823523f987ecf405327d6ccb12b8606d9d74c321ea3a3f8e8a385907b96fe3b"
+      },
+      "content": "{\"engine_version\":\"rrc-0.4.0\",\"error\":\"Traceback (most recent call last):\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 446, in execute_spec_catching\\n    return execute_spec(spec)\\n           ^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 440, in execute_spec\\n    return execute_composition_observation(spec)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/home/cello/domains/RS-rrc/relational-complexity/src/rrc/items.py\\\", line 391, in execute_composition_observation\\n    \\\"round_id\\\": spec[\\\"round_id\\\"],\\n                ~~~~^^^^^^^^^^^^\\nKeyError: 'round_id'\\n\",\"item_id\":\"A7-triangle-line\",\"plan_hash\":\"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\",\"round_id\":\"atlas-007\",\"spec_hash\":\"124dade538f1b8340e44b6489cd62d18efbb604d7e49f186eb571516de77e3de\",\"status\":\"failed\",\"type\":\"composition_observation\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-items-a7-882f7a6c",
+        "path": "relational-complexity/results/atlas-007/items/A7-triangle-line/status.json",
+        "ref": "sha256:3b8c376db64ef048e4ad4c56650959556287c827dcdd119b8617cbb5d1ccc82b"
+      },
+      "content": "{\"item_id\": \"A7-triangle-line\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"status\": \"failed\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-007-manifest-0a713aaf",
+        "path": "relational-complexity/results/atlas-007/manifest.json",
+        "ref": "sha256:f62e6ef06c4ebd1a7be38ac941219a2fd7078739f205e17b67761c26e4e16f55"
+      },
+      "content": "{\"engine_version\": \"rrc-0.4.0\", \"plan_hash\": \"8b655f094fb4b9bfc10c124a00fecab228a178b10df2310ea87e10fb0350c766\", \"round_id\": \"atlas-007\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-c4cae5d4",
+        "path": "relational-complexity/results/atlas-008/items/A8-chain-count/receipt.json",
+        "ref": "sha256:08123013eec4b001695257916403dc04c79e25c5521c92f039f2ec8e5a7ff89f"
+      },
+      "content": "{\"item_id\": \"A8-chain-count\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"16e4a65a39e9b5cf87e5dcd6921931a6a367aee66c937ac3c7e1fecbb5ff0e4c\", \"spec_hash\": \"d3d7925eea532c48277202c30fcaf9900ffe967927a464892f9fdcd3e0d517ee\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-3bf37e65",
+        "path": "relational-complexity/results/atlas-008/items/A8-chain-count/result.json",
+        "ref": "sha256:16e4a65a39e9b5cf87e5dcd6921931a6a367aee66c937ac3c7e1fecbb5ff0e4c"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000673,\"engine_version\":\"rrc-0.4.0\",\"exact\":true,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-chain-count\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"n\":4,\"n_blocks\":4,\"n_distinct_labels\":4,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"present_edge_count\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"d3d7925eea532c48277202c30fcaf9900ffe967927a464892f9fdcd3e0d517ee\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]],\"witness\":null}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-656d983c",
+        "path": "relational-complexity/results/atlas-008/items/A8-chain-count/status.json",
+        "ref": "sha256:f0aa251b07f72d46be0f70f04ff78b5c37805a6de433426da18580bc8f1ac60e"
+      },
+      "content": "{\"item_id\": \"A8-chain-count\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-40bd4e82",
+        "path": "relational-complexity/results/atlas-008/items/A8-chain-degree/receipt.json",
+        "ref": "sha256:3c0f74a9ebe116026a1d5eba895a903f51fafe089d5999fb06d1780896b416b6"
+      },
+      "content": "{\"item_id\": \"A8-chain-degree\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"3aa71bed001bce2a3d56eb0b5b8481e88d73bad9d3202c44b50e795e956132e5\", \"spec_hash\": \"3b7dbc250ae8d66b20afb0272d3af5857c93232cfe15f54733f3d5c5ccf49ee4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-603188e6",
+        "path": "relational-complexity/results/atlas-008/items/A8-chain-degree/result.json",
+        "ref": "sha256:3aa71bed001bce2a3d56eb0b5b8481e88d73bad9d3202c44b50e795e956132e5"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"9\",\"float\":0.4444444444444444,\"num\":\"4\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000872,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-chain-degree\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"n\":4,\"n_blocks\":5,\"n_distinct_labels\":5,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"present_degree_sequence\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"3b7dbc250ae8d66b20afb0272d3af5857c93232cfe15f54733f3d5c5ccf49ee4\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]],\"witness\":{\"block\":1,\"pairwise_l1\":{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},\"states\":[1,2]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-be7521ea",
+        "path": "relational-complexity/results/atlas-008/items/A8-chain-degree/status.json",
+        "ref": "sha256:cdd898d12b5b4cdf99cc4b69622f69d9fd11f2a0cc2cb3731d5f97e5c604fba5"
+      },
+      "content": "{\"item_id\": \"A8-chain-degree\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-db77370f",
+        "path": "relational-complexity/results/atlas-008/items/A8-chain-line/receipt.json",
+        "ref": "sha256:5f8c77b9ad3dd9f8ba61a932c73cbaceb4201e9c820288be2d520eafd60540bf"
+      },
+      "content": "{\"item_id\": \"A8-chain-line\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"1699e4228171a98a988850fc6dc212bf61cc68d272a2657f23251ef839536e9b\", \"spec_hash\": \"e58e6eb8a6a5bcf5bbec0c7672cc7a02c8905d25ab013319b4e9b0c4ca6737ef\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-dcec57ee",
+        "path": "relational-complexity/results/atlas-008/items/A8-chain-line/result.json",
+        "ref": "sha256:1699e4228171a98a988850fc6dc212bf61cc68d272a2657f23251ef839536e9b"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"9\",\"float\":0.4444444444444444,\"num\":\"4\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000926,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L16\",\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-chain-line\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"n\":4,\"n_blocks\":5,\"n_distinct_labels\":5,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"present_line_graph\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"e58e6eb8a6a5bcf5bbec0c7672cc7a02c8905d25ab013319b4e9b0c4ca6737ef\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"e6f7386ece69cd8888eca2be7cbc621dc46a80b61c6ddebb9f0a18abfceea8cc\",\"type\":\"composition_observation\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]],\"witness\":{\"block\":1,\"pairwise_l1\":{\"den\":\"3\",\"float\":0.6666666666666666,\"num\":\"2\"},\"states\":[1,2]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-c5c45364",
+        "path": "relational-complexity/results/atlas-008/items/A8-chain-line/status.json",
+        "ref": "sha256:2cd30a7473c9c8295a75b3d9414171276f79d786306244c48de0b247ef15f909"
+      },
+      "content": "{\"item_id\": \"A8-chain-line\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-0baa7bc3",
+        "path": "relational-complexity/results/atlas-008/items/A8-cycle4-count/receipt.json",
+        "ref": "sha256:3d700f9f8d974d02109c08082ddf57776fdd911a536f680c59de4987a7a03625"
+      },
+      "content": "{\"item_id\": \"A8-cycle4-count\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"108f9b47c1f1729db8e7f4ef52758f030bb004a5146440ab72b913f352999371\", \"spec_hash\": \"3049a5d55bf0b5955d927ab16f40271a054bf6d64236bc5f16b566a7f6eceffe\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-dd95f28a",
+        "path": "relational-complexity/results/atlas-008/items/A8-cycle4-count/result.json",
+        "ref": "sha256:108f9b47c1f1729db8e7f4ef52758f030bb004a5146440ab72b913f352999371"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3],[0,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001172,\"engine_version\":\"rrc-0.4.0\",\"exact\":true,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-cycle4-count\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"n\":4,\"n_blocks\":5,\"n_distinct_labels\":5,\"n_edges\":4,\"n_states\":16,\"new_state\":false,\"observation\":\"present_edge_count\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"3049a5d55bf0b5955d927ab16f40271a054bf6d64236bc5f16b566a7f6eceffe\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"5747f684d10b1fc3f48c38b0a9b4176e5c1aa137469d113d0caa3126c12f7a51\",\"type\":\"composition_observation\",\"weight_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"weights\":[[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],\"witness\":null}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-7bccfd70",
+        "path": "relational-complexity/results/atlas-008/items/A8-cycle4-count/status.json",
+        "ref": "sha256:d66636c70ce58410b77d3e45314c8a42d2d9f1e75ec263a3e2174eed99a5b804"
+      },
+      "content": "{\"item_id\": \"A8-cycle4-count\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-5b1a263e",
+        "path": "relational-complexity/results/atlas-008/items/A8-cycle4-degree/receipt.json",
+        "ref": "sha256:9298dd303030b25883bcc2bc7098b3e388507b18f2a0e3fe189afe2cbb821c3c"
+      },
+      "content": "{\"item_id\": \"A8-cycle4-degree\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"7a968b14dd2e552a04ae28fe57b52bf7ad8ae1be5a140abd34cf23e704691a2a\", \"spec_hash\": \"bf9b92f21646c62af3ad769d509d36b22003ddc277e0842787a1b91710a8edc7\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-acc760c1",
+        "path": "relational-complexity/results/atlas-008/items/A8-cycle4-degree/result.json",
+        "ref": "sha256:7a968b14dd2e552a04ae28fe57b52bf7ad8ae1be5a140abd34cf23e704691a2a"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3],[0,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001074,\"engine_version\":\"rrc-0.4.0\",\"exact\":true,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-cycle4-degree\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"n\":4,\"n_blocks\":6,\"n_distinct_labels\":6,\"n_edges\":4,\"n_states\":16,\"new_state\":false,\"observation\":\"present_degree_sequence\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"bf9b92f21646c62af3ad769d509d36b22003ddc277e0842787a1b91710a8edc7\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"5747f684d10b1fc3f48c38b0a9b4176e5c1aa137469d113d0caa3126c12f7a51\",\"type\":\"composition_observation\",\"weight_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"weights\":[[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],\"witness\":null}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-e784b92e",
+        "path": "relational-complexity/results/atlas-008/items/A8-cycle4-degree/status.json",
+        "ref": "sha256:052be83c713d7fa604453e242548a6af6c0c293cc081bd7bce3d3ddbbc73eb86"
+      },
+      "content": "{\"item_id\": \"A8-cycle4-degree\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-de7a3c5c",
+        "path": "relational-complexity/results/atlas-008/items/A8-cycle4-line/receipt.json",
+        "ref": "sha256:fae34f14235885bcd56705cad3e898fdd0b0cd1d84e2a2c552019790c3366a51"
+      },
+      "content": "{\"item_id\": \"A8-cycle4-line\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"1cc60858d3197ad4c2dcdf45c4877e48f993fde33b9ff22bf778a2b16ea1f8a9\", \"spec_hash\": \"cbcca9a2988974ec843ab6c5805c8802ca4a96217b72a2cbb8f6b4206ab84494\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-b36f236f",
+        "path": "relational-complexity/results/atlas-008/items/A8-cycle4-line/result.json",
+        "ref": "sha256:1cc60858d3197ad4c2dcdf45c4877e48f993fde33b9ff22bf778a2b16ea1f8a9"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3],[0,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001114,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L16\",\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-cycle4-line\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"n\":4,\"n_blocks\":8,\"n_distinct_labels\":8,\"n_edges\":4,\"n_states\":16,\"new_state\":false,\"observation\":\"present_line_graph\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"cbcca9a2988974ec843ab6c5805c8802ca4a96217b72a2cbb8f6b4206ab84494\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"5747f684d10b1fc3f48c38b0a9b4176e5c1aa137469d113d0caa3126c12f7a51\",\"type\":\"composition_observation\",\"weight_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"weights\":[[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},\"states\":[3,6]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-b7d1cb10",
+        "path": "relational-complexity/results/atlas-008/items/A8-cycle4-line/status.json",
+        "ref": "sha256:8e98768acdec6dcb040299f989e53e1b74f5ef8dfc2488e635b6d002d48993cd"
+      },
+      "content": "{\"item_id\": \"A8-cycle4-line\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-a60c600d",
+        "path": "relational-complexity/results/atlas-008/items/A8-path4-count/receipt.json",
+        "ref": "sha256:c9cbfd68ab4aa87ebec245012d52089af99582612e3601d213a537d9c8f81fef"
+      },
+      "content": "{\"item_id\": \"A8-path4-count\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"68a3ae1423b4b95e3e8ad1077f576b3ff93e8fe1472f02336d90a61c8e17de78\", \"spec_hash\": \"599f423151dd580b1e5b3e70b0e22a157c94d8f4d4e4630c1399ee1a2c0fc968\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-9f423721",
+        "path": "relational-complexity/results/atlas-008/items/A8-path4-count/result.json",
+        "ref": "sha256:68a3ae1423b4b95e3e8ad1077f576b3ff93e8fe1472f02336d90a61c8e17de78"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3],[3,4]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000974,\"engine_version\":\"rrc-0.4.0\",\"exact\":true,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-path4-count\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"n\":5,\"n_blocks\":5,\"n_distinct_labels\":5,\"n_edges\":4,\"n_states\":16,\"new_state\":false,\"observation\":\"present_edge_count\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"599f423151dd580b1e5b3e70b0e22a157c94d8f4d4e4630c1399ee1a2c0fc968\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"84db59d996c291bfe5bafa71dbabc7abd162bee5c450306dfad834b498c10598\",\"type\":\"composition_observation\",\"weight_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"weights\":[[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],\"witness\":null}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-7218a6e6",
+        "path": "relational-complexity/results/atlas-008/items/A8-path4-count/status.json",
+        "ref": "sha256:3ddfb1c8ea28c7723968e98c790259346dff0a132971809cd3ad143620744183"
+      },
+      "content": "{\"item_id\": \"A8-path4-count\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-269ede55",
+        "path": "relational-complexity/results/atlas-008/items/A8-path4-degree/receipt.json",
+        "ref": "sha256:ab5f7c4f49f4cc7cb6b88dce38625a55a3bf1387875f16f9ef51079c2bfe904c"
+      },
+      "content": "{\"item_id\": \"A8-path4-degree\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"867fd8cf85cad09f65461409611add7be387460f2ac4148150a1ee213b844040\", \"spec_hash\": \"c1653723efe7b3ea9ee3b86c7a92b5359fc31c212613ad496d90f7ba6519a2dd\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-c5ab97f6",
+        "path": "relational-complexity/results/atlas-008/items/A8-path4-degree/result.json",
+        "ref": "sha256:867fd8cf85cad09f65461409611add7be387460f2ac4148150a1ee213b844040"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3],[3,4]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"3\",\"float\":0.3333333333333333,\"num\":\"1\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001207,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-path4-degree\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"n\":5,\"n_blocks\":7,\"n_distinct_labels\":7,\"n_edges\":4,\"n_states\":16,\"new_state\":false,\"observation\":\"present_degree_sequence\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"c1653723efe7b3ea9ee3b86c7a92b5359fc31c212613ad496d90f7ba6519a2dd\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"84db59d996c291bfe5bafa71dbabc7abd162bee5c450306dfad834b498c10598\",\"type\":\"composition_observation\",\"weight_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"weights\":[[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},\"states\":[3,6]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-737c60d0",
+        "path": "relational-complexity/results/atlas-008/items/A8-path4-degree/status.json",
+        "ref": "sha256:b53dda78d2518d76bbd8fbc552bbc07f5a25513774c29eaaed1cdbc2d90fee8d"
+      },
+      "content": "{\"item_id\": \"A8-path4-degree\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-8d24b917",
+        "path": "relational-complexity/results/atlas-008/items/A8-path4-line/receipt.json",
+        "ref": "sha256:4cc61dfae4bca1a4067c1e0edfadb050cb8dfca522a320dd6743d671d84d3bba"
+      },
+      "content": "{\"item_id\": \"A8-path4-line\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"050595b0f3b8f24abf119a621dc2ace52549df05f3afe54139cf5374271f9412\", \"spec_hash\": \"8a7bb7c81784d8508f84aaa0eb04475443d3f4422190d5ab37153d361bb7fb0d\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-238d3251",
+        "path": "relational-complexity/results/atlas-008/items/A8-path4-line/result.json",
+        "ref": "sha256:050595b0f3b8f24abf119a621dc2ace52549df05f3afe54139cf5374271f9412"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[2,3],[3,4]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"3\",\"float\":0.3333333333333333,\"num\":\"1\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001107,\"engine_version\":\"rrc-0.4.0\",\"exact\":false,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L16\",\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-path4-line\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"n\":5,\"n_blocks\":8,\"n_distinct_labels\":8,\"n_edges\":4,\"n_states\":16,\"new_state\":false,\"observation\":\"present_line_graph\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"8a7bb7c81784d8508f84aaa0eb04475443d3f4422190d5ab37153d361bb7fb0d\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"84db59d996c291bfe5bafa71dbabc7abd162bee5c450306dfad834b498c10598\",\"type\":\"composition_observation\",\"weight_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"weights\":[[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],\"witness\":{\"block\":2,\"pairwise_l1\":{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},\"states\":[3,6]}}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-eef14679",
+        "path": "relational-complexity/results/atlas-008/items/A8-path4-line/status.json",
+        "ref": "sha256:cd1d33d3d7521445afbe110ea6819649284257c0d3d52fc76f47e4459fec1b6f"
+      },
+      "content": "{\"item_id\": \"A8-path4-line\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-aa74cd2e",
+        "path": "relational-complexity/results/atlas-008/items/A8-star-count/receipt.json",
+        "ref": "sha256:772442b50a2af6a36ac32bf16310c1dc74bca508cb32489903c6eb2535628424"
+      },
+      "content": "{\"item_id\": \"A8-star-count\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"63e05fa900bb8658e42f6106001f30bc5f8c2f1a38c34e960f5d1a45bf73898c\", \"spec_hash\": \"b7f26fc91879ec322724bb13b0f9605bb9f07ba5cac959ae8e0b745305f11469\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-07045cdb",
+        "path": "relational-complexity/results/atlas-008/items/A8-star-count/result.json",
+        "ref": "sha256:63e05fa900bb8658e42f6106001f30bc5f8c2f1a38c34e960f5d1a45bf73898c"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[0,2],[0,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000717,\"engine_version\":\"rrc-0.4.0\",\"exact\":true,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-star-count\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"n\":4,\"n_blocks\":4,\"n_distinct_labels\":4,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"present_edge_count\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"b7f26fc91879ec322724bb13b0f9605bb9f07ba5cac959ae8e0b745305f11469\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"6c959c90bc45976a55a7d874b0e0e4a6c4c31cf14f231e39417136e5ddf1e1d1\",\"type\":\"composition_observation\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]],\"witness\":null}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-3f3dfc5a",
+        "path": "relational-complexity/results/atlas-008/items/A8-star-count/status.json",
+        "ref": "sha256:c6869bd6395072e602205452cdd94cc829da4de62b794e9359dbd5c23df128a9"
+      },
+      "content": "{\"item_id\": \"A8-star-count\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-2300161e",
+        "path": "relational-complexity/results/atlas-008/items/A8-star-degree/receipt.json",
+        "ref": "sha256:a7bdf787126a72878be672b05aa106edcf4412e4a595dd446331aabe4ceabb0f"
+      },
+      "content": "{\"item_id\": \"A8-star-degree\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"c8fff09f917f4b6ed285828842169d6a8288bc16c00696efd07a748c06ef57a6\", \"spec_hash\": \"bd18874081a110987bf5f642d238b8cdb5ffaab08f1a6a1fca86ba458111a643\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-a0c80440",
+        "path": "relational-complexity/results/atlas-008/items/A8-star-degree/result.json",
+        "ref": "sha256:c8fff09f917f4b6ed285828842169d6a8288bc16c00696efd07a748c06ef57a6"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[0,2],[0,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000719,\"engine_version\":\"rrc-0.4.0\",\"exact\":true,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-star-degree\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"n\":4,\"n_blocks\":4,\"n_distinct_labels\":4,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"present_degree_sequence\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"bd18874081a110987bf5f642d238b8cdb5ffaab08f1a6a1fca86ba458111a643\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"6c959c90bc45976a55a7d874b0e0e4a6c4c31cf14f231e39417136e5ddf1e1d1\",\"type\":\"composition_observation\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]],\"witness\":null}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-4835b88a",
+        "path": "relational-complexity/results/atlas-008/items/A8-star-degree/status.json",
+        "ref": "sha256:95c1fb202871a480bcbf07ae1bd782590c888673c4de809557dcd9809b9031e0"
+      },
+      "content": "{\"item_id\": \"A8-star-degree\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-e41d51ce",
+        "path": "relational-complexity/results/atlas-008/items/A8-star-line/receipt.json",
+        "ref": "sha256:8411d2903fcd5b7a7f8ec8d1705829aed2591397452af3398afcf6bb75ceba26"
+      },
+      "content": "{\"item_id\": \"A8-star-line\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"3f2ad7b5b91be8afd5ec69d6145d84000acba9b29c2f39da9041fc908ff0a44f\", \"spec_hash\": \"4a3f211a80995b2f3c329d84a5d541d437c2371188028a071b78ca402f5a2205\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-b91505b0",
+        "path": "relational-complexity/results/atlas-008/items/A8-star-line/result.json",
+        "ref": "sha256:3f2ad7b5b91be8afd5ec69d6145d84000acba9b29c2f39da9041fc908ff0a44f"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[0,2],[0,3]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.001063,\"engine_version\":\"rrc-0.4.0\",\"exact\":true,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L16\",\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-star-line\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"n\":4,\"n_blocks\":4,\"n_distinct_labels\":4,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"present_line_graph\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"4a3f211a80995b2f3c329d84a5d541d437c2371188028a071b78ca402f5a2205\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"6c959c90bc45976a55a7d874b0e0e4a6c4c31cf14f231e39417136e5ddf1e1d1\",\"type\":\"composition_observation\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]],\"witness\":null}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-b4761b46",
+        "path": "relational-complexity/results/atlas-008/items/A8-star-line/status.json",
+        "ref": "sha256:cfd6517bb27620d0875a538e3361a9888d6604e5a0cdaef75801f7e68fb2f255"
+      },
+      "content": "{\"item_id\": \"A8-star-line\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-b33b9fb2",
+        "path": "relational-complexity/results/atlas-008/items/A8-triangle-count/receipt.json",
+        "ref": "sha256:6382fe44b53d23befff88ab236aa878bb991e0173b12e75f562faa82c96b40a4"
+      },
+      "content": "{\"item_id\": \"A8-triangle-count\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"835a9269ea13c7a79c3a8cf646d8ad54c5148d50b5568adcd658c6b190e76750\", \"spec_hash\": \"f502b893cd3e9d52e50fc7dae9278c9794005bb173a7d9da15ee7938111ba4fb\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-0e5ef74b",
+        "path": "relational-complexity/results/atlas-008/items/A8-triangle-count/result.json",
+        "ref": "sha256:835a9269ea13c7a79c3a8cf646d8ad54c5148d50b5568adcd658c6b190e76750"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[0,2]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000707,\"engine_version\":\"rrc-0.4.0\",\"exact\":true,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-triangle-count\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"n\":3,\"n_blocks\":4,\"n_distinct_labels\":4,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"present_edge_count\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"f502b893cd3e9d52e50fc7dae9278c9794005bb173a7d9da15ee7938111ba4fb\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"ff349bdce93ed13b62f03679c99fd48833989b4355d70f562056f7d3fa4f1447\",\"type\":\"composition_observation\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]],\"witness\":null}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-defcd577",
+        "path": "relational-complexity/results/atlas-008/items/A8-triangle-count/status.json",
+        "ref": "sha256:65250cbcad6f1f5a1665fabd9706cc31a04911f2c8601a996d12c8f73785a638"
+      },
+      "content": "{\"item_id\": \"A8-triangle-count\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-d992d487",
+        "path": "relational-complexity/results/atlas-008/items/A8-triangle-degree/receipt.json",
+        "ref": "sha256:ac53f11b08cac21f6d8e44fd50c6b5fa66847a7269032438e3e1bafae1a9b147"
+      },
+      "content": "{\"item_id\": \"A8-triangle-degree\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"80f4c157b1a0191799ef23b3b800177cdb6a722c3f698349a68f9b293deeed5f\", \"spec_hash\": \"8866829ba4ebb4b64f31ba899460418f113305358030d221f074f76fd2d9eb6a\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-c3f53171",
+        "path": "relational-complexity/results/atlas-008/items/A8-triangle-degree/result.json",
+        "ref": "sha256:80f4c157b1a0191799ef23b3b800177cdb6a722c3f698349a68f9b293deeed5f"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[0,2]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000769,\"engine_version\":\"rrc-0.4.0\",\"exact\":true,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-triangle-degree\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"n\":3,\"n_blocks\":4,\"n_distinct_labels\":4,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"present_degree_sequence\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"8866829ba4ebb4b64f31ba899460418f113305358030d221f074f76fd2d9eb6a\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"ff349bdce93ed13b62f03679c99fd48833989b4355d70f562056f7d3fa4f1447\",\"type\":\"composition_observation\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]],\"witness\":null}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-a9fbf439",
+        "path": "relational-complexity/results/atlas-008/items/A8-triangle-degree/status.json",
+        "ref": "sha256:3783c19bbe9fdf9fdf1875b7174148ac75be430a7ede780c48d6559be7e326ed"
+      },
+      "content": "{\"item_id\": \"A8-triangle-degree\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-fb6fceb4",
+        "path": "relational-complexity/results/atlas-008/items/A8-triangle-line/receipt.json",
+        "ref": "sha256:d155a451fdf418f676ca7a22c0efbfc0c262ac9f2c326542eed9f716c240b18b"
+      },
+      "content": "{\"item_id\": \"A8-triangle-line\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"result_sha256\": \"26562ec20b78cb9fd30caed49ff6770790de884fc087331d1612d9508a2e4bc1\", \"spec_hash\": \"892fedaf9fe599c352e2d3ba84adb5fb25c076f7d1944a6f7319be1abefea61a\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-6fc8cef2",
+        "path": "relational-complexity/results/atlas-008/items/A8-triangle-line/result.json",
+        "ref": "sha256:26562ec20b78cb9fd30caed49ff6770790de884fc087331d1612d9508a2e4bc1"
+      },
+      "content": "{\"baseline\":1,\"carrier\":{\"edges\":[[0,1],[1,2],[0,2]],\"kind\":\"listed\"},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"defect_l1\":{\"den\":\"1\",\"float\":0.0,\"num\":\"0\"},\"dynamics\":\"halt_self_loop projection; Markov only when exact\",\"elapsed_s\":0.000811,\"engine_version\":\"rrc-0.4.0\",\"exact\":true,\"further_label\":\"undefined\",\"further_label_reason\":\"no second label map is declared\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-L16\",\"IDEA-L13\"],\"injective\":false,\"item_id\":\"A8-triangle-line\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"n\":3,\"n_blocks\":4,\"n_distinct_labels\":4,\"n_edges\":3,\"n_states\":8,\"new_state\":false,\"observation\":\"present_line_graph\",\"plan_hash\":\"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\",\"role\":\"observation\",\"round_id\":\"atlas-008\",\"spec_hash\":\"892fedaf9fe599c352e2d3ba84adb5fb25c076f7d1944a6f7319be1abefea61a\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"ff349bdce93ed13b62f03679c99fd48833989b4355d70f562056f7d3fa4f1447\",\"type\":\"composition_observation\",\"weight_sha256\":\"3f096c84d15f07449d954e22eb5abd7fb368a91b1912d5347b404e60d87e10a7\",\"weights\":[[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1]],\"witness\":null}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-items-a8-58cf0367",
+        "path": "relational-complexity/results/atlas-008/items/A8-triangle-line/status.json",
+        "ref": "sha256:d619596992f1c7f152da71da1fd5585e161bc0021ab04745c362691617cbaeaa"
+      },
+      "content": "{\"item_id\": \"A8-triangle-line\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-008-manifest-785e8c1c",
+        "path": "relational-complexity/results/atlas-008/manifest.json",
+        "ref": "sha256:b7c489fa9fe84bd7a15a5e4e9f2d1db1bb4a4cfcd53a46ee8b53e5d106ff8ef2"
+      },
+      "content": "{\"engine_version\": \"rrc-0.4.0\", \"plan_hash\": \"6d558c5191bf82c5bec3285f9ae39bb19b9a5934998f36601b52b0f810b9bdb4\", \"round_id\": \"atlas-008\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-009-items-a9-4c7592ce",
+        "path": "relational-complexity/results/atlas-009/items/A9-base/receipt.json",
+        "ref": "sha256:e8e593cef686296b2dc90ac2239293143dd19a93f4633309779d8049d8059943"
+      },
+      "content": "{\"item_id\": \"A9-base\", \"plan_hash\": \"51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8\", \"result_sha256\": \"0da066eb6633d43e03e2e8d044b8d671eecd7d9572dd818b103d73986d8572b0\", \"spec_hash\": \"e6aa78f97469b795f46f7b4c54b33e368c1bf2bf2e7fe7fcef0441f7346546e3\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-009-items-a9-2d891d30",
+        "path": "relational-complexity/results/atlas-009/items/A9-base/result.json",
+        "ref": "sha256:0da066eb6633d43e03e2e8d044b8d671eecd7d9572dd818b103d73986d8572b0"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":0,\"distinct_events\":0,\"effective_cardinality\":0,\"effective_method\":\"minimum_equivalent_subset\",\"expansion_j_total\":0,\"features\":[],\"j_positive\":0,\"j_prohibit\":0,\"kernel_ablation_method\":\"minimum_equivalent_subset\",\"kernel_effective_cardinality\":0,\"kernel_removal_sensitive_count\":0,\"max_active_in_state\":0,\"max_constraints_on_one_event\":0,\"max_expansion_k\":0,\"max_incident_edges\":0,\"max_positive_k\":0,\"max_prohibit_literals\":0,\"removal_sensitive_count\":0,\"states_with_zero_active\":16,\"zero_active_fraction\":{\"den\":\"1\",\"float\":1.0,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[2,3],[3,4]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false,\"new_primitive\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.000792,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.4.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C00\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":0,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A9-base\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"method\":\"exact_weight_table\",\"n\":5,\"n_edges\":4,\"n_states\":16,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"1\",\"float\":3.0,\"num\":\"3\"},\"mean_present_edges\":{\"den\":\"1\",\"float\":2.0,\"num\":\"2\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]},\"plan_hash\":\"51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8\",\"positive_transitions\":64,\"role\":\"baseline\",\"round_id\":\"atlas-009\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"e6aa78f97469b795f46f7b4c54b33e368c1bf2bf2e7fe7fcef0441f7346546e3\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"84db59d996c291bfe5bafa71dbabc7abd162bee5c450306dfad834b498c10598\",\"type\":\"atlas_core\",\"weight_sha256\":\"5c458ff162a1ba869c081c42a5160b03fab0df590b4f01e0a5977621177e86c3\",\"weights\":[[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-009-items-a9-bc207340",
+        "path": "relational-complexity/results/atlas-009/items/A9-base/status.json",
+        "ref": "sha256:b3980c0c4193881a51269107556614f54846a2c62accd4f7469f0dc7520dfa5e"
+      },
+      "content": "{\"item_id\": \"A9-base\", \"plan_hash\": \"51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-009-items-a9-3ad64677",
+        "path": "relational-complexity/results/atlas-009/items/A9-dep-disjoint/receipt.json",
+        "ref": "sha256:ec616acff4ff5a6da0dfd1876a1c3f6debb090ad5540f8e4d206837f041fd985"
+      },
+      "content": "{\"item_id\": \"A9-dep-disjoint\", \"plan_hash\": \"51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8\", \"result_sha256\": \"fdc8c28c85baa7a2dbc66df6c1fd96c68bc902165b7b335d1d468aa55a1e2e91\", \"spec_hash\": \"a4409530a43e277128006048103c66f88deaf2bffdd99cb82f101c3ce3b83038\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-009-items-a9-6c5c1a48",
+        "path": "relational-complexity/results/atlas-009/items/A9-dep-disjoint/result.json",
+        "ref": "sha256:fdc8c28c85baa7a2dbc66df6c1fd96c68bc902165b7b335d1d468aa55a1e2e91"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":2,\"effective_cardinality\":2,\"effective_method\":\"minimum_equivalent_subset\",\"expansion_j_total\":0,\"features\":[{\"action\":\"either\",\"condition\":[1,2],\"condition_kind\":\"designated_edge\",\"effect\":\"multiply\",\"event\":[0,1],\"factor\":2,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2},{\"action\":\"either\",\"condition\":[3,4],\"condition_kind\":\"designated_edge\",\"effect\":\"multiply\",\"event\":[2,3],\"factor\":2,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":2,\"j_prohibit\":0,\"kernel_ablation_method\":\"minimum_equivalent_subset\",\"kernel_effective_cardinality\":2,\"kernel_removal_sensitive_count\":2,\"max_active_in_state\":2,\"max_constraints_on_one_event\":1,\"max_expansion_k\":0,\"max_incident_edges\":0,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":2,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.25,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[2,3],[3,4]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false,\"new_primitive\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001267,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.4.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C06\",\"IDEA-C07\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A9-dep-disjoint\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"0927130c126a6ff9ec290edb24a18cb5b66561b9b2470b45890731141e696f2b\",\"method\":\"exact_weight_table\",\"n\":5,\"n_edges\":4,\"n_states\":16,\"occupation\":{\"edge_presence\":[{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"20\",\"float\":0.55,\"num\":\"11\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"20\",\"float\":0.55,\"num\":\"11\"}],\"mean_components\":{\"den\":\"10\",\"float\":2.9,\"num\":\"29\"},\"mean_present_edges\":{\"den\":\"10\",\"float\":2.1,\"num\":\"21\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[4,4,5,5,4,4,5,5,5,5,6,6,5,5,6,6]},\"plan_hash\":\"51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8\",\"positive_transitions\":64,\"role\":\"instrument\",\"round_id\":\"atlas-009\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"a4409530a43e277128006048103c66f88deaf2bffdd99cb82f101c3ce3b83038\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"84db59d996c291bfe5bafa71dbabc7abd162bee5c450306dfad834b498c10598\",\"type\":\"atlas_core\",\"weight_sha256\":\"0927130c126a6ff9ec290edb24a18cb5b66561b9b2470b45890731141e696f2b\",\"weights\":[[1,1,1,1],[1,1,1,1],[2,1,1,1],[2,1,1,1],[1,1,1,1],[1,1,1,1],[2,1,1,1],[2,1,1,1],[1,1,2,1],[1,1,2,1],[2,1,2,1],[2,1,2,1],[1,1,2,1],[1,1,2,1],[2,1,2,1],[2,1,2,1]],\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-009-items-a9-f3cdb7e6",
+        "path": "relational-complexity/results/atlas-009/items/A9-dep-disjoint/status.json",
+        "ref": "sha256:74294bf92cf2b42d1496a4bb5c80ba03fa1c8b02a4b413d6e952f42e9fbab6f8"
+      },
+      "content": "{\"item_id\": \"A9-dep-disjoint\", \"plan_hash\": \"51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-009-items-a9-99381fcc",
+        "path": "relational-complexity/results/atlas-009/items/A9-dep-mutual/receipt.json",
+        "ref": "sha256:ce37af2beaea019370568f8330e8257f16ae6513ad82513af4f3eb6cfe339f50"
+      },
+      "content": "{\"item_id\": \"A9-dep-mutual\", \"plan_hash\": \"51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8\", \"result_sha256\": \"b3fcd6689c955c39746ade64b3b9cf87eb3f20edae00c59b55cf3fac22e2ebe9\", \"spec_hash\": \"f6979ffc4be24f2518579311c91980f7e40a08ff6205a30ae84b7a92a1d405d3\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-009-items-a9-76509776",
+        "path": "relational-complexity/results/atlas-009/items/A9-dep-mutual/result.json",
+        "ref": "sha256:b3fcd6689c955c39746ade64b3b9cf87eb3f20edae00c59b55cf3fac22e2ebe9"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":2,\"effective_cardinality\":2,\"effective_method\":\"minimum_equivalent_subset\",\"expansion_j_total\":0,\"features\":[{\"action\":\"either\",\"condition\":[1,2],\"condition_kind\":\"designated_edge\",\"effect\":\"multiply\",\"event\":[0,1],\"factor\":2,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2},{\"action\":\"either\",\"condition\":[0,1],\"condition_kind\":\"designated_edge\",\"effect\":\"multiply\",\"event\":[1,2],\"factor\":2,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":2,\"j_prohibit\":0,\"kernel_ablation_method\":\"minimum_equivalent_subset\",\"kernel_effective_cardinality\":2,\"kernel_removal_sensitive_count\":2,\"max_active_in_state\":2,\"max_constraints_on_one_event\":1,\"max_expansion_k\":0,\"max_incident_edges\":0,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":2,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.25,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[2,3],[3,4]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false,\"new_primitive\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001409,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.4.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C06\",\"IDEA-C07\"],\"imposed_rule_dependency\":{\"has_cycle\":true,\"longest_simple_path_edges\":1,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A9-dep-mutual\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"265b07a1bec345b0a1ee6f136fbe99cd509cd45384bff57bd9a357209061ef60\",\"method\":\"exact_weight_table\",\"n\":5,\"n_edges\":4,\"n_states\":16,\"occupation\":{\"edge_presence\":[{\"den\":\"20\",\"float\":0.55,\"num\":\"11\"},{\"den\":\"20\",\"float\":0.55,\"num\":\"11\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"10\",\"float\":2.9,\"num\":\"29\"},\"mean_present_edges\":{\"den\":\"10\",\"float\":2.1,\"num\":\"21\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[4,5,5,6,4,5,5,6,4,5,5,6,4,5,5,6]},\"plan_hash\":\"51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8\",\"positive_transitions\":64,\"role\":\"instrument\",\"round_id\":\"atlas-009\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"f6979ffc4be24f2518579311c91980f7e40a08ff6205a30ae84b7a92a1d405d3\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"84db59d996c291bfe5bafa71dbabc7abd162bee5c450306dfad834b498c10598\",\"type\":\"atlas_core\",\"weight_sha256\":\"265b07a1bec345b0a1ee6f136fbe99cd509cd45384bff57bd9a357209061ef60\",\"weights\":[[1,1,1,1],[1,2,1,1],[2,1,1,1],[2,2,1,1],[1,1,1,1],[1,2,1,1],[2,1,1,1],[2,2,1,1],[1,1,1,1],[1,2,1,1],[2,1,1,1],[2,2,1,1],[1,1,1,1],[1,2,1,1],[2,1,1,1],[2,2,1,1]],\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-009-items-a9-35da4875",
+        "path": "relational-complexity/results/atlas-009/items/A9-dep-mutual/status.json",
+        "ref": "sha256:44841f48df86005f845a8b0ff88f6d2f751db399b655e41c0fe5e225a7db490a"
+      },
+      "content": "{\"item_id\": \"A9-dep-mutual\", \"plan_hash\": \"51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-009-items-a9-f60f164f",
+        "path": "relational-complexity/results/atlas-009/items/A9-dep-path/receipt.json",
+        "ref": "sha256:3e861e936a09353023bc4c8b32445bbc0469f53c4311f20950a88f6ebd45cc8d"
+      },
+      "content": "{\"item_id\": \"A9-dep-path\", \"plan_hash\": \"51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8\", \"result_sha256\": \"dee002bbc6ecd90cf2a69c403c5b8757bee09818544e16c62e9f00874e0d4b59\", \"spec_hash\": \"2f1ca4dbb751a1a3bf2ef8885831414d64b729344ef8bc65f650fccf9063fd60\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-009-items-a9-a4fc5167",
+        "path": "relational-complexity/results/atlas-009/items/A9-dep-path/result.json",
+        "ref": "sha256:dee002bbc6ecd90cf2a69c403c5b8757bee09818544e16c62e9f00874e0d4b59"
+      },
+      "content": "{\"action_bit_independent\":true,\"baseline\":1,\"bookkeeping\":{\"declared_cardinality\":2,\"distinct_events\":2,\"effective_cardinality\":2,\"effective_method\":\"minimum_equivalent_subset\",\"expansion_j_total\":0,\"features\":[{\"action\":\"either\",\"condition\":[0,1],\"condition_kind\":\"designated_edge\",\"effect\":\"multiply\",\"event\":[1,2],\"factor\":2,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2},{\"action\":\"either\",\"condition\":[1,2],\"condition_kind\":\"designated_edge\",\"effect\":\"multiply\",\"event\":[2,3],\"factor\":2,\"literals\":1,\"polarity\":\"present\",\"positive_k\":2}],\"j_positive\":2,\"j_prohibit\":0,\"kernel_ablation_method\":\"minimum_equivalent_subset\",\"kernel_effective_cardinality\":2,\"kernel_removal_sensitive_count\":2,\"max_active_in_state\":2,\"max_constraints_on_one_event\":1,\"max_expansion_k\":0,\"max_incident_edges\":0,\"max_positive_k\":2,\"max_prohibit_literals\":0,\"removal_sensitive_count\":2,\"states_with_zero_active\":4,\"zero_active_fraction\":{\"den\":\"4\",\"float\":0.25,\"num\":\"1\"}},\"carrier\":{\"components\":1,\"components_note\":\"components of the carrier graph, isolated nodes included; an instrument\",\"edges\":[[0,1],[1,2],[2,3],[3,4]],\"kind\":\"listed\"},\"classes\":{\"deadlock_states\":0,\"halt_completion\":\"halt_self_loop\",\"recurrent_classes\":1},\"clock\":{\"name\":\"halt_self_loop\",\"step\":\"one carrier pair, probability proportional to its current weight\"},\"compilation\":{\"all_weights_positive\":true,\"gate\":\"current-state single-toggle weights\",\"history\":false,\"hyperedge\":false,\"multi_pair_event\":false,\"new_primitive\":false},\"composer\":{\"name\":\"prohibit_then_product\",\"order_independent\":true},\"elapsed_s\":0.001229,\"empirical_bit_independent\":true,\"engine_version\":\"rrc-0.4.0\",\"grammar_id\":\"opening-prohibit-multiply-v1\",\"idea_ids\":[\"IDEA-C06\",\"IDEA-C07\"],\"imposed_rule_dependency\":{\"has_cycle\":false,\"longest_simple_path_edges\":2,\"method\":\"exact_simple_path\",\"note\":\"imposed rule text, not an observed dynamical cascade\"},\"item_id\":\"A9-dep-path\",\"kernel_method\":\"row_gcd_halt_self_loop\",\"kernel_sha256\":\"cfd481e8da8a5c3c2fc5353a243777c67061fccfde3a08beb5a0962503758a62\",\"method\":\"exact_weight_table\",\"n\":5,\"n_edges\":4,\"n_states\":16,\"occupation\":{\"edge_presence\":[{\"den\":\"20\",\"float\":0.55,\"num\":\"11\"},{\"den\":\"20\",\"float\":0.55,\"num\":\"11\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"},{\"den\":\"2\",\"float\":0.5,\"num\":\"1\"}],\"mean_components\":{\"den\":\"10\",\"float\":2.9,\"num\":\"29\"},\"mean_present_edges\":{\"den\":\"10\",\"float\":2.1,\"num\":\"21\"},\"method\":\"integer_pi_proportional_to_total_weight\",\"reason\":\"bit_independent_positive_total_weight_one_recurrent_class\",\"status\":\"unique\",\"unnormalized_total_weight\":[4,5,5,6,4,5,5,6,4,5,5,6,4,5,5,6]},\"plan_hash\":\"51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8\",\"positive_transitions\":64,\"role\":\"instrument\",\"round_id\":\"atlas-009\",\"solver_budget\":{\"cross_tolerance\":1e-08,\"dense_max_states\":1024,\"max_iter\":10000,\"tolerance\":1e-12,\"used\":false},\"spec_hash\":\"2f1ca4dbb751a1a3bf2ef8885831414d64b729344ef8bc65f650fccf9063fd60\",\"status\":\"complete\",\"structure_method\":\"present_degree_components_cycle\",\"structure_sha256\":\"84db59d996c291bfe5bafa71dbabc7abd162bee5c450306dfad834b498c10598\",\"type\":\"atlas_core\",\"weight_sha256\":\"cfd481e8da8a5c3c2fc5353a243777c67061fccfde3a08beb5a0962503758a62\",\"weights\":[[1,1,1,1],[1,2,1,1],[1,1,2,1],[1,2,2,1],[1,1,1,1],[1,2,1,1],[1,1,2,1],[1,2,2,1],[1,1,1,1],[1,2,1,1],[1,1,2,1],[1,2,2,1],[1,1,1,1],[1,2,1,1],[1,1,2,1],[1,2,2,1]],\"zero_cells\":0}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-009-items-a9-b6201f1e",
+        "path": "relational-complexity/results/atlas-009/items/A9-dep-path/status.json",
+        "ref": "sha256:2a7b4e726690b81b5473e455af18b25e2ed141e9aaf1c05d828e79cc9d1278cb"
+      },
+      "content": "{\"item_id\": \"A9-dep-path\", \"plan_hash\": \"51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8\", \"status\": \"complete\"}\n"
+    },
+    {
+      "op": "capture_source",
+      "source": {
+        "alias": "c-relational-complexity-results-atlas-009-items-a9-9302ee32",
+        "path": "relational-complexity/results/atlas-009/items/A9-g-e0-c1/receipt.json",
+        "ref": "sha256:d1b02f84ce12bde18ff26cd5ae7c76010d1c6d785b3b7095b2740f1a874e134f"
+      },
+      "content": "{\"item_id\": \"A9-g-e0-c1\", \"plan_hash\": \"51b0e0c533c6fa9bada24a3acaa1740c042a50392a0359fe61c15f7b0b4826d8\", \"result_sha256\": \"263428371985ee1787501ce9066be754ef9bd5dd5b19a139015d7dcee4244e2a\", \"spec_hash\": \"afc138e772f13dad043cf221305cfdffb374783547d1abde250a93652e7e90f8\", \"status\": \"complete\"}\n"
+    }
+  ],
+  "base_revision": "05219008f0bea9be22c9c38d03de0c122773d6654752d1801d9d1275820edd6f",
+  "origin": "ai-inferred",
+  "author": "agent",
+  "state": "proposed",
+  "id": "proposal-b42d935284ea465b77914fa3"
+}
